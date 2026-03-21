@@ -4,7 +4,54 @@
 
 > 38 Lean modules &bull; 360 theorems &bull; 0 sorry &bull; 1 physical axiom &bull; 54 Python tests &bull; 14 QuickCheck properties
 
-![Interference collapse](Docs/double-slit-collapse.gif)
+![Teaser — Measurement IS Thermodynamics](Docs/teaser.png)
+
+![Interference collapse animation](Docs/double-slit-collapse.gif)
+
+---
+
+## Architecture
+
+```mermaid
+flowchart TB
+    subgraph QM["Quantum Layer"]
+        DM["DensityMatrix ρ ∈ ℂ²ˣ²\nPSD + Tr(ρ) = 1"]
+        KC["Kraus Channel\nLüders Which-Path\nΠᵢ ρ Πᵢ"]
+        IV["Born Weights → (I, V)\nI = |p₀ − p₁|\nV = 2|ρ₀₁|"]
+    end
+
+    subgraph COMP["Complementarity"]
+        ENG["Englert Relation\nV² + I² ≤ 1"]
+        COL["Which-Path Collapse\nV → 0, I preserved"]
+    end
+
+    subgraph THERMO["Thermodynamic Layer"]
+        IE["Diagonal von Neumann\nH = −Σ pᵢ ln pᵢ ≤ ln 2"]
+        LB["Landauer Bound\nQ ≥ k_B T · H"]
+        EP["ErasureProcess\ndissipatedHeat ≥ cost"]
+    end
+
+    subgraph PMIC["Principle of Maximal Information Collapse"]
+        RES["Residual Coherence\n= 1 − pathEntropyBits\n∈ 0, 1"]
+        ZERO["Extract 1 bit → Residual = 0\nComplete Decoherence"]
+        FULL["Extract 0 bits → Residual = 1\nFull Visibility"]
+    end
+
+    DM --> KC
+    DM --> IV
+    KC --> COL
+    IV --> ENG
+    COL --> IE
+    ENG -->|"measurement destroys V"| COL
+    IE --> LB
+    LB --> EP
+    LB --> RES
+    RES --> ZERO
+    RES --> FULL
+    EP -->|"Second Law"| RES
+```
+
+[Open in Mermaid Live Editor](https://l.mermaid.ai/7wfI1p)
 
 ---
 
