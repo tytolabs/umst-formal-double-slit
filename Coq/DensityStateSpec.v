@@ -19,7 +19,7 @@
 (*    - coherence_bounded     (|rho01|^2 <= p0 * p1)                   *)
 (* ================================================================== *)
 
-From Stdlib Require Import Reals Lra.
+From Stdlib Require Import Reals Lra RIneq.
 
 Open Scope R_scope.
 
@@ -95,9 +95,19 @@ Qed.
 (** The product p0 * p1 is at most 1/4 (AM-GM with p0 + p1 = 1). *)
 Lemma p0_p1_le_quarter (rho : DensityMatrix2) : p0 rho * p1 rho <= 1 / 4.
 Proof.
-  pose proof (p0_nonneg rho).
-  pose proof (p1_nonneg rho).
-  pose proof (trace_one rho).
-  (* From (p0 - p1)^2 >= 0 we get 4 p0 p1 <= (p0 + p1)^2 = 1 *)
-  nlra.
+  pose proof (trace_one rho) as Htr.
+  pose proof (p0_nonneg rho) as Hp0.
+  pose proof (p1_nonneg rho) as Hp1.
+  assert (Hexp : (p0 rho + p1 rho) * (p0 rho + p1 rho) =
+               (p0 rho - p1 rho) * (p0 rho - p1 rho) + 4 * (p0 rho * p1 rho)) by ring.
+  rewrite Htr in Hexp.
+  assert (Hnonneg : 0 <= (p0 rho - p1 rho) * (p0 rho - p1 rho)).
+  { destruct (Rle_dec 0 (p0 rho - p1 rho)) as [Hge|Hlt].
+    - apply Rmult_le_pos; [exact Hge | exact Hge].
+    - replace ((p0 rho - p1 rho) * (p0 rho - p1 rho))
+        with ((p1 rho - p0 rho) * (p1 rho - p0 rho)) by ring.
+      assert (Hg : 0 <= p1 rho - p0 rho) by lra.
+      apply Rmult_le_pos; [exact Hg | exact Hg]. }
+  assert (H4bound : 4 * (p0 rho * p1 rho) <= 1) by lra.
+  lra.
 Qed.

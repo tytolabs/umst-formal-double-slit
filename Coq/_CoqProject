@@ -1,6 +1,10 @@
 -Q . UMSTFormal
 LandauerEinsteinBridge.v
-MeasurementCost.v
 DensityStateSpec.v
 ComplementaritySpec.v
 VonNeumannEntropySpec.v
+MeasurementCost.v
+InfoTheory.v
+Gate.v
+Extraction.v
+Constitutional.v

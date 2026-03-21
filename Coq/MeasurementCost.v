@@ -10,7 +10,7 @@
 (* ================================================================== *)
 
 From Stdlib Require Import Reals Lra Field.
-Require Import UMSTFormal.LandauerEinsteinBridge.
+From UMSTFormal Require Import LandauerEinsteinBridge.
 
 Open Scope R_scope.
 

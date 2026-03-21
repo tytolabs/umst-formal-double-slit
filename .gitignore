@@ -13,12 +13,18 @@ Coq/.*.aux
 Coq/*.vo
 Coq/*.vok
 Coq/*.vos
+Coq/_extract/
+Coq/gate_extracted.ml
+Coq/gate_extracted.mli
 
 # Agda (vendored `Agda/`)
 Agda/_build/
+Agda/*.agdai
 
 # Lean build artifacts
 Lean/.lake/
+Lean/.csdp.cache
+Lean/.nra.cache
 
 # LaTeX build artifacts
 Docs/*.aux

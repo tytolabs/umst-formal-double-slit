@@ -38,7 +38,7 @@ From Stdlib Require Import List.
 From Stdlib Require Import Lia.
 Import ListNotations.
 
-Require Import UMSTFormal.Gate.
+From UMSTFormal Require Import Gate.
 
 (* ================================================================== *)
 (*  SECTION 1: Constitutional Sequences                                 *)

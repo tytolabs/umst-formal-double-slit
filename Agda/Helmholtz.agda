@@ -37,9 +37,8 @@
 
 module Helmholtz where
 
-open import Data.Integer.Base as ℤ using (ℤ; +_; ∣_∣)
-open import Data.Nat.Coprimality as ℕ using (sym; 1-coprimeTo)
-open import Data.Rational as ℚ using (ℚ; 0ℚ; mkℚ; _+_; _*_; _-_; _≤_; -_)
+open import Data.Nat as Nat using (ℕ)
+open import Data.Rational as ℚ using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _-_; _≤_; -_)
 open import Data.Rational.Properties as ℚ-Props
 open import Relation.Binary.PropositionalEquality
   using (_≡_; refl; trans; cong)
@@ -53,12 +52,17 @@ open ThermodynamicState
 -- 1. Physical Constants
 ------------------------------------------------------------------------
 
+private
+  natToℚ : ℕ → ℚ
+  natToℚ Nat.zero    = 0ℚ
+  natToℚ (Nat.suc k) = 1ℚ + natToℚ k
+
 -- Latent heat of full cement hydration (J/kg).
 -- Standard Portland cement releases ≈ 450 kJ/kg upon complete hydration.
 -- This value is identical to `qHydration` in Haskell/UMST.hs and
 -- `Q_HYD` in the Rust kernel.
 Q-hyd : ℚ
-Q-hyd = mkℚ (+ 450) 0 (ℕ.sym (ℕ.1-coprimeTo ∣ + 450 ∣))
+Q-hyd = natToℚ 450
 
 ------------------------------------------------------------------------
 -- 2. The Helmholtz Free-Energy Model

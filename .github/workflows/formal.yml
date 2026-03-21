@@ -1,0 +1,46 @@
+# Coq/Rocq + Agda — matches root `make coq-check` / `make agda-check` / `make formal-check`.
+name: Formal (Coq + Agda)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - "Coq/**"
+      - "Agda/**"
+      - "Makefile"
+      - "scripts/formal_check.sh"
+      - ".github/workflows/formal.yml"
+  pull_request:
+    paths:
+      - "Coq/**"
+      - "Agda/**"
+      - "Makefile"
+      - "scripts/formal_check.sh"
+      - ".github/workflows/formal.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  coq:
+    runs-on: ubuntu-latest
+    container:
+      # Rocq 9.x (successor to Coq); `coqc` remains on PATH in official images.
+      image: rocq/rocq-prover:9.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: coq-check (all Coq/ modules)
+        run: make coq-check
+
+  agda:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Agda (distro meta-package includes stdlib on Ubuntu 24.04+)
+        run: |
+          set -e
+          sudo apt-get update
+          sudo apt-get install -y agda
+      - name: agda-check (all Agda/ modules)
+        run: make agda-check

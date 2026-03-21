@@ -1,5 +1,5 @@
 # umst-formal-double-slit — local verification
-.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test telemetry-sample haskell-test coq-check agda-check ci-local ci-full
+.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
 
 lean:
 	cd Lean && lake build
@@ -31,18 +31,24 @@ telemetry-sample:
 haskell-test:
 	cd Haskell && cabal test
 
-# Optional: integrated Coq/Agda from upstream framework (requires coqc / agda on PATH).
+# Optional: integrated Coq/Agda (requires `coqc` / `agda` on PATH).
+# Coq: Rocq/Coq 9.x or 8.20+ with `From Stdlib` layout. Order respects module imports.
+COQ_VO := LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v \
+	MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v
+
 coq-check:
-	cd Coq && coqc -Q . UMSTFormal LandauerEinsteinBridge.v
-	cd Coq && coqc -Q . UMSTFormal DensityStateSpec.v
-	cd Coq && coqc -Q . UMSTFormal ComplementaritySpec.v
-	cd Coq && coqc -Q . UMSTFormal VonNeumannEntropySpec.v
+	@set -e; cd Coq; for f in $(COQ_VO); do coqc -Q . UMSTFormal "$$f"; done
+
+# Agda: 2.6+ stdlib; order respects local `open import` dependencies.
+AGDA_MAIN := DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda \
+	LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda \
+	Activation.agda InfoTheory.agda MeasurementCost.agda
 
 agda-check:
-	cd Agda && agda -v0 LandauerEinsteinTrace.agda
-	cd Agda && agda -v0 DensityStateSpec.agda
-	cd Agda && agda -v0 ComplementaritySpec.agda
-	cd Agda && agda -v0 VonNeumannEntropySpec.agda
+	@set -e; cd Agda; for f in $(AGDA_MAIN); do agda -v0 "$$f"; done
+
+# Single entry point for formal verification tracks (Coq + Agda).
+formal-check: coq-check agda-check
 
 # CI: after `lake build`, `.github/workflows/lean.yml` runs `pip install -r sim/requirements-optional.txt`,
 # then the same commands as `make sim` plus `unittest` (same as `make sim-test`).

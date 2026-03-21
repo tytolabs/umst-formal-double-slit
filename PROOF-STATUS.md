@@ -6,7 +6,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 # umst-formal-double-slit — proof status (Lean)
 
 **Build:** from `Lean/`, run `lake build` (or repo root `make lean`).
-**CI:** `.github/workflows/lean.yml` (Ubuntu, Elan, optional Mathlib `lake exe cache get`, `pip install -r sim/requirements-optional.txt`, then Python `sim` + `unittest`); `.github/workflows/haskell.yml` (Cabal `test` in `Haskell/`).
+**CI:** `.github/workflows/lean.yml` (Ubuntu, Elan, optional Mathlib `lake exe cache get`, `pip install -r sim/requirements-optional.txt`, then Python `sim` + `unittest`); `.github/workflows/haskell.yml` (Cabal `test` in `Haskell/`); `.github/workflows/formal.yml` (`make coq-check` in Docker **`rocq/rocq-prover:9.0`**, `make agda-check` on Ubuntu with distro Agda).
 **Assumptions / non-claims:** `Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.
 
 ## Lean declaration statistics
@@ -85,7 +85,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Lean 4 | 48 `lakefile` roots; **457** `theorem` + **33** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **3 axiom** (2 quantum-info + physical 2nd law) |
 | Haskell | 7 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
-| Coq | `LandauerEinsteinBridge.v` | **0 Admitted** |
-| Agda | `LandauerEinsteinTrace.agda` (stub) | **Clean** |
+| Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **2** `Admitted` (binary Shannon bound + diagonal corner step) plus **axioms** for pure / maximally-mixed spectral entropy (see file) |
+| Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-03-22 — `make lean-stats-md`: 54 files, **457** `theorem`, 33 `lemma`, **3** `axiom`, sum **714**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`.
+Last updated: 2026-03-22 — `make lean-stats-md`: 54 files, **457** `theorem`, 33 `lemma`, **3** `axiom`, sum **714**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`. Formal tracks: **`make formal-check`**.

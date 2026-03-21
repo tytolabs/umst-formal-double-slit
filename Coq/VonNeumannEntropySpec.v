@@ -26,8 +26,8 @@
 (*    - vonNeumannEntropy_unitary_invariant                            *)
 (* ================================================================== *)
 
-From Stdlib Require Import Reals Lra Rpower.
-Require Import DensityStateSpec.
+From Stdlib Require Import Reals Lra RIneq Rpower.
+From UMSTFormal Require Import DensityStateSpec.
 
 Open Scope R_scope.
 
@@ -54,8 +54,16 @@ Proof.
   - (* x > 0 and x <= 1, so ln x <= 0, hence -x * ln x >= 0 *)
     assert (Hxpos : 0 < x) by lra.
     assert (Hln : ln x <= 0).
-    { rewrite <- ln_1. apply ln_le_compat; lra. }
-    nlra.
+    { destruct (Rlt_dec x 1) as [Hlt1 | Hge1].
+      - assert (Hltln : ln x < ln 1) by (apply ln_increasing; lra).
+        rewrite ln_1 in Hltln. lra.
+      - assert (Heq : x = 1) by lra.
+        subst x. rewrite ln_1. lra. }
+    assert (Hxln : x * ln x <= 0).
+    { replace 0 with (x * 0) by ring.
+      apply Rmult_le_compat_l; [now apply Rlt_le | exact Hln]. }
+    replace (- x * ln x) with (- (x * ln x)) by ring.
+    lra.
 Qed.
 
 (** negMulLog(1) = 0. *)
@@ -180,7 +188,7 @@ Axiom vonNeumannEntropy_le_ln2 : forall rho : DensityMatrix2,
 Axiom vonNeumannDiagonal_ge_spectral : forall rho : DensityMatrix2,
   vonNeumannDiagonal rho >= vonNeumannEntropy rho.
 
-(** Unitary invariance: S(U rho U*) = S(rho).
+(** Unitary invariance: [S(U rho U^dagger) = S(rho)].
     Proved in Lean as [vonNeumannEntropy_unitarily_invariant]
     via charpoly preservation under similarity. *)
 Axiom vonNeumannEntropy_unitary_invariant :

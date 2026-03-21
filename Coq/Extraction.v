@@ -33,7 +33,7 @@
 (*    4. Compare output with Rust kernel on identical inputs            *)
 (* ================================================================== *)
 
-Require Import UMSTFormal.Gate.
+From UMSTFormal Require Import Gate.
 
 (** Extraction configuration.
 
@@ -47,9 +47,9 @@ Require Import UMSTFormal.Gate.
     These mappings ensure the extracted code is idiomatic OCaml
     rather than a naive transliteration of inductive types. *)
 
-Require Import Extraction.
-Require Import ExtrOcamlBasic.
-Require Import ExtrOcamlString.
+From Stdlib Require Import Extraction.
+From Stdlib Require Import ExtrOcamlBasic.
+From Stdlib Require Import ExtrOcamlString.
 
 (** We also configure extraction of Q (rationals).
     By default, Q extracts to a pair (Z, positive) with arithmetic
@@ -76,20 +76,22 @@ Require Import ExtrOcamlString.
     Proofs ([admissible], [gate_check_correct], etc.) are erased
     because they live in Prop — zero runtime overhead. *)
 
+(* Keep generated OCaml under [Coq/_extract/] (gitignored) to avoid polluting the tree root. *)
+Set Extraction Output Directory "_extract".
 Extraction "gate_extracted" gate_check.
 
 (* ------------------------------------------------------------------ *)
 (*  Post-Extraction: Compiling the OCaml                                *)
 (* ------------------------------------------------------------------ *)
 
-(*  After running [coqc Extraction.v], compile the extracted code:
+(*  After running [coqc Extraction.v], compile the extracted code from [Coq/_extract/]:
 
       # Option A: bytecode (quick, for testing)
-      ocamlfind ocamlc -package zarith -linkpkg gate_extracted.ml \
+      ocamlfind ocamlc -package zarith -linkpkg _extract/gate_extracted.ml \
         -o gate_test
 
       # Option B: native (optimised, for benchmarking)
-      ocamlfind ocamlopt -package zarith -linkpkg gate_extracted.ml \
+      ocamlfind ocamlopt -package zarith -linkpkg _extract/gate_extracted.ml \
         -o gate_test
 
     Note: the extracted code uses Coq's own integer representations

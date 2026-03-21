@@ -18,8 +18,8 @@
 
 module DensityStateSpec where
 
-open import Data.Rational as ℚ using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _≤_)
-open import Data.Rational.Properties as ℚ-Props
+open import Data.Rational using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _-_; _≤_)
+open import Data.Rational.Properties
 open import Data.Product using (_×_; _,_)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
 
@@ -88,8 +88,7 @@ postulate
 -- | A pure state has one eigenvalue = 1 and the other = 0.
 --   Lean: pureDensity, vonNeumannEntropy_pure_eq_zero
 pureDensity : ℚ → ℚ → DensityMatrix2
-pureDensity p₀ c₀₁ = mkDensityMatrix2 p₀ (1ℚ + ℚ.- p₀) c₀₁
-  where open ℚ using (-_)
+pureDensity p₀ c₀₁ = mkDensityMatrix2 p₀ (1ℚ - p₀) c₀₁
 
 -- | Convex combination weight: t ∈ [0,1].
 --   Lean: mixedDensity (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ)

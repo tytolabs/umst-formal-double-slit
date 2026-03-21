@@ -39,8 +39,7 @@ open import Relation.Binary.PropositionalEquality using (_≡_)
 --   Lean: fringeVisibility ρ = 2 * Complex.abs (ρ.carrier 0 1)
 --   We approximate with 2 · c₀₁ where c₀₁ = |ρ₀₁| from DensityMatrix2.
 fringeVisibility : DensityMatrix2 → ℚ
-fringeVisibility ρ = ℚ.mkℚ 2 0 _ * DensityMatrix2.c₀₁ ρ
-  where instance _ = Data.Nat.Coprimality.1-coprimeTo 2
+fringeVisibility ρ = (1ℚ + 1ℚ) * DensityMatrix2.c₀₁ ρ
 
 -- | Which-path distinguishability: I = |p₀ - p₁|.
 --   Lean: whichPathDistinguishability ρ = |pathWeight ρ 0 - pathWeight ρ 1|
@@ -53,9 +52,9 @@ distinguishability² ρ = let d = DensityMatrix2.p₀ ρ - DensityMatrix2.p₁ �
 -- | Visibility squared: V² = 4 · c₀₁².
 visibility² : DensityMatrix2 → ℚ
 visibility² ρ = let c = DensityMatrix2.c₀₁ ρ
-                    four = ℚ.mkℚ 4 0 _
+                    two = 1ℚ + 1ℚ
+                    four = two * two
                 in four * (c * c)
-  where instance _ = Data.Nat.Coprimality.1-coprimeTo 4
 
 ------------------------------------------------------------------------
 -- 2. Complementarity record (mirrors DoubleSlitCore.Complementary)

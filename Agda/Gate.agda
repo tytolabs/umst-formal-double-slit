@@ -33,9 +33,8 @@
 
 module Gate where
 
-open import Data.Integer.Base as ℤ using (ℤ; +_; ∣_∣)
-open import Data.Nat.Coprimality as ℕ using (sym; 1-coprimeTo)
-open import Data.Rational as ℚ using (ℚ; 0ℚ; 1ℚ; mkℚ; _+_; _*_; _-_; _≤_; _<_)
+open import Data.Nat as Nat using (ℕ)
+open import Data.Rational as ℚ using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _-_; _≤_; _<_)
 open import Data.Rational.Properties as ℚ-Props
 open import Data.Bool using (Bool; true; false; if_then_else_)
 open import Data.Product using (_×_; _,_; proj₁; proj₂; ∃-syntax)
@@ -72,11 +71,18 @@ open ThermodynamicState
 -- 2. Physical Constants
 ------------------------------------------------------------------------
 
+-- | [n] copies of [1ℚ], i.e. ℕ → ℚ without [mkℚ] / coprimality proofs
+--   (stdlib names for coprime witnesses differ across Agda versions).
+private
+  natToℚ : ℕ → ℚ
+  natToℚ Nat.zero    = 0ℚ
+  natToℚ (Nat.suc k) = 1ℚ + natToℚ k
+
 -- Tolerance for mass conservation check.
 -- In the Rust kernel this is 100.0 kg/m³ (a generous bound that catches
 -- gross density jumps while allowing normal hydration-induced changes).
 δ-mass : ℚ
-δ-mass = mkℚ (+ 100) 0 (ℕ.sym (ℕ.1-coprimeTo ∣ + 100 ∣))
+δ-mass = natToℚ 100
 
 -- Tolerance for dissipation and strength checks.
 -- In the Rust kernel this is 1e-6.  For rational proofs we use 0

@@ -23,14 +23,21 @@ All notable changes to this **standalone repository** are listed here. The upstr
 ### Added (Coq/Agda — A0 quantum parity)
 
 - **`Coq/DensityStateSpec.v`** — 2×2 density matrix record + PSD constraints; **proved**: `p0_le_one`, `p1_le_one`, `coherence_bounded`, `p0_p1_le_quarter`.
-- **`Coq/ComplementaritySpec.v`** — Englert complementarity **V²+D²≤1** fully **proved** via `nlra`.
-- **`Coq/VonNeumannEntropySpec.v`** — `negMulLog`, `shannon_binary`, diagonal entropy bounds **proved**; spectral entropy axiomatised (1 `Admitted`: entropy concavity).
+- **`Coq/ComplementaritySpec.v`** — Englert complementarity **V²+D²≤1** fully **proved** (real algebra / `lra`, no `nlra` dependency).
+- **`Coq/VonNeumannEntropySpec.v`** — `negMulLog` and core lemmas **proved**; **`shannon_binary_le_ln2`** and **`vonNeumannDiagonal_zero_iff_diagonal_pure`** left as **`Admitted`**; spectral entropy partly **axiomatised** (see file).
 - **`Agda/DensityStateSpec.agda`** — density matrix spec over ℚ; properties postulated (authority: Lean).
 - **`Agda/ComplementaritySpec.agda`** — Englert relation postulated.
 - **`Agda/VonNeumannEntropySpec.agda`** — Von Neumann entropy + DPI specs postulated.
-- **`Coq/_CoqProject`** — updated with all new `.v` files.
-- **`Makefile`** — `coq-check` / `agda-check` now compile all new spec files.
 - **`Docs/A0_COQ_AGDA_BACKLOG.md`** — refreshed inventory; priorities 1–4 all done.
+
+### Changed (Coq / Agda verification environments)
+
+- **`Makefile`** — **`coq-check`** compiles all **9** `Coq/*.v` files in order; **`agda-check`** type-checks all **11** Agda entry modules; **`formal-check`** runs both. Wrapper **`scripts/formal_check.sh`**.
+- **`Coq/_CoqProject`** — lists **`-Q . UMSTFormal`** and the full module set (for `coq_makefile` / IDE).
+- **Coq** — `From UMSTFormal` imports in `MeasurementCost.v`, `Constitutional.v`, `Extraction.v`; **`Extraction.v`** uses **`From Stdlib`** extraction libs and writes OCaml to **`Coq/_extract/`** (gitignored).
+- **Agda** — `Gate.agda` / `Helmholtz.agda` use **`natToℚ`** instead of **`mkℚ`** + coprimality lemmas (stdlib API variance).
+- **`.github/workflows/formal.yml`** — CI: Docker **`rocq/rocq-prover:9.0`** + Ubuntu **`agda`**; runs **`make coq-check`** / **`make agda-check`**.
+- **Docs** — **`Coq/README.md`**, **`Agda/README.md`**, **`CONTRIBUTING.md`**, **`PROOF-STATUS.md`**, **`scripts/README.md`**.
 
 ### Added (sim — PML + 3D Schrödinger)
 
@@ -42,7 +49,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Changed (docs — stats reconciliation)
 
-- **`README.md`**, **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**, **`Docs/OnePager-DoubleSlit.tex`**, **`scripts/generate_spectacular_gif.py`**, **`CHANGELOG.md`**, **`Docs/PARALLEL_WORK.md`** — heuristic counts updated: **457** `theorem`, **33** `lemma`, **87** Python tests; cross-language table: Coq 8 modules, Agda 9 modules.
+- **`README.md`**, **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**, **`Docs/OnePager-DoubleSlit.tex`**, **`scripts/generate_spectacular_gif.py`**, **`CHANGELOG.md`**, **`Docs/PARALLEL_WORK.md`** — heuristic counts updated: **457** `theorem`, **33** `lemma`, **87** Python tests; cross-language table: Coq 9 `.v` files, Agda 11 entry modules.
 
 ### Added (license headers)
 

@@ -18,8 +18,8 @@
 (*  Corresponds to [complementarity_fringe_path] in Lean.              *)
 (* ================================================================== *)
 
-From Stdlib Require Import Reals Lra.
-Require Import DensityStateSpec.
+From Stdlib Require Import Reals Lra RIneq R_sqrt.
+From UMSTFormal Require Import DensityStateSpec.
 
 Open Scope R_scope.
 
@@ -65,7 +65,7 @@ Proof.
   unfold visibility.
   apply Rmult_le_pos.
   - lra.
-  - apply sqrt_positivity.
+  - apply sqrt_pos.
 Qed.
 
 (* ------------------------------------------------------------------ *)
@@ -112,7 +112,10 @@ Proof.
   pose proof (coherence_bounded rho) as Hcoh.
   fold a in Htr. fold b in Htr.
   fold a in Hcoh. fold b in Hcoh. fold c_sq in Hcoh.
-  nlra.
+  (* 4 c_sq + (a-b)² ≤ 4 a b + (a-b)² = (a+b)² = 1 using c_sq ≤ a*b *)
+  assert (Hle : 4 * c_sq + (a - b) * (a - b) <= (a + b) * (a + b)) by lra.
+  rewrite Htr in Hle.
+  lra.
 Qed.
 
 (** Squared form using Rsqr for compatibility. *)
@@ -120,5 +123,5 @@ Theorem englert_complementarity_sq (rho : DensityMatrix2) :
   Rsqr (visibility rho) + Rsqr (distinguishability rho) <= 1.
 Proof.
   unfold Rsqr.
-  exact englert_complementarity rho.
+  exact (englert_complementarity rho).
 Qed.

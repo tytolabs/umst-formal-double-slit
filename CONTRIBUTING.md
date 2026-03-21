@@ -7,6 +7,7 @@
 3. Optional: **`make haskell-test`** if you touch `Haskell/` (matches `haskell.yml` CI), or **`make ci-full`** for `ci-local` + Haskell in one command.
 4. If you use optional Python stacks locally: **`pip install -r sim/requirements-optional.txt`** so QuTiP / matplotlib tests don’t skip.
 5. Multi-agent / swarm edits: check `Docs/TODO-TRACKING.md` and avoid duplicating work without checking files already exist.
+6. If you touch **`Coq/`** or **`Agda/`**: from repo root run **`make formal-check`** (or separately **`make coq-check`** / **`make agda-check`**). Toolchain notes: **`Coq/README.md`**, **`Agda/README.md`**. CI: **`.github/workflows/formal.yml`**.
 
 ## License (SPDX)
 
@@ -80,6 +81,12 @@ From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the 
 ## Haskell
 
 - The **`Haskell/`** package is developed in parallel (QuickCheck / mirroring Lean). Prefer **not** editing `Haskell/*` from the Lean/Python agent session unless you own that track; verify with **`make haskell-test`** or `cabal test` from `Haskell/`. If you change **`build-depends`** in the `.cabal` file, run **`cabal freeze`** and commit **`cabal.project.freeze`**.
+
+## Coq / Agda
+
+- **`make coq-check`** — all `Coq/*.v` (Rocq/Coq 9.x or 8.20+ with `From Stdlib`). See **`Coq/README.md`** and **`Coq/_CoqProject`**.
+- **`make agda-check`** — all Agda entry modules in dependency order (Agda 2.6+ + matching stdlib). See **`Agda/README.md`**.
+- **`make formal-check`** or **`scripts/formal_check.sh`** — both tracks in one go.
 
 ## Where to document changes
 

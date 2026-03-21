@@ -11,6 +11,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 [![Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
 [![Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
+[![Formal](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
 **Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**3** axioms (Klein, unital DPI, physical 2nd law — `Lean/VERIFY.md`)&ensp;·&ensp;**457** theorems + **33** lemmas (heuristic scan — `PROOF-STATUS.md`)**
@@ -258,8 +259,8 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 | **Lean 4** | 48 modules, 457 thm + 33 lem (heuristic) | **0** sorry, **3** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
 | **Haskell** | 7 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
-| **Coq** | 8 modules incl. `DensityStateSpec`, `ComplementaritySpec`, `VonNeumannEntropySpec` | **1 Admitted** (entropy concavity) | `make coq-check` |
-| **Agda** | 9 modules incl. `DensityStateSpec`, `ComplementaritySpec`, `VonNeumannEntropySpec` | postulated (authority: Lean) | `make agda-check` |
+| **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **2** `Admitted` + axioms in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
+| **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
 
 ---
 
@@ -274,8 +275,9 @@ cd Lean && lake build          # Lean 4 — counts: PROOF-STATUS.md / make lean-
 make sim && make sim-test      # Python — 87 unit tests
 make telemetry-sample          # Gap 14 — golden JSON + consumer (NumPy)
 cd Haskell && cabal test       # Haskell — 14 QuickCheck properties
-make coq-check                 # Coq (optional, needs coqc)
-make agda-check                # Agda (optional, needs agda)
+make formal-check              # Coq + Agda (optional toolchains; matches CI formal.yml)
+make coq-check                 # Coq only (Rocq/Coq 9.x or 8.20+ `From Stdlib`)
+make agda-check                # Agda only (2.6+ + stdlib)
 
 # Generate visualizations
 python3 scripts/generate_spectacular_gif.py   # → Docs/double-slit-collapse.gif + teaser.png
