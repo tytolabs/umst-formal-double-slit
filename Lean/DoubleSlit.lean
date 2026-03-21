@@ -22,6 +22,7 @@ Main entry points:
 * `UMST.DoubleSlit.interference_preserved_identity`
 * `UMST.DoubleSlit.collapse_fringe_on_whichPath`
 * `UMST.DoubleSlit.measurementUpdateWhichPath_gateEnforcement`
+* `UMST.DoubleSlit.principle_of_maximal_information_collapse`
 -/
 
 namespace UMST.DoubleSlit

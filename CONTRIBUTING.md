@@ -5,7 +5,7 @@
 1. From repo root: **`make ci-local`** (Lean + Python sim + `unittest`).
 2. Optional: **`make haskell-test`** if you touch `Haskell/` (matches `haskell.yml` CI), or **`make ci-full`** for `ci-local` + Haskell in one command.
 3. If you use optional Python stacks locally: **`pip install -r sim/requirements-optional.txt`** so QuTiP / matplotlib tests don’t skip.
-4. Multi-agent / swarm edits: read **`Docs/PARALLEL_WORK.md`** (hot paths + **suggested next jobs** table) and avoid duplicating work without checking files already exist.
+4. Multi-agent / swarm edits: check `Docs/TODO-TRACKING.md` and avoid duplicating work without checking files already exist.
 
 ## Lean
 

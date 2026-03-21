@@ -65,6 +65,47 @@ theorem landauerCostDiagonal_whichPathInvariant (ρ : DensityMatrix hnQubit) (T 
       landauerCostDiagonal ρ T := by
   simp [landauerCostDiagonal, pathEntropyBits, vonNeumannDiagonal_whichPath_apply]
 
+/-- **Principle of Maximal Information Collapse.**
+The residual coherence capacity after extracting `pathEntropyBits ρ` bits of which-path information
+is `1 - pathEntropyBits ρ`. This quantity lies in `[0, 1]`:
+- If no information is extracted (`pathEntropyBits = 0`), residual = 1 (full visibility possible).
+- If the maximum 1 bit is extracted (`pathEntropyBits = 1`), residual = 0 (complete decoherence).
+
+This is the thermodynamic bound enforced by the UMST gate on top of `V² + I² ≤ 1`. -/
+noncomputable def residualCoherenceCapacity (ρ : DensityMatrix hnQubit) : ℝ :=
+  1 - pathEntropyBits ρ
+
+theorem residualCoherenceCapacity_nonneg (ρ : DensityMatrix hnQubit) :
+    0 ≤ residualCoherenceCapacity ρ := by
+  unfold residualCoherenceCapacity
+  linarith [pathEntropyBits_le_one ρ]
+
+theorem residualCoherenceCapacity_le_one (ρ : DensityMatrix hnQubit) :
+    residualCoherenceCapacity ρ ≤ 1 := by
+  unfold residualCoherenceCapacity
+  linarith [pathEntropyBits_nonneg ρ]
+
+theorem principle_of_maximal_information_collapse (ρ : DensityMatrix hnQubit) :
+    0 ≤ residualCoherenceCapacity ρ ∧ residualCoherenceCapacity ρ ≤ 1 :=
+  ⟨residualCoherenceCapacity_nonneg ρ, residualCoherenceCapacity_le_one ρ⟩
+
+/-- When path entropy is maximal (1 bit), residual coherence collapses to zero. -/
+theorem maximal_extraction_collapses_coherence (ρ : DensityMatrix hnQubit)
+    (h : pathEntropyBits ρ = 1) : residualCoherenceCapacity ρ = 0 := by
+  unfold residualCoherenceCapacity; linarith
+
+/-- When no path information is extracted, full coherence capacity remains. -/
+theorem null_extraction_preserves_coherence (ρ : DensityMatrix hnQubit)
+    (h : pathEntropyBits ρ = 0) : residualCoherenceCapacity ρ = 1 := by
+  unfold residualCoherenceCapacity; linarith
+
+/-- The Landauer cost of the diagonal entropy is exactly `landauerBitEnergy T` times the
+fraction of coherence destroyed (`1 - residualCoherenceCapacity`). -/
+theorem landauerCost_eq_bitEnergy_times_extracted (ρ : DensityMatrix hnQubit) (T : ℝ) :
+    landauerCostDiagonal ρ T = landauerBitEnergy T * (1 - residualCoherenceCapacity ρ) := by
+  unfold landauerCostDiagonal infoEnergyLowerBound residualCoherenceCapacity
+  ring
+
 /-- A concrete physical erasure process that resets the qubit, dissipating heat to a bath at temperature T.
 We idealize erasure such that the bound is physically saturated by an active bounding axiom. -/
 structure ErasureProcess (T : ℝ) where

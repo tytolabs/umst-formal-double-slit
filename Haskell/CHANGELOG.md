@@ -1,5 +1,6 @@
 # Revision history for umst-formal-double-slit
 
-## 0.1.0.0 -- YYYY-mm-dd
+## 0.1.0.0 -- 2026-03-21
 
-* First version. Released on an unsuspecting world.
+* Initial release: DoubleSlit, DensityState, MeasurementChannel, MeasurementCost, EpistemicGalois, LandauerExtension, MonoidalState.
+* 14 QuickCheck properties + landauer-einstein-sanity suite.

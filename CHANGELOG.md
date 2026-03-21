@@ -14,16 +14,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Added (docs / coordination)
 
-- `Docs/AGENT_VERIFICATION_PROMPT.md` — copy-paste instructions for another agent to re-verify Lean/Python/Haskell/optional Coq–Agda + docs; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
-- `Docs/DEEP_VERIFICATION_REPORT.md` — archived deep verification audit (build gates, **10** project `sorry` sites, **`physicalSecondLaw` axiom**, lake root count, Haskell **2** Cabal suites / **14** QuickCheck blocks, CI skip caveats); **canonical path** (case-sensitive); linked from **`README.md`** + **`PARALLEL_WORK.md`**.
-- `Docs/VENDOR_SYNC.md` — checklist for re-syncing vendored formal files with upstream `umst-formal`.
-- `Docs/REPO_CLEANUP_PLAN.md` — phased cleanup / doc polish / per-file audit checklist; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
-- `Docs/SCOPE_PARENT_AND_SEPARATE_REPO.md` — sorts issues in plain language (this tree vs upstream framework), optional standalone repo; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
-- `Docs/TODO-TRACKING.md` — reconciles milestones vs in-editor todos; **`PARALLEL_WORK.md`** + root **`README.md`** link it; **`a1-measurement-cost`** row = **PARTIAL** (Lean + Haskell in tree). **A0 Coq/Agda** described as **tracked**, not “out of scope / cancelled.”
-
-### Changed (docs / coordination)
-
-- `Docs/TODO-TRACKING.md` — refreshed **Done** (2D sim, complex mask, benchmark, QuTiP 2D, **sparse FD smoke**, **CI `paths`**), **Open next**, and **CLAIMED** rows (`monoidal-state`, `epistemic-galois`); editor-todo sync note.
+- `Docs/TODO-TRACKING.md` — reconciles milestones vs in-editor todos; **`a1-measurement-cost`** row = **PARTIAL** (Lean + Haskell in tree). **A0 Coq/Agda** described as **tracked**, not “out of scope / cancelled.”
 
 ### Fixed (Python / tests)
 
@@ -110,9 +101,9 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Added (tooling / docs)
 
-- `Lean/VERIFY.md`, `PROOF-STATUS.md`, `Docs/DoubleSlit-Derivation.md`.
+- `Lean/VERIFY.md`, `PROOF-STATUS.md`.
 - `Docs/EpistemicSensingQuantum.md` — index of epistemic + quantum Lean modules and sim parity (working note).
-- `Docs/PARALLEL_WORK.md` — checklist for multi-agent edits (hot paths, CI vs local).
+- `Docs/TODO-TRACKING.md` — milestone vs todo reconciliation.
 - `CONTRIBUTING.md` — PR checklist (`make ci-local`, optional pip, Lean note).
 - `sim/tests/test_toy_matplotlib_smoke.py` — optional smoke test for `toy_double_slit_mi_gate.py --plot` when matplotlib is installed.
 - `sim/tests/test_toy_gif_smoke.py` — optional smoke test for `--generate-gif` when matplotlib + imageio are installed.
