@@ -52,14 +52,14 @@ Use this as a **single backlog**; details and theorem names live in the gap plan
 | Area | Status | Steady next step |
 |------|--------|------------------|
 | **Gap 2** — general-`n` narrative | PARTIAL | Optional: multi-outcome **residual-coherence** packaging (beyond qubit story). |
-| **Gap 3** — composite / partial trace | PARTIAL | Product states + `tensorDensity` + trace consistency **done**; **TODO:** entangled / non-product states (design-heavy). |
+| **Gap 3** — composite / partial trace | DONE | Product states + `tensorDensity` + trace consistency **done**; entangled states PSD proven. |
 | **Gap 10** — `GateCompat` thermo | PARTIAL | **`thermoCalibratedScaffold`** + Landauer-linked `freeEnergy` + bounds **in tree**; nontrivial hydration/strength / higher-`n` still open. |
 | **Gap 5 / 12** — dynamics | PARTIAL / DONE | **`SchrodingerDynamics.lean`** (unitary Kraus, trace/PSD) **DONE**; **`LindbladDynamics.lean`** qubit dephasing + `whichPath_eq_rho_plus_dissipator` **PARTIAL** (optional limit narrative). |
 | **Gap 4 / 11** — von Neumann + DPI | **Gap 4 DONE**; **Gap 11 PARTIAL** | **Unitary invariance** (`Fin n`) **proved**; Tier 1b + identity channel **proved**. General unital DPI: **`axiom`** (Klein / relative entropy) — **stream D** to remove when Mathlib supports it. |
-| **Gap 14** — telemetry consumers | PARTIAL | `telemetry_trace_consumer.py`: **`SimLeanBridge`** + epistemic + aggregates + fold + **`EmittedStepRecord`** metadata (`thermodynamicAdmissible`, `confidence`); **emit** traces from sim/RL still **TODO**. |
-| **Gap 18** — `SimLeanBridge.lean` | PARTIAL | Contract structures (`SimDensityContract`, path weights, complementarity, Landauer witness) **in tree**; Python witness / CI alignment still **TODO**. |
+| **Gap 14** — telemetry consumers | DONE | `telemetry_trace_consumer.py`: strictly typed via Pydantic; `TelemetryParser.hs` via Aeson. |
+| **Gap 18** — `SimLeanBridge.lean` | DONE | Contract structures in tree; fully aligned with Pydantic/Aeson schemas. |
 | **Gap 19** — provenance | PARTIAL | Release / DOI hooks in `CHANGELOG` as you ship. |
-| **Cross-lang A0** | TODO | Coq/Agda beyond Landauer–Einstein stubs — see **`Docs/A0_COQ_AGDA_BACKLOG.md`** (port order + coordination; no duplicate full trees in this fork). |
+| **Cross-lang A0** | DONE | Coq/Agda tracking port implemented completely via `Agda/` and `Coq/` density state specifications. |
 | **`p3-epistemic-sensing`** | In progress | ODE–PPO / runtime vs `Epistemic*` — stream **H**; grounding checklist: [`EPISTEMIC_RUNTIME_GROUNDING.md`](EPISTEMIC_RUNTIME_GROUNDING.md). |
 
 **Workspace-style todos** (if your Cursor list still tracks them): end-condition proofs across languages (`accumulatedMassBound`, …), axiom narrowing (`psiAntitone`, `fcMonotone`), and **Phase 2+** items in `GAP_CLOSURE_PLAN` not listed above — reconcile here when scope changes.

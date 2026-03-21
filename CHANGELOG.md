@@ -9,6 +9,17 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
+### Added (general dimension & limits — Phase 2 & 4)
+
+- **`Lean/GeneralVisibility.lean`** — Gap 2: defined rigorous $\ell_1$ norm of coherence (`fringeVisibility_n`) for arbitrary `Fin n` dimensional epistemic sensing.
+- **`Lean/GateCompat.lean`** — Gap 10: generalized metric hook for physical multi-slit hydration leveraging `fringeVisibility_n` across `ThermodynamicState`.
+- **`Lean/LindbladDynamics.lean`** — Gap 12: explicit topological filter boundary (`dephasingSolution_tendsto_diagonal`) proving continuous exponential trace limits toward Lüders states as $t \to \infty$.
+
+### Added (telemetry boundary schemas — Phase 6)
+
+- **`sim/telemetry_trace_consumer.py`** — Gap 14 & 18: strict `pydantic` mapping (`BaseModel` tracing) limiting trace inputs natively against `SimLeanBridge` type contracts.
+- **`Haskell/src/TelemetryParser.hs`** — Gap 14: extensive GHC Generic `Aeson FromJSON` structs implementing pure functional ingress parsing.
+
 ### Added (Coq/Agda — A0 quantum parity)
 
 - **`Coq/DensityStateSpec.v`** — 2×2 density matrix record + PSD constraints; **proved**: `p0_le_one`, `p1_le_one`, `coherence_bounded`, `p0_p1_le_quarter`.
