@@ -44,11 +44,9 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Changed (CI / coordination)
 
-- `.github/workflows/lean.yml`, `haskell.yml` — **`paths`** filters so jobs skip doc-only / unrelated edits (Lean+sim+`Makefile` vs `Haskell/**`); **`Docs/PARALLEL_WORK.md`** documents behavior.
-- `Docs/PARALLEL_WORK.md` — **`a1-measurement-cost`** = **PARTIAL**; **`a1-extend-landauer`** + **`a1-epistemic-galois`** claims; **Python** next = post–`plot_schrodinger_absorbing_edges_svg`.
+- `.github/workflows/lean.yml`, `haskell.yml` — **`paths`** filters so jobs skip doc-only / unrelated edits (Lean+sim+`Makefile` vs `Haskell/**`).
 - `.github/workflows/lean.yml`, `haskell.yml` — **`concurrency`** groups (cancel superseded runs on same ref).
 - `Makefile` — **`ci-full`** target (`ci-local` + `haskell-test`).
-- `Docs/PARALLEL_WORK.md` — restored actionable job table; fixed **`make lean-stats-md`** wording; merged swarm notes; **`sim/README.md`** in “Also read”; claim + hot-path merge tips; **reverted false `a1-measurement-cost` COMPLETED** (no cross-lang tree in repo); stricter **claim hygiene** note.
 
 ### Added (tooling / docs)
 
@@ -127,4 +125,4 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Not in scope (yet)
 
-- Full spatial double-slit / Schrödinger dynamics; matplotlib animation / GIF export; physical `dissipation ≥ Landauer` for a concrete process; Haskell QC in CI; theorem-count automation in CI.
+- Full spatial double-slit / Schrödinger dynamics from first principles; Haskell QC in default CI; theorem-count automation in CI.

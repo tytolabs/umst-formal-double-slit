@@ -28,4 +28,4 @@ GitHub Actions caches the Cabal store and `dist-newstyle` (see `.github/workflow
 ## Related
 
 - Formal proofs: `../Lean/` + `../Lean/VERIFY.md`
-- Swarm coordination: `../Docs/PARALLEL_WORK.md`
+- Tracking: `../Docs/TODO-TRACKING.md`
