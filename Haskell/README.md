@@ -1,6 +1,6 @@
 # Haskell mirror (QuickCheck)
 
-This package **mirrors** selected Lean definitions from the double-slit fork (`DensityState`, `MeasurementChannel`, `DoubleSlit`, **`LandauerExtension`**, **`MonoidalState`**, `MeasurementCost`, `EpistemicGalois`) for **property-based testing** and engineering sanity checks.
+This package **mirrors** selected Lean definitions from the double-slit repository (`DensityState`, `MeasurementChannel`, `DoubleSlit`, **`LandauerExtension`**, **`MonoidalState`**, `MeasurementCost`, `EpistemicGalois`) for **property-based testing** and engineering sanity checks.
 
 ## Build & test
 

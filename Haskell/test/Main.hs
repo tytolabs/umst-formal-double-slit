@@ -114,7 +114,7 @@ prop_eg_landauer_galois =
         landauerGaloisConnection t i e
 
 ------------------------------------------------------------------------
--- LandauerExtension (parent parity)
+-- LandauerExtension (upstream reference parity)
 ------------------------------------------------------------------------
 
 prop_le_300k_pos :: Property
@@ -129,7 +129,7 @@ prop_le_energy_mono =
           (LE.landauerEnergyMono tLo tHi)
 
 ------------------------------------------------------------------------
--- MonoidalState (parent parity)
+-- MonoidalState (upstream reference parity)
 ------------------------------------------------------------------------
 
 genThermoState :: Gen ThermodynamicState

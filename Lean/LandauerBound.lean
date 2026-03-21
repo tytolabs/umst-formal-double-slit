@@ -14,6 +14,15 @@ that requires a full erasure / dissipation model.
 **Proved:** costing is nonnegative for `T ≥ 0`, **invariant under `whichPathChannel.apply`**, and
 `pathEntropyBits ρ ≤ 1` hence **`landauerCostDiagonal ρ T ≤ landauerBitEnergy T`** for `T ≥ 0`
 (one Landauer bit-energy unit bounds the diagonal-entropy hook).
+
+### Principle of Maximal Information Collapse
+This module enforces an *additional thermodynamic upper bound* on remaining coherence (Residual Logical 
+Uncertainty). By mapping macroscopic energy extraction to the dimensionless `[0, 1]` coherence capacity:
+`1 - (MI) / (k_B * T * ln(2)) = Residual Capacity`
+If the observer pays the maximum Landauer cost of 1 bit (`landauerBitEnergy`), the residual capacity
+collapses strictly to 0, mathematically destroying interference (`V=0`). This mapping establishes that 
+intelligent macroscopic measurements directly pay the thermodynamic price required to collapse reality, 
+working in tight conjunction with the classical Englert quantum limit `V² + I² ≤ 1`.
 -/
 
 namespace UMST.DoubleSlit

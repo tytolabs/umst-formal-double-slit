@@ -1,4 +1,4 @@
-# Coq (vendored from `umst-formal`)
+# Coq (integrated from `umst-formal`)
 
 `LandauerEinsteinBridge.v` is the **standalone** SI + `E = mc²` mass-equivalent fragment (parameters + algebra). It matches the narrative in `../Lean/LandauerEinsteinBridge.lean`.
 

@@ -1,4 +1,4 @@
-# Double-slit fork — derivation chain (Lean)
+# double-slit repository — derivation chain (Lean)
 
 Human-readable map of what is **proved** in `umst-formal-double-slit/Lean/`. See `Lean/VERIFY.md` for theorem names and `PROOF-STATUS.md` for scope / non-claims.
 

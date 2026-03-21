@@ -1,10 +1,10 @@
 # Changelog — umst-formal-double-slit
 
-All notable changes to this **extension fork** are listed here. The parent `umst-formal` repo has its own history.
+All notable changes to this **standalone repository** are listed here. The upstream framework repo has its own history.
 
 ## [Unreleased]
 
-### Added (formal — vendored from parent `umst-formal`)
+### Added (formal — integrated from upstream framework)
 
 - **Lean:** `LandauerLaw.lean`, `LandauerExtension.lean`, `LandauerEinsteinBridge.lean`, `Gate.lean`, `Naturality.lean`, `Activation.lean`, `FiberedActivation.lean`, `MonoidalState.lean` — registered as extra roots in `Lean/lakefile.lean` (alongside `UMST.DoubleSlit` modules).
 - **Haskell:** `LandauerExtension.hs`, `MonoidalState.hs`; QuickCheck blocks `prop_le_*` / `prop_ms_*`; test suite **`landauer-einstein-sanity`** (`Haskell/test/LandauerEinsteinSanity.hs`).
@@ -14,7 +14,11 @@ All notable changes to this **extension fork** are listed here. The parent `umst
 
 ### Added (docs / coordination)
 
-- `Docs/SCOPE_PARENT_AND_SEPARATE_REPO.md` — sorts issues in plain language (this tree vs parent `umst-formal`), optional standalone repo; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
+- `Docs/AGENT_VERIFICATION_PROMPT.md` — copy-paste instructions for another agent to re-verify Lean/Python/Haskell/optional Coq–Agda + docs; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
+- `Docs/DEEP_VERIFICATION_REPORT.md` — archived deep verification audit (build gates, **10** project `sorry` sites, **`physicalSecondLaw` axiom**, lake root count, Haskell **2** Cabal suites / **14** QuickCheck blocks, CI skip caveats); **canonical path** (case-sensitive); linked from **`README.md`** + **`PARALLEL_WORK.md`**.
+- `Docs/VENDOR_SYNC.md` — checklist for re-syncing vendored formal files with upstream `umst-formal`.
+- `Docs/REPO_CLEANUP_PLAN.md` — phased cleanup / doc polish / per-file audit checklist; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
+- `Docs/SCOPE_PARENT_AND_SEPARATE_REPO.md` — sorts issues in plain language (this tree vs upstream framework), optional standalone repo; linked from **`README.md`** + **`PARALLEL_WORK.md`**.
 - `Docs/TODO-TRACKING.md` — reconciles milestones vs in-editor todos; **`PARALLEL_WORK.md`** + root **`README.md`** link it; **`a1-measurement-cost`** row = **PARTIAL** (Lean + Haskell in tree). **A0 Coq/Agda** described as **tracked**, not “out of scope / cancelled.”
 
 ### Changed (docs / coordination)

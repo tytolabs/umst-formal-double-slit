@@ -27,7 +27,7 @@ sim-test:
 haskell-test:
 	cd Haskell && cabal test
 
-# Optional: vendored Coq/Agda from parent `umst-formal` (requires coqc / agda on PATH).
+# Optional: integrated Coq/Agda from upstream framework (requires coqc / agda on PATH).
 coq-check:
 	cd Coq && coqc -Q . UMSTFormal LandauerEinsteinBridge.v
 
