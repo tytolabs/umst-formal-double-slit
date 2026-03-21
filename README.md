@@ -222,7 +222,7 @@ Every claim is checked in at least two languages. Zero gaps across the entire st
 | **Lean 4** | 38 modules, 360 theorems | **0 sorry** | `cd Lean && lake build` |
 | **Haskell** | 7 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 54 unit tests, 4 sim scripts | **All pass** | `make sim && make sim-test` |
-| **Coq** | `LandauerEinsteinBridge.v` | (0 Admitted) | `make coq-check` |
+| **Coq** | `LandauerEinsteinBridge.v` | **0 Admitted** | `make coq-check` |
 | **Agda** | `LandauerEinsteinTrace.agda` + `InfoTheory.agda` | **0 gaps** | `make agda-check` |
 
 ---
@@ -248,8 +248,7 @@ python3 scripts/generate_spectacular_gif.py   # → Docs/double-slit-collapse.gi
 
 ## Claim Taxonomy (strict)
 
-**Established** (machine-checked):
-**What is formally proved:**
+**What is formally proved** (machine-checked):
 - Englert complementarity: $V² + I² ≤ 1$ ✓
 - Landauer bound for **diagonal path entropy** ✓
 - Kraus measurement channels ✓
@@ -272,7 +271,7 @@ This repository is part of the **Foundations of Constitutional Physics (FCP)** s
 |:-----:|-------|:------:|
 | FCP-I | Physics-Gated AI — UMST tensor + DUMSTO hard gate | [Zenodo](https://zenodo.org/records/18768547) |
 | FCP-II | Epistemic Sensing — MI-guided proxy selection | [Zenodo](https://zenodo.org/records/18894710) |
-| **This work** | **Thermodynamic Price of Observation — formal double-slit** | **This repo** |
+| **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | **This repo** |
 
 The key bridge: the UMST gate enforces thermodynamic admissibility on _classical_ material states (mass, energy, hydration over ℚ). This work extends that gate to _quantum_ density matrices, proving that Englert complementarity + Landauer erasure are the quantum analogues of Clausius-Duhem + Helmholtz free energy.
 
@@ -301,6 +300,15 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 **Santosh Prabhu Shenbagamoorthy** · [santosh@tyto.studio](mailto:santosh@tyto.studio)
 
 [Studio TYTO](https://tyto.studio)
+
+---
+
+## Acknowledgments
+
+Portions of this work were developed with assistance from large-language-model tools
+(**Claude** by Anthropic, **Gemini** by Google, **Grok** by xAI) and the **Cursor** code editor.
+All formal proofs were machine-checked by their respective compilers (Lean 4, Coq, Agda);
+the LLMs contributed to exploration, drafting, and code scaffolding — not to proof validity.
 
 ---
 

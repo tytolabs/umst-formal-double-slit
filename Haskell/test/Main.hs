@@ -11,9 +11,9 @@ import qualified LandauerExtension as LE
 import MonoidalState
 import System.Exit (exitFailure)
 
--- | Generator for random valid 2x2 Density Matrices
-genDensityMatrix :: Gen Matrix2x2
-genDensityMatrix = do
+-- | Generator for random valid 2x2 pure-state Density Matrices
+genPureDensityMatrix :: Gen Matrix2x2
+genPureDensityMatrix = do
   uReal <- choose (-1, 1)
   uImag <- choose (-1, 1)
   vReal <- choose (-1, 1)
@@ -21,13 +21,28 @@ genDensityMatrix = do
   let u = uReal :+ uImag
       v = vReal :+ vImag
       norm = magnitude u ** 2 + magnitude v ** 2
-  if norm < 0.001 
-    then return ((1, 0), (0, 0)) 
+  if norm < 0.001
+    then return ((1, 0), (0, 0))
     else do
       let scaleFactor = 1.0 / sqrt norm
           u' = u * (scaleFactor :+ 0)
           v' = v * (scaleFactor :+ 0)
       return $ pureState (u', v')
+
+-- | Generator for random valid 2x2 mixed-state Density Matrices
+--   Convex combination: ρ = t·ρ₁ + (1-t)·ρ₂ for random pure ρ₁, ρ₂ and t ∈ [0,1]
+genMixedDensityMatrix :: Gen Matrix2x2
+genMixedDensityMatrix = do
+  rho1 <- genPureDensityMatrix
+  rho2 <- genPureDensityMatrix
+  t <- choose (0.0, 1.0)
+  let sc a ((a00, a01), (a10, a11)) = (((a:+0)*a00, (a:+0)*a01), ((a:+0)*a10, (a:+0)*a11))
+      add ((a00,a01),(a10,a11)) ((b00,b01),(b10,b11)) = ((a00+b00,a01+b01),(a10+b10,a11+b11))
+  return $ add (sc t rho1) (sc (1-t) rho2)
+
+-- | Generator that produces both pure and mixed states (50/50)
+genDensityMatrix :: Gen Matrix2x2
+genDensityMatrix = oneof [genPureDensityMatrix, genMixedDensityMatrix]
 
 -- | Property 1: Complementarity V^2 + I^2 <= 1
 prop_complementarity :: Property

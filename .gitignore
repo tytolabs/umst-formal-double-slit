@@ -16,5 +16,16 @@ Coq/*.vos
 # Agda (vendored `Agda/`)
 Agda/_build/
 
+# Lean build artifacts
+Lean/.lake/
+
+# LaTeX build artifacts
+Docs/*.aux
+Docs/*.log
+Docs/*.out
+Docs/*.synctex.gz
+Docs/*.fls
+Docs/*.fdb_latexmk
+
 # OS / editor
 .DS_Store
