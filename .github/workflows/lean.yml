@@ -1,6 +1,7 @@
 # CI: Lake + Mathlib (cache when available). See Lean/VERIFY.md.
 name: Lean
 on:
+  workflow_dispatch:
   push:
     branches: [main, master]
     paths:
@@ -62,3 +63,10 @@ jobs:
           python3 sim/qubit_kraus_sweep.py --validate
           python3 sim/plot_complementarity_svg.py --validate
           python3 -m unittest discover -s sim/tests -p "test_*.py"
+
+      - name: Telemetry consumer validation
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -e
+          python3 sim/telemetry_trace_consumer.py /dev/null --validate
+          python3 sim/export_sample_telemetry_trace.py --validate

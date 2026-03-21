@@ -1,4 +1,9 @@
 /-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
+/-
   UMST-Formal: Activation.lean
   Lean 4 — Material activations as dependent types.
 

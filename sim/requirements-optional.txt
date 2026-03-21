@@ -2,3 +2,4 @@ numpy>=1.19.0
 matplotlib>=3.3.0
 imageio>=2.9.0
 qutip>=4.7.1
+scipy>=1.7.0

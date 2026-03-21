@@ -1,4 +1,9 @@
 /-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
+/-
   UMST-Formal: LandauerEinsteinBridge.lean
 
   Standalone mathematical artifact: combine the Landauer thermal scale `k_B T ln 2`

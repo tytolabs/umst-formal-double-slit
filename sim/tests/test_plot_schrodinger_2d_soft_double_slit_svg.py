@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """Tests for plot_schrodinger_2d_soft_double_slit_svg (stdlib)."""
 
 import subprocess

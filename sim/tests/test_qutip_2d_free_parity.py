@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """QuTiP vs scipy expm for 2D periodic free Hamiltonian (optional QuTiP)."""
 
 import importlib.util

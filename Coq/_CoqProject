@@ -1,2 +1,6 @@
 -Q . UMSTFormal
 LandauerEinsteinBridge.v
+MeasurementCost.v
+DensityStateSpec.v
+ComplementaritySpec.v
+VonNeumannEntropySpec.v

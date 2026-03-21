@@ -1,4 +1,9 @@
 /-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
+/-
   UMST-Formal: LandauerLaw.lean
 
   T_LandauerLaw: The Landauer Principle in the signature extension

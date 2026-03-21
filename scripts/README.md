@@ -1,8 +1,14 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Maintenance scripts
 
 | Script | Usage |
 |--------|--------|
 | `lean_decl_stats.py` | Heuristic counts of `theorem` / `lemma` / `def` / … in `Lean/**/*.lean` (skips `.lake`). |
+| `add_spdx_headers.py` | Idempotently prepends MIT `SPDX-License-Identifier` + copyright to `Lean/**/*.lean` (skips `.lake`), `sim/**/*.py`, `scripts/**/*.py`, `Haskell/**/*.hs` (skips `dist-newstyle` / `dist`), `Docs/*.tex`, and repo `*.md`. |
 
 From repo root:
 

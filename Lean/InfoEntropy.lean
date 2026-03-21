@@ -1,3 +1,8 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import Mathlib.Analysis.SpecialFunctions.BinaryEntropy
 import Mathlib.Analysis.SpecialFunctions.Log.NegMulLog
 import Mathlib.Algebra.BigOperators.Fin
@@ -14,7 +19,7 @@ particular it equals **`shannonBinary (pathWeight ρ 0)`** because `pathWeight �
 **Agrees with Mathlib:** `shannonBinary p = Real.binEntropy p` (`shannonBinary_eq_binEntropy`). Hence
 **`shannonBinary p ≤ log 2`** and **`vonNeumannDiagonal ρ ≤ log 2`** (nats).
 
-**Not yet:** general `n`, quantum mutual information, DPI.
+**General `n` bound:** `vonNeumannDiagonal_n_le_log_n` in **`GeneralDimension.lean`**. **`vonNeumannDiagonal_n_eq_vonNeumannDiagonal`:** on a qubit, `vonNeumannDiagonal_n` = `vonNeumannDiagonal`. **Landauer:** `pathEntropyBits_n`, `landauerCostDiagonal_n_*` in **`LandauerBound.lean`**. **Not yet:** quantum mutual information, DPI.
 -/
 
 namespace UMST.Quantum
@@ -72,9 +77,17 @@ noncomputable def vonNeumannDiagonal_n {n : ℕ} {hn : 0 < n} (ρ : DensityMatri
 theorem vonNeumannDiagonal_n_nonneg {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix hn) : 0 ≤ vonNeumannDiagonal_n ρ := by
   apply Finset.sum_nonneg
   intro i _
-  have h0 : 0 ≤ (ρ.carrier i i).re := DensityMatrix.diag_re_nonneg_n ρ i
-  have h1 : (ρ.carrier i i).re ≤ 1 := DensityMatrix.diag_re_le_one_n ρ i
+  have h0 : 0 ≤ (ρ.carrier i i).re := DensityMat.diag_re_nonneg_n ρ i
+  have h1 : (ρ.carrier i i).re ≤ 1 := DensityMat.diag_re_le_one_n ρ i
   exact negMulLog_nonneg h0 h1
+
+/-- On a qubit, the `Fin 2` diagonal sum agrees with the binary Shannon functional on `pathWeight`. -/
+theorem vonNeumannDiagonal_n_eq_vonNeumannDiagonal (ρ : DensityMatrix hnQubit) :
+    vonNeumannDiagonal_n ρ = vonNeumannDiagonal ρ := by
+  have hdiag1 : (ρ.carrier 1 1).re = 1 - (ρ.carrier 0 0).re := by
+    simpa [pathWeight, add_comm, add_left_comm, add_assoc] using (pathWeight_sum ρ)
+  unfold vonNeumannDiagonal vonNeumannDiagonal_n shannonBinary
+  rw [Fin.sum_univ_two, hdiag1, pathWeight]
 
 theorem vonNeumannDiagonal_le_log_two (ρ : DensityMatrix hnQubit) : vonNeumannDiagonal ρ ≤ log 2 := by
   unfold vonNeumannDiagonal
@@ -84,5 +97,48 @@ theorem vonNeumannDiagonal_le_log_two (ρ : DensityMatrix hnQubit) : vonNeumannD
 theorem vonNeumannDiagonal_whichPath_apply (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) = vonNeumannDiagonal ρ := by
   simp [vonNeumannDiagonal, shannonBinary, pathWeight_whichPath_apply]
+
+/-! ### Quantum mutual information (diagonal / path-observable) -/
+
+/-- **Quantum mutual information** for the path observable (diagonal form, nats).
+For a qubit density matrix, this measures the information gain from path measurement:
+`I(ρ) = S_diag(ρ) - S(ρ_post)`, where `S_diag` is the diagonal entropy and `S(ρ_post)` is the
+post-measurement entropy. Since measurement diagonalizes the state,
+`S(ρ_post) = S_diag(ρ)` and `I(ρ) = S_diag(ρ)` for a complete path measurement.
+
+For partial measurements (fractional probes), MI is defined via `EpistemicMI.lean`. -/
+noncomputable def quantumMutualInfo_diagonal (ρ : DensityMatrix hnQubit) : ℝ :=
+  vonNeumannDiagonal ρ
+
+/-- Quantum MI for path measurement is nonneg (since diagonal entropy is nonneg). -/
+theorem quantumMutualInfo_diagonal_nonneg (ρ : DensityMatrix hnQubit) :
+    0 ≤ quantumMutualInfo_diagonal ρ :=
+  vonNeumannDiagonal_nonneg ρ
+
+/-- Quantum MI for path measurement is bounded by log 2 (1 bit in nats). -/
+theorem quantumMutualInfo_diagonal_le_log_two (ρ : DensityMatrix hnQubit) :
+    quantumMutualInfo_diagonal ρ ≤ log 2 :=
+  vonNeumannDiagonal_le_log_two ρ
+
+/-- Measurement-invariant: `MI_diag(E(ρ)) = MI_diag(ρ)` for the which-path channel. -/
+@[simp]
+theorem quantumMutualInfo_diagonal_whichPath (ρ : DensityMatrix hnQubit) :
+    quantumMutualInfo_diagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) =
+    quantumMutualInfo_diagonal ρ :=
+  vonNeumannDiagonal_whichPath_apply ρ
+
+/-- **General quantum mutual information** for an n-dimensional path observable (diagonal form).
+`I_n(ρ) = vonNeumannDiagonal_n(ρ)` — the diagonal entropy in nats. -/
+noncomputable def quantumMutualInfo_diagonal_n {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix hn) : ℝ :=
+  vonNeumannDiagonal_n ρ
+
+theorem quantumMutualInfo_diagonal_n_nonneg {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix hn) :
+    0 ≤ quantumMutualInfo_diagonal_n ρ :=
+  vonNeumannDiagonal_n_nonneg ρ
+
+/-- For qubits, `quantumMutualInfo_diagonal_n` reduces to `quantumMutualInfo_diagonal`. -/
+theorem quantumMutualInfo_diagonal_n_qubit_eq (ρ : DensityMatrix hnQubit) :
+    quantumMutualInfo_diagonal_n ρ = quantumMutualInfo_diagonal ρ :=
+  vonNeumannDiagonal_n_eq_vonNeumannDiagonal ρ
 
 end UMST.Quantum

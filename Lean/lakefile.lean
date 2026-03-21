@@ -1,3 +1,8 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import Lake
 open Lake DSL
 
@@ -12,16 +17,18 @@ require mathlib from git
   `cd Lean && lake build`
 -/
 lean_lib «UMST.DoubleSlit» where
-  roots := #[`UMSTCore, `DensityState, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
-    `InfoEntropy, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
+  roots := #[`UMSTCore, `DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
+    `InfoEntropy, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
     `EpistemicTrajectoryMI, `EpistemicPolicy, `EpistemicRuntimeContract, `EpistemicNumericsContract,
     `EpistemicPerStepNumerics, `EpistemicRuntimeSchemaContract, `EpistemicTelemetryBridge,
     `EpistemicTelemetryApproximation, `EpistemicTelemetryQuantitativeUtility,
     `EpistemicTraceDerivedEpsilonCertificate,
     `EpistemicTelemetrySolverCalibration, `EpistemicTraceDrivenCalibrationWitness,
-    `PrototypeSolverCalibration, `GateCompat,
-    `Complementarity, `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `MeasurementCost,
-    `EpistemicGalois,
+    `PrototypeSolverCalibration, `GateCompat, `QRBridge,
+    `PMICEntropyInterior, `Complementarity, `PMICVisibility,
+    `VonNeumannEntropy, `DataProcessingInequality,
+    `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `MeasurementCost,
+    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `SimLeanBridge,
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
     `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState]

@@ -1,8 +1,168 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Changelog — umst-formal-double-slit
 
 All notable changes to this **standalone repository** are listed here. The upstream framework repo has its own history.
 
 ## [Unreleased]
+
+### Added (Coq/Agda — A0 quantum parity)
+
+- **`Coq/DensityStateSpec.v`** — 2×2 density matrix record + PSD constraints; **proved**: `p0_le_one`, `p1_le_one`, `coherence_bounded`, `p0_p1_le_quarter`.
+- **`Coq/ComplementaritySpec.v`** — Englert complementarity **V²+D²≤1** fully **proved** via `nlra`.
+- **`Coq/VonNeumannEntropySpec.v`** — `negMulLog`, `shannon_binary`, diagonal entropy bounds **proved**; spectral entropy axiomatised (1 `Admitted`: entropy concavity).
+- **`Agda/DensityStateSpec.agda`** — density matrix spec over ℚ; properties postulated (authority: Lean).
+- **`Agda/ComplementaritySpec.agda`** — Englert relation postulated.
+- **`Agda/VonNeumannEntropySpec.agda`** — Von Neumann entropy + DPI specs postulated.
+- **`Coq/_CoqProject`** — updated with all new `.v` files.
+- **`Makefile`** — `coq-check` / `agda-check` now compile all new spec files.
+- **`Docs/A0_COQ_AGDA_BACKLOG.md`** — refreshed inventory; priorities 1–4 all done.
+
+### Added (sim — PML + 3D Schrödinger)
+
+- **`sim/schrodinger_2d_pml.py`** — true PML (polynomial-graded conductivity) for 2D split-step; `pml_conductivity_profile`, `pml_damping_mask_2d`, `split_step_evolve_2d_pml`.
+- **`sim/schrodinger_3d_split_step.py`** — 3D FFT split-step with soft double-slit in (y,z) plane; `make_grid_3d`, `initial_gaussian_3d`, `kinetic_half_step_3d`, `absorption_mask_3d`.
+- **`sim/tests/test_schrodinger_2d_pml.py`** — 6 PML mask tests (shape, symmetry, damping, σ=0/n=0 recovery).
+- **`sim/tests/test_schrodinger_3d_split_step.py`** — 19 tests (grid, Gaussian, potential, absorption mask, free norm conservation).
+- Python unit tests: **62 → 87** (+25).
+
+### Changed (docs — stats reconciliation)
+
+- **`README.md`**, **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**, **`Docs/OnePager-DoubleSlit.tex`**, **`scripts/generate_spectacular_gif.py`**, **`CHANGELOG.md`**, **`Docs/PARALLEL_WORK.md`** — heuristic counts updated: **457** `theorem`, **33** `lemma`, **87** Python tests; cross-language table: Coq 8 modules, Agda 9 modules.
+
+### Added (license headers)
+
+- **MIT SPDX headers** on first-party **`Lean/**/*.lean`** (excluding `.lake`), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`**, **`Docs/*.tex`**, and **`.md`** docs; maintenance tool **`scripts/add_spdx_headers.py`** (skips **`dist-newstyle`** / build junk); documented in **`CONTRIBUTING.md`** and **`scripts/README.md`**.
+
+### Fixed (Haskell layout)
+
+- **Module shadowing:** root-level duplicates of `MeasurementCost` / `LandauerExtension` / `MonoidalState` moved to **`Haskell/legacy/`** so GHC’s `-i` (package dir) no longer picks them over **`src/`**. **`cabal build all`** + **`cabal test`** succeed.
+- **Stub executable:** `app/Main.hs` no longer references missing `MyLib`; **`umst-formal-double-slit` exe** is a minimal placeholder (use **`cabal test`** for QuickCheck).
+
+### Changed (Lean — **0 sorry** milestone)
+
+- **`VonNeumannEntropy.lean`** — `vonNeumannEntropy_unitarily_invariant` general `Fin n` **proved** (was sorry). New helper lemmas: `charmatrix_diagonal'`, `charpoly_diagonal'`, `IsHermitian.charpoly_eq_prod_eigenvalues`, `eigenvalue_multiset_eq_of_charpoly_eq`.
+- **`DataProcessingInequality.lean`** — general unital DPI `sorry` → **axiom** (`vonNeumannEntropy_nondecreasing_unital`, `klein_inequality`). Requires Mathlib matrix logarithm infrastructure.
+- **All docs** — updated from "1 sorry" to "0 sorry, 3 axioms" (`VERIFY.md`, `README.md`, `GAP_CLOSURE_PLAN.md`, `TODO-TRACKING.md`, `SORRY_ROADMAP.md`, `OnePager`, GIF overlay, multi-agent notes in `TODO-TRACKING` / `PARALLEL_WORK`).
+
+### Added (Lean — Gaps 5, 10, 12, 18)
+
+- **`SchrodingerDynamics.lean`** — Gap 5: unitary evolution as Kraus channel (`unitaryChannel`), PSD/trace preservation, adjoint involutivity.
+- **`LindbladDynamics.lean`** — Gap 12: Lindblad dissipator, qubit dephasing bridge (`whichPath_eq_rho_plus_dissipator`).
+- **`GateCompat.lean`** — Gap 10: `thermoCalibratedScaffold` with `freeEnergy = -landauerCostDiagonal`, Admissible invariance, Landauer bound.
+- **`SimLeanBridge.lean`** — Gap 18: formal type contracts (`SimDensityContract`, `SimPathProjectionContract`, `SimComplementarityWitness`, `SimLandauerWitness`).
+
+### Added (engineering — Gaps 14, 16, 19)
+
+- **`sim/telemetry_trace_consumer.py`** — Gap 14: runtime trace contract validator (DensityMatrix, PathProjection, Complementarity, Landauer).
+- **`sim/requirements-optional.txt`** — Gap 16: added `scipy>=1.7.0`.
+- **`Docs/PROVENANCE.md`** — Gap 19: formal authorship provenance.
+
+### Changed (docs — proof inventory sync)
+
+- **`Lean/VERIFY.md`**, **`PROOF-STATUS.md`**, **`README.md`**, **`Docs/OnePager-DoubleSlit.tex`**, **`Docs/GAP_CLOSURE_PLAN.md`**, **`Docs/TODO-TRACKING.md`**, **`Docs/PARALLEL_WORK.md`**, **`Docs/REMAINING_WORK_PLAN.md`**, **`Docs/SORRY_ROADMAP.md`**, **`scripts/generate_spectacular_gif.py`** — **0** `sorry`; **3** `axiom` (Klein + unital DPI + `physicalSecondLaw`); **`vonNeumannEntropy_unitarily_invariant`** **proved**; heuristic counts **457** `theorem` / **33** `lemma` where pasted.
+
+### Changed (docs — Python test count)
+
+- **`README.md`**, **`PROOF-STATUS.md`**, **`Docs/OnePager-DoubleSlit.tex`** — Python **`unittest`** count **54 → 62** (`unittest discover -s sim/tests`).
+
+### Changed (build)
+
+- **`Makefile`** — target **`telemetry-sample`**: `export_sample_telemetry_trace.py --validate`.
+- **`.github/workflows/lean.yml`** — after **`unittest`**, runs **`export_sample_telemetry_trace.py --validate`** (Gap 14 regression).
+- **`CONTRIBUTING.md`**, **`sim/README.md`** — document **`make telemetry-sample`**.
+
+### Added (sim — telemetry golden producer)
+
+- **`sim/export_sample_telemetry_trace.py`** — reference **emitter** for Gap 14: 3-step qubit demo (`|+⟩`, repeat, Lüders diagonal) with `SimLeanBridge` + nested **`emitted`** + **`aggregate`**; `--validate` runs **`telemetry_trace_consumer.py`**. **`sim/tests/test_export_sample_telemetry_trace.py`** — export→consume round-trip.
+
+### Added (docs — remaining work plan)
+
+- **`Docs/REMAINING_WORK_PLAN.md`** — ordered backlog with **Phase 5 explicitly deferred** to stream **D**; points at Gap 14 / A0 / a1 / post–Phase-5 stats refresh. **`TODO-TRACKING.md`**, **`PARALLEL_WORK.md`**, **`README.md`** link it.
+
+### Changed (sim — EmittedStepRecord metadata)
+
+- **`sim/telemetry_trace_consumer.py`** — optional **`thermodynamicAdmissible`** / **`confidence`** checks; nested **`emitted`** object + precedence for MI/cost/metadata; **`sim/tests/test_telemetry_trace_consumer.py`** extended.
+
+### Changed (docs — multi-agent handoff)
+
+- **`Docs/TODO-TRACKING.md`** — **Phase 5** ownership (other agent, stream **D**); **backlog checklist** for A0 full ports, a1 cross-language work, sim/RL **emitting** aggregates; **`EmittedStepRecord`** metadata validated in **`telemetry_trace_consumer.py`** when present.
+- **`Docs/PARALLEL_WORK.md`** — stream **D** → **ACTIVE** for Phase 5 `sorry` closure.
+- **`Docs/EPISTEMIC_RUNTIME_GROUNDING.md`** — **`thermodynamicAdmissible` / `confidence`** documented for Python consumer (flat or nested **`emitted`**).
+
+### Changed (sim — Gap 14 telemetry)
+
+- **`sim/telemetry_trace_consumer.py`** — optional per-step **epistemic** validation: `stepMI`/`trajMI` (nats, `≤ ln 2`), `stepCost`/`effortCost` (joules, `≤ k_B T ln 2`), and **MI–cost consistency** `cost ≈ k_B T · MI`. **Aggregate:** root or nested `aggregate` with `aggregateMI`/`aggregateCost` — **catalog** bounds (`≤ n ln 2`, `≤ n k_B T ln 2`) and, when every step has MI+cost, **fold sum** checks vs totals; partial per-step epistemic + aggregates → failed `EpistemicFold_skipped` gate. Docstring + **`sim/README.md`** + **`EPISTEMIC_RUNTIME_GROUNDING.md`** updated.
+- **`sim/tests/test_telemetry_trace_consumer.py`** — regression tests for aliases, MI bound failure, legacy Sim-only traces, aggregate+fold, and partial-step fold gate.
+
+### Added (docs — p3 epistemic / runtime)
+
+- **`Docs/EPISTEMIC_RUNTIME_GROUNDING.md`** — checklist mapping each **`Epistemic*.lean`** (+ `PrototypeSolverCalibration`) to runtime / sim obligations; links **`SimLeanBridge`**, stream **H**, **Gap 14**. **`TODO-TRACKING.md`**, **`PARALLEL_WORK.md`**, **`README.md`** cross-link it.
+
+### Changed (docs — backlog reconciliation)
+
+- **`Docs/GAP_CLOSURE_PLAN.md`**, **`Docs/TODO-TRACKING.md`**, **`Docs/PARALLEL_WORK.md`** — aligned with **landed** Lean: **`GateCompat`** calibrated scaffold (**Gap 10** partial), **`SchrodingerDynamics`** (**Gap 5** done), **`LindbladDynamics`** + which-path / dephasing (**Gap 12** partial), **`SimLeanBridge`** contract types (**Gap 18** partial); stream **E** claim set to **PARTIAL**.
+- **`Docs/A0_COQ_AGDA_BACKLOG.md`** — new coordination doc for **A0** Coq/Agda parity (port order, `make coq-check` / `make agda-check`).
+- **`README.md`** — documentation table links **`TODO-TRACKING.md`** and **`A0_COQ_AGDA_BACKLOG.md`**.
+
+### Changed (docs — README)
+
+- **`README.md`** — **48** `lakefile` roots (was 42); module tables add **`GeneralDimension`**, **`TensorPartialTrace`**, **`VonNeumannEntropy`**, **`DataProcessingInequality`**, and a **Dynamics & Lean↔sim** section (`SchrodingerDynamics`, `LindbladDynamics`, `SimLeanBridge`).
+
+### Changed (docs — Lean counts)
+
+- **`PROOF-STATUS.md`**, **`README.md`**, **`Lean/VERIFY.md`**, **`Docs/OnePager-DoubleSlit.tex`**, **`scripts/generate_spectacular_gif.py`** — refreshed heuristic declaration counts (**457** `theorem`, **33** `lemma`, **54** files, sum **714** kinds); OnePager / GIF now show **0** `sorry`, **3** `axiom`, and **48** modules.
+- **`Docs/OnePager-DoubleSlit.tex`** — bibliography entry `\bibitem{umst-formal}` no longer claims “59 theorems, 0 sorry”; aligned with double-slit track stats above.
+
+### Added (Lean — unital DPI base case)
+
+- **`DataProcessingInequality.lean`** — **`KrausChannel.identity_isUnital`** (`identity_map`), **`vonNeumannEntropy_identity_apply`**, **`vonNeumannEntropy_nondecreasing_unital_identity`** (Tier 2 without Klein for `KrausChannel.identity`).
+
+### Changed (docs / status)
+
+- **`PROOF-STATUS.md`** — sorry inventory: **0** `sorry`; **3** `axiom` (Klein, unital DPI, physicalSecondLaw); historical DensityState/MeasurementChannel sorries called out separately.
+- **`Lean/VERIFY.md`**, **`Docs/TODO-TRACKING.md`**, **`Docs/GAP_CLOSURE_PLAN.md`**, **`Docs/PARALLEL_WORK.md`** — Phase 5: **0** `sorry`; general unitary **proved** via `charpoly`; Klein/unital DPI → **axiom**; **`Fin 1`/`Fin 2` unitary** + **identity-channel** entropy facts proved.
+
+### Changed (docs — cross-links)
+
+- **`Lean/MeasurementChannel.lean`** module doc — pointer to **`DataProcessingInequality`** for unital / identity-channel entropy lemmas.
+
+### Changed (Lean — DensityState naming)
+
+- **`DensityState.lean`** — underlying record is **`DensityMatCore`**; public **`DensityMatrix`** remains an `abbrev`; lemmas live in **`DensityMat`** (`DensityMat.ext`, `trace_eq_one`, …) to avoid Lean namespace/structure path collisions.
+- **`DensityState.lean`** — section `hn` is **`variable {hn : 0 < n}`** (implicit). Using **`(hn : 0 < n)`** made `hn` the first *explicit* argument of every lemma, breaking calls like `diag_nonneg_complex_n ρ` (type mismatch).
+
+### Added (Lean — von Neumann spectral bookkeeping)
+
+- **`VonNeumannEntropy.lean`** — **`vonNeumannEntropy_congr_eigenvalues`**, **`vonNeumannEntropy_eq_of_eigenvalues_reindex`** (`Fintype.sum_equiv`); documents the remaining glue for **`vonNeumannEntropy_unitarily_invariant`** (build `e : Fin n ≃ Fin n` from similarity / spectrum). Import **`Mathlib.Algebra.BigOperators.Group.Finset`** for `Fintype.sum_equiv`.
+- **`VonNeumannEntropy.lean`** — proved **`charmatrix_unitary_conj`** and **`charpoly_unitary_conj`** (`det_units_conj` on embedded `ℂ → ℂ[X]` coefficients); full unitary entropy invariance still needs linking `charpoly` / spectrum to **ordered** `IsHermitian.eigenvalues`.
+- **`VonNeumannEntropy.lean`** — qubit layer: **`det_eq_of_charpoly_eq`**, **`vonNeumannEntropy_eq_of_det_carrier_eq_two`**, **`vonNeumannEntropy_unitarily_invariant_two`** (`Fin 2`). Imports **`Charpoly.Coeff`**, **`Algebra.BigOperators.Fin`**.
+- **`DensityState.lean`** — **`pureDensity_carrier`**: use **`pureDensity (hn := hn) ψ hψ`** in the LHS so elaboration sees the section `hn` (avoid duplicate `{hn}` binder vs `variable {hn}`).
+- **`VonNeumannEntropy.lean`** — **`densityMatrix_carrier_eq_one`**, **`vonNeumannEntropy_unitarily_invariant_one`** (`Fin 1` trivial sector).
+
+### Added (Lean — Gap 11 / Tier 1b)
+
+- **`DataProcessingInequality.lean`** — full proof of **`vonNeumannDiagonal_ge_vonNeumannEntropy`** (qubit): det bound + `binEntropy_strictAntiOn` on `[1/2,1]`.
+
+### Added (Lean — Phase 3 / composite)
+
+- **`TensorPartialTrace.lean`** — Kronecker / `tensorDensity` on `Fin (na*nb)`; **`partialTraceRight*`** + **`partialTraceLeft*`** (product + flattened indices); **`trace_partialTrace*Prod`** / **`trace_partialTrace*Fin`** (partial trace preserves **`Matrix.trace`**); **`posSemidef_kronecker`**. Root in `lakefile.lean` (after `DensityState`).
+
+### Added (Lean — Phase 2 / general dimension)
+
+- **`GeneralDimension.lean`** — proves **`vonNeumannDiagonal_n_le_log_n`** (Jensen on `negMulLog` + algebraic peel); new root in `lakefile.lean`.
+- **`LandauerBound.lean`** — **`pathEntropyBits_n`**, **`landauerCostDiagonal_n`**, and **`landauerCostDiagonal_n_le_logb_landauerBitEnergy`** (imports `GeneralDimension`; max `logb 2 n` bit-equivalents).
+- **Qubit API alignment:** `vonNeumannDiagonal_n_eq_vonNeumannDiagonal` (`InfoEntropy`); `pathEntropyBits_n_qubit_eq`, `landauerCostDiagonal_n_qubit_eq` (`LandauerBound`).
+
+### Changed (Lean — Phase 1 / PMIC)
+
+- `PMICEntropyInterior.lean` — **closed** the interior bound `4 x (1-x) log 2 ≤ binEntropy x` on `(0,1/2)` (MVT on `entropyBoundK`, strict antitone of `binEntropy / (t(1-t))`). **Zero `sorry`** in PMIC chain.
+- `PMICVisibility.lean` — imports `PMICEntropyInterior`; `visibility_sq_le_coherence_capacity` fully proved.
+- `QRBridge.lean` — ℚ → ℝ `Admissible` lift (`admissible_thermodynamicStateToReal`); root in `lakefile.lean`.
+- `Docs/PHASE1_GAP_CLOSURE.md` — Phase 1 gaps marked **done** for Gaps 1, 13, 17.
 
 ### Added (formal — integrated from upstream framework)
 
@@ -14,6 +174,8 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Added (docs / coordination)
 
+- `Docs/GAP_CLOSURE_PLAN.md` — **6-phase / 19-gap** tracker vs original Lean roadmap: Phase 1 **done** (incl. `PMICEntropyInterior`), Phases 2–6 **TODO/PARTIAL**, parallel “swarm” streams, checklist.
+- `Docs/PARALLEL_WORK.md` — **multi-agent coordination:** stream IDs (A–H), choke points (`lakefile`, README), **active claims** table, merge hints.
 - `Docs/TODO-TRACKING.md` — reconciles milestones vs in-editor todos; **`a1-measurement-cost`** row = **PARTIAL** (Lean + Haskell in tree). **A0 Coq/Agda** described as **tracked**, not “out of scope / cancelled.”
 
 ### Fixed (Python / tests)

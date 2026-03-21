@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Haskell mirror (QuickCheck)
 
 This package **mirrors** selected Lean definitions from the double-slit repository (`DensityState`, `MeasurementChannel`, `DoubleSlit`, **`LandauerExtension`**, **`MonoidalState`**, `MeasurementCost`, `EpistemicGalois`) for **property-based testing** and engineering sanity checks.
@@ -15,6 +20,10 @@ cabal test   # runs `umst-formal-double-slit-test` + `landauer-einstein-sanity`
 Project root is pinned by **`cabal.project`** (`packages: .`). **`cabal.project.freeze`** is committed for reproducible CI (run `cabal freeze` in `Haskell/` after changing `build-depends` in the `.cabal` file, then commit the updated freeze).
 
 GHC / `base` bounds are set in `umst-formal-double-slit.cabal` (currently **GHC 9.14-era** `base`).
+
+## Legacy mirrors
+
+Older root-level copies of `LandauerExtension` / `MeasurementCost` / `MonoidalState` live under **`legacy/`**. They are **not** built; **`src/`** is canonical. (Cabal invokes GHC with `-i` for the package directory, so duplicate module basenames in `Haskell/` used to shadow `src/` and break the build.)
 
 ## Scope
 

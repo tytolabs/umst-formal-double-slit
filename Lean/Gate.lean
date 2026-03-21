@@ -1,4 +1,9 @@
 /-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
+/-
   UMST-Formal: Gate.lean
   Lean 4 — Core Definitions and Gate Theorems (sorry-free)
 

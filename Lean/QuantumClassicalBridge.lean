@@ -1,3 +1,8 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Data.Complex.Abs
 import Mathlib.Data.Complex.Order

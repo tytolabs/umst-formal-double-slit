@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """
 Publication-style complementarity diagram (stdlib only): Englert quarter-disk V²+I²≤1 in the (I, V) plane.
 

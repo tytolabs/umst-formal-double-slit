@@ -23,22 +23,24 @@ name:               umst-formal-double-slit
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
--- synopsis:
+synopsis:           Haskell mirror of the UMST formal double-slit verification stack
 
 -- A longer description of the package.
--- description:
+description:
+    QuickCheck and types mirroring the Lean formalization in the parent repository
+    (Landauer / measurement cost / epistemic bridges). MIT-licensed; see @LICENSE@.
 
--- The license under which the package is released.
-license:            NONE
+-- MIT — duplicate of repository root `LICENSE` (Cabal sdist requires file inside package dir).
+license:            MIT
+license-file:       LICENSE
 
--- The package author(s).
-author:             Santhosh Shyamsundar
+-- The package author(s). Affiliations: Studio TYTO; IAAC Barcelona (MAEBB / MRAC).
+author:             Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy
 
--- An email address to which users can send suggestions, bug reports, and patches.
-maintainer:         santhoshshyamsundar@gmail.com
+-- Contact (same as UMST Research Dashboard contact table / Zenodo creators).
+maintainer:         santhosh@tyto.studio
 
--- A copyright notice.
--- copyright:
+copyright:          2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 build-type:         Simple
 
 -- Extra doc files to be distributed with the package, such as a CHANGELOG or a README.
@@ -93,9 +95,7 @@ executable umst-formal-double-slit
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:
-        base ^>=4.22.0.0,
-        umst-formal-double-slit
+    build-depends:    base ^>=4.22.0.0
 
     -- Directories containing source files.
     hs-source-dirs:   app

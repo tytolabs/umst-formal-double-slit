@@ -1,6 +1,12 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import Complementarity
 import GateCompat
 import LandauerBound
+import TensorPartialTrace
 
 /-!
 # DoubleSlit — full-chain import closure + which-path measurement update
@@ -70,7 +76,7 @@ theorem measurementUpdateWhichPath_landauer_le_landauerBitEnergy (ρ : DensityMa
 theorem interference_preserved_identity (ρ : DensityMatrix hnQubit) :
     fringeVisibility ((KrausChannel.identity 2).apply hnQubit ρ) = fringeVisibility ρ := by
   congr 1
-  exact DensityMatrix.ext (KrausChannel.identity_map 2 ρ.carrier)
+  exact DensityMat.ext (KrausChannel.identity_map 2 ρ.carrier)
 
 /-- Which-path measurement collapses fringe visibility. -/
 theorem collapse_fringe_on_whichPath (ρ : DensityMatrix hnQubit) :

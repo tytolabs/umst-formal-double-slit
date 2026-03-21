@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # umst-formal-double-slit — proof status (Lean)
 
 **Build:** from `Lean/`, run `lake build` (or repo root `make lean`).
@@ -9,16 +14,16 @@
 *(Heuristic line counts from `make lean-stats-md`; portable paths — re-paste after large Lean edits.)*
 
 - **Lean root:** `Lean`
-- **`.lean` files scanned:** 40 (`.lake` excluded)
-- **`abbrev` (line-start heuristic):** 4
-- **`axiom` (line-start heuristic):** 1
-- **`def` (line-start heuristic):** 157
+- **`.lean` files scanned:** 54 (`.lake` excluded)
+- **`abbrev` (line-start heuristic):** 5
+- **`axiom` (line-start heuristic):** 3
+- **`def` (line-start heuristic):** 177
 - **`inductive` (line-start heuristic):** 4
 - **`instance` (line-start heuristic):** 1
-- **`lemma` (line-start heuristic):** 27
-- **`structure` (line-start heuristic):** 24
-- **`theorem` (line-start heuristic):** 360
-- **Sum of above kinds:** 578
+- **`lemma` (line-start heuristic):** 33
+- **`structure` (line-start heuristic):** 29
+- **`theorem` (line-start heuristic):** 457
+- **Sum of above kinds:** 714
 
 ## Track summary
 
@@ -51,26 +56,36 @@
 | Gate scaffold + `Admissible` under which-path (`GateCompat`) | **Proved** |
 | `MeasurementUpdate` for which-path (`DoubleSlit`) | **Proved** (identity preserves interference, which-path collapses fringes, gate-enforcement packaging) |
 | Worked examples (`ExamplesQubit`) | **Proved** (`|+⟩`, `|0⟩`, `|1⟩` with measurement-update corollaries) |
-| Haskell / Python / publication sims | **In repo** (toy + Kraus + SVG + QuTiP + 1D/2D Schrödinger + 54 tests) |
+| Spectral von Neumann entropy + DPI (`VonNeumannEntropy`, `DataProcessingInequality`) | **PARTIAL** — general `Fin n` **unitary invariance** ✓; qubit-tier DPI **proved**; **full unital DPI + Klein** stated as **`axiom`** (Mathlib matrix-log gap). **0 `sorry`.** See `Lean/VERIFY.md`. |
+| Haskell / Python / publication sims | **In repo** (toy + Kraus + SVG + QuTiP + 1D/2D Schrödinger + 62 tests) |
 
 ## Axiom inventory
 
 | Axiom | File | Justification |
 |-------|------|---------------|
-| `physicalSecondLaw` | `LandauerLaw.lean:154` | Second Law of Thermodynamics (physical constitutive law) |
+| `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
+| `klein_inequality` | `DataProcessingInequality.lean` | Klein / quantum relative entropy (placeholder until Mathlib matrix `log` + convexity) |
+| `vonNeumannEntropy_nondecreasing_unital` | `DataProcessingInequality.lean` | Full **unital CPTP** entropy monotonicity (standard proof via Klein; **axiomatized** pending Mathlib) |
 
 ## Sorry inventory
 
-**Zero.** All 10 former `sorry` sites (4 in `DensityState.lean`, 6 in `MeasurementChannel.lean`) are now fully proved.
+**0 `sorry`** across all `Lean/**/*.lean` (heuristic: line-start `sorry`).
+
+| File | Topic |
+|------|--------|
+| `VonNeumannEntropy.lean` | **Proved** — `vonNeumannEntropy_unitarily_invariant` (`Fin n`), `charpoly` lemmas. |
+| `DataProcessingInequality.lean` | **Proved** special cases (identity, which-path qubit, diagonal ≥ spectral); **general unital DPI** via **`axiom`** above. |
+
+**Resolved (historical):** all 10 former `sorry` sites in `DensityState.lean` (4) and `MeasurementChannel.lean` (6) are fully proved.
 
 ## Cross-language status
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | 38 modules, 578 declarations | **0 sorry, 1 axiom** |
+| Lean 4 | 48 `lakefile` roots; **457** `theorem` + **33** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **3 axiom** (2 quantum-info + physical 2nd law) |
 | Haskell | 7 exposed modules, 14 QC + sanity suite | **All pass** |
-| Python | 54 unit tests, 4 sim scripts | **All pass** |
+| Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | `LandauerEinsteinBridge.v` | **0 Admitted** |
 | Agda | `LandauerEinsteinTrace.agda` (stub) | **Clean** |
 
-Last updated: 2026-03-21 — eliminated all sorry (DensityState + MeasurementChannel), added Principle of Maximal Information Collapse theorems, refreshed stats (40 files / 578 decls / 360 theorems).
+Last updated: 2026-03-22 — `make lean-stats-md`: 54 files, **457** `theorem`, 33 `lemma`, **3** `axiom`, sum **714**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`.

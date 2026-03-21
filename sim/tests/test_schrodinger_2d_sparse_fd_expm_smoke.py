@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """Sparse vs dense expm for 2D FD + slit H (needs SciPy)."""
 
 import importlib.util

@@ -1,3 +1,6 @@
+-- SPDX-License-Identifier: MIT
+-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 -- |
 -- Module      : SDFGate
 -- Description : SDF / FRep interpretation of the UMST thermodynamic gate

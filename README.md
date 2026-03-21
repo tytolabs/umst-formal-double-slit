@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 <div align="center">
 
 # The Thermodynamic Cost of Knowing
@@ -8,7 +13,7 @@
 [![Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;Zero sorry&ensp;·&ensp;360 theorems&ensp;·&ensp;1 physical axiom**
+**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**3** axioms (Klein, unital DPI, physical 2nd law — `Lean/VERIFY.md`)&ensp;·&ensp;**457** theorems + **33** lemmas (heuristic scan — `PROOF-STATUS.md`)**
 
 _Observation is not yes-or-no. Extracting a fraction of a bit of which-path information_
 _causes a proportional destruction of interference — and each fraction carries an exact Landauer cost._
@@ -31,9 +36,9 @@ _causes a proportional destruction of interference — and each fraction carries
 
 | | |
 |:---:|:---:|
-| **38** Lean modules | **360** machine-checked theorems |
-| **0** sorry | **1** physical axiom (Landauer) |
-| **54** Python unit tests | **14** Haskell QuickCheck properties |
+| **48** Lean modules | **457** `theorem` + **33** `lemma` (line-start scan) |
+| **0** sorry, **3** axioms (Klein, unital DPI, physical 2nd law) | All qubit-level theorems proved |
+| **62** Python unit tests | **14** Haskell QuickCheck properties |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
 
 </div>
@@ -41,6 +46,17 @@ _causes a proportional destruction of interference — and each fraction carries
 ---
 
 ## Core Result
+
+### In plain language
+
+**Learning “which way the particle went” is not a light switch — it’s a dimmer.**  
+The more path information you pull out of the system, the less room is left for interference. You can take a *little* information and keep *most* of the pattern, or push toward a full bit and wipe the fringes out. That trade-off is **continuous**: every extra scrap of which-path knowledge has a **thermodynamic price tag** tied to Landauer’s scale (roughly: one bit of information at temperature *T* costs on the order of *k_B T ln 2* in energy). So **observation is a physical transaction**, not a free label you attach after the fact.
+
+**Why care outside quantum optics?** Any field where agents **measure, decide, or extract information** about a physical process hits the same shape of problem: sensing, control, secure inference, materials and process gates, and energy-aware computing all need honest accounting of **what was learned** versus **what was spent or destroyed** (coherence, reversibility, dissipation). This repo makes a slice of that accounting **machine-checked**, so the “weight” of the principle is not metaphor — it’s tied to proved inequalities plus **explicit axioms** where Mathlib is still catching up (see `Lean/VERIFY.md`).
+
+---
+
+### Formal statement
 
 > **Principle of Maximal Information Collapse.**&ensp;When an observer extracts which-path information from a quantum system, the residual coherence capacity is:
 >
@@ -52,7 +68,7 @@ _causes a proportional destruction of interference — and each fraction carries
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **360 theorems, 0 sorry, 1 physical axiom.**_
+> _Machine-checked in Lean 4 with Mathlib. **457 theorems + 33 lemmas (heuristic); 0 sorry; 3 axioms (Klein, unital DPI, physical 2nd law).**_
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -74,7 +90,7 @@ theorem null_extraction_preserves_coherence (ρ : DensityMatrix hnQubit)
   unfold residualCoherenceCapacity; linarith
 ```
 
-→ [`Lean/LandauerBound.lean`](Lean/LandauerBound.lean) · [All 360 theorems](Lean/VERIFY.md)
+→ [`Lean/LandauerBound.lean`](Lean/LandauerBound.lean) · [Proof / module map](Lean/VERIFY.md) · [`PROOF-STATUS.md`](PROOF-STATUS.md) (counts)
 
 </details>
 
@@ -99,6 +115,8 @@ A formally verified bridge from quantum measurement theory to classical thermody
 | 11 | **Erasure ≥ bound** | dissipatedHeat ≥ landauerCostDiagonal | `LandauerBound` |
 | 12 | **Which-path invariance** | Landauer cost unchanged by measurement | `LandauerBound` |
 | 13 | **Gate enforcement** | admissibility + Landauer + cap in one | `DoubleSlit` |
+| 14 | **PMIC visibility** | `V² + residualCoherenceCapacity ≤ 1` | `PMICVisibility` + `PMICEntropyInterior` |
+| 15 | **ℚ → ℝ gate lift** | `Admissible` preserved under cast | `QRBridge` |
 
 ---
 
@@ -145,8 +163,8 @@ flowchart TB
 
 ---
 
-## Lean modules (38 roots, `lake build` — zero sorry)
-*(Note: The 360 theorem/lemma count includes ~45 substantive physical theorems and over 300 structural/interface `simp` and generic verification lemmas).*
+## Lean modules (48 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
+*(Counts: `make lean-stats-md` → **457** line-start `theorem`, **33** `lemma`, **3** `axiom` in 54 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>
@@ -158,7 +176,24 @@ flowchart TB
 | `QuantumClassicalBridge` | `complementarity_fringe_path` (V² + I² ≤ 1), `observationStateCanonical` |
 | `InfoEntropy` | `shannonBinary = Real.binEntropy`, `vonNeumannDiagonal ≤ log 2` |
 | `LandauerBound` | `pathEntropyBits ≤ 1`, `principle_of_maximal_information_collapse`, `ErasureProcess` |
+| `PMICEntropyInterior` | `four_mul_x_one_sub_x_mul_log_two_interior` — binary entropy ≥ `4x(1-x) log 2` on `(0,1/2)` (MVT + ratio monotonicity) |
+| `PMICVisibility` | `visibility_sq_le_coherence_capacity` — `V² + residualCoherenceCapacity ≤ 1` |
 | `DoubleSlit` | `measurementUpdateWhichPath`, gate enforcement, Landauer cap |
+| `GeneralDimension` | `vonNeumannDiagonal_n_le_log_n` (diagonal entropy ≤ `log n`) |
+| `TensorPartialTrace` | `tensorDensity`, partial traces, Kronecker PSD lemmas |
+| `VonNeumannEntropy` | Spectral `S(ρ)`; `Fin 1`/`Fin 2`/general `Fin n` unitary invariance **proved**; `charpoly` conjugation (`Lean/VERIFY.md`) |
+| `DataProcessingInequality` | Qubit diagonal ≥ spectral; identity-channel unital base; general unital DPI **axiom** (`Lean/VERIFY.md`) |
+
+</details>
+
+<details>
+<summary><strong>Dynamics & Lean↔sim contracts</strong> — unitary Kraus, Lindblad dephasing, numeric witness shapes</summary>
+
+| Module | Role |
+|--------|------|
+| `SchrodingerDynamics` | Unitary `U` as single-Kraus channel; `UρUᴴ` preserves `DensityMatrix` |
+| `LindbladDynamics` | Lindblad dissipator; which-path as strong dephasing limit |
+| `SimLeanBridge` | Propositional contracts (`SimDensityContract`, complementarity/Landauer witnesses) for `sim/` outputs |
 
 </details>
 
@@ -205,6 +240,7 @@ flowchart TB
 | `UMSTCore` | ℝ SI constants, Landauer bit energy, `ThermodynamicState`, `Admissible` |
 | `DoubleSlitCore` | Coarse `MeasurementUpdate` skeleton |
 | `GateCompat` | Born weights → `ThermodynamicState` scaffold |
+| `QRBridge` | ℚ `Gate.ThermodynamicState` → ℝ `UMSTCore.ThermodynamicState`; `admissible_thermodynamicStateToReal` |
 | `Complementarity` | Discoverability shims |
 | `Gate`, `Naturality`, `Activation`, `FiberedActivation`, `MonoidalState` | Upstream ℚ core (vendored) |
 | `LandauerLaw`, `LandauerExtension`, `LandauerEinsteinBridge` | Upstream Landauer stack (vendored) |
@@ -215,15 +251,15 @@ flowchart TB
 
 ## Cross-Language Verification
 
-Every claim is checked in at least two languages. Zero gaps across the entire stack.
+Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadratic bound is closed in `Lean/PMICEntropyInterior.lean` (see `Docs/PHASE1_GAP_CLOSURE.md`).
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 38 modules, 360 theorems | **0 sorry** | `cd Lean && lake build` |
+| **Lean 4** | 48 modules, 457 thm + 33 lem (heuristic) | **0** sorry, **3** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
 | **Haskell** | 7 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
-| **Python** | 54 unit tests, 4 sim scripts | **All pass** | `make sim && make sim-test` |
-| **Coq** | `LandauerEinsteinBridge.v` | **0 Admitted** | `make coq-check` |
-| **Agda** | `LandauerEinsteinTrace.agda` + `InfoTheory.agda` | **0 gaps** | `make agda-check` |
+| **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
+| **Coq** | 8 modules incl. `DensityStateSpec`, `ComplementaritySpec`, `VonNeumannEntropySpec` | **1 Admitted** (entropy concavity) | `make coq-check` |
+| **Agda** | 9 modules incl. `DensityStateSpec`, `ComplementaritySpec`, `VonNeumannEntropySpec` | postulated (authority: Lean) | `make agda-check` |
 
 ---
 
@@ -234,8 +270,9 @@ Every claim is checked in at least two languages. Zero gaps across the entire st
 make ci-full
 
 # Individual layers
-cd Lean && lake build          # Lean 4 — 360 theorems, zero sorry
-make sim && make sim-test      # Python — 54 unit tests
+cd Lean && lake build          # Lean 4 — counts: PROOF-STATUS.md / make lean-stats-md
+make sim && make sim-test      # Python — 87 unit tests
+make telemetry-sample          # Gap 14 — golden JSON + consumer (NumPy)
 cd Haskell && cabal test       # Haskell — 14 QuickCheck properties
 make coq-check                 # Coq (optional, needs coqc)
 make agda-check                # Agda (optional, needs agda)
@@ -265,13 +302,28 @@ Measurement is fundamentally an irreversible thermodynamic transaction.
 
 ## Connection to the UMST Programme
 
-This repository is part of the **Foundations of Constitutional Physics (FCP)** series by [Studio TYTO](https://tyto.studio):
+This repository is part of the **Foundations of Constitutional Physics (FCP)** series by [Studio TYTO](https://tyto.studio). For a **single curated overview** (figures, roadmap, and pointers), use the **research dashboard** on Zenodo — it is updated as the programme grows:
 
-| Study | Title | Status |
+| Resource | What it is | Link |
+|:---------|------------|:-----|
+| **Research dashboard** | Curated PDF overview of the UMST / FCP thread | [**DOI 10.5281/zenodo.18940933**](https://doi.org/10.5281/zenodo.18940933) · [record](https://zenodo.org/records/18940933) |
+| **Zenodo community** | Aggregated deposits (papers, data, compendia) | [**Unified Material State Tensors** community](https://zenodo.org/communities/unified-material-state-tensors/records) |
+
+**FCP studies** (peer-facing preprints / compendia):
+
+| Study | Title | Zenodo |
 |:-----:|-------|:------:|
-| FCP-I | Physics-Gated AI — UMST tensor + DUMSTO hard gate | [Zenodo](https://zenodo.org/records/18768547) |
-| FCP-II | Epistemic Sensing — MI-guided proxy selection | [Zenodo](https://zenodo.org/records/18894710) |
-| **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | **This repo** |
+| FCP-I | Physics-Gated AI — UMST tensor + DUMSTO hard gate | [record](https://zenodo.org/records/18768547) |
+| FCP-II | Epistemic Sensing — MI-guided proxy selection | [record](https://zenodo.org/records/18894710) |
+| **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | **This repo** (cite via your release DOI when you mint one) |
+
+**Related code** ([`github.com/tytolabs`](https://github.com/tytolabs)):
+
+| Repository | Role |
+|------------|------|
+| [`umst-formal`](https://github.com/tytolabs/umst-formal) | Classical UMST gate, Landauer stack, Lean + Coq + Agda + Haskell (wider formal base) |
+| **`umst-formal-double-slit`** (here) | Quantum measurement layer: density matrices, Kraus channels, Englert complementarity, Landauer–path-entropy bridge |
+| [`umst-prototype-2a`](https://github.com/tytolabs/umst-prototype-2a) | Prototype / epistemic-sensing demo stack (e.g. web-style UI, ROS2 bridge — see that repo’s README) |
 
 The key bridge: the UMST gate enforces thermodynamic admissibility on _classical_ material states (mass, energy, hydration over ℚ). This work extends that gate to _quantum_ density matrices, proving that Englert complementarity + Landauer erasure are the quantum analogues of Clausius-Duhem + Helmholtz free energy.
 
@@ -283,10 +335,17 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 |----------|------|
 | Technical note (3-page LaTeX) | [`Docs/OnePager-DoubleSlit.tex`](Docs/OnePager-DoubleSlit.tex) |
 | Proof status & declaration counts | [`PROOF-STATUS.md`](PROOF-STATUS.md) |
+| Phase 1 gap closure (Lean) | [`Docs/PHASE1_GAP_CLOSURE.md`](Docs/PHASE1_GAP_CLOSURE.md) |
+| **6-phase gap plan (status tracker)** | [`Docs/GAP_CLOSURE_PLAN.md`](Docs/GAP_CLOSURE_PLAN.md) |
+| Milestones & open next steps | [`Docs/TODO-TRACKING.md`](Docs/TODO-TRACKING.md) |
+| **Remaining work (Phase 5 deferred)** | [`Docs/REMAINING_WORK_PLAN.md`](Docs/REMAINING_WORK_PLAN.md) |
+| Coq / Agda parity backlog (A0) | [`Docs/A0_COQ_AGDA_BACKLOG.md`](Docs/A0_COQ_AGDA_BACKLOG.md) |
+| **Parallel work (multi-agent)** | [`Docs/PARALLEL_WORK.md`](Docs/PARALLEL_WORK.md) |
 | Module map & theorem names | [`Lean/VERIFY.md`](Lean/VERIFY.md) |
 | Mathematical foundations | [`Docs/Mathematical-Foundations.md`](Docs/Mathematical-Foundations.md) |
 | Assumptions & non-claims | [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md) |
 | Epistemic sensing note | [`Docs/EpistemicSensingQuantum.md`](Docs/EpistemicSensingQuantum.md) |
+| **Epistemic ↔ runtime grounding (p3)** | [`Docs/EPISTEMIC_RUNTIME_GROUNDING.md`](Docs/EPISTEMIC_RUNTIME_GROUNDING.md) |
 | Simulator details | [`sim/README.md`](sim/README.md) |
 | Haskell mirror | [`Haskell/README.md`](Haskell/README.md) |
 | Contributing | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
@@ -296,10 +355,9 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 ## Authors
 
-**Santhosh Shyamsundar** · [santhosh@tyto.studio](mailto:santhosh@tyto.studio)
-**Santosh Prabhu Shenbagamoorthy** · [santosh@tyto.studio](mailto:santosh@tyto.studio)
+**Santhosh Shyamsundar** — Studio TYTO; IAAC Barcelona (MAEBB) · [santhoshshyamsundar@studio.tyto](mailto:santhoshshyamsundar@studio.tyto)
 
-[Studio TYTO](https://tyto.studio)
+**Santosh Prabhu Shenbagamoorthy** — Studio TYTO; IAAC Barcelona (MRAC) · [santosh@studio.tyto](mailto:santosh@studio.tyto)
 
 ---
 

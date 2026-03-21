@@ -1,3 +1,8 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import Mathlib.Data.Complex.Basic
 import Mathlib.Algebra.BigOperators.Ring
 import Mathlib.Algebra.BigOperators.Fin
@@ -28,6 +33,9 @@ measurement channel on the path degree of freedom. **`whichPath_map_eq_diagonal`
 
 **Composition:** `KrausChannel.compose κ₁ κ₂` (indices `(i,j)`, operators `K₂ⱼ K₁ᵢ`) satisfies **`compose_map`**:
 `map` agrees with applying `κ₁` then `κ₂`. Corollary **`apply_compose`** for `DensityMatrix.apply`.
+
+**Unital / entropy (Tier 2 base case):** `KrausChannel.IsUnital` and von Neumann entropy under the identity
+channel are in **`DataProcessingInequality.lean`** (`identity_isUnital`, `vonNeumannEntropy_identity_apply`).
 
 This module does **not** yet import `DoubleSlitCore` (classical `I`/`V` interface stays separate).
 -/
@@ -147,7 +155,7 @@ variable {ι₁ ι₂ : Type*} [Fintype ι₁] [DecidableEq ι₁] [Fintype ι�
 
 Trace preservation follows from `∑ⱼ K₂ⱼᴴ K₂ⱼ = 1` and `∑ᵢ K₁ᵢᴴ K₁ᵢ = 1` by reassociating the
 double sum (same algebra as multiplying Stinespring isometries). -/
-noncomputable def KrausChannel.compose (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂) :
+noncomputable def compose (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂) :
     KrausChannel n (ι₁ × ι₂) where
   K := fun p => κ₂.K p.2 * κ₁.K p.1
   tp := by
@@ -173,7 +181,7 @@ theorem compose_map (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂
     (ρ : Matrix (Fin n) (Fin n) ℂ) :
     (κ₂.compose κ₁).map ρ = κ₂.map (κ₁.map ρ) := by
   classical
-  dsimp [KrausChannel.map, KrausChannel.compose]
+  dsimp [KrausChannel.map, compose]
   rw [Fintype.sum_prod_type']
   simp_rw [Matrix.conjTranspose_mul, ← mul_assoc]
   dsimp [KrausChannel.map]
@@ -186,8 +194,8 @@ theorem compose_map (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂
 theorem apply_compose (hn : 0 < n) (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂)
     (ρ : DensityMatrix hn) :
     (κ₂.compose κ₁).apply hn ρ = κ₂.apply hn (κ₁.apply hn ρ) := by
-  refine DensityMatrix.ext ?_
-  simp only [KrausChannel.apply, compose_map]
+  refine DensityMat.ext ?_
+  simp only [apply, compose_map]
 
 end Composition
 
@@ -202,32 +210,29 @@ noncomputable def pathProjector (i : Fin 2) : Matrix (Fin 2) (Fin 2) ℂ :=
 theorem pathProjector_conjTranspose (i : Fin 2) :
     (pathProjector i)ᴴ = pathProjector i := by
   ext a b
-  simp [pathProjector, diagonal, conjTranspose_apply, Pi.single, Function.update, star]
-  split_ifs <;> simp [Complex.conj_ofReal]
+  fin_cases a <;> fin_cases b <;> fin_cases i <;>
+    simp [pathProjector, diagonal, conjTranspose_apply, Pi.single, Function.update, star]
 
 theorem pathProjector_mul_self (i : Fin 2) : pathProjector i * pathProjector i = pathProjector i := by
   ext a b
-  simp only [pathProjector, Matrix.mul_apply, diagonal_apply, Finset.sum_ite_eq', Finset.mem_univ,
-    if_true, Pi.single]
-  split_ifs <;> simp_all [Function.update]
+  fin_cases a <;> fin_cases b <;> fin_cases i <;>
+    simp [pathProjector, Matrix.mul_apply, diagonal_apply, Pi.single, Function.update, Fin.sum_univ_two]
 
 theorem pathProjector_mul_orthogonal {i j : Fin 2} (hij : i ≠ j) :
     pathProjector i * pathProjector j = 0 := by
   ext a b
-  simp only [pathProjector, Matrix.mul_apply, diagonal_apply, Matrix.zero_apply,
-    Finset.sum_ite_eq', Finset.mem_univ, if_true, Pi.single]
-  split_ifs with ha hb
-  · subst ha; simp [Function.update, hij]
-  all_goals simp_all [Function.update]
+  fin_cases a <;> fin_cases b <;> fin_cases i <;> fin_cases j <;>
+    first | exact absurd rfl hij
+          | simp [pathProjector, Matrix.mul_apply, diagonal_apply, Matrix.zero_apply,
+                  Pi.single, Function.update, Fin.sum_univ_two]
 
 theorem pathProjector_tp_aux :
     (∑ i : Fin 2, (pathProjector i)ᴴ * pathProjector i) = 1 := by
   simp only [pathProjector_conjTranspose]
   ext a b
   simp only [Fin.sum_univ_two, Matrix.add_apply, Matrix.one_apply]
-  simp only [pathProjector, diagonal, Pi.single, Function.update, Matrix.mul_apply,
-    Finset.sum_ite_eq', Finset.mem_univ, if_true]
-  fin_cases a <;> fin_cases b <;> simp
+  fin_cases a <;> fin_cases b <;>
+    simp [pathProjector, diagonal, Pi.single, Function.update, Matrix.mul_apply, Fin.sum_univ_two]
 
 /-- Lüders measurement in the computational basis of a 2-level path system. -/
 noncomputable def whichPathChannel : KrausChannel 2 (Fin 2) where
@@ -238,22 +243,21 @@ noncomputable def whichPathChannel : KrausChannel 2 (Fin 2) where
 elements. -/
 theorem pathProjector_conj_mul_entry (i a b : Fin 2) (ρ : Matrix (Fin 2) (Fin 2) ℂ) :
     (pathProjector i * ρ * pathProjector i) a b = if a = i ∧ b = i then ρ i i else 0 := by
-  simp only [pathProjector, Matrix.mul_apply, diagonal_apply, Pi.single, Function.update]
-  fin_cases i <;> fin_cases a <;> fin_cases b <;> simp [Finset.sum_ite_eq', Finset.mem_univ]
+  fin_cases i <;> fin_cases a <;> fin_cases b <;>
+    simp [pathProjector, Matrix.mul_apply, diagonal_apply, Pi.single, Function.update, Fin.sum_univ_two]
 
 /-- Path measurement **dephases** to the diagonal: off-diagonal entries vanish, diagonal is unchanged. -/
 theorem whichPath_map_eq_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) :
     whichPathChannel.map ρ = diagonal (fun i : Fin 2 => ρ i i) := by
   ext a b
   simp only [KrausChannel.map, whichPathChannel, Fin.sum_univ_two, Matrix.add_apply,
-    diagonal_apply]
+    diagonal_apply, pathProjector_conjTranspose]
   rw [pathProjector_conj_mul_entry 0, pathProjector_conj_mul_entry 1]
   fin_cases a <;> fin_cases b <;> simp
 
 theorem whichPath_map_apply_entry (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) :
     whichPathChannel.map ρ a b = if a = b then ρ a a else 0 := by
   rw [whichPath_map_eq_diagonal, diagonal_apply]
-  split_ifs with h <;> simp [h]
 
 end WhichPathQubit
 

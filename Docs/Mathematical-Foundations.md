@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Mathematical Foundations: The Thermodynamic Cost of Knowing
 
 ### Observation as Irreversible Payment

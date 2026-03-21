@@ -1,5 +1,5 @@
 # umst-formal-double-slit — local verification
-.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test haskell-test coq-check agda-check ci-local ci-full
+.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test telemetry-sample haskell-test coq-check agda-check ci-local ci-full
 
 lean:
 	cd Lean && lake build
@@ -23,6 +23,10 @@ sim:
 sim-test:
 	python3 -m unittest discover -s sim/tests -p "test_*.py"
 
+# Gap 14: golden Lean-aligned telemetry JSON + run consumer (requires NumPy).
+telemetry-sample:
+	python3 sim/export_sample_telemetry_trace.py --validate
+
 # Optional: QuickCheck mirror (requires GHC/cabal). See Haskell/README.md.
 haskell-test:
 	cd Haskell && cabal test
@@ -30,9 +34,15 @@ haskell-test:
 # Optional: integrated Coq/Agda from upstream framework (requires coqc / agda on PATH).
 coq-check:
 	cd Coq && coqc -Q . UMSTFormal LandauerEinsteinBridge.v
+	cd Coq && coqc -Q . UMSTFormal DensityStateSpec.v
+	cd Coq && coqc -Q . UMSTFormal ComplementaritySpec.v
+	cd Coq && coqc -Q . UMSTFormal VonNeumannEntropySpec.v
 
 agda-check:
 	cd Agda && agda -v0 LandauerEinsteinTrace.agda
+	cd Agda && agda -v0 DensityStateSpec.agda
+	cd Agda && agda -v0 ComplementaritySpec.agda
+	cd Agda && agda -v0 VonNeumannEntropySpec.agda
 
 # CI: after `lake build`, `.github/workflows/lean.yml` runs `pip install -r sim/requirements-optional.txt`,
 # then the same commands as `make sim` plus `unittest` (same as `make sim-test`).

@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """Generate a spectacular double-slit interference collapse GIF + teaser image.
 
 Usage:
@@ -258,7 +261,7 @@ def generate_teaser(out_dir):
 
     # Stats bar
     stats_y = 0.12
-    stats = "360 theorems  |  0 sorry  |  1 axiom  |  38 modules"
+    stats = "457 thm + 33 lem  |  0 sorry  |  3 axiom  |  48 modules"
     ax2.text(0.5, stats_y, stats, ha='center', va='top', color='#666',
             fontsize=10, transform=ax2.transAxes, fontfamily='monospace')
 

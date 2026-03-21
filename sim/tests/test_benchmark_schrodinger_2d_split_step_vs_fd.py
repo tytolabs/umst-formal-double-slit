@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """Smoke test for benchmark_schrodinger_2d_split_step_vs_fd (needs SciPy)."""
 
 import importlib.util

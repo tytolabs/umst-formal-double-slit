@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Double-slit Lean track — verification
 
 From `umst-formal-double-slit/Lean/`:
@@ -8,22 +13,29 @@ lake build
 
 Expected: **success** (all roots in `lakefile.lean`).
 
-**Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.
+**Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.  
+**Roadmap:** `../Docs/GAP_CLOSURE_PLAN.md` (6 phases, gaps 1–19, parallel streams).  
+**Multi-agent:** `../Docs/PARALLEL_WORK.md` (claims, choke points, stream IDs).  
+**Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **3 axioms** in project: `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital` (DPI), `physicalSecondLaw` (Landauer). See `../Docs/GAP_CLOSURE_PLAN.md` Phase 5 and `../Docs/SORRY_ROADMAP.md`.
 
 **CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`).  
-**Stats (heuristic):** from repo root, `make lean-stats` → `scripts/lean_decl_stats.py`.
+**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **457** `theorem`, **33** `lemma`, **3** `axiom`, **54** `.lean` files (line-start scan, not a full parser).
 
 ## Module map (high level)
 
 | Module | Role |
 |--------|------|
 | `UMSTCore` | ℝ Landauer scale + `Admissible` shape |
-| `DensityState` | `DensityMatrix`, `pureDensity`, `DensityMatrix.ext` |
+| `DensityState` | `DensityMatrix` (= `DensityMatCore`), `pureDensity`, `DensityMat.ext` |
+| `TensorPartialTrace` | `tensorDensity`, `partialTraceRight*` / `partialTraceLeft*` (product + `Fin (na*nb)`), `trace_partialTrace*Prod` / `trace_partialTrace*Fin`, `posSemidef_kronecker` |
 | `MeasurementChannel` | `KrausChannel`, `map` / `apply`, `compose`, `whichPathChannel`, Lüders diagonal |
 | `DoubleSlitCore` | `ObservationState`, `ObservationState.ext`, complementarity interface |
 | `QuantumClassicalBridge` | `pathWeight`, `whichPathDistinguishability`, `fringeVisibility`, `complementarity_fringe_path`, `observationStateCanonical`, `observationStateOf` |
-| `InfoEntropy` | `shannonBinary`, `vonNeumannDiagonal`, `vonNeumannDiagonal_whichPath_apply` |
-| `LandauerBound` | `pathEntropyBits`, `landauerCostDiagonal`, `landauerCostDiagonal_whichPathInvariant` |
+| `InfoEntropy` | `shannonBinary`, `vonNeumannDiagonal`, `vonNeumannDiagonal_n`, `vonNeumannDiagonal_whichPath_apply` |
+| `GeneralDimension` | `vonNeumannDiagonal_n_le_log_n` (diagonal entropy ≤ `log n`, nats) |
+| `VonNeumannEntropy` | `vonNeumannEntropy` (spectral `negMulLog` sum); **`vonNeumannEntropy_congr_eigenvalues`**, **`vonNeumannEntropy_eq_of_eigenvalues_reindex`**; **`charmatrix_unitary_conj`**, **`charpoly_unitary_conj`**; **`vonNeumannEntropy_unitarily_invariant_one`** / **`_two`**; general **`vonNeumannEntropy_unitarily_invariant`** (`Fin n`) **proved** |
+| `DataProcessingInequality` | `vonNeumannDiagonal_ge_vonNeumannEntropy` (qubit Schur); `KrausChannel.IsUnital`; `whichPath_increases_entropy`; identity-channel DPI proved; general unital DPI + Klein as **axiom** |
+| `LandauerBound` | `pathEntropyBits`, `landauerCostDiagonal`, `landauerCostDiagonal_whichPathInvariant`; general `n`: `pathEntropyBits_n`, `landauerCostDiagonal_n_le_logb_landauerBitEnergy` |
 | `EpistemicSensing` | `QuantumProbe`, `nullProbe`/`whichPathProbe`, `ProbeStrength`, `IsMaxMIProbeAt`, finite-family argmax, collapse/preserve theorems, Landauer-from-strength bounds |
 | `EpistemicMI` | `PathProbe`, `EpistemicMI`, `epistemicMIBits`, `epistemicLandauerCost` links to `landauerCostDiagonal` |
 | `EpistemicDynamics` | `stepProbe`, `rollout`, `nullPolicy`/`whichPathPolicy` invariants |
@@ -40,8 +52,14 @@ Expected: **success** (all roots in `lakefile.lean`).
 | `EpistemicTelemetrySolverCalibration` | explicit solver-parameter-to-epsilon calibration layer and utility-bound transfer assumptions |
 | `EpistemicTraceDrivenCalibrationWitness` | witness object pairing telemetry traces with calibration assumptions and direct utility-bound transfer |
 | `PrototypeSolverCalibration` | concrete calibration constants and explicit epsilon/utility-bound corollaries |
+| `SchrodingerDynamics` | `unitaryChannel` (unitary as single-Kraus), PSD/trace preservation, `unitaryChannel_apply` / `DensityMatrix` closure |
+| `LindbladDynamics` | `dissipator`, `lindbladGenerator`, qubit dephasing, `whichPath_eq_rho_plus_dissipator` |
+| `SimLeanBridge` | `SimDensityContract`, `SimPathProjectionContract`, `SimComplementarityWitness`, `SimLandauerWitness` (trust-boundary contracts) |
 | `GateCompat` | `thermoFromQubitPath`, `admissible_thermoFromQubitPath_whichPath` |
+| `QRBridge` | `thermodynamicStateToReal`, `admissible_thermodynamicStateToReal` (ℚ → ℝ `Admissible`) |
 | `Complementarity` | `complementarityEnglert`, `observationCanonical_complementary` (shim over bridge) |
+| `PMICEntropyInterior` | `four_mul_x_one_sub_x_mul_log_two_interior`, `entropyBoundK_pos`, `quad_log_lt_of_lt_half` (PMIC entropy–quadratic, no `sorry`) |
+| `PMICVisibility` | `visibility_sq_le_coherence_capacity`, `four_mul_x_one_sub_x_mul_log_two_le_binEntropy`, `quadratic_le_entropy_bits` |
 | `DoubleSlit` | Full-chain imports + **`measurementUpdateWhichPath`** (`MeasurementUpdate` for Lüders which-path) |
 | `ProbeOptimization` | `ProbeUtility`, finite argmax (`exists_optimalProbeIndexAt`), admissibility-constrained optimization |
 | `ExamplesQubit` | **`rhoPlus`**, **`rhoZero`**, **`rhoOne`**; epistemic/optimization + Landauer corollaries |
@@ -65,11 +83,15 @@ Expected: **success** (all roots in `lakefile.lean`).
 - **Channel algebra:** `KrausChannel.compose_map`, `KrausChannel.apply_compose`
 - **PSD / coherence bound:** `normSq_coherence_le_product`
 - **Englert complementarity:** `complementarity_fringe_path`, `Complementarity.complementarityEnglert`
+- **PMIC / thermodynamic visibility:** `visibility_sq_le_coherence_capacity`, `four_mul_x_one_sub_x_mul_log_two_le_binEntropy`, `PMICEntropyInterior.four_mul_x_one_sub_x_mul_log_two_interior`
+- **ℚ → ℝ gate:** `admissible_thermodynamicStateToReal`
 - **Canonical observation state:** `observationStateCanonical`, `observationStateCanonical_complementary`
 - **Fringe kill under which-path:** `fringeVisibility_whichPath_apply`
 - **Classical packaging (external `V`):** `observationStateOf_complementary`, `observationStateOf_fringe_complementary`
 - **Entropy (binary):** `vonNeumannDiagonal_nonneg`, `vonNeumannDiagonal_le_log_two`, `vonNeumannDiagonal_whichPath_apply`, `shannonBinary_symm`, `shannonBinary_eq_binEntropy`, `shannonBinary_le_log_two`
+- **Entropy (general diagonal):** `vonNeumannDiagonal_n_nonneg`, `vonNeumannDiagonal_n_le_log_n`, `vonNeumannDiagonal_n_eq_vonNeumannDiagonal`
 - **Landauer scale (diagonal entropy):** `landauerCostDiagonal_nonneg`, `pathEntropyBits_le_one`, `landauerCostDiagonal_le_landauerBitEnergy`, `landauerCostDiagonal_whichPathInvariant`
+- **Landauer scale (general diagonal / `Fin n`):** `pathEntropyBits_n_nonneg`, `pathEntropyBits_n_le_logb_two`, `landauerCostDiagonal_n_nonneg`, `landauerCostDiagonal_n_le_logb_landauerBitEnergy`, `pathEntropyBits_n_qubit_eq`, `landauerCostDiagonal_n_qubit_eq`
 - **T_LandauerLaw (integrated):** `landauerBound`, `landauerBound_nBit`, `binaryErasureEntropyDrop`, `physicalSecondLaw_uniform_binary`
 - **Landauer–Einstein bridge (integrated):** `massEquivalent_pos`, tight numeric mass bracket theorems at 300 K (see module)
 - **Monoidal state (integrated):** `combine_one`, `combine_zero`, `combine_density_between`, `combine_freeEnergy_le`
@@ -92,13 +114,17 @@ Expected: **success** (all roots in `lakefile.lean`).
 - **Epistemic trace-driven calibration witness:** `TraceCalibrationWitnessAt`, `traceCalibrationWitnessAt_utility_diff_le`, `traceCalibrationWitnessAt_bound_nonneg`
 - **Prototype solver calibration:** `prototypeCalibration`, `prototypeCalibration_epsMIStep`, `prototypeCalibration_epsMIAgg`, `prototypeCalibration_utility_diff_le`
 - **Python sim regression:** `make sim`, `make sim-test` — toy CSV (`sim/toy_double_slit_mi_gate.py`); toy complementarity SVG (`sim/plot_toy_complementarity_svg.py`); qubit Kraus + qubit SVG (`sim/qubit_kraus_sweep.py`, `sim/plot_complementarity_svg.py`); tests under `sim/tests/`. **CI** also `pip install -r sim/requirements-optional.txt` (QuTiP / matplotlib / imageio); locally those tests skip if packages missing.
+- **Tensor / partial trace:** `partialTraceRightProd_kronecker`, `partialTraceRightFin_tensorDensity_carrier`, `partialTraceLeftProd_kronecker`, `partialTraceLeftFin_tensorDensity_carrier`, `trace_partialTraceRightProd`, `trace_partialTraceLeftProd`, `trace_partialTraceRightFin`, `trace_partialTraceLeftFin`, `tensorDensity`, `posSemidef_kronecker`, `conjTranspose_kronecker`
+- **DPI / entropy (qubit):** `vonNeumannDiagonal_ge_vonNeumannEntropy`, `whichPath_increases_entropy`, `entropy_increase_from_measurement_nonneg`
+- **Unital DPI (base case):** `KrausChannel.identity_isUnital`, `vonNeumannEntropy_identity_apply`, `vonNeumannEntropy_nondecreasing_unital_identity` (`DataProcessingInequality.lean`)
+- **Spectral / unitary (matrix):** `charmatrix_unitary_conj`, `charpoly_unitary_conj`, `densityMatrix_carrier_eq_one`, `vonNeumannEntropy_unitarily_invariant_one`, `vonNeumannEntropy_eq_of_det_carrier_eq_two`, `vonNeumannEntropy_unitarily_invariant_two` (`VonNeumannEntropy.lean`)
 - **Gate scaffold:** `thermoFromQubitPath_whichPath`, `admissible_thermoFromQubitPath_whichPath`
 - **Coarse measurement update + narrative wrappers:** `measurementUpdateWhichPath`, `measurementUpdateWhichPath_new_V`, `measurementUpdateWhichPath_I_eq`, `measurementUpdateWhichPath_landauer_eq`, `measurementUpdateWhichPath_landauer_le_landauerBitEnergy`, `interference_preserved_identity`, `collapse_fringe_on_whichPath`, `measurementUpdateWhichPath_gateEnforcement`
 
 ## Not in this track yet (needs design / approval)
 
 - Physical **equality** Landauer (dissipation ≥ bound) for a concrete erasure channel
-- General-`n` entropy, quantum mutual information, DPI (`InfoEntropy` extension)
+- Quantum mutual information; general-`n` **residual coherence** narrative (still qubit-only in `LandauerBound`); full unital DPI proof (Klein axiom → theorem when Mathlib ready)
 - Nontrivial hydration/strength from QM; calibrated `thermoFromQubitPath`
 - Stronger equivalence-style DoubleSlit narrative (`⟺`) and detector-model refinements
 - Matplotlib animation / GIF export; full QuTiP-based spatial simulator (optional QuTiP **qubit** parity is in `sim/qutip_qubit_kraus.py`)

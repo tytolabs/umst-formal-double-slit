@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Assumptions & non-claims — umst-formal-double-slit
 
 Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is **scope control**, not a proof gap inside the stated formal statements.

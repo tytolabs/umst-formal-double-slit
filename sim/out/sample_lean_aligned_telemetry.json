@@ -1,0 +1,118 @@
+{
+  "temperature": 300.0,
+  "description": "Lean-aligned sample: EpistemicMI = diagonal Shannon nats; costs = k_B T MI.",
+  "steps": [
+    {
+      "density_matrix_real": [
+        [
+          0.4999999999999999,
+          0.4999999999999999
+        ],
+        [
+          0.4999999999999999,
+          0.4999999999999999
+        ]
+      ],
+      "density_matrix_imag": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "path_weights": [
+        0.5,
+        0.5
+      ],
+      "visibility": 0.9999999999999998,
+      "distinguishability": 0.0,
+      "entropy_bits": 1.0,
+      "temperature": 300.0,
+      "emitted": {
+        "stepMI": 0.6931471805599453,
+        "stepCost": 2.870978885078724e-21,
+        "thermodynamicAdmissible": true,
+        "confidence": 1.0
+      }
+    },
+    {
+      "density_matrix_real": [
+        [
+          0.4999999999999999,
+          0.4999999999999999
+        ],
+        [
+          0.4999999999999999,
+          0.4999999999999999
+        ]
+      ],
+      "density_matrix_imag": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "path_weights": [
+        0.5,
+        0.5
+      ],
+      "visibility": 0.9999999999999998,
+      "distinguishability": 0.0,
+      "entropy_bits": 1.0,
+      "temperature": 300.0,
+      "emitted": {
+        "stepMI": 0.6931471805599453,
+        "stepCost": 2.870978885078724e-21,
+        "thermodynamicAdmissible": true,
+        "confidence": 0.99
+      }
+    },
+    {
+      "density_matrix_real": [
+        [
+          0.4999999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          0.4999999999999999
+        ]
+      ],
+      "density_matrix_imag": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "path_weights": [
+        0.5,
+        0.5
+      ],
+      "visibility": 0.0,
+      "distinguishability": 0.0,
+      "entropy_bits": 1.0,
+      "temperature": 300.0,
+      "emitted": {
+        "stepMI": 0.6931471805599453,
+        "stepCost": 2.870978885078724e-21,
+        "thermodynamicAdmissible": true,
+        "confidence": 1.0
+      }
+    }
+  ],
+  "aggregate": {
+    "aggregateMI": 2.0794415416798357,
+    "aggregateCost": 8.612936655236172e-21
+  }
+}

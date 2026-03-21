@@ -1,3 +1,6 @@
+-- SPDX-License-Identifier: MIT
+-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 -- |
 -- Module      : UMST
 -- Description : Core types and pure reference implementation for the UMST thermodynamic gate

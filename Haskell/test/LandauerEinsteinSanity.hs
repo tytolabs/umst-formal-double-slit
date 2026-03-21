@@ -1,3 +1,6 @@
+-- SPDX-License-Identifier: MIT
+-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 -- | Engineering consistency check for `Lean/LandauerEinsteinBridge.lean` tight bracket.
 -- Not a proof layer: exact arithmetic in 'Rational' mirrors the rational endpoints
 -- used after propagating Mathlib's @log_two_near_10@ bound on ln 2.

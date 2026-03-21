@@ -1,4 +1,7 @@
 %!TEX program = pdflatex
+% SPDX-License-Identifier: MIT
+% Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 %----------------------------------------------------------------------
 % Technical Note — The Thermodynamic Cost of Knowing
 % Style: UMST thesis-spine voice (monochrome, mathpazo, left-border)
@@ -41,7 +44,7 @@
     urlcolor=LinkGray,
     citecolor=DimGray,
     pdftitle={The Thermodynamic Cost of Knowing},
-    pdfauthor={Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO}
+    pdfauthor={Santhosh Shyamsundar and Santosh Prabhu Shenbagamoorthy, Studio TYTO}
 }
 
 \setlength{\parskip}{0.28em}
@@ -79,6 +82,9 @@
 
 \vspace{0.15em}
 \noindent{\fontsize{9.5}{12}\selectfont\color{MidGray}%
+$V^2 \;+\; \bigl(1 - H_{\mathrm{bits}}(\rho)\bigr) \;\le\; 1
+\qquad\Longrightarrow\qquad
+Q \;\ge\; k_B T \ln 2 \;\cdot\; \bigl(1 - V^2\bigr)$\\[2pt]
 \textit{Every fraction of a bit of which-path information causes a proportional destruction of interference---and each fraction carries an exact Landauer cost.}}
 
 \vspace{0.25em}
@@ -90,12 +96,9 @@ Landauer's Erasure Bound, and the Principle of Maximal Information Collapse}
 \noindent{\small\color{MidGray}\textsf{TECHNICAL NOTE}\quad\rule[0.35ex]{2em}{0.5pt}\quad March 2026}
 
 \vspace{0.2em}
-\noindent{\small
-\textbf{Santhosh Shyamsundar}\;\;
-\textbf{Santosh Prabhu Shenbagamoorthy}}\\[2pt]
 {\footnotesize\color{MidGray}%
-Studio TYTO (\texttt{tyto.studio})\quad$\cdot$\quad
-\texttt{santhosh@tyto.studio}\quad$\cdot$\quad
+\textbf{Santhosh Shyamsundar} --- Studio TYTO; IAAC Barcelona (MAEBB)\quad\texttt{santhoshshyamsundar@studio.tyto}\\[1pt]
+\textbf{Santosh Prabhu Shenbagamoorthy} --- Studio TYTO; IAAC Barcelona (MRAC)\quad\texttt{santosh@studio.tyto}\\[2pt]
 \textit{Lean\,4 + Mathlib, Haskell QuickCheck, Python}}
 
 \vspace{0.3em}
@@ -112,7 +115,7 @@ When an observer extracts which-path information from a quantum system, the resi
 \]
 Extract 0 bits $\implies$ full interference.\quad Extract 1 bit $\implies$ complete decoherence.\\[2pt]
 \textbf{Crucially, observation is not binary.} Partial measurement extracts a \emph{fraction} of a bit, causing proportional decoherence along the Englert curve $V = \sqrt{1 - I^2}$.\\[2pt]
-\textit{Machine-checked in Lean\,4 with Mathlib.\; \textbf{360 theorems, 0 sorry, 1 physical axiom.}}
+\textit{Machine-checked in Lean\,4 with Mathlib.\; \textbf{457 theorems + 33 lemmas} (line-start heuristic),\; \textbf{0 \texttt{sorry}},\; \textbf{3 axioms} (Klein placeholder, unital DPI, physical 2nd law).}
 \end{leftbox}
 
 %---------- MOTIVATION ----------
@@ -181,7 +184,7 @@ This closes the self-consistent loop: the macroscopic energy expenditure of the 
 \needspace{10\baselineskip}
 \section{What Is Formally Proved}
 
-\noindent Every row is a machine-checked theorem in Lean\,4 with Mathlib~\cite{lean4, mathlib2020}---no \texttt{sorry}, no \texttt{admit}.
+\noindent Every row is a machine-checked theorem in Lean\,4 with Mathlib~\cite{lean4, mathlib2020}---no \texttt{sorry} in these modules. \emph{(The repository has one Phase-5 placeholder: general unital DPI / Klein in \texttt{DataProcessingInequality.lean}; see \texttt{Lean/VERIFY.md}.)}
 
 \vspace{0.15em}
 {\footnotesize
@@ -226,9 +229,9 @@ This work extends the UMST formal verification stack in three directions:
 \toprule
 \textbf{Layer} & \textbf{Tool} & \textbf{Scope} & \textbf{Status} \\
 \midrule
-Formal proof & Lean 4 + Mathlib & 38 modules, 360 theorems & \textbf{0 sorry} \\
+Formal proof & Lean 4 + Mathlib & 48 modules, 457 thm + 33 lem (heuristic) & \textbf{0 sorry}, \textbf{3 axioms} (DPI/Klein + physical law) \\
 Property testing & Haskell QuickCheck & 14 properties + sanity & \textbf{All pass} \\
-Numerical sim & Python (stdlib + QuTiP) & 54 unit tests, 4 sims & \textbf{All pass} \\
+Numerical sim & Python (stdlib + QuTiP) & 62 unit tests, 4 sims & \textbf{All pass} \\
 Cross-language & Coq + Agda & LandauerEinsteinBridge & \textbf{0 Admitted} \\
 \bottomrule
 \end{tabular}}
@@ -257,7 +260,7 @@ the LLMs contributed to exploration, drafting, and code scaffolding---not to pro
 \begin{thebibliography}{99}
 
 %--- Our work ---
-\bibitem{umst-formal} S.~Shyamsundar and S.\,P.~Shenbagamoorthy, ``Formal Verification and Categorical Semantics for the UMST/DUMSTO Thermodynamic Gate,'' \texttt{umst-formal}, GitHub, 2026. 59 Lean theorems, 0 sorry.
+\bibitem{umst-formal} S.~Shyamsundar and S.\,P.~Shenbagamoorthy, ``Formal Verification and Categorical Semantics for the UMST/DUMSTO Thermodynamic Gate,'' \texttt{umst-formal} (double-slit extension track), GitHub, 2026. Lean\,4: 457 \texttt{theorem}s + 33 \texttt{lemma}s (line-start heuristic), 48 \texttt{lakefile} roots, 54 \texttt{.lean} files; 0 \texttt{sorry}; 3 \texttt{axiom}s (Klein/DPI layer + physical 2nd law; see \texttt{PROOF-STATUS.md}).
 
 \bibitem{fcpI} S.~Shyamsundar and S.\,P.~Shenbagamoorthy, ``Towards Unified Material-State Tensors for Physics-Gated AI: Thermodynamic Admissibility as Constitutional Constraint,'' Zenodo, 2026. \texttt{doi:10.5281/zenodo.18768547}
 

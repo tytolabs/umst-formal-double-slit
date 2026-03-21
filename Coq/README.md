@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Coq (integrated from `umst-formal`)
 
 `LandauerEinsteinBridge.v` is the **standalone** SI + `E = mc²` mass-equivalent fragment (parameters + algebra). It matches the narrative in `../Lean/LandauerEinsteinBridge.lean`.

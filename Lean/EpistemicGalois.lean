@@ -1,3 +1,8 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import MeasurementCost
 import Mathlib.Order.GaloisConnection
 import Mathlib.Data.Real.Basic

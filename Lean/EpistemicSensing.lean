@@ -1,3 +1,8 @@
+/-
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-/
+
 import DoubleSlit
 
 /-!
@@ -100,7 +105,7 @@ theorem nullProbe_strength (ρ : DensityMatrix hnQubit) :
 @[simp]
 theorem nullProbe_apply (ρ : DensityMatrix hnQubit) :
     nullProbe.apply ρ = ρ := by
-  apply DensityMatrix.ext
+  apply DensityMat.ext
   simpa [nullProbe, KrausChannel.apply] using
     KrausChannel.identity_map 2 ρ.carrier
 

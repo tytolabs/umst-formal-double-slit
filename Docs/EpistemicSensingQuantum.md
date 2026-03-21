@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Epistemic Sensing: From Materials to Quantum Observers
 
 This document bridges the information-theoretic selection logic found in continuum materials models (like the `prototype-2a` active inference loop) to the rigorous formal quantum mechanics of `umst-formal-double-slit`.
@@ -20,3 +25,7 @@ Instead of an infinite-dimensional ODE trajectory, the formal Lean representatio
 Whether in a continuum cementitious material or a 2D quantum path qubit, the measurement exacts a thermodynamic toll. 
 $$ W \ge k_B T \ln(2) \cdot H $$
 In `umst-formal-double-slit`, this is rigorously proven as an algebraic hook (`landauerCostDiagonal`), showing that any epistemic gain directly incurs a physical bound that limits subsequent gate operations.
+
+## 4. Runtime and simulation alignment
+
+For **telemetry names**, **numeric trace shapes**, and the **`SimLeanBridge`** trust boundary when wiring ODE/PPO-style logs to Lean contracts, see **[`EPISTEMIC_RUNTIME_GROUNDING.md`](EPISTEMIC_RUNTIME_GROUNDING.md)**.

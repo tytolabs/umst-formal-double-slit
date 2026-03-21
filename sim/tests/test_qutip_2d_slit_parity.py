@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """QuTiP vs scipy on 2D FD Hamiltonian + soft slit potential (optional QuTiP)."""
 
 import importlib.util

@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: MIT
+Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+-->
+
 # Simulation quickstart
 
 This folder contains lightweight Python simulation utilities for the double-slit extension.
@@ -253,6 +258,28 @@ python3 sim/plot_classical_double_slit_svg.py --validate
 
 Default output: `sim/out/classical_double_slit_far_field.svg`.
 
+## Telemetry trace consumer (Gap 14)
+
+[`telemetry_trace_consumer.py`](telemetry_trace_consumer.py) validates JSON traces against **`SimLeanBridge`**
+-style fields (density matrix, path weights, complementarity, diagonal entropy bits) and, optionally,
+**epistemic** per-step fields aligned with **`EpistemicTelemetryBridge`** / **`EmittedTraceSchema`**:
+
+- `stepMI` or `trajMI` — MI surrogate in **nats** (`0 … ln 2`).
+- `stepCost` or `effortCost` — joules, capped by `k_B T ln 2` at `temperature` (default 300 K).
+- Optional root **`aggregateMI`** / **`aggregateCost`** (or nested **`aggregate`** object) — catalog bounds vs `n` steps; if every step has MI+cost, **sum vs aggregate** fold checks.
+- Optional **`thermodynamicAdmissible`** / **`confidence`** per step (flat or nested **`emitted`**) — matches Lean **`EmittedStepRecord`** / **`EmittedTraceWellFormed`**.
+
+```bash
+python3 sim/telemetry_trace_consumer.py your_trace.json
+python3 -m unittest sim.tests.test_telemetry_trace_consumer -v
+```
+
+**Golden producer (Lean-aligned qubit trace):** [`export_sample_telemetry_trace.py`](export_sample_telemetry_trace.py) writes `sim/out/sample_lean_aligned_telemetry.json` by default (diagonal Shannon nats = `whichPathMI` story, `k_B T MI` costs, nested `emitted`, root `aggregate`). Requires **NumPy**.
+
+```bash
+python3 sim/export_sample_telemetry_trace.py --validate
+```
+
 ## Optional dependencies (`requirements-optional.txt`)
 
 Bundled for **NumPy** (FFT sim), **QuTiP parity**, **matplotlib**, and **imageio** (GIF). GitHub Actions installs this file before `unittest`, so NumPy/QuTiP tests run in CI when the install succeeds.
@@ -270,4 +297,5 @@ Run:
 
 ```bash
 make sim-test
+make telemetry-sample   # Gap 14 — export golden trace + consumer (NumPy); same step as CI after unittests
 ```

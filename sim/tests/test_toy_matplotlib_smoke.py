@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """Smoke-test toy script --plot when matplotlib is installed (CI); skip locally if missing."""
 
 import subprocess

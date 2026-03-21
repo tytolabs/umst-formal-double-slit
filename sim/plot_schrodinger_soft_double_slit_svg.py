@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
 """
 Stdlib SVG: |psi|^2 (rho) and potential V vs x from
 `schrodinger_1d_soft_double_slit.py` output CSV (`x`, `V`, `rho`).
