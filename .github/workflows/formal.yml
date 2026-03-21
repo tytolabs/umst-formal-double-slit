@@ -37,10 +37,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Install Agda (distro meta-package includes stdlib on Ubuntu 24.04+)
+      - name: Install Agda + stdlib
         run: |
           set -e
           sudo apt-get update
-          sudo apt-get install -y agda
+          sudo apt-get install -y agda agda-stdlib
       - name: agda-check (all Agda/ modules)
         run: make agda-check
