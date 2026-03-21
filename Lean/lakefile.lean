@@ -22,7 +22,7 @@ lean_lib «UMST.DoubleSlit» where
     `PrototypeSolverCalibration, `GateCompat,
     `Complementarity, `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `MeasurementCost,
     `EpistemicGalois,
-    -- Vendored from parent `umst-formal` (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
+    -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
     `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState]
   srcDir := "."

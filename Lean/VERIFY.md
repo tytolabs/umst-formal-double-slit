@@ -47,16 +47,16 @@ Expected: **success** (all roots in `lakefile.lean`).
 | `ExamplesQubit` | **`rhoPlus`**, **`rhoZero`**, **`rhoOne`**; epistemic/optimization + Landauer corollaries |
 | `MeasurementCost` | probe costs vs Landauer bit-energy cap |
 | `EpistemicGalois` | info–energy Galois connection (Lean) |
-| `LandauerLaw` | *(vendored parent)* `T_LandauerLaw`: `ErasureProcess`, `physicalSecondLaw`, `landauerBound`, Shannon on `Fin n` |
-| `LandauerExtension` | *(vendored)* temp scaling, n-bit bound, additivity, 300 K positivity |
-| `LandauerEinsteinBridge` | *(vendored)* SI `k_B`, `c`, `massEquivalent`, numeric brackets at 300 K |
-| `Gate` | *(vendored)* ℚ `ThermodynamicState`, `Admissible`, gate theorems (full UMST L₀ core) |
-| `Naturality` | *(vendored)* `MaterialClass`, `stateFor`, material-agnostic gate lemmas |
-| `Activation` | *(vendored)* `Engine`, `activation`, `ActivatedUMST`, totality + negative witnesses |
-| `FiberedActivation` | *(vendored)* `engineFiber`, universality, covering, characteristic engines |
-| `MonoidalState` | *(vendored)* `combine` on ℚ `ThermodynamicState`, unit/midpoint/convexity lemmas |
+| `LandauerLaw` | *(integrated upstream reference)* `T_LandauerLaw`: `ErasureProcess`, `physicalSecondLaw`, `landauerBound`, Shannon on `Fin n` |
+| `LandauerExtension` | *(integrated)* temp scaling, n-bit bound, additivity, 300 K positivity |
+| `LandauerEinsteinBridge` | *(integrated)* SI `k_B`, `c`, `massEquivalent`, numeric brackets at 300 K |
+| `Gate` | *(integrated)* ℚ `ThermodynamicState`, `Admissible`, gate theorems (full UMST L₀ core) |
+| `Naturality` | *(integrated)* `MaterialClass`, `stateFor`, material-agnostic gate lemmas |
+| `Activation` | *(integrated)* `Engine`, `activation`, `ActivatedUMST`, totality + negative witnesses |
+| `FiberedActivation` | *(integrated)* `engineFiber`, universality, covering, characteristic engines |
+| `MonoidalState` | *(integrated)* `combine` on ℚ `ThermodynamicState`, unit/midpoint/convexity lemmas |
 
-**Note:** `UMSTCore` remains the **ℝ** scaffold for `GateCompat` / quantum composition; **`Gate`** is the independent ℚ formalization copied from the parent repo. They are intentionally **not** merged into one file.
+**Note:** `UMSTCore` remains the **ℝ** scaffold for `GateCompat` / quantum composition; **`Gate`** is the independent ℚ formalization copied from the upstream framework. They are intentionally **not** merged into one file.
 
 ## Key proved facts (names to search)
 
@@ -70,10 +70,10 @@ Expected: **success** (all roots in `lakefile.lean`).
 - **Classical packaging (external `V`):** `observationStateOf_complementary`, `observationStateOf_fringe_complementary`
 - **Entropy (binary):** `vonNeumannDiagonal_nonneg`, `vonNeumannDiagonal_le_log_two`, `vonNeumannDiagonal_whichPath_apply`, `shannonBinary_symm`, `shannonBinary_eq_binEntropy`, `shannonBinary_le_log_two`
 - **Landauer scale (diagonal entropy):** `landauerCostDiagonal_nonneg`, `pathEntropyBits_le_one`, `landauerCostDiagonal_le_landauerBitEnergy`, `landauerCostDiagonal_whichPathInvariant`
-- **T_LandauerLaw (vendored):** `landauerBound`, `landauerBound_nBit`, `binaryErasureEntropyDrop`, `physicalSecondLaw_uniform_binary`
-- **Landauer–Einstein bridge (vendored):** `massEquivalent_pos`, tight numeric mass bracket theorems at 300 K (see module)
-- **Monoidal state (vendored):** `combine_one`, `combine_zero`, `combine_density_between`, `combine_freeEnergy_le`
-- **Fibered activation (vendored):** `engineFiber_nonempty`, `strength_universal`, `activation_at_least_two`
+- **T_LandauerLaw (integrated):** `landauerBound`, `landauerBound_nBit`, `binaryErasureEntropyDrop`, `physicalSecondLaw_uniform_binary`
+- **Landauer–Einstein bridge (integrated):** `massEquivalent_pos`, tight numeric mass bracket theorems at 300 K (see module)
+- **Monoidal state (integrated):** `combine_one`, `combine_zero`, `combine_density_between`, `combine_freeEnergy_le`
+- **Fibered activation (integrated):** `engineFiber_nonempty`, `strength_universal`, `activation_at_least_two`
 - **Epistemic interface:** `whichPathProbe`, `nullProbe`, `whichPathProbe_strength_invariant`, `IsMaxMIProbeAt`, `whichPathProbe_isMax_on_singleton`, `whichPathProbe_isMax_on_null_pair`, `exists_maxProbeIndexAt`, `argmaxProbeIndexAt_spec`, `argmax_nullWhichFamily_eq_which_of_pos`, `interference_preserved_nullProbe`, `collapse_on_whichPathProbe`, `LandauerCostFromProbeStrength_le_landauerBitEnergy`
 - **Probe optimization:** `ProbeUtility`, `exists_optimalProbeIndexAt`, `argmaxUtilityProbeIndexAt_spec`, `ProbeSelectionAdmissible_nullProbe`, `ProbeSelectionAdmissible_whichPathProbe`, `exists_constrainedOptimalAt`
 - **Epistemic MI:** `epistemicMI_whichPath`, `epistemicMIBits_whichPath`, `epistemicLandauerCost_whichPath`, `epistemicLandauerCost_null`

@@ -2,7 +2,7 @@ import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Tactic
 
 /-!
-# UMSTCore (double-slit fork)
+# UMSTCore (double-slit repository)
 
 Minimal **ℝ-valued** classical layer so the quantum extension can compile standalone
 without importing the full `umst-formal` `Gate.lean` (ℚ core). Intended for
