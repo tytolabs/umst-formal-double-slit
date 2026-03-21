@@ -1,6 +1,8 @@
-# Mathematical Foundations: UMST Formal Double-Slit
+# Mathematical Foundations: The Thermodynamic Cost of Knowing
 
-This document serves as the comprehensive, single point of truth for the mathematical definitions, theorems, and physical explanations mechanized within the `umst-formal-double-slit` repository.
+### Observation as Irreversible Payment
+
+This document serves as the comprehensive, single point of truth for the mathematical definitions, theorems, and physical explanations mechanized within the `umst-formal-double-slit` repository — a formally verified bridge from quantum measurement theory to classical thermodynamics.
 
 ## 1. The Quantum State (Path Qubit)
 The formalization models the spatial degree of freedom of a particle traversing a double-slit interferometer as a two-level continuous quantum system (a qubit).

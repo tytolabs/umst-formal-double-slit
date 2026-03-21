@@ -1,6 +1,6 @@
 %!TEX program = pdflatex
 %----------------------------------------------------------------------
-% Technical Note — The Thermodynamic Price of Observation
+% Technical Note — The Thermodynamic Cost of Knowing
 % Style: UMST thesis-spine voice (monochrome, mathpazo, left-border)
 % Compile: cd Docs && pdflatex OnePager-DoubleSlit.tex
 %----------------------------------------------------------------------
@@ -8,7 +8,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{mathpazo}
-\usepackage[margin=2.0cm, top=1.8cm, bottom=1.8cm]{geometry}
+\usepackage[margin=2.0cm, top=1.7cm, bottom=1.8cm]{geometry}
 \usepackage{microtype}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{xcolor}
@@ -33,25 +33,26 @@
 \titleformat{\section}
     {\fontsize{11.5}{14}\selectfont\bfseries\color{Black}}
     {\thesection}{0.4em}{}
-\titlespacing*{\section}{0pt}{0.85em}{0.3em}
+\titlespacing*{\section}{0pt}{0.65em}{0.2em}
 
 \hypersetup{
     colorlinks=true,
     linkcolor=Black,
     urlcolor=LinkGray,
-    pdftitle={The Thermodynamic Price of Observation — Technical Note},
-    pdfauthor={UMST Formal Methods}
+    citecolor=DimGray,
+    pdftitle={The Thermodynamic Cost of Knowing},
+    pdfauthor={Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO}
 }
 
-\setlength{\parskip}{0.32em}
-\setlist[enumerate]{leftmargin=1.4em, itemsep=0.15em, topsep=0.1em}
-\setlist[itemize]{leftmargin=1.4em, itemsep=0.10em, topsep=0.05em}
+\setlength{\parskip}{0.28em}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=0.12em, topsep=0.08em}
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.08em, topsep=0.05em}
 
 % Left-border accent box (thesis spine style)
 \newenvironment{leftbox}{%
   \par\vspace{0.3em}%
   \noindent\hspace{0pt}%
-  \begin{minipage}[t]{3pt}\color{Black}\rule{3pt}{4\baselineskip}\end{minipage}%
+  \begin{minipage}[t]{3pt}\color{Black}\rule{3pt}{5.5\baselineskip}\end{minipage}%
   \hspace{8pt}%
   \begin{minipage}[t]{\dimexpr\textwidth-15pt}\small
 }{%
@@ -60,28 +61,44 @@
 
 \newtheorem{theorem}{Theorem}
 
+% Page numbers (bottom center, small, gray)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{MidGray}\thepage}
+
 \begin{document}
-\pagestyle{empty}
 
 %---------- HEADER ----------
 \noindent
-{\fontsize{17}{21}\selectfont\bfseries The Thermodynamic Price of Observation}\\[0.25em]
-{\large\color{DimGray}%
-A Machine-Checked Proof Connecting Wave-Particle Duality,\\
-Landauer's Erasure Bound, and the Principle of Maximal Information Collapse}
+{\fontsize{17}{21}\selectfont\bfseries The Thermodynamic Cost of Knowing}
 
-\vspace{0.5em}
-\noindent{\small\color{MidGray}\textsf{TECHNICAL NOTE}\quad\rule[0.35ex]{2em}{0.5pt}\quad March 2026}
+\vspace{0.15em}
+\noindent{\fontsize{12}{15}\selectfont\color{DimGray}\itshape Observation as Irreversible Payment}
 
 \vspace{0.25em}
+\noindent{\small\color{MidGray}%
+A Machine-Checked Proof Connecting Wave-Particle Duality,
+Landauer's Erasure Bound, and the Principle of Maximal Information Collapse}
+
+\vspace{0.4em}
+\noindent{\small\color{MidGray}\textsf{TECHNICAL NOTE}\quad\rule[0.35ex]{2em}{0.5pt}\quad March 2026}
+
+\vspace{0.2em}
 \noindent{\small
-\textbf{UMST Formal Methods}\;\textit{--- Lean 4 + Mathlib verification, Haskell QuickCheck, Python simulation}}
+\textbf{Santhosh Shyamsundar}\;\;
+\textbf{Santosh Prabhu Shenbagamoorthy}}\\[2pt]
+{\footnotesize\color{MidGray}%
+Studio TYTO (\texttt{tyto.studio})\quad$\cdot$\quad
+\texttt{santhosh@tyto.studio}\quad$\cdot$\quad
+\textit{Lean\,4 + Mathlib, Haskell QuickCheck, Python}}
 
 \vspace{0.3em}
 {\color{Black}\rule{\textwidth}{2.5pt}}
 
 %---------- CORE RESULT ----------
-\vspace{0.5em}
+\vspace{0.25em}
 
 \begin{leftbox}
 \textbf{Core Result: Principle of Maximal Information Collapse.}
@@ -90,47 +107,49 @@ When an observer extracts which-path information from a quantum system, the resi
 \text{Residual Coherence} = 1 - \frac{\text{MI}_{\text{extracted}}}{k_B T \ln 2} \;\in\; [0,\,1]
 \]
 Extract 0 bits $\implies$ full interference.\quad Extract 1 bit $\implies$ complete decoherence.\\[2pt]
+\textbf{Crucially, observation is not binary.} Partial measurement extracts a \emph{fraction} of a bit, causing proportional decoherence along the Englert curve $V = \sqrt{1 - I^2}$.\\[2pt]
 \textit{Machine-checked in Lean\,4 with Mathlib.\; \textbf{360 theorems, 0 sorry, 1 physical axiom.}}
 \end{leftbox}
 
 %---------- MOTIVATION ----------
 \section{Motivation and Prior Work}
 
-The double-slit experiment is the canonical demonstration of quantum mechanics: a single particle interferes with itself, producing fringes on a detection screen---unless an observer determines \emph{which slit} the particle traversed, in which case the fringes vanish. This complementarity between path information and interference visibility, quantified by Englert's relation $V^2 + I^2 \le 1$, is well established but typically treated as a purely quantum phenomenon, disconnected from classical thermodynamics.
+The double-slit experiment is the canonical demonstration of quantum mechanics~\cite{feynman1965, vonneumann1932}: a single particle interferes with itself, producing fringes on a detection screen---unless an observer determines \emph{which slit} the particle traversed, in which case the fringes vanish~\cite{bohr1928}. This complementarity between path information and interference visibility was first quantified by Wootters and Zurek~\cite{wootters1979} and Greenberger and Yasin~\cite{greenberger1988}, then sharpened to Englert's tight inequality $V^2 + I^2 \le 1$~\cite{englert1996}. Though well established, this tradeoff is typically treated as a purely quantum phenomenon, disconnected from classical thermodynamics. The decoherence programme~\cite{zurek2003, schlosshauer2005} explains the \emph{mechanism} of this transition but does not quantify its \emph{thermodynamic cost}.
 
-Our prior work on the \textbf{Unified Material-State Tensor (UMST)} framework~\cite{umst-formal} established a formally verified thermodynamic gate for continuum materials: a Kleisli-categorical structure enforcing conservation laws (mass, energy, hydration bounds) with graded admissibility. The key insight was that \emph{admissibility is compositional but not transitive}---two individually valid transitions can compose to an inadmissible one, proved via triangle-inequality grading (the \texttt{admissibleTrans} counterexample: densities $\{0, 99, 198\}$ kg/m$^3$ with $\delta = 100$).
+Our prior work on the \textbf{Unified Material-State Tensor (UMST)} framework~\cite{umst-formal, fcpI, fcpII} established a formally verified thermodynamic gate for continuum materials: a Kleisli-categorical structure enforcing conservation laws (mass, energy, hydration bounds) with graded admissibility. The key insight was that \emph{admissibility is compositional but not transitive}---two individually valid transitions can compose to an inadmissible one, proved via triangle-inequality grading (the \texttt{admissibleTrans} counterexample: densities $\{0, 99, 198\}$ kg/m$^3$ with $\delta = 100$).
 
-The present work extends this framework to quantum measurement. We observe that the act of measurement is not a mysterious ``collapse'' but a \emph{thermodynamic transaction}: extracting which-path information requires physical work bounded by Landauer's principle ($Q \ge k_B T \ln 2$ per bit), and this energy expenditure is \emph{mathematically identical} to the destruction of quantum coherence.
+The present work extends this framework to quantum measurement. We observe that the act of measurement is not a mysterious ``collapse'' but a \emph{thermodynamic transaction}: extracting which-path information requires physical work bounded by Landauer's principle~\cite{landauer1961, bennett1982} ($Q \ge k_B T \ln 2$ per bit, experimentally confirmed~\cite{berut2012}), and this energy expenditure is \emph{mathematically identical} to the destruction of quantum coherence.
 
 %---------- PROOF ARCHITECTURE ----------
 \section{Proof Architecture}
 
 The formalization is structured as a \emph{closed chain} from quantum states through measurement to thermodynamic cost:
 
+\vspace{-0.2em}
 \begin{center}
 \begin{tikzpicture}[
   box/.style={draw=Black, rounded corners=2pt, minimum width=2.0cm, minimum height=0.6cm, align=center, font=\footnotesize},
-  arrow/.style={-{Stealth[length=4pt]}, thick, color=Black},
-  label/.style={font=\tiny, midway, fill=white, inner sep=1pt, color=DimGray}
+  arrow/.style={-{Stealth[length=4pt]}, thick, color=Black}
 ]
 \node[box] (rho) {$\rho \in \mathbb{C}^{2\times 2}$\\PSD, Tr$=1$};
-\node[box, right=1.0cm of rho] (iv) {$I = |p_0{-}p_1|$\\$V = 2|\rho_{01}|$};
-\node[box, right=1.0cm of iv] (comp) {$V^2 + I^2 \le 1$\\Englert};
-\node[box, below=0.7cm of rho] (kraus) {Kraus Channel\\L\"uders $\Pi_i \rho \Pi_i$};
-\node[box, below=0.7cm of iv] (ent) {$H = -\sum p_i \ln p_i$\\$\le \ln 2$};
-\node[box, below=0.7cm of comp] (land) {$Q \ge k_B T \cdot H$\\Landauer};
-\node[box, below=0.7cm of ent, minimum width=3.2cm] (pmic) {\textbf{Residual} $= 1 - S_{\text{bits}}$\;\;$\in [0,1]$};
+\node[box, right=1.2cm of rho] (iv) {$I = |p_0{-}p_1|$\\$V = 2|\rho_{01}|$};
+\node[box, right=1.2cm of iv] (comp) {$V^2 + I^2 \le 1$\\Englert};
+\node[box, below=0.8cm of rho] (kraus) {Kraus Channel\\L\"uders $\Pi_i \rho \Pi_i$};
+\node[box, below=0.8cm of iv] (ent) {$H = -\sum p_i \ln p_i$\\$\le \ln 2$};
+\node[box, below=0.8cm of comp] (land) {$Q \ge k_B T \cdot H$\\Landauer};
+\node[box, below=0.8cm of ent, minimum width=3.2cm, line width=0.8pt] (pmic) {\textbf{Residual} $= 1 - S_{\text{bits}}$\;\;$\in [0,1]$};
 
 \draw[arrow] (rho) -- (iv);
 \draw[arrow] (iv) -- (comp);
 \draw[arrow] (rho) -- (kraus);
-\draw[arrow] (kraus) -- node[label]{$V\to 0$} (ent);
+\draw[arrow] (kraus) -- node[above, font=\tiny, color=DimGray]{$V\!\to\!0$} (ent);
 \draw[arrow] (iv) -- (ent);
 \draw[arrow] (ent) -- (land);
 \draw[arrow] (land) -- (pmic);
-\draw[arrow, dashed, color=DimGray] (comp) -- node[label]{destroys $V$} (kraus);
+\draw[-{Stealth[length=4pt]}, dashed, thick, color=MidGray] (comp.south west) -- node[below, font=\tiny\itshape, color=MidGray, pos=0.45]{destroys $V$} (kraus.north east);
 \end{tikzpicture}
 \end{center}
+\vspace{-0.3em}
 
 \noindent From the density matrix $\rho$ we extract \textbf{path distinguishability} $I = |p_0 - p_1|$ and \textbf{fringe visibility} $V = 2|\rho_{01}|$. Englert's complementarity follows from the PSD principal minor: $\det(\rho) \ge 0 \implies |\rho_{01}|^2 \le p_0 p_1$, yielding $V^2 + I^2 \le (p_0 + p_1)^2 = 1$.
 
@@ -150,15 +169,17 @@ is formally proved to lie in $[0, 1]$, with tight bounds at both endpoints:
 \end{itemize}
 We also prove the cost identity $Q = k_B T \ln 2 \cdot (1 - \text{Residual})$: the thermodynamic cost is \emph{exactly proportional} to the fraction of coherence destroyed. A concrete \texttt{ErasureProcess} structure enforces $\text{dissipatedHeat} \ge \text{landauerCostDiagonal}$ via the Second Law.
 
+\textbf{The collapse is not binary.} The standard textbook narrative presents measurement as all-or-nothing: ``observe and the fringes vanish.'' The Englert relation reveals a \emph{continuum}: a probe that extracts $I = 0.3$ bits of which-path information reduces fringe visibility to $V = \sqrt{1 - 0.09} \approx 0.95$---the interference pattern is barely disturbed. At $I = 0.7$ the fringes are heavily suppressed ($V \approx 0.71$). Full decoherence requires extracting the \emph{entire} bit. Every point on the curve $V^2 + I^2 = 1$ is physically realizable, and each carries a proportional Landauer cost. This continuous tradeoff is precisely what the residual-capacity framework captures and what the Lean formalization proves.
+
 This closes the self-consistent loop: the macroscopic energy expenditure of the intelligent probe maps \emph{directly} to the microscopic destruction of interference.
 
 %---------- THEOREM TABLE ----------
 \needspace{10\baselineskip}
 \section{What Is Formally Proved}
 
-\noindent Every row is a machine-checked theorem in Lean\,4 with Mathlib---no \texttt{sorry}, no \texttt{admit}.
+\noindent Every row is a machine-checked theorem in Lean\,4 with Mathlib~\cite{lean4, mathlib2020}---no \texttt{sorry}, no \texttt{admit}.
 
-\vspace{0.2em}
+\vspace{0.15em}
 {\footnotesize
 \begin{tabular}{@{}lll@{}}
 \toprule
@@ -173,7 +194,7 @@ Landauer cost cap & cost $\le k_B T \ln 2$ & \texttt{LandauerBound} \\
 Path entropy $\le 1$ bit & $S_{\text{bits}} \in [0, 1]$ & \texttt{LandauerBound} \\
 Maximal collapse & $S_{\text{bits}} = 1 \implies \text{Residual} = 0$ & \texttt{LandauerBound} \\
 Null preservation & $S_{\text{bits}} = 0 \implies \text{Residual} = 1$ & \texttt{LandauerBound} \\
-Cost = energy $\times$ extracted & $Q = k_B T \ln 2 \cdot (1 - \text{Residual})$ & \texttt{LandauerBound} \\
+Cost--coherence identity & $Q = k_B T \ln 2 \cdot (1 - \text{Residual})$ & \texttt{LandauerBound} \\
 Erasure $\ge$ bound & dissipatedHeat $\ge$ landauerCostDiagonal & \texttt{LandauerBound} \\
 Which-path invariance & Landauer cost unchanged by measurement & \texttt{LandauerBound} \\
 Gate enforcement & admissibility + Landauer + cap in one & \texttt{DoubleSlit} \\
@@ -208,17 +229,64 @@ Cross-language & Coq + Agda & LandauerEinsteinBridge & \textbf{0 Admitted} \\
 \bottomrule
 \end{tabular}}
 
-\vspace{0.4em}
+\vspace{0.15em}
 \noindent The Python simulator demonstrates the collapse visually: as which-path information $I$ increases from 0 to 1, the interference pattern progressively flattens, tracking the $V = \sqrt{1 - I^2}$ Englert curve exactly.
 
-\vspace{0.3em}
+\vspace{0.25em}
 {\color{Black}\rule{\textwidth}{1pt}}
-\vspace{0.15em}
+\vspace{0.1em}
 
 \noindent{\small\textit{Repository:} \texttt{umst-formal-double-slit} \quad\textbar\quad \textit{License:} MIT \quad\textbar\quad \textit{Build:} \texttt{cd Lean \&\& lake build}}
 
-\begin{thebibliography}{9}
-\bibitem{umst-formal} UMST Formal Methods, ``Unified Material-State Tensor: Formal Verification of Thermodynamic Gate Invariants,'' \texttt{umst-formal}, 2026. 13 Lean modules, 115 theorems, 0 sorry. Graded admissibility, Kleisli composition, Landauer--Einstein bridge.
+\noindent{\footnotesize\color{MidGray}\copyright\;2026 Studio TYTO $\cdot$ \texttt{github.com/tytolabs}}
+
+%---------- REFERENCES ----------
+\begingroup
+\small
+\begin{thebibliography}{99}
+
+%--- Our work ---
+\bibitem{umst-formal} S.~Shyamsundar and S.\,P.~Shenbagamoorthy, ``Formal Verification and Categorical Semantics for the UMST/DUMSTO Thermodynamic Gate,'' \texttt{umst-formal}, GitHub, 2026. 59 Lean theorems, 0 sorry.
+
+\bibitem{fcpI} S.~Shyamsundar and S.\,P.~Shenbagamoorthy, ``Towards Unified Material-State Tensors for Physics-Gated AI: Thermodynamic Admissibility as Constitutional Constraint,'' Zenodo, 2026. \texttt{doi:10.5281/zenodo.18768547}
+
+\bibitem{fcpII} S.\,P.~Shenbagamoorthy and S.~Shyamsundar, ``Epistemic Sensing Architecture for Physics-Constrained Material Characterization,'' Zenodo, 2026. \texttt{doi:10.5281/zenodo.18894710}
+
+%--- Quantum foundations ---
+\bibitem{bohr1928} N.~Bohr, ``The quantum postulate and the recent development of atomic theory,'' \textit{Nature}, 121:580--590, 1928.
+
+\bibitem{feynman1965} R.\,P.~Feynman, R.\,B.~Leighton, and M.~Sands, \textit{The Feynman Lectures on Physics}, Vol.\,III, Ch.\,1, Addison-Wesley, 1965.
+
+\bibitem{vonneumann1932} J.~von~Neumann, \textit{Mathematische Grundlagen der Quantenmechanik}, Springer, 1932.
+
+\bibitem{wootters1979} W.\,K.~Wootters and W.\,H.~Zurek, ``Complementarity in the double-slit experiment,'' \textit{Phys.\ Rev.\ D}, 19(2):473--484, 1979.
+
+\bibitem{greenberger1988} D.\,M.~Greenberger and A.~Yasin, ``Simultaneous wave and particle knowledge in a neutron interferometer,'' \textit{Phys.\ Lett.\ A}, 128:391--394, 1988.
+
+\bibitem{englert1996} B.-G.~Englert, ``Fringe visibility and which-way information: An inequality,'' \textit{Phys.\ Rev.\ Lett.}, 77(11):2154--2157, 1996.
+
+%--- Thermodynamics of information ---
+\bibitem{landauer1961} R.~Landauer, ``Irreversibility and heat generation in the computing process,'' \textit{IBM J.\ Res.\ Dev.}, 5(3):183--191, 1961.
+
+\bibitem{bennett1982} C.\,H.~Bennett, ``The thermodynamics of computation---a review,'' \textit{Int.\ J.\ Theor.\ Phys.}, 21:905--940, 1982.
+
+\bibitem{berut2012} A.~B\'{e}rut \textit{et al.}, ``Experimental verification of Landauer's principle linking information and thermodynamics,'' \textit{Nature}, 483:187--189, 2012.
+
+%--- Decoherence ---
+\bibitem{zurek2003} W.\,H.~Zurek, ``Decoherence, einselection, and the quantum origins of the classical,'' \textit{Rev.\ Mod.\ Phys.}, 75:715--775, 2003.
+
+\bibitem{schlosshauer2005} M.~Schlosshauer, ``Decoherence, the measurement problem, and interpretations of quantum mechanics,'' \textit{Rev.\ Mod.\ Phys.}, 76:1267--1305, 2005.
+
+\bibitem{nielsen2000} M.\,A.~Nielsen and I.\,L.~Chuang, \textit{Quantum Computation and Quantum Information}, Cambridge Univ.\ Press, 2000.
+
+%--- Formal verification ---
+\bibitem{lean4} L.~de~Moura and S.~Ullrich, ``The Lean~4 Theorem Prover and Programming Language,'' \textit{CADE-28}, pp.\,625--635, Springer, 2021.
+
+\bibitem{mathlib2020} The Mathlib Community, ``The Lean Mathematical Library,'' \textit{CPP 2020}, pp.\,367--381, ACM, 2020.
+
+\bibitem{avigad2017} J.~Avigad, J.~H\"{o}lzl, and L.~Serafin, ``A formally verified proof of the central limit theorem,'' \textit{J.\ Automated Reasoning}, 59:389--423, 2017.
+
 \end{thebibliography}
+\endgroup
 
 \end{document}

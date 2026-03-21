@@ -59,15 +59,16 @@ def generate_gif(out_dir):
         vis = math.sqrt(max(0, 1 - info**2))  # Englert: V = sqrt(1 - I^2)
         residual = 1 - info  # Principle of Maximal Information Collapse
 
-        fig = plt.figure(figsize=(12, 6), facecolor='#0a0a1a')
+        fig = plt.figure(figsize=(13, 6.5), facecolor='#0a0a1a')
         gs = GridSpec(1, 3, width_ratios=[3, 1.2, 1.2], wspace=0.35)
 
-        # Main title above all panels (no overlap)
-        fig.suptitle("Double-Slit Interference Collapse",
-                     color='white', fontsize=14, fontweight='bold', y=0.97)
-        fig.text(0.5, 0.935,
-                 "Observing which slit the particle passes through destroys the interference pattern",
-                 ha='center', color='#888', fontsize=9, fontstyle='italic')
+        # Main title — positioned with generous clearance from subplots
+        fig.text(0.5, 0.96,
+                 "The Thermodynamic Cost of Knowing",
+                 ha='center', va='top', color='white', fontsize=15, fontweight='bold')
+        fig.text(0.5, 0.915,
+                 "Observation as irreversible payment — each fraction of a bit costs proportional Landauer energy",
+                 ha='center', va='top', color='#888', fontsize=9, fontstyle='italic')
 
         # --- Panel 1: Interference pattern ---
         ax1 = fig.add_subplot(gs[0])
@@ -86,7 +87,7 @@ def generate_gif(out_dir):
         ax1.set_ylim(0, 1.15)
         ax1.set_xlabel("Screen Position (detector array behind slits)", color='white', fontsize=10)
         ax1.set_ylabel("Intensity  (photon arrival probability)", color='white', fontsize=10)
-        ax1.set_title("Photon Detection Screen", color='#aaa', fontsize=10, pad=8)
+        ax1.set_title("Photon Detection Screen", color='#aaa', fontsize=9, pad=4)
         ax1.tick_params(colors='white')
         for spine in ax1.spines.values():
             spine.set_color('#333')
@@ -160,9 +161,9 @@ def generate_gif(out_dir):
                 "Principle of Maximal Information Collapse: Residual = 1 \u2212 MI\u2091\u2093\u209c / (k\u0042 T ln 2)",
                 ha='center', color='#888', fontsize=8, fontfamily='monospace')
 
-        plt.subplots_adjust(top=0.88, bottom=0.14)
+        plt.subplots_adjust(top=0.85, bottom=0.14, left=0.06, right=0.97)
         frame_path = os.path.join(tmp_dir, f"frame_{idx:03d}.png")
-        plt.savefig(frame_path, dpi=120, bbox_inches='tight',
+        plt.savefig(frame_path, dpi=120, pad_inches=0.15,
                    facecolor=fig.get_facecolor(), edgecolor='none')
         gif_frames.append(imageio.imread(frame_path))
         plt.close()
@@ -195,11 +196,12 @@ def generate_teaser(out_dir):
     fig = plt.figure(figsize=(14, 7), facecolor='#0a0a1a')
     gs = GridSpec(1, 2, width_ratios=[1.3, 1], wspace=0.3)
 
-    fig.suptitle("Measurement Destroys Interference",
-                 color='white', fontsize=16, fontweight='bold', y=0.97)
+    fig.text(0.5, 0.97,
+             "The Thermodynamic Cost of Knowing",
+             ha='center', va='top', color='white', fontsize=16, fontweight='bold')
     fig.text(0.5, 0.93,
-             "Knowing which slit the particle traversed eliminates the wave pattern on the detection screen",
-             ha='center', color='#888', fontsize=10, fontstyle='italic')
+             "Observation as Irreversible Payment",
+             ha='center', va='top', color='#888', fontsize=11, fontstyle='italic')
 
     x = np.linspace(-20, 20, 500)
 
@@ -221,12 +223,12 @@ def generate_teaser(out_dir):
     ax1.set_ylim(0, 1.15)
     ax1.set_xlabel("Screen Position (detector array behind slits)", color='white', fontsize=11)
     ax1.set_ylabel("Intensity (photon arrival probability)", color='white', fontsize=11)
-    ax1.set_title("Photon Detection Screen", color='#aaa', fontsize=10, pad=8)
+    ax1.set_title("Photon Detection Screen", color='#aaa', fontsize=9, pad=4)
     ax1.legend(fontsize=9, facecolor='#0a0a1a', edgecolor='#333', labelcolor='white', loc='upper right')
     ax1.tick_params(colors='white')
     for spine in ax1.spines.values():
         spine.set_color('#333')
-    plt.subplots_adjust(top=0.86, bottom=0.12)
+    plt.subplots_adjust(top=0.85, bottom=0.12)
 
     # --- Right panel: Key equations ---
     ax2 = fig.add_subplot(gs[1])
@@ -260,13 +262,13 @@ def generate_teaser(out_dir):
     ax2.text(0.5, stats_y, stats, ha='center', va='top', color='#666',
             fontsize=10, transform=ax2.transAxes, fontfamily='monospace')
 
-    ax2.text(0.5, 0.03, "Measurement IS Thermodynamics",
+    ax2.text(0.5, 0.03, "The Thermodynamic Cost of Knowing",
             ha='center', va='top', color='white', fontsize=13, fontweight='bold',
             transform=ax2.transAxes,
             bbox=dict(boxstyle='round,pad=0.4', facecolor='#e94560', alpha=0.8))
 
     teaser_path = os.path.join(out_dir, "teaser.png")
-    plt.savefig(teaser_path, dpi=150, bbox_inches='tight',
+    plt.savefig(teaser_path, dpi=150, pad_inches=0.15,
                facecolor=fig.get_facecolor(), edgecolor='none')
     plt.close()
     print(f"Wrote teaser to {teaser_path}")
