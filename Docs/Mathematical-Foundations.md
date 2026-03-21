@@ -47,28 +47,34 @@ where $\Pi_0, \Pi_1$ are the spatial projectors.
 This mathematical operation preserves the diagonal entries ($p_0, p_1$ are unmodified) but strictly forces the off-diagonal coherences to zero ($\rho_{01} \to 0$), forcing $V \to 0$ post-measurement, mathematically formalizing wavefunction collapse on the path basis.
 
 ## 4. Logical Entropy and Landauer's Principle
-The repository securely links the quantum path distinguishability to the classical continuum thermodynamics.
+
+The repository securely links the quantum path distinguishability to the classical continuum thermodynamics of the UMST gate.
 
 ### Diagonal Information Entropy
-Given the extracted path distribution, the logical uncertainty of the system is given by the discrete Shannon entropy over the diagonals (in natural units):
-$$ H = -p_0 \ln p_0 - p_1 \ln p_1 $$
-This is mathematically equivalent to the von Neumann entropy evaluated strictly on the diagonal frame (the classical classical thermodynamic projection). It is capped at $\ln 2$ bits.
+Given the extracted path distribution after measurement, the logical uncertainty of the system is given by the discrete Shannon entropy over the diagonals (in natural units):
+
+\[ H = -p_0 \ln p_0 - p_1 \ln p_1 \]
+
+This is mathematically equivalent to the von Neumann entropy evaluated strictly on the diagonal frame (the classical thermodynamic projection) and is capped at \(\ln 2\) bits.
 
 ### The Landauer Bound
-If the observer extracts the which-path bit from the measurement channel to the macro-world, that computational memory trace incurs a strict physical constraint via **Landauer's Principle**. To erase or isolate that bit computationally against a thermal bath at temperature $T$, the minimum heat dissipated $Q$ (or work required $W$) is strictly bound:
-$$ Q \ge k_B T \cdot H $$
-In bits, the scale is exactly $k_B T \ln 2$. 
+If the observer extracts the which-path bit from the measurement channel to the macro-world, that computational memory trace incurs a strict physical constraint via **Landauer’s Principle**. To erase or isolate that bit computationally against a thermal bath at temperature \(T\), the minimum heat dissipated \(Q\) (or work required \(W\)) is strictly bound:
 
-The formalized modules (`LandauerLaw`, `LandauerExtension`, and `EpistemicGalois`) rigorously establish this Galois connection: the maximal information $I_{bits}$ extractable from the quantum system is bounded by the minimum thermodynamic energetic mass-equivalent $E$ deployed by the classical observer.
+\[ Q \ge k_B T \cdot H \]
+
+In bits, the scale is exactly \(k_B T \ln 2\).
+
+The formalized modules (`LandauerLaw`, `LandauerExtension`, and `EpistemicGalois`) rigorously establish this Galois connection: the maximal information \(I_{\text{bits}}\) extractable from the quantum system is bounded by the minimum thermodynamic energetic mass-equivalent \(E\) deployed by the classical observer.
 
 ### Principle of Maximal Information Collapse
-By normalizing the physical energy scale against the Landauer bound, we can quantify the exact constraint connecting continuous energy expenditure to quantum collapse. 
+By normalizing the physical energy scale against the Landauer bound, we quantify the exact thermodynamic constraint that the UMST gate imposes on remaining quantum coherence.
 
-Given an experimentally $\text{MI extracted}$ (in energy/Joules), dividing it by $k_B T \ln 2$ yields the exact amount of extracted information $I_{bits}$. The remaining undisturbed coherence is dictated by the **Principle of Maximal Information Collapse**:
-$$ \text{Residual Logical Uncertainty} = 1 - \frac{\text{MI extracted}}{k_B T \ln 2} $$
+Given an experimentally measured \(\text{MI extracted}\) (in energy/Joules), dividing by \(k_B T \ln 2\) yields the extracted information \(I_{\text{bits}}\). The remaining capacity for interference after this irreversible dissipation is dictated by the **Principle of Maximal Information Collapse**:
 
-This algebraic ratio equates to exactly $1 - I_{bits}$. 
-- If no information is extracted ($\text{MI extracted} = 0$), the Residual Logical Uncertainty is exactly **1** (full quantum visibility preserved: $V=1$).
-- If the maximum possible information is forcefully measured/extracted ($\text{MI extracted} = k_B T \ln 2$), the value collapses to **0** (complete decoherence: $V \to 0$, $I \to 1$). 
+\[ \text{Residual Logical Uncertainty} = 1 - \frac{\text{MI extracted}}{k_B T \ln 2} \]
 
-This directly maps the macroscopic thermodynamic extraction boundary to the microscopic Englert visibility bounds $V^2 = 1 - I^2$.
+This algebraic ratio represents the *normalized remaining coherence capacity* after the observer has paid the Landauer cost.  
+- If no information is extracted (\(\text{MI extracted} = 0\)), the residual is exactly **1** (full quantum visibility possible: \(V \le 1\)).  
+- If the maximum possible information is extracted (\(\text{MI extracted} = k_B T \ln 2\)), the residual collapses to **0** (complete decoherence: \(V = 0\)).
+
+This thermodynamic bound is strictly enforced by the UMST gate on top of the standard quantum limit \(V^2 + I^2 \le 1\). It directly maps the macroscopic energy expenditure of the intelligent probe to the microscopic destruction of interference, closing the self-consistent loop between sensing, entropy production, and classical emergence.
