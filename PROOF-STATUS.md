@@ -14,16 +14,16 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 *(Heuristic line counts from `make lean-stats-md`; portable paths — re-paste after large Lean edits.)*
 
 - **Lean root:** `Lean`
-- **`.lean` files scanned:** 54 (`.lake` excluded)
+- **`.lean` files scanned:** 55 (`.lake` excluded)
 - **`abbrev` (line-start heuristic):** 5
-- **`axiom` (line-start heuristic):** 3
-- **`def` (line-start heuristic):** 177
+- **`axiom` (line-start heuristic):** 5
+- **`def` (line-start heuristic):** 190
 - **`inductive` (line-start heuristic):** 4
 - **`instance` (line-start heuristic):** 1
-- **`lemma` (line-start heuristic):** 33
+- **`lemma` (line-start heuristic):** 48
 - **`structure` (line-start heuristic):** 29
-- **`theorem` (line-start heuristic):** 457
-- **Sum of above kinds:** 714
+- **`theorem` (line-start heuristic):** 467
+- **Sum of above kinds:** 749
 
 ## Track summary
 
@@ -57,7 +57,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | `MeasurementUpdate` for which-path (`DoubleSlit`) | **Proved** (identity preserves interference, which-path collapses fringes, gate-enforcement packaging) |
 | Worked examples (`ExamplesQubit`) | **Proved** (`|+⟩`, `|0⟩`, `|1⟩` with measurement-update corollaries) |
 | Spectral von Neumann entropy + DPI (`VonNeumannEntropy`, `DataProcessingInequality`) | **PARTIAL** — general `Fin n` **unitary invariance** ✓; qubit-tier DPI **proved**; **full unital DPI + Klein** stated as **`axiom`** (Mathlib matrix-log gap). **0 `sorry`.** See `Lean/VERIFY.md`. |
-| Haskell / Python / publication sims | **In repo** (toy + Kraus + SVG + QuTiP + 1D/2D Schrödinger + 62 tests) |
+| Haskell / Python / publication sims | **In repo** (toy + Kraus + SVG + QuTiP + 1D/2D/3D Schrödinger + 87 tests) |
 
 ## Axiom inventory
 
@@ -66,6 +66,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
 | `klein_inequality` | `DataProcessingInequality.lean` | Klein / quantum relative entropy (placeholder until Mathlib matrix `log` + convexity) |
 | `vonNeumannEntropy_nondecreasing_unital` | `DataProcessingInequality.lean` | Full **unital CPTP** entropy monotonicity (standard proof via Klein; **axiomatized** pending Mathlib) |
+| `fringeVisibility_n_le_one` | `GeneralVisibility.lean` | $\ell_1$ norm of coherence ≤ 1 for arbitrary `Fin n` (requires Cauchy–Schwarz) |
+| `dephasingSolution_tendsto_diagonal` | `LindbladDynamics.lean` | Off-diagonal coherences vanish as $t \to \infty$ under pure dephasing (topological limit) |
 
 ## Sorry inventory
 
@@ -82,10 +84,10 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | 48 `lakefile` roots; **457** `theorem` + **33** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **3 axiom** (2 quantum-info + physical 2nd law) |
-| Haskell | 7 exposed modules, 14 QC + sanity suite | **All pass** |
+| Lean 4 | 49 `lakefile` roots; **467** `theorem` + **48** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **5 axiom** (3 quantum-info/physical + 2 analysis) |
+| Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **2** `Admitted` (binary Shannon bound + diagonal corner step) plus **axioms** for pure / maximally-mixed spectral entropy (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-03-22 — `make lean-stats-md`: 54 files, **457** `theorem`, 33 `lemma`, **3** `axiom`, sum **714**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-03-22 — `make lean-stats-md`: 55 files, **467** `theorem`, 48 `lemma`, **5** `axiom`, sum **749**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`. Formal tracks: **`make formal-check`**.

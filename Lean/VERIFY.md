@@ -18,8 +18,8 @@ Expected: **success** (all roots in `lakefile.lean`).
 **Multi-agent:** `../Docs/PARALLEL_WORK.md` (claims, choke points, stream IDs).  
 **Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **3 axioms** in project: `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital` (DPI), `physicalSecondLaw` (Landauer). See `../Docs/GAP_CLOSURE_PLAN.md` Phase 5 and `../Docs/SORRY_ROADMAP.md`.
 
-**CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`).  
-**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **457** `theorem`, **33** `lemma`, **3** `axiom`, **54** `.lean` files (line-start scan, not a full parser).
+**CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`); `.github/workflows/formal.yml` (`make coq-check` in Docker **`rocq/rocq-prover:9.0`**, `make agda-check` on Ubuntu with `agda-stdlib`).  
+**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **467** `theorem`, **48** `lemma`, **5** `axiom`, **55** `.lean` files (line-start scan, not a full parser).
 
 ## Module map (high level)
 
