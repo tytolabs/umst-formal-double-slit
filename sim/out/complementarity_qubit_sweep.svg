@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="480" viewBox="0 0 520 480">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .axis { stroke: #333; stroke-width: 1.2; fill: none; }
+      .arc { stroke: #0a5; stroke-width: 2; fill: none; }
+      .fill { fill: rgba(10, 160, 80, 0.08); stroke: none; }
+      .point { fill: #c03; stroke: #fff; stroke-width: 1.5; }
+      .lbl { font-family: system-ui, sans-serif; font-size: 11px; fill: #222; }
+      .title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: 600; fill: #111; }
+    ]]></style>
+  </defs>
+  <text x="260" y="26" text-anchor="middle" class="title">Complementarity (qubit path bit): V² + I² ≤ 1</text>
+  <path class="fill" d="M 72 408 L 440 408 A 368 368 0 0 1 72 40 L 72 408 Z"/>
+  <line class="axis" x1="72" y1="408" x2="440" y2="408"/>
+  <line class="axis" x1="72" y1="408" x2="72" y2="40"/>
+  <path class="arc" d="M 440 408 A 368 368 0 0 1 72 40"/>
+  <text x="256" y="452" text-anchor="middle" class="lbl">which-path distinguishability I</text>
+  <text transform="translate(22 224) rotate(-90)" text-anchor="middle" class="lbl">fringe visibility V</text>
+  <text x="436" y="422" text-anchor="end" class="lbl">1</text>
+  <text x="66" y="44" text-anchor="end" class="lbl">1</text>
+  <text x="68" y="412" text-anchor="end" class="lbl">0</text>
+  <circle class="point" cx="72.00" cy="40.00" r="5" id="pt_plus_identity"/>
+  <text x="80.00" y="54.00" class="lbl">plus/identity</text>
+  <circle class="point" cx="72.00" cy="408.00" r="5" id="pt_plus_which_path"/>
+  <text x="80.00" y="402.00" class="lbl">plus/which_path</text>
+  <circle class="point" cx="440.00" cy="408.00" r="5" id="pt_zero_identity"/>
+  <text x="312.00" y="402.00" class="lbl">zero/identity</text>
+  <circle class="point" cx="440.00" cy="408.00" r="5" id="pt_zero_which_path"/>
+  <text x="312.00" y="402.00" class="lbl">zero/which_path</text>
+  <circle class="point" cx="440.00" cy="408.00" r="5" id="pt_one_identity"/>
+  <text x="312.00" y="402.00" class="lbl">one/identity</text>
+  <circle class="point" cx="440.00" cy="408.00" r="5" id="pt_one_which_path"/>
+  <text x="312.00" y="402.00" class="lbl">one/which_path</text>
+</svg>

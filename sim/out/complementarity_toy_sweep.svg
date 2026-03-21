@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="480" viewBox="0 0 520 480">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .axis { stroke: #333; stroke-width: 1.2; fill: none; }
+      .arc { stroke: #0a5; stroke-width: 2; fill: none; }
+      .fill { fill: rgba(10, 160, 80, 0.08); stroke: none; }
+      .curve { stroke: #06c; stroke-width: 2.5; fill: none; }
+      .title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: 600; fill: #111; }
+      .lbl { font-family: system-ui, sans-serif; font-size: 11px; fill: #222; }
+    ]]></style>
+  </defs>
+  <text x="260" y="26" text-anchor="middle" class="title">Toy complementarity: V = sqrt(max(0, 1 - I^2)) vs feasible region</text>
+  <path class="fill" d="M 72 408 L 440 408 A 368 368 0 0 1 72 40 L 72 408 Z"/>
+  <line class="axis" x1="72" y1="408" x2="440" y2="408"/>
+  <line class="axis" x1="72" y1="408" x2="72" y2="40"/>
+  <path class="arc" d="M 440 408 A 368 368 0 0 1 72 40"/>
+  <path class="curve" d="M 72.00,40.00 L 90.40,40.46 L 108.80,41.84 L 127.20,44.16 L 145.60,47.44 L 164.00,51.69 L 182.40,56.95 L 200.80,63.28 L 219.20,70.72 L 237.60,79.37 L 256.00,89.30 L 274.40,100.66 L 292.80,113.60 L 311.20,128.34 L 329.60,145.20 L 348.00,164.59 L 366.40,187.20 L 384.80,214.14 L 403.20,247.59 L 421.60,293.09 L 440.00,408.00"/>
+  <text x="256" y="452" text-anchor="middle" class="lbl">info gain I (toy)</text>
+  <text transform="translate(22 224) rotate(-90)" text-anchor="middle" class="lbl">visibility V</text>
+</svg>

@@ -1,0 +1,20 @@
+# Haskell / Cabal
+Haskell/dist-newstyle/
+
+# Python
+**/__pycache__/
+*.py[cod]
+.Python
+
+# Coq build artifacts (vendored `Coq/`)
+Coq/*.glob
+Coq/.*.aux
+Coq/*.vo
+Coq/*.vok
+Coq/*.vos
+
+# Agda (vendored `Agda/`)
+Agda/_build/
+
+# OS / editor
+.DS_Store

@@ -1,0 +1,16 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH= /Users/santhoshshyamsundar/.elan/toolchains/leanprover--lean4---v4.14.0/bin/lean ././././DensityState.lean -R ./././. -o ././.lake/build/lib/DensityState.olean -i ././.lake/build/lib/DensityState.ilean -c ././.lake/build/ir/DensityState.c --json",
+   "level": "trace"},
+  {"message": "././././DensityState.lean:51:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message": "././././DensityState.lean:54:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message": "././././DensityState.lean:57:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message": "././././DensityState.lean:60:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././././DensityState.lean:76:2: try 'simp' instead of 'simpa'\nnote: this linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"}],
+ "depHash": "14903017399241392430"}

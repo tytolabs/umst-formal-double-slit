@@ -1,0 +1,64 @@
+# CI: Lake + Mathlib (cache when available). See Lean/VERIFY.md.
+name: Lean
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "Lean/**"
+      - "sim/**"
+      - "Makefile"
+      - ".github/workflows/lean.yml"
+  pull_request:
+    paths:
+      - "Lean/**"
+      - "sim/**"
+      - "Makefile"
+      - ".github/workflows/lean.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Lean
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Elan
+        run: |
+          set -e
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - uses: actions/cache@v4
+        with:
+          path: Lean/.lake
+          key: lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json') }}-${{ github.sha }}
+          restore-keys: |
+            lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json') }}-
+
+      - name: Mathlib cache + build
+        run: |
+          set -e
+          lake exe cache get || true
+          lake build
+
+      - name: Install Optional Sim Dependencies
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -e
+          python3 -m pip install -r sim/requirements-optional.txt
+
+      - name: Python sim + tests
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -e
+          python3 sim/toy_double_slit_mi_gate.py --validate
+          python3 sim/plot_toy_complementarity_svg.py --validate
+          python3 sim/qubit_kraus_sweep.py --validate
+          python3 sim/plot_complementarity_svg.py --validate
+          python3 -m unittest discover -s sim/tests -p "test_*.py"

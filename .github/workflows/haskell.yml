@@ -1,0 +1,47 @@
+# Haskell QuickCheck mirror — see Haskell/README.md
+name: Haskell
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "Haskell/**"
+      - ".github/workflows/haskell.yml"
+  pull_request:
+    paths:
+      - "Haskell/**"
+      - ".github/workflows/haskell.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cabal-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Haskell
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: haskell-actions/setup@v2
+        with:
+          ghc-version: "9.14"
+          cabal-version: "3.14"
+
+      - name: Cache Cabal store + dist-newstyle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cabal/store
+            ~/.cabal/packages
+            Haskell/dist-newstyle
+          key: ${{ runner.os }}-haskell-ghc914-${{ hashFiles('Haskell/umst-formal-double-slit.cabal', 'Haskell/cabal.project', 'Haskell/cabal.project.freeze', 'Haskell/**/*.hs') }}
+          restore-keys: |
+            ${{ runner.os }}-haskell-ghc914-
+
+      - name: Build and test
+        run: |
+          set -e
+          cabal update
+          cabal test

@@ -1,0 +1,105 @@
+# Double-slit Lean track — verification
+
+From `umst-formal-double-slit/Lean/`:
+
+```bash
+lake build
+```
+
+Expected: **success** (all roots in `lakefile.lean`).
+
+**Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.
+
+**CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`).  
+**Stats (heuristic):** from repo root, `make lean-stats` → `scripts/lean_decl_stats.py`.
+
+## Module map (high level)
+
+| Module | Role |
+|--------|------|
+| `UMSTCore` | ℝ Landauer scale + `Admissible` shape |
+| `DensityState` | `DensityMatrix`, `pureDensity`, `DensityMatrix.ext` |
+| `MeasurementChannel` | `KrausChannel`, `map` / `apply`, `compose`, `whichPathChannel`, Lüders diagonal |
+| `DoubleSlitCore` | `ObservationState`, `ObservationState.ext`, complementarity interface |
+| `QuantumClassicalBridge` | `pathWeight`, `whichPathDistinguishability`, `fringeVisibility`, `complementarity_fringe_path`, `observationStateCanonical`, `observationStateOf` |
+| `InfoEntropy` | `shannonBinary`, `vonNeumannDiagonal`, `vonNeumannDiagonal_whichPath_apply` |
+| `LandauerBound` | `pathEntropyBits`, `landauerCostDiagonal`, `landauerCostDiagonal_whichPathInvariant` |
+| `EpistemicSensing` | `QuantumProbe`, `nullProbe`/`whichPathProbe`, `ProbeStrength`, `IsMaxMIProbeAt`, finite-family argmax, collapse/preserve theorems, Landauer-from-strength bounds |
+| `EpistemicMI` | `PathProbe`, `EpistemicMI`, `epistemicMIBits`, `epistemicLandauerCost` links to `landauerCostDiagonal` |
+| `EpistemicDynamics` | `stepProbe`, `rollout`, `nullPolicy`/`whichPathPolicy` invariants |
+| `EpistemicTrajectoryMI` | `cumulativeEpistemicMI`, `cumulativeEpistemicLandauerCost` and bounds |
+| `EpistemicPolicy` | `policyUtility`, finite policy argmax, constrained policy optimality existence |
+| `EpistemicRuntimeContract` | runtime trace coherence/contract and bridge lemmas to policy dominance |
+| `EpistemicNumericsContract` | numeric rollout record (`NumericTraceRecord`), consistency, and utility-equivalence bridge |
+| `EpistemicPerStepNumerics` | per-step record (`PerStepNumericRecord`), fold-to-aggregate consistency, projection to numeric aggregate record |
+| `EpistemicRuntimeSchemaContract` | emitted runtime schema + rollout-consistency transfer to per-step/aggregate utility contracts |
+| `EpistemicTelemetryBridge` | runtime telemetry naming bridge (`trajMI` / `effortCost`) with consistency transfer into existing numeric contracts |
+| `EpistemicTelemetryApproximation` | epsilon-approximation assumptions for runtime numerics + zero-error transfer to exact contracts |
+| `EpistemicTelemetryQuantitativeUtility` | nonzero-error utility deviation bounds from aggregate approximation assumptions |
+| `EpistemicTraceDerivedEpsilonCertificate` | residual-based epsilon certificates derived from telemetry traces with direct utility-bound transfer |
+| `EpistemicTelemetrySolverCalibration` | explicit solver-parameter-to-epsilon calibration layer and utility-bound transfer assumptions |
+| `EpistemicTraceDrivenCalibrationWitness` | witness object pairing telemetry traces with calibration assumptions and direct utility-bound transfer |
+| `PrototypeSolverCalibration` | concrete calibration constants and explicit epsilon/utility-bound corollaries |
+| `GateCompat` | `thermoFromQubitPath`, `admissible_thermoFromQubitPath_whichPath` |
+| `Complementarity` | `complementarityEnglert`, `observationCanonical_complementary` (shim over bridge) |
+| `DoubleSlit` | Full-chain imports + **`measurementUpdateWhichPath`** (`MeasurementUpdate` for Lüders which-path) |
+| `ProbeOptimization` | `ProbeUtility`, finite argmax (`exists_optimalProbeIndexAt`), admissibility-constrained optimization |
+| `ExamplesQubit` | **`rhoPlus`**, **`rhoZero`**, **`rhoOne`**; epistemic/optimization + Landauer corollaries |
+| `MeasurementCost` | probe costs vs Landauer bit-energy cap |
+| `EpistemicGalois` | info–energy Galois connection (Lean) |
+| `LandauerLaw` | *(vendored parent)* `T_LandauerLaw`: `ErasureProcess`, `physicalSecondLaw`, `landauerBound`, Shannon on `Fin n` |
+| `LandauerExtension` | *(vendored)* temp scaling, n-bit bound, additivity, 300 K positivity |
+| `LandauerEinsteinBridge` | *(vendored)* SI `k_B`, `c`, `massEquivalent`, numeric brackets at 300 K |
+| `Gate` | *(vendored)* ℚ `ThermodynamicState`, `Admissible`, gate theorems (full UMST L₀ core) |
+| `Naturality` | *(vendored)* `MaterialClass`, `stateFor`, material-agnostic gate lemmas |
+| `Activation` | *(vendored)* `Engine`, `activation`, `ActivatedUMST`, totality + negative witnesses |
+| `FiberedActivation` | *(vendored)* `engineFiber`, universality, covering, characteristic engines |
+| `MonoidalState` | *(vendored)* `combine` on ℚ `ThermodynamicState`, unit/midpoint/convexity lemmas |
+
+**Note:** `UMSTCore` remains the **ℝ** scaffold for `GateCompat` / quantum composition; **`Gate`** is the independent ℚ formalization copied from the parent repo. They are intentionally **not** merged into one file.
+
+## Key proved facts (names to search)
+
+- **Lüders / dephasing:** `KrausChannel.whichPath_map_eq_diagonal`, `whichPath_map_apply_entry`
+- **Born weights after measurement:** `pathWeight_whichPath_apply`, `whichPathDistinguishability_whichPath_apply`
+- **Channel algebra:** `KrausChannel.compose_map`, `KrausChannel.apply_compose`
+- **PSD / coherence bound:** `normSq_coherence_le_product`
+- **Englert complementarity:** `complementarity_fringe_path`, `Complementarity.complementarityEnglert`
+- **Canonical observation state:** `observationStateCanonical`, `observationStateCanonical_complementary`
+- **Fringe kill under which-path:** `fringeVisibility_whichPath_apply`
+- **Classical packaging (external `V`):** `observationStateOf_complementary`, `observationStateOf_fringe_complementary`
+- **Entropy (binary):** `vonNeumannDiagonal_nonneg`, `vonNeumannDiagonal_le_log_two`, `vonNeumannDiagonal_whichPath_apply`, `shannonBinary_symm`, `shannonBinary_eq_binEntropy`, `shannonBinary_le_log_two`
+- **Landauer scale (diagonal entropy):** `landauerCostDiagonal_nonneg`, `pathEntropyBits_le_one`, `landauerCostDiagonal_le_landauerBitEnergy`, `landauerCostDiagonal_whichPathInvariant`
+- **T_LandauerLaw (vendored):** `landauerBound`, `landauerBound_nBit`, `binaryErasureEntropyDrop`, `physicalSecondLaw_uniform_binary`
+- **Landauer–Einstein bridge (vendored):** `massEquivalent_pos`, tight numeric mass bracket theorems at 300 K (see module)
+- **Monoidal state (vendored):** `combine_one`, `combine_zero`, `combine_density_between`, `combine_freeEnergy_le`
+- **Fibered activation (vendored):** `engineFiber_nonempty`, `strength_universal`, `activation_at_least_two`
+- **Epistemic interface:** `whichPathProbe`, `nullProbe`, `whichPathProbe_strength_invariant`, `IsMaxMIProbeAt`, `whichPathProbe_isMax_on_singleton`, `whichPathProbe_isMax_on_null_pair`, `exists_maxProbeIndexAt`, `argmaxProbeIndexAt_spec`, `argmax_nullWhichFamily_eq_which_of_pos`, `interference_preserved_nullProbe`, `collapse_on_whichPathProbe`, `LandauerCostFromProbeStrength_le_landauerBitEnergy`
+- **Probe optimization:** `ProbeUtility`, `exists_optimalProbeIndexAt`, `argmaxUtilityProbeIndexAt_spec`, `ProbeSelectionAdmissible_nullProbe`, `ProbeSelectionAdmissible_whichPathProbe`, `exists_constrainedOptimalAt`
+- **Epistemic MI:** `epistemicMI_whichPath`, `epistemicMIBits_whichPath`, `epistemicLandauerCost_whichPath`, `epistemicLandauerCost_null`
+- **Epistemic dynamics:** `rollout_nullPolicy`, `rollout_whichPathPolicy_visibility_zero_of_pos`, `rollout_whichPathPolicy_distinguishability_invariant`
+- **Trajectory aggregation:** `cumulativeEpistemicMI_nonneg`, `cumulativeEpistemicMI_le`, `cumulativeEpistemicLandauerCost_nonneg`, `cumulativeEpistemicLandauerCost_le`, `cumulativeEpistemicMI_nullPolicy`
+- **Policy optimization:** `exists_optimalPolicyIndexAt`, `argmaxPolicyIndexAt_spec`, `exists_constrainedOptimalPolicyAt`, `exists_constrainedOptimal_basicPolicyFamily`
+- **Epistemic runtime contract:** `RuntimeTraceCoherent`, `RuntimeTraceContractMI`, `RuntimeTraceContractLandauer`, `policyAdmissible_iff_traceStepsAdmissible`, `constrainedOptimal_traceUtilityDominates`
+- **Epistemic numerics contract:** `NumericTraceRecord.ofRollout`, `NumericTraceConsistent`, `NumericTraceFullyConsistent`, `traceRecordPolicyUtility_eq_policyUtility`, `traceRecordPolicyUtility_le_aggregateMI`
+- **Epistemic per-step numerics:** `PerStepNumericRecord.ofRollout`, `PerStepNumericConsistent`, `perStepConsistent_implies_aggregateConsistent`, `ofRollout_toNumericTraceRecord`, `perStepRecordPolicyUtility_eq_policyUtility`
+- **Epistemic runtime schema bridge:** `EmittedTraceSchema`, `EmittedTraceRolloutConsistent`, `emittedRolloutConsistent_toPerStepConsistent`, `emittedRolloutConsistent_toNumericTraceConsistent`, `ofRollout_policyUtility_eq`
+- **Epistemic telemetry bridge:** `RuntimeTelemetrySchemaConsistent`, `telemetrySchemaConsistent_toNumericTraceConsistent`, `telemetrySchemaConsistent_policyUtility_eq`, `RuntimeTelemetrySchema.ofRollout`
+- **Epistemic telemetry approximation:** `RuntimeTelemetrySchemaApproxConsistent`, `telemetryApprox_zero_implies_exact`, `telemetryApprox_zero_policyUtility_eq`, `telemetryApprox_ofRollout_zero`
+- **Epistemic telemetry quantitative utility:** `utilityApproxBound`, `numericApprox_utility_diff_le`, `utilityApproxBound_nonneg`, `utilityApproxBound_zero`
+- **Epistemic trace-derived epsilon certificate:** `traceResidualMI`, `traceResidualCost`, `traceResidual_numericApproxConsistent`, `traceEpsilonCertificate_utility_diff_le`
+- **Epistemic telemetry solver calibration:** `SolverCalibration`, `epsMIStep`, `epsCostStep`, `epsMIAgg`, `epsCostAgg`, `solverCalibration_utility_diff_le`
+- **Epistemic trace-driven calibration witness:** `TraceCalibrationWitnessAt`, `traceCalibrationWitnessAt_utility_diff_le`, `traceCalibrationWitnessAt_bound_nonneg`
+- **Prototype solver calibration:** `prototypeCalibration`, `prototypeCalibration_epsMIStep`, `prototypeCalibration_epsMIAgg`, `prototypeCalibration_utility_diff_le`
+- **Python sim regression:** `make sim`, `make sim-test` — toy CSV (`sim/toy_double_slit_mi_gate.py`); toy complementarity SVG (`sim/plot_toy_complementarity_svg.py`); qubit Kraus + qubit SVG (`sim/qubit_kraus_sweep.py`, `sim/plot_complementarity_svg.py`); tests under `sim/tests/`. **CI** also `pip install -r sim/requirements-optional.txt` (QuTiP / matplotlib / imageio); locally those tests skip if packages missing.
+- **Gate scaffold:** `thermoFromQubitPath_whichPath`, `admissible_thermoFromQubitPath_whichPath`
+- **Coarse measurement update + narrative wrappers:** `measurementUpdateWhichPath`, `measurementUpdateWhichPath_new_V`, `measurementUpdateWhichPath_I_eq`, `measurementUpdateWhichPath_landauer_eq`, `measurementUpdateWhichPath_landauer_le_landauerBitEnergy`, `interference_preserved_identity`, `collapse_fringe_on_whichPath`, `measurementUpdateWhichPath_gateEnforcement`
+
+## Not in this track yet (needs design / approval)
+
+- Physical **equality** Landauer (dissipation ≥ bound) for a concrete erasure channel
+- General-`n` entropy, quantum mutual information, DPI (`InfoEntropy` extension)
+- Nontrivial hydration/strength from QM; calibrated `thermoFromQubitPath`
+- Stronger equivalence-style DoubleSlit narrative (`⟺`) and detector-model refinements
+- Matplotlib animation / GIF export; full QuTiP-based spatial simulator (optional QuTiP **qubit** parity is in `sim/qutip_qubit_kraus.py`)
+- Richer CI (matrix, lint, `lean4checker`) if you want stricter gates

@@ -1,0 +1,5 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH= /Users/santhoshshyamsundar/.elan/toolchains/leanprover--lean4---v4.14.0/bin/lean ././././DoubleSlitCore.lean -R ./././. -o ././.lake/build/lib/DoubleSlitCore.olean -i ././.lake/build/lib/DoubleSlitCore.ilean -c ././.lake/build/ir/DoubleSlitCore.c --json",
+   "level": "trace"}],
+ "depHash": "4947598582017958018"}

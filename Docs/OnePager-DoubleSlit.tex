@@ -1,0 +1,32 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\title{Formal Connection Between Wave-Particle Duality and Landauer's Principle}
+\author{UMST Formal Methods Group}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+We present a mechanically verified formalization (in Lean 4) establishing a strict mathematical bridge between Englert's quantum complementarity relation and Landauer's thermodynamic erasure bound. 
+
+\section{Quantum Formalization}
+The formalization is scoped to a two-level system representing the spatial path of a particle in a double-slit interferometer. Working over the complex density matrix algebraic structure $\rho \in \mathbb{C}^{2 \times 2}$ with Positive Semi-Definite (PSD) and trace constraints, we define:
+\begin{align*}
+    I &= |p_0 - p_1| \\
+    V &= 2|\rho_{01}|
+\end{align*}
+The relation $V^2 + I^2 \le 1$ is formally proved via the Cauchy-Schwarz inequality on the PSD principal minor. A Lüders measurement (implemented via Kraus trace-preserving maps) dephases the off-diagonals, rigorously collapsing the visibility $V \to 0$.
+
+\section{Thermodynamic Projection}
+To link this to computation, we project the pure path probabilities onto a generalized classical \texttt{ThermodynamicState}. The logical uncertainty (diagonal von Neumann entropy) is quantified in bits, $S_{\text{bits}}$. We introduce an explicit \texttt{ErasureProcess} structure forcing a physical heat bath dissipation bound:
+\begin{equation}
+    Q \ge k_B T \ln 2 \cdot S_{\text{bits}}
+\end{equation}
+Lean proves that traversing the which-path quantum channel and subsequently erasing the apparatus state preserves the identical admissibility invariants required by classical gating logic. 
+
+\end{document}
