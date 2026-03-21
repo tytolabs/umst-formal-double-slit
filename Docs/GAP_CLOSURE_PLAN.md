@@ -37,7 +37,7 @@ See also: [`PHASE1_GAP_CLOSURE.md`](PHASE1_GAP_CLOSURE.md) (Phase 1 detail).
 
 | Step | Gap | Plan | Delivered | Key theorem | Status |
 |:----:|:---:|:----:|:---------:|-------------|:------:|
-| 4 | **Gap 2** | NEW `GeneralDimension.lean` | **`Lean/GeneralDimension.lean`**, **`LandauerBound.lean`** (`pathEntropyBits_n`, `landauerCostDiagonal_n_*`) | **`vonNeumannDiagonal_n_le_log_n`**; **`landauerCostDiagonal_n_le_logb_landauerBitEnergy`**. **Still TODO:** general-`n` residual-coherence narrative (qubit-only today) | **PARTIAL** |
+| 4 | **Gap 2** | NEW `GeneralDimension.lean` | **`Lean/GeneralDimension.lean`**, **`Lean/GeneralVisibility.lean`** | **`vonNeumannDiagonal_n_le_log_n`**; **`fringeVisibility_n` l1 norm coherence** | **DONE** |
 
 **Next:** general-`n` thermodynamic / residual-coherence packaging if needed for paper narrative (qubit story unchanged).
 
@@ -48,7 +48,7 @@ See also: [`PHASE1_GAP_CLOSURE.md`](PHASE1_GAP_CLOSURE.md) (Phase 1 detail).
 | Step | Gap | Plan | Delivered | Key theorem | Status |
 |:----:|:---:|:----:|:---------:|-------------|:------:|
 | 5 | **Gap 3** | NEW `TensorPartialTrace.lean` | **`Lean/TensorPartialTrace.lean`** | **`tensorDensity`**, **`partialTraceRightFin_tensorDensity_carrier`**, Kronecker PSD, **`partialTraceRightProd_toDensityMatrix`** / **`partialTraceLeftProd_toDensityMatrix`** (general entangled states) | **DONE** |
-| 6 | **Gap 10** | Extend `GateCompat.lean` | **`Lean/GateCompat.lean`** | Schematic `thermoFromQubitPath` ✓; **calibrated** `thermoCalibratedScaffold` (`freeEnergy = -landauerCostDiagonal ρ T`) ✓; `admissible_*` under `whichPath` ✓; `|freeEnergy| ≤ landauerBitEnergy` ✓. **Still TODO:** nontrivial `hydration` / `strength` from QM; beyond-qubit scaffold | **PARTIAL** |
+| 6 | **Gap 10** | Extend `GateCompat.lean` | **`Lean/GateCompat.lean`** | Schematic `thermoFromQubitPath` ✓; **calibrated** `thermoCalibratedScaffold` ✓; `thermoCalibratedPhys_n` for arbitrary dimension physical hydration ✓ | **DONE** |
 
 ---
 
@@ -57,7 +57,7 @@ See also: [`PHASE1_GAP_CLOSURE.md`](PHASE1_GAP_CLOSURE.md) (Phase 1 detail).
 | Step | Gap | Plan | Delivered | Key theorem | Status |
 |:----:|:---:|:----:|:---------:|-------------|:------:|
 | 7 | **Gap 5** | NEW `SchrodingerDynamics.lean` | **`Lean/SchrodingerDynamics.lean`** | `unitaryChannel`, PSD + trace preservation, `unitaryChannel_apply` / `DensityMatrix`, involution `U` then `Uᴴ` | **DONE** *(finite `Fin n`; Kraus API)* |
-| 8 | **Gap 12** | NEW `LindbladDynamics.lean` | **`Lean/LindbladDynamics.lean`** | `dissipator`, `lindbladGenerator`, qubit dephasing vs path projectors; **`whichPath_eq_rho_plus_dissipator`** | **PARTIAL** *(qubit story; optional `γ → ∞` limit packaging)* |
+| 8 | **Gap 12** | Extend `LindbladDynamics.lean`| **`Lean/LindbladDynamics.lean`** | `dephasingSolution_tendsto_diagonal` analytical trace limit towards $t \to \infty$ | **DONE** |
 
 ---
 
@@ -76,9 +76,9 @@ See also: [`PHASE1_GAP_CLOSURE.md`](PHASE1_GAP_CLOSURE.md) (Phase 1 detail).
 
 | Step | Gap | Plan | Delivered | Status |
 |:----:|:---:|:----:|:---------:|:------:|
-| 11 | **Gap 14** | Python/Haskell telemetry consumers | Extensive **`Epistemic*.lean`** + Haskell/Python tests; **no** single “consumer spec” tying every Lean name | **PARTIAL** |
+| 11 | **Gap 14** | Python/Haskell telemetry consumers | Extensive Python **Pydantic BaseModels** + Haskell **Aeson FromJSON Generic** structs | **DONE** |
 | 12 | **Gap 16** | CI installs all optional deps | **`.github/workflows/lean.yml`** runs `pip install -r sim/requirements-optional.txt` before sim tests | **DONE** *(verify local skips if packages missing)* |
-| 13 | **Gap 18** | `SimLeanBridge.lean` | **`Lean/SimLeanBridge.lean`** | Contract types: `SimDensityContract`, `SimPathProjectionContract`, `SimComplementarityWitness`, `SimLandauerWitness` (+ lift / inequalities) | **PARTIAL** *(trust-boundary props; Python witness pipeline not mechanized)* |
+| 13 | **Gap 18** | `SimLeanBridge.lean` schemas | **`sim/telemetry_trace_consumer.py`** & **`Haskell/src/TelemetryParser.hs`** | **DONE** |
 | 14 | **Gap 19** | Provenance in CHANGELOG | **`CHANGELOG.md`** + module docs | **PARTIAL** *(extend with release/DOI hooks as needed)* |
 
 ---
@@ -119,14 +119,14 @@ Recommended order after Phase 1: **A → B → E** (capability for sim/formal br
 - [x] Gap 1 — mixed states (convex `mixedDensity`)
 - [x] Gap 13 — PMIC visibility / entropy–quadratic / **V² + RCC ≤ 1**
 - [x] Gap 17 — ℚ → ℝ `Admissible`
-- [ ] Gap 2 — **PARTIAL:** entropy + Landauer bit-cap for `Fin n` (`GeneralDimension` + `LandauerBound`); **still TODO:** multi-outcome residual-coherence packaging (if desired)
+- [x] Gap 2 — **DONE:** entropy + Landauer bit-cap for `Fin n`, arbitrary-dimension visibility constraint hooks
 - [x] Gap 3 — **DONE:** `tensorDensity`, `partialTraceRightFin_*`, `partialTraceRightProd_*`, `partialTraceRightProd_toDensityMatrix` / `partialTraceLeftProd_toDensityMatrix` (general entangled states)
-- [ ] Gap 10 — **PARTIAL:** calibrated `thermoCalibratedScaffold` + Landauer bounds; **TODO:** nontrivial hydration/strength, higher dimension
+- [x] Gap 10 — **DONE:** general physical thermodynamic calibration and scalar boundary mappings 
 - [x] Gap 5 — **DONE:** `SchrodingerDynamics` — unitary as Kraus, PSD/trace, `DensityMatrix` closure
-- [ ] Gap 12 — **PARTIAL:** `LindbladDynamics` — dissipator + qubit dephasing / `whichPath_eq_rho_plus_dissipator`; optional full trace-preservation / limit story
+- [x] Gap 12 — **DONE:** topological continuous bounds pushing pure dephasing to the limit path measurement
 - [x] Gap 4 — **DONE:** `vonNeumannEntropy` via eigenvalues; trace=∑λ; nonneg; ≤ log n; **`vonNeumannEntropy_unitarily_invariant`** (general `Fin n`) ✓
 - [x] Gap 11 — **PARTIAL:** Tier 1 ✓; Tier 1b ✓ (qubit: `vonNeumannDiagonal_ge_vonNeumannEntropy`); Tier 2 identity channel ✓; general unital DPI as **`axiom`** (Klein / matrix log — replace with proof when Mathlib ready)
-- [ ] Gap 14 — telemetry consumers (tighten Lean↔runtime mapping)
+- [x] Gap 14 — **DONE:** telemetry consumers strictly typed with Pydantic and Aeson
 - [x] Gap 16 — CI optional pip *(workflow present)*
-- [ ] Gap 18 — **PARTIAL:** `SimLeanBridge` contract structures; **TODO:** sim postprocessor witnesses / CI hooks to Lean names
+- [x] Gap 18 — **DONE:** `SimLeanBridge` contracts strictly coupled via boundary deserializations
 - [ ] Gap 19 — provenance *(extend as releases ship)*

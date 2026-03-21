@@ -4,7 +4,8 @@
 """
 Idempotently add MIT SPDX + copyright headers to first-party sources under this repo.
 
-Covers: Lean (.lean), Python (.py), Haskell (.hs), LaTeX (.tex), Markdown (.md).
+Covers: Lean (.lean), Python (.py), Haskell (.hs), LaTeX (.tex), Markdown (.md),
+Coq (.v), Agda (.agda).
 
 Usage (from repo root):
   python3 scripts/add_spdx_headers.py
@@ -47,6 +48,18 @@ MD_HEADER = (
     "SPDX-License-Identifier: MIT\n"
     "Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "-->\n"
+    "\n"
+)
+
+COQ_HEADER = (
+    "(* SPDX-License-Identifier: MIT *)\n"
+    "(* Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO *)\n"
+    "\n"
+)
+
+AGDA_HEADER = (
+    "-- SPDX-License-Identifier: MIT\n"
+    "-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "\n"
 )
 
@@ -110,11 +123,28 @@ def _patch_md(path: Path) -> bool:
     return True
 
 
+def _patch_coq(path: Path) -> bool:
+    text = path.read_text(encoding="utf-8")
+    if _has_spdx_snippet(text, 1200):
+        return False
+    path.write_text(COQ_HEADER + text, encoding="utf-8")
+    return True
+
+
+def _patch_agda(path: Path) -> bool:
+    text = path.read_text(encoding="utf-8")
+    if _has_spdx_snippet(text, 1500):
+        return False
+    path.write_text(AGDA_HEADER + text, encoding="utf-8")
+    return True
+
+
 def _skip_dir_parts(parts: tuple[str, ...]) -> bool:
     """Never touch tool caches, build outputs, or vendored trees."""
     skip = {
         ".lake",
         "__pycache__",
+        ".pytest_cache",
         ".venv",
         "venv",
         "node_modules",
@@ -150,6 +180,26 @@ def main() -> int:
         # Plain-text LICENSE is not Markdown
         and p.name != "LICENSE.md"
     )
+    coq_root = REPO_ROOT / "Coq"
+    agda_root = REPO_ROOT / "Agda"
+    coq_files = (
+        sorted(
+            p
+            for p in coq_root.rglob("*.v")
+            if coq_root.exists() and not _skip_dir_parts(_rel_parts(p))
+        )
+        if coq_root.is_dir()
+        else []
+    )
+    agda_files = (
+        sorted(
+            p
+            for p in agda_root.rglob("*.agda")
+            if agda_root.exists() and not _skip_dir_parts(_rel_parts(p))
+        )
+        if agda_root.is_dir()
+        else []
+    )
 
     changed: list[Path] = []
     for p in lean_files:
@@ -166,6 +216,12 @@ def main() -> int:
             changed.append(p)
     for p in md_files:
         if _patch_md(p):
+            changed.append(p)
+    for p in coq_files:
+        if _patch_coq(p):
+            changed.append(p)
+    for p in agda_files:
+        if _patch_agda(p):
             changed.append(p)
 
     for p in changed:

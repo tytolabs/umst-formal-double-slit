@@ -67,7 +67,40 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+from pydantic import BaseModel, Field
+from typing import List, Optional, Union
 import numpy as np
+
+class EmittedStepRecord(BaseModel):
+    thermodynamicAdmissible: Optional[Union[bool, int]] = None
+    confidence: Optional[float] = None
+    stepMI: Optional[float] = None
+    stepCost: Optional[float] = None
+
+class StepRecord(BaseModel):
+    density_matrix_real: Optional[List[List[float]]] = None
+    density_matrix_imag: Optional[List[List[float]]] = None
+    path_weights: Optional[List[float]] = None
+    visibility: Optional[float] = None
+    distinguishability: Optional[float] = None
+    entropy_bits: Optional[float] = None
+    temperature: Optional[float] = 300.0
+    stepMI: Optional[float] = None
+    trajMI: Optional[float] = None
+    stepCost: Optional[float] = None
+    effortCost: Optional[float] = None
+    emitted: Optional[EmittedStepRecord] = None
+
+class AggregateRecord(BaseModel):
+    aggregateMI: Optional[float] = None
+    aggregateCost: Optional[float] = None
+
+class TraceRecord(BaseModel):
+    steps: List[StepRecord] = []
+    temperature: Optional[float] = None
+    aggregateMI: Optional[float] = None
+    aggregateCost: Optional[float] = None
+    aggregate: Optional[AggregateRecord] = None
 
 
 @dataclass
@@ -304,6 +337,9 @@ def consume_trace(trace_path: Path, tolerance: float) -> list[ContractResult]:
     """Read a trace file and check all contracts."""
     with open(trace_path) as f:
         data = json.load(f)
+    
+    # Strict schema boundary validation (Gap 14/18)
+    _ = TraceRecord.model_validate(data)
 
     results: list[ContractResult] = []
     steps = data.get("steps", [])

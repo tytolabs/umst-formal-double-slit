@@ -51,7 +51,21 @@ The repository is **MIT** (`LICENSE`). New **first-party** sources should carry:
   -->
   ```
 
-From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the above to **`Lean/**/*.lean`** (skips **`.lake`**), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`** (skips **`dist-newstyle`**, **`dist`**, **`.stack-work`**), **`Docs/*.tex`**, and **repo-wide `*.md`** (except a literal `LICENSE.md` if added later). **Do not** retarget it at vendored trees.
+- **Coq** — at the **very top** (before any other `(* … *)` banner):
+
+  ```coq
+  (* SPDX-License-Identifier: MIT *)
+  (* Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO *)
+  ```
+
+- **Agda** — at the **very top** (before `{-|` or `{-# OPTIONS`):
+
+  ```agda
+  -- SPDX-License-Identifier: MIT
+  -- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+  ```
+
+From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the above to **`Lean/**/*.lean`** (skips **`.lake`**), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`** (skips **`dist-newstyle`**, **`dist`**, **`.stack-work`**), **`Coq/**/*.v`**, **`Agda/**/*.agda`**, **`Docs/*.tex`**, and **repo-wide `*.md`** (skips **`.pytest_cache`**, etc.). **Do not** retarget it at vendored trees.
 
 ## Lean
 

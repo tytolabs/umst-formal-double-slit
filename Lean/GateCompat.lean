@@ -8,6 +8,7 @@ import MeasurementChannel
 import QuantumClassicalBridge
 import LandauerBound
 import EpistemicSensing
+import GeneralVisibility
 
 /-!
 # GateCompat — UMST `Admissible` shape vs qubit path statistics
@@ -143,6 +144,22 @@ noncomputable def thermoCalibratedPhys (P : QuantumProbe) (ρ : DensityMatrix hn
   freeEnergy := -landauerCostDiagonal ρ T
   hydration := calibratedHydration ρ
   strength := calibratedStrength P ρ
+
+/-! ## General Dimension `Fin n` Extensions (Gaps 2 & 10) -/
+
+/-- N-dimensional physical hydration metric built from the $l_1$ norm of coherence. -/
+noncomputable def calibratedHydration_n {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) : ℝ :=
+  1 - fringeVisibility_n hn ρ
+
+/-- Full N-dimensional calibrated gate state. 
+Connects diagonal Landauer bounds spanning $N$ dimensions with $N$-slit visibility for the
+thermodynamic and epistemic metrics. -/
+noncomputable def thermoCalibratedPhys_n {n : ℕ} (hn : 0 < n) (P : QuantumProbe) 
+    (ρ : DensityMatrix hn) (T : ℝ) : ThermodynamicState where
+  density := pathWeight ρ 0
+  freeEnergy := -landauerCostDiagonal_n_real hn ρ T
+  hydration := calibratedHydration_n hn ρ
+  strength := 0 -- Placeholder for generalized probe strength.
 
 /-- For the canonical measuring probe, the calibrated physical state satisfies the standard
 `Admissible` thermodynamic conditions across the path measurement channel. -/

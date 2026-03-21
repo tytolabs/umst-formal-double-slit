@@ -1,8 +1,7 @@
-------------------------------------------------------------------------
 -- SPDX-License-Identifier: MIT
--- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy
---   — Studio TYTO
---
+-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+
+------------------------------------------------------------------------
 -- UMST-Formal: ComplementaritySpec.agda
 --
 -- Englert complementarity relation for qubit density matrices.

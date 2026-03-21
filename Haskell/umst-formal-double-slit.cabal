@@ -64,7 +64,8 @@ library
         MeasurementCost,
         EpistemicGalois,
         LandauerExtension,
-        MonoidalState
+        MonoidalState,
+        TelemetryParser
 
     -- Modules included in this library but not exported.
     -- other-modules:
@@ -72,8 +73,10 @@ library
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
 
-    -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.22.0.0
+    build-depends:    base ^>=4.22.0.0,
+                      aeson,
+                      bytestring,
+                      text
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -129,7 +132,9 @@ test-suite umst-formal-double-slit-test
     build-depends:
         base ^>=4.22.0.0,
         umst-formal-double-slit,
-        QuickCheck >= 2.14
+        QuickCheck >= 2.14,
+        aeson,
+        bytestring
 
 -- Rational arithmetic consistency with Lean `LandauerEinsteinBridge.lean` tight bracket.
 test-suite landauer-einstein-sanity

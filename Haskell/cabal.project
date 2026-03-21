@@ -1,3 +1,4 @@
 -- Explicit package root for CI and optional `cabal freeze` / lockfiles later.
 -- See Docs/PARALLEL_WORK.md (CI row).
 packages: .
+allow-newer: all

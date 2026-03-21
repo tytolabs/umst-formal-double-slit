@@ -35,7 +35,8 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Added (license headers)
 
-- **MIT SPDX headers** on first-party **`Lean/**/*.lean`** (excluding `.lake`), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`**, **`Docs/*.tex`**, and **`.md`** docs; maintenance tool **`scripts/add_spdx_headers.py`** (skips **`dist-newstyle`** / build junk); documented in **`CONTRIBUTING.md`** and **`scripts/README.md`**.
+- **MIT SPDX headers** on first-party **`Lean/**/*.lean`**, **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`**, **`Coq/**/*.v`**, **`Agda/**/*.agda`**, **`Docs/*.tex`**, and **`.md`** docs; maintenance tool **`scripts/add_spdx_headers.py`** (skips **`.lake`**, **`dist-newstyle`**, **`.pytest_cache`**, …); documented in **`CONTRIBUTING.md`** and **`scripts/README.md`**.
+- **`.gitignore`** — **`**/.pytest_cache/`** so pytest cache is not committed.
 
 ### Fixed (Haskell layout)
 

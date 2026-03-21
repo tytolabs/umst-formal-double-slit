@@ -8,7 +8,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Script | Usage |
 |--------|--------|
 | `lean_decl_stats.py` | Heuristic counts of `theorem` / `lemma` / `def` / … in `Lean/**/*.lean` (skips `.lake`). |
-| `add_spdx_headers.py` | Idempotently prepends MIT `SPDX-License-Identifier` + copyright to `Lean/**/*.lean` (skips `.lake`), `sim/**/*.py`, `scripts/**/*.py`, `Haskell/**/*.hs` (skips `dist-newstyle` / `dist`), `Docs/*.tex`, and repo `*.md`. |
+| `add_spdx_headers.py` | Idempotently prepends MIT `SPDX-License-Identifier` + copyright to `Lean/**/*.lean`, `sim/**/*.py`, `scripts/**/*.py`, `Haskell/**/*.hs`, `Coq/**/*.v`, `Agda/**/*.agda`, `Docs/*.tex`, repo `*.md` (skips `.lake`, `dist-newstyle`, `.pytest_cache`, …). |
 
 From repo root:
 

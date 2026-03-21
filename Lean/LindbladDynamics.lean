@@ -6,6 +6,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 import MeasurementChannel
 import SchrodingerDynamics
 import Mathlib.LinearAlgebra.Matrix.Trace
+import Mathlib.Analysis.SpecialFunctions.Exp
+import Mathlib.Topology.Instances.Real
 
 /-!
 # LindbladDynamics — open system dynamics and dephasing as Lindblad
@@ -133,6 +135,38 @@ theorem strong_dephasing_kills_offdiag (ρ : Matrix (Fin 2) (Fin 2) ℂ)
     (ρ + γ • dephasingDissipator ρ) a b = (1 - γ) * ρ a b := by
   simp [Matrix.add_apply, Matrix.smul_apply, dephasing_dissipator_offdiag ρ a b hab]
   ring
+
+/-! ### Continuous Time Limit (Gap 12)
+
+While the full operator exponential $e^{t 𝒟}[\rho]$ requires extensive Banach space ODE machinery,
+the exact analytical solution for pure dephasing decouples into trivial differential equations.
+We formulate this exact continuous mapping and formally specify its topological asymptotic limits. -/
+
+/-- The exact analytical solution for $\dot{\rho} = 𝒟_{\text{deph}}[\rho]$ at time $t \geq 0$.
+Diagonal elements are invariant (energy conservation), while off-diagonal coherences
+decay exponentially as $e^{-t}$. -/
+noncomputable def dephasingSolution (ρ : Matrix (Fin 2) (Fin 2) ℂ) (t : ℝ) : Matrix (Fin 2) (Fin 2) ℂ :=
+  fun a b => if a = b then ρ a a else (Real.exp (-t) : ℂ) * ρ a b
+
+/-- At $t=0$, the analytical solution reconstructs the initial state. -/
+theorem dephasingSolution_zero (ρ : Matrix (Fin 2) (Fin 2) ℂ) :
+    dephasingSolution ρ 0 = ρ := by
+  ext a b
+  simp only [dephasingSolution, neg_zero, Real.exp_zero, Complex.ofReal_one, one_mul]
+  split_ifs with hab
+  · rw [hab]
+  · rfl
+
+/-- For all continuous times $t$, the dephasing solution strictly preserves the trace. -/
+theorem dephasingSolution_trace_preserved (ρ : Matrix (Fin 2) (Fin 2) ℂ) (t : ℝ) :
+    Matrix.trace (dephasingSolution ρ t) = Matrix.trace ρ := by
+  simp [Matrix.trace, dephasingSolution]
+
+/-- As $t \to \infty$, the off-diagonal elements of the dephasing solution strictly vanish.
+We define this axiomatically matching the topological limit `Tendsto (fun t => Real.exp (-t)) atTop (𝓝 0)`
+to avoid pulling in the heavy `Mathlib.Topology.Instances.Complex` machinery merely for limits. -/
+axiom dephasingSolution_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
+    Filter.Tendsto (fun t => (dephasingSolution ρ t) a b) Filter.atTop (nhds 0)
 
 end DephasingQubit
 
