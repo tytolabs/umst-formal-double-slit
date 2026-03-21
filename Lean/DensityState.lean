@@ -48,17 +48,30 @@ theorem trace_eq_one (ρ : @DensityMatrix n) : Matrix.trace ρ.carrier = 1 :=
 theorem isHermitian (ρ : @DensityMatrix n) : ρ.carrier.IsHermitian :=
   ρ.psd.isHermitian
 
-theorem diag_nonneg_complex_n (ρ : @DensityMatrix n) (i : Fin n) : (0 : ℂ) ≤ ρ.carrier i i :=
-  sorry
+theorem diag_nonneg_complex_n (ρ : @DensityMatrix n) (i : Fin n) : (0 : ℂ) ≤ ρ.carrier i i := by
+  have h := ρ.psd.2 (Pi.single i (1 : ℂ))
+  have key : dotProduct (star (Pi.single i (1 : ℂ))) (ρ.carrier *ᵥ Pi.single i (1 : ℂ)) = ρ.carrier i i := by
+    simp only [Pi.star_single, star_one, mulVec_single, dotProduct_single_one, mul_one]
+  rwa [key] at h
 
 theorem diag_re_nonneg_n (ρ : @DensityMatrix n) (i : Fin n) : 0 ≤ (ρ.carrier i i).re :=
-  sorry
+  (Complex.nonneg_iff.mp (diag_nonneg_complex_n ρ i)).1
 
-theorem trace_re_eq_one_n (ρ : @DensityMatrix n) : ∑ i : Fin n, (ρ.carrier i i).re = 1 :=
-  sorry
+theorem trace_re_eq_one_n (ρ : @DensityMatrix n) : ∑ i : Fin n, (ρ.carrier i i).re = 1 := by
+  have h := ρ.trace_one
+  unfold Matrix.trace at h
+  apply_fun Complex.re at h
+  simp only [map_sum, Complex.one_re] at h
+  exact h
 
-theorem diag_re_le_one_n (ρ : @DensityMatrix n) (i : Fin n) : (ρ.carrier i i).re ≤ 1 :=
-  sorry
+theorem diag_re_le_one_n (ρ : @DensityMatrix n) (i : Fin n) : (ρ.carrier i i).re ≤ 1 := by
+  have hsum := trace_re_eq_one_n ρ
+  have hrest : ∑ j in Finset.univ.erase i, (ρ.carrier j j).re ≥ 0 :=
+    Finset.sum_nonneg (fun j _ => diag_re_nonneg_n ρ j)
+  have heq : (ρ.carrier i i).re + ∑ j in Finset.univ.erase i, (ρ.carrier j j).re = 1 := by
+    rw [← Finset.add_sum_erase Fintype.univ i (Finset.mem_univ i)]
+    exact hsum
+  linarith
 
 end DensityMatrix
 

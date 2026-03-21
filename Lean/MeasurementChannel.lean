@@ -200,19 +200,34 @@ noncomputable def pathProjector (i : Fin 2) : Matrix (Fin 2) (Fin 2) ℂ :=
   diagonal (single i (1 : ℂ))
 
 theorem pathProjector_conjTranspose (i : Fin 2) :
-    (pathProjector i)ᴴ = pathProjector i :=
-  sorry
+    (pathProjector i)ᴴ = pathProjector i := by
+  ext a b
+  simp [pathProjector, diagonal, conjTranspose_apply, Pi.single, Function.update, star]
+  split_ifs <;> simp [Complex.conj_ofReal]
 
-theorem pathProjector_mul_self (i : Fin 2) : pathProjector i * pathProjector i = pathProjector i :=
-  sorry
+theorem pathProjector_mul_self (i : Fin 2) : pathProjector i * pathProjector i = pathProjector i := by
+  ext a b
+  simp only [pathProjector, Matrix.mul_apply, diagonal_apply, Finset.sum_ite_eq', Finset.mem_univ,
+    if_true, Pi.single]
+  split_ifs <;> simp_all [Function.update]
 
 theorem pathProjector_mul_orthogonal {i j : Fin 2} (hij : i ≠ j) :
-    pathProjector i * pathProjector j = 0 :=
-  sorry
+    pathProjector i * pathProjector j = 0 := by
+  ext a b
+  simp only [pathProjector, Matrix.mul_apply, diagonal_apply, Matrix.zero_apply,
+    Finset.sum_ite_eq', Finset.mem_univ, if_true, Pi.single]
+  split_ifs with ha hb
+  · subst ha; simp [Function.update, hij]
+  all_goals simp_all [Function.update]
 
 theorem pathProjector_tp_aux :
-    (∑ i : Fin 2, (pathProjector i)ᴴ * pathProjector i) = 1 :=
-  sorry
+    (∑ i : Fin 2, (pathProjector i)ᴴ * pathProjector i) = 1 := by
+  simp only [pathProjector_conjTranspose]
+  ext a b
+  simp only [Fin.sum_univ_two, Matrix.add_apply, Matrix.one_apply]
+  simp only [pathProjector, diagonal, Pi.single, Function.update, Matrix.mul_apply,
+    Finset.sum_ite_eq', Finset.mem_univ, if_true]
+  fin_cases a <;> fin_cases b <;> simp
 
 /-- Lüders measurement in the computational basis of a 2-level path system. -/
 noncomputable def whichPathChannel : KrausChannel 2 (Fin 2) where
@@ -222,13 +237,18 @@ noncomputable def whichPathChannel : KrausChannel 2 (Fin 2) where
 /-- One Kraus term `Pᵢ ρ Pᵢ` picks out the `(i,i)` diagonal entry and zeros all other matrix
 elements. -/
 theorem pathProjector_conj_mul_entry (i a b : Fin 2) (ρ : Matrix (Fin 2) (Fin 2) ℂ) :
-    (pathProjector i * ρ * pathProjector i) a b = if a = i ∧ b = i then ρ i i else 0 :=
-  sorry
+    (pathProjector i * ρ * pathProjector i) a b = if a = i ∧ b = i then ρ i i else 0 := by
+  simp only [pathProjector, Matrix.mul_apply, diagonal_apply, Pi.single, Function.update]
+  fin_cases i <;> fin_cases a <;> fin_cases b <;> simp [Finset.sum_ite_eq', Finset.mem_univ]
 
 /-- Path measurement **dephases** to the diagonal: off-diagonal entries vanish, diagonal is unchanged. -/
 theorem whichPath_map_eq_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) :
-    whichPathChannel.map ρ = diagonal (fun i : Fin 2 => ρ i i) :=
-  sorry
+    whichPathChannel.map ρ = diagonal (fun i : Fin 2 => ρ i i) := by
+  ext a b
+  simp only [KrausChannel.map, whichPathChannel, Fin.sum_univ_two, Matrix.add_apply,
+    diagonal_apply]
+  rw [pathProjector_conj_mul_entry 0, pathProjector_conj_mul_entry 1]
+  fin_cases a <;> fin_cases b <;> simp
 
 theorem whichPath_map_apply_entry (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) :
     whichPathChannel.map ρ a b = if a = b then ρ a a else 0 := by

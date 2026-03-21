@@ -84,7 +84,7 @@ Create a scoped, defensible bridge:
 
 ## integrated from upstream framework (full parity track)
 
-These files are **copies** (with the same module structure as upstream) so this checkout is self-contained. **Re-sync** from `../umst-formal` when the upstream reference changes — see **`Docs/VENDOR_SYNC.md`** for a file-level checklist and recommendations.
+These files are **copies** (with the same module structure as upstream) so this checkout is self-contained. **Re-sync** from `../umst-formal` when the upstream reference changes.
 
 - **Lean** (all in `lake build`): `LandauerLaw.lean`, `LandauerExtension.lean`, `LandauerEinsteinBridge.lean`, `Gate.lean`, `Naturality.lean`, `Activation.lean`, `FiberedActivation.lean`, `MonoidalState.lean`.
 - **Haskell:** `Haskell/src/LandauerExtension.hs`, `MonoidalState.hs`; QuickCheck in `Haskell/test/Main.hs`; rational sanity suite `landauer-einstein-sanity` (Lean bridge numerators).
@@ -145,13 +145,10 @@ See `Lean/VERIFY.md` for a module map and main theorem names.
 Simulation details: `sim/README.md`.
 
 **CI:** on push/PR to `main` or `master`: **`lean.yml`** — `lake build` in `Lean/`, then `pip install -r sim/requirements-optional.txt`, then the same Python steps as `make sim` + `make sim-test`; **`haskell.yml`** — `cabal test` in `Haskell/` (includes **`landauer-einstein-sanity`**). Coq/Agda checks are **local** via **`make coq-check`** / **`make agda-check`** (not in default CI).  
-**Contributing / parallel agents:** `CONTRIBUTING.md`, `Docs/PARALLEL_WORK.md` (swarm coordination), `Docs/TODO-TRACKING.md` (milestone vs todo reconciliation). **Confused by “repository” / “upstream reference” / what’s actually in this folder?** → `Docs/SCOPE_PARENT_AND_SEPARATE_REPO.md`. Optional all-in-one local check: **`make ci-full`** (Lean + Python + Cabal).  
+**Contributing / tracking:** `CONTRIBUTING.md`, `Docs/TODO-TRACKING.md` (milestone vs todo reconciliation). Optional all-in-one local check: **`make ci-full`** (Lean + Python + Cabal).  
 **Status table:** `PROOF-STATUS.md`.  
-**Derivation walkthrough (informal):** `Docs/DoubleSlit-Derivation.md`.  
+**Mathematical Foundations:** `Docs/Mathematical-Foundations.md`.  
 **Epistemic sensing ↔ quantum (note):** `Docs/EpistemicSensingQuantum.md`.  
 **One-pager (LaTeX):** `Docs/OnePager-DoubleSlit.tex`.  
 **Assumptions / non-claims:** `Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.  
-**Changelog:** `CHANGELOG.md`.  
-**Deep verification audit (build/sorry/CI caveats):** `Docs/DEEP_VERIFICATION_REPORT.md`.  
-**Copy-paste agent verification prompt:** `Docs/AGENT_VERIFICATION_PROMPT.md`.  
-**Cleanup / polish checklist:** `Docs/REPO_CLEANUP_PLAN.md`.
+**Changelog:** `CHANGELOG.md`. 
