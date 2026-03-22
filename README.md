@@ -429,7 +429,7 @@ This repository is part of the **Foundations of Constitutional Physics (FCP)** s
 |:-----:|-------|:------:|
 | FCP-I | Physics-Gated AI — UMST tensor + DUMSTO hard gate | [record](https://zenodo.org/records/18768547) |
 | FCP-II | Epistemic Sensing — MI-guided proxy selection | [record](https://zenodo.org/records/18894710) |
-| **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | **This repo** (cite via your release DOI when you mint one) |
+| **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | [record](https://zenodo.org/records/19159660) |
 
 **Related code** ([`github.com/tytolabs`](https://github.com/tytolabs)):
 
