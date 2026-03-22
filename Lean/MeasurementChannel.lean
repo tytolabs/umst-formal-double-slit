@@ -7,6 +7,7 @@ import Mathlib.Data.Complex.Basic
 import Mathlib.Algebra.BigOperators.Ring
 import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Data.Fintype.BigOperators
+import Mathlib.Data.Fintype.Prod
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.LinearAlgebra.Matrix.PosDef
 import Mathlib.Data.Matrix.RowCol
@@ -31,7 +32,7 @@ projectors `Pᵢ = diagonal (Pi.single i 1)` with `∑ Pᵢ = 1`. This is the st
 measurement channel on the path degree of freedom. **`whichPath_map_eq_diagonal`**: the channel maps
 `ρ` to `diagonal (fun i => ρ i i)` (dephasing; diagonal entries fixed, off-diagonal zeroed).
 
-**Composition:** `KrausChannel.compose κ₁ κ₂` (indices `(i,j)`, operators `K₂ⱼ K₁ᵢ`) satisfies **`compose_map`**:
+**Composition:** `κ₂.compose κ₁` (indices `(i,j)`, operators `K₂ⱼ K₁ᵢ`) satisfies **`compose_map`**:
 `map` agrees with applying `κ₁` then `κ₂`. Corollary **`apply_compose`** for `DensityMatrix.apply`.
 
 **Unital / entropy (Tier 2 base case):** `KrausChannel.IsUnital` and von Neumann entropy under the identity
@@ -71,29 +72,23 @@ theorem map_expand (ρ : Matrix (Fin n) (Fin n) ℂ) :
 /-- Each Kraus conjugation `ρ ↦ K ρ Kᴴ` preserves positive semidefiniteness. -/
 theorem posSemidef_map_term (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : ρ.PosSemidef) (i : ι) :
     (κ.K i * ρ * (κ.K i)ᴴ).PosSemidef :=
-  (hρ.mul_mul_conjTranspose_same (κ.K i)).conjTranspose
-
-/-- Sum of PSD matrices is PSD (pointwise quadratic form). -/
-theorem PosSemidef.add {A B : Matrix (Fin n) (Fin n) ℂ} (hA : A.PosSemidef) (hB : B.PosSemidef) :
-    (A + B).PosSemidef := by
-  refine ⟨hA.isHermitian.add hB.isHermitian, fun x => ?_⟩
-  simpa [mulVec_add, dotProduct_add] using
-    (Complex.add_nonneg (hA.2 x) (hB.2 x))
+  hρ.mul_mul_conjTranspose_same (κ.K i)
 
 theorem posSemidef_finset_sum (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n) ℂ)
     (hf : ∀ i ∈ s, (f i).PosSemidef) : (∑ i ∈ s, f i).PosSemidef := by
   classical
-  refine Finset.induction_on s ?_ ?_
-  · simp [PosSemidef.zero]
-  · intro a t ha ih hf'
-    have hfa : (f a).PosSemidef := hf' a (Finset.mem_insert_self _ _)
-    have iht : ∀ i ∈ t, (f i).PosSemidef := fun i hi => hf' _ (Finset.mem_insert_of_mem hi)
-    simp only [Finset.sum_insert ha]
-    exact PosSemidef.add hfa (ih iht)
+  refine Finset.induction_on s (p := fun s' => (∀ i ∈ s', (f i).PosSemidef) → (∑ i ∈ s', f i).PosSemidef)
+    ?_ ?_ hf
+  · intro; simp [Finset.sum_empty, PosSemidef.zero]
+  · intro a t hat ih hins
+    rw [Finset.sum_insert hat]
+    exact Matrix.PosSemidef.add (hins a (Finset.mem_insert_self _ _))
+      (ih fun i hi => hins i (Finset.mem_insert_of_mem hi))
 
 theorem posSemidef_sum (f : ι → Matrix (Fin n) (Fin n) ℂ) (hf : ∀ i, (f i).PosSemidef) :
     (∑ i, f i).PosSemidef := by
-  simpa [Fintype.sum_eq_sum_univ] using posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
+  classical
+  exact posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
 
 theorem map_posSemidef (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : ρ.PosSemidef) :
     (κ.map ρ).PosSemidef := by
@@ -105,27 +100,25 @@ theorem trace_mul_sum (ρ : Matrix (Fin n) (Fin n) ℂ) (f : ι → Matrix (Fin 
     (∑ i ∈ s, Matrix.trace (ρ * f i)) = Matrix.trace (ρ * ∑ i ∈ s, f i) := by
   classical
   refine Finset.induction_on s ?_ ?_
-  · simp
+  · simp [Finset.sum_empty]
   · intro a t ha ih
-    simp only [Finset.sum_insert ha, mul_add, map_add, ih]
+    rw [Finset.sum_insert ha, Finset.sum_insert ha, Matrix.mul_add, Matrix.trace_add, ih]
 
+set_option maxHeartbeats 0 in
 theorem trace_map_eq (ρ : Matrix (Fin n) (Fin n) ℂ) :
     Matrix.trace (κ.map ρ) = Matrix.trace (ρ * ∑ i, (κ.K i)ᴴ * κ.K i) := by
   classical
   dsimp [KrausChannel.map]
   have step (i : ι) :
       Matrix.trace (κ.K i * ρ * (κ.K i)ᴴ) = Matrix.trace (ρ * ((κ.K i)ᴴ * κ.K i)) := by
-    calc
-      Matrix.trace (κ.K i * ρ * (κ.K i)ᴴ) = Matrix.trace ((κ.K i)ᴴ * κ.K i * ρ) := by
-        simpa using (Matrix.trace_mul_cycle (κ.K i) ρ (κ.K i)ᴴ).symm
-      _ = Matrix.trace (ρ * ((κ.K i)ᴴ * κ.K i)) := Matrix.trace_mul_comm _ _
+    rw [Matrix.trace_mul_cycle (κ.K i) ρ (κ.K i)ᴴ, Matrix.trace_mul_comm]
   calc
-    Matrix.trace (∑ i, κ.K i * ρ * (κ.K i)ᴴ) = ∑ i, Matrix.trace (κ.K i * ρ * (κ.K i)ᴴ) :=
-      map_sum ..
-    _ = ∑ i, Matrix.trace (ρ * ((κ.K i)ᴴ * κ.K i)) := by simp [step]
-    _ = Matrix.trace (ρ * ∑ i, (κ.K i)ᴴ * κ.K i) := by
-          simpa [Fintype.sum_eq_sum_univ] using
-            trace_mul_sum ρ (fun i => (κ.K i)ᴴ * κ.K i) Finset.univ
+    Matrix.trace (∑ i, κ.K i * ρ * (κ.K i)ᴴ) = ∑ i, Matrix.trace (κ.K i * ρ * (κ.K i)ᴴ) := by
+      simpa using (Matrix.trace_sum Finset.univ fun i => κ.K i * ρ * (κ.K i)ᴴ).symm
+    _ = ∑ i, Matrix.trace (ρ * ((κ.K i)ᴴ * κ.K i)) := by
+      refine Finset.sum_congr rfl fun i _ => step i
+    _ = Matrix.trace (ρ * ∑ i, (κ.K i)ᴴ * κ.K i) :=
+      trace_mul_sum ρ (fun i => (κ.K i)ᴴ * κ.K i) Finset.univ
 
 theorem trace_map_one (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : Matrix.trace ρ = 1) :
     Matrix.trace (κ.map ρ) = 1 := by
@@ -145,23 +138,27 @@ noncomputable def identity (n : ℕ) : KrausChannel n Unit where
 
 theorem identity_map (n : ℕ) (ρ : Matrix (Fin n) (Fin n) ℂ) :
     (identity n).map ρ = ρ := by
-  simp [KrausChannel.map, Fintype.sum_unique, one_mul, mul_one]
+  unfold KrausChannel.map identity
+  simp [Fintype.sum_unique, one_mul, mul_one]
 
 section Composition
 
 variable {ι₁ ι₂ : Type*} [Fintype ι₁] [DecidableEq ι₁] [Fintype ι₂] [DecidableEq ι₂]
 
-/-- Sequential composition: first `κ₁`, then `κ₂`. Kraus operators are `K₂ⱼ K₁ᵢ`, indexed by `(i, j)`.
+set_option maxHeartbeats 0 in
+/-- Sequential composition: first `κ₁`, then `κ₂`.
 
-Trace preservation follows from `∑ⱼ K₂ⱼᴴ K₂ⱼ = 1` and `∑ᵢ K₁ᵢᴴ K₁ᵢ = 1` by reassociating the
-double sum (same algebra as multiplying Stinespring isometries). -/
-noncomputable def compose (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂) :
+**Parameter order:** arguments are `(κ₂, κ₁)` so that dot notation `κ₂.compose κ₁` reads naturally
+and Kraus operators are `K₂ⱼ K₁ᵢ` on index `(i, j) ∈ ι₁ × ι₂`. -/
+noncomputable def compose (κ₂ : KrausChannel n ι₂) (κ₁ : KrausChannel n ι₁) :
     KrausChannel n (ι₁ × ι₂) where
   K := fun p => κ₂.K p.2 * κ₁.K p.1
   tp := by
     classical
+    rw [show (Finset.univ : Finset (ι₁ × ι₂)) = Finset.univ ×ˢ Finset.univ from
+      Finset.univ_product_univ.symm]
+    rw [Finset.sum_product]
     simp_rw [Matrix.conjTranspose_mul]
-    rw [Fintype.sum_prod_type']
     have inner (i : ι₁) :
         (∑ j : ι₂, (κ₁.K i)ᴴ * (κ₂.K j)ᴴ * κ₂.K j * κ₁.K i) = (κ₁.K i)ᴴ * κ₁.K i := by
       calc
@@ -174,21 +171,34 @@ noncomputable def compose (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n
               rw [← Matrix.mul_sum]
         _ = ((κ₁.K i)ᴴ * (1 : Matrix (Fin n) (Fin n) ℂ)) * κ₁.K i := by rw [κ₂.tp]
         _ = (κ₁.K i)ᴴ * κ₁.K i := by rw [Matrix.mul_one]
-    simp_rw [inner]
-    exact κ₁.tp
+    have bridge (i : ι₁) :
+        (∑ y : ι₂, (κ₁.K (i, y).1)ᴴ * (κ₂.K (i, y).2)ᴴ * (κ₂.K (i, y).2 * κ₁.K (i, y).1)) =
+          ∑ j : ι₂, (κ₁.K i)ᴴ * (κ₂.K j)ᴴ * κ₂.K j * κ₁.K i := by
+      simp_rw [← mul_assoc]
+    rw [← κ₁.tp]
+    refine Finset.sum_congr rfl fun i _ => (bridge i).trans (inner i)
 
 theorem compose_map (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂)
     (ρ : Matrix (Fin n) (Fin n) ℂ) :
     (κ₂.compose κ₁).map ρ = κ₂.map (κ₁.map ρ) := by
   classical
   dsimp [KrausChannel.map, compose]
-  rw [Fintype.sum_prod_type']
+  rw [show (Finset.univ : Finset (ι₁ × ι₂)) = Finset.univ ×ˢ Finset.univ from
+    Finset.univ_product_univ.symm]
+  rw [Finset.sum_product]
   simp_rw [Matrix.conjTranspose_mul, ← mul_assoc]
-  dsimp [KrausChannel.map]
   rw [← Finset.sum_comm]
   refine Finset.sum_congr rfl ?_
-  intro j _hj
-  rw [← Matrix.mul_sum]
+  intro j _
+  calc
+    ∑ i : ι₁, κ₂.K j * κ₁.K i * ρ * (κ₁.K i)ᴴ * (κ₂.K j)ᴴ
+        = ∑ i : ι₁, κ₂.K j * (κ₁.K i * ρ * (κ₁.K i)ᴴ) * (κ₂.K j)ᴴ := by
+          refine Finset.sum_congr rfl fun i _ => ?_
+          simp_rw [← mul_assoc]
+    _ = (∑ i : ι₁, κ₂.K j * (κ₁.K i * ρ * (κ₁.K i)ᴴ)) * (κ₂.K j)ᴴ := by
+          rw [← Matrix.sum_mul]
+    _ = (κ₂.K j * ∑ i : ι₁, κ₁.K i * ρ * (κ₁.K i)ᴴ) * (κ₂.K j)ᴴ := by
+          rw [Matrix.mul_sum]
 
 /-- Applying a composed Kraus channel equals applying the factors in order. -/
 theorem apply_compose (hn : 0 < n) (κ₁ : KrausChannel n ι₁) (κ₂ : KrausChannel n ι₂)
@@ -211,7 +221,7 @@ theorem pathProjector_conjTranspose (i : Fin 2) :
     (pathProjector i)ᴴ = pathProjector i := by
   ext a b
   fin_cases a <;> fin_cases b <;> fin_cases i <;>
-    simp [pathProjector, diagonal, conjTranspose_apply, Pi.single, Function.update, star]
+    simp [pathProjector, diagonal, conjTranspose_apply, Pi.single, Function.update, star, Complex.ext_iff]
 
 theorem pathProjector_mul_self (i : Fin 2) : pathProjector i * pathProjector i = pathProjector i := by
   ext a b
