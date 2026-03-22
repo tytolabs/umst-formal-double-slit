@@ -25,11 +25,14 @@ concurrency:
 jobs:
   coq:
     # Code uses `From Stdlib` (Rocq 9.x); Ubuntu's Coq 8.18 cannot compile it.
-    # In Rocq 9.0 the compiler is `rocq compile`, NOT `coqc`.
+    # In Rocq 9.0 the compiler is `rocq compile` (NOT coqc).
+    # Running as root for checkout; must explicitly add opam bin to PATH.
     runs-on: ubuntu-latest
     container:
       image: rocq/rocq-prover:9.0
       options: --user root
+    env:
+      PATH: /home/coq/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     steps:
       - name: Install git
         run: |
@@ -56,29 +59,21 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y agda agda-stdlib
           agda --version
-      - name: Register stdlib with Agda
+      - name: Register stdlib and fix permissions
         run: |
           set -e
-          # The agda-stdlib deb installs source at /usr/share/agda-stdlib/
-          # but does NOT create /etc/agda/libraries or ~/.agda/libraries.
-          # We must register it manually.
-          # First, find or create the .agda-lib file
           STDLIB_DIR="/usr/share/agda-stdlib"
-          if [ ! -d "$STDLIB_DIR/Data" ]; then
-            echo "ERROR: stdlib not at expected path"
-            exit 1
-          fi
-          # Create an agda-lib file if one doesn't exist
+          # Create .agda-lib manifest if missing
           if [ ! -f "$STDLIB_DIR/standard-library.agda-lib" ]; then
-            echo "name: standard-library" | sudo tee "$STDLIB_DIR/standard-library.agda-lib"
-            echo "include: ." | sudo tee -a "$STDLIB_DIR/standard-library.agda-lib"
+            printf "name: standard-library\ninclude: .\n" | sudo tee "$STDLIB_DIR/standard-library.agda-lib"
           fi
           # Register with Agda
           mkdir -p ~/.agda
           echo "$STDLIB_DIR/standard-library.agda-lib" > ~/.agda/libraries
           echo "standard-library" > ~/.agda/defaults
-          echo "Registered stdlib at: $STDLIB_DIR"
-          cat ~/.agda/libraries
+          # Agda writes .agdai interface files next to source —
+          # make the stdlib directory writable so compilation caching works.
+          sudo chmod -R a+w "$STDLIB_DIR"
       - name: agda-check (all Agda/ modules)
         run: |
           set -e
