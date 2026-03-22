@@ -16,9 +16,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 **Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**5** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit — `Lean/VERIFY.md`)&ensp;·&ensp;**467** theorems + **48** lemmas (heuristic scan — `PROOF-STATUS.md`)**
 
-_You wanted to look. The universe let you. But it kept the receipt._
-_Every fraction of a bit you extract destroys a corresponding fraction of interference —_
-_and the thermodynamic cost is non-negotiable. The proofs don't care if you believe them._
+_Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference —_
+_and the thermodynamic cost is non-negotiable. The proofs don't care who is looking._
 
 <br>
 
