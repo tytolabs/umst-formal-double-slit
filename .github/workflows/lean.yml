@@ -62,6 +62,8 @@ jobs:
           CHECKER="$(realpath "${LEAN4CHECKER_ROOT}/.lake/build/bin/lean4checker")"
           test -x "${CHECKER}"
           cd "${GITHUB_WORKSPACE}/Lean"
+          # Ensure UMSTAll.olean exists (cache may not include it for new/changed roots).
+          lake build UMSTAll
           # UMSTAll imports every root module; lean4checker replays all transitive oleans.
           lake env "${CHECKER}" UMSTAll
 
