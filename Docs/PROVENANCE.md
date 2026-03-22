@@ -43,7 +43,7 @@ Same contacts as in the repo [`README.md`](../README.md).
 | `Complementarity.lean` | — | Original | `lake build` ✅ | 0 |
 | `DoubleSlit.lean` | — | Original | `lake build` ✅ | 0 |
 
-**Axioms (not `sorry`):** general unital DPI and Klein’s inequality are **`axiom`** in `DataProcessingInequality.lean` pending Mathlib matrix-log infrastructure; `GeneralVisibility.lean` and `LindbladDynamics.lean` carry analysis-style axioms. See **`PROOF-STATUS.md`** / **`Lean/VERIFY.md`**.
+**Axioms (not `sorry`):** 5 explicit axioms across the codebase — general unital DPI and Klein's inequality in `DataProcessingInequality.lean`, analysis-style axioms in `GeneralVisibility.lean` and `LindbladDynamics.lean`, and `physicalSecondLaw`. See **`PROOF-STATUS.md`** / **`Lean/VERIFY.md`**.
 
 ## Python Simulation Layer
 
