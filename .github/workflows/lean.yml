@@ -62,9 +62,9 @@ jobs:
           CHECKER="$(realpath "${LEAN4CHECKER_ROOT}/.lake/build/bin/lean4checker")"
           test -x "${CHECKER}"
           cd "${GITHUB_WORKSPACE}/Lean"
-          # Default target (empty args) uses manifest package name «umst-formal-double-slit», which does
-          # not prefix any project oleans; pass the lean_lib root so all UMST.DoubleSlit.* modules match.
-          lake env "${CHECKER}" UMST.DoubleSlit
+          # No module argument: lean4checker replays all oleans built by `lake build` above.
+          # The library roots (UMSTCore, DensityState, …) are top-level names, not UMST.DoubleSlit.*.
+          lake env "${CHECKER}"
 
       - name: Install Optional Sim Dependencies
         working-directory: ${{ github.workspace }}
