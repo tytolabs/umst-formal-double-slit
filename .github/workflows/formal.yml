@@ -24,22 +24,41 @@ concurrency:
 
 jobs:
   coq:
-    # The project uses `From Stdlib` (Rocq 9.x syntax) — Ubuntu's Coq 8.18
+    # Our Coq code uses `From Stdlib` (Rocq 9.x syntax) — Ubuntu Coq 8.18
     # does not support this, so we must use the official Rocq container.
-    # The container's coqc lives under opam, so we must source the opam env
-    # (running as default 'coq' user, NOT root, to preserve opam setup).
+    # Running as root (needed for checkout permissions), but we must
+    # explicitly source opam env since coqc lives in the opam switch.
     runs-on: ubuntu-latest
     container:
       image: rocq/rocq-prover:9.0
+      options: --user root
     steps:
-      - name: Install git (needed for checkout)
+      - name: Install git
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq git
+          apt-get update -qq
+          apt-get install -y -qq git
       - uses: actions/checkout@v4
       - name: coq-check (all Coq/ modules)
+        shell: bash
         run: |
           set -e
+          # Source opam env — coqc lives in the opam switch, not system PATH
+          eval $(opam env --switch=/home/coq/.opam/default --set-switch 2>/dev/null || true)
+          # Also try standard opam env
+          eval $(opam env 2>/dev/null || true)
+          # If coqc still not found, search for it
+          if ! command -v coqc &>/dev/null; then
+            echo "coqc not on PATH, searching..."
+            COQC=$(find / -name coqc -type f 2>/dev/null | head -1)
+            if [ -n "$COQC" ]; then
+              export PATH="$(dirname $COQC):$PATH"
+              echo "Found coqc at: $COQC"
+            else
+              echo "ERROR: coqc not found anywhere"
+              exit 1
+            fi
+          fi
+          coqc --version
           cd Coq
           for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
             echo "==> Compiling $f"
@@ -56,16 +75,34 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y agda agda-stdlib
           agda --version
-          # Check if the library is auto-registered
-          echo "=== Checking /etc/agda ==="
-          ls -la /etc/agda/ 2>/dev/null || echo "no /etc/agda"
-          cat /etc/agda/libraries 2>/dev/null || echo "no /etc/agda/libraries"
-          cat /etc/agda/defaults 2>/dev/null || echo "no /etc/agda/defaults"
+          # Show what stdlib version is installed
+          dpkg -s agda-stdlib | grep Version || true
       - name: agda-check (all Agda/ modules)
         run: |
           set -e
           cd Agda
-          for f in DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
+          # Try to type-check the first file with verbose output to diagnose
+          echo "==> Checking DensityStateSpec.agda (verbose for diagnostics)"
+          agda DensityStateSpec.agda 2>&1 || {
+            echo ""
+            echo "=== DIAGNOSTICS ==="
+            echo "Agda version:"
+            agda --version
+            echo "Stdlib package version:"
+            dpkg -s agda-stdlib | grep Version || true
+            echo "Agda library search paths:"
+            agda --print-agda-dir 2>/dev/null || true
+            echo "Contents of /etc/agda/:"
+            ls -la /etc/agda/ 2>/dev/null || echo "not found"
+            cat /etc/agda/libraries 2>/dev/null || echo "no libraries file"
+            echo "stdlib .agda-lib search:"
+            find /usr -name "*.agda-lib" 2>/dev/null || echo "none"
+            echo "Data.Rational module search:"
+            find /usr -path "*/Data/Rational.agda" 2>/dev/null || echo "not found"
+            exit 42
+          }
+          # If first file passes, continue with the rest
+          for f in ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
             echo "==> Checking $f"
             agda -v0 "$f"
           done
