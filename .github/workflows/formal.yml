@@ -25,30 +25,18 @@ concurrency:
 jobs:
   coq:
     runs-on: ubuntu-latest
-    container:
-      image: rocq/rocq-prover:9.0
-      options: --user root
     steps:
-      - name: Install build tools
-        run: |
-          apt-get update -qq
-          apt-get install -y -qq make git
       - uses: actions/checkout@v4
-      - name: Diagnostics
-        run: |
-          coqc --version || rocq compile --version || echo "no coqc/rocq"
-          pwd
-          ls Coq/
-      - name: coq-check (all Coq/ modules)
-        run: |
-          set -e
-          cd Coq
-          # The _CoqProject defines -Q . UMSTFormal
-          # Compile in dependency order matching _CoqProject
-          for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
-            echo "==> Compiling $f"
-            coqc -Q . UMSTFormal "$f"
-          done
+      - uses: rocq-community/docker-coq-action@v1
+        with:
+          custom_image: rocq/rocq-prover:9.0
+          custom_script: |
+            set -e
+            cd Coq
+            for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
+              echo "==> Compiling $f"
+              coqc -Q . UMSTFormal "$f"
+            done
 
   agda:
     runs-on: ubuntu-24.04
@@ -59,74 +47,28 @@ jobs:
           set -e
           sudo apt-get update
           sudo apt-get install -y agda agda-stdlib
-      - name: Diagnostics
-        run: |
-          agda --version
-          # Locate all .agda-lib files from the package
-          echo "=== dpkg -L agda-stdlib | grep agda-lib ==="
-          dpkg -L agda-stdlib | grep -i agda-lib || echo "none found via dpkg"
-          echo "=== dpkg -L agda-stdlib | head -30 ==="
-          dpkg -L agda-stdlib | head -30
-          echo "=== find /usr -name '*.agda-lib' ==="
-          find /usr -name "*.agda-lib" 2>/dev/null || echo "none found"
-          echo "=== Agda default library dir ==="
-          agda --print-agda-dir 2>/dev/null || echo "agda --print-agda-dir not available"
-      - name: Configure Agda stdlib
+      - name: agda-check (all Agda/ modules)
         run: |
           set -e
-          # Try multiple known locations for the stdlib .agda-lib file
-          STDLIB_LIB=""
-          for candidate in \
-            /usr/share/agda-stdlib/standard-library.agda-lib \
-            /usr/share/agda-stdlib/agda-stdlib.agda-lib \
-            /usr/share/agda/lib/agda-stdlib/standard-library.agda-lib \
-            /usr/lib/agda/agda-stdlib/standard-library.agda-lib; do
-            if [ -f "$candidate" ]; then
-              STDLIB_LIB="$candidate"
-              break
-            fi
+          cd Agda
+          # Find the stdlib include path (dpkg tells us where the files are)
+          STDLIB_INC=$(dpkg -L agda-stdlib | grep '/Data$' | head -1 | sed 's|/Data$||')
+          if [ -z "$STDLIB_INC" ]; then
+            # Fallback: try common paths
+            for p in /usr/share/agda-stdlib /usr/share/agda/lib/agda-stdlib; do
+              if [ -d "$p/Data" ]; then
+                STDLIB_INC="$p"
+                break
+              fi
+            done
+          fi
+          echo "Agda stdlib include path: $STDLIB_INC"
+          if [ -z "$STDLIB_INC" ]; then
+            echo "ERROR: Could not find Agda stdlib include path"
+            dpkg -L agda-stdlib | head -40
+            exit 1
+          fi
+          for f in DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
+            echo "==> Checking $f"
+            agda -v0 -i . -i "$STDLIB_INC" "$f"
           done
-          # If not found by known paths, search
-          if [ -z "$STDLIB_LIB" ]; then
-            STDLIB_LIB=$(find /usr -name "*.agda-lib" -path "*stdlib*" 2>/dev/null | head -1)
-          fi
-          # If still not found, try any .agda-lib
-          if [ -z "$STDLIB_LIB" ]; then
-            STDLIB_LIB=$(find /usr -name "*.agda-lib" 2>/dev/null | head -1)
-          fi
-          if [ -z "$STDLIB_LIB" ]; then
-            echo "ERROR: No .agda-lib file found anywhere under /usr"
-            echo "Trying Agda built-in library registration..."
-            # Some distros register the library globally via /etc/agda
-            if [ -d /etc/agda ]; then
-              echo "Found /etc/agda:"
-              ls -la /etc/agda/ || true
-              cat /etc/agda/libraries 2>/dev/null || true
-            fi
-            # If agda can already find the stdlib, skip configuration
-            echo "Testing if Agda finds stdlib by default..."
-            echo "module Test where" > /tmp/test.agda
-            echo "open import Data.Nat using (ℕ)" >> /tmp/test.agda
-            if agda /tmp/test.agda 2>/dev/null; then
-              echo "Agda finds stdlib without explicit config!"
-              exit 0
-            else
-              echo "Agda cannot find stdlib. Exiting."
-              exit 1
-            fi
-          fi
-          STDLIB_DIR=$(dirname "$STDLIB_LIB")
-          STDLIB_NAME=$(grep "^name:" "$STDLIB_LIB" | sed 's/name: *//')
-          echo "Found stdlib .agda-lib at: $STDLIB_LIB"
-          echo "Stdlib dir: $STDLIB_DIR"
-          echo "Stdlib name: $STDLIB_NAME"
-          # Configure for both ~/.agda (legacy) and AGDA_DIR
-          AGDA_DIR=$(agda --print-agda-dir 2>/dev/null || echo "$HOME/.agda")
-          mkdir -p "$AGDA_DIR"
-          echo "$STDLIB_LIB" > "$AGDA_DIR/libraries"
-          echo "$STDLIB_NAME" > "$AGDA_DIR/defaults"
-          echo "Wrote $AGDA_DIR/libraries and $AGDA_DIR/defaults"
-          cat "$AGDA_DIR/libraries"
-          cat "$AGDA_DIR/defaults"
-      - name: agda-check (all Agda/ modules)
-        run: make agda-check
