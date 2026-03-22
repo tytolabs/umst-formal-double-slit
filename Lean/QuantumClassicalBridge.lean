@@ -37,33 +37,35 @@ open Matrix
 
 namespace UMST.Quantum
 
+open UMST.DoubleSlit
+
 /-- Witness for `Fin 2` Hilbert dimension. -/
 def hnQubit : 0 < 2 := by decide
 
-variable {ρ : DensityMatrix hnQubit}
-
-theorem isHermitian_carrier : ρ.carrier.IsHermitian :=
+theorem isHermitian_carrier (ρ : DensityMatrix hnQubit) : ρ.carrier.IsHermitian :=
   ρ.psd.isHermitian
 
-theorem diag_star_eq (i : Fin 2) : star (ρ.carrier i i) = ρ.carrier i i :=
+theorem diag_star_eq (ρ : DensityMatrix hnQubit) (i : Fin 2) : star (ρ.carrier i i) = ρ.carrier i i :=
   (isHermitian_carrier ρ).apply i i
 
-theorem diag_im_zero (i : Fin 2) : (ρ.carrier i i).im = 0 := by
+theorem diag_im_zero (ρ : DensityMatrix hnQubit) (i : Fin 2) : (ρ.carrier i i).im = 0 := by
   rw [← Complex.conj_eq_iff_im]
   rw [← Complex.star_def]
-  exact (diag_star_eq ρ i).symm
+  exact diag_star_eq ρ i
 
-theorem diag_nonneg_complex (i : Fin 2) : (0 : ℂ) ≤ ρ.carrier i i := by
+theorem diag_nonneg_complex (ρ : DensityMatrix hnQubit) (i : Fin 2) : (0 : ℂ) ≤ ρ.carrier i i := by
   have h := ρ.psd.2 (Pi.single i (1 : ℂ))
   have key :
       dotProduct (star (Pi.single i (1 : ℂ))) (ρ.carrier *ᵥ Pi.single i (1 : ℂ)) = ρ.carrier i i := by
-    simp only [Pi.star_single, star_one, mulVec_single, dotProduct_single_one, mul_one]
+    simp [dotProduct, mulVec, Pi.star_apply, Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq,
+      Finset.mem_univ, if_pos]
   rwa [key] at h
 
-theorem pathWeight_nonneg (i : Fin 2) : 0 ≤ (ρ.carrier i i).re :=
+theorem pathWeight_nonneg (ρ : DensityMatrix hnQubit) (i : Fin 2) : 0 ≤ (ρ.carrier i i).re :=
   (Complex.nonneg_iff.mp (diag_nonneg_complex ρ i)).1
 
-theorem pathWeight0_add_pathWeight1 : (ρ.carrier 0 0).re + (ρ.carrier 1 1).re = 1 := by
+theorem pathWeight0_add_pathWeight1 (ρ : DensityMatrix hnQubit) :
+    (ρ.carrier 0 0).re + (ρ.carrier 1 1).re = 1 := by
   have ht := ρ.trace_one
   rw [Matrix.trace_fin_two] at ht
   apply_fun Complex.re at ht
@@ -90,16 +92,13 @@ theorem whichPathDistinguishability_nonneg (ρ : DensityMatrix hnQubit) :
 theorem whichPathDistinguishability_le_one (ρ : DensityMatrix hnQubit) :
     whichPathDistinguishability ρ ≤ 1 := by
   unfold whichPathDistinguishability pathWeight
-  rw [abs_le]
-  constructor
-  · have hsum := pathWeight_sum ρ
-    have h0 := pathWeight_nonneg ρ 0
-    have h1 := pathWeight_nonneg ρ 1
-    linarith
-  · have hsum := pathWeight_sum ρ
-    have h0 := pathWeight_nonneg ρ 0
-    have h1 := pathWeight_nonneg ρ 1
-    linarith
+  set p0 := (ρ.carrier 0 0).re with hp0
+  set p1 := (ρ.carrier 1 1).re with hp1
+  have hp0n : 0 ≤ p0 := by rw [hp0]; exact pathWeight_nonneg ρ 0
+  have hp1n : 0 ≤ p1 := by rw [hp1]; exact pathWeight_nonneg ρ 1
+  have hsum : p0 + p1 = 1 := by rw [hp0, hp1]; exact pathWeight_sum ρ
+  rw [abs_le, hp0, hp1]
+  constructor <;> linarith
 
 theorem whichPathDistinguishability_mem_Icc (ρ : DensityMatrix hnQubit) :
     whichPathDistinguishability ρ ∈ Set.Icc (0 : ℝ) 1 :=
@@ -108,7 +107,8 @@ theorem whichPathDistinguishability_mem_Icc (ρ : DensityMatrix hnQubit) :
 /-- Lüders path measurement preserves computational-basis Born weights (diagonal entries). -/
 theorem pathWeight_whichPath_apply (ρ : DensityMatrix hnQubit) (i : Fin 2) :
     pathWeight (KrausChannel.whichPathChannel.apply hnQubit ρ) i = pathWeight ρ i := by
-  simp [pathWeight, KrausChannel.apply, KrausChannel.whichPath_map_apply_entry]
+  simp only [pathWeight, KrausChannel.apply]
+  fin_cases i <;> simp [KrausChannel.whichPath_map_apply_entry]
 
 @[simp]
 theorem whichPathDistinguishability_whichPath_apply (ρ : DensityMatrix hnQubit) :
@@ -121,27 +121,43 @@ theorem normSq_coherence_le_product (ρ : DensityMatrix hnQubit) :
     Complex.normSq (ρ.carrier 0 1) ≤ pathWeight ρ 0 * pathWeight ρ 1 := by
   let A := ρ.carrier
   let hH := isHermitian_carrier ρ
-  have h10 : A 1 0 = star (A 0 1) := by
-    apply_fun star at (hH.apply 0 1)
-    simpa using this.symm
+  have h10 : A 1 0 = star (A 0 1) := (hH.apply 1 0).symm
   have hdet := hH.det_eq_prod_eigenvalues
-  rw [Fintype.prod_univ_two] at hdet
-  have hλ (i : Fin 2) : 0 ≤ hH.eigenvalues i := PosSemidef.eigenvalues_nonneg ρ.psd i
-  rw [Matrix.det_fin_two, h10, Complex.star_def, Complex.mul_conj] at hdet
-  rw [Complex.ext_iff] at hdet
-  rcases hdet with ⟨hre, _⟩
+  rw [Fin.prod_univ_two] at hdet
+  have hev (i : Fin 2) : 0 ≤ hH.eigenvalues i := PosSemidef.eigenvalues_nonneg ρ.psd i
+  rw [Matrix.det_fin_two] at hdet
+  have h10' : ρ.carrier 1 0 = star (ρ.carrier 0 1) := h10
+  rw [h10'] at hdet
+  simp_rw [Complex.star_def, Complex.mul_conj] at hdet
   have h00i : (A 0 0).im = 0 := diag_im_zero ρ 0
   have h11i : (A 1 1).im = 0 := diag_im_zero ρ 1
-  simp only [Complex.sub_re, Complex.mul_re, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
-    sub_zero, sub_self, h00i, h11i, mul_zero, zero_mul] at hre
-  have hright :
-      ((hH.eigenvalues 0 : ℂ) * (hH.eigenvalues 1 : ℂ)).re = hH.eigenvalues 0 * hH.eigenvalues 1 := by
-    simp
-  rw [hright] at hre
-  have hnneg : 0 ≤ hH.eigenvalues 0 * hH.eigenvalues 1 := mul_nonneg (hλ 0) (hλ 1)
+  have hev0i : ((hH.eigenvalues 0 : ℂ)).im = 0 := by
+    rw [Complex.ofReal_im]
+  have hev1i : ((hH.eigenvalues 1 : ℂ)).im = 0 := by
+    rw [Complex.ofReal_im]
+  rw [Complex.ext_iff] at hdet
+  rcases hdet with ⟨hre, _⟩
   have hre' :
-      (A 0 0).re * (A 1 1).re - Complex.normSq (A 0 1) = hH.eigenvalues 0 * hH.eigenvalues 1 := hre
-  linarith [hre', hnneg]
+      (A 0 0).re * (A 1 1).re - Complex.normSq (A 0 1) = hH.eigenvalues 0 * hH.eigenvalues 1 := by
+    have hmul : (ρ.carrier 0 0 * ρ.carrier 1 1).re = (ρ.carrier 0 0).re * (ρ.carrier 1 1).re := by
+      rw [Complex.mul_re, h00i, h11i]
+      ring
+    have hprod : ((hH.eigenvalues 0 : ℂ) * (hH.eigenvalues 1 : ℂ)).re =
+        hH.eigenvalues 0 * hH.eigenvalues 1 := by
+      rw [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_re, hev0i, hev1i]
+      ring
+    calc
+      (A 0 0).re * (A 1 1).re - Complex.normSq (A 0 1)
+          = (ρ.carrier 0 0 * ρ.carrier 1 1 - (Complex.normSq (ρ.carrier 0 1) : ℂ)).re := by
+            simp [Complex.sub_re, Complex.ofReal_re, hmul, A]
+      _ = ((hH.eigenvalues 0 : ℂ) * (hH.eigenvalues 1 : ℂ)).re := hre
+      _ = hH.eigenvalues 0 * hH.eigenvalues 1 := hprod
+  have hnneg : 0 ≤ hH.eigenvalues 0 * hH.eigenvalues 1 := mul_nonneg (hev 0) (hev 1)
+  rw [pathWeight, pathWeight]
+  have hsub : 0 ≤ (ρ.carrier 0 0).re * (ρ.carrier 1 1).re - Complex.normSq (ρ.carrier 0 1) := by
+    rw [hre']
+    exact hnneg
+  exact sub_nonneg.mp hsub
 
 /-- Fringe visibility `V = 2 |ρ₀₁|` (standard double-slit convention for a qubit path bit). -/
 noncomputable def fringeVisibility (ρ : DensityMatrix hnQubit) : ℝ :=
@@ -183,10 +199,11 @@ theorem pathWeight_prod_le_quarter (ρ : DensityMatrix hnQubit) :
 theorem fringeVisibility_le_one (ρ : DensityMatrix hnQubit) : fringeVisibility ρ ≤ 1 := by
   have hsq : fringeVisibility ρ ^ 2 ≤ 1 := by
     unfold fringeVisibility
-    rw [mul_pow, sq (2 : ℝ), ← Complex.sq_abs]
+    rw [mul_pow, sq (2 : ℝ), Complex.sq_abs]
     have hnc := normSq_coherence_le_product ρ
     have hp := pathWeight_prod_le_quarter ρ
-    nlinarith
+    simp only [pathWeight] at hnc hp ⊢
+    nlinarith [hnc, hp]
   exact (sq_le_one_iff₀ (fringeVisibility_nonneg ρ)).1 hsq
 
 @[simp]
@@ -204,14 +221,15 @@ theorem complementarity_fringe_path (ρ : DensityMatrix hnQubit) :
   set c := ρ.carrier 0 1 with hc
   have hs : a + b = 1 := by rw [ha, hb]; exact pathWeight_sum ρ
   have hnc : Complex.normSq c ≤ a * b := by rw [ha, hb, hc]; exact normSq_coherence_le_product ρ
-  rw [hc, mul_pow, sq (2 : ℝ), Complex.sq_abs, sq_abs (a - b)]
+  rw [hc, mul_pow, sq (2 : ℝ), ← Complex.normSq_eq_abs, sq_abs (a - b)]
   have step : 4 * Complex.normSq c + (a - b) ^ 2 ≤ 4 * (a * b) + (a - b) ^ 2 := by nlinarith [hnc]
+  have hfour : (2 : ℝ) * 2 * Complex.normSq c = 4 * Complex.normSq c := by ring
   calc
-    4 * Complex.normSq c + (a - b) ^ 2 ≤ 4 * (a * b) + (a - b) ^ 2 := step
+    (2 : ℝ) * 2 * Complex.normSq c + (a - b) ^ 2 = 4 * Complex.normSq c + (a - b) ^ 2 := by rw [hfour]
+    _ ≤ 4 * (a * b) + (a - b) ^ 2 := step
     _ = (a + b) ^ 2 := by ring
     _ = 1 := by rw [hs]; ring
 
-open UMST.DoubleSlit in
 /-- Canonical observation state: `I` from diagonal weights, `V` from fringe visibility; complementarity
 holds automatically (`complementarity_fringe_path`). -/
 noncomputable def observationStateCanonical (ρ : DensityMatrix hnQubit) : ObservationState where
@@ -224,25 +242,27 @@ theorem observationStateCanonical_complementary (ρ : DensityMatrix hnQubit) :
     UMST.DoubleSlit.Complementary (observationStateCanonical ρ) := by
   simpa [observationStateCanonical, UMST.DoubleSlit.Complementary] using complementarity_fringe_path ρ
 
-/-- Build a `DoubleSlitCore` observation state: `I` from diagonal path weights, `V` supplied externally. -/
-noncomputable def observationStateOf (ρ : DensityMatrix hnQubit) (V : ℝ) (hV : 0 ≤ V ∧ V ≤ 1)
-    (_hComp : V ^ 2 + whichPathDistinguishability ρ ^ 2 ≤ 1) : ObservationState where
+/-- Build a `DoubleSlitCore` observation state: `I` from diagonal path weights, `V` supplied externally.
+
+Complementarity `V² + I² ≤ 1` is **not** stored in the structure; use
+`observationStateOf_complementary` when you have that hypothesis. -/
+noncomputable def observationStateOf (ρ : DensityMatrix hnQubit) (V : ℝ) (hVbd : 0 ≤ V ∧ V ≤ 1) :
+    ObservationState where
   I := whichPathDistinguishability ρ
   V := V
   hI := ⟨whichPathDistinguishability_nonneg ρ, whichPathDistinguishability_le_one ρ⟩
-  hV := hV
+  hV := hVbd
 
-theorem observationStateOf_complementary (ρ : DensityMatrix hnQubit) (V : ℝ) (hV : 0 ≤ V ∧ V ≤ 1)
+theorem observationStateOf_complementary (ρ : DensityMatrix hnQubit) (V : ℝ) (hVbd : 0 ≤ V ∧ V ≤ 1)
     (hComp : V ^ 2 + whichPathDistinguishability ρ ^ 2 ≤ 1) :
-    UMST.DoubleSlit.Complementary (observationStateOf ρ V hV hComp) := by
-  simpa [observationStateOf, UMST.DoubleSlit.Complementary]
+    UMST.DoubleSlit.Complementary (observationStateOf ρ V hVbd) := by
+  simpa [observationStateOf, UMST.DoubleSlit.Complementary] using hComp
 
 /-- Using the measured fringe visibility, `observationStateOf` is complementary by `complementarity_fringe_path`. -/
 theorem observationStateOf_fringe_complementary (ρ : DensityMatrix hnQubit) :
     UMST.DoubleSlit.Complementary
         (observationStateOf ρ (fringeVisibility ρ)
-          ⟨fringeVisibility_nonneg ρ, fringeVisibility_le_one ρ⟩
-          (complementarity_fringe_path ρ)) := by
-  simpa [observationStateOf, UMST.DoubleSlit.Complementary]
+          ⟨fringeVisibility_nonneg ρ, fringeVisibility_le_one ρ⟩) := by
+  simpa [observationStateOf, UMST.DoubleSlit.Complementary] using complementarity_fringe_path ρ
 
 end UMST.Quantum

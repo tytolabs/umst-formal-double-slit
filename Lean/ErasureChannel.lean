@@ -164,4 +164,17 @@ theorem idealResetErasure_saturates (ρ : DensityMatrix hnQubit) (T : ℝ) :
     (idealResetErasure ρ T).dissipatedHeat = landauerCostDiagonal ρ T :=
   rfl
 
+/-- Dissipated heat minus the Landauer cost of the **output** state equals the initial Landauer cost.
+For the reset channel the output cost is `0`, so this is just `landauerCostDiagonal ρ T`. -/
+theorem idealResetErasure_saturationQuality (ρ : DensityMatrix hnQubit) (T : ℝ) :
+    (idealResetErasure ρ T).dissipatedHeat -
+        landauerCostDiagonal (resetChannel.apply hnQubit ρ) T =
+      landauerCostDiagonal ρ T := by
+  simp [idealResetErasure, resetChannel_landauerCost_zero]
+
+/-- For `|+⟩`, ideal reset dissipates exactly one Landauer bit-energy at temperature `T`. -/
+theorem idealResetErasure_rhoPlus_dissipation_eq_landauerBitEnergy (T : ℝ) :
+    (idealResetErasure rhoPlus T).dissipatedHeat = landauerBitEnergy T := by
+  simp [idealResetErasure, rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy]
+
 end UMST.DoubleSlit

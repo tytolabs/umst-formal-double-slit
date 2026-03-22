@@ -18,6 +18,7 @@ require mathlib from git
 -/
 lean_lib «UMST.DoubleSlit» where
   roots := #[`UMSTCore, `DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
+    `DoubleSlitMeasurementUpdate,
     `InfoEntropy, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
     `EpistemicTrajectoryMI, `EpistemicPolicy, `EpistemicRuntimeContract, `EpistemicNumericsContract,
     `EpistemicPerStepNumerics, `EpistemicRuntimeSchemaContract, `EpistemicTelemetryBridge,

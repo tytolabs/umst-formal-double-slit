@@ -80,6 +80,39 @@ theorem trace_eq_sum_eigenvalues_hermitian {A : Matrix (Fin n) (Fin n) ℂ}
           rw [Matrix.trace, Matrix.diag_apply]; simp [diagonal_apply, Function.comp]
     _ = ∑ i, (hA.eigenvalues i : ℂ) := by simp [Function.comp]
 
+/-- For Hermitian `A`, `Tr(A²)` equals `∑ᵢ λᵢ²` (spectral theorem + cyclicity). -/
+theorem trace_mul_self_eq_sum_eigenvalues_sq {A : Matrix (Fin n) (Fin n) ℂ}
+    (hA : A.IsHermitian) :
+    Matrix.trace (A * A) = ∑ i : Fin n, ((hA.eigenvalues i : ℂ) ^ 2) := by
+  conv_lhs => rw [hA.spectral_theorem]
+  set U := (hA.eigenvectorUnitary : Matrix (Fin n) (Fin n) ℂ)
+  set D := diagonal (RCLike.ofReal ∘ hA.eigenvalues)
+  have hU_star : star U * U = 1 :=
+    (Matrix.mem_unitaryGroup_iff.mp (hA.eigenvectorUnitary).2)
+  have hmul : (U * D * star U) * (U * D * star U) = U * (D * D) * star U := by
+    calc
+      (U * D * star U) * (U * D * star U)
+          = U * D * (star U * U) * D * star U := by
+            simp only [Matrix.mul_assoc]
+      _ = U * D * 1 * D * star U := by rw [hU_star]
+      _ = U * (D * D) * star U := by simp only [Matrix.mul_assoc, Matrix.one_mul]
+  rw [hmul]
+  calc Matrix.trace (U * (D * D) * star U)
+      = Matrix.trace (star U * (U * (D * D))) := by rw [Matrix.trace_mul_comm]
+    _ = Matrix.trace ((star U * U) * (D * D)) := by rw [Matrix.mul_assoc]
+    _ = Matrix.trace (1 * (D * D)) := by rw [hU_star]
+    _ = Matrix.trace (D * D) := by rw [Matrix.one_mul]
+    _ = Matrix.trace (diagonal fun i => (RCLike.ofReal ∘ hA.eigenvalues i) ^ 2) := by
+          congr 1
+          ext i j
+          simp only [Matrix.mul_apply, diagonal_apply, Pi.mul_def, Function.comp_apply]
+          by_cases hij : i = j
+          · subst hij; ring
+          · simp [hij]
+    _ = ∑ i, ((RCLike.ofReal ∘ hA.eigenvalues i) ^ 2) := by
+          rw [Matrix.trace, Matrix.diag_apply]; simp [diagonal_apply, Function.comp]
+    _ = ∑ i, (hA.eigenvalues i : ℂ) ^ 2 := by simp [Function.comp]
+
 /-! ### Eigenvalue properties of density matrices -/
 
 /-- Eigenvalues of a density matrix are nonnegative. -/
@@ -111,6 +144,29 @@ theorem density_eigenvalues_le_one (ρ : DensityMatrix hn) (i : Fin n) :
     rw [Finset.add_sum_erase _ _ (Finset.mem_univ i)]
     exact hsum
   linarith
+
+/-- For a density matrix, `Re Tr(ρ²) = ∑ᵢ λᵢ²`. -/
+theorem trace_mul_self_re_eq_sum_sq (ρ : DensityMatrix hn) :
+    (Matrix.trace (ρ.carrier * ρ.carrier)).re =
+      ∑ i : Fin n, (ρ.isHermitian.eigenvalues i) ^ 2 := by
+  have h := trace_mul_self_eq_sum_eigenvalues_sq ρ.isHermitian
+  apply_fun Complex.re at h
+  simpa [map_sum, Complex.ofReal_re] using h
+
+/-- For a density matrix, `Tr(ρ²) ≤ 1` in the real part (equivalently `∑ λᵢ² ≤ 1`).
+
+Eigenvalues form a probability distribution on `[0,1]`, hence `λᵢ² ≤ λᵢ` termwise. -/
+theorem trace_mul_self_re_le_one (ρ : DensityMatrix hn) :
+    (Matrix.trace (ρ.carrier * ρ.carrier)).re ≤ 1 := by
+  rw [trace_mul_self_re_eq_sum_sq ρ]
+  have hsum := density_eigenvalues_sum_eq_one_real ρ
+  have hterm (i : Fin n) : (ρ.isHermitian.eigenvalues i) ^ 2 ≤ ρ.isHermitian.eigenvalues i := by
+    have hλ := density_eigenvalues_nonneg ρ i
+    have h1 := density_eigenvalues_le_one ρ i
+    nlinarith
+  calc ∑ i : Fin n, (ρ.isHermitian.eigenvalues i) ^ 2
+      ≤ ∑ i : Fin n, ρ.isHermitian.eigenvalues i := Finset.sum_le_sum (fun i _ => hterm i)
+    _ = 1 := hsum
 
 /-! ### Von Neumann entropy -/
 
