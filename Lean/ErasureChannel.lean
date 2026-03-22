@@ -7,9 +7,11 @@ import Mathlib.Data.Complex.Basic
 import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Data.Fintype.BigOperators
 import Mathlib.LinearAlgebra.Matrix.Trace
+import Mathlib.Data.Matrix.Basis
 import Mathlib.Tactic.FinCases
 import MeasurementChannel
 import LandauerBound
+import VonNeumannEntropy
 import ExamplesQubit
 
 /-!
@@ -37,33 +39,45 @@ namespace UMST.Quantum
 
 /-- Kraus operator K₀ = |0⟩⟨0| for the reset channel. -/
 noncomputable def resetK0 : Matrix (Fin 2) (Fin 2) ℂ :=
-  Matrix.of !![1, 0; 0, 0]
+  stdBasisMatrix 0 0 (1 : ℂ)
 
 /-- Kraus operator K₁ = |0⟩⟨1| for the reset channel. -/
 noncomputable def resetK1 : Matrix (Fin 2) (Fin 2) ℂ :=
-  Matrix.of !![0, 1; 0, 0]
+  stdBasisMatrix 0 1 (1 : ℂ)
+
+theorem resetK0_eq_of : resetK0 = Matrix.of !![1, 0; 0, 0] := by
+  ext a b
+  fin_cases a <;> fin_cases b <;> simp [resetK0, stdBasisMatrix, Matrix.of_apply]
+
+theorem resetK1_eq_of : resetK1 = Matrix.of !![0, 1; 0, 0] := by
+  ext a b
+  fin_cases a <;> fin_cases b <;> simp [resetK1, stdBasisMatrix, Matrix.of_apply, Fin.ext_iff]
 
 theorem resetK0_conjTranspose :
     resetK0ᴴ = Matrix.of !![1, 0; 0, 0] := by
+  rw [resetK0_eq_of]
   ext a b
-  fin_cases a <;> fin_cases b <;> simp [resetK0, conjTranspose_apply, Matrix.of_apply, star]
+  fin_cases a <;> fin_cases b <;> simp [conjTranspose_apply, Matrix.of_apply, star]
 
 theorem resetK1_conjTranspose :
     resetK1ᴴ = Matrix.of !![0, 0; 1, 0] := by
+  rw [resetK1_eq_of]
   ext a b
-  fin_cases a <;> fin_cases b <;> simp [resetK1, conjTranspose_apply, Matrix.of_apply, star]
+  fin_cases a <;> fin_cases b <;> simp [conjTranspose_apply, Matrix.of_apply, star]
 
 theorem resetK0_conj_mul :
     resetK0ᴴ * resetK0 = Matrix.of !![1, 0; 0, 0] := by
+  rw [resetK0_conjTranspose, resetK0_eq_of]
   ext a b
   fin_cases a <;> fin_cases b <;>
-    simp [resetK0_conjTranspose, resetK0, Matrix.mul_apply, Matrix.of_apply, Fin.sum_univ_two]
+    simp [Matrix.mul_apply, Matrix.of_apply, Fin.sum_univ_two]
 
 theorem resetK1_conj_mul :
     resetK1ᴴ * resetK1 = Matrix.of !![0, 0; 0, 1] := by
+  rw [resetK1_conjTranspose, resetK1_eq_of]
   ext a b
   fin_cases a <;> fin_cases b <;>
-    simp [resetK1_conjTranspose, resetK1, Matrix.mul_apply, Matrix.of_apply, Fin.sum_univ_two]
+    simp [Matrix.mul_apply, Matrix.of_apply, Fin.sum_univ_two]
 
 /-- Trace preservation: K₀ᴴ K₀ + K₁ᴴ K₁ = I. -/
 theorem resetChannel_tp_aux :
@@ -71,7 +85,7 @@ theorem resetChannel_tp_aux :
   ext a b
   simp only [Fin.sum_univ_two, Matrix.add_apply, Matrix.one_apply]
   fin_cases a <;> fin_cases b <;>
-    simp [resetK0_conjTranspose, resetK1_conjTranspose, resetK0, resetK1,
+    simp [resetK0_conjTranspose, resetK1_conjTranspose, resetK0_eq_of, resetK1_eq_of,
       Matrix.mul_apply, Matrix.of_apply, Fin.sum_univ_two]
 
 /-- The "reset to |0⟩" erasure channel, packaging K₀ = |0⟩⟨0| and K₁ = |0⟩⟨1|. -/
@@ -97,7 +111,7 @@ theorem resetChannel_map_entry (a b : Fin 2) :
       if a = 0 ∧ b = 0 then ρ 0 0 + ρ 1 1 else 0 := by
   simp only [KrausChannel.map, resetChannel, Fin.sum_univ_two, Matrix.add_apply]
   fin_cases a <;> fin_cases b <;>
-    simp [resetK0, resetK1, Matrix.mul_apply, Matrix.of_apply, conjTranspose_apply,
+    simp [resetK0_eq_of, resetK1_eq_of, Matrix.mul_apply, Matrix.of_apply, conjTranspose_apply,
       Fin.sum_univ_two, star]
 
 /-- The reset channel maps any density matrix to `rhoZero.carrier` (i.e. `|0⟩⟨0|`). -/
@@ -143,6 +157,30 @@ theorem resetChannel_landauerCost_zero (ρ_dm : DensityMatrix hnQubit) (T : ℝ)
   rw [resetChannel_output_eq_rhoZero]
   exact rhoZero_landauerCostDiagonal T
 
+/-- `|0⟩⟨0|` has determinant `0` (rank one). -/
+theorem rhoZero_carrier_det_eq_zero : rhoZero.carrier.det = 0 := by
+  rw [Matrix.det_fin_two]
+  simp [rhoZero, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique, col_apply,
+    row_apply, psiZero, Fin.ext_iff, mul_one, mul_zero, Complex.star_def, Complex.conj_one,
+    Complex.conj_zero]
+
+/-- Von Neumann entropy of `|0⟩⟨0|` is `0`. -/
+theorem vonNeumannEntropy_rhoZero : vonNeumannEntropy rhoZero = 0 :=
+  vonNeumannEntropy_qubit_det_eq_zero rhoZero rhoZero_carrier_det_eq_zero
+
+/-- Quantum entropy of the reset-channel output vanishes. -/
+theorem resetChannel_output_vonNeumannEntropy_zero (ρ_dm : DensityMatrix hnQubit) :
+    vonNeumannEntropy (resetChannel.apply hnQubit ρ_dm) = 0 := by
+  rw [resetChannel_output_eq_rhoZero]
+  exact vonNeumannEntropy_rhoZero
+
+/-- Drop in **diagonal / Born-path** entropy (nats) equals `pathEntropyBits ρ · log 2`. -/
+theorem resetChannel_diagonal_entropy_drop (ρ_dm : DensityMatrix hnQubit) :
+    vonNeumannDiagonal ρ_dm - vonNeumannDiagonal (resetChannel.apply hnQubit ρ_dm) =
+      pathEntropyBits ρ_dm * log 2 := by
+  rw [resetChannel_output_eq_rhoZero, rhoZero_vonNeumannDiagonal, sub_zero, pathEntropyBits]
+  field_simp [ne_of_gt log_two_pos]
+
 end Entropy
 
 end UMST.Quantum
@@ -163,5 +201,10 @@ dissipated heat equals the Landauer cost exactly. -/
 theorem idealResetErasure_saturates (ρ : DensityMatrix hnQubit) (T : ℝ) :
     (idealResetErasure ρ T).dissipatedHeat = landauerCostDiagonal ρ T :=
   rfl
+
+/-- For `|+⟩`, ideal reset dissipates exactly one Landauer bit-energy (diagonal entropy is maximal). -/
+theorem idealResetErasure_rhoPlus_eq_landauerBitEnergy (T : ℝ) :
+    (idealResetErasure rhoPlus T).dissipatedHeat = landauerBitEnergy T :=
+  rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy T
 
 end UMST.DoubleSlit
