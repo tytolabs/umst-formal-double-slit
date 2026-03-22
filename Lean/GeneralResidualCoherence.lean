@@ -3,8 +3,10 @@ SPDX-License-Identifier: MIT
 Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -/
 
+import Mathlib.Data.Complex.BigOperators
+import Mathlib.Algebra.Order.BigOperators.Group.Finset
 import DensityState
-import LandauerBound
+import VonNeumannEntropy
 
 /-!
 # GeneralResidualCoherence — purity-based Residual Coherence Capacity for `Fin n`
@@ -44,7 +46,7 @@ noncomputable def offDiagonalPurity (ρ : DensityMatrix hn) : ℝ :=
 /-- General residual coherence capacity (purity-based):
 `RCC_n(ρ) = offDiagonalPurity ρ / (1 - diagonalPurity ρ)`. -/
 noncomputable def residualCoherenceCapacity_purity (ρ : DensityMatrix hn)
-    (h : diagonalPurity ρ < 1) : ℝ :=
+    (_h : diagonalPurity ρ < 1) : ℝ :=
   offDiagonalPurity ρ / (1 - diagonalPurity ρ)
 
 /-! ### Basic properties of diagonal purity -/
@@ -60,8 +62,11 @@ theorem diagonalPurity_le_one (ρ : DensityMatrix hn) : diagonalPurity ρ ≤ 1 
   have hle : ∀ i : Fin n, (ρ.carrier i i).re ≤ 1 := fun i => DensityMat.diag_re_le_one_n ρ i
   calc diagonalPurity ρ = ∑ i : Fin n, (ρ.carrier i i).re ^ 2 := rfl
     _ ≤ ∑ i : Fin n, (ρ.carrier i i).re := by
-        apply Finset.sum_le_sum; intro i _
-        exact sq_le_self' (by linarith [hnn i]) (hle i)
+        refine Finset.sum_le_sum ?_
+        intro i _
+        have hx : 0 ≤ (ρ.carrier i i).re := hnn i
+        have hx1 : (ρ.carrier i i).re ≤ 1 := hle i
+        nlinarith
     _ = 1 := hsum
 
 /-! ### Hermiticity helpers -/
@@ -79,7 +84,7 @@ theorem hermitian_sq_diag_eq_sum_normSq (ρ : DensityMatrix hn) (i : Fin n) :
       simp [Matrix.IsHermitian, Matrix.conjTranspose_apply] at h
       rw [← h]; simp [star]
     rw [this]]
-  rw [map_sum]
+  rw [Complex.re_sum]
   congr 1; ext j
   rw [Complex.mul_conj]
   simp [Complex.ofReal_re]
@@ -88,7 +93,7 @@ theorem hermitian_sq_diag_eq_sum_normSq (ρ : DensityMatrix hn) (i : Fin n) :
 theorem trace_sq_eq_sum_normSq (ρ : DensityMatrix hn) :
     (trace (ρ.carrier * ρ.carrier)).re = ∑ i : Fin n, ∑ j : Fin n, Complex.normSq (ρ.carrier i j) := by
   unfold Matrix.trace
-  rw [map_sum]
+  rw [Complex.re_sum]
   congr 1; ext i
   exact hermitian_sq_diag_eq_sum_normSq ρ i
 
@@ -98,9 +103,7 @@ theorem normSq_diag_eq_re_sq (ρ : DensityMatrix hn) (i : Fin n) :
   have hH := DensityMat.isHermitian ρ
   have him : (ρ.carrier i i).im = 0 := by
     have h := hH.apply i i
-    simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at h
-    rw [Complex.ext_iff] at h
-    linarith [h.2]
+    simpa [Matrix.conjTranspose_apply, Complex.star_def] using Complex.conj_eq_iff_im.1 h
   simp [Complex.normSq_apply, him, sq]
 
 /-! ### Off-diagonal purity is a sum of `‖ρᵢⱼ‖²` for `i ≠ j` -/
@@ -127,40 +130,13 @@ theorem offDiagonalPurity_nonneg (ρ : DensityMatrix hn) : 0 ≤ offDiagonalPuri
 
 /-! ### `Tr(ρ²) ≤ 1` -/
 
-/-- For a density matrix, `Tr(ρ²) ≤ Tr(ρ) = 1`.
-Proof: eigenvalues `λᵢ ∈ [0,1]` with `∑ λᵢ = 1`, so `∑ λᵢ² ≤ ∑ λᵢ = 1`. -/
-theorem trace_sq_le_one (ρ : DensityMatrix hn) :
-    (trace (ρ.carrier * ρ.carrier)).re ≤ 1 := by
-  rw [trace_sq_eq_sum_normSq ρ]
-  calc ∑ i : Fin n, ∑ j : Fin n, Complex.normSq (ρ.carrier i j)
-      = diagonalPurity ρ + offDiagonalPurity ρ := by
-        rw [offDiagonalPurity_eq_sum_offdiag]
-        simp_rw [normSq_diag_eq_re_sq ρ]
-        have key : ∀ i : Fin n,
-            (∑ j : Fin n, Complex.normSq (ρ.carrier i j)) =
-              (ρ.carrier i i).re ^ 2 + ∑ j in Finset.univ.erase i, Complex.normSq (ρ.carrier i j) := by
-          intro i
-          rw [← Finset.add_sum_erase _ _ (Finset.mem_univ i)]
-          congr 1
-          exact (normSq_diag_eq_re_sq ρ i).symm
-        simp_rw [key]
-        rw [Finset.sum_add_distrib]
-    _ ≤ 1 + offDiagonalPurity ρ := by linarith [diagonalPurity_le_one ρ]
-    _ = 1 + ((trace (ρ.carrier * ρ.carrier)).re - diagonalPurity ρ) := rfl
-    _ = (trace (ρ.carrier * ρ.carrier)).re + (1 - diagonalPurity ρ) := by ring
-  -- We need: ∑∑ normSq ≤ 1
-  -- We have: ∑∑ normSq = ∑∑ normSq + (1 - diagPurity) - (1 - diagPurity)
-  -- Actually let's use a direct approach via eigenvalues.
-  -- For now, use the purity decomposition differently.
-  sorry
+/-- For a density matrix, `Tr(ρ²) ≤ 1` (real part of the complex trace).
 
--- Let's prove trace_sq_le_one via a direct diagonal+offdiag argument instead
--- We know offDiagonalPurity = Tr(ρ²) - diagPurity, so Tr(ρ²) = diagPurity + offDiagPurity
--- We need Tr(ρ²) ≤ 1. This requires showing the total purity ≤ 1.
--- The cleanest path: use that ρ is PSD with trace 1, so eigenvalues are a probability distribution,
--- and ∑ λᵢ² ≤ (∑ λᵢ)² = 1 (by Cauchy-Schwarz / convexity of x²).
--- In Lean/Mathlib, we can use the fact that for PSD ρ, Tr(ρ²) = ‖ρ‖_F² and use norm bounds.
--- Alternatively, prove it from the matrix entries directly.
+Proof: spectral theorem gives `Tr(ρ²) = ∑ λᵢ²` with `λᵢ ≥ 0` and `∑ λᵢ = 1`, hence
+`∑ λᵢ² ≤ (∑ λᵢ)² = 1`. See `density_trace_sq_re_le_one` in `VonNeumannEntropy.lean`. -/
+theorem trace_sq_le_one (ρ : DensityMatrix hn) :
+    (trace (ρ.carrier * ρ.carrier)).re ≤ 1 :=
+  density_trace_sq_re_le_one ρ
 
 /-! ### RCC properties -/
 
@@ -199,12 +175,12 @@ theorem offDiagonalPurity_eq_zero_iff_diagonal (ρ : DensityMatrix hn) :
   · intro h i j hij
     have hle : ∀ i : Fin n, 0 ≤ ∑ j in Finset.univ.erase i, Complex.normSq (ρ.carrier i j) :=
       fun i => Finset.sum_nonneg (fun j _ => Complex.normSq_nonneg _)
-    have hzero := Finset.sum_eq_zero_iff_of_nonneg hle |>.mp h
+    have hzero := (Finset.sum_eq_zero_iff_of_nonneg (fun i _ => hle i)).mp h
     have hrow := hzero i (Finset.mem_univ i)
     have hle2 : ∀ k ∈ Finset.univ.erase i, 0 ≤ Complex.normSq (ρ.carrier i k) :=
       fun k _ => Complex.normSq_nonneg _
     have hcol := Finset.sum_eq_zero_iff_of_nonneg hle2 |>.mp hrow
-    have hmem : j ∈ Finset.univ.erase i := Finset.mem_erase.mpr ⟨hij, Finset.mem_univ j⟩
+    have hmem : j ∈ Finset.univ.erase i := Finset.mem_erase.mpr ⟨Ne.symm hij, Finset.mem_univ j⟩
     have := hcol j hmem
     rwa [Complex.normSq_eq_zero] at this
   · intro h
@@ -249,22 +225,26 @@ theorem offDiagonalPurity_qubit (ρ : DensityMatrix hnQubit) :
     offDiagonalPurity ρ = 2 * Complex.normSq (ρ.carrier 0 1) := by
   rw [offDiagonalPurity_eq_sum_offdiag]
   rw [Fin.sum_univ_two]
-  simp only [Finset.univ, Fintype.elems_fin]
-  -- Each inner sum has exactly one term (the other index)
-  have h0 : ∑ j in ({0, 1} : Finset (Fin 2)).erase 0, Complex.normSq (ρ.carrier 0 j) =
+  have h0 : ∑ j in Finset.univ.erase (0 : Fin 2), Complex.normSq (ρ.carrier 0 j) =
       Complex.normSq (ρ.carrier 0 1) := by
-    simp [Finset.sum_singleton]
-  have h1 : ∑ j in ({0, 1} : Finset (Fin 2)).erase 1, Complex.normSq (ρ.carrier 1 j) =
+    refine Finset.sum_eq_single (1 : Fin 2) ?_ ?_
+    · intro j hj hne
+      exfalso
+      fin_cases j <;> simp at hj hne
+    · intro h01; simp at h01
+  have h1 : ∑ j in Finset.univ.erase (1 : Fin 2), Complex.normSq (ρ.carrier 1 j) =
       Complex.normSq (ρ.carrier 1 0) := by
-    simp [Finset.sum_singleton]
+    refine Finset.sum_eq_single (0 : Fin 2) ?_ ?_
+    · intro j hj hne
+      exfalso
+      fin_cases j <;> simp at hj hne
+    · intro h10; simp at h10
   rw [h0, h1]
   -- ‖ρ₁₀‖² = ‖ρ₀₁‖² by Hermiticity
   have hH := DensityMat.isHermitian ρ
-  have h10 : ρ.carrier 1 0 = starRingEnd ℂ (ρ.carrier 0 1) := by
-    have := hH.apply 0 1
-    simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at this
-    rw [← this]; simp [star]
-  rw [h10, map_starRingEnd, Complex.normSq_conj]
+  have h10 : ρ.carrier 1 0 = star (ρ.carrier 0 1) := by
+    simpa [star_star] using congrArg star (hH.apply 0 1)
+  rw [h10, Complex.star_def, Complex.normSq_conj]
   ring
 
 /-- For a qubit with nonzero off-diagonal, `RCC_purity = ‖ρ₀₁‖² / (p₀ p₁)`. -/
@@ -274,7 +254,21 @@ theorem residualCoherenceCapacity_purity_qubit (ρ : DensityMatrix hnQubit)
       Complex.normSq (ρ.carrier 0 1) / ((ρ.carrier 0 0).re * (ρ.carrier 1 1).re) := by
   unfold residualCoherenceCapacity_purity
   rw [offDiagonalPurity_qubit, one_sub_diagonalPurity_qubit]
-  field_simp
+  have h2 : (2 : ℝ) ≠ 0 := by norm_num
+  have hden :
+      (2 : ℝ) * (ρ.carrier 0 0).re * (ρ.carrier 1 1).re ≠ 0 := by
+    -- From `diagonalPurity ρ < 1` and `p₀ + p₁ = 1`, get `2 p₀ p₁ = 1 - (p₀² + p₁²) > 0`
+    have hdp := diagonalPurity_qubit ρ
+    have hsum := DensityMat.trace_re_eq_one_n ρ
+    rw [Fin.sum_univ_two] at hsum
+    have hprod : 0 < 2 * (ρ.carrier 0 0).re * (ρ.carrier 1 1).re := by
+      have hsq : (ρ.carrier 0 0).re ^ 2 + (ρ.carrier 1 1).re ^ 2 < 1 := by linarith [h, hdp]
+      nlinarith [hsum, hsq, DensityMat.diag_re_nonneg_n ρ 0, DensityMat.diag_re_nonneg_n ρ 1]
+    intro hz
+    linarith
+  have hp0 : (ρ.carrier 0 0).re ≠ 0 := fun hz => hden (by rw [hz]; ring)
+  have hp1 : (ρ.carrier 1 1).re ≠ 0 := fun hz => hden (by rw [hz]; ring)
+  field_simp [h2, hp0, hp1]
   ring
 
 end UMST.Quantum
