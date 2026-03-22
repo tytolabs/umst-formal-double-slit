@@ -27,7 +27,7 @@ lean_lib «UMST.DoubleSlit» where
     `PrototypeSolverCalibration, `GateCompat, `QRBridge,
     `PMICEntropyInterior, `Complementarity, `PMICVisibility,
     `VonNeumannEntropy, `QuantumMutualInfo, `DataProcessingInequality,
-    `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,
+    `WhichPathMeasurementUpdate, `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `SimLeanBridge,
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
