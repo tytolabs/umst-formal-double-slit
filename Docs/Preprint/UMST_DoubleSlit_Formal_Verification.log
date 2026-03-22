@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 08:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 08:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -900,7 +900,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: ../Media/teaser-paper.png Graphic file (type png)
 <use ../Media/teaser-paper.png>
 Package pdftex.def Info: ../Media/teaser-paper.png  used on input line 121.
-(pdftex.def)             Requested size: 432.48051pt x 216.23933pt.
+(pdftex.def)             Requested size: 455.24411pt x 227.62523pt.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/it' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/it' tried instead on input line 135.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1002,7 +1002,7 @@ exmf/fonts/type1/urw/palatino/uplb8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplbi8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplr8a.pfb></Users/santhoshshyamsundar/Library/tex
 mf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 431275 byte
+Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 440972 byte
 s).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
