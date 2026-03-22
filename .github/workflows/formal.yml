@@ -26,10 +26,13 @@ jobs:
   coq:
     runs-on: ubuntu-latest
     container:
-      # Rocq 9.x (successor to Coq); `coqc` remains on PATH in official images.
       image: rocq/rocq-prover:9.0
       options: --user root
     steps:
+      - name: Install build tools
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq make git
       - uses: actions/checkout@v4
       - name: coq-check (all Coq/ modules)
         run: make coq-check
@@ -43,10 +46,20 @@ jobs:
           set -e
           sudo apt-get update
           sudo apt-get install -y agda agda-stdlib
-      - name: Configure Agda stdlib path
+      - name: Configure Agda stdlib
         run: |
+          set -e
+          # Find the actual .agda-lib file for stdlib
+          STDLIB_LIB=$(find /usr/share -name "standard-library.agda-lib" 2>/dev/null | head -1)
+          if [ -z "$STDLIB_LIB" ]; then
+            echo "ERROR: Could not find standard-library.agda-lib"
+            find /usr/share -name "*.agda-lib" 2>/dev/null
+            exit 1
+          fi
+          STDLIB_DIR=$(dirname "$STDLIB_LIB")
+          echo "Found stdlib at: $STDLIB_DIR"
           mkdir -p ~/.agda
-          echo "/usr/share/agda-stdlib" > ~/.agda/libraries
+          echo "$STDLIB_DIR" > ~/.agda/libraries
           echo "standard-library" > ~/.agda/defaults
       - name: agda-check (all Agda/ modules)
         run: make agda-check
