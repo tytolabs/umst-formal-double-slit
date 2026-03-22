@@ -1,5 +1,5 @@
 # umst-formal-double-slit — local verification
-.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
+.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test sim-gifs sim-gifs-validate telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
 
 lean:
 	cd Lean && lake build
@@ -22,6 +22,13 @@ sim:
 
 sim-test:
 	python3 -m unittest discover -s sim/tests -p "test_*.py"
+
+# Optional: wave simulation GIFs (matplotlib + imageio; see scripts/generate_sim_gifs.py).
+sim-gifs:
+	python3 scripts/generate_sim_gifs.py
+
+sim-gifs-validate:
+	python3 scripts/generate_sim_gifs.py --validate
 
 # Gap 14: golden Lean-aligned telemetry JSON + run consumer (requires NumPy).
 telemetry-sample:

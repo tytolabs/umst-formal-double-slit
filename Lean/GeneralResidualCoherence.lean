@@ -181,142 +181,152 @@ private lemma normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
       simp [Matrix.submatrix, hji]
     have hsub_11 : ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) 1 1 = (q : ℂ) := by
       simp [Matrix.submatrix, hjj_eq]
-    -- Apply PSD to vector v2 = ![-b, (p:ℂ)] to get 0 ≤ p*(p*q - normSq(b))
+    -- Helper: b * starRingEnd ℂ b = normSq b (as complex)
+    have hbc : b * starRingEnd ℂ b = (Complex.normSq b : ℂ) := Complex.mul_conj b
+    -- Apply PSD to vector ![-b, (p:ℂ)] to get 0 ≤ p*(p*q - normSq(b))
     have H1 : (0 : ℂ) ≤ Matrix.dotProduct (star (![-b, (p : ℂ)] : Fin 2 → ℂ))
         (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![-b, (p : ℂ)]) :=
       h2psd.2 ![-b, (p : ℂ)]
-    -- Apply PSD to vector v1 = ![(q:ℂ), -starRingEnd ℂ b] to get 0 ≤ q*(p*q - normSq(b))
-    have H2 : (0 : ℂ) ≤ Matrix.dotProduct (star (![( q : ℂ), -starRingEnd ℂ b] : Fin 2 → ℂ))
+    -- Apply PSD to vector ![(q:ℂ), -starRingEnd ℂ b] to get 0 ≤ q*(p*q - normSq(b))
+    have H2 : (0 : ℂ) ≤ Matrix.dotProduct (star (![(q : ℂ), -starRingEnd ℂ b] : Fin 2 → ℂ))
         (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(q : ℂ), -starRingEnd ℂ b]) :=
       h2psd.2 ![(q : ℂ), -starRingEnd ℂ b]
-    -- Compute dot products for H1: result is p * (p*q - normSq b)
+    -- Compute dot product for H1: result is p * (p*q - normSq b)
     have H1_val : Matrix.dotProduct (star (![-b, (p : ℂ)] : Fin 2 → ℂ))
         (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![-b, (p : ℂ)]) =
         (p : ℂ) * ((p : ℂ) * (q : ℂ) - Complex.normSq b) := by
       simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-        Matrix.cons_val_one, Matrix.head_cons, star_neg, star_ofReal, RCLike.star_def]
+        Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_neg, starRingEnd_apply]
       simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-      push_neg
-      simp only [map_neg, map_ofNat]
-      simp only [Complex.normSq_apply, starRingEnd_apply]
+      have hsp : star (p : ℂ) = (p : ℂ) := Complex.conj_ofReal p
+      rw [hsp]
       ring_nf
-      simp [Complex.mul_conj', Complex.normSq_apply, mul_comm]
-    -- Compute dot products for H2: result is q * (p*q - normSq b)
+      rw [show (p : ℂ) * b * starRingEnd ℂ b = (p : ℂ) * (b * starRingEnd ℂ b) from by ring]
+      rw [hbc]
+    -- Compute dot product for H2: result is q * (p*q - normSq b)
     have H2_val : Matrix.dotProduct (star (![(q : ℂ), -starRingEnd ℂ b] : Fin 2 → ℂ))
         (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(q : ℂ), -starRingEnd ℂ b]) =
         (q : ℂ) * ((p : ℂ) * (q : ℂ) - Complex.normSq b) := by
       simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-        Matrix.cons_val_one, Matrix.head_cons, star_neg, star_ofReal, RCLike.star_def]
+        Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_neg, starRingEnd_apply, star_star]
       simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-      simp only [map_neg, starRingEnd_apply, star_star]
-      simp only [Complex.normSq_apply, starRingEnd_apply]
+      have hsq : star (q : ℂ) = (q : ℂ) := Complex.conj_ofReal q
+      rw [hsq]
       ring_nf
-      simp [Complex.mul_conj', Complex.normSq_apply, mul_comm]
+      rw [show (q : ℂ) * b * starRingEnd ℂ b = (q : ℂ) * (b * starRingEnd ℂ b) from by ring]
+      rw [hbc]
     rw [H1_val] at H1
     rw [H2_val] at H2
-    -- Now case split on p
-    have hp_nn : 0 ≤ p := DensityMat.diag_re_nonneg_n ρ i
-    have hq_nn : 0 ≤ q := DensityMat.diag_re_nonneg_n ρ j
-    -- H1: 0 ≤ p * (p*q - normSq b) as complex
-    -- H2: 0 ≤ q * (p*q - normSq b) as complex
-    -- Extract real parts
-    have H1_re : 0 ≤ (p : ℝ) * ((p : ℝ) * (q : ℝ) - Complex.normSq b) := by
-      have := (Complex.nonneg_iff.mp H1).1
-      simp [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.sub_re, Complex.normSq_apply] at this
-      linarith
-    have H2_re : 0 ≤ (q : ℝ) * ((p : ℝ) * (q : ℝ) - Complex.normSq b) := by
-      have := (Complex.nonneg_iff.mp H2).1
-      simp [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.sub_re, Complex.normSq_apply] at this
-      linarith
+    -- Extract real parts: H1 gives 0 ≤ p*(p*q - normSq b), H2 gives 0 ≤ q*(p*q - normSq b)
+    have H1_re : 0 ≤ p * (p * q - Complex.normSq b) := by
+      have h := (Complex.nonneg_iff.mp H1).1
+      simp only [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.sub_re,
+        Complex.normSq_apply, mul_zero, sub_zero] at h
+      convert h using 1
+      simp [Complex.normSq_apply]
+    have H2_re : 0 ≤ q * (p * q - Complex.normSq b) := by
+      have h := (Complex.nonneg_iff.mp H2).1
+      simp only [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.sub_re,
+        Complex.normSq_apply, mul_zero, sub_zero] at h
+      convert h using 1
+      simp [Complex.normSq_apply]
     -- normSq b ≥ 0
     have hnsq : 0 ≤ Complex.normSq b := Complex.normSq_nonneg _
+    have hp_nn : 0 ≤ p := DensityMat.diag_re_nonneg_n ρ i
+    have hq_nn : 0 ≤ q := DensityMat.diag_re_nonneg_n ρ j
     -- Case split on p
     rcases hp_nn.eq_or_gt with rfl | hp_pos
     · -- p = 0
       rcases hq_nn.eq_or_gt with rfl | hq_pos
-      · -- p = 0, q = 0: use PSD with standard basis vectors to show b = 0
-        -- Apply PSD to ![1, 1]
+      · -- p = 0, q = 0: use PSD with ![1, r] for r = 1, -1, I, -I to show b = 0
+        -- For any vector ![1, r], dotProduct = b*r + star(b*r) = 2*Re(b*r) ≥ 0
+        -- Taking r=1: 2*Re(b) ≥ 0; r=-1: -2*Re(b) ≥ 0 → Re(b)=0
+        -- Taking r=I: -2*Im(b) ≥ 0; r=-I: 2*Im(b) ≥ 0 → Im(b)=0
+        -- hsub entries with p=0, q=0:
+        -- M = [[0, b], [starRingEnd ℂ b, 0]]
         have H3 : (0 : ℂ) ≤ Matrix.dotProduct (star (![(1:ℂ), (1:ℂ)] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), (1:ℂ)]) :=
           h2psd.2 ![(1:ℂ), (1:ℂ)]
-        -- Apply PSD to ![1, -1]
         have H4 : (0 : ℂ) ≤ Matrix.dotProduct (star (![(1:ℂ), -(1:ℂ)] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), -(1:ℂ)]) :=
           h2psd.2 ![(1:ℂ), -(1:ℂ)]
-        -- Apply PSD to ![1, Complex.I]
         have H5 : (0 : ℂ) ≤ Matrix.dotProduct (star (![(1:ℂ), Complex.I] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), Complex.I]) :=
           h2psd.2 ![(1:ℂ), Complex.I]
-        -- Apply PSD to ![1, -Complex.I]
         have H6 : (0 : ℂ) ≤ Matrix.dotProduct (star (![(1:ℂ), -Complex.I] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), -Complex.I]) :=
           h2psd.2 ![(1:ℂ), -Complex.I]
-        -- Compute these dot products with p=0, q=0
+        -- Compute dot products
+        -- For ![1, 1]: 1*(0*1+b*1) + 1*(cj(b)*1+0*1) = b + cj(b)
         have H3_val : Matrix.dotProduct (star (![(1:ℂ), (1:ℂ)] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), (1:ℂ)]) =
             b + starRingEnd ℂ b := by
           simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-            Matrix.cons_val_one, Matrix.head_cons, star_one, RCLike.star_def]
+            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one]
           simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-          simp [starRingEnd_apply, Complex.ofReal_zero]
+          simp only [starRingEnd_apply]
           ring
+        -- For ![1, -1]: similarly -(b + cj(b))
         have H4_val : Matrix.dotProduct (star (![(1:ℂ), -(1:ℂ)] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), -(1:ℂ)]) =
             -(b + starRingEnd ℂ b) := by
           simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-            Matrix.cons_val_one, Matrix.head_cons, star_neg, star_one, RCLike.star_def]
+            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one, star_neg]
           simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-          simp [starRingEnd_apply, Complex.ofReal_zero]
+          simp only [starRingEnd_apply]
           ring
+        -- For ![1, I]: 1*(b*I) + (-I)*(cj(b)) = b*I - I*cj(b); Re = -2*Im(b)
         have H5_val : Matrix.dotProduct (star (![(1:ℂ), Complex.I] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), Complex.I]) =
-            Complex.I * starRingEnd ℂ b - Complex.I * b := by
+            b * Complex.I + starRingEnd ℂ (b * Complex.I) := by
           simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-            Matrix.cons_val_one, Matrix.head_cons, RCLike.star_def]
+            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one]
+          have hstI : star Complex.I = -Complex.I := by
+            have : starRingEnd ℂ Complex.I = -Complex.I := Complex.conj_I
+            rwa [← Complex.star_def] at this
+          rw [hstI]
           simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-          simp [starRingEnd_apply, Complex.ofReal_zero, Complex.I_sq]
+          simp only [starRingEnd_apply, map_mul, Complex.conj_I]
           ring
+        -- For ![1, -I]: -(b*I + cj(b*I))
         have H6_val : Matrix.dotProduct (star (![(1:ℂ), -Complex.I] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), -Complex.I]) =
-            -(Complex.I * starRingEnd ℂ b - Complex.I * b) := by
+            -(b * Complex.I + starRingEnd ℂ (b * Complex.I)) := by
           simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-            Matrix.cons_val_one, Matrix.head_cons, map_neg, RCLike.star_def]
+            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one, star_neg]
+          have hstI : star Complex.I = -Complex.I := by
+            have : starRingEnd ℂ Complex.I = -Complex.I := Complex.conj_I
+            rwa [← Complex.star_def] at this
+          rw [hstI]
           simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-          simp [starRingEnd_apply, Complex.ofReal_zero, Complex.I_sq]
+          simp only [starRingEnd_apply, map_mul, Complex.conj_I, map_neg]
           ring
-        rw [H3_val] at H3
-        rw [H4_val] at H4
-        rw [H5_val] at H5
-        rw [H6_val] at H6
-        -- b + conj(b) = 2*Re(b) ≥ 0 and ≤ 0, so Re(b) = 0
-        -- I*conj(b) - I*b = 2*Im(b) ≥ 0 and ≤ 0, so Im(b) = 0
+        rw [H3_val] at H3; rw [H4_val] at H4
+        rw [H5_val] at H5; rw [H6_val] at H6
+        -- From H3 and H4: b + cj(b) ≥ 0 and -(b + cj(b)) ≥ 0 → Re(b) = 0
         have hre : b.re = 0 := by
           have h3r := (Complex.nonneg_iff.mp H3).1
           have h4r := (Complex.nonneg_iff.mp H4).1
-          simp [starRingEnd_apply, Complex.add_re, Complex.conj_re] at h3r h4r
+          simp only [starRingEnd_apply, Complex.add_re, Complex.conj_re, Complex.neg_re] at h3r h4r
           linarith
+        -- From H5 and H6: b*I + cj(b*I) ≥ 0 and -(b*I + cj(b*I)) ≥ 0 → Im(b) = 0
         have him2 : b.im = 0 := by
           have h5r := (Complex.nonneg_iff.mp H5).1
           have h6r := (Complex.nonneg_iff.mp H6).1
-          simp [starRingEnd_apply, Complex.mul_re, Complex.conj_re, Complex.conj_im,
-                Complex.I_re, Complex.I_im, Complex.sub_re] at h5r h6r
+          simp only [starRingEnd_apply, Complex.add_re, Complex.mul_re,
+            Complex.conj_re, Complex.I_re, Complex.I_im, Complex.conj_im, Complex.neg_re] at h5r h6r
           linarith
         have hb_zero : b = 0 := Complex.ext hre him2
         simp [hb_zero, Complex.normSq_zero]
-      · -- p = 0, q > 0: from H1, 0 ≤ 0*(0*q - normSq b) = 0, which is trivial.
-        -- From H2: 0 ≤ q * (0*q - normSq b) = -q*normSq(b)
+      · -- p = 0, q > 0: From H2_re: 0 ≤ q*(0*q - normSq b) = -q*normSq(b)
         -- Since q > 0 and normSq b ≥ 0, we get normSq b = 0
-        have : Complex.normSq b = 0 := by
-          have hq2 : 0 ≤ (q : ℝ) * ((0 : ℝ) * (q : ℝ) - Complex.normSq b) := by
-            simpa using H2_re
-          have : 0 ≤ -(q * Complex.normSq b) := by linarith
-          have : q * Complex.normSq b ≤ 0 := by linarith
+        have hnsq_zero : Complex.normSq b = 0 := by
+          have : 0 ≤ q * (0 * q - Complex.normSq b) := H2_re
+          have : q * Complex.normSq b ≤ 0 := by nlinarith
           nlinarith [hq_pos.le]
-        simp [this]
-    · -- p > 0
-      -- From H1: 0 ≤ p * (p*q - normSq b), since p > 0 → 0 ≤ p*q - normSq b → normSq b ≤ p*q
+        simp [hnsq_zero]
+    · -- p > 0: From H1_re: 0 ≤ p*(p*q - normSq b), since p > 0 → normSq b ≤ p*q
       have key : Complex.normSq b ≤ p * q := by
-        have h1r : 0 ≤ (p : ℝ) * ((p : ℝ) * (q : ℝ) - Complex.normSq b) := H1_re
         nlinarith [hp_pos.le]
       linarith
 

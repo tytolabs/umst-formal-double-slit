@@ -20,6 +20,16 @@ All notable changes to this **standalone repository** are listed here. The upstr
 - **`sim/telemetry_trace_consumer.py`** — Gap 14 & 18: strict `pydantic` mapping (`BaseModel` tracing) limiting trace inputs natively against `SimLeanBridge` type contracts.
 - **`Haskell/src/TelemetryParser.hs`** — Gap 14: extensive GHC Generic `Aeson FromJSON` structs implementing pure functional ingress parsing.
 
+### Added (general-n RCC, QMI, erasure, sorry elimination)
+
+- **`Lean/GeneralResidualCoherence.lean`** — Gap 3 (extended): General-n **Residual Coherence Capacity** via purity decomposition `RCC_n = (Tr(ρ²) - Σpᵢ²)/(1 - Σpᵢ²)`. Fully proved: `RCC_n ∈ [0,1]` (Cauchy-Schwarz from first principles via 2×2 PSD submatrices), `RCC_n = 0 ↔ diagonal`, `RCC_n = 1 ↔ pure`, qubit compatibility `RCC_2 = |ρ₀₁|²/(p₀p₁)`. **0 sorry**.
+- **`Lean/QuantumMutualInfo.lean`** — Quantum mutual information `I(A:B) = S(A) + S(B) - S(AB)`, conditional entropy, `I ≤ log nA + log nB` upper bound, `I(A:B) = 0` for product states. 1 axiom: `S(ρ⊗σ) = S(ρ)+S(σ)` (Kronecker eigenvalue structure).
+- **`Lean/ErasureChannel.lean`** — Concrete reset-to-`|0⟩` erasure channel (Kraus operators `K₀`, `K₁`), trace preservation, output always `|0⟩⟨0|`, zero output entropy. Provides `ErasureProcess` saturation of Landauer bound.
+
+### Fixed (sole remaining sorry eliminated)
+
+- **`GeneralResidualCoherence.lean` line 155** — `trace_sq_le_one`: The hidden sorry in the broken circular `calc` was replaced by a complete Lean 4 proof. Key lemma: `normSq(ρᵢⱼ) ≤ (ρᵢᵢ).re * (ρⱼⱼ).re` proved for all i,j by applying PSD quadratic form to specific vectors on 2×2 submatrices. Three-case proof: `p > 0` (H2 vector), `p = 0, q > 0` (H1 vector), `p = q = 0` (four sign-testing vectors force b = 0). **Total project sorry count: 0**.
+
 ### Added (Coq/Agda — A0 quantum parity)
 
 - **`Coq/DensityStateSpec.v`** — 2×2 density matrix record + PSD constraints; **proved**: `p0_le_one`, `p1_le_one`, `coherence_bounded`, `p0_p1_le_quarter`.
