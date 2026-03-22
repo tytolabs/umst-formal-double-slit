@@ -51,13 +51,13 @@ _and the thermodynamic cost is non-negotiable. The proofs don't care if you beli
 
 ### In plain language
 
-**The particle goes both ways. You already knew that. What you didn't know is the price of asking.**
+Extracting which-path information from a quantum system destroys interference. This is not binary. Extract 0.3 bits: visibility drops to ≈ 0.95. Extract 0.7 bits: visibility drops to ≈ 0.71. Extract the full bit: the pattern is gone. The relationship is the Englert curve, V² + I² ≤ 1, and every point on it is physically realizable.
 
-Learning "which slit" is not a light switch — it's a dimmer, and someone is watching the meter. Take a little information, keep most of the interference pattern. Push toward a full bit, and the fringes dissolve. That trade-off is **continuous**, merciless, and exactly calculable: every scrap of which-path knowledge carries a **thermodynamic price tag** at Landauer's scale — one bit of information at temperature *T* costs *k_B T ln 2* in energy that the universe will never return.
+Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, non-recoverable. This is not interpretation. It is accounting. The second law enforces it.
 
-**Observation is a physical transaction.** Not a philosophical stance. Not a metaphor. A transaction — with a receipt the second law won't let you forge.
+This repository proves the chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **467 theorems. 0 `sorry`. 5 axioms** (where Mathlib does not yet supply the lemma — each is stated explicitly in `Lean/VERIFY.md`).
 
-**Why should anyone outside quantum optics care?** Because any system that **measures, decides, or extracts information** about a physical process — sensing, control, secure inference, materials gates, energy-aware computing — faces the same ledger. This repository makes a slice of that accounting **machine-checked across four proof languages**, so the weight of the principle is not rhetoric. It is 467 theorems, zero apologies, and five axioms where Mathlib hasn't caught up yet (see `Lean/VERIFY.md`). The proofs are the territory.
+**Why this matters beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same constraint. The cost of knowing is not a metaphor. It is a proved inequality. This repository is the proof.
 
 ---
 
