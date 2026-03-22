@@ -20,10 +20,11 @@ partial trace.
 - `quantumMutualInfo` — definition via partial traces and `vonNeumannEntropy`
 - `quantumConditionalEntropy` — `S(A|B) = S(ρ_AB) - S(ρ_B)`
 - `quantumMutualInfo_eq_entropy_minus_conditional` — `I(A:B) = S(ρ_A) - S(A|B)` (pure algebra)
-- `quantumMutualInfo_le` — `I(A:B) ≤ log na + log nb` (upper bound)
+- `quantumMutualInfo_le` / `quantumMutualInfo_le_log_na_add_log_nb` — `I(A:B) ≤ log na + log nb`
 - `vonNeumannEntropy_tensorDensity` — `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)` (axiom; Kronecker
   eigenvalue factorization not available in Mathlib)
-- `quantumMutualInfo_product_eq_zero` — product states have zero mutual information
+- `quantumMutualInfo_product_eq_zero` / `quantumMutualInfo_product_state_eq_zero` — product states
+- `quantumMutualInfo_nonneg` — `I(A:B) ≥ 0` (axiom; Klein / SSA)
 -/
 
 namespace UMST.Quantum
@@ -66,6 +67,26 @@ theorem quantumMutualInfo_le
   have hAB := vonNeumannEntropy_nonneg ρAB
   linarith
 
+/-- Alias: `I(A:B) ≤ log na + log nb`. -/
+theorem quantumMutualInfo_le_log_na_add_log_nb
+    (ρAB : DensityMatrix (Nat.mul_pos ha hb)) :
+    quantumMutualInfo ha hb ρAB ≤ Real.log na + Real.log nb :=
+  quantumMutualInfo_le ha hb ρAB
+
+/-- **Quantum conditional entropy** (alternate convention): `S(B|A) = S(ρ_AB) - S(ρ_A)`. -/
+noncomputable def quantumConditionalEntropy_B_given_A
+    (ρAB : DensityMatrix (Nat.mul_pos ha hb)) : ℝ :=
+  vonNeumannEntropy ρAB -
+  vonNeumannEntropy (partialTraceRightProd_toDensityMatrix ha hb ρAB)
+
+/-- **Axiom** (subadditivity of quantum entropy): `I(A:B) ≥ 0`.
+
+Equivalent to `S(ρ_AB) ≤ S(ρ_A) + S(ρ_B)` (strong subadditivity on this bipartite system is Klein's
+inequality in standard formulations). Mathlib lacks the matrix logarithm / SSA infrastructure used
+in textbook proofs; see `DataProcessingInequality.lean` (`klein_inequality`). -/
+axiom quantumMutualInfo_nonneg
+    (ρAB : DensityMatrix (Nat.mul_pos ha hb)) : 0 ≤ quantumMutualInfo ha hb ρAB
+
 /-- **Axiom**: Kronecker eigenvalue factorization.
 
 For product states `ρ_A ⊗ ρ_B`, the eigenvalues of the tensor product are the pairwise products
@@ -93,5 +114,11 @@ theorem quantumMutualInfo_product_eq_zero
     DensityMat.ext (partialTraceLeftProd_toDensityMatrix_tensor ha hb ρA ρB)
   rw [hRA, hRB, vonNeumannEntropy_tensorDensity ha hb ρA ρB]
   ring
+
+/-- Alias for `quantumMutualInfo_product_eq_zero`. -/
+theorem quantumMutualInfo_product_state_eq_zero
+    (ρA : DensityMatrix ha) (ρB : DensityMatrix hb) :
+    quantumMutualInfo ha hb (tensorDensity ha hb ρA ρB) = 0 :=
+  quantumMutualInfo_product_eq_zero ha hb ρA ρB
 
 end UMST.Quantum

@@ -24,9 +24,10 @@ Together they satisfy the trace-preservation constraint `K₀ᴴ K₀ + K₁ᴴ 
 **Proved:**
 - `resetChannel_tp` — trace preservation
 - `resetChannel_output_eq_rhoZero` — output is always `|0⟩⟨0|` for any density matrix
-- `resetChannel_entropy_zero` — output has zero diagonal entropy
+- `resetChannel_entropy_zero` / `resetChannel_output_vonNeumannDiagonal` — zero diagonal entropy
+- `resetChannel_diagonal_entropy_drop_rhoPlus_eq_log_two` — |+⟩ drops one nat on the path bit
 - `idealResetErasure` — an `ErasureProcess` at Landauer equality
-- `idealResetErasure_saturates` — dissipated heat = Landauer cost exactly
+- `idealResetErasure_saturates`, `idealResetErasure_rhoPlus_secondLaw_eq`
 -/
 
 open scoped Matrix ComplexOrder BigOperators
@@ -131,6 +132,25 @@ theorem resetChannel_entropy_zero (ρ_dm : DensityMatrix hnQubit) :
   rw [resetChannel_output_eq_rhoZero]
   exact rhoZero_vonNeumannDiagonal
 
+/-- Alias: reset kills **Born / diagonal** entropy (classical path uncertainty), not necessarily
+`vonNeumannEntropy` (which is already `0` on pure |+⟩). -/
+theorem resetChannel_output_vonNeumannDiagonal (ρ_dm : DensityMatrix hnQubit) :
+    vonNeumannDiagonal (resetChannel.apply hnQubit ρ_dm) = 0 :=
+  resetChannel_entropy_zero ρ_dm
+
+/-- For |+⟩, diagonal entropy drops by exactly `log 2` (one nat of Shannon on the path bit). -/
+theorem resetChannel_diagonal_entropy_drop_rhoPlus_eq_log_two :
+    vonNeumannDiagonal rhoPlus -
+      vonNeumannDiagonal (resetChannel.apply hnQubit rhoPlus) = Real.log 2 := by
+  rw [resetChannel_output_eq_rhoZero, rhoPlus_vonNeumannDiagonal_eq_log_two, rhoZero_vonNeumannDiagonal]
+  ring
+
+/-- Same drop in **bit-equivalent** form: `1` bit of diagonal entropy erased. -/
+theorem resetChannel_pathEntropyBits_drop_rhoPlus_eq_one :
+    pathEntropyBits rhoPlus - pathEntropyBits (resetChannel.apply hnQubit rhoPlus) = 1 := by
+  rw [resetChannel_output_eq_rhoZero, rhoPlus_pathEntropyBits_eq_one, rhoZero_pathEntropyBits]
+  ring
+
 /-- The output of the reset channel has zero path entropy bits. -/
 theorem resetChannel_pathEntropyBits_zero (ρ_dm : DensityMatrix hnQubit) :
     pathEntropyBits (resetChannel.apply hnQubit ρ_dm) = 0 := by
@@ -163,5 +183,10 @@ dissipated heat equals the Landauer cost exactly. -/
 theorem idealResetErasure_saturates (ρ : DensityMatrix hnQubit) (T : ℝ) :
     (idealResetErasure ρ T).dissipatedHeat = landauerCostDiagonal ρ T :=
   rfl
+
+/-- On |+⟩, `secondLaw` is an equality: dissipated heat equals the full one-bit Landauer scale. -/
+theorem idealResetErasure_rhoPlus_secondLaw_eq (T : ℝ) :
+    (idealResetErasure rhoPlus T).dissipatedHeat = landauerBitEnergy T :=
+  rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy T
 
 end UMST.DoubleSlit
