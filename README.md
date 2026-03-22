@@ -370,7 +370,7 @@ Portions of this work were developed in collaboration with advanced large-langua
 Claude Opus and Sonnet 4.6 (Anthropic) provided surgical precision during drafting and refinement.
 Gemini 3.1 Pro High (Google) offered exceptional large-context planning and file management.
 Grok 4.20 by xAI and its collaborative reasoning team contributed core mathematical and scientific reasoning.
-The Cursor code editor and Composer supported seamless implementation.
+The Cursor code editor, Composer, Claude Code, and Antigravity supported seamless implementation and agentic file management.
 
 The large-language models assisted with exploration, drafting, and code scaffolding — never with the validity of formal proofs. All theorems were machine-checked by their respective compilers (Lean 4, Coq/Rocq, Agda), which accept only well-typed terms, never persuasive arguments.
 
