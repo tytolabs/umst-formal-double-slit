@@ -66,6 +66,12 @@ theorem quantumMutualInfo_le
   have hAB := vonNeumannEntropy_nonneg ρAB
   linarith
 
+/-- Alias: `I(A:B) ≤ log na + log nb` (same as `quantumMutualInfo_le`). -/
+theorem quantumMutualInfo_le_log_na_add_log_nb
+    (ρAB : DensityMatrix (Nat.mul_pos ha hb)) :
+    quantumMutualInfo ha hb ρAB ≤ Real.log na + Real.log nb :=
+  quantumMutualInfo_le ha hb ρAB
+
 /-- **Axiom**: Kronecker eigenvalue factorization.
 
 For product states `ρ_A ⊗ ρ_B`, the eigenvalues of the tensor product are the pairwise products

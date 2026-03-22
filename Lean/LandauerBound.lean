@@ -24,7 +24,9 @@ that requires a full erasure / dissipation model.
 **General `Fin n`:** `pathEntropyBits_n` and `landauerCostDiagonal_n` use `vonNeumannDiagonal_n` /
 `GeneralDimension.vonNeumannDiagonal_n_le_log_n`, giving **`pathEntropyBits_n ρ ≤ logb 2 n`** and
 **`landauerCostDiagonal_n ρ T ≤ landauerBitEnergy T * logb 2 n`** (max-entropy / `n`-outcome bit cap).
-The qubit residual-coherence narrative (`residualCoherenceCapacity`) remains **binary-only**.
+The qubit hook `residualCoherenceCapacity` remains the **binary** narrative in this file; a
+dimension-independent purity-based RCC lives in `GeneralResidualCoherence.lean`
+(`residualCoherenceCapacity_purity`).
 
 ### Principle of Maximal Information Collapse
 This module enforces an *additional thermodynamic upper bound* on remaining coherence (Residual Logical 

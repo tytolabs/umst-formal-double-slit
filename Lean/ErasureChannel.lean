@@ -143,6 +143,12 @@ theorem resetChannel_landauerCost_zero (ρ_dm : DensityMatrix hnQubit) (T : ℝ)
   rw [resetChannel_output_eq_rhoZero]
   exact rhoZero_landauerCostDiagonal T
 
+/-- Classical entropy drop (nats) from input to reset output: input diagonal entropy minus `0`. -/
+theorem resetChannel_entropy_drop_eq_classical (ρ_dm : DensityMatrix hnQubit) :
+    vonNeumannDiagonal ρ_dm - vonNeumannDiagonal (resetChannel.apply hnQubit ρ_dm) =
+      vonNeumannDiagonal ρ_dm := by
+  rw [resetChannel_output_eq_rhoZero, rhoZero_vonNeumannDiagonal, sub_zero]
+
 end Entropy
 
 end UMST.Quantum
@@ -157,6 +163,11 @@ noncomputable def idealResetErasure (ρ : DensityMatrix hnQubit) (T : ℝ) : Era
   initial := ρ
   dissipatedHeat := landauerCostDiagonal ρ T
   secondLaw := le_refl _
+
+/-- **Equality case:** erasing the maximally coherent path qubit (`|+⟩`) pays exactly one Landauer bit-energy. -/
+theorem idealResetErasure_rhoPlus_eq (T : ℝ) :
+    (idealResetErasure rhoPlus T).dissipatedHeat = landauerBitEnergy T :=
+  rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy T
 
 /-- The ideal reset erasure process saturates the Landauer bound:
 dissipated heat equals the Landauer cost exactly. -/

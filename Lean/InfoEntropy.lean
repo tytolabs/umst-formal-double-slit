@@ -40,16 +40,10 @@ theorem shannonBinary_le_log_two (p : ℝ) : shannonBinary p ≤ log 2 := by
 
 theorem shannonBinary_symm (p : ℝ) : shannonBinary p = shannonBinary (1 - p) := by
   unfold shannonBinary
-  abel
+  simp [add_comm]
 
 theorem pathWeight_le_one (ρ : DensityMatrix hnQubit) (i : Fin 2) : pathWeight ρ i ≤ 1 := by
-  fin_cases i
-  · have hs := pathWeight_sum ρ
-    have h1 := pathWeight_nonneg' ρ 1
-    linarith
-  · have hs := pathWeight_sum ρ
-    have h0 := pathWeight_nonneg' ρ 0
-    linarith
+  fin_cases i <;> simp [pathWeight] <;> exact DensityMat.diag_re_le_one_n ρ _
 
 /-- Diagonal / spectrum entropy for the path qubit (nats; same functional form as `S(ρ)` here). -/
 noncomputable def vonNeumannDiagonal (ρ : DensityMatrix hnQubit) : ℝ :=
@@ -60,14 +54,15 @@ theorem vonNeumannDiagonal_eq_shannon_path1 (ρ : DensityMatrix hnQubit) :
   unfold vonNeumannDiagonal
   have hs := pathWeight_sum ρ
   have : pathWeight ρ 0 = 1 - pathWeight ρ 1 := by linarith
-  rw [this, shannonBinary_symm]
+  rw [this]
+  exact (shannonBinary_symm (pathWeight ρ 1)).symm
 
 theorem vonNeumannDiagonal_nonneg (ρ : DensityMatrix hnQubit) : 0 ≤ vonNeumannDiagonal ρ := by
   unfold vonNeumannDiagonal shannonBinary
-  have h0 := pathWeight_nonneg' ρ 0
+  have h0 := pathWeight_nonneg ρ 0
   have hle := pathWeight_le_one ρ 0
-  have h1 : 0 ≤ 1 - pathWeight ρ 0 := by linarith [pathWeight_sum ρ, pathWeight_nonneg' ρ 1]
-  have h1le : 1 - pathWeight ρ 0 ≤ 1 := by linarith [pathWeight_nonneg' ρ 0]
+  have h1 : 0 ≤ 1 - pathWeight ρ 0 := by linarith [pathWeight_sum ρ, pathWeight_nonneg ρ 1]
+  have h1le : 1 - pathWeight ρ 0 ≤ 1 := by linarith [pathWeight_nonneg ρ 0]
   exact add_nonneg (negMulLog_nonneg h0 hle) (negMulLog_nonneg h1 h1le)
 
 /-- General diagonal von Neumann entropy (nats) for arbitrary dimension n -/
@@ -85,7 +80,9 @@ theorem vonNeumannDiagonal_n_nonneg {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix h
 theorem vonNeumannDiagonal_n_eq_vonNeumannDiagonal (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal_n ρ = vonNeumannDiagonal ρ := by
   have hdiag1 : (ρ.carrier 1 1).re = 1 - (ρ.carrier 0 0).re := by
-    simpa [pathWeight, add_comm, add_left_comm, add_assoc] using (pathWeight_sum ρ)
+    have h := pathWeight_sum ρ
+    simp only [pathWeight] at h ⊢
+    linarith
   unfold vonNeumannDiagonal vonNeumannDiagonal_n shannonBinary
   rw [Fin.sum_univ_two, hdiag1, pathWeight]
 
