@@ -1,4 +1,11 @@
-# Coq/Rocq + Agda — matches root `make coq-check` / `make agda-check` / `make formal-check`.
+# Coq/Rocq + Agda formal verification CI.
+#
+# Coq: the `rocq/rocq-prover:9.0` image's ENTRYPOINT is `opam exec --`,
+#       which fails under `--user root`. We clear the entrypoint and
+#       dynamically find the opam bin directory to get `rocq compile`.
+# Agda: the Ubuntu `agda-stdlib` package installs source at /usr/share/agda-stdlib/
+#       but does not register it with Agda. We create ~/.agda/libraries + defaults
+#       and chmod the stdlib dir so Agda can write .agdai interface caches.
 name: Formal (Coq + Agda)
 on:
   workflow_dispatch:
@@ -24,15 +31,10 @@ concurrency:
 
 jobs:
   coq:
-    # Code uses `From Stdlib` (Rocq 9.x); Ubuntu's Coq 8.18 cannot compile it.
-    # In Rocq 9.0 the compiler is `rocq compile` (NOT coqc).
-    # Running as root for checkout; must explicitly add opam bin to PATH.
     runs-on: ubuntu-latest
     container:
       image: rocq/rocq-prover:9.0
-      options: --user root
-    env:
-      PATH: /home/coq/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      options: --user root --entrypoint ""
     steps:
       - name: Install git
         run: |
@@ -42,6 +44,27 @@ jobs:
       - name: coq-check (all Coq/ modules)
         run: |
           set -e
+          # Find the rocq binary — could be under /home/coq or /home/rocq
+          ROCQ_BIN=""
+          for d in /home/coq/.opam/*/bin /home/rocq/.opam/*/bin; do
+            if [ -x "$d/rocq" ]; then
+              ROCQ_BIN="$d"
+              break
+            fi
+          done
+          if [ -z "$ROCQ_BIN" ]; then
+            echo "Searching entire filesystem for rocq..."
+            ROCQ_PATH="$(find / -name rocq -type f 2>/dev/null | head -1)"
+            if [ -n "$ROCQ_PATH" ]; then
+              ROCQ_BIN="$(dirname "$ROCQ_PATH")"
+            else
+              echo "ERROR: rocq binary not found anywhere"
+              ls -la /home/ 2>/dev/null || true
+              exit 1
+            fi
+          fi
+          export PATH="${ROCQ_BIN}:${PATH}"
+          echo "Using rocq from: $ROCQ_BIN"
           rocq compile --version
           cd Coq
           for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
@@ -71,8 +94,7 @@ jobs:
           mkdir -p ~/.agda
           echo "$STDLIB_DIR/standard-library.agda-lib" > ~/.agda/libraries
           echo "standard-library" > ~/.agda/defaults
-          # Agda writes .agdai interface files next to source —
-          # make the stdlib directory writable so compilation caching works.
+          # Make stdlib writable for .agdai interface cache
           sudo chmod -R a+w "$STDLIB_DIR"
       - name: agda-check (all Agda/ modules)
         run: |
