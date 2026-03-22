@@ -24,6 +24,8 @@ concurrency:
 
 jobs:
   coq:
+    # Code uses `From Stdlib` (Rocq 9.x); Ubuntu's Coq 8.18 cannot compile it.
+    # In Rocq 9.0 the compiler is `rocq compile`, NOT `coqc`.
     runs-on: ubuntu-latest
     container:
       image: rocq/rocq-prover:9.0
@@ -35,26 +37,13 @@ jobs:
           apt-get install -y -qq git
       - uses: actions/checkout@v4
       - name: coq-check (all Coq/ modules)
-        shell: bash
         run: |
           set -e
-          # Source opam env — coqc lives in the opam switch
-          eval $(opam env --switch=/home/coq/.opam/default --set-switch 2>/dev/null || true)
-          eval $(opam env 2>/dev/null || true)
-          if ! command -v coqc &>/dev/null; then
-            COQC=$(find / -name coqc -type f 2>/dev/null | head -1)
-            if [ -n "$COQC" ]; then
-              export PATH="$(dirname $COQC):$PATH"
-            else
-              echo "ERROR: coqc not found"
-              exit 1
-            fi
-          fi
-          echo "coqc version: $(coqc --version)"
+          rocq compile --version
           cd Coq
           for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
             echo "==> Compiling $f"
-            coqc -Q . UMSTFormal "$f" 2>&1
+            rocq compile -Q . UMSTFormal "$f"
           done
 
   agda:
@@ -66,13 +55,35 @@ jobs:
           set -e
           sudo apt-get update
           sudo apt-get install -y agda agda-stdlib
-          echo "Agda: $(agda --version)"
-          echo "Stdlib: $(dpkg -s agda-stdlib | grep Version)"
+          agda --version
+      - name: Register stdlib with Agda
+        run: |
+          set -e
+          # The agda-stdlib deb installs source at /usr/share/agda-stdlib/
+          # but does NOT create /etc/agda/libraries or ~/.agda/libraries.
+          # We must register it manually.
+          # First, find or create the .agda-lib file
+          STDLIB_DIR="/usr/share/agda-stdlib"
+          if [ ! -d "$STDLIB_DIR/Data" ]; then
+            echo "ERROR: stdlib not at expected path"
+            exit 1
+          fi
+          # Create an agda-lib file if one doesn't exist
+          if [ ! -f "$STDLIB_DIR/standard-library.agda-lib" ]; then
+            echo "name: standard-library" | sudo tee "$STDLIB_DIR/standard-library.agda-lib"
+            echo "include: ." | sudo tee -a "$STDLIB_DIR/standard-library.agda-lib"
+          fi
+          # Register with Agda
+          mkdir -p ~/.agda
+          echo "$STDLIB_DIR/standard-library.agda-lib" > ~/.agda/libraries
+          echo "standard-library" > ~/.agda/defaults
+          echo "Registered stdlib at: $STDLIB_DIR"
+          cat ~/.agda/libraries
       - name: agda-check (all Agda/ modules)
         run: |
           set -e
           cd Agda
           for f in DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
             echo "==> Checking $f"
-            agda "$f" 2>&1
+            agda "$f"
           done
