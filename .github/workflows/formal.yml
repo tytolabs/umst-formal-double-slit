@@ -33,9 +33,12 @@ jobs:
           custom_script: |
             set -e
             cd Coq
+            # Rocq 9.x ships `rocqc`; fall back to `coqc` for Coq 8.x images
+            COQC=$(command -v rocqc 2>/dev/null || command -v coqc)
+            echo "Using compiler: $COQC"
             for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
               echo "==> Compiling $f"
-              coqc -Q . UMSTFormal "$f"
+              $COQC -Q . UMSTFormal "$f"
             done
 
   agda:
@@ -54,7 +57,6 @@ jobs:
           # Find the stdlib include path (dpkg tells us where the files are)
           STDLIB_INC=$(dpkg -L agda-stdlib | grep '/Data$' | head -1 | sed 's|/Data$||')
           if [ -z "$STDLIB_INC" ]; then
-            # Fallback: try common paths
             for p in /usr/share/agda-stdlib /usr/share/agda/lib/agda-stdlib; do
               if [ -d "$p/Data" ]; then
                 STDLIB_INC="$p"
@@ -68,6 +70,8 @@ jobs:
             dpkg -L agda-stdlib | head -40
             exit 1
           fi
+          # Agda writes .agdai interface files next to source; make stdlib writable
+          sudo chmod -R a+w "$STDLIB_INC"
           for f in DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
             echo "==> Checking $f"
             agda -v0 -i . -i "$STDLIB_INC" "$f"

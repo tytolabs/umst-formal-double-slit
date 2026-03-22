@@ -31,13 +31,14 @@ telemetry-sample:
 haskell-test:
 	cd Haskell && cabal test
 
-# Optional: integrated Coq/Agda (requires `coqc` / `agda` on PATH).
+# Optional: integrated Coq/Agda (requires `coqc`/`rocqc` / `agda` on PATH).
 # Coq: Rocq/Coq 9.x or 8.20+ with `From Stdlib` layout. Order respects module imports.
 COQ_VO := LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v \
 	MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v
+COQC := $(shell command -v rocqc 2>/dev/null || command -v coqc)
 
 coq-check:
-	@set -e; cd Coq; for f in $(COQ_VO); do coqc -Q . UMSTFormal "$$f"; done
+	@set -e; cd Coq; for f in $(COQ_VO); do $(COQC) -Q . UMSTFormal "$$f"; done
 
 # Agda: 2.6+ stdlib; order respects local `open import` dependencies.
 AGDA_MAIN := DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda \
