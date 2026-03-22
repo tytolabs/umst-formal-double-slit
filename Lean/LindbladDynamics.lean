@@ -7,6 +7,7 @@ import MeasurementChannel
 import SchrodingerDynamics
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.Analysis.SpecialFunctions.Exp
+import Mathlib.Analysis.Complex.Basic
 import Mathlib.Topology.Instances.Real
 
 /-!
@@ -162,11 +163,17 @@ theorem dephasingSolution_trace_preserved (ρ : Matrix (Fin 2) (Fin 2) ℂ) (t :
     Matrix.trace (dephasingSolution ρ t) = Matrix.trace ρ := by
   simp [Matrix.trace, dephasingSolution]
 
-/-- As $t \to \infty$, the off-diagonal elements of the dephasing solution strictly vanish.
-We define this axiomatically matching the topological limit `Tendsto (fun t => Real.exp (-t)) atTop (𝓝 0)`
-to avoid pulling in the heavy `Mathlib.Topology.Instances.Complex` machinery merely for limits. -/
-axiom dephasingSolution_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
-    Filter.Tendsto (fun t => (dephasingSolution ρ t) a b) Filter.atTop (nhds 0)
+/-- As $t \to \infty$, the off-diagonal elements of the dephasing solution tend to $0$:
+`exp(-t) → 0` in `ℝ`, hence as a real cast in `ℂ`, then multiply by the fixed entry `ρ a b`. -/
+theorem dephasingSolution_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
+    Filter.Tendsto (fun t => (dephasingSolution ρ t) a b) Filter.atTop (nhds 0) := by
+  have hε :
+      (fun t => (dephasingSolution ρ t) a b) = fun t => (Real.exp (-t) : ℂ) * ρ a b := by
+    funext t
+    simp [dephasingSolution, if_neg hab]
+  rw [hε]
+  simpa [zero_mul] using
+    (Filter.Tendsto.ofReal Real.tendsto_exp_neg_atTop_nhds_zero).mul tendsto_const_nhds
 
 end DephasingQubit
 
