@@ -358,9 +358,9 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 ## Authors
 
-**Santhosh Shyamsundar** — Studio TYTO; IAAC Barcelona (MAEBB) · [santhoshshyamsundar@studio.tyto](mailto:santhoshshyamsundar@studio.tyto)
+**Santhosh Shyamsundar** — Studio TYTO; IAAC Barcelona · [santhoshshyamsundar@studio.tyto](mailto:santhoshshyamsundar@studio.tyto)
 
-**Santosh Prabhu Shenbagamoorthy** — Studio TYTO; IAAC Barcelona (MRAC) · [santosh@studio.tyto](mailto:santosh@studio.tyto)
+**Santosh Prabhu Shenbagamoorthy** — Studio TYTO; IAAC Barcelona · [santosh@studio.tyto](mailto:santosh@studio.tyto)
 
 ---
 
