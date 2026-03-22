@@ -7,7 +7,7 @@ This document bridges the gap between **Quantum Mechanics** and **Formal Verific
 ## 0. The Critical Thesis
 In traditional physics, we use **persuasive arguments**: we write LaTeX, draw diagrams, and hope the peer reviewer doesn't miss a sign error in a 50-step derivation. 
 
-In **Formal Physics**, we use **machine-checked terms**: every step of a proof is verified by a kernel (Lean 4) that accepts only logically perfect transitions. If the proof is "well-typed," the conclusion is a mathematical certainty within the given axioms. 
+In **Formal Physics**, we use **machine-checked terms**: every step of a proof is verified by a kernel (Lean 4, Coq, Agda) that accepts only logically perfect transitions. If the proof is "well-typed," the conclusion is a mathematical certainty within the given axioms. 
 
 > [!IMPORTANT]
 > This isn't just "bug-free code." This is a **conserved truth** where the laws of physics (like Landauer's bound) are encoded as type-level invariants that cannot be violated by construction.
@@ -18,23 +18,34 @@ In **Formal Physics**, we use **machine-checked terms**: every step of a proof i
 
 ```mermaid
 graph TD
-    A[Functions & Types] --> B[Density Matrix ρ]
-    B --> C[PSD & Unit-Trace Invariants]
-    C --> D[Entropy & Information]
-    D --> E[Kraus Channels]
-    E --> F[Landauer's Bound Q ≥ kBT ln 2]
-    F --> G[Principle of Maximal Information Collapse]
+    A[Functions & Types] --> B[Algebraic Data Types]
+    B --> C[Density Matrix ρ]
+    C --> D[PSD & Unit-Trace Invariants]
+    D --> E[Category Theory Foundations]
+    E --> F[Functors & Natural Transformations]
+    F --> G[Kraus Channels as Morphisms]
+    G --> H[Entropy & Information]
+    H --> I[Landauer Monad]
+    I --> J[Principle of Maximal Information Collapse]
     
-    style G fill:#f96,stroke:#333,stroke-width:4px
+    style J fill:#f96,stroke:#333,stroke-width:4px
 ```
 
 ---
 
-## 1. The Density Matrix as a Type
-In this repository, a quantum state is not just a "box of numbers." It is a **Prop-Gated Type**.
+## 1. Functions and Referential Transparency
+**Definition.** A function is a pure, reliable mapping that takes one or more inputs and always produces exactly one output according to a fixed rule.
 
+**In this repository.** Every physical simulation (Python/QuTiP) and every proof (Lean 4) relies on pure functions. When we say $V^2 + I^2 \le 1$ is a theorem, we mean there is a pure function `complementarity_check` that returns `True` for every possible input state.
+
+---
+
+## 2. Algebraic Data Types (ADT)
+We model physical reality using **Product Types** and **Sum Types**.
+
+### Product Types (The "AND" of Physics)
+A `DensityMatrix` is a product of its four complex components $+$ the proofs of its properties.
 ```lean
--- Conceptual Lean 4 structure
 structure DensityMatrix where
   data : Matrix (Fin 2) (Fin 2) Complex
   is_hermitian : data = data.conjTranspose
@@ -42,45 +53,60 @@ structure DensityMatrix where
   is_unit_trace : data.trace = 1
 ```
 
-**Why this is "Creative":** 
-By defining the state this way, any function we write (like the measurement channel) **must** prove that it returns a valid `DensityMatrix`. If a physical transition would break PSD-ness (e.g., negative probabilities), the code **will not compile**.
+### Sum Types (The "OR" of Physics)
+A measurement outcome is a sum type: `Either |0⟩ |1⟩`. This forces the code to handle **both** possibilities (slit 0 or slit 1) before the compiler allows progress.
 
 ---
 
-## 2. Measurement as a Monad / Channel
-We model the act of "looking" at a slit not as a hand-wavy collapse, but as a **Kleisli Arrow** in the category of quantum states.
+## 3. Category Theory: The Language of Composition
+Physics is about how systems change. Category theory is the math of **composition**.
 
-- **The Input**: A pure interference state (Off-diagonals ≠ 0).
-- **The Process**: A Kraus trace-preserving map (The L\"uders Channel).
-- **The Cost**: An increase in diagonal entropy.
+- **Objects**: Quantum States ($\rho$).
+- **Morphisms**: Physical Processes (Channels $\mathcal{E}$).
+- **Composition**: Sequential measurements ($\mathcal{E}_2 \circ \mathcal{E}_1$).
 
-### The Landauer Monad
-We think of the "Thermodynamic Cost" as a computational side-effect. Just as a programmer might log errors to a console, the universe "logs" decoherence as heat to the environment. 
-
-> **Equation of State:**
-> $Q \ge k_B T \ln 2 \cdot (1 - V^2)$
-> *Translation:* To destroy visibility $V$, you must pay in Joules $Q$.
+### Functors: Structure Preservation
+A **Functor** maps one category to another while preserving the "laws" of composition. In our case, the mapping from **Quantum States** to **Thermodynamic Costs** is a functor: it preserves the ordering and dependencies of measurements.
 
 ---
 
-## 3. Critical Section: Persuasion vs. Type-Checking
+## 4. The Landauer Monad
+We think of the "Thermodynamic Cost" as a computational context. Just as a programmer might use a `Writer` monad to log errors, the universe use a "Heat Monad" to log entropy.
+
+> **The Monadic Interaction:**
+> When you extract 1 bit of information ($I=1$), the visibility "collapses" ($V=0$). The "Heat Monad" ensures that the dissipated energy $Q \ge k_B T \ln 2$ is tracked and accounted for in the global energy balance.
+
+---
+
+## 5. Critical Section: Persuasion vs. Type-Checking
 
 Traditional papers often use "Assume for simplicity..." or "It follows trivially that...". 
 
-In `UMST-Formal-Double-Slit`, simplicity is earned, not assumed.
+In `UMST-Formal-Double-Slit`, simplicity is earned, not assumed:
 - **0 sorry**: Every single lemma is fully expanded into its atomic logical components.
-- **5 Explicit Axioms**: We explicitly label the physical "leaps" (e.g., "Landauer's Principle holds for this specific interaction") so they are visible and auditable, rather than hidden in prose.
+- **Strictly Well-Typed**: The Lean 4 kernel does not understand "intuition." It only understands valid applications of inference rules.
+- **5 Explicit Axioms**: We explicitly label the physical "leaps" (e.g., "Landauer's Principle holds for this specific interaction") so they are visible and auditable.
 
 ---
 
-## 4. How to Read the Code
+## 6. Architecture Layers (Multi-Language Verification)
 
-| If you see... | It represents... |
-| :--- | :--- |
-| `det(ρ) ≥ 0` | The physical constraint that probabilities cannot be negative. |
-| `trace(ρ) = 1` | The law of conservation of probability. |
-| `V² + I² ≤ 1` | The fundamental tradeoff between "Which-Path" and "Interference". |
-| `lake build` | The machine verifying that no physical laws were broken in the derivation. |
+This repository uses a "Quad-Check" architecture:
+1. **Lean 4**: High-level theorem proving and Mathlib integration.
+2. **Coq/Rocq**: Extraction to OCaml for high-assurance execution.
+3. **Agda**: Dependent type theory exploration and Kleisli category proofs.
+4. **Haskell (QuickCheck)**: Property-based testing of the physical limits against billions of random states.
+
+---
+
+## 7. How to Read the Code
+
+| Code Snippet | Physical Meaning | Formal Constraint |
+| :--- | :--- | :--- |
+| `det(ρ) ≥ 0` | No negative probabilities. | `PosSemidef` invariant. |
+| `trace(ρ) = 1` | Conservation of energy/particles. | `UnitTrace` invariant. |
+| `V² + I² ≤ 1` | Complementarity Principle. | `ComplementarityTheorem`. |
+| `lake build` | The machine verifying reality. | `ProofOfArchitecture`. |
 
 ---
 
