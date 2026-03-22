@@ -22,14 +22,14 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Docs/teaser.png">
-  <source media="(prefers-color-scheme: light)" srcset="Docs/teaser.png">
-  <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/teaser.png" width="820">
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/Media/teaser-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="Docs/Media/teaser-light.png">
+  <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/Media/teaser-dark.png" width="820">
 </picture>
 
 <br>
 
-<img src="Docs/double-slit-collapse.gif" alt="Interference collapse animation — visibility decreasing as which-path information increases" width="820">
+<img src="Docs/Media/double-slit-collapse.gif" alt="Interference collapse animation — visibility decreasing as which-path information increases" width="820">
 
 <sub>As which-path information I rises from 0 → 1, the interference pattern collapses along the Englert curve V = √(1 − I²).<br>Every frame is a theorem. Machine-checked in Lean 4.</sub>
 
@@ -284,7 +284,7 @@ make coq-check                 # Coq only (Rocq/Coq 9.x or 8.20+ `From Stdlib`)
 make agda-check                # Agda only (2.6+ + stdlib)
 
 # Generate visualizations
-python3 scripts/generate_spectacular_gif.py   # → Docs/double-slit-collapse.gif + teaser.png
+python3 scripts/generate_spectacular_gif.py   # → Docs/Media/double-slit-collapse.gif + teaser.png
 ```
 
 ---
@@ -339,9 +339,9 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 | Document | Path |
 |----------|------|
-| Technical note (3-page LaTeX) | [`Docs/OnePager-DoubleSlit.tex`](Docs/OnePager-DoubleSlit.tex) |
+| Technical note (3-page LaTeX) | [`Docs/OnePager/OnePager-DoubleSlit.tex`](Docs/OnePager/OnePager-DoubleSlit.tex) |
 | Proof status & declaration counts | [`PROOF-STATUS.md`](PROOF-STATUS.md) |
-| **Gap closure plan (status tracker)** | [`Docs/GAP_CLOSURE_PLAN.md`](Docs/GAP_CLOSURE_PLAN.md) |
+
 | Module map & theorem names | [`Lean/VERIFY.md`](Lean/VERIFY.md) |
 | Mathematical foundations | [`Docs/Mathematical-Foundations.md`](Docs/Mathematical-Foundations.md) |
 | Assumptions & non-claims | [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md) |
