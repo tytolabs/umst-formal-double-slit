@@ -308,16 +308,16 @@ Measurement is irreversible. The compiler confirms it. The second law confirmed 
 
 ## Connection to the UMST Programme
 
-This repository is part of the **Foundations of Constitutional Physics (FCP)** series by [Studio TYTO](https://tyto.studio). For a **single curated overview** (figures, roadmap, and pointers), use the **research dashboard** on Zenodo — it is updated as the programme grows:
+This repository is part of the **Foundations of Constitutional Physics (FCP)** series by [Studio TYTO](https://zenodo.org/communities/unified-material-state-tensors/records?q=&l=list&p=1&s=10&sort=newest). For a **single curated overview** (figures, roadmap, and pointers), use the **public research dashboard** — it is updated as the programme grows:
 
 | Resource | What it is | Link |
 |:---------|------------|:-----|
 | **Research dashboard** | Curated PDF overview of the UMST / FCP thread | [**DOI 10.5281/zenodo.18940933**](https://doi.org/10.5281/zenodo.18940933) · [record](https://zenodo.org/records/18940933) |
-| **Zenodo community** | Aggregated deposits (papers, data, compendia) | [**Unified Material State Tensors** community](https://zenodo.org/communities/unified-material-state-tensors/records) |
+| **Public community repository** | Aggregated deposits (papers, data, compendia) | [**Unified Material State Tensors** community](https://zenodo.org/communities/unified-material-state-tensors/records) |
 
 **FCP studies** (peer-facing preprints / compendia):
 
-| Study | Title | Zenodo |
+| Study | Title | Repository |
 |:-----:|-------|:------:|
 | FCP-I | Physics-Gated AI — UMST tensor + DUMSTO hard gate | [record](https://zenodo.org/records/18768547) |
 | FCP-II | Epistemic Sensing — MI-guided proxy selection | [record](https://zenodo.org/records/18894710) |
@@ -339,7 +339,7 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 | Document | Path |
 |----------|------|
-| Technical note (Zenodo preprint) | [`Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex`](Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex) |
+| Technical note (Public preprint) | [`Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex`](Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex) <br> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19159660.svg)](https://doi.org/10.5281/zenodo.19159660)|
 | Proof status & declaration counts | [`PROOF-STATUS.md`](PROOF-STATUS.md) |
 
 | Module map & theorem names | [`Lean/VERIFY.md`](Lean/VERIFY.md) |
