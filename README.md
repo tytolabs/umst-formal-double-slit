@@ -16,8 +16,9 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 **Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**5** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit — `Lean/VERIFY.md`)&ensp;·&ensp;**467** theorems + **48** lemmas (heuristic scan — `PROOF-STATUS.md`)**
 
-_Observation is not yes-or-no. Extracting a fraction of a bit of which-path information_
-_causes a proportional destruction of interference — and each fraction carries an exact Landauer cost._
+_You wanted to look. The universe let you. But it kept the receipt._
+_Every fraction of a bit you extract destroys a corresponding fraction of interference —_
+_and the thermodynamic cost is non-negotiable. The proofs don't care if you believe them._
 
 <br>
 
@@ -50,10 +51,13 @@ _causes a proportional destruction of interference — and each fraction carries
 
 ### In plain language
 
-**Learning “which way the particle went” is not a light switch — it’s a dimmer.**  
-The more path information you pull out of the system, the less room is left for interference. You can take a *little* information and keep *most* of the pattern, or push toward a full bit and wipe the fringes out. That trade-off is **continuous**: every extra scrap of which-path knowledge has a **thermodynamic price tag** tied to Landauer’s scale (roughly: one bit of information at temperature *T* costs on the order of *k_B T ln 2* in energy). So **observation is a physical transaction**, not a free label you attach after the fact.
+**The particle goes both ways. You already knew that. What you didn't know is the price of asking.**
 
-**Why care outside quantum optics?** Any field where agents **measure, decide, or extract information** about a physical process hits the same shape of problem: sensing, control, secure inference, materials and process gates, and energy-aware computing all need honest accounting of **what was learned** versus **what was spent or destroyed** (coherence, reversibility, dissipation). This repo makes a slice of that accounting **machine-checked**, so the “weight” of the principle is not metaphor — it’s tied to proved inequalities plus **explicit axioms** where Mathlib is still catching up (see `Lean/VERIFY.md`).
+Learning "which slit" is not a light switch — it's a dimmer, and someone is watching the meter. Take a little information, keep most of the interference pattern. Push toward a full bit, and the fringes dissolve. That trade-off is **continuous**, merciless, and exactly calculable: every scrap of which-path knowledge carries a **thermodynamic price tag** at Landauer's scale — one bit of information at temperature *T* costs *k_B T ln 2* in energy that the universe will never return.
+
+**Observation is a physical transaction.** Not a philosophical stance. Not a metaphor. A transaction — with a receipt the second law won't let you forge.
+
+**Why should anyone outside quantum optics care?** Because any system that **measures, decides, or extracts information** about a physical process — sensing, control, secure inference, materials gates, energy-aware computing — faces the same ledger. This repository makes a slice of that accounting **machine-checked across four proof languages**, so the weight of the principle is not rhetoric. It is 467 theorems, zero apologies, and five axioms where Mathlib hasn't caught up yet (see `Lean/VERIFY.md`). The proofs are the territory.
 
 ---
 
@@ -286,20 +290,22 @@ python3 scripts/generate_spectacular_gif.py   # → Docs/double-slit-collapse.gi
 
 ---
 
-## Claim Taxonomy (strict)
+## Claim Taxonomy
 
-**What is formally proved** (machine-checked):
-- Englert complementarity: $V² + I² ≤ 1$ ✓
-- Landauer bound for **diagonal path entropy** ✓
-- Kraus measurement channels ✓
-- Full erasure ≥ Landauer cost ✓
-- Principle of Maximal Information Collapse (formal algebraic mapping) ✓
+_"I would not say 'friends'. I would not say 'enemies'. I would say — things the compiler has settled."_
 
-Measurement is fundamentally an irreversible thermodynamic transaction.
+**What the machine has proved** — these are not claims, they are verdicts:
+- Englert complementarity: $V² + I² ≤ 1$ — the universe's budget constraint ✓
+- Landauer bound for **diagonal path entropy** — the minimum rent for knowing ✓
+- Kraus measurement channels — the mechanics of looking ✓
+- Full erasure ≥ Landauer cost — you cannot cheat the house ✓
+- Principle of Maximal Information Collapse — the dimmer switch, formally ✓
 
-**Not established** (explicitly scoped out):
-- Full quantum derivation from Schrödinger dynamics (partial spatial sims in `sim/`)
-- Empirical laboratory verification
+Measurement is irreversible. The compiler agrees. The universe agreed first.
+
+**What remains outside the fence** (explicitly scoped out):
+- Full quantum derivation from Schrödinger dynamics (partial spatial sims in `sim/` — the hosts are still learning)
+- Empirical laboratory verification (the real world has not yet been asked to sign off — but the math is patient)
 
 ---
 
@@ -363,10 +369,13 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 ## Acknowledgments
 
+_"You can't play God without being acquainted with the devil."_
+
 Portions of this work were developed with assistance from large-language-model tools
 (**Claude** by Anthropic, **Gemini** by Google, **Grok** by xAI) and the **Cursor** code editor.
-All formal proofs were machine-checked by their respective compilers (Lean 4, Coq, Agda);
-the LLMs contributed to exploration, drafting, and code scaffolding — not to proof validity.
+The machines helped explore. The machines helped draft. But the machines did not prove.
+All formal proofs were checked by their respective compilers — Lean 4, Coq/Rocq, Agda —
+which, unlike the rest of us, cannot be persuaded by eloquence.
 
 ---
 
