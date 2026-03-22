@@ -14,7 +14,7 @@ lake build
 Expected: **success** (all roots in `lakefile.lean`).
 
 **Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.  
-**Multi-agent:** `../Docs/PARALLEL_WORK.md` (claims, choke points, stream IDs).  
+**Multi-agent:** `../Docs/PARALLEL_WORK.md` (choke points); `../Docs/SWARM_WORK.md` (parallel track split).  
 **Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **3 axioms** in project: `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital` (DPI), `physicalSecondLaw` (Landauer). See `../Docs/SORRY_ROADMAP.md`.
 
 **CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`); `.github/workflows/formal.yml` (`make coq-check` in Docker **`rocq/rocq-prover:9.0`**, `make agda-check` on Ubuntu with `agda-stdlib`).  

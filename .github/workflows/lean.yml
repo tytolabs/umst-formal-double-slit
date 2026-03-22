@@ -48,6 +48,17 @@ jobs:
           lake exe cache get || true
           lake build
 
+      - name: lean4checker (independent .olean verification)
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -e
+          rm -rf lean4checker
+          git clone --depth 1 https://github.com/leanprover/lean4checker lean4checker
+          cd lean4checker
+          lake build
+          cd "${{ github.workspace }}/Lean"
+          lake env "${{ github.workspace }}/lean4checker/.lake/build/bin/lean4checker"
+
       - name: Install Optional Sim Dependencies
         working-directory: ${{ github.workspace }}
         run: |

@@ -131,6 +131,12 @@ theorem resetChannel_entropy_zero (ρ_dm : DensityMatrix hnQubit) :
   rw [resetChannel_output_eq_rhoZero]
   exact rhoZero_vonNeumannDiagonal
 
+/-- Erasing `|+⟩` to `|0⟩` drops **diagonal** path entropy by exactly `log 2` nats (one bit). -/
+theorem resetChannel_entropy_drop_from_rhoPlus :
+    vonNeumannDiagonal rhoPlus - vonNeumannDiagonal (resetChannel.apply hnQubit rhoPlus) = log 2 := by
+  rw [resetChannel_output_eq_rhoZero, rhoPlus_vonNeumannDiagonal_eq_log_two, rhoZero_vonNeumannDiagonal]
+  simp
+
 /-- The output of the reset channel has zero path entropy bits. -/
 theorem resetChannel_pathEntropyBits_zero (ρ_dm : DensityMatrix hnQubit) :
     pathEntropyBits (resetChannel.apply hnQubit ρ_dm) = 0 := by
