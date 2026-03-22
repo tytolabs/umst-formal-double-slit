@@ -260,7 +260,7 @@ def generate_teaser(out_dir):
         ax2.axis('off')
 
         ax2.text(0.5, 0.95, "Formally Verified in Lean 4",
-                ha='center', va='top', color=v['accent'], fontsize=22, fontweight='bold',
+                ha='center', va='top', color=v['accent'], fontsize=16, fontweight='bold',
                 transform=ax2.transAxes)
 
         equations = [
