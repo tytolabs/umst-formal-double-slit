@@ -13,7 +13,7 @@ This folder contains lightweight Python simulation utilities for the double-slit
 |----------|------|--------|
 | 1 | Stdlib toy + **toy complementarity SVG** (`plot_toy_complementarity_svg.py`) + qubit Kraus + qubit SVG (`plot_complementarity_svg.py`) | **In repo** — runs in `make sim` / CI |
 | 2 | **QuTiP** parity — qubit (`qutip_qubit_kraus.py`, `test_qutip_parity.py`); **2D free** + **2D soft slit** (`qutip_schrodinger_2d_*_parity.py`, `test_qutip_2d_*_parity.py`) + **`sim/requirements-optional.txt`** | **CI:** GHA installs optional deps then runs full unittest. **Local:** `pip install -r sim/requirements-optional.txt` or tests skip |
-| 3 | **Matplotlib / GIF** (toy script `--plot`, `--generate-gif`) | **In repo** — needs deps from `requirements-optional.txt`; not part of default `make sim` |
+| 3 | **Matplotlib / GIF** — toy script `--plot`/`--generate-gif`; `scripts/generate_sim_gifs.py` (1D/2D wave GIFs, `--validate` flag) | **In repo** — `make sim-gifs` / `make sim-gifs-validate` (needs `requirements-optional.txt`); not part of default `make sim` |
 | 4 | Spatial Schrödinger / full QuTiP dynamics | **Starters:** as above + **2D real sponge** + **complex edge mask** + **sparse FD `expm_multiply` smoke** (`schrodinger_2d_sparse_fd_expm_smoke.py`, SciPy) + **QuTiP** 2D parity + **benchmark** (`benchmark_schrodinger_2d_split_step_vs_fd.py`). **Open:** true PML / stretched coords, large-grid QuTiP on sparse **H**, reference ABC checks |
 
 ## Toy simulator

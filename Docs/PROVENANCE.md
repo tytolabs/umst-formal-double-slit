@@ -42,8 +42,12 @@ Same contacts as in the repo [`README.md`](../README.md).
 | `DataProcessingInequality.lean` | 11 | Claude Code (Stream D) | `lake build` ✅ | 0 |
 | `Complementarity.lean` | — | Original | `lake build` ✅ | 0 |
 | `DoubleSlit.lean` | — | Original | `lake build` ✅ | 0 |
+| `WhichPathMeasurementUpdate.lean` | — | Claude Code | `lake build` ✅ | 0 |
+| `GeneralResidualCoherence.lean` | 3ext | Claude Code | `lake build` ✅ | 0 |
+| `QuantumMutualInfo.lean` | QMI | Claude Code | `lake build` ✅ | 0 |
+| `ErasureChannel.lean` | erasure | Claude Code | `lake build` ✅ | 0 |
 
-**Axioms (not `sorry`):** 5 explicit axioms across the codebase — general unital DPI and Klein's inequality in `DataProcessingInequality.lean`, analysis-style axioms in `GeneralVisibility.lean` and `LindbladDynamics.lean`, and `physicalSecondLaw`. See **`PROOF-STATUS.md`** / **`Lean/VERIFY.md`**.
+**Axioms (not `sorry`):** **6** explicit axioms across the codebase — general unital DPI and Klein's inequality in `DataProcessingInequality.lean`; analysis-style axioms in `GeneralVisibility.lean` and `LindbladDynamics.lean`; `physicalSecondLaw` in `LandauerLaw.lean`; `vonNeumannEntropy_tensorDensity` in `QuantumMutualInfo.lean` (Kronecker eigenvalue factorization pending Mathlib). See **`PROOF-STATUS.md`** / **`Lean/VERIFY.md`**.
 
 ## Python Simulation Layer
 

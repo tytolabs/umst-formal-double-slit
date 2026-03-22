@@ -38,7 +38,7 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 | | |
 |:---:|:---:|
-| **49** Lean modules | **515** `theorem` + **33** `lemma` (line-start scan) |
+| **53** Lean modules | **515** `theorem` + **33** `lemma` (line-start scan) |
 | **0** sorry, **6** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit, tensor entropy) | All qubit-level theorems proved |
 | **87** Python unit tests | **14** Haskell QuickCheck properties |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
@@ -55,7 +55,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **515 theorems. 0 `sorry`. 5 explicit axioms** (each stated in `Lean/VERIFY.md` — corresponding to physical principles not yet formalized in Mathlib).
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **515 theorems. 0 `sorry`. 6 explicit axioms** (each stated in `Lean/VERIFY.md` — corresponding to physical principles or Mathlib gaps).
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
 
@@ -73,7 +73,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **508 theorem + 33 lemmas (heuristic); 0 sorry; 6 axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit).**_
+> _Machine-checked in Lean 4 with Mathlib. **515 theorem + 33 lemmas (heuristic); 0 sorry; 6 axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit, tensor entropy).**_
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -168,8 +168,8 @@ flowchart TB
 
 ---
 
-## Lean modules (49 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
-*(Counts: `make lean-stats-md` → **515** line-start `theorem`, **33** `lemma`, **5** `axiom` in 55 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
+## Lean modules (53 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
+*(Counts: `make lean-stats-md` → **515** line-start `theorem`, **33** `lemma`, **6** `axiom` in 58 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>
@@ -183,8 +183,12 @@ flowchart TB
 | `LandauerBound` | `pathEntropyBits ≤ 1`, `principle_of_maximal_information_collapse`, `ErasureProcess` |
 | `PMICEntropyInterior` | `four_mul_x_one_sub_x_mul_log_two_interior` — binary entropy ≥ `4x(1-x) log 2` on `(0,1/2)` (MVT + ratio monotonicity) |
 | `PMICVisibility` | `visibility_sq_le_coherence_capacity` — `V² + residualCoherenceCapacity ≤ 1` |
-| `DoubleSlit` | `measurementUpdateWhichPath`, gate enforcement, Landauer cap |
+| `DoubleSlit` | Gate enforcement, Landauer cap; full-chain import root |
+| `WhichPathMeasurementUpdate` | `measurementUpdateWhichPath` (Lüders update, fringe collapse, Landauer invariance) |
 | `GeneralDimension` | `vonNeumannDiagonal_n_le_log_n` (diagonal entropy ≤ `log n`) |
+| `GeneralResidualCoherence` | `RCC_n ∈ [0,1]`; purity-based formula; Cauchy-Schwarz from first principles; qubit compatibility |
+| `QuantumMutualInfo` | `I(A:B) = S(A)+S(B)−S(AB)`; upper bound `≤ log nA + log nB`; product-state zero |
+| `ErasureChannel` | Reset-to-`\|0⟩` Kraus channel; trace preservation; `idealResetErasure` at Landauer equality |
 | `GeneralVisibility` | `fringeVisibility_n` ($\ell_1$ norm of coherence for `Fin n`); `fringeVisibility_n_nonneg`; `fringeVisibility_n_whichPath_apply` |
 | `TensorPartialTrace` | `tensorDensity`, partial traces, Kronecker PSD lemmas |
 | `VonNeumannEntropy` | Spectral `S(ρ)`; `Fin 1`/`Fin 2`/general `Fin n` unitary invariance **proved**; `charpoly` conjugation (`Lean/VERIFY.md`) |
@@ -261,7 +265,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 49 modules, 508 thm + 33 lem (heuristic) | **0** sorry, **6** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
+| **Lean 4** | 53 modules, 515 thm + 33 lem (heuristic) | **0** sorry, **6** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **2** `Admitted` + axioms in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |

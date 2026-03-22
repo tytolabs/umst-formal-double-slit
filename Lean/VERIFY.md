@@ -15,10 +15,10 @@ Expected: **success** (all roots in `lakefile.lean`).
 
 **Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.  
 **Multi-agent:** see **`../CONTRIBUTING.md`**.  
-**Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **5 axioms** (line-start heuristic, see **`../PROOF-STATUS.md`**): `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital`, `physicalSecondLaw`, `fringeVisibility_n_le_one`, `dephasingSolution_tendsto_diagonal`.
+**Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **6 axioms** (line-start heuristic, see **`../PROOF-STATUS.md`**): `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital`, `physicalSecondLaw`, `fringeVisibility_n_le_one`, `dephasingSolution_tendsto_diagonal`, `vonNeumannEntropy_tensorDensity`.
 
 **CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`); `.github/workflows/formal.yml` (`make coq-check` in Docker **`rocq/rocq-prover:9.0`**, `make agda-check` on Ubuntu with `agda-stdlib`).  
-**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **467** `theorem`, **48** `lemma`, **5** `axiom`, **55** `.lean` files (line-start scan, not a full parser).
+**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **515** `theorem`, **33** `lemma`, **6** `axiom`, **58** `.lean` files (line-start scan, not a full parser).
 
 ## Module map (high level)
 
@@ -59,11 +59,15 @@ Expected: **success** (all roots in `lakefile.lean`).
 | `Complementarity` | `complementarityEnglert`, `observationCanonical_complementary` (shim over bridge) |
 | `PMICEntropyInterior` | `four_mul_x_one_sub_x_mul_log_two_interior`, `entropyBoundK_pos`, `quad_log_lt_of_lt_half` (PMIC entropy–quadratic, no `sorry`) |
 | `PMICVisibility` | `visibility_sq_le_coherence_capacity`, `four_mul_x_one_sub_x_mul_log_two_le_binEntropy`, `quadratic_le_entropy_bits` |
-| `DoubleSlit` | Full-chain imports + **`measurementUpdateWhichPath`** (`MeasurementUpdate` for Lüders which-path) |
+| `DoubleSlit` | Full-chain imports; gate enforcement and Landauer cap packaging |
+| `WhichPathMeasurementUpdate` | **`measurementUpdateWhichPath`** (`MeasurementUpdate` for Lüders which-path); fringe collapse + Landauer invariance (split from `DoubleSlit` to break import cycle with `EpistemicSensing`) |
 | `ProbeOptimization` | `ProbeUtility`, finite argmax (`exists_optimalProbeIndexAt`), admissibility-constrained optimization |
 | `ExamplesQubit` | **`rhoPlus`**, **`rhoZero`**, **`rhoOne`**; epistemic/optimization + Landauer corollaries |
 | `MeasurementCost` | probe costs vs Landauer bit-energy cap |
 | `EpistemicGalois` | info–energy Galois connection (Lean) |
+| `GeneralResidualCoherence` | `residualCoherenceCapacity_purity` (purity-based `RCC_n ∈ [0,1]`); `RCC_n = 0 ↔ diagonal`, `RCC_n = 1 ↔ pure`; Cauchy-Schwarz for PSD matrices proved from first principles; qubit compatibility `RCC_2 = \|ρ₀₁\|²/(p₀p₁)` |
+| `QuantumMutualInfo` | `quantumMutualInfo` (`I(A:B) = S(A)+S(B)-S(AB)`); `quantumConditionalEntropy`; upper bound `I ≤ log nA + log nB`; product-state zero; one axiom: `vonNeumannEntropy_tensorDensity` |
+| `ErasureChannel` | Reset-to-`\|0⟩` Kraus operators; trace preservation; output always `\|0⟩⟨0\|`; zero output entropy; `idealResetErasure` at Landauer equality |
 | `LandauerLaw` | *(integrated upstream reference)* `T_LandauerLaw`: `ErasureProcess`, `physicalSecondLaw`, `landauerBound`, Shannon on `Fin n` |
 | `LandauerExtension` | *(integrated)* temp scaling, n-bit bound, additivity, 300 K positivity |
 | `LandauerEinsteinBridge` | *(integrated)* SI `k_B`, `c`, `massEquivalent`, numeric brackets at 300 K |
@@ -122,9 +126,16 @@ Expected: **success** (all roots in `lakefile.lean`).
 
 ## Not in this track yet (needs design / approval)
 
-- Physical **equality** Landauer (dissipation ≥ bound) for a concrete erasure channel
-- Quantum mutual information; general-`n` **residual coherence** narrative (still qubit-only in `LandauerBound`); full unital DPI proof (Klein axiom → theorem when Mathlib ready)
+- Full unital DPI proof (Klein axiom → theorem when Mathlib `matrix log` ready)
 - Nontrivial hydration/strength from QM; calibrated `thermoFromQubitPath`
 - Stronger equivalence-style DoubleSlit narrative (`⟺`) and detector-model refinements
-- Matplotlib animation / GIF export; full QuTiP-based spatial simulator (optional QuTiP **qubit** parity is in `sim/qutip_qubit_kraus.py`)
-- Richer CI (matrix, lint, `lean4checker`) if you want stricter gates
+- Full QuTiP-based spatial simulator (optional QuTiP **qubit** parity is in `sim/qutip_qubit_kraus.py`)
+
+## Recently completed (formerly "not in this track")
+
+- **Physical equality Landauer** for concrete erasure channel: `ErasureChannel.lean` — reset-to-`|0⟩` Kraus operators, `idealResetErasure` at Landauer equality, 0 sorry ✓
+- **Quantum mutual information**: `QuantumMutualInfo.lean` — `I(A:B) = S(A)+S(B)-S(AB)`, upper bound, product-state zero, 0 sorry ✓
+- **General-`n` residual coherence** (`GeneralResidualCoherence.lean`): purity-based `RCC_n`, Cauchy-Schwarz from first principles, qubit compatibility proved, `trace_sq_le_one` sorry eliminated ✓
+- **Matplotlib animation / GIF export**: `scripts/generate_sim_gifs.py` — 1D/2D wave GIFs with `--validate` flag; `make sim-gifs` / `make sim-gifs-validate` ✓
+- **`lean4checker`**: independent Lean kernel re-verification of `.olean` files added to `.github/workflows/lean.yml` ✓
+- **`WhichPathMeasurementUpdate`**: split from `DoubleSlit` to break import cycle with `EpistemicSensing` ✓

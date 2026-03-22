@@ -24,7 +24,7 @@ Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is
 
 - Derivation from a relativistic / gravitational UMST layer.
 - Identification of `I` with a specific **experimental** which-path meter without calibration axioms.
-- **Quantum DPI / mutual information** on compound systems (listed as future in `InfoEntropy`).
+- **Full unital quantum DPI** (Klein inequality) on compound systems — axiomatized in `DataProcessingInequality.lean` pending Mathlib matrix-log infrastructure.
 - **Mixed ensembles** as formal convex sums in `DensityState` (future).
 - Certified ODE/PPO solver convergence / stability / generalization claims without an explicit numerical analysis layer.
 
