@@ -16,7 +16,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 - **Lean root:** `Lean`
 - **`.lean` files scanned:** 55 (`.lake` excluded)
 - **`abbrev` (line-start heuristic):** 5
-- **`axiom` (line-start heuristic):** 5
+- **`axiom` (line-start heuristic):** 7
 - **`def` (line-start heuristic):** 190
 - **`inductive` (line-start heuristic):** 4
 - **`instance` (line-start heuristic):** 1
@@ -68,6 +68,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | `vonNeumannEntropy_nondecreasing_unital` | `DataProcessingInequality.lean` | Full **unital CPTP** entropy monotonicity (standard proof via Klein; **axiomatized** pending Mathlib) |
 | `fringeVisibility_n_le_one` | `GeneralVisibility.lean` | $\ell_1$ norm of coherence ≤ 1 for arbitrary `Fin n` (requires Cauchy–Schwarz) |
 | `dephasingSolution_tendsto_diagonal` | `LindbladDynamics.lean` | Off-diagonal coherences vanish as $t \to \infty$ under pure dephasing (topological limit) |
+| `vonNeumannEntropy_tensorDensity` | `QuantumMutualInfo.lean` | Additivity $S(\rho_A \otimes \rho_B) = S(\rho_A) + S(\rho_B)$ (Kronecker spectrum factorization gap in Mathlib) |
+| `quantumMutualInfo_nonneg` | `QuantumMutualInfo.lean` | $I(A{:}B) \geq 0$ / subadditivity (Klein–SSA infrastructure gap; aligns with `klein_inequality`) |
 
 ## Sorry inventory
 
@@ -84,10 +86,10 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | 49 `lakefile` roots; **467** `theorem` + **48** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **5 axiom** (3 quantum-info/physical + 2 analysis) |
+| Lean 4 | 49 `lakefile` roots; **467** `theorem` + **48** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **7 axiom** (quantum-info / physical / analysis placeholders) |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **2** `Admitted` (binary Shannon bound + diagonal corner step) plus **axioms** for pure / maximally-mixed spectral entropy (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-03-22 — `make lean-stats-md`: 55 files, **467** `theorem`, 48 `lemma`, **5** `axiom`, sum **749**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-03-22 — `make lean-stats-md`: 55 files, **467** `theorem`, 48 `lemma`, **7** `axiom` (re-count after `QuantumMutualInfo`); **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`. Formal tracks: **`make formal-check`**.

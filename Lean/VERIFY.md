@@ -15,10 +15,10 @@ Expected: **success** (all roots in `lakefile.lean`).
 
 **Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.  
 **Multi-agent:** see **`../CONTRIBUTING.md`**.  
-**Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **5 axioms** (line-start heuristic, see **`../PROOF-STATUS.md`**): `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital`, `physicalSecondLaw`, `fringeVisibility_n_le_one`, `dephasingSolution_tendsto_diagonal`.
+**Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — general unital DPI / **Klein** stated as **axiom** (requires Mathlib matrix logarithm infrastructure); identity channel + qubit DPI **proved**. **Tier 1b** (qubit diagonal ≥ spectral) is **proved** (`vonNeumannDiagonal_ge_vonNeumannEntropy`). **7 axioms** (line-start heuristic, see **`../PROOF-STATUS.md`**): `klein_inequality`, `vonNeumannEntropy_nondecreasing_unital`, `physicalSecondLaw`, `fringeVisibility_n_le_one`, `dephasingSolution_tendsto_diagonal`, `vonNeumannEntropy_tensorDensity`, `quantumMutualInfo_nonneg`.
 
 **CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`); `.github/workflows/formal.yml` (`make coq-check` in Docker **`rocq/rocq-prover:9.0`**, `make agda-check` on Ubuntu with `agda-stdlib`).  
-**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **467** `theorem`, **48** `lemma`, **5** `axiom`, **55** `.lean` files (line-start scan, not a full parser).
+**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. *Last pasted to `PROOF-STATUS.md`:* **467** `theorem`, **48** `lemma`, **7** `axiom`, **55** `.lean` files (line-start scan, not a full parser).
 
 ## Module map (high level)
 
