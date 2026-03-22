@@ -3,7 +3,8 @@ SPDX-License-Identifier: MIT
 Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -/
 
-import DoubleSlit
+import Complementarity
+import LandauerBound
 
 /-!
 # EpistemicSensing — interface layer for probe selection
@@ -18,6 +19,9 @@ stack.
 
 This is a structural step toward the full epistemic-sensing plan; it does **not** yet encode
 trajectory MI estimation, PPO, or a concrete dissipation model.
+
+Imports **`Complementarity`** + **`LandauerBound`** (not **`DoubleSlit`**) to avoid a module cycle
+with **`GateCompat`**.
 -/
 
 namespace UMST.DoubleSlit
@@ -225,15 +229,5 @@ theorem LandauerCostFromProbeStrength_mono (P Q : QuantumProbe) (ρ : DensityMat
     LandauerCostFromProbeStrength Q ρ T ≤ LandauerCostFromProbeStrength P ρ T := by
   unfold LandauerCostFromProbeStrength infoEnergyLowerBound
   exact mul_le_mul_of_nonneg_left hPQ (landauerBitEnergy_nonneg hT)
-
-/-- Bridge to existing `MeasurementUpdate` instance: which-path update is info-monotone. -/
-theorem measurementUpdateWhichPath_info_monotone (ρ : DensityMatrix hnQubit) :
-    (measurementUpdateWhichPath ρ).oldState.I ≤ (measurementUpdateWhichPath ρ).newState.I :=
-  (measurementUpdateWhichPath ρ).hInfoMonotone
-
-/-- Bridge to existing `MeasurementUpdate` instance: which-path update drops visibility. -/
-theorem measurementUpdateWhichPath_visibility_drop (ρ : DensityMatrix hnQubit) :
-    (measurementUpdateWhichPath ρ).newState.V ≤ (measurementUpdateWhichPath ρ).oldState.V :=
-  (measurementUpdateWhichPath ρ).hVisibilityDrop
 
 end UMST.DoubleSlit

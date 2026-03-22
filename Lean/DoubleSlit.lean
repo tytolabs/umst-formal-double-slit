@@ -108,4 +108,14 @@ theorem collapse_all_fringes_iff_zeros_offdiag {ι : Type*} [Fintype ι] [Decida
     rw [fringeVisibility_eq_zero_iff]
     exact h ρ
 
+/-- Bridge to `MeasurementUpdate`: which-path update is info-monotone. -/
+theorem measurementUpdateWhichPath_info_monotone (ρ : DensityMatrix hnQubit) :
+    (measurementUpdateWhichPath ρ).oldState.I ≤ (measurementUpdateWhichPath ρ).newState.I :=
+  (measurementUpdateWhichPath ρ).hInfoMonotone
+
+/-- Bridge to `MeasurementUpdate`: which-path update drops visibility. -/
+theorem measurementUpdateWhichPath_visibility_drop (ρ : DensityMatrix hnQubit) :
+    (measurementUpdateWhichPath ρ).newState.V ≤ (measurementUpdateWhichPath ρ).oldState.V :=
+  (measurementUpdateWhichPath ρ).hVisibilityDrop
+
 end UMST.DoubleSlit
