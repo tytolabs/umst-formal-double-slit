@@ -132,12 +132,15 @@ def generate_gif(out_dir):
         trail_v = np.sqrt(np.maximum(0, 1 - trail_i**2))
         ax2.plot(trail_i, trail_v, color=accent_color, lw=1, alpha=0.5)
 
-        ax2.set_xlim(-0.05, 1.1)
-        ax2.set_ylim(-0.05, 1.1)
+        ax2.set_xlim(-0.05, 1.15)
+        ax2.set_ylim(-0.05, 1.15)
         ax2.set_xlabel("I (info)", color=text_color, fontsize=9)
         ax2.set_ylabel("V (visibility)", color=text_color, fontsize=9)
-        ax2.set_title("V\u00b2 + I\u00b2 \u2264 1", color=text_color, fontsize=10, fontweight='bold')
+        ax2.set_title("Englert: V\u00b2 + I\u00b2 \u2264 1", color=text_color, fontsize=10, fontweight='bold')
         ax2.tick_params(colors='white', labelsize=7)
+        # Label the boundary curve
+        ax2.text(0.38, 0.92, "V\u00b2+I\u00b2=1", color=grid_color, fontsize=7,
+                rotation=-45, ha='center', va='center')
         for spine in ax2.spines.values():
             spine.set_color('#333')
 
@@ -168,10 +171,17 @@ def generate_gif(out_dir):
         ax3.legend(loc='upper right', fontsize=7, facecolor=bg_color,
                   edgecolor=grid_color, labelcolor=text_color)
 
+        # Landauer cost readout below bar
+        q_frac = info  # Q / (kBT ln2) = extracted fraction
+        ax3.text(0.5, -0.35,
+                f"Q = {q_frac:.2f} · kBT ln 2",
+                ha='center', va='top', color='#00d2ff', fontsize=9,
+                transform=ax3.transAxes, fontfamily='monospace')
+
         # Bottom annotation
         fig.text(0.5, 0.01,
-                "Principle of Maximal Information Collapse: Residual = 1 \u2212 MI\u2091\u2093\u209c / (k\u0042 T ln 2)",
-                ha='center', color=sub_text_color, fontsize=8, fontfamily='monospace')
+                r"Principle of Maximal Information Collapse:  Residual = 1 $-$ S$_{\rm bits}$    |    Q = k$_B$T ln 2 · (1 $-$ Residual)",
+                ha='center', color=sub_text_color, fontsize=8)
 
         plt.subplots_adjust(top=0.85, bottom=0.14, left=0.06, right=0.97)
         frame_path = os.path.join(tmp_dir, f"frame_{idx:03d}.png")
@@ -254,22 +264,25 @@ def generate_teaser(out_dir):
             spine.set_linewidth(1.5)
         plt.subplots_adjust(top=0.92, bottom=0.12)
 
-        # --- Right panel: Key equations ---
+        # --- Right panel: Key equations + complementarity curve ---
         ax2 = fig.add_subplot(gs[1])
         ax2.set_facecolor(v['bg'])
         ax2.axis('off')
 
-        ax2.text(0.5, 0.95, "Formally Verified in Lean 4",
-                ha='center', va='top', color=v['accent'], fontsize=16, fontweight='bold',
+        ax2.text(0.5, 0.97, "Formally Verified",
+                ha='center', va='top', color=v['accent'], fontsize=17, fontweight='bold',
                 transform=ax2.transAxes)
+        ax2.text(0.5, 0.925, "Lean 4 + Mathlib  ·  Coq  ·  Agda  ·  Haskell",
+                ha='center', va='top', color=v['sub'], fontsize=11,
+                transform=ax2.transAxes, fontfamily='monospace')
 
         equations = [
-            (0.80, "Englert Complementarity", r"$V^2 + I^2 \leq 1$", v['cyan']),
-            (0.64, "Landauer Bound", r"$Q \geq k_B T \cdot H$", v['trail']),
+            (0.78, "Englert Complementarity", r"$V^2 + I^2 \leq 1$", v['cyan']),
+            (0.63, "Landauer Bound", r"$Q \geq k_B T \cdot H$", v['trail']),
             (0.48, "Maximal Information Collapse",
              r"Residual $= 1 - \frac{\mathrm{MI}_{\mathrm{extracted}}}{k_B T \ln 2}$", v['accent']),
-            (0.30, "", r"$\mathrm{MI} = 0 \Rightarrow$ full interference", v['sub']),
-            (0.20, "", r"$\mathrm{MI} = k_B T \ln 2 \Rightarrow$ complete collapse", v['sub']),
+            (0.31, "", r"$\mathrm{MI} = 0 \Rightarrow$ full interference", v['sub']),
+            (0.22, "", r"$\mathrm{MI} = k_B T \ln 2 \Rightarrow$ complete collapse", v['sub']),
         ]
 
         for y, label, eq, color in equations:
@@ -279,9 +292,13 @@ def generate_teaser(out_dir):
             ax2.text(0.08, y - 0.02, eq, ha='left', va='top', color=color,
                     fontsize=18, transform=ax2.transAxes)
 
-        stats = "467 theorems  |  0 sorry  |  5 axioms  |  48 modules"
-        ax2.text(0.5, 0.09, stats, ha='center', va='top', color=v['sub'],
-                fontsize=14, transform=ax2.transAxes, fontfamily='monospace')
+        # Stats: two lines for clarity
+        stats_top = "515 theorems · 33 lemmas · 6 axioms · 0 sorry"
+        stats_bot = "53 modules · 58 .lean files · 0 Admitted"
+        ax2.text(0.5, 0.13, stats_top, ha='center', va='top', color=v['sub'],
+                fontsize=12, transform=ax2.transAxes, fontfamily='monospace')
+        ax2.text(0.5, 0.085, stats_bot, ha='center', va='top', color=v['sub'],
+                fontsize=11, transform=ax2.transAxes, fontfamily='monospace')
 
         ax2.text(0.5, 0.02, "  The Thermodynamic Cost of Knowing  ",
                 ha='center', va='top', color=v['text'], fontsize=18, fontweight='bold',
