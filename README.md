@@ -168,6 +168,109 @@ flowchart TB
 
 ---
 
+## Repository layout
+
+```
+umst-formal-double-slit/
+│
+├── Lean/                          ← 53 modules · 515 theorems · 33 lemmas · 6 axioms · 58 .lean files
+│   │
+│   ├── ── Quantum core (18 modules) ─────────────────────────────────────────────────────────
+│   │   ├── UMSTCore.lean                  ℝ SI constants, Landauer bit energy, Admissible
+│   │   ├── DensityState.lean              DensityMatrix, PSD, trace-one, diagonal bounds
+│   │   ├── MeasurementChannel.lean        Kraus channels, Lüders which-path, projector algebra
+│   │   ├── QuantumClassicalBridge.lean    V² + I² ≤ 1, canonical observation state
+│   │   ├── InfoEntropy.lean               shannonBinary, vonNeumannDiagonal ≤ log 2
+│   │   ├── LandauerBound.lean             PMIC, residualCoherenceCapacity ∈ [0,1], ErasureProcess
+│   │   ├── PMICEntropyInterior.lean       entropy ≥ 4x(1−x)log2 on (0,½) — MVT proof
+│   │   ├── PMICVisibility.lean            V² + residualCoherenceCapacity ≤ 1
+│   │   ├── DoubleSlit.lean                full-chain import root, gate enforcement
+│   │   ├── WhichPathMeasurementUpdate.lean  measurementUpdateWhichPath (split from DoubleSlit)
+│   │   ├── GeneralDimension.lean          vonNeumannDiagonal_n ≤ log n (Fin n)
+│   │   ├── GeneralResidualCoherence.lean  RCC_n ∈ [0,1], Cauchy–Schwarz from first principles
+│   │   ├── GeneralVisibility.lean         fringeVisibility_n (ℓ₁ norm, Fin n); axiom fringeVisibility_n_le_one
+│   │   ├── QuantumMutualInfo.lean         I(A:B) = S(A)+S(B)−S(AB); upper bound; product-state zero
+│   │   ├── ErasureChannel.lean            reset-to-|0⟩ Kraus; idealResetErasure at Landauer equality
+│   │   ├── TensorPartialTrace.lean        tensorDensity, partial traces, Kronecker PSD
+│   │   ├── VonNeumannEntropy.lean         S(ρ) spectral; unitary invariance proved for all Fin n
+│   │   └── DataProcessingInequality.lean  qubit DPI proved; unital DPI axiomatized (Klein)
+│   │
+│   ├── ── Dynamics & sim contracts (3 modules) ─────────────────────────────────────────────
+│   │   ├── SchrodingerDynamics.lean       unitary as single-Kraus; DensityMatrix closure
+│   │   ├── LindbladDynamics.lean          Lindblad dissipator; dephasing limit (axiom)
+│   │   └── SimLeanBridge.lean             trust-boundary contracts for sim/ outputs
+│   │
+│   ├── ── Epistemic sensing stack (8 modules) ──────────────────────────────────────────────
+│   │   ├── EpistemicSensing.lean          QuantumProbe, nullProbe/whichPathProbe, collapse/preserve
+│   │   ├── EpistemicMI.lean               PathProbe, MI in nats/bits, Landauer links
+│   │   ├── EpistemicDynamics.lean         policy rollouts, null/which-path invariants
+│   │   ├── EpistemicTrajectoryMI.lean     cumulative MI/cost, finite upper bounds
+│   │   ├── EpistemicPolicy.lean           utility argmax, constrained optimality
+│   │   ├── EpistemicGalois.lean           info extractable ↔ energy deployed (Galois adjunction)
+│   │   ├── ProbeOptimization.lean         cost-penalized finite probe selection
+│   │   └── ExamplesQubit.lean             worked examples: |+⟩, |0⟩, |1⟩
+│   │
+│   ├── ── Runtime contract stack (11 modules) ──────────────────────────────────────────────
+│   │   ├── EpistemicRuntimeContract.lean              trace coherence → policy bridge
+│   │   ├── EpistemicNumericsContract.lean             numeric aggregate → utility equivalence
+│   │   ├── EpistemicPerStepNumerics.lean              per-step fold → cumulative consistency
+│   │   ├── EpistemicRuntimeSchemaContract.lean        emitted schema → contract transfer
+│   │   ├── EpistemicTelemetryBridge.lean              runtime naming bridge (trajMI, effortCost)
+│   │   ├── EpistemicTelemetryApproximation.lean       ε-approximation with zero-error collapse
+│   │   ├── EpistemicTelemetryQuantitativeUtility.lean nonzero-error deviation bounds
+│   │   ├── EpistemicTraceDerivedEpsilonCertificate.lean  residual-based ε extraction
+│   │   ├── EpistemicTelemetrySolverCalibration.lean   solver params → ε budgets
+│   │   ├── EpistemicTraceDrivenCalibrationWitness.lean   trace + calibration → utility bounds
+│   │   └── PrototypeSolverCalibration.lean            concrete instantiation (step=1/100, order=2)
+│   │
+│   └── ── Classical / upstream integration (13 modules) ────────────────────────────────────
+│       ├── DoubleSlitCore.lean            coarse MeasurementUpdate skeleton
+│       ├── GateCompat.lean                Born weights → ThermodynamicState scaffold
+│       ├── QRBridge.lean                  ℚ → ℝ Admissible lift
+│       ├── Complementarity.lean           discoverability shims over QuantumClassicalBridge
+│       ├── MeasurementCost.lean           probe costs vs Landauer bit-energy cap
+│       ├── Gate.lean                      ← vendored: ℚ ThermodynamicState, Admissible
+│       ├── Naturality.lean                ← vendored: material-agnostic gate lemmas
+│       ├── Activation.lean                ← vendored: Engine, activation, totality
+│       ├── FiberedActivation.lean         ← vendored: engineFiber, universality
+│       ├── MonoidalState.lean             ← vendored: combine on ℚ ThermodynamicState
+│       ├── LandauerLaw.lean               ← vendored: physicalSecondLaw axiom, Shannon Fin n
+│       ├── LandauerExtension.lean         ← vendored: temp scaling, n-bit bound, 300 K
+│       └── LandauerEinsteinBridge.lean    ← vendored: SI k_B, c, mass brackets at 300 K
+│
+├── sim/                           ← Python · 87 unit tests · 4 sim scripts
+│   ├── toy_double_slit_mi_gate.py         MI-gate sweep → CSV + SVG
+│   ├── qubit_kraus_sweep.py               identity vs Lüders on |+⟩, |0⟩, |1⟩
+│   ├── plot_complementarity_svg.py        quarter-disk V²+I²≤1 diagram (stdlib)
+│   ├── plot_toy_complementarity_svg.py    toy CSV → SVG (stdlib)
+│   ├── export_sample_telemetry_trace.py   Gap 14 — golden JSON telemetry
+│   ├── telemetry_trace_consumer.py        pydantic contract validator
+│   ├── schrodinger_1d_*.py                1D FFT/split-step solvers
+│   ├── schrodinger_2d_*.py                2D split-step + PML
+│   ├── schrodinger_3d_split_step.py       3D FFT split-step
+│   ├── qutip_*.py                         QuTiP parity checks (optional)
+│   ├── tests/                             87 unittest files
+│   └── requirements-optional.txt          NumPy, SciPy, matplotlib, imageio, QuTiP
+│
+├── scripts/
+│   ├── generate_sim_gifs.py               1D/2D wave GIFs (make sim-gifs)
+│   ├── generate_spectacular_gif.py        Docs/Media/double-slit-collapse.gif + teaser
+│   └── lean_decl_stats.py                 heuristic theorem/lemma/axiom counts
+│
+├── Haskell/                       ← 8 modules · 14 QuickCheck properties
+├── Coq/                           ← 9 .v modules (make coq-check; 2 Admitted in VonNeumannEntropySpec.v)
+├── Agda/                          ← 11 entry modules (make agda-check; clean typecheck)
+├── Docs/                          ← Mathematical-Foundations.md, ASSUMPTIONS, PROVENANCE, Preprint/
+├── PROOF-STATUS.md                ← canonical declaration counts + axiom inventory
+├── Lean/VERIFY.md                 ← full module map + sorry/axiom map + key theorem names
+├── CHANGELOG.md
+└── Makefile                       ← lean · sim · sim-gifs · haskell-test · coq-check · agda-check · ci-*
+```
+
+> **Counting the numbers:** The 58 `.lean` files include all 53 `lakefile` roots plus 5 auxiliary/support files in `Lean/.lake` is excluded by the scanner. The **515 theorems** and **33 lemmas** are line-start heuristic counts from `make lean-stats-md`; the **6 axioms** are explicit `axiom` declarations (not `sorry`) — see `PROOF-STATUS.md` for the full inventory. Every number is verifiable: `cd Lean && lake build` for correctness, `make lean-stats-md` for counts.
+
+---
+
 ## Lean modules (53 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
 *(Counts: `make lean-stats-md` → **515** line-start `theorem`, **33** `lemma`, **6** `axiom` in 58 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
 
