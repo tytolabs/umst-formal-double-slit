@@ -40,9 +40,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: Lean/.lake
-          key: lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json') }}-${{ github.sha }}
+          key: lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json', 'Lean/lakefile.lean') }}-${{ github.sha }}
           restore-keys: |
-            lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json') }}-
+            lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json', 'Lean/lakefile.lean') }}-
 
       - name: Mathlib cache + build
         run: |
