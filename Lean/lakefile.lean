@@ -32,5 +32,6 @@ lean_lib «UMST.DoubleSlit» where
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
     `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState,
-    `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility]
+    `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
+    `UMSTAll]
   srcDir := "."

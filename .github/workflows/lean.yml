@@ -62,9 +62,8 @@ jobs:
           CHECKER="$(realpath "${LEAN4CHECKER_ROOT}/.lake/build/bin/lean4checker")"
           test -x "${CHECKER}"
           cd "${GITHUB_WORKSPACE}/Lean"
-          # No module argument: lean4checker replays all oleans built by `lake build` above.
-          # The library roots (UMSTCore, DensityState, …) are top-level names, not UMST.DoubleSlit.*.
-          lake env "${CHECKER}"
+          # UMSTAll imports every root module; lean4checker replays all transitive oleans.
+          lake env "${CHECKER}" UMSTAll
 
       - name: Install Optional Sim Dependencies
         working-directory: ${{ github.workspace }}
