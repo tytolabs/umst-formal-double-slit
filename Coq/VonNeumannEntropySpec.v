@@ -16,7 +16,7 @@
 (*    - shannon_binary_nonneg                                          *)
 (*    - vonNeumannDiagonal_nonneg                                      *)
 (*    - vonNeumannDiagonal_le_ln2 (uses axiom [shannon_binary_le_ln2]) *)
-(*    - vonNeumannDiagonal_zero_iff_diagonal_pure (uses axiom below)   *)
+(*    - vonNeumannDiagonal_zero_iff_diagonal_pure (uses [negMulLog_zero_interval]) *)
 (*                                                                      *)
 (*  Axiomatised (real analysis; Coq stdlib without convexity calculus):  *)
 (*    - shannon_binary_le_ln2 (concavity of -x ln x on [0,1])          *)
@@ -28,6 +28,8 @@
 (*    - vonNeumannEntropy_le_ln2                                       *)
 (*    - vonNeumannDiagonal_ge_spectral (Schur concavity)               *)
 (*    - vonNeumannEntropy_unitary_invariant                            *)
+(*    - vonNeumannEntropy_pure_zero                                    *)
+(*    - vonNeumannEntropy_maximally_mixed                              *)
 (* ================================================================== *)
 
 From Stdlib Require Import Reals Lra RIneq Rpower.
