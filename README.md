@@ -297,7 +297,7 @@ _"I would not say 'friends'. I would not say 'enemies'. I would say — things t
 - Englert complementarity: $V² + I² ≤ 1$ — the universe's budget constraint ✓
 - Landauer bound for **diagonal path entropy** — the minimum rent for knowing ✓
 - Kraus measurement channels — the mechanics of looking ✓
-- Full erasure ≥ Landauer cost — you cannot cheat the house ✓
+- Full erasure ≥ Landauer cost — the house cannot be cheated ✓
 - Principle of Maximal Information Collapse — the dimmer switch, formally ✓
 
 Measurement is irreversible. The compiler agrees. The universe agreed first.
@@ -368,7 +368,7 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 ## Acknowledgments
 
-_"You can't play God without being acquainted with the devil."_
+_"One can't play God without being acquainted with the devil."_
 
 Portions of this work were developed with assistance from large-language-model tools
 (**Claude** by Anthropic, **Gemini** by Google, **Grok** by xAI) and the **Cursor** code editor.
