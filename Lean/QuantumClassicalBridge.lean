@@ -147,6 +147,24 @@ theorem normSq_coherence_le_product (ρ : DensityMatrix hnQubit) :
 noncomputable def fringeVisibility (ρ : DensityMatrix hnQubit) : ℝ :=
   2 * Complex.abs (ρ.carrier 0 1)
 
+/-- Fringe visibility is zero iff the off-diagonal coherence `ρ₀₁` vanishes. -/
+theorem fringeVisibility_eq_zero_iff (ρ : DensityMatrix hnQubit) :
+    fringeVisibility ρ = 0 ↔ ρ.carrier 0 1 = 0 := by
+  unfold fringeVisibility
+  constructor
+  · intro h
+    have : Complex.abs (ρ.carrier 0 1) = 0 := by linarith [Complex.abs.nonneg (ρ.carrier 0 1)]
+    rwa [map_eq_zero] at this
+  · intro h
+    rw [h, map_zero, mul_zero]
+
+/-- Fringe visibility is positive iff the off-diagonal coherence `ρ₀₁` is nonzero. -/
+theorem fringeVisibility_pos_iff (ρ : DensityMatrix hnQubit) :
+    0 < fringeVisibility ρ ↔ ρ.carrier 0 1 ≠ 0 := by
+  rw [lt_iff_le_and_ne, and_iff_right (by unfold fringeVisibility; exact mul_nonneg (by norm_num) (Complex.abs.nonneg _)),
+      ne_comm, ← not_iff_not, not_not, not_not]
+  exact fringeVisibility_eq_zero_iff ρ
+
 theorem fringeVisibility_nonneg (ρ : DensityMatrix hnQubit) : 0 ≤ fringeVisibility ρ := by
   unfold fringeVisibility
   exact mul_nonneg (by norm_num) (Complex.abs.nonneg _)

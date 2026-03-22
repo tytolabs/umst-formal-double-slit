@@ -22,9 +22,9 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Docs/Media/teaser-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="Docs/Media/teaser-light.png">
-  <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/Media/teaser-dark.png" width="820">
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/Media/teaser.png">
+  <source media="(prefers-color-scheme: light)" srcset="Docs/Media/teaser.png">
+  <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/Media/teaser.png" width="820">
 </picture>
 
 <br>
@@ -339,7 +339,7 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 | Document | Path |
 |----------|------|
-| Technical note (3-page LaTeX) | [`Docs/OnePager/OnePager-DoubleSlit.tex`](Docs/OnePager/OnePager-DoubleSlit.tex) |
+| Technical note (Zenodo preprint) | [`Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex`](Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex) |
 | Proof status & declaration counts | [`PROOF-STATUS.md`](PROOF-STATUS.md) |
 
 | Module map & theorem names | [`Lean/VERIFY.md`](Lean/VERIFY.md) |

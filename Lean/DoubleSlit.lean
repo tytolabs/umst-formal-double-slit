@@ -95,4 +95,17 @@ theorem measurementUpdateWhichPath_gateEnforcement (ρ : DensityMatrix hnQubit) 
     (landauerCostDiagonal_whichPathInvariant ρ T).symm,
     landauerCostDiagonal_le_landauerBitEnergy ρ T hT⟩
 
+/-- A channel collapses all fringes iff it zeros the `(0,1)` off-diagonal for every density matrix. -/
+theorem collapse_all_fringes_iff_zeros_offdiag {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (κ : KrausChannel 2 ι) :
+    (∀ ρ : DensityMatrix hnQubit, fringeVisibility (κ.apply hnQubit ρ) = 0) ↔
+    (∀ ρ : DensityMatrix hnQubit, (κ.map ρ.carrier) 0 1 = 0) := by
+  constructor
+  · intro h ρ
+    rw [fringeVisibility_eq_zero_iff] at h
+    exact h ρ
+  · intro h ρ
+    rw [fringeVisibility_eq_zero_iff]
+    exact h ρ
+
 end UMST.DoubleSlit

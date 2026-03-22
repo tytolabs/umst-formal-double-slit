@@ -32,6 +32,13 @@
 \definecolor{BorderGray}{HTML}{BBBBBB}
 \definecolor{LinkGray}{HTML}{333333}
 
+% --- Teaser-matching palette (for figures) ---
+\definecolor{TeaserBg}{HTML}{0A0A1A}
+\definecolor{TeaserCyan}{HTML}{00D2FF}
+\definecolor{TeaserPurple}{HTML}{8B5CF6}
+\definecolor{TeaserRed}{HTML}{E94560}
+\definecolor{TeaserNavy}{HTML}{1A1A3E}
+
 \renewcommand{\familydefault}{\rmdefault}
 
 \titleformat{\section}
@@ -108,7 +115,7 @@ Landauer's Erasure Bound, and the Principle of Maximal Information Collapse}
 %---------- TEASER IMAGE ----------
 \vspace{0.5em}
 \begin{center}
-\includegraphics[width=0.92\textwidth]{../Media/teaser-light.png}
+\includegraphics[width=0.92\textwidth]{../Media/teaser.png}
 \end{center}
 \vspace{0.2em}
 
@@ -140,31 +147,35 @@ The present work extends this framework to quantum measurement. We observe that 
 
 The formalization is structured as a \emph{closed chain} from quantum states through measurement to thermodynamic cost:
 
-\vspace{-0.2em}
+\vspace{0.3em}
 \begin{center}
 \begin{tikzpicture}[
-  box/.style={draw=Black, rounded corners=2pt, minimum width=2.0cm, minimum height=0.6cm, align=center, font=\footnotesize},
-  arrow/.style={-{Stealth[length=4pt]}, thick, color=Black}
+  qbox/.style={draw=TeaserCyan, fill=TeaserBg, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize\color{white}, line width=0.6pt},
+  ibox/.style={draw=TeaserPurple, fill=TeaserBg, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize\color{white}, line width=0.6pt},
+  rbox/.style={draw=TeaserRed, fill=TeaserNavy, rounded corners=3pt, minimum width=3.4cm, minimum height=0.65cm, align=center, font=\footnotesize\bfseries\color{white}, line width=0.8pt},
+  qarrow/.style={-{Stealth[length=4pt]}, thick, color=TeaserCyan},
+  iarrow/.style={-{Stealth[length=4pt]}, thick, color=TeaserPurple},
+  rarrow/.style={-{Stealth[length=4pt]}, thick, color=TeaserRed}
 ]
-\node[box] (rho) {$\rho \in \mathbb{C}^{2\times 2}$\\PSD, Tr$=1$};
-\node[box, right=1.2cm of rho] (iv) {$I = |p_0{-}p_1|$\\$V = 2|\rho_{01}|$};
-\node[box, right=1.2cm of iv] (comp) {$V^2 + I^2 \le 1$\\Englert};
-\node[box, below=0.8cm of rho] (kraus) {Kraus Channel\\L\"uders $\Pi_i \rho \Pi_i$};
-\node[box, below=0.8cm of iv] (ent) {$H = -\sum p_i \ln p_i$\\$\le \ln 2$};
-\node[box, below=0.8cm of comp] (land) {$Q \ge k_B T \cdot H$\\Landauer};
-\node[box, below=0.8cm of ent, minimum width=3.2cm, line width=0.8pt] (pmic) {\textbf{Residual} $= 1 - S_{\text{bits}}$\;\;$\in [0,1]$};
+\node[qbox] (rho) {$\rho \in \mathbb{C}^{2\times 2}$\\\color{TeaserCyan!60}PSD, Tr$=1$};
+\node[qbox, right=1.2cm of rho] (iv) {$I = |p_0{-}p_1|$\\$V = 2|\rho_{01}|$};
+\node[qbox, right=1.2cm of iv] (comp) {$V^2 + I^2 \le 1$\\\color{TeaserCyan!60}Englert};
+\node[ibox, below=0.9cm of rho] (kraus) {Kraus Channel\\\color{TeaserPurple!60}L\"uders $\Pi_i \rho \Pi_i$};
+\node[ibox, below=0.9cm of iv] (ent) {$H = -\sum p_i \ln p_i$\\\color{TeaserPurple!60}$\le \ln 2$};
+\node[ibox, below=0.9cm of comp] (land) {$Q \ge k_B T \cdot H$\\\color{TeaserPurple!60}Landauer};
+\node[rbox, below=0.9cm of ent] (pmic) {Residual $= 1 - S_{\text{bits}}$\;\;$\in [0,1]$};
 
-\draw[arrow] (rho) -- (iv);
-\draw[arrow] (iv) -- (comp);
-\draw[arrow] (rho) -- (kraus);
-\draw[arrow] (kraus) -- node[above, font=\tiny, color=DimGray]{$V\!\to\!0$} (ent);
-\draw[arrow] (iv) -- (ent);
-\draw[arrow] (ent) -- (land);
-\draw[arrow] (land) -- (pmic);
-\draw[-{Stealth[length=4pt]}, dashed, thick, color=MidGray] (comp.south west) -- node[below, font=\tiny\itshape, color=MidGray, pos=0.45]{destroys $V$} (kraus.north east);
+\draw[qarrow] (rho) -- (iv);
+\draw[qarrow] (iv) -- (comp);
+\draw[iarrow] (rho) -- (kraus);
+\draw[iarrow] (kraus) -- node[above, font=\tiny\color{TeaserPurple!70}]{$V\!\to\!0$} (ent);
+\draw[iarrow] (iv) -- (ent);
+\draw[iarrow] (ent) -- (land);
+\draw[rarrow] (land) -- (pmic);
+\draw[-{Stealth[length=4pt]}, dashed, thick, color=TeaserRed!50] (comp.south west) -- node[below, font=\tiny\itshape, color=TeaserRed!50, pos=0.45]{destroys $V$} (kraus.north east);
 \end{tikzpicture}
 \end{center}
-\vspace{-0.3em}
+\vspace{0.1em}
 
 \noindent From the density matrix $\rho$ we extract \textbf{path distinguishability} $I = |p_0 - p_1|$ and \textbf{fringe visibility} $V = 2|\rho_{01}|$. Englert's complementarity follows from the PSD principal minor: $\det(\rho) \ge 0 \implies |\rho_{01}|^2 \le p_0 p_1$, yielding $V^2 + I^2 \le (p_0 + p_1)^2 = 1$.
 

@@ -44,6 +44,8 @@ def generate_gif(out_dir):
     import numpy as np
     import matplotlib
     matplotlib.use('Agg')
+    matplotlib.rcParams['font.family'] = 'serif'
+    matplotlib.rcParams['font.serif'] = ['Times New Roman', 'Palatino', 'DejaVu Serif']
     import matplotlib.pyplot as plt
     from matplotlib.gridspec import GridSpec
     import imageio.v2 as imageio
@@ -195,21 +197,23 @@ def generate_gif(out_dir):
     return gif_path
 
 
-def generate_teaser(out_dir, is_dark=True):
+def generate_teaser(out_dir):
     """Generate a static teaser image showing the key result."""
     import numpy as np
     import matplotlib
     matplotlib.use('Agg')
+    matplotlib.rcParams['font.family'] = 'serif'
+    matplotlib.rcParams['font.serif'] = ['Times New Roman', 'Palatino', 'DejaVu Serif']
     import matplotlib.pyplot as plt
     from matplotlib.gridspec import GridSpec
 
-    bg_color = '#0a0a1a' if is_dark else '#ffffff'
-    text_color = 'white' if is_dark else '#111111'
-    sub_text_color = '#888' if is_dark else '#666666'
-    grid_color = '#333' if is_dark else '#bbbbbb'
-    accent_color = '#e94560' if is_dark else '#444444'
-    trail_color = '#8b5cf6' if is_dark else '#777777'
-
+    bg_color = '#0a0a1a'
+    text_color = 'white'
+    sub_text_color = '#888'
+    grid_color = '#333'
+    accent_color = '#e94560'
+    trail_color = '#8b5cf6'
+    
     fig = plt.figure(figsize=(14, 7), facecolor=bg_color)
     gs = GridSpec(1, 2, width_ratios=[1.3, 1], wspace=0.3)
 
@@ -282,10 +286,9 @@ def generate_teaser(out_dir, is_dark=True):
     ax2.text(0.5, 0.03, "The Thermodynamic Cost of Knowing",
             ha='center', va='top', color=text_color, fontsize=13, fontweight='bold',
             transform=ax2.transAxes,
-            bbox=dict(boxstyle='round,pad=0.4', facecolor=accent_color, alpha=0.8))
+            bbox=dict(boxstyle='round,pad=0.4', facecolor='#1a1a3e', edgecolor='#333', alpha=0.8))
 
-    suffix = "dark" if is_dark else "light"
-    teaser_path = os.path.join(out_dir, f"teaser-{suffix}.png")
+    teaser_path = os.path.join(out_dir, "teaser.png")
     plt.savefig(teaser_path, dpi=150, pad_inches=0.15,
                facecolor=fig.get_facecolor(), edgecolor='none')
     plt.close()
@@ -302,8 +305,7 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
 
     generate_gif(out_dir)
-    generate_teaser(out_dir, is_dark=True)
-    generate_teaser(out_dir, is_dark=False)
+    generate_teaser(out_dir)
 
     print("\nDone! Files in Docs/:")
     print("  - double-slit-collapse.gif")
