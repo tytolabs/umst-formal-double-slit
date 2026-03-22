@@ -45,6 +45,10 @@ structure DensityMatCore (hn : 0 < n) : Type where
 
 abbrev DensityMatrix (hn : 0 < n) : Type := DensityMatCore hn
 
+/-- Enables `ρ.isHermitian` on `DensityMatrix` / `DensityMatCore` (carrier is Hermitian). -/
+def DensityMatCore.isHermitian {hn : 0 < n} (ρ : DensityMatCore hn) : ρ.carrier.IsHermitian :=
+  ρ.psd.isHermitian
+
 namespace DensityMat
 
 /-- Two density matrices are equal if their underlying matrices agree (PSD / trace proofs are

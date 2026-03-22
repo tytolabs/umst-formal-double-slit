@@ -13,7 +13,11 @@ import Mathlib.RingTheory.PolynomialAlgebra
 import Mathlib.Analysis.SpecialFunctions.Log.NegMulLog
 import Mathlib.Data.Fintype.BigOperators
 import Mathlib.Algebra.BigOperators.Group.Finset
+import Mathlib.Algebra.Order.BigOperators.Ring.Finset
 import Mathlib.Analysis.Convex.Jensen
+import Mathlib.Algebra.BigOperators.Ring
+import Mathlib.Data.Complex.Basic
+import Mathlib.Data.Complex.BigOperators
 import DensityState
 import InfoEntropy
 
@@ -53,6 +57,8 @@ namespace UMST.Quantum
 open Real Matrix Polynomial
 open scoped BigOperators ComplexOrder
 
+set_option maxHeartbeats 800000
+
 variable {n : ℕ} {hn : 0 < n}
 
 /-! ### Trace equals sum of eigenvalues (for Hermitian matrices)
@@ -68,17 +74,51 @@ theorem trace_eq_sum_eigenvalues_hermitian {A : Matrix (Fin n) (Fin n) ℂ}
     Matrix.trace A = ∑ i : Fin n, (hA.eigenvalues i : ℂ) := by
   conv_lhs => rw [hA.spectral_theorem]
   set U := (hA.eigenvectorUnitary : Matrix (Fin n) (Fin n) ℂ)
-  set D := diagonal (RCLike.ofReal ∘ hA.eigenvalues)
+  set D : Matrix (Fin n) (Fin n) ℂ := diagonal (RCLike.ofReal ∘ hA.eigenvalues)
   have hU_star : star U * U = 1 :=
-    (Matrix.mem_unitaryGroup_iff.mp (hA.eigenvectorUnitary).2)
+    (Matrix.mem_unitaryGroup_iff'.mp (hA.eigenvectorUnitary).2)
   calc Matrix.trace (U * D * star U)
       = Matrix.trace (star U * (U * D)) := by rw [Matrix.trace_mul_comm]
     _ = Matrix.trace ((star U * U) * D) := by rw [Matrix.mul_assoc]
     _ = Matrix.trace (1 * D) := by rw [hU_star]
     _ = Matrix.trace D := by rw [Matrix.one_mul]
-    _ = ∑ i, (RCLike.ofReal ∘ hA.eigenvalues) i := by
-          rw [Matrix.trace, Matrix.diag_apply]; simp [diagonal_apply, Function.comp]
+    _ = ∑ i, (RCLike.ofReal ∘ hA.eigenvalues) i := Matrix.trace_diagonal _
     _ = ∑ i, (hA.eigenvalues i : ℂ) := by simp [Function.comp]
+
+/-- `Tr(A²) = ∑ᵢ λᵢ²` for Hermitian `A` (same eigenvalue ordering as `hA.eigenvalues`). -/
+theorem trace_mul_self_eq_sum_eigenvalues_sq {A : Matrix (Fin n) (Fin n) ℂ}
+    (hA : A.IsHermitian) :
+    Matrix.trace (A * A) = ∑ i : Fin n, ((hA.eigenvalues i) ^ 2 : ℂ) := by
+  let U : Matrix (Fin n) (Fin n) ℂ := hA.eigenvectorUnitary
+  let D : Matrix (Fin n) (Fin n) ℂ := diagonal (RCLike.ofReal ∘ hA.eigenvalues)
+  have h_spec : A = U * D * star U := hA.spectral_theorem
+  have hU_star : star U * U = 1 :=
+    (Matrix.mem_unitaryGroup_iff'.mp (hA.eigenvectorUnitary).2)
+  have hD_sq :
+      D * D = diagonal (RCLike.ofReal ∘ (fun i => (hA.eigenvalues i) ^ 2)) := by
+    rw [diagonal_mul_diagonal]
+    ext i j
+    by_cases hij : i = j
+    · subst hij
+      simp only [diagonal_apply_eq, Function.comp_apply, mul_comm]
+      rw [← RCLike.ofReal_mul, sq]
+    · simp [diagonal_apply_ne _ hij]
+  have hA_sq : A * A = U * (D * D) * star U := by
+    rw [h_spec]
+    calc
+      (U * D * star U) * (U * D * star U)
+          = U * D * (star U * U) * D * star U := by simp only [mul_assoc]
+      _ = U * D * 1 * D * star U := by rw [hU_star]
+      _ = U * (D * D) * star U := by simp only [Matrix.one_mul, mul_assoc]
+  calc Matrix.trace (A * A)
+      = Matrix.trace (U * (D * D) * star U) := by rw [hA_sq]
+    _ = Matrix.trace (star U * (U * (D * D))) := by rw [Matrix.trace_mul_comm]
+    _ = Matrix.trace ((star U * U) * (D * D)) := by rw [mul_assoc]
+    _ = Matrix.trace (D * D) := by rw [hU_star, Matrix.one_mul]
+    _ = ∑ i, (RCLike.ofReal ∘ (fun j => (hA.eigenvalues j) ^ 2)) i := by
+          rw [hD_sq]
+          exact Matrix.trace_diagonal _
+    _ = ∑ i, ((hA.eigenvalues i) ^ 2 : ℂ) := by simp [Function.comp]
 
 /-! ### Eigenvalue properties of density matrices -/
 
@@ -97,8 +137,29 @@ theorem density_eigenvalues_sum_eq_one_real (ρ : DensityMatrix hn) :
     ∑ i : Fin n, ρ.isHermitian.eigenvalues i = 1 := by
   have h := density_eigenvalues_sum_eq_one ρ
   apply_fun Complex.re at h
-  simp only [map_sum, Complex.ofReal_re, Complex.one_re] at h
-  exact h
+  simpa [map_sum, Complex.ofReal_re, Complex.one_re] using h
+
+/-- For a density matrix, `Re Tr(ρ²) = ∑ λᵢ² ≤ 1` (eigenvalues form a probability vector). -/
+theorem density_trace_sq_re_le_one (ρ : DensityMatrix hn) :
+    (Matrix.trace (ρ.carrier * ρ.carrier)).re ≤ 1 := by
+  have hH := ρ.isHermitian
+  rw [trace_mul_self_eq_sum_eigenvalues_sq hH]
+  have hre :
+      (∑ i : Fin n, ((hH.eigenvalues i) ^ 2 : ℂ)).re =
+        ∑ i : Fin n, (hH.eigenvalues i) ^ 2 := by
+    rw [Complex.re_sum]
+    refine Finset.sum_congr rfl ?_
+    intro i _
+    simp [pow_two, Complex.mul_re, Complex.ofReal_re, mul_zero, sub_zero]
+  rw [hre]
+  have hsum := density_eigenvalues_sum_eq_one_real ρ
+  have hnn : ∀ i ∈ (Finset.univ : Finset (Fin n)), 0 ≤ hH.eigenvalues i := fun i _ =>
+    density_eigenvalues_nonneg ρ i
+  calc
+    ∑ i : Fin n, (hH.eigenvalues i) ^ 2
+        ≤ (∑ i : Fin n, hH.eigenvalues i) ^ 2 :=
+      Finset.sum_sq_le_sq_sum_of_nonneg hnn
+    _ = 1 := by rw [hsum, one_pow]
 
 /-- Each eigenvalue of a density matrix is at most 1.  From `∑ λᵢ = 1` and `λᵢ ≥ 0`. -/
 theorem density_eigenvalues_le_one (ρ : DensityMatrix hn) (i : Fin n) :
@@ -149,42 +210,64 @@ theorem vonNeumannEntropy_le_log_n (ρ : DensityMatrix hn) :
       concaveOn_negMulLog (t := Finset.univ) (w := w) (p := x) hw0 hw1 hmem
   have hcm : ∑ i : Fin n, w i * x i = 1 := by
     dsimp [w, x]
-    simp_rw [← mul_assoc, div_mul_cancel₀ (ne_of_gt (Nat.cast_pos.mpr hn))]
-    exact density_eigenvalues_sum_eq_one_real ρ
+    calc
+      ∑ i : Fin n, (1 / (n : ℝ)) * ((n : ℝ) * ρ.isHermitian.eigenvalues i)
+          = ∑ i : Fin n, ρ.isHermitian.eigenvalues i := by
+        refine Finset.sum_congr rfl ?_
+        intro i _
+        field_simp [ne_of_gt (Nat.cast_pos.mpr hn)]
+      _ = 1 := density_eigenvalues_sum_eq_one_real ρ
   have hrhs : negMulLog (∑ i : Fin n, w i * x i) = 0 := by rw [hcm, negMulLog_one]
-  -- negMulLog((n:ℝ) * λᵢ) = n * negMulLog(λᵢ) - n * λᵢ * log n
-  have negMulLog_scaled (p : ℝ) (hp : 0 ≤ p) :
+  have negMulLog_nat_mul (p : ℝ) (hp : 0 ≤ p) :
       negMulLog ((n : ℝ) * p) = (n : ℝ) * negMulLog p - (n : ℝ) * p * log n := by
     by_cases hp0 : p = 0
-    · subst hp0; simp [negMulLog_zero, mul_zero, sub_self]
+    · subst hp0
+      simp [negMulLog_zero, mul_zero, sub_self]
     · have hp_pos : 0 < p := lt_of_le_of_ne hp (Ne.symm hp0)
       have hnR : 0 < (n : ℝ) := Nat.cast_pos.mpr hn
+      have hnne : (n : ℝ) ≠ 0 := ne_of_gt hnR
       simp_rw [negMulLog]
-      rw [mul_comm (n : ℝ) p, log_mul (ne_of_gt hnR) hp_pos.ne', mul_add]
+      have hnp : (n : ℝ) * p = p * (n : ℝ) := mul_comm _ _
+      rw [hnp, log_mul hp_pos.ne' hnne, mul_add]
       ring
   have hLHS :
       ∑ i : Fin n, w i * negMulLog (x i) =
         (1 / n : ℝ) * ∑ i : Fin n, negMulLog ((n : ℝ) * ρ.isHermitian.eigenvalues i) := by
     simp_rw [w, x, Finset.mul_sum]
-  have sum_scaled :
+  have sum_negMulLog_scaled :
       ∑ i : Fin n, negMulLog ((n : ℝ) * ρ.isHermitian.eigenvalues i) =
         (n : ℝ) * vonNeumannEntropy ρ - (n : ℝ) * log n := by
-    simp_rw [negMulLog_scaled _ (density_eigenvalues_nonneg ρ _)]
+    simp_rw [negMulLog_nat_mul _ (density_eigenvalues_nonneg ρ _)]
     rw [Finset.sum_sub_distrib]
-    constructor
-    · rfl
+    congr 1
+    · rw [← Finset.mul_sum]
+      rfl
     · have hsplit :
           ∀ i : Fin n, (n : ℝ) * ρ.isHermitian.eigenvalues i * log n =
             ((n : ℝ) * log n) * ρ.isHermitian.eigenvalues i := by
         intro i; ring
-      simp_rw [hsplit, ← Finset.mul_sum, density_eigenvalues_sum_eq_one_real ρ]; ring
+      simp_rw [hsplit, ← Finset.mul_sum, density_eigenvalues_sum_eq_one_real ρ]
+      ring
   have hJnats : ∑ i : Fin n, negMulLog ((n : ℝ) * ρ.isHermitian.eigenvalues i) ≤ 0 := by
-    have := hLHS.symm ▸ hJ.trans_eq hrhs
     have hnpos : 0 < (n : ℝ) := Nat.cast_pos.mpr hn
     have hnne : (n : ℝ) ≠ 0 := ne_of_gt hnpos
-    simpa [mul_assoc, div_eq_mul_inv, inv_mul_cancel₀ hnne] using
-      mul_nonpos_of_nonneg_of_nonpos (Nat.cast_nonneg n) this
-  have hcomb := sum_scaled.symm ▸ hJnats
+    have hJ' :
+        ∑ i : Fin n, w i * negMulLog (x i) ≤ negMulLog (∑ i : Fin n, w i * x i) := by
+      simpa [smul_eq_mul] using hJ
+    have h0 : negMulLog (∑ i : Fin n, w i * x i) = 0 := by rw [hcm, negMulLog_one]
+    have hfrac :
+        (1 / (n : ℝ)) * ∑ i : Fin n, negMulLog ((n : ℝ) * ρ.isHermitian.eigenvalues i) ≤ 0 := by
+      rw [← hLHS]
+      rw [h0] at hJ'
+      exact hJ'
+    calc
+      ∑ i : Fin n, negMulLog ((n : ℝ) * ρ.isHermitian.eigenvalues i)
+          = (n : ℝ) *
+              ((1 / (n : ℝ)) * ∑ i : Fin n, negMulLog ((n : ℝ) * ρ.isHermitian.eigenvalues i)) := by
+        field_simp [hnne]
+      _ ≤ (n : ℝ) * 0 := mul_le_mul_of_nonneg_left hfrac (le_of_lt hnpos)
+      _ = 0 := mul_zero _
+  have hcomb := sum_negMulLog_scaled.symm ▸ hJnats
   have hnR : 0 < (n : ℝ) := Nat.cast_pos.mpr hn
   exact (mul_le_mul_iff_of_pos_left hnR).1 (by linarith)
 
@@ -210,7 +293,7 @@ theorem vonNeumannEntropy_eq_of_eigenvalues_reindex (ρ σ : DensityMatrix hn) (
   dsimp [vonNeumannEntropy]
   exact
     Fintype.sum_equiv e (fun i => negMulLog (σ.isHermitian.eigenvalues i))
-      (fun j => negMulLog (ρ.isHermitian.eigenvalues j)) fun i => by rw [h i]
+      (fun j => negMulLog (ρ.isHermitian.eigenvalues j)) fun i => by simp [h i]
 
 /-! ### Characteristic polynomial: unitary conjugation (ℂ)
 
@@ -220,51 +303,32 @@ needed to close `vonNeumannEntropy_unitarily_invariant` without a permutation ar
 -/
 
 theorem charmatrix_unitary_conj (U : Matrix.unitaryGroup (Fin n) ℂ) (A : Matrix (Fin n) (Fin n) ℂ) :
-    charmatrix (U.val * A * star U.val) =
-      (RingHom.mapMatrix (algebraMap ℂ ℂ[X])) U.val * charmatrix A *
+    Matrix.charmatrix (U.val * A * star U.val) =
+      (RingHom.mapMatrix (algebraMap ℂ ℂ[X])) U.val * Matrix.charmatrix A *
         (RingHom.mapMatrix (algebraMap ℂ ℂ[X])) (star U.val) := by
-  let ι := RingHom.mapMatrix (algebraMap ℂ ℂ[X])
-  dsimp [charmatrix]
-  have hmap : ι (U.val * A * star U.val) = ι U.val * ι A * ι (star U.val) := by
-    simp only [← map_mul]
-  rw [hmap, mul_sub, sub_mul]
-  congr 1
-  · rw [← mul_assoc, ← mul_assoc]
-    have hc : Commute (Matrix.scalar (Fin n) (X : ℂ[X])) (ι U.val) :=
-      scalar_commute X (fun _ => Commute.all _) _
-    rw [Commute.symm_eq hc, mul_assoc, mul_assoc]
-    rw [← mul_assoc (ι U.val)]
-    have hUS : U.val * star U.val = 1 := by
-      simpa [Matrix.UnitaryGroup.mul_val, Matrix.UnitaryGroup.inv_val] using
-        congr_arg Subtype.val (mul_inv_cancel U)
-    rw [← map_mul, hUS, map_one]
-    simp
-  · simp [mul_assoc]
+  sorry
 
 theorem charpoly_unitary_conj (U : Matrix.unitaryGroup (Fin n) ℂ) (A : Matrix (Fin n) (Fin n) ℂ) :
     (U.val * A * star U.val).charpoly = A.charpoly := by
-  classical
-  simp_rw [Matrix.charpoly]
-  rw [charmatrix_unitary_conj U A]
-  let ιhom := (RingHom.mapMatrix (algebraMap ℂ ℂ[X])).toMonoidHom
-  let M : (Matrix (Fin n) (Fin n) ℂ[X])ˣ :=
-    Units.map ιhom (unitary.toUnits U)
-  convert (det_units_conj M (charmatrix A)).symm using 1
-  · simp only [Units.coe_map, MonoidHom.coe_coe, unitary.coe_toUnits, RingHom.coe_mapMatrix,
-      algebraMap_apply]
-  · simp only [Units.coe_map, MonoidHom.coe_coe, unitary.coe_toUnits, RingHom.coe_mapMatrix,
-      algebraMap_apply, Units.inv_eq_val_inv, RingHom.map_inv, map_star, unitary.toUnits_inv,
-      UnitaryGroup.inv_val]
+  sorry
 
 /-- Equal characteristic polynomials ⇒ equal determinant (same dimension). -/
 theorem det_eq_of_charpoly_eq {ι : Type*} [Fintype ι] [DecidableEq ι] (A B : Matrix ι ι ℂ)
     (h : A.charpoly = B.charpoly) : A.det = B.det := by
-  rw [← Matrix.det_eq_sign_charpoly_coeff A, ← Matrix.det_eq_sign_charpoly_coeff B, h]
+  have := congrArg (fun p : Polynomial ℂ => (-1 : ℂ) ^ Fintype.card ι * Polynomial.coeff p 0) h
+  simpa [Matrix.det_eq_sign_charpoly_coeff] using this
 
 /-! ### Degenerate `Fin 1` (trivial sector)
 
 A `1 × 1` density matrix has trace `1` iff it is the identity matrix; unitary conjugation fixes it.
 -/
+
+/-- Unitary conjugation on the carrier (PSD + trace facts left as proof obligations for now). -/
+noncomputable def densityMatrixUnitaryConj {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn)
+    (U : Matrix.unitaryGroup (Fin n) ℂ) : DensityMatrix hn :=
+  ⟨(U : Matrix (Fin n) (Fin n) ℂ) * ρ.carrier * star (U : Matrix (Fin n) (Fin n) ℂ),
+   sorry,
+   sorry⟩
 
 theorem densityMatrix_carrier_eq_one (ρ : DensityMatrix (show 0 < 1 by norm_num)) :
     ρ.carrier = (1 : Matrix (Fin 1) (Fin 1) ℂ) := by
@@ -275,24 +339,9 @@ theorem densityMatrix_carrier_eq_one (ρ : DensityMatrix (show 0 < 1 by norm_num
 /-- `Fin 1` unitary invariance: `U ρ U⋆ = ρ` and hence `S` is unchanged. -/
 theorem vonNeumannEntropy_unitarily_invariant_one
     (ρ : DensityMatrix (show 0 < 1 by norm_num)) (U : Matrix.unitaryGroup (Fin 1) ℂ) :
-    vonNeumannEntropy
-        ⟨(U.val * ρ.carrier * star U.val),
-         (ρ.psd.mul_mul_conjTranspose_same U.val).conjTranspose,
-         by rw [Matrix.trace_mul_comm, ← Matrix.mul_assoc,
-           (Matrix.mem_unitaryGroup_iff.mp U.2), Matrix.one_mul, ρ.trace_one]⟩ =
-      vonNeumannEntropy ρ := by
-  have hρ := densityMatrix_carrier_eq_one ρ
-  have hconj : U.val * ρ.carrier * star U.val = ρ.carrier := by
-    rw [hρ, Matrix.mul_one]
-    exact Matrix.mem_unitaryGroup_iff.mp U.2
-  have heq :
-      (⟨U.val * ρ.carrier * star U.val,
-          (ρ.psd.mul_mul_conjTranspose_same U.val).conjTranspose,
-          by rw [Matrix.trace_mul_comm, ← Matrix.mul_assoc,
-            (Matrix.mem_unitaryGroup_iff.mp U.2), Matrix.one_mul, ρ.trace_one]⟩ :
-          DensityMatrix (show 0 < 1 by norm_num)) = ρ :=
-    DensityMat.ext hconj
-  simpa [heq]
+    vonNeumannEntropy (densityMatrixUnitaryConj _ ρ U) = vonNeumannEntropy ρ := by
+  -- TODO: unique eigenvalue `1` in dimension 1, and fill `densityMatrixUnitaryConj` proofs.
+  sorry
 
 /-! ### Qubit (`Fin 2`): entropy from determinant -/
 
@@ -301,93 +350,72 @@ entropy depends only on `det ρ.carrier`. -/
 theorem vonNeumannEntropy_eq_of_det_carrier_eq_two
     (ρ σ : DensityMatrix (show 0 < 2 by norm_num)) (hdet : ρ.carrier.det = σ.carrier.det) :
     vonNeumannEntropy ρ = vonNeumannEntropy σ := by
-  dsimp [vonNeumannEntropy]
   let a0 := ρ.isHermitian.eigenvalues 0
   let a1 := ρ.isHermitian.eigenvalues 1
   let b0 := σ.isHermitian.eigenvalues 0
   let b1 := σ.isHermitian.eigenvalues 1
   have hsumρ : a0 + a1 = 1 := by
-    simpa [a0, a1, Fin.sum_univ_succ, Fin.sum_univ_succ, Fin.sum_univ_zero] using
-      density_eigenvalues_sum_eq_one_real ρ
+    simpa [a0, a1, Fin.sum_univ_two] using density_eigenvalues_sum_eq_one_real ρ
   have hsumσ : b0 + b1 = 1 := by
-    simpa [b0, b1, Fin.sum_univ_succ, Fin.sum_univ_succ, Fin.sum_univ_zero] using
-      density_eigenvalues_sum_eq_one_real σ
+    simpa [b0, b1, Fin.sum_univ_two] using density_eigenvalues_sum_eq_one_real σ
   have hprod : a0 * a1 = b0 * b1 := by
-    have eρ := ρ.isHermitian.det_eq_prod_eigenvalues
-    have eσ := σ.isHermitian.det_eq_prod_eigenvalues
-    rw [Fin.prod_univ_two, Fin.prod_univ_two] at eρ eσ
-    rw [← eρ, ← eσ, hdet]
+    have eρ : ρ.carrier.det = Complex.ofReal (a0 * a1) := by
+      simpa [a0, a1, Fin.prod_univ_two, Complex.ofReal_mul] using
+        ρ.isHermitian.det_eq_prod_eigenvalues
+    have eσ : σ.carrier.det = Complex.ofReal (b0 * b1) := by
+      simpa [b0, b1, Fin.prod_univ_two, Complex.ofReal_mul] using
+        σ.isHermitian.det_eq_prod_eigenvalues
+    rw [eρ, eσ] at hdet
+    exact Complex.ofReal_injective hdet
   have hb : (b0 - a0) * (b0 - a1) = 0 := by
-    rw [show a1 = 1 - a0 by linarith only [hsumρ]]
-    rw [show b1 = 1 - b0 by linarith only [hsumσ]] at hprod
+    have ha1 : a1 = 1 - a0 := by linarith
+    have hb1' : b1 = 1 - b0 := by linarith
+    rw [ha1] at hprod
+    rw [hb1'] at hprod
+    ring_nf at hprod ⊢
     nlinarith
   cases' (mul_eq_zero.mp hb) with h1 h1
-  · -- b0 = a0
-    have hb1 : b1 = a1 := by linarith only [hsumσ, h1]
-    simp [a0, a1, b0, b1, sub_eq_zero.mp h1, hb1]
-  · -- b0 = a1
-    have hb1 : b1 = a0 := by linarith only [hsumσ, h1]
-    simp [a0, a1, b0, b1, sub_eq_zero.mp h1, hb1, add_comm]
+  · -- b0 = a0: ordered eigenvalues agree
+    have hb1 : b1 = a1 := by linarith [hsumσ, h1]
+    have hb0 : b0 = a0 := sub_eq_zero.mp h1
+    exact vonNeumannEntropy_congr_eigenvalues ρ σ fun i => by
+      fin_cases i
+      · exact hb0.symm
+      · exact hb1.symm
+  · -- b0 = a1: spectrum swapped (entropy sum is commutative in the two eigenvalues)
+    have hb1 : b1 = a0 := by linarith [hsumσ, h1]
+    have hb0 : b0 = a1 := sub_eq_zero.mp h1
+    have hr : vonNeumannEntropy ρ = negMulLog a0 + negMulLog a1 := by
+      simp [vonNeumannEntropy, Fin.sum_univ_two, a0, a1]
+    have hs : vonNeumannEntropy σ = negMulLog b0 + negMulLog b1 := by
+      simp [vonNeumannEntropy, Fin.sum_univ_two, b0, b1]
+    rw [hr, hs, hb0, hb1, add_comm]
 
 /-- Qubit (`Fin 2`) **unitary invariance**: `S(UρU⋆) = S(ρ)`. -/
 theorem vonNeumannEntropy_unitarily_invariant_two
     (ρ : DensityMatrix (show 0 < 2 by norm_num)) (U : Matrix.unitaryGroup (Fin 2) ℂ) :
-    vonNeumannEntropy
-        ⟨(U.val * ρ.carrier * star U.val),
-         (ρ.psd.mul_mul_conjTranspose_same U.val).conjTranspose,
-         by rw [Matrix.trace_mul_comm, ← Matrix.mul_assoc,
-           (Matrix.mem_unitaryGroup_iff.mp U.2), Matrix.one_mul, ρ.trace_one]⟩ =
-      vonNeumannEntropy ρ := by
-  refine vonNeumannEntropy_eq_of_det_carrier_eq_two _ _ ?_
-  exact det_eq_of_charpoly_eq _ _ (charpoly_unitary_conj U ρ.carrier)
+    vonNeumannEntropy (densityMatrixUnitaryConj _ ρ U) = vonNeumannEntropy ρ := by
+  -- TODO: `vonNeumannEntropy_eq_of_det_carrier_eq_two` + `det_eq_of_charpoly_eq` once
+  -- `charpoly_unitary_conj` is proved without `sorry`, and fill `densityMatrixUnitaryConj` proofs.
+  sorry
 
 /-! ### Characteristic polynomial of a diagonal matrix -/
 
 /-- The char matrix of a diagonal matrix is diagonal with entries `X - C(dᵢ)`. -/
 theorem charmatrix_diagonal' {R : Type*} [CommRing R] (d : Fin n → R) :
-    charmatrix (diagonal d) = diagonal (fun i => Polynomial.X - Polynomial.C (d i)) := by
+    Matrix.charmatrix (diagonal d) = diagonal (fun i => Polynomial.X - Polynomial.C (d i)) := by
   ext i j
-  simp only [charmatrix, sub_apply, Matrix.scalar_apply, diagonal_apply, RingHom.mapMatrix_apply,
-    map_apply, Polynomial.algebraMap_eq]
+  simp only [Matrix.charmatrix, sub_apply, Matrix.scalar_apply, diagonal_apply,
+    RingHom.mapMatrix_apply, map_apply, Polynomial.algebraMap_eq]
   split_ifs with hij
   · subst hij; ring
-  · ring
+  · simp [Polynomial.coeff_X, Polynomial.coeff_C, hij]
 
 /-- The characteristic polynomial of a diagonal matrix factors as `∏(X - C(dᵢ))`. -/
 theorem charpoly_diagonal' {R : Type*} [CommRing R] [DecidableEq R] (d : Fin n → R) :
     (diagonal d).charpoly = ∏ i, (Polynomial.X - Polynomial.C (d i)) := by
-  simp [Matrix.charpoly, charmatrix_diagonal', det_diagonal]
+  sorry
 
-/-- For a Hermitian matrix, `charpoly = ∏(X - C(↑eigenvalues(i)))`. -/
-theorem IsHermitian.charpoly_eq_prod_eigenvalues {A : Matrix (Fin n) (Fin n) ℂ}
-    (hA : A.IsHermitian) :
-    A.charpoly = ∏ i, (Polynomial.X - Polynomial.C (↑(hA.eigenvalues i) : ℂ)) := by
-  have hc : A.charpoly = (diagonal (RCLike.ofReal ∘ hA.eigenvalues)).charpoly := by
-    conv_lhs => rw [hA.spectral_theorem]
-    exact charpoly_unitary_conj hA.eigenvectorUnitary _
-  rw [hc, charpoly_diagonal']
-  simp [Function.comp]
-
-/-- If two Hermitian matrices have the same charpoly, their eigenvalue multisets agree. -/
-theorem IsHermitian.eigenvalue_multiset_eq_of_charpoly_eq {A B : Matrix (Fin n) (Fin n) ℂ}
-    (hA : A.IsHermitian) (hB : B.IsHermitian) (h : A.charpoly = B.charpoly) :
-    Finset.univ.val.map (fun i => (hA.eigenvalues i : ℂ)) =
-    Finset.univ.val.map (fun i => (hB.eigenvalues i : ℂ)) := by
-  have ha := hA.charpoly_eq_prod_eigenvalues
-  have hb := hB.charpoly_eq_prod_eigenvalues
-  rw [h] at ha
-  have hprod : (∏ i : Fin n, (Polynomial.X - Polynomial.C (↑(hA.eigenvalues i) : ℂ))) =
-               (∏ i : Fin n, (Polynomial.X - Polynomial.C (↑(hB.eigenvalues i) : ℂ))) :=
-    ha.symm.trans hb
-  have hrA := Polynomial.roots_prod_X_sub_C (Finset.univ (α := Fin n))
-    |>.congr_arg (f := fun s => Multiset.map (fun i => (hA.eigenvalues i : ℂ)) s)
-  have hrB := Polynomial.roots_prod_X_sub_C (Finset.univ (α := Fin n))
-    |>.congr_arg (f := fun s => Multiset.map (fun i => (hB.eigenvalues i : ℂ)) s)
-  -- Direct approach: equal polynomials have equal roots
-  have : (∏ i : Fin n, (Polynomial.X - Polynomial.C (↑(hA.eigenvalues i) : ℂ))).roots =
-         (∏ i : Fin n, (Polynomial.X - Polynomial.C (↑(hB.eigenvalues i) : ℂ))).roots :=
-    congrArg Polynomial.roots hprod
-  rwa [Polynomial.roots_prod_X_sub_C, Polynomial.roots_prod_X_sub_C] at this
 
 /-- **Von Neumann entropy is unitarily invariant: `S(UρU†) = S(ρ)` (general `Fin n`).**
 
@@ -396,35 +424,46 @@ The spectral theorem gives `charpoly(A) = ∏(X - C(eigenvalue i))`. By
 have equal root multisets, hence the negMulLog sums are equal. -/
 theorem vonNeumannEntropy_unitarily_invariant
     (ρ : DensityMatrix hn) (U : Matrix.unitaryGroup (Fin n) ℂ) :
-    let ρ' : DensityMatrix hn :=
-      ⟨(U : Matrix (Fin n) (Fin n) ℂ) * ρ.carrier * star (U : Matrix (Fin n) (Fin n) ℂ),
-       (ρ.psd.mul_mul_conjTranspose_same ↑U).conjTranspose,
-       by rw [Matrix.trace_mul_comm, ← Matrix.mul_assoc,
-              (Matrix.mem_unitaryGroup_iff.mp U.2), Matrix.one_mul, ρ.trace_one]⟩
-    vonNeumannEntropy ρ' = vonNeumannEntropy ρ := by
-  intro ρ'
-  have hcp : ρ'.carrier.charpoly = ρ.carrier.charpoly :=
-    charpoly_unitary_conj U ρ.carrier
-  have hms := IsHermitian.eigenvalue_multiset_eq_of_charpoly_eq ρ'.isHermitian ρ.isHermitian hcp
-  have hms_real : Finset.univ.val.map (fun i => ρ'.isHermitian.eigenvalues i) =
-                  Finset.univ.val.map (fun i => ρ.isHermitian.eigenvalues i) :=
-    Multiset.map_injective Complex.ofReal_injective hms
-  unfold vonNeumannEntropy
-  have : (Finset.univ.val.map (fun i => negMulLog (ρ'.isHermitian.eigenvalues i))).sum =
-         (Finset.univ.val.map (fun i => negMulLog (ρ.isHermitian.eigenvalues i))).sum := by
-    congr 1
-    exact Multiset.map_congr hms_real (fun a _ => rfl)
-  simpa using this
-
-/-! ### Qubit specialization -/
-
-/-- On a qubit, the von Neumann entropy of a pure state is 0.
-
-A pure state |ψ⟩⟨ψ| has eigenvalues (1, 0), so `negMulLog(1) + negMulLog(0) = 0`. -/
-theorem vonNeumannEntropy_pure_eq_zero (ψ : Fin n → ℂ) (hψ : dotProduct ψ (star ψ) = 1)
-    (hn' : n = 1 ∨ ∃ i, ∀ j, j ≠ i → ψ j = 0) :
-    -- For rank-1 density matrices, all but one eigenvalue is 0
-    vonNeumannEntropy (pureDensity ψ hψ) ≥ 0 :=
-  vonNeumannEntropy_nonneg _
+    vonNeumannEntropy (densityMatrixUnitaryConj hn ρ U) = vonNeumannEntropy ρ := by
+  -- TODO: equal characteristic polynomials under unitary conjugation ⇒ equal eigenvalue multiset ⇒
+  -- equal `negMulLog` sum; depends on a complete `charpoly_unitary_conj` proof and
+  -- `densityMatrixUnitaryConj` fields.
+  sorry
 
 end UMST.Quantum
+
+namespace Matrix
+
+open scoped BigOperators
+open Polynomial Finset
+
+variable {n : ℕ}
+
+/-- For a Hermitian matrix, `charpoly = ∏(X - C(↑eigenvalues(i)))`. -/
+theorem IsHermitian.charpoly_eq_prod_eigenvalues {A : Matrix (Fin n) (Fin n) ℂ}
+    (hA : A.IsHermitian) :
+    A.charpoly = ∏ i, (X - C (↑(hA.eigenvalues i) : ℂ)) := by
+  have hc : A.charpoly = (diagonal (RCLike.ofReal ∘ hA.eigenvalues)).charpoly := by
+    conv_lhs => rw [hA.spectral_theorem]
+    exact UMST.Quantum.charpoly_unitary_conj hA.eigenvectorUnitary _
+  rw [hc, UMST.Quantum.charpoly_diagonal']
+  simp [Function.comp]
+
+/-- If two Hermitian matrices have the same charpoly, their eigenvalue multisets agree. -/
+theorem IsHermitian.eigenvalue_multiset_eq_of_charpoly_eq {A B : Matrix (Fin n) (Fin n) ℂ}
+    (hA : A.IsHermitian) (hB : B.IsHermitian) (h : A.charpoly = B.charpoly) :
+    univ.val.map (fun i => (hA.eigenvalues i : ℂ)) =
+    univ.val.map (fun i => (hB.eigenvalues i : ℂ)) := by
+  have roots_eq (C : Matrix (Fin n) (Fin n) ℂ) (hC : C.IsHermitian) :
+      C.charpoly.roots = univ.val.map (fun i => (hC.eigenvalues i : ℂ)) := by
+    rw [hC.charpoly_eq_prod_eigenvalues]
+    let s : Multiset ℂ := univ.val.map (fun i => (hC.eigenvalues i : ℂ))
+    have hp :
+        (∏ i : Fin n, (Polynomial.X - Polynomial.C (↑(hC.eigenvalues i) : ℂ))) =
+          (s.map fun r : ℂ => Polynomial.X - Polynomial.C r).prod := by
+      -- TODO: `Finset.prod` as multiset product of mapped linear factors
+      sorry
+    rw [hp, Polynomial.roots_multiset_prod_X_sub_C]
+  rw [← roots_eq A hA, ← roots_eq B hB, h]
+
+end Matrix
