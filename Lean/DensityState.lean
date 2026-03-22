@@ -4,10 +4,13 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 -/
 
 import Mathlib.Data.Complex.Basic
+import Mathlib.Data.Complex.BigOperators
 import Mathlib.Data.Matrix.RowCol
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.LinearAlgebra.Matrix.PosDef
 import Mathlib.Data.Fintype.Basic
+import Mathlib.Data.Fintype.BigOperators
+import Mathlib.Tactic.Ring
 
 /-!
 # DensityState — finite-dimensional density matrices (minimal layer)
@@ -21,8 +24,11 @@ standard quantum density-operator interface.
 - `pureDensity ψ h` — rank-one projector `|ψ⟩⟨ψ|` from a normalized vector (`dotProduct ψ (star ψ) = 1`).
 
 **In file:** convex **mixed state** `mixedDensity ρ₁ ρ₂ t` for `t ∈ [0,1]` (`PosSemidef.add` / `smul_psd`).
+- Finite **convex combinations** `convexComboDensity w hsum hnonneg ρ` over any `Fintype ι` (weights in `ℝ`,
+  PSD sums via `DensityMat.posSemidef_sum`, same pattern as `KrausChannel.posSemidef_sum` in
+  `MeasurementChannel.lean`).
 
-**Not yet:** general finite mixtures `∑ tᵢ ρᵢ`, or a dedicated bridge import from `DoubleSlitCore`.
+**Not yet:** a dedicated bridge import from `DoubleSlitCore`.
 **Composite / partial trace:** see **`TensorPartialTrace.lean`** (`tensorDensity`, `partialTraceRightProd`).
 -/
 
@@ -62,6 +68,15 @@ theorem trace_eq_one (ρ : DensityMatCore hn) : Matrix.trace ρ.carrier = 1 :=
 
 theorem isHermitian (ρ : DensityMatCore hn) : ρ.carrier.IsHermitian :=
   ρ.psd.isHermitian
+
+theorem diag_star_eq_n (ρ : DensityMatCore hn) (i : Fin n) :
+    star (ρ.carrier i i) = ρ.carrier i i :=
+  (isHermitian ρ).apply i i
+
+theorem diag_im_zero_n (ρ : DensityMatCore hn) (i : Fin n) : (ρ.carrier i i).im = 0 := by
+  rw [← Complex.conj_eq_iff_im]
+  rw [← Complex.star_def]
+  exact diag_star_eq_n ρ i
 
 theorem diag_nonneg_complex_n (ρ : DensityMatCore hn) (i : Fin n) :
     (0 : ℂ) ≤ ρ.carrier i i := by
@@ -146,6 +161,44 @@ theorem smul_psd {M : Matrix (Fin n) (Fin n) ℂ} (hM : M.PosSemidef) (r : ℝ) 
     rw [step1]
     exact mul_nonneg (Complex.zero_le_real.mpr hr) h1
 
+variable {ι : Type*} [Fintype ι]
+
+/-- Finite sum of PSD matrices is PSD (induction; matches `KrausChannel.posSemidef_finset_sum`). -/
+theorem posSemidef_finset_sum (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n) ℂ)
+    (hf : ∀ i ∈ s, (f i).PosSemidef) : (∑ i ∈ s, f i).PosSemidef := by
+  classical
+  revert hf
+  refine Finset.induction_on s ?_ ?_
+  · simp [Matrix.PosSemidef.zero]
+  · intro a t ha ih hf'
+    have hfa : (f a).PosSemidef := hf' a (Finset.mem_insert_self _ _)
+    have iht : ∀ i ∈ t, (f i).PosSemidef := fun i hi => hf' _ (Finset.mem_insert_of_mem hi)
+    simp only [Finset.sum_insert ha]
+    exact Matrix.PosSemidef.add hfa (ih iht)
+
+theorem posSemidef_sum (f : ι → Matrix (Fin n) (Fin n) ℂ) (hf : ∀ i, (f i).PosSemidef) :
+    (∑ i, f i).PosSemidef :=
+  posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
+
+/-- Convex combination `∑ᵢ wᵢ ρᵢ` with `wᵢ ≥ 0` and `∑ᵢ wᵢ = 1`. -/
+noncomputable def convexComboDensity {ι : Type*} [Fintype ι] [DecidableEq ι] (w : ι → ℝ)
+    (hsum : ∑ i, w i = 1) (hnonneg : ∀ i, 0 ≤ w i) (ρ : ι → DensityMatCore hn) : DensityMatCore hn where
+  carrier := ∑ i, (w i : ℂ) • (ρ i).carrier
+  psd := posSemidef_sum _ fun i => smul_psd (ρ i).psd (w i) (hnonneg i)
+  trace_one := by
+    classical
+    calc
+      Matrix.trace (∑ i, (w i : ℂ) • (ρ i).carrier)
+          = ∑ i, Matrix.trace ((w i : ℂ) • (ρ i).carrier) := by
+            simp [Matrix.trace_sum]
+      _ = ∑ i, (w i : ℂ) := by
+            refine Finset.sum_congr rfl fun i _ => ?_
+            rw [Matrix.trace_smul, trace_eq_one (ρ i)]
+            simp
+      _ = 1 := by
+            rw [(Complex.ofReal_sum (s := Finset.univ) w).symm, hsum]
+            simp
+
 /-- Convex combination of two density matrices: `t ρ₁ + (1 - t) ρ₂` for `0 ≤ t ≤ 1`. -/
 noncomputable def mixedDensity (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ) (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
     DensityMatCore hn where
@@ -159,6 +212,23 @@ noncomputable def mixedDensity (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ) (ht0 
     simp only [Matrix.trace_smul, Matrix.trace_add]
     rw [trace_eq_one ρ₁, trace_eq_one ρ₂]
     simp [mul_one]
+
+/-- `mixedDensity` is the `Bool`-indexed convex combination with weights `t` and `1 - t`. -/
+theorem mixedDensity_eq_convexCombo_two (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ) (ht0 : 0 ≤ t)
+    (ht1 : t ≤ 1) :
+    mixedDensity ρ₁ ρ₂ t ht0 ht1 =
+      convexComboDensity
+        (w := fun b : Bool => bif b then t else 1 - t)
+        (by
+          classical
+          simp [Fintype.sum_bool]
+          ring)
+        (fun b => by cases b <;> simp [ht0, sub_nonneg.mpr ht1])
+        (fun b => bif b then ρ₁ else ρ₂) := by
+  refine ext ?_
+  simp only [mixedDensity, convexComboDensity]
+  rw [Fintype.univ_bool]
+  simp [Finset.sum_insert, Finset.sum_singleton]
 
 end DensityMat
 

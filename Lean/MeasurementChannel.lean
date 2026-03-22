@@ -83,6 +83,7 @@ theorem PosSemidef.add {A B : Matrix (Fin n) (Fin n) ℂ} (hA : A.PosSemidef) (h
 theorem posSemidef_finset_sum (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n) ℂ)
     (hf : ∀ i ∈ s, (f i).PosSemidef) : (∑ i ∈ s, f i).PosSemidef := by
   classical
+  revert hf
   refine Finset.induction_on s ?_ ?_
   · simp [PosSemidef.zero]
   · intro a t ha ih hf'
@@ -92,8 +93,8 @@ theorem posSemidef_finset_sum (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n)
     exact PosSemidef.add hfa (ih iht)
 
 theorem posSemidef_sum (f : ι → Matrix (Fin n) (Fin n) ℂ) (hf : ∀ i, (f i).PosSemidef) :
-    (∑ i, f i).PosSemidef := by
-  simpa [Fintype.sum_eq_sum_univ] using posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
+    (∑ i, f i).PosSemidef :=
+  posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
 
 theorem map_posSemidef (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : ρ.PosSemidef) :
     (κ.map ρ).PosSemidef := by
