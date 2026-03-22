@@ -20,7 +20,7 @@ partial trace.
 - `quantumMutualInfo` — definition via partial traces and `vonNeumannEntropy`
 - `quantumConditionalEntropy` — `S(A|B) = S(ρ_AB) - S(ρ_B)`
 - `quantumMutualInfo_eq_entropy_minus_conditional` — `I(A:B) = S(ρ_A) - S(A|B)` (pure algebra)
-- `quantumMutualInfo_le` — `I(A:B) ≤ log na + log nb` (upper bound)
+- `quantumMutualInfo_le_log_na_add_log_nb` — `I(A:B) ≤ log na + log nb` (upper bound)
 - `vonNeumannEntropy_tensorDensity` — `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)` (axiom; Kronecker
   eigenvalue factorization not available in Mathlib)
 - `quantumMutualInfo_product_eq_zero` — product states have zero mutual information
@@ -57,7 +57,7 @@ theorem quantumMutualInfo_eq_entropy_minus_conditional
 /-- **Upper bound**: `I(A:B) ≤ log na + log nb`.
 
 Uses `vonNeumannEntropy_le_log_n` on both marginals and `vonNeumannEntropy_nonneg` on the joint. -/
-theorem quantumMutualInfo_le
+theorem quantumMutualInfo_le_log_na_add_log_nb
     (ρAB : DensityMatrix (Nat.mul_pos ha hb)) :
     quantumMutualInfo ha hb ρAB ≤ Real.log na + Real.log nb := by
   unfold quantumMutualInfo
@@ -65,6 +65,8 @@ theorem quantumMutualInfo_le
   have hB := vonNeumannEntropy_le_log_n (partialTraceLeftProd_toDensityMatrix ha hb ρAB)
   have hAB := vonNeumannEntropy_nonneg ρAB
   linarith
+
+@[deprecated (since := "2026-03-22")] alias quantumMutualInfo_le := quantumMutualInfo_le_log_na_add_log_nb
 
 /-- **Axiom**: Kronecker eigenvalue factorization.
 

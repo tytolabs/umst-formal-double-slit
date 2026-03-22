@@ -36,6 +36,7 @@ where `λᵢ` are the eigenvalues of ρ.  Since ρ is PSD with trace 1, all `λ�
 - `vonNeumannEntropy_unitarily_invariant_two`: **proved** `S(UρU⋆) = S(ρ)` for `Fin 2`
 - `vonNeumannEntropy_le_log_n`: `S(ρ) ≤ log n`  (maximum entropy, uniform mixture)
 - `trace_eq_sum_eigenvalues_hermitian`: `trace A = ∑ eigenvalues` for Hermitian A
+- `trace_sq_eq_sum_eigenvalues_sq`, `density_trace_sq_re_le_one`: `Tr(ρ²) ≤ 1` for density matrices
 - `density_eigenvalues_sum_eq_one_real`: eigenvalues of a density matrix sum to 1 (ℝ)
 - `density_eigenvalues_le_one`: each eigenvalue ≤ 1
 
@@ -111,6 +112,75 @@ theorem density_eigenvalues_le_one (ρ : DensityMatrix hn) (i : Fin n) :
     rw [Finset.add_sum_erase _ _ (Finset.mem_univ i)]
     exact hsum
   linarith
+
+/-! ### Trace of ρ² via the spectrum -/
+
+/-- For Hermitian `A`, `Tr(A²)` equals `∑ᵢ λᵢ²` (as a complex scalar, each term is real). -/
+theorem trace_sq_eq_sum_eigenvalues_sq {A : Matrix (Fin n) (Fin n) ℂ}
+    (hA : A.IsHermitian) :
+    Matrix.trace (A * A) = ∑ i : Fin n, (hA.eigenvalues i : ℂ) ^ 2 := by
+  classical
+  conv_lhs => rw [hA.spectral_theorem]
+  set U : Matrix (Fin n) (Fin n) ℂ := hA.eigenvectorUnitary
+  set D : Matrix (Fin n) (Fin n) ℂ := diagonal (RCLike.ofReal ∘ hA.eigenvalues)
+  have hUs : star U * U = 1 := (Matrix.mem_unitaryGroup_iff'.mp hA.eigenvectorUnitary.2)
+  have hUu : U * star U = 1 := (Matrix.mem_unitaryGroup_iff.mp hA.eigenvectorUnitary.2)
+  have hsq : (U * D * star U) * (U * D * star U) = U * (D * D) * star U := by
+    simp_rw [← Matrix.mul_assoc]
+    calc
+      U * D * star U * (U * D * star U) = U * D * (star U * U) * D * star U := by
+        simp_rw [Matrix.mul_assoc]
+      _ = U * D * D * star U := by rw [hUs]; simp_rw [Matrix.mul_one, Matrix.mul_assoc]
+      _ = U * (D * D) * star U := by simp_rw [Matrix.mul_assoc]
+  rw [hsq]
+  calc Matrix.trace (U * (D * D) * star U)
+      = Matrix.trace (star U * (U * (D * D))) := by rw [Matrix.trace_mul_comm]
+    _ = Matrix.trace ((star U * U) * (D * D)) := by rw [Matrix.mul_assoc]
+    _ = Matrix.trace (D * D) := by rw [hUs, Matrix.one_mul]
+    _ = ∑ i : Fin n, (D * D) i i := by rw [Matrix.trace, Matrix.diag_apply]
+    _ = ∑ i : Fin n, (hA.eigenvalues i : ℂ) ^ 2 := by
+        refine Finset.sum_congr rfl fun i _ => ?_
+        rw [Matrix.diagonal_mul_diagonal, Matrix.diagonal_apply_eq, Pi.mul_apply, Function.comp_apply,
+          ← RCLike.ofReal_mul, mul_pow, RCLike.ofReal_pow, pow_two]
+
+/-- `Tr(ρ²)` (real part) is at most `1`: eigenvalues form a probability vector, so `∑ λᵢ² ≤ (∑ λᵢ)²`. -/
+theorem density_trace_sq_re_le_one (ρ : DensityMatrix hn) :
+    (Matrix.trace (ρ.carrier * ρ.carrier)).re ≤ 1 := by
+  classical
+  have hA := ρ.isHermitian
+  rw [trace_sq_eq_sum_eigenvalues_sq hA]
+  have hre : (∑ i : Fin n, (hA.eigenvalues i : ℂ) ^ 2).re =
+      ∑ i : Fin n, ((hA.eigenvalues i : ℂ) ^ 2).re := map_sum Complex.re ..
+  rw [hre]
+  have hterm (i : Fin n) : ((hA.eigenvalues i : ℂ) ^ 2).re = (hA.eigenvalues i) ^ 2 := by
+    simp [pow_two, Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, mul_zero, sub_zero]
+  simp_rw [hterm]
+  have hsum : ∑ i : Fin n, hA.eigenvalues i = 1 := density_eigenvalues_sum_eq_one_real ρ
+  have hnn : ∀ i : Fin n, 0 ≤ hA.eigenvalues i := fun i => density_eigenvalues_nonneg ρ i
+  -- `(∑ λ)² = ∑ λ² + 2 ∑_{i<j} λᵢλⱼ` with each cross-term ≥ 0
+  have hcross : 0 ≤ ∑ i : Fin n, ∑ j in Finset.univ.erase i, hA.eigenvalues i * hA.eigenvalues j := by
+    refine Finset.sum_nonneg fun i _ => Finset.sum_nonneg fun j hj => ?_
+    exact mul_nonneg (hnn i) (hnn j)
+  have hexp : (∑ i : Fin n, hA.eigenvalues i) ^ 2 =
+      ∑ i : Fin n, (hA.eigenvalues i) ^ 2 +
+        ∑ i : Fin n, ∑ j in Finset.univ.erase i, hA.eigenvalues i * hA.eigenvalues j := by
+    rw [sq, Finset.sum_mul_sum]
+    rw [← Finset.sum_product']
+    symm
+    calc
+      ∑ x ∈ (Finset.univ : Finset (Fin n)) ×ˢ Finset.univ,
+          hA.eigenvalues x.1 * hA.eigenvalues x.2
+          = ∑ i : Fin n, ∑ j : Fin n, hA.eigenvalues i * hA.eigenvalues j := by
+            simp [Finset.sum_product]
+      _ = ∑ i : Fin n, (hA.eigenvalues i ^ 2 +
+            ∑ j in Finset.univ.erase i, hA.eigenvalues i * hA.eigenvalues j) := by
+            refine Finset.sum_congr rfl fun i _ => ?_
+            rw [← Finset.add_sum_erase _ _ (Finset.mem_univ i), Finset.sum_singleton, sq]
+      _ = _ := by rw [Finset.sum_add_distrib]
+  have hle : ∑ i : Fin n, (hA.eigenvalues i) ^ 2 ≤ (∑ i : Fin n, hA.eigenvalues i) ^ 2 := by
+    linarith [hexp, hcross]
+  rw [hsum] at hle
+  simpa using hle
 
 /-! ### Von Neumann entropy -/
 
@@ -417,6 +487,32 @@ theorem vonNeumannEntropy_unitarily_invariant
   simpa using this
 
 /-! ### Qubit specialization -/
+
+/-- On a qubit, `det ρ = 0` forces rank `1`, so the spectrum is `{0, 1}` and `S(ρ) = 0`. -/
+theorem vonNeumannEntropy_qubit_det_eq_zero (ρ : DensityMatrix (show 0 < 2 by norm_num))
+    (hdet : ρ.carrier.det = 0) :
+    vonNeumannEntropy ρ = 0 := by
+  dsimp [vonNeumannEntropy]
+  let a0 := ρ.isHermitian.eigenvalues 0
+  let a1 := ρ.isHermitian.eigenvalues 1
+  have hsum : a0 + a1 = 1 := by
+    simpa [a0, a1, Fin.sum_univ_succ, Fin.sum_univ_succ, Fin.sum_univ_zero] using
+      density_eigenvalues_sum_eq_one_real ρ
+  have hprod : a0 * a1 = 0 := by
+    have e := ρ.isHermitian.det_eq_prod_eigenvalues
+    rw [Fin.prod_univ_two, a0, a1] at e
+    simpa [hdet] using e
+  have ha0 : a0 = 0 ∨ a1 = 0 := by
+    rcases (mul_eq_zero.mp hprod) with h | h
+    · left; exact h
+    · right; exact h
+  cases ha0 with
+  | inl ha0 =>
+    have ha1 : a1 = 1 := by linarith only [hsum, ha0]
+    simp [a0, a1, ha0, ha1, negMulLog_zero, negMulLog_one, add_zero]
+  | inr ha1 =>
+    have ha0' : a0 = 1 := by linarith only [hsum, ha1]
+    simp [a0, a1, ha0', ha1, negMulLog_zero, negMulLog_one, zero_add]
 
 /-- On a qubit, the von Neumann entropy of a pure state is 0.
 

@@ -5,6 +5,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 import DensityState
 import LandauerBound
+import VonNeumannEntropy
 
 /-!
 # GeneralResidualCoherence — purity-based Residual Coherence Capacity for `Fin n`
@@ -127,40 +128,10 @@ theorem offDiagonalPurity_nonneg (ρ : DensityMatrix hn) : 0 ≤ offDiagonalPuri
 
 /-! ### `Tr(ρ²) ≤ 1` -/
 
-/-- For a density matrix, `Tr(ρ²) ≤ Tr(ρ) = 1`.
-Proof: eigenvalues `λᵢ ∈ [0,1]` with `∑ λᵢ = 1`, so `∑ λᵢ² ≤ ∑ λᵢ = 1`. -/
+/-- For a density matrix, `Tr(ρ²) ≤ 1` (spectral proof: `VonNeumannEntropy.density_trace_sq_re_le_one`). -/
 theorem trace_sq_le_one (ρ : DensityMatrix hn) :
-    (trace (ρ.carrier * ρ.carrier)).re ≤ 1 := by
-  rw [trace_sq_eq_sum_normSq ρ]
-  calc ∑ i : Fin n, ∑ j : Fin n, Complex.normSq (ρ.carrier i j)
-      = diagonalPurity ρ + offDiagonalPurity ρ := by
-        rw [offDiagonalPurity_eq_sum_offdiag]
-        simp_rw [normSq_diag_eq_re_sq ρ]
-        have key : ∀ i : Fin n,
-            (∑ j : Fin n, Complex.normSq (ρ.carrier i j)) =
-              (ρ.carrier i i).re ^ 2 + ∑ j in Finset.univ.erase i, Complex.normSq (ρ.carrier i j) := by
-          intro i
-          rw [← Finset.add_sum_erase _ _ (Finset.mem_univ i)]
-          congr 1
-          exact (normSq_diag_eq_re_sq ρ i).symm
-        simp_rw [key]
-        rw [Finset.sum_add_distrib]
-    _ ≤ 1 + offDiagonalPurity ρ := by linarith [diagonalPurity_le_one ρ]
-    _ = 1 + ((trace (ρ.carrier * ρ.carrier)).re - diagonalPurity ρ) := rfl
-    _ = (trace (ρ.carrier * ρ.carrier)).re + (1 - diagonalPurity ρ) := by ring
-  -- We need: ∑∑ normSq ≤ 1
-  -- We have: ∑∑ normSq = ∑∑ normSq + (1 - diagPurity) - (1 - diagPurity)
-  -- Actually let's use a direct approach via eigenvalues.
-  -- For now, use the purity decomposition differently.
-  sorry
-
--- Let's prove trace_sq_le_one via a direct diagonal+offdiag argument instead
--- We know offDiagonalPurity = Tr(ρ²) - diagPurity, so Tr(ρ²) = diagPurity + offDiagPurity
--- We need Tr(ρ²) ≤ 1. This requires showing the total purity ≤ 1.
--- The cleanest path: use that ρ is PSD with trace 1, so eigenvalues are a probability distribution,
--- and ∑ λᵢ² ≤ (∑ λᵢ)² = 1 (by Cauchy-Schwarz / convexity of x²).
--- In Lean/Mathlib, we can use the fact that for PSD ρ, Tr(ρ²) = ‖ρ‖_F² and use norm bounds.
--- Alternatively, prove it from the matrix entries directly.
+    (trace (ρ.carrier * ρ.carrier)).re ≤ 1 :=
+  density_trace_sq_re_le_one ρ
 
 /-! ### RCC properties -/
 
