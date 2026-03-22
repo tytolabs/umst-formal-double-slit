@@ -92,7 +92,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Lean 4 | 53 `lakefile` roots; **515** `theorem` + **33** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **6 axiom** (3 quantum-info/physical + 3 analysis/topology) |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
-| Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **2** `Admitted` (binary Shannon bound + diagonal corner step) plus **axioms** for pure / maximally-mixed spectral entropy (see file) |
+| Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **no** `Admitted`; real-analysis facts are **axioms** (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) plus spectral **axioms** (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
 Last updated: 2026-03-22 — `make lean-stats-md`: 58 files, **515** `theorem`, **33** `lemma`, **6** `axiom`, sum **781**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`; General-n RCC fully proved in `GeneralResidualCoherence.lean`; QMI defined in `QuantumMutualInfo.lean`. Formal tracks: **`make formal-check`**.

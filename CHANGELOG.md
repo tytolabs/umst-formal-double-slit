@@ -34,7 +34,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 - **`Coq/DensityStateSpec.v`** — 2×2 density matrix record + PSD constraints; **proved**: `p0_le_one`, `p1_le_one`, `coherence_bounded`, `p0_p1_le_quarter`.
 - **`Coq/ComplementaritySpec.v`** — Englert complementarity **V²+D²≤1** fully **proved** (real algebra / `lra`, no `nlra` dependency).
-- **`Coq/VonNeumannEntropySpec.v`** — `negMulLog` and core lemmas **proved**; **`shannon_binary_le_ln2`** and **`vonNeumannDiagonal_zero_iff_diagonal_pure`** left as **`Admitted`**; spectral entropy partly **axiomatised** (see file).
+- **`Coq/VonNeumannEntropySpec.v`** — `negMulLog` and core lemmas **proved**; **`shannon_binary_le_ln2`** and **`negMulLog_zero_interval`** as **axioms** (replacing `Admitted`); **`vonNeumannDiagonal_zero_iff_diagonal_pure`** **proved**; spectral entropy partly **axiomatised** (see file).
 - **`Agda/DensityStateSpec.agda`** — density matrix spec over ℚ; properties postulated (authority: Lean).
 - **`Agda/ComplementaritySpec.agda`** — Englert relation postulated.
 - **`Agda/VonNeumannEntropySpec.agda`** — Von Neumann entropy + DPI specs postulated.

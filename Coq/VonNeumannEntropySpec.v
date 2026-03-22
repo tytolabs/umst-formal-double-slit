@@ -14,9 +14,13 @@
 (*                                                                      *)
 (*  Proved (from DensityMatrix2 constraints):                          *)
 (*    - shannon_binary_nonneg                                          *)
-(*    - shannon_binary_le_ln2                                          *)
 (*    - vonNeumannDiagonal_nonneg                                      *)
-(*    - vonNeumannDiagonal_le_ln2                                      *)
+(*    - vonNeumannDiagonal_le_ln2 (uses axiom [shannon_binary_le_ln2]) *)
+(*    - vonNeumannDiagonal_zero_iff_diagonal_pure (uses axiom below)   *)
+(*                                                                      *)
+(*  Axiomatised (real analysis; Coq stdlib without convexity calculus):  *)
+(*    - shannon_binary_le_ln2 (concavity of -x ln x on [0,1])          *)
+(*    - negMulLog_zero_interval (zeros of -x ln x on [0,1])            *)
 (*                                                                      *)
 (*  Axiomatised (require spectral decomposition / eigenvalues):        *)
 (*    - vonNeumannEntropy (spectral S(rho))                            *)
@@ -84,6 +88,11 @@ Proof.
   - exfalso; lra.
 Qed.
 
+(** On [0,1], if [negMulLog x = 0] then [x = 0] or [x = 1] (convention [0 ln 0 = 0]).
+    Equivalent to characterising zeros of [-x ln x]; axiomatised here. *)
+Axiom negMulLog_zero_interval :
+  forall x : R, 0 <= x -> x <= 1 -> negMulLog x = 0 -> x = 0 \/ x = 1.
+
 (* ------------------------------------------------------------------ *)
 (*  Binary Shannon entropy                                              *)
 (* ------------------------------------------------------------------ *)
@@ -103,16 +112,11 @@ Proof.
   lra.
 Qed.
 
-(** Binary Shannon entropy is at most ln 2 (maximum at p = 1/2). *)
-Lemma shannon_binary_le_ln2 (p : R) (hp0 : 0 <= p) (hp1 : p <= 1) :
+(** Binary Shannon entropy is at most ln 2 (maximum at p = 1/2).
+    Proof sketch: concavity of [negMulLog] on [0,1] gives
+    [H(p)=f(p)+f(1-p) <= 2 f(1/2) = ln 2].  Axiomatised (stdlib). *)
+Axiom shannon_binary_le_ln2 : forall (p : R) (hp0 : 0 <= p) (hp1 : p <= 1),
   shannon_binary p <= ln 2.
-Proof.
-  (* This follows from the concavity of negMulLog:
-     H(p) = f(p) + f(1-p) <= 2 f(1/2) = 2 * (1/2) * ln 2 = ln 2.
-     A full proof requires the concavity of -x ln x, which is
-     non-trivial in Coq stdlib.  We axiomatize this bound. *)
-  (* For a spec file, we accept this as an axiom-backed lemma. *)
-Admitted.
 
 (* ------------------------------------------------------------------ *)
 (*  Diagonal von Neumann entropy                                        *)
@@ -232,8 +236,6 @@ Proof.
   assert (H2 : 0 <= negMulLog (1 - p0 rho)).
   { apply negMulLog_nonneg; [| ]; pose proof (p0_nonneg rho); pose proof (p0_le_one rho); lra. }
   assert (Hf1 : negMulLog (p0 rho) = 0) by lra.
-  assert (Hf2 : negMulLog (1 - p0 rho) = 0) by lra.
-  (* negMulLog(x) = 0 on [0,1] iff x = 0 or x = 1.
-     This requires analysis of -x ln x = 0, which needs ln properties.
-     We admit this final step. *)
-Admitted.
+  apply (negMulLog_zero_interval (p0 rho));
+    [ exact (p0_nonneg rho) | exact (p0_le_one rho) | exact Hf1 ].
+Qed.

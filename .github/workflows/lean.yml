@@ -53,11 +53,18 @@ jobs:
       - name: lean4checker
         working-directory: ${{ github.workspace }}
         run: |
-          set -e
-          git clone --depth 1 https://github.com/leanprover/lean4checker ../lean4checker
-          cd ../lean4checker && lake build
+          set -euo pipefail
+          # lake env cannot spawn external tools given a *relative* path (exit 255 on Ubuntu);
+          # resolve lean4checker to an absolute path before invoking.
+          LEAN4CHECKER_ROOT="${GITHUB_WORKSPACE}/../lean4checker"
+          git clone --depth 1 https://github.com/leanprover/lean4checker "${LEAN4CHECKER_ROOT}"
+          (cd "${LEAN4CHECKER_ROOT}" && lake build)
+          CHECKER="$(realpath "${LEAN4CHECKER_ROOT}/.lake/build/bin/lean4checker")"
+          test -x "${CHECKER}"
           cd "${GITHUB_WORKSPACE}/Lean"
-          lake env ../lean4checker/.lake/build/bin/lean4checker
+          # Default target (empty args) uses manifest package name «umst-formal-double-slit», which does
+          # not prefix any project oleans; pass the lean_lib root so all UMST.DoubleSlit.* modules match.
+          lake env "${CHECKER}" UMST.DoubleSlit
 
       - name: Install Optional Sim Dependencies
         working-directory: ${{ github.workspace }}

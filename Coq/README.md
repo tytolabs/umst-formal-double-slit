@@ -46,4 +46,4 @@ The repo’s canonical developer entry point remains **`make coq-check`** from t
 
 ## Proof status
 
-`VonNeumannEntropySpec.v` intentionally contains **`Admitted`** placeholders (binary Shannon bound and a diagonal-entropy corner case); everything else in the tree above is intended to compile without admits. See **`PROOF-STATUS.md`**.
+`VonNeumannEntropySpec.v` uses explicit **`Axiom`**s for two real-analysis facts (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) and spectral entropy; there are **no** `Admitted` obligations. See **`PROOF-STATUS.md`**.

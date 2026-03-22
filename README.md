@@ -258,7 +258,7 @@ umst-formal-double-slit/
 │   └── lean_decl_stats.py                 heuristic theorem/lemma/axiom counts
 │
 ├── Haskell/                       ← 8 modules · 14 QuickCheck properties
-├── Coq/                           ← 9 .v modules (make coq-check; 2 Admitted in VonNeumannEntropySpec.v)
+├── Coq/                           ← 9 .v modules (make coq-check; axioms in VonNeumannEntropySpec.v, no Admitted)
 ├── Agda/                          ← 11 entry modules (make agda-check; clean typecheck)
 ├── Docs/                          ← Mathematical-Foundations.md, ASSUMPTIONS, PROVENANCE, Preprint/
 ├── PROOF-STATUS.md                ← canonical declaration counts + axiom inventory
@@ -371,7 +371,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 | **Lean 4** | 53 modules, 515 thm + 33 lem (heuristic) | **0** sorry, **6** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
-| **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **2** `Admitted` + axioms in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
+| **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
 | **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
 
 ---
