@@ -16,8 +16,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 **Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**5** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit — `Lean/VERIFY.md`)&ensp;·&ensp;**467** theorems + **48** lemmas (heuristic scan — `PROOF-STATUS.md`)**
 
-_Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference —_
-_and the thermodynamic cost is non-negotiable. The proofs don't care who is looking._
+_Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference._
+_The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 <br>
 
@@ -50,13 +50,13 @@ _and the thermodynamic cost is non-negotiable. The proofs don't care who is look
 
 ### In plain language
 
-Extracting which-path information from a quantum system destroys interference. This is not binary. Extract 0.3 bits: visibility drops to ≈ 0.95. Extract 0.7 bits: visibility drops to ≈ 0.71. Extract the full bit: the pattern is gone. The relationship is the Englert curve, V² + I² ≤ 1, and every point on it is physically realizable.
+Extracting which-path information from a quantum system destroys interference. The destruction is proportional, not binary. Extract 0.3 bits of path information and visibility drops to ≈ 0.95. Extract 0.7 bits and it drops to ≈ 0.71. Extract the full bit and the interference pattern is gone entirely. This is the Englert complementarity relation, V² + I² ≤ 1. Every point on the curve is physically realizable.
 
-Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, non-recoverable. This is not interpretation. It is accounting. The second law enforces it.
+Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **467 theorems. 0 `sorry`. 5 axioms** (where Mathlib does not yet supply the lemma — each is stated explicitly in `Lean/VERIFY.md`).
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **467 theorems. 0 `sorry`. 5 explicit axioms** (each stated in `Lean/VERIFY.md` — they mark where Mathlib's coverage ends, not where rigour does).
 
-**Why this matters beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same constraint. The cost of knowing is not a metaphor. It is a proved inequality. This repository is the proof.
+**Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
 
 ---
 
@@ -291,20 +291,18 @@ python3 scripts/generate_spectacular_gif.py   # → Docs/double-slit-collapse.gi
 
 ## Claim Taxonomy
 
-_"I would not say 'friends'. I would not say 'enemies'. I would say — things the compiler has settled."_
+**Machine-checked (formally verified):**
+- Englert complementarity: V² + I² ≤ 1 ✓
+- Landauer bound for diagonal path entropy ✓
+- Kraus measurement channels: projector properties, TP, which-path collapse ✓
+- Full erasure ≥ Landauer cost ✓
+- Principle of Maximal Information Collapse: continuous cost–coherence identity ✓
 
-**What the machine has proved** — these are not claims, they are verdicts:
-- Englert complementarity: $V² + I² ≤ 1$ — the universe's budget constraint ✓
-- Landauer bound for **diagonal path entropy** — the minimum rent for knowing ✓
-- Kraus measurement channels — the mechanics of looking ✓
-- Full erasure ≥ Landauer cost — the house cannot be cheated ✓
-- Principle of Maximal Information Collapse — the dimmer switch, formally ✓
+Measurement is irreversible. The compiler confirms it. The second law confirmed it first.
 
-Measurement is irreversible. The compiler agrees. The universe agreed first.
-
-**What remains outside the fence** (explicitly scoped out):
-- Full quantum derivation from Schrödinger dynamics (partial spatial sims in `sim/` — the hosts are still learning)
-- Empirical laboratory verification (the real world has not yet been asked to sign off — but the math is patient)
+**Explicitly outside scope:**
+- Full quantum derivation from Schrödinger dynamics (partial spatial coverage in `sim/`)
+- Empirical laboratory verification (the formal chain is complete; experimental confirmation is separate work)
 
 ---
 
@@ -368,13 +366,11 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 
 ## Acknowledgments
 
-_"One can't play God without being acquainted with the devil."_
-
 Portions of this work were developed with assistance from large-language-model tools
 (**Claude** by Anthropic, **Gemini** by Google, **Grok** by xAI) and the **Cursor** code editor.
-The machines helped explore. The machines helped draft. But the machines did not prove.
-All formal proofs were checked by their respective compilers — Lean 4, Coq/Rocq, Agda —
-which, unlike the rest of us, cannot be persuaded by eloquence.
+LLMs contributed to exploration, drafting, and code scaffolding — not to proof validity.
+All formal proofs were machine-checked by their respective compilers (Lean 4, Coq/Rocq, Agda),
+which accept well-typed terms, not persuasive arguments.
 
 ---
 
