@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,37 +956,21 @@ n/10.95 (-20) 2 \OMS/zplm/m/n/10.95 ^^B \OT1/zplm/m/n/10.95 ([])$\T1/ppl/m/n/10
 .95 (-20) ---
  []
 
-[5] [6]
-Underfull \hbox (badness 1303) in paragraph at lines 400--401
-[]\T1/ppl/m/n/10 (+20) S. Shyam-sun-dar and S.P. Shen-bag-amoor-thy, ``To-wards
- Uni-fied Material-State Ten-sors for
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 402--403
-[]\T1/ppl/m/n/10 (+20) S.P. Shen-bag-amoor-thy and S. Shyam-sun-dar, ``Epis-tem
-ic Sens-ing Ar-chi-tec-ture for Physics-
- []
-
-[7] (./UMST_DoubleSlit_Formal_Verification.aux)
+[5] [6] [7] (./UMST_DoubleSlit_Formal_Verification.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `UMST_DoubleSlit_Formal_Verification.out' has
  not changed.
 (rerunfilecheck)             Checksum: EB7D35C091D4E69DDAD5B4A9AAA8BD29;3084.
  ) 
 Here is how much of TeX's memory you used:
- 25312 strings out of 469006
- 461614 string characters out of 5454813
- 881659 words of memory out of 5000000
+ 25337 strings out of 469006
+ 461870 string characters out of 5454813
+ 882436 words of memory out of 5000000
  53045 multiletter control sequences out of 15000+600000
- 716989 words of font info for 464 fonts, out of 8000000 for 9000
+ 718200 words of font info for 480 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  102i,12n,107p,1224b,832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
@@ -1006,11 +990,11 @@ exmf/fonts/type1/urw/palatino/uplb8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplbi8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplr8a.pfb></Users/santhoshshyamsundar/Library/tex
 mf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 580188 byte
+Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 579262 byte
 s).
 PDF statistics:
  257 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams
  57 named destinations out of 1000 (max. 500000)
- 126098 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 128146 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -10,7 +10,6 @@ import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.Tactic.FinCases
 import MeasurementChannel
 import LandauerBound
-import ExamplesQubit
 
 /-!
 # ErasureChannel — concrete "reset to |0⟩" erasure channel
@@ -86,8 +85,6 @@ theorem resetChannel_tp :
 
 section Output
 
-open UMST.Quantum.Examples
-
 variable (ρ : Matrix (Fin 2) (Fin 2) ℂ)
 
 /-- The reset channel always outputs |0⟩⟨0| (the (0,0) entry of the output is `trace ρ`,
@@ -100,21 +97,45 @@ theorem resetChannel_map_entry (a b : Fin 2) :
     simp [resetK0, resetK1, Matrix.mul_apply, Matrix.of_apply, conjTranspose_apply,
       Fin.sum_univ_two, star]
 
-/-- The reset channel maps any density matrix to `rhoZero.carrier` (i.e. `|0⟩⟨0|`). -/
+/-- The |0⟩ pure state carrier matrix `|0⟩⟨0|`. -/
+noncomputable def rhoZeroCarrier : Matrix (Fin 2) (Fin 2) ℂ :=
+  Matrix.of !![1, 0; 0, 0]
+
+/-- The reset channel maps any density matrix to `|0⟩⟨0|`. -/
 theorem resetChannel_output_eq_rhoZero_carrier (ρ_dm : DensityMatrix hnQubit) :
-    resetChannel.map ρ_dm.carrier = rhoZero.carrier := by
+    resetChannel.map ρ_dm.carrier = rhoZeroCarrier := by
   ext a b
   rw [resetChannel_map_entry]
   have htrace := ρ_dm.trace_one
   unfold Matrix.trace at htrace
   simp only [Fin.sum_univ_two, Matrix.diag_apply] at htrace
   fin_cases a <;> fin_cases b <;>
-    simp [rhoZero, pureDensity_carrier, pureCarrier, Matrix.mul_apply, col_apply, row_apply,
-      psiZero, Fintype.sum_unique, Fin.ext_iff, htrace, Pi.star_apply, Complex.star_def]
+    simp [rhoZeroCarrier, Matrix.of_apply, htrace]
 
-/-- The reset channel maps any density matrix to `rhoZero`. -/
+/-- `rhoZeroCarrier` is positive semidefinite. -/
+theorem rhoZeroCarrier_posSemidef : rhoZeroCarrier.PosSemidef := by
+  have : rhoZeroCarrier = pureCarrier (fun i : Fin 2 => ite (i = 0) (1 : ℂ) 0) := by
+    ext a b
+    fin_cases a <;> fin_cases b <;>
+      simp [rhoZeroCarrier, pureCarrier, Matrix.mul_apply, col_apply, row_apply,
+        Fintype.sum_unique, Matrix.of_apply, Pi.star_apply, Complex.star_def]
+  rw [this]
+  exact pureCarrier_posSemidef _
+
+/-- `rhoZeroCarrier` has trace 1. -/
+theorem rhoZeroCarrier_trace_one : Matrix.trace rhoZeroCarrier = 1 := by
+  unfold rhoZeroCarrier Matrix.trace
+  simp [Fin.sum_univ_two, Matrix.diag_apply, Matrix.of_apply]
+
+/-- The |0⟩ pure state as a `DensityMatrix`. -/
+noncomputable def resetOutputState : DensityMatrix hnQubit where
+  carrier := rhoZeroCarrier
+  psd := rhoZeroCarrier_posSemidef
+  trace_one := rhoZeroCarrier_trace_one
+
+/-- The reset channel maps any density matrix to `resetOutputState` (i.e. `|0⟩⟨0|`). -/
 theorem resetChannel_output_eq_rhoZero (ρ_dm : DensityMatrix hnQubit) :
-    resetChannel.apply hnQubit ρ_dm = rhoZero := by
+    resetChannel.apply hnQubit ρ_dm = resetOutputState := by
   apply DensityMat.ext
   simp only [KrausChannel.apply]
   exact resetChannel_output_eq_rhoZero_carrier ρ_dm
@@ -123,25 +144,34 @@ end Output
 
 section Entropy
 
-open UMST.DoubleSlit UMST.Quantum.Examples
+open UMST.DoubleSlit Real
+
+/-- Diagonal entry of the reset output at index 0 is 1. -/
+theorem resetOutputState_diag_0 : (resetOutputState.carrier 0 0).re = 1 := by
+  simp [resetOutputState, rhoZeroCarrier, Matrix.of_apply]
+
+/-- Diagonal entry of the reset output at index 1 is 0. -/
+theorem resetOutputState_diag_1 : (resetOutputState.carrier 1 1).re = 0 := by
+  simp [resetOutputState, rhoZeroCarrier, Matrix.of_apply]
 
 /-- The output of the reset channel has zero diagonal entropy. -/
 theorem resetChannel_entropy_zero (ρ_dm : DensityMatrix hnQubit) :
     vonNeumannDiagonal (resetChannel.apply hnQubit ρ_dm) = 0 := by
   rw [resetChannel_output_eq_rhoZero]
-  exact rhoZero_vonNeumannDiagonal
+  unfold vonNeumannDiagonal shannonBinary pathWeight
+  simp [resetOutputState_diag_0, Real.negMulLog_one, Real.negMulLog_zero]
 
 /-- The output of the reset channel has zero path entropy bits. -/
 theorem resetChannel_pathEntropyBits_zero (ρ_dm : DensityMatrix hnQubit) :
     pathEntropyBits (resetChannel.apply hnQubit ρ_dm) = 0 := by
-  rw [resetChannel_output_eq_rhoZero]
-  exact rhoZero_pathEntropyBits
+  unfold pathEntropyBits
+  rw [resetChannel_entropy_zero]
+  simp [ne_of_gt log_two_pos]
 
 /-- The output of the reset channel has zero Landauer cost. -/
 theorem resetChannel_landauerCost_zero (ρ_dm : DensityMatrix hnQubit) (T : ℝ) :
     landauerCostDiagonal (resetChannel.apply hnQubit ρ_dm) T = 0 := by
-  rw [resetChannel_output_eq_rhoZero]
-  exact rhoZero_landauerCostDiagonal T
+  simp [landauerCostDiagonal, infoEnergyLowerBound, resetChannel_pathEntropyBits_zero, mul_zero]
 
 end Entropy
 
@@ -149,7 +179,7 @@ end UMST.Quantum
 
 namespace UMST.DoubleSlit
 
-open UMST.Quantum UMST.Quantum.Examples
+open UMST.Quantum
 
 /-- An ideal erasure process that resets a qubit to |0⟩, dissipating exactly the Landauer cost.
 This saturates the Landauer bound (equality in the Second Law). -/
