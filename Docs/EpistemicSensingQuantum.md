@@ -28,4 +28,4 @@ In `umst-formal-double-slit`, this is rigorously proven as an algebraic hook (`l
 
 ## 4. Runtime and simulation alignment
 
-For **telemetry names**, **numeric trace shapes**, and the **`SimLeanBridge`** trust boundary when wiring ODE/PPO-style logs to Lean contracts, see **[`EPISTEMIC_RUNTIME_GROUNDING.md`](EPISTEMIC_RUNTIME_GROUNDING.md)**.
+For **telemetry names**, **numeric trace shapes**, and the **`SimLeanBridge`** trust boundary when wiring ODE/PPO-style logs to Lean contracts, see **[`sim/README.md`](../sim/README.md)** (section *Telemetry trace consumer (Gap 14)*) and the `Epistemic*.lean` module map in **`Lean/VERIFY.md`**.

@@ -6,7 +6,7 @@
 2. Gap 14 telemetry: **`make telemetry-sample`** (golden JSON export + consumer; also runs in **`lean.yml`** after unittests).
 3. Optional: **`make haskell-test`** if you touch `Haskell/` (matches `haskell.yml` CI), or **`make ci-full`** for `ci-local` + Haskell in one command.
 4. If you use optional Python stacks locally: **`pip install -r sim/requirements-optional.txt`** so QuTiP / matplotlib tests don’t skip.
-5. Multi-agent / swarm edits: check `Docs/TODO-TRACKING.md` and avoid duplicating work without checking files already exist.
+5. Multi-agent / swarm edits: coordinate via issues/PRs and scan **`CHANGELOG.md`** for recent ownership; optional `Docs/*` tracking files may exist in some checkouts.
 6. If you touch **`Coq/`** or **`Agda/`**: from repo root run **`make formal-check`** (or separately **`make coq-check`** / **`make agda-check`**). Toolchain notes: **`Coq/README.md`**, **`Agda/README.md`**. CI: **`.github/workflows/formal.yml`**.
 
 ## License (SPDX)
@@ -76,7 +76,7 @@ From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the 
 ## Python
 
 - Default pipeline is **stdlib** for the SVG plotters; optional **matplotlib / imageio / QuTiP** live in `sim/requirements-optional.txt` (also installed in GitHub Actions before tests).
-- **Gap 14:** `sim/telemetry_trace_consumer.py` + `sim/export_sample_telemetry_trace.py` need **NumPy** (in optional requirements). See **`sim/README.md`** and **`Docs/EPISTEMIC_RUNTIME_GROUNDING.md`**.
+- **Gap 14:** `sim/telemetry_trace_consumer.py` + `sim/export_sample_telemetry_trace.py` need **NumPy** (in optional requirements). See **`sim/README.md`** (*Telemetry trace consumer*) and **`Lean/VERIFY.md`** (`SimLeanBridge` + epistemic runtime modules).
 
 ## Haskell
 

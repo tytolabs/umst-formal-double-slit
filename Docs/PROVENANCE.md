@@ -13,8 +13,8 @@ specification to machine-checked proof.
 
 | Name | Affiliation | Email |
 |------|-------------|-------|
-| **Santhosh Shyamsundar** | Studio TYTO; IAAC Barcelona | `santhosh@tyto.studio` |
-| **Santosh Prabhu Shenbagamoorthy** | Studio TYTO; IAAC Barcelona | `santosh@tyto.studio` |
+| **Santhosh Shyamsundar** | Studio TYTO; IAAC Barcelona | `santhoshshyamsundar@studio.tyto` |
+| **Santosh Prabhu Shenbagamoorthy** | Studio TYTO; IAAC Barcelona | `santosh@studio.tyto` |
 
 Same contacts as in the repo [`README.md`](../README.md).
 
@@ -38,13 +38,12 @@ Same contacts as in the repo [`README.md`](../README.md).
 | `GateCompat.lean` | 10 | Original + Antigravity | `lake build` ✅ | 0 |
 | `QRBridge.lean` | 17 | Original | `lake build` ✅ | 0 |
 | `SimLeanBridge.lean` | 18 | Antigravity (Stream E) | `lake build` ✅ | 0 |
-| `VonNeumannEntropy.lean` | 4 | Claude Code (Stream D) | `lake build` ✅ | 1* |
-| `DataProcessingInequality.lean` | 11 | Claude Code (Stream D) | `lake build` ✅ | 1* |
+| `VonNeumannEntropy.lean` | 4 | Claude Code (Stream D) | `lake build` ✅ | 0 |
+| `DataProcessingInequality.lean` | 11 | Claude Code (Stream D) | `lake build` ✅ | 0 |
 | `Complementarity.lean` | — | Original | `lake build` ✅ | 0 |
 | `DoubleSlit.lean` | — | Original | `lake build` ✅ | 0 |
 
-\* Sorry items are Mathlib infrastructure gaps (eigenvalue multiset bridge, Klein's inequality),
-not proof logic errors. All physically relevant qubit-level theorems are sorry-free.
+**Axioms (not `sorry`):** general unital DPI and Klein’s inequality are **`axiom`** in `DataProcessingInequality.lean` pending Mathlib matrix-log infrastructure; `GeneralVisibility.lean` and `LindbladDynamics.lean` carry analysis-style axioms. See **`PROOF-STATUS.md`** / **`Lean/VERIFY.md`**.
 
 ## Python Simulation Layer
 
@@ -81,5 +80,5 @@ Mathlib 4.14  →  DensityState  →  MeasurementChannel  →  DoubleSlitCore
 
 - **Machine verification:** Every Lean module must pass `lake build` with 0 errors.
 - **Sorry disclosure:** Any `sorry` must be documented with its mathematical nature.
-- **Multi-agent coordination:** See `Docs/PARALLEL_WORK.md` for claim/merge protocol.
+- **Multi-agent coordination:** Use issues/PRs and **`CONTRIBUTING.md`**; optional coordination notes may live under `Docs/` when checked in.
 - **CI enforcement:** `.github/workflows/lean.yml` runs full `lake build` on every push.

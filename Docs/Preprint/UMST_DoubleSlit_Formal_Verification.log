@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 08:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 08:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
 \c@section=\count276
@@ -696,7 +696,7 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 raries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 56.
+Package hyperref Info: Option `colorlinks' set `true' on input line 61.
 \c@theorem=\count339
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -718,7 +718,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip75
 \@temptokenb=\toks48
 )
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 82
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 90
 .
 
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/t1ppl.fd
@@ -731,24 +731,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (./UMST_DoubleSlit_Formal_Verification.aux)
 \openout1 = `UMST_DoubleSlit_Formal_Verification.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -758,23 +758,23 @@ LaTeX Font Info:    ... okay on input line 82.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
-* v-part:(T,H,B)=(48.36958pt, 745.46222pt, 51.21504pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(62.59596pt, 719.85492pt, 62.59596pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=745.46222pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-60.9004pt
+* \textwidth=455.24411pt
+* \textheight=719.85492pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-46.67403pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -784,13 +784,13 @@ LaTeX Font Info:    ... okay on input line 82.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 82.
-Package microtype Info: Applying patch `item' on input line 82.
-Package microtype Info: Applying patch `toc' on input line 82.
-Package microtype Info: Applying patch `eqnum' on input line 82.
-Package microtype Info: Applying patch `footnote' on input line 82.
-Package microtype Info: Applying patch `verbatim' on input line 82.
-LaTeX Info: Redefining \microtypesetup on input line 82.
+LaTeX Info: Redefining \microtypecontext on input line 90.
+Package microtype Info: Applying patch `item' on input line 90.
+Package microtype Info: Applying patch `toc' on input line 90.
+Package microtype Info: Applying patch `eqnum' on input line 90.
+Package microtype Info: Applying patch `footnote' on input line 90.
+Package microtype Info: Applying patch `verbatim' on input line 90.
+LaTeX Info: Redefining \microtypesetup on input line 90.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -828,36 +828,38 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 82.
+Package hyperref Info: Link coloring ON on input line 90.
+ (./UMST_DoubleSlit_Formal_Verification.out)
+(./UMST_DoubleSlit_Formal_Verification.out)
 \@outlinefile=\write4
 \openout4 = `UMST_DoubleSlit_Formal_Verification.out'.
 
-LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 93.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 9
-3.
- (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/ot1ppl.fd
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
+01.
+
+(/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-93.
+101.
 
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-93.
+101.
 
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-93.
+101.
 
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-93.
+101.
 
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -867,25 +869,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.89906pt on input line 93.
+(Font)              scaled to size 10.42007pt on input line 101.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.52322pt on input line 93.
+(Font)              scaled to size 7.91925pt on input line 101.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.9395pt on input line 93.
+(Font)              scaled to size 6.25204pt on input line 101.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.89906pt on input line 93.
+(Font)              scaled to size 10.42007pt on input line 101.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.52322pt on input line 93.
+(Font)              scaled to size 7.91925pt on input line 101.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.9395pt on input line 93.
+(Font)              scaled to size 6.25204pt on input line 101.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -894,37 +896,21 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<../Media/teaser.png, id=7, 1011.78pt x 505.89pt>
+<../Media/teaser.png, id=31, 1011.78pt x 505.89pt>
 File: ../Media/teaser.png Graphic file (type png)
 <use ../Media/teaser.png>
-Package pdftex.def Info: ../Media/teaser.png  used on input line 118.
-(pdftex.def)             Requested size: 445.00023pt x 222.49965pt.
+Package pdftex.def Info: ../Media/teaser.png  used on input line 121.
+(pdftex.def)             Requested size: 432.48051pt x 216.23933pt.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/it' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/it' tried instead on input line 135.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 128.
+(Font)              scaled to size 11.40997pt on input line 141.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 128.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 128.
+(Font)              scaled to size 8.33606pt on input line 141.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 128.
+(Font)              scaled to size 11.40997pt on input line 141.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 128.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 128.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/it' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/it' tried instead on input line 133.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 139.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 139.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 139.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 139.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 139.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 139.
+(Font)              scaled to size 8.33606pt on input line 141.
 
 [1
 
@@ -932,29 +918,57 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 x/updmap/pdftex.map}{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/ba
 se/8r.enc}{/Users/santhoshshyamsundar/Library/texmf/fonts/enc/dvips/cm-super/cm
 -super-t1.enc} <../Media/teaser.png>]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 160.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 160.
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-160.
+154.
 
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-93.
+) [2]
+Overfull \hbox (56.64732pt too wide) in paragraph at lines 189--191
+\T1/ppl/m/n/10.95 (-20) This is the con-tent of the Lean the-o-rem \T1/cmtt/m/n
+/10.95 complementarity_fringe_path \T1/ppl/m/n/10.95 (-20) in mod-ule \T1/cmtt/
+m/n/10.95 QuantumClassicalBridge\T1/ppl/m/n/10.95 (-20) .
+ []
 
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
+02.
 (/Users/santhoshshyamsundar/Library/texmf/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Overfull \hbox (9.4972pt too wide) in paragraph at lines 206--207
-\T1/ppl/m/it/10 (-20) tory has one Phase-5 place-holder: gen-eral uni-tal DPI /
- Klein in \T1/cmtt/m/it/10 DataProcessingInequality.lean\T1/ppl/m/it/10 (-20) ;
- see \T1/cmtt/m/it/10 Lean/VERIFY.md\T1/ppl/m/it/10 (-20) .) 
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 225.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 225.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 225.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 225.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 225.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 225.
+ [3]
+[4]
+Overfull \hbox (36.1188pt too wide) in paragraph at lines 331--332
+[]\T1/ppl/b/n/10.95 (-20) Landauer layer: \T1/cmtt/m/n/10.95 landauerCostDiagon
+al \T1/ppl/m/n/10.95 (-20) is a scale $\OML/zplm/m/it/10.95 k[]T [] \OT1/ppl/m/
+n/10.95 (-20) 2 \OMS/zplm/m/n/10.95 ^^B \OT1/zplm/m/n/10.95 ([])$\T1/ppl/m/n/10
+.95 (-20) ---
  []
 
-[2] [3] [4] (./UMST_DoubleSlit_Formal_Verification.aux)
+[5] [6]
+Underfull \hbox (badness 1303) in paragraph at lines 399--400
+[]\T1/ppl/m/n/10 (+20) S. Shyam-sun-dar and S.P. Shen-bag-amoor-thy, ``To-wards
+ Uni-fied Material-State Ten-sors for
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 401--402
+[]\T1/ppl/m/n/10 (+20) S.P. Shen-bag-amoor-thy and S. Shyam-sun-dar, ``Epis-tem
+ic Sens-ing Ar-chi-tec-ture for Physics-
+ []
+
+[7] (./UMST_DoubleSlit_Formal_Verification.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -968,17 +982,17 @@ has changed.
 
 Package rerunfilecheck Info: Checksums for `UMST_DoubleSlit_Formal_Verification
 .out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  975A51FD9D5386D4989F6BEBAE0A696E;1114.
+(rerunfilecheck)             Before: 975A51FD9D5386D4989F6BEBAE0A696E;1114
+(rerunfilecheck)             After:  EB7D35C091D4E69DDAD5B4A9AAA8BD29;3084.
  ) 
 Here is how much of TeX's memory you used:
- 25216 strings out of 469006
- 460360 string characters out of 5454813
- 887403 words of memory out of 5000000
- 53025 multiletter control sequences out of 15000+600000
- 721683 words of font info for 441 fonts, out of 8000000 for 9000
+ 25289 strings out of 469006
+ 461332 string characters out of 5454813
+ 882617 words of memory out of 5000000
+ 53033 multiletter control sequences out of 15000+600000
+ 716586 words of font info for 458 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 102i,11n,107p,1224b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,1224b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -987,21 +1001,20 @@ ts/cm/cmsy10.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/type1/public/m
 athpazo/fplmbb.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/type1/public
 /mathpazo/fplmr.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/type1/publi
 c/mathpazo/fplmri.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/type1/pub
-lic/cm-super/sfit0900.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/type1
-/public/cm-super/sfit1000.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/t
-ype1/public/cm-super/sfss0900.pfb></Users/santhoshshyamsundar/Library/texmf/fon
-ts/type1/public/cm-super/sftt0800.pfb></Users/santhoshshyamsundar/Library/texmf
-/fonts/type1/public/cm-super/sftt0900.pfb></Users/santhoshshyamsundar/Library/t
-exmf/fonts/type1/public/cm-super/sftt1000.pfb></Users/santhoshshyamsundar/Libra
-ry/texmf/fonts/type1/urw/palatino/uplb8a.pfb></Users/santhoshshyamsundar/Librar
-y/texmf/fonts/type1/urw/palatino/uplbi8a.pfb></Users/santhoshshyamsundar/Librar
-y/texmf/fonts/type1/urw/palatino/uplr8a.pfb></Users/santhoshshyamsundar/Library
-/texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on UMST_DoubleSlit_Formal_Verification.pdf (4 pages, 430969 byte
+lic/cm-super/sfit1000.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/type1
+/public/cm-super/sfss1000.pfb></Users/santhoshshyamsundar/Library/texmf/fonts/t
+ype1/public/cm-super/sftt0900.pfb></Users/santhoshshyamsundar/Library/texmf/fon
+ts/type1/public/cm-super/sftt1000.pfb></Users/santhoshshyamsundar/Library/texmf
+/fonts/type1/public/cm-super/sftt1095.pfb></Users/santhoshshyamsundar/Library/t
+exmf/fonts/type1/urw/palatino/uplb8a.pfb></Users/santhoshshyamsundar/Library/te
+xmf/fonts/type1/urw/palatino/uplbi8a.pfb></Users/santhoshshyamsundar/Library/te
+xmf/fonts/type1/urw/palatino/uplr8a.pfb></Users/santhoshshyamsundar/Library/tex
+mf/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 425942 byte
 s).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 134674 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 126018 words of extra memory for PDF output out of 128383 (max. 10000000)
 

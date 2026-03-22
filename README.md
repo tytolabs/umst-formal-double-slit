@@ -78,7 +78,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
 
 ```lean
--- Lean/LandauerBound.lean, line 88
+-- Lean/LandauerBound.lean, line 140
 theorem principle_of_maximal_information_collapse (ρ : DensityMatrix hnQubit) :
     0 ≤ residualCoherenceCapacity ρ ∧ residualCoherenceCapacity ρ ≤ 1 :=
   ⟨residualCoherenceCapacity_nonneg ρ, residualCoherenceCapacity_le_one ρ⟩
@@ -256,7 +256,7 @@ flowchart TB
 
 ## Cross-Language Verification
 
-Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadratic bound is closed in `Lean/PMICEntropyInterior.lean` (see `Docs/PHASE1_GAP_CLOSURE.md`).
+Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadratic bound is closed in `Lean/PMICEntropyInterior.lean` (module map: `Lean/VERIFY.md`).
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
