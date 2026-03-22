@@ -228,13 +228,6 @@ def generate_teaser(out_dir):
         fig = plt.figure(figsize=(18, 9), facecolor=v['bg'])
         gs = GridSpec(1, 2, width_ratios=[1.3, 1], wspace=0.3)
 
-        fig.text(0.5, 0.97,
-                 "The Thermodynamic Cost of Knowing",
-                 ha='center', va='top', color=v['text'], fontsize=28, fontweight='bold')
-        fig.text(0.5, 0.92,
-                 "Observation as Irreversible Payment",
-                 ha='center', va='top', color=v['sub'], fontsize=18, fontstyle='italic')
-
         x = np.linspace(-20, 20, 500)
 
         # --- Left panel: Before/After comparison ---
@@ -259,7 +252,7 @@ def generate_teaser(out_dir):
         for spine in ax1.spines.values():
             spine.set_color(v['grid'])
             spine.set_linewidth(1.5)
-        plt.subplots_adjust(top=0.82, bottom=0.12)
+        plt.subplots_adjust(top=0.92, bottom=0.12)
 
         # --- Right panel: Key equations ---
         ax2 = fig.add_subplot(gs[1])

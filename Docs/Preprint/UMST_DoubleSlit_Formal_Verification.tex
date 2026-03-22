@@ -116,11 +116,13 @@ Q \;\ge\; k_B T \ln 2 \;\cdot\; \bigl(1 - V^2\bigr)$\\[3pt]
 {\color{Black}\rule{\textwidth}{2.5pt}}
 
 %---------- TEASER IMAGE ----------
-\vspace{0.6em}
-\begin{center}
-\includegraphics[width=0.95\textwidth]{../Media/teaser-paper.png}
-\end{center}
-\vspace{0.4em}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{../Media/teaser-paper.png}
+\caption{\textbf{Visual summary of the formalization out-of-the-box.} The extracted which-path information acts as an irreversible measurement channel, systematically degrading fringe visibility. The exact thermodynamic cost is bounded by Landauer's principle, forming a strict tradeoff between coherence and dissipation rigorously quantified in Lean 4.}
+\vspace{-1em}
+\label{fig:teaser}
+\end{figure}
 
 %---------- CORE RESULT ----------
 
@@ -210,10 +212,10 @@ This channel preserves the diagonal entries ($p_0$ and $p_1$ are unchanged) but 
 %---------- PROOF ARCHITECTURE ----------
 \section{Proof Architecture}
 
-The formalization is structured as a \emph{closed chain} from quantum states through measurement to thermodynamic cost:
+The formalization is structured as a \emph{closed chain} from quantum states through measurement to thermodynamic cost.
 
-\vspace{0.3em}
-\begin{center}
+\begin{figure}[htbp]
+\centering
 \begin{tikzpicture}[
   qbox/.style={draw=FigCyan, fill=FigLightBlue, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize, line width=0.6pt},
   ibox/.style={draw=FigPurple, fill=FigLightPurple, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize, line width=0.6pt},
@@ -239,10 +241,9 @@ The formalization is structured as a \emph{closed chain} from quantum states thr
 \draw[rarrow] (land) -- (pmic);
 \draw[-{Stealth[length=4pt]}, dashed, thick, color=FigRed!60] (comp.south west) -- node[below, font=\tiny\itshape, color=FigRed!60, pos=0.45]{destroys $V$} (kraus.north east);
 \end{tikzpicture}
-\end{center}
-\vspace{0.3em}
-
-\noindent\textbf{Top row (cyan):} The quantum state $\rho$ yields observables $I$ and $V$, bounded by Englert complementarity. \textbf{Middle row (purple):} The L\"uders channel extracts which-path information, producing diagonal entropy $H$ and incurring a Landauer cost. \textbf{Bottom (red):} The Principle of Maximal Information Collapse unifies these into a single residual-coherence metric.
+\caption{\textbf{Proof Architecture Pipeline.} \textbf{Top row (cyan):} The quantum state $\rho$ yields observables $I$ and $V$, bounded by Englert complementarity. \textbf{Middle row (purple):} The L\"uders channel extracts which-path information, producing diagonal entropy $H$ and incurring a Landauer cost. \textbf{Bottom (red):} The Principle of Maximal Information Collapse unifies these into a single residual-coherence metric.}
+\label{fig:architecture}
+\end{figure}
 
 %---------- PMIC ----------
 \section{The Principle of Maximal Information Collapse}
