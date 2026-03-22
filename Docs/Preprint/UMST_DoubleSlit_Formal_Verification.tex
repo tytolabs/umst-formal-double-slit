@@ -189,7 +189,9 @@ Substituting into the definitions of $V$ and $I$:
 \[
 V^2 + I^2 = 4|\rho_{01}|^2 + (p_0 - p_1)^2 \le 4p_0 p_1 + (p_0 - p_1)^2 = (p_0 + p_1)^2 = 1
 \]
-This is the content of the Lean theorem \texttt{complementarity\_fringe\_path} in module \texttt{QuantumClassicalBridge}. Any gain in which-path distinguishability $I$ mathematically necessitates a rigid destruction of interference visibility $V$.
+This corresponds to the Lean theorem \texttt{complementarity\_fringe\_path}
+(\texttt{QuantumClassicalBridge}). Any gain in which-path distinguishability
+$I$ mathematically necessitates a rigid destruction of interference visibility $V$.
 
 %---------- MEASUREMENT CHANNEL ----------
 \section{The Measurement Channel}
@@ -329,14 +331,16 @@ The formalization makes the following explicit assumptions---none of which are p
 \item \textbf{Path qubit only:} Hilbert space $\texttt{Fin 2} \to \mathbb{C}$ for the which-path degree of freedom. No spatial fringe pattern in position/momentum bases within this formal layer.
 \item \textbf{Coarse readout $(I, V)$:} Defined proxies, not derived von Neumann entropy of an apparatus.
 \item \textbf{Diagonal entropy:} \texttt{vonNeumannDiagonal} uses computational-basis diagonals; for general pure states with coherence, this can differ from the full $S(\rho) = -\mathrm{Tr}(\rho \log \rho)$.
-\item \textbf{Landauer layer:} \texttt{landauerCostDiagonal} is a scale $k_B T \ln 2 \times (\text{diagonal entropy in bit-equivalents})$---not a claim that measured heat equals this without an explicit erasure/bath model.
+\item \textbf{Landauer layer:} The term \texttt{landauerCost\-Diagonal} is a scale $k_B T \ln 2 \times H_{\mathrm{bits}}$---not a claim that measured heat equals this without an explicit erasure/bath model.
 \end{enumerate}
 
 \noindent\textbf{What is not claimed:}
 \begin{itemize}
 \item Derivation from a relativistic or gravitational UMST layer.
 \item Identification of $I$ with a specific experimental which-path meter without calibration axioms.
-\item Full unital quantum DPI / Klein inequality on compound systems: axiomatized in \texttt{DataProcessingInequality.lean}; Klein becomes a theorem when Mathlib matrix-log infrastructure is available. Quantum mutual information $I(A\!:\!B) = S(A){+}S(B){-}S(AB)$ is now formally proved in \texttt{QuantumMutualInfo.lean}.
+\item Full unital quantum DPI / Klein inequality on compound systems:
+stated as \texttt{axiom} (pending Mathlib matrix-log); qubit-tier DPI and
+quantum mutual information $I(A\!:\!B)=S(A)+S(B)-S(AB)$ are fully proved.
 \item Mixed ensembles as formal convex sums in \texttt{DensityState} (future).
 \item Certified ODE/PPO solver convergence/stability claims without a dedicated numerical analysis layer.
 \end{itemize}
@@ -363,10 +367,10 @@ This work extends the UMST formal verification stack in three directions:
 \toprule
 \textbf{Layer} & \textbf{Tool} & \textbf{Scope} & \textbf{Status} \\
 \midrule
-Formal proof & Lean 4 + Mathlib & 53 modules, 515 theorems & \textbf{0 sorry}, \textbf{6 axioms} \\
+Formal proof & Lean 4 + Mathlib & 53 mod., 515 thm., 33 lem. & \textbf{0 sorry}, \textbf{6 axioms} \\
 Property testing & Haskell QuickCheck & 14 properties + sanity & \textbf{All pass} \\
 Numerical sim & Python (stdlib + QuTiP) & 87 unit tests, 4 sims & \textbf{All pass} \\
-Cross-language & Coq + Agda & 9 Coq + 11 Agda modules & Coq: \textbf{2 Admitted}; Agda: \textbf{clean} \\
+Cross-language & Coq + Agda & 9 Coq + 11 Agda mod. & \textbf{2 Admitted} / Agda \textbf{clean} \\
 \bottomrule
 \end{tabular}}
 
