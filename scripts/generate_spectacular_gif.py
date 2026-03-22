@@ -198,7 +198,7 @@ def generate_gif(out_dir):
 
 
 def generate_teaser(out_dir):
-    """Generate a static teaser image showing the key result."""
+    """Generate dark teaser (README) and light teaser (paper) images."""
     import numpy as np
     import matplotlib
     matplotlib.use('Agg')
@@ -207,93 +207,101 @@ def generate_teaser(out_dir):
     import matplotlib.pyplot as plt
     from matplotlib.gridspec import GridSpec
 
-    bg_color = '#0a0a1a'
-    text_color = 'white'
-    sub_text_color = '#888'
-    grid_color = '#333'
-    accent_color = '#e94560'
-    trail_color = '#8b5cf6'
-    
-    fig = plt.figure(figsize=(14, 7), facecolor=bg_color)
-    gs = GridSpec(1, 2, width_ratios=[1.3, 1], wspace=0.3)
-
-    fig.text(0.5, 0.97,
-             "The Thermodynamic Cost of Knowing",
-             ha='center', va='top', color=text_color, fontsize=16, fontweight='bold')
-    fig.text(0.5, 0.93,
-             "Observation as Irreversible Payment",
-             ha='center', va='top', color=sub_text_color, fontsize=11, fontstyle='italic')
-
-    x = np.linspace(-20, 20, 500)
-
-    # --- Left panel: Before/After comparison ---
-    ax1 = fig.add_subplot(gs[0])
-    ax1.set_facecolor(bg_color)
-
-    # No measurement (V=1)
-    int_full = fringe_pattern(x, 1.0)
-    ax1.fill_between(x, 0, int_full, color='#533483', alpha=0.4)
-    ax1.plot(x, int_full, color=trail_color, lw=2, label='No detector (V=1, full interference)')
-
-    # Full measurement (V=0)
-    int_none = fringe_pattern(x, 0.0)
-    ax1.fill_between(x, 0, int_none, color=accent_color, alpha=0.3)
-    ax1.plot(x, int_none, color=accent_color, lw=2, ls='--', label='Which-path detector (V=0, collapsed)')
-
-    ax1.set_xlim(-20, 20)
-    ax1.set_ylim(0, 1.15)
-    ax1.set_xlabel("Screen Position (detector array behind slits)", color=text_color, fontsize=11)
-    ax1.set_ylabel("Intensity (photon arrival probability)", color=text_color, fontsize=11)
-    ax1.set_title("Photon Detection Screen", color=sub_text_color, fontsize=9, pad=4)
-    ax1.legend(fontsize=9, facecolor=bg_color, edgecolor=grid_color, labelcolor=text_color, loc='upper right')
-    ax1.tick_params(colors='white')
-    for spine in ax1.spines.values():
-        spine.set_color('#333')
-    plt.subplots_adjust(top=0.85, bottom=0.12)
-
-    # --- Right panel: Key equations ---
-    ax2 = fig.add_subplot(gs[1])
-    ax2.set_facecolor(bg_color)
-    ax2.axis('off')
-
-    title_y = 0.95
-    ax2.text(0.5, title_y, "Formally Verified in Lean 4",
-            ha='center', va='top', color=accent_color, fontsize=14, fontweight='bold',
-            transform=ax2.transAxes)
-
-    equations = [
-        (0.82, "Englert Complementarity", r"$V^2 + I^2 \leq 1$", '#00d2ff'),
-        (0.68, "Landauer Bound", r"$Q \geq k_B T \cdot H$", '#8b5cf6'),
-        (0.54, "Maximal Information Collapse",
-         r"Residual $= 1 - \frac{\mathrm{MI}_{\mathrm{extracted}}}{k_B T \ln 2}$", '#e94560'),
-        (0.38, "", r"$\mathrm{MI} = 0 \Rightarrow$ full interference", '#888'),
-        (0.30, "", r"$\mathrm{MI} = k_B T \ln 2 \Rightarrow$ complete collapse", '#888'),
+    variants = [
+        {   # Dark mode for README
+            'suffix': '',  # teaser.png
+            'bg': '#0a0a1a', 'text': 'white', 'sub': '#888', 'grid': '#333',
+            'accent': '#e94560', 'trail': '#8b5cf6', 'fill_a': '#533483',
+            'cyan': '#00d2ff', 'badge_bg': '#1a1a3e', 'badge_edge': '#333',
+            'tick': 'white',
+        },
+        {   # Light mode for LaTeX paper
+            'suffix': '-paper',  # teaser-paper.png
+            'bg': '#ffffff', 'text': '#111111', 'sub': '#555555', 'grid': '#cccccc',
+            'accent': '#c0392b', 'trail': '#6c3483', 'fill_a': '#d2b4de',
+            'cyan': '#2471a3', 'badge_bg': '#eaf2f8', 'badge_edge': '#aab7b8',
+            'tick': '#333333',
+        },
     ]
 
-    for y, label, eq, color in equations:
-        if label:
-            ax2.text(0.05, y + 0.04, label, ha='left', va='top', color=sub_text_color,
-                    fontsize=9, transform=ax2.transAxes, fontstyle='italic')
-        ax2.text(0.08, y - 0.02, eq, ha='left', va='top', color=color,
-                fontsize=12, transform=ax2.transAxes)
+    for v in variants:
+        fig = plt.figure(figsize=(14, 7), facecolor=v['bg'])
+        gs = GridSpec(1, 2, width_ratios=[1.3, 1], wspace=0.3)
 
-    # Stats bar
-    stats_y = 0.12
-    stats = "457 thm + 33 lem  |  0 sorry  |  3 axiom  |  48 modules"
-    ax2.text(0.5, stats_y, stats, ha='center', va='top', color='#666',
-            fontsize=10, transform=ax2.transAxes, fontfamily='monospace')
+        fig.text(0.5, 0.97,
+                 "The Thermodynamic Cost of Knowing",
+                 ha='center', va='top', color=v['text'], fontsize=16, fontweight='bold')
+        fig.text(0.5, 0.93,
+                 "Observation as Irreversible Payment",
+                 ha='center', va='top', color=v['sub'], fontsize=11, fontstyle='italic')
 
-    ax2.text(0.5, 0.03, "The Thermodynamic Cost of Knowing",
-            ha='center', va='top', color=text_color, fontsize=13, fontweight='bold',
-            transform=ax2.transAxes,
-            bbox=dict(boxstyle='round,pad=0.4', facecolor='#1a1a3e', edgecolor='#333', alpha=0.8))
+        x = np.linspace(-20, 20, 500)
 
-    teaser_path = os.path.join(out_dir, "teaser.png")
-    plt.savefig(teaser_path, dpi=150, pad_inches=0.15,
-               facecolor=fig.get_facecolor(), edgecolor='none')
-    plt.close()
-    print(f"Wrote teaser to {teaser_path}")
-    return teaser_path
+        # --- Left panel: Before/After comparison ---
+        ax1 = fig.add_subplot(gs[0])
+        ax1.set_facecolor(v['bg'])
+
+        int_full = fringe_pattern(x, 1.0)
+        ax1.fill_between(x, 0, int_full, color=v['fill_a'], alpha=0.4)
+        ax1.plot(x, int_full, color=v['trail'], lw=2, label='No detector (V=1, full interference)')
+
+        int_none = fringe_pattern(x, 0.0)
+        ax1.fill_between(x, 0, int_none, color=v['accent'], alpha=0.3)
+        ax1.plot(x, int_none, color=v['accent'], lw=2, ls='--', label='Which-path detector (V=0, collapsed)')
+
+        ax1.set_xlim(-20, 20)
+        ax1.set_ylim(0, 1.15)
+        ax1.set_xlabel("Screen Position (detector array behind slits)", color=v['text'], fontsize=11)
+        ax1.set_ylabel("Intensity (photon arrival probability)", color=v['text'], fontsize=11)
+        ax1.set_title("Photon Detection Screen", color=v['sub'], fontsize=9, pad=4)
+        ax1.legend(fontsize=9, facecolor=v['bg'], edgecolor=v['grid'], labelcolor=v['text'], loc='upper right')
+        ax1.tick_params(colors=v['tick'])
+        for spine in ax1.spines.values():
+            spine.set_color(v['grid'])
+        plt.subplots_adjust(top=0.85, bottom=0.12)
+
+        # --- Right panel: Key equations ---
+        ax2 = fig.add_subplot(gs[1])
+        ax2.set_facecolor(v['bg'])
+        ax2.axis('off')
+
+        ax2.text(0.5, 0.95, "Formally Verified in Lean 4",
+                ha='center', va='top', color=v['accent'], fontsize=14, fontweight='bold',
+                transform=ax2.transAxes)
+
+        equations = [
+            (0.82, "Englert Complementarity", r"$V^2 + I^2 \leq 1$", v['cyan']),
+            (0.68, "Landauer Bound", r"$Q \geq k_B T \cdot H$", v['trail']),
+            (0.54, "Maximal Information Collapse",
+             r"Residual $= 1 - \frac{\mathrm{MI}_{\mathrm{extracted}}}{k_B T \ln 2}$", v['accent']),
+            (0.38, "", r"$\mathrm{MI} = 0 \Rightarrow$ full interference", v['sub']),
+            (0.30, "", r"$\mathrm{MI} = k_B T \ln 2 \Rightarrow$ complete collapse", v['sub']),
+        ]
+
+        for y, label, eq, color in equations:
+            if label:
+                ax2.text(0.05, y + 0.04, label, ha='left', va='top', color=v['sub'],
+                        fontsize=9, transform=ax2.transAxes, fontstyle='italic')
+            ax2.text(0.08, y - 0.02, eq, ha='left', va='top', color=color,
+                    fontsize=12, transform=ax2.transAxes)
+
+        stats = "467 theorems  |  0 sorry  |  5 axioms  |  48 modules"
+        ax2.text(0.5, 0.12, stats, ha='center', va='top', color=v['sub'],
+                fontsize=10, transform=ax2.transAxes, fontfamily='monospace')
+
+        ax2.text(0.5, 0.03, "The Thermodynamic Cost of Knowing",
+                ha='center', va='top', color=v['text'], fontsize=13, fontweight='bold',
+                transform=ax2.transAxes,
+                bbox=dict(boxstyle='round,pad=0.4', facecolor=v['badge_bg'],
+                          edgecolor=v['badge_edge'], alpha=0.8))
+
+        teaser_path = os.path.join(out_dir, f"teaser{v['suffix']}.png")
+        plt.savefig(teaser_path, dpi=150, pad_inches=0.15,
+                   facecolor=fig.get_facecolor(), edgecolor='none')
+        plt.close()
+        print(f"Wrote teaser to {teaser_path}")
+
+    return os.path.join(out_dir, "teaser.png")
 
 
 def main():

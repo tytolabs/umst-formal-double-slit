@@ -32,12 +32,12 @@
 \definecolor{BorderGray}{HTML}{BBBBBB}
 \definecolor{LinkGray}{HTML}{333333}
 
-% --- Teaser-matching palette (for figures) ---
-\definecolor{TeaserBg}{HTML}{0A0A1A}
-\definecolor{TeaserCyan}{HTML}{00D2FF}
-\definecolor{TeaserPurple}{HTML}{8B5CF6}
-\definecolor{TeaserRed}{HTML}{E94560}
-\definecolor{TeaserNavy}{HTML}{1A1A3E}
+% --- Figure palette (paper-friendly) ---
+\definecolor{FigCyan}{HTML}{2471A3}
+\definecolor{FigPurple}{HTML}{6C3483}
+\definecolor{FigRed}{HTML}{C0392B}
+\definecolor{FigLightBlue}{HTML}{EAF2F8}
+\definecolor{FigLightPurple}{HTML}{F4ECF7}
 
 \renewcommand{\familydefault}{\rmdefault}
 
@@ -118,7 +118,7 @@ Q \;\ge\; k_B T \ln 2 \;\cdot\; \bigl(1 - V^2\bigr)$\\[3pt]
 %---------- TEASER IMAGE ----------
 \vspace{0.6em}
 \begin{center}
-\includegraphics[width=0.95\textwidth]{../Media/teaser.png}
+\includegraphics[width=0.95\textwidth]{../Media/teaser-paper.png}
 \end{center}
 \vspace{0.4em}
 
@@ -215,29 +215,29 @@ The formalization is structured as a \emph{closed chain} from quantum states thr
 \vspace{0.3em}
 \begin{center}
 \begin{tikzpicture}[
-  qbox/.style={draw=TeaserCyan, fill=TeaserBg, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize\color{white}, line width=0.6pt},
-  ibox/.style={draw=TeaserPurple, fill=TeaserBg, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize\color{white}, line width=0.6pt},
-  rbox/.style={draw=TeaserRed, fill=TeaserNavy, rounded corners=3pt, minimum width=3.4cm, minimum height=0.65cm, align=center, font=\footnotesize\bfseries\color{white}, line width=0.8pt},
-  qarrow/.style={-{Stealth[length=4pt]}, thick, color=TeaserCyan},
-  iarrow/.style={-{Stealth[length=4pt]}, thick, color=TeaserPurple},
-  rarrow/.style={-{Stealth[length=4pt]}, thick, color=TeaserRed}
+  qbox/.style={draw=FigCyan, fill=FigLightBlue, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize, line width=0.6pt},
+  ibox/.style={draw=FigPurple, fill=FigLightPurple, rounded corners=3pt, minimum width=2.1cm, minimum height=0.65cm, align=center, font=\footnotesize, line width=0.6pt},
+  rbox/.style={draw=FigRed, fill=FigRed!8, rounded corners=3pt, minimum width=3.4cm, minimum height=0.65cm, align=center, font=\footnotesize\bfseries, line width=0.8pt},
+  qarrow/.style={-{Stealth[length=4pt]}, thick, color=FigCyan},
+  iarrow/.style={-{Stealth[length=4pt]}, thick, color=FigPurple},
+  rarrow/.style={-{Stealth[length=4pt]}, thick, color=FigRed}
 ]
-\node[qbox] (rho) {$\rho \in \mathbb{C}^{2\times 2}$\\\color{TeaserCyan!60}PSD, Tr$=1$};
+\node[qbox] (rho) {$\rho \in \mathbb{C}^{2\times 2}$\\\color{FigCyan}PSD, Tr$=1$};
 \node[qbox, right=1.2cm of rho] (iv) {$I = |p_0{-}p_1|$\\$V = 2|\rho_{01}|$};
-\node[qbox, right=1.2cm of iv] (comp) {$V^2 + I^2 \le 1$\\\color{TeaserCyan!60}Englert};
-\node[ibox, below=0.9cm of rho] (kraus) {Kraus Channel\\\color{TeaserPurple!60}L\"uders $\Pi_i \rho \Pi_i$};
-\node[ibox, below=0.9cm of iv] (ent) {$H = -\sum p_i \ln p_i$\\\color{TeaserPurple!60}$\le \ln 2$};
-\node[ibox, below=0.9cm of comp] (land) {$Q \ge k_B T \cdot H$\\\color{TeaserPurple!60}Landauer};
+\node[qbox, right=1.2cm of iv] (comp) {$V^2 + I^2 \le 1$\\\color{FigCyan}Englert};
+\node[ibox, below=0.9cm of rho] (kraus) {Kraus Channel\\\color{FigPurple}L\"uders $\Pi_i \rho \Pi_i$};
+\node[ibox, below=0.9cm of iv] (ent) {$H = -\sum p_i \ln p_i$\\\color{FigPurple}$\le \ln 2$};
+\node[ibox, below=0.9cm of comp] (land) {$Q \ge k_B T \cdot H$\\\color{FigPurple}Landauer};
 \node[rbox, below=0.9cm of ent] (pmic) {Residual $= 1 - S_{\text{bits}}$\;\;$\in [0,1]$};
 
 \draw[qarrow] (rho) -- (iv);
 \draw[qarrow] (iv) -- (comp);
 \draw[iarrow] (rho) -- (kraus);
-\draw[iarrow] (kraus) -- node[above, font=\tiny\color{TeaserPurple!70}]{$V\!\to\!0$} (ent);
+\draw[iarrow] (kraus) -- node[above, font=\tiny\color{FigPurple}]{$V\!\to\!0$} (ent);
 \draw[iarrow] (iv) -- (ent);
 \draw[iarrow] (ent) -- (land);
 \draw[rarrow] (land) -- (pmic);
-\draw[-{Stealth[length=4pt]}, dashed, thick, color=TeaserRed!50] (comp.south west) -- node[below, font=\tiny\itshape, color=TeaserRed!50, pos=0.45]{destroys $V$} (kraus.north east);
+\draw[-{Stealth[length=4pt]}, dashed, thick, color=FigRed!60] (comp.south west) -- node[below, font=\tiny\itshape, color=FigRed!60, pos=0.45]{destroys $V$} (kraus.north east);
 \end{tikzpicture}
 \end{center}
 \vspace{0.3em}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 08:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 08:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -896,10 +896,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<../Media/teaser.png, id=31, 1011.78pt x 505.89pt>
-File: ../Media/teaser.png Graphic file (type png)
-<use ../Media/teaser.png>
-Package pdftex.def Info: ../Media/teaser.png  used on input line 121.
+<../Media/teaser-paper.png, id=71, 1011.78pt x 505.89pt>
+File: ../Media/teaser-paper.png Graphic file (type png)
+<use ../Media/teaser-paper.png>
+Package pdftex.def Info: ../Media/teaser-paper.png  used on input line 121.
 (pdftex.def)             Requested size: 432.48051pt x 216.23933pt.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/it' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/it' tried instead on input line 135.
@@ -917,7 +917,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 {/Users/santhoshshyamsundar/Library/texlive/2025basic/texmf-var/fonts/map/pdfte
 x/updmap/pdftex.map}{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/ba
 se/8r.enc}{/Users/santhoshshyamsundar/Library/texmf/fonts/enc/dvips/cm-super/cm
--super-t1.enc} <../Media/teaser.png>]
+-super-t1.enc} <../Media/teaser-paper.png>]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
 154.
 
@@ -973,26 +973,18 @@ ic Sens-ing Ar-chi-tec-ture for Physics-
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `UMST_DoubleSlit_Formal_Verification.out' 
-has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `UMST_DoubleSlit_Formal_Verification
-.out':
-(rerunfilecheck)             Before: 975A51FD9D5386D4989F6BEBAE0A696E;1114
-(rerunfilecheck)             After:  EB7D35C091D4E69DDAD5B4A9AAA8BD29;3084.
+Package rerunfilecheck Info: File `UMST_DoubleSlit_Formal_Verification.out' has
+ not changed.
+(rerunfilecheck)             Checksum: EB7D35C091D4E69DDAD5B4A9AAA8BD29;3084.
  ) 
 Here is how much of TeX's memory you used:
- 25289 strings out of 469006
- 461332 string characters out of 5454813
- 882617 words of memory out of 5000000
- 53033 multiletter control sequences out of 15000+600000
+ 25298 strings out of 469006
+ 461476 string characters out of 5454813
+ 882659 words of memory out of 5000000
+ 53042 multiletter control sequences out of 15000+600000
  716586 words of font info for 458 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 102i,12n,107p,1224b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,1224b,781s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -1010,11 +1002,11 @@ exmf/fonts/type1/urw/palatino/uplb8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplbi8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplr8a.pfb></Users/santhoshshyamsundar/Library/tex
 mf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 425942 byte
+Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 431275 byte
 s).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
  55 named destinations out of 1000 (max. 500000)
- 126018 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 126098 words of extra memory for PDF output out of 128383 (max. 10000000)
 
