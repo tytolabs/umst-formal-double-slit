@@ -14,16 +14,16 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 *(Heuristic line counts from `make lean-stats-md`; portable paths — re-paste after large Lean edits.)*
 
 - **Lean root:** `Lean`
-- **`.lean` files scanned:** 55 (`.lake` excluded)
+- **`.lean` files scanned:** 58 (`.lake` excluded)
 - **`abbrev` (line-start heuristic):** 5
-- **`axiom` (line-start heuristic):** 5
-- **`def` (line-start heuristic):** 190
+- **`axiom` (line-start heuristic):** 4
+- **`def` (line-start heuristic):** 200
 - **`inductive` (line-start heuristic):** 4
 - **`instance` (line-start heuristic):** 1
-- **`lemma` (line-start heuristic):** 48
+- **`lemma` (line-start heuristic):** 60
 - **`structure` (line-start heuristic):** 29
-- **`theorem` (line-start heuristic):** 467
-- **Sum of above kinds:** 749
+- **`theorem` (line-start heuristic):** 512
+- **Sum of above kinds:** 815
 
 ## Track summary
 
@@ -31,6 +31,9 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 |------|--------|
 | Classical ℝ gate shape (`UMSTCore`, `DoubleSlitCore`) | **Proved** |
 | Density matrices + Kraus + Lüders which-path | **Proved** (all projector properties, no sorry) |
+| Finite convex combinations (`convexComboDensity`) | **Proved** (`DensityState`) |
+| General-`n` coherence visibility bound | **Proved** (`GeneralVisibility.fringeVisibility_n_le_one`) |
+| Lindblad dephasing $t \to \infty$ off-diagonal limit | **Proved** (`LindbladDynamics.dephasingSolution_tendsto_diagonal`) |
 | Englert-style `V² + I² ≤ 1` (canonical `I`, `V`) | **Proved** (`QuantumClassicalBridge`, `Complementarity`) |
 | Binary diagonal entropy (`InfoEntropy`) | **Proved** (`≤ log 2` nats via `Real.binEntropy`, general `n`) |
 | Landauer **scale** from diagonal entropy (`LandauerBound`) | **Proved** (nonneg, `pathEntropyBits ≤ 1`, `landauerCostDiagonal ≤ landauerBitEnergy`, which-path invariant, `ErasureProcess`) |
@@ -66,8 +69,9 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
 | `klein_inequality` | `DataProcessingInequality.lean` | Klein / quantum relative entropy (placeholder until Mathlib matrix `log` + convexity) |
 | `vonNeumannEntropy_nondecreasing_unital` | `DataProcessingInequality.lean` | Full **unital CPTP** entropy monotonicity (standard proof via Klein; **axiomatized** pending Mathlib) |
-| `fringeVisibility_n_le_one` | `GeneralVisibility.lean` | $\ell_1$ norm of coherence ≤ 1 for arbitrary `Fin n` (requires Cauchy–Schwarz) |
-| `dephasingSolution_tendsto_diagonal` | `LindbladDynamics.lean` | Off-diagonal coherences vanish as $t \to \infty$ under pure dephasing (topological limit) |
+| `vonNeumannEntropy_tensorDensity` | `QuantumMutualInfo.lean` | Product-state entropy additivity $S(\rho_A \otimes \rho_B) = S(\rho_A)+S(\rho_B)$ (Kronecker / joint spectrum gap in Mathlib) |
+
+**Resolved (formerly axioms):** `fringeVisibility_n_le_one` (`GeneralVisibility.lean`, **proved**); `dephasingSolution_tendsto_diagonal` (`LindbladDynamics.lean`, **proved**).
 
 ## Sorry inventory
 
@@ -84,10 +88,10 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | 49 `lakefile` roots; **467** `theorem` + **48** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **5 axiom** (3 quantum-info/physical + 2 analysis) |
+| Lean 4 | 51 `lakefile` roots; **512** `theorem` + **60** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **4 axiom** (physical second law + Klein/unital DPI pair + tensor entropy additivity) |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
-| Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
+| Python | 88+ unit tests (`sim/tests`), 4 sim scripts + telemetry export/consumer | **All pass** in CI with optional deps |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **2** `Admitted` (binary Shannon bound + diagonal corner step) plus **axioms** for pure / maximally-mixed spectral entropy (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-03-22 — `make lean-stats-md`: 55 files, **467** `theorem`, 48 `lemma`, **5** `axiom`, sum **749**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-03-22 — `make lean-stats-md`: 58 files, **512** `theorem`, 60 `lemma`, **4** `axiom`, sum **815**; **0** `sorry`; `fringeVisibility_n_le_one` + `dephasingSolution_tendsto_diagonal` **proved** (swarm closure). Formal tracks: **`make formal-check`**.

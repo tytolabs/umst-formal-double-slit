@@ -14,7 +14,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 [![Formal](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**5** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit — `Lean/VERIFY.md`)&ensp;·&ensp;**467** theorems + **48** lemmas (heuristic scan — `PROOF-STATUS.md`)**
+**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**4** axioms (Klein, unital DPI, physical 2nd law, tensor entropy additivity — `Lean/VERIFY.md`)&ensp;·&ensp;**512** theorems + **60** lemmas (heuristic scan — `PROOF-STATUS.md`)**
 
 _Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference._
 _The thermodynamic cost is exact, non-negotiable, and formally verified._
@@ -37,9 +37,9 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 | | |
 |:---:|:---:|
-| **49** Lean modules | **467** `theorem` + **48** `lemma` (line-start scan) |
-| **0** sorry, **5** axioms (Klein, unital DPI, physical 2nd law + 2 analysis) | All qubit-level theorems proved |
-| **87** Python unit tests | **14** Haskell QuickCheck properties |
+| **51** Lean modules | **512** `theorem` + **60** `lemma` (line-start scan) |
+| **0** sorry, **4** axioms (Klein, unital DPI, physical 2nd law, tensor entropy additivity) | All qubit-level theorems proved |
+| **88** Python unit tests | **14** Haskell QuickCheck properties |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
 
 </div>
@@ -54,7 +54,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **467 theorems. 0 `sorry`. 5 explicit axioms** (each stated in `Lean/VERIFY.md` — corresponding to physical principles not yet formalized in Mathlib).
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **512 theorems. 0 `sorry`. 4 explicit axioms** (each stated in `Lean/VERIFY.md` — physical second law, Klein/unital DPI pair, and tensor entropy additivity pending Mathlib glue).
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
 
@@ -72,7 +72,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **467 theorems + 48 lemmas (heuristic); 0 sorry; 5 axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit).**_
+> _Machine-checked in Lean 4 with Mathlib. **512 theorems + 60 lemmas (heuristic); 0 sorry; 4 axioms (Klein, unital DPI, physical 2nd law, tensor entropy additivity).**_
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -167,8 +167,8 @@ flowchart TB
 
 ---
 
-## Lean modules (49 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
-*(Counts: `make lean-stats-md` → **467** line-start `theorem`, **48** `lemma`, **5** `axiom` in 55 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
+## Lean modules (51 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
+*(Counts: `make lean-stats-md` → **512** line-start `theorem`, **60** `lemma`, **4** `axiom` in 58 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>
@@ -260,9 +260,9 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 49 modules, 467 thm + 48 lem (heuristic) | **0** sorry, **5** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
+| **Lean 4** | 51 modules, 512 thm + 60 lem (heuristic) | **0** sorry, **4** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
-| **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
+| **Python** | 88 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** in CI with optional deps | `make sim && make sim-test` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **2** `Admitted` + axioms in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
 | **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
 
@@ -276,7 +276,7 @@ make ci-full
 
 # Individual layers
 cd Lean && lake build          # Lean 4 — counts: PROOF-STATUS.md / make lean-stats-md
-make sim && make sim-test      # Python — 87 unit tests
+make sim && make sim-test      # Python — 88 unit tests
 make telemetry-sample          # Gap 14 — golden JSON + consumer (NumPy)
 cd Haskell && cabal test       # Haskell — 14 QuickCheck properties
 make formal-check              # Coq + Agda (optional toolchains; matches CI formal.yml)

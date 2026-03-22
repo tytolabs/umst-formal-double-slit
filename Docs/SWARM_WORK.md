@@ -7,6 +7,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 Use this to assign **independent** tracks to agents or humans. Each track should end with **`lake build`** (Lean) or **`python3 -m unittest`** (Python) where applicable.
 
+**Example split:** one agent on **Track A** (tensor entropy / Kronecker spectrum), another on **Track B** (visibility), a third on **Tracks C+D** (dephasing limit + convex combos) — they touch different files and merge cleanly. **Tracks B, C, D** are now **closed** in `cursor/quantum-formalism-gaps-3118` (see git log).
+
 ## Track A — Lean: tensor entropy axiom (hard)
 
 **Goal:** Prove `vonNeumannEntropy_tensorDensity` in `Lean/QuantumMutualInfo.lean` and remove the axiom.
@@ -15,28 +17,23 @@ Use this to assign **independent** tracks to agents or humans. Each track should
 
 **Blocker class:** Mathlib Kronecker–spectrum glue (not a quick PR).
 
-## Track B — Lean: general visibility bound (medium)
+## Track B — Lean: general visibility bound — **DONE**
 
-**Goal:** Replace `fringeVisibility_n_le_one` axiom in `Lean/GeneralVisibility.lean` with a proof (Schur minors + Cauchy–Schwarz on off-diagonals).
+**Theorem:** `fringeVisibility_n_le_one` in `Lean/GeneralVisibility.lean` (PSD `2 × 2` minors + Cauchy–Schwarz on `√pᵢ`).
 
 **Independent of** Track A.
 
-## Track C — Lean: dephasing limit (small)
+## Track C — Lean: dephasing limit — **DONE**
 
-**Goal:** Replace `dephasingSolution_tendsto_diagonal` in `Lean/LindbladDynamics.lean` with `Filter.Tendsto` using `Real.tendsto_exp_neg_atTop_nhds_zero` and complex continuity.
+**Theorem:** `dephasingSolution_tendsto_diagonal` in `Lean/LindbladDynamics.lean` (`Real.tendsto_exp_neg_atTop_nhds_zero` + `Tendsto` on `ℂ`).
 
-**Imports:** add minimal topology for `nhds` / `Tendsto` on `ℂ`.
+## Track D — Lean: finite convex combinations — **DONE**
 
-## Track D — Lean: finite convex combinations (medium)
-
-**Goal:** In `DensityState.lean`, `convexComboDensity` for `∑ wᵢ = 1`, `wᵢ ≥ 0`, family of `DensityMatrix`.
+**Defs / lemmas:** `convexComboDensity`, `mixedDensity_eq_convexCombo_two` in `Lean/DensityState.lean` (plus `MeasurementChannel` `posSemidef_sum` alignment).
 
 ## Track E — Lean: concrete erasure (done / extend)
 
-**Status:** `ErasureChannel.lean` already has reset channel + `idealResetErasure`.
-
-**Optional extension:** entropy **drop** along reset for a named input (e.g. `rhoPlus`):  
-`vonNeumannDiagonal ρ - vonNeumannDiagonal (reset ρ) = log 2`.
+**Status:** `ErasureChannel.lean` has reset channel, `idealResetErasure`, and `resetChannel_entropy_drop_from_rhoPlus`.
 
 ## Track F — Lean: QMI + DPI (mostly done)
 
