@@ -26,6 +26,9 @@ Lean/.lake/
 Lean/.csdp.cache
 Lean/.nra.cache
 
+# Generated simulation GIFs (see scripts/generate_sim_gifs.py)
+Docs/Media/sim-*.gif
+
 # LaTeX build artifacts
 Docs/*.aux
 Docs/*.log

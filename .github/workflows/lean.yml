@@ -48,6 +48,15 @@ jobs:
           lake exe cache get || true
           lake build
 
+      - name: lean4checker
+        working-directory: ${{ github.workspace }}/Lean
+        run: |
+          set -e
+          git clone --depth 1 https://github.com/leanprover/lean4checker ../lean4checker
+          cd ../lean4checker && lake build
+          cd "${GITHUB_WORKSPACE}/Lean"
+          lake env ../lean4checker/.lake/build/bin/lean4checker
+
       - name: Install Optional Sim Dependencies
         working-directory: ${{ github.workspace }}
         run: |
@@ -62,6 +71,7 @@ jobs:
           python3 sim/plot_toy_complementarity_svg.py --validate
           python3 sim/qubit_kraus_sweep.py --validate
           python3 sim/plot_complementarity_svg.py --validate
+          python3 scripts/generate_sim_gifs.py --validate
           python3 -m unittest discover -s sim/tests -p "test_*.py"
 
       - name: Telemetry consumer validation
