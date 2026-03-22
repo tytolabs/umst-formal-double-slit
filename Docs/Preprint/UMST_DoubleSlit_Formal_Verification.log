@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 09:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.15)  22 MAR 2026 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -904,11 +904,11 @@ Package rerunfilecheck Info: File `UMST_DoubleSlit_Formal_Verification.out' has
 (rerunfilecheck)             Checksum: EB7D35C091D4E69DDAD5B4A9AAA8BD29;3084.
  ) 
 Here is how much of TeX's memory you used:
- 25338 strings out of 469006
- 461931 string characters out of 5454813
+ 25325 strings out of 469006
+ 461740 string characters out of 5454813
  882436 words of memory out of 5000000
- 53048 multiletter control sequences out of 15000+600000
- 718053 words of font info for 479 fonts, out of 8000000 for 9000
+ 53043 multiletter control sequences out of 15000+600000
+ 716763 words of font info for 473 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  102i,12n,107p,1224b,832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
@@ -928,11 +928,11 @@ exmf/fonts/type1/urw/palatino/uplb8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplbi8a.pfb></Users/santhoshshyamsundar/Library/te
 xmf/fonts/type1/urw/palatino/uplr8a.pfb></Users/santhoshshyamsundar/Library/tex
 mf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 579646 byte
+Output written on UMST_DoubleSlit_Formal_Verification.pdf (7 pages, 579328 byte
 s).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  212 compressed objects within 3 object streams
  57 named destinations out of 1000 (max. 500000)
- 126098 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 124050 words of extra memory for PDF output out of 128383 (max. 10000000)
 
