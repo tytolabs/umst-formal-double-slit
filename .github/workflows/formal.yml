@@ -24,19 +24,27 @@ concurrency:
 
 jobs:
   coq:
+    # The project uses `From Stdlib` (Rocq 9.x syntax) — Ubuntu's Coq 8.18
+    # does not support this, so we must use the official Rocq container.
+    # The container's coqc lives under opam, so we must source the opam env
+    # (running as default 'coq' user, NOT root, to preserve opam setup).
     runs-on: ubuntu-latest
+    container:
+      image: rocq/rocq-prover:9.0
     steps:
+      - name: Install git (needed for checkout)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq git
       - uses: actions/checkout@v4
-      - uses: rocq-community/docker-coq-action@v1
-        with:
-          custom_image: rocq/rocq-prover:9.0
-          custom_script: |
-            set -e
-            cd Coq
-            for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
-              echo "==> Compiling $f"
-              coqc -Q . UMSTFormal "$f"
-            done
+      - name: coq-check (all Coq/ modules)
+        run: |
+          set -e
+          cd Coq
+          for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
+            echo "==> Compiling $f"
+            coqc -Q . UMSTFormal "$f"
+          done
 
   agda:
     runs-on: ubuntu-24.04
@@ -47,28 +55,17 @@ jobs:
           set -e
           sudo apt-get update
           sudo apt-get install -y agda agda-stdlib
+          agda --version
+          # Check if the library is auto-registered
+          echo "=== Checking /etc/agda ==="
+          ls -la /etc/agda/ 2>/dev/null || echo "no /etc/agda"
+          cat /etc/agda/libraries 2>/dev/null || echo "no /etc/agda/libraries"
+          cat /etc/agda/defaults 2>/dev/null || echo "no /etc/agda/defaults"
       - name: agda-check (all Agda/ modules)
         run: |
           set -e
           cd Agda
-          # Find the stdlib include path (dpkg tells us where the files are)
-          STDLIB_INC=$(dpkg -L agda-stdlib | grep '/Data$' | head -1 | sed 's|/Data$||')
-          if [ -z "$STDLIB_INC" ]; then
-            # Fallback: try common paths
-            for p in /usr/share/agda-stdlib /usr/share/agda/lib/agda-stdlib; do
-              if [ -d "$p/Data" ]; then
-                STDLIB_INC="$p"
-                break
-              fi
-            done
-          fi
-          echo "Agda stdlib include path: $STDLIB_INC"
-          if [ -z "$STDLIB_INC" ]; then
-            echo "ERROR: Could not find Agda stdlib include path"
-            dpkg -L agda-stdlib | head -40
-            exit 1
-          fi
           for f in DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
             echo "==> Checking $f"
-            agda -v0 -i . -i "$STDLIB_INC" "$f"
+            agda -v0 "$f"
           done
