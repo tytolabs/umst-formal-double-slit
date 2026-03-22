@@ -204,11 +204,11 @@ def generate_teaser(out_dir, is_dark=True):
     from matplotlib.gridspec import GridSpec
 
     bg_color = '#0a0a1a' if is_dark else '#ffffff'
-    text_color = 'white' if is_dark else 'black'
-    sub_text_color = '#888' if is_dark else '#444'
-    grid_color = '#333' if is_dark else '#ccc'
-    accent_color = '#e94560' if is_dark else '#d12040'
-    trail_color = '#8b5cf6' if is_dark else '#6b21a8'
+    text_color = 'white' if is_dark else '#111111'
+    sub_text_color = '#888' if is_dark else '#666666'
+    grid_color = '#333' if is_dark else '#bbbbbb'
+    accent_color = '#e94560' if is_dark else '#444444'
+    trail_color = '#8b5cf6' if is_dark else '#777777'
 
     fig = plt.figure(figsize=(14, 7), facecolor=bg_color)
     gs = GridSpec(1, 2, width_ratios=[1.3, 1], wspace=0.3)
