@@ -1,5 +1,5 @@
 # umst-formal-double-slit — local verification
-.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
+.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test sim-gifs sim-gifs-validate telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
 
 lean:
 	cd Lean && lake build
@@ -22,6 +22,13 @@ sim:
 
 sim-test:
 	python3 -m unittest discover -s sim/tests -p "test_*.py"
+
+# Optional: wave simulation GIFs (matplotlib + imageio; see scripts/generate_sim_gifs.py).
+sim-gifs:
+	python3 scripts/generate_sim_gifs.py
+
+sim-gifs-validate:
+	python3 scripts/generate_sim_gifs.py --validate
 
 # Gap 14: golden Lean-aligned telemetry JSON + run consumer (requires NumPy).
 telemetry-sample:
@@ -51,7 +58,7 @@ agda-check:
 formal-check: coq-check agda-check
 
 # CI: after `lake build`, `.github/workflows/lean.yml` runs `pip install -r sim/requirements-optional.txt`,
-# then the same commands as `make sim` plus `unittest` (same as `make sim-test`).
+# then the same commands as `make sim` plus `unittest` (same as `make sim-test`) and `sim-gifs-validate`.
 # Local `make ci-local` does not pip-install; QuTiP tests skip unless you install optional deps.
 # `.github/workflows/haskell.yml` runs `cabal test` separately (not part of ci-local).
 # Optional: Lean + Python + Haskell in one go (requires cabal/GHC).
