@@ -33,4 +33,5 @@ lean_lib «UMST.DoubleSlit» where
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
     `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState,
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility]
+    -- WIP (axiom elimination): `MatrixLog, `LogSum, `KleinInequality — not yet sorry-free
   srcDir := "."
