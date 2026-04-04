@@ -10,10 +10,20 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import numpy as np
-
 ROOT = Path(__file__).resolve().parents[2]
 SCRIPT = ROOT / "sim" / "telemetry_trace_consumer.py"
+
+_TELEMETRY_SKIP_MSG = "numpy and pydantic required (pip install -r sim/requirements.txt)"
+
+
+def _have_telemetry_stack() -> bool:
+    try:
+        import numpy  # noqa: F401
+        import pydantic  # noqa: F401
+
+        return True
+    except ImportError:
+        return False
 
 
 def _load_consumer():
@@ -26,8 +36,16 @@ def _load_consumer():
     return module
 
 
+@unittest.skipUnless(_have_telemetry_stack(), _TELEMETRY_SKIP_MSG)
 class TelemetryTraceConsumerTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        import numpy as _np
+
+        cls.np = _np
+
     def test_epistemic_aliases_pass(self):
+        np = self.np
         c = _load_consumer()
         T = 300.0
         k_b = 1.380649e-23
@@ -56,6 +74,7 @@ class TelemetryTraceConsumerTests(unittest.TestCase):
             path.unlink(missing_ok=True)
 
     def test_epistemic_mi_exceeds_ln2_fails(self):
+        np = self.np
         c = _load_consumer()
         trace = {"steps": [{"stepMI": np.log(2.0) + 0.01, "temperature": 300.0}]}
         with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as tmp:
@@ -70,6 +89,7 @@ class TelemetryTraceConsumerTests(unittest.TestCase):
             path.unlink(missing_ok=True)
 
     def test_aggregate_catalog_and_fold(self):
+        np = self.np
         c = _load_consumer()
         T = 300.0
         k_b = 1.380649e-23
@@ -103,6 +123,7 @@ class TelemetryTraceConsumerTests(unittest.TestCase):
             path.unlink(missing_ok=True)
 
     def test_aggregate_with_partial_steps_fails_fold_gate(self):
+        np = self.np
         c = _load_consumer()
         T = 300.0
         k_b = 1.380649e-23
@@ -129,6 +150,7 @@ class TelemetryTraceConsumerTests(unittest.TestCase):
             path.unlink(missing_ok=True)
 
     def test_emitted_block_metadata_and_mi(self):
+        np = self.np
         c = _load_consumer()
         T = 300.0
         k_b = 1.380649e-23

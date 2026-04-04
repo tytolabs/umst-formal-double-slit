@@ -3,6 +3,8 @@ SPDX-License-Identifier: MIT
 Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -/
 
+import Mathlib.Data.Complex.BigOperators
+
 import DensityState
 import LandauerBound
 
@@ -44,7 +46,7 @@ noncomputable def offDiagonalPurity (ρ : DensityMatrix hn) : ℝ :=
 /-- General residual coherence capacity (purity-based):
 `RCC_n(ρ) = offDiagonalPurity ρ / (1 - diagonalPurity ρ)`. -/
 noncomputable def residualCoherenceCapacity_purity (ρ : DensityMatrix hn)
-    (h : diagonalPurity ρ < 1) : ℝ :=
+    (_ : diagonalPurity ρ < 1) : ℝ :=
   offDiagonalPurity ρ / (1 - diagonalPurity ρ)
 
 /-! ### Basic properties of diagonal purity -/
@@ -61,7 +63,7 @@ theorem diagonalPurity_le_one (ρ : DensityMatrix hn) : diagonalPurity ρ ≤ 1 
   calc diagonalPurity ρ = ∑ i : Fin n, (ρ.carrier i i).re ^ 2 := rfl
     _ ≤ ∑ i : Fin n, (ρ.carrier i i).re := by
         apply Finset.sum_le_sum; intro i _
-        exact sq_le_self' (by linarith [hnn i]) (hle i)
+        nlinarith [hnn i, hle i, sq_nonneg ((ρ.carrier i i).re - 1)]
     _ = 1 := hsum
 
 /-! ### Hermiticity helpers -/
@@ -69,38 +71,34 @@ theorem diagonalPurity_le_one (ρ : DensityMatrix hn) : diagonalPurity ρ ≤ 1 
 /-- For a Hermitian matrix, `(A * A) i i = ∑ j, ‖A i j‖²` (real and nonneg). -/
 theorem hermitian_sq_diag_eq_sum_normSq (ρ : DensityMatrix hn) (i : Fin n) :
     ((ρ.carrier * ρ.carrier) i i).re = ∑ j : Fin n, Complex.normSq (ρ.carrier i j) := by
-  simp only [Matrix.mul_apply]
   have hH := DensityMat.isHermitian ρ
-  conv_lhs => rw [show (∑ j, ρ.carrier i j * ρ.carrier j i) =
-    ∑ j, ρ.carrier i j * starRingEnd ℂ (ρ.carrier i j) from by
-    congr 1; ext j
-    have : ρ.carrier j i = starRingEnd ℂ (ρ.carrier i j) := by
-      have h := hH.apply i j
-      simp [Matrix.IsHermitian, Matrix.conjTranspose_apply] at h
-      rw [← h]; simp [star]
-    rw [this]]
-  rw [map_sum]
-  congr 1; ext j
-  rw [Complex.mul_conj]
-  simp [Complex.ofReal_re]
+  simp only [Matrix.mul_apply, Complex.re_sum]
+  refine Finset.sum_congr rfl ?_
+  intro j _
+  have hij : ρ.carrier j i = starRingEnd ℂ (ρ.carrier i j) := by
+    rw [starRingEnd_apply]
+    exact (hH.apply j i).symm
+  rw [hij, Complex.mul_conj]
+  simp
 
 /-- `Tr(ρ²)` equals `∑ᵢ ∑ⱼ ‖ρᵢⱼ‖²` for a Hermitian matrix. -/
 theorem trace_sq_eq_sum_normSq (ρ : DensityMatrix hn) :
     (trace (ρ.carrier * ρ.carrier)).re = ∑ i : Fin n, ∑ j : Fin n, Complex.normSq (ρ.carrier i j) := by
   unfold Matrix.trace
-  rw [map_sum]
-  congr 1; ext i
+  simp only [Complex.re_sum]
+  refine Finset.sum_congr rfl ?_
+  intro i _
   exact hermitian_sq_diag_eq_sum_normSq ρ i
 
 /-- Diagonal entry satisfies `‖ρᵢᵢ‖² = Re(ρᵢᵢ)²` (since imaginary part is zero for Hermitian). -/
 theorem normSq_diag_eq_re_sq (ρ : DensityMatrix hn) (i : Fin n) :
     Complex.normSq (ρ.carrier i i) = (ρ.carrier i i).re ^ 2 := by
-  have hH := DensityMat.isHermitian ρ
+  have h := (DensityMat.isHermitian ρ).apply i i
+  simp only [Matrix.IsHermitian, Matrix.conjTranspose_apply, starRingEnd_apply] at h
   have him : (ρ.carrier i i).im = 0 := by
-    have h := hH.apply i i
-    simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at h
-    rw [Complex.ext_iff] at h
-    linarith [h.2]
+    have := congrArg Complex.im h
+    simp at this
+    linarith
   simp [Complex.normSq_apply, him, sq]
 
 /-! ### Off-diagonal purity is a sum of `‖ρᵢⱼ‖²` for `i ≠ j` -/
@@ -127,16 +125,15 @@ theorem offDiagonalPurity_nonneg (ρ : DensityMatrix hn) : 0 ≤ offDiagonalPuri
 
 /-! ### `Tr(ρ²) ≤ 1` -/
 
-/-- For a density matrix, `Tr(ρ²) ≤ Tr(ρ) = 1`.
-Proof: eigenvalues `λᵢ ∈ [0,1]` with `∑ λᵢ = 1`, so `∑ λᵢ² ≤ ∑ λᵢ = 1`. -/
--- Key lemma: for PSD ρ, each entry satisfies normSq(ρᵢⱼ) ≤ (ρᵢᵢ).re * (ρⱼⱼ).re
-private lemma normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
+/-- PSD entry bound: `‖ρᵢⱼ‖² ≤ (ρᵢᵢ).re · (ρⱼⱼ).re` (Schur complement on a 2×2 principal submatrix).
+For a density matrix, `Tr(ρ²) ≤ 1` follows from eigenvalues in `[0,1]` summing to `1`. -/
+theorem normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
     Complex.normSq (ρ.carrier i j) ≤ (ρ.carrier i i).re * (ρ.carrier j j).re := by
   by_cases hij : i = j
   · -- Diagonal case: normSq(ρᵢᵢ) = (ρᵢᵢ).re² = (ρᵢᵢ).re * (ρᵢᵢ).re
     subst hij
     rw [normSq_diag_eq_re_sq]
-    ring_nf
+    simp [pow_two, le_refl]
   · -- Off-diagonal case: use 2×2 submatrix PSD argument
     set b := ρ.carrier i j with hb_def
     set p := (ρ.carrier i i).re with hp_def
@@ -145,25 +142,23 @@ private lemma normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
     have h2psd : (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n)
         (![i, j] : Fin 2 → Fin n)).PosSemidef :=
       ρ.psd.submatrix (![i, j] : Fin 2 → Fin n)
-    -- Hermiticity gives ρ j i = conj(b)
+    -- Hermiticity gives ρ j i = conj(ρ i j) = conj(b)
     have hji : ρ.carrier j i = starRingEnd ℂ b := by
-      have hH := DensityMat.isHermitian ρ
-      have h := hH.apply i j
-      simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at h
-      rw [← h]; simp [star]
+      rw [hb_def]
+      exact (DensityMat.isHermitian ρ).apply j i |>.symm
     -- Diagonal entries are real: ρ i i = ↑p, ρ j j = ↑q
     have hii_re : (ρ.carrier i i).im = 0 := by
-      have hH := DensityMat.isHermitian ρ
-      have h := hH.apply i i
-      simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at h
-      rw [Complex.ext_iff] at h
-      linarith [h.2]
+      have h := (DensityMat.isHermitian ρ).apply i i
+      simp only [Matrix.IsHermitian, Matrix.conjTranspose_apply, starRingEnd_apply] at h
+      have := congrArg Complex.im h
+      simp at this
+      linarith
     have hjj_re : (ρ.carrier j j).im = 0 := by
-      have hH := DensityMat.isHermitian ρ
-      have h := hH.apply j j
-      simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at h
-      rw [Complex.ext_iff] at h
-      linarith [h.2]
+      have h := (DensityMat.isHermitian ρ).apply j j
+      simp only [Matrix.IsHermitian, Matrix.conjTranspose_apply, starRingEnd_apply] at h
+      have := congrArg Complex.im h
+      simp at this
+      linarith
     have hii_eq : ρ.carrier i i = (p : ℂ) := by
       apply Complex.ext
       · simp [hp_def]
@@ -235,9 +230,9 @@ private lemma normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
     have hp_nn : 0 ≤ p := DensityMat.diag_re_nonneg_n ρ i
     have hq_nn : 0 ≤ q := DensityMat.diag_re_nonneg_n ρ j
     -- Case split on p
-    rcases hp_nn.eq_or_gt with rfl | hp_pos
+    by_cases hp0 : p = 0
     · -- p = 0
-      rcases hq_nn.eq_or_gt with rfl | hq_pos
+      by_cases hq0 : q = 0
       · -- p = 0, q = 0: use PSD with ![1, r] for r = 1, -1, I, -I to show b = 0
         -- For any vector ![1, r], dotProduct = b*r + star(b*r) = 2*Re(b*r) ≥ 0
         -- Taking r=1: 2*Re(b) ≥ 0; r=-1: -2*Re(b) ≥ 0 → Re(b)=0
@@ -264,8 +259,9 @@ private lemma normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
           simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
             Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one]
           simp only [hsub_00, hsub_01, hsub_10, hsub_11]
+          rw [show (p : ℂ) = 0 by simp [hp0], show (q : ℂ) = 0 by simp [hq0]]
           simp only [starRingEnd_apply]
-          ring
+          ring_nf
         -- For ![1, -1]: similarly -(b + cj(b))
         have H4_val : Matrix.dotProduct (star (![(1:ℂ), -(1:ℂ)] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), -(1:ℂ)]) =
@@ -273,61 +269,92 @@ private lemma normSq_entry_le_diag_mul (ρ : DensityMatrix hn) (i j : Fin n) :
           simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
             Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one, star_neg]
           simp only [hsub_00, hsub_01, hsub_10, hsub_11]
+          rw [show (p : ℂ) = 0 by simp [hp0], show (q : ℂ) = 0 by simp [hq0]]
           simp only [starRingEnd_apply]
-          ring
+          ring_nf
         -- For ![1, I]: 1*(b*I) + (-I)*(cj(b)) = b*I - I*cj(b); Re = -2*Im(b)
         have H5_val : Matrix.dotProduct (star (![(1:ℂ), Complex.I] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), Complex.I]) =
             b * Complex.I + starRingEnd ℂ (b * Complex.I) := by
-          simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one]
           have hstI : star Complex.I = -Complex.I := by
             have : starRingEnd ℂ Complex.I = -Complex.I := Complex.conj_I
             rwa [← Complex.star_def] at this
-          rw [hstI]
-          simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-          simp only [starRingEnd_apply, map_mul, Complex.conj_I]
-          ring
+          simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
+            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one, hstI, hsub_00, hsub_01,
+            hsub_10, hsub_11, hp0, hq0, Complex.ofReal_zero, zero_mul, add_zero, mul_zero,
+            starRingEnd_apply, RingHom.map_mul (starRingEnd ℂ), Complex.conj_I, smul_eq_mul, one_mul,
+            neg_mul, mul_one, mul_neg, neg_neg]
+          simp [mul_comm, mul_left_comm, mul_assoc, add_comm]
         -- For ![1, -I]: -(b*I + cj(b*I))
         have H6_val : Matrix.dotProduct (star (![(1:ℂ), -Complex.I] : Fin 2 → ℂ))
             (ρ.carrier.submatrix (![i, j] : Fin 2 → Fin n) (![i, j] : Fin 2 → Fin n) *ᵥ ![(1:ℂ), -Complex.I]) =
             -(b * Complex.I + starRingEnd ℂ (b * Complex.I)) := by
-          simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
-            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one, star_neg]
           have hstI : star Complex.I = -Complex.I := by
             have : starRingEnd ℂ Complex.I = -Complex.I := Complex.conj_I
             rwa [← Complex.star_def] at this
-          rw [hstI]
-          simp only [hsub_00, hsub_01, hsub_10, hsub_11]
-          simp only [starRingEnd_apply, map_mul, Complex.conj_I, map_neg]
-          ring
+          simp only [Matrix.dotProduct, Matrix.mulVec, Fin.sum_univ_two, Matrix.cons_val_zero,
+            Matrix.cons_val_one, Matrix.head_cons, Pi.star_apply, star_one, star_neg, hstI, hsub_00,
+            hsub_01, hsub_10, hsub_11, hp0, hq0, Complex.ofReal_zero, zero_mul, add_zero, mul_zero,
+            starRingEnd_apply, RingHom.map_mul (starRingEnd ℂ), Complex.conj_I, map_neg, smul_eq_mul,
+            one_mul, neg_mul, mul_one, mul_neg, neg_neg]
+          simp [mul_comm, mul_left_comm, mul_assoc, add_comm]
         rw [H3_val] at H3; rw [H4_val] at H4
         rw [H5_val] at H5; rw [H6_val] at H6
         -- From H3 and H4: b + cj(b) ≥ 0 and -(b + cj(b)) ≥ 0 → Re(b) = 0
         have hre : b.re = 0 := by
-          have h3r := (Complex.nonneg_iff.mp H3).1
-          have h4r := (Complex.nonneg_iff.mp H4).1
-          simp only [starRingEnd_apply, Complex.add_re, Complex.conj_re, Complex.neg_re] at h3r h4r
+          rcases Complex.nonneg_iff.mp H3 with ⟨h3r, _⟩
+          rcases Complex.nonneg_iff.mp H4 with ⟨h4r, _⟩
+          have hres : (starRingEnd ℂ b).re = b.re := by
+            rw [starRingEnd_apply, congr_fun Complex.star_def b, Complex.conj_re]
+          have hre_sum : (b + starRingEnd ℂ b).re = 2 * b.re := by
+            rw [Complex.add_re, hres, two_mul]
+          have h4re : (-(b + starRingEnd ℂ b)).re = -(2 * b.re) := by
+            rw [Complex.neg_re, Complex.add_re, hres, ← two_mul]
+          rw [hre_sum] at h3r
+          rw [h4re] at h4r
           linarith
         -- From H5 and H6: b*I + cj(b*I) ≥ 0 and -(b*I + cj(b*I)) ≥ 0 → Im(b) = 0
         have him2 : b.im = 0 := by
-          have h5r := (Complex.nonneg_iff.mp H5).1
-          have h6r := (Complex.nonneg_iff.mp H6).1
-          simp only [starRingEnd_apply, Complex.add_re, Complex.mul_re,
-            Complex.conj_re, Complex.I_re, Complex.I_im, Complex.conj_im, Complex.neg_re] at h5r h6r
+          have hbI : b * Complex.I = Complex.ofReal (-b.im) := by
+            have hbr : b = (b.im : ℂ) * Complex.I := by
+              calc
+                b = (b.re : ℂ) + (b.im : ℂ) * Complex.I := (Complex.re_add_im b).symm
+                _ = (b.im : ℂ) * Complex.I := by simp [hre, zero_add]
+            rw [hbr, mul_assoc, Complex.I_mul_I]
+            simp [← Complex.ofReal_neg]
+          have hkey :
+              b * Complex.I + starRingEnd ℂ (b * Complex.I) = Complex.ofReal (-(2 * b.im)) := by
+            rw [hbI, starRingEnd_apply, congr_fun Complex.star_def (Complex.ofReal (-b.im)),
+              Complex.add_conj]
+            simp [two_mul, neg_mul]
+          rw [hkey] at H5
+          have hneg :
+              -(b * Complex.I + starRingEnd ℂ (b * Complex.I)) = Complex.ofReal (2 * b.im) := by
+            rw [hkey]
+            simp only [Complex.ofReal_neg, neg_neg]
+          rw [hneg] at H6
+          rcases Complex.nonneg_iff.mp H5 with ⟨h5r, _⟩
+          rcases Complex.nonneg_iff.mp H6 with ⟨h6r, _⟩
+          simp only [Complex.ofReal_re, Complex.ofReal_im] at h5r h6r
           linarith
         have hb_zero : b = 0 := Complex.ext hre him2
-        simp [hb_zero, Complex.normSq_zero]
-      · -- p = 0, q > 0: From H2_re: 0 ≤ q*(0*q - normSq b) = -q*normSq(b)
-        -- Since q > 0 and normSq b ≥ 0, we get normSq b = 0
+        rw [hb_zero, hp0, hq0, Complex.normSq_zero]
+        simp
+      · -- p = 0, q ≠ 0 hence q > 0
+        have hq_pos : 0 < q := lt_of_le_of_ne hq_nn (Ne.symm hq0)
+        -- From H2_re: 0 ≤ q*(0*q - normSq b) = -q*normSq(b)
         have hnsq_zero : Complex.normSq b = 0 := by
+          rw [hp0] at H2_re
           have : 0 ≤ q * (0 * q - Complex.normSq b) := H2_re
           have : q * Complex.normSq b ≤ 0 := by nlinarith
           nlinarith [hq_pos.le]
-        simp [hnsq_zero]
-    · -- p > 0: From H1_re: 0 ≤ p*(p*q - normSq b), since p > 0 → normSq b ≤ p*q
-      have key : Complex.normSq b ≤ p * q := by
-        nlinarith [hp_pos.le]
+        rw [hnsq_zero, hp0]
+        simp
+    · -- p > 0
+      have hp_pos : 0 < p := lt_of_le_of_ne hp_nn (Ne.symm hp0)
+      have hdiff : 0 ≤ p * q - Complex.normSq b :=
+        nonneg_of_mul_nonneg_right H1_re hp_pos
+      have key : Complex.normSq b ≤ p * q := by linarith
       linarith
 
 theorem trace_sq_le_one (ρ : DensityMatrix hn) :
@@ -383,14 +410,14 @@ theorem offDiagonalPurity_eq_zero_iff_diagonal (ρ : DensityMatrix hn) :
   rw [offDiagonalPurity_eq_sum_offdiag]
   constructor
   · intro h i j hij
-    have hle : ∀ i : Fin n, 0 ≤ ∑ j in Finset.univ.erase i, Complex.normSq (ρ.carrier i j) :=
-      fun i => Finset.sum_nonneg (fun j _ => Complex.normSq_nonneg _)
+    have hle : ∀ i ∈ (Finset.univ : Finset (Fin n)), 0 ≤ ∑ j in Finset.univ.erase i, Complex.normSq (ρ.carrier i j) :=
+      fun i _ => Finset.sum_nonneg (fun j _ => Complex.normSq_nonneg _)
     have hzero := Finset.sum_eq_zero_iff_of_nonneg hle |>.mp h
     have hrow := hzero i (Finset.mem_univ i)
     have hle2 : ∀ k ∈ Finset.univ.erase i, 0 ≤ Complex.normSq (ρ.carrier i k) :=
       fun k _ => Complex.normSq_nonneg _
     have hcol := Finset.sum_eq_zero_iff_of_nonneg hle2 |>.mp hrow
-    have hmem : j ∈ Finset.univ.erase i := Finset.mem_erase.mpr ⟨hij, Finset.mem_univ j⟩
+    have hmem : j ∈ Finset.univ.erase i := Finset.mem_erase.mpr ⟨Ne.symm hij, Finset.mem_univ j⟩
     have := hcol j hmem
     rwa [Complex.normSq_eq_zero] at this
   · intro h
@@ -433,24 +460,19 @@ theorem one_sub_diagonalPurity_qubit (ρ : DensityMatrix hnQubit) :
 /-- For a qubit, `offDiagonalPurity = 2 ‖ρ₀₁‖²`. -/
 theorem offDiagonalPurity_qubit (ρ : DensityMatrix hnQubit) :
     offDiagonalPurity ρ = 2 * Complex.normSq (ρ.carrier 0 1) := by
-  rw [offDiagonalPurity_eq_sum_offdiag]
-  rw [Fin.sum_univ_two]
-  simp only [Finset.univ, Fintype.elems_fin]
-  -- Each inner sum has exactly one term (the other index)
-  have h0 : ∑ j in ({0, 1} : Finset (Fin 2)).erase 0, Complex.normSq (ρ.carrier 0 j) =
-      Complex.normSq (ρ.carrier 0 1) := by
-    simp [Finset.sum_singleton]
-  have h1 : ∑ j in ({0, 1} : Finset (Fin 2)).erase 1, Complex.normSq (ρ.carrier 1 j) =
-      Complex.normSq (ρ.carrier 1 0) := by
-    simp [Finset.sum_singleton]
-  rw [h0, h1]
-  -- ‖ρ₁₀‖² = ‖ρ₀₁‖² by Hermiticity
+  rw [offDiagonalPurity_eq_sum_offdiag, Fin.sum_univ_two]
+  have hErase0 : Finset.univ.erase (0 : Fin 2) = ({1} : Finset (Fin 2)) := by decide
+  have hErase1 : Finset.univ.erase (1 : Fin 2) = ({0} : Finset (Fin 2)) := by decide
+  simp only [hErase0, hErase1, Finset.sum_singleton]
   have hH := DensityMat.isHermitian ρ
   have h10 : ρ.carrier 1 0 = starRingEnd ℂ (ρ.carrier 0 1) := by
-    have := hH.apply 0 1
-    simp [Matrix.IsHermitian, Matrix.conjTranspose_apply, star] at this
-    rw [← this]; simp [star]
-  rw [h10, map_starRingEnd, Complex.normSq_conj]
+    rw [starRingEnd_apply]
+    exact (hH.apply 1 0).symm
+  rw [h10]
+  have hn :
+      Complex.normSq (starRingEnd ℂ (ρ.carrier 0 1)) = Complex.normSq (ρ.carrier 0 1) := by
+    rw [starRingEnd_apply, star_def, Complex.normSq_conj]
+  rw [hn]
   ring
 
 /-- For a qubit with nonzero off-diagonal, `RCC_purity = ‖ρ₀₁‖² / (p₀ p₁)`. -/
@@ -458,9 +480,28 @@ theorem residualCoherenceCapacity_purity_qubit (ρ : DensityMatrix hnQubit)
     (h : diagonalPurity ρ < 1) :
     residualCoherenceCapacity_purity ρ h =
       Complex.normSq (ρ.carrier 0 1) / ((ρ.carrier 0 0).re * (ρ.carrier 1 1).re) := by
+  have hp0 : (ρ.carrier 0 0).re ≠ 0 := by
+    intro hz
+    have hsum := DensityMat.trace_re_eq_one_n ρ
+    rw [Fin.sum_univ_two] at hsum
+    simp [hz] at hsum
+    have hone : diagonalPurity ρ = 1 := by
+      rw [diagonalPurity_qubit, hz]; simp [pow_two, hsum]
+    linarith [h, hone]
+  have hp1 : (ρ.carrier 1 1).re ≠ 0 := by
+    intro hz
+    have hsum := DensityMat.trace_re_eq_one_n ρ
+    rw [Fin.sum_univ_two] at hsum
+    have h0 : (ρ.carrier 0 0).re = 1 := by linarith [hsum, hz]
+    have hone : diagonalPurity ρ = 1 := by
+      rw [diagonalPurity_qubit, hz, h0]; simp [pow_two]
+    linarith [h, hone]
+  have h2 : (2 : ℝ) ≠ 0 := by norm_num
+  have hden : 2 * (ρ.carrier 0 0).re * (ρ.carrier 1 1).re ≠ 0 :=
+    mul_ne_zero (mul_ne_zero h2 hp0) hp1
   unfold residualCoherenceCapacity_purity
   rw [offDiagonalPurity_qubit, one_sub_diagonalPurity_qubit]
-  field_simp
+  field_simp [hden]
   ring
 
 end UMST.Quantum

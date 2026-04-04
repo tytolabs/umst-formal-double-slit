@@ -7,7 +7,7 @@ import MeasurementChannel
 import SchrodingerDynamics
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Topology.Instances.Real
+import Mathlib.Topology.Instances.Complex
 
 /-!
 # LindbladDynamics — open system dynamics and dephasing as Lindblad
@@ -87,7 +87,7 @@ noncomputable def lindbladGenerator {ι : Type*} [Fintype ι]
 
 section DephasingQubit
 
-open Pi KrausChannel
+open Pi KrausChannel Filter
 
 /-- Dephasing dissipator for qubit computational basis using path projectors `P₀, P₁`. -/
 noncomputable def dephasingDissipator (ρ : Matrix (Fin 2) (Fin 2) ℂ) :
@@ -99,10 +99,10 @@ theorem dephasing_dissipator_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (i : Fin
     dephasingDissipator ρ i i = 0 := by
   unfold dephasingDissipator dissipator singleDissipator
   simp only [Fin.sum_univ_two, Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply,
-    smul_eq_mul]
+    smul_eq_mul, pathProjector_conjTranspose]
   rw [pathProjector_conj_mul_entry 0 i i ρ, pathProjector_conj_mul_entry 1 i i ρ]
   fin_cases i <;> simp [pathProjector, diagonal_apply, Pi.single, Function.update,
-    Matrix.mul_apply, Fin.sum_univ_two]
+    Matrix.mul_apply, Fin.sum_univ_two] <;> ring
 
 /-- Off-diagonal entries under dephasing dissipator: `𝒟_deph[ρ]_{ab} = -ρ_{ab}` for `a ≠ b`. -/
 theorem dephasing_dissipator_offdiag (ρ : Matrix (Fin 2) (Fin 2) ℂ)
@@ -110,11 +110,11 @@ theorem dephasing_dissipator_offdiag (ρ : Matrix (Fin 2) (Fin 2) ℂ)
     dephasingDissipator ρ a b = -ρ a b := by
   unfold dephasingDissipator dissipator singleDissipator
   simp only [Fin.sum_univ_two, Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply,
-    smul_eq_mul]
+    smul_eq_mul, pathProjector_conjTranspose]
   rw [pathProjector_conj_mul_entry 0 a b ρ, pathProjector_conj_mul_entry 1 a b ρ]
   fin_cases a <;> fin_cases b <;> (try exact absurd rfl hab) <;>
     simp [pathProjector, diagonal_apply, Pi.single, Function.update,
-      Matrix.mul_apply, Fin.sum_univ_two]
+      Matrix.mul_apply, Fin.sum_univ_two] <;> ring
 
 /-- The which-path Kraus channel equals `ρ + 𝒟_deph[ρ]` projected through unit dephasing step.
 This shows that the Kraus measurement channel is exactly the "apply dephasing once" map on the
@@ -140,7 +140,7 @@ theorem strong_dephasing_kills_offdiag (ρ : Matrix (Fin 2) (Fin 2) ℂ)
 
 While the full operator exponential $e^{t 𝒟}[\rho]$ requires extensive Banach space ODE machinery,
 the exact analytical solution for pure dephasing decouples into trivial differential equations.
-We formulate this exact continuous mapping and formally specify its topological asymptotic limits. -/
+We formulate this exact continuous mapping and prove off-diagonal `Tendsto` limits at `atTop`. -/
 
 /-- The exact analytical solution for $\dot{\rho} = 𝒟_{\text{deph}}[\rho]$ at time $t \geq 0$.
 Diagonal elements are invariant (energy conservation), while off-diagonal coherences
@@ -162,11 +162,28 @@ theorem dephasingSolution_trace_preserved (ρ : Matrix (Fin 2) (Fin 2) ℂ) (t :
     Matrix.trace (dephasingSolution ρ t) = Matrix.trace ρ := by
   simp [Matrix.trace, dephasingSolution]
 
-/-- As $t \to \infty$, the off-diagonal elements of the dephasing solution strictly vanish.
-We define this axiomatically matching the topological limit `Tendsto (fun t => Real.exp (-t)) atTop (𝓝 0)`
-to avoid pulling in the heavy `Mathlib.Topology.Instances.Complex` machinery merely for limits. -/
-axiom dephasingSolution_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
-    Filter.Tendsto (fun t => (dephasingSolution ρ t) a b) Filter.atTop (nhds 0)
+/-- As $t \to \infty$, off-diagonal entries of `dephasingSolution` tend to $0$.
+For `a ≠ b` the entry is `(Real.exp (-t) : ℂ) * ρ a b`; reals `exp (-t) → 0` at `atTop`
+(`Real.tendsto_exp_neg_atTop_nhds_zero`), hence the coercion to `ℂ` (`Filter.Tendsto.ofReal`),
+then continuity of multiplication. -/
+theorem dephasingSolution_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
+    Tendsto (fun t => (dephasingSolution ρ t) a b) atTop (nhds (0 : ℂ)) := by
+  have hform (t : ℝ) : (dephasingSolution ρ t) a b = (Real.exp (-t) : ℂ) * ρ a b := by
+    simp [dephasingSolution, hab]
+  simp_rw [hform]
+  by_cases hρ : ρ a b = 0
+  · have h0 : (fun t => (Real.exp (-t) : ℂ) * ρ a b) = fun _ => 0 := by
+      funext t
+      simp [hρ]
+    rw [h0]
+    exact tendsto_const_nhds
+  · have hexp := Filter.Tendsto.ofReal Real.tendsto_exp_neg_atTop_nhds_zero
+    simpa [zero_mul] using Filter.Tendsto.mul hexp tendsto_const_nhds
+
+/-- Alias: off-diagonal dephasing solution tends to `0` as `t → ∞`. -/
+theorem dephasing_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
+    Tendsto (fun t => (dephasingSolution ρ t) a b) atTop (nhds (0 : ℂ)) :=
+  dephasingSolution_tendsto_diagonal ρ a b hab
 
 end DephasingQubit
 

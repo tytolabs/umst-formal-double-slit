@@ -7,6 +7,22 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 This folder contains lightweight Python simulation utilities for the double-slit extension.
 
+## Python dependencies (tests)
+
+| File | Purpose |
+|------|---------|
+| **`sim/requirements.txt`** | **Baseline for `unittest discover`:** `numpy`, `pydantic` (telemetry consumer + export + NumPy-backed tests). Install with `python3 -m pip install -r sim/requirements.txt` from the repo root. |
+| **`sim/requirements-optional.txt`** | Full stack: includes `requirements.txt` plus matplotlib, imageio, QuTiP, SciPy (CI uses this). |
+
+Tests that need heavier packages use `@unittest.skipUnless(...)` when imports are missing, so a completely bare interpreter still finishes with **skipped** tests rather than **errors**.
+
+On **PEP 668** / Homebrew Python, create a venv first (same pattern as CI’s isolated env):
+
+```bash
+python3 -m venv .venv && . .venv/bin/activate
+pip install -r sim/requirements.txt   # or sim/requirements-optional.txt for everything
+```
+
 ## Roadmap (Python)
 
 | Priority | Item | Status |

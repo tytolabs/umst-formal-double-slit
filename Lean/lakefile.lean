@@ -15,6 +15,12 @@ require mathlib from git
   Self-contained quantum / measurement extension. Build:
 
   `cd Lean && lake build`
+
+  **Default `roots`** = quantum + epistemic formal layer plus the vendored thermodynamic
+  stack.  **Excluded on purpose:** `Test*.lean`, `test_tensor_eigen.lean`, optional
+  `LogSum` / `MatrixLog`, `FlashMoERuntimeScaffold.lean`, etc.  Those files are not in
+  `roots` so they do not run in default CI; build them explicitly (e.g. `lake build +TestEntropy`)
+  when needed.  They have been manually grep-checked for `sorry` / stray `axiom`.
 -/
 lean_lib «UMST.DoubleSlit» where
   roots := #[`UMSTCore, `DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
@@ -28,10 +34,11 @@ lean_lib «UMST.DoubleSlit» where
     `PMICEntropyInterior, `Complementarity, `PMICVisibility,
     `VonNeumannEntropy, `QuantumMutualInfo, `KleinInequality, `DataProcessingInequality,
     `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,
-    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `SimLeanBridge,
+    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `FormalFoundations, `SimLeanBridge,
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
     `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState,
-    `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility]
+    `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
+    `PhysicsConstrainedAI, `InformationCostIdentity]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)
   srcDir := "."

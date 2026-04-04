@@ -47,7 +47,7 @@ Same contacts as in the repo [`README.md`](../README.md).
 | `QuantumMutualInfo.lean` | QMI | Claude Code | `lake build` ✅ | 0 |
 | `ErasureChannel.lean` | erasure | Claude Code | `lake build` ✅ | 0 |
 
-**Axioms (not `sorry`):** **6** explicit axioms across the codebase — general unital DPI and Klein's inequality in `DataProcessingInequality.lean`; analysis-style axioms in `GeneralVisibility.lean` and `LindbladDynamics.lean`; `physicalSecondLaw` in `LandauerLaw.lean`; `vonNeumannEntropy_tensorDensity` in `QuantumMutualInfo.lean` (Kronecker eigenvalue factorization pending Mathlib). See **`PROOF-STATUS.md`** / **`Lean/VERIFY.md`**.
+**Lean `axiom` declarations:** **1** — **`physicalSecondLaw`** (`LandauerLaw.lean`). **`fringeVisibility_n_le_one`** and **`dephasingSolution_tendsto_diagonal`** are **theorems** (`GeneralVisibility.lean`, `LindbladDynamics.lean`). Klein relative-entropy nonnegativity is a **theorem** in `KleinInequality.lean`; tensor entropy additivity is a **theorem** in `KroneckerEigen.lean`. See **`FORMAL_FOUNDATIONS.md`**, **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**.
 
 ## Python Simulation Layer
 

@@ -78,7 +78,7 @@ noncomputable def landauerCostDiagonal_n {n : ℕ} (hn : 0 < n) (ρ : DensityMat
 theorem landauerCostDiagonal_n_nonneg {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) (T : ℝ) (hT : 0 ≤ T) :
     0 ≤ landauerCostDiagonal_n hn ρ T := by
   unfold landauerCostDiagonal_n
-  exact infoEnergyLowerBound _ _ (pathEntropyBits_n_nonneg hn ρ) hT
+  exact infoEnergyLowerBound_nonneg _ _ (pathEntropyBits_n_nonneg hn ρ) hT
 
 theorem landauerCostDiagonal_n_le_logb_landauerBitEnergy {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn)
     (T : ℝ) (hT : 0 ≤ T) :
@@ -90,11 +90,6 @@ theorem pathEntropyBits_n_qubit_eq (ρ : DensityMatrix hnQubit) :
     pathEntropyBits_n hnQubit ρ = pathEntropyBits ρ := by
   unfold pathEntropyBits_n pathEntropyBits
   rw [vonNeumannDiagonal_n_eq_vonNeumannDiagonal ρ]
-
-theorem landauerCostDiagonal_n_qubit_eq (ρ : DensityMatrix hnQubit) (T : ℝ) :
-    landauerCostDiagonal_n hnQubit ρ T = landauerCostDiagonal ρ T := by
-  unfold landauerCostDiagonal_n landauerCostDiagonal
-  rw [pathEntropyBits_n_qubit_eq ρ]
 
 /-- SI joules: `k_B T log 2` times bit-equivalent diagonal entropy. -/
 noncomputable def landauerCostDiagonal (ρ : DensityMatrix hnQubit) (T : ℝ) : ℝ :=
@@ -108,14 +103,19 @@ theorem landauerCostDiagonal_nonneg (ρ : DensityMatrix hnQubit) (T : ℝ) (hT :
 theorem landauerCostDiagonal_le_landauerBitEnergy (ρ : DensityMatrix hnQubit) (T : ℝ) (hT : 0 ≤ T) :
     landauerCostDiagonal ρ T ≤ landauerBitEnergy T := by
   unfold landauerCostDiagonal infoEnergyLowerBound
-  rw [← mul_one (landauerBitEnergy T)]
-  exact mul_le_mul_of_nonneg_left (pathEntropyBits_le_one ρ) (landauerBitEnergy_nonneg hT)
+  simpa [mul_assoc, mul_one] using
+    mul_le_mul_of_nonneg_left (pathEntropyBits_le_one ρ) (landauerBitEnergy_nonneg hT)
 
 @[simp]
 theorem landauerCostDiagonal_whichPathInvariant (ρ : DensityMatrix hnQubit) (T : ℝ) :
     landauerCostDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) T =
       landauerCostDiagonal ρ T := by
   simp [landauerCostDiagonal, pathEntropyBits, vonNeumannDiagonal_whichPath_apply]
+
+theorem landauerCostDiagonal_n_qubit_eq (ρ : DensityMatrix hnQubit) (T : ℝ) :
+    landauerCostDiagonal_n hnQubit ρ T = landauerCostDiagonal ρ T := by
+  unfold landauerCostDiagonal_n landauerCostDiagonal
+  rw [pathEntropyBits_n_qubit_eq ρ]
 
 /-- **Principle of Maximal Information Collapse.**
 The residual coherence capacity after extracting `pathEntropyBits ρ` bits of which-path information
@@ -158,7 +158,7 @@ For an n-level system, normalized by the maximum entropy `logb 2 n`:
 `residualCoherenceCapacity_n ρ = 1 - pathEntropyBits_n / logb 2 n`.
 Ranges in [0, 1]: 0 = maximum information extracted, 1 = no extraction. -/
 noncomputable def residualCoherenceCapacity_n {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) : ℝ :=
-  if h : (1 : ℕ) < n then 1 - pathEntropyBits_n hn ρ / logb 2 n
+  if _ : (1 : ℕ) < n then 1 - pathEntropyBits_n hn ρ / logb 2 n
   else 1 - pathEntropyBits_n hn ρ  -- n=1: degenerate case, logb 2 1 = 0
 
 theorem residualCoherenceCapacity_n_nonneg {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
@@ -169,8 +169,10 @@ theorem residualCoherenceCapacity_n_nonneg {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
   have hlog : 0 < logb 2 n := by
     apply Real.logb_pos (by norm_num : (1 : ℝ) < 2)
     exact_mod_cast hn1
-  rw [sub_nonneg]
-  exact div_le_one_of_le (pathEntropyBits_n_le_logb_two hn ρ) (le_of_lt hlog)
+  have hle : pathEntropyBits_n hn ρ / logb 2 (n : ℝ) ≤ 1 := by
+    simpa [div_self (ne_of_gt hlog)] using
+      div_le_div_of_nonneg_right (pathEntropyBits_n_le_logb_two hn ρ) (le_of_lt hlog)
+  linarith [hle]
 
 theorem residualCoherenceCapacity_n_le_one {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
     (ρ : DensityMatrix hn) :
@@ -192,10 +194,11 @@ theorem principle_of_maximal_information_collapse_n {n : ℕ} (hn : 0 < n) (hn1 
 theorem residualCoherenceCapacity_n_qubit_eq (ρ : DensityMatrix hnQubit) :
     residualCoherenceCapacity_n hnQubit ρ = residualCoherenceCapacity ρ := by
   unfold residualCoherenceCapacity_n residualCoherenceCapacity
-  simp [show (1 : ℕ) < 2 from by norm_num]
-  rw [pathEntropyBits_n_qubit_eq]
-  simp [Real.logb, Real.log_ofNat_eq_ofNat_log (R := ℝ)]
-  ring
+  simp only [show (1 : ℕ) < 2 from by norm_num]
+  have hone : logb 2 (2 : ℝ) = 1 := by
+    simp [logb]
+    field_simp [ne_of_gt log_two_pos]
+  simp [pathEntropyBits_n_qubit_eq ρ, hone]
 
 /-- The Landauer cost of the diagonal entropy is exactly `landauerBitEnergy T` times the
 fraction of coherence destroyed (`1 - residualCoherenceCapacity`). -/

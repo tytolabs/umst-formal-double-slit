@@ -57,9 +57,10 @@ agda-check:
 # Single entry point for formal verification tracks (Coq + Agda).
 formal-check: coq-check agda-check
 
-# CI: after `lake build`, `.github/workflows/lean.yml` runs `pip install -r sim/requirements-optional.txt`,
-# then the same commands as `make sim` plus `unittest` (same as `make sim-test`).
-# Local `make ci-local` does not pip-install; QuTiP tests skip unless you install optional deps.
+# CI: after `lake build`, `.github/workflows/lean.yml` runs `pip install -r sim/requirements-optional.txt`
+# (includes `sim/requirements.txt`: numpy + pydantic), then the same commands as `make sim` plus unittest.
+# Local `make ci-local` does not pip-install: run `pip install -r sim/requirements.txt` for telemetry + NumPy
+# tests, or `pip install -r sim/requirements-optional.txt` for QuTiP / matplotlib / SciPy as well.
 # `.github/workflows/haskell.yml` runs `cabal test` separately (not part of ci-local).
 # Optional: Lean + Python + Haskell in one go (requires cabal/GHC).
 ci-local: lean sim sim-test

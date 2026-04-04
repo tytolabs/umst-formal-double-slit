@@ -13,7 +13,20 @@ ROOT = Path(__file__).resolve().parents[2]
 EXPORT = ROOT / "sim" / "export_sample_telemetry_trace.py"
 CONSUMER = ROOT / "sim" / "telemetry_trace_consumer.py"
 
+_TELEMETRY_SKIP_MSG = "numpy and pydantic required (pip install -r sim/requirements.txt)"
 
+
+def _have_telemetry_stack() -> bool:
+    try:
+        import numpy  # noqa: F401
+        import pydantic  # noqa: F401
+
+        return True
+    except ImportError:
+        return False
+
+
+@unittest.skipUnless(_have_telemetry_stack(), _TELEMETRY_SKIP_MSG)
 class ExportSampleTelemetryTests(unittest.TestCase):
     def test_export_then_consume_passes(self):
         with tempfile.TemporaryDirectory() as tmp:

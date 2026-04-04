@@ -15,10 +15,10 @@ Expected: **success** (all roots in `lakefile.lean`).
 
 **Scope / assumptions:** `../Docs/ASSUMPTIONS-DOUBLE-SLIT.md`.  
 **Multi-agent:** see **`../CONTRIBUTING.md`**.  
-**Sorry:** **none** in any Lean file — **0 `sorry`** across the entire project. **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — **Tier 1b** (`vonNeumannDiagonal_ge_vonNeumannEntropy`); **algebraic unital DPI** for the qubit which-path channel (`vonNeumannEntropy_nondecreasing_unital_whichPath`); identity channel base case. **General** unital CPTP monotonicity for arbitrary `n`/Kraus families is **not** proved here as one theorem (full quantum DPI / channel layer). **Tensor additivity** `S(ρ⊗σ)=S(ρ)+S(σ)` is **proved** in **`KroneckerEigen.lean`** and feeds **`QuantumMutualInfo.lean`**. **`KleinInequality.lean`** — **`spectralRelativeEntropy_nonneg`** is **proved** (Gibbs + unitary row/column sums + Jensen on `log`). **Information-theoretic Lean axioms:** **0**. **Remaining axioms** (physical / visibility / limit — **`../PROOF-STATUS.md`**): **`physicalSecondLaw`**, **`fringeVisibility_n_le_one`**, **`dephasingSolution_tendsto_diagonal`** (**3**, line-start heuristic).
+**Sorry:** **0** tactic `sorry` in default `lake` roots (see **`../FORMAL_FOUNDATIONS.md`** for scope and any comment-only `sorry` in integrated gate files). **Phase 5 (information theory):** **`VonNeumannEntropy.lean`** — general `Fin n` **`vonNeumannEntropy_unitarily_invariant`** is **proved** (via `charpoly` + eigenvalue multiset). **`DataProcessingInequality.lean`** — **Tier 1b** (`vonNeumannDiagonal_ge_vonNeumannEntropy`); **algebraic unital DPI** for the qubit which-path channel (`vonNeumannEntropy_nondecreasing_unital_whichPath`); identity channel base case. **General** unital CPTP monotonicity for arbitrary `n`/Kraus families is **not** proved here as one theorem (full quantum DPI / channel layer). **Tensor additivity** `S(ρ⊗σ)=S(ρ)+S(σ)` is **proved** in **`KroneckerEigen.lean`** and feeds **`QuantumMutualInfo.lean`**. **`KleinInequality.lean`** — **`spectralRelativeEntropy_nonneg`** is **proved** (Gibbs + unitary row/column sums + Jensen on `log`). **Lean `axiom` declarations (project):** **1** — **`LandauerLaw.physicalSecondLaw`**. **`fringeVisibility_n_le_one`** and **`dephasingSolution_tendsto_diagonal`** are **theorems** (`GeneralVisibility.lean`, `LindbladDynamics.lean`).
 
 **CI:** `.github/workflows/lean.yml` (Lean + Python sim; caches `Lean/.lake`); `.github/workflows/haskell.yml` (Cabal tests in `Haskell/`); `.github/workflows/formal.yml` (`make coq-check` in Docker **`rocq/rocq-prover:9.0`**, `make agda-check` on Ubuntu with `agda-stdlib`).  
-**Stats (heuristic):** from repo root, `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py`. Re-paste counts to `PROOF-STATUS.md` after large edits (line-start scan, not a full parser).
+**Stats:** from repo root, `python3 scripts/lean_declaration_stats.py` (lake roots + line-start `theorem`/`lemma`; see **`../Docs/COUNT-METHODOLOGY.md`**). Legacy: `make lean-stats` / `make lean-stats-md` → `scripts/lean_decl_stats.py` (full-tree heuristic — label outputs accordingly).
 
 ## Module map (high level)
 
@@ -52,7 +52,7 @@ Expected: **success** (all roots in `lakefile.lean`).
 | `EpistemicTraceDrivenCalibrationWitness` | witness object pairing telemetry traces with calibration assumptions and direct utility-bound transfer |
 | `PrototypeSolverCalibration` | concrete calibration constants and explicit epsilon/utility-bound corollaries |
 | `SchrodingerDynamics` | `unitaryChannel` (unitary as single-Kraus), PSD/trace preservation, `unitaryChannel_apply` / `DensityMatrix` closure |
-| `LindbladDynamics` | `dissipator`, `lindbladGenerator`, qubit dephasing, `whichPath_eq_rho_plus_dissipator` |
+| `LindbladDynamics` | `dissipator`, `lindbladGenerator`, qubit dephasing, `whichPath_eq_rho_plus_dissipator`; **`dephasingSolution_tendsto_diagonal`** (**theorem**) |
 | `SimLeanBridge` | `SimDensityContract`, `SimPathProjectionContract`, `SimComplementarityWitness`, `SimLandauerWitness` (trust-boundary contracts) |
 | `GateCompat` | `thermoFromQubitPath`, `admissible_thermoFromQubitPath_whichPath` |
 | `QRBridge` | `thermodynamicStateToReal`, `admissible_thermodynamicStateToReal` (ℚ → ℝ `Admissible`) |
@@ -66,6 +66,7 @@ Expected: **success** (all roots in `lakefile.lean`).
 | `MeasurementCost` | probe costs vs Landauer bit-energy cap |
 | `EpistemicGalois` | info–energy Galois connection (Lean) |
 | `GeneralResidualCoherence` | `residualCoherenceCapacity_purity` (purity-based `RCC_n ∈ [0,1]`); `RCC_n = 0 ↔ diagonal`, `RCC_n = 1 ↔ pure`; Cauchy-Schwarz for PSD matrices proved from first principles; qubit compatibility `RCC_2 = \|ρ₀₁\|²/(p₀p₁)` |
+| `GeneralVisibility` | `fringeVisibility_n` (ℓ₁ coherence norm on `Fin n`); **`fringeVisibility_n_le_one`** (**theorem**; Cauchy–Schwarz / PSD bound on coherence) |
 | `KroneckerEigen` | `vonNeumannEntropy_tensorDensity_eq` (tensor entropy additivity); charpoly / multiset bridge for `tensorDensity` |
 | `KleinInequality` | `gibbs_inequality`, `spectralRelativeEntropy`, **`spectralRelativeEntropy_nonneg`** (proved; no axiom) |
 | `QuantumMutualInfo` | `quantumMutualInfo`; `quantumConditionalEntropy`; `I ≤ log nA + log nB`; `quantumMutualInfo_product_eq_zero` via **`KroneckerEigen`** (`vonNeumannEntropy_tensorDensity_eq`) |
@@ -127,6 +128,8 @@ Expected: **success** (all roots in `lakefile.lean`).
 - **Coarse measurement update + narrative wrappers:** `measurementUpdateWhichPath`, `measurementUpdateWhichPath_new_V`, `measurementUpdateWhichPath_I_eq`, `measurementUpdateWhichPath_landauer_eq`, `measurementUpdateWhichPath_landauer_le_landauerBitEnergy`, `interference_preserved_identity`, `collapse_fringe_on_whichPath`, `measurementUpdateWhichPath_gateEnforcement`
 
 ## Not in this track yet (needs design / approval)
+
+*(High-level roadmap items; user-facing “outside scope” bullets also appear in the root **`README.md`** (“Claim taxonomy”) and **`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`**.)*
 
 - Full **arbitrary** unital CPTP DPI on general `Fin n` (relative entropy / matrix `log`; qubit which-path instance is proved)
 - Nontrivial hydration/strength from QM; calibrated `thermoFromQubitPath`

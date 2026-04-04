@@ -28,8 +28,7 @@ noncomputable def measurementUpdateWhichPath (ρ : DensityMatrix hnQubit) : Meas
   hCompOld := observationStateCanonical_complementary ρ
   hCompNew := observationStateCanonical_complementary (KrausChannel.whichPathChannel.apply hnQubit ρ)
   hInfoMonotone := by
-    simp [observationStateCanonical]
-    rw [whichPathDistinguishability_whichPath_apply]
+    simp [observationStateCanonical, whichPathDistinguishability_whichPath_apply]
   hVisibilityDrop := by
     simp [observationStateCanonical, fringeVisibility_whichPath_apply, fringeVisibility_nonneg]
 
@@ -75,10 +74,9 @@ theorem collapse_all_fringes_iff_zeros_offdiag {ι : Type*} [Fintype ι] [Decida
     (∀ ρ : DensityMatrix hnQubit, (κ.map ρ.carrier) 0 1 = 0) := by
   constructor
   · intro h ρ
-    rw [fringeVisibility_eq_zero_iff] at h
-    exact h ρ
+    exact (fringeVisibility_eq_zero_iff (κ.apply hnQubit ρ)).1 (h ρ)
   · intro h ρ
-    rw [fringeVisibility_eq_zero_iff]
-    exact h ρ
+    refine (fringeVisibility_eq_zero_iff (κ.apply hnQubit ρ)).2 ?_
+    simpa [KrausChannel.apply] using h ρ
 
 end UMST.DoubleSlit

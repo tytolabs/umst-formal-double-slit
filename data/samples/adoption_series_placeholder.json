@@ -1,0 +1,8 @@
+{
+  "source_id": "placeholder_weekly_growth",
+  "unit": "relative_index",
+  "points": [
+    { "t": "2024-W01", "y": 1.0, "note": "Replace with vendor-neutral series; schema only." },
+    { "t": "2024-W02", "y": 1.02 }
+  ]
+}

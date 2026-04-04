@@ -3,7 +3,8 @@ SPDX-License-Identifier: MIT
 Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -/
 
-import DoubleSlit
+import LandauerBound
+import WhichPathMeasurementUpdate
 
 /-!
 # EpistemicSensing — interface layer for probe selection
@@ -119,7 +120,7 @@ def ProbeDominates (P Q : QuantumProbe) : Prop :=
 
 theorem whichPathProbe_dominates_nullProbe : ProbeDominates whichPathProbe nullProbe := by
   intro ρ
-  simp [ProbeDominatesAt, nullProbe_strength, ProbeStrength_nonneg]
+  simp [ProbeDominatesAt, nullProbe_strength, whichPathProbe_strength, whichPathDistinguishability_nonneg]
 
 /-- Null probe preserves interference exactly (identity channel). -/
 theorem interference_preserved_nullProbe (ρ : DensityMatrix hnQubit) :
@@ -139,7 +140,7 @@ theorem whichPathProbe_isMax_on_null_pair (ρ : DensityMatrix hnQubit) :
   · intro Q hQ
     rcases Set.mem_insert_iff.mp hQ with h | h
     · subst h
-      simp [nullProbe_strength, ProbeStrength_nonneg]
+      simp [nullProbe_strength, whichPathProbe_strength, whichPathDistinguishability_nonneg]
     · simpa [Set.mem_singleton_iff.mp h]
 
 /-- Maximal probe index in a finite probe family at state `ρ`. -/
@@ -186,17 +187,16 @@ theorem argmax_nullWhichFamily_eq_which_of_pos (ρ : DensityMatrix hnQubit)
     (hpos : 0 < whichPathDistinguishability ρ) :
     argmaxProbeIndexAt nullWhichFamily ρ = 1 := by
   have hmax := argmaxProbeIndexAt_spec nullWhichFamily ρ
-  let i := argmaxProbeIndexAt nullWhichFamily ρ
-  have h1 : ProbeStrength (nullWhichFamily 1) ρ ≤ ProbeStrength (nullWhichFamily i) ρ := hmax 1
-  cases i using Fin.cases with
-  | zero =>
-      have hle : whichPathDistinguishability ρ ≤ 0 := by
-        simpa [nullWhichFamily, nullProbe_strength, whichPathProbe_strength] using h1
-      exact (not_le_of_gt hpos hle).elim
-  | succ i =>
-      -- `Fin 2` has only `1` as successor case.
-      fin_cases i
-      simp [i]
+  have h1 :
+      ProbeStrength (nullWhichFamily 1) ρ ≤
+        ProbeStrength (nullWhichFamily (argmaxProbeIndexAt nullWhichFamily ρ)) ρ :=
+    hmax 1
+  by_cases hz : argmaxProbeIndexAt nullWhichFamily ρ = 0
+  · rw [hz] at h1
+    have hle : whichPathDistinguishability ρ ≤ 0 := by
+      simpa [nullWhichFamily, nullProbe_strength, whichPathProbe_strength] using h1
+    exact (not_le_of_gt hpos hle).elim
+  · exact Fin.eq_one_of_neq_zero (argmaxProbeIndexAt nullWhichFamily ρ) hz
 
 /-- SI Landauer hook from any probe strength surrogate. -/
 noncomputable def LandauerCostFromProbeStrength (P : QuantumProbe) (ρ : DensityMatrix hnQubit)
@@ -213,8 +213,8 @@ theorem LandauerCostFromProbeStrength_le_landauerBitEnergy (P : QuantumProbe)
     (ρ : DensityMatrix hnQubit) (T : ℝ) (hT : 0 ≤ T) :
     LandauerCostFromProbeStrength P ρ T ≤ landauerBitEnergy T := by
   unfold LandauerCostFromProbeStrength infoEnergyLowerBound
-  rw [← mul_one (landauerBitEnergy T)]
-  exact mul_le_mul_of_nonneg_left (ProbeStrength_le_one P ρ) (landauerBitEnergy_nonneg hT)
+  simpa [mul_assoc, mul_one] using
+    mul_le_mul_of_nonneg_left (ProbeStrength_le_one P ρ) (landauerBitEnergy_nonneg hT)
 
 theorem LandauerCostFromProbeStrength_nullProbe (ρ : DensityMatrix hnQubit) (T : ℝ) :
     LandauerCostFromProbeStrength nullProbe ρ T = 0 := by

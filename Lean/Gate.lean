@@ -21,8 +21,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
     gateCheck                       │ gate_check (bool)
     gateCheckSound                  │ gate_check_sound (Corollary)
     gateCheckComplete               │ gate_check_complete (Corollary)
-    psiAntitone                     │ psi_antitone (Axiom)
-    fcMonotone                      │ fc_monotone (Axiom)
+    helmholtzAntitone               │ psi_antitone (Lemma — proved in Gate.lean)
+    powersStateFcMonotone           │ fc_monotone (Lemma — proved in `umst-formal`/Powers.lean)
     clausiusDuhemFwd                │ clausius_duhem_forward (Theorem)
     forwardHydrationAdmissible      │ forward_hydration_admissible
     admissibleRefl                  │ admissible_refl (Lemma)
@@ -49,6 +49,9 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
   kleisliAdmissibility         │ ✓ proved   │ ✓ proved   │ DIB-Kleisli
   ─────────────────────────────────────────────────────────────────
   Zero sorry.
+
+  Note: this tree vendors the rational gate core; `powersStateFcMonotone` is not
+  duplicated here — see sibling `umst-formal/Lean/Powers.lean`.
 -/
 
 import Mathlib.Algebra.Order.Field.Rat
@@ -137,12 +140,10 @@ structure Admissible (old new : ThermodynamicState) : Prop where
   strengthMono   : old.strength   ≤ new.strength
 
 -- ================================================================
--- SECTION 5: Physical Model Axioms
+-- SECTION 5: Physical model (constitutive lemmas, not Lean axioms)
 -- ================================================================
--- These mirror Coq's `psi_antitone` and `fc_monotone` axioms.
--- They are physical assumptions (constitutive laws), not logical gaps.
--- The concrete Helmholtz instance of psiAntitone is proved in
--- Lean/Helmholtz.lean.
+-- ψ antitone: `helmholtzAntitone` in this file.  Full state-level `fc` witness:
+-- `powersStateFcMonotone` in sibling `umst-formal/Lean/Powers.lean` (see header).
 
 -- Section 5 was removed to eliminate unconstrained global physical axioms.
 

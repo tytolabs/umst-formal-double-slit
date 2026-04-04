@@ -9,6 +9,13 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
+### Fixed (documentation consistency)
+
+- **Lean stats / axioms (2026-04)** — **`FORMAL_FOUNDATIONS.md`**, **`PROOF-STATUS.md`**, **`README.md`**, **`Lean/VERIFY.md`**, **`Docs/PROVENANCE.md`**, preprint TeX, **`scripts/generate_spectacular_gif.py`**: **58** lake roots; **533+34** (roots) / **542+35** (all `Lean/*.lean`); **1** Lean `axiom` (`physicalSecondLaw`); visibility + dephasing limits are **theorems**. Methodology: **`Docs/COUNT-METHODOLOGY.md`**, **`scripts/lean_declaration_stats.py`**.
+- **`Docs/PROVENANCE.md`** — axiom inventory: **1** Lean `axiom`; fringe visibility + dephasing diagonal limit **theorems** (supersedes earlier “3 axioms” wording).
+- **`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`** — non-claims bullet on DPI / Klein corrected (qubit instances and `spectralRelativeEntropy_nonneg` are theorems; general-n unital CPTP DPI still not one theorem).
+- **`Lean/VERIFY.md`** — module row for **`GeneralVisibility`**; cross-link from “Not in this track yet” to README + assumptions doc.
+
 ### Added (general dimension & limits — Phase 2 & 4)
 
 - **`Lean/GeneralVisibility.lean`** — Gap 2: defined rigorous $\ell_1$ norm of coherence (`fringeVisibility_n`) for arbitrary `Fin n` dimensional epistemic sensing.
@@ -75,7 +82,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 - **`VonNeumannEntropy.lean`** — `vonNeumannEntropy_unitarily_invariant` general `Fin n` **proved** (was sorry). New helper lemmas: `charmatrix_diagonal'`, `charpoly_diagonal'`, `IsHermitian.charpoly_eq_prod_eigenvalues`, `eigenvalue_multiset_eq_of_charpoly_eq`.
 - **`DataProcessingInequality.lean`** — removed placeholder Klein / general-unital **axioms**; **proved** algebraic unital DPI for the qubit which-path channel (`vonNeumannEntropy_nondecreasing_unital_whichPath`, from diagonal spectrum + Tier 1b log-sum bound).
-- **All docs** — updated from "1 sorry" to "0 sorry, 3 axioms" (`VERIFY.md`, `README.md`, `GAP_CLOSURE_PLAN.md`, `TODO-TRACKING.md`, `SORRY_ROADMAP.md`, `OnePager`, GIF overlay, multi-agent notes in `TODO-TRACKING` / `PARALLEL_WORK`).
+- **All docs** — updated from "1 sorry" to "0 sorry, 3 axioms" (`VERIFY.md`, `README.md`, …). *(Historical: visibility + dephasing were later proved; current inventory is **1** axiom — see **`FORMAL_FOUNDATIONS.md`**.)*
 
 ### Added (Lean — Gaps 5, 10, 12, 18)
 

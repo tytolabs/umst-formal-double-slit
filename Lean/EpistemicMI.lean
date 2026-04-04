@@ -53,7 +53,9 @@ theorem epistemicMI_nonneg (p : PathProbe) (ρ : DensityMatrix hnQubit) :
 
 theorem epistemicMI_le_log_two (p : PathProbe) (ρ : DensityMatrix hnQubit) :
     EpistemicMI p ρ ≤ Real.log 2 := by
-  cases p <;> simp [EpistemicMI, whichPathMI_le_log_two]
+  cases p with
+  | null => simp [EpistemicMI]; exact le_of_lt log_two_pos
+  | whichPath => simpa [EpistemicMI] using whichPathMI_le_log_two ρ
 
 /-- Bit-equivalent form of `EpistemicMI`. -/
 noncomputable def epistemicMIBits (p : PathProbe) (ρ : DensityMatrix hnQubit) : ℝ :=
@@ -98,13 +100,13 @@ theorem epistemicLandauerCost_nonneg (p : PathProbe) (ρ : DensityMatrix hnQubit
 theorem epistemicLandauerCost_le_landauerBitEnergy (p : PathProbe) (ρ : DensityMatrix hnQubit)
     (T : ℝ) (hT : 0 ≤ T) : epistemicLandauerCost p ρ T ≤ landauerBitEnergy T := by
   unfold epistemicLandauerCost infoEnergyLowerBound
-  rw [← mul_one (landauerBitEnergy T)]
-  exact mul_le_mul_of_nonneg_left (epistemicMIBits_le_one p ρ) (landauerBitEnergy_nonneg hT)
+  simpa [mul_assoc, mul_one] using
+    mul_le_mul_of_nonneg_left (epistemicMIBits_le_one p ρ) (landauerBitEnergy_nonneg hT)
 
 @[simp]
 theorem epistemicLandauerCost_null (ρ : DensityMatrix hnQubit) (T : ℝ) :
     epistemicLandauerCost PathProbe.null ρ T = 0 := by
-  simp [epistemicLandauerCost]
+  simp [epistemicLandauerCost, epistemicMIBits_null, infoEnergyLowerBound, mul_zero]
 
 @[simp]
 theorem epistemicLandauerCost_whichPath (ρ : DensityMatrix hnQubit) (T : ℝ) :

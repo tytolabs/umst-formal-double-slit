@@ -11,19 +11,14 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 ## Lean declaration statistics
 
-*(Heuristic line counts from `make lean-stats-md`; portable paths — re-paste after large Lean edits.)*
+**Authoritative counts** (lake `roots` + line-start `theorem` / `lemma`): `python3 scripts/lean_declaration_stats.py` — see `FORMAL_FOUNDATIONS.md` and `Docs/COUNT-METHODOLOGY.md`.
 
-- **Lean root:** `Lean`
-- **`.lean` files scanned:** 65 (`.lake` excluded)
-- **`abbrev` (line-start heuristic):** 7
-- **`axiom` (line-start heuristic):** 3
-- **`def` (line-start heuristic):** 207
-- **`inductive` (line-start heuristic):** 4
-- **`instance` (line-start heuristic):** 1
-- **`lemma` (line-start heuristic):** 54
-- **`structure` (line-start heuristic):** 29
-- **`theorem` (line-start heuristic):** 528
-- **Sum of above kinds:** 833
+| Scope | `theorem` | `lemma` | Total |
+|-------|-----------|---------|-------|
+| `lakefile` roots only (**58** modules) | **533** | **34** | **567** |
+| All `Lean/*.lean` (includes tests / optional files not in roots) | **542** | **35** | **577** |
+
+Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you maintain that Makefile target separately.
 
 ## Track summary
 
@@ -63,15 +58,15 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Which-path update bridge (`WhichPathMeasurementUpdate`) | **Proved** — `measurementUpdateWhichPath`, fringe collapse, Landauer invariance along update; split from `DoubleSlit` to break import cycle with `EpistemicSensing`. |
 | Haskell / Python / publication sims | **In repo** (toy + Kraus + SVG + QuTiP + 1D/2D/3D Schrödinger + 87 tests) |
 
-## Axiom inventory
+## Axiom inventory (Lean `axiom` keyword)
 
 | Axiom | File | Justification |
 |-------|------|---------------|
 | `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
-| `fringeVisibility_n_le_one` | `GeneralVisibility.lean` | $\ell_1$ norm of coherence ≤ 1 for arbitrary `Fin n` (requires Cauchy–Schwarz on coherence vector) |
-| `dephasingSolution_tendsto_diagonal` | `LindbladDynamics.lean` | Off-diagonal coherences vanish as $t \to \infty$ under pure dephasing (topological limit of ODE) |
 
-**Resolved (information theory):** `spectralRelativeEntropy_nonneg` — **theorem** in `KleinInequality.lean` (Gibbs inequality + unitary row/column `normSq` sums + concave `log` / Jensen). **0** information-theoretic Lean axioms.
+**Proved (not Lean axioms):** `fringeVisibility_n_le_one` — **theorem** in `GeneralVisibility.lean`; `dephasingSolution_tendsto_diagonal` (alias `dephasing_tendsto_diagonal`) — **theorem** in `LindbladDynamics.lean`.
+
+**Resolved (information theory):** `spectralRelativeEntropy_nonneg` — **theorem** in `KleinInequality.lean`. **0** information-theoretic Lean axioms.
 
 ## Sorry inventory
 
@@ -88,10 +83,10 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | 55 `lakefile` roots; **528** `theorem` + **54** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **3 axiom** (see inventory; re-run `make lean-stats-md` for fresh counts) |
+| Lean 4 | **58** `lakefile` roots; **533** `theorem` + **34** `lemma` (roots-only); **542** + **35** all `Lean/*.lean` | **0** tactic `sorry`, **1** project `axiom` (`physicalSecondLaw`); `python3 scripts/lean_declaration_stats.py` |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **no** `Admitted`; real-analysis facts are **axioms** (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) plus spectral **axioms** (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-04-03 — `spectralRelativeEntropy_nonneg` is a **theorem** in `KleinInequality.lean` (no Klein axiom). Qubit-tier unital DPI instances in `DataProcessingInequality.lean`; tensor additivity in `KroneckerEigen.lean`. **3** project `axiom`s: `physicalSecondLaw`, `fringeVisibility_n_le_one`, `dephasingSolution_tendsto_diagonal`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-04-04 — Axiom inventory aligned with **Wave 6.5.1**: **1** Lean `axiom` (`physicalSecondLaw`); fringe visibility and dephasing limit are **theorems**. Counts: `scripts/lean_declaration_stats.py` / `FORMAL_FOUNDATIONS.md`. Formal tracks: **`make formal-check`**.

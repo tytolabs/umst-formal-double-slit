@@ -24,7 +24,7 @@ Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is
 
 - Derivation from a relativistic / gravitational UMST layer.
 - Identification of `I` with a specific **experimental** which-path meter without calibration axioms.
-- **Full unital quantum DPI** (Klein inequality) on compound systems — axiomatized in `DataProcessingInequality.lean` pending Mathlib matrix-log infrastructure.
+- **Full unital CPTP DPI for arbitrary `Fin n` and general Kraus families** as one packaged theorem — **not** in this repo; qubit-tier instances (e.g. which-path channel) are **proved** in `DataProcessingInequality.lean`. **`spectralRelativeEntropy_nonneg`** (spectral relative entropy ≥ 0) is a **theorem** in `KleinInequality.lean`, not an axiom.
 - **Mixed ensembles** as formal convex sums in `DensityState` (future).
 - Certified ODE/PPO solver convergence / stability / generalization claims without an explicit numerical analysis layer.
 

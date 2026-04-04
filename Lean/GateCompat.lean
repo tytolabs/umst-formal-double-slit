@@ -94,9 +94,8 @@ theorem thermoCalibratedScaffold_freeEnergy_bounded (ρ : DensityMatrix hnQubit)
     (hT : 0 ≤ T) :
     |(thermoCalibratedScaffold ρ T).freeEnergy| ≤ landauerBitEnergy T := by
   simp only [thermoCalibratedScaffold]
-  rw [abs_neg]
-  exact abs_of_nonneg (landauerCostDiagonal_nonneg ρ T hT) ▸
-    landauerCostDiagonal_le_landauerBitEnergy ρ T hT
+  rw [abs_neg, abs_of_nonneg (landauerCostDiagonal_nonneg ρ T hT)]
+  exact landauerCostDiagonal_le_landauerBitEnergy ρ T hT
 
 /-! ## Physical Calibration: Hydration & Strength (Gap 10) -/
 
@@ -154,10 +153,10 @@ noncomputable def calibratedHydration_n {n : ℕ} (hn : 0 < n) (ρ : DensityMatr
 /-- Full N-dimensional calibrated gate state. 
 Connects diagonal Landauer bounds spanning $N$ dimensions with $N$-slit visibility for the
 thermodynamic and epistemic metrics. -/
-noncomputable def thermoCalibratedPhys_n {n : ℕ} (hn : 0 < n) (P : QuantumProbe) 
+noncomputable def thermoCalibratedPhys_n {n : ℕ} (hn : 0 < n) (_P : QuantumProbe)
     (ρ : DensityMatrix hn) (T : ℝ) : ThermodynamicState where
-  density := pathWeight ρ 0
-  freeEnergy := -landauerCostDiagonal_n_real hn ρ T
+  density := (ρ.carrier ⟨0, hn⟩ ⟨0, hn⟩).re
+  freeEnergy := -landauerCostDiagonal_n hn ρ T
   hydration := calibratedHydration_n hn ρ
   strength := 0 -- Placeholder for generalized probe strength.
 

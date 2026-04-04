@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://umst.tyto.studio/schemas/adoption_growth_series.schema.json",
+  "title": "AdoptionGrowthSeries",
+  "description": "Unbiased time series for cross-checking macro growth vs entropy-tax models (e.g. CHAT/Linux proxies).",
+  "type": "object",
+  "required": ["source_id", "unit", "points"],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "description": "Stable id, e.g. nber_chat_weekly, linux_loc_major"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Measurement unit for y (e.g. users, loc, commits_per_month)"
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "y"],
+        "properties": {
+          "t": { "type": "string", "description": "ISO-8601 date or period label" },
+          "y": { "type": "number" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}
