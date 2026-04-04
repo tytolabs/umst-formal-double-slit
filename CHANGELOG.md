@@ -23,7 +23,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 ### Added (general-n RCC, QMI, erasure, sorry elimination)
 
 - **`Lean/GeneralResidualCoherence.lean`** — Gap 3 (extended): General-n **Residual Coherence Capacity** via purity decomposition `RCC_n = (Tr(ρ²) - Σpᵢ²)/(1 - Σpᵢ²)`. Fully proved: `RCC_n ∈ [0,1]` (Cauchy-Schwarz from first principles via 2×2 PSD submatrices), `RCC_n = 0 ↔ diagonal`, `RCC_n = 1 ↔ pure`, qubit compatibility `RCC_2 = |ρ₀₁|²/(p₀p₁)`. **0 sorry**.
-- **`Lean/QuantumMutualInfo.lean`** — Quantum mutual information `I(A:B) = S(A) + S(B) - S(AB)`, conditional entropy, `I ≤ log nA + log nB` upper bound, `I(A:B) = 0` for product states. 1 axiom: `S(ρ⊗σ) = S(ρ)+S(σ)` (Kronecker eigenvalue structure).
+- **`Lean/QuantumMutualInfo.lean`** — Quantum mutual information `I(A:B) = S(A) + S(B) - S(AB)`, conditional entropy, `I ≤ log nA + log nB` upper bound, `I(A:B) = 0` for product states. Tensor additivity `S(ρ⊗σ) = S(ρ)+S(σ)` is **proved** as `vonNeumannEntropy_tensorDensity_eq` in **`KroneckerEigen.lean`** (see `PROOF-STATUS.md`).
 - **`Lean/ErasureChannel.lean`** — Concrete reset-to-`|0⟩` erasure channel (Kraus operators `K₀`, `K₁`), trace preservation, output always `|0⟩⟨0|`, zero output entropy. Provides `ErasureProcess` saturation of Landauer bound.
 
 ### Fixed (sole remaining sorry eliminated)
@@ -74,7 +74,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 ### Changed (Lean — **0 sorry** milestone)
 
 - **`VonNeumannEntropy.lean`** — `vonNeumannEntropy_unitarily_invariant` general `Fin n` **proved** (was sorry). New helper lemmas: `charmatrix_diagonal'`, `charpoly_diagonal'`, `IsHermitian.charpoly_eq_prod_eigenvalues`, `eigenvalue_multiset_eq_of_charpoly_eq`.
-- **`DataProcessingInequality.lean`** — general unital DPI `sorry` → **axiom** (`vonNeumannEntropy_nondecreasing_unital`, `klein_inequality`). Requires Mathlib matrix logarithm infrastructure.
+- **`DataProcessingInequality.lean`** — removed placeholder Klein / general-unital **axioms**; **proved** algebraic unital DPI for the qubit which-path channel (`vonNeumannEntropy_nondecreasing_unital_whichPath`, from diagonal spectrum + Tier 1b log-sum bound).
 - **All docs** — updated from "1 sorry" to "0 sorry, 3 axioms" (`VERIFY.md`, `README.md`, `GAP_CLOSURE_PLAN.md`, `TODO-TRACKING.md`, `SORRY_ROADMAP.md`, `OnePager`, GIF overlay, multi-agent notes in `TODO-TRACKING` / `PARALLEL_WORK`).
 
 ### Added (Lean — Gaps 5, 10, 12, 18)
