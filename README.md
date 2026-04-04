@@ -15,7 +15,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 [![Formal](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**6** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit — `Lean/VERIFY.md`)&ensp;·&ensp;**515** theorems + **33** lemmas (heuristic scan — `PROOF-STATUS.md`)**
+**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** `sorry` across all Lean files&ensp;·&ensp;**3** axioms (physical 2nd law, visibility bound, dephasing limit — `PROOF-STATUS.md`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**528** theorems + **54** lemmas (heuristic scan — `PROOF-STATUS.md`)**
 
 _Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference._
 _The thermodynamic cost is exact, non-negotiable, and formally verified._
@@ -38,8 +38,8 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 | | |
 |:---:|:---:|
-| **53** Lean modules | **515** `theorem` + **33** `lemma` (line-start scan) |
-| **0** sorry, **6** axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit, tensor entropy) | All qubit-level theorems proved |
+| **55** Lean modules (`lakefile` roots) | **528** `theorem` + **54** `lemma` (line-start scan) |
+| **0** sorry, **3** axioms (physical 2nd law, visibility bound, dephasing limit) | All qubit-level theorems proved |
 | **87** Python unit tests | **14** Haskell QuickCheck properties |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
 
@@ -55,7 +55,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **515 theorems. 0 `sorry`. 6 explicit axioms** (each stated in `Lean/VERIFY.md` — corresponding to physical principles or Mathlib gaps).
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **528 theorems. 0 `sorry`. 3 explicit axioms** (physical second law, general-n visibility bound, dephasing limit — see `PROOF-STATUS.md`). **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean` (not an axiom).
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
 
@@ -73,7 +73,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **515 theorem + 33 lemmas (heuristic); 0 sorry; 6 axioms (Klein, unital DPI, physical 2nd law, visibility bound, dephasing limit, tensor entropy).**_
+> _Machine-checked in Lean 4 with Mathlib. **528 theorem + 54 lemmas (heuristic); 0 sorry; 3 axioms (physical 2nd law, visibility bound, dephasing limit). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity proved in `KroneckerEigen.lean`.**_
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -173,7 +173,7 @@ flowchart TB
 ```
 umst-formal-double-slit/
 │
-├── Lean/                          ← 53 modules · 515 theorems · 33 lemmas · 6 axioms · 58 .lean files
+├── Lean/                          ← 55 lakefile roots · 528 theorems · 54 lemmas · 3 axioms · 65 .lean files scanned
 │   │
 │   ├── ── Quantum core (18 modules) ─────────────────────────────────────────────────────────
 │   │   ├── UMSTCore.lean                  ℝ SI constants, Landauer bit energy, Admissible
@@ -193,7 +193,7 @@ umst-formal-double-slit/
 │   │   ├── ErasureChannel.lean            reset-to-|0⟩ Kraus; idealResetErasure at Landauer equality
 │   │   ├── TensorPartialTrace.lean        tensorDensity, partial traces, Kronecker PSD
 │   │   ├── VonNeumannEntropy.lean         S(ρ) spectral; unitary invariance proved for all Fin n
-│   │   └── DataProcessingInequality.lean  qubit DPI proved; unital DPI axiomatized (Klein)
+│   │   └── DataProcessingInequality.lean  qubit-tier unital DPI instances proved; general-n CPTP DPI not one theorem
 │   │
 │   ├── ── Dynamics & sim contracts (3 modules) ─────────────────────────────────────────────
 │   │   ├── SchrodingerDynamics.lean       unitary as single-Kraus; DensityMatrix closure
@@ -267,12 +267,12 @@ umst-formal-double-slit/
 └── Makefile                       ← lean · sim · sim-gifs · haskell-test · coq-check · agda-check · ci-*
 ```
 
-> **Counting the numbers:** The 58 `.lean` files include all 53 `lakefile` roots plus 5 auxiliary/support files in `Lean/.lake` is excluded by the scanner. The **515 theorems** and **33 lemmas** are line-start heuristic counts from `make lean-stats-md`; the **6 axioms** are explicit `axiom` declarations (not `sorry`) — see `PROOF-STATUS.md` for the full inventory. Every number is verifiable: `cd Lean && lake build` for correctness, `make lean-stats-md` for counts.
+> **Counting the numbers:** The scanner walks all `Lean/**/*.lean` except `.lake` (currently **65** files); **55** are unique `lakefile` roots in `Lean/lakefile.lean`. The **528** theorems and **54** lemmas are line-start heuristic counts from `make lean-stats-md`; the **3 axioms** are explicit `axiom` declarations (not `sorry`) — see `PROOF-STATUS.md`. Every number is verifiable: `cd Lean && lake build` for correctness, `make lean-stats-md` for counts.
 
 ---
 
-## Lean modules (53 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
-*(Counts: `make lean-stats-md` → **515** line-start `theorem`, **33** `lemma`, **6** `axiom` in 58 `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
+## Lean modules (55 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` map)
+*(Counts: `make lean-stats-md` → **528** line-start `theorem`, **54** `lemma`, **3** `axiom` in 65 scanned `.lean` files — heuristic only, see `scripts/lean_decl_stats.py` and `PROOF-STATUS.md`. Many are small/interface lemmas; headline physics chain is the PMIC + double-slit narrative.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>
@@ -368,7 +368,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 53 modules, 515 thm + 33 lem (heuristic) | **0** sorry, **6** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
+| **Lean 4** | 55 modules, 528 thm + 54 lem (heuristic) | **0** sorry, **3** axioms — `Lean/VERIFY.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
@@ -449,7 +449,6 @@ The key bridge: the UMST gate enforces thermodynamic admissibility on _classical
 |----------|------|
 | Technical note (Public preprint) | [`Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex`](Docs/Preprint/UMST_DoubleSlit_Formal_Verification.tex) <br> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19159660.svg)](https://doi.org/10.5281/zenodo.19159660)|
 | Proof status & declaration counts | [`PROOF-STATUS.md`](PROOF-STATUS.md) |
-
 | Module map & theorem names | [`Lean/VERIFY.md`](Lean/VERIFY.md) |
 | Mathematical foundations | [`Docs/Mathematical-Foundations.md`](Docs/Mathematical-Foundations.md) |
 | Assumptions & non-claims | [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md) |

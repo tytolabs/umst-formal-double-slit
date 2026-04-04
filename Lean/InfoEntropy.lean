@@ -19,7 +19,11 @@ particular it equals **`shannonBinary (pathWeight ρ 0)`** because `pathWeight �
 **Agrees with Mathlib:** `shannonBinary p = Real.binEntropy p` (`shannonBinary_eq_binEntropy`). Hence
 **`shannonBinary p ≤ log 2`** and **`vonNeumannDiagonal ρ ≤ log 2`** (nats).
 
-**General `n` bound:** `vonNeumannDiagonal_n_le_log_n` in **`GeneralDimension.lean`**. **`vonNeumannDiagonal_n_eq_vonNeumannDiagonal`:** on a qubit, `vonNeumannDiagonal_n` = `vonNeumannDiagonal`. **Landauer:** `pathEntropyBits_n`, `landauerCostDiagonal_n_*` in **`LandauerBound.lean`**. **Not yet:** quantum mutual information, DPI.
+**General `n` bound:** `vonNeumannDiagonal_n_le_log_n` in **`GeneralDimension.lean`**. **`vonNeumannDiagonal_n_eq_vonNeumannDiagonal`:** on a qubit, `vonNeumannDiagonal_n` = `vonNeumannDiagonal`. **Landauer:** `pathEntropyBits_n`, `landauerCostDiagonal_n_*` in **`LandauerBound.lean`**.
+
+**Downstream:** `vonNeumannDiagonal_ge_vonNeumannEntropy` and unital which-path spectral monotonicity
+(`vonNeumannEntropy_nondecreasing_unital_whichPath`) live in **`DataProcessingInequality.lean`**.
+**QMI / tensors:** `QuantumMutualInfo.lean` (product states via **`KroneckerEigen.vonNeumannEntropy_tensorDensity_eq`**).
 -/
 
 namespace UMST.Quantum
@@ -40,16 +44,17 @@ theorem shannonBinary_le_log_two (p : ℝ) : shannonBinary p ≤ log 2 := by
 
 theorem shannonBinary_symm (p : ℝ) : shannonBinary p = shannonBinary (1 - p) := by
   unfold shannonBinary
-  abel
+  have h : 1 - (1 - p) = p := by ring
+  rw [h, add_comm]
 
 theorem pathWeight_le_one (ρ : DensityMatrix hnQubit) (i : Fin 2) : pathWeight ρ i ≤ 1 := by
-  fin_cases i
-  · have hs := pathWeight_sum ρ
-    have h1 := pathWeight_nonneg' ρ 1
-    linarith
-  · have hs := pathWeight_sum ρ
-    have h0 := pathWeight_nonneg' ρ 0
-    linarith
+  have hs := pathWeight_sum ρ
+  have h0 := pathWeight_nonneg' ρ 0
+  have h1 := pathWeight_nonneg' ρ 1
+  by_cases hi : i = 0
+  · subst hi; nlinarith
+  · have hi1 : i = 1 := Fin.eq_one_of_neq_zero i hi
+    subst hi1; nlinarith
 
 /-- Diagonal / spectrum entropy for the path qubit (nats; same functional form as `S(ρ)` here). -/
 noncomputable def vonNeumannDiagonal (ρ : DensityMatrix hnQubit) : ℝ :=
@@ -59,8 +64,8 @@ theorem vonNeumannDiagonal_eq_shannon_path1 (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal ρ = shannonBinary (pathWeight ρ 1) := by
   unfold vonNeumannDiagonal
   have hs := pathWeight_sum ρ
-  have : pathWeight ρ 0 = 1 - pathWeight ρ 1 := by linarith
-  rw [this, shannonBinary_symm]
+  have hp0 : pathWeight ρ 0 = 1 - pathWeight ρ 1 := by linarith
+  rw [hp0, ← shannonBinary_symm (pathWeight ρ 1)]
 
 theorem vonNeumannDiagonal_nonneg (ρ : DensityMatrix hnQubit) : 0 ≤ vonNeumannDiagonal ρ := by
   unfold vonNeumannDiagonal shannonBinary
@@ -85,7 +90,9 @@ theorem vonNeumannDiagonal_n_nonneg {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix h
 theorem vonNeumannDiagonal_n_eq_vonNeumannDiagonal (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal_n ρ = vonNeumannDiagonal ρ := by
   have hdiag1 : (ρ.carrier 1 1).re = 1 - (ρ.carrier 0 0).re := by
-    simpa [pathWeight, add_comm, add_left_comm, add_assoc] using (pathWeight_sum ρ)
+    have hs := pathWeight_sum ρ
+    simp only [pathWeight] at hs
+    linarith
   unfold vonNeumannDiagonal vonNeumannDiagonal_n shannonBinary
   rw [Fin.sum_univ_two, hdiag1, pathWeight]
 

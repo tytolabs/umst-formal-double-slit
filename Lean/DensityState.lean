@@ -45,6 +45,10 @@ structure DensityMatCore (hn : 0 < n) : Type where
 
 abbrev DensityMatrix (hn : 0 < n) : Type := DensityMatCore hn
 
+/-- PSD implies Hermitian; bundled as dot-notation for spectral API (`ρ.isHermitian.eigenvalues`). -/
+abbrev DensityMatCore.isHermitian (ρ : DensityMatCore hn) : ρ.carrier.IsHermitian :=
+  ρ.psd.isHermitian
+
 namespace DensityMat
 
 /-- Two density matrices are equal if their underlying matrices agree (PSD / trace proofs are
@@ -169,7 +173,7 @@ noncomputable def pureCarrier (ψ : ℂⁿ) : Matrix (Fin n) (Fin n) ℂ :=
   col Unit ψ * row Unit (star ψ)
 
 theorem pureCarrier_posSemidef (ψ : ℂⁿ) : (pureCarrier ψ).PosSemidef := by
-  simpa [pureCarrier] using posSemidef_self_mul_conjTranspose (col Unit ψ)
+  simp [pureCarrier, posSemidef_self_mul_conjTranspose (col Unit ψ)]
 
 theorem pureCarrier_trace (ψ : ℂⁿ) :
     Matrix.trace (pureCarrier ψ) = dotProduct ψ (star ψ) := by

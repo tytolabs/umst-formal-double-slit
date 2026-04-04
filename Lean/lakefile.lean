@@ -18,7 +18,7 @@ require mathlib from git
 -/
 lean_lib «UMST.DoubleSlit» where
   roots := #[`UMSTCore, `DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
-    `InfoEntropy, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
+    `InfoEntropy, `KroneckerEigen, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
     `EpistemicTrajectoryMI, `EpistemicPolicy, `EpistemicRuntimeContract, `EpistemicNumericsContract,
     `EpistemicPerStepNumerics, `EpistemicRuntimeSchemaContract, `EpistemicTelemetryBridge,
     `EpistemicTelemetryApproximation, `EpistemicTelemetryQuantitativeUtility,
@@ -26,12 +26,12 @@ lean_lib «UMST.DoubleSlit» where
     `EpistemicTelemetrySolverCalibration, `EpistemicTraceDrivenCalibrationWitness,
     `PrototypeSolverCalibration, `GateCompat, `QRBridge,
     `PMICEntropyInterior, `Complementarity, `PMICVisibility,
-    `VonNeumannEntropy, `QuantumMutualInfo, `DataProcessingInequality,
+    `VonNeumannEntropy, `QuantumMutualInfo, `KleinInequality, `DataProcessingInequality,
     `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `SimLeanBridge,
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
     `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState,
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility]
-    -- WIP (axiom elimination): `MatrixLog, `LogSum, `KleinInequality — not yet sorry-free
+    -- Optional / future: `MatrixLog, `LogSum (not in roots)
   srcDir := "."

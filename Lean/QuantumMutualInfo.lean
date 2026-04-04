@@ -5,6 +5,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 import VonNeumannEntropy
 import TensorPartialTrace
+import KroneckerEigen
 
 /-!
 # QuantumMutualInfo — bipartite quantum mutual information and conditional entropy
@@ -21,8 +22,8 @@ partial trace.
 - `quantumConditionalEntropy` — `S(A|B) = S(ρ_AB) - S(ρ_B)`
 - `quantumMutualInfo_eq_entropy_minus_conditional` — `I(A:B) = S(ρ_A) - S(A|B)` (pure algebra)
 - `quantumMutualInfo_le` — `I(A:B) ≤ log na + log nb` (upper bound)
-- `vonNeumannEntropy_tensorDensity` — `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)` (axiom; Kronecker
-  eigenvalue factorization not available in Mathlib)
+- `vonNeumannEntropy_tensorDensity_eq` — `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)` (**proved** in
+  `KroneckerEigen.lean`, imported here)
 - `quantumMutualInfo_product_eq_zero` — product states have zero mutual information
 -/
 
@@ -66,17 +67,12 @@ theorem quantumMutualInfo_le
   have hAB := vonNeumannEntropy_nonneg ρAB
   linarith
 
-/-- **Axiom**: Kronecker eigenvalue factorization.
+/-- **Axiom Eliminated**: Kronecker eigenvalue factorization.
 
 For product states `ρ_A ⊗ ρ_B`, the eigenvalues of the tensor product are the pairwise products
 of eigenvalues of the factors, hence `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)`.
 
-This requires Kronecker eigenvalue structure not currently available in Mathlib, so we axiomatize
-it. -/
-axiom vonNeumannEntropy_tensorDensity
-    (ρA : DensityMatrix ha) (ρB : DensityMatrix hb) :
-    vonNeumannEntropy (tensorDensity ha hb ρA ρB) =
-    vonNeumannEntropy ρA + vonNeumannEntropy ρB
+Proved formally in `KroneckerEigen.lean` via characteristic polynomial tracking under unitary conjugation. -/
 
 /-- Product states have zero quantum mutual information.
 
@@ -91,7 +87,7 @@ theorem quantumMutualInfo_product_eq_zero
     DensityMat.ext (partialTraceRightProd_toDensityMatrix_tensor ha hb ρA ρB)
   have hRB : (partialTraceLeftProd_toDensityMatrix ha hb (tensorDensity ha hb ρA ρB)) = ρB :=
     DensityMat.ext (partialTraceLeftProd_toDensityMatrix_tensor ha hb ρA ρB)
-  rw [hRA, hRB, vonNeumannEntropy_tensorDensity ha hb ρA ρB]
+  rw [hRA, hRB, vonNeumannEntropy_tensorDensity_eq ha hb ρA ρB]
   ring
 
 end UMST.Quantum

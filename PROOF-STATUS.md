@@ -14,16 +14,16 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 *(Heuristic line counts from `make lean-stats-md`; portable paths — re-paste after large Lean edits.)*
 
 - **Lean root:** `Lean`
-- **`.lean` files scanned:** 55 (`.lake` excluded)
-- **`abbrev` (line-start heuristic):** 5
-- **`axiom` (line-start heuristic):** 6
-- **`def` (line-start heuristic):** 200
+- **`.lean` files scanned:** 65 (`.lake` excluded)
+- **`abbrev` (line-start heuristic):** 7
+- **`axiom` (line-start heuristic):** 3
+- **`def` (line-start heuristic):** 207
 - **`inductive` (line-start heuristic):** 4
 - **`instance` (line-start heuristic):** 1
-- **`lemma` (line-start heuristic):** 33
+- **`lemma` (line-start heuristic):** 54
 - **`structure` (line-start heuristic):** 29
-- **`theorem` (line-start heuristic):** 515
-- **Sum of above kinds:** 781
+- **`theorem` (line-start heuristic):** 528
+- **Sum of above kinds:** 833
 
 ## Track summary
 
@@ -56,9 +56,9 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Gate scaffold + `Admissible` under which-path (`GateCompat`) | **Proved** |
 | `MeasurementUpdate` for which-path (`DoubleSlit`) | **Proved** (identity preserves interference, which-path collapses fringes, gate-enforcement packaging) |
 | Worked examples (`ExamplesQubit`) | **Proved** (`|+⟩`, `|0⟩`, `|1⟩` with measurement-update corollaries) |
-| Spectral von Neumann entropy + DPI (`VonNeumannEntropy`, `DataProcessingInequality`) | **PARTIAL** — general `Fin n` **unitary invariance** ✓; qubit-tier DPI **proved**; **full unital DPI + Klein** stated as **`axiom`** (Mathlib matrix-log gap). **0 `sorry`.** See `Lean/VERIFY.md`. |
+| Spectral von Neumann entropy + DPI (`VonNeumannEntropy`, `DataProcessingInequality`, `KleinInequality`) | **PARTIAL** — general `Fin n` **unitary invariance** ✓; qubit-tier unital DPI instances **proved**; **spectral relative entropy nonnegativity** **`spectralRelativeEntropy_nonneg`** **proved** in **`KleinInequality.lean`** (no Klein axiom). **General** unital CPTP DPI for all `n` not a single theorem. **0 `sorry`.** See `Lean/VERIFY.md`. |
 | General-n RCC (`GeneralResidualCoherence`) | **Proved** — `RCC_n ∈ [0,1]`, `RCC_n = 0 ↔ diagonal`, `RCC_n = 1 ↔ pure`, qubit compatibility `RCC_2 = \|ρ₀₁\|²/(p₀p₁)`. Cauchy-Schwarz for PSD matrices proved from first principles. |
-| Quantum Mutual Information (`QuantumMutualInfo`) | **Proved** — `I(A:B) = S(A) + S(B) - S(AB)` definition, conditional entropy, `I ≤ log nA + log nB` upper bound, `I(A:B) = 0` for product states. One axiom: `S(ρ⊗σ) = S(ρ)+S(σ)`. |
+| Quantum Mutual Information (`QuantumMutualInfo`) | **Proved** — `I(A:B) = S(A) + S(B) - S(AB)` definition, conditional entropy, `I ≤ log nA + log nB` upper bound, `I(A:B) = 0` for product states. Tensor additivity **`vonNeumannEntropy_tensorDensity_eq`** proved in **`KroneckerEigen.lean`**. |
 | Concrete erasure channel (`ErasureChannel`) | **Proved** — reset-to-`\|0⟩` Kraus operators, trace preservation, output always `\|0⟩⟨0\|`, zero output entropy, `ErasureProcess` at Landauer equality. |
 | Which-path update bridge (`WhichPathMeasurementUpdate`) | **Proved** — `measurementUpdateWhichPath`, fringe collapse, Landauer invariance along update; split from `DoubleSlit` to break import cycle with `EpistemicSensing`. |
 | Haskell / Python / publication sims | **In repo** (toy + Kraus + SVG + QuTiP + 1D/2D/3D Schrödinger + 87 tests) |
@@ -68,11 +68,10 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Axiom | File | Justification |
 |-------|------|---------------|
 | `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
-| `klein_inequality` | `DataProcessingInequality.lean` | Klein / quantum relative entropy (placeholder until Mathlib matrix `log` + convexity) |
-| `vonNeumannEntropy_nondecreasing_unital` | `DataProcessingInequality.lean` | Full **unital CPTP** entropy monotonicity (standard proof via Klein; **axiomatized** pending Mathlib) |
 | `fringeVisibility_n_le_one` | `GeneralVisibility.lean` | $\ell_1$ norm of coherence ≤ 1 for arbitrary `Fin n` (requires Cauchy–Schwarz on coherence vector) |
 | `dephasingSolution_tendsto_diagonal` | `LindbladDynamics.lean` | Off-diagonal coherences vanish as $t \to \infty$ under pure dephasing (topological limit of ODE) |
-| `vonNeumannEntropy_tensorDensity` | `QuantumMutualInfo.lean` | `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)` (Kronecker eigenvalue factorization, pending Mathlib) |
+
+**Resolved (information theory):** `spectralRelativeEntropy_nonneg` — **theorem** in `KleinInequality.lean` (Gibbs inequality + unitary row/column `normSq` sums + concave `log` / Jensen). **0** information-theoretic Lean axioms.
 
 ## Sorry inventory
 
@@ -81,7 +80,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | File | Topic |
 |------|--------|
 | `VonNeumannEntropy.lean` | **Proved** — `vonNeumannEntropy_unitarily_invariant` (`Fin n`), `charpoly` lemmas. |
-| `DataProcessingInequality.lean` | **Proved** special cases (identity, which-path qubit, diagonal ≥ spectral); **general unital DPI** via **`axiom`** above. |
+| `DataProcessingInequality.lean` | **Proved** — identity channel, **algebraic unital DPI** for qubit which-path (`vonNeumannEntropy_nondecreasing_unital_whichPath`), diagonal ≥ spectral (Tier 1b). |
 
 **Resolved (historical):** all 10 former `sorry` sites in `DensityState.lean` (4) and `MeasurementChannel.lean` (6) are fully proved.
 
@@ -89,10 +88,10 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | 53 `lakefile` roots; **515** `theorem` + **33** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **6 axiom** (3 quantum-info/physical + 3 analysis/topology) |
+| Lean 4 | 55 `lakefile` roots; **528** `theorem` + **54** `lemma` (+ defs/structures, heuristic table) | **0 sorry**, **3 axiom** (see inventory; re-run `make lean-stats-md` for fresh counts) |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **no** `Admitted`; real-analysis facts are **axioms** (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) plus spectral **axioms** (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-03-22 — `make lean-stats-md`: 58 files, **515** `theorem`, **33** `lemma`, **6** `axiom`, sum **781**; **0** `sorry`; DPI/Klein layer **axiomatized** in `DataProcessingInequality.lean`; General-n RCC fully proved in `GeneralResidualCoherence.lean`; QMI defined in `QuantumMutualInfo.lean`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-04-03 — `spectralRelativeEntropy_nonneg` is a **theorem** in `KleinInequality.lean` (no Klein axiom). Qubit-tier unital DPI instances in `DataProcessingInequality.lean`; tensor additivity in `KroneckerEigen.lean`. **3** project `axiom`s: `physicalSecondLaw`, `fringeVisibility_n_le_one`, `dephasingSolution_tendsto_diagonal`. Formal tracks: **`make formal-check`**.

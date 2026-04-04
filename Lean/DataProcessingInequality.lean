@@ -34,9 +34,13 @@ This file proves:
    On a qubit, diagonal (Born) entropy is at least the spectral von Neumann entropy.
    Proof: `det = λ₀λ₁ ≤ p₀p₁` ⇒ `max λ ≥ max p` on `[1/2,1]`, then **`binEntropy_strictAntiOn`**.
 
-3. **Tier 2 — Unital Channel DPI** (general case stated; proof needs Klein's inequality):
-   For any unital CPTP channel, `vonNeumannEntropy(E(ρ)) ≥ vonNeumannEntropy(ρ)`.
-   **Proved base case:** identity channel (`vonNeumannEntropy_identity_apply`, `identity_isUnital`).
+3. **Tier 2 — Unital channel DPI (proved instances):**
+   - **Identity:** `vonNeumannEntropy_identity_apply`, `vonNeumannEntropy_nondecreasing_unital_identity`.
+   - **Qubit which-path (computational Lüders):** unital (`whichPathChannel_isUnital`) and
+     **`vonNeumannEntropy_nondecreasing_unital_whichPath`** — spectral entropy monotone; proof =
+     diagonal spectrum after dephasing + **Tier 1b** log-sum / `binEntropy` bound.
+   A fully **quantitative** statement for an arbitrary unital Kraus channel on general `Fin n` is
+   **out of scope** here (standard proofs use quantum relative entropy / matrix logarithms).
 
 **Gap 11 closure (Tier 1 + statements for Tier 2).**
 
@@ -90,9 +94,10 @@ private lemma vonNeumannDiagonal_eq_binEntropy_max_path (ρ : DensityMatrix hnQu
 
 private lemma vonNeumannEntropy_eq_binEntropy_max_eigen (ρ : DensityMatrix hnQubit) :
     vonNeumannEntropy ρ =
-      binEntropy (max (ρ.isHermitian.eigenvalues 0) (ρ.isHermitian.eigenvalues 1)) := by
-  set l0 := ρ.isHermitian.eigenvalues 0
-  set l1 := ρ.isHermitian.eigenvalues 1
+      binEntropy (max ((DensityMat.isHermitian ρ).eigenvalues 0)
+        ((DensityMat.isHermitian ρ).eigenvalues 1)) := by
+  set l0 := (DensityMat.isHermitian ρ).eigenvalues 0
+  set l1 := (DensityMat.isHermitian ρ).eigenvalues 1
   have hl_sum : l0 + l1 = 1 := by simpa [Fin.sum_univ_two] using density_eigenvalues_sum_eq_one_real ρ
   unfold vonNeumannEntropy
   rw [Fin.sum_univ_two, ← binEntropy_eq_negMulLog_add_negMulLog_one_sub]
@@ -115,7 +120,7 @@ theorem vonNeumannDiagonal_ge_vonNeumannEntropy (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal ρ ≥ vonNeumannEntropy ρ := by
   classical
   set A := ρ.carrier
-  set hρ := ρ.isHermitian
+  set hρ := DensityMat.isHermitian ρ
   set l0 : ℝ := hρ.eigenvalues 0
   set l1 : ℝ := hρ.eigenvalues 1
   set p0 : ℝ := pathWeight ρ 0
@@ -183,9 +188,7 @@ theorem vonNeumannEntropy_identity_apply (ρ : DensityMatrix hn) :
   refine congr_arg vonNeumannEntropy (DensityMat.ext ?_)
   simp [KrausChannel.apply, KrausChannel.identity_map]
 
-/-- **Tier 2** holds trivially for the identity channel: `S(ρ) ≥ S(ρ)` (in fact equality).
-
-The general unital case remains on Klein's inequality (`vonNeumannEntropy_nondecreasing_unital`). -/
+/-- **Tier 2** holds trivially for the identity channel: `S(ρ) ≥ S(ρ)` (in fact equality). -/
 theorem vonNeumannEntropy_nondecreasing_unital_identity (ρ : DensityMatrix hn) :
     vonNeumannEntropy ((KrausChannel.identity n).apply hn ρ) ≥ vonNeumannEntropy ρ := by
   rw [vonNeumannEntropy_identity_apply]
@@ -198,41 +201,50 @@ theorem whichPathChannel_isUnital : KrausChannel.whichPathChannel.IsUnital := by
   ext i j
   simp [diagonal_apply, one_apply]
 
-/-- **Klein's inequality** (axiom): For density matrices ρ, σ, the quantum relative entropy
-is nonneg: `Tr(ρ(log ρ - log σ)) ≥ 0`.
+/-! ### Tier 2 (algebraic): unital dephasing on the qubit path bit -/
 
-This is stated as an axiom because its proof requires matrix logarithms and operator
-convexity, which are not yet available in Mathlib. It is a fundamental result in quantum
-information theory (see Nielsen & Chuang, Theorem 11.7).
+/-- Diagonal entries of a density matrix are real (`im = 0`), hence `ρᵢᵢ = ↑(re ρᵢᵢ)`. -/
+theorem densityMatrix_diag_entry_eq_ofReal_re {m : ℕ} {hm : 0 < m} (ρ : DensityMatrix hm)
+    (i : Fin m) : ρ.carrier i i = ((ρ.carrier i i).re : ℂ) := by
+  rw [Complex.ext_iff]
+  have him : (ρ.carrier i i).im = 0 := by
+    rw [← Complex.conj_eq_iff_im, ← Complex.star_def]
+    exact (ρ.psd.isHermitian.apply i i).symm
+  simp [him]
 
-**Mathlib dependency:** `Matrix.log : Matrix → Matrix` via spectral functional calculus. -/
-axiom klein_inequality {n : ℕ} (hn : 0 < n) (ρ σ : DensityMatrix hn) :
-    -- Tr(ρ log ρ) ≥ Tr(ρ log σ), equivalently S(ρ‖σ) ≥ 0
-    vonNeumannEntropy σ ≥ vonNeumannEntropy ρ →
-    vonNeumannEntropy σ ≥ vonNeumannEntropy ρ  -- tautology placeholder; see note below
+/-- After Lüders which-path, the carrier is the diagonal of Born weights as complex scalars. -/
+theorem whichPath_apply_carrier_eq_diagonal_pathWeight (ρ : DensityMatrix hnQubit) :
+    (KrausChannel.whichPathChannel.apply hnQubit ρ).carrier =
+      diagonal (fun i : Fin 2 => (pathWeight ρ i : ℂ)) := by
+  rw [KrausChannel.apply, KrausChannel.whichPath_map_eq_diagonal]
+  refine congrArg diagonal (funext fun i => ?_)
+  rw [densityMatrix_diag_entry_eq_ofReal_re ρ i, pathWeight]
 
-/-- **Unital DPI (full quantum):** For a unital CPTP channel, von Neumann entropy does not decrease.
+/-- Spectral entropy of the dephased state equals the diagonal Shannon functional on path weights. -/
+theorem vonNeumannEntropy_whichPath_apply_eq_vonNeumannDiagonal (ρ : DensityMatrix hnQubit) :
+    vonNeumannEntropy (KrausChannel.whichPathChannel.apply hnQubit ρ) = vonNeumannDiagonal ρ := by
+  have hdiag :=
+    vonNeumannEntropy_eq_sum_negMulLog_of_diagonal_carrier
+      (KrausChannel.whichPathChannel.apply hnQubit ρ) (fun i => pathWeight ρ i)
+      (whichPath_apply_carrier_eq_diagonal_pathWeight ρ)
+  rw [hdiag, vonNeumannDiagonal, shannonBinary]
+  rw [Fin.sum_univ_two]
+  have hp1 : pathWeight ρ 1 = 1 - pathWeight ρ 0 := by linarith [pathWeight_sum ρ]
+  simpa [hp1]
 
-  If `E(I) = I` then `S(E(ρ)) ≥ S(ρ)`.
+/-- **Algebraic unital DPI (qubit path channel):** the computational-basis Lüders channel is
+unital (`whichPathChannel_isUnital`) and **does not decrease** von Neumann entropy.
 
-This is a deep result. The standard proof goes via Klein's inequality (quantum relative entropy
-is nonneg). An alternative proof uses concavity of von Neumann entropy combined with Choi's
-mixed-unitary decomposition theorem for unital channels.
+Proof: `S(E(ρ))` equals `vonNeumannDiagonal ρ` (dephased state is diagonal, spectrum = Born weights),
+and `vonNeumannDiagonal ρ ≥ S(ρ)` is **Tier 1b** (`vonNeumannDiagonal_ge_vonNeumannEntropy`, det / log-sum / `binEntropy` chain).
 
-Both approaches require Mathlib infrastructure not yet available (matrix logarithms or
-Choi's theorem). The statement is retained for completeness; all physically relevant
-special cases are proved sorry-free:
-
-- **Identity channel:** `vonNeumannEntropy_nondecreasing_unital_identity`
-- **Which-path channel (qubit DPI):** `whichPath_increases_entropy`
-- **Diagonal ≥ spectral (Schur concavity):** `vonNeumannDiagonal_ge_vonNeumannEntropy`
-
-**Reference:** M. A. Nielsen & I. L. Chuang, *Quantum Computation and Quantum Information*,
-Theorem 11.9. -/
-axiom vonNeumannEntropy_nondecreasing_unital
-    {n : ℕ} {hn : 0 < n} {ι : Type*} [Fintype ι] [DecidableEq ι]
-    (κ : KrausChannel n ι) (hU : κ.IsUnital) (ρ : DensityMatrix hn) :
-    vonNeumannEntropy (κ.apply hn ρ) ≥ vonNeumannEntropy ρ
+This is the spectral-side packaging of `whichPath_increases_entropy` (same inequality, LHS written
+as `vonNeumannDiagonal(E(ρ))` there). A **general** unital CPTP statement for all `n` and all Kraus
+families is **not** in this file (would require relative entropy / matrix log infrastructure). -/
+theorem vonNeumannEntropy_nondecreasing_unital_whichPath (ρ : DensityMatrix hnQubit) :
+    vonNeumannEntropy (KrausChannel.whichPathChannel.apply hnQubit ρ) ≥ vonNeumannEntropy ρ := by
+  rw [vonNeumannEntropy_whichPath_apply_eq_vonNeumannDiagonal ρ]
+  exact vonNeumannDiagonal_ge_vonNeumannEntropy ρ
 
 /-! ### Corollaries combining Tier 1 and Tier 1b -/
 

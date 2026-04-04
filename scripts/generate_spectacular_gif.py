@@ -293,8 +293,8 @@ def generate_teaser(out_dir):
                     fontsize=18, transform=ax2.transAxes)
 
         # Stats: two lines for clarity
-        stats_top = "515 theorems · 33 lemmas · 6 axioms · 0 sorry"
-        stats_bot = "53 modules · 58 .lean files · 0 Admitted"
+        stats_top = "529 theorems · 54 lemmas · 3 axioms · 0 sorry"
+        stats_bot = "53 lakefile roots · 65 .lean files scanned · 0 Admitted"
         ax2.text(0.5, 0.13, stats_top, ha='center', va='top', color=v['sub'],
                 fontsize=12, transform=ax2.transAxes, fontfamily='monospace')
         ax2.text(0.5, 0.085, stats_bot, ha='center', va='top', color=v['sub'],
