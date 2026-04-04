@@ -36,3 +36,22 @@ Docs/*.fdb_latexmk
 
 # OS / editor
 .DS_Store
+
+# Model / ML artifacts (never commit downloaded weights)
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.ggml
+*.onnx
+*.h5
+*.hdf5
+*.msgpack
+tokenizer.model
+tokenizer.json
+checkpoints/
+weights/
+**/.cache/huggingface/
+/models/
+/pretrained/
