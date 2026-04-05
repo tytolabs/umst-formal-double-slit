@@ -19,12 +19,13 @@ Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is
 8. **Examples** (`rhoPlus`, `rhoZero`, `rhoOne`): concrete vectors; no claim they model a full laboratory double-slit geometry.
 9. **ODE/PPO numerics hooks**: runtime telemetry (`trajMI`, `effortCost`) and epsilon-approximation contracts are **defined** interfaces / surrogates, not derived convergence or stability theorems.
 10. **Telemetry approximation bounds**: exact equivalence theorems from numerics to abstract rollout contracts are proved in the explicit **zero-error** limit; a separate quantitative-utility layer provides nonzero-error deviation bounds under explicit approximation assumptions.
+11. **Lindblad stream-D (`LindbladStreamD.lean`)**: discrete readout of the **same** closed-form qubit dephasing trajectory as `LindbladDynamics` (`streamD_sampling` at integer times). **`streamD_limit_to_Lueders_states`** is the entrywise `n → ∞` limit to the computational diagonal (composed with `dephasingSolution_tendsto_diagonal`). Still **qubit `Fin 2`**; not a sampling-bandwidth or finite-`n` error model for experiments.
 
 ## What is **not** claimed
 
 - Derivation from a relativistic / gravitational UMST layer.
 - Identification of `I` with a specific **experimental** which-path meter without calibration axioms.
-- **Full unital CPTP DPI for arbitrary `Fin n` and general Kraus families** as one packaged theorem — **not** in this repo; qubit-tier instances (e.g. which-path channel) are **proved** in `DataProcessingInequality.lean`. **`spectralRelativeEntropy_nonneg`** (spectral relative entropy ≥ 0) is a **theorem** in `KleinInequality.lean`, not an axiom.
+- **Full unital CPTP DPI for arbitrary `Fin n` and general multi-Kraus families** as one packaged theorem — **not** in this repo. **Proved** in `DataProcessingInequality.lean`: qubit-tier instances (e.g. which-path channel), identity channel, and **`vonNeumannEntropy_nondecreasing_unital_CPTP_n`** for **unitary single-Kraus** channels on **`Fin n`** (entropy preserved). **`spectralRelativeEntropy_nonneg`** (spectral relative entropy ≥ 0) is a **theorem** in `KleinInequality.lean`, not an axiom.
 - **Mixed ensembles** as formal convex sums in `DensityState` (future).
 - Certified ODE/PPO solver convergence / stability / generalization claims without an explicit numerical analysis layer.
 

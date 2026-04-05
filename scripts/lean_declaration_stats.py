@@ -49,7 +49,7 @@ def parse_lake_roots(lakefile_text: str) -> list[str]:
             depth -= 1
             if depth == 0:
                 body = sub[start + 1 : k]
-                names = re.findall(r"`([A-Za-z][A-Za-z0-9_]*)", body)
+                names = re.findall(r"`([A-Za-z][A-Za-z0-9_.]*)", body)
                 return names
         k += 1
     raise ValueError("unclosed roots array")
@@ -68,8 +68,8 @@ def count_declarations(lean_path: Path) -> tuple[int, int]:
 
 def find_axioms(lean_dir: Path) -> list[tuple[str, int, str]]:
     out: list[tuple[str, int, str]] = []
-    for p in sorted(lean_dir.glob("*.lean")):
-        if p.name == "lakefile.lean":
+    for p in sorted(lean_dir.rglob("*.lean")):
+        if p.name == "lakefile.lean" or ".lake" in p.parts:
             continue
         for lineno, line in enumerate(p.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
             if line.startswith("axiom "):
@@ -96,7 +96,8 @@ def main() -> int:
     rt = rl = 0
     missing: list[str] = []
     for name in roots:
-        f = lean / f"{name}.lean"
+        rel = Path(*name.split(".")).with_suffix(".lean")
+        f = lean / rel
         if not f.is_file():
             missing.append(name)
             continue
@@ -106,8 +107,8 @@ def main() -> int:
         rl += l
 
     all_t = all_l = 0
-    for p in lean.glob("*.lean"):
-        if p.name == "lakefile.lean":
+    for p in lean.rglob("*.lean"):
+        if p.name == "lakefile.lean" or ".lake" in p.parts:
             continue
         t, l = count_declarations(p)
         all_t += t

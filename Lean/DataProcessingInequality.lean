@@ -15,6 +15,8 @@ import DensityState
 import MeasurementChannel
 import InfoEntropy
 import VonNeumannEntropy
+import SchrodingerDynamics
+import Mathlib.LinearAlgebra.UnitaryGroup
 
 /-!
 # DataProcessingInequality — entropy monotonicity under quantum channels
@@ -277,5 +279,46 @@ Combined with the DPI, we get the full thermodynamic picture:
 
 This closes the loop from quantum coherence → measurement entropy → thermodynamic cost → PMIC.
 -/
+
+/-! ### Wave 6.5.2 — general `Fin n`: unital **single-Kraus** (unitary) CPTP maps
+
+The fully general statement “`S(Φ(ρ)) ≥ S(ρ)` for **every** unital CPTP `Φ` on `Fin n`” is a
+deep result (quantum relative entropy / Stinespring).  Here we prove the **unitary subclass**:
+every **unitary conjugation** channel is CPTP, unital, and **preserves** von Neumann entropy
+(`vonNeumannEntropy_unitarily_invariant`), hence satisfies the DPI inequality trivially with equality.
+-/
+
+variable {n : ℕ} {hn : 0 < n}
+
+theorem KrausChannel.unitaryChannel_isUnital (U : Matrix (Fin n) (Fin n) ℂ) (hU : Uᴴ * U = 1) :
+    (unitaryChannel U hU).IsUnital := by
+  unfold KrausChannel.IsUnital
+  rw [unitaryChannel_map U hU 1, mul_one]
+  exact conjTranspose_mul_self_of_self_mul_conjTranspose U hU
+
+/-- Carrier of `apply` for a unitary Kraus channel agrees with `U ρ Uᴴ`. -/
+theorem unitaryChannel_apply_carrier (U : Matrix (Fin n) (Fin n) ℂ) (hU : Uᴴ * U = 1)
+    (ρ : DensityMatrix hn) :
+    ((unitaryChannel U hU).apply hn ρ).carrier = U * ρ.carrier * Uᴴ := by
+  simp [KrausChannel.apply, unitaryChannel_map]
+
+private theorem unitaryChannel_apply_eq_unitaryConj (U : Matrix (Fin n) (Fin n) ℂ) (hU : Uᴴ * U = 1)
+    (ρ : DensityMatrix hn) :
+    (unitaryChannel U hU).apply hn ρ =
+      unitaryConjDensityMatrix ρ ⟨U, Matrix.mem_unitaryGroup_iff'.mpr hU⟩ := by
+  refine DensityMat.ext ?_
+  simp [unitaryChannel_apply_carrier, unitaryConjDensityMatrix, Matrix.star_eq_conjTranspose]
+
+/-- **Unital CPTP (single Kraus / unitary) on `Fin n`:** entropy is **preserved**, hence
+`S(E(ρ)) ≥ S(ρ)` with equality.
+
+For multi-Kraus unital CPTP maps beyond the unitary subclass, see the note in the module doc
+at the top of Tier 2. -/
+theorem vonNeumannEntropy_nondecreasing_unital_CPTP_n (ρ : DensityMatrix hn)
+    (U : Matrix (Fin n) (Fin n) ℂ) (hU : Uᴴ * U = 1) :
+    vonNeumannEntropy ((unitaryChannel U hU).apply hn ρ) ≥ vonNeumannEntropy ρ := by
+  rw [unitaryChannel_apply_eq_unitaryConj U hU ρ,
+    vonNeumannEntropy_unitarily_invariant ρ ⟨U, Matrix.mem_unitaryGroup_iff'.mpr hU⟩]
+  exact le_rfl
 
 end UMST.Quantum

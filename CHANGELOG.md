@@ -9,11 +9,17 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
-### Fixed (documentation consistency)
+### Added (Wave 6.5.2 — 2026-04-04)
 
-- **Lean stats / axioms (2026-04)** — **`FORMAL_FOUNDATIONS.md`**, **`PROOF-STATUS.md`**, **`README.md`**, **`Lean/VERIFY.md`**, **`Docs/PROVENANCE.md`**, preprint TeX, **`scripts/generate_spectacular_gif.py`**: **58** lake roots; **533+34** (roots) / **542+35** (all `Lean/*.lean`); **1** Lean `axiom` (`physicalSecondLaw`); visibility + dephasing limits are **theorems**. Methodology: **`Docs/COUNT-METHODOLOGY.md`**, **`scripts/lean_declaration_stats.py`**.
+- **`Lean/LindbladStreamD.lean`** — discrete **stream-D** sampling of qubit dephasing; **`streamD_limit_to_Lueders_states`** (composes `dephasingSolution_tendsto_diagonal` with `n : ℕ → ∞`). New `lakefile` root **`LindbladStreamD`**.
+- **`Lean/DataProcessingInequality.lean`** — **`vonNeumannEntropy_nondecreasing_unital_CPTP_n`**: unital CPTP given by a **single unitary Kraus** on **`Fin n`**; von Neumann entropy **unchanged** (DPI with equality). **Does not** settle arbitrary multi-Kraus unital CPTP on general `n`.
+
+### Fixed (documentation / tooling)
+
+- **`scripts/lean_declaration_stats.py`** — exclude **`.lake`** from “all `Lean`” and axiom scans (avoids Mathlib dependency noise); refreshed counts: **59** roots, **537+34** roots-only / **546+35** all-Lean.
+- **Lean stats / axioms (2026-04)** — **`FORMAL_FOUNDATIONS.md`**, **`PROOF-STATUS.md`**, **`README.md`**, **`Lean/VERIFY.md`**, **`Docs/PROVENANCE.md`**, preprint TeX, **`scripts/generate_spectacular_gif.py`**: **59** lake roots; **537+34** (roots) / **546+35** (all `Lean/*.lean`, script excludes `.lake`); **1** Lean `axiom` (`physicalSecondLaw`); visibility + dephasing limits are **theorems**. Methodology: **`Docs/COUNT-METHODOLOGY.md`**, **`scripts/lean_declaration_stats.py`**.
 - **`Docs/PROVENANCE.md`** — axiom inventory: **1** Lean `axiom`; fringe visibility + dephasing diagonal limit **theorems** (supersedes earlier “3 axioms” wording).
-- **`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`** — non-claims bullet on DPI / Klein corrected (qubit instances and `spectralRelativeEntropy_nonneg` are theorems; general-n unital CPTP DPI still not one theorem).
+- **`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`** — DPI non-claim narrowed to **arbitrary multi-Kraus** unital CPTP; documents proved **unitary single-Kraus** `Fin n` case and qubit which-path instances.
 - **`Lean/VERIFY.md`** — module row for **`GeneralVisibility`**; cross-link from “Not in this track yet” to README + assumptions doc.
 
 ### Added (general dimension & limits — Phase 2 & 4)

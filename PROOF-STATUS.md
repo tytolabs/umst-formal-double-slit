@@ -15,8 +15,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Scope | `theorem` | `lemma` | Total |
 |-------|-----------|---------|-------|
-| `lakefile` roots only (**58** modules) | **533** | **34** | **567** |
-| All `Lean/*.lean` (includes tests / optional files not in roots) | **542** | **35** | **577** |
+| `lakefile` roots only (**59** modules) | **537** | **34** | **571** |
+| All `Lean/*.lean` (excludes `.lake`; includes tests / optional files not in roots) | **546** | **35** | **581** |
 
 Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you maintain that Makefile target separately.
 
@@ -51,7 +51,7 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 | Gate scaffold + `Admissible` under which-path (`GateCompat`) | **Proved** |
 | `MeasurementUpdate` for which-path (`DoubleSlit`) | **Proved** (identity preserves interference, which-path collapses fringes, gate-enforcement packaging) |
 | Worked examples (`ExamplesQubit`) | **Proved** (`|+⟩`, `|0⟩`, `|1⟩` with measurement-update corollaries) |
-| Spectral von Neumann entropy + DPI (`VonNeumannEntropy`, `DataProcessingInequality`, `KleinInequality`) | **PARTIAL** — general `Fin n` **unitary invariance** ✓; qubit-tier unital DPI instances **proved**; **spectral relative entropy nonnegativity** **`spectralRelativeEntropy_nonneg`** **proved** in **`KleinInequality.lean`** (no Klein axiom). **General** unital CPTP DPI for all `n` not a single theorem. **0 `sorry`.** See `Lean/VERIFY.md`. |
+| Spectral von Neumann entropy + DPI (`VonNeumannEntropy`, `DataProcessingInequality`, `KleinInequality`) | **PARTIAL** — general `Fin n` **unitary invariance** ✓; qubit-tier unital DPI instances **proved**; **`vonNeumannEntropy_nondecreasing_unital_CPTP_n`** for **unitary single-Kraus** channels on **`Fin n`** (entropy **preserved**, hence DPI with equality) in **`DataProcessingInequality.lean`**; **spectral relative entropy nonnegativity** **`spectralRelativeEntropy_nonneg`** in **`KleinInequality.lean`**. **Arbitrary multi-Kraus** unital CPTP on general `n` is **not** one theorem here. **0 `sorry`.** See `Lean/VERIFY.md`. |
 | General-n RCC (`GeneralResidualCoherence`) | **Proved** — `RCC_n ∈ [0,1]`, `RCC_n = 0 ↔ diagonal`, `RCC_n = 1 ↔ pure`, qubit compatibility `RCC_2 = \|ρ₀₁\|²/(p₀p₁)`. Cauchy-Schwarz for PSD matrices proved from first principles. |
 | Quantum Mutual Information (`QuantumMutualInfo`) | **Proved** — `I(A:B) = S(A) + S(B) - S(AB)` definition, conditional entropy, `I ≤ log nA + log nB` upper bound, `I(A:B) = 0` for product states. Tensor additivity **`vonNeumannEntropy_tensorDensity_eq`** proved in **`KroneckerEigen.lean`**. |
 | Concrete erasure channel (`ErasureChannel`) | **Proved** — reset-to-`\|0⟩` Kraus operators, trace preservation, output always `\|0⟩⟨0\|`, zero output entropy, `ErasureProcess` at Landauer equality. |
@@ -64,7 +64,7 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 |-------|------|---------------|
 | `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
 
-**Proved (not Lean axioms):** `fringeVisibility_n_le_one` — **theorem** in `GeneralVisibility.lean`; `dephasingSolution_tendsto_diagonal` (alias `dephasing_tendsto_diagonal`) — **theorem** in `LindbladDynamics.lean`.
+**Proved (not Lean axioms):** `fringeVisibility_n_le_one` — **theorem** in `GeneralVisibility.lean`; `dephasingSolution_tendsto_diagonal` (alias `dephasing_tendsto_diagonal`) — **theorem** in `LindbladDynamics.lean`; **`streamD_limit_to_Lueders_states`** — discrete stream-D sampling limit in **`LindbladStreamD.lean`**.
 
 **Resolved (information theory):** `spectralRelativeEntropy_nonneg` — **theorem** in `KleinInequality.lean`. **0** information-theoretic Lean axioms.
 
@@ -75,7 +75,7 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 | File | Topic |
 |------|--------|
 | `VonNeumannEntropy.lean` | **Proved** — `vonNeumannEntropy_unitarily_invariant` (`Fin n`), `charpoly` lemmas. |
-| `DataProcessingInequality.lean` | **Proved** — identity channel, **algebraic unital DPI** for qubit which-path (`vonNeumannEntropy_nondecreasing_unital_whichPath`), diagonal ≥ spectral (Tier 1b). |
+| `DataProcessingInequality.lean` | **Proved** — identity channel, **algebraic unital DPI** for qubit which-path (`vonNeumannEntropy_nondecreasing_unital_whichPath`), diagonal ≥ spectral (Tier 1b), **`vonNeumannEntropy_nondecreasing_unital_CPTP_n`** (unitary **single-Kraus** on `Fin n`; not general CPTP). |
 
 **Resolved (historical):** all 10 former `sorry` sites in `DensityState.lean` (4) and `MeasurementChannel.lean` (6) are fully proved.
 
@@ -83,10 +83,10 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | **58** `lakefile` roots; **533** `theorem` + **34** `lemma` (roots-only); **542** + **35** all `Lean/*.lean` | **0** tactic `sorry`, **1** project `axiom` (`physicalSecondLaw`); `python3 scripts/lean_declaration_stats.py` |
+| Lean 4 | **59** `lakefile` roots; **537** `theorem` + **34** `lemma` (roots-only); **546** + **35** all `Lean/*.lean` (script excludes `.lake`) | **0** tactic `sorry`, **1** project `axiom` (`physicalSecondLaw`); `python3 scripts/lean_declaration_stats.py` |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **no** `Admitted`; real-analysis facts are **axioms** (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) plus spectral **axioms** (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-04-04 — Axiom inventory aligned with **Wave 6.5.1**: **1** Lean `axiom` (`physicalSecondLaw`); fringe visibility and dephasing limit are **theorems**. Counts: `scripts/lean_declaration_stats.py` / `FORMAL_FOUNDATIONS.md`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-04-04 — **Wave 6.5.2**: **`LindbladStreamD`** (`streamD_limit_to_Lueders_states`); unitary **single-Kraus** DPI on **`Fin n`** (`vonNeumannEntropy_nondecreasing_unital_CPTP_n`). **1** Lean `axiom` (`physicalSecondLaw`). Counts: `scripts/lean_declaration_stats.py` / `FORMAL_FOUNDATIONS.md`. Formal tracks: **`make formal-check`**.

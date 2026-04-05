@@ -1,6 +1,6 @@
 # Formal foundations — `umst-formal-double-slit`
 
-**Version:** Wave 6.5.1 — **2026-04-04**
+**Version:** Wave 6.5.2 — **2026-04-04**
 
 ## Single physical axiom (Lean `axiom`)
 
@@ -52,8 +52,8 @@ DIB Kleisli semantics and full **Field/Core** functor for `discover`/`invent`/`b
 | `lake build` (all `lakefile` roots) | **Succeeded** (verified in workspace) |
 | `^axiom ` in `Lean/*.lean` (excluding `.lake`) | **1** — `LandauerLaw.physicalSecondLaw` only |
 | Tactic `sorry` / `admit` / `Admitted` in `Lean/*.lean` | **None** (the word “sorry” appears only in **comments** in: `Gate.lean`, `Activation.lean`, `Naturality.lean`) |
-| `theorem` / `lemma` in **`lakefile` roots only** (58 modules) | **533** `theorem`, **34** `lemma` (total **567**) — same line-count convention as `umst-formal` |
-| All `Lean/*.lean` (includes tests / scratch) | **542** `theorem`, **35** `lemma` (total **577**) |
+| `theorem` / `lemma` in **`lakefile` roots only** (59 modules) | **537** `theorem`, **34** `lemma` (total **571**) — same line-count convention as `umst-formal` |
+| All `Lean/*.lean` (excludes `.lake`; includes tests / scratch) | **546** `theorem`, **35** `lemma` (total **581**) |
 | Lean files **outside** default roots | `Test3.lean`, `Test4.lean`, `TestEntropy.lean`, `TestFixes.lean`, `TestMixed.lean`, `test_tensor_eigen.lean`, optional `LogSum.lean` / `MatrixLog.lean`, `FlashMoERuntimeScaffold.lean` — **not** in default `lake build` |
 
 ### Cold rebuild (audit)
@@ -76,4 +76,4 @@ Procedure: `rm -rf .lake && lake build` under `Lean/`. **Result:** `Build comple
 
 **GREEN FLAG – Fully Complete** for: default `lake` roots, **zero** tactic `sorry` / `admit` / `Admitted`, **one** project `axiom` (`physicalSecondLaw`), cold `lake build` **without** `warning:`/`error:` in captured output.
 
-Wave **6.5.1**: optional/test **scope** and **paper map** documented here and in `lakefile.lean`; `Gate.lean` header drift fixed. Epistemic “contracts” remain formal scaffolding, not runtime certificates.
+Wave **6.5.2**: **`LindbladStreamD`** root (`streamD_limit_to_Lueders_states`); **`DataProcessingInequality`**: `vonNeumannEntropy_nondecreasing_unital_CPTP_n` for **unitary single-Kraus** maps on **`Fin n`** (full arbitrary unital CPTP on general `n` remains future work). **`scripts/lean_declaration_stats.py`** excludes `.lake` from “all Lean” scans. Epistemic “contracts” remain formal scaffolding, not runtime certificates.
