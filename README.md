@@ -173,7 +173,7 @@ flowchart TB
 ```
 umst-formal-double-slit/
 │
-├── Lean/                          ← 59 lakefile roots · 537 thm + 34 lem (roots) · 546 + 35 (all Lean/*.lean) · 1 axiom · 68+ .lean files
+├── Lean/                          ← 59 lakefile roots · 537 thm + 34 lem (roots) · 546 + 35 (all Lean/*.lean) · 1 axiom · 69 .lean files
 │   │
 │   ├── ── Quantum core (18 modules) ─────────────────────────────────────────────────────────
 │   │   ├── UMSTCore.lean                  ℝ SI constants, Landauer bit energy, Admissible
