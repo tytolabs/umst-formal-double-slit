@@ -9,6 +9,10 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
+### Documentation (2026-04-22)
+
+- **Count verification** — re-ran `python3 scripts/lean_declaration_stats.py`; headline **59** roots · **537+34** (roots-only) / **546+35** (all `Lean/*.lean`) unchanged from `README.md` / `PROOF-STATUS.md`. Cross-linked maintenance: sibling **`tytolabs/umst-formal`** Lean totals refreshed the same day (FPD wave + snapshot) for downstream **`tytolabs/egoff`** registry parity work.
+
 ### Added (Wave 6.5.2 — 2026-04-04)
 
 - **`Lean/LindbladStreamD.lean`** — discrete **stream-D** sampling of qubit dephasing; **`streamD_limit_to_Lueders_states`** (composes `dephasingSolution_tendsto_diagonal` with `n : ℕ → ∞`). New `lakefile` root **`LindbladStreamD`**.
