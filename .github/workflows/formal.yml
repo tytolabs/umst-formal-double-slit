@@ -67,6 +67,8 @@ jobs:
           echo "Using rocq from: $ROCQ_BIN"
           rocq compile --version
           cd Coq
+          # `Extraction.v` writes OCaml under `_extract/` — must exist (see root `Makefile` `coq-check`).
+          mkdir -p _extract
           for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
             echo "==> Compiling $f"
             rocq compile -Q . UMSTFormal "$f"

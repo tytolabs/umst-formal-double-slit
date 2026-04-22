@@ -9,6 +9,10 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
+### Fixed (2026-04-22)
+
+- **GitHub Actions `formal.yml` (Coq job)** — create `Coq/_extract/` before `rocq compile` so `Extraction.v` can emit `gate_extracted.ml` (matches root `Makefile` `coq-check`; fixes CI failure `No such file or directory` on `Coq/_extract/gate_extracted.ml`).
+
 ### Documentation (2026-04-22)
 
 - **Count verification** — re-ran `python3 scripts/lean_declaration_stats.py`; headline **59** roots · **537+34** (roots-only) / **546+35** (all `Lean/*.lean`) unchanged from `README.md` / `PROOF-STATUS.md`. Cross-linked maintenance: sibling **`tytolabs/umst-formal`** Lean totals refreshed the same day (FPD wave + snapshot) for downstream **`tytolabs/egoff`** registry parity work.
