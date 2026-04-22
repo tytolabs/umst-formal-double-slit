@@ -18,7 +18,7 @@
 (*  Corresponds to [complementarity_fringe_path] in Lean.              *)
 (* ================================================================== *)
 
-From Stdlib Require Import Reals Lra RIneq R_sqrt.
+From Coq Require Import Reals Lra RIneq R_sqrt.
 From UMSTFormal Require Import DensityStateSpec.
 
 Open Scope R_scope.

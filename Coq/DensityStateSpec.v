@@ -19,7 +19,7 @@
 (*    - coherence_bounded     (|rho01|^2 <= p0 * p1)                   *)
 (* ================================================================== *)
 
-From Stdlib Require Import Reals Lra RIneq.
+From Coq Require Import Reals Lra RIneq.
 
 Open Scope R_scope.
 

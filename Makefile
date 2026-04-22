@@ -44,15 +44,18 @@ COQ_VO := LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonN
 	MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v
 
 coq-check:
-	@set -e; cd Coq; for f in $(COQ_VO); do coqc -Q . UMSTFormal "$$f"; done
+	@set -e; cd Coq; mkdir -p _extract; for f in $(COQ_VO); do coqc -Q . UMSTFormal "$$f"; done
 
 # Agda: 2.6+ stdlib; order respects local `open import` dependencies.
+# Uses `umst-formal-double-slit.agda-lib` (see that file) so `Data.Rational` etc. resolve via
+# registered `standard-library` (~/.agda/libraries — run scripts/setup-agda-libraries.sh).
+AGDA_FLAGS := --library=umst-formal-double-slit -W noLibUnknownField -W ignore
 AGDA_MAIN := DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda \
 	LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda \
 	Activation.agda InfoTheory.agda MeasurementCost.agda
 
 agda-check:
-	@set -e; cd Agda; for f in $(AGDA_MAIN); do agda -v0 "$$f"; done
+	@set -e; cd Agda; for f in $(AGDA_MAIN); do agda $(AGDA_FLAGS) -v0 "$$f"; done
 
 # Single entry point for formal verification tracks (Coq + Agda).
 formal-check: coq-check agda-check

@@ -1,0 +1,4 @@
+name: umst-formal-double-slit
+include: .
+depend:
+  standard-library

@@ -32,7 +32,7 @@
 (*    - vonNeumannEntropy_maximally_mixed                              *)
 (* ================================================================== *)
 
-From Stdlib Require Import Reals Lra RIneq Rpower.
+From Coq Require Import Reals Lra RIneq Rpower.
 From UMSTFormal Require Import DensityStateSpec.
 
 Open Scope R_scope.

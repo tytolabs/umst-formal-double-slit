@@ -47,9 +47,9 @@ From UMSTFormal Require Import Gate.
     These mappings ensure the extracted code is idiomatic OCaml
     rather than a naive transliteration of inductive types. *)
 
-From Stdlib Require Import Extraction.
-From Stdlib Require Import ExtrOcamlBasic.
-From Stdlib Require Import ExtrOcamlString.
+From Coq Require Import Extraction.
+From Coq Require Import ExtrOcamlBasic.
+From Coq Require Import ExtrOcamlString.
 
 (** We also configure extraction of Q (rationals).
     By default, Q extracts to a pair (Z, positive) with arithmetic
@@ -76,9 +76,9 @@ From Stdlib Require Import ExtrOcamlString.
     Proofs ([admissible], [gate_check_correct], etc.) are erased
     because they live in Prop — zero runtime overhead. *)
 
-(* Keep generated OCaml under [Coq/_extract/] (gitignored) to avoid polluting the tree root. *)
-Set Extraction Output Directory "_extract".
-Extraction "gate_extracted" gate_check.
+(* Coq 8.18 (apt): [Set Extraction Output Directory] is not a valid option — removed.
+   Use a path in [Extraction] below; [coq-check] ensures [_extract/] exists. *)
+Extraction "_extract/gate_extracted" gate_check.
 
 (* ------------------------------------------------------------------ *)
 (*  Post-Extraction: Compiling the OCaml                                *)

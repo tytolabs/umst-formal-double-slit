@@ -55,3 +55,6 @@ weights/
 **/.cache/huggingface/
 /models/
 /pretrained/
+
+# Python CI venv
+.venv-ci/

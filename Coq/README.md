@@ -9,7 +9,7 @@ Integrated from `umst-formal`: gate admissibility, Landauér bridge, density-mat
 
 ## Requirements
 
-- **Rocq / Coq** **8.20+** or **9.x** with the **`From Stdlib`** library layout (not legacy `Coq` top-level paths for the files that use `From Stdlib`).
+- **Rocq / Coq** **8.20+** or **9.x** with the **`From Stdlib`** library layout — **or** Ubuntu/Pop!_OS **apt** Coq **8.18**, which only provides the classic **`From Coq`** paths (this workspace’s pinned `*.v` use **`From Coq`** so `make coq-check` works on noble without opam).
 
 ## Local check
 
