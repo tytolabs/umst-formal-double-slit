@@ -15,8 +15,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Scope | `theorem` | `lemma` | Total |
 |-------|-----------|---------|-------|
-| `lakefile` roots only (**59** modules) | **537** | **34** | **571** |
-| All `Lean/*.lean` (excludes `.lake`; includes tests / optional files not in roots) | **546** | **35** | **581** |
+| `lakefile` roots only (**59** modules) | **540** | **34** | **574** |
+| All `Lean/*.lean` (excludes `.lake`; includes tests / optional files not in roots) | **549** | **35** | **584** |
 
 Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you maintain that Makefile target separately.
 
@@ -83,10 +83,10 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | **59** `lakefile` roots; **537** `theorem` + **34** `lemma` (roots-only); **546** + **35** all `Lean/*.lean` (script excludes `.lake`) | **0** tactic `sorry`, **1** project `axiom` (`physicalSecondLaw`); `python3 scripts/lean_declaration_stats.py` |
+| Lean 4 | **59** `lakefile` roots; **540** `theorem` + **34** `lemma` (roots-only); **549** + **35** all `Lean/*.lean` (script excludes `.lake`) | **0** tactic `sorry`, **1** project `axiom` (`physicalSecondLaw`); `python3 scripts/lean_declaration_stats.py` |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **no** `Admitted`; real-analysis facts are **axioms** (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) plus spectral **axioms** (see file) |
 | Agda | **11** entry modules; root **`make agda-check`** | **Clean** typecheck (specs + `Gate` / `Helmholtz` / activation stack) |
 
-Last updated: 2026-04-04 — **Wave 6.5.2**: **`LindbladStreamD`** (`streamD_limit_to_Lueders_states`); unitary **single-Kraus** DPI on **`Fin n`** (`vonNeumannEntropy_nondecreasing_unital_CPTP_n`). **1** Lean `axiom` (`physicalSecondLaw`). Counts: `scripts/lean_declaration_stats.py` / `FORMAL_FOUNDATIONS.md`. Formal tracks: **`make formal-check`**.
+Last updated: 2026-05-30 — **KRON-1** (`KroneckerEigen` tensor diagonal carrier); counts **540**/**34** roots-only. **Wave 6.5.2**: **`LindbladStreamD`** (`streamD_limit_to_Lueders_states`); unitary **single-Kraus** DPI on **`Fin n`** (`vonNeumannEntropy_nondecreasing_unital_CPTP_n`). **1** Lean `axiom` (`physicalSecondLaw`). Counts: `scripts/lean_declaration_stats.py` / `FORMAL_FOUNDATIONS.md`. Formal tracks: **`make formal-check`**.

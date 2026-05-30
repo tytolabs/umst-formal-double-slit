@@ -173,7 +173,7 @@ flowchart TB
 ```
 umst-formal-double-slit/
 │
-├── Lean/                          ← 59 lakefile roots · 537 thm + 34 lem (roots) · 546 + 35 (all Lean/*.lean) · 1 axiom · 69 .lean files
+├── Lean/                          ← 59 lakefile roots · 540 thm + 34 lem (roots) · 549 + 35 (all Lean/*.lean) · 1 axiom · 69 .lean files
 │   │
 │   ├── ── Quantum core (18 modules) ─────────────────────────────────────────────────────────
 │   │   ├── UMSTCore.lean                  ℝ SI constants, Landauer bit energy, Admissible
@@ -370,7 +370,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 59 roots, 537 thm + 34 lem (roots); 546 + 35 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
+| **Lean 4** | 59 roots, 540 thm + 34 lem (roots); 549 + 35 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |

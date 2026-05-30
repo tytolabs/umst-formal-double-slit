@@ -9,6 +9,10 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
+### Documentation (2026-05-30 — §14bis.x-DOC-COUNTS)
+
+- **Lean metrics** — `python3 scripts/lean_declaration_stats.py`: **59** roots, **540**/**34**/**574** (roots-only); **549**/**35**/**584** (all `Lean/*.lean`). **KRON-1** `KroneckerEigen` (+3 roots-only theorems). `PROOF-STATUS.md`, `FORMAL_FOUNDATIONS.md`, `README.md` aligned.
+
 ### Fixed (2026-04-22)
 
 - **GitHub Actions `formal.yml` (Coq job)** — create `Coq/_extract/` before `rocq compile` so `Extraction.v` can emit `gate_extracted.ml` (matches root `Makefile` `coq-check`; fixes CI failure `No such file or directory` on `Coq/_extract/gate_extracted.ml`).

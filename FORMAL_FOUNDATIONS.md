@@ -52,8 +52,8 @@ DIB Kleisli semantics and full **Field/Core** functor for `discover`/`invent`/`b
 | `lake build` (all `lakefile` roots) | **Succeeded** (verified in workspace) |
 | `^axiom ` in `Lean/*.lean` (excluding `.lake`) | **1** — `LandauerLaw.physicalSecondLaw` only |
 | Tactic `sorry` / `admit` / `Admitted` in `Lean/*.lean` | **None** (the word “sorry” appears only in **comments** in: `Gate.lean`, `Activation.lean`, `Naturality.lean`) |
-| `theorem` / `lemma` in **`lakefile` roots only** (59 modules) | **537** `theorem`, **34** `lemma` (total **571**) — same line-count convention as `umst-formal` |
-| All `Lean/*.lean` (excludes `.lake`; includes tests / scratch) | **546** `theorem`, **35** `lemma` (total **581**) |
+| `theorem` / `lemma` in **`lakefile` roots only** (59 modules) | **540** `theorem`, **34** `lemma` (total **574**) — same line-count convention as `umst-formal` |
+| All `Lean/*.lean` (excludes `.lake`; includes tests / scratch) | **549** `theorem`, **35** `lemma` (total **584**) |
 | Lean files **outside** default roots | `Test3.lean`, `Test4.lean`, `TestEntropy.lean`, `TestFixes.lean`, `TestMixed.lean`, `test_tensor_eigen.lean`, optional `LogSum.lean` / `MatrixLog.lean`, `FlashMoERuntimeScaffold.lean` — **not** in default `lake build` |
 
 ### Cold rebuild (audit)
