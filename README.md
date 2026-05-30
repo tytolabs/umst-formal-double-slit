@@ -15,7 +15,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 [![Formal](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** tactic `sorry` in default `lake` roots&ensp;·&ensp;**1** Lean axiom (`physicalSecondLaw` — `FORMAL_FOUNDATIONS.md`)&ensp;·&ensp;Visibility + dephasing limits **proved** (`GeneralVisibility`, `LindbladDynamics`, `LindbladStreamD`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**537** theorems + **34** lemmas in **59** roots; **546** + **35** over all `Lean/*.lean` (`python3 scripts/lean_declaration_stats.py`; excludes `.lake`)**
+**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** tactic `sorry` in default `lake` roots&ensp;·&ensp;**1** Lean axiom (`physicalSecondLaw` — `FORMAL_FOUNDATIONS.md`)&ensp;·&ensp;Visibility + dephasing limits **proved** (`GeneralVisibility`, `LindbladDynamics`, `LindbladStreamD`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**540** theorems + **34** lemmas in **59** roots; **549** + **35** over all `Lean/*.lean` (`python3 scripts/lean_declaration_stats.py`; excludes `.lake`)**
 
 _Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference._
 _The thermodynamic cost is exact, non-negotiable, and formally verified._
@@ -38,7 +38,7 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 | | |
 |:---:|:---:|
-| **59** Lean modules (`lakefile` roots) | **537** `theorem` + **34** `lemma` (roots-only; line-start) |
+| **59** Lean modules (`lakefile` roots) | **540** `theorem` + **34** `lemma` (roots-only; line-start) |
 | **0** tactic sorry, **1** axiom (`physicalSecondLaw`) | Visibility + dephasing: **theorems**; qubit-tier results proved |
 | **87** Python unit tests | **14** Haskell QuickCheck properties |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
@@ -55,7 +55,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **537 theorems** in default roots (**571** with lemmas); **0** tactic `sorry`; **1** explicit Lean axiom (**physical second law** — `LandauerLaw.lean`). General-**n** visibility bound and dephasing diagonal limit are **theorems** (`GeneralVisibility`, `LindbladDynamics` — see `FORMAL_FOUNDATIONS.md`). Discrete **stream-D** sampling converges to the same Lüders limit (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy (`vonNeumannEntropy_nondecreasing_unital_CPTP_n` — not arbitrary multi-Kraus CPTP). **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **540 theorems** in default roots (**574** with lemmas); **0** tactic `sorry`; **1** explicit Lean axiom (**physical second law** — `LandauerLaw.lean`). General-**n** visibility bound and dephasing diagonal limit are **theorems** (`GeneralVisibility`, `LindbladDynamics` — see `FORMAL_FOUNDATIONS.md`). Discrete **stream-D** sampling converges to the same Lüders limit (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy (`vonNeumannEntropy_nondecreasing_unital_CPTP_n` — not arbitrary multi-Kraus CPTP). **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
 
@@ -73,7 +73,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **537 theorem + 34 lemmas in 59 roots; 546 + 35 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.**_
+> _Machine-checked in Lean 4 with Mathlib. **540 theorem + 34 lemmas in 59 roots; 549 + 35 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.**_
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -269,12 +269,12 @@ umst-formal-double-slit/
 └── Makefile                       ← lean · sim · sim-gifs · haskell-test · coq-check · agda-check · ci-*
 ```
 
-> **Counting the numbers:** Authoritative: `python3 scripts/lean_declaration_stats.py` — **59** `lean_lib` roots, **537** + **34** line-start `theorem`/`lemma` summed over those roots (**571** total declarations), **546** + **35** over all `Lean/*.lean` (**581**; `.lake` excluded), **1** `^axiom ` (**`physicalSecondLaw`**). See **`Docs/COUNT-METHODOLOGY.md`** and **`FORMAL_FOUNDATIONS.md`**. Legacy full-tree scan: `make lean-stats-md` → `lean_decl_stats.py` (label “full-tree heuristic”). Verify: `cd Lean && lake build`.
+> **Counting the numbers:** Authoritative: `python3 scripts/lean_declaration_stats.py` — **59** `lean_lib` roots, **540** + **34** line-start `theorem`/`lemma` summed over those roots (**574** total declarations), **549** + **35** over all `Lean/*.lean` (**584**; `.lake` excluded), **1** `^axiom ` (**`physicalSecondLaw`**). See **`Docs/COUNT-METHODOLOGY.md`** and **`FORMAL_FOUNDATIONS.md`**. Legacy full-tree scan: `make lean-stats-md` → `lean_decl_stats.py` (label “full-tree heuristic”). Verify: `cd Lean && lake build`.
 
 ---
 
 ## Lean modules (59 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` / axiom map)
-*(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **537** / **34**; all-`Lean/*.lean` **546** / **35**; **1** project axiom — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
+*(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **540** / **34**; all-`Lean/*.lean` **549** / **35**; **1** project axiom — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>

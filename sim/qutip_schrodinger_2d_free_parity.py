@@ -112,7 +112,8 @@ def evolve_qutip_sesolve(
     n = H.shape[0]
     Hq = qutip.Qobj(H, dims=[[n], [n]])
     psi0q = qutip.Qobj(psi0, dims=[[n], [1]])
-    result = qutip.sesolve(Hq, psi0q, [0.0, t], [])
+    # QuTiP 5: sesolve(H, psi0, tlist); e_ops is keyword-only (no 4th positional arg).
+    result = qutip.sesolve(Hq, psi0q, [0.0, t])
     out = result.states[-1].full().ravel()
     return np.asarray(out, dtype=np.complex128)
 
