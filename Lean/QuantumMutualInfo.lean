@@ -67,13 +67,6 @@ theorem quantumMutualInfo_le
   have hAB := vonNeumannEntropy_nonneg ρAB
   linarith
 
-/-- **Axiom Eliminated**: Kronecker eigenvalue factorization.
-
-For product states `ρ_A ⊗ ρ_B`, the eigenvalues of the tensor product are the pairwise products
-of eigenvalues of the factors, hence `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)`.
-
-Proved formally in `KroneckerEigen.lean` via characteristic polynomial tracking under unitary conjugation. -/
-
 /-- Product states have zero quantum mutual information.
 
 Proof: the marginals of `ρ_A ⊗ ρ_B` are `ρ_A` and `ρ_B` (by partial trace), so

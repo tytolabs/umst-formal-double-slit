@@ -257,6 +257,45 @@ theorem charmatrix_unitary_conj (U : Matrix.unitaryGroup (Fin n) ℂ) (A : Matri
     _ = Matrix.scalar (Fin n) X * 1 := by rw [← map_mul ι, hUS, _root_.map_one]
     _ = Matrix.scalar (Fin n) X := mul_one _
 
+theorem charmatrix_unitary_conj' {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (U : Matrix.unitaryGroup ι ℂ) (A : Matrix ι ι ℂ) :
+    charmatrix (U.val * A * star U.val) =
+      (RingHom.mapMatrix (algebraMap ℂ ℂ[X])) U.val * charmatrix A *
+        (RingHom.mapMatrix (algebraMap ℂ ℂ[X])) (star U.val) := by
+  let mapι : Matrix ι ι ℂ →+* Matrix ι ι ℂ[X] := RingHom.mapMatrix (algebraMap ℂ ℂ[X])
+  have hcm : ∀ (M : Matrix ι ι ℂ), charmatrix M = Matrix.scalar ι (X : ℂ[X]) - mapι M := fun _ => rfl
+  rw [hcm, hcm A]
+  have hmap : mapι (U.val * A * star U.val) = mapι U.val * mapι A * mapι (star U.val) := by
+    rw [RingHom.map_mul mapι, RingHom.map_mul mapι]
+  have hUS : U.val * star U.val = 1 := by
+    simp [Matrix.UnitaryGroup.mul_val, Matrix.UnitaryGroup.inv_val,
+      congr_arg Subtype.val (mul_inv_cancel U)]
+  rw [mul_sub, sub_mul, hmap]
+  congr 1
+  symm
+  calc mapι U.val * Matrix.scalar ι (X : ℂ[X]) * mapι (star U.val)
+      = Matrix.scalar ι X * mapι U.val * mapι (star U.val) := by
+        congr 1; exact (scalar_commute X (Commute.all X) (mapι U.val)).symm.eq
+    _ = Matrix.scalar ι X * (mapι U.val * mapι (star U.val)) := by rw [mul_assoc]
+    _ = Matrix.scalar ι X * 1 := by rw [← RingHom.map_mul mapι, hUS, RingHom.map_one mapι]
+    _ = Matrix.scalar ι X := mul_one _
+
+theorem charpoly_unitary_conj' {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (U : Matrix.unitaryGroup ι ℂ) (A : Matrix ι ι ℂ) :
+    (U.val * A * star U.val).charpoly = A.charpoly := by
+  have hcp : ∀ (M : Matrix ι ι ℂ), M.charpoly = (charmatrix M).det := fun _ => rfl
+  rw [hcp, hcp A, charmatrix_unitary_conj' U A]
+  let mapι : Matrix ι ι ℂ →+* Matrix ι ι ℂ[X] := RingHom.mapMatrix (algebraMap ℂ ℂ[X])
+  have hUU : mapι (star U.val) * mapι U.val = 1 := by
+    rw [← RingHom.map_mul mapι]
+    exact congr_arg mapι (Matrix.mem_unitaryGroup_iff'.mp U.2) |>.trans (map_one mapι)
+  calc (mapι U.val * charmatrix A * mapι (star U.val)).det
+      = (mapι U.val).det * (charmatrix A).det * (mapι (star U.val)).det := by rw [det_mul, det_mul]
+    _ = (mapι (star U.val)).det * (mapι U.val).det * (charmatrix A).det := by ring
+    _ = (mapι (star U.val) * mapι U.val).det * (charmatrix A).det := by rw [det_mul]
+    _ = 1 * (charmatrix A).det := by rw [hUU, det_one]
+    _ = (charmatrix A).det := one_mul _
+
 theorem charpoly_unitary_conj (U : Matrix.unitaryGroup (Fin n) ℂ) (A : Matrix (Fin n) (Fin n) ℂ) :
     (U.val * A * star U.val).charpoly = A.charpoly := by
   -- charpoly M = (charmatrix M).det by definition
