@@ -21,6 +21,14 @@ require mathlib from git
   `LogSum` / `MatrixLog`, `FlashMoERuntimeScaffold.lean`, etc.  Those files are not in
   `roots` so they do not run in default CI; build them explicitly (e.g. `lake build +TestEntropy`)
   when needed.  They have been manually grep-checked for `sorry` / stray `axiom`.
+
+  **Lean root catalog (entries JSON):** From `Lean/`, run **`lake exe export_catalog`**
+  to emit **`artifacts/catalog.json`** with `{ version, entries[{ id, module, kind, name }] }`.
+  Details: **`tools/lean_export/README.md`**.
+
+  **Python module scan (imports + digests):** **`make lean-catalog-export`** runs
+  **`tools/lean_export/export_catalog.py`** — a different JSON shape for tooling that needs
+  coarse import edges and per-file content hashes.
 -/
 lean_lib «UMST.DoubleSlit» where
   roots := #[`UMSTCore, `DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
@@ -42,3 +50,8 @@ lean_lib «UMST.DoubleSlit» where
     `PhysicsConstrainedAI, `InformationCostIdentity]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)
   srcDir := "."
+
+/-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
+lean_exe export_catalog where
+  root := `ExportCatalog
+  srcDir := "../tools/lean_export"

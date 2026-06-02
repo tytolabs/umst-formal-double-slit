@@ -1,8 +1,16 @@
 # umst-formal-double-slit — local verification
-.PHONY: lean lean-clean lean-stats lean-stats-md sim sim-test sim-gifs sim-gifs-validate telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
+.PHONY: lean lean-clean lean-catalog-export lean-stats lean-stats-md sim sim-test sim-gifs sim-gifs-validate telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
 
 lean:
 	cd Lean && lake build
+
+# Emit `artifacts/catalog.json` + `artifacts/catalog.lock.json` (see `artifacts/README.md`).
+lean-catalog-export:
+	APPROVE_CROSS_REPO_MERGE=1 python3 tools/lean_export/export_catalog.py \
+		--lean-root Lean \
+		--also-lean-root ../umst-formal/Lean \
+		--also-lean-repo-tag umst-formal \
+		--out artifacts/catalog.json
 
 lean-clean:
 	cd Lean && lake clean

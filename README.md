@@ -376,6 +376,38 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
 | **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
 
+### Downstream manifold integration
+
+This repo is the **primary catalog fiber** for [`umst-manifold`](../umst-manifold): Lean proofs are exported as a **versioned library** (JSON + digest), not replayed at runtime. Manifold embeds the lock hash at build time and enforces **witness R0** (catalog lock) before **R1–R4** gate law on the hot path — see the normative ladder in [`../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md).
+
+**Pipeline (forward flow):**
+
+1. `make lean-catalog-export` → `artifacts/catalog.json` + `artifacts/catalog.lock.json` (**69** modules, digest `c1d9ba2a…` at time of writing).
+2. Sibling **`umst-manifold/artifacts/catalog.lock.json`** pins `upstream_catalog_digest_hex` + `module_count` (must match this tree).
+3. `umst-manifold/build.rs` → `UMST_CATALOG_LOCK_SHA256_HEX` (hash of manifold lock **file bytes**, not live Lean).
+4. `UMST_REQUIRE_FORMAL_EXPORT=1 ./scripts/verify_umst_stack.sh` regen-exports here and fails on digest drift; CI: `umst-catalog-drift.yml`.
+
+**Integration learnings (2026-05-21):**
+
+| Topic | Takeaway |
+|-------|----------|
+| **69 vs 59** | **`lake build`** compiles **59** `lakefile` roots; **Python** export scans **all 69** `Lean/**/*.lean` files for the manifold pin. The extra **10** are tests, `lakefile`, optional helpers — they change the digest but not default proof roots. Never run `lake exe export_catalog` onto `artifacts/catalog.json` (59-entry schema collides with Python). |
+| **Digest pin impact** | Any edit under `Lean/` (including `Test*.lean`) changes `catalog_digest_hex` and forces a coordinated manifold lock bump + rebuild. Only **~26%** of modules are on the runtime gate hot path; **100%** of the 69 still fingerprint the proof inventory (R0). |
+| **Second fiber** | [`umst-formal`](../umst-formal) (DEC, `DIBKleisli`, Economic) is **not** in this digest until cross-repo export is approved; dry-run: `artifacts/catalog-cross-repo-preview.json`. |
+| **Witness ladder** | R0 = this export; R1–R4 = `Gate` / `Landauer*` / mix / Kleisli families in roots; R5 v1 = `formal-witness` digest check; R5 v2 = `EpistemicRuntimeSchemaContract` (trace schema, Lean-only enforcement today). |
+
+| Document | Role |
+|----------|------|
+| [`Docs/EXPORT_COVERAGE.md`](Docs/EXPORT_COVERAGE.md) | Exporter scope, digest definition, 69 vs 59, cross-repo scaffold |
+| [`Docs/UMST_FORMAL_REPOS_ALIGNMENT.md`](Docs/UMST_FORMAL_REPOS_ALIGNMENT.md) | Two-repo fiber policy + consumer table |
+| [`../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md) | Ordered witnesses R0–R6 (CD → Landauer → constitutive → probe) |
+| [`../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md`](../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md) | Hot path (~18 modules) vs catalog-only (~51) |
+| [`../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md) | Forward/backward Lean → catalog → manifold → cartridge |
+| [`../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md) | Per-module `catalog_id` ↔ Rust wiring |
+| [`artifacts/README.md`](artifacts/README.md) | Lock file, digest algorithm, manifold `build.rs` coupling |
+
+Canonical export: `make lean-catalog-export` → `artifacts/catalog.json` (consumed by [`umst-manifold`](../umst-manifold) `artifacts/catalog.lock.json`).
+
 ---
 
 ## Quick Start
