@@ -9,19 +9,9 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
-### Documentation (manifold integration — 2026-05-21)
+### Documentation (2026-05-30 — §14bis.x-DOC-COUNTS)
 
-- **`README.md`** — Downstream manifold integration narrative: export pipeline (R0), **69 vs 59** learnings, digest-pin impact, witness-ladder cross-links; fixed `Docs/` paths for coverage docs.
-- **`Docs/EXPORT_COVERAGE.md`** — Sections: downstream integration table, **69 vs 59** learnings + Lake/Python pitfall, **digest pin impact**, **witness ladder** R0–R6 ↔ Lean modules; links to `FORMAL_INTEGRATION_STATUS`, `FORMAL_BIDIRECTIONAL_ALIGNMENT`, `GOD_GRADE_WITNESS_LADDER`.
-- **`Docs/UMST_FORMAL_REPOS_ALIGNMENT.md`** — Integration summary diagram, digest-pin maintenance table, **69 vs 59** policy, expanded witness-ladder / bidirectional doc footer.
-
-### Added (catalog export — 2026-05-21)
-
-- **Lean catalog export** — `tools/lean_export/export_catalog.py` + `artifacts/catalog.json` / `artifacts/catalog.lock.json` (**69** modules); canonical digest `c1d9ba2aa402106a3477f454dd6d28015eb399c1160d8a2e2ba7d16788fdbfcc` pinned in sibling **`umst-manifold`** `artifacts/catalog.lock.json` (`upstream_catalog_digest_hex`).
-- **Downstream verify** — manifold `scripts/verify_umst_stack.sh` and `umst-catalog-drift` CI regen-export vs lock; catalog ↔ Rust usage matrix: [`../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md).
-- **Witness ladder (R0)** — Export digest = manifold catalog lock / `UMST_CATALOG_LOCK_SHA256_HEX`; gate law R1–R4 hand-aligned to **59** roots (~**18** hot path per [`../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md`](../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md)); normative order [`../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md).
-- **69 vs 59** — `lake build` / Lake exe: **59** roots; Python + manifold pin: **69** files (incl. tests, `lakefile`, optional helpers). Lake exe must not overwrite Python `catalog.json`.
-- **Digest pin impact** — Any scanned `Lean/` change bumps digest; coordinated manifold lock + rebuild; cross-repo preview does not change pin until approved.
+- **Lean metrics** — `python3 scripts/lean_declaration_stats.py`: **59** roots, **540**/**34**/**574** (roots-only); **549**/**35**/**584** (all `Lean/*.lean`). **KRON-1** `KroneckerEigen` (+3 roots-only theorems). `PROOF-STATUS.md`, `FORMAL_FOUNDATIONS.md`, `README.md` aligned.
 
 ### Fixed (2026-04-22)
 
