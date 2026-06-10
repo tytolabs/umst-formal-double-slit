@@ -8,7 +8,7 @@ import Gate
 /-!
 # Flash-MoE 31B IT — formal runtime scaffold (Phases 2–3)
 
-Specification anchor for `MaOS-Core/rust/maos-core/src/formal_runtime/`.
+Specification anchor for the application runtime formal_runtime module (private; not part of this public repo).
 
 ## Graded admissibility (constitutional kernel)
 

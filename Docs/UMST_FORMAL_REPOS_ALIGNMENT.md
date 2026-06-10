@@ -1,6 +1,6 @@
 # UMST formal repositories — alignment
 
-**Workspace:** `MaOS-Workspace`  
+**Workspace:** multi-repo sibling checkout (local)  
 **Date:** 2026-05-21  
 **Repos:** [`umst-formal`](../../umst-formal) · [`umst-formal-double-slit`](../) (this tree)
 
