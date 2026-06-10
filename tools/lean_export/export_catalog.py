@@ -68,7 +68,7 @@ def module_name(lean_root: Path, path: Path) -> str:
     return stem.replace("/", ".")
 
 
-def scan_file(path: Path) -> Dict[str, Any]:
+def scan_file(path: Path, *, lean_root: Path) -> Dict[str, Any]:
     raw = path.read_bytes()
     text = raw.decode("utf-8", errors="replace")
 
@@ -84,8 +84,9 @@ def scan_file(path: Path) -> Dict[str, Any]:
         if IMPORT_RE.match(line):
             imports.append(line.split(maxsplit=1)[1].strip())
 
+    rel_path = path.resolve().relative_to(lean_root.resolve()).as_posix()
     blob = dict(
-        path=str(path.resolve()),
+        path=rel_path,
         content_sha256=sha256_hex(raw),
         declarations=declarations,
         import_lines=sorted(set(imports)),
@@ -102,7 +103,7 @@ def build_catalog(lean_root: Path) -> Dict[str, Any]:
             continue
         if p.name.lower().startswith(".#"):
             continue
-        blob = scan_file(p)
+        blob = scan_file(p, lean_root=lean_root)
         blob["module"] = module_name(lean_root, p)
         modules.append(blob)
 
@@ -115,7 +116,7 @@ def build_catalog(lean_root: Path) -> Dict[str, Any]:
 
     catalog_body = dict(
         version=1,
-        lean_root=str(lean_root),
+        lean_root="Lean",
         toolchain_hint="Lean/lake-toolchain (+ mathlib pinned in lakefile.lean)",
         modules=modules,
         module_graph_edges=edges,
