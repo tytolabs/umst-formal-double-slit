@@ -14,8 +14,8 @@
   "secondary_module_count": 64,
   "merged_module_count": 122,
   "primary_digest_hex": "a2589c3360c3dd787f8477852861f97bce07e1089b07b6eb4b0ce1e81dd8cc29",
-  "secondary_digest_hex": "bf3081ea6ec1dac74ae5fd45db380751fd7af7e9b8607aca2e99fe5fff674a45",
-  "merged_digest_hex": "b785e4c438371fecd735ae522c02104ece008cc83779fdd4f7aaf4770d23aa86",
+  "secondary_digest_hex": "43b7d6c21acccf234a20b9e375cab0a9d699b65a67f06f1ad766c359dc8d2cd7",
+  "merged_digest_hex": "c61b1befdec77a82bbb9f6c3f7562e754218ef635f0e3b9990752138df5f4bb5",
   "overlap_basename_count": 11,
   "only_in_primary_basename": [
     "Complementarity",
@@ -1210,7 +1210,7 @@
     },
     {
       "path": "PrimeSpectralGuidance.lean",
-      "content_sha256": "f4e59a919a423ea833ae33e7bcc7c55e8a664a66a8f546aa6a2ba26b7243d6c6",
+      "content_sha256": "2849aa35c60d7383f5c28fa0de5f67ace62003dcddbd13d8c691f571f53685d3",
       "declarations": {
         "structure": [
           "MultiplicativeChannel",
@@ -1248,7 +1248,8 @@
       "import_lines": [
         "Gate",
         "Mathlib.Algebra.BigOperators.Group.Finset",
-        "Mathlib.Data.Nat.Prime",
+        "Mathlib.Algebra.IsPrimePow",
+        "Mathlib.Data.Nat.Prime.Basic",
         "Mathlib.NumberTheory.VonMangoldt"
       ],
       "module": "PrimeSpectralGuidance",
@@ -6295,7 +6296,7 @@
     },
     {
       "path": "PrimeSpectralGuidance.lean",
-      "content_sha256": "f4e59a919a423ea833ae33e7bcc7c55e8a664a66a8f546aa6a2ba26b7243d6c6",
+      "content_sha256": "2849aa35c60d7383f5c28fa0de5f67ace62003dcddbd13d8c691f571f53685d3",
       "declarations": {
         "structure": [
           "MultiplicativeChannel",
@@ -6333,7 +6334,8 @@
       "import_lines": [
         "Gate",
         "Mathlib.Algebra.BigOperators.Group.Finset",
-        "Mathlib.Data.Nat.Prime",
+        "Mathlib.Algebra.IsPrimePow",
+        "Mathlib.Data.Nat.Prime.Basic",
         "Mathlib.NumberTheory.VonMangoldt"
       ],
       "module": "PrimeSpectralGuidance",

@@ -994,7 +994,7 @@
     },
     {
       "path": "PrimeSpectralGuidance.lean",
-      "content_sha256": "f4e59a919a423ea833ae33e7bcc7c55e8a664a66a8f546aa6a2ba26b7243d6c6",
+      "content_sha256": "2849aa35c60d7383f5c28fa0de5f67ace62003dcddbd13d8c691f571f53685d3",
       "declarations": {
         "structure": [
           "MultiplicativeChannel",
@@ -1032,7 +1032,8 @@
       "import_lines": [
         "Gate",
         "Mathlib.Algebra.BigOperators.Group.Finset",
-        "Mathlib.Data.Nat.Prime",
+        "Mathlib.Algebra.IsPrimePow",
+        "Mathlib.Data.Nat.Prime.Basic",
         "Mathlib.NumberTheory.VonMangoldt"
       ],
       "module": "PrimeSpectralGuidance",
@@ -3454,8 +3455,13 @@
     },
     {
       "from": "PrimeSpectralGuidance",
-      "import": "Mathlib.Data.Nat.Prime",
-      "to_approx": "Mathlib.Data.Nat.Prime"
+      "import": "Mathlib.Algebra.IsPrimePow",
+      "to_approx": "Mathlib.Algebra.IsPrimePow"
+    },
+    {
+      "from": "PrimeSpectralGuidance",
+      "import": "Mathlib.Data.Nat.Prime.Basic",
+      "to_approx": "Mathlib.Data.Nat.Prime.Basic"
     },
     {
       "from": "PrimeSpectralGuidance",
@@ -4618,5 +4624,5 @@
       "to_approx": "VonNeumannEntropy"
     }
   ],
-  "digest": "b785e4c438371fecd735ae522c02104ece008cc83779fdd4f7aaf4770d23aa86"
+  "digest": "c61b1befdec77a82bbb9f6c3f7562e754218ef635f0e3b9990752138df5f4bb5"
 }
