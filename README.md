@@ -460,7 +460,7 @@ This repository is part of the **Foundations of Constitutional Physics (FCP)** s
 
 | Study | Title | Repository |
 |:-----:|-------|:------:|
-| FCP-I | Physics-Gated AI — UMST tensor + DUMSTO hard gate | [record](https://zenodo.org/records/18768547) |
+| FCP-I | Physics-Gated AI — UMST tensor + thermodynamic hard gate | [record](https://zenodo.org/records/18768547) |
 | FCP-II | Epistemic Sensing — MI-guided proxy selection | [record](https://zenodo.org/records/18894710) |
 | **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | [record](https://zenodo.org/records/19159660) |
 
