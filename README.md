@@ -14,7 +14,9 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19159660.svg)](https://doi.org/10.5281/zenodo.19159660)
 <!-- readme:status -->
-[![Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
+[![CI — Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
+[![CI — Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
+[![CI — Formal (Coq+Agda)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
 **Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** tactic `sorry` in default `lake` roots&ensp;·&ensp;**1** Lean axiom (`physicalSecondLaw` — `FORMAL_FOUNDATIONS.md`)&ensp;·&ensp;Visibility + dephasing limits **proved** (`GeneralVisibility`, `LindbladDynamics`, `LindbladStreamD`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**540** theorems + **34** lemmas in **59** roots; **549** + **35** over all `Lean/*.lean` (`python3 scripts/lean_declaration_stats.py`; excludes `.lake`)**
