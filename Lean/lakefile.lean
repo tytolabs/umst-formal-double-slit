@@ -12,7 +12,7 @@ require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.14.0"
 
 require «umst-formal» from git
-  "https://github.com/tytolabs/umst-formal" @ "c12b62e" / "Lean"
+  "https://github.com/tytolabs/umst-formal" @ "690fbe6" / "Lean"
 
 /-!
   Self-contained quantum / measurement extension. Build:
@@ -41,7 +41,7 @@ lean_lib «UMST.DoubleSlit» where
     `EpistemicTelemetryApproximation, `EpistemicTelemetryQuantitativeUtility,
     `EpistemicTraceDerivedEpsilonCertificate,
     `EpistemicTelemetrySolverCalibration, `EpistemicTraceDrivenCalibrationWitness,
-    `PrototypeSolverCalibration, `GateCompat, `QRBridge,
+    `PrototypeSolverCalibration, `GateCompat,
     `PMICEntropyInterior, `Complementarity, `PMICVisibility,
     `VonNeumannEntropy, `QuantumMutualInfo, `KleinInequality, `DataProcessingInequality,
     `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,

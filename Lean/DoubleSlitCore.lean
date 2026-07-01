@@ -5,39 +5,23 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 import Mathlib
 import Core.State
+import Real.State
 
 /-!
 DoubleSlitCore
 --------------
-Measurement / complementarity interface layered on `UMST.Core`.
+Measurement / complementarity interface layered on `UMST.Core` at `K = ℝ`.
 
-### HONEST FINDING: Physical Mapping & The `ℚ` vs `ℝ` Barrier
+Physical mapping (registered as `ThermodynamicSystem ℝ ObservationState`):
+- **`density`**: path distinguishability `I` (coarse proxy for trace / which-path weight).
+- **`freeEnergy`**: negative complementarity slack `-(I² + V²)` (Helmholtz-style potential).
 
-We were instructed to implement `UMST.Core.ThermodynamicSystem` directly for `ObservationState` 
-and `DensityMatrix`, rather than mocking `hydration := 0` and `strength := 0`.
-
-The physical justification for this mapping is sound and physically meaningful:
-- **`density`**: Maps to the trace (probability conservation) of the quantum state. The mass conservation 
-  bound ($| \rho_{new} - \rho_{old} | \le \delta$) enforces unitarity / probability conservation.
-- **`freeEnergy`**: Maps to the negative Landauer information cost ($-k_B T S(\rho)$). The Clausius-Duhem 
-  bound ($F_{new} \le F_{old}$) rigorously enforces the Second Law of Thermodynamics (entropy of the system 
-  plus bath cannot decrease) for epistemic measurement updates.
-
-**However, the mathematical implementation is impossible without truncation.** 
-The recent `umst-formal` "Science Cartridge" refactor hardcoded the `ThermodynamicSystem` typeclass 
-fields to the Rational numbers (`ℚ`), which is appropriate for exact discrete solvers but fundamentally 
-incompatible with continuous quantum mechanics (which requires `ℝ` or `ℂ` for rotations, irrational Born 
-weights, and transcendental Von Neumann entropy via `Real.log`). 
-
-We cannot implement `ThermodynamicSystem S` directly for continuous epistemic states without destroying 
-the physical meaning via arbitrary rational truncation. Therefore, we document this gap: the physical 
-mapping is profoundly meaningful, but the typed formalism requires a generic scalar field `K` in upstream 
-`Core` before the instance can be formally registered.
+Continuous quantum states (`DensityMatrix`) use temperature-calibrated instances in `GateCompat.lean`.
 -/
 
 namespace UMST.DoubleSlit
 
-open UMST.Core
+open UMST.Core UMST.Real
 
 /-- A coarse state carrying which-path information and visibility. -/
 structure ObservationState where
@@ -45,6 +29,10 @@ structure ObservationState where
   V : ℝ
   hI : 0 ≤ I ∧ I ≤ 1
   hV : 0 ≤ V ∧ V ≤ 1
+
+noncomputable instance : ThermodynamicSystem ℝ ObservationState where
+  density s    := s.I
+  freeEnergy s := -(s.I ^ 2 + s.V ^ 2)
 
 @[ext]
 theorem ObservationState.ext {s t : ObservationState} (hI : s.I = t.I) (hV : s.V = t.V) : s = t := by
