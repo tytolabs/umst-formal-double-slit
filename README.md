@@ -59,7 +59,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **540 theorems** in default roots (**574** with lemmas); **0** tactic `sorry`; **1** explicit Lean axiom (**physical second law** — `LandauerLaw.lean`). General-**n** visibility bound and dephasing diagonal limit are **theorems** (`GeneralVisibility`, `LindbladDynamics` — see `FORMAL_FOUNDATIONS.md`). Discrete **stream-D** sampling converges to the same Lüders limit (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy (`vonNeumannEntropy_nondecreasing_unital_CPTP_n` — not arbitrary multi-Kraus CPTP). **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **486 theorems** in default roots (**516** with lemmas); **0** tactic `sorry`; **1** explicit Lean axiom (**physical second law** — `LandauerLaw.lean`). General-**n** visibility bound and dephasing diagonal limit are **theorems** (`GeneralVisibility`, `LindbladDynamics` — see `FORMAL_FOUNDATIONS.md`). Discrete **stream-D** sampling converges to the same Lüders limit (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy (`vonNeumannEntropy_nondecreasing_unital_CPTP_n` — not arbitrary multi-Kraus CPTP). **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
 
@@ -77,7 +77,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **540 theorem + 34 lemmas in 59 roots; 549 + 35 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.**_
+> _Machine-checked in Lean 4 with Mathlib. **486 theorem + 30 lemmas in 52 roots; 495 + 31 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.**_
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -374,7 +374,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 59 roots, 540 thm + 34 lem (roots); 549 + 35 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
+| **Lean 4** | 52 roots, 486 thm + 30 lem (roots); 495 + 31 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
