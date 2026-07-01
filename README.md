@@ -19,7 +19,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 [![CI — Formal (Coq+Agda)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** tactic `sorry` in default `lake` roots&ensp;·&ensp;**1** Lean axiom (`physicalSecondLaw` — `FORMAL_FOUNDATIONS.md`)&ensp;·&ensp;Visibility + dephasing limits **proved** (`GeneralVisibility`, `LindbladDynamics`, `LindbladStreamD`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**487** theorems + **30** lemmas in **53** roots; **496** + **31** over all `Lean/*.lean` (`python3 scripts/lean_declaration_stats.py`; excludes `.lake`)**
+**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** tactic `sorry` in default `lake` roots&ensp;·&ensp;**1** Lean axiom (`physicalSecondLaw` — `FORMAL_FOUNDATIONS.md`)&ensp;·&ensp;Visibility + dephasing limits **proved** (`GeneralVisibility`, `LindbladDynamics`, `LindbladStreamD`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**486** theorems + **30** lemmas in **52** roots; **495** + **31** over all `Lean/*.lean` (`python3 scripts/lean_declaration_stats.py`; excludes `.lake`)**
 
 _Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference._
 _The thermodynamic cost is exact, non-negotiable, and formally verified._
@@ -42,7 +42,7 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 | | |
 |:---:|:---:|
-| **53** Lean modules (`lakefile` roots) | **487** `theorem` + **30** `lemma` (roots-only; line-start) |
+| **52** Lean modules (`lakefile` roots) | **486** `theorem` + **30** `lemma` (roots-only; line-start) |
 | **0** tactic sorry, **1** axiom (`physicalSecondLaw`) | Visibility + dephasing: **theorems**; qubit-tier results proved |
 | **87** Python unit tests | **14** Haskell QuickCheck properties |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
