@@ -15,8 +15,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 | Scope | `theorem` | `lemma` | Total |
 |-------|-----------|---------|-------|
-| `lakefile` roots only (**59** modules) | **540** | **34** | **574** |
-| All `Lean/*.lean` (excludes `.lake`; includes tests / optional files not in roots) | **549** | **35** | **584** |
+| `lakefile` roots only (**52** modules) | **486** | **30** | **516** |
+| All `Lean/*.lean` (excludes `.lake`; includes tests / optional files not in roots) | **495** | **31** | **526** |
 
 Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you maintain that Makefile target separately.
 
