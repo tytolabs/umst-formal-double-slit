@@ -3,43 +3,50 @@ SPDX-License-Identifier: MIT
 Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -/
 
-import Gate
-import UMSTCore
+import Core.Gate
+import GateCompat
 
 /-!
-# QRBridge — ℚ thermodynamic gate ↔ ℝ `UMSTCore` scaffold
+# QRBridge — Formal Coercion from ℚ `UMST.Core` to ℝ `RealThermodynamicState`
 
-The upstream `Gate.lean` layer uses **ℚ-valued** `ThermodynamicState` and `Admissible`.
-`UMSTCore` uses **ℝ** for composition with quantum / classical projections.
+This file provides the formal bridge theorem explicitly connecting the discrete
+`UMST.Core.CoreAdmissible` (over `ℚ`) back to the continuous `RealAdmissible` scaffold
+used by the quantum measurement states.
 
-This file gives the canonical coercion and proves that **ℚ admissibility implies ℝ admissibility**
-for the same four conjuncts (mass, Clausius–Duhem, hydration, strength).
+While we cannot define the continuous quantum states natively as instances of the
+`ℚ`-hardcoded `ThermodynamicSystem` without arbitrary truncation, this theorem proves
+that *if* a system satisfies the upstream ℚ-admissibility bounds, its exact ℝ-casted
+projection structurally satisfies the continuous `RealAdmissible` bounds.
 -/
 
 namespace UMST.DoubleSlit
 
-open UMST
+open UMST.Core
 
-/-- Embed a ℚ-valued UMST thermodynamic state into the ℝ scaffold used by `GateCompat` / sim hooks. -/
-noncomputable def thermodynamicStateToReal (s : ThermodynamicState) : UMST.Core.ThermodynamicState where
-  density := s.density
-  freeEnergy := s.freeEnergy
-  hydration := s.hydration
-  strength := s.strength
+/-- Formal embedding of the upstream ℚ-valued thermodynamic typeclass properties into the ℝ scaffold. -/
+noncomputable def thermodynamicSystemToReal {S : Type} [ThermodynamicSystem S] (s : S) : RealThermodynamicState where
+  density := (ThermodynamicSystem.density s : ℝ)
+  freeEnergy := (ThermodynamicSystem.freeEnergy s : ℝ)
 
-theorem admissible_thermodynamicStateToReal {old new : ThermodynamicState} (h : Admissible old new) :
-    UMST.Core.Admissible (thermodynamicStateToReal old) (thermodynamicStateToReal new) := by
-  rcases h with ⟨hm, hc, hh, hs⟩
-  refine ⟨?_, ?_, ?_, ?_⟩
-  · -- Mass: `|↑Δρ| = ↑( |Δρ|_ℚ )` and `↑100` matches `Core.δMass`.
-    simp [UMST.Core.MassCond, thermodynamicStateToReal, UMST.Core.δMass]
-    have hcast :
-        ((|new.density - old.density| : ℚ) : ℝ) = |((new.density : ℝ) - (old.density : ℝ))| := by
+/-- 
+Bridge Theorem: The upstream exact `CoreAdmissible` (which uses ℚ bounds) strictly 
+implies the continuous `RealAdmissible` bounds under the `ℚ → ℝ` coercion. 
+This definitively connects the two disconnected scaffolds via a one-directional formal proof.
+-/
+theorem admissible_thermodynamicSystemToReal {S : Type} [ThermodynamicSystem S]
+    {old new : S} (h : CoreAdmissible old new) :
+    RealAdmissible (thermodynamicSystemToReal old) (thermodynamicSystemToReal new) := by
+  constructor
+  · -- Mass Density: |new - old| <= δMass
+    simp [thermodynamicSystemToReal]
+    have hcast : ((|ThermodynamicSystem.density new - ThermodynamicSystem.density old| : ℚ) : ℝ) =
+        |((ThermodynamicSystem.density new : ℝ) - (ThermodynamicSystem.density old : ℝ))| := by
       rw [← Rat.cast_sub, Rat.cast_abs]
     rw [← hcast]
-    exact_mod_cast hm
-  · simp [UMST.Core.DissipCond, thermodynamicStateToReal]; exact_mod_cast hc
-  · simp [UMST.Core.HydratCond, thermodynamicStateToReal]; exact_mod_cast hh
-  · simp [UMST.Core.StrengthCond, thermodynamicStateToReal]; exact_mod_cast hs
+    -- Since the upstream condition is |Δρ|_ℚ <= δMass_ℚ, casting preserves the inequality
+    exact_mod_cast h.massDensity
+  · -- Clausius Duhem: new <= old
+    simp [thermodynamicSystemToReal]
+    exact_mod_cast h.clausiusDuhem
 
 end UMST.DoubleSlit

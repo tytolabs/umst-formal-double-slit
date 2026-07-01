@@ -19,7 +19,7 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ### Documentation (2026-04-22)
 
-- **Count verification** — re-ran `python3 scripts/lean_declaration_stats.py`; headline **59** roots · **537+34** (roots-only) / **546+35** (all `Lean/*.lean`) unchanged from `README.md` / `PROOF-STATUS.md`. Cross-linked maintenance: sibling **`tytolabs/umst-formal`** Lean totals refreshed the same day (FPD wave + snapshot) for downstream **`tytolabs/egoff`** registry parity work.
+- **Count verification** — re-ran `python3 scripts/lean_declaration_stats.py`; headline **59** roots · **537+34** (roots-only) / **546+35** (all `Lean/*.lean`) unchanged from `README.md` / `PROOF-STATUS.md`. Cross-linked maintenance: sibling **`tytolabs/umst-formal`** Lean totals refreshed the same day (FPD wave + snapshot) for downstream constants-registry parity work.
 
 ### Added (Wave 6.5.2 — 2026-04-04)
 

@@ -11,6 +11,9 @@ package «umst-formal-double-slit» where
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.14.0"
 
+require «umst-formal» from git
+  "https://github.com/tytolabs/umst-formal" @ "c12b62e" / "Lean"
+
 /-!
   Self-contained quantum / measurement extension. Build:
 
@@ -31,7 +34,7 @@ require mathlib from git
   coarse import edges and per-file content hashes.
 -/
 lean_lib «UMST.DoubleSlit» where
-  roots := #[`UMSTCore, `DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
+  roots := #[`DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
     `InfoEntropy, `KroneckerEigen, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
     `EpistemicTrajectoryMI, `EpistemicPolicy, `EpistemicRuntimeContract, `EpistemicNumericsContract,
     `EpistemicPerStepNumerics, `EpistemicRuntimeSchemaContract, `EpistemicTelemetryBridge,
@@ -45,7 +48,6 @@ lean_lib «UMST.DoubleSlit» where
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `FormalFoundations, `SimLeanBridge,
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
     `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
-    `Gate, `Naturality, `Activation, `FiberedActivation, `MonoidalState,
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
     `PhysicsConstrainedAI, `InformationCostIdentity]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)
