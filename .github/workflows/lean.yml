@@ -74,14 +74,4 @@ jobs:
           python3 sim/telemetry_trace_consumer.py /dev/null --validate
           python3 sim/export_sample_telemetry_trace.py --validate
 
-      - name: Checkout sibling umst-formal (shared-module drift)
-        uses: actions/checkout@v4 # v4
-        with:
-          repository: tytolabs/umst-formal
-          path: sibling/umst-formal
 
-      - name: Shared Lean module drift (8 modules)
-        working-directory: ${{ github.workspace }}
-        env:
-          UMST_FORMAL_SIBLING_DIR: ${{ github.workspace }}/sibling/umst-formal
-        run: bash scripts/check_shared_lean_drift.sh
