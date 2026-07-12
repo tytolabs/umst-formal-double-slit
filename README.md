@@ -16,7 +16,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 **What it is.** Machine-checked formalizations (Lean 4 · Mathlib · Haskell QuickCheck · Coq · Agda · Python sims) of the **thermodynamic cost of observation** — density matrices, Kraus which-path channels, Englert complementarity, Landauer bounds, and epistemic Galois adjunctions. This is a **proof tree**, not a runtime solver and not an MCP host.
 
-**The gate / knowing idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch.
+**The gate idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch — structural thermodynamic accounting, not metaphor.
 
 **Honest is / isn't.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
 
@@ -28,6 +28,8 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
 </div>
+
+**Repository:** [`tytolabs/umst-formal-double-slit`](https://github.com/tytolabs/umst-formal-double-slit) — **knowing** fiber: machine-checked observation / measurement-cost proofs (Lean · Haskell · Coq · Agda · Python sims).
 
 ### Shared stack (matter · knowing · acting · time)
 
@@ -41,6 +43,8 @@ These public repos share **one** thermodynamic admissibility gate, applied acros
 | **Time** | [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) | Temporal witness / stamp spine |
 
 Sibling links only — no paper-series arc naming in this README. Already-public per-repo DOI badges stay where they exist; this repo’s own Zenodo DOI for *The Thermodynamic Cost of Knowing* stays above.
+
+**Knowing fiber** (observation-cost proofs). Runtime physics, catalog consume, and MCP live in [`umst-manifold`](https://github.com/tytolabs/umst-manifold) and [`umst-concrete-cartridge`](https://github.com/tytolabs/umst-concrete-cartridge).
 
 ### Real objects (categorical — not “the proofs”)
 
@@ -70,9 +74,9 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 
 Authoritative MCP = concrete [`AGENT_MCP.md`](https://github.com/tytolabs/umst-concrete-cartridge/blob/main/docs/AGENT_MCP.md). Catalog lock = [`umst-manifold/artifacts/catalog.lock.json`](https://github.com/tytolabs/umst-manifold/blob/main/artifacts/catalog.lock.json).
 
-### Honesty ledger (counts @ `42b6844`)
+### Honesty ledger (one status pointer)
 
-**One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md).
+Counts @ **`42b6844`**. **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md). Strengthen every disclaimer below; soften none.
 
 **Lean 4 (default lake roots)** — paste from `python3 scripts/lean_declaration_stats.py` on `origin/master` @ **`42b6844`** (`42b68445e122765c76772b43a47d19fb9802ee40`):
 
@@ -91,6 +95,10 @@ Axioms (^axiom ):
 - **Script wins** on any mismatch with prose or older docs.
 
 **Strengthen — do not soften:** unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
+
+### Knowing in plain words
+
+Extracting which-path information from a quantum system destroys interference proportionally, not all at once — the Englert curve `V² + I² ≤ 1`. Each bit extracted carries at least Landauer's cost. This repository machine-checks that chain from density matrices through Kraus channels to thermodynamic bounds. It is a **proof tree**, not a lab apparatus or an MCP host.
 
 ### Visual surrogate
 
@@ -611,6 +619,12 @@ Full Schrödinger derivation from first principles; empirical lab verification �
 - Observation is **continuous payment** — PMIC / Englert curve is machine-checked, not metaphor.
 - **Landauer + complementarity** chain closes from density matrices to cost–coherence identity.
 - **Multi-language mirrors** — Lean primary; Haskell/Coq/Agda/Python support roles differ (see §7).
+
+### What surprised us
+
+- **Continuous collapse** — PMIC makes partial which-path extraction a theorem, not a metaphor; agents must not binarize observation cost.
+- **DPI scope discipline** — unitary single-Kraus preservation is proved; arbitrary CPTP DPI required an explicit “not one theorem” guardrail.
+- **Catalog vs lake roots** — export `module_count` and proof `lake` roots serve different roles; conflating them breaks compositional integrity.
 
 ### Forward path
 
