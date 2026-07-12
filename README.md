@@ -166,7 +166,7 @@ Extracting which-path information from a quantum system destroys interference pr
   - [9.3 Guarantees](#93-guarantees)
   - [9.4 Operational mapping](#94-operational-mapping)
   - [9.5 Proposed](#95-proposed-not-yet-built)
-  - [9.6 Principles](#96-principles-honest)
+  - [9.6 Principles](#96-principles)
 - [§10 Conclusion](#10-conclusion-inferences--forward-path)
   - [What this repo demonstrates](#what-this-repo-demonstrates)
   - [What surprised us](#what-surprised-us)
@@ -699,9 +699,9 @@ See [Hot arena vs cold edge](#hot-arena-vs-cold-edge-performance-honesty). **Col
 
 ### 9.5 Proposed (not yet built)
 
-Full Schrödinger derivation from first principles; empirical lab verification — explicitly out of scope in Claim Taxonomy.
+Two things this repo deliberately does **not** claim (see the Claim Taxonomy): a full Schrödinger derivation from first principles, and empirical lab verification. The proofs are of the information–coherence *accounting* — not of the underlying wavefunction dynamics, and not of a physical experiment.
 
-### 9.6 Principles (honest)
+### 9.6 Principles
 
 * **Observation is continuous payment.** PMIC makes partial which-path extraction a theorem — agents must not binarize observation cost into on/off switches.
 * **Cold proof, hot gate elsewhere.** Consume catalog witnesses; do not `lake build` mid-inference on a robot or IDE agent loop.
@@ -720,9 +720,9 @@ Full Schrödinger derivation from first principles; empirical lab verification �
 
 ### What surprised us
 
-- **Continuous collapse** — PMIC makes partial which-path extraction a theorem, not a metaphor; agents must not binarize observation cost.
-- **DPI scope discipline** — unitary single-Kraus preservation is proved; arbitrary CPTP DPI required an explicit “not one theorem” guardrail.
-- **Catalog vs lake roots** — export `module_count` and proof `lake` roots serve different roles; conflating them breaks compositional integrity.
+- **A philosophical claim became an exact theorem.** "Observation has a cost" reads like interpretation. Here it is machine-checked: the Englert bound `V² + I² ≤ 1` and the Landauer floor are *proved*, not asserted. How little metaphor survives once you demand `lake build` was the surprise — the interference collapse in the header GIF is a theorem per frame, not an illustration.
+- **Refusing to over-claim took as much care as the proof.** We proved that a *unitary single-Kraus* channel preserves the cost–coherence relation — then had to write an explicit "this is **not** a theorem about arbitrary CPTP maps" guardrail, because the tidy result invites over-generalization. Stating precisely what we did *not* prove is why [`PROOF-STATUS.md`](PROOF-STATUS.md) exists: no agent should silently extend the claim.
+- **Two counts that look identical mean different things.** The exported `module_count` (catalog composition) and the proof `lake` roots (52) are easy to conflate — and conflating them quietly breaks compositional integrity with the manifold lock. Keeping them distinct, and saying which is which, was a correctness property, not pedantry.
 
 ### Forward path
 
