@@ -734,12 +734,14 @@ Full Schrödinger derivation from first principles; empirical lab verification �
 <a id="related-repositories"></a>
 ## Related repositories
 
-| Repo | Focus |
-|:---|:---|
-| [`umst-manifold`](https://github.com/tytolabs/umst-manifold) | Catalog lock SSOT + DEC carrier |
-| [`umst-concrete-cartridge`](https://github.com/tytolabs/umst-concrete-cartridge) | MCP + cementitious runtime |
-| [`umst-formal`](https://github.com/tytolabs/umst-formal) | Acting / economic fiber |
-| [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) | Temporal witness / stamps |
+Shared gate spine — **knowing** (this fiber) · **matter** · **acting** · **time**. Each sibling below is listed for how it composes **with this observation-cost proof tree**.
+
+| Repository | Spine role | Relation to this Knowing fiber |
+|:---|:---|:---|
+| [`umst-manifold`](https://github.com/tytolabs/umst-manifold) | **Matter** substrate | Owns `artifacts/catalog.lock.json` (digest SSOT) and the hot DEC / gate runtime. Agents consume export witnesses (R0) **from the lock** before hot gate — they do not `lake build` this tree mid-inference. |
+| [`umst-concrete-cartridge`](https://github.com/tytolabs/umst-concrete-cartridge) | **Matter** cartridge + MCP | Authoritative stdio MCP and cementitious runtime. This repo is a **proof tree only** — no MCP host, no arena hot path. |
+| [`umst-formal`](https://github.com/tytolabs/umst-formal) | **Acting** | Economic burden / Kleisli admissibility. **Observation cost ≠ economic burden** — cite PMIC / Englert here; cite `PhysicsConstrainedAI` / `CoreAdmissible` there. Do not merge the fibers. |
+| [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) | **Time** | Stamps *when* an observation cost was booked (`UcrsObservedAt` / `UMST_UCRS_WITNESS`). Does not re-prove mutual information or run Lean. |
 
 ---
 
