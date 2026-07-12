@@ -382,7 +382,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 ### Downstream manifold integration
 
-This repo is the **primary catalog fiber** for [`umst-manifold`](../umst-manifold): Lean proofs are exported as a **versioned library** (JSON + digest), not replayed at runtime. Manifold embeds the lock hash at build time and enforces **witness R0** (catalog lock) before **R1–R4** gate law on the hot path — see the normative ladder in [`../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md).
+This repo is the **primary catalog fiber** for [`umst-manifold`](../umst-manifold): Lean proofs are exported as a **versioned library** (JSON + digest), not replayed at runtime. Manifold embeds the lock hash at build time and enforces **witness R0** (catalog lock) before **R1–R4** gate law on the hot path — see the normative ladder in [`../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../umst-manifold/docs/QUALITY_WITNESS_LADDER.md).
 
 **Pipeline (forward flow):**
 
@@ -404,7 +404,7 @@ This repo is the **primary catalog fiber** for [`umst-manifold`](../umst-manifol
 |----------|------|
 | [`Docs/EXPORT_COVERAGE.md`](Docs/EXPORT_COVERAGE.md) | Exporter scope, digest definition, 69 vs 59, cross-repo scaffold |
 | [`Docs/UMST_FORMAL_REPOS_ALIGNMENT.md`](Docs/UMST_FORMAL_REPOS_ALIGNMENT.md) | Two-repo fiber policy + consumer table |
-| [`../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md) | Ordered witnesses R0–R6 (CD → Landauer → constitutive → probe) |
+| [`../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../umst-manifold/docs/QUALITY_WITNESS_LADDER.md) | Ordered witnesses R0–R6 (CD → Landauer → constitutive → probe) |
 | [`../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md`](../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md) | Hot path (~18 modules) vs catalog-only (~51) |
 | [`../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md) | Forward/backward Lean → catalog → manifold → cartridge |
 | [`../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md) | Per-module `catalog_id` ↔ Rust wiring |
