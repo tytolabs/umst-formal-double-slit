@@ -14,6 +14,14 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 ### Observation as Irreversible Payment
 
+<br>
+
+<img src="Docs/Media/double-slit-collapse.gif" alt="Surrogate animation: interference visibility falling as which-path information rises along Englert V = sqrt(1 - I^2)" width="820">
+
+<sub>Surrogate matplotlib animation (`scripts/generate_spectacular_gif.py`): which-path information I rises 0 → 1; visibility follows Englert V = √(1 − I²). The inequality is machine-checked in Lean (`QuantumClassicalBridge` / `GeneralVisibility`) — frames are **not** Lean kernel renders.</sub>
+
+<br>
+
 **What it is.** Machine-checked formalizations (Lean 4 · Mathlib · Haskell QuickCheck · Coq · Agda · Python sims) of the **thermodynamic cost of observation** — density matrices, Kraus which-path channels, Englert complementarity, Landauer bounds, and epistemic Galois adjunctions. This is a **proof tree**, not a runtime solver and not an MCP host.
 
 **The gate idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch — structural thermodynamic accounting, not metaphor.
@@ -100,7 +108,7 @@ Axioms (^axiom ):
 
 Extracting which-path information from a quantum system destroys interference proportionally, not all at once — the Englert curve `V² + I² ≤ 1`. Each bit extracted carries at least Landauer's cost. This repository machine-checks that chain from density matrices through Kraus channels to thermodynamic bounds. It is a **proof tree**, not a lab apparatus or an MCP host.
 
-### Visual surrogate
+### Visual surrogate (static teaser)
 
 <br>
 
@@ -109,12 +117,6 @@ Extracting which-path information from a quantum system destroys interference pr
   <source media="(prefers-color-scheme: light)" srcset="Docs/Media/teaser.png">
   <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/Media/teaser.png" width="820">
 </picture>
-
-<br>
-
-<img src="Docs/Media/double-slit-collapse.gif" alt="Surrogate animation: interference visibility falling as which-path information rises along Englert V = sqrt(1 - I^2)" width="820">
-
-<sub>Surrogate matplotlib animation (`scripts/generate_spectacular_gif.py`): which-path information I rises 0 → 1; visibility follows Englert V = √(1 − I²). The inequality is machine-checked in Lean (`QuantumClassicalBridge` / `GeneralVisibility`) — frames are **not** Lean kernel renders.</sub>
 
 <br>
 
@@ -658,10 +660,10 @@ Brief: read [`CONTRIBUTING.md`](CONTRIBUTING.md) before PRs; run `cd Lean && lak
 
 ## Acknowledgments
 
-Portions of this work were developed in collaboration with advanced large-language-model tools.
-Claude Opus and Sonnet 4.6 (Anthropic) provided surgical precision during drafting and refinement.
-Gemini 3.1 Pro High (Google) offered exceptional large-context planning and file management.
-Grok 4.20 by xAI and its collaborative reasoning team contributed core mathematical and scientific reasoning.
+Portions of this work were developed in collaboration with advanced large-language-model tools, across multiple model iterations.
+Claude Opus and Sonnet (Anthropic) provided surgical precision during drafting and refinement.
+Gemini (Google) offered exceptional large-context planning and file management.
+Grok (xAI) and its collaborative reasoning team contributed core mathematical and scientific reasoning.
 The Cursor code editor, Composer, Claude Code, and Antigravity supported seamless implementation and agentic file management.
 
 The large-language models assisted with exploration, drafting, and code scaffolding — never with the validity of formal proofs. All theorems were machine-checked by their respective compilers (Lean 4, Coq/Rocq, Agda), which accept only well-typed terms, never persuasive arguments.
