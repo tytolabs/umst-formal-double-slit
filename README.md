@@ -717,9 +717,9 @@ Brief: read [`CONTRIBUTING.md`](CONTRIBUTING.md) before PRs; run `cd Lean && lak
 
 ## Authors
 
-**Santhosh Shyamsundar** — Studio TYTO; IAAC Barcelona · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
+**Santhosh Shyamsundar** — Studio TYTO · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
 
-**Santosh Prabhu Shenbagamoorthy** — Studio TYTO; IAAC Barcelona · [santosh@tyto.studio](mailto:santosh@tyto.studio)
+**Santosh Prabhu Shenbagamoorthy** — Studio TYTO · [santosh@tyto.studio](mailto:santosh@tyto.studio)
 
 ---
 
