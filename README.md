@@ -128,18 +128,35 @@ Extracting which-path information from a quantum system destroys interference pr
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
 
 <details>
-<summary><strong>Table of contents</strong></summary>
+<summary><strong>Table of contents</strong> (detailed map + outline)</summary>
 
-- [1. Core result](#1-core-result)
-- [2. Proof architecture](#2-proof-architecture)
-- [3. Cross-Domain Integration](#3-cross-domain-integration)
-- [4. Repository topology](#4-repository-topology)
-- [5. Surfaces & verification layers](#5-surfaces--verification-layers)
-- [6. Quick Start](#6-quick-start)
-- [7. Cross-language verification](#7-cross-language-verification)
-- [8. Documentation hub](#8-documentation-hub)
-- [9. Special Protocol: Agents](#9-special-protocol-note-to-autonomous-ai-agents--systems)
-- [10. Conclusion](#10-conclusion-inferences--forward-path)
+**Top-level map**
+
+| Block | Jump |
+|:---|:---|
+| Foundations | [§1](#1-core-result) · [§2](#2-proof-architecture) · [§3](#3-cross-domain-integration-specifications) |
+| Layout & ops | [§4](#4-repository-topology) · [§5](#5-surfaces--verification-layers) · [§6](#6-quick-start) |
+| Verification & docs | [§7](#7-cross-language-verification) · [§8](#8-documentation-hub) |
+| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§10](#10-conclusion-inferences--forward-path) · [Related](#related-repositories) |
+
+**Detailed outline**
+
+- [§1 Core result](#1-core-result)
+- [§2 Proof architecture](#2-proof-architecture)
+- [§3 Cross-Domain Integration Specifications](#3-cross-domain-integration-specifications)
+  - [3.1 Epistemic sensing & probes](#31-epistemic-sensing--probes)
+  - [3.2 Catalog consume / R0](#32-catalog-consume--r0)
+  - [3.3 Acting sibling](#33-acting-sibling)
+  - [3.4 Time / provenance](#34-time--provenance)
+- [§4 Repository topology](#4-repository-topology)
+- [§5 Surfaces & verification layers](#5-surfaces--verification-layers)
+- [§6 Quick Start](#6-quick-start)
+- [§7 Cross-language verification](#7-cross-language-verification)
+- [§8 Documentation hub](#8-documentation-hub)
+- [§9 Special Protocol: Agents](#9-special-protocol-note-to-autonomous-ai-agents--systems)
+  - [9.1 Shared stack](#91-shared-stack) · [9.2 Hot vs cold](#92-hot-vs-cold) · [9.3 Guarantees](#93-guarantees) · [9.4 Operational mapping](#94-operational-mapping) · [9.5 Proposed](#95-proposed-not-yet-built) · [9.6 Principles](#96-principles-honest)
+- [§10 Conclusion](#10-conclusion-inferences--forward-path)
+- [Related repositories](#related-repositories)
 
 </details>
 
@@ -266,17 +283,69 @@ flowchart TB
 
 ---
 
-## 3. Cross-Domain Integration
+## 3. Cross-Domain Integration Specifications
 
-| Domain | How Knowing composes | Honest limit |
-|:---|:---|:---|
-| **Matter** | Gate enforcement lemmas bridge thermodynamic state | Does not run DEC solvers — [`umst-manifold`](https://github.com/tytolabs/umst-manifold) / concrete |
-| **Acting** | Economic Kleisli commitments in sibling formal fiber | Observation cost ≠ economic burden — link [`umst-formal`](https://github.com/tytolabs/umst-formal) |
-| **Time** | UCRS stamps when observation events land in integrated stacks | Does not run sync protocol — link [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) |
-| **Sensing / control** | MI + Landauer chain applies to any which-path style extraction | Lab confirmation out of scope |
-| **Materials gating** | PMIC constrains coherence vs information tradeoff | Python `sim/` = surrogates, not physical measurements |
+**What this section is for.** Knowing is the fiber that answers: *how much does it cost, thermodynamically, to find something out?* That cost is not metaphor — it is Landauer payment plus Englert complementarity, machine-checked. Open a persona below to see who plugs in, what surface they use, what they walk away with, and where the proof stops.
 
-**Impact:** Knowing-fiber proofs bound **what observation costs** in thermodynamic terms. Agents and sensors that extract information pay at least the Landauer floor; Englert complementarity bounds how much coherence can survive that payment. **Unitary single-Kraus** DPI is proved; **arbitrary multi-Kraus CPTP DPI** is **not** one theorem here — read [`PROOF-STATUS.md`](PROOF-STATUS.md) and [`Lean/VERIFY.md`](Lean/VERIFY.md) before citing DPI off-repo.
+This is a **proof tree**, not a runtime solver. Matter still runs DEC on manifold/concrete; Acting still owns economic predicates in [`umst-formal`](https://github.com/tytolabs/umst-formal); Time still stamps events in [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs). Knowing supplies the observation-cost vocabulary those siblings compose through.
+
+<a id="31-epistemic-sensing--probes"></a>
+<details>
+<summary><b>1. Epistemic sensing & probes</b> (Sensing, control, materials gating)</summary>
+
+* **Domain Focus / Integration Surface:** Which-path style information extraction — mutual information, Landauer floors, and residual coherence. Primary Lean roots: [`InfoEntropy.lean`](Lean/InfoEntropy.lean), [`LandauerBound.lean`](Lean/LandauerBound.lean), [`MeasurementChannel.lean`](Lean/MeasurementChannel.lean), plus the Epistemic* probe stack ([`EpistemicSensing.lean`](Lean/EpistemicSensing.lean) and siblings).
+
+* **Composition / Pipeline:** Density matrix → Kraus which-path channel → Englert / PMIC visibility → Landauer cost. Python `sim/` mirrors the chain under trust-boundary contracts in [`SimLeanBridge.lean`](Lean/SimLeanBridge.lean).
+
+* **Computational Outcome:** A continuous cost–coherence curve agents and sensor designers can cite: extract 0.3 bits and visibility stays high; extract a full bit and interference is gone. Theorem names such as `principle_of_maximal_information_collapse` are **cold witnesses** — not deployed runtime detectors.
+
+* **Honest limit:** Python `sim/` and hero GIFs are **surrogates**, not lab measurements. **Unitary single-Kraus** DPI is proved; **arbitrary multi-Kraus CPTP DPI** is **not** one theorem here — read [`PROOF-STATUS.md`](PROOF-STATUS.md) and [`Lean/VERIFY.md`](Lean/VERIFY.md).
+
+</details>
+
+<a id="32-catalog-consume--r0"></a>
+<details>
+<summary><b>2. Catalog consume / R0</b> (Agent cold-edge, manifold integrators)</summary>
+
+* **Domain Focus / Integration Surface:** EXPORT / VERIFY discipline for agents that need pinned theorem names without rebuilding Lean mid-inference.
+
+* **Composition / Pipeline:** Manifold catalog digest → witness R0 before hot gate. Export `module_count` and this repo’s **52** `lakefile` roots are different roles — never conflate them ([`scripts/lean_declaration_stats.py`](scripts/lean_declaration_stats.py)).
+
+* **Computational Outcome:** Agents consume digest-pinned counts and theorem names from the lock; `lake build` stays a **cold** CI/dev step, never a robot mid-loop.
+
+* **Honest limit:** Never hardcode rival catalog SHAs in prompts — re-open [`umst-manifold/artifacts/catalog.lock.json`](https://github.com/tytolabs/umst-manifold/blob/main/artifacts/catalog.lock.json).
+
+</details>
+
+<a id="33-acting-sibling"></a>
+<details>
+<summary><b>3. Acting sibling</b> (Economic commitments, control AI)</summary>
+
+* **Domain Focus / Integration Surface:** Observation **cost** (this fiber) versus economic **burden** and Kleisli admissibility ([`umst-formal`](https://github.com/tytolabs/umst-formal)).
+
+* **Composition / Pipeline:** Knowing proves PMIC / Landauer. Acting stages propose→gate via `PhysicsConstrainedAI`. Link the sibling — do not merge the fibers or copy Economic module tables here.
+
+* **Computational Outcome:** Multi-step agents can ask two separate questions honestly: *what did observation cost?* (Knowing) and *may this commitment commit?* (Acting predicates).
+
+* **Honest limit:** Observation cost ≠ economic burden. Acting does not prove Englert / Kraus — cite the correct fiber.
+
+</details>
+
+<a id="34-time--provenance"></a>
+<details>
+<summary><b>4. Time / provenance</b> (UCRS stamps, memory ingest)</summary>
+
+* **Domain Focus / Integration Surface:** When an observation event lands in an integrated stack — [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) `UcrsObservedAt` / `UMST_UCRS_WITNESS`.
+
+* **Composition / Pipeline:** MI / Landauer accounting stays in Lean. The stamp records **when** that cost was booked — it does not re-prove mutual information.
+
+* **Computational Outcome:** Shared `ucrs_seq` / `stamp_tier` vocabulary across memory accept, catalog consume, and formal export so “when we paid” is composable across Matter / Knowing / Acting.
+
+* **Honest limit:** UCRS does not run sync protocol or validate constitutive law — stamps only. MCP host = concrete.
+
+</details>
+
+**Cross-domain impact.** Any system that extracts information from a physical process — sensing, control, inference, materials gating — pays at least the Landauer floor, and Englert complementarity bounds how much coherence can survive that payment. Matter still owns DEC solvers ([`umst-manifold`](https://github.com/tytolabs/umst-manifold) / concrete); this fiber owns the machine-checked **observation-cost** slice of the shared gate. **Unitary single-Kraus** DPI is proved here; **arbitrary multi-Kraus CPTP DPI** is not — that scope boundary is part of the product.
 
 ---
 
@@ -612,15 +681,22 @@ See [Hot arena vs cold edge](#hot-arena-vs-cold-edge-performance-honesty). **Col
 
 Full Schrödinger derivation from first principles; empirical lab verification — explicitly out of scope in Claim Taxonomy.
 
+### 9.6 Principles (honest)
+
+* **Observation is continuous payment.** PMIC makes partial which-path extraction a theorem — agents must not binarize observation cost into on/off switches.
+* **Cold proof, hot gate elsewhere.** Consume catalog witnesses; do not `lake build` mid-inference on a robot or IDE agent loop.
+* **DPI scope discipline.** Unitary single-Kraus preservation is proved; cite [`PROOF-STATUS.md`](PROOF-STATUS.md) before claiming arbitrary CPTP DPI from this repo alone.
+* **Surrogate honesty.** Python sim and README GIFs illustrate the Englert curve — they are not physical measurements.
+
 ---
 
 ## 10. Conclusion: Inferences & Forward Path
 
 ### What this repo demonstrates
 
-- Observation is **continuous payment** — PMIC / Englert curve is machine-checked, not metaphor.
-- **Landauer + complementarity** chain closes from density matrices to cost–coherence identity.
-- **Multi-language mirrors** — Lean primary; Haskell/Coq/Agda/Python support roles differ (see §7).
+- **Observation is continuous payment** — the PMIC / Englert curve is machine-checked: partial which-path extraction destroys interference proportionally, not as a binary switch.
+- **Landauer + complementarity close** — density matrices → Kraus channels → diagonal von Neumann entropy → cost–coherence identity, with one explicit axiom (`physicalSecondLaw`).
+- **Multi-language mirrors with distinct roles** — Lean is authoritative; Haskell/Coq/Agda/Python support verification and pedagogy without substituting for `lake build` (see §7).
 
 ### What surprised us
 
@@ -633,7 +709,10 @@ Full Schrödinger derivation from first principles; empirical lab verification �
 - Keep catalog export aligned with manifold lock; do not conflate `module_count` with 52 lake roots.
 - Preserve honest DPI scope boundaries in agent-facing docs.
 
-### Related repositories
+---
+
+<a id="related-repositories"></a>
+## Related repositories
 
 | Repo | Focus |
 |:---|:---|
@@ -652,9 +731,9 @@ Brief: read [`CONTRIBUTING.md`](CONTRIBUTING.md) before PRs; run `cd Lean && lak
 
 ## Authors
 
-**Santhosh Shyamsundar** — Studio TYTO; IAAC Barcelona · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
+**Santhosh Shyamsundar** — Studio TYTO · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
 
-**Santosh Prabhu Shenbagamoorthy** — Studio TYTO; IAAC Barcelona · [santosh@tyto.studio](mailto:santosh@tyto.studio)
+**Santosh Prabhu Shenbagamoorthy** — Studio TYTO · [santosh@tyto.studio](mailto:santosh@tyto.studio)
 
 ---
 
