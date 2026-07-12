@@ -129,6 +129,7 @@ Extracting which-path information from a quantum system destroys interference pr
 
 <details>
 <summary><strong>Table of contents</strong> (detailed map + outline)</summary>
+<br>
 
 **Top-level map**
 
@@ -137,11 +138,14 @@ Extracting which-path information from a quantum system destroys interference pr
 | Foundations | [§1](#1-core-result) · [§2](#2-proof-architecture) · [§3](#3-cross-domain-integration-specifications) |
 | Layout & ops | [§4](#4-repository-topology) · [§5](#5-surfaces--verification-layers) · [§6](#6-quick-start) |
 | Verification & docs | [§7](#7-cross-language-verification) · [§8](#8-documentation-hub) |
-| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§10](#10-conclusion-inferences--forward-path) · [Related](#related-repositories) |
+| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§10](#10-conclusion-inferences--forward-path) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributing](#contributing) · [Citation](#citation) · [License](#license) |
 
-**Detailed outline**
+**Detailed outline** — every entry links to a stable anchor (`README.md#…`); collapsible sections use `<details>` but share the same deep-link fragments.
 
 - [§1 Core result](#1-core-result)
+  - [In plain language](#in-plain-language)
+  - [Formal statement](#formal-statement)
+- [What This Repository Proves](#what-this-repository-proves)
 - [§2 Proof architecture](#2-proof-architecture)
 - [§3 Cross-Domain Integration Specifications](#3-cross-domain-integration-specifications)
   - [3.1 Epistemic sensing & probes](#31-epistemic-sensing--probes)
@@ -150,13 +154,29 @@ Extracting which-path information from a quantum system destroys interference pr
   - [3.4 Time / provenance](#34-time--provenance)
 - [§4 Repository topology](#4-repository-topology)
 - [§5 Surfaces & verification layers](#5-surfaces--verification-layers)
+  - [Lean modules (52 lakefile roots)](#5-surfaces--verification-layers)
+- [Claim Taxonomy](#claim-taxonomy)
 - [§6 Quick Start](#6-quick-start)
 - [§7 Cross-language verification](#7-cross-language-verification)
+  - [Downstream manifold integration](#downstream-manifold-integration)
 - [§8 Documentation hub](#8-documentation-hub)
 - [§9 Special Protocol: Agents](#9-special-protocol-note-to-autonomous-ai-agents--systems)
-  - [9.1 Shared stack](#91-shared-stack) · [9.2 Hot vs cold](#92-hot-vs-cold) · [9.3 Guarantees](#93-guarantees) · [9.4 Operational mapping](#94-operational-mapping) · [9.5 Proposed](#95-proposed-not-yet-built) · [9.6 Principles](#96-principles-honest)
+  - [9.1 Shared stack](#91-shared-stack)
+  - [9.2 Hot vs cold](#92-hot-vs-cold)
+  - [9.3 Guarantees](#93-guarantees)
+  - [9.4 Operational mapping](#94-operational-mapping)
+  - [9.5 Proposed](#95-proposed-not-yet-built)
+  - [9.6 Principles](#96-principles-honest)
 - [§10 Conclusion](#10-conclusion-inferences--forward-path)
+  - [What this repo demonstrates](#what-this-repo-demonstrates)
+  - [What surprised us](#what-surprised-us)
+  - [Forward path](#forward-path)
 - [Related repositories](#related-repositories)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
+- [Contributing](#contributing)
+- [Citation](#citation)
+- [License](#license)
 
 </details>
 
@@ -723,12 +743,6 @@ Full Schrödinger derivation from first principles; empirical lab verification �
 
 ---
 
-## Contributing
-
-Brief: read [`CONTRIBUTING.md`](CONTRIBUTING.md) before PRs; run `cd Lean && lake build` and `python3 scripts/lean_declaration_stats.py` when touching Lean roots.
-
----
-
 ## Authors
 
 **Santhosh Shyamsundar** — Studio TYTO · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
@@ -751,6 +765,20 @@ The mathematical reality captured in this repository rests entirely on the found
 
 ---
 
-<div align="center">
-<sub>MIT License · © 2026 Studio TYTO · <a href="https://github.com/tytolabs">github.com/tytolabs</a></sub>
-</div>
+## Contributing
+
+Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before PRs. When touching Lean roots, run `cd Lean && lake build` and `python3 scripts/lean_declaration_stats.py` in the same change set when totals move.
+
+---
+
+## Citation
+
+Shyamsundar, S., Shenbagamoorthy, S. P. (2026). *UMST Formal Double-Slit* (observation / measurement-cost formal fiber). Zenodo. https://doi.org/10.5281/zenodo.19159660
+
+Also cite the sibling Acting fiber ([DOI 10.5281/zenodo.18940933](https://doi.org/10.5281/zenodo.18940933)) when you rely on economic / Kleisli admissibility theorems.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE). © 2026 Studio TYTO.
