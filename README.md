@@ -285,16 +285,21 @@ flowchart TB
 
 ## 3. Cross-Domain Integration Specifications
 
-Knowing composes as **epistemic payment** — Landauer floors and Englert bounds on observation. Pick your integration surface:
+**What this section is for.** Knowing is the fiber that answers: *how much does it cost, thermodynamically, to find something out?* That cost is not metaphor — it is Landauer payment plus Englert complementarity, machine-checked. Open a persona below to see who plugs in, what surface they use, what they walk away with, and where the proof stops.
+
+This is a **proof tree**, not a runtime solver. Matter still runs DEC on manifold/concrete; Acting still owns economic predicates in [`umst-formal`](https://github.com/tytolabs/umst-formal); Time still stamps events in [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs). Knowing supplies the observation-cost vocabulary those siblings compose through.
 
 <a id="31-epistemic-sensing--probes"></a>
 <details>
 <summary><b>1. Epistemic sensing & probes</b> (Sensing, control, materials gating)</summary>
 
-* **Domain Focus / Integration Surface:** MI + Landauer chain for which-path style extraction — [`Lean/InfoEntropy.lean`](Lean/InfoEntropy.lean), [`Lean/LandauerBound.lean`](Lean/LandauerBound.lean), [`Lean/MeasurementChannel.lean`](Lean/MeasurementChannel.lean).
-* **Composition / Pipeline:** Density matrix → Kraus channel → PMIC visibility; Python `sim/` mirrors via [`Lean/SimLeanBridge.lean`](Lean/SimLeanBridge.lean) trust-boundary contracts.
-* **Computational Outcome:** Agents cite theorem names (`principle_of_maximal_information_collapse`, Englert bounds) as **cold witnesses** — not deployed runtime detectors.
-* **Honest limit:** Python `sim/` and hero GIFs are **surrogates**, not lab measurements; arbitrary multi-Kraus CPTP DPI is **not** one theorem here — read [`PROOF-STATUS.md`](PROOF-STATUS.md) and [`Lean/VERIFY.md`](Lean/VERIFY.md).
+* **Domain Focus / Integration Surface:** Which-path style information extraction — mutual information, Landauer floors, and residual coherence. Primary Lean roots: [`InfoEntropy.lean`](Lean/InfoEntropy.lean), [`LandauerBound.lean`](Lean/LandauerBound.lean), [`MeasurementChannel.lean`](Lean/MeasurementChannel.lean), plus the Epistemic* probe stack ([`EpistemicSensing.lean`](Lean/EpistemicSensing.lean) and siblings).
+
+* **Composition / Pipeline:** Density matrix → Kraus which-path channel → Englert / PMIC visibility → Landauer cost. Python `sim/` mirrors the chain under trust-boundary contracts in [`SimLeanBridge.lean`](Lean/SimLeanBridge.lean).
+
+* **Computational Outcome:** A continuous cost–coherence curve agents and sensor designers can cite: extract 0.3 bits and visibility stays high; extract a full bit and interference is gone. Theorem names such as `principle_of_maximal_information_collapse` are **cold witnesses** — not deployed runtime detectors.
+
+* **Honest limit:** Python `sim/` and hero GIFs are **surrogates**, not lab measurements. **Unitary single-Kraus** DPI is proved; **arbitrary multi-Kraus CPTP DPI** is **not** one theorem here — read [`PROOF-STATUS.md`](PROOF-STATUS.md) and [`Lean/VERIFY.md`](Lean/VERIFY.md).
 
 </details>
 
@@ -302,10 +307,13 @@ Knowing composes as **epistemic payment** — Landauer floors and Englert bounds
 <details>
 <summary><b>2. Catalog consume / R0</b> (Agent cold-edge, manifold integrators)</summary>
 
-* **Domain Focus / Integration Surface:** EXPORT / VERIFY discipline; catalog digest from manifold lock — not mid-inference `lake build`.
-* **Composition / Pipeline:** Witness R0 before hot gate on manifold; export `module_count` ≠ **52** `lakefile` roots — different roles ([`scripts/lean_declaration_stats.py`](scripts/lean_declaration_stats.py)).
-* **Computational Outcome:** Agents consume pinned theorem names and counts @ script SHA; proof build stays **cold**.
-* **Honest limit:** Never hardcode rival catalog SHAs in prompts; re-open [`umst-manifold/artifacts/catalog.lock.json`](https://github.com/tytolabs/umst-manifold/blob/main/artifacts/catalog.lock.json).
+* **Domain Focus / Integration Surface:** EXPORT / VERIFY discipline for agents that need pinned theorem names without rebuilding Lean mid-inference.
+
+* **Composition / Pipeline:** Manifold catalog digest → witness R0 before hot gate. Export `module_count` and this repo’s **52** `lakefile` roots are different roles — never conflate them ([`scripts/lean_declaration_stats.py`](scripts/lean_declaration_stats.py)).
+
+* **Computational Outcome:** Agents consume digest-pinned counts and theorem names from the lock; `lake build` stays a **cold** CI/dev step, never a robot mid-loop.
+
+* **Honest limit:** Never hardcode rival catalog SHAs in prompts — re-open [`umst-manifold/artifacts/catalog.lock.json`](https://github.com/tytolabs/umst-manifold/blob/main/artifacts/catalog.lock.json).
 
 </details>
 
@@ -313,10 +321,13 @@ Knowing composes as **epistemic payment** — Landauer floors and Englert bounds
 <details>
 <summary><b>3. Acting sibling</b> (Economic commitments, control AI)</summary>
 
-* **Domain Focus / Integration Surface:** Observation **cost** lives here; economic **burden** and Kleisli admissibility live in [`umst-formal`](https://github.com/tytolabs/umst-formal).
-* **Composition / Pipeline:** Knowing proves PMIC / Landauer; Acting binds `PhysicsConstrainedAI` propose→gate — link sibling, do not merge fibers.
-* **Computational Outcome:** Multi-step agents separate **what observation costs** (Knowing) from **what acting may commit** (Acting predicates).
-* **Honest limit:** Observation cost ≠ economic burden; Acting does not prove Englert / Kraus — cite the correct fiber.
+* **Domain Focus / Integration Surface:** Observation **cost** (this fiber) versus economic **burden** and Kleisli admissibility ([`umst-formal`](https://github.com/tytolabs/umst-formal)).
+
+* **Composition / Pipeline:** Knowing proves PMIC / Landauer. Acting stages propose→gate via `PhysicsConstrainedAI`. Link the sibling — do not merge the fibers or copy Economic module tables here.
+
+* **Computational Outcome:** Multi-step agents can ask two separate questions honestly: *what did observation cost?* (Knowing) and *may this commitment commit?* (Acting predicates).
+
+* **Honest limit:** Observation cost ≠ economic burden. Acting does not prove Englert / Kraus — cite the correct fiber.
 
 </details>
 
@@ -324,14 +335,17 @@ Knowing composes as **epistemic payment** — Landauer floors and Englert bounds
 <details>
 <summary><b>4. Time / provenance</b> (UCRS stamps, memory ingest)</summary>
 
-* **Domain Focus / Integration Surface:** When observation events land in integrated stacks — [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) `UcrsObservedAt` / `UMST_UCRS_WITNESS`.
-* **Composition / Pipeline:** MI advisory in Lean; stamp records **when** cost was accounted — does not re-prove MI.
-* **Computational Outcome:** Shared `ucrs_seq` / `stamp_tier` vocabulary across memory accept and formal export consume.
-* **Honest limit:** UCRS does not run sync protocol or validate constitutive law — stamps only; MCP host = concrete.
+* **Domain Focus / Integration Surface:** When an observation event lands in an integrated stack — [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) `UcrsObservedAt` / `UMST_UCRS_WITNESS`.
+
+* **Composition / Pipeline:** MI / Landauer accounting stays in Lean. The stamp records **when** that cost was booked — it does not re-prove mutual information.
+
+* **Computational Outcome:** Shared `ucrs_seq` / `stamp_tier` vocabulary across memory accept, catalog consume, and formal export so “when we paid” is composable across Matter / Knowing / Acting.
+
+* **Honest limit:** UCRS does not run sync protocol or validate constitutive law — stamps only. MCP host = concrete.
 
 </details>
 
-**Impact:** Knowing-fiber proofs bound **what observation costs** in thermodynamic terms. Englert complementarity bounds how much coherence survives partial payment; **unitary single-Kraus** DPI is proved — **arbitrary multi-Kraus CPTP DPI** is **not** one theorem here.
+**Cross-domain impact.** Any system that extracts information from a physical process — sensing, control, inference, materials gating — pays at least the Landauer floor, and Englert complementarity bounds how much coherence can survive that payment. Matter still owns DEC solvers ([`umst-manifold`](https://github.com/tytolabs/umst-manifold) / concrete); this fiber owns the machine-checked **observation-cost** slice of the shared gate. **Unitary single-Kraus** DPI is proved here; **arbitrary multi-Kraus CPTP DPI** is not — that scope boundary is part of the product.
 
 ---
 
