@@ -63,11 +63,11 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 
 This repository is a **machine-checked proof artifact**. It is **neither** the manifold hot-arena tensor path **nor** an MCP cold-edge host. Agents **consume** exported catalog witnesses via [`umst-manifold`](https://github.com/tytolabs/umst-manifold); they do not `lake build` mid-inference. Python `sim/` animations are **surrogates**, not Lean kernel playback.
 
-### Honesty ledger (counts @ `fcd9e7a`)
+### Honesty ledger (counts @ `e2719b9`)
 
 **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md).
 
-**Lean 4 (default lake roots)** — paste from `python3 scripts/lean_declaration_stats.py` on `origin/master` @ **`fcd9e7a`** (`fcd9e7a6a8ef42d4776c38514e985196f1a46e64`):
+**Lean 4 (default lake roots)** — paste from `python3 scripts/lean_declaration_stats.py` on `origin/master` @ **`e2719b9`** (`e2719b92e8ed33bbb84f898281b8c8fad810d4b7`):
 
 ```text
 Repository: umst-formal-double-slit
@@ -120,7 +120,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. Counts @ `fcd9e7a`: **486** theorems + **30** lemmas in **52** roots (**0** tactic `sorry`; **1** axiom `physicalSecondLaw`). General-**n** visibility and dephasing diagonal limits are **theorems** (`GeneralVisibility`, `LindbladDynamics`). Discrete **stream-D** → Lüders (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy — **not** arbitrary multi-Kraus CPTP. **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. Counts @ `e2719b9`: **486** theorems + **30** lemmas in **52** roots (**0** tactic `sorry`; **1** axiom `physicalSecondLaw`). General-**n** visibility and dephasing diagonal limits are **theorems** (`GeneralVisibility`, `LindbladDynamics`). Discrete **stream-D** → Lüders (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy — **not** arbitrary multi-Kraus CPTP. **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked across the language fibers above.
 
@@ -138,7 +138,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **486 theorem + 30 lemmas in 52 roots; 495 + 31 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.** Counts from `python3 scripts/lean_declaration_stats.py` @ `fcd9e7a` — script wins._
+> _Machine-checked in Lean 4 with Mathlib. **486 theorem + 30 lemmas in 52 roots; 495 + 31 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.** Counts from `python3 scripts/lean_declaration_stats.py` @ `e2719b9` — script wins._
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -315,7 +315,7 @@ umst-formal-double-slit/
 │   ├── schrodinger_2d_*.py                2D split-step + PML
 │   ├── schrodinger_3d_split_step.py       3D FFT split-step
 │   ├── qutip_*.py                         QuTiP parity checks (optional)
-│   ├── tests/                             unittest discover (88 ran @ fcd9e7a; see Quick Start paste)
+│   ├── tests/                             unittest discover (88 ran @ e2719b9; see Quick Start paste)
 │   └── requirements-optional.txt          NumPy, SciPy, matplotlib, imageio, QuTiP
 │
 ├── scripts/
@@ -334,7 +334,7 @@ umst-formal-double-slit/
 └── Makefile                       ← lean · sim · sim-gifs · haskell-test · coq-check · agda-check · ci-*
 ```
 
-> **Counting the numbers:** Authoritative: `python3 scripts/lean_declaration_stats.py` — **52** `lean_lib` roots, **486** + **30** line-start `theorem`/`lemma` over those roots (**516** total), **495** + **31** over all `Lean/*.lean` (**526**; `.lake` excluded), **1** `^axiom ` (**`physicalSecondLaw`**). See **`Docs/COUNT-METHODOLOGY.md`**, **`PROOF-STATUS.md`**, and **`FORMAL_FOUNDATIONS.md`**. Legacy full-tree scan: `make lean-stats-md` → `lean_decl_stats.py` (label “full-tree heuristic”). Verify: `cd Lean && lake build`. Older README prose that cited **59** roots / **540** theorems was **stale** — retracted in favour of the script @ `fcd9e7a`.
+> **Counting the numbers:** Authoritative: `python3 scripts/lean_declaration_stats.py` — **52** `lean_lib` roots, **486** + **30** line-start `theorem`/`lemma` over those roots (**516** total), **495** + **31** over all `Lean/*.lean` (**526**; `.lake` excluded), **1** `^axiom ` (**`physicalSecondLaw`**). See **`Docs/COUNT-METHODOLOGY.md`**, **`PROOF-STATUS.md`**, and **`FORMAL_FOUNDATIONS.md`**. Legacy full-tree scan: `make lean-stats-md` → `lean_decl_stats.py` (label “full-tree heuristic”). Verify: `cd Lean && lake build`. Older README prose that cited **59** roots / **540** theorems was **stale** — retracted in favour of the script @ `e2719b9`.
 
 ---
 
@@ -437,7 +437,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 |:--------:|----------|:------:|---------|
 | **Lean 4** | 52 roots, 486 thm + 30 lem (roots); 495 + 31 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
-| **Python** | 88 unit tests (unittest discover @ `fcd9e7a`; 58 skipped in that run) | **Pass** (paste in Quick Start) | `python3 -m unittest discover -s sim/tests -q` |
+| **Python** | 88 unit tests (unittest discover @ `e2719b9`; 58 skipped in that run) | **Pass** (paste in Quick Start) | `python3 -m unittest discover -s sim/tests -q` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
 | **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
 
@@ -445,7 +445,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 This repo’s Lean inventory is exported as a **versioned catalog** (JSON + digest), not replayed at runtime. Manifold consumes the lock as witness **R0** before hot-path gate law — see [`umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](https://github.com/tytolabs/umst-manifold/blob/main/docs/QUALITY_WITNESS_LADDER.md).
 
-**Pin @ `fcd9e7a` (committed `artifacts/catalog.lock.json`):**
+**Pin @ `e2719b9` (committed `artifacts/catalog.lock.json`):**
 
 ```text
 module_count: 129
@@ -468,7 +468,7 @@ Canonical export: `make lean-catalog-export` → `artifacts/catalog.json` (consu
 
 ```bash
 # Counts (authoritative Lean numbers)
-git checkout fcd9e7a   # or origin/master
+git checkout e2719b9   # or origin/master
 python3 scripts/lean_declaration_stats.py
 
 # Full verification (Lean + Python + Haskell)
@@ -476,7 +476,7 @@ make ci-full
 
 # Individual layers
 cd Lean && lake build          # Lean 4 — counts: PROOF-STATUS.md / lean_declaration_stats.py
-python3 -m unittest discover -s sim/tests -q   # Python — 88 ran @ fcd9e7a (58 skipped)
+python3 -m unittest discover -s sim/tests -q   # Python — 88 ran @ e2719b9 (58 skipped)
 cd Haskell && cabal test       # Haskell — 14 QuickCheck properties (Haskell/test/Main.hs)
 make formal-check              # Coq + Agda (optional toolchains; matches CI formal.yml)
 make coq-check                 # Coq only (Rocq/Coq 9.x or 8.20+ `From Stdlib`)
@@ -484,7 +484,7 @@ make agda-check                # Agda only
 python3 scripts/generate_spectacular_gif.py   # → Docs/Media/double-slit-collapse.gif + teaser.png
 ```
 
-**Python paste @ `fcd9e7a`:**
+**Python paste @ `e2719b9`:**
 
 ```text
 Ran 88 tests in 0.795s
