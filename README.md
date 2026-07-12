@@ -2,15 +2,23 @@
 SPDX-License-Identifier: MIT
 Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -->
+<!-- markdownlint-disable-file MD013 MD040 MD001 MD026 — hero README is intentionally dense; other docs stay strict via shared config. -->
 
 <div align="center">
 
 # The Thermodynamic Cost of Knowing
 
+### `umst-formal-double-slit` — observation / measurement-cost formal fiber
+
 > _This ecosystem is dedicated to the thousands of unnamed contributors who wrote formal proofs, maintained open-source compilers, and built mathematical libraries for years — often without evidence that any of it would be used beyond pure theory. They chose to make their work free, because they understood that knowledge about physical reality cannot be owned. Whatever this system achieves is yours._
 
-
 ### Observation as Irreversible Payment
+
+**What it is.** Machine-checked formalizations (Lean 4 · Mathlib · Haskell QuickCheck · Coq · Agda · Python sims) of the **thermodynamic cost of observation** — density matrices, Kraus which-path channels, Englert complementarity, Landauer bounds, and epistemic Galois adjunctions. This is a **proof tree**, not a runtime solver and not an MCP host.
+
+**The gate / knowing idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch.
+
+**Honest is / isn't.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19159660.svg)](https://doi.org/10.5281/zenodo.19159660)
 <!-- readme:status -->
@@ -19,10 +27,65 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 [![CI — Formal (Coq+Agda)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**Formally verified in Lean 4 + Mathlib&ensp;·&ensp;**0** tactic `sorry` in default `lake` roots&ensp;·&ensp;**1** Lean axiom (`physicalSecondLaw` — `FORMAL_FOUNDATIONS.md`)&ensp;·&ensp;Visibility + dephasing limits **proved** (`GeneralVisibility`, `LindbladDynamics`, `LindbladStreamD`)&ensp;·&ensp;Klein relative-entropy nonnegativity **proved** (`KleinInequality.lean`)&ensp;·&ensp;**486** theorems + **30** lemmas in **52** roots; **495** + **31** over all `Lean/*.lean` (`python3 scripts/lean_declaration_stats.py`; excludes `.lake`)**
+</div>
 
-_Observation has a price. Every fraction of a bit extracted destroys a corresponding fraction of interference._
-_The thermodynamic cost is exact, non-negotiable, and formally verified._
+### Shared stack (matter · knowing · acting · time)
+
+These public repos share **one** thermodynamic admissibility gate, applied across domains:
+
+| Domain | Public repo | Role |
+|:---|:---|:---|
+| **Matter** | [`umst-manifold`](https://github.com/tytolabs/umst-manifold) + [`umst-concrete-cartridge`](https://github.com/tytolabs/umst-concrete-cartridge) | DEC carrier + cementitious constitutive law |
+| **Knowing** | **this repo** ([`umst-formal-double-slit`](https://github.com/tytolabs/umst-formal-double-slit)) **← you are here** | Observation / measurement-cost formal fiber |
+| **Acting** | [`umst-formal`](https://github.com/tytolabs/umst-formal) | Economic-admissibility formal fiber |
+| **Time** | [`umst-ucrs`](https://github.com/tytolabs/umst-ucrs) | Temporal witness / stamp spine |
+
+Sibling links only — no paper-series arc naming in this README. Already-public per-repo DOI badges stay where they exist; this repo’s own Zenodo DOI for *The Thermodynamic Cost of Knowing* stays above.
+
+### Real objects (categorical — not “the proofs”)
+
+| Symbol | Role | Defined at |
+|:---|:---|:---|
+| `ObservationState` | Coarse object: which-path `I` + visibility `V` | [`Lean/DoubleSlitCore.lean:27`](Lean/DoubleSlitCore.lean) |
+| `ThermodynamicSystem ℝ ObservationState` | Instance: density = `I`, freeEnergy = `-(I²+V²)` | [`Lean/DoubleSlitCore.lean:33`](Lean/DoubleSlitCore.lean) |
+| `DensityMatrix` / `densityMatrixThermoSystem` | Quantum object + temperature-calibrated thermo instance | [`Lean/DensityState.lean:46`](Lean/DensityState.lean), [`Lean/GateCompat.lean:32`](Lean/GateCompat.lean) |
+| `fringeVisibility_n_le_one` | Morphisms: general-`n` visibility bound | [`Lean/GeneralVisibility.lean:126`](Lean/GeneralVisibility.lean) |
+| `dephasingSolution_tendsto_diagonal` | Lindblad dephasing → diagonal (theorem) | [`Lean/LindbladDynamics.lean:169`](Lean/LindbladDynamics.lean) |
+| `streamD_limit_to_Lueders_states` | Discrete stream-D → Lüders limit | [`Lean/LindbladStreamD.lean:34`](Lean/LindbladStreamD.lean) |
+| `spectralRelativeEntropy_nonneg` | Klein / relative-entropy nonnegativity | [`Lean/KleinInequality.lean:146`](Lean/KleinInequality.lean) |
+| `vonNeumannEntropy` / unitary invariance | Spectral entropy morphisms | [`Lean/VonNeumannEntropy.lean`](Lean/VonNeumannEntropy.lean) |
+| `landauer_galois_connection` | Epistemic Galois: info ⊣ energy | [`Lean/EpistemicGalois.lean:71`](Lean/EpistemicGalois.lean) |
+| `physicalSecondLaw` | Sole project `axiom` (Second Law) | [`Lean/LandauerLaw.lean:159`](Lean/LandauerLaw.lean) |
+
+Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATIONS.md`](FORMAL_FOUNDATIONS.md).
+
+### Performance honesty
+
+This repository is a **machine-checked proof artifact**. It is **neither** the manifold hot-arena tensor path **nor** an MCP cold-edge host. Agents **consume** exported catalog witnesses via [`umst-manifold`](https://github.com/tytolabs/umst-manifold); they do not `lake build` mid-inference. Python `sim/` animations are **surrogates**, not Lean kernel playback.
+
+### Honesty ledger (counts @ `fcd9e7a`)
+
+**One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md).
+
+**Lean 4 (default lake roots)** — paste from `python3 scripts/lean_declaration_stats.py` on `origin/master` @ **`fcd9e7a`** (`fcd9e7a6a8ef42d4776c38514e985196f1a46e64`):
+
+```text
+Repository: umst-formal-double-slit
+Lake roots: 52 modules
+Roots-only:  486 theorem, 30 lemma, total 516
+All Lean/*:  495 theorem, 31 lemma, total 526
+Axioms (^axiom ):
+  LandauerLaw.lean:159  physicalSecondLaw
+```
+
+- **0** tactic `sorry` in default rooted Lean (see [`PROOF-STATUS.md`](PROOF-STATUS.md)).
+- **1** project `axiom`: `physicalSecondLaw`.
+- This repo does **not** ship a separate `check_print_axioms.sh`; axiom inventory is the script line above + [`PROOF-STATUS.md`](PROOF-STATUS.md).
+- **Script wins** on any mismatch with prose or older docs.
+
+**Strengthen — do not soften:** unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
+
+### Visual surrogate
 
 <br>
 
@@ -34,9 +97,9 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 
 <br>
 
-<img src="Docs/Media/double-slit-collapse.gif" alt="Interference collapse animation — visibility decreasing as which-path information increases" width="820">
+<img src="Docs/Media/double-slit-collapse.gif" alt="Surrogate animation: interference visibility falling as which-path information rises along Englert V = sqrt(1 - I^2)" width="820">
 
-<sub>As which-path information I rises from 0 → 1, the interference pattern collapses along the Englert curve V = √(1 − I²).<br>Every frame is a theorem. Machine-checked in Lean 4.</sub>
+<sub>Surrogate matplotlib animation (`scripts/generate_spectacular_gif.py`): which-path information I rises 0 → 1; visibility follows Englert V = √(1 − I²). The inequality is machine-checked in Lean (`QuantumClassicalBridge` / `GeneralVisibility`) — frames are **not** Lean kernel renders.</sub>
 
 <br>
 
@@ -44,10 +107,8 @@ _The thermodynamic cost is exact, non-negotiable, and formally verified._
 |:---:|:---:|
 | **52** Lean modules (`lakefile` roots) | **486** `theorem` + **30** `lemma` (roots-only; line-start) |
 | **0** tactic sorry, **1** axiom (`physicalSecondLaw`) | Visibility + dephasing: **theorems**; qubit-tier results proved |
-| **87** Python unit tests | **14** Haskell QuickCheck properties |
+| **88** Python unit tests (paste below) | **14** Haskell QuickCheck properties (`Haskell/test/Main.hs`) |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
-
-</div>
 
 ---
 
@@ -59,9 +120,9 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. **486 theorems** in default roots (**516** with lemmas); **0** tactic `sorry`; **1** explicit Lean axiom (**physical second law** — `LandauerLaw.lean`). General-**n** visibility bound and dephasing diagonal limit are **theorems** (`GeneralVisibility`, `LindbladDynamics` — see `FORMAL_FOUNDATIONS.md`). Discrete **stream-D** sampling converges to the same Lüders limit (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy (`vonNeumannEntropy_nondecreasing_unital_CPTP_n` — not arbitrary multi-Kraus CPTP). **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. Counts @ `fcd9e7a`: **486** theorems + **30** lemmas in **52** roots (**0** tactic `sorry`; **1** axiom `physicalSecondLaw`). General-**n** visibility and dephasing diagonal limits are **theorems** (`GeneralVisibility`, `LindbladDynamics`). Discrete **stream-D** → Lüders (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy — **not** arbitrary multi-Kraus CPTP. **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
 
-**Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked in four languages.
+**Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked across the language fibers above.
 
 ---
 
@@ -77,7 +138,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **486 theorem + 30 lemmas in 52 roots; 495 + 31 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.**_
+> _Machine-checked in Lean 4 with Mathlib. **486 theorem + 30 lemmas in 52 roots; 495 + 31 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.** Counts from `python3 scripts/lean_declaration_stats.py` @ `fcd9e7a` — script wins._
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -177,7 +238,7 @@ flowchart TB
 ```
 umst-formal-double-slit/
 │
-├── Lean/                          ← 59 lakefile roots · 540 thm + 34 lem (roots) · 549 + 35 (all Lean/*.lean) · 1 axiom · 69 .lean files
+├── Lean/                          ← 52 lakefile roots · 486 thm + 30 lem (roots) · 495 + 31 (all Lean/*.lean) · 1 axiom · see PROOF-STATUS.md
 │   │
 │   ├── ── Quantum core (18 modules) ─────────────────────────────────────────────────────────
 │   │   ├── UMSTCore.lean                  ℝ SI constants, Landauer bit energy, Admissible
@@ -243,7 +304,7 @@ umst-formal-double-slit/
 │       ├── LandauerExtension.lean         ← vendored: temp scaling, n-bit bound, 300 K
 │       └── LandauerEinsteinBridge.lean    ← vendored: SI k_B, c, mass brackets at 300 K
 │
-├── sim/                           ← Python · 87 unit tests · 4 sim scripts
+├── sim/                           ← Python · 88 unit tests (discover) · sim scripts + telemetry
 │   ├── toy_double_slit_mi_gate.py         MI-gate sweep → CSV + SVG
 │   ├── qubit_kraus_sweep.py               identity vs Lüders on |+⟩, |0⟩, |1⟩
 │   ├── plot_complementarity_svg.py        quarter-disk V²+I²≤1 diagram (stdlib)
@@ -254,7 +315,7 @@ umst-formal-double-slit/
 │   ├── schrodinger_2d_*.py                2D split-step + PML
 │   ├── schrodinger_3d_split_step.py       3D FFT split-step
 │   ├── qutip_*.py                         QuTiP parity checks (optional)
-│   ├── tests/                             87 unittest files
+│   ├── tests/                             unittest discover (88 ran @ fcd9e7a; see Quick Start paste)
 │   └── requirements-optional.txt          NumPy, SciPy, matplotlib, imageio, QuTiP
 │
 ├── scripts/
@@ -273,12 +334,12 @@ umst-formal-double-slit/
 └── Makefile                       ← lean · sim · sim-gifs · haskell-test · coq-check · agda-check · ci-*
 ```
 
-> **Counting the numbers:** Authoritative: `python3 scripts/lean_declaration_stats.py` — **59** `lean_lib` roots, **540** + **34** line-start `theorem`/`lemma` summed over those roots (**574** total declarations), **549** + **35** over all `Lean/*.lean` (**584**; `.lake` excluded), **1** `^axiom ` (**`physicalSecondLaw`**). See **`Docs/COUNT-METHODOLOGY.md`** and **`FORMAL_FOUNDATIONS.md`**. Legacy full-tree scan: `make lean-stats-md` → `lean_decl_stats.py` (label “full-tree heuristic”). Verify: `cd Lean && lake build`.
+> **Counting the numbers:** Authoritative: `python3 scripts/lean_declaration_stats.py` — **52** `lean_lib` roots, **486** + **30** line-start `theorem`/`lemma` over those roots (**516** total), **495** + **31** over all `Lean/*.lean` (**526**; `.lake` excluded), **1** `^axiom ` (**`physicalSecondLaw`**). See **`Docs/COUNT-METHODOLOGY.md`**, **`PROOF-STATUS.md`**, and **`FORMAL_FOUNDATIONS.md`**. Legacy full-tree scan: `make lean-stats-md` → `lean_decl_stats.py` (label “full-tree heuristic”). Verify: `cd Lean && lake build`. Older README prose that cited **59** roots / **540** theorems was **stale** — retracted in favour of the script @ `fcd9e7a`.
 
 ---
 
-## Lean modules (59 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` / axiom map)
-*(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **540** / **34**; all-`Lean/*.lean` **549** / **35**; **1** project axiom — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
+## Lean modules (52 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` / axiom map)
+*(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **486** / **30**; all-`Lean/*.lean` **495** / **31**; **1** project axiom — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>
@@ -376,62 +437,61 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 |:--------:|----------|:------:|---------|
 | **Lean 4** | 52 roots, 486 thm + 30 lem (roots); 495 + 31 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
-| **Python** | 87 unit tests, 4 sim scripts + telemetry (Gap 14) | **All pass** | `make sim && make sim-test` |
+| **Python** | 88 unit tests (unittest discover @ `fcd9e7a`; 58 skipped in that run) | **Pass** (paste in Quick Start) | `python3 -m unittest discover -s sim/tests -q` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
 | **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
 
 ### Downstream manifold integration
 
-This repo is the **primary catalog fiber** for [`umst-manifold`](../umst-manifold): Lean proofs are exported as a **versioned library** (JSON + digest), not replayed at runtime. Manifold embeds the lock hash at build time and enforces **witness R0** (catalog lock) before **R1–R4** gate law on the hot path — see the normative ladder in [`../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../umst-manifold/docs/QUALITY_WITNESS_LADDER.md).
+This repo’s Lean inventory is exported as a **versioned catalog** (JSON + digest), not replayed at runtime. Manifold consumes the lock as witness **R0** before hot-path gate law — see [`umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](https://github.com/tytolabs/umst-manifold/blob/main/docs/QUALITY_WITNESS_LADDER.md).
 
-**Pipeline (forward flow):**
+**Pin @ `fcd9e7a` (committed `artifacts/catalog.lock.json`):**
 
-1. `make lean-catalog-export` → `artifacts/catalog.json` + `artifacts/catalog.lock.json` (**69** modules, digest `c1d9ba2a…` at time of writing).
-2. Sibling **`umst-manifold/artifacts/catalog.lock.json`** pins `upstream_catalog_digest_hex` + `module_count` (must match this tree).
-3. `umst-manifold/build.rs` → `UMST_CATALOG_LOCK_SHA256_HEX` (hash of manifold lock **file bytes**, not live Lean).
-4. `UMST_REQUIRE_FORMAL_EXPORT=1 ./scripts/verify_umst_stack.sh` regen-exports here and fails on digest drift; CI: `umst-catalog-drift.yml`.
+```text
+module_count: 129
+catalog_digest_hex: 17a6d8e17d9a4847231a255ffb1214db0319a7a2727ecd80708cb7f08045da1e
+```
 
-**Integration learnings (2026-05-21):**
-
-| Topic | Takeaway |
-|-------|----------|
-| **69 vs 59** | **`lake build`** compiles **59** `lakefile` roots; **Python** export scans **all 69** `Lean/**/*.lean` files for the manifold pin. The extra **10** are tests, `lakefile`, optional helpers — they change the digest but not default proof roots. Never run `lake exe export_catalog` onto `artifacts/catalog.json` (59-entry schema collides with Python). |
-| **Digest pin impact** | Any edit under `Lean/` (including `Test*.lean`) changes `catalog_digest_hex` and forces a coordinated manifold lock bump + rebuild. Only **~26%** of modules are on the runtime gate hot path; **100%** of the 69 still fingerprint the proof inventory (R0). |
-| **Second fiber** | [`umst-formal`](../umst-formal) (DEC, `DIBKleisli`, Economic) is **not** in this digest until cross-repo export is approved; dry-run: `artifacts/catalog-cross-repo-preview.json`. |
-| **Witness ladder** | R0 = this export; R1–R4 = `Gate` / `Landauer*` / mix / Kleisli families in roots; R5 v1 = `formal-witness` digest check; R5 v2 = `EpistemicRuntimeSchemaContract` (trace schema, Lean-only enforcement today). |
+Proof **lake roots** remain **52** (declaration script). Catalog `module_count` fingerprints the export inventory (may include fibers beyond default roots) — do **not** conflate the two numbers. Methodology and historical split notes: [`Docs/EXPORT_COVERAGE.md`](Docs/EXPORT_COVERAGE.md) (treat that doc’s older 59/69/119 figures as historical unless re-verified).
 
 | Document | Role |
 |----------|------|
-| [`Docs/EXPORT_COVERAGE.md`](Docs/EXPORT_COVERAGE.md) | Exporter scope, digest definition, 69 vs 59, cross-repo scaffold |
+| [`Docs/EXPORT_COVERAGE.md`](Docs/EXPORT_COVERAGE.md) | Exporter scope, digest definition, cross-repo scaffold |
 | [`Docs/UMST_FORMAL_REPOS_ALIGNMENT.md`](Docs/UMST_FORMAL_REPOS_ALIGNMENT.md) | Two-repo fiber policy + consumer table |
-| [`../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../umst-manifold/docs/QUALITY_WITNESS_LADDER.md) | Ordered witnesses R0–R6 (CD → Landauer → constitutive → probe) |
-| [`../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md`](../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md) | Hot path (~18 modules) vs catalog-only (~51) |
-| [`../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md) | Forward/backward Lean → catalog → manifold → cartridge |
-| [`../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md) | Per-module `catalog_id` ↔ Rust wiring |
-| [`artifacts/README.md`](artifacts/README.md) | Lock file, digest algorithm, manifold `build.rs` coupling |
+| [`artifacts/README.md`](artifacts/README.md) | Lock file, digest algorithm, manifold coupling |
 
-Canonical export: `make lean-catalog-export` → `artifacts/catalog.json` (consumed by [`umst-manifold`](../umst-manifold) `artifacts/catalog.lock.json`).
+Canonical export: `make lean-catalog-export` → `artifacts/catalog.json` (consumed by [`umst-manifold`](https://github.com/tytolabs/umst-manifold)).
 
 ---
 
 ## Quick Start
 
 ```bash
+# Counts (authoritative Lean numbers)
+git checkout fcd9e7a   # or origin/master
+python3 scripts/lean_declaration_stats.py
+
 # Full verification (Lean + Python + Haskell)
 make ci-full
 
 # Individual layers
-cd Lean && lake build          # Lean 4 — counts: PROOF-STATUS.md / make lean-stats-md
-make sim && make sim-test      # Python — 87 unit tests
-make telemetry-sample          # Gap 14 — golden JSON + consumer (NumPy)
-cd Haskell && cabal test       # Haskell — 14 QuickCheck properties
+cd Lean && lake build          # Lean 4 — counts: PROOF-STATUS.md / lean_declaration_stats.py
+python3 -m unittest discover -s sim/tests -q   # Python — 88 ran @ fcd9e7a (58 skipped)
+cd Haskell && cabal test       # Haskell — 14 QuickCheck properties (Haskell/test/Main.hs)
 make formal-check              # Coq + Agda (optional toolchains; matches CI formal.yml)
 make coq-check                 # Coq only (Rocq/Coq 9.x or 8.20+ `From Stdlib`)
-make agda-check                # Agda only (2.6+ + stdlib)
-
-# Generate visualizations
+make agda-check                # Agda only
 python3 scripts/generate_spectacular_gif.py   # → Docs/Media/double-slit-collapse.gif + teaser.png
 ```
+
+**Python paste @ `fcd9e7a`:**
+
+```text
+Ran 88 tests in 0.795s
+OK (skipped=58)
+```
+
+**Lean paste:** see Honesty ledger above (486 / 30 / 52).
 
 ---
 
@@ -449,35 +509,6 @@ Measurement is irreversible. The compiler confirms it. The second law confirmed 
 **Explicitly outside scope:**
 - Full quantum derivation from Schrödinger dynamics (partial spatial coverage in `sim/`)
 - Empirical laboratory verification (the formal chain is complete; experimental confirmation is separate work)
-
----
-
-## Connection to the UMST Programme
-
-This repository is part of the **Foundations of Constitutional Physics (FCP)** series by [Studio TYTO](https://zenodo.org/communities/unified-material-state-tensors/records?q=&l=list&p=1&s=10&sort=newest). For a **single curated overview** (figures, roadmap, and pointers), use the **public research dashboard** — it is updated as the programme grows:
-
-| Resource | What it is | Link |
-|:---------|------------|:-----|
-| **Research dashboard** | Curated PDF overview of the UMST / FCP thread | [**DOI 10.5281/zenodo.18940933**](https://doi.org/10.5281/zenodo.18940933) · [record](https://zenodo.org/records/18940933) |
-| **Public community repository** | Aggregated deposits (papers, data, compendia) | [**Unified Material State Tensors** community](https://zenodo.org/communities/unified-material-state-tensors/records) |
-
-**FCP studies** (peer-facing preprints / compendia):
-
-| Study | Title | Repository |
-|:-----:|-------|:------:|
-| FCP-I | Physics-Gated AI — UMST tensor + thermodynamic hard gate | [record](https://zenodo.org/records/18768547) |
-| FCP-II | Epistemic Sensing — MI-guided proxy selection | [record](https://zenodo.org/records/18894710) |
-| **This work** | **The Thermodynamic Cost of Knowing — formal double-slit** | [record](https://zenodo.org/records/19159660) |
-
-**Related code** ([`github.com/tytolabs`](https://github.com/tytolabs)):
-
-| Repository | Role |
-|------------|------|
-| [`umst-formal`](https://github.com/tytolabs/umst-formal) | Classical UMST gate, Landauer stack, Lean + Coq + Agda + Haskell (wider formal base) |
-| **`umst-formal-double-slit`** (here) | Quantum measurement layer: density matrices, Kraus channels, Englert complementarity, Landauer–path-entropy bridge |
-| [`umst-prototype-2a`](https://github.com/tytolabs/umst-prototype-2a) | Prototype / epistemic-sensing demo stack (e.g. web-style UI, ROS2 bridge — see that repo’s README) |
-
-The key bridge: the UMST gate enforces thermodynamic admissibility on _classical_ material states (mass, energy, hydration over ℚ). This work extends that gate to _quantum_ density matrices, proving that Englert complementarity + Landauer erasure are the quantum analogues of Clausius-Duhem + Helmholtz free energy.
 
 ---
 
