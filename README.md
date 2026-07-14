@@ -22,11 +22,88 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 
 <br>
 
+### Knowing in plain words
+
+Extracting which-path information from a quantum system destroys interference proportionally, not all at once — the Englert curve `V² + I² ≤ 1`. Each bit extracted carries at least Landauer's cost. This repository machine-checks that chain from density matrices through Kraus channels to thermodynamic bounds. It is a **proof tree**, not a lab apparatus or an MCP host.
+
+### Visual surrogate (static teaser)
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Docs/Media/teaser.png">
+  <source media="(prefers-color-scheme: light)" srcset="Docs/Media/teaser.png">
+  <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/Media/teaser.png" width="820">
+</picture>
+
+<br>
+
+| | |
+|:---:|:---:|
+| **52** Lean modules (`lakefile` roots) | **486** `theorem` + **30** `lemma` (roots-only; line-start) |
+| **0** tactic sorry, **1** axiom (`physicalSecondLaw`) | Visibility + dephasing: **theorems**; qubit-tier results proved |
+| **88** Python unit tests (paste below) | **14** Haskell QuickCheck properties (`Haskell/test/Main.hs`) |
+| **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
+
+<details>
+<summary><strong>Table of contents</strong> (detailed map + outline)</summary>
+<br>
+
+**Top-level map**
+
+| Block | Jump |
+|:---|:---|
+| Foundations | [§1](#1-core-result) · [§2](#2-proof-architecture) · [§3](#3-cross-domain-integration-specifications) |
+| Layout & ops | [§4](#4-repository-topology) · [§5](#5-surfaces--verification-layers) · [§6](#6-quick-start) |
+| Verification & docs | [§7](#7-cross-language-verification) · [§8](#8-documentation-hub) |
+| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§11](#11-conclusion-inferences--forward-path) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributing](#contributing) · [Citation](#citation) · [License](#license) |
+
+**Detailed outline** — every entry links to a stable anchor (`README.md#…`); collapsible sections use `<details>` but share the same deep-link fragments.
+
+- [§1 Core result](#1-core-result)
+  - [In plain language](#in-plain-language)
+  - [Formal statement](#formal-statement)
+- [What This Repository Proves](#what-this-repository-proves)
+- [§2 Proof architecture](#2-proof-architecture)
+- [§3 Cross-Domain Integration Specifications](#3-cross-domain-integration-specifications)
+  - [3.1 Epistemic sensing & probes](#31-epistemic-sensing--probes)
+  - [3.2 Catalog consume / R0](#32-catalog-consume--r0)
+  - [3.3 Acting sibling](#33-acting-sibling)
+  - [3.4 Time / provenance](#34-time--provenance)
+- [§4 Repository topology](#4-repository-topology)
+- [§5 Surfaces & verification layers](#5-surfaces--verification-layers)
+  - [Lean modules (52 lakefile roots)](#5-surfaces--verification-layers)
+- [Claim Taxonomy](#claim-taxonomy)
+- [§6 Quick Start](#6-quick-start)
+- [§7 Cross-language verification](#7-cross-language-verification)
+  - [Downstream manifold integration](#downstream-manifold-integration)
+- [§8 Documentation hub](#8-documentation-hub)
+- [§9 Special Protocol: Agents](#9-special-protocol-note-to-autonomous-ai-agents--systems)
+  - [9.1 Shared stack](#91-shared-stack)
+  - [9.2 Hot vs cold](#92-hot-vs-cold)
+  - [9.3 Guarantees](#93-guarantees)
+  - [9.4 Operational mapping](#94-operational-mapping)
+  - [9.5 Proposed](#95-proposed-not-yet-built)
+  - [9.6 Principles](#96-principles)
+- [§10 Honesty and limits](#10-honesty-and-limits)
+- [§11 Conclusion](#11-conclusion-inferences--forward-path)
+  - [What this repo demonstrates](#what-this-repo-demonstrates)
+  - [What surprised us](#what-surprised-us)
+  - [Forward path](#forward-path)
+- [Related repositories](#related-repositories)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
+- [Contributing](#contributing)
+- [Citation](#citation)
+- [License](#license)
+
+</details>
+
+---
+
 **What it is.** Machine-checked formalizations (Lean 4 · Mathlib · Haskell QuickCheck · Coq · Agda · Python sims) of the **thermodynamic cost of observation** — density matrices, Kraus which-path channels, Englert complementarity, Landauer bounds, and epistemic Galois adjunctions. This is a **proof tree**, not a runtime solver and not an MCP host.
 
 **The gate idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch — structural thermodynamic accounting, not metaphor.
-
-**Honest is / isn't.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19159660.svg)](https://doi.org/10.5281/zenodo.19159660)
 <!-- readme:status -->
@@ -71,6 +148,10 @@ Sibling links only — no paper-series arc naming in this README. Already-public
 
 Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATIONS.md`](FORMAL_FOUNDATIONS.md).
 
+## 10. Honesty and limits
+
+**Honest is / isn't.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
+
 ### Hot arena vs cold edge (performance honesty)
 
 | Path | What | Character |
@@ -81,7 +162,6 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 | **Catalog consume** | Manifold witness R0 before hot gate | Digest pin — do not conflate with 52 lake roots |
 
 Authoritative MCP = concrete [`AGENT_MCP.md`](https://github.com/tytolabs/umst-concrete-cartridge/blob/main/docs/AGENT_MCP.md). Catalog lock = [`umst-manifold/artifacts/catalog.lock.json`](https://github.com/tytolabs/umst-manifold/blob/main/artifacts/catalog.lock.json).
-
 ### Honesty ledger (one status pointer)
 
 Counts @ **`42b6844`**. **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md). Strengthen every disclaimer below; soften none.
@@ -103,84 +183,6 @@ Axioms (^axiom ):
 - **Script wins** on any mismatch with prose or older docs.
 
 **Strengthen — do not soften:** unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
-
-### Knowing in plain words
-
-Extracting which-path information from a quantum system destroys interference proportionally, not all at once — the Englert curve `V² + I² ≤ 1`. Each bit extracted carries at least Landauer's cost. This repository machine-checks that chain from density matrices through Kraus channels to thermodynamic bounds. It is a **proof tree**, not a lab apparatus or an MCP host.
-
-### Visual surrogate (static teaser)
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Docs/Media/teaser.png">
-  <source media="(prefers-color-scheme: light)" srcset="Docs/Media/teaser.png">
-  <img alt="The Thermodynamic Cost of Knowing — Formally Verified" src="Docs/Media/teaser.png" width="820">
-</picture>
-
-<br>
-
-| | |
-|:---:|:---:|
-| **52** Lean modules (`lakefile` roots) | **486** `theorem` + **30** `lemma` (roots-only; line-start) |
-| **0** tactic sorry, **1** axiom (`physicalSecondLaw`) | Visibility + dephasing: **theorems**; qubit-tier results proved |
-| **88** Python unit tests (paste below) | **14** Haskell QuickCheck properties (`Haskell/test/Main.hs`) |
-| **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
-
-<details>
-<summary><strong>Table of contents</strong> (detailed map + outline)</summary>
-<br>
-
-**Top-level map**
-
-| Block | Jump |
-|:---|:---|
-| Foundations | [§1](#1-core-result) · [§2](#2-proof-architecture) · [§3](#3-cross-domain-integration-specifications) |
-| Layout & ops | [§4](#4-repository-topology) · [§5](#5-surfaces--verification-layers) · [§6](#6-quick-start) |
-| Verification & docs | [§7](#7-cross-language-verification) · [§8](#8-documentation-hub) |
-| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§10](#10-conclusion-inferences--forward-path) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributing](#contributing) · [Citation](#citation) · [License](#license) |
-
-**Detailed outline** — every entry links to a stable anchor (`README.md#…`); collapsible sections use `<details>` but share the same deep-link fragments.
-
-- [§1 Core result](#1-core-result)
-  - [In plain language](#in-plain-language)
-  - [Formal statement](#formal-statement)
-- [What This Repository Proves](#what-this-repository-proves)
-- [§2 Proof architecture](#2-proof-architecture)
-- [§3 Cross-Domain Integration Specifications](#3-cross-domain-integration-specifications)
-  - [3.1 Epistemic sensing & probes](#31-epistemic-sensing--probes)
-  - [3.2 Catalog consume / R0](#32-catalog-consume--r0)
-  - [3.3 Acting sibling](#33-acting-sibling)
-  - [3.4 Time / provenance](#34-time--provenance)
-- [§4 Repository topology](#4-repository-topology)
-- [§5 Surfaces & verification layers](#5-surfaces--verification-layers)
-  - [Lean modules (52 lakefile roots)](#5-surfaces--verification-layers)
-- [Claim Taxonomy](#claim-taxonomy)
-- [§6 Quick Start](#6-quick-start)
-- [§7 Cross-language verification](#7-cross-language-verification)
-  - [Downstream manifold integration](#downstream-manifold-integration)
-- [§8 Documentation hub](#8-documentation-hub)
-- [§9 Special Protocol: Agents](#9-special-protocol-note-to-autonomous-ai-agents--systems)
-  - [9.1 Shared stack](#91-shared-stack)
-  - [9.2 Hot vs cold](#92-hot-vs-cold)
-  - [9.3 Guarantees](#93-guarantees)
-  - [9.4 Operational mapping](#94-operational-mapping)
-  - [9.5 Proposed](#95-proposed-not-yet-built)
-  - [9.6 Principles](#96-principles)
-- [§10 Conclusion](#10-conclusion-inferences--forward-path)
-  - [What this repo demonstrates](#what-this-repo-demonstrates)
-  - [What surprised us](#what-surprised-us)
-  - [Forward path](#forward-path)
-- [Related repositories](#related-repositories)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgments)
-- [Contributing](#contributing)
-- [Citation](#citation)
-- [License](#license)
-
-</details>
-
----
 
 ## 1. Core Result
 
@@ -709,8 +711,7 @@ Two things this repo deliberately does **not** claim (see the Claim Taxonomy): a
 * **Surrogate honesty.** Python sim and README GIFs illustrate the Englert curve — they are not physical measurements.
 
 ---
-
-## 10. Conclusion: Inferences & Forward Path
+## 11. Conclusion: Inferences & Forward Path
 
 ### What this repo demonstrates
 
