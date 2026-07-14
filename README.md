@@ -56,7 +56,7 @@ Extracting which-path information from a quantum system destroys interference pr
 | Foundations | [§1](#1-core-result) · [§2](#2-proof-architecture) · [§3](#3-cross-domain-integration-specifications) |
 | Layout & ops | [§4](#4-repository-topology) · [§5](#5-surfaces--verification-layers) · [§6](#6-quick-start) |
 | Verification & docs | [§7](#7-cross-language-verification) · [§8](#8-documentation-hub) |
-| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§10](#10-conclusion-inferences--forward-path) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributing](#contributing) · [Citation](#citation) · [License](#license) |
+| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§11](#11-conclusion-inferences--forward-path) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributing](#contributing) · [Citation](#citation) · [License](#license) |
 
 **Detailed outline** — every entry links to a stable anchor (`README.md#…`); collapsible sections use `<details>` but share the same deep-link fragments.
 
@@ -100,7 +100,6 @@ Extracting which-path information from a quantum system destroys interference pr
 </details>
 
 ---
-
 
 **What it is.** Machine-checked formalizations (Lean 4 · Mathlib · Haskell QuickCheck · Coq · Agda · Python sims) of the **thermodynamic cost of observation** — density matrices, Kraus which-path channels, Englert complementarity, Landauer bounds, and epistemic Galois adjunctions. This is a **proof tree**, not a runtime solver and not an MCP host.
 
@@ -149,9 +148,6 @@ Sibling links only — no paper-series arc naming in this README. Already-public
 
 Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATIONS.md`](FORMAL_FOUNDATIONS.md).
 
-
-
-
 ## 10. Honesty and limits
 
 **Honest is / isn't.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
@@ -187,7 +183,6 @@ Axioms (^axiom ):
 - **Script wins** on any mismatch with prose or older docs.
 
 **Strengthen — do not soften:** unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
-
 
 ## 1. Core Result
 
