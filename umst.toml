@@ -1,0 +1,16 @@
+# Self-description manifest (blueprint §18 / NEW_REPOS_BUILD_SPEC C8).
+# Consumed by umst-meta when implemented; not checked yet.
+
+name = "tytolabs/umst-formal-double-slit"
+path = "umst-formal-double-slit"
+
+kind = "formal"
+spdx = "MIT"
+layer = "spine"
+formal_anchors = ["physicalSecondLaw"]
+status = "wip"
+
+[registry]
+id = "tytolabs/umst-formal-double-slit"
+validation_status = "unvalidated"
+notes = "Knowing fiber — Lean catalog export (artifacts/catalog.json) pinned by umst-manifold."
