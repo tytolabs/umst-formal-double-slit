@@ -13,8 +13,8 @@ specification to machine-checked proof.
 
 | Name | Affiliation | Email |
 |------|-------------|-------|
-| **Santhosh Shyamsundar** | Studio TYTO; IAAC Barcelona | `santhoshshyamsundar@tyto.studio` |
-| **Santosh Prabhu Shenbagamoorthy** | Studio TYTO; IAAC Barcelona | `santosh@tyto.studio` |
+| **Santhosh Shyamsundar** | Studio TYTO | `santhoshshyamsundar@tyto.studio` |
+| **Santosh Prabhu Shenbagamoorthy** | Studio TYTO | `santosh@tyto.studio` |
 
 Same contacts as in the repo [`README.md`](../README.md).
 
