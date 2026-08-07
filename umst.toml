@@ -2,7 +2,7 @@
 # Consumed by umst-meta when implemented; not checked yet.
 
 name = "tytolabs/umst-formal-double-slit"
-path = "umst-formal-double-slit"
+path = "umst/umst-formal-double-slit"
 
 kind = "formal"
 spdx = "MIT"
