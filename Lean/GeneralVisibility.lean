@@ -121,7 +121,7 @@ theorem coherenceL1_carrier_le (ρ : DensityMatrix hn) :
 /-- Fringe visibility is at most $1$: coherence $\ell_1$ is $\le n-1$ by the PSD–Schur and
 Cauchy–Schwarz argument in `coherenceL1_carrier_le`.
 
-For the qubit `fringeVisibility` (Paper 4 / bridge layer), see
+For the qubit `fringeVisibility` (bridge layer), see
 `QuantumClassicalBridge.fringeVisibility_le_one`. -/
 theorem fringeVisibility_n_le_one (ρ : DensityMatrix hn) : fringeVisibility_n hn ρ ≤ 1 := by
   unfold fringeVisibility_n
