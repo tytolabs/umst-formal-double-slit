@@ -33,6 +33,3 @@ make formal-check    # Coq + Agda
 ## Notes
 
 - Rationals like **100** and **450** in `Gate.agda` / `Helmholtz.agda` use a small `natToℚ` helper so we do not depend on coprimality lemma names that changed across stdlib versions.
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.

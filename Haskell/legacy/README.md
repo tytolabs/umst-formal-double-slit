@@ -8,6 +8,3 @@ SPDX-License-Identifier: MIT
 Older copies of modules that also live under `src/`. They were kept at the package root for historical reference but **must not** sit next to `src/` while Cabal passes GHC `-i` (current package dir): otherwise they **shadow** the `src/` modules and break the build.
 
 **Canonical library sources:** `../src/*.hs` as listed in `../umst-formal-double-slit.cabal`.
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.

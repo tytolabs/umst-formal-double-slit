@@ -94,6 +94,3 @@ Optional override at build time: `UMST_CATALOG=/path/to/catalog.lock.json`.
 ## Lake executable (optional)
 
 Inside `Lean/` you can also run `lake exe export_catalog` (see `tools/lean_export/README.md`). The Makefile/Python path above is the supported CI/local workflow for pinned artifacts.
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.

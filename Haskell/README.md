@@ -38,6 +38,3 @@ GitHub Actions caches the Cabal store and `dist-newstyle` (see `.github/workflow
 
 - Formal proofs: `../Lean/` + `../Lean/VERIFY.md`
 - Tracking: `../Docs/TODO-TRACKING.md`
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.

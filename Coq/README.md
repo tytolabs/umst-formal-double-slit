@@ -47,6 +47,3 @@ The repo’s canonical developer entry point remains **`make coq-check`** from t
 ## Proof status
 
 `VonNeumannEntropySpec.v` uses explicit **`Axiom`**s for two real-analysis facts (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) and spectral entropy; there are **no** `Admitted` obligations. See **`PROOF-STATUS.md`**.
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.

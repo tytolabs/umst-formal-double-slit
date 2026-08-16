@@ -23,6 +23,3 @@ Avoid editing this script in the same PR as large `PROOF-STATUS` rewrites unless
 Full local verification including Haskell: from repo root run **`make ci-full`** (see root **`Makefile`** / **`CONTRIBUTING.md`**).
 
 Formal verification (optional toolchains): **`make formal-check`** or **`./scripts/formal_check.sh`**; see **`Coq/README.md`** and **`Agda/README.md`**.
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.

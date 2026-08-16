@@ -315,6 +315,3 @@ Run:
 make sim-test
 make telemetry-sample   # Gap 14 — export golden trace + consumer (NumPy); same step as CI after unittests
 ```
-## 🔒 Confidentiality Notice
-
-This repository contains proprietary information. Copyright (c) 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar. All rights reserved. Unauthorized copying, distribution, or use of these files, via any medium, is prohibited.
