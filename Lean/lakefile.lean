@@ -33,6 +33,8 @@ require «umst-formal» from git
   **`tools/lean_export/export_catalog.py`** — a different JSON shape for tooling that needs
   coarse import edges and per-file content hashes.
 -/
+-- LandauerLaw is supplied by the umst-formal dependency: the sole physical axiom
+-- physicalSecondLaw is declared once, there, and imported here rather than vendored.
 lean_lib «UMST.DoubleSlit» where
   roots := #[`DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
     `InfoEntropy, `KroneckerEigen, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
@@ -47,7 +49,7 @@ lean_lib «UMST.DoubleSlit» where
     `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `FormalFoundations, `SimLeanBridge,
     -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
-    `LandauerLaw, `LandauerExtension, `LandauerEinsteinBridge,
+    `LandauerExtension, `LandauerEinsteinBridge,
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
     `PhysicsConstrainedAI, `InformationCostIdentity]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)

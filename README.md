@@ -41,7 +41,7 @@ Extracting which-path information from a quantum system destroys interference pr
 | | |
 |:---:|:---:|
 | **52** Lean modules (`lakefile` roots) | **486** `theorem` + **30** `lemma` (roots-only; line-start) |
-| **0** tactic sorry, **1** axiom (`physicalSecondLaw`) | Visibility + dephasing: **theorems**; qubit-tier results proved |
+| **0** tactic sorry, **0** axiom (`physicalSecondLaw` imported) | Visibility + dephasing: **theorems**; qubit-tier results proved |
 | **88** Python unit tests (paste below) | **14** Haskell QuickCheck properties (`Haskell/test/Main.hs`) |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
 
@@ -144,7 +144,7 @@ Sibling links only — no paper-series arc naming in this README. Already-public
 | `spectralRelativeEntropy_nonneg` | Klein / relative-entropy nonnegativity | [`Lean/KleinInequality.lean:146`](Lean/KleinInequality.lean) |
 | `vonNeumannEntropy` / unitary invariance | Spectral entropy morphisms | [`Lean/VonNeumannEntropy.lean`](Lean/VonNeumannEntropy.lean) |
 | `landauer_galois_connection` | Epistemic Galois: info ⊣ energy | [`Lean/EpistemicGalois.lean:71`](Lean/EpistemicGalois.lean) |
-| `physicalSecondLaw` | Sole project `axiom` (Second Law) | [`Lean/LandauerLaw.lean:159`](Lean/LandauerLaw.lean) |
+| `physicalSecondLaw` | Sole `axiom` of the workspace (Second Law) — imported from `umst-formal`; this repository declares **no** axiom | `umst-formal` `Lean/LandauerLaw.lean:155` |
 
 Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATIONS.md`](FORMAL_FOUNDATIONS.md).
 
@@ -171,14 +171,21 @@ Counts @ **`42b6844`**. **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS
 ```text
 Repository: umst-formal-double-slit
 Lake roots: 52 modules
-Roots-only:  486 theorem, 30 lemma, total 516
-All Lean/*:  495 theorem, 31 lemma, total 526
+Roots-only:  477 theorem, 27 lemma, total 504
+All Lean/*:  486 theorem, 28 lemma, total 514
 Axioms (^axiom ):
-  LandauerLaw.lean:159  physicalSecondLaw
+  (none — physicalSecondLaw is imported from the umst-formal dependency)
 ```
 
+`Lean/LandauerLaw.lean` was a vendored copy of umst-formal's file and re-declared
+`physicalSecondLaw`, so the workspace held two declarations of one law. The lakefile already
+carried `require «umst-formal»`, so the copy is deleted and the axiom is imported. Two identical
+axioms are two axioms: nothing keeps them identical, and these had already drifted — the copy
+had dropped upstream's own line reading *"Sole project `axiom`"*. The roots count falls by 9
+theorems and 3 lemmas, all of which now live in the dependency where they were always defined.
+
 - **0** tactic `sorry` in default rooted Lean (see [`PROOF-STATUS.md`](PROOF-STATUS.md)).
-- **1** project `axiom`: `physicalSecondLaw`.
+- **0** `axiom` declarations. `physicalSecondLaw` is imported from `umst-formal`; this repository declares **no** axiom.
 - This repo does **not** ship a separate `check_print_axioms.sh`; axiom inventory is the script line above + [`PROOF-STATUS.md`](PROOF-STATUS.md).
 - **Script wins** on any mismatch with prose or older docs.
 
@@ -192,7 +199,7 @@ Extracting which-path information from a quantum system destroys interference. T
 
 Each fraction of information extracted carries a thermodynamic cost at Landauer's scale — *k_B T ln 2* per bit, minimum, irreversible. This is not a matter of interpretation. It is thermodynamic accounting, enforced by the second law.
 
-This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. Counts @ `42b6844`: **486** theorems + **30** lemmas in **52** roots (**0** tactic `sorry`; **1** axiom `physicalSecondLaw`). General-**n** visibility and dephasing diagonal limits are **theorems** (`GeneralVisibility`, `LindbladDynamics`). Discrete **stream-D** → Lüders (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy — **not** arbitrary multi-Kraus CPTP. **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
+This repository proves the full chain: density matrix → Kraus measurement channel → Englert complementarity → diagonal von Neumann entropy → Landauer bound → cost–coherence identity. Counts (2026-08-16): **477** theorems + **27** lemmas in **51** roots (**0** tactic `sorry`; **0** axiom — `physicalSecondLaw` imported from `umst-formal`). General-**n** visibility and dephasing diagonal limits are **theorems** (`GeneralVisibility`, `LindbladDynamics`). Discrete **stream-D** → Lüders (`LindbladStreamD`). **Unitary single-Kraus** channels on **`Fin n`** preserve von Neumann entropy — **not** arbitrary multi-Kraus CPTP. **Spectral relative entropy ≥ 0** is **proved** in `KleinInequality.lean`.
 
 **Relevance beyond quantum optics.** Any system that extracts information from a physical process — sensing, control, inference, materials gating, computing — is subject to the same thermodynamic constraint. This repository is the formal proof of that constraint, machine-checked across the language fibers above.
 
@@ -210,7 +217,7 @@ This repository proves the full chain: density matrix → Kraus measurement chan
 >
 > **Crucially, observation is not binary.** A probe extracting 0.3 bits barely disturbs the fringes (V ≈ 0.95). At 0.7 bits the pattern is heavily suppressed (V ≈ 0.71). Full collapse requires the _entire_ bit. Every point on the Englert curve V² + I² = 1 is physically realizable, and each carries a proportional Landauer cost. The collapse is a _continuum_, not a switch.
 >
-> _Machine-checked in Lean 4 with Mathlib. **486 theorem + 30 lemmas in 52 roots; 495 + 31 over all Lean/*.lean; 0 tactic sorry; 1 axiom (`physicalSecondLaw`). Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.** Counts from `python3 scripts/lean_declaration_stats.py` @ `42b6844` — script wins._
+> _Machine-checked in Lean 4 with Mathlib. **477 theorem + 27 lemmas in 51 roots; 486 + 28 over all Lean/*.lean; 0 tactic sorry; 0 axiom — `physicalSecondLaw` imported from `umst-formal`. Klein `spectralRelativeEntropy_nonneg` proved; tensor additivity in `KroneckerEigen.lean`; stream-D limit in `LindbladStreamD.lean`.** Counts from `python3 scripts/lean_declaration_stats.py` (2026-08-16) — script wins._
 
 <details>
 <summary><strong>Show me the proof</strong> — key theorem in Lean 4</summary>
@@ -376,7 +383,7 @@ This is a **proof tree**, not a runtime solver. Matter still runs DEC on manifol
 ```
 umst-formal-double-slit/
 │
-├── Lean/                          ← 52 lakefile roots · 486 thm + 30 lem (roots) · 495 + 31 (all Lean/*.lean) · 1 axiom · see PROOF-STATUS.md
+├── Lean/                          ← 51 lakefile roots · 477 thm + 27 lem (roots) · 486 + 28 (all Lean/*.lean) · 0 axiom · see PROOF-STATUS.md
 │   │
 │   ├── ── Quantum core (18 modules) ─────────────────────────────────────────────────────────
 │   │   ├── UMSTCore.lean                  ℝ SI constants, Landauer bit energy, Admissible
@@ -438,7 +445,7 @@ umst-formal-double-slit/
 │       ├── Activation.lean                ← vendored: Engine, activation, totality
 │       ├── FiberedActivation.lean         ← vendored: engineFiber, universality
 │       ├── MonoidalState.lean             ← vendored: combine on ℚ ThermodynamicState
-│       ├── LandauerLaw.lean               ← vendored: physicalSecondLaw axiom, Shannon Fin n
+│       ├── LandauerLaw.lean               ← from umst-formal dep: physicalSecondLaw, Shannon Fin n
 │       ├── LandauerExtension.lean         ← vendored: temp scaling, n-bit bound, 300 K
 │       └── LandauerEinsteinBridge.lean    ← vendored: SI k_B, c, mass brackets at 300 K
 │
