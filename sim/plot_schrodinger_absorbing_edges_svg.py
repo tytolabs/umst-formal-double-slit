@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
-
 """
 Stdlib SVG: |psi|^2 vs x from `schrodinger_1d_absorbing_edges.py` output
 (`schrodinger_absorbing_edges_rho.csv`, columns `x`, `rho`).

@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # Quantum-Formal Primer: The Architecture of Verifiable Reality
 
 This document provides a rigorous conceptual bridge between **Quantum Information Theory** and **Formal Type Theory**. It is written for researchers familiar with the double-slit experiment but new to machine-checked proofs.

@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # M4-A8-R5 — Formal Anchor Expansion Plan (Informational Path)
 
 | Field | Value |

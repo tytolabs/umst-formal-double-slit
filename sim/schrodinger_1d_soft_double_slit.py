@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
-
 """
 1D caricature of a **double slit**: a high potential plateau with two Gaussian
 “openings”, active only for **x >= x_screen** (pedagogical screen + two soft holes).

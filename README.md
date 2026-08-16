@@ -1,6 +1,6 @@
-<!--
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 SPDX-License-Identifier: MIT
-Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+<!--
 -->
 <!-- markdownlint-disable-file MD013 MD040 MD001 MD026 — hero README is intentionally dense; other docs stay strict via shared config. -->
 
@@ -755,9 +755,9 @@ Shared gate spine — **knowing** (this fiber) · **matter** · **acting** · **
 
 ## Authors
 
-**Santhosh Shyamsundar** — Studio TYTO · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
+**Santhosh Shyamsundar** —  · [santhoshshyamsundar@tyto.studio](mailto:santhoshshyamsundar@tyto.studio)
 
-**Santosh Prabhu Shenbagamoorthy** — Studio TYTO · [santosh@tyto.studio](mailto:santosh@tyto.studio)
+**Santosh Prabhu Shenbagamoorthy** —  · [santosh@tyto.studio](mailto:santosh@tyto.studio)
 
 ---
 
@@ -791,7 +791,7 @@ Also cite the sibling Acting fiber ([DOI 10.5281/zenodo.18940933](https://doi.or
 
 ## License
 
-Released under the [MIT License](LICENSE). © 2026 Studio TYTO.
+Released under the [MIT License](LICENSE). © 2026 .
 
 <!-- AUTO-LATTICE:BEGIN -->
 ## Lattice position

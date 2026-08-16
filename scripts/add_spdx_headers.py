@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 """
 Idempotently add MIT SPDX + copyright headers to first-party sources under this repo.
 
@@ -19,47 +19,39 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 LEAN_HEADER = """/-
-SPDX-License-Identifier: MIT
-Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
 -/
 
 """
 
 PY_HEADER_LINES = (
     "# SPDX-License-Identifier: MIT\n"
-    "# Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "\n"
 )
 
 HS_HEADER = (
     "-- SPDX-License-Identifier: MIT\n"
-    "-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "\n"
 )
 
 TEX_HEADER = (
     "% SPDX-License-Identifier: MIT\n"
-    "% Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "\n"
 )
 
 MD_HEADER = (
     "<!--\n"
     "SPDX-License-Identifier: MIT\n"
-    "Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "-->\n"
     "\n"
 )
 
 COQ_HEADER = (
     "(* SPDX-License-Identifier: MIT *)\n"
-    "(* Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO *)\n"
     "\n"
 )
 
 AGDA_HEADER = (
     "-- SPDX-License-Identifier: MIT\n"
-    "-- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO\n"
     "\n"
 )
 

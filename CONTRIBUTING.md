@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # Contributing — `umst-formal-double-slit`
 
 ## Before you open a PR
@@ -18,7 +20,6 @@ The repository is **MIT** (`LICENSE`). New **first-party** sources should carry:
   ```lean
   /-
   SPDX-License-Identifier: MIT
-  Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   -/
   ```
 
@@ -26,21 +27,18 @@ The repository is **MIT** (`LICENSE`). New **first-party** sources should carry:
 
   ```python
   # SPDX-License-Identifier: MIT
-  # Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   ```
 
 - **Haskell** — at the **very top** (before `{-# LANGUAGE` / Haddock `---`):
 
   ```haskell
   -- SPDX-License-Identifier: MIT
-  -- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   ```
 
 - **LaTeX** — after a leading `%!TEX` magic line (if present), else line 1:
 
   ```latex
   % SPDX-License-Identifier: MIT
-  % Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   ```
 
 - **Markdown** — HTML comment at the top (invisible on GitHub render):
@@ -48,7 +46,6 @@ The repository is **MIT** (`LICENSE`). New **first-party** sources should carry:
   ```markdown
   <!--
   SPDX-License-Identifier: MIT
-  Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   -->
   ```
 
@@ -56,14 +53,12 @@ The repository is **MIT** (`LICENSE`). New **first-party** sources should carry:
 
   ```coq
   (* SPDX-License-Identifier: MIT *)
-  (* Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO *)
   ```
 
 - **Agda** — at the **very top** (before `{-|` or `{-# OPTIONS`):
 
   ```agda
   -- SPDX-License-Identifier: MIT
-  -- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   ```
 
 From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the above to **`Lean/**/*.lean`** (skips **`.lake`**), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`** (skips **`dist-newstyle`**, **`dist`**, **`.stack-work`**), **`Coq/**/*.v`**, **`Agda/**/*.agda`**, **`Docs/*.tex`**, and **repo-wide `*.md`** (skips **`.pytest_cache`**, etc.). **Do not** retarget it at vendored trees.

@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # Lean export coverage (UMST formal stack)
 
 Last audited: 2026-05-21. Canonical pin for **umst-manifold**: Python `export_catalog.py` → `artifacts/catalog.json` + `artifacts/catalog.lock.json`.

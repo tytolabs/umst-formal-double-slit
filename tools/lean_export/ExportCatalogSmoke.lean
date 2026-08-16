@@ -1,6 +1,6 @@
-/-
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 SPDX-License-Identifier: MIT
-Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
+/-
 
 Smoke entry point: `lake env lean ../tools/lean_export/ExportCatalogSmoke.lean` from `Lean/`
 runs `ExportCatalog.main` without executing the compiled `export_catalog` binary — useful when

@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # Formal foundations — `umst-formal-double-slit`
 
 **Version:** Wave 6.5.2 — **2026-04-04**

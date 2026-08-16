@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+# SPDX-License-Identifier: MIT
 # Coq/Rocq + Agda formal verification CI.
 #
 # Coq: the `rocq/rocq-prover:9.0` image's ENTRYPOINT is `opam exec --`,

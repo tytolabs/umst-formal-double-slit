@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # Lean declaration counts — methodology
 
 **Authoritative summary:** [FORMAL_FOUNDATIONS.md](../FORMAL_FOUNDATIONS.md) (Wave 6.5.1+).

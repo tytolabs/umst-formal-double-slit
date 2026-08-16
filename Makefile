@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+# SPDX-License-Identifier: MIT
 # umst-formal-double-slit — local verification
 .PHONY: lean lean-clean lean-catalog-export lean-stats lean-stats-md sim sim-test sim-gifs sim-gifs-validate telemetry-sample haskell-test coq-check agda-check formal-check ci-local ci-full
 

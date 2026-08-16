@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+# SPDX-License-Identifier: MIT
 """Load adoption / growth JSON series validated against `data/schemas/adoption_growth_series.schema.json`."""
 from __future__ import annotations
 

@@ -1,6 +1,5 @@
+-- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
--- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
-
 module Main (main) where
 
 -- | Thin CLI placeholder; library + tests carry the formal mirror. See `cabal test`.

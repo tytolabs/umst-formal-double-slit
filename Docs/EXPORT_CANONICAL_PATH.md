@@ -1,3 +1,5 @@
+SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+SPDX-License-Identifier: MIT
 # Lean catalog export: canonical CI path
 
 Comparison of **`lake exe export_catalog`** (Lean `ExportCatalog`) vs **`tools/lean_export/export_catalog.py`** for `umst-formal-double-slit`, recorded **2026-05-21** on macOS with Lake **5.0.0** / Lean **4.29.1**.
