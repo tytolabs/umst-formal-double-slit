@@ -792,7 +792,7 @@ Released under the [MIT License](LICENSE). © 2026 .
 <!-- AUTO-LATTICE:BEGIN -->
 ## Lattice position
 
-**What it is:** `tytolabs/umst-formal-double-slit` — Knowing fiber — Lean catalog export (artifacts/catalog.json) pinned by umst-manifold.
+**Role.** `tytolabs/umst-formal-double-slit` — Knowing fiber — Lean catalog export (artifacts/catalog.json) pinned by umst-manifold.
 
 **One-line role:** `formal` on layer `spine` (status `wip`, stability `evolving`, semver `0.1.0`).
 
