@@ -63,7 +63,7 @@ Extracting which-path information from a quantum system destroys interference pr
 - [§1 Core result](#1-core-result)
   - [In plain language](#in-plain-language)
   - [Formal statement](#formal-statement)
-- [What This Repository Proves](#what-this-repository-proves)
+- [This repository proves](#this-repository-proves)
 - [§2 Proof architecture](#2-proof-architecture)
 - [§3 Cross-Domain Integration Specifications](#3-cross-domain-integration-specifications)
   - [3.1 Epistemic sensing & probes](#31-epistemic-sensing--probes)
@@ -87,8 +87,8 @@ Extracting which-path information from a quantum system destroys interference pr
   - [9.6 Principles](#96-principles)
 - [§10 Honesty and limits](#10-honesty-and-limits)
 - [§11 Conclusion](#11-conclusion-inferences--forward-path)
-  - [What this repo demonstrates](#what-this-repo-demonstrates)
-  - [What surprised us](#what-surprised-us)
+  - [This repository demonstrates](#this-repository-demonstrates)
+  - [Inferences from the work](#inferences-from-the-work)
   - [Forward path](#forward-path)
 - [Related repositories](#related-repositories)
 - [Authors](#authors)
@@ -106,10 +106,10 @@ Extracting which-path information from a quantum system destroys interference pr
 **The gate idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch — structural thermodynamic accounting, not metaphor.
 
 <!-- readme:status -->
-[![CI — Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
-[![CI — Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
-[![CI — Formal (Coq+Agda)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
+[![Figure 1: CI Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
+[![Figure 2: CI Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
+[![Figure 3: CI Formal Coq Agda](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
+[![Figure 4: License MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 <!-- /readme:status -->
 
 </div>
@@ -154,7 +154,7 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 
 ### Hot arena vs cold edge (performance honesty)
 
-| Path | What | Character |
+| Path | Role | Character |
 |:---|:---|:---|
 | **Cold (this repo)** | `lake build`, Haskell/Coq/Agda CI, `lean_declaration_stats.py` | Machine-checked proof artifact |
 | **Warm** | Python `sim/` animations | **Surrogates** — not Lean kernel renders |
