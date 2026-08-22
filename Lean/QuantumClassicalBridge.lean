@@ -36,6 +36,10 @@ measurement (`pathWeight_whichPath_apply`); **`fringeVisibility_whichPath_apply`
 `vonNeumannEntropy_nondecreasing_unital_whichPath` (`DataProcessingInequality.lean`).
 Product-state additivity `vonNeumannEntropy_tensorDensity_eq` is proved in `KroneckerEigen.lean`
 (consumed by `QuantumMutualInfo.lean`).
+
+**umst-chem lift anchor (`CHEM-L0-FORMAL-02`):** quantum / knowing fiber only —
+`umst/umst-chem/src/formal_quantum_lift.rs` cites this module; never place meso / acting
+theorems here (`umst-formal` is `CHEM-L0-FORMAL-01`). Unwired; `physics_green` false.
 -/
 
 open scoped Matrix ComplexOrder BigOperators

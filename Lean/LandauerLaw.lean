@@ -33,6 +33,11 @@
     - Bekenstein/holographic entropy bounds.
     - FLRW information density.
     These require additional signature extensions beyond ΔL.
+
+  umst-chem lift anchor (CHEM-L0-FORMAL-02): knowing-fiber Landauer / Shannon spine —
+  umst/umst-chem/src/formal_quantum_lift.rs cites this module on umst-formal-double-slit
+  only; meso/acting Landauer lives on umst-formal (CHEM-L0-FORMAL-01). Unwired;
+  physics_green false.
 -/
 
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
