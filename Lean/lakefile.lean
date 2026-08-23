@@ -121,13 +121,19 @@ lean_lib ChemGeometry where
   `monoidalLawsProved` false; Unwired, not CAT-01 Proved, not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.OreMonoidalConservation`
+
+  Kleisli interact conservation (`CHEM-FORMAL-Q-LEAN-KLEISLI-INTERACT-CONSERVATION`):
+  `InteractStep` identity/compose; associator; morphism identity conserved;
+  `kleisliLawsProved` false; Unwired, not CAT-00 Proved, not physics GREEN.
+
+  Build: `lake build ChemConstants.KleisliInteractConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
     `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
     `ChemConstants.OccupancyExceptionSetsDisjoint, `ChemConstants.ScaleOccupancyZCommute,
     `ChemConstants.Eco02ConsumeNotFork, `ChemConstants.AdjunctionCostLandauer,
-    `ChemConstants.OreMonoidalConservation]
+    `ChemConstants.OreMonoidalConservation, `ChemConstants.KleisliInteractConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
