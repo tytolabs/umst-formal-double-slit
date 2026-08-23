@@ -183,6 +183,14 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.FoldConservation`
+
+  Fixpoint conservation (`CHEM-FORMAL-Q-LEAN-FIXPOINT-CONSERVATION`):
+  FP-02 fixpoint conservation; Unwired/Assumed/Proved/Surrogate;
+  lattice meet/join identity conserved; monotone chain reaches fixed point;
+  `fp02FixpointProved` false; Unwired, not FP-02 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.FixpointConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -193,7 +201,8 @@ lean_lib ChemConstants where
     `ChemConstants.PullbackConservation, `ChemConstants.CoalgebraConservation,
     `ChemConstants.DependentTypesConservation, `ChemConstants.LinearConservation,
     `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation,
-    `ChemConstants.PartialConservation, `ChemConstants.FoldConservation]
+    `ChemConstants.PartialConservation, `ChemConstants.FoldConservation,
+    `ChemConstants.FixpointConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
