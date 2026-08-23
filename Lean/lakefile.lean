@@ -127,13 +127,20 @@ lean_lib ChemGeometry where
   `kleisliLawsProved` false; Unwired, not CAT-00 Proved, not physics GREEN.
 
   Build: `lake build ChemConstants.KleisliInteractConservation`
+
+  Pullback/pushout conservation (`CHEM-FORMAL-Q-LEAN-PULLBACK-CONSERVATION`):
+  `PullbackStep` identity/pullback/pushout; shared-substructure identity conserved;
+  `universalPropertiesProved` false; Unwired, not CAT-02 Proved, not physics GREEN.
+
+  Build: `lake build ChemConstants.PullbackConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
     `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
     `ChemConstants.OccupancyExceptionSetsDisjoint, `ChemConstants.ScaleOccupancyZCommute,
     `ChemConstants.Eco02ConsumeNotFork, `ChemConstants.AdjunctionCostLandauer,
-    `ChemConstants.OreMonoidalConservation, `ChemConstants.KleisliInteractConservation]
+    `ChemConstants.OreMonoidalConservation, `ChemConstants.KleisliInteractConservation,
+    `ChemConstants.PullbackConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
