@@ -175,6 +175,14 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.PartialConservation`
+
+  Fold conservation (`CHEM-FORMAL-Q-LEAN-FOLD-CONSERVATION`):
+  FP-01 classifier-fold conservation; Unwired/Assumed/Proved/Surrogate;
+  conjunctive / disjunctive fold identity conserved; GREEN invent refuse;
+  `fp01FoldProved` false; Unwired, not FP-01 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.FoldConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -185,7 +193,7 @@ lean_lib ChemConstants where
     `ChemConstants.PullbackConservation, `ChemConstants.CoalgebraConservation,
     `ChemConstants.DependentTypesConservation, `ChemConstants.LinearConservation,
     `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation,
-    `ChemConstants.PartialConservation]
+    `ChemConstants.PartialConservation, `ChemConstants.FoldConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
