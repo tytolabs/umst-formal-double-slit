@@ -73,9 +73,15 @@ lean_lib ChemGeometry where
   integer mantissa identity for **k**, **N_A**, DerivedSI **R** = N_A ∘ k.
 
   Build: `lake build ChemConstants.ExactSiInteger`
+
+  Named Madelung occupancy exceptions (`CHEM-FORMAL-Q-LEAN-NAMED-OCCUPANCY-EXCEPTIONS`):
+  finite `NamedException` set La / Ce / Gd / Pt / Au — cites qlattice + madelung_witness, not
+  second axiom.
+
+  Build: `lake build ChemConstants.NamedOccupancyExceptions`
 -/
 lean_lib ChemConstants where
-  roots := #[`ChemConstants.ExactSiInteger]
+  roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
