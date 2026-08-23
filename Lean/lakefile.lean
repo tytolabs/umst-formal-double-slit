@@ -167,6 +167,14 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.EffectConservation`
+
+  Partial conservation (`CHEM-FORMAL-Q-LEAN-PARTIAL-CONSERVATION`):
+  TYPE-05 partial Interact conservation; Unwired/Assumed/Proved/Surrogate;
+  admissible vs forbidden partial Interact; total-claim refuse;
+  `type05PartialProved` false; Unwired, not TYPE-05 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.PartialConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -176,7 +184,8 @@ lean_lib ChemConstants where
     `ChemConstants.OreMonoidalConservation, `ChemConstants.KleisliInteractConservation,
     `ChemConstants.PullbackConservation, `ChemConstants.CoalgebraConservation,
     `ChemConstants.DependentTypesConservation, `ChemConstants.LinearConservation,
-    `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation]
+    `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation,
+    `ChemConstants.PartialConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
