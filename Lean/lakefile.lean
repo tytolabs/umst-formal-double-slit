@@ -103,11 +103,18 @@ lean_lib ChemGeometry where
   homolog not copy; Unwired, not SCALE-01 physics GREEN.
 
   Build: `lake build ChemConstants.ScaleOccupancyZCommute`
+
+  ECO-02 consume-not-fork (`CHEM-FORMAL-Q-LEAN-ECO-02-CONSUME-NOT-FORK`):
+  one learner spine; `chemForksLiquidPpoKernel` / `burnKernelCopiedToChem` /
+  `liquidPpoProductionWired` false; `bindAntichainUntilMeasured` true; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.Eco02ConsumeNotFork`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
     `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
-    `ChemConstants.OccupancyExceptionSetsDisjoint, `ChemConstants.ScaleOccupancyZCommute]
+    `ChemConstants.OccupancyExceptionSetsDisjoint, `ChemConstants.ScaleOccupancyZCommute,
+    `ChemConstants.Eco02ConsumeNotFork]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
