@@ -145,6 +145,13 @@ lean_lib ChemGeometry where
   `speciesIsL1` true; `type01DepProved` false; Unwired, not TYPE-01 Proved, not physics GREEN.
 
   Build: `lake build ChemConstants.DependentTypesConservation`
+
+  Linear conservation (`CHEM-FORMAL-Q-LEAN-LINEAR-CONSERVATION`):
+  ConservationAxis Mass/Charge/AtomCount/Enthalpy; signed linear exact-balance;
+  affine weakening with dissipative witness; `type02LinearProved` false;
+  Unwired, not TYPE-02 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.LinearConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -153,7 +160,7 @@ lean_lib ChemConstants where
     `ChemConstants.Eco02ConsumeNotFork, `ChemConstants.AdjunctionCostLandauer,
     `ChemConstants.OreMonoidalConservation, `ChemConstants.KleisliInteractConservation,
     `ChemConstants.PullbackConservation, `ChemConstants.CoalgebraConservation,
-    `ChemConstants.DependentTypesConservation]
+    `ChemConstants.DependentTypesConservation, `ChemConstants.LinearConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
