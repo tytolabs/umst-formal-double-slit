@@ -97,11 +97,17 @@ lean_lib ChemGeometry where
   Z-sets; Z = 94 (Pu) in none; Z = 103 (Lr) in actinide not named; Unwired, not GREEN DFT.
 
   Build: `lake build ChemConstants.OccupancyExceptionSetsDisjoint`
+
+  SCALE occupancy Z-identity commute (`CHEM-FORMAL-Q-LEAN-SCALE-OCCUPANCY-Z-COMMUTE`):
+  `liftQM` / `liftMM` / `coarseQM` identity placeholders; Z-identity commute; Ds (110) ≠ Pt (78)
+  homolog not copy; Unwired, not SCALE-01 physics GREEN.
+
+  Build: `lake build ChemConstants.ScaleOccupancyZCommute`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
     `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
-    `ChemConstants.OccupancyExceptionSetsDisjoint]
+    `ChemConstants.OccupancyExceptionSetsDisjoint, `ChemConstants.ScaleOccupancyZCommute]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
