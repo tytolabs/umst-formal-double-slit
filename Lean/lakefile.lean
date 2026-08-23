@@ -91,10 +91,17 @@ lean_lib ChemGeometry where
   madelung_witness, not second axiom; DISTINCT from NamedException and ActinideException.
 
   Build: `lake build ChemConstants.DBlockOccupancyExceptions`
+
+  Occupancy exception Z-set disjointness (`CHEM-FORMAL-Q-LEAN-OCCUPANCY-EXCEPTION-SETS-DISJOINT`):
+  Lean composition of Named / Actinide / DBlock occupancy exception modules — pairwise disjoint
+  Z-sets; Z = 94 (Pu) in none; Z = 103 (Lr) in actinide not named; Unwired, not GREEN DFT.
+
+  Build: `lake build ChemConstants.OccupancyExceptionSetsDisjoint`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
-    `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions]
+    `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
+    `ChemConstants.OccupancyExceptionSetsDisjoint]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
