@@ -56,6 +56,18 @@ lean_lib «UMST.DoubleSlit» where
     -- Optional / future: `MatrixLog, `LogSum (not in roots)
   srcDir := "."
 
+/-!
+  Knowing-fiber chemistry (`CHEM-FORMAL-Q-LEAN-CHEM`): Q-lattice electronic quantum numbers,
+  SCALE ladder, EDGE-SURFACE sign convention.  `globs` auto-picks up future `Chem*.lean`;
+  `ElementElectronic` stays an explicit root until renamed under `Chem*`.
+
+  Build: `lake build ChemGeometry`
+-/
+lean_lib ChemGeometry where
+  roots := #[`ElementElectronic, `ChemGeometry]
+  -- `Chem.+` glob activates when `Chem/` subtree exists (future geometry modules).
+  srcDir := "."
+
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
 lean_exe export_catalog where
   root := `ExportCatalog
