@@ -20,7 +20,7 @@ module AllotropeGeometry where
 
 open import Data.Nat.Base using (z<s)
 open import Data.Nat as ℕ using (ℕ; zero; suc; _+_; _≤_)
-open import Data.Nat.Properties using (≤-refl; 0≢1+n; suc-injective; 0<1+n)
+open import Data.Nat.Properties using (≤-refl; 0<1+n)
 open import Data.Integer as ℤ using (ℤ; ∣_∣)
 open import Data.Bool using (Bool; true; false; if_then_else_)
 open import Data.Rational as ℚ using (ℚ; 0ℚ)
@@ -30,7 +30,6 @@ open import Data.Product using (_×_; _,_)
 open import Data.Empty using (⊥; ⊥-elim)
 open import Relation.Binary.PropositionalEquality using (_≡_; _≢_; refl; sym; cong; subst)
 open import Relation.Nullary using (Dec; yes; no; ¬_)
-open import Relation.Nullary.Negation using (contradiction)
 open import Relation.Nullary.Decidable using (does)
 
 ------------------------------------------------------------------------
@@ -91,11 +90,6 @@ scaleLegTarget : ScaleCommutingLeg → ScaleLevel
 scaleLegTarget quantum-to-meso = scale-meso
 scaleLegTarget meso-to-macro = scale-macro
 scaleLegTarget quantum-to-macro-direct = scale-macro
-
-scaleLevelTag : ScaleLevel → ℕ
-scaleLevelTag scale-quantum = 0
-scaleLevelTag scale-meso = 1
-scaleLevelTag scale-macro = 2
 
 private
   scale-quantum≢scale-meso : scale-quantum ≢ scale-meso
