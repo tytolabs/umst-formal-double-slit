@@ -85,10 +85,16 @@ lean_lib ChemGeometry where
   madelung_witness, not second axiom; Lr named override agrees Madelung honest.
 
   Build: `lake build ChemConstants.ActinideOccupancyExceptions`
+
+  D-block qlattice occupancy exceptions (`CHEM-FORMAL-Q-LEAN-DBLOCK-OCCUPANCY-EXCEPTIONS`):
+  finite `DBlockException` set Cr / Cu / Nb / Mo / Ru / Rh / Pd / Ag — cites qlattice +
+  madelung_witness, not second axiom; DISTINCT from NamedException and ActinideException.
+
+  Build: `lake build ChemConstants.DBlockOccupancyExceptions`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
-    `ChemConstants.ActinideOccupancyExceptions]
+    `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
