@@ -159,6 +159,14 @@ lean_lib ChemGeometry where
   `type03ModalityProved` false; Unwired, not TYPE-03 Proved, not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.ModalityConservation`
+
+  Effect conservation (`CHEM-FORMAL-Q-LEAN-EFFECT-CONSERVATION`):
+  TYPE-04 dissipative effect conservation; Unwired/Assumed/Proved/Surrogate;
+  forward Refine requires positive ChemStamp/Landauer witness; free purification refuse;
+  reverse contaminate typed; `type04EffectProved` false; Unwired, not TYPE-04 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.EffectConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -168,7 +176,7 @@ lean_lib ChemConstants where
     `ChemConstants.OreMonoidalConservation, `ChemConstants.KleisliInteractConservation,
     `ChemConstants.PullbackConservation, `ChemConstants.CoalgebraConservation,
     `ChemConstants.DependentTypesConservation, `ChemConstants.LinearConservation,
-    `ChemConstants.ModalityConservation]
+    `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
