@@ -109,12 +109,18 @@ lean_lib ChemGeometry where
   `liquidPpoProductionWired` false; `bindAntichainUntilMeasured` true; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.Eco02ConsumeNotFork`
+
+  CAT-03 adjunction-cost Landauer (`CHEM-FORMAL-Q-LEAN-ADJUNCTION-COST-LANDAUER`):
+  `purewardCost` nonnegative; `freePurificationAdmitted` false when contaminants;
+  purification implies positive `minPurewardCost`; Unwired, not CAT-03 Proved, not physics GREEN.
+
+  Build: `lake build ChemConstants.AdjunctionCostLandauer`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
     `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
     `ChemConstants.OccupancyExceptionSetsDisjoint, `ChemConstants.ScaleOccupancyZCommute,
-    `ChemConstants.Eco02ConsumeNotFork]
+    `ChemConstants.Eco02ConsumeNotFork, `ChemConstants.AdjunctionCostLandauer]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
