@@ -68,6 +68,16 @@ lean_lib ChemGeometry where
   -- `Chem.+` glob activates when `Chem/` subtree exists (future geometry modules).
   srcDir := "."
 
+/-!
+  Knowing-fiber chemistry constants (`CHEM-FORMAL-Q-LEAN-EXACT-SI-RATIONAL`): SI-2019 exact
+  integer mantissa identity for **k**, **N_A**, DerivedSI **R** = N_A ∘ k.
+
+  Build: `lake build ChemConstants.ExactSiInteger`
+-/
+lean_lib ChemConstants where
+  roots := #[`ChemConstants.ExactSiInteger]
+  srcDir := "."
+
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
 lean_exe export_catalog where
   root := `ExportCatalog
