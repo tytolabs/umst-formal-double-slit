@@ -304,6 +304,13 @@ lean_lib ChemGeometry where
   not physics GREEN.
 
   Build: `lake build ChemConstants.CartridgeConstitutiveCompose`
+
+  Cement hydration not-L0-G (`CHEM-FORMAL-Q-LEAN-CEMENT-HYDRATION-NOT-L0-G-CONSERVATION`):
+  continuum hydration α in ψ is L1 occupancy of one cementitious material, not the L0 G-engine;
+  `hydrationAlphaIsL0GEngine` false; `cementHydrationNotL0GProved` false; Unwired,
+  not physics GREEN.
+
+  Build: `lake build ChemConstants.CementHydrationNotL0G`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -321,7 +328,8 @@ lean_lib ChemConstants where
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
-    `ChemConstants.ChemPhysicsChartIsomorphism, `ChemConstants.CartridgeConstitutiveCompose]
+    `ChemConstants.ChemPhysicsChartIsomorphism, `ChemConstants.CartridgeConstitutiveCompose,
+    `ChemConstants.CementHydrationNotL0G]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
