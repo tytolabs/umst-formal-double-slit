@@ -325,6 +325,16 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.ImpureComponentMorphismConservation`
 
+  Processing-refining conservation (`CHEM-FORMAL-Q-LEAN-PROCESSING-REFINING-CONSERVATION`):
+  PATTERN-00 class 9 **processing_refining** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  processing/refining is concurrent factor on same second-law + conservation object, not 26th axiom;
+  dissipative refine ⊗ G-min second-law presentation ⊗ class-9 processing_refining **product** not XOR;
+  Fe Z=26 host assemblage witness; parallel refining axiom refuse; species-id smuggle refuse;
+  extra ElementId Z=119 refuse; free purification refuse; cite `LandauerLaw.physicalSecondLaw` not meso theorems;
+  `processingRefiningConservationProved` false; Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.ProcessingRefiningConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -511,6 +521,7 @@ lean_lib ChemConstants where
     `ChemConstants.StructureBlockingInertnessConservation,
     `ChemConstants.AssemblageStabilityWhyConservation,
     `ChemConstants.ImpureComponentMorphismConservation,
+    `ChemConstants.ProcessingRefiningConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
