@@ -1,0 +1,561 @@
+DIGEST 3380cb644b727eb540a0133bbb908f17
+FUrgeKnowing.PersistVsOccupancy
+R1139:1144 Stdlib.Strings.String <> <> lib
+R1146:1150 Stdlib.Arith.Arith <> <> lib
+R1152:1155 Stdlib.Lists.List <> <> lib
+R1157:1160 Stdlib.Bool.Bool <> <> lib
+R1170:1182 Stdlib.Lists.List ListNotations <> mod
+ind 1512:1537 <> PersistVsOccupancyModality
+constr 1553:1580 <> persist_vs_occupancy_unwired
+constr 1586:1613 <> persist_vs_occupancy_assumed
+constr 1619:1645 <> persist_vs_occupancy_proved
+constr 1651:1680 <> persist_vs_occupancy_surrogate
+scheme 1512:1537 <> PersistVsOccupancyModality_rect
+scheme 1512:1537 <> PersistVsOccupancyModality_ind
+scheme 1512:1537 <> PersistVsOccupancyModality_rec
+scheme 1512:1537 <> PersistVsOccupancyModality_sind
+def 1695:1727 <> persistVsOccupancyModalityCurrent
+R1731:1756 UrgeKnowing.PersistVsOccupancy <> PersistVsOccupancyModality ind
+R1763:1790 UrgeKnowing.PersistVsOccupancy <> persist_vs_occupancy_unwired constr
+ind 2028:2038 <> HilbertRole
+constr 2054:2080 <> hilbert_role_persist_acting
+constr 2086:2115 <> hilbert_role_occupancy_knowing
+scheme 2028:2038 <> HilbertRole_rect
+scheme 2028:2038 <> HilbertRole_ind
+scheme 2028:2038 <> HilbertRole_rec
+scheme 2028:2038 <> HilbertRole_sind
+def 2130:2147 <> persistHilbertRole
+R2151:2161 UrgeKnowing.PersistVsOccupancy <> HilbertRole ind
+R2168:2194 UrgeKnowing.PersistVsOccupancy <> hilbert_role_persist_acting constr
+def 2209:2228 <> occupancyHilbertRole
+R2232:2242 UrgeKnowing.PersistVsOccupancy <> HilbertRole ind
+R2249:2278 UrgeKnowing.PersistVsOccupancy <> hilbert_role_occupancy_knowing constr
+rec 2515:2528 <> PersistHilbert
+proj 2537:2547 <> persist_raw
+R2551:2553 Corelib.Init.Datatypes <> nat ind
+rec 2566:2581 <> OccupancyHilbert
+proj 2590:2602 <> occupancy_raw
+R2606:2608 Corelib.Init.Datatypes <> nat ind
+def 2625:2644 <> persistHilbertRoleOf
+R2651:2664 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 2647:2647 <> p:9
+R2669:2679 UrgeKnowing.PersistVsOccupancy <> HilbertRole ind
+R2686:2712 UrgeKnowing.PersistVsOccupancy <> hilbert_role_persist_acting constr
+def 2727:2748 <> occupancyHilbertRoleOf
+R2755:2770 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 2751:2751 <> o:10
+R2775:2785 UrgeKnowing.PersistVsOccupancy <> HilbertRole ind
+R2792:2821 UrgeKnowing.PersistVsOccupancy <> hilbert_role_occupancy_knowing constr
+prf 2831:2855 <> persist_ne_occupancy_role
+R2879:2882 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R2861:2878 UrgeKnowing.PersistVsOccupancy <> persistHilbertRole def
+R2883:2902 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertRole def
+prf 2938:2961 <> persist_hilbert_role_pin
+R2968:2981 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 2964:2964 <> p:11
+R3010:3012 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2988:3007 UrgeKnowing.PersistVsOccupancy <> persistHilbertRoleOf def
+R3009:3009 UrgeKnowing.PersistVsOccupancy <> p:11 var
+R3013:3039 UrgeKnowing.PersistVsOccupancy <> hilbert_role_persist_acting constr
+prf 3074:3099 <> occupancy_hilbert_role_pin
+R3106:3121 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 3102:3102 <> o:12
+R3152:3154 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3128:3149 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertRoleOf def
+R3151:3151 UrgeKnowing.PersistVsOccupancy <> o:12 var
+R3155:3184 UrgeKnowing.PersistVsOccupancy <> hilbert_role_occupancy_knowing constr
+ind 3447:3464 <> HilbertFuseRefused
+constr 3480:3514 <> fuse_refused_persist_into_occupancy
+constr 3520:3554 <> fuse_refused_occupancy_into_persist
+constr 3560:3591 <> fuse_refused_homolog_is_not_copy
+constr 3597:3622 <> fuse_refused_second_argmin
+scheme 3447:3464 <> HilbertFuseRefused_rect
+scheme 3447:3464 <> HilbertFuseRefused_ind
+scheme 3447:3464 <> HilbertFuseRefused_rec
+scheme 3447:3464 <> HilbertFuseRefused_sind
+def 3637:3666 <> refuseFusePersistIntoOccupancy
+R3676:3689 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 3671:3672 <> _p:15
+R3694:3699 Corelib.Init.Datatypes <> option ind
+R3701:3718 UrgeKnowing.PersistVsOccupancy <> HilbertFuseRefused ind
+R3725:3728 Corelib.Init.Datatypes <> Some constr
+R3730:3764 UrgeKnowing.PersistVsOccupancy <> fuse_refused_persist_into_occupancy constr
+def 3779:3808 <> refuseFuseOccupancyIntoPersist
+R3818:3833 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 3813:3814 <> _o:16
+R3838:3843 Corelib.Init.Datatypes <> option ind
+R3845:3862 UrgeKnowing.PersistVsOccupancy <> HilbertFuseRefused ind
+R3869:3872 Corelib.Init.Datatypes <> Some constr
+R3874:3908 UrgeKnowing.PersistVsOccupancy <> fuse_refused_occupancy_into_persist constr
+def 3923:3940 <> refuseSecondArgmin
+R3944:3949 Corelib.Init.Datatypes <> option ind
+R3951:3968 UrgeKnowing.PersistVsOccupancy <> HilbertFuseRefused ind
+R3975:3978 Corelib.Init.Datatypes <> Some constr
+R3980:4005 UrgeKnowing.PersistVsOccupancy <> fuse_refused_second_argmin constr
+prf 4015:4049 <> fuse_persist_into_occupancy_refused
+R4056:4069 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 4052:4052 <> p:17
+R4108:4112 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4076:4105 UrgeKnowing.PersistVsOccupancy <> refuseFusePersistIntoOccupancy def
+R4107:4107 UrgeKnowing.PersistVsOccupancy <> p:17 var
+R4113:4116 Corelib.Init.Datatypes <> Some constr
+R4118:4152 UrgeKnowing.PersistVsOccupancy <> fuse_refused_persist_into_occupancy constr
+prf 4187:4221 <> fuse_occupancy_into_persist_refused
+R4228:4243 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 4224:4224 <> o:18
+R4282:4286 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4250:4279 UrgeKnowing.PersistVsOccupancy <> refuseFuseOccupancyIntoPersist def
+R4281:4281 UrgeKnowing.PersistVsOccupancy <> o:18 var
+R4287:4290 Corelib.Init.Datatypes <> Some constr
+R4292:4326 UrgeKnowing.PersistVsOccupancy <> fuse_refused_occupancy_into_persist constr
+prf 4361:4381 <> second_argmin_refused
+R4405:4407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4387:4404 UrgeKnowing.PersistVsOccupancy <> refuseSecondArgmin def
+R4408:4411 Corelib.Init.Datatypes <> Some constr
+R4413:4438 UrgeKnowing.PersistVsOccupancy <> fuse_refused_second_argmin constr
+rec 4700:4720 <> HilbertHomologWitness
+proj 4729:4743 <> homolog_persist
+proj 4765:4781 <> homolog_occupancy
+proj 4805:4832 <> homolog_claims_identity_copy
+R4747:4760 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+R4785:4800 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+R4836:4839 Corelib.Init.Datatypes <> bool ind
+def 4856:4880 <> homologPersistToOccupancy
+R4889:4902 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 4885:4885 <> p:23
+R4910:4925 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 4906:4906 <> o:24
+R4943:4946 Corelib.Init.Datatypes <> bool ind
+binder 4929:4939 <> claims_copy:25
+R4953:4973 UrgeKnowing.PersistVsOccupancy <> HilbertHomologWitness rec
+R4983:4997 UrgeKnowing.PersistVsOccupancy <> homolog_persist proj
+R4983:4997 UrgeKnowing.PersistVsOccupancy <> homolog_persist proj
+R4983:4997 UrgeKnowing.PersistVsOccupancy <> homolog_persist proj
+R5010:5026 UrgeKnowing.PersistVsOccupancy <> homolog_occupancy proj
+R5010:5026 UrgeKnowing.PersistVsOccupancy <> homolog_occupancy proj
+R5039:5066 UrgeKnowing.PersistVsOccupancy <> homolog_claims_identity_copy proj
+R5039:5066 UrgeKnowing.PersistVsOccupancy <> homolog_claims_identity_copy proj
+R5002:5002 UrgeKnowing.PersistVsOccupancy <> p:23 var
+R5031:5031 UrgeKnowing.PersistVsOccupancy <> o:24 var
+R5071:5081 UrgeKnowing.PersistVsOccupancy <> claims_copy:25 var
+def 5099:5112 <> homologNotCopy
+R5119:5139 UrgeKnowing.PersistVsOccupancy <> HilbertHomologWitness rec
+binder 5115:5115 <> w:26
+R5144:5147 Corelib.Init.Datatypes <> bool ind
+R5160:5187 UrgeKnowing.PersistVsOccupancy <> homolog_claims_identity_copy proj
+R5189:5189 UrgeKnowing.PersistVsOccupancy <> w:26 var
+R5200:5203 Corelib.Init.Datatypes <> true constr
+R5208:5212 Corelib.Init.Datatypes <> false constr
+R5218:5222 Corelib.Init.Datatypes <> false constr
+R5293:5314 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertRoleOf def
+R5317:5333 UrgeKnowing.PersistVsOccupancy <> homolog_occupancy proj
+R5335:5335 UrgeKnowing.PersistVsOccupancy <> w:26 var
+R5239:5258 UrgeKnowing.PersistVsOccupancy <> persistHilbertRoleOf def
+R5261:5275 UrgeKnowing.PersistVsOccupancy <> homolog_persist proj
+R5277:5277 UrgeKnowing.PersistVsOccupancy <> w:26 var
+R5351:5377 UrgeKnowing.PersistVsOccupancy <> hilbert_role_persist_acting constr
+R5380:5409 UrgeKnowing.PersistVsOccupancy <> hilbert_role_occupancy_knowing constr
+R5414:5417 Corelib.Init.Datatypes <> true constr
+R5435:5439 Corelib.Init.Datatypes <> false constr
+def 5470:5483 <> hilbertRoleEqb
+R5494:5504 UrgeKnowing.PersistVsOccupancy <> HilbertRole ind
+binder 5486:5487 <> r1:27
+binder 5489:5490 <> r2:28
+R5509:5512 Corelib.Init.Datatypes <> bool ind
+R5529:5530 UrgeKnowing.PersistVsOccupancy <> r2:28 var
+R5525:5526 UrgeKnowing.PersistVsOccupancy <> r1:27 var
+R5541:5567 UrgeKnowing.PersistVsOccupancy <> hilbert_role_persist_acting constr
+R5570:5596 UrgeKnowing.PersistVsOccupancy <> hilbert_role_persist_acting constr
+R5601:5604 Corelib.Init.Datatypes <> true constr
+R5610:5639 UrgeKnowing.PersistVsOccupancy <> hilbert_role_occupancy_knowing constr
+R5642:5671 UrgeKnowing.PersistVsOccupancy <> hilbert_role_occupancy_knowing constr
+R5676:5679 Corelib.Init.Datatypes <> true constr
+R5693:5697 Corelib.Init.Datatypes <> false constr
+def 5718:5742 <> homologClaimsIdentityCopy
+R5749:5769 UrgeKnowing.PersistVsOccupancy <> HilbertHomologWitness rec
+binder 5745:5745 <> w:31
+R5774:5777 Corelib.Init.Datatypes <> bool ind
+R5814:5819 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5784:5811 UrgeKnowing.PersistVsOccupancy <> homolog_claims_identity_copy proj
+R5813:5813 UrgeKnowing.PersistVsOccupancy <> w:31 var
+R5820:5833 UrgeKnowing.PersistVsOccupancy <> hilbertRoleEqb def
+R5836:5855 UrgeKnowing.PersistVsOccupancy <> persistHilbertRoleOf def
+R5858:5872 UrgeKnowing.PersistVsOccupancy <> homolog_persist proj
+R5874:5874 UrgeKnowing.PersistVsOccupancy <> w:31 var
+R5896:5917 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertRoleOf def
+R5920:5936 UrgeKnowing.PersistVsOccupancy <> homolog_occupancy proj
+R5938:5938 UrgeKnowing.PersistVsOccupancy <> w:31 var
+prf 5950:5993 <> homolog_witness_not_copy_when_roles_distinct
+R6002:6015 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 5998:5998 <> p:32
+R6023:6038 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 6019:6019 <> o:33
+R6097:6099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6045:6058 UrgeKnowing.PersistVsOccupancy <> homologNotCopy def
+R6061:6085 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R6087:6087 UrgeKnowing.PersistVsOccupancy <> p:32 var
+R6089:6089 UrgeKnowing.PersistVsOccupancy <> o:33 var
+R6091:6095 Corelib.Init.Datatypes <> false constr
+R6100:6103 Corelib.Init.Datatypes <> true constr
+R6122:6135 UrgeKnowing.PersistVsOccupancy <> homologNotCopy def
+R6138:6162 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+prf 6199:6227 <> homolog_identity_copy_refused
+R6236:6249 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+binder 6232:6232 <> p:34
+R6257:6272 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+binder 6253:6253 <> o:35
+R6341:6343 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6279:6303 UrgeKnowing.PersistVsOccupancy <> homologClaimsIdentityCopy def
+R6306:6330 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R6332:6332 UrgeKnowing.PersistVsOccupancy <> p:34 var
+R6334:6334 UrgeKnowing.PersistVsOccupancy <> o:35 var
+R6336:6339 Corelib.Init.Datatypes <> true constr
+R6344:6347 Corelib.Init.Datatypes <> true constr
+R6366:6390 UrgeKnowing.PersistVsOccupancy <> homologClaimsIdentityCopy def
+R6393:6417 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+ind 6682:6693 <> FiberVerdict
+constr 6709:6728 <> fiber_verdict_accept
+constr 6734:6753 <> fiber_verdict_refuse
+scheme 6682:6693 <> FiberVerdict_rect
+scheme 6682:6693 <> FiberVerdict_ind
+scheme 6682:6693 <> FiberVerdict_rec
+scheme 6682:6693 <> FiberVerdict_sind
+def 6768:6782 <> fiberVerdictEqb
+R6793:6804 UrgeKnowing.PersistVsOccupancy <> FiberVerdict ind
+binder 6785:6786 <> v1:38
+binder 6788:6789 <> v2:39
+R6809:6812 Corelib.Init.Datatypes <> bool ind
+R6829:6830 UrgeKnowing.PersistVsOccupancy <> v2:39 var
+R6825:6826 UrgeKnowing.PersistVsOccupancy <> v1:38 var
+R6841:6860 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+R6863:6882 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+R6887:6890 Corelib.Init.Datatypes <> true constr
+R6896:6915 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+R6918:6937 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+R6942:6945 Corelib.Init.Datatypes <> true constr
+R6959:6963 Corelib.Init.Datatypes <> false constr
+rec 6981:6996 <> FiberFixtureStep
+proj 7005:7019 <> fixture_step_id
+proj 7033:7047 <> fixture_verdict
+proj 7067:7081 <> fixture_refusal
+R7023:7028 Stdlib.Strings.String <> string ind
+R7051:7062 UrgeKnowing.PersistVsOccupancy <> FiberVerdict ind
+R7085:7090 Corelib.Init.Datatypes <> option ind
+R7092:7109 UrgeKnowing.PersistVsOccupancy <> HilbertFuseRefused ind
+def 7126:7146 <> evaluateFiberMorphism
+R7155:7175 UrgeKnowing.PersistVsOccupancy <> HilbertHomologWitness rec
+binder 7151:7151 <> w:46
+R7194:7197 Corelib.Init.Datatypes <> bool ind
+binder 7179:7190 <> attempt_fuse:47
+R7202:7213 UrgeKnowing.PersistVsOccupancy <> FiberVerdict ind
+R7223:7234 UrgeKnowing.PersistVsOccupancy <> attempt_fuse:47 var
+R7276:7300 UrgeKnowing.PersistVsOccupancy <> homologClaimsIdentityCopy def
+R7302:7302 UrgeKnowing.PersistVsOccupancy <> w:46 var
+R7344:7357 UrgeKnowing.PersistVsOccupancy <> homologNotCopy def
+R7359:7359 UrgeKnowing.PersistVsOccupancy <> w:46 var
+R7402:7421 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+R7370:7389 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+R7313:7332 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+R7245:7264 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+def 7436:7451 <> verdictToRefusal
+R7466:7477 UrgeKnowing.PersistVsOccupancy <> FiberVerdict ind
+binder 7456:7462 <> verdict:48
+R7487:7507 UrgeKnowing.PersistVsOccupancy <> HilbertHomologWitness rec
+binder 7483:7483 <> w:49
+R7528:7531 Corelib.Init.Datatypes <> bool ind
+binder 7513:7524 <> attempt_fuse:50
+R7536:7541 Corelib.Init.Datatypes <> option ind
+R7543:7560 UrgeKnowing.PersistVsOccupancy <> HilbertFuseRefused ind
+R7573:7579 UrgeKnowing.PersistVsOccupancy <> verdict:48 var
+R7590:7609 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+R7614:7617 Corelib.Init.Datatypes <> None constr
+R7623:7642 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+R7656:7667 UrgeKnowing.PersistVsOccupancy <> attempt_fuse:50 var
+R7737:7764 UrgeKnowing.PersistVsOccupancy <> homolog_claims_identity_copy proj
+R7766:7766 UrgeKnowing.PersistVsOccupancy <> w:49 var
+R7838:7841 Corelib.Init.Datatypes <> Some constr
+R7843:7874 UrgeKnowing.PersistVsOccupancy <> fuse_refused_homolog_is_not_copy constr
+R7781:7784 Corelib.Init.Datatypes <> Some constr
+R7786:7817 UrgeKnowing.PersistVsOccupancy <> fuse_refused_homolog_is_not_copy constr
+R7682:7685 Corelib.Init.Datatypes <> Some constr
+R7687:7721 UrgeKnowing.PersistVsOccupancy <> fuse_refused_persist_into_occupancy constr
+def 7895:7914 <> samplePersistHilbert
+R7918:7931 UrgeKnowing.PersistVsOccupancy <> PersistHilbert rec
+R7941:7951 UrgeKnowing.PersistVsOccupancy <> persist_raw proj
+R7941:7951 UrgeKnowing.PersistVsOccupancy <> persist_raw proj
+R7941:7951 UrgeKnowing.PersistVsOccupancy <> persist_raw proj
+def 7975:7996 <> sampleOccupancyHilbert
+R8000:8015 UrgeKnowing.PersistVsOccupancy <> OccupancyHilbert rec
+R8025:8037 UrgeKnowing.PersistVsOccupancy <> occupancy_raw proj
+R8025:8037 UrgeKnowing.PersistVsOccupancy <> occupancy_raw proj
+R8025:8037 UrgeKnowing.PersistVsOccupancy <> occupancy_raw proj
+def 8061:8090 <> homologRestrictionAdmittedStep
+R8094:8109 UrgeKnowing.PersistVsOccupancy <> FiberFixtureStep rec
+R8119:8133 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R8119:8133 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R8119:8133 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R8175:8189 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R8175:8189 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R8331:8345 UrgeKnowing.PersistVsOccupancy <> fixture_refusal proj
+R8331:8345 UrgeKnowing.PersistVsOccupancy <> fixture_refusal proj
+R8201:8221 UrgeKnowing.PersistVsOccupancy <> evaluateFiberMorphism def
+R8233:8257 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R8259:8278 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R8280:8301 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R8303:8307 Corelib.Init.Datatypes <> false constr
+R8319:8323 Corelib.Init.Datatypes <> false constr
+R8357:8372 UrgeKnowing.PersistVsOccupancy <> verdictToRefusal def
+R8384:8404 UrgeKnowing.PersistVsOccupancy <> evaluateFiberMorphism def
+R8419:8443 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R8445:8464 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R8466:8487 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R8489:8493 Corelib.Init.Datatypes <> false constr
+R8508:8512 Corelib.Init.Datatypes <> false constr
+R8525:8549 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R8551:8570 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R8572:8593 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R8595:8599 Corelib.Init.Datatypes <> false constr
+R8611:8615 Corelib.Init.Datatypes <> false constr
+def 8633:8660 <> fusePersistIntoOccupancyStep
+R8664:8679 UrgeKnowing.PersistVsOccupancy <> FiberFixtureStep rec
+R8689:8703 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R8689:8703 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R8689:8703 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R8744:8758 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R8744:8758 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R8899:8913 UrgeKnowing.PersistVsOccupancy <> fixture_refusal proj
+R8899:8913 UrgeKnowing.PersistVsOccupancy <> fixture_refusal proj
+R8770:8790 UrgeKnowing.PersistVsOccupancy <> evaluateFiberMorphism def
+R8802:8826 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R8828:8847 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R8849:8870 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R8872:8876 Corelib.Init.Datatypes <> false constr
+R8888:8891 Corelib.Init.Datatypes <> true constr
+R8925:8940 UrgeKnowing.PersistVsOccupancy <> verdictToRefusal def
+R8952:8972 UrgeKnowing.PersistVsOccupancy <> evaluateFiberMorphism def
+R8987:9011 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R9013:9032 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R9034:9055 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R9057:9061 Corelib.Init.Datatypes <> false constr
+R9076:9079 Corelib.Init.Datatypes <> true constr
+R9092:9116 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R9118:9137 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R9139:9160 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R9162:9166 Corelib.Init.Datatypes <> false constr
+R9178:9181 Corelib.Init.Datatypes <> true constr
+def 9199:9221 <> homologIdentityCopyStep
+R9225:9240 UrgeKnowing.PersistVsOccupancy <> FiberFixtureStep rec
+R9250:9264 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R9250:9264 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R9250:9264 UrgeKnowing.PersistVsOccupancy <> fixture_step_id proj
+R9299:9313 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R9299:9313 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R9454:9468 UrgeKnowing.PersistVsOccupancy <> fixture_refusal proj
+R9454:9468 UrgeKnowing.PersistVsOccupancy <> fixture_refusal proj
+R9325:9345 UrgeKnowing.PersistVsOccupancy <> evaluateFiberMorphism def
+R9357:9381 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R9383:9402 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R9404:9425 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R9427:9430 Corelib.Init.Datatypes <> true constr
+R9442:9446 Corelib.Init.Datatypes <> false constr
+R9480:9495 UrgeKnowing.PersistVsOccupancy <> verdictToRefusal def
+R9507:9527 UrgeKnowing.PersistVsOccupancy <> evaluateFiberMorphism def
+R9542:9566 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R9568:9587 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R9589:9610 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R9612:9615 Corelib.Init.Datatypes <> true constr
+R9630:9634 Corelib.Init.Datatypes <> false constr
+R9647:9671 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R9673:9692 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R9694:9715 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R9717:9720 Corelib.Init.Datatypes <> true constr
+R9732:9736 Corelib.Init.Datatypes <> false constr
+def 9754:9778 <> persistVsOccupancyFixture
+R9782:9785 Corelib.Init.Datatypes <> list ind
+R9787:9802 UrgeKnowing.PersistVsOccupancy <> FiberFixtureStep rec
+R9809:9810 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9841:9846 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9875:9880 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9904:9905 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9811:9840 UrgeKnowing.PersistVsOccupancy <> homologRestrictionAdmittedStep def
+R9847:9874 UrgeKnowing.PersistVsOccupancy <> fusePersistIntoOccupancyStep def
+R9881:9903 UrgeKnowing.PersistVsOccupancy <> homologIdentityCopyStep def
+def 9918:9934 <> countFiberVerdict
+R9947:9950 Corelib.Init.Datatypes <> list ind
+R9952:9967 UrgeKnowing.PersistVsOccupancy <> FiberFixtureStep rec
+binder 9939:9943 <> steps:52
+R9980:9991 UrgeKnowing.PersistVsOccupancy <> FiberVerdict ind
+binder 9971:9976 <> target:53
+R9996:9998 Corelib.Init.Datatypes <> nat ind
+R10011:10015 UrgeKnowing.PersistVsOccupancy <> steps:52 var
+R10026:10027 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R10042:10045 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10060:10060 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R10123:10132 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R10064:10078 UrgeKnowing.PersistVsOccupancy <> fiberVerdictEqb def
+R10081:10095 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R10103:10108 UrgeKnowing.PersistVsOccupancy <> target:53 var
+R10133:10149 UrgeKnowing.PersistVsOccupancy <> countFiberVerdict:54 def
+R10156:10161 UrgeKnowing.PersistVsOccupancy <> target:53 var
+prf 10177:10194 <> fixture_one_accept
+R10264:10266 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10200:10216 UrgeKnowing.PersistVsOccupancy <> countFiberVerdict def
+R10218:10242 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyFixture def
+R10244:10263 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+prf 10302:10319 <> fixture_two_refuse
+R10389:10391 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10325:10341 UrgeKnowing.PersistVsOccupancy <> countFiberVerdict def
+R10343:10367 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyFixture def
+R10369:10388 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+prf 10427:10454 <> homolog_restriction_admitted
+R10506:10508 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10460:10474 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R10476:10505 UrgeKnowing.PersistVsOccupancy <> homologRestrictionAdmittedStep def
+R10509:10528 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+prf 10563:10587 <> fuse_persist_step_refused
+R10637:10639 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10593:10607 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R10609:10636 UrgeKnowing.PersistVsOccupancy <> fusePersistIntoOccupancyStep def
+R10640:10659 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+prf 10694:10718 <> homolog_copy_step_refused
+R10763:10765 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10724:10738 UrgeKnowing.PersistVsOccupancy <> fixture_verdict proj
+R10740:10762 UrgeKnowing.PersistVsOccupancy <> homologIdentityCopyStep def
+R10766:10785 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+def 11049:11067 <> composeSurrogateFor
+R11071:11076 Stdlib.Strings.String <> string ind
+def 11121:11140 <> metaExcitementModule
+R11144:11149 Stdlib.Strings.String <> string ind
+prf 11211:11248 <> compose_surrogate_is_excitement_select
+R11273:11275 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11254:11272 UrgeKnowing.PersistVsOccupancy <> composeSurrogateFor def
+prf 11334:11361 <> meta_excitement_module_cited
+R11387:11390 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11367:11386 UrgeKnowing.PersistVsOccupancy <> metaExcitementModule def
+def 11657:11679 <> persistHilbertAuthority
+R11683:11688 Stdlib.Strings.String <> string ind
+def 11756:11780 <> occupancyHilbertAuthority
+R11784:11789 Stdlib.Strings.String <> string ind
+def 11866:11897 <> persistNotOccupancyCopyCollision
+R11901:11906 Stdlib.Strings.String <> string ind
+def 12037:12062 <> physicalSecondLawAuthority
+R12066:12071 Stdlib.Strings.String <> string ind
+def 12123:12146 <> persistVsOccupancyCellId
+R12150:12155 Stdlib.Strings.String <> string ind
+def 12216:12239 <> persistVsOccupancyMarker
+R12243:12248 Stdlib.Strings.String <> string ind
+def 12294:12318 <> persistVsOccupancySurface
+R12322:12327 Stdlib.Strings.String <> string ind
+def 12378:12402 <> persistVsOccupancyRowStem
+R12406:12411 Stdlib.Strings.String <> string ind
+def 12454:12479 <> persistVsOccupancyNonClaim
+R12483:12488 Stdlib.Strings.String <> string ind
+prf 12834:12861 <> persist_vs_occupancy_cell_id
+R12891:12893 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12867:12890 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyCellId def
+prf 12968:12994 <> persist_vs_occupancy_marker
+R13024:13026 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13000:13023 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyMarker def
+prf 13086:13113 <> persist_vs_occupancy_surface
+R13144:13146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13119:13143 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancySurface def
+prf 13211:13239 <> persist_vs_occupancy_row_stem
+R13270:13272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13245:13269 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyRowStem def
+prf 13329:13359 <> persist_hilbert_authority_cited
+R13388:13391 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13365:13387 UrgeKnowing.PersistVsOccupancy <> persistHilbertAuthority def
+prf 13429:13461 <> occupancy_hilbert_authority_cited
+R13492:13495 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13467:13491 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertAuthority def
+prf 13533:13568 <> persist_not_occupancy_copy_collision
+R13606:13609 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13574:13605 UrgeKnowing.PersistVsOccupancy <> persistNotOccupancyCopyCollision def
+prf 13647:13692 <> persist_vs_occupancy_cites_physical_second_law
+R13724:13726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13698:13723 UrgeKnowing.PersistVsOccupancy <> physicalSecondLawAuthority def
+def 14020:14053 <> persistVsOccupancySecondLawFraming
+R14057:14062 Stdlib.Strings.String <> string ind
+def 14138:14151 <> secondAxiomTag
+R14155:14160 Stdlib.Strings.String <> string ind
+prf 14211:14247 <> persist_vs_occupancy_not_second_axiom
+R14287:14290 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14253:14286 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancySecondLawFraming def
+R14291:14304 UrgeKnowing.PersistVsOccupancy <> secondAxiomTag def
+prf 14340:14378 <> persist_vs_occupancy_second_law_framing
+R14418:14421 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14384:14417 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancySecondLawFraming def
+def 14464:14491 <> persistVsOccupancyIsNewAxiom
+R14503:14507 Corelib.Init.Logic <> False ind
+prf 14517:14551 <> persist_vs_occupancy_zero_new_axiom
+R14557:14558 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R14559:14586 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyIsNewAxiom def
+def 14855:14876 <> physicsGreenAuthorized
+R14888:14892 Corelib.Init.Logic <> False ind
+prf 14902:14941 <> persist_vs_occupancy_physics_green_false
+R14947:14948 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R14949:14970 UrgeKnowing.PersistVsOccupancy <> physicsGreenAuthorized def
+prf 15010:15046 <> persist_vs_occupancy_modality_unwired
+R15085:15087 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15052:15084 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyModalityCurrent def
+R15088:15115 UrgeKnowing.PersistVsOccupancy <> persist_vs_occupancy_unwired constr
+def 15379:15416 <> persistVsOccupancyPositiveRefuseHonest
+R15420:15423 Corelib.Init.Datatypes <> bool ind
+R15560:15577 UrgeKnowing.PersistVsOccupancy <> refuseSecondArgmin def
+R15497:15526 UrgeKnowing.PersistVsOccupancy <> refuseFuseOccupancyIntoPersist def
+R15528:15549 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R15436:15465 UrgeKnowing.PersistVsOccupancy <> refuseFusePersistIntoOccupancy def
+R15467:15486 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R15588:15591 Corelib.Init.Datatypes <> Some constr
+R15593:15627 UrgeKnowing.PersistVsOccupancy <> fuse_refused_persist_into_occupancy constr
+R15634:15637 Corelib.Init.Datatypes <> Some constr
+R15639:15673 UrgeKnowing.PersistVsOccupancy <> fuse_refused_occupancy_into_persist constr
+R15680:15683 Corelib.Init.Datatypes <> Some constr
+R15685:15710 UrgeKnowing.PersistVsOccupancy <> fuse_refused_second_argmin constr
+R15715:15718 Corelib.Init.Datatypes <> true constr
+R15735:15739 Corelib.Init.Datatypes <> false constr
+prf 15755:15797 <> persist_vs_occupancy_positive_refuse_honest
+R15841:15843 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15803:15840 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyPositiveRefuseHonest def
+R15844:15847 Corelib.Init.Datatypes <> true constr
+def 15887:15916 <> persistVsOccupancyDeepenHonest
+R15920:15923 Corelib.Init.Datatypes <> bool ind
+R16412:16417 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16362:16367 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16301:16306 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16217:16223 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16300:16300 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16133:16139 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16216:16216 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16035:16040 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15991:15996 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15930:15933 Corelib.Init.Datatypes <> negb def
+R15936:15949 UrgeKnowing.PersistVsOccupancy <> hilbertRoleEqb def
+R15951:15968 UrgeKnowing.PersistVsOccupancy <> persistHilbertRole def
+R15970:15989 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertRole def
+R15997:16034 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyPositiveRefuseHonest def
+R16041:16054 UrgeKnowing.PersistVsOccupancy <> homologNotCopy def
+R16057:16081 UrgeKnowing.PersistVsOccupancy <> homologPersistToOccupancy def
+R16083:16102 UrgeKnowing.PersistVsOccupancy <> samplePersistHilbert def
+R16104:16125 UrgeKnowing.PersistVsOccupancy <> sampleOccupancyHilbert def
+R16127:16131 Corelib.Init.Datatypes <> false constr
+R16140:16146 Stdlib.Arith.PeanoNat Nat eqb def
+R16149:16165 UrgeKnowing.PersistVsOccupancy <> countFiberVerdict def
+R16167:16191 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyFixture def
+R16193:16212 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_accept constr
+R16224:16230 Stdlib.Arith.PeanoNat Nat eqb def
+R16233:16249 UrgeKnowing.PersistVsOccupancy <> countFiberVerdict def
+R16251:16275 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyFixture def
+R16277:16296 UrgeKnowing.PersistVsOccupancy <> fiber_verdict_refuse constr
+R16307:16316 Stdlib.Strings.String <> eqb def
+R16318:16336 UrgeKnowing.PersistVsOccupancy <> composeSurrogateFor def
+R16368:16371 Corelib.Init.Datatypes <> negb def
+R16374:16383 Stdlib.Strings.String <> eqb def
+R16385:16407 UrgeKnowing.PersistVsOccupancy <> persistHilbertAuthority def
+R16418:16421 Corelib.Init.Datatypes <> negb def
+R16424:16433 Stdlib.Strings.String <> eqb def
+R16435:16459 UrgeKnowing.PersistVsOccupancy <> occupancyHilbertAuthority def
+prf 16473:16506 <> persist_vs_occupancy_deepen_honest
+R16542:16544 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16512:16541 UrgeKnowing.PersistVsOccupancy <> persistVsOccupancyDeepenHonest def
+R16545:16548 Corelib.Init.Datatypes <> true constr
