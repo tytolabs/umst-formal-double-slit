@@ -376,6 +376,13 @@ lean_lib ChemGeometry where
   not physics GREEN.
 
   Build: `lake build ChemConstants.MadelungExceptionIsTheorem`
+
+  Heavy-Z relativistic continuum (`CHEM-FORMAL-Q-LEAN-HEAVY-Z-RELATIVISTIC-CONTINUUM-CONSERVATION`):
+  Cn Z=112 / Fl Z=114 / Og Z=118 relativistic continuum named chart same ChemObject second law
+  conservation; not Xe/Rn noble-gas copy; homolog ≠ copy; terminals theorem | deferred composition |
+  typed Absent; `heavyZRelativisticContinuumProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.HeavyZRelativisticContinuum`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -403,7 +410,8 @@ lean_lib ChemConstants where
     `ChemConstants.OccupancyEngineSort,
     `ChemConstants.InteractEngineClosedShell,
     `ChemConstants.OutlierIsTheorem,
-    `ChemConstants.MadelungExceptionIsTheorem]
+    `ChemConstants.MadelungExceptionIsTheorem,
+    `ChemConstants.HeavyZRelativisticContinuum]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
