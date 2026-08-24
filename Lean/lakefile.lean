@@ -224,6 +224,16 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.HyperConservation`
+
+  Dissip conservation (`CHEM-FORMAL-Q-LEAN-DISSIP-CONSERVATION`):
+  GRAPH-04 **dissip** conservation; Unwired/Assumed/Proved/Surrogate;
+  cyclic vs **dissip**ative path identity conserved; reaction-cycle closed;
+  bond-path **dissip**ative typed; Fe Z=26; Cu Z=29; Og Z=118;
+  trivial **dissip** fail-closed; **dissip** ≠ **bond**; no petgraph fork;
+  `graph04DissipProved` false; Unwired, not GRAPH-04 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.DissipConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -237,7 +247,7 @@ lean_lib ChemConstants where
     `ChemConstants.PartialConservation, `ChemConstants.FoldConservation,
     `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
     `ChemConstants.BondConservation, `ChemConstants.CutConservation,
-    `ChemConstants.HyperConservation]
+    `ChemConstants.HyperConservation, `ChemConstants.DissipConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
