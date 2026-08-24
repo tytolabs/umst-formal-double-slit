@@ -199,6 +199,14 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.RewriteConservation`
+
+  Bond conservation (`CHEM-FORMAL-Q-LEAN-BOND-CONSERVATION`):
+  GRAPH-01 bond/reaction edge conservation; Unwired/Assumed/Proved/Surrogate;
+  named H–O bond Z=1/8; Og Z=118; forward hydration named; self-loop fail-closed;
+  `graph01BondProved` false; Unwired, not GRAPH-01 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.BondConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -210,7 +218,8 @@ lean_lib ChemConstants where
     `ChemConstants.DependentTypesConservation, `ChemConstants.LinearConservation,
     `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation,
     `ChemConstants.PartialConservation, `ChemConstants.FoldConservation,
-    `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation]
+    `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
+    `ChemConstants.BondConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
