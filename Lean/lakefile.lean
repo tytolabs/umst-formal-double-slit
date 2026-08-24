@@ -383,6 +383,14 @@ lean_lib ChemGeometry where
   typed Absent; `heavyZRelativisticContinuumProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.HeavyZRelativisticContinuum`
+
+  Cross-domain breakthrough protocol (`CHEM-FORMAL-Q-LEAN-CROSS-DOMAIN-BREAKTHROUGH-PROTOCOL-CONSERVATION`):
+  X40 cross-domain breakthrough protocol conservation; four fibers from one second-law + conservation
+  axiom; honest terminals NewChart / CommutingSquare / NamedRemainder; NewAxiom / Folklore refused;
+  cite chem_physics_chart_isomorphism not fork; not 27th axiom; `crossDomainBreakthroughProtocolProved`
+  false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.CrossDomainBreakthroughProtocol`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -411,7 +419,8 @@ lean_lib ChemConstants where
     `ChemConstants.InteractEngineClosedShell,
     `ChemConstants.OutlierIsTheorem,
     `ChemConstants.MadelungExceptionIsTheorem,
-    `ChemConstants.HeavyZRelativisticContinuum]
+    `ChemConstants.HeavyZRelativisticContinuum,
+    `ChemConstants.CrossDomainBreakthroughProtocol]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
