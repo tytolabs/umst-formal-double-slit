@@ -391,6 +391,13 @@ lean_lib ChemGeometry where
   false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.CrossDomainBreakthroughProtocol`
+
+  Composer research bleeding-edge (`CHEM-FORMAL-Q-LEAN-COMPOSER-RESEARCH-BLEEDING-EDGE-CONSERVATION`):
+  umst-chem-research named hypotheses only; research chart conservation on one axiom object;
+  cite CHEM_NS_V50_RESEARCH_HYPOTHESES.json read-only; literature new-axiom refused;
+  `composerResearchBleedingEdgeProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.ComposerResearchBleedingEdge`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -420,7 +427,8 @@ lean_lib ChemConstants where
     `ChemConstants.OutlierIsTheorem,
     `ChemConstants.MadelungExceptionIsTheorem,
     `ChemConstants.HeavyZRelativisticContinuum,
-    `ChemConstants.CrossDomainBreakthroughProtocol]
+    `ChemConstants.CrossDomainBreakthroughProtocol,
+    `ChemConstants.ComposerResearchBleedingEdge]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
