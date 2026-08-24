@@ -269,6 +269,15 @@ lean_lib ChemGeometry where
   not Thermo_n Proved, not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.ThermoConservation`
+
+  Goldschmidt conservation (`CHEM-FORMAL-Q-LEAN-GOLDSCHMIDT-CONSERVATION`):
+  GOLDSCHMIDT-01 **ore-class** **conservation**; Unwired/Assumed/Proved/Surrogate;
+  lithophile/chalcophile/siderophile class 6⊗7⊗17 concurrent Ore⊗G⊗fO₂ **product** not XOR;
+  Fe Z=26 metal/oxide/sulfide same Z; Cu Z=29; Si Z=14; He Z=2 closed-shell no-ore;
+  folklore/GREEN/trivial/XOR refuse; `goldschmidtProved` false; Unwired, not Goldschmidt Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.GoldschmidtConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -284,7 +293,8 @@ lean_lib ChemConstants where
     `ChemConstants.BondConservation, `ChemConstants.CutConservation,
     `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
-    `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation]
+    `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
+    `ChemConstants.GoldschmidtConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
