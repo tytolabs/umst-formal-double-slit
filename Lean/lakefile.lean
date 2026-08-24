@@ -368,6 +368,14 @@ lean_lib ChemGeometry where
   typed Absent — not folklore outlier; `outlierIsTheoremProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.OutlierIsTheorem`
+
+  Madelung-exception-is-theorem (`CHEM-FORMAL-Q-LEAN-MADELUNG-EXCEPTION-IS-THEOREM-CONSERVATION`):
+  Named / Actinide / DBlock occupancy exceptions are occupancy-engine sort theorems (observed ≠
+  Madelung family); Lr honest override; Pu 94 absent; homolog ≠ copy (Ds vs Pt); terminals
+  theorem | deferred composition | typed Absent; `madelungExceptionIsTheoremProved` false; Unwired,
+  not physics GREEN.
+
+  Build: `lake build ChemConstants.MadelungExceptionIsTheorem`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -394,7 +402,8 @@ lean_lib ChemConstants where
     `ChemConstants.OccurrenceFamilyPattern,
     `ChemConstants.OccupancyEngineSort,
     `ChemConstants.InteractEngineClosedShell,
-    `ChemConstants.OutlierIsTheorem]
+    `ChemConstants.OutlierIsTheorem,
+    `ChemConstants.MadelungExceptionIsTheorem]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
