@@ -406,6 +406,14 @@ lean_lib ChemGeometry where
   Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.ConstantDeriveSecondLawCensus`
+
+  Fine-structure α measured remainder (`CHEM-FORMAL-Q-LEAN-FINE-STRUCTURE-ALPHA-MEASURED-REMAINDER-CONSERVATION`):
+  CODATA MeasuredCited α deferred composition on second law conservation; consume
+  vacuum_permittivity_si_derived not fork; Landauer kT ln 2 alpha derive refused not Landauer-fake;
+  not impossibility rest; not 26th axiom; `fineStructureAlphaMeasuredRemainderProved` false;
+  Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.FineStructureAlphaMeasuredRemainder`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -437,7 +445,8 @@ lean_lib ChemConstants where
     `ChemConstants.HeavyZRelativisticContinuum,
     `ChemConstants.CrossDomainBreakthroughProtocol,
     `ChemConstants.ComposerResearchBleedingEdge,
-    `ChemConstants.ConstantDeriveSecondLawCensus]
+    `ChemConstants.ConstantDeriveSecondLawCensus,
+    `ChemConstants.FineStructureAlphaMeasuredRemainder]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
