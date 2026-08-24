@@ -311,6 +311,13 @@ lean_lib ChemGeometry where
   not physics GREEN.
 
   Build: `lake build ChemConstants.CementHydrationNotL0G`
+
+  Cartridge Ore consult monoid (`CHEM-FORMAL-Q-LEAN-CARTRIDGE-ORE-CONSULT-MONOID-CONSERVATION`):
+  C-S-H (Ca,Si,O,H) and pore solution (Na,Cl,O,H) are Ore consults, not ElementId smuggle;
+  Z=1..118 assemblage pattern; consult ChemistryService; no second periodic table;
+  `cartridgeOreConsultMonoidProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.CartridgeOreConsultMonoid`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -328,8 +335,9 @@ lean_lib ChemConstants where
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
-    `ChemConstants.ChemPhysicsChartIsomorphism, `ChemConstants.CartridgeConstitutiveCompose,
-    `ChemConstants.CementHydrationNotL0G]
+    `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
+    `ChemConstants.CementHydrationNotL0G,
+    `ChemConstants.CartridgeOreConsultMonoid]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
