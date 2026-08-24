@@ -252,6 +252,14 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.ScaleConservation`
+
+  Density conservation (`CHEM-FORMAL-Q-LEAN-DENSITY-CONSERVATION`):
+  DENSITY-01 **density** ladder order **conservation**; Unwired/Assumed/Proved/Surrogate;
+  four rungs mSDF→TE-SDF→SDF→FRep; composed indirect equals mSDF→FRep direct typed **conservation**;
+  SDF ≠ ρ unless named; live TE-SDF refuse; `densityLadderProved` false; Unwired,
+  not DensityLadder Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.DensityConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -266,7 +274,8 @@ lean_lib ChemConstants where
     `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
     `ChemConstants.BondConservation, `ChemConstants.CutConservation,
     `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
-    `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation]
+    `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
+    `ChemConstants.DensityConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
