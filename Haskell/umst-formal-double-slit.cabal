@@ -70,7 +70,8 @@ library
         TelemetryParser,
         UrgeKnowing.LandauerHistoryLook,
         UrgeKnowing.EpistemicNullProbe,
-        UrgeKnowing.CompactionMiCost
+        UrgeKnowing.CompactionMiCost,
+        UrgeKnowing.TwoHilberts
 
     -- Modules included in this library but not exported.
     -- other-modules:
