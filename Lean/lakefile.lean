@@ -234,6 +234,15 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.DissipConservation`
+
+  Pattern product conservation (`CHEM-FORMAL-Q-LEAN-PATTERN-PRODUCT-CONSERVATION`):
+  PATTERN-00 **PatternBundle** concurrent **product** conservation; Unwired/Assumed/Proved/Surrogate;
+  Π_c identity conserved (cardinality 25; ≥2 Present is **product** not XOR);
+  carbon nuance allotrope + catalysis + continuum concurrent; XOR mutually-exclusive refuse;
+  `pattern00ProductProved` false; Unwired, not PATTERN-00 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.PatternProductConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -247,7 +256,8 @@ lean_lib ChemConstants where
     `ChemConstants.PartialConservation, `ChemConstants.FoldConservation,
     `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
     `ChemConstants.BondConservation, `ChemConstants.CutConservation,
-    `ChemConstants.HyperConservation, `ChemConstants.DissipConservation]
+    `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
+    `ChemConstants.PatternProductConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
