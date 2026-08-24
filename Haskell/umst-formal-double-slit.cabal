@@ -74,7 +74,8 @@ library
         UrgeKnowing.ObserveMinMi,
         UrgeKnowing.MachineTemperature,
         UrgeKnowing.MeasurementCostSync,
-        UrgeKnowing.TwoHilberts
+        UrgeKnowing.TwoHilberts,
+        UrgeKnowing.PersistVsOccupancy
 
     -- Modules included in this library but not exported.
     -- other-modules:
