@@ -15,7 +15,7 @@
 --
 -- INT (read-only cite): umst/umst-chem/src/x_rows/chem_physics_chart_isomorphism.rs
 -- G-min cite: umst/umst-chem/src/assemblage_stability.rs
--- Mirrors sibling `ChemConstants/HomeostasisGminConservation.agda` style.
+-- Mirrors sibling `ChemConstants/CatalysisConservation.agda` style.
 -- No meso / acting theorems. Modality Unwired; physics GREEN false.
 -- Not 118² GREEN table. Second-law + **conservation** framing (not wired).
 -- Not biology axiom; not 26th axiom. Product not XOR.
