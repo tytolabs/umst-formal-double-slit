@@ -260,6 +260,15 @@ lean_lib ChemGeometry where
   not DensityLadder Proved, not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.DensityConservation`
+
+  Thermo conservation (`CHEM-FORMAL-Q-LEAN-THERMO-CONSERVATION`):
+  THERMO-01 **Thermo_n G(T,P,x) conservation**; Unwired/Assumed/Proved/Surrogate;
+  T, P, x named; composed T∘P∘x equals direct G typed **conservation**;
+  CALPHAD hull identity conserved; formation-zero ≠ G; measured-scalar invent refuse;
+  scrambled order refuse; live Process G refuse; `thermoGProved` false; Unwired,
+  not Thermo_n Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.ThermoConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -275,7 +284,7 @@ lean_lib ChemConstants where
     `ChemConstants.BondConservation, `ChemConstants.CutConservation,
     `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
-    `ChemConstants.DensityConservation]
+    `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
