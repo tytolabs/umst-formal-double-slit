@@ -68,7 +68,8 @@ library
         LandauerExtension,
         MonoidalState,
         TelemetryParser,
-        UrgeKnowing.LandauerHistoryLook
+        UrgeKnowing.LandauerHistoryLook,
+        UrgeKnowing.EpistemicNullProbe
 
     -- Modules included in this library but not exported.
     -- other-modules:
