@@ -345,6 +345,16 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.IsotopeConservation`
 
+  Metastable-vs-equilibrium conservation (`CHEM-FORMAL-Q-LEAN-METASTABLE-VS-EQUILIBRIUM-CONSERVATION`):
+  PATTERN-00 class 12 **metastable_vs_equilibrium** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  equilibrium G hull ⊗ metastable trap ⊗ class-12 factor **product** not XOR; Fe Z=26 host witness;
+  fast kinetics ≠ equilibrium G hull refuse; time SCALE-02 remainder ≠ new law refuse;
+  parallel metastability axiom refuse; species-id smuggle refuse; extra ElementId Z=119 refuse;
+  cite `LandauerLaw.physicalSecondLaw` not meso theorems; `metastableVsEquilibriumConservationProved` false;
+  Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.MetastableVsEquilibriumConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -533,6 +543,7 @@ lean_lib ChemConstants where
     `ChemConstants.ImpureComponentMorphismConservation,
     `ChemConstants.ProcessingRefiningConservation,
     `ChemConstants.IsotopeConservation,
+    `ChemConstants.MetastableVsEquilibriumConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
