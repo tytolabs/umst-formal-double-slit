@@ -306,6 +306,15 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.StructureBlockingInertnessConservation`
 
+  Assemblage-stability-WHY conservation (`CHEM-FORMAL-Q-LEAN-ASSEMBLAGE-STABILITY-WHY-CONSERVATION`):
+  PATTERN-00 class 7 **assemblage_stability_why** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  why mineral/phase assemblage observed = Ore predicate ⊗ G-min presentation ⊗ class-7 WHY factor **product** not XOR;
+  Fe Z=26 ore witness; Goldschmidt XOR enum refuse; parallel stability axiom refuse; species-id smuggle refuse;
+  cite `LandauerLaw.physicalSecondLaw` not meso theorems; `assemblageStabilityWhyConservationProved` false;
+  Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.AssemblageStabilityWhyConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -490,6 +499,7 @@ lean_lib ChemConstants where
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
     `ChemConstants.StructureEnablingConservation,
     `ChemConstants.StructureBlockingInertnessConservation,
+    `ChemConstants.AssemblageStabilityWhyConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
