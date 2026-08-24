@@ -296,6 +296,14 @@ lean_lib ChemGeometry where
   not physics GREEN.
 
   Build: `lake build ChemConstants.ChemPhysicsChartIsomorphism`
+
+  Cartridge constitutive compose (`CHEM-FORMAL-Q-LEAN-CARTRIDGE-CONSTITUTIVE-COMPOSE-CONSERVATION`):
+  cartridge ψ/𝒟 additive compose matter-fiber dual of chem Ore product not XOR;
+  consult ChemistryService; no second periodic table; XOR cartridge merge refused;
+  WAVE100 lib.rs/eos.rs smuggle refuse; `cartridgeComposeProved` false; Unwired,
+  not physics GREEN.
+
+  Build: `lake build ChemConstants.CartridgeConstitutiveCompose`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -313,7 +321,7 @@ lean_lib ChemConstants where
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
-    `ChemConstants.ChemPhysicsChartIsomorphism]
+    `ChemConstants.ChemPhysicsChartIsomorphism, `ChemConstants.CartridgeConstitutiveCompose]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
