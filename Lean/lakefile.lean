@@ -445,6 +445,14 @@ lean_lib ChemGeometry where
   `bondFormingConservationProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.BondFormingConservation`
+
+  Bond-repelling conservation (`CHEM-FORMAL-Q-LEAN-BOND-REPELLING-CONSERVATION`):
+  PATTERN-00 class 3 **bond_repelling** concurrent Π_c identity conserved; Pauli/steric + Ore-blocking +
+  TYPE-05 partiality concurrent **product** not XOR; TYPE-05 partial Interact undefined/identity-only
+  **not** Refine; Pauli/Ore/TYPE-05 witnesses; XOR / parallel-axiom / exchange-repulsion-axiom refuse;
+  `bondRepellingConservationProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.BondRepellingConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -481,7 +489,8 @@ lean_lib ChemConstants where
     `ChemConstants.ContinuumPatternLearn,
     `ChemConstants.PerElementNuanceConservation,
     `ChemConstants.SharedConservation,
-    `ChemConstants.BondFormingConservation]
+    `ChemConstants.BondFormingConservation,
+    `ChemConstants.BondRepellingConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
