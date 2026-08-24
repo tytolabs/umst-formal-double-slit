@@ -80,11 +80,11 @@ iupac-table-not-118-squared = refl
 laZ57OccupancyEngineSortIndex : ℕ
 laZ57OccupancyEngineSortIndex = 57
 
-mo-z42-occupancy-engine-sort-index : laZ57OccupancyEngineSortIndex ≡ 57
-mo-z42-occupancy-engine-sort-index = refl
+la-z57-occupancy-engine-sort-index : laZ57OccupancyEngineSortIndex ≡ 57
+la-z57-occupancy-engine-sort-index = refl
 
 ------------------------------------------------------------------------
--- Named element Z pins — Mo (Z=42), Cr (Z=24 homolog)
+-- Named element Z pins — La (Z=57), Y (Z=39) / Ac (Z=89) homolog
 ------------------------------------------------------------------------
 
 data ElementTag : Set where
@@ -697,7 +697,7 @@ laExceptionContinuumAxiom =
   , (λ a → refl)
   , xor-mutually-exclusive-refuse
   , iupac-table-cardinality-one-eighteen
-  , mo-z42-occupancy-engine-sort-index
+  , la-z57-occupancy-engine-sort-index
   , la-exception-present-count
   , lanthanum-z-57
   , yttrium-z-39
@@ -743,10 +743,10 @@ la-exception-continuum-cell-id :
   laExceptionContinuumCellId ≡ "CHEM-FORMAL-Q-AGDA-LA-EXCEPTION-CONTINUUM"
 la-exception-continuum-cell-id = refl
 
-la-exception-continuum-cites-z042-mo-rs :
+la-exception-continuum-cites-z057-la-rs :
   laExceptionContinuumAuthority ≡
   "umst/umst-chem/src/elements/z_057_la.rs"
-la-exception-continuum-cites-z042-mo-rs = refl
+la-exception-continuum-cites-z057-la-rs = refl
 
 la-exception-continuum-cites-occupancy-engine-sort-rs :
   occupancyEngineSortAuthority ≡
