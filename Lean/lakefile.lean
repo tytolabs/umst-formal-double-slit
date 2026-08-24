@@ -437,6 +437,14 @@ lean_lib ChemGeometry where
   `pattern00SharedProved` false; `cat02PullbackProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.SharedConservation`
+
+  Bond-forming conservation (`CHEM-FORMAL-Q-LEAN-BOND-FORMING-CONSERVATION`):
+  PATTERN-00 class 2 **bond_forming** concurrent Π_c identity conserved; QTAIM BCP + Mayer/DDEC +
+  Kleisli Interact Apply concurrent **product** not XOR; forming arrow on Interact **not** Refine;
+  H–O and C–C bond-forming witnesses; XOR / parallel-axiom / bond-order-axiom refuse;
+  `bondFormingConservationProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.BondFormingConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -472,7 +480,8 @@ lean_lib ChemConstants where
     `ChemConstants.FineStructureAlphaMeasuredRemainder,
     `ChemConstants.ContinuumPatternLearn,
     `ChemConstants.PerElementNuanceConservation,
-    `ChemConstants.SharedConservation]
+    `ChemConstants.SharedConservation,
+    `ChemConstants.BondFormingConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
