@@ -69,7 +69,8 @@ library
         MonoidalState,
         TelemetryParser,
         UrgeKnowing.LandauerHistoryLook,
-        UrgeKnowing.EpistemicNullProbe
+        UrgeKnowing.EpistemicNullProbe,
+        UrgeKnowing.CompactionMiCost
 
     -- Modules included in this library but not exported.
     -- other-modules:
