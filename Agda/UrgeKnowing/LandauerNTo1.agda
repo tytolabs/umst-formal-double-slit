@@ -156,7 +156,7 @@ evaluateCompression : CompressionCandidate → CompressionVerdict
 evaluateCompression cand =
   case admitCompressionCandidate cand of λ
     { nothing → compression-accept
-    ; just _ → compression-refuse
+    ; (just _) → compression-refuse
     }
 
 ------------------------------------------------------------------------
