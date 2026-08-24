@@ -315,6 +315,16 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.AssemblageStabilityWhyConservation`
 
+  Impure-component-morphism conservation (`CHEM-FORMAL-Q-LEAN-IMPURE-COMPONENT-MORPHISM-CONSERVATION`):
+  PATTERN-00 class 8 **impure_component_morphism** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  impurity is morphism on same second-law + conservation object (component in assemblage), not second SpeciesId / 26th axiom;
+  ore constituent morphism ⊗ G-min presentation ⊗ class-8 impure morphism **product** not XOR; Fe Z=26 ore host witness;
+  parallel impurity axiom refuse; species-id smuggle refuse; extra ElementId Z=119 refuse; free purification refuse;
+  cite `LandauerLaw.physicalSecondLaw` not meso theorems; `impureComponentMorphismConservationProved` false;
+  Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.ImpureComponentMorphismConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -500,6 +510,7 @@ lean_lib ChemConstants where
     `ChemConstants.StructureEnablingConservation,
     `ChemConstants.StructureBlockingInertnessConservation,
     `ChemConstants.AssemblageStabilityWhyConservation,
+    `ChemConstants.ImpureComponentMorphismConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
