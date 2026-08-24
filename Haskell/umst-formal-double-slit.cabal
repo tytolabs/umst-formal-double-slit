@@ -71,6 +71,7 @@ library
         UrgeKnowing.LandauerHistoryLook,
         UrgeKnowing.EpistemicNullProbe,
         UrgeKnowing.CompactionMiCost,
+        UrgeKnowing.MeasurementCostSync,
         UrgeKnowing.TwoHilberts
 
     -- Modules included in this library but not exported.
