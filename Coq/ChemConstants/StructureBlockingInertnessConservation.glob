@@ -1,0 +1,1145 @@
+DIGEST 2298a7b739cf12a5fd1b5a276bf900bd
+FUMST.ChemConstants.StructureBlockingInertnessConservation
+R1523:1527 Stdlib.Arith.Arith <> <> lib
+R1529:1534 Stdlib.ZArith.ZArith <> <> lib
+R1536:1541 Stdlib.Strings.String <> <> lib
+R1543:1546 Stdlib.Bool.Bool <> <> lib
+R1548:1550 Stdlib.micromega.Lia <> <> lib
+R1552:1555 Stdlib.Lists.List <> <> lib
+R1565:1577 Stdlib.Lists.List ListNotations <> mod
+ind 1908:1953 <> StructureBlockingInertnessConservationModality
+constr 1969:2017 <> structure_blocking_inertness_conservation_unwired
+constr 2023:2071 <> structure_blocking_inertness_conservation_assumed
+constr 2077:2124 <> structure_blocking_inertness_conservation_proved
+constr 2130:2180 <> structure_blocking_inertness_conservation_surrogate
+scheme 1908:1953 <> StructureBlockingInertnessConservationModality_rect
+scheme 1908:1953 <> StructureBlockingInertnessConservationModality_ind
+scheme 1908:1953 <> StructureBlockingInertnessConservationModality_rec
+scheme 1908:1953 <> StructureBlockingInertnessConservationModality_sind
+def 2195:2247 <> structureBlockingInertnessConservationModalityCurrent
+R2253:2298 UMST.ChemConstants.StructureBlockingInertnessConservation <> StructureBlockingInertnessConservationModality ind
+R2305:2353 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+def 2368:2415 <> structure_blocking_inertness_lattice_cardinality
+R2419:2421 Corelib.Init.Datatypes <> nat ind
+prf 2436:2491 <> structure_blocking_inertness_lattice_cardinality_is_four
+R2545:2547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2497:2544 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_lattice_cardinality def
+prf 2583:2634 <> structure_blocking_inertness_lattice_not_118_squared
+R2715:2717 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2640:2643 Corelib.Init.Datatypes <> negb def
+R2646:2652 Stdlib.Arith.PeanoNat Nat eqb def
+R2654:2701 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_lattice_cardinality def
+R2707:2709 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2718:2721 Corelib.Init.Datatypes <> true constr
+R2740:2787 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_lattice_cardinality def
+def 3048:3072 <> pattern_class_cardinality
+R3076:3078 Corelib.Init.Datatypes <> nat ind
+prf 3094:3124 <> pattern_class_cardinality_is_25
+R3155:3157 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3130:3154 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_cardinality def
+prf 3194:3222 <> pattern_class_not_118_squared
+R3280:3282 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3228:3231 Corelib.Init.Datatypes <> negb def
+R3234:3240 Stdlib.Arith.PeanoNat Nat eqb def
+R3242:3266 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_cardinality def
+R3272:3274 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3283:3286 Corelib.Init.Datatypes <> true constr
+R3305:3329 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_cardinality def
+def 3364:3388 <> pattern_class_index_valid
+R3395:3397 Corelib.Init.Datatypes <> nat ind
+binder 3391:3391 <> i:3
+R3402:3405 Corelib.Init.Datatypes <> bool ind
+R3412:3418 Stdlib.Arith.PeanoNat Nat ltb def
+R3420:3420 UMST.ChemConstants.StructureBlockingInertnessConservation <> i:3 var
+R3422:3446 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_cardinality def
+def 3547:3582 <> pattern_class_structure_blocking_idx
+R3586:3588 Corelib.Init.Datatypes <> nat ind
+prf 3603:3643 <> pattern_class_structure_blocking_idx_is_5
+R3685:3687 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3649:3684 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_structure_blocking_idx def
+prf 3723:3758 <> structure_blocking_class_index_valid
+R3826:3828 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3764:3788 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_index_valid def
+R3790:3825 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_structure_blocking_idx def
+R3829:3832 Corelib.Init.Datatypes <> true constr
+R3851:3875 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_index_valid def
+R3878:3913 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_structure_blocking_idx def
+R3920:3944 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_cardinality def
+def 3979:4015 <> crossClassifierStructureBlockingRowId
+R4019:4024 Stdlib.Strings.String <> string ind
+prf 4043:4087 <> cross_classifier_structure_blocking_row_named
+R4130:4132 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4093:4129 UMST.ChemConstants.StructureBlockingInertnessConservation <> crossClassifierStructureBlockingRowId def
+def 4400:4422 <> iupac_table_cardinality
+R4426:4428 Corelib.Init.Datatypes <> nat ind
+prf 4445:4474 <> iupac_table_cardinality_is_118
+R4503:4505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4480:4502 UMST.ChemConstants.StructureBlockingInertnessConservation <> iupac_table_cardinality def
+def 4548:4569 <> helium_atomic_number_z
+R4573:4575 Corelib.Init.Datatypes <> nat ind
+prf 4590:4616 <> helium_atomic_number_z_is_2
+R4644:4646 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4622:4643 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+def 4687:4700 <> helium_z_valid
+R4704:4707 Corelib.Init.Datatypes <> bool ind
+R4746:4751 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4714:4720 Stdlib.Arith.PeanoNat Nat ltb def
+R4724:4745 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+R4752:4758 Stdlib.Arith.PeanoNat Nat leb def
+R4760:4781 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+R4783:4805 UMST.ChemConstants.StructureBlockingInertnessConservation <> iupac_table_cardinality def
+prf 4815:4833 <> helium_z_valid_true
+R4851:4853 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4837:4850 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_z_valid def
+R4854:4857 Corelib.Init.Datatypes <> true constr
+R4876:4889 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_z_valid def
+R4892:4913 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+R4916:4938 UMST.ChemConstants.StructureBlockingInertnessConservation <> iupac_table_cardinality def
+def 4973:4991 <> helium_notation_tag
+R4995:5000 Stdlib.Strings.String <> string ind
+prf 5020:5047 <> helium_notation_tag_nonempty
+R5070:5073 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5051:5069 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_notation_tag def
+def 5116:5151 <> interact_kind_structure_blocking_tag
+R5155:5160 Stdlib.Strings.String <> string ind
+def 5214:5257 <> pattern_bundle_structure_blocking_factor_tag
+R5261:5266 Stdlib.Strings.String <> string ind
+prf 5312:5356 <> interact_kind_structure_blocking_tag_nonempty
+R5398:5401 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5362:5397 UMST.ChemConstants.StructureBlockingInertnessConservation <> interact_kind_structure_blocking_tag def
+prf 5439:5491 <> pattern_bundle_structure_blocking_factor_tag_nonempty
+R5541:5544 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5497:5540 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_bundle_structure_blocking_factor_tag def
+ind 5810:5840 <> structure_blocking_channel_slot
+constr 5856:5870 <> sb_slot_unwired
+constr 5876:5889 <> sb_slot_absent
+constr 5895:5909 <> sb_slot_present
+scheme 5810:5840 <> structure_blocking_channel_slot_rect
+scheme 5810:5840 <> structure_blocking_channel_slot_ind
+scheme 5810:5840 <> structure_blocking_channel_slot_rec
+scheme 5810:5840 <> structure_blocking_channel_slot_sind
+def 5924:5958 <> structure_blocking_channel_slot_beq
+R5971:6001 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_slot ind
+binder 5963:5964 <> s1:6
+binder 5966:5967 <> s2:7
+R6006:6009 Corelib.Init.Datatypes <> bool ind
+R6026:6027 UMST.ChemConstants.StructureBlockingInertnessConservation <> s2:7 var
+R6022:6023 UMST.ChemConstants.StructureBlockingInertnessConservation <> s1:6 var
+R6038:6052 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_unwired constr
+R6055:6069 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_unwired constr
+R6074:6077 Corelib.Init.Datatypes <> true constr
+R6083:6096 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_absent constr
+R6099:6112 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_absent constr
+R6117:6120 Corelib.Init.Datatypes <> true constr
+R6126:6140 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_present constr
+R6143:6157 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_present constr
+R6162:6165 Corelib.Init.Datatypes <> true constr
+R6179:6183 Corelib.Init.Datatypes <> false constr
+def 6204:6245 <> structure_blocking_channel_slot_is_present
+R6254:6284 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_slot ind
+binder 6250:6250 <> s:10
+R6289:6292 Corelib.Init.Datatypes <> bool ind
+R6305:6305 UMST.ChemConstants.StructureBlockingInertnessConservation <> s:10 var
+R6316:6330 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_present constr
+R6335:6338 Corelib.Init.Datatypes <> true constr
+R6349:6353 Corelib.Init.Datatypes <> false constr
+def 6374:6409 <> structureBlockingProductChannelCount
+R6413:6415 Corelib.Init.Datatypes <> nat ind
+prf 6430:6478 <> structure_blocking_product_channel_count_is_three
+R6520:6522 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6484:6519 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingProductChannelCount def
+def 6641:6670 <> sb_channel_he_1s2_closed_shell
+R6674:6676 Corelib.Init.Datatypes <> nat ind
+def 6695:6721 <> sb_channel_missing_interact
+R6725:6727 Corelib.Init.Datatypes <> nat ind
+def 6746:6774 <> sb_channel_vacuum_inert_limit
+R6778:6780 Corelib.Init.Datatypes <> nat ind
+prf 6795:6820 <> sb_channel_he_1s2_idx_is_0
+R6856:6858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6826:6855 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_he_1s2_closed_shell def
+prf 6894:6929 <> sb_channel_missing_interact_idx_is_1
+R6962:6964 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6935:6961 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_missing_interact def
+prf 7000:7037 <> sb_channel_vacuum_inert_limit_idx_is_2
+R7072:7074 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7043:7071 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_vacuum_inert_limit def
+def 7339:7371 <> structure_blocking_channel_bundle
+R7388:7391 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7385:7387 Corelib.Init.Datatypes <> nat ind
+R7392:7422 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_slot ind
+def 7437:7469 <> structureBlockingBundleAllUnwired
+R7473:7505 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+R7521:7535 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_unwired constr
+def 7550:7574 <> structureBlockingBundleAt
+R7581:7613 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 7577:7577 <> b:12
+R7623:7625 Corelib.Init.Datatypes <> nat ind
+binder 7617:7619 <> idx:13
+R7638:7668 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_slot ind
+binder 7631:7634 <> slot:14
+R7673:7705 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 7716:7716 <> i:15
+R7724:7730 Stdlib.Arith.PeanoNat Nat eqb def
+R7732:7732 UMST.ChemConstants.StructureBlockingInertnessConservation <> i:15 var
+R7734:7736 UMST.ChemConstants.StructureBlockingInertnessConservation <> idx:13 var
+R7753:7753 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:12 var
+R7755:7755 UMST.ChemConstants.StructureBlockingInertnessConservation <> i:15 var
+R7743:7746 UMST.ChemConstants.StructureBlockingInertnessConservation <> slot:14 var
+def 7770:7803 <> structureBlockingBundleWithPresent
+R7812:7844 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 7808:7808 <> b:16
+R7854:7856 Corelib.Init.Datatypes <> nat ind
+binder 7848:7850 <> idx:17
+R7861:7893 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+R7900:7924 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleAt def
+R7926:7926 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:16 var
+R7928:7930 UMST.ChemConstants.StructureBlockingInertnessConservation <> idx:17 var
+R7932:7946 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_slot_present constr
+def 7959:7980 <> count_sb_present_up_to
+R7987:8019 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 7983:7983 <> b:18
+R8031:8033 Corelib.Init.Datatypes <> nat ind
+binder 8023:8027 <> bound:19
+R8038:8040 Corelib.Init.Datatypes <> nat ind
+R8053:8057 UMST.ChemConstants.StructureBlockingInertnessConservation <> bound:19 var
+R8079:8079 Corelib.Init.Datatypes <> S constr
+R8114:8155 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_slot_is_present def
+R8158:8158 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:18 var
+R8161:8164 Corelib.Init.Peano <> pred abbrev
+R8166:8170 UMST.ChemConstants.StructureBlockingInertnessConservation <> bound:19 var
+binder 8096:8098 <> add:22
+R8231:8233 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8205:8226 UMST.ChemConstants.StructureBlockingInertnessConservation <> count_sb_present_up_to:20 def
+R8228:8228 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:18 var
+R8234:8236 UMST.ChemConstants.StructureBlockingInertnessConservation <> add:22 var
+def 8257:8291 <> structureBlockingBundlePresentCount
+R8298:8330 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 8294:8294 <> b:23
+R8335:8337 Corelib.Init.Datatypes <> nat ind
+R8344:8365 UMST.ChemConstants.StructureBlockingInertnessConservation <> count_sb_present_up_to def
+R8367:8367 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:23 var
+R8369:8404 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingProductChannelCount def
+def 8419:8446 <> structureBlockingBundleHolds
+R8453:8485 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 8449:8449 <> b:24
+R8495:8497 Corelib.Init.Datatypes <> nat ind
+binder 8489:8491 <> idx:25
+R8502:8505 Corelib.Init.Datatypes <> bool ind
+R8512:8553 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_slot_is_present def
+R8556:8556 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:24 var
+R8558:8560 UMST.ChemConstants.StructureBlockingInertnessConservation <> idx:25 var
+def 8576:8617 <> structureBlockingBundleIsConcurrentProduct
+R8624:8656 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 8620:8620 <> b:26
+R8661:8664 Corelib.Init.Datatypes <> bool ind
+R8671:8677 Stdlib.Arith.PeanoNat Nat leb def
+R8682:8716 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundlePresentCount def
+R8718:8718 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:26 var
+def 8815:8858 <> structureBlockingHe1s2MissingInteractWitness
+R8862:8894 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+R8901:8934 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleWithPresent def
+R8941:8974 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleWithPresent def
+R8983:9016 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleWithPresent def
+R9018:9050 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleAllUnwired def
+R9060:9089 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_he_1s2_closed_shell def
+R9098:9124 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_missing_interact def
+R9131:9159 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_vacuum_inert_limit def
+def 9174:9202 <> structureBlockingEmptyWitness
+R9206:9238 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+R9245:9277 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleAllUnwired def
+def 9292:9321 <> structureBlockingSinglePresent
+R9325:9357 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+R9364:9397 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleWithPresent def
+R9399:9431 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleAllUnwired def
+R9437:9466 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_he_1s2_closed_shell def
+prf 9476:9497 <> he_1s2_channel_present
+R9611:9613 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9503:9530 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleHolds def
+R9532:9575 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R9581:9610 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_he_1s2_closed_shell def
+R9614:9617 Corelib.Init.Datatypes <> true constr
+prf 9652:9683 <> missing_interact_channel_present
+R9794:9796 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9689:9716 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleHolds def
+R9718:9761 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R9767:9793 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_missing_interact def
+R9797:9800 Corelib.Init.Datatypes <> true constr
+prf 9835:9868 <> vacuum_inert_limit_channel_present
+R9981:9983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9874:9901 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleHolds def
+R9903:9946 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R9952:9980 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_channel_vacuum_inert_limit def
+R9984:9987 Corelib.Init.Datatypes <> true constr
+prf 10022:10067 <> he_1s2_missing_interact_present_count_is_three
+R10153:10155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10073:10107 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundlePresentCount def
+R10109:10152 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+prf 10191:10235 <> he_1s2_missing_interact_is_concurrent_product
+R10328:10330 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10241:10282 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R10284:10327 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R10331:10334 Corelib.Init.Datatypes <> true constr
+R10353:10394 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R10407:10452 UMST.ChemConstants.StructureBlockingInertnessConservation <> he_1s2_missing_interact_present_count_is_three thm
+R10407:10452 UMST.ChemConstants.StructureBlockingInertnessConservation <> he_1s2_missing_interact_present_count_is_three thm
+R10407:10452 UMST.ChemConstants.StructureBlockingInertnessConservation <> he_1s2_missing_interact_present_count_is_three thm
+prf 10482:10512 <> empty_bundle_present_count_zero
+R10583:10585 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10518:10552 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundlePresentCount def
+R10554:10582 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingEmptyWitness def
+prf 10621:10655 <> empty_bundle_not_concurrent_product
+R10733:10735 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10661:10702 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R10704:10732 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingEmptyWitness def
+R10736:10740 Corelib.Init.Datatypes <> false constr
+R10759:10800 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R10813:10843 UMST.ChemConstants.StructureBlockingInertnessConservation <> empty_bundle_present_count_zero thm
+R10813:10843 UMST.ChemConstants.StructureBlockingInertnessConservation <> empty_bundle_present_count_zero thm
+R10813:10843 UMST.ChemConstants.StructureBlockingInertnessConservation <> empty_bundle_present_count_zero thm
+prf 10873:10899 <> single_present_count_is_one
+R10971:10973 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10905:10939 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundlePresentCount def
+R10941:10970 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingSinglePresent def
+prf 11009:11045 <> single_present_not_concurrent_product
+R11124:11126 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11051:11092 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R11094:11123 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingSinglePresent def
+R11127:11131 Corelib.Init.Datatypes <> false constr
+R11150:11191 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R11204:11230 UMST.ChemConstants.StructureBlockingInertnessConservation <> single_present_count_is_one thm
+R11204:11230 UMST.ChemConstants.StructureBlockingInertnessConservation <> single_present_count_is_one thm
+R11204:11230 UMST.ChemConstants.StructureBlockingInertnessConservation <> single_present_count_is_one thm
+ind 11489:11518 <> structure_blocking_xor_posture
+constr 11534:11549 <> sb_xor_exclusive
+constr 11555:11579 <> sb_xor_concurrent_product
+scheme 11489:11518 <> structure_blocking_xor_posture_rect
+scheme 11489:11518 <> structure_blocking_xor_posture_ind
+scheme 11489:11518 <> structure_blocking_xor_posture_rec
+scheme 11489:11518 <> structure_blocking_xor_posture_sind
+def 11594:11614 <> sbXorClassifierMarker
+R11618:11623 Stdlib.Strings.String <> string ind
+def 11687:11711 <> sbConcurrentProductMarker
+R11715:11720 Stdlib.Strings.String <> string ind
+prf 11774:11815 <> sb_xor_marker_ne_concurrent_product_marker
+R11842:11845 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11821:11841 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierMarker def
+R11846:11870 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbConcurrentProductMarker def
+def 11911:11937 <> sbXorClassifierIncompatible
+R11952:11955 Corelib.Init.Datatypes <> bool ind
+binder 11940:11948 <> claim_xor:29
+R11965:11997 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 11961:11961 <> b:30
+R12002:12005 Corelib.Init.Datatypes <> bool ind
+R12021:12024 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12012:12020 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_xor:29 var
+R12025:12066 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R12068:12068 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:30 var
+prf 12078:12108 <> sb_xor_refuse_on_he_1s2_witness
+R12191:12193 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12114:12140 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierIncompatible def
+R12142:12145 Corelib.Init.Datatypes <> true constr
+R12147:12190 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R12194:12197 Corelib.Init.Datatypes <> true constr
+R12216:12242 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierIncompatible def
+prf 12295:12331 <> sb_xor_ok_on_concurrent_product_claim
+R12415:12417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12337:12363 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierIncompatible def
+R12365:12369 Corelib.Init.Datatypes <> false constr
+R12371:12414 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R12418:12422 Corelib.Init.Datatypes <> false constr
+def 12462:12476 <> sbProductNotXor
+R12480:12483 Corelib.Init.Datatypes <> bool ind
+R12577:12582 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12490:12531 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R12533:12576 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R12583:12609 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierIncompatible def
+R12611:12614 Corelib.Init.Datatypes <> true constr
+R12616:12659 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+prf 12669:12691 <> sb_product_not_xor_true
+R12710:12712 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12695:12709 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbProductNotXor def
+R12713:12716 Corelib.Init.Datatypes <> true constr
+R12735:12749 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbProductNotXor def
+prf 12804:12829 <> concurrent_product_not_xor
+R12857:12862 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12850:12852 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12835:12849 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbProductNotXor def
+R12853:12856 Corelib.Init.Datatypes <> true constr
+R12966:12971 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12959:12961 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12863:12869 Stdlib.Arith.PeanoNat Nat leb def
+R12874:12908 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundlePresentCount def
+R12914:12957 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R12962:12965 Corelib.Init.Datatypes <> true constr
+R12993:12996 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12972:12992 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierMarker def
+R12997:13021 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbConcurrentProductMarker def
+R13050:13072 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_product_not_xor_true thm
+R13050:13072 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_product_not_xor_true thm
+R13100:13145 UMST.ChemConstants.StructureBlockingInertnessConservation <> he_1s2_missing_interact_present_count_is_three thm
+R13100:13145 UMST.ChemConstants.StructureBlockingInertnessConservation <> he_1s2_missing_interact_present_count_is_three thm
+R13100:13145 UMST.ChemConstants.StructureBlockingInertnessConservation <> he_1s2_missing_interact_present_count_is_three thm
+R13179:13220 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_xor_marker_ne_concurrent_product_marker thm
+R13179:13220 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_xor_marker_ne_concurrent_product_marker thm
+ind 13464:13494 <> structure_blocking_bar_presence
+constr 13510:13522 <> sb_bar_absent
+constr 13528:13541 <> sb_bar_present
+scheme 13464:13494 <> structure_blocking_bar_presence_rect
+scheme 13464:13494 <> structure_blocking_bar_presence_ind
+scheme 13464:13494 <> structure_blocking_bar_presence_rec
+scheme 13464:13494 <> structure_blocking_bar_presence_sind
+rec 13552:13579 <> structure_blocking_claim_bar
+proj 13595:13609 <> sb_bar_presence
+proj 13648:13666 <> sb_bar_defect_total
+R13613:13643 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_bar_presence ind
+R13670:13672 Corelib.Init.Datatypes <> nat ind
+def 13689:13719 <> structureBlockingClaimBarAbsent
+R13723:13750 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_claim_bar rec
+R13760:13774 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R13760:13774 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R13760:13774 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R13799:13817 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_defect_total proj
+R13799:13817 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_defect_total proj
+R13779:13791 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_absent constr
+def 13840:13874 <> structureBlockingClaimBarZeroDefect
+R13878:13905 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_claim_bar rec
+R13915:13929 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R13915:13929 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R13915:13929 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R13955:13973 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_defect_total proj
+R13955:13973 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_defect_total proj
+R13934:13947 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_present constr
+def 13996:14035 <> structure_blocking_claim_bar_zero_defect
+R14042:14069 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_claim_bar rec
+binder 14038:14038 <> b:36
+R14074:14077 Corelib.Init.Datatypes <> bool ind
+R14090:14104 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_presence proj
+R14106:14106 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:36 var
+R14117:14129 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_absent constr
+R14134:14138 Corelib.Init.Datatypes <> false constr
+R14144:14157 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_present constr
+R14162:14168 Stdlib.Arith.PeanoNat Nat eqb def
+R14171:14189 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_bar_defect_total proj
+R14191:14191 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:36 var
+prf 14210:14254 <> structure_blocking_claim_bar_zero_defect_true
+R14336:14338 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14260:14299 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_claim_bar_zero_defect def
+R14301:14335 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarZeroDefect def
+R14339:14342 Corelib.Init.Datatypes <> true constr
+prf 14377:14427 <> structure_blocking_claim_bar_absent_not_zero_defect
+R14505:14507 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14433:14472 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_claim_bar_zero_defect def
+R14474:14504 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R14508:14512 Corelib.Init.Datatypes <> false constr
+ind 14777:14815 <> structure_blocking_conservation_verdict
+constr 14831:14851 <> sb_verdict_unwired_ok
+constr 14857:14875 <> sb_verdict_named_ok
+constr 14881:14900 <> sb_verdict_design_ok
+constr 14906:14930 <> sb_verdict_trivial_refuse
+constr 14936:14956 <> sb_verdict_xor_refuse
+constr 14962:14991 <> sb_verdict_green_invent_refuse
+constr 14997:15032 <> sb_verdict_proved_without_bar_refuse
+constr 15038:15071 <> sb_verdict_production_wired_refuse
+constr 15077:15118 <> sb_verdict_parallel_inertness_axiom_refuse
+constr 15124:15155 <> sb_verdict_nobility_magic_refuse
+constr 15161:15190 <> sb_verdict_npc6_cartoon_refuse
+scheme 14777:14815 <> structure_blocking_conservation_verdict_rect
+scheme 14777:14815 <> structure_blocking_conservation_verdict_ind
+scheme 14777:14815 <> structure_blocking_conservation_verdict_rec
+scheme 14777:14815 <> structure_blocking_conservation_verdict_sind
+def 15205:15246 <> structure_blocking_conservation_verdict_ok
+R15255:15293 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict ind
+binder 15251:15251 <> v:39
+R15298:15301 Corelib.Init.Datatypes <> bool ind
+R15314:15314 UMST.ChemConstants.StructureBlockingInertnessConservation <> v:39 var
+R15325:15345 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_unwired_ok constr
+R15350:15353 Corelib.Init.Datatypes <> true constr
+R15359:15377 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R15382:15385 Corelib.Init.Datatypes <> true constr
+R15391:15410 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_design_ok constr
+R15415:15418 Corelib.Init.Datatypes <> true constr
+R15429:15433 Corelib.Init.Datatypes <> false constr
+def 15454:15486 <> structureBlockingBundleNontrivial
+R15493:15525 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 15489:15489 <> b:41
+R15530:15533 Corelib.Init.Datatypes <> bool ind
+R15540:15546 Stdlib.Arith.PeanoNat Nat ltb def
+R15551:15585 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundlePresentCount def
+R15587:15587 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:41 var
+def 15603:15636 <> evaluate_structure_blocking_bundle
+R15645:15690 UMST.ChemConstants.StructureBlockingInertnessConservation <> StructureBlockingInertnessConservationModality ind
+binder 15641:15641 <> m:42
+R15700:15732 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_channel_bundle def
+binder 15696:15696 <> b:43
+R15744:15771 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_claim_bar rec
+binder 15738:15740 <> bar:44
+R15800:15803 Corelib.Init.Datatypes <> bool ind
+binder 15777:15796 <> claim_xor_classifier:45
+R15831:15834 Corelib.Init.Datatypes <> bool ind
+binder 15809:15827 <> claim_physics_green:46
+R15855:15858 Corelib.Init.Datatypes <> bool ind
+binder 15840:15851 <> claim_proved:47
+R15863:15901 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict ind
+R15911:15929 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_physics_green:46 var
+R15979:15990 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_proved:47 var
+R16056:16059 Corelib.Init.Datatypes <> negb def
+R16062:16094 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleNontrivial def
+R16096:16096 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:43 var
+R16162:16188 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbXorClassifierIncompatible def
+R16190:16209 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_xor_classifier:45 var
+R16211:16211 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:43 var
+R16304:16304 UMST.ChemConstants.StructureBlockingInertnessConservation <> m:42 var
+R16332:16380 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R16411:16452 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R16454:16454 UMST.ChemConstants.StructureBlockingInertnessConservation <> b:43 var
+R16532:16551 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_design_ok constr
+R16484:16502 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R16574:16622 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_assumed constr
+R16645:16695 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_surrogate constr
+R16723:16742 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_design_ok constr
+R16723:16742 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_design_ok constr
+R16765:16812 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R16840:16875 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_proved_without_bar_refuse constr
+R16235:16255 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_xor_refuse constr
+R16116:16140 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_trivial_refuse constr
+R16004:16039 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_proved_without_bar_refuse constr
+R15938:15967 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_green_invent_refuse constr
+def 16913:16958 <> evaluate_structure_blocking_conservation_close
+R16967:17012 UMST.ChemConstants.StructureBlockingInertnessConservation <> StructureBlockingInertnessConservationModality ind
+binder 16963:16963 <> m:49
+R17040:17043 Corelib.Init.Datatypes <> bool ind
+binder 17018:17036 <> claim_physics_green:50
+R17074:17077 Corelib.Init.Datatypes <> bool ind
+binder 17049:17070 <> claim_production_wired:51
+R17082:17120 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict ind
+R17130:17148 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_physics_green:50 var
+R17198:17219 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_production_wired:51 var
+R17280:17280 UMST.ChemConstants.StructureBlockingInertnessConservation <> m:49 var
+R17293:17341 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R17346:17366 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_unwired_ok constr
+R17374:17422 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_assumed constr
+R17430:17477 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R17485:17535 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_surrogate constr
+R17540:17558 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R17540:17558 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R17540:17558 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R17228:17261 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_production_wired_refuse constr
+R17157:17186 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_green_invent_refuse constr
+def 17581:17622 <> structure_blocking_conservation_authorized
+R17649:17652 Corelib.Init.Datatypes <> bool ind
+binder 17627:17645 <> claim_physics_green:53
+R17683:17686 Corelib.Init.Datatypes <> bool ind
+binder 17658:17679 <> claim_production_wired:54
+R17691:17694 Corelib.Init.Datatypes <> bool ind
+R17707:17752 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R17764:17811 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R17813:17831 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_physics_green:53 var
+R17833:17854 UMST.ChemConstants.StructureBlockingInertnessConservation <> claim_production_wired:54 var
+R17865:17883 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R17888:17891 Corelib.Init.Datatypes <> true constr
+R17902:17906 Corelib.Init.Datatypes <> false constr
+ind 18150:18184 <> structure_blocking_conservation_law
+constr 18200:18215 <> sb_law_conserved
+constr 18221:18235 <> sb_law_named_ok
+constr 18241:18261 <> sb_law_trivial_refuse
+constr 18267:18292 <> sb_law_green_invent_refuse
+scheme 18150:18184 <> structure_blocking_conservation_law_rect
+scheme 18150:18184 <> structure_blocking_conservation_law_ind
+scheme 18150:18184 <> structure_blocking_conservation_law_rec
+scheme 18150:18184 <> structure_blocking_conservation_law_sind
+def 18307:18347 <> structure_blocking_conservation_law_count
+R18351:18353 Corelib.Init.Datatypes <> nat ind
+prf 18368:18416 <> structure_blocking_conservation_law_count_is_four
+R18463:18465 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18422:18462 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_law_count def
+ind 18505:18547 <> structure_blocking_conservation_law_witness
+constr 18563:18581 <> sb_law_witness_open
+constr 18587:18607 <> sb_law_witness_proved
+scheme 18505:18547 <> structure_blocking_conservation_law_witness_rect
+scheme 18505:18547 <> structure_blocking_conservation_law_witness_ind
+scheme 18505:18547 <> structure_blocking_conservation_law_witness_rec
+scheme 18505:18547 <> structure_blocking_conservation_law_witness_sind
+def 18622:18673 <> evaluate_structure_blocking_conservation_law_witness
+R18684:18718 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_law ind
+binder 18678:18680 <> law:59
+R18728:18773 UMST.ChemConstants.StructureBlockingInertnessConservation <> StructureBlockingInertnessConservationModality ind
+binder 18724:18724 <> m:60
+R18780:18822 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_law_witness ind
+R18835:18835 UMST.ChemConstants.StructureBlockingInertnessConservation <> m:60 var
+R18846:18894 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R18900:18948 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_assumed constr
+R18954:19004 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_surrogate constr
+R19009:19027 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+R19009:19027 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+R19009:19027 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+R19033:19080 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R19085:19105 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_proved constr
+prf 19121:19176 <> all_structure_blocking_conservation_laws_open_at_unwired
+R19327:19332 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19305:19307 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19182:19233 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_law_witness def
+R19235:19250 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_conserved constr
+R19256:19304 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R19308:19326 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+R19477:19482 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19455:19457 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19333:19384 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_law_witness def
+R19386:19400 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_named_ok constr
+R19406:19454 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R19458:19476 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+R19633:19638 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19611:19613 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19483:19534 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_law_witness def
+R19536:19556 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_trivial_refuse constr
+R19562:19610 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R19614:19632 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+R19772:19774 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19639:19690 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_law_witness def
+R19692:19717 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_green_invent_refuse constr
+R19723:19771 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R19775:19793 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_law_witness_open constr
+def 20073:20116 <> structureBlockingInertnessConservationProved
+R20120:20123 Corelib.Init.Datatypes <> bool ind
+R20128:20132 Corelib.Init.Datatypes <> false constr
+prf 20142:20195 <> structure_blocking_inertness_conservation_proved_false
+R20245:20247 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20201:20244 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationProved def
+R20248:20252 Corelib.Init.Datatypes <> false constr
+def 20292:20314 <> not118SquaredGreenTable
+R20318:20321 Corelib.Init.Datatypes <> bool ind
+R20326:20329 Corelib.Init.Datatypes <> true constr
+prf 20339:20365 <> not_118_squared_green_table
+R20392:20394 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20369:20391 UMST.ChemConstants.StructureBlockingInertnessConservation <> not118SquaredGreenTable def
+R20395:20398 Corelib.Init.Datatypes <> true constr
+prf 20655:20693 <> unwired_close_without_production_wiring
+R20811:20815 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20699:20744 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R20750:20798 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R20800:20804 Corelib.Init.Datatypes <> false constr
+R20806:20810 Corelib.Init.Datatypes <> false constr
+R20816:20836 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_unwired_ok constr
+prf 20873:20924 <> unwired_modality_always_ok_without_production_wiring
+R21042:21046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20930:20975 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R20981:21029 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R21031:21035 Corelib.Init.Datatypes <> false constr
+R21037:21041 Corelib.Init.Datatypes <> false constr
+R21047:21067 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_unwired_ok constr
+R21083:21121 UMST.ChemConstants.StructureBlockingInertnessConservation <> unwired_close_without_production_wiring thm
+R21083:21121 UMST.ChemConstants.StructureBlockingInertnessConservation <> unwired_close_without_production_wiring thm
+prf 21136:21179 <> unwired_verdict_ok_without_production_wiring
+R21349:21353 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21185:21226 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R21233:21278 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R21287:21335 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R21337:21341 Corelib.Init.Datatypes <> false constr
+R21343:21347 Corelib.Init.Datatypes <> false constr
+R21354:21357 Corelib.Init.Datatypes <> true constr
+R21376:21417 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R21430:21468 UMST.ChemConstants.StructureBlockingInertnessConservation <> unwired_close_without_production_wiring thm
+R21430:21468 UMST.ChemConstants.StructureBlockingInertnessConservation <> unwired_close_without_production_wiring thm
+R21430:21468 UMST.ChemConstants.StructureBlockingInertnessConservation <> unwired_close_without_production_wiring thm
+prf 21723:21754 <> he_1s2_missing_interact_named_ok
+R21951:21955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21760:21793 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R21799:21847 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R21853:21896 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R21902:21932 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R21934:21938 Corelib.Init.Datatypes <> false constr
+R21940:21944 Corelib.Init.Datatypes <> false constr
+R21946:21950 Corelib.Init.Datatypes <> false constr
+R21956:21974 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+prf 22011:22054 <> named_he_1s2_structure_blocking_conservation
+R22275:22280 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22251:22255 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22060:22093 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R22099:22147 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R22153:22196 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R22202:22232 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R22234:22238 Corelib.Init.Datatypes <> false constr
+R22240:22244 Corelib.Init.Datatypes <> false constr
+R22246:22250 Corelib.Init.Datatypes <> false constr
+R22256:22274 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R22375:22380 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22368:22370 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22281:22322 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingBundleIsConcurrentProduct def
+R22324:22367 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R22371:22374 Corelib.Init.Datatypes <> true constr
+R22407:22412 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22403:22405 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22381:22402 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+R22449:22451 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22413:22448 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_structure_blocking_idx def
+prf 22503:22535 <> structure_blocking_named_close_ok
+R22652:22656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22541:22586 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R22592:22639 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R22641:22645 Corelib.Init.Datatypes <> false constr
+R22647:22651 Corelib.Init.Datatypes <> false constr
+R22657:22675 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+prf 22712:22754 <> named_structure_blocking_conservation_close
+R22895:22900 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22871:22875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22760:22805 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R22811:22858 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R22860:22864 Corelib.Init.Datatypes <> false constr
+R22866:22870 Corelib.Init.Datatypes <> false constr
+R22876:22894 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R22955:22957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22901:22942 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_authorized def
+R22944:22948 Corelib.Init.Datatypes <> false constr
+R22950:22954 Corelib.Init.Datatypes <> false constr
+R22958:22961 Corelib.Init.Datatypes <> true constr
+R22990:23022 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_named_close_ok thm
+R22990:23022 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_named_close_ok thm
+R23036:23077 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_authorized def
+R23092:23124 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_named_close_ok thm
+R23092:23124 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_named_close_ok thm
+R23092:23124 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_named_close_ok thm
+prf 23380:23401 <> trivial_bundle_refused
+R23583:23587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23407:23440 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R23446:23494 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R23500:23528 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingEmptyWitness def
+R23534:23564 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R23566:23570 Corelib.Init.Datatypes <> false constr
+R23572:23576 Corelib.Init.Datatypes <> false constr
+R23578:23582 Corelib.Init.Datatypes <> false constr
+R23588:23612 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_trivial_refuse constr
+prf 23649:23680 <> trivial_empty_bundle_fail_closed
+R23892:23897 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23862:23866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23686:23719 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R23725:23773 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R23779:23807 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingEmptyWitness def
+R23813:23843 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R23845:23849 Corelib.Init.Datatypes <> false constr
+R23851:23855 Corelib.Init.Datatypes <> false constr
+R23857:23861 Corelib.Init.Datatypes <> false constr
+R23867:23891 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_trivial_refuse constr
+R24132:24136 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23898:23939 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R23946:23979 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R23988:24036 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R24045:24073 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingEmptyWitness def
+R24082:24112 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R24114:24118 Corelib.Init.Datatypes <> false constr
+R24120:24124 Corelib.Init.Datatypes <> false constr
+R24126:24130 Corelib.Init.Datatypes <> false constr
+R24137:24141 Corelib.Init.Datatypes <> false constr
+R24170:24191 UMST.ChemConstants.StructureBlockingInertnessConservation <> trivial_bundle_refused thm
+R24170:24191 UMST.ChemConstants.StructureBlockingInertnessConservation <> trivial_bundle_refused thm
+R24205:24246 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R24261:24282 UMST.ChemConstants.StructureBlockingInertnessConservation <> trivial_bundle_refused thm
+R24261:24282 UMST.ChemConstants.StructureBlockingInertnessConservation <> trivial_bundle_refused thm
+R24261:24282 UMST.ChemConstants.StructureBlockingInertnessConservation <> trivial_bundle_refused thm
+prf 24538:24559 <> xor_classifier_refused
+R24755:24759 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24565:24598 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R24604:24652 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R24658:24701 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R24707:24737 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R24739:24742 Corelib.Init.Datatypes <> true constr
+R24744:24748 Corelib.Init.Datatypes <> false constr
+R24750:24754 Corelib.Init.Datatypes <> false constr
+R24760:24780 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_xor_refuse constr
+prf 24817:24861 <> xor_mutually_exclusive_classifier_fail_closed
+R25083:25088 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25057:25061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24867:24900 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R24906:24954 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R24960:25003 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R25009:25039 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R25041:25044 Corelib.Init.Datatypes <> true constr
+R25046:25050 Corelib.Init.Datatypes <> false constr
+R25052:25056 Corelib.Init.Datatypes <> false constr
+R25062:25082 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_xor_refuse constr
+R25337:25341 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25089:25130 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R25137:25170 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R25179:25227 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R25236:25279 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R25288:25318 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R25320:25323 Corelib.Init.Datatypes <> true constr
+R25325:25329 Corelib.Init.Datatypes <> false constr
+R25331:25335 Corelib.Init.Datatypes <> false constr
+R25342:25346 Corelib.Init.Datatypes <> false constr
+R25375:25396 UMST.ChemConstants.StructureBlockingInertnessConservation <> xor_classifier_refused thm
+R25375:25396 UMST.ChemConstants.StructureBlockingInertnessConservation <> xor_classifier_refused thm
+R25410:25451 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R25466:25487 UMST.ChemConstants.StructureBlockingInertnessConservation <> xor_classifier_refused thm
+R25466:25487 UMST.ChemConstants.StructureBlockingInertnessConservation <> xor_classifier_refused thm
+R25466:25487 UMST.ChemConstants.StructureBlockingInertnessConservation <> xor_classifier_refused thm
+prf 25743:25769 <> green_invent_refuse_unwired
+R25886:25890 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25775:25820 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R25826:25874 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R25876:25879 Corelib.Init.Datatypes <> true constr
+R25881:25885 Corelib.Init.Datatypes <> false constr
+R25891:25920 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_green_invent_refuse constr
+prf 25957:25982 <> green_invent_always_refuse
+R26151:26155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25988:26029 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R26036:26081 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R26090:26138 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R26140:26143 Corelib.Init.Datatypes <> true constr
+R26145:26149 Corelib.Init.Datatypes <> false constr
+R26156:26160 Corelib.Init.Datatypes <> false constr
+R26179:26220 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R26233:26259 UMST.ChemConstants.StructureBlockingInertnessConservation <> green_invent_refuse_unwired thm
+R26233:26259 UMST.ChemConstants.StructureBlockingInertnessConservation <> green_invent_refuse_unwired thm
+R26233:26259 UMST.ChemConstants.StructureBlockingInertnessConservation <> green_invent_refuse_unwired thm
+prf 26289:26333 <> green_invent_structure_blocking_bundle_refuse
+R26529:26533 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26339:26372 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R26378:26426 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R26432:26475 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R26481:26511 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R26513:26517 Corelib.Init.Datatypes <> false constr
+R26519:26522 Corelib.Init.Datatypes <> true constr
+R26524:26528 Corelib.Init.Datatypes <> false constr
+R26534:26563 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_green_invent_refuse constr
+prf 26822:26846 <> proved_without_bar_refuse
+R27042:27046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26852:26885 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R26891:26939 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R26945:26988 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R26994:27024 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R27026:27030 Corelib.Init.Datatypes <> false constr
+R27032:27036 Corelib.Init.Datatypes <> false constr
+R27038:27041 Corelib.Init.Datatypes <> true constr
+R27047:27082 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_proved_without_bar_refuse constr
+prf 27119:27148 <> proved_without_bar_fail_closed
+R27385:27390 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27344:27348 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27154:27187 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R27193:27241 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R27247:27290 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R27296:27326 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R27328:27332 Corelib.Init.Datatypes <> false constr
+R27334:27338 Corelib.Init.Datatypes <> false constr
+R27340:27343 Corelib.Init.Datatypes <> true constr
+R27349:27384 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_proved_without_bar_refuse constr
+R27639:27643 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27391:27432 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R27439:27472 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R27481:27529 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R27538:27581 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R27590:27620 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R27622:27626 Corelib.Init.Datatypes <> false constr
+R27628:27632 Corelib.Init.Datatypes <> false constr
+R27634:27637 Corelib.Init.Datatypes <> true constr
+R27644:27648 Corelib.Init.Datatypes <> false constr
+R27677:27701 UMST.ChemConstants.StructureBlockingInertnessConservation <> proved_without_bar_refuse thm
+R27677:27701 UMST.ChemConstants.StructureBlockingInertnessConservation <> proved_without_bar_refuse thm
+R27715:27756 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R27771:27795 UMST.ChemConstants.StructureBlockingInertnessConservation <> proved_without_bar_refuse thm
+R27771:27795 UMST.ChemConstants.StructureBlockingInertnessConservation <> proved_without_bar_refuse thm
+R27771:27795 UMST.ChemConstants.StructureBlockingInertnessConservation <> proved_without_bar_refuse thm
+prf 28052:28074 <> production_wired_refuse
+R28190:28194 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28080:28125 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R28131:28178 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R28180:28184 Corelib.Init.Datatypes <> false constr
+R28186:28189 Corelib.Init.Datatypes <> true constr
+R28195:28228 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_production_wired_refuse constr
+prf 28265:28294 <> production_wired_claim_refused
+R28462:28466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28300:28341 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R28348:28393 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R28402:28449 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R28451:28455 Corelib.Init.Datatypes <> false constr
+R28457:28460 Corelib.Init.Datatypes <> true constr
+R28467:28471 Corelib.Init.Datatypes <> false constr
+R28490:28531 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R28544:28566 UMST.ChemConstants.StructureBlockingInertnessConservation <> production_wired_refuse thm
+R28544:28566 UMST.ChemConstants.StructureBlockingInertnessConservation <> production_wired_refuse thm
+R28544:28566 UMST.ChemConstants.StructureBlockingInertnessConservation <> production_wired_refuse thm
+def 28825:28871 <> structureBlockingInertnessConservationAuthority
+R28875:28880 Stdlib.Strings.String <> string ind
+def 28973:28997 <> parallelInertnessAxiomTag
+R29001:29006 Stdlib.Strings.String <> string ind
+prf 29042:29072 <> parallel_inertness_axiom_refuse
+R29156:29161 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29125:29130 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29078:29124 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationAuthority def
+R29131:29155 UMST.ChemConstants.StructureBlockingInertnessConservation <> parallelInertnessAxiomTag def
+R29206:29208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29162:29205 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationProved def
+R29209:29213 Corelib.Init.Datatypes <> false constr
+R29260:29313 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved_false thm
+R29260:29313 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved_false thm
+prf 29330:29364 <> parallel_inertness_axiom_not_minted
+R29494:29499 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29417:29421 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29370:29416 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationAuthority def
+R29552:29557 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29544:29546 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29500:29543 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationProved def
+R29547:29551 Corelib.Init.Datatypes <> false constr
+R29605:29608 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29558:29604 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationAuthority def
+R29609:29633 UMST.ChemConstants.StructureBlockingInertnessConservation <> parallelInertnessAxiomTag def
+def 29933:29952 <> nobilityMagicFraming
+R29956:29961 Stdlib.Strings.String <> string ind
+def 30024:30068 <> structureBlockingInertnessConservationFraming
+R30072:30077 Stdlib.Strings.String <> string ind
+prf 30157:30177 <> nobility_magic_refuse
+R30254:30259 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30228:30233 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30183:30227 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationFraming def
+R30234:30253 UMST.ChemConstants.StructureBlockingInertnessConservation <> nobilityMagicFraming def
+R30286:30291 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30282:30284 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30260:30281 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+R30328:30330 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30292:30327 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_structure_blocking_idx def
+prf 30400:30434 <> missing_interact_not_nobility_magic
+R30511:30516 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30485:30490 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30440:30484 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationFraming def
+R30491:30510 UMST.ChemConstants.StructureBlockingInertnessConservation <> nobilityMagicFraming def
+R30543:30548 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30539:30541 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30517:30538 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+R30589:30594 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30585:30587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30549:30584 UMST.ChemConstants.StructureBlockingInertnessConservation <> pattern_class_structure_blocking_idx def
+R30639:30641 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30595:30638 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationProved def
+R30642:30646 Corelib.Init.Datatypes <> false constr
+def 30947:30964 <> npc6CartoonFraming
+R30968:30973 Stdlib.Strings.String <> string ind
+prf 31020:31038 <> npc6_cartoon_refuse
+R31113:31118 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31089:31094 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31044:31088 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationFraming def
+R31095:31112 UMST.ChemConstants.StructureBlockingInertnessConservation <> npc6CartoonFraming def
+R31138:31140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31119:31137 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_notation_tag def
+prf 31214:31236 <> he_1s2_not_npc6_cartoon
+R31311:31316 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31287:31292 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31242:31286 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationFraming def
+R31293:31310 UMST.ChemConstants.StructureBlockingInertnessConservation <> npc6CartoonFraming def
+R31345:31350 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31336:31338 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31317:31335 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_notation_tag def
+R31373:31375 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31351:31372 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+def 31670:31719 <> structure_blocking_conservation_coherence_scaffold
+R31723:31726 Corelib.Init.Datatypes <> bool ind
+R32072:32077 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R31896:31901 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R31733:31774 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R31781:31826 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R31835:31882 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R31884:31888 Corelib.Init.Datatypes <> false constr
+R31890:31894 Corelib.Init.Datatypes <> false constr
+R31902:31905 Corelib.Init.Datatypes <> negb def
+R31908:31949 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R31956:32001 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R32010:32058 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R32060:32063 Corelib.Init.Datatypes <> true constr
+R32065:32069 Corelib.Init.Datatypes <> false constr
+R32078:32081 Corelib.Init.Datatypes <> negb def
+R32084:32125 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_verdict_ok def
+R32132:32177 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R32186:32233 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R32235:32239 Corelib.Init.Datatypes <> false constr
+R32241:32244 Corelib.Init.Datatypes <> true constr
+prf 32256:32310 <> structure_blocking_conservation_coherence_scaffold_true
+R32366:32368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32316:32365 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_coherence_scaffold def
+R32369:32372 Corelib.Init.Datatypes <> true constr
+R32391:32440 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_coherence_scaffold def
+prf 32495:32552 <> structure_blocking_conservation_coherence_scaffold_theorem
+R32695:32700 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32669:32675 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32558:32603 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R32609:32656 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R32658:32662 Corelib.Init.Datatypes <> false constr
+R32664:32668 Corelib.Init.Datatypes <> false constr
+R32676:32694 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R32849:32854 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32812:32818 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32701:32746 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R32752:32800 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R32802:32805 Corelib.Init.Datatypes <> true constr
+R32807:32811 Corelib.Init.Datatypes <> false constr
+R32819:32848 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_green_invent_refuse constr
+R32965:32971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32855:32900 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R32906:32953 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_proved constr
+R32955:32959 Corelib.Init.Datatypes <> false constr
+R32961:32964 Corelib.Init.Datatypes <> true constr
+R32972:33005 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_production_wired_refuse constr
+ind 33284:33295 <> formal_fiber
+constr 33311:33331 <> fiber_quantum_knowing
+constr 33337:33353 <> fiber_meso_acting
+scheme 33284:33295 <> formal_fiber_rect
+scheme 33284:33295 <> formal_fiber_ind
+scheme 33284:33295 <> formal_fiber_rec
+scheme 33284:33295 <> formal_fiber_sind
+def 33368:33407 <> structure_blocking_conservation_fiber_ok
+R33414:33425 UMST.ChemConstants.StructureBlockingInertnessConservation <> formal_fiber ind
+binder 33410:33410 <> f:64
+R33430:33433 Corelib.Init.Datatypes <> bool ind
+R33446:33446 UMST.ChemConstants.StructureBlockingInertnessConservation <> f:64 var
+R33457:33477 UMST.ChemConstants.StructureBlockingInertnessConservation <> fiber_quantum_knowing constr
+R33482:33485 Corelib.Init.Datatypes <> true constr
+R33491:33507 UMST.ChemConstants.StructureBlockingInertnessConservation <> fiber_meso_acting constr
+R33512:33516 Corelib.Init.Datatypes <> false constr
+def 33537:33584 <> structure_blocking_conservation_knowing_fiber_ok
+R33588:33591 Corelib.Init.Datatypes <> bool ind
+R33598:33637 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_fiber_ok def
+R33639:33659 UMST.ChemConstants.StructureBlockingInertnessConservation <> fiber_quantum_knowing constr
+def 33674:33719 <> structure_blocking_conservation_meso_acting_ok
+R33723:33726 Corelib.Init.Datatypes <> bool ind
+R33733:33772 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_fiber_ok def
+R33774:33790 UMST.ChemConstants.StructureBlockingInertnessConservation <> fiber_meso_acting constr
+prf 33800:33852 <> structure_blocking_conservation_knowing_fiber_ok_true
+R33906:33908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33858:33905 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok def
+R33909:33912 Corelib.Init.Datatypes <> true constr
+prf 33947:33996 <> structure_blocking_conservation_meso_acting_not_ok
+R34048:34050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34002:34047 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_ok def
+R34051:34055 Corelib.Init.Datatypes <> false constr
+prf 34092:34146 <> structure_blocking_conservation_routes_knowing_not_meso
+R34207:34212 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34200:34202 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34152:34199 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok def
+R34203:34206 Corelib.Init.Datatypes <> true constr
+R34259:34261 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34213:34258 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_ok def
+R34262:34266 Corelib.Init.Datatypes <> false constr
+R34295:34347 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok_true thm
+R34295:34347 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok_true thm
+R34360:34409 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_not_ok thm
+R34360:34409 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_not_ok thm
+def 34429:34446 <> fiberNotMesoActing
+R34450:34453 Corelib.Init.Datatypes <> bool ind
+R34508:34513 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R34460:34507 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok def
+R34514:34517 Corelib.Init.Datatypes <> negb def
+R34519:34564 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_ok def
+prf 34574:34599 <> fiber_not_meso_acting_true
+R34621:34623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34603:34620 UMST.ChemConstants.StructureBlockingInertnessConservation <> fiberNotMesoActing def
+R34624:34627 Corelib.Init.Datatypes <> true constr
+R34646:34663 UMST.ChemConstants.StructureBlockingInertnessConservation <> fiberNotMesoActing def
+R34666:34713 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok def
+R34720:34765 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_ok def
+prf 35021:35078 <> structure_blocking_inertness_conservation_fixture_scaffold
+R35301:35306 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35275:35281 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35084:35117 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R35123:35171 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R35177:35220 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R35226:35256 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R35258:35262 Corelib.Init.Datatypes <> false constr
+R35264:35268 Corelib.Init.Datatypes <> false constr
+R35270:35274 Corelib.Init.Datatypes <> false constr
+R35282:35300 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_named_ok constr
+R35515:35520 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35483:35489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35307:35340 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R35346:35394 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R35400:35428 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingEmptyWitness def
+R35434:35464 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R35466:35470 Corelib.Init.Datatypes <> false constr
+R35472:35476 Corelib.Init.Datatypes <> false constr
+R35478:35482 Corelib.Init.Datatypes <> false constr
+R35490:35514 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_trivial_refuse constr
+R35739:35744 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35711:35717 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35521:35554 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R35560:35608 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R35614:35657 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R35663:35693 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R35695:35698 Corelib.Init.Datatypes <> true constr
+R35700:35704 Corelib.Init.Datatypes <> false constr
+R35706:35710 Corelib.Init.Datatypes <> false constr
+R35718:35738 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_xor_refuse constr
+R35978:35983 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35935:35941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35745:35778 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_bundle def
+R35784:35832 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R35838:35881 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingHe1s2MissingInteractWitness def
+R35887:35917 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingClaimBarAbsent def
+R35919:35923 Corelib.Init.Datatypes <> false constr
+R35925:35929 Corelib.Init.Datatypes <> false constr
+R35931:35934 Corelib.Init.Datatypes <> true constr
+R35942:35977 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_proved_without_bar_refuse constr
+R36124:36129 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36096:36102 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35984:36029 UMST.ChemConstants.StructureBlockingInertnessConservation <> evaluate_structure_blocking_conservation_close def
+R36035:36083 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
+R36085:36089 Corelib.Init.Datatypes <> false constr
+R36091:36095 Corelib.Init.Datatypes <> false constr
+R36103:36123 UMST.ChemConstants.StructureBlockingInertnessConservation <> sb_verdict_unwired_ok constr
+R36185:36190 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36178:36180 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36130:36177 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_knowing_fiber_ok def
+R36181:36184 Corelib.Init.Datatypes <> true constr
+R36245:36250 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36237:36239 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36191:36236 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_conservation_meso_acting_ok def
+R36240:36244 Corelib.Init.Datatypes <> false constr
+R36303:36308 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36295:36297 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36251:36294 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationProved def
+R36298:36302 Corelib.Init.Datatypes <> false constr
+R36331:36336 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36324:36326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36309:36323 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbProductNotXor def
+R36327:36330 Corelib.Init.Datatypes <> true constr
+R36359:36361 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36337:36358 UMST.ChemConstants.StructureBlockingInertnessConservation <> helium_atomic_number_z def
+def 36642:36673 <> chemL0StructureBlockingAuthority
+R36677:36682 Stdlib.Strings.String <> string ind
+def 36765:36791 <> interactPartialityAuthority
+R36795:36800 Stdlib.Strings.String <> string ind
+def 36864:36885 <> elementHeliumAuthority
+R36889:36894 Stdlib.Strings.String <> string ind
+def 36962:36987 <> vacuumInertLimitsAuthority
+R36991:36996 Stdlib.Strings.String <> string ind
+def 37060:37089 <> chemIntCrossHelium1s2Authority
+R37093:37098 Stdlib.Strings.String <> string ind
+def 37156:37199 <> structureBlockingInertnessConservationCellId
+R37203:37208 Stdlib.Strings.String <> string ind
+def 37290:37335 <> structureBlockingInertnessConservationNonClaim
+R37339:37344 Stdlib.Strings.String <> string ind
+prf 38141:38189 <> structure_blocking_inertness_conservation_cell_id
+R38239:38243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38195:38238 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationCellId def
+prf 38339:38392 <> structure_blocking_inertness_conservation_cites_int_rs
+R38445:38448 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38398:38444 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationAuthority def
+prf 38486:38541 <> structure_blocking_inertness_conservation_authority_path
+R38594:38598 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38547:38593 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationAuthority def
+prf 38705:38760 <> structure_blocking_inertness_conservation_cites_l0_table
+R38798:38801 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38766:38797 UMST.ChemConstants.StructureBlockingInertnessConservation <> chemL0StructureBlockingAuthority def
+prf 38839:38892 <> structure_blocking_inertness_conservation_cites_marker
+R38923:38926 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38898:38922 UMST.ChemConstants.StructureBlockingInertnessConservation <> sbConcurrentProductMarker def
+prf 39186:39218 <> structure_blocking_not_26th_axiom
+R39269:39272 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39224:39268 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationFraming def
+R39273:39297 UMST.ChemConstants.StructureBlockingInertnessConservation <> parallelInertnessAxiomTag def
+prf 39333:39382 <> structure_blocking_second_law_conservation_framing
+R39433:39436 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39388:39432 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationFraming def
+def 39703:39724 <> physicsGreenAuthorized
+R39736:39740 Corelib.Init.Logic <> False ind
+prf 39750:39810 <> structure_blocking_inertness_conservation_physics_green_false
+R39816:39817 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R39818:39839 UMST.ChemConstants.StructureBlockingInertnessConservation <> physicsGreenAuthorized def
+prf 39879:39936 <> structure_blocking_inertness_conservation_modality_unwired
+R39995:39999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39942:39994 UMST.ChemConstants.StructureBlockingInertnessConservation <> structureBlockingInertnessConservationModalityCurrent def
+R40000:40048 UMST.ChemConstants.StructureBlockingInertnessConservation <> structure_blocking_inertness_conservation_unwired constr
