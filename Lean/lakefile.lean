@@ -278,6 +278,15 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.GoldschmidtConservation`
+
+  Allotrope conservation (`CHEM-FORMAL-Q-LEAN-ALLOTROPE-CONSERVATION`):
+  ALLOTROPE-01 **allotrope-net** **conservation**; Unwired/Assumed/Proved/Surrogate;
+  crystallineLattice/layeredGraphitic/amorphousDisordered class 10⊗11⊗12 concurrent Net⊗Scale⊗Edge **product** not XOR;
+  C Z=6 diamond/graphite/fullerene same Z; Si Z=14; O Z=8; He Z=2 closed-shell no-allotrope;
+  folklore/GREEN/trivial/XOR refuse; `allotropeProved` false; Unwired, not ALLOTROPE Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.AllotropeConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -294,7 +303,7 @@ lean_lib ChemConstants where
     `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
-    `ChemConstants.GoldschmidtConservation]
+    `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
