@@ -340,6 +340,14 @@ lean_lib ChemGeometry where
   `naturalOccurrenceZ118Proved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.NaturalOccurrenceZ118`
+
+  Occurrence family pattern (`CHEM-FORMAL-Q-LEAN-OCCURRENCE-FAMILY-PATTERN-CONSERVATION`):
+  occurrence-class families are concurrent product classifiers (7 tags); ore-engine sorts outliers
+  (native Au Z=79 vs oxide-product Fe Z=26 vs closed-shell He atmophile no-ore Z=2); same Z many
+  assemblages; not folklore exclusive lists; not XOR enum; `occurrenceFamilyPatternProved` false;
+  Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.OccurrenceFamilyPattern`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -362,7 +370,8 @@ lean_lib ChemConstants where
     `ChemConstants.CartridgeOreConsultMonoid,
     `ChemConstants.DlvoKtNotPsi,
     `ChemConstants.EngineRefusesNewSi,
-    `ChemConstants.NaturalOccurrenceZ118]
+    `ChemConstants.NaturalOccurrenceZ118,
+    `ChemConstants.OccurrenceFamilyPattern]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
