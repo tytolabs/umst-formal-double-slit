@@ -362,6 +362,12 @@ lean_lib ChemGeometry where
   `interactEngineClosedShellProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.InteractEngineClosedShell`
+
+  Outlier-is-theorem (`CHEM-FORMAL-Q-LEAN-OUTLIER-IS-THEOREM-CONSERVATION`):
+  Z=1..118 / Interact / Ore / Refine outliers sorted to theorem | deferred composition remainder |
+  typed Absent — not folklore outlier; `outlierIsTheoremProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.OutlierIsTheorem`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -387,7 +393,8 @@ lean_lib ChemConstants where
     `ChemConstants.NaturalOccurrenceZ118,
     `ChemConstants.OccurrenceFamilyPattern,
     `ChemConstants.OccupancyEngineSort,
-    `ChemConstants.InteractEngineClosedShell]
+    `ChemConstants.InteractEngineClosedShell,
+    `ChemConstants.OutlierIsTheorem]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
