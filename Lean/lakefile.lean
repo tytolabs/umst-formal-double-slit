@@ -297,6 +297,15 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.StructureEnablingConservation`
 
+  Structure-blocking inertness conservation (`CHEM-FORMAL-Q-LEAN-STRUCTURE-BLOCKING-INERTNESS-CONSERVATION`):
+  PATTERN-00 class 5 **structure_blocking_inertness** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  He 1s² closed shell s-block not np⁶ cartoon; missing Interact classifier not nobility magic; μ_inert vacuum/inert limit;
+  He 1s² ⊗ missing-Interact ⊗ μ_inert **product** not XOR; folklore/GREEN/trivial/XOR/parallel-axiom/np⁶ refuse;
+  cite `LandauerLaw.physicalSecondLaw` not meso theorems; `structureBlockingInertnessConservationProved` false;
+  Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.StructureBlockingInertnessConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -480,6 +489,7 @@ lean_lib ChemConstants where
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
     `ChemConstants.StructureEnablingConservation,
+    `ChemConstants.StructureBlockingInertnessConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
