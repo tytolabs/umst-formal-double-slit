@@ -25,7 +25,7 @@ open import Data.Nat.Base using (z≤n; s≤s)
 open import Data.Product using (_×_; _,_)
 open import Data.String using (String)
 open import Data.Unit using (tt; ⊤)
-open import Relation.Binary.PropositionalEquality using (_≡_; _≡?_; _≢_; refl)
+open import Relation.Binary.PropositionalEquality using (_≡_; _≢_; refl)
 open import Relation.Nullary using (no; yes)
 open import Relation.Nullary.Decidable using (isNo; isYes)
 open import Relation.Nullary using (¬_)
@@ -120,6 +120,10 @@ data LandauerNTo1Refusal : Set where
 data CompressionVerdict : Set where
   compression-accept compression-refuse : CompressionVerdict
 
+checkBitsMatch : ℕ → ℕ → Maybe LandauerNTo1Refusal
+checkBitsMatch (suc (suc zero)) (suc (suc zero)) = nothing
+checkBitsMatch _ _ = just invented-distinction-bits
+
 checkDestroyedBits :
   ℕ → Maybe ℕ → Maybe LandauerNTo1Refusal
 checkDestroyedBits n claimed =
@@ -127,10 +131,7 @@ checkDestroyedBits n claimed =
     { nothing → just invented-distinction-bits
     ; (just exp) → case claimed of λ
       { nothing → just invented-distinction-bits
-      ; (just c) → case exp ≡? c of λ
-        { (no _) → just invented-distinction-bits
-        ; (yes refl) → nothing
-        }
+      ; (just c) → checkBitsMatch exp c
       }
     }
 
