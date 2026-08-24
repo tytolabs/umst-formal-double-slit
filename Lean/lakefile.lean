@@ -355,6 +355,13 @@ lean_lib ChemGeometry where
   Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.OccupancyEngineSort`
+
+  Interact engine closed shell (`CHEM-FORMAL-Q-LEAN-INTERACT-ENGINE-CLOSED-SHELL-CONSERVATION`):
+  interact-engine sorts closed-shell blocking / partial Interact refuse / catalysis-not-axiom;
+  He no-ore = missing Interact class 5 structure_blocking_inertness, not nobility magic;
+  `interactEngineClosedShellProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.InteractEngineClosedShell`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -379,7 +386,8 @@ lean_lib ChemConstants where
     `ChemConstants.EngineRefusesNewSi,
     `ChemConstants.NaturalOccurrenceZ118,
     `ChemConstants.OccurrenceFamilyPattern,
-    `ChemConstants.OccupancyEngineSort]
+    `ChemConstants.OccupancyEngineSort,
+    `ChemConstants.InteractEngineClosedShell]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
