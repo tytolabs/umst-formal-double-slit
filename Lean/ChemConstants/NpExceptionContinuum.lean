@@ -70,10 +70,10 @@ theorem np_exception_continuum_row_stem_named :
     npExceptionContinuumRowStem = "np_exception_continuum" := rfl
 
 /-- North-star §2 class-14 np_exception_continuum pattern index. -/
-def class9NpExceptionContinuumPatternIndex : Nat := 14
+def class14NpExceptionContinuumPatternIndex : Nat := 14
 
-theorem class9_np_exception_continuum_pattern_index_nine :
-    class9NpExceptionContinuumPatternIndex = 14 := rfl
+theorem class14_np_exception_continuum_pattern_index_fourteen :
+    class14NpExceptionContinuumPatternIndex = 14 := rfl
 
 /-- Cross-classifier X29 row id pin. -/
 def crossClassifierNpExceptionContinuumRowId : String := "X29"
@@ -91,7 +91,7 @@ theorem pattern_class_not_118_squared : patternClassCardinality ≠ 118 * 118 :=
 def patternClassIndexValid (i : Nat) : Bool := i < patternClassCardinality
 
 theorem np_exception_continuum_class_index_valid :
-    patternClassIndexValid class9NpExceptionContinuumPatternIndex = true := by decide
+    patternClassIndexValid class14NpExceptionContinuumPatternIndex = true := by decide
 
 /-- IUPAC periodic-table cardinality (Z=1..118). -/
 def iupacTableCardinality : Nat := 118
@@ -177,7 +177,7 @@ def npExceptionContinuumChannelSlotIsPresent (s : NpExceptionContinuumChannelSlo
 
 /-- Named dissipative refine / G-min / class-14 np_exception_continuum product channels (bounded scaffold). -/
 inductive NpExceptionContinuumProductChannel where
-  | occupancyEngineSort | observedOverride | class9NpExceptionContinuumAxis
+  | occupancyEngineSort | observedOverride | class14NpExceptionContinuumAxis
   deriving DecidableEq, Repr
 
 def npExceptionContinuumProductChannelCount : Nat := 3
@@ -188,7 +188,7 @@ theorem np_exception_continuum_product_channel_count_three :
 def npExceptionContinuumProductChannelIndex : NpExceptionContinuumProductChannel → Nat
   | .occupancyEngineSort => 0
   | .observedOverride => 1
-  | .class9NpExceptionContinuumAxis => 2
+  | .class14NpExceptionContinuumAxis => 2
 
 theorem npec_channel_occupancy_engine_sort_idx_is_0 :
     npExceptionContinuumProductChannelIndex .occupancyEngineSort = 0 := rfl
@@ -196,8 +196,8 @@ theorem npec_channel_occupancy_engine_sort_idx_is_0 :
 theorem npec_channel_observed_override_idx_is_1 :
     npExceptionContinuumProductChannelIndex .observedOverride = 1 := rfl
 
-theorem npec_channel_class9_np_exception_continuum_idx_is_2 :
-    npExceptionContinuumProductChannelIndex .class9NpExceptionContinuumAxis = 2 := rfl
+theorem npec_channel_class14_np_exception_continuum_idx_is_2 :
+    npExceptionContinuumProductChannelIndex .class14NpExceptionContinuumAxis = 2 := rfl
 
 /-- Class-9 processing-refining concurrent **product** bundle (north-star §3). -/
 structure NpExceptionContinuumConcurrentBundle where
@@ -253,7 +253,7 @@ theorem occupancy_engine_sort_channel_present :
 theorem observed_override_channel_present :
     npExceptionContinuumConcurrentBundleHolds 1 npExceptionContinuumNp93Witness = true := by decide
 
-theorem class9_np_exception_continuum_channel_present :
+theorem class14_np_exception_continuum_channel_present :
     npExceptionContinuumConcurrentBundleHolds 2 npExceptionContinuumNp93Witness = true := by decide
 
 theorem np93_witness_present_count_is_three :
@@ -378,11 +378,11 @@ def npExceptionContinuumNp93ConcurrentOk : Bool :=
       false false false = .namedOk ∧
     npExceptionContinuumConcurrentBundleIsConcurrentProduct sampleNpExceptionContinuumNp93Bundle = true ∧
     neptuniumAtomicNumberZ = 93 ∧
-    class9NpExceptionContinuumPatternIndex = 14)
+    npObservedOccupancyTag = "7s25f46d1")
 
-def class9NpExceptionContinuumPatternIndexOk : Bool :=
-  decide (class9NpExceptionContinuumPatternIndex = 14 ∧
-    patternClassIndexValid class9NpExceptionContinuumPatternIndex = true)
+def class14NpExceptionContinuumPatternIndexOk : Bool :=
+  decide (class14NpExceptionContinuumPatternIndex = 14 ∧
+    patternClassIndexValid class14NpExceptionContinuumPatternIndex = true)
 
 def concurrentProductNotXorOk : Bool :=
   decide (npecProductNotXor = true ∧
@@ -478,7 +478,7 @@ def parallelNpExceptionContinuumAxiomRefuse : Bool :=
 def homologCopySmuggleRefuse : Bool :=
   decide (npExceptionContinuumFraming ≠ homologCopyFraming ∧
     neptuniumAtomicNumberZ = 93 ∧
-    class9NpExceptionContinuumPatternIndex = 14)
+    npObservedOccupancyTag = "7s25f46d1")
 
 def extraElementIdRefuse : Bool :=
   decide (npExceptionContinuumFraming ≠ extraElementIdSmuggleFraming ∧
@@ -516,7 +516,7 @@ def tpFloatPinRefuse : Bool :=
 def npExceptionContinuumLatticeScaffold : Bool :=
   unwiredDesignOk &&
     npExceptionContinuumNp93ConcurrentOk &&
-    class9NpExceptionContinuumPatternIndexOk &&
+    class14NpExceptionContinuumPatternIndexOk &&
     concurrentProductNotXorOk &&
     xorMutuallyExclusiveRefuse &&
     greenInventNpExceptionContinuumRefuse &&
@@ -561,7 +561,7 @@ structure NpExceptionContinuumProbe where
   unwired : Bool
   physicsGreenRefused : Bool
   notProved : Bool
-  class9Index : Bool
+  class14Index : Bool
   np93HostWitness : Bool
   occupancyObservedOverrideProduct : Bool
   concurrentNotXor : Bool
@@ -586,7 +586,7 @@ def npExceptionContinuumProbe : NpExceptionContinuumProbe :=
     unwired := decide (npExceptionContinuumModalityCurrent = .unwired)
     physicsGreenRefused := true
     notProved := !npExceptionContinuumProved
-    class9Index := decide (class9NpExceptionContinuumPatternIndex = 14)
+    class14Index := decide (class14NpExceptionContinuumPatternIndex = 14)
     np93HostWitness := decide (neptuniumAtomicNumberZ = 93)
     occupancyObservedOverrideProduct := decide (occupancyEngineSortChannelTag = "occupancy_engine_sort" ∧
       observedOverrideChannelTag = "observed_override" ∧
@@ -611,7 +611,7 @@ def npExceptionContinuumHonest : Bool :=
     p.unwired &&
     p.physicsGreenRefused &&
     p.notProved &&
-    p.class9Index &&
+    p.class14Index &&
     p.np93HostWitness &&
     p.occupancyObservedOverrideProduct &&
     p.concurrentNotXor &&
@@ -692,12 +692,12 @@ theorem np_exception_continuum_honest_bundle :
     evaluateNpExceptionContinuum .unwired true false = .greenInventRefuse ∧
     npecProductNotXor = true ∧
     neptuniumAtomicNumberZ = 93 ∧
-    class9NpExceptionContinuumPatternIndex = 14 ∧
+    class14NpExceptionContinuumPatternIndex = 14 ∧
     npExceptionContinuumAxiom = true :=
   ⟨rfl, rfl, not_118_squared_green_table, np_exception_continuum_second_law_conservation_framed,
     unwired_close_without_production_wiring, np93_witness_named_ok,
     trivial_empty_bundle_fail_closed, xor_classifier_refused, green_invent_refuse_unwired,
-    npec_product_not_xor_true, neptunium_atomic_number_z_is_93, class9_np_exception_continuum_pattern_index_nine,
+    npec_product_not_xor_true, neptunium_atomic_number_z_is_93, class14_np_exception_continuum_pattern_index_fourteen,
     np_exception_continuum_axiom⟩
 
 end UMST.Chem
