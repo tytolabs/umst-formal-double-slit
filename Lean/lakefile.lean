@@ -243,6 +243,15 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.PatternProductConservation`
+
+  Scale conservation (`CHEM-FORMAL-Q-LEAN-SCALE-CONSERVATION`):
+  SCALE-01 **scale** commuting-square **conservation**; Unwired/Assumed/Proved/Surrogate;
+  three named legs Q→meso→macro; composed indirect equals Q→macro direct typed **conservation**;
+  distinct from ScaleOccupancyZCommute Z-lift; Ds 110 not Pt 78 homolog not copy;
+  `scale01CommuteProved` false; Unwired, not SCALE-01 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.ScaleConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -257,7 +266,7 @@ lean_lib ChemConstants where
     `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
     `ChemConstants.BondConservation, `ChemConstants.CutConservation,
     `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
-    `ChemConstants.PatternProductConservation]
+    `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
