@@ -1,10 +1,6 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 
--- metastablevsequilibriumconservation
--- metastable_vs_equilibrium
--- chem_formal_q_lean_metastable_vs_equilibrium_conservation
-
 import ElementElectronic
 
 set_option maxRecDepth 8192
@@ -13,26 +9,25 @@ set_option maxRecDepth 8192
 # MetastableVsEquilibriumConservation — class-12 **metastable_vs_equilibrium** **conservation** (Q lattice)
 
 Knowing-fiber Lean: PATTERN-00 class 12 (`metastable_vs_equilibrium`) concurrent Π_c identity conserved on named class
-pins. Metastable vs equilibrium is a concurrent PatternBundle factor on the same second-law + **conservation** object
-(not a 26th axiom). Equilibrium G hull ⊗ metastable trap ⊗ class-12 factor is **product** not XOR. Fast kinetics is
-**not** the equilibrium G hull; time is a named remainder on SCALE-02, **not a new law**. Fe Z=26 host witness;
-named class-12 identity conserved under honest scaffold; trivial XOR, parallel metastability axiom, fast-kinetics-as-G-hull,
-time-as-new-law, species-id smuggle, extra ElementId Z=119, and GREEN invent fail-closed.
+pins. Metastable vs equilibrium is a concurrent PatternBundle factor on the same second-law + **conservation** object (not a
+26th axiom). Equilibrium G hull ⊗ metastable trap ⊗ class-12 metastable_vs_equilibrium factor is **product** not XOR.
+Fast kinetics is not the equilibrium G hull; time is a named remainder on SCALE-02, not a new law. C Z=6 diamond/graphite
+metastable witness; not XOR enum; not 26th axiom. Named class-12 identity conserved under honest scaffold; trivial XOR,
+parallel metastability axiom, extra ElementId Z=119, fast-kinetics-as-equilibrium-G-hull, time-as-new-law, and GREEN
+invent fail-closed.
 
 Read-only cites (not imported — self-contained scaffold):
 - `Coq/ChemConstants/MetastableVsEquilibriumConservation.v`
-- `Haskell/UMST/ChemConstants/MetastableVsEquilibriumConservation.hs`
-- `Agda/ChemConstants/MetastableVsEquilibriumConservation.agda`
 - `umst/umst-chem/src/l0_tables/metastable_vs_equilibrium.rs`
 - `umst/umst-chem/src/metastable_equilibrium.rs`
 
 - `MetastableVsEquilibriumConservationModality` — Unwired / Assumed / Proved / Surrogate (not 118² GREEN table).
-- `MetastableVsEquilibriumProductChannel` — equilibrium G hull ⊗ metastable trap ⊗ class-12 concurrent Π_c.
+- `MetastableVsEquilibriumProductChannel` — equilibrium basin ⊗ metastable trap ⊗ class-12 concurrent Π_c.
 - Second-law + **conservation** framing cites `LandauerLaw.physicalSecondLaw` — not imported meso theorems.
 - No meso / acting theorems. No new physics `axiom`.
 - `physics_green` stays false. Does **not** claim `metastableVsEquilibriumConservationProved` or physics GREEN.
 - WAVE100 freeze — not wired lib.rs / eos.rs / nano.
-- Does **not** mint parallel metastability axiom (not 26th axiom).
+- Does **not** mint second metastable-vs-equilibrium axiom (not 26th axiom).
 -/
 
 namespace UMST.Chem
@@ -102,10 +97,13 @@ def iupacTableCardinality : Nat := 118
 
 theorem iupac_table_cardinality_118 : iupacTableCardinality = 118 := rfl
 
-/-- Iron Z=26 — host assemblage witness element pin. -/
-def ironAtomicNumberZ : Nat := 26
+/-- Carbon Z=6 — diamond/graphite metastable witness element pin. -/
+def carbonAtomicNumberZ : Nat := 6
 
-theorem iron_atomic_number_z_is_26 : ironAtomicNumberZ = 26 := rfl
+theorem carbon_atomic_number_z_is_6 : carbonAtomicNumberZ = 6 := rfl
+
+theorem carbon_z_in_iupac_table :
+    carbonAtomicNumberZ ≤ iupacTableCardinality := by decide
 
 /-- Forbidden Z=119 smuggle — not in IUPAC table. -/
 def forbiddenZ119Smuggle : Nat := 119
@@ -138,10 +136,10 @@ inductive MetastableVsEquilibriumChannelSlot where
   | unwired | absent | present
   deriving DecidableEq, Repr
 
-def metastableVsEquilibriumChannelSlotIsPresent (s : MetastableVsEquilibriumChannelSlot) : Bool :=
+def mveChannelSlotIsPresent (s : MetastableVsEquilibriumChannelSlot) : Bool :=
   match s with | .present => true | _ => false
 
-/-- Named equilibrium G hull / metastable trap / class-12 product channels (bounded scaffold). -/
+/-- Named equilibrium basin / metastable trap / class-12 product channels (bounded scaffold). -/
 inductive MetastableVsEquilibriumProductChannel where
   | equilibriumBasin | metastableTrap | class12MetastableVsEquilibriumAxis
   deriving DecidableEq, Repr
@@ -195,58 +193,55 @@ def metastableVsEquilibriumConcurrentBundleHolds (idx : Nat) (b : MetastableVsEq
   | _ => false
 
 def metastableVsEquilibriumConcurrentBundlePresentCount (b : MetastableVsEquilibriumConcurrentBundle) : Nat :=
-  b.channelSlots.foldl (fun acc s => if metastableVsEquilibriumChannelSlotIsPresent s then acc + 1 else acc) 0
+  b.channelSlots.foldl (fun acc s => if mveChannelSlotIsPresent s then acc + 1 else acc) 0
 
 def metastableVsEquilibriumConcurrentBundleIsConcurrentProduct (b : MetastableVsEquilibriumConcurrentBundle) : Bool :=
   decide (metastableVsEquilibriumConcurrentBundlePresentCount b ≥ 2)
 
-/-- Fe Z=26 equilibrium G hull + metastable trap + class-12 concurrent witness on class 12. -/
-def mveFe26Witness : MetastableVsEquilibriumConcurrentBundle :=
+/-- C Z=6 equilibrium basin + metastable trap + class-12 concurrent witness on class 12. -/
+def metastableVsEquilibriumC6Witness : MetastableVsEquilibriumConcurrentBundle :=
   metastableVsEquilibriumConcurrentBundleWithPresent 2
     (metastableVsEquilibriumConcurrentBundleWithPresent 1
       (metastableVsEquilibriumConcurrentBundleWithPresent 0
         metastableVsEquilibriumConcurrentBundleUnwired))
 
-def mveEmptyWitness : MetastableVsEquilibriumConcurrentBundle :=
+def metastableVsEquilibriumEmptyWitness : MetastableVsEquilibriumConcurrentBundle :=
   metastableVsEquilibriumConcurrentBundleUnwired
 
-def mveSinglePresent : MetastableVsEquilibriumConcurrentBundle :=
+def metastableVsEquilibriumSinglePresent : MetastableVsEquilibriumConcurrentBundle :=
   metastableVsEquilibriumConcurrentBundleWithPresent 0 metastableVsEquilibriumConcurrentBundleUnwired
 
 theorem equilibrium_basin_channel_present :
-    metastableVsEquilibriumConcurrentBundleHolds 0 mveFe26Witness = true := by decide
+    metastableVsEquilibriumConcurrentBundleHolds 0 metastableVsEquilibriumC6Witness = true := by decide
 
 theorem metastable_trap_channel_present :
-    metastableVsEquilibriumConcurrentBundleHolds 1 mveFe26Witness = true := by decide
+    metastableVsEquilibriumConcurrentBundleHolds 1 metastableVsEquilibriumC6Witness = true := by decide
 
 theorem class12_metastable_vs_equilibrium_channel_present :
-    metastableVsEquilibriumConcurrentBundleHolds 2 mveFe26Witness = true := by decide
+    metastableVsEquilibriumConcurrentBundleHolds 2 metastableVsEquilibriumC6Witness = true := by decide
 
-theorem fe26_witness_present_count_is_three :
-    metastableVsEquilibriumConcurrentBundlePresentCount mveFe26Witness = 3 := by decide
+theorem c6_witness_present_count_is_three :
+    metastableVsEquilibriumConcurrentBundlePresentCount metastableVsEquilibriumC6Witness = 3 := by decide
 
-theorem fe26_witness_is_concurrent_product :
-    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct mveFe26Witness = true := by decide
+theorem c6_witness_is_concurrent_product :
+    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct metastableVsEquilibriumC6Witness = true := by decide
 
 theorem empty_bundle_present_count_zero :
-    metastableVsEquilibriumConcurrentBundlePresentCount mveEmptyWitness = 0 := by decide
+    metastableVsEquilibriumConcurrentBundlePresentCount metastableVsEquilibriumEmptyWitness = 0 := by decide
 
 theorem empty_bundle_not_concurrent_product :
-    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct mveEmptyWitness = false := by decide
+    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct metastableVsEquilibriumEmptyWitness = false := by decide
 
 theorem single_present_count_is_one :
-    metastableVsEquilibriumConcurrentBundlePresentCount mveSinglePresent = 1 := by decide
+    metastableVsEquilibriumConcurrentBundlePresentCount metastableVsEquilibriumSinglePresent = 1 := by decide
 
 theorem single_present_not_concurrent_product :
-    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct mveSinglePresent = false := by decide
+    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct metastableVsEquilibriumSinglePresent = false := by decide
 
 /-- XOR posture — mutual exclusivity scaffold defect (must refuse). -/
 inductive MetastableVsEquilibriumXorPosture where
   | exclusive | concurrent
   deriving DecidableEq, Repr
-
-def metastableVsEquilibriumXorPostureExclusive : MetastableVsEquilibriumXorPosture := .exclusive
-def metastableVsEquilibriumXorPostureConcurrent : MetastableVsEquilibriumXorPosture := .concurrent
 
 def mveXorClassifierMarker : String := "chem_l0_metastable_vs_equilibrium_xor_classifier_v1"
 def mveConcurrentProductMarker : String := "chem_int_metastable_vs_equilibrium_product_v1"
@@ -257,12 +252,12 @@ theorem mve_xor_marker_ne_concurrent_product_marker :
 def mveXorClassifierIncompatible (claimXor : Bool) (b : MetastableVsEquilibriumConcurrentBundle) : Bool :=
   claimXor && metastableVsEquilibriumConcurrentBundleIsConcurrentProduct b
 
-theorem mve_xor_refuse_on_fe26_witness :
-    mveXorClassifierIncompatible true mveFe26Witness = true := by decide
+theorem mve_xor_refuse_on_c6_witness :
+    mveXorClassifierIncompatible true metastableVsEquilibriumC6Witness = true := by decide
 
 def mveProductNotXor : Bool :=
-  metastableVsEquilibriumConcurrentBundleIsConcurrentProduct mveFe26Witness &&
-  mveXorClassifierIncompatible true mveFe26Witness
+  metastableVsEquilibriumConcurrentBundleIsConcurrentProduct metastableVsEquilibriumC6Witness &&
+  mveXorClassifierIncompatible true metastableVsEquilibriumC6Witness
 
 theorem mve_product_not_xor_true : mveProductNotXor = true := by decide
 
@@ -337,20 +332,20 @@ def metastableVsEquilibriumConservationAuthorized (claimPhysicsGreen : Bool) (cl
   | .namedOk => true
   | _ => false
 
-def sampleMveFe26Bundle : MetastableVsEquilibriumConcurrentBundle :=
-  mveFe26Witness
+def sampleMetastableVsEquilibriumC6Bundle : MetastableVsEquilibriumConcurrentBundle :=
+  metastableVsEquilibriumC6Witness
 
 def sampleTrivialUnwiredBundle : MetastableVsEquilibriumConcurrentBundle :=
-  mveEmptyWitness
+  metastableVsEquilibriumEmptyWitness
 
 def unwiredDesignOk : Bool :=
   decide (evaluateMetastableVsEquilibriumConservation .unwired false false = .unwiredOk)
 
-def mveFe26ConcurrentOk : Bool :=
-  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+def metastableVsEquilibriumC6ConcurrentOk : Bool :=
+  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false false false = .namedOk ∧
-    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct sampleMveFe26Bundle = true ∧
-    ironAtomicNumberZ = 26 ∧
+    metastableVsEquilibriumConcurrentBundleIsConcurrentProduct sampleMetastableVsEquilibriumC6Bundle = true ∧
+    carbonAtomicNumberZ = 6 ∧
     class12MetastableVsEquilibriumPatternIndex = 12)
 
 def class12MetastableVsEquilibriumPatternIndexOk : Bool :=
@@ -359,23 +354,23 @@ def class12MetastableVsEquilibriumPatternIndexOk : Bool :=
 
 def concurrentProductNotXorOk : Bool :=
   decide (mveProductNotXor = true ∧
-    metastableVsEquilibriumConcurrentBundlePresentCount mveFe26Witness = 3)
+    metastableVsEquilibriumConcurrentBundlePresentCount metastableVsEquilibriumC6Witness = 3)
 
 def xorMutuallyExclusiveRefuse : Bool :=
-  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       true false false false false = .xorRefuse)
 
-def greenInventMveRefuse : Bool :=
+def greenInventMetastableRefuse : Bool :=
   decide (evaluateMetastableVsEquilibriumConservation .unwired true false = .greenInventRefuse ∧
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false true false false false = .greenInventRefuse)
 
 def fastKineticsNotEquilibriumGHullRefuse : Bool :=
-  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false true false = .fastKineticsNotEquilibriumGHullRefuse)
 
 def timeRemainderNotNewLawRefuse : Bool :=
-  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+  decide (evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false false true = .timeRemainderNotNewLawRefuse)
 
 def productionWiredRefuse : Bool :=
@@ -432,6 +427,12 @@ theorem metastable_vs_equilibrium_conservation_authority_path :
 def metastableEquilibriumEdgeAuthority : String :=
   "umst/umst-chem/src/metastable_equilibrium.rs"
 
+def calphadKineticsAuthority : String :=
+  "umst/umst-chem/src/cross_classifier/calphad_equilibrium_is_not_kinetics.rs"
+
+def scale02RemainderAuthority : String :=
+  "umst/umst-chem/src/timescale_separation_remainders.rs"
+
 def parallelMetastabilityAxiomTag : String := "26th_chemistry_axiom"
 
 def speciesIdSmuggleFraming : String := "l1_species_id_cement_occupancy_tag"
@@ -453,25 +454,25 @@ def parallelMetastabilityAxiomRefuse : Bool :=
 
 def speciesIdSmuggleRefuse : Bool :=
   decide (metastableVsEquilibriumConservationFraming ≠ speciesIdSmuggleFraming ∧
-    ironAtomicNumberZ = 26 ∧
+    carbonAtomicNumberZ = 6 ∧
     class12MetastableVsEquilibriumPatternIndex = 12)
 
 def extraElementIdRefuse : Bool :=
   decide (metastableVsEquilibriumConservationFraming ≠ extraElementIdSmuggleFraming ∧
     forbiddenZ119Smuggle > iupacTableCardinality ∧
-    ironAtomicNumberZ = 26)
+    carbonAtomicNumberZ = 6)
 
 def tpFloatPinRefuse : Bool :=
   decide (metastableVsEquilibriumConservationFraming ≠ tpFloatPinFraming ∧
     equilibriumBasinChannelTag = "equilibrium_basin")
 
-def mveLatticeScaffold : Bool :=
+def metastableVsEquilibriumLatticeScaffold : Bool :=
   unwiredDesignOk &&
-    mveFe26ConcurrentOk &&
+    metastableVsEquilibriumC6ConcurrentOk &&
     class12MetastableVsEquilibriumPatternIndexOk &&
     concurrentProductNotXorOk &&
     xorMutuallyExclusiveRefuse &&
-    greenInventMveRefuse &&
+    greenInventMetastableRefuse &&
     fastKineticsNotEquilibriumGHullRefuse &&
     timeRemainderNotNewLawRefuse &&
     parallelMetastabilityAxiomRefuse &&
@@ -482,8 +483,8 @@ def mveLatticeScaffold : Bool :=
     productionWiredRefuse &&
     wave100NotWired
 
-theorem mve_lattice_scaffold_true :
-    mveLatticeScaffold = true := by native_decide
+theorem metastable_vs_equilibrium_lattice_scaffold_true :
+    metastableVsEquilibriumLatticeScaffold = true := by native_decide
 
 inductive MetastableVsEquilibriumConservationFiber where
   | quantumKnowing | mesoActing
@@ -502,7 +503,7 @@ def metastableVsEquilibriumConservationCellId : String :=
   "CHEM-FORMAL-Q-LEAN-METASTABLE-VS-EQUILIBRIUM-CONSERVATION"
 
 def metastableVsEquilibriumConservationNonClaim : String :=
-  "CHEM-FORMAL-Q-LEAN-METASTABLE-VS-EQUILIBRIUM-CONSERVATION PATTERN-00 class 12 metastable_vs_equilibrium conservation equilibrium G hull metastable trap concurrent product identity conserved present ge 2 product not XOR xor mutually exclusive refuse parallel metastability axiom refuse species id smuggle refuse extra element id Z=119 refuse fast kinetics not equilibrium G hull refuse time remainder not new law refuse metastableVsEquilibriumConservationProved false Unwired OK not PATTERN-00 Proved not physics GREEN cite LandauerLaw.physicalSecondLaw not meso theorems not 118 squared GREEN table not production_wired Fe Z=26 host witness metastablevsequilibriumconservation"
+  "CHEM-FORMAL-Q-LEAN-METASTABLE-VS-EQUILIBRIUM-CONSERVATION PATTERN-00 class 12 metastable_vs_equilibrium conservation equilibrium basin metastable trap class 12 metastable_vs_equilibrium concurrent product not XOR fast kinetics not equilibrium G hull refuse time remainder not new law refuse metastable is factor not 26th axiom parallel metastability axiom refuse species id smuggle refuse extra ElementId Z=119 refuse metastableVsEquilibriumConservationProved false Unwired OK not PATTERN-00 Proved not physics GREEN cite LandauerLaw.physicalSecondLaw not meso theorems not 118 squared GREEN table not production_wired C Z=6 diamond graphite metastable witness"
 
 def metastableVsEquilibriumConservationPhysicsGreenAuthorized : Prop := False
 
@@ -515,10 +516,10 @@ structure MetastableVsEquilibriumConservationProbe where
   physicsGreenRefused : Bool
   notProved : Bool
   class12Index : Bool
-  fe26HostWitness : Bool
+  c6HostWitness : Bool
   equilibriumMetastableClass12Product : Bool
   concurrentNotXor : Bool
-  fe26WitnessOk : Bool
+  c6WitnessOk : Bool
   xorRefuse : Bool
   greenInventRefuse : Bool
   fastKineticsRefuse : Bool
@@ -541,14 +542,14 @@ def metastableVsEquilibriumConservationProbe : MetastableVsEquilibriumConservati
     physicsGreenRefused := true
     notProved := !metastableVsEquilibriumConservationProved
     class12Index := decide (class12MetastableVsEquilibriumPatternIndex = 12)
-    fe26HostWitness := decide (ironAtomicNumberZ = 26)
+    c6HostWitness := decide (carbonAtomicNumberZ = 6)
     equilibriumMetastableClass12Product := decide (equilibriumBasinChannelTag = "equilibrium_basin" ∧
       metastableTrapChannelTag = "metastable_trap" ∧
       metastableVsEquilibriumFactorTag = "metastable_vs_equilibrium")
     concurrentNotXor := mveProductNotXor
-    fe26WitnessOk := mveFe26ConcurrentOk
+    c6WitnessOk := metastableVsEquilibriumC6ConcurrentOk
     xorRefuse := xorMutuallyExclusiveRefuse
-    greenInventRefuse := greenInventMveRefuse
+    greenInventRefuse := greenInventMetastableRefuse
     fastKineticsRefuse := fastKineticsNotEquilibriumGHullRefuse
     timeRemainderRefuse := timeRemainderNotNewLawRefuse
     parallelAxiomRefuse := parallelMetastabilityAxiomRefuse
@@ -567,10 +568,10 @@ def metastableVsEquilibriumConservationHonest : Bool :=
     p.physicsGreenRefused &&
     p.notProved &&
     p.class12Index &&
-    p.fe26HostWitness &&
+    p.c6HostWitness &&
     p.equilibriumMetastableClass12Product &&
     p.concurrentNotXor &&
-    p.fe26WitnessOk &&
+    p.c6WitnessOk &&
     p.xorRefuse &&
     p.greenInventRefuse &&
     p.fastKineticsRefuse &&
@@ -583,7 +584,7 @@ def metastableVsEquilibriumConservationHonest : Bool :=
     p.knowingFiberOk &&
     p.wave100NotWired &&
     p.intAuthorityCited &&
-    mveLatticeScaffold
+    metastableVsEquilibriumLatticeScaffold
 
 theorem metastable_vs_equilibrium_conservation_honest_true :
     metastableVsEquilibriumConservationHonest = true := by native_decide
@@ -591,7 +592,7 @@ theorem metastable_vs_equilibrium_conservation_honest_true :
 def metastableVsEquilibriumConservationAxiom : Bool :=
   not118SquaredGreenTable &&
     metastableVsEquilibriumSecondLawConservationFramed &&
-    mveLatticeScaffold &&
+    metastableVsEquilibriumLatticeScaffold &&
     metastableVsEquilibriumConservationHonest &&
     !metastableVsEquilibriumConservationProved &&
     !metastableVsEquilibriumConservationProductionWired &&
@@ -612,8 +613,8 @@ theorem metastable_vs_equilibrium_conservation_modality_unwired :
 theorem unwired_close_without_production_wiring :
     evaluateMetastableVsEquilibriumConservation .unwired false false = .unwiredOk := rfl
 
-theorem fe26_witness_named_ok :
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+theorem c6_witness_named_ok :
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false false false = .namedOk := rfl
 
 theorem trivial_empty_bundle_fail_closed :
@@ -621,22 +622,22 @@ theorem trivial_empty_bundle_fail_closed :
       false false false false false = .trivialRefuse := rfl
 
 theorem xor_classifier_refused :
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       true false false false false = .xorRefuse := rfl
 
 theorem green_invent_refuse_unwired :
     evaluateMetastableVsEquilibriumConservation .unwired true false = .greenInventRefuse := rfl
 
 theorem fast_kinetics_not_equilibrium_g_hull_refused :
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false true false = .fastKineticsNotEquilibriumGHullRefuse := rfl
 
 theorem time_remainder_not_new_law_refused :
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false false true = .timeRemainderNotNewLawRefuse := rfl
 
 theorem proved_without_bar_refuse :
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false true false false = .provedWithoutBarRefuse := rfl
 
 theorem production_wired_refuse :
@@ -648,26 +649,26 @@ theorem metastable_vs_equilibrium_conservation_honest_bundle :
     not118SquaredGreenTable = true ∧
     metastableVsEquilibriumSecondLawConservationFramed = true ∧
     evaluateMetastableVsEquilibriumConservation .unwired false false = .unwiredOk ∧
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false false false = .namedOk ∧
     evaluateMetastableVsEquilibriumBundle .unwired sampleTrivialUnwiredBundle
       false false false false false = .trivialRefuse ∧
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       true false false false false = .xorRefuse ∧
     evaluateMetastableVsEquilibriumConservation .unwired true false = .greenInventRefuse ∧
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false true false = .fastKineticsNotEquilibriumGHullRefuse ∧
-    evaluateMetastableVsEquilibriumBundle .unwired sampleMveFe26Bundle
+    evaluateMetastableVsEquilibriumBundle .unwired sampleMetastableVsEquilibriumC6Bundle
       false false false false true = .timeRemainderNotNewLawRefuse ∧
     mveProductNotXor = true ∧
-    ironAtomicNumberZ = 26 ∧
+    carbonAtomicNumberZ = 6 ∧
     class12MetastableVsEquilibriumPatternIndex = 12 ∧
     metastableVsEquilibriumConservationAxiom = true :=
   ⟨rfl, rfl, not_118_squared_green_table, metastable_vs_equilibrium_second_law_conservation_framed,
-    unwired_close_without_production_wiring, fe26_witness_named_ok,
+    unwired_close_without_production_wiring, c6_witness_named_ok,
     trivial_empty_bundle_fail_closed, xor_classifier_refused, green_invent_refuse_unwired,
     fast_kinetics_not_equilibrium_g_hull_refused, time_remainder_not_new_law_refused,
-    mve_product_not_xor_true, iron_atomic_number_z_is_26,
+    mve_product_not_xor_true, carbon_atomic_number_z_is_6,
     class12_metastable_vs_equilibrium_pattern_index_twelve, metastable_vs_equilibrium_conservation_axiom⟩
 
 end UMST.Chem
