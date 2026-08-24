@@ -207,6 +207,14 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.BondConservation`
+
+  Cut conservation (`CHEM-FORMAL-Q-LEAN-CUT-CONSERVATION`):
+  GRAPH-02 cut/separation conservation; Unwired/Assumed/Proved/Surrogate;
+  ore/waste partition complement conserved; Fe Z=26; recycle Cu loop Z=29; Og Z=118;
+  trivial cut fail-closed; cut ≠ bond; `graph02CutProved` false; Unwired, not GRAPH-02 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.CutConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -219,7 +227,7 @@ lean_lib ChemConstants where
     `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation,
     `ChemConstants.PartialConservation, `ChemConstants.FoldConservation,
     `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
-    `ChemConstants.BondConservation]
+    `ChemConstants.BondConservation, `ChemConstants.CutConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
