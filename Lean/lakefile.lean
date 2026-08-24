@@ -414,6 +414,15 @@ lean_lib ChemGeometry where
   Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.FineStructureAlphaMeasuredRemainder`
+
+  Continuum pattern-learn (`CHEM-FORMAL-Q-LEAN-CONTINUUM-PATTERN-LEARN-CONSERVATION`):
+  X55 named chart concurrent §2 pattern classifiers along vacuum | contained | messy continuum;
+  cite pattern_taxonomy SSOT not live PatternBundle Π_c wire; Π_c product not XOR;
+  consumes graph liquid-PPO MI observation consume-not-fork BIND antichain;
+  explicit env coordinates 15 16 19 20 21 22 not extra axioms; not 26th axiom;
+  `continuumPatternLearnProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.ContinuumPatternLearn`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -446,7 +455,8 @@ lean_lib ChemConstants where
     `ChemConstants.CrossDomainBreakthroughProtocol,
     `ChemConstants.ComposerResearchBleedingEdge,
     `ChemConstants.ConstantDeriveSecondLawCensus,
-    `ChemConstants.FineStructureAlphaMeasuredRemainder]
+    `ChemConstants.FineStructureAlphaMeasuredRemainder,
+    `ChemConstants.ContinuumPatternLearn]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
