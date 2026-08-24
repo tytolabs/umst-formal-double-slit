@@ -67,7 +67,8 @@ library
         EpistemicGalois,
         LandauerExtension,
         MonoidalState,
-        TelemetryParser
+        TelemetryParser,
+        UrgeKnowing.LandauerHistoryLook
 
     -- Modules included in this library but not exported.
     -- other-modules:
