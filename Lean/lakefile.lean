@@ -325,6 +325,13 @@ lean_lib ChemGeometry where
   not physics GREEN.
 
   Build: `lake build ChemConstants.DlvoKtNotPsi`
+
+  Engine refuses new SI (`CHEM-FORMAL-Q-LEAN-ENGINE-REFUSES-NEW-SI-CONSERVATION`):
+  constitutive engines sort using the existing SI/occupancy/derived-morphism sheaf; they do not
+  mint k, R, or ε₀; ExactSI constants are unit morphisms; `engineRefusesNewSiProved` false;
+  Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.EngineRefusesNewSi`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -345,7 +352,8 @@ lean_lib ChemConstants where
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
-    `ChemConstants.DlvoKtNotPsi]
+    `ChemConstants.DlvoKtNotPsi,
+    `ChemConstants.EngineRefusesNewSi]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
