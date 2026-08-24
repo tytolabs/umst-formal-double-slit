@@ -430,6 +430,13 @@ lean_lib ChemGeometry where
   cite INT x_row read-only; `perElementNuanceConservationProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.PerElementNuanceConservation`
+
+  Shared conservation (`CHEM-FORMAL-Q-LEAN-SHARED-CONSERVATION`):
+  PATTERN-00 class 1 **shared** concurrent Π_c identity conserved; CEF sublattice + QTAIM bond paths +
+  CAT-02 pullback; shared sites neighbor not independent SpeciesId; product not XOR;
+  `pattern00SharedProved` false; `cat02PullbackProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.SharedConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -464,7 +471,8 @@ lean_lib ChemConstants where
     `ChemConstants.ConstantDeriveSecondLawCensus,
     `ChemConstants.FineStructureAlphaMeasuredRemainder,
     `ChemConstants.ContinuumPatternLearn,
-    `ChemConstants.PerElementNuanceConservation]
+    `ChemConstants.PerElementNuanceConservation,
+    `ChemConstants.SharedConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
