@@ -8,7 +8,7 @@
 (*  **conservation**. Occupancy-engine sort (X29) restriction on the    *)
 (*  same second-law + conservation object (not a 26th axiom / extra force). *)
 (*  Concurrent Π_c PatternBundle factor — **product** not XOR.          *)
-(*  Cm Z=96 4d5 5s1 actinide Madelung exception; Gd Z=64 homolog not Cm copy. *)
+(*  Cm Z=96 5f7 6d1 7s2 actinide Madelung exception; Gd Z=64 homolog not Cm copy. *)
 (*  cmExceptionContinuumProved false. Modality Unwired.               *)
 (*                                                                      *)
 (*  Self-contained (Stdlib Arith). physics_green = False. Zero Admitted. *)
