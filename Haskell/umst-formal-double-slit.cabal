@@ -76,7 +76,8 @@ library
         UrgeKnowing.MeasurementCostSync,
         UrgeKnowing.TwoHilberts,
         UrgeKnowing.PersistVsOccupancy,
-        UrgeKnowing.LandauerNTo1
+        UrgeKnowing.LandauerNTo1,
+        UrgeKnowing.EpistemicQueryLook
 
     -- Modules included in this library but not exported.
     -- other-modules:
