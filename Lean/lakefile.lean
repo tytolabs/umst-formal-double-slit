@@ -348,6 +348,13 @@ lean_lib ChemGeometry where
   Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.OccurrenceFamilyPattern`
+
+  Occupancy engine sort (`CHEM-FORMAL-Q-LEAN-OCCUPANCY-ENGINE-SORT-CONSERVATION`):
+  occupancy engine sorts Madelung family vs Named / Actinide / DBlock exception families;
+  Pu 94 absent; homolog ≠ copy (Ds 110 not Pt 78); `occupancyEngineSortProved` false;
+  Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.OccupancyEngineSort`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -371,7 +378,8 @@ lean_lib ChemConstants where
     `ChemConstants.DlvoKtNotPsi,
     `ChemConstants.EngineRefusesNewSi,
     `ChemConstants.NaturalOccurrenceZ118,
-    `ChemConstants.OccurrenceFamilyPattern]
+    `ChemConstants.OccurrenceFamilyPattern,
+    `ChemConstants.OccupancyEngineSort]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
