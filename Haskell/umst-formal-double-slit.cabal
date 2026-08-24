@@ -71,6 +71,7 @@ library
         UrgeKnowing.LandauerHistoryLook,
         UrgeKnowing.EpistemicNullProbe,
         UrgeKnowing.CompactionMiCost,
+        UrgeKnowing.ObserveMinMi,
         UrgeKnowing.MachineTemperature,
         UrgeKnowing.MeasurementCostSync,
         UrgeKnowing.TwoHilberts
