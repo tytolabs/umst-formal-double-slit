@@ -215,6 +215,15 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.CutConservation`
+
+  Hyper conservation (`CHEM-FORMAL-Q-LEAN-HYPER-CONSERVATION`):
+  GRAPH-03 hypergraph incidence conservation; Unwired/Assumed/Proved/Surrogate;
+  multi-constituent ore incidence identity conserved; ternary arity; hematite ≠ gangue;
+  Fe Z=26; Og Z=118; trivial hyper fail-closed; hyper ≠ bond; no petgraph fork;
+  `graph03HyperProved` false; Unwired, not GRAPH-03 Proved,
+  not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.HyperConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -227,7 +236,8 @@ lean_lib ChemConstants where
     `ChemConstants.ModalityConservation, `ChemConstants.EffectConservation,
     `ChemConstants.PartialConservation, `ChemConstants.FoldConservation,
     `ChemConstants.FixpointConservation, `ChemConstants.RewriteConservation,
-    `ChemConstants.BondConservation, `ChemConstants.CutConservation]
+    `ChemConstants.BondConservation, `ChemConstants.CutConservation,
+    `ChemConstants.HyperConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
