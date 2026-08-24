@@ -398,6 +398,14 @@ lean_lib ChemGeometry where
   `composerResearchBleedingEdgeProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.ComposerResearchBleedingEdge`
+
+  Constant-derive second-law census (`CHEM-FORMAL-Q-LEAN-CONSTANT-DERIVE-SECOND-LAW-CENSUS-CONSERVATION`):
+  engines consult ExactSI / occupancy / derived-morphism sheaf; do not mint k/R/ε₀;
+  α MeasuredCited not Landauer-faked; cite constant_derive_second_law_census.rs not fork;
+  sorting cites upstream sheaf pins — not 26th axiom; `constantDeriveSecondLawCensusProved` false;
+  Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.ConstantDeriveSecondLawCensus`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -428,7 +436,8 @@ lean_lib ChemConstants where
     `ChemConstants.MadelungExceptionIsTheorem,
     `ChemConstants.HeavyZRelativisticContinuum,
     `ChemConstants.CrossDomainBreakthroughProtocol,
-    `ChemConstants.ComposerResearchBleedingEdge]
+    `ChemConstants.ComposerResearchBleedingEdge,
+    `ChemConstants.ConstantDeriveSecondLawCensus]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
