@@ -493,6 +493,16 @@ lean_lib ChemConstants where
     `ChemConstants.BondRepellingConservation]
   srcDir := "."
 
+/-!
+  Knowing-fiber urge (`URGE-FORMAL-Q-LEAN-LANDAUER-HISTORY-LOOK`): Q-lattice epistemic
+  Landauer history look; `globs` auto-picks up future `UrgeKnowing/*.lean`.
+
+  Build: `lake build UrgeKnowing`
+-/
+lean_lib UrgeKnowing where
+  globs := #[`UrgeKnowing.+]
+  srcDir := "."
+
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
 lean_exe export_catalog where
   root := `ExportCatalog
