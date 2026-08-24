@@ -288,6 +288,15 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.AllotropeConservation`
 
+  Structure-enabling conservation (`CHEM-FORMAL-Q-LEAN-STRUCTURE-ENABLING-CONSERVATION`):
+  PATTERN-00 class 4 **structure_enabling** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  class 4 structure_enabling ⊗ class 2 bond_forming concurrent Π_c; TopoNet⊗DensityLadder⊗Interact **product** not XOR;
+  C Z=6 diamond/graphite/fullerene same Z; Si Z=14; O Z=8; He Z=2 closed-shell no-enabling scaffold;
+  folklore/GREEN/trivial/XOR refuse; cite `LandauerLaw.physicalSecondLaw` not meso theorems;
+  `structureEnablingProved` false; Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.StructureEnablingConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -470,6 +479,7 @@ lean_lib ChemConstants where
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
+    `ChemConstants.StructureEnablingConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
