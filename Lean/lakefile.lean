@@ -423,6 +423,13 @@ lean_lib ChemGeometry where
   `continuumPatternLearnProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.ContinuumPatternLearn`
+
+  Per-element nuance conservation (`CHEM-FORMAL-Q-LEAN-PER-ELEMENT-NUANCE-CONSERVATION`):
+  PATTERN-00 class 0 **per_element_nuance** concurrent Π_c factor not XOR; occupied Q-lattice +
+  thermo graph + PSP per Z product; homolog ≠ copy; XOR / parallel axiom / GREEN invent refuse;
+  cite INT x_row read-only; `perElementNuanceConservationProved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.PerElementNuanceConservation`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -456,7 +463,8 @@ lean_lib ChemConstants where
     `ChemConstants.ComposerResearchBleedingEdge,
     `ChemConstants.ConstantDeriveSecondLawCensus,
     `ChemConstants.FineStructureAlphaMeasuredRemainder,
-    `ChemConstants.ContinuumPatternLearn]
+    `ChemConstants.ContinuumPatternLearn,
+    `ChemConstants.PerElementNuanceConservation]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
