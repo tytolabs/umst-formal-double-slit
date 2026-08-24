@@ -318,6 +318,13 @@ lean_lib ChemGeometry where
   `cartridgeOreConsultMonoidProved` false; Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.CartridgeOreConsultMonoid`
+
+  DLVO kT not-ψ (`CHEM-FORMAL-Q-LEAN-DLVO-KT-NOT-PSI-CONSERVATION`):
+  fluids DLVO kT is a coefficient pin, not constitutive ψ; ExactSI k is a unit morphism;
+  engines sort the sheaf; no Landauer-fake constants; `dlvoKtNotPsiProved` false; Unwired,
+  not physics GREEN.
+
+  Build: `lake build ChemConstants.DlvoKtNotPsi`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -337,7 +344,8 @@ lean_lib ChemConstants where
     `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
-    `ChemConstants.CartridgeOreConsultMonoid]
+    `ChemConstants.CartridgeOreConsultMonoid,
+    `ChemConstants.DlvoKtNotPsi]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
