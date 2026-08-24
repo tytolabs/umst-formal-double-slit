@@ -335,6 +335,16 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.ProcessingRefiningConservation`
 
+  Isotope conservation (`CHEM-FORMAL-Q-LEAN-ISOTOPE-CONSERVATION`):
+  PATTERN-00 class 11 **isotope** PatternBundle **conservation**; Unwired/Assumed/Proved/Surrogate;
+  electronic occupancy ⊗ nuclear identity ⊗ class-11 isotope **product** not XOR; Fe Z=26 host witness;
+  Tc/Pm radioelement honesty same-Z isotope factor not extra ElementId; nuclear decay ≠ chem GREEN refuse;
+  parallel isotope axiom refuse; species-id smuggle refuse; extra ElementId Z=119 refuse;
+  cite `LandauerLaw.physicalSecondLaw` not meso theorems; `isotopeConservationProved` false;
+  Unwired, not PATTERN-00 Proved, not 118² GREEN, not physics GREEN.
+
+  Build: `lake build ChemConstants.IsotopeConservation`
+
   Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
   chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
   chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
@@ -522,6 +532,7 @@ lean_lib ChemConstants where
     `ChemConstants.AssemblageStabilityWhyConservation,
     `ChemConstants.ImpureComponentMorphismConservation,
     `ChemConstants.ProcessingRefiningConservation,
+    `ChemConstants.IsotopeConservation,
     `ChemConstants.ChemPhysicsChartIsomorphism,     `ChemConstants.CartridgeConstitutiveCompose,
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
