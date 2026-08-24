@@ -287,6 +287,15 @@ lean_lib ChemGeometry where
   not 118² GREEN, not physics GREEN.
 
   Build: `lake build ChemConstants.AllotropeConservation`
+
+  Chem-physics chart isomorphism (`CHEM-FORMAL-Q-LEAN-CHEM-PHYSICS-CHART-ISOMORPHISM-CONSERVATION`):
+  chemistry is occupancy physics; constitutive engines named charts one second-law conservation object;
+  chart isomorphism Thermo_n / DensityLadder / SCALE-01 / Occupancy same Z distinct chart names;
+  separate-object-per-chart refuse; WAVE100 lib.rs/eos.rs smuggle refuse; XOR enum refuse;
+  not fourth chemistry science; not 26th axiom; `chemPhysicsChartIsomorphismProved` false; Unwired,
+  not physics GREEN.
+
+  Build: `lake build ChemConstants.ChemPhysicsChartIsomorphism`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -303,7 +312,8 @@ lean_lib ChemConstants where
     `ChemConstants.HyperConservation, `ChemConstants.DissipConservation,
     `ChemConstants.PatternProductConservation, `ChemConstants.ScaleConservation,
     `ChemConstants.DensityConservation, `ChemConstants.ThermoConservation,
-    `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation]
+    `ChemConstants.GoldschmidtConservation, `ChemConstants.AllotropeConservation,
+    `ChemConstants.ChemPhysicsChartIsomorphism]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
