@@ -332,6 +332,14 @@ lean_lib ChemGeometry where
   Unwired, not physics GREEN.
 
   Build: `lake build ChemConstants.EngineRefusesNewSi`
+
+  Natural occurrence Z118 (`CHEM-FORMAL-Q-LEAN-NATURAL-OCCURRENCE-Z118-CONSERVATION`):
+  Z=1..118 natural occurrence class table as Unwired named product classifiers
+  (native/oxide/sulfide/silicate/halide+carbonate/atmophile/synthetic-or-trace); not folklore
+  lists; concurrent product bits not XOR enum; He atmophile-only; Fe native⊗oxide⊗sulfide product;
+  `naturalOccurrenceZ118Proved` false; Unwired, not physics GREEN.
+
+  Build: `lake build ChemConstants.NaturalOccurrenceZ118`
 -/
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
@@ -353,7 +361,8 @@ lean_lib ChemConstants where
     `ChemConstants.CementHydrationNotL0G,
     `ChemConstants.CartridgeOreConsultMonoid,
     `ChemConstants.DlvoKtNotPsi,
-    `ChemConstants.EngineRefusesNewSi]
+    `ChemConstants.EngineRefusesNewSi,
+    `ChemConstants.NaturalOccurrenceZ118]
   srcDir := "."
 
 /-- Emit `artifacts/catalog.json` (repo root): pinned Lake roots + schema; see `../tools/lean_export/README.md`. -/
