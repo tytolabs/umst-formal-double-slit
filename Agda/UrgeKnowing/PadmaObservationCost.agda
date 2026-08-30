@@ -10,8 +10,9 @@
 
 module UrgeKnowing.PadmaObservationCost where
 
-open import Data.Bool using (Bool; false)
+open import Data.Bool using (Bool; false; true)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
+open import Relation.Nullary using (¬_)
 
 data ObsCostModality : Set where
   obs-cost-unwired obs-cost-assumed obs-cost-proved obs-cost-surrogate : ObsCostModality
@@ -39,3 +40,12 @@ observationCostNotProved = refl
 
 modalityUnwired : obsCostModalityCurrent ≡ obs-cost-unwired
 modalityUnwired = refl
+
+fourArmRunFormal : Bool
+fourArmRunFormal = false
+
+fourArmRunStaysFalse : fourArmRunFormal ≡ false
+fourArmRunStaysFalse = refl
+
+inventPhysicsGreenRefused : ¬ (physicsGreenFormal ≡ true)
+inventPhysicsGreenRefused ()
