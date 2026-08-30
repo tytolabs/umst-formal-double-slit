@@ -72,6 +72,7 @@ library
         UrgeKnowing.EpistemicNullProbe,
         UrgeKnowing.CompactionMiCost,
         UrgeKnowing.ObserveMinMi,
+        UrgeKnowing.PadmaObservationCost,
         UrgeKnowing.MachineTemperature,
         UrgeKnowing.MeasurementCostSync,
         UrgeKnowing.TwoHilberts,
