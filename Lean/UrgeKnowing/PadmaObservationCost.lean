@@ -32,4 +32,13 @@ theorem production_wired_stays_false : productionWiredFormal = false := by rfl
 theorem observation_cost_not_proved : observationCostProvedFormal = false := by rfl
 theorem modality_unwired : obsCostModalityCurrent = .unwired := by rfl
 
+/-- Formal witness: four_arm / production retrieve stay unwired on Knowing obs-cost. -/
+def fourArmRunFormal : Bool := false
+
+theorem four_arm_run_stays_false : fourArmRunFormal = false := by rfl
+
+/-- Adversarial: inventing physics_green=true is refused. -/
+theorem invent_physics_green_refused : ¬ (physicsGreenFormal = true) := by
+  simp [physicsGreenFormal]
+
 end UrgeKnowing.PadmaObservationCost
