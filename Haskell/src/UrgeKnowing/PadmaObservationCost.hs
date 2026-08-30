@@ -6,7 +6,7 @@ Description : Knowing-fiber Padma observation / read-tax cost honesty pin.
 Copyright   : (c) UMST Project, 2026
 
 Formal bools stay false. Not meso Economic. Not physics GREEN.
-Cell: PADMA-FORMAL-KNOW-HS-OBS-COST
+Cell: PADMA-P3-FORMAL-KNOW-HS-ADV
 -}
 module UrgeKnowing.PadmaObservationCost
   ( ObsCostModality (..)
@@ -14,10 +14,13 @@ module UrgeKnowing.PadmaObservationCost
   , physicsGreenFormal
   , productionWiredFormal
   , observationCostProvedFormal
+  , fourArmRunFormal
   , physicsGreenStaysFalse
   , productionWiredStaysFalse
   , observationCostNotProved
   , modalityUnwired
+  , fourArmRunStaysFalse
+  , inventPhysicsGreenRefused
   ) where
 
 data ObsCostModality
@@ -39,6 +42,9 @@ productionWiredFormal = False
 observationCostProvedFormal :: Bool
 observationCostProvedFormal = False
 
+fourArmRunFormal :: Bool
+fourArmRunFormal = False
+
 physicsGreenStaysFalse :: Bool
 physicsGreenStaysFalse = not physicsGreenFormal
 
@@ -50,3 +56,9 @@ observationCostNotProved = not observationCostProvedFormal
 
 modalityUnwired :: Bool
 modalityUnwired = obsCostModalityCurrent == ObsCostUnwired
+
+fourArmRunStaysFalse :: Bool
+fourArmRunStaysFalse = not fourArmRunFormal
+
+inventPhysicsGreenRefused :: Bool
+inventPhysicsGreenRefused = not physicsGreenFormal
