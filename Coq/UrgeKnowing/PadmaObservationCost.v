@@ -33,4 +33,13 @@ Proof. reflexivity. Qed.
 Lemma modality_unwired : obs_cost_modality_current = obs_cost_unwired.
 Proof. reflexivity. Qed.
 
+Definition four_arm_run_formal : bool := false.
+
+Lemma four_arm_run_stays_false : four_arm_run_formal = false.
+Proof. reflexivity. Qed.
+
+Lemma invent_physics_green_refused :
+  physics_green_formal = true -> False.
+Proof. discriminate. Qed.
+
 End PadmaObservationCost.
