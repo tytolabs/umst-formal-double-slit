@@ -1,0 +1,619 @@
+DIGEST d08ca852c4e2a6f1e473023810ff9da3
+FUMST.ChemConstants.CoalgebraConservation
+R1049:1053 Stdlib.Arith.Arith <> <> lib
+R1055:1060 Stdlib.Strings.String <> <> lib
+R1062:1065 Stdlib.Bool.Bool <> <> lib
+R1067:1069 Stdlib.micromega.Lia <> <> lib
+ind 1326:1354 <> CoalgebraConservationModality
+constr 1370:1399 <> coalgebra_conservation_unwired
+constr 1405:1434 <> coalgebra_conservation_assumed
+constr 1440:1468 <> coalgebra_conservation_proved
+constr 1474:1505 <> coalgebra_conservation_surrogate
+scheme 1326:1354 <> CoalgebraConservationModality_rect
+scheme 1326:1354 <> CoalgebraConservationModality_ind
+scheme 1326:1354 <> CoalgebraConservationModality_rec
+scheme 1326:1354 <> CoalgebraConservationModality_sind
+def 1520:1555 <> coalgebraConservationModalityCurrent
+R1559:1587 UMST.ChemConstants.CoalgebraConservation <> CoalgebraConservationModality ind
+R1594:1623 UMST.ChemConstants.CoalgebraConservation <> coalgebra_conservation_unwired constr
+ind 1859:1872 <> OreFragmentTag
+constr 1888:1893 <> frag_a
+constr 1899:1904 <> frag_b
+scheme 1859:1872 <> OreFragmentTag_rect
+scheme 1859:1872 <> OreFragmentTag_ind
+scheme 1859:1872 <> OreFragmentTag_rec
+scheme 1859:1872 <> OreFragmentTag_sind
+ind 1918:1933 <> OreAssemblageTag
+constr 1949:1964 <> assemblage_empty
+constr 1970:1986 <> assemblage_single
+constr 2016:2030 <> assemblage_pair
+R1996:2009 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+binder 1989:1992 <> frag:7
+R2046:2059 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+binder 2033:2036 <> left:8
+binder 2038:2042 <> right:9
+scheme 1918:1933 <> OreAssemblageTag_rect
+scheme 1918:1933 <> OreAssemblageTag_ind
+scheme 1918:1933 <> OreAssemblageTag_rec
+scheme 1918:1933 <> OreAssemblageTag_sind
+rec 2071:2090 <> OreDecompositionStep
+proj 2106:2116 <> decomp_head
+proj 2138:2148 <> decomp_tail
+R2120:2133 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+R2152:2167 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+rec 2180:2195 <> OreSynthesisStep
+proj 2211:2220 <> synth_head
+proj 2242:2251 <> synth_tail
+R2224:2237 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+R2255:2270 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+ind 2286:2305 <> DecompositionVerdict
+constr 2321:2335 <> decomp_terminal
+constr 2341:2356 <> decomp_unfold_ok
+scheme 2286:2305 <> DecompositionVerdict_rect
+scheme 2286:2305 <> DecompositionVerdict_ind
+scheme 2286:2305 <> DecompositionVerdict_rec
+scheme 2286:2305 <> DecompositionVerdict_sind
+ind 2370:2385 <> SynthesisVerdict
+constr 2401:2413 <> synth_fold_ok
+constr 2419:2443 <> synth_invalid_tail_refuse
+constr 2449:2473 <> synth_green_invent_refuse
+scheme 2370:2385 <> SynthesisVerdict_rect
+scheme 2370:2385 <> SynthesisVerdict_ind
+scheme 2370:2385 <> SynthesisVerdict_rec
+scheme 2370:2385 <> SynthesisVerdict_sind
+def 2488:2503 <> ore_fragment_beq
+R2512:2525 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+binder 2506:2506 <> a:20
+binder 2508:2508 <> b:21
+R2530:2533 Corelib.Init.Datatypes <> bool ind
+R2549:2549 UMST.ChemConstants.CoalgebraConservation <> b:21 var
+R2546:2546 UMST.ChemConstants.CoalgebraConservation <> a:20 var
+R2560:2565 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R2568:2573 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R2578:2581 Corelib.Init.Datatypes <> true constr
+R2587:2592 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+R2595:2600 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+R2605:2608 Corelib.Init.Datatypes <> true constr
+R2622:2626 Corelib.Init.Datatypes <> false constr
+prf 2642:2662 <> ore_fragment_beq_refl
+R2669:2682 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+binder 2665:2665 <> f:24
+R2709:2711 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2689:2704 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq def
+R2706:2706 UMST.ChemConstants.CoalgebraConservation <> f:24 var
+R2708:2708 UMST.ChemConstants.CoalgebraConservation <> f:24 var
+R2712:2715 Corelib.Init.Datatypes <> true constr
+def 2767:2784 <> ore_assemblage_beq
+R2793:2808 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 2787:2787 <> a:25
+binder 2789:2789 <> b:26
+R2813:2816 Corelib.Init.Datatypes <> bool ind
+R2832:2832 UMST.ChemConstants.CoalgebraConservation <> b:26 var
+R2829:2829 UMST.ChemConstants.CoalgebraConservation <> a:25 var
+R2843:2858 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R2861:2876 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R2881:2884 Corelib.Init.Datatypes <> true constr
+R2890:2906 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R2912:2928 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R2936:2951 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq def
+R2963:2977 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R2986:3000 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R3039:3042 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3017:3032 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq def
+R3043:3058 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq def
+R3078:3082 Corelib.Init.Datatypes <> false constr
+prf 3098:3120 <> ore_assemblage_beq_refl
+R3127:3142 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 3123:3123 <> a:29
+R3171:3173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3149:3166 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_beq def
+R3168:3168 UMST.ChemConstants.CoalgebraConservation <> a:29 var
+R3170:3170 UMST.ChemConstants.CoalgebraConservation <> a:29 var
+R3174:3177 Corelib.Init.Datatypes <> true constr
+R3237:3257 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3237:3257 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3237:3257 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3285:3305 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3308:3328 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3285:3305 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3285:3305 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3308:3328 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R3308:3328 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+def 3361:3370 <> unfold_ore
+R3377:3392 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 3373:3373 <> a:30
+R3419:3421 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3399:3418 UMST.ChemConstants.CoalgebraConservation <> DecompositionVerdict ind
+R3422:3427 Corelib.Init.Datatypes <> option ind
+R3429:3448 UMST.ChemConstants.CoalgebraConservation <> OreDecompositionStep rec
+R3461:3461 UMST.ChemConstants.CoalgebraConservation <> a:30 var
+R3472:3487 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R3492:3492 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3508:3509 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3514:3514 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3493:3507 UMST.ChemConstants.CoalgebraConservation <> decomp_terminal constr
+R3510:3513 Corelib.Init.Datatypes <> None constr
+R3520:3536 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R3549:3549 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3566:3574 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3635:3635 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3550:3565 UMST.ChemConstants.CoalgebraConservation <> decomp_unfold_ok constr
+R3575:3578 Corelib.Init.Datatypes <> Some constr
+R3583:3593 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R3583:3593 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R3583:3593 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R3601:3611 UMST.ChemConstants.CoalgebraConservation <> decomp_tail proj
+R3601:3611 UMST.ChemConstants.CoalgebraConservation <> decomp_tail proj
+R3616:3631 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R3641:3655 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R3670:3670 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3687:3695 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3759:3759 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3671:3686 UMST.ChemConstants.CoalgebraConservation <> decomp_unfold_ok constr
+R3696:3699 Corelib.Init.Datatypes <> Some constr
+R3704:3714 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R3704:3714 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R3704:3714 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R3722:3732 UMST.ChemConstants.CoalgebraConservation <> decomp_tail proj
+R3722:3732 UMST.ChemConstants.CoalgebraConservation <> decomp_tail proj
+R3737:3753 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+def 3780:3787 <> fold_ore
+R3797:3812 UMST.ChemConstants.CoalgebraConservation <> OreSynthesisStep rec
+binder 3790:3793 <> step:32
+R3835:3837 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3819:3834 UMST.ChemConstants.CoalgebraConservation <> SynthesisVerdict ind
+R3838:3843 Corelib.Init.Datatypes <> option ind
+R3845:3860 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+R3898:3907 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R3892:3895 UMST.ChemConstants.CoalgebraConservation <> step:32 var
+R3879:3888 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R3873:3876 UMST.ChemConstants.CoalgebraConservation <> step:32 var
+R3922:3937 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R3948:3948 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3962:3963 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3990:3990 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3949:3961 UMST.ChemConstants.CoalgebraConservation <> synth_fold_ok constr
+R3964:3967 Corelib.Init.Datatypes <> Some constr
+R3970:3986 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R3999:4015 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R4028:4028 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4042:4043 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4070:4070 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4029:4041 UMST.ChemConstants.CoalgebraConservation <> synth_fold_ok constr
+R4044:4047 Corelib.Init.Datatypes <> Some constr
+R4050:4064 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R4079:4093 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R4108:4108 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4134:4135 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4140:4140 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4109:4133 UMST.ChemConstants.CoalgebraConservation <> synth_invalid_tail_refuse constr
+R4136:4139 Corelib.Init.Datatypes <> None constr
+def 4161:4173 <> single_frag_a
+R4177:4192 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+R4197:4213 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R4215:4220 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+def 4234:4245 <> pair_frag_ab
+R4249:4264 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+R4271:4285 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R4287:4292 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R4294:4299 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+def 4538:4556 <> coalgebraLawsProved
+R4560:4563 Corelib.Init.Datatypes <> bool ind
+R4568:4572 Corelib.Init.Datatypes <> false constr
+prf 4582:4608 <> coalgebra_laws_proved_false
+R4631:4633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4612:4630 UMST.ChemConstants.CoalgebraConservation <> coalgebraLawsProved def
+R4634:4638 Corelib.Init.Datatypes <> false constr
+def 4678:4697 <> cat04CoalgebraProved
+R4701:4704 Corelib.Init.Datatypes <> bool ind
+R4709:4713 Corelib.Init.Datatypes <> false constr
+prf 4723:4748 <> cat04_coalgebra_not_proved
+R4772:4774 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4752:4771 UMST.ChemConstants.CoalgebraConservation <> cat04CoalgebraProved def
+R4775:4779 Corelib.Init.Datatypes <> false constr
+def 4819:4841 <> not118SquaredGreenTable
+R4845:4848 Corelib.Init.Datatypes <> bool ind
+R4853:4856 Corelib.Init.Datatypes <> true constr
+prf 4866:4892 <> not_118_squared_green_table
+R4919:4921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4896:4918 UMST.ChemConstants.CoalgebraConservation <> not118SquaredGreenTable def
+R4922:4925 Corelib.Init.Datatypes <> true constr
+def 5187:5198 <> is_unfold_ok
+R5205:5220 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 5201:5201 <> a:33
+R5225:5228 Corelib.Init.Datatypes <> bool ind
+R5241:5250 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R5252:5252 UMST.ChemConstants.CoalgebraConservation <> a:33 var
+R5263:5263 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5280:5281 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5288:5288 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5264:5279 UMST.ChemConstants.CoalgebraConservation <> decomp_unfold_ok constr
+R5282:5285 Corelib.Init.Datatypes <> Some constr
+R5293:5296 Corelib.Init.Datatypes <> true constr
+R5307:5311 Corelib.Init.Datatypes <> false constr
+def 5332:5349 <> is_decomp_terminal
+R5356:5371 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 5352:5352 <> a:34
+R5376:5379 Corelib.Init.Datatypes <> bool ind
+R5392:5401 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R5403:5403 UMST.ChemConstants.CoalgebraConservation <> a:34 var
+R5414:5414 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5430:5431 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5436:5436 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5415:5429 UMST.ChemConstants.CoalgebraConservation <> decomp_terminal constr
+R5432:5435 Corelib.Init.Datatypes <> None constr
+R5441:5444 Corelib.Init.Datatypes <> true constr
+R5455:5459 Corelib.Init.Datatypes <> false constr
+prf 5475:5498 <> empty_terminal_decompose
+R5539:5541 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5504:5521 UMST.ChemConstants.CoalgebraConservation <> is_decomp_terminal def
+R5523:5538 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R5542:5545 Corelib.Init.Datatypes <> true constr
+R5564:5581 UMST.ChemConstants.CoalgebraConservation <> is_decomp_terminal def
+R5584:5593 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+prf 5623:5645 <> single_frag_a_unfold_ok
+R5677:5679 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5651:5662 UMST.ChemConstants.CoalgebraConservation <> is_unfold_ok def
+R5664:5676 UMST.ChemConstants.CoalgebraConservation <> single_frag_a def
+R5680:5683 Corelib.Init.Datatypes <> true constr
+R5702:5713 UMST.ChemConstants.CoalgebraConservation <> is_unfold_ok def
+R5716:5725 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R5728:5740 UMST.ChemConstants.CoalgebraConservation <> single_frag_a def
+prf 5770:5791 <> pair_unfold_peels_left
+R5803:5812 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R5814:5825 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R5836:5836 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5853:5854 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5864:5864 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5837:5852 UMST.ChemConstants.CoalgebraConservation <> decomp_unfold_ok constr
+R5855:5858 Corelib.Init.Datatypes <> Some constr
+R5924:5933 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5917:5919 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5875:5890 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq def
+R5898:5908 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R5911:5916 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R5920:5923 Corelib.Init.Datatypes <> true constr
+R5998:6000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5934:5951 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_beq def
+R5959:5969 UMST.ChemConstants.CoalgebraConservation <> decomp_tail proj
+R5973:5989 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R5991:5996 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+R6001:6004 Corelib.Init.Datatypes <> true constr
+R6015:6019 Corelib.Init.Logic <> False ind
+R6044:6053 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R6056:6067 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+def 6338:6347 <> is_fold_ok
+R6357:6372 UMST.ChemConstants.CoalgebraConservation <> OreSynthesisStep rec
+binder 6350:6353 <> step:35
+R6377:6380 Corelib.Init.Datatypes <> bool ind
+R6393:6400 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R6402:6405 UMST.ChemConstants.CoalgebraConservation <> step:35 var
+R6416:6416 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6430:6431 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6438:6438 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6417:6429 UMST.ChemConstants.CoalgebraConservation <> synth_fold_ok constr
+R6432:6435 Corelib.Init.Datatypes <> Some constr
+R6443:6446 Corelib.Init.Datatypes <> true constr
+R6457:6461 Corelib.Init.Datatypes <> false constr
+prf 6477:6497 <> fold_single_frag_a_ok
+R6572:6574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6503:6512 UMST.ChemConstants.CoalgebraConservation <> is_fold_ok def
+R6517:6526 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R6517:6526 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R6517:6526 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R6539:6548 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R6539:6548 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R6531:6536 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R6553:6568 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R6575:6578 Corelib.Init.Datatypes <> true constr
+R6597:6606 UMST.ChemConstants.CoalgebraConservation <> is_fold_ok def
+R6609:6616 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+prf 6646:6675 <> invalid_tail_synthesis_refused
+R6687:6694 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R6703:6712 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R6703:6712 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R6703:6712 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R6732:6741 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R6732:6741 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R6717:6722 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R6746:6760 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R6762:6767 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+R6769:6774 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R6788:6788 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6814:6815 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6820:6820 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6789:6813 UMST.ChemConstants.CoalgebraConservation <> synth_invalid_tail_refuse constr
+R6816:6819 Corelib.Init.Datatypes <> None constr
+R6825:6828 Corelib.Init.Logic <> True ind
+R6839:6843 Corelib.Init.Logic <> False ind
+def 7113:7139 <> ore_assemblage_roundtrip_ok
+R7146:7161 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 7142:7142 <> a:36
+R7166:7169 Corelib.Init.Datatypes <> bool ind
+R7182:7191 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R7193:7193 UMST.ChemConstants.CoalgebraConservation <> a:36 var
+R7204:7204 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7220:7221 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7226:7226 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7205:7219 UMST.ChemConstants.CoalgebraConservation <> decomp_terminal constr
+R7222:7225 Corelib.Init.Datatypes <> None constr
+R7243:7243 UMST.ChemConstants.CoalgebraConservation <> a:36 var
+R7258:7273 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R7278:7281 Corelib.Init.Datatypes <> true constr
+R7296:7300 Corelib.Init.Datatypes <> false constr
+R7316:7316 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7333:7334 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7344:7344 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7317:7332 UMST.ChemConstants.CoalgebraConservation <> decomp_unfold_ok constr
+R7335:7338 Corelib.Init.Datatypes <> Some constr
+R7361:7368 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R7381:7390 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R7381:7390 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R7381:7390 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R7415:7424 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R7415:7424 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R7401:7411 UMST.ChemConstants.CoalgebraConservation <> decomp_head proj
+R7435:7445 UMST.ChemConstants.CoalgebraConservation <> decomp_tail proj
+R7470:7470 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7484:7485 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7498:7498 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7471:7483 UMST.ChemConstants.CoalgebraConservation <> synth_fold_ok constr
+R7486:7489 Corelib.Init.Datatypes <> Some constr
+R7503:7520 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_beq def
+R7530:7530 UMST.ChemConstants.CoalgebraConservation <> a:36 var
+R7545:7549 Corelib.Init.Datatypes <> false constr
+R7570:7574 Corelib.Init.Datatypes <> false constr
+prf 7590:7607 <> empty_roundtrip_ok
+R7657:7659 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7613:7639 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R7641:7656 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R7660:7663 Corelib.Init.Datatypes <> true constr
+R7682:7708 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R7711:7720 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+prf 7750:7768 <> single_roundtrip_ok
+R7775:7788 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+binder 7771:7771 <> f:38
+R7844:7846 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7795:7821 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R7824:7840 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R7842:7842 UMST.ChemConstants.CoalgebraConservation <> f:38 var
+R7847:7850 Corelib.Init.Datatypes <> true constr
+R7869:7895 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R7898:7907 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R7910:7917 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R7937:7957 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R7937:7957 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R7937:7957 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+prf 7985:8010 <> single_frag_a_roundtrip_ok
+R8057:8059 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8016:8042 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R8044:8056 UMST.ChemConstants.CoalgebraConservation <> single_frag_a def
+R8060:8063 Corelib.Init.Datatypes <> true constr
+R8082:8094 UMST.ChemConstants.CoalgebraConservation <> single_frag_a def
+R8103:8121 UMST.ChemConstants.CoalgebraConservation <> single_roundtrip_ok thm
+R8103:8121 UMST.ChemConstants.CoalgebraConservation <> single_roundtrip_ok thm
+prf 8136:8152 <> pair_roundtrip_ok
+R8161:8174 UMST.ChemConstants.CoalgebraConservation <> OreFragmentTag ind
+binder 8155:8155 <> l:39
+binder 8157:8157 <> r:40
+R8230:8232 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8181:8207 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R8210:8224 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R8226:8226 UMST.ChemConstants.CoalgebraConservation <> l:39 var
+R8228:8228 UMST.ChemConstants.CoalgebraConservation <> r:40 var
+R8233:8236 Corelib.Init.Datatypes <> true constr
+R8255:8281 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R8284:8293 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R8296:8303 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R8323:8343 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R8346:8366 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R8323:8343 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R8323:8343 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R8346:8366 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+R8346:8366 UMST.ChemConstants.CoalgebraConservation <> ore_fragment_beq_refl thm
+prf 8394:8418 <> pair_frag_ab_roundtrip_ok
+R8464:8466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8424:8450 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R8452:8463 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R8467:8470 Corelib.Init.Datatypes <> true constr
+R8489:8500 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R8509:8525 UMST.ChemConstants.CoalgebraConservation <> pair_roundtrip_ok thm
+R8509:8525 UMST.ChemConstants.CoalgebraConservation <> pair_roundtrip_ok thm
+prf 8542:8576 <> ore_identity_conservation_roundtrip
+R8593:8608 UMST.ChemConstants.CoalgebraConservation <> OreAssemblageTag ind
+binder 8589:8589 <> a:41
+R8644:8646 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8615:8641 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R8643:8643 UMST.ChemConstants.CoalgebraConservation <> a:41 var
+R8647:8650 Corelib.Init.Datatypes <> true constr
+R8694:8711 UMST.ChemConstants.CoalgebraConservation <> empty_roundtrip_ok thm
+R8694:8711 UMST.ChemConstants.CoalgebraConservation <> empty_roundtrip_ok thm
+R8724:8742 UMST.ChemConstants.CoalgebraConservation <> single_roundtrip_ok thm
+R8724:8742 UMST.ChemConstants.CoalgebraConservation <> single_roundtrip_ok thm
+R8755:8771 UMST.ChemConstants.CoalgebraConservation <> pair_roundtrip_ok thm
+R8755:8771 UMST.ChemConstants.CoalgebraConservation <> pair_roundtrip_ok thm
+def 9017:9028 <> is_fold_root
+R9038:9053 UMST.ChemConstants.CoalgebraConservation <> OreSynthesisStep rec
+binder 9031:9034 <> step:42
+R9058:9061 Corelib.Init.Datatypes <> bool ind
+R9074:9081 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R9083:9086 UMST.ChemConstants.CoalgebraConservation <> step:42 var
+R9097:9097 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9111:9112 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9119:9119 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9098:9110 UMST.ChemConstants.CoalgebraConservation <> synth_fold_ok constr
+R9113:9116 Corelib.Init.Datatypes <> Some constr
+R9124:9127 Corelib.Init.Datatypes <> true constr
+R9138:9142 Corelib.Init.Datatypes <> false constr
+def 9163:9184 <> triple_unfold_scaffold
+R9188:9203 UMST.ChemConstants.CoalgebraConservation <> OreSynthesisStep rec
+R9213:9222 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R9213:9222 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R9213:9222 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R9240:9249 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R9240:9249 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R9227:9232 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R9254:9270 UMST.ChemConstants.CoalgebraConservation <> assemblage_single constr
+R9272:9277 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+def 9295:9312 <> dual_fold_scaffold
+R9316:9331 UMST.ChemConstants.CoalgebraConservation <> OreSynthesisStep rec
+R9341:9350 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R9341:9350 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R9341:9350 UMST.ChemConstants.CoalgebraConservation <> synth_head proj
+R9368:9377 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R9368:9377 UMST.ChemConstants.CoalgebraConservation <> synth_tail proj
+R9355:9360 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+R9382:9396 UMST.ChemConstants.CoalgebraConservation <> assemblage_pair constr
+R9398:9403 UMST.ChemConstants.CoalgebraConservation <> frag_a constr
+R9405:9410 UMST.ChemConstants.CoalgebraConservation <> frag_b constr
+prf 9423:9446 <> triple_unfold_is_fold_ok
+R9487:9489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9452:9463 UMST.ChemConstants.CoalgebraConservation <> is_fold_root def
+R9465:9486 UMST.ChemConstants.CoalgebraConservation <> triple_unfold_scaffold def
+R9490:9493 Corelib.Init.Datatypes <> true constr
+R9512:9523 UMST.ChemConstants.CoalgebraConservation <> is_fold_root def
+R9526:9547 UMST.ChemConstants.CoalgebraConservation <> triple_unfold_scaffold def
+R9550:9557 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+prf 9587:9608 <> dual_fold_invalid_tail
+R9719:9721 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9620:9627 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R9629:9646 UMST.ChemConstants.CoalgebraConservation <> dual_fold_scaffold def
+R9657:9657 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9683:9684 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9689:9689 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9658:9682 UMST.ChemConstants.CoalgebraConservation <> synth_invalid_tail_refuse constr
+R9685:9688 Corelib.Init.Datatypes <> None constr
+R9694:9697 Corelib.Init.Datatypes <> true constr
+R9708:9712 Corelib.Init.Datatypes <> false constr
+R9722:9725 Corelib.Init.Datatypes <> true constr
+R9744:9761 UMST.ChemConstants.CoalgebraConservation <> dual_fold_scaffold def
+R9764:9771 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+def 9806:9820 <> decomposeNotXor
+R9824:9827 Corelib.Init.Datatypes <> bool ind
+R9859:9864 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9834:9845 UMST.ChemConstants.CoalgebraConservation <> is_unfold_ok def
+R9847:9858 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R9865:9868 Corelib.Init.Datatypes <> negb def
+R9877:9884 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R9886:9903 UMST.ChemConstants.CoalgebraConservation <> dual_fold_scaffold def
+R9920:9920 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9934:9935 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9937:9937 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9921:9933 UMST.ChemConstants.CoalgebraConservation <> synth_fold_ok constr
+R9942:9945 Corelib.Init.Datatypes <> true constr
+R9962:9966 Corelib.Init.Datatypes <> false constr
+prf 9989:10010 <> decompose_not_xor_true
+R10029:10031 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10014:10028 UMST.ChemConstants.CoalgebraConservation <> decomposeNotXor def
+R10032:10035 Corelib.Init.Datatypes <> true constr
+R10054:10068 UMST.ChemConstants.CoalgebraConservation <> decomposeNotXor def
+R10071:10082 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R10085:10102 UMST.ChemConstants.CoalgebraConservation <> dual_fold_scaffold def
+R10105:10112 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+prf 10151:10169 <> unfold_fold_not_xor
+R10197:10202 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10190:10192 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10175:10189 UMST.ChemConstants.CoalgebraConservation <> decomposeNotXor def
+R10193:10196 Corelib.Init.Datatypes <> true constr
+R10235:10240 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10228:10230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10203:10214 UMST.ChemConstants.CoalgebraConservation <> is_unfold_ok def
+R10216:10227 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R10231:10234 Corelib.Init.Datatypes <> true constr
+R10346:10348 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10247:10254 UMST.ChemConstants.CoalgebraConservation <> fold_ore def
+R10256:10273 UMST.ChemConstants.CoalgebraConservation <> dual_fold_scaffold def
+R10284:10284 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10310:10311 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10316:10316 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R10285:10309 UMST.ChemConstants.CoalgebraConservation <> synth_invalid_tail_refuse constr
+R10312:10315 Corelib.Init.Datatypes <> None constr
+R10321:10324 Corelib.Init.Datatypes <> true constr
+R10335:10339 Corelib.Init.Datatypes <> false constr
+R10349:10352 Corelib.Init.Datatypes <> true constr
+R10381:10402 UMST.ChemConstants.CoalgebraConservation <> decompose_not_xor_true thm
+R10381:10402 UMST.ChemConstants.CoalgebraConservation <> decompose_not_xor_true thm
+R10429:10440 UMST.ChemConstants.CoalgebraConservation <> is_unfold_ok def
+R10443:10452 UMST.ChemConstants.CoalgebraConservation <> unfold_ore def
+R10455:10466 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R10494:10515 UMST.ChemConstants.CoalgebraConservation <> dual_fold_invalid_tail thm
+R10494:10515 UMST.ChemConstants.CoalgebraConservation <> dual_fold_invalid_tail thm
+prf 10756:10794 <> coalgebra_conservation_fixture_scaffold
+R10851:10856 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10844:10846 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10800:10826 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R10828:10843 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R10847:10850 Corelib.Init.Datatypes <> true constr
+R10905:10910 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10898:10900 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10857:10883 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R10885:10897 UMST.ChemConstants.CoalgebraConservation <> single_frag_a def
+R10901:10904 Corelib.Init.Datatypes <> true constr
+R10958:10963 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10951:10953 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10911:10937 UMST.ChemConstants.CoalgebraConservation <> ore_assemblage_roundtrip_ok def
+R10939:10950 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab def
+R10954:10957 Corelib.Init.Datatypes <> true constr
+R11006:11011 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10999:11001 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10964:10981 UMST.ChemConstants.CoalgebraConservation <> is_decomp_terminal def
+R10983:10998 UMST.ChemConstants.CoalgebraConservation <> assemblage_empty constr
+R11002:11005 Corelib.Init.Datatypes <> true constr
+R11038:11040 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11012:11023 UMST.ChemConstants.CoalgebraConservation <> is_unfold_ok def
+R11025:11037 UMST.ChemConstants.CoalgebraConservation <> single_frag_a def
+R11041:11044 Corelib.Init.Datatypes <> true constr
+R11073:11090 UMST.ChemConstants.CoalgebraConservation <> empty_roundtrip_ok thm
+R11073:11090 UMST.ChemConstants.CoalgebraConservation <> empty_roundtrip_ok thm
+R11116:11141 UMST.ChemConstants.CoalgebraConservation <> single_frag_a_roundtrip_ok thm
+R11116:11141 UMST.ChemConstants.CoalgebraConservation <> single_frag_a_roundtrip_ok thm
+R11171:11195 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab_roundtrip_ok thm
+R11171:11195 UMST.ChemConstants.CoalgebraConservation <> pair_frag_ab_roundtrip_ok thm
+R11220:11243 UMST.ChemConstants.CoalgebraConservation <> empty_terminal_decompose thm
+R11253:11275 UMST.ChemConstants.CoalgebraConservation <> single_frag_a_unfold_ok thm
+R11220:11243 UMST.ChemConstants.CoalgebraConservation <> empty_terminal_decompose thm
+R11253:11275 UMST.ChemConstants.CoalgebraConservation <> single_frag_a_unfold_ok thm
+def 11523:11550 <> oreCoalgebraAlgebraAuthority
+R11554:11559 Stdlib.Strings.String <> string ind
+def 11625:11646 <> oreAssemblageAuthority
+R11650:11655 Stdlib.Strings.String <> string ind
+def 11723:11742 <> chemL0Cat04Authority
+R11746:11751 Stdlib.Strings.String <> string ind
+def 11788:11822 <> chemIntProveCat04CoalgebraAuthority
+R11826:11831 Stdlib.Strings.String <> string ind
+def 11885:11911 <> coalgebraConservationCellId
+R11915:11920 Stdlib.Strings.String <> string ind
+def 11983:12011 <> coalgebraConservationNonClaim
+R12015:12020 Stdlib.Strings.String <> string ind
+prf 12412:12441 <> coalgebra_conservation_cell_id
+R12474:12478 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12447:12473 UMST.ChemConstants.CoalgebraConservation <> coalgebraConservationCellId def
+prf 12555:12586 <> coalgebra_cites_ore_coalgebra_rs
+R12620:12625 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12592:12619 UMST.ChemConstants.CoalgebraConservation <> oreCoalgebraAlgebraAuthority def
+prf 12663:12692 <> coalgebra_cites_ore_assemblage
+R12720:12725 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12698:12719 UMST.ChemConstants.CoalgebraConservation <> oreAssemblageAuthority def
+prf 12763:12787 <> coalgebra_cites_l0_cat_04
+R12813:12815 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12793:12812 UMST.ChemConstants.CoalgebraConservation <> chemL0Cat04Authority def
+prf 12866:12897 <> coalgebra_cites_int_prove_cat_04
+R12938:12943 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12903:12937 UMST.ChemConstants.CoalgebraConservation <> chemIntProveCat04CoalgebraAuthority def
+def 13207:13243 <> coalgebraSecondLawConservationFraming
+R13247:13252 Stdlib.Strings.String <> string ind
+prf 13340:13375 <> coalgebra_not_second_coalgebra_axiom
+R13418:13423 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13381:13417 UMST.ChemConstants.CoalgebraConservation <> coalgebraSecondLawConservationFraming def
+prf 13483:13523 <> coalgebra_second_law_conservation_framing
+R13566:13571 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13529:13565 UMST.ChemConstants.CoalgebraConservation <> coalgebraSecondLawConservationFraming def
+def 13838:13859 <> physicsGreenAuthorized
+R13871:13875 Corelib.Init.Logic <> False ind
+prf 13885:13913 <> coalgebra_physics_green_false
+R13919:13920 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13921:13942 UMST.ChemConstants.CoalgebraConservation <> physicsGreenAuthorized def
+prf 13982:14007 <> coalgebra_modality_unwired
+R14049:14051 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14013:14048 UMST.ChemConstants.CoalgebraConservation <> coalgebraConservationModalityCurrent def
+R14052:14081 UMST.ChemConstants.CoalgebraConservation <> coalgebra_conservation_unwired constr

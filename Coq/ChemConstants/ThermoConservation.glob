@@ -1,0 +1,2015 @@
+DIGEST 8d43bd8c1e4d0222bea8c1090e348f83
+FUMST.ChemConstants.ThermoConservation
+R1592:1596 Stdlib.Arith.Arith <> <> lib
+R1598:1603 Stdlib.ZArith.ZArith <> <> lib
+R1605:1610 Stdlib.Strings.String <> <> lib
+R1612:1615 Stdlib.Bool.Bool <> <> lib
+R1617:1619 Stdlib.micromega.Lia <> <> lib
+R1621:1624 Stdlib.Lists.List <> <> lib
+R1634:1646 Stdlib.Lists.List ListNotations <> mod
+ind 1977:2002 <> ThermoConservationModality
+constr 2018:2044 <> thermo_conservation_unwired
+constr 2050:2076 <> thermo_conservation_assumed
+constr 2082:2107 <> thermo_conservation_proved
+constr 2113:2141 <> thermo_conservation_surrogate
+scheme 1977:2002 <> ThermoConservationModality_rect
+scheme 1977:2002 <> ThermoConservationModality_ind
+scheme 1977:2002 <> ThermoConservationModality_rec
+scheme 1977:2002 <> ThermoConservationModality_sind
+def 2156:2188 <> thermoConservationModalityCurrent
+R2192:2217 UMST.ChemConstants.ThermoConservation <> ThermoConservationModality ind
+R2224:2250 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+def 2265:2299 <> thermo_modality_lattice_cardinality
+R2303:2305 Corelib.Init.Datatypes <> nat ind
+prf 2320:2362 <> thermo_modality_lattice_cardinality_is_four
+R2403:2405 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2368:2402 UMST.ChemConstants.ThermoConservation <> thermo_modality_lattice_cardinality def
+prf 2441:2479 <> thermo_modality_lattice_not_118_squared
+R2547:2549 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2485:2488 Corelib.Init.Datatypes <> negb def
+R2491:2497 Stdlib.Arith.PeanoNat Nat eqb def
+R2499:2533 UMST.ChemConstants.ThermoConservation <> thermo_modality_lattice_cardinality def
+R2539:2541 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2550:2553 Corelib.Init.Datatypes <> true constr
+R2572:2606 UMST.ChemConstants.ThermoConservation <> thermo_modality_lattice_cardinality def
+def 2940:2962 <> iupac_table_cardinality
+R2966:2968 Corelib.Init.Datatypes <> nat ind
+prf 2985:3014 <> iupac_table_cardinality_is_118
+R3043:3045 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3020:3042 UMST.ChemConstants.ThermoConservation <> iupac_table_cardinality def
+def 3088:3109 <> thermo_element_z_valid
+R3116:3118 Corelib.Init.Datatypes <> nat ind
+binder 3112:3112 <> z:3
+R3123:3126 Corelib.Init.Datatypes <> bool ind
+R3144:3147 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3133:3139 Stdlib.Arith.PeanoNat Nat ltb def
+R3143:3143 UMST.ChemConstants.ThermoConservation <> z:3 var
+R3148:3154 Stdlib.Arith.PeanoNat Nat leb def
+R3156:3156 UMST.ChemConstants.ThermoConservation <> z:3 var
+R3158:3180 UMST.ChemConstants.ThermoConservation <> iupac_table_cardinality def
+def 3195:3215 <> thermo_element_iron_z
+R3219:3221 Corelib.Init.Datatypes <> nat ind
+def 3241:3263 <> thermo_element_copper_z
+R3267:3269 Corelib.Init.Datatypes <> nat ind
+def 3289:3314 <> thermo_element_oganesson_z
+R3318:3320 Corelib.Init.Datatypes <> nat ind
+prf 3337:3355 <> thermo_iron_z_is_26
+R3382:3384 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3361:3381 UMST.ChemConstants.ThermoConservation <> thermo_element_iron_z def
+prf 3421:3441 <> thermo_copper_z_is_29
+R3470:3472 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3447:3469 UMST.ChemConstants.ThermoConservation <> thermo_element_copper_z def
+prf 3509:3533 <> thermo_oganesson_z_is_118
+R3565:3567 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3539:3564 UMST.ChemConstants.ThermoConservation <> thermo_element_oganesson_z def
+prf 3605:3624 <> thermo_fe_cu_z_valid
+R3681:3686 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3674:3676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3630:3651 UMST.ChemConstants.ThermoConservation <> thermo_element_z_valid def
+R3653:3673 UMST.ChemConstants.ThermoConservation <> thermo_element_iron_z def
+R3677:3680 Corelib.Init.Datatypes <> true constr
+R3733:3735 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3687:3708 UMST.ChemConstants.ThermoConservation <> thermo_element_z_valid def
+R3710:3732 UMST.ChemConstants.ThermoConservation <> thermo_element_copper_z def
+R3736:3739 Corelib.Init.Datatypes <> true constr
+R3765:3786 UMST.ChemConstants.ThermoConservation <> thermo_element_z_valid def
+R3789:3809 UMST.ChemConstants.ThermoConservation <> thermo_element_iron_z def
+R3816:3838 UMST.ChemConstants.ThermoConservation <> thermo_element_copper_z def
+R3841:3863 UMST.ChemConstants.ThermoConservation <> iupac_table_cardinality def
+prf 3891:3914 <> thermo_oganesson_z_valid
+R3969:3971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3920:3941 UMST.ChemConstants.ThermoConservation <> thermo_element_z_valid def
+R3943:3968 UMST.ChemConstants.ThermoConservation <> thermo_element_oganesson_z def
+R3972:3975 Corelib.Init.Datatypes <> true constr
+R3994:4015 UMST.ChemConstants.ThermoConservation <> thermo_element_z_valid def
+R4018:4043 UMST.ChemConstants.ThermoConservation <> thermo_element_oganesson_z def
+R4046:4068 UMST.ChemConstants.ThermoConservation <> iupac_table_cardinality def
+ind 4325:4337 <> thermo_n_kind
+constr 4353:4380 <> thermo_n_calphad_convex_hull
+constr 4386:4406 <> thermo_n_unauthorized
+scheme 4325:4337 <> thermo_n_kind_rect
+scheme 4325:4337 <> thermo_n_kind_ind
+scheme 4325:4337 <> thermo_n_kind_rec
+scheme 4325:4337 <> thermo_n_kind_sind
+def 4421:4437 <> thermo_n_kind_beq
+R4448:4460 UMST.ChemConstants.ThermoConservation <> thermo_n_kind ind
+binder 4440:4441 <> k1:6
+binder 4443:4444 <> k2:7
+R4465:4468 Corelib.Init.Datatypes <> bool ind
+R4485:4486 UMST.ChemConstants.ThermoConservation <> k2:7 var
+R4481:4482 UMST.ChemConstants.ThermoConservation <> k1:6 var
+R4497:4524 UMST.ChemConstants.ThermoConservation <> thermo_n_calphad_convex_hull constr
+R4527:4554 UMST.ChemConstants.ThermoConservation <> thermo_n_calphad_convex_hull constr
+R4559:4562 Corelib.Init.Datatypes <> true constr
+R4568:4588 UMST.ChemConstants.ThermoConservation <> thermo_n_unauthorized constr
+R4591:4611 UMST.ChemConstants.ThermoConservation <> thermo_n_unauthorized constr
+R4616:4619 Corelib.Init.Datatypes <> true constr
+R4633:4637 Corelib.Init.Datatypes <> false constr
+def 4658:4681 <> thermoNCalphadConvexHull
+R4685:4697 UMST.ChemConstants.ThermoConservation <> thermo_n_kind ind
+R4704:4731 UMST.ChemConstants.ThermoConservation <> thermo_n_calphad_convex_hull constr
+def 4746:4774 <> thermo_n_kind_is_calphad_hull
+R4781:4793 UMST.ChemConstants.ThermoConservation <> thermo_n_kind ind
+binder 4777:4777 <> k:10
+R4798:4801 Corelib.Init.Datatypes <> bool ind
+R4814:4814 UMST.ChemConstants.ThermoConservation <> k:10 var
+R4825:4852 UMST.ChemConstants.ThermoConservation <> thermo_n_calphad_convex_hull constr
+R4857:4860 Corelib.Init.Datatypes <> true constr
+R4866:4886 UMST.ChemConstants.ThermoConservation <> thermo_n_unauthorized constr
+R4891:4895 Corelib.Init.Datatypes <> false constr
+prf 4911:4942 <> thermo_n_calphad_hull_authorized
+R5002:5004 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4948:4976 UMST.ChemConstants.ThermoConservation <> thermo_n_kind_is_calphad_hull def
+R4978:5001 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R5005:5008 Corelib.Init.Datatypes <> true constr
+prf 5043:5080 <> thermo_n_unauthorized_not_calphad_hull
+R5137:5139 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5086:5114 UMST.ChemConstants.ThermoConservation <> thermo_n_kind_is_calphad_hull def
+R5116:5136 UMST.ChemConstants.ThermoConservation <> thermo_n_unauthorized constr
+R5140:5144 Corelib.Init.Datatypes <> false constr
+ind 5409:5428 <> thermo_g_scalar_kind
+constr 5444:5472 <> scalar_formation_zero_theater
+constr 5478:5501 <> scalar_measured_g_invent
+constr 5507:5525 <> scalar_green_book_g
+scheme 5409:5428 <> thermo_g_scalar_kind_rect
+scheme 5409:5428 <> thermo_g_scalar_kind_ind
+scheme 5409:5428 <> thermo_g_scalar_kind_rec
+scheme 5409:5428 <> thermo_g_scalar_kind_sind
+def 5540:5563 <> thermo_g_scalar_kind_beq
+R5574:5593 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+binder 5566:5567 <> k1:14
+binder 5569:5570 <> k2:15
+R5598:5601 Corelib.Init.Datatypes <> bool ind
+R5618:5619 UMST.ChemConstants.ThermoConservation <> k2:15 var
+R5614:5615 UMST.ChemConstants.ThermoConservation <> k1:14 var
+R5630:5658 UMST.ChemConstants.ThermoConservation <> scalar_formation_zero_theater constr
+R5661:5689 UMST.ChemConstants.ThermoConservation <> scalar_formation_zero_theater constr
+R5694:5697 Corelib.Init.Datatypes <> true constr
+R5703:5726 UMST.ChemConstants.ThermoConservation <> scalar_measured_g_invent constr
+R5729:5752 UMST.ChemConstants.ThermoConservation <> scalar_measured_g_invent constr
+R5757:5760 Corelib.Init.Datatypes <> true constr
+R5766:5784 UMST.ChemConstants.ThermoConservation <> scalar_green_book_g constr
+R5787:5805 UMST.ChemConstants.ThermoConservation <> scalar_green_book_g constr
+R5810:5813 Corelib.Init.Datatypes <> true constr
+R5827:5831 Corelib.Init.Datatypes <> false constr
+def 5852:5883 <> thermoScalarFormationZeroTheater
+R5887:5906 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+R5913:5941 UMST.ChemConstants.ThermoConservation <> scalar_formation_zero_theater constr
+def 5956:5982 <> thermoScalarMeasuredGInvent
+R5986:6005 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+R6012:6035 UMST.ChemConstants.ThermoConservation <> scalar_measured_g_invent constr
+def 6050:6071 <> thermoScalarGreenBookG
+R6075:6094 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+R6101:6119 UMST.ChemConstants.ThermoConservation <> scalar_green_book_g constr
+def 6134:6162 <> thermo_scalar_is_green_book_g
+R6169:6188 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+binder 6165:6165 <> k:18
+R6193:6196 Corelib.Init.Datatypes <> bool ind
+R6209:6209 UMST.ChemConstants.ThermoConservation <> k:18 var
+R6220:6238 UMST.ChemConstants.ThermoConservation <> scalar_green_book_g constr
+R6243:6246 Corelib.Init.Datatypes <> true constr
+R6257:6261 Corelib.Init.Datatypes <> false constr
+def 6282:6312 <> thermo_scalar_is_formation_zero
+R6319:6338 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+binder 6315:6315 <> k:20
+R6343:6346 Corelib.Init.Datatypes <> bool ind
+R6359:6359 UMST.ChemConstants.ThermoConservation <> k:20 var
+R6370:6398 UMST.ChemConstants.ThermoConservation <> scalar_formation_zero_theater constr
+R6403:6406 Corelib.Init.Datatypes <> true constr
+R6417:6421 Corelib.Init.Datatypes <> false constr
+def 6442:6468 <> thermo_scalar_is_measured_g
+R6475:6494 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+binder 6471:6471 <> k:22
+R6499:6502 Corelib.Init.Datatypes <> bool ind
+R6515:6515 UMST.ChemConstants.ThermoConservation <> k:22 var
+R6526:6549 UMST.ChemConstants.ThermoConservation <> scalar_measured_g_invent constr
+R6554:6557 Corelib.Init.Datatypes <> true constr
+R6568:6572 Corelib.Init.Datatypes <> false constr
+def 6593:6623 <> formation_zero_not_green_book_g
+R6627:6630 Corelib.Init.Datatypes <> bool ind
+R6637:6640 Corelib.Init.Datatypes <> negb def
+R6643:6666 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind_beq def
+R6672:6703 UMST.ChemConstants.ThermoConservation <> thermoScalarFormationZeroTheater def
+R6705:6726 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+prf 6737:6764 <> formation_zero_theater_not_g
+R6801:6803 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6770:6800 UMST.ChemConstants.ThermoConservation <> formation_zero_not_green_book_g def
+R6804:6807 Corelib.Init.Datatypes <> true constr
+prf 6842:6866 <> thermo_green_book_g_named
+R6924:6926 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6872:6900 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_green_book_g def
+R6902:6923 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+R6927:6930 Corelib.Init.Datatypes <> true constr
+prf 6965:6991 <> thermo_formation_zero_not_g
+R7059:7061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6997:7025 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_green_book_g def
+R7027:7058 UMST.ChemConstants.ThermoConservation <> thermoScalarFormationZeroTheater def
+R7062:7066 Corelib.Init.Datatypes <> false constr
+prf 7101:7132 <> thermo_measured_g_not_green_book
+R7195:7197 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7138:7166 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_green_book_g def
+R7168:7194 UMST.ChemConstants.ThermoConservation <> thermoScalarMeasuredGInvent def
+R7198:7202 Corelib.Init.Datatypes <> false constr
+prf 7237:7275 <> thermo_formation_zero_is_formation_zero
+R7345:7347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7281:7311 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_formation_zero def
+R7313:7344 UMST.ChemConstants.ThermoConservation <> thermoScalarFormationZeroTheater def
+R7348:7351 Corelib.Init.Datatypes <> true constr
+prf 7386:7414 <> thermo_measured_g_is_measured
+R7475:7477 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7420:7446 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_measured_g def
+R7448:7474 UMST.ChemConstants.ThermoConservation <> thermoScalarMeasuredGInvent def
+R7478:7481 Corelib.Init.Datatypes <> true constr
+ind 7743:7757 <> thermo_argument
+constr 7773:7789 <> arg_temperature_T
+constr 7795:7808 <> arg_pressure_P
+constr 7814:7830 <> arg_composition_x
+scheme 7743:7757 <> thermo_argument_rect
+scheme 7743:7757 <> thermo_argument_ind
+scheme 7743:7757 <> thermo_argument_rec
+scheme 7743:7757 <> thermo_argument_sind
+def 7845:7863 <> thermo_argument_beq
+R7874:7888 UMST.ChemConstants.ThermoConservation <> thermo_argument ind
+binder 7866:7867 <> a1:26
+binder 7869:7870 <> a2:27
+R7893:7896 Corelib.Init.Datatypes <> bool ind
+R7913:7914 UMST.ChemConstants.ThermoConservation <> a2:27 var
+R7909:7910 UMST.ChemConstants.ThermoConservation <> a1:26 var
+R7925:7941 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+R7944:7960 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+R7965:7968 Corelib.Init.Datatypes <> true constr
+R7974:7987 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+R7990:8003 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+R8008:8011 Corelib.Init.Datatypes <> true constr
+R8017:8033 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R8036:8052 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R8057:8060 Corelib.Init.Datatypes <> true constr
+R8074:8078 Corelib.Init.Datatypes <> false constr
+def 8099:8108 <> thermoArgT
+R8112:8126 UMST.ChemConstants.ThermoConservation <> thermo_argument ind
+R8131:8147 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+def 8161:8170 <> thermoArgP
+R8174:8188 UMST.ChemConstants.ThermoConservation <> thermo_argument ind
+R8193:8206 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+def 8220:8229 <> thermoArgX
+R8233:8247 UMST.ChemConstants.ThermoConservation <> thermo_argument ind
+R8252:8268 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+prf 8278:8295 <> thermo_arg_T_named
+R8311:8313 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8301:8310 UMST.ChemConstants.ThermoConservation <> thermoArgT def
+R8314:8330 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+prf 8365:8382 <> thermo_arg_P_named
+R8398:8400 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8388:8397 UMST.ChemConstants.ThermoConservation <> thermoArgP def
+R8401:8414 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+prf 8449:8466 <> thermo_arg_x_named
+R8482:8484 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8472:8481 UMST.ChemConstants.ThermoConservation <> thermoArgX def
+R8485:8501 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+rec 8761:8782 <> mole_fraction_scaffold
+proj 8798:8820 <> mole_fraction_numerator
+proj 8831:8855 <> mole_fraction_denominator
+R8824:8826 Corelib.Init.Datatypes <> nat ind
+R8859:8861 Corelib.Init.Datatypes <> nat ind
+def 8878:8893 <> moleFractionUnit
+R8897:8918 UMST.ChemConstants.ThermoConservation <> mole_fraction_scaffold rec
+R8928:8950 UMST.ChemConstants.ThermoConservation <> mole_fraction_numerator proj
+R8928:8950 UMST.ChemConstants.ThermoConservation <> mole_fraction_numerator proj
+R8928:8950 UMST.ChemConstants.ThermoConservation <> mole_fraction_numerator proj
+R8958:8982 UMST.ChemConstants.ThermoConservation <> mole_fraction_denominator proj
+R8958:8982 UMST.ChemConstants.ThermoConservation <> mole_fraction_denominator proj
+def 9005:9032 <> mole_fraction_scaffold_valid
+R9039:9060 UMST.ChemConstants.ThermoConservation <> mole_fraction_scaffold rec
+binder 9035:9035 <> m:33
+R9065:9068 Corelib.Init.Datatypes <> bool ind
+R9114:9119 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9075:9081 Stdlib.Arith.PeanoNat Nat ltb def
+R9086:9110 UMST.ChemConstants.ThermoConservation <> mole_fraction_denominator proj
+R9112:9112 UMST.ChemConstants.ThermoConservation <> m:33 var
+R9120:9126 Stdlib.Arith.PeanoNat Nat leb def
+R9129:9151 UMST.ChemConstants.ThermoConservation <> mole_fraction_numerator proj
+R9153:9153 UMST.ChemConstants.ThermoConservation <> m:33 var
+R9157:9181 UMST.ChemConstants.ThermoConservation <> mole_fraction_denominator proj
+R9183:9183 UMST.ChemConstants.ThermoConservation <> m:33 var
+prf 9194:9217 <> mole_fraction_unit_valid
+R9268:9270 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9223:9250 UMST.ChemConstants.ThermoConservation <> mole_fraction_scaffold_valid def
+R9252:9267 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+R9271:9274 Corelib.Init.Datatypes <> true constr
+ind 9537:9548 <> thermo_g_leg
+constr 9564:9573 <> leg_T_lift
+constr 9579:9588 <> leg_P_lift
+constr 9594:9603 <> leg_x_lift
+constr 9609:9620 <> leg_G_direct
+scheme 9537:9548 <> thermo_g_leg_rect
+scheme 9537:9548 <> thermo_g_leg_ind
+scheme 9537:9548 <> thermo_g_leg_rec
+scheme 9537:9548 <> thermo_g_leg_sind
+def 9635:9651 <> thermo_leg_source
+R9660:9671 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+binder 9654:9656 <> leg:36
+R9676:9690 UMST.ChemConstants.ThermoConservation <> thermo_argument ind
+R9703:9705 UMST.ChemConstants.ThermoConservation <> leg:36 var
+R9716:9725 UMST.ChemConstants.ThermoConservation <> leg_T_lift constr
+R9730:9746 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+R9752:9761 UMST.ChemConstants.ThermoConservation <> leg_P_lift constr
+R9766:9779 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+R9785:9794 UMST.ChemConstants.ThermoConservation <> leg_x_lift constr
+R9799:9815 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R9821:9832 UMST.ChemConstants.ThermoConservation <> leg_G_direct constr
+R9837:9853 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+def 9874:9890 <> thermo_leg_target
+R9899:9910 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+binder 9893:9895 <> leg:38
+R9915:9929 UMST.ChemConstants.ThermoConservation <> thermo_argument ind
+R9942:9944 UMST.ChemConstants.ThermoConservation <> leg:38 var
+R9955:9964 UMST.ChemConstants.ThermoConservation <> leg_T_lift constr
+R9969:9982 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+R9988:9997 UMST.ChemConstants.ThermoConservation <> leg_P_lift constr
+R10002:10018 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R10024:10033 UMST.ChemConstants.ThermoConservation <> leg_x_lift constr
+R10038:10054 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R10060:10071 UMST.ChemConstants.ThermoConservation <> leg_G_direct constr
+R10076:10092 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+def 10113:10126 <> thermoLegTLift
+R10130:10141 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R10146:10155 UMST.ChemConstants.ThermoConservation <> leg_T_lift constr
+def 10169:10182 <> thermoLegPLift
+R10186:10197 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R10202:10211 UMST.ChemConstants.ThermoConservation <> leg_P_lift constr
+def 10225:10238 <> thermoLegXLift
+R10242:10253 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R10258:10267 UMST.ChemConstants.ThermoConservation <> leg_x_lift constr
+def 10281:10296 <> thermoLegGDirect
+R10300:10311 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R10316:10327 UMST.ChemConstants.ThermoConservation <> leg_G_direct constr
+prf 10337:10359 <> thermo_leg_T_lift_named
+R10379:10381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10365:10378 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R10382:10391 UMST.ChemConstants.ThermoConservation <> leg_T_lift constr
+prf 10426:10448 <> thermo_leg_P_lift_named
+R10468:10470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10454:10467 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R10471:10480 UMST.ChemConstants.ThermoConservation <> leg_P_lift constr
+prf 10515:10537 <> thermo_leg_x_lift_named
+R10557:10559 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10543:10556 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R10560:10569 UMST.ChemConstants.ThermoConservation <> leg_x_lift constr
+prf 10604:10628 <> thermo_leg_G_direct_named
+R10650:10652 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10634:10649 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R10653:10664 UMST.ChemConstants.ThermoConservation <> leg_G_direct constr
+def 10704:10736 <> thermo_leg_indirect_composes_bool
+R10740:10743 Corelib.Init.Datatypes <> bool ind
+R10847:10852 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10750:10768 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R10775:10791 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R10793:10806 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R10814:10830 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R10832:10845 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R10853:10871 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R10878:10894 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R10896:10909 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R10917:10933 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R10935:10948 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+def 10964:11001 <> thermo_leg_direct_endpoints_match_bool
+R11005:11008 Corelib.Init.Datatypes <> bool ind
+R11114:11119 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11015:11033 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R11040:11056 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11058:11071 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R11079:11095 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11097:11112 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R11120:11138 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R11145:11161 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R11163:11176 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R11184:11200 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R11202:11217 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+prf 11228:11260 <> thermo_leg_indirect_composes_args
+R11333:11338 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11298:11300 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11266:11282 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R11284:11297 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R11301:11317 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11319:11332 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R11371:11373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11339:11355 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R11357:11370 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R11374:11390 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11392:11405 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+prf 11434:11471 <> thermo_leg_indirect_composes_bool_true
+R11510:11512 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11477:11509 UMST.ChemConstants.ThermoConservation <> thermo_leg_indirect_composes_bool def
+R11513:11516 Corelib.Init.Datatypes <> true constr
+prf 11551:11583 <> thermo_leg_direct_endpoints_match
+R11662:11667 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11621:11627 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11589:11605 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11607:11620 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R11628:11644 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11646:11661 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R11700:11706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11668:11684 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R11686:11699 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R11707:11723 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R11725:11740 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+prf 11769:11811 <> thermo_leg_direct_endpoints_match_bool_true
+R11855:11857 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11817:11854 UMST.ChemConstants.ThermoConservation <> thermo_leg_direct_endpoints_match_bool def
+R11858:11861 Corelib.Init.Datatypes <> true constr
+prf 11896:11921 <> thermo_leg_distinct_T_vs_P
+R12031:12033 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11927:11930 Corelib.Init.Datatypes <> negb def
+R11933:11951 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R11958:11974 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R11976:11989 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R11997:12013 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R12015:12028 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R12034:12037 Corelib.Init.Datatypes <> true constr
+rec 12296:12309 <> thermo_binding
+proj 12325:12339 <> thermo_parent_z
+R12343:12345 Corelib.Init.Datatypes <> nat ind
+def 12362:12376 <> thermoBindingFe
+R12380:12393 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+R12403:12417 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12403:12417 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12403:12417 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12422:12442 UMST.ChemConstants.ThermoConservation <> thermo_element_iron_z def
+def 12460:12474 <> thermoBindingCu
+R12478:12491 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+R12501:12515 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12501:12515 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12501:12515 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12520:12542 UMST.ChemConstants.ThermoConservation <> thermo_element_copper_z def
+def 12560:12574 <> thermoBindingOg
+R12578:12591 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+R12601:12615 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12601:12615 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12601:12615 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12620:12645 UMST.ChemConstants.ThermoConservation <> thermo_element_oganesson_z def
+def 12663:12682 <> thermoBindingTrivial
+R12686:12699 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+R12709:12723 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12709:12723 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12709:12723 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+def 12746:12768 <> thermoBindingNontrivial
+R12775:12788 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+binder 12771:12771 <> b:42
+R12793:12796 Corelib.Init.Datatypes <> bool ind
+R12803:12809 Stdlib.Arith.PeanoNat Nat ltb def
+R12814:12828 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R12830:12830 UMST.ChemConstants.ThermoConservation <> b:42 var
+prf 12841:12868 <> thermo_binding_fe_nontrivial
+R12913:12915 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12874:12896 UMST.ChemConstants.ThermoConservation <> thermoBindingNontrivial def
+R12898:12912 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R12916:12919 Corelib.Init.Datatypes <> true constr
+prf 12954:12990 <> thermo_binding_trivial_not_nontrivial
+R13040:13042 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12996:13018 UMST.ChemConstants.ThermoConservation <> thermoBindingNontrivial def
+R13020:13039 UMST.ChemConstants.ThermoConservation <> thermoBindingTrivial def
+R13043:13047 Corelib.Init.Datatypes <> false constr
+def 13087:13116 <> thermoBindingIdentityConserved
+R13127:13140 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+binder 13119:13120 <> b1:43
+binder 13122:13123 <> b2:44
+R13145:13148 Corelib.Init.Datatypes <> bool ind
+R13155:13161 Stdlib.Arith.PeanoNat Nat eqb def
+R13164:13178 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R13180:13181 UMST.ChemConstants.ThermoConservation <> b1:43 var
+R13185:13199 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R13201:13202 UMST.ChemConstants.ThermoConservation <> b2:44 var
+prf 13213:13248 <> thermo_binding_fe_identity_conserved
+R13316:13318 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13254:13283 UMST.ChemConstants.ThermoConservation <> thermoBindingIdentityConserved def
+R13285:13299 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R13301:13315 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R13319:13322 Corelib.Init.Datatypes <> true constr
+def 13586:13590 <> liftT
+R13597:13599 Corelib.Init.Datatypes <> nat ind
+binder 13593:13593 <> z:45
+R13604:13606 Corelib.Init.Datatypes <> nat ind
+R13611:13611 UMST.ChemConstants.ThermoConservation <> z:45 var
+def 13626:13630 <> liftP
+R13637:13639 Corelib.Init.Datatypes <> nat ind
+binder 13633:13633 <> z:46
+R13644:13646 Corelib.Init.Datatypes <> nat ind
+R13651:13651 UMST.ChemConstants.ThermoConservation <> z:46 var
+def 13666:13670 <> liftX
+R13677:13679 Corelib.Init.Datatypes <> nat ind
+binder 13673:13673 <> z:47
+R13684:13686 Corelib.Init.Datatypes <> nat ind
+R13691:13691 UMST.ChemConstants.ThermoConservation <> z:47 var
+def 13706:13716 <> liftGDirect
+R13723:13725 Corelib.Init.Datatypes <> nat ind
+binder 13719:13719 <> z:48
+R13730:13732 Corelib.Init.Datatypes <> nat ind
+R13737:13737 UMST.ChemConstants.ThermoConservation <> z:48 var
+prf 13747:13761 <> lift_T_identity
+R13768:13770 Corelib.Init.Datatypes <> nat ind
+binder 13764:13764 <> z:49
+R13784:13786 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13777:13781 UMST.ChemConstants.ThermoConservation <> liftT def
+R13783:13783 UMST.ChemConstants.ThermoConservation <> z:49 var
+R13787:13787 UMST.ChemConstants.ThermoConservation <> z:49 var
+prf 13822:13836 <> lift_P_identity
+R13843:13845 Corelib.Init.Datatypes <> nat ind
+binder 13839:13839 <> z:50
+R13859:13861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13852:13856 UMST.ChemConstants.ThermoConservation <> liftP def
+R13858:13858 UMST.ChemConstants.ThermoConservation <> z:50 var
+R13862:13862 UMST.ChemConstants.ThermoConservation <> z:50 var
+prf 13897:13911 <> lift_x_identity
+R13918:13920 Corelib.Init.Datatypes <> nat ind
+binder 13914:13914 <> z:51
+R13934:13936 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13927:13931 UMST.ChemConstants.ThermoConservation <> liftX def
+R13933:13933 UMST.ChemConstants.ThermoConservation <> z:51 var
+R13937:13937 UMST.ChemConstants.ThermoConservation <> z:51 var
+prf 13972:13993 <> lift_G_direct_identity
+R14000:14002 Corelib.Init.Datatypes <> nat ind
+binder 13996:13996 <> z:52
+R14022:14024 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14009:14019 UMST.ChemConstants.ThermoConservation <> liftGDirect def
+R14021:14021 UMST.ChemConstants.ThermoConservation <> z:52 var
+R14025:14025 UMST.ChemConstants.ThermoConservation <> z:52 var
+def 14065:14086 <> thermoComposedIdentity
+R14093:14095 Corelib.Init.Datatypes <> nat ind
+binder 14089:14089 <> z:53
+R14100:14102 Corelib.Init.Datatypes <> nat ind
+R14109:14113 UMST.ChemConstants.ThermoConservation <> liftX def
+R14116:14120 UMST.ChemConstants.ThermoConservation <> liftP def
+R14123:14127 UMST.ChemConstants.ThermoConservation <> liftT def
+R14129:14129 UMST.ChemConstants.ThermoConservation <> z:53 var
+def 14146:14165 <> thermoDirectIdentity
+R14172:14174 Corelib.Init.Datatypes <> nat ind
+binder 14168:14168 <> z:54
+R14179:14181 Corelib.Init.Datatypes <> nat ind
+R14188:14198 UMST.ChemConstants.ThermoConservation <> liftGDirect def
+R14200:14200 UMST.ChemConstants.ThermoConservation <> z:54 var
+def 14215:14240 <> thermoComposedEqualsDirect
+R14247:14249 Corelib.Init.Datatypes <> nat ind
+binder 14243:14243 <> z:55
+R14254:14257 Corelib.Init.Datatypes <> bool ind
+R14264:14270 Stdlib.Arith.PeanoNat Nat eqb def
+R14273:14294 UMST.ChemConstants.ThermoConservation <> thermoComposedIdentity def
+R14296:14296 UMST.ChemConstants.ThermoConservation <> z:55 var
+R14300:14319 UMST.ChemConstants.ThermoConservation <> thermoDirectIdentity def
+R14321:14321 UMST.ChemConstants.ThermoConservation <> z:55 var
+prf 14332:14369 <> thermo_composed_equals_direct_identity
+R14376:14378 Corelib.Init.Datatypes <> nat ind
+binder 14372:14372 <> z:56
+R14413:14415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14385:14410 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R14412:14412 UMST.ChemConstants.ThermoConservation <> z:56 var
+R14416:14419 Corelib.Init.Datatypes <> true constr
+R14438:14463 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R14466:14487 UMST.ChemConstants.ThermoConservation <> thermoComposedIdentity def
+R14490:14509 UMST.ChemConstants.ThermoConservation <> thermoDirectIdentity def
+R14516:14520 UMST.ChemConstants.ThermoConservation <> liftX def
+R14523:14527 UMST.ChemConstants.ThermoConservation <> liftP def
+R14530:14534 UMST.ChemConstants.ThermoConservation <> liftT def
+R14537:14547 UMST.ChemConstants.ThermoConservation <> liftGDirect def
+R14558:14569 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+R14558:14569 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+prf 14586:14612 <> thermo_g_identity_conserved
+R14629:14631 Corelib.Init.Datatypes <> nat ind
+binder 14625:14625 <> z:57
+R14662:14664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14638:14659 UMST.ChemConstants.ThermoConservation <> thermoComposedIdentity def
+R14661:14661 UMST.ChemConstants.ThermoConservation <> z:57 var
+R14665:14684 UMST.ChemConstants.ThermoConservation <> thermoDirectIdentity def
+R14686:14686 UMST.ChemConstants.ThermoConservation <> z:57 var
+prf 14735:14766 <> thermo_fe_composed_equals_direct
+R14820:14822 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14772:14797 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R14799:14819 UMST.ChemConstants.ThermoConservation <> thermo_element_iron_z def
+R14823:14826 Corelib.Init.Datatypes <> true constr
+R14842:14879 UMST.ChemConstants.ThermoConservation <> thermo_composed_equals_direct_identity thm
+R14842:14879 UMST.ChemConstants.ThermoConservation <> thermo_composed_equals_direct_identity thm
+prf 14894:14925 <> thermo_cu_composed_equals_direct
+R14981:14983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14931:14956 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R14958:14980 UMST.ChemConstants.ThermoConservation <> thermo_element_copper_z def
+R14984:14987 Corelib.Init.Datatypes <> true constr
+R15003:15040 UMST.ChemConstants.ThermoConservation <> thermo_composed_equals_direct_identity thm
+R15003:15040 UMST.ChemConstants.ThermoConservation <> thermo_composed_equals_direct_identity thm
+rec 15280:15295 <> thermo_g_diagram
+proj 15311:15315 <> via_T
+proj 15335:15340 <> then_P
+proj 15360:15365 <> then_x
+proj 15385:15392 <> direct_G
+proj 15412:15421 <> has_T_lift
+proj 15433:15442 <> has_P_lift
+proj 15454:15463 <> has_x_lift
+proj 15475:15486 <> has_G_direct
+R15319:15330 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R15344:15355 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R15369:15380 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R15396:15407 UMST.ChemConstants.ThermoConservation <> thermo_g_leg ind
+R15425:15428 Corelib.Init.Datatypes <> bool ind
+R15446:15449 Corelib.Init.Datatypes <> bool ind
+R15467:15470 Corelib.Init.Datatypes <> bool ind
+R15490:15493 Corelib.Init.Datatypes <> bool ind
+def 15510:15528 <> thermoGDiagramNamed
+R15532:15547 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+R15557:15561 UMST.ChemConstants.ThermoConservation <> via_T proj
+R15557:15561 UMST.ChemConstants.ThermoConservation <> via_T proj
+R15557:15561 UMST.ChemConstants.ThermoConservation <> via_T proj
+R15587:15592 UMST.ChemConstants.ThermoConservation <> then_P proj
+R15587:15592 UMST.ChemConstants.ThermoConservation <> then_P proj
+R15618:15623 UMST.ChemConstants.ThermoConservation <> then_x proj
+R15618:15623 UMST.ChemConstants.ThermoConservation <> then_x proj
+R15649:15656 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R15649:15656 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R15684:15693 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R15684:15693 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R15709:15718 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R15709:15718 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R15734:15743 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R15734:15743 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R15759:15770 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R15759:15770 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R15566:15579 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R15597:15610 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R15628:15641 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R15661:15676 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R15698:15701 Corelib.Init.Datatypes <> true constr
+R15723:15726 Corelib.Init.Datatypes <> true constr
+R15748:15751 Corelib.Init.Datatypes <> true constr
+R15775:15778 Corelib.Init.Datatypes <> true constr
+def 15796:15822 <> thermoGDiagramMissingDirect
+R15826:15841 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+R15851:15855 UMST.ChemConstants.ThermoConservation <> via_T proj
+R15851:15855 UMST.ChemConstants.ThermoConservation <> via_T proj
+R15851:15855 UMST.ChemConstants.ThermoConservation <> via_T proj
+R15881:15886 UMST.ChemConstants.ThermoConservation <> then_P proj
+R15881:15886 UMST.ChemConstants.ThermoConservation <> then_P proj
+R15912:15917 UMST.ChemConstants.ThermoConservation <> then_x proj
+R15912:15917 UMST.ChemConstants.ThermoConservation <> then_x proj
+R15943:15950 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R15943:15950 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R15978:15987 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R15978:15987 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R16003:16012 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16003:16012 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16028:16037 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16028:16037 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16053:16064 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R16053:16064 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R15860:15873 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R15891:15904 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R15922:15935 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R15955:15970 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R15992:15995 Corelib.Init.Datatypes <> true constr
+R16017:16020 Corelib.Init.Datatypes <> true constr
+R16042:16045 Corelib.Init.Datatypes <> true constr
+R16069:16073 Corelib.Init.Datatypes <> false constr
+def 16091:16118 <> thermoGDiagramScrambledOrder
+R16122:16137 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+R16147:16151 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16147:16151 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16147:16151 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16177:16182 UMST.ChemConstants.ThermoConservation <> then_P proj
+R16177:16182 UMST.ChemConstants.ThermoConservation <> then_P proj
+R16208:16213 UMST.ChemConstants.ThermoConservation <> then_x proj
+R16208:16213 UMST.ChemConstants.ThermoConservation <> then_x proj
+R16239:16246 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R16239:16246 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R16274:16283 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R16274:16283 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R16299:16308 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16299:16308 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16324:16333 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16324:16333 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16349:16360 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R16349:16360 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R16156:16169 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R16187:16200 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R16218:16231 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R16251:16266 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R16288:16291 Corelib.Init.Datatypes <> true constr
+R16313:16316 Corelib.Init.Datatypes <> true constr
+R16338:16341 Corelib.Init.Datatypes <> true constr
+R16365:16368 Corelib.Init.Datatypes <> true constr
+def 16386:16406 <> thermoGDiagramTrivial
+R16410:16425 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+R16435:16439 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16435:16439 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16435:16439 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16465:16470 UMST.ChemConstants.ThermoConservation <> then_P proj
+R16465:16470 UMST.ChemConstants.ThermoConservation <> then_P proj
+R16496:16501 UMST.ChemConstants.ThermoConservation <> then_x proj
+R16496:16501 UMST.ChemConstants.ThermoConservation <> then_x proj
+R16527:16534 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R16527:16534 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R16562:16571 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R16562:16571 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R16588:16597 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16588:16597 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16614:16623 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16614:16623 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16640:16651 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R16640:16651 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R16444:16457 UMST.ChemConstants.ThermoConservation <> thermoLegTLift def
+R16475:16488 UMST.ChemConstants.ThermoConservation <> thermoLegPLift def
+R16506:16519 UMST.ChemConstants.ThermoConservation <> thermoLegXLift def
+R16539:16554 UMST.ChemConstants.ThermoConservation <> thermoLegGDirect def
+R16576:16580 Corelib.Init.Datatypes <> false constr
+R16602:16606 Corelib.Init.Datatypes <> false constr
+R16628:16632 Corelib.Init.Datatypes <> false constr
+R16656:16660 Corelib.Init.Datatypes <> false constr
+def 16678:16705 <> thermoGDiagramAllLegsPresent
+R16712:16727 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+binder 16708:16708 <> d:67
+R16732:16735 Corelib.Init.Datatypes <> bool ind
+R16796:16801 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16776:16781 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16756:16761 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16745:16754 UMST.ChemConstants.ThermoConservation <> has_T_lift proj
+R16742:16742 UMST.ChemConstants.ThermoConservation <> d:67 var
+R16765:16774 UMST.ChemConstants.ThermoConservation <> has_P_lift proj
+R16762:16762 UMST.ChemConstants.ThermoConservation <> d:67 var
+R16785:16794 UMST.ChemConstants.ThermoConservation <> has_x_lift proj
+R16782:16782 UMST.ChemConstants.ThermoConservation <> d:67 var
+R16805:16816 UMST.ChemConstants.ThermoConservation <> has_G_direct proj
+R16802:16802 UMST.ChemConstants.ThermoConservation <> d:67 var
+def 16832:16854 <> thermoGDiagramLegsNamed
+R16861:16876 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+binder 16857:16857 <> d:68
+R16881:16884 Corelib.Init.Datatypes <> bool ind
+R17397:17402 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17321:17326 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17247:17252 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17173:17178 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17099:17104 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17028:17033 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16958:16963 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16891:16909 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R16912:16928 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R16933:16937 UMST.ChemConstants.ThermoConservation <> via_T proj
+R16930:16930 UMST.ChemConstants.ThermoConservation <> d:68 var
+R16941:16957 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+R16964:16982 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R16985:17001 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17006:17010 UMST.ChemConstants.ThermoConservation <> via_T proj
+R17003:17003 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17014:17027 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+R17034:17052 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17055:17071 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17076:17081 UMST.ChemConstants.ThermoConservation <> then_P proj
+R17073:17073 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17085:17098 UMST.ChemConstants.ThermoConservation <> arg_pressure_P constr
+R17105:17123 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17126:17142 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17147:17152 UMST.ChemConstants.ThermoConservation <> then_P proj
+R17144:17144 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17156:17172 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R17179:17197 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17200:17216 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17221:17226 UMST.ChemConstants.ThermoConservation <> then_x proj
+R17218:17218 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17230:17246 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R17253:17271 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17274:17290 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17295:17300 UMST.ChemConstants.ThermoConservation <> then_x proj
+R17292:17292 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17304:17320 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+R17327:17345 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17348:17364 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17369:17376 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R17366:17366 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17380:17396 UMST.ChemConstants.ThermoConservation <> arg_temperature_T constr
+R17403:17421 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17424:17440 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17445:17452 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R17442:17442 UMST.ChemConstants.ThermoConservation <> d:68 var
+R17456:17472 UMST.ChemConstants.ThermoConservation <> arg_composition_x constr
+def 17487:17507 <> thermoGDiagramOrderOk
+R17514:17529 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+binder 17510:17510 <> d:69
+R17534:17537 Corelib.Init.Datatypes <> bool ind
+R17823:17828 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17727:17732 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17632:17637 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17544:17562 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17569:17585 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17590:17594 UMST.ChemConstants.ThermoConservation <> via_T proj
+R17587:17587 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17603:17619 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17624:17629 UMST.ChemConstants.ThermoConservation <> then_P proj
+R17621:17621 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17638:17656 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17663:17679 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17684:17689 UMST.ChemConstants.ThermoConservation <> then_P proj
+R17681:17681 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17698:17714 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17719:17724 UMST.ChemConstants.ThermoConservation <> then_x proj
+R17716:17716 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17733:17751 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17758:17774 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17779:17783 UMST.ChemConstants.ThermoConservation <> via_T proj
+R17776:17776 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17792:17808 UMST.ChemConstants.ThermoConservation <> thermo_leg_source def
+R17813:17820 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R17810:17810 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17829:17847 UMST.ChemConstants.ThermoConservation <> thermo_argument_beq def
+R17854:17870 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17875:17880 UMST.ChemConstants.ThermoConservation <> then_x proj
+R17872:17872 UMST.ChemConstants.ThermoConservation <> d:69 var
+R17889:17905 UMST.ChemConstants.ThermoConservation <> thermo_leg_target def
+R17910:17917 UMST.ChemConstants.ThermoConservation <> direct_G proj
+R17907:17907 UMST.ChemConstants.ThermoConservation <> d:69 var
+prf 17929:17959 <> thermo_g_diagram_named_all_legs
+R18013:18015 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17965:17992 UMST.ChemConstants.ThermoConservation <> thermoGDiagramAllLegsPresent def
+R17994:18012 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R18016:18019 Corelib.Init.Datatypes <> true constr
+prf 18054:18086 <> thermo_g_diagram_named_legs_named
+R18135:18137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18092:18114 UMST.ChemConstants.ThermoConservation <> thermoGDiagramLegsNamed def
+R18116:18134 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R18138:18141 Corelib.Init.Datatypes <> true constr
+prf 18176:18206 <> thermo_g_diagram_named_order_ok
+R18253:18255 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18212:18232 UMST.ChemConstants.ThermoConservation <> thermoGDiagramOrderOk def
+R18234:18252 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R18256:18259 Corelib.Init.Datatypes <> true constr
+prf 18294:18332 <> thermo_g_diagram_scrambled_order_not_ok
+R18388:18390 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18338:18358 UMST.ChemConstants.ThermoConservation <> thermoGDiagramOrderOk def
+R18360:18387 UMST.ChemConstants.ThermoConservation <> thermoGDiagramScrambledOrder def
+R18391:18395 Corelib.Init.Datatypes <> false constr
+prf 18430:18473 <> thermo_g_diagram_missing_direct_not_all_legs
+R18535:18537 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18479:18506 UMST.ChemConstants.ThermoConservation <> thermoGDiagramAllLegsPresent def
+R18508:18534 UMST.ChemConstants.ThermoConservation <> thermoGDiagramMissingDirect def
+R18538:18542 Corelib.Init.Datatypes <> false constr
+prf 18577:18613 <> thermo_g_diagram_trivial_not_all_legs
+R18669:18671 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18619:18646 UMST.ChemConstants.ThermoConservation <> thermoGDiagramAllLegsPresent def
+R18648:18668 UMST.ChemConstants.ThermoConservation <> thermoGDiagramTrivial def
+R18672:18676 Corelib.Init.Datatypes <> false constr
+rec 18936:18951 <> thermo_incidence
+proj 18967:18984 <> thermo_inc_binding
+proj 19006:19023 <> thermo_inc_diagram
+proj 19047:19063 <> thermo_inc_scalar
+proj 19091:19114 <> thermo_inc_thermo_n_kind
+proj 19135:19158 <> thermo_inc_mole_fraction
+proj 19188:19203 <> thermo_inc_level
+R18988:19001 UMST.ChemConstants.ThermoConservation <> thermo_binding rec
+R19027:19042 UMST.ChemConstants.ThermoConservation <> thermo_g_diagram rec
+R19067:19086 UMST.ChemConstants.ThermoConservation <> thermo_g_scalar_kind ind
+R19118:19130 UMST.ChemConstants.ThermoConservation <> thermo_n_kind ind
+R19162:19183 UMST.ChemConstants.ThermoConservation <> mole_fraction_scaffold rec
+R19207:19209 Corelib.Init.Datatypes <> nat ind
+def 19226:19250 <> thermoIncidenceNontrivial
+R19257:19272 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+binder 19253:19253 <> h:77
+R19277:19280 Corelib.Init.Datatypes <> bool ind
+R19287:19293 Stdlib.Arith.PeanoNat Nat ltb def
+R19298:19313 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R19315:19315 UMST.ChemConstants.ThermoConservation <> h:77 var
+def 19331:19354 <> thermoIncidenceFeNamedL1
+R19358:19373 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R19383:19400 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R19383:19400 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R19383:19400 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R19427:19444 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R19427:19444 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R19475:19491 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R19475:19491 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R19525:19548 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R19525:19548 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R19584:19607 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R19584:19607 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R19635:19650 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R19635:19650 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R19405:19419 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R19449:19467 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R19496:19517 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+R19553:19576 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R19612:19627 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+def 19673:19696 <> thermoIncidenceCuNamedL1
+R19700:19715 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R19725:19742 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R19725:19742 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R19725:19742 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R19769:19786 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R19769:19786 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R19817:19833 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R19817:19833 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R19867:19890 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R19867:19890 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R19926:19949 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R19926:19949 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R19977:19992 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R19977:19992 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R19747:19761 UMST.ChemConstants.ThermoConservation <> thermoBindingCu def
+R19791:19809 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R19838:19859 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+R19895:19918 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R19954:19969 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+def 20015:20036 <> thermoIncidenceTrivial
+R20040:20055 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R20065:20082 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20065:20082 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20065:20082 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20114:20131 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R20114:20131 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R20164:20180 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R20164:20180 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R20214:20237 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R20214:20237 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R20273:20296 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R20273:20296 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R20324:20339 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R20324:20339 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R20087:20106 UMST.ChemConstants.ThermoConservation <> thermoBindingTrivial def
+R20136:20156 UMST.ChemConstants.ThermoConservation <> thermoGDiagramTrivial def
+R20185:20206 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+R20242:20265 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R20301:20316 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+def 20362:20390 <> thermoIncidenceScrambledOrder
+R20394:20409 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R20419:20436 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20419:20436 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20419:20436 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20463:20480 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R20463:20480 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R20520:20536 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R20520:20536 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R20570:20593 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R20570:20593 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R20629:20652 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R20629:20652 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R20680:20695 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R20680:20695 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R20441:20455 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R20485:20512 UMST.ChemConstants.ThermoConservation <> thermoGDiagramScrambledOrder def
+R20541:20562 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+R20598:20621 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R20657:20672 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+def 20718:20748 <> thermoIncidenceMissingDirectLeg
+R20752:20767 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R20777:20794 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20777:20794 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20777:20794 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R20821:20838 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R20821:20838 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R20877:20893 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R20877:20893 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R20927:20950 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R20927:20950 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R20986:21009 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R20986:21009 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R21037:21052 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R21037:21052 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R20799:20813 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R20843:20869 UMST.ChemConstants.ThermoConservation <> thermoGDiagramMissingDirect def
+R20898:20919 UMST.ChemConstants.ThermoConservation <> thermoScalarGreenBookG def
+R20955:20978 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R21014:21029 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+def 21075:21102 <> thermoIncidenceFormationZero
+R21106:21121 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R21131:21148 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R21131:21148 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R21131:21148 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R21175:21192 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R21175:21192 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R21223:21239 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R21223:21239 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R21283:21306 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R21283:21306 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R21342:21365 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R21342:21365 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R21393:21408 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R21393:21408 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R21153:21167 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R21197:21215 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R21244:21275 UMST.ChemConstants.ThermoConservation <> thermoScalarFormationZeroTheater def
+R21311:21334 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R21370:21385 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+def 21431:21454 <> thermoIncidenceMeasuredG
+R21458:21473 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+R21483:21500 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R21483:21500 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R21483:21500 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R21527:21544 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R21527:21544 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R21575:21591 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R21575:21591 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R21630:21653 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R21630:21653 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R21689:21712 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R21689:21712 UMST.ChemConstants.ThermoConservation <> thermo_inc_mole_fraction proj
+R21740:21755 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R21740:21755 UMST.ChemConstants.ThermoConservation <> thermo_inc_level proj
+R21505:21519 UMST.ChemConstants.ThermoConservation <> thermoBindingFe def
+R21549:21567 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R21596:21622 UMST.ChemConstants.ThermoConservation <> thermoScalarMeasuredGInvent def
+R21658:21681 UMST.ChemConstants.ThermoConservation <> thermoNCalphadConvexHull def
+R21717:21732 UMST.ChemConstants.ThermoConservation <> moleFractionUnit def
+prf 21773:21808 <> thermo_incidence_fe_named_nontrivial
+R21864:21866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21814:21838 UMST.ChemConstants.ThermoConservation <> thermoIncidenceNontrivial def
+R21840:21863 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R21867:21870 Corelib.Init.Datatypes <> true constr
+prf 21905:21943 <> thermo_incidence_trivial_not_nontrivial
+R21997:21999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21949:21973 UMST.ChemConstants.ThermoConservation <> thermoIncidenceNontrivial def
+R21975:21996 UMST.ChemConstants.ThermoConservation <> thermoIncidenceTrivial def
+R22000:22004 Corelib.Init.Datatypes <> false constr
+prf 22039:22073 <> thermo_incidence_fe_composed_direct
+R22169:22171 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22079:22104 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R22107:22121 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R22124:22141 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R22143:22166 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R22172:22175 Corelib.Init.Datatypes <> true constr
+R22191:22228 UMST.ChemConstants.ThermoConservation <> thermo_composed_equals_direct_identity thm
+R22191:22228 UMST.ChemConstants.ThermoConservation <> thermo_composed_equals_direct_identity thm
+prf 22243:22276 <> thermo_incidence_calphad_hull_kind
+R22367:22369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22282:22310 UMST.ChemConstants.ThermoConservation <> thermo_n_kind_is_calphad_hull def
+R22317:22340 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R22342:22365 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R22370:22373 Corelib.Init.Datatypes <> true constr
+prf 22408:22436 <> thermo_incidence_green_book_g
+R22520:22522 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22442:22470 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_green_book_g def
+R22477:22493 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R22495:22518 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R22523:22526 Corelib.Init.Datatypes <> true constr
+def 22790:22809 <> indirectThermoMarker
+R22813:22818 Stdlib.Strings.String <> string ind
+def 22861:22878 <> directThermoMarker
+R22882:22887 Stdlib.Strings.String <> string ind
+prf 22929:22960 <> indirect_ne_direct_thermo_marker
+R22986:22989 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R22966:22985 UMST.ChemConstants.ThermoConservation <> indirectThermoMarker def
+R22990:23007 UMST.ChemConstants.ThermoConservation <> directThermoMarker def
+def 23048:23069 <> indirectNeDirectThermo
+R23073:23076 Corelib.Init.Datatypes <> bool ind
+R23268:23273 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23214:23219 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23160:23165 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23116:23121 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23083:23115 UMST.ChemConstants.ThermoConservation <> thermo_leg_indirect_composes_bool def
+R23122:23159 UMST.ChemConstants.ThermoConservation <> thermo_leg_direct_endpoints_match_bool def
+R23166:23191 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R23193:23213 UMST.ChemConstants.ThermoConservation <> thermo_element_iron_z def
+R23220:23247 UMST.ChemConstants.ThermoConservation <> thermoGDiagramAllLegsPresent def
+R23249:23267 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+R23274:23294 UMST.ChemConstants.ThermoConservation <> thermoGDiagramOrderOk def
+R23296:23314 UMST.ChemConstants.ThermoConservation <> thermoGDiagramNamed def
+prf 23324:23353 <> indirect_ne_direct_thermo_true
+R23379:23381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23357:23378 UMST.ChemConstants.ThermoConservation <> indirectNeDirectThermo def
+R23382:23385 Corelib.Init.Datatypes <> true constr
+R23404:23425 UMST.ChemConstants.ThermoConservation <> indirectNeDirectThermo def
+R23438:23475 UMST.ChemConstants.ThermoConservation <> thermo_leg_indirect_composes_bool_true thm
+R23438:23475 UMST.ChemConstants.ThermoConservation <> thermo_leg_indirect_composes_bool_true thm
+R23438:23475 UMST.ChemConstants.ThermoConservation <> thermo_leg_indirect_composes_bool_true thm
+R23488:23530 UMST.ChemConstants.ThermoConservation <> thermo_leg_direct_endpoints_match_bool_true thm
+R23488:23530 UMST.ChemConstants.ThermoConservation <> thermo_leg_direct_endpoints_match_bool_true thm
+R23488:23530 UMST.ChemConstants.ThermoConservation <> thermo_leg_direct_endpoints_match_bool_true thm
+R23543:23574 UMST.ChemConstants.ThermoConservation <> thermo_fe_composed_equals_direct thm
+R23543:23574 UMST.ChemConstants.ThermoConservation <> thermo_fe_composed_equals_direct thm
+R23543:23574 UMST.ChemConstants.ThermoConservation <> thermo_fe_composed_equals_direct thm
+prf 23615:23648 <> indirect_ne_direct_thermo_identity
+R23683:23688 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23676:23678 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23654:23675 UMST.ChemConstants.ThermoConservation <> indirectNeDirectThermo def
+R23679:23682 Corelib.Init.Datatypes <> true constr
+R23709:23712 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R23689:23708 UMST.ChemConstants.ThermoConservation <> indirectThermoMarker def
+R23713:23730 UMST.ChemConstants.ThermoConservation <> directThermoMarker def
+R23759:23788 UMST.ChemConstants.ThermoConservation <> indirect_ne_direct_thermo_true thm
+R23759:23788 UMST.ChemConstants.ThermoConservation <> indirect_ne_direct_thermo_true thm
+R23801:23832 UMST.ChemConstants.ThermoConservation <> indirect_ne_direct_thermo_marker thm
+R23801:23832 UMST.ChemConstants.ThermoConservation <> indirect_ne_direct_thermo_marker thm
+ind 24075:24095 <> thermo_g_bar_presence
+constr 24111:24127 <> thermo_bar_absent
+constr 24133:24150 <> thermo_bar_present
+scheme 24075:24095 <> thermo_g_bar_presence_rect
+scheme 24075:24095 <> thermo_g_bar_presence_ind
+scheme 24075:24095 <> thermo_g_bar_presence_rec
+scheme 24075:24095 <> thermo_g_bar_presence_sind
+rec 24161:24178 <> thermo_claim_g_bar
+proj 24194:24212 <> thermo_bar_presence
+proj 24241:24263 <> thermo_bar_defect_total
+R24216:24236 UMST.ChemConstants.ThermoConservation <> thermo_g_bar_presence ind
+R24267:24269 Corelib.Init.Datatypes <> nat ind
+def 24286:24306 <> thermoClaimGBarAbsent
+R24310:24327 UMST.ChemConstants.ThermoConservation <> thermo_claim_g_bar rec
+R24337:24355 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24337:24355 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24337:24355 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24379:24401 UMST.ChemConstants.ThermoConservation <> thermo_bar_defect_total proj
+R24379:24401 UMST.ChemConstants.ThermoConservation <> thermo_bar_defect_total proj
+R24360:24376 UMST.ChemConstants.ThermoConservation <> thermo_bar_absent constr
+def 24424:24448 <> thermoClaimGBarZeroDefect
+R24452:24469 UMST.ChemConstants.ThermoConservation <> thermo_claim_g_bar rec
+R24479:24497 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24479:24497 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24479:24497 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24522:24544 UMST.ChemConstants.ThermoConservation <> thermo_bar_defect_total proj
+R24522:24544 UMST.ChemConstants.ThermoConservation <> thermo_bar_defect_total proj
+R24502:24519 UMST.ChemConstants.ThermoConservation <> thermo_bar_present constr
+def 24567:24596 <> thermo_claim_g_bar_zero_defect
+R24603:24620 UMST.ChemConstants.ThermoConservation <> thermo_claim_g_bar rec
+binder 24599:24599 <> b:83
+R24625:24628 Corelib.Init.Datatypes <> bool ind
+R24641:24659 UMST.ChemConstants.ThermoConservation <> thermo_bar_presence proj
+R24661:24661 UMST.ChemConstants.ThermoConservation <> b:83 var
+R24672:24688 UMST.ChemConstants.ThermoConservation <> thermo_bar_absent constr
+R24693:24697 Corelib.Init.Datatypes <> false constr
+R24703:24720 UMST.ChemConstants.ThermoConservation <> thermo_bar_present constr
+R24725:24731 Stdlib.Arith.PeanoNat Nat eqb def
+R24734:24756 UMST.ChemConstants.ThermoConservation <> thermo_bar_defect_total proj
+R24758:24758 UMST.ChemConstants.ThermoConservation <> b:83 var
+prf 24777:24811 <> thermo_claim_g_bar_zero_defect_true
+R24873:24875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24817:24846 UMST.ChemConstants.ThermoConservation <> thermo_claim_g_bar_zero_defect def
+R24848:24872 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarZeroDefect def
+R24876:24879 Corelib.Init.Datatypes <> true constr
+prf 24914:24954 <> thermo_claim_g_bar_absent_not_zero_defect
+R25012:25014 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24960:24989 UMST.ChemConstants.ThermoConservation <> thermo_claim_g_bar_zero_defect def
+R24991:25011 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R25015:25019 Corelib.Init.Datatypes <> false constr
+ind 25282:25308 <> thermo_conservation_verdict
+constr 25324:25341 <> verdict_unwired_ok
+constr 25347:25369 <> verdict_thermo_named_ok
+constr 25375:25403 <> verdict_trivial_thermo_refuse
+constr 25409:25438 <> verdict_scrambled_order_refuse
+constr 25444:25472 <> verdict_formation_zero_refuse
+constr 25478:25502 <> verdict_measured_g_refuse
+constr 25508:25534 <> verdict_green_invent_refuse
+constr 25540:25572 <> verdict_proved_without_bar_refuse
+constr 25578:25608 <> verdict_production_wired_refuse
+scheme 25282:25308 <> thermo_conservation_verdict_rect
+scheme 25282:25308 <> thermo_conservation_verdict_ind
+scheme 25282:25308 <> thermo_conservation_verdict_rec
+scheme 25282:25308 <> thermo_conservation_verdict_sind
+def 25623:25652 <> thermo_conservation_verdict_ok
+R25661:25687 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict ind
+binder 25657:25657 <> v:86
+R25692:25695 Corelib.Init.Datatypes <> bool ind
+R25708:25708 UMST.ChemConstants.ThermoConservation <> v:86 var
+R25719:25736 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R25741:25744 Corelib.Init.Datatypes <> true constr
+R25750:25772 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R25777:25780 Corelib.Init.Datatypes <> true constr
+R25791:25795 Corelib.Init.Datatypes <> false constr
+def 25816:25846 <> thermo_conservation_verdict_beq
+R25859:25885 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict ind
+binder 25851:25852 <> v1:88
+binder 25854:25855 <> v2:89
+R25890:25893 Corelib.Init.Datatypes <> bool ind
+R25910:25911 UMST.ChemConstants.ThermoConservation <> v2:89 var
+R25906:25907 UMST.ChemConstants.ThermoConservation <> v1:88 var
+R25922:25939 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R25942:25959 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R25964:25967 Corelib.Init.Datatypes <> true constr
+R25973:25995 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R25998:26020 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R26025:26028 Corelib.Init.Datatypes <> true constr
+R26034:26062 UMST.ChemConstants.ThermoConservation <> verdict_trivial_thermo_refuse constr
+R26065:26093 UMST.ChemConstants.ThermoConservation <> verdict_trivial_thermo_refuse constr
+R26098:26101 Corelib.Init.Datatypes <> true constr
+R26107:26136 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R26139:26168 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R26173:26176 Corelib.Init.Datatypes <> true constr
+R26182:26210 UMST.ChemConstants.ThermoConservation <> verdict_formation_zero_refuse constr
+R26213:26241 UMST.ChemConstants.ThermoConservation <> verdict_formation_zero_refuse constr
+R26246:26249 Corelib.Init.Datatypes <> true constr
+R26255:26279 UMST.ChemConstants.ThermoConservation <> verdict_measured_g_refuse constr
+R26282:26306 UMST.ChemConstants.ThermoConservation <> verdict_measured_g_refuse constr
+R26311:26314 Corelib.Init.Datatypes <> true constr
+R26320:26346 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+R26349:26375 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+R26380:26383 Corelib.Init.Datatypes <> true constr
+R26389:26421 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+R26424:26456 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+R26461:26464 Corelib.Init.Datatypes <> true constr
+R26470:26500 UMST.ChemConstants.ThermoConservation <> verdict_production_wired_refuse constr
+R26503:26533 UMST.ChemConstants.ThermoConservation <> verdict_production_wired_refuse constr
+R26538:26541 Corelib.Init.Datatypes <> true constr
+R26555:26559 Corelib.Init.Datatypes <> false constr
+def 26580:26604 <> evaluate_thermo_incidence
+R26613:26638 UMST.ChemConstants.ThermoConservation <> ThermoConservationModality ind
+binder 26609:26609 <> m:92
+R26648:26663 UMST.ChemConstants.ThermoConservation <> thermo_incidence rec
+binder 26644:26644 <> h:93
+R26673:26690 UMST.ChemConstants.ThermoConservation <> thermo_claim_g_bar rec
+binder 26669:26669 <> b:94
+R26718:26721 Corelib.Init.Datatypes <> bool ind
+binder 26696:26714 <> claim_physics_green:95
+R26742:26745 Corelib.Init.Datatypes <> bool ind
+binder 26727:26738 <> claim_proved:96
+R26750:26776 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict ind
+R26786:26804 UMST.ChemConstants.ThermoConservation <> claim_physics_green:95 var
+R26851:26862 UMST.ChemConstants.ThermoConservation <> claim_proved:96 var
+R26925:26955 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_formation_zero def
+R26958:26974 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R26976:26976 UMST.ChemConstants.ThermoConservation <> h:93 var
+R27046:27072 UMST.ChemConstants.ThermoConservation <> thermo_scalar_is_measured_g def
+R27075:27091 UMST.ChemConstants.ThermoConservation <> thermo_inc_scalar proj
+R27093:27093 UMST.ChemConstants.ThermoConservation <> h:93 var
+R27169:27172 Corelib.Init.Datatypes <> negb def
+R27175:27199 UMST.ChemConstants.ThermoConservation <> thermoIncidenceNontrivial def
+R27201:27201 UMST.ChemConstants.ThermoConservation <> h:93 var
+R27291:27294 Corelib.Init.Datatypes <> negb def
+R27297:27324 UMST.ChemConstants.ThermoConservation <> thermoGDiagramAllLegsPresent def
+R27327:27344 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R27346:27346 UMST.ChemConstants.ThermoConservation <> h:93 var
+R27448:27451 Corelib.Init.Datatypes <> negb def
+R27454:27474 UMST.ChemConstants.ThermoConservation <> thermoGDiagramOrderOk def
+R27477:27494 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R27496:27496 UMST.ChemConstants.ThermoConservation <> h:93 var
+R27645:27645 UMST.ChemConstants.ThermoConservation <> m:92 var
+R27688:27714 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R27719:27741 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R27779:27805 UMST.ChemConstants.ThermoConservation <> thermo_conservation_assumed constr
+R27843:27871 UMST.ChemConstants.ThermoConservation <> thermo_conservation_surrogate constr
+R27876:27893 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R27876:27893 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R27931:27956 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R27961:27993 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+R27537:27566 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R27382:27411 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R27231:27259 UMST.ChemConstants.ThermoConservation <> verdict_trivial_thermo_refuse constr
+R27118:27142 UMST.ChemConstants.ThermoConservation <> verdict_measured_g_refuse constr
+R26996:27024 UMST.ChemConstants.ThermoConservation <> verdict_formation_zero_refuse constr
+R26876:26908 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+R26813:26839 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+def 28046:28079 <> evaluate_thermo_conservation_close
+R28088:28113 UMST.ChemConstants.ThermoConservation <> ThermoConservationModality ind
+binder 28084:28084 <> m:98
+R28141:28144 Corelib.Init.Datatypes <> bool ind
+binder 28119:28137 <> claim_physics_green:99
+R28175:28178 Corelib.Init.Datatypes <> bool ind
+binder 28150:28171 <> claim_production_wired:100
+R28183:28209 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict ind
+R28219:28237 UMST.ChemConstants.ThermoConservation <> claim_physics_green:99 var
+R28284:28305 UMST.ChemConstants.ThermoConservation <> claim_production_wired:100 var
+R28363:28363 UMST.ChemConstants.ThermoConservation <> m:98 var
+R28376:28402 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R28407:28424 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R28432:28458 UMST.ChemConstants.ThermoConservation <> thermo_conservation_assumed constr
+R28466:28491 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R28499:28527 UMST.ChemConstants.ThermoConservation <> thermo_conservation_surrogate constr
+R28532:28554 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R28532:28554 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R28532:28554 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R28314:28344 UMST.ChemConstants.ThermoConservation <> verdict_production_wired_refuse constr
+R28246:28272 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+def 28577:28606 <> thermo_conservation_authorized
+R28633:28636 Corelib.Init.Datatypes <> bool ind
+binder 28611:28629 <> claim_physics_green:102
+R28667:28670 Corelib.Init.Datatypes <> bool ind
+binder 28642:28663 <> claim_production_wired:103
+R28675:28678 Corelib.Init.Datatypes <> bool ind
+R28691:28724 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R28736:28761 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R28763:28781 UMST.ChemConstants.ThermoConservation <> claim_physics_green:102 var
+R28783:28804 UMST.ChemConstants.ThermoConservation <> claim_production_wired:103 var
+R28815:28837 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R28842:28845 Corelib.Init.Datatypes <> true constr
+R28856:28860 Corelib.Init.Datatypes <> false constr
+ind 29105:29127 <> thermo_conservation_law
+constr 29143:29160 <> law_thermo_g_named
+constr 29166:29191 <> law_scrambled_order_refuse
+constr 29197:29219 <> law_green_invent_refuse
+constr 29225:29251 <> law_production_wired_refuse
+scheme 29105:29127 <> thermo_conservation_law_rect
+scheme 29105:29127 <> thermo_conservation_law_ind
+scheme 29105:29127 <> thermo_conservation_law_rec
+scheme 29105:29127 <> thermo_conservation_law_sind
+def 29266:29294 <> thermo_conservation_law_count
+R29298:29300 Corelib.Init.Datatypes <> nat ind
+prf 29315:29351 <> thermo_conservation_law_count_is_four
+R29386:29388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29357:29385 UMST.ChemConstants.ThermoConservation <> thermo_conservation_law_count def
+ind 29428:29458 <> thermo_conservation_law_witness
+constr 29474:29496 <> thermo_law_witness_open
+constr 29502:29526 <> thermo_law_witness_proved
+scheme 29428:29458 <> thermo_conservation_law_witness_rect
+scheme 29428:29458 <> thermo_conservation_law_witness_ind
+scheme 29428:29458 <> thermo_conservation_law_witness_rec
+scheme 29428:29458 <> thermo_conservation_law_witness_sind
+def 29541:29580 <> evaluate_thermo_conservation_law_witness
+R29591:29613 UMST.ChemConstants.ThermoConservation <> thermo_conservation_law ind
+binder 29585:29587 <> law:108
+R29621:29646 UMST.ChemConstants.ThermoConservation <> ThermoConservationModality ind
+binder 29617:29617 <> m:109
+R29653:29683 UMST.ChemConstants.ThermoConservation <> thermo_conservation_law_witness ind
+R29696:29696 UMST.ChemConstants.ThermoConservation <> m:109 var
+R29707:29733 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R29739:29765 UMST.ChemConstants.ThermoConservation <> thermo_conservation_assumed constr
+R29771:29799 UMST.ChemConstants.ThermoConservation <> thermo_conservation_surrogate constr
+R29804:29826 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+R29804:29826 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+R29804:29826 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+R29832:29857 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R29862:29886 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_proved constr
+prf 29902:29945 <> all_thermo_conservation_laws_open_at_unwired
+R30068:30073 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30042:30044 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29951:29990 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_law_witness def
+R29992:30009 UMST.ChemConstants.ThermoConservation <> law_thermo_g_named constr
+R30015:30041 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R30045:30067 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+R30199:30204 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30173:30175 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30074:30113 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_law_witness def
+R30115:30140 UMST.ChemConstants.ThermoConservation <> law_scrambled_order_refuse constr
+R30146:30172 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R30176:30198 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+R30327:30332 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30301:30303 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30205:30244 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_law_witness def
+R30246:30268 UMST.ChemConstants.ThermoConservation <> law_green_invent_refuse constr
+R30274:30300 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R30304:30326 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+R30433:30435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30333:30372 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_law_witness def
+R30374:30400 UMST.ChemConstants.ThermoConservation <> law_production_wired_refuse constr
+R30406:30432 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R30436:30458 UMST.ChemConstants.ThermoConservation <> thermo_law_witness_open constr
+def 30736:30748 <> thermoGProved
+R30752:30755 Corelib.Init.Datatypes <> bool ind
+R30760:30764 Corelib.Init.Datatypes <> false constr
+prf 30774:30794 <> thermo_g_proved_false
+R30811:30813 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30798:30810 UMST.ChemConstants.ThermoConservation <> thermoGProved def
+R30814:30818 Corelib.Init.Datatypes <> false constr
+def 30858:30870 <> thermoNProved
+R30874:30877 Corelib.Init.Datatypes <> bool ind
+R30882:30886 Corelib.Init.Datatypes <> false constr
+prf 30896:30916 <> thermo_n_proved_false
+R30933:30935 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30920:30932 UMST.ChemConstants.ThermoConservation <> thermoNProved def
+R30936:30940 Corelib.Init.Datatypes <> false constr
+def 30980:31002 <> not118SquaredGreenTable
+R31006:31009 Corelib.Init.Datatypes <> bool ind
+R31014:31017 Corelib.Init.Datatypes <> true constr
+prf 31027:31053 <> not_118_squared_green_table
+R31080:31082 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31057:31079 UMST.ChemConstants.ThermoConservation <> not118SquaredGreenTable def
+R31083:31086 Corelib.Init.Datatypes <> true constr
+prf 31343:31381 <> unwired_close_without_production_wiring
+R31465:31469 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31387:31420 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R31426:31452 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R31454:31458 Corelib.Init.Datatypes <> false constr
+R31460:31464 Corelib.Init.Datatypes <> false constr
+R31470:31487 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+prf 31524:31575 <> unwired_modality_always_ok_without_production_wiring
+R31659:31663 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31581:31614 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R31620:31646 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R31648:31652 Corelib.Init.Datatypes <> false constr
+R31654:31658 Corelib.Init.Datatypes <> false constr
+R31664:31681 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R31697:31735 UMST.ChemConstants.ThermoConservation <> unwired_close_without_production_wiring thm
+R31697:31735 UMST.ChemConstants.ThermoConservation <> unwired_close_without_production_wiring thm
+prf 31750:31793 <> unwired_verdict_ok_without_production_wiring
+R31917:31921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31799:31828 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R31835:31868 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R31877:31903 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R31905:31909 Corelib.Init.Datatypes <> false constr
+R31911:31915 Corelib.Init.Datatypes <> false constr
+R31922:31925 Corelib.Init.Datatypes <> true constr
+R31944:31973 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R31986:32024 UMST.ChemConstants.ThermoConservation <> unwired_close_without_production_wiring thm
+R31986:32024 UMST.ChemConstants.ThermoConservation <> unwired_close_without_production_wiring thm
+R31986:32024 UMST.ChemConstants.ThermoConservation <> unwired_close_without_production_wiring thm
+prf 32278:32295 <> thermo_fe_named_ok
+R32421:32425 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32301:32325 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R32331:32357 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R32359:32382 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R32388:32408 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R32410:32414 Corelib.Init.Datatypes <> false constr
+R32416:32420 Corelib.Init.Datatypes <> false constr
+R32426:32448 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+prf 32485:32511 <> named_thermo_g_conservation
+R32665:32670 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32637:32641 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32517:32541 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R32547:32573 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R32575:32598 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R32604:32624 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R32626:32630 Corelib.Init.Datatypes <> false constr
+R32632:32636 Corelib.Init.Datatypes <> false constr
+R32642:32664 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R32768:32773 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32761:32763 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32671:32696 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R32699:32713 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R32716:32733 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R32735:32758 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R32764:32767 Corelib.Init.Datatypes <> true constr
+R32907:32912 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32900:32902 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32774:32803 UMST.ChemConstants.ThermoConservation <> thermoBindingIdentityConserved def
+R32806:32823 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R32825:32848 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R32856:32873 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R32875:32898 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R32903:32906 Corelib.Init.Datatypes <> true constr
+R32994:32999 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32987:32989 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32913:32940 UMST.ChemConstants.ThermoConservation <> thermoGDiagramAllLegsPresent def
+R32943:32960 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R32962:32985 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R32990:32993 Corelib.Init.Datatypes <> true constr
+R33074:33079 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33067:33069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33000:33020 UMST.ChemConstants.ThermoConservation <> thermoGDiagramOrderOk def
+R33023:33040 UMST.ChemConstants.ThermoConservation <> thermo_inc_diagram proj
+R33042:33065 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R33070:33073 Corelib.Init.Datatypes <> true constr
+R33161:33163 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33080:33108 UMST.ChemConstants.ThermoConservation <> thermo_n_kind_is_calphad_hull def
+R33111:33134 UMST.ChemConstants.ThermoConservation <> thermo_inc_thermo_n_kind proj
+R33136:33159 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R33164:33167 Corelib.Init.Datatypes <> true constr
+prf 33218:33235 <> thermo_cu_named_ok
+R33361:33365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33241:33265 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R33271:33297 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R33299:33322 UMST.ChemConstants.ThermoConservation <> thermoIncidenceCuNamedL1 def
+R33328:33348 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R33350:33354 Corelib.Init.Datatypes <> false constr
+R33356:33360 Corelib.Init.Datatypes <> false constr
+R33366:33388 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+prf 33425:33454 <> named_cu_thermo_g_conservation
+R33608:33613 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33580:33584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33460:33484 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R33490:33516 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R33518:33541 UMST.ChemConstants.ThermoConservation <> thermoIncidenceCuNamedL1 def
+R33547:33567 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R33569:33573 Corelib.Init.Datatypes <> false constr
+R33575:33579 Corelib.Init.Datatypes <> false constr
+R33585:33607 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R33704:33706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33614:33639 UMST.ChemConstants.ThermoConservation <> thermoComposedEqualsDirect def
+R33642:33656 UMST.ChemConstants.ThermoConservation <> thermo_parent_z proj
+R33659:33676 UMST.ChemConstants.ThermoConservation <> thermo_inc_binding proj
+R33678:33701 UMST.ChemConstants.ThermoConservation <> thermoIncidenceCuNamedL1 def
+R33707:33710 Corelib.Init.Datatypes <> true constr
+R33739:33756 UMST.ChemConstants.ThermoConservation <> thermo_cu_named_ok thm
+R33739:33756 UMST.ChemConstants.ThermoConservation <> thermo_cu_named_ok thm
+R33769:33800 UMST.ChemConstants.ThermoConservation <> thermo_cu_composed_equals_direct thm
+R33769:33800 UMST.ChemConstants.ThermoConservation <> thermo_cu_composed_equals_direct thm
+prf 33815:33835 <> thermo_named_close_ok
+R33918:33922 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33841:33874 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R33880:33905 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R33907:33911 Corelib.Init.Datatypes <> false constr
+R33913:33917 Corelib.Init.Datatypes <> false constr
+R33923:33945 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+prf 33982:34012 <> named_thermo_conservation_close
+R34123:34128 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34095:34099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34018:34051 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R34057:34082 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R34084:34088 Corelib.Init.Datatypes <> false constr
+R34090:34094 Corelib.Init.Datatypes <> false constr
+R34100:34122 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R34171:34173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34129:34158 UMST.ChemConstants.ThermoConservation <> thermo_conservation_authorized def
+R34160:34164 Corelib.Init.Datatypes <> false constr
+R34166:34170 Corelib.Init.Datatypes <> false constr
+R34174:34177 Corelib.Init.Datatypes <> true constr
+R34206:34226 UMST.ChemConstants.ThermoConservation <> thermo_named_close_ok thm
+R34206:34226 UMST.ChemConstants.ThermoConservation <> thermo_named_close_ok thm
+R34240:34269 UMST.ChemConstants.ThermoConservation <> thermo_conservation_authorized def
+R34284:34304 UMST.ChemConstants.ThermoConservation <> thermo_named_close_ok thm
+R34284:34304 UMST.ChemConstants.ThermoConservation <> thermo_named_close_ok thm
+R34284:34304 UMST.ChemConstants.ThermoConservation <> thermo_named_close_ok thm
+prf 34560:34581 <> trivial_thermo_refused
+R34705:34709 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34587:34611 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R34617:34643 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R34645:34666 UMST.ChemConstants.ThermoConservation <> thermoIncidenceTrivial def
+R34672:34692 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R34694:34698 Corelib.Init.Datatypes <> false constr
+R34700:34704 Corelib.Init.Datatypes <> false constr
+R34710:34738 UMST.ChemConstants.ThermoConservation <> verdict_trivial_thermo_refuse constr
+prf 34775:34800 <> trivial_thermo_fail_closed
+R34958:34963 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34924:34928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34806:34830 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R34836:34862 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R34864:34885 UMST.ChemConstants.ThermoConservation <> thermoIncidenceTrivial def
+R34891:34911 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R34913:34917 Corelib.Init.Datatypes <> false constr
+R34919:34923 Corelib.Init.Datatypes <> false constr
+R34929:34957 UMST.ChemConstants.ThermoConservation <> verdict_trivial_thermo_refuse constr
+R35125:35129 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34964:34993 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R35000:35024 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R35033:35059 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R35061:35082 UMST.ChemConstants.ThermoConservation <> thermoIncidenceTrivial def
+R35091:35111 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R35113:35117 Corelib.Init.Datatypes <> false constr
+R35119:35123 Corelib.Init.Datatypes <> false constr
+R35130:35134 Corelib.Init.Datatypes <> false constr
+R35163:35184 UMST.ChemConstants.ThermoConservation <> trivial_thermo_refused thm
+R35163:35184 UMST.ChemConstants.ThermoConservation <> trivial_thermo_refused thm
+R35198:35227 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R35242:35263 UMST.ChemConstants.ThermoConservation <> trivial_thermo_refused thm
+R35242:35263 UMST.ChemConstants.ThermoConservation <> trivial_thermo_refused thm
+R35242:35263 UMST.ChemConstants.ThermoConservation <> trivial_thermo_refused thm
+prf 35519:35541 <> scrambled_order_refused
+R35672:35676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35547:35571 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R35577:35603 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R35605:35633 UMST.ChemConstants.ThermoConservation <> thermoIncidenceScrambledOrder def
+R35639:35659 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R35661:35665 Corelib.Init.Datatypes <> false constr
+R35667:35671 Corelib.Init.Datatypes <> false constr
+R35677:35706 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+prf 35743:35769 <> scrambled_order_fail_closed
+R35935:35940 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35900:35904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35775:35799 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R35805:35831 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R35833:35861 UMST.ChemConstants.ThermoConservation <> thermoIncidenceScrambledOrder def
+R35867:35887 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R35889:35893 Corelib.Init.Datatypes <> false constr
+R35895:35899 Corelib.Init.Datatypes <> false constr
+R35905:35934 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R36109:36113 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35941:35970 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R35977:36001 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R36010:36036 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R36038:36066 UMST.ChemConstants.ThermoConservation <> thermoIncidenceScrambledOrder def
+R36075:36095 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R36097:36101 Corelib.Init.Datatypes <> false constr
+R36103:36107 Corelib.Init.Datatypes <> false constr
+R36114:36118 Corelib.Init.Datatypes <> false constr
+R36147:36169 UMST.ChemConstants.ThermoConservation <> scrambled_order_refused thm
+R36147:36169 UMST.ChemConstants.ThermoConservation <> scrambled_order_refused thm
+R36183:36212 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R36227:36249 UMST.ChemConstants.ThermoConservation <> scrambled_order_refused thm
+R36227:36249 UMST.ChemConstants.ThermoConservation <> scrambled_order_refused thm
+R36227:36249 UMST.ChemConstants.ThermoConservation <> scrambled_order_refused thm
+prf 36281:36316 <> missing_direct_leg_scrambled_refused
+R36449:36453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36322:36346 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R36352:36378 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R36380:36410 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMissingDirectLeg def
+R36416:36436 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R36438:36442 Corelib.Init.Datatypes <> false constr
+R36444:36448 Corelib.Init.Datatypes <> false constr
+R36454:36483 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+prf 36520:36559 <> missing_direct_leg_scrambled_fail_closed
+R36727:36732 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36692:36696 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36565:36589 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R36595:36621 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R36623:36653 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMissingDirectLeg def
+R36659:36679 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R36681:36685 Corelib.Init.Datatypes <> false constr
+R36687:36691 Corelib.Init.Datatypes <> false constr
+R36697:36726 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R36903:36907 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36733:36762 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R36769:36793 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R36802:36828 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R36830:36860 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMissingDirectLeg def
+R36869:36889 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R36891:36895 Corelib.Init.Datatypes <> false constr
+R36897:36901 Corelib.Init.Datatypes <> false constr
+R36908:36912 Corelib.Init.Datatypes <> false constr
+R36941:36976 UMST.ChemConstants.ThermoConservation <> missing_direct_leg_scrambled_refused thm
+R36941:36976 UMST.ChemConstants.ThermoConservation <> missing_direct_leg_scrambled_refused thm
+R36990:37019 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R37034:37069 UMST.ChemConstants.ThermoConservation <> missing_direct_leg_scrambled_refused thm
+R37034:37069 UMST.ChemConstants.ThermoConservation <> missing_direct_leg_scrambled_refused thm
+R37034:37069 UMST.ChemConstants.ThermoConservation <> missing_direct_leg_scrambled_refused thm
+prf 37325:37346 <> formation_zero_refused
+R37476:37480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37352:37376 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R37382:37408 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R37410:37437 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFormationZero def
+R37443:37463 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R37465:37469 Corelib.Init.Datatypes <> false constr
+R37471:37475 Corelib.Init.Datatypes <> false constr
+R37481:37509 UMST.ChemConstants.ThermoConservation <> verdict_formation_zero_refuse constr
+prf 37546:37571 <> formation_zero_fail_closed
+R37735:37740 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37701:37705 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37577:37601 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R37607:37633 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R37635:37662 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFormationZero def
+R37668:37688 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R37690:37694 Corelib.Init.Datatypes <> false constr
+R37696:37700 Corelib.Init.Datatypes <> false constr
+R37706:37734 UMST.ChemConstants.ThermoConservation <> verdict_formation_zero_refuse constr
+R37908:37912 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37741:37770 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R37777:37801 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R37810:37836 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R37838:37865 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFormationZero def
+R37874:37894 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R37896:37900 Corelib.Init.Datatypes <> false constr
+R37902:37906 Corelib.Init.Datatypes <> false constr
+R37913:37917 Corelib.Init.Datatypes <> false constr
+R37946:37967 UMST.ChemConstants.ThermoConservation <> formation_zero_refused thm
+R37946:37967 UMST.ChemConstants.ThermoConservation <> formation_zero_refused thm
+R37981:38010 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R38025:38046 UMST.ChemConstants.ThermoConservation <> formation_zero_refused thm
+R38025:38046 UMST.ChemConstants.ThermoConservation <> formation_zero_refused thm
+R38025:38046 UMST.ChemConstants.ThermoConservation <> formation_zero_refused thm
+prf 38300:38317 <> measured_g_refused
+R38443:38447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38323:38347 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R38353:38379 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R38381:38404 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMeasuredG def
+R38410:38430 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R38432:38436 Corelib.Init.Datatypes <> false constr
+R38438:38442 Corelib.Init.Datatypes <> false constr
+R38448:38472 UMST.ChemConstants.ThermoConservation <> verdict_measured_g_refuse constr
+prf 38509:38530 <> measured_g_fail_closed
+R38686:38691 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38656:38660 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38536:38560 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R38566:38592 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R38594:38617 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMeasuredG def
+R38623:38643 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R38645:38649 Corelib.Init.Datatypes <> false constr
+R38651:38655 Corelib.Init.Datatypes <> false constr
+R38661:38685 UMST.ChemConstants.ThermoConservation <> verdict_measured_g_refuse constr
+R38855:38859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38692:38721 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R38728:38752 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R38761:38787 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R38789:38812 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMeasuredG def
+R38821:38841 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R38843:38847 Corelib.Init.Datatypes <> false constr
+R38849:38853 Corelib.Init.Datatypes <> false constr
+R38860:38864 Corelib.Init.Datatypes <> false constr
+R38893:38910 UMST.ChemConstants.ThermoConservation <> measured_g_refused thm
+R38893:38910 UMST.ChemConstants.ThermoConservation <> measured_g_refused thm
+R38924:38953 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R38968:38985 UMST.ChemConstants.ThermoConservation <> measured_g_refused thm
+R38968:38985 UMST.ChemConstants.ThermoConservation <> measured_g_refused thm
+R38968:38985 UMST.ChemConstants.ThermoConservation <> measured_g_refused thm
+prf 39241:39267 <> green_invent_refuse_unwired
+R39350:39354 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39273:39306 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R39312:39338 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R39340:39343 Corelib.Init.Datatypes <> true constr
+R39345:39349 Corelib.Init.Datatypes <> false constr
+R39355:39381 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+prf 39418:39443 <> green_invent_always_refuse
+R39566:39570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39449:39478 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R39485:39518 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R39527:39553 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R39555:39558 Corelib.Init.Datatypes <> true constr
+R39560:39564 Corelib.Init.Datatypes <> false constr
+R39571:39575 Corelib.Init.Datatypes <> false constr
+R39594:39623 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R39636:39662 UMST.ChemConstants.ThermoConservation <> green_invent_refuse_unwired thm
+R39636:39662 UMST.ChemConstants.ThermoConservation <> green_invent_refuse_unwired thm
+R39636:39662 UMST.ChemConstants.ThermoConservation <> green_invent_refuse_unwired thm
+prf 39692:39727 <> green_invent_thermo_incidence_refuse
+R39852:39856 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39733:39757 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R39763:39789 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R39791:39814 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R39820:39840 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R39842:39845 Corelib.Init.Datatypes <> true constr
+R39847:39851 Corelib.Init.Datatypes <> false constr
+R39857:39883 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+prf 40142:40166 <> proved_without_bar_refuse
+R40291:40295 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40172:40196 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R40202:40228 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R40230:40253 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R40259:40279 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R40281:40285 Corelib.Init.Datatypes <> false constr
+R40287:40290 Corelib.Init.Datatypes <> true constr
+R40296:40328 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+prf 40365:40394 <> proved_without_bar_fail_closed
+R40557:40562 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R40519:40523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40400:40424 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R40430:40456 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R40458:40481 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R40487:40507 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R40509:40513 Corelib.Init.Datatypes <> false constr
+R40515:40518 Corelib.Init.Datatypes <> true constr
+R40524:40556 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+R40725:40729 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40563:40592 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R40599:40623 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R40632:40658 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R40660:40683 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R40692:40712 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R40714:40718 Corelib.Init.Datatypes <> false constr
+R40720:40723 Corelib.Init.Datatypes <> true constr
+R40730:40734 Corelib.Init.Datatypes <> false constr
+R40763:40787 UMST.ChemConstants.ThermoConservation <> proved_without_bar_refuse thm
+R40763:40787 UMST.ChemConstants.ThermoConservation <> proved_without_bar_refuse thm
+R40801:40830 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R40845:40869 UMST.ChemConstants.ThermoConservation <> proved_without_bar_refuse thm
+R40845:40869 UMST.ChemConstants.ThermoConservation <> proved_without_bar_refuse thm
+R40845:40869 UMST.ChemConstants.ThermoConservation <> proved_without_bar_refuse thm
+prf 40901:40943 <> proved_without_bar_zero_defect_still_refuse
+R41072:41076 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40949:40973 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R40979:41005 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R41007:41030 UMST.ChemConstants.ThermoConservation <> thermoIncidenceCuNamedL1 def
+R41036:41060 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarZeroDefect def
+R41062:41066 Corelib.Init.Datatypes <> false constr
+R41068:41071 Corelib.Init.Datatypes <> true constr
+R41077:41109 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+prf 41368:41390 <> production_wired_refuse
+R41472:41476 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41396:41429 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R41435:41460 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R41462:41466 Corelib.Init.Datatypes <> false constr
+R41468:41471 Corelib.Init.Datatypes <> true constr
+R41477:41507 UMST.ChemConstants.ThermoConservation <> verdict_production_wired_refuse constr
+prf 41544:41573 <> production_wired_claim_refused
+R41695:41699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41579:41608 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R41615:41648 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R41657:41682 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R41684:41688 Corelib.Init.Datatypes <> false constr
+R41690:41693 Corelib.Init.Datatypes <> true constr
+R41700:41704 Corelib.Init.Datatypes <> false constr
+R41723:41752 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_ok def
+R41765:41787 UMST.ChemConstants.ThermoConservation <> production_wired_refuse thm
+R41765:41787 UMST.ChemConstants.ThermoConservation <> production_wired_refuse thm
+R41765:41787 UMST.ChemConstants.ThermoConservation <> production_wired_refuse thm
+def 42047:42084 <> thermo_conservation_coherence_scaffold
+R42088:42091 Corelib.Init.Datatypes <> bool ind
+R42400:42405 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R42244:42249 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R42098:42128 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_beq def
+R42135:42168 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R42177:42202 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R42204:42208 Corelib.Init.Datatypes <> false constr
+R42210:42214 Corelib.Init.Datatypes <> false constr
+R42221:42243 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R42250:42280 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_beq def
+R42287:42320 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R42329:42355 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R42357:42360 Corelib.Init.Datatypes <> true constr
+R42362:42366 Corelib.Init.Datatypes <> false constr
+R42373:42399 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+R42406:42436 UMST.ChemConstants.ThermoConservation <> thermo_conservation_verdict_beq def
+R42443:42476 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R42485:42510 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R42512:42516 Corelib.Init.Datatypes <> false constr
+R42518:42521 Corelib.Init.Datatypes <> true constr
+R42528:42558 UMST.ChemConstants.ThermoConservation <> verdict_production_wired_refuse constr
+prf 42568:42610 <> thermo_conservation_coherence_scaffold_true
+R42654:42656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R42616:42653 UMST.ChemConstants.ThermoConservation <> thermo_conservation_coherence_scaffold def
+R42657:42660 Corelib.Init.Datatypes <> true constr
+R42679:42716 UMST.ChemConstants.ThermoConservation <> thermo_conservation_coherence_scaffold def
+prf 42771:42816 <> thermo_conservation_coherence_scaffold_theorem
+R42929:42934 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R42899:42905 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R42822:42855 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R42861:42886 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R42888:42892 Corelib.Init.Datatypes <> false constr
+R42894:42898 Corelib.Init.Datatypes <> false constr
+R42906:42928 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R43046:43051 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R43012:43018 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R42935:42968 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R42974:43000 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R43002:43005 Corelib.Init.Datatypes <> true constr
+R43007:43011 Corelib.Init.Datatypes <> false constr
+R43019:43045 UMST.ChemConstants.ThermoConservation <> verdict_green_invent_refuse constr
+R43128:43134 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43052:43085 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R43091:43116 UMST.ChemConstants.ThermoConservation <> thermo_conservation_proved constr
+R43118:43122 Corelib.Init.Datatypes <> false constr
+R43124:43127 Corelib.Init.Datatypes <> true constr
+R43135:43165 UMST.ChemConstants.ThermoConservation <> verdict_production_wired_refuse constr
+ind 43444:43455 <> formal_fiber
+constr 43471:43491 <> fiber_quantum_knowing
+constr 43497:43513 <> fiber_meso_acting
+scheme 43444:43455 <> formal_fiber_rect
+scheme 43444:43455 <> formal_fiber_ind
+scheme 43444:43455 <> formal_fiber_rec
+scheme 43444:43455 <> formal_fiber_sind
+ind 43527:43545 <> formal_claim_family
+constr 43561:43585 <> claim_thermo_conservation
+scheme 43527:43545 <> formal_claim_family_rect
+scheme 43527:43545 <> formal_claim_family_ind
+scheme 43527:43545 <> formal_claim_family_rec
+scheme 43527:43545 <> formal_claim_family_sind
+def 43600:43627 <> thermo_conservation_fiber_ok
+R43634:43645 UMST.ChemConstants.ThermoConservation <> formal_fiber ind
+binder 43630:43630 <> f:115
+R43650:43653 Corelib.Init.Datatypes <> bool ind
+R43666:43666 UMST.ChemConstants.ThermoConservation <> f:115 var
+R43677:43693 UMST.ChemConstants.ThermoConservation <> fiber_meso_acting constr
+R43698:43701 Corelib.Init.Datatypes <> true constr
+R43707:43727 UMST.ChemConstants.ThermoConservation <> fiber_quantum_knowing constr
+R43732:43736 Corelib.Init.Datatypes <> false constr
+def 43757:43790 <> thermo_conservation_meso_acting_ok
+R43794:43797 Corelib.Init.Datatypes <> bool ind
+R43804:43831 UMST.ChemConstants.ThermoConservation <> thermo_conservation_fiber_ok def
+R43833:43849 UMST.ChemConstants.ThermoConservation <> fiber_meso_acting constr
+def 43864:43899 <> thermo_conservation_knowing_fiber_ok
+R43903:43906 Corelib.Init.Datatypes <> bool ind
+R43913:43940 UMST.ChemConstants.ThermoConservation <> thermo_conservation_fiber_ok def
+R43942:43962 UMST.ChemConstants.ThermoConservation <> fiber_quantum_knowing constr
+def 43977:43998 <> thermoDoesNotMintLiveG
+R44002:44005 Corelib.Init.Datatypes <> bool ind
+R44012:44015 Corelib.Init.Datatypes <> negb def
+R44017:44052 UMST.ChemConstants.ThermoConservation <> thermo_conservation_knowing_fiber_ok def
+def 44067:44097 <> thermoDoesNotClaimThermoNProved
+R44101:44104 Corelib.Init.Datatypes <> bool ind
+R44111:44114 Corelib.Init.Datatypes <> negb def
+R44116:44128 UMST.ChemConstants.ThermoConservation <> thermoNProved def
+prf 44138:44176 <> thermo_conservation_meso_acting_ok_true
+R44216:44218 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44182:44215 UMST.ChemConstants.ThermoConservation <> thermo_conservation_meso_acting_ok def
+R44219:44222 Corelib.Init.Datatypes <> true constr
+prf 44257:44296 <> thermo_conservation_knowing_fiber_not_ok
+R44338:44340 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44302:44337 UMST.ChemConstants.ThermoConservation <> thermo_conservation_knowing_fiber_ok def
+R44341:44345 Corelib.Init.Datatypes <> false constr
+prf 44382:44424 <> thermo_conservation_routes_meso_not_knowing
+R44471:44476 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44464:44466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44430:44463 UMST.ChemConstants.ThermoConservation <> thermo_conservation_meso_acting_ok def
+R44467:44470 Corelib.Init.Datatypes <> true constr
+R44521:44526 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44513:44515 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44477:44512 UMST.ChemConstants.ThermoConservation <> thermo_conservation_knowing_fiber_ok def
+R44516:44520 Corelib.Init.Datatypes <> false constr
+R44556:44561 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44549:44551 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44527:44548 UMST.ChemConstants.ThermoConservation <> thermoDoesNotMintLiveG def
+R44552:44555 Corelib.Init.Datatypes <> true constr
+R44593:44595 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44562:44592 UMST.ChemConstants.ThermoConservation <> thermoDoesNotClaimThermoNProved def
+R44596:44599 Corelib.Init.Datatypes <> true constr
+def 44655:44679 <> fiberMesoActingNotKnowing
+R44683:44686 Corelib.Init.Datatypes <> bool ind
+R44727:44732 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R44693:44726 UMST.ChemConstants.ThermoConservation <> thermo_conservation_meso_acting_ok def
+R44733:44736 Corelib.Init.Datatypes <> negb def
+R44738:44773 UMST.ChemConstants.ThermoConservation <> thermo_conservation_knowing_fiber_ok def
+prf 44783:44816 <> fiber_meso_acting_not_knowing_true
+R44845:44847 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44820:44844 UMST.ChemConstants.ThermoConservation <> fiberMesoActingNotKnowing def
+R44848:44851 Corelib.Init.Datatypes <> true constr
+R44870:44894 UMST.ChemConstants.ThermoConservation <> fiberMesoActingNotKnowing def
+R44897:44930 UMST.ChemConstants.ThermoConservation <> thermo_conservation_meso_acting_ok def
+R44937:44972 UMST.ChemConstants.ThermoConservation <> thermo_conservation_knowing_fiber_ok def
+prf 45228:45263 <> thermo_conservation_fixture_scaffold
+R45419:45424 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45389:45395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45269:45293 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R45299:45325 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R45327:45350 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R45356:45376 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R45378:45382 Corelib.Init.Datatypes <> false constr
+R45384:45388 Corelib.Init.Datatypes <> false constr
+R45396:45418 UMST.ChemConstants.ThermoConservation <> verdict_thermo_named_ok constr
+R45579:45584 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45543:45549 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45425:45449 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R45455:45481 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R45483:45504 UMST.ChemConstants.ThermoConservation <> thermoIncidenceTrivial def
+R45510:45530 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R45532:45536 Corelib.Init.Datatypes <> false constr
+R45538:45542 Corelib.Init.Datatypes <> false constr
+R45550:45578 UMST.ChemConstants.ThermoConservation <> verdict_trivial_thermo_refuse constr
+R45747:45752 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45710:45716 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45585:45609 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R45615:45641 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R45643:45671 UMST.ChemConstants.ThermoConservation <> thermoIncidenceScrambledOrder def
+R45677:45697 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R45699:45703 Corelib.Init.Datatypes <> false constr
+R45705:45709 Corelib.Init.Datatypes <> false constr
+R45717:45746 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R45917:45922 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45880:45886 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45753:45777 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R45783:45809 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R45811:45841 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMissingDirectLeg def
+R45847:45867 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R45869:45873 Corelib.Init.Datatypes <> false constr
+R45875:45879 Corelib.Init.Datatypes <> false constr
+R45887:45916 UMST.ChemConstants.ThermoConservation <> verdict_scrambled_order_refuse constr
+R46083:46088 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46047:46053 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45923:45947 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R45953:45979 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R45981:46008 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFormationZero def
+R46014:46034 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R46036:46040 Corelib.Init.Datatypes <> false constr
+R46042:46046 Corelib.Init.Datatypes <> false constr
+R46054:46082 UMST.ChemConstants.ThermoConservation <> verdict_formation_zero_refuse constr
+R46241:46246 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46209:46215 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46089:46113 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R46119:46145 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R46147:46170 UMST.ChemConstants.ThermoConservation <> thermoIncidenceMeasuredG def
+R46176:46196 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R46198:46202 Corelib.Init.Datatypes <> false constr
+R46204:46208 Corelib.Init.Datatypes <> false constr
+R46216:46240 UMST.ChemConstants.ThermoConservation <> verdict_measured_g_refuse constr
+R46406:46411 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46366:46372 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46247:46271 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_incidence def
+R46277:46303 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R46305:46328 UMST.ChemConstants.ThermoConservation <> thermoIncidenceFeNamedL1 def
+R46334:46354 UMST.ChemConstants.ThermoConservation <> thermoClaimGBarAbsent def
+R46356:46360 Corelib.Init.Datatypes <> false constr
+R46362:46365 Corelib.Init.Datatypes <> true constr
+R46373:46405 UMST.ChemConstants.ThermoConservation <> verdict_proved_without_bar_refuse constr
+R46515:46520 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46490:46496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46412:46445 UMST.ChemConstants.ThermoConservation <> evaluate_thermo_conservation_close def
+R46451:46477 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr
+R46479:46483 Corelib.Init.Datatypes <> false constr
+R46485:46489 Corelib.Init.Datatypes <> false constr
+R46497:46514 UMST.ChemConstants.ThermoConservation <> verdict_unwired_ok constr
+R46562:46567 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46555:46557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46521:46554 UMST.ChemConstants.ThermoConservation <> thermo_conservation_meso_acting_ok def
+R46558:46561 Corelib.Init.Datatypes <> true constr
+R46612:46617 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46604:46606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46568:46603 UMST.ChemConstants.ThermoConservation <> thermo_conservation_knowing_fiber_ok def
+R46607:46611 Corelib.Init.Datatypes <> false constr
+R46639:46644 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46631:46633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46618:46630 UMST.ChemConstants.ThermoConservation <> thermoGProved def
+R46634:46638 Corelib.Init.Datatypes <> false constr
+R46666:46671 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46658:46660 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46645:46657 UMST.ChemConstants.ThermoConservation <> thermoNProved def
+R46661:46665 Corelib.Init.Datatypes <> false constr
+R46701:46706 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R46694:46696 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46672:46693 UMST.ChemConstants.ThermoConservation <> indirectNeDirectThermo def
+R46697:46700 Corelib.Init.Datatypes <> true constr
+R46738:46740 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46707:46737 UMST.ChemConstants.ThermoConservation <> formation_zero_not_green_book_g def
+R46741:46744 Corelib.Init.Datatypes <> true constr
+def 47024:47039 <> thermoGAuthority
+R47043:47048 Stdlib.Strings.String <> string ind
+def 47101:47127 <> chemIntThermoNTypeAuthority
+R47131:47136 Stdlib.Strings.String <> string ind
+def 47181:47219 <> chemIntCrossThermoConservationAuthority
+R47223:47228 Stdlib.Strings.String <> string ind
+def 47285:47308 <> thermoConservationCellId
+R47312:47317 Stdlib.Strings.String <> string ind
+def 47377:47402 <> thermoConservationNonClaim
+R47406:47411 Stdlib.Strings.String <> string ind
+prf 48026:48052 <> thermo_conservation_cell_id
+R48082:48084 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R48058:48081 UMST.ChemConstants.ThermoConservation <> thermoConservationCellId def
+prf 48158:48194 <> thermo_conservation_cites_thermo_g_rs
+R48216:48219 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R48200:48215 UMST.ChemConstants.ThermoConservation <> thermoGAuthority def
+prf 48257:48299 <> thermo_conservation_cites_int_thermo_n_type
+R48332:48334 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R48305:48331 UMST.ChemConstants.ThermoConservation <> chemIntThermoNTypeAuthority def
+prf 48393:48447 <> thermo_conservation_cites_int_cross_thermo_conservation
+R48492:48494 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R48453:48491 UMST.ChemConstants.ThermoConservation <> chemIntCrossThermoConservationAuthority def
+prf 48565:48596 <> thermo_conservation_cites_marker
+R48622:48625 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R48602:48621 UMST.ChemConstants.ThermoConservation <> indirectThermoMarker def
+def 48891:48924 <> thermoSecondLawConservationFraming
+R48928:48933 Stdlib.Strings.String <> string ind
+prf 49030:49059 <> thermo_not_second_thermo_axiom
+R49099:49102 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R49065:49098 UMST.ChemConstants.ThermoConservation <> thermoSecondLawConservationFraming def
+prf 49159:49196 <> thermo_second_law_conservation_framing
+R49236:49239 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R49202:49235 UMST.ChemConstants.ThermoConservation <> thermoSecondLawConservationFraming def
+def 49508:49529 <> physicsGreenAuthorized
+R49541:49545 Corelib.Init.Logic <> False ind
+prf 49555:49593 <> thermo_conservation_physics_green_false
+R49599:49600 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R49601:49622 UMST.ChemConstants.ThermoConservation <> physicsGreenAuthorized def
+prf 49662:49697 <> thermo_conservation_modality_unwired
+R49736:49738 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R49703:49735 UMST.ChemConstants.ThermoConservation <> thermoConservationModalityCurrent def
+R49739:49765 UMST.ChemConstants.ThermoConservation <> thermo_conservation_unwired constr

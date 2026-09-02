@@ -1,0 +1,373 @@
+DIGEST 64504f372df9e5ec6fc546c0835ce15b
+FUMST.ChemConstants.CementHydrationNotL0G
+R1201:1205 Stdlib.Arith.Arith <> <> lib
+R1207:1212 Stdlib.Strings.String <> <> lib
+R1214:1217 Stdlib.Bool.Bool <> <> lib
+R1219:1221 Stdlib.micromega.Lia <> <> lib
+ind 1552:1580 <> CementHydrationNotL0GModality
+constr 1596:1628 <> cement_hydration_not_l0_g_unwired
+constr 1634:1666 <> cement_hydration_not_l0_g_assumed
+constr 1672:1703 <> cement_hydration_not_l0_g_proved
+constr 1709:1743 <> cement_hydration_not_l0_g_surrogate
+scheme 1552:1580 <> CementHydrationNotL0GModality_rect
+scheme 1552:1580 <> CementHydrationNotL0GModality_ind
+scheme 1552:1580 <> CementHydrationNotL0GModality_rec
+scheme 1552:1580 <> CementHydrationNotL0GModality_sind
+def 1758:1793 <> cementHydrationNotL0GModalityCurrent
+R1797:1825 UMST.ChemConstants.CementHydrationNotL0G <> CementHydrationNotL0GModality ind
+R1832:1864 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr
+def 1879:1923 <> cement_hydration_modality_lattice_cardinality
+R1927:1929 Corelib.Init.Datatypes <> nat ind
+prf 1944:1996 <> cement_hydration_modality_lattice_cardinality_is_four
+R2047:2049 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2002:2046 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_modality_lattice_cardinality def
+prf 2085:2133 <> cement_hydration_modality_lattice_not_118_squared
+R2211:2215 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2139:2142 Corelib.Init.Datatypes <> negb def
+R2145:2151 Stdlib.Arith.PeanoNat Nat eqb def
+R2153:2197 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_modality_lattice_cardinality def
+R2203:2205 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2216:2219 Corelib.Init.Datatypes <> true constr
+R2238:2282 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_modality_lattice_cardinality def
+def 2542:2560 <> hydrationAlphaLayer
+R2564:2569 Stdlib.Strings.String <> string ind
+def 2602:2613 <> gEngineLayer
+R2617:2622 Stdlib.Strings.String <> string ind
+prf 2649:2675 <> hydration_alpha_layer_named
+R2700:2702 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2681:2699 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaLayer def
+prf 2751:2770 <> g_engine_layer_named
+R2788:2790 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2776:2787 UMST.ChemConstants.CementHydrationNotL0G <> gEngineLayer def
+def 2843:2873 <> hydration_alpha_layer_prefix_l1
+R2877:2880 Corelib.Init.Datatypes <> bool ind
+R2887:2896 Stdlib.Strings.String <> eqb def
+R2899:2914 Stdlib.Strings.String <> substring def
+R2920:2938 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaLayer def
+def 2959:2985 <> hydration_alpha_layer_is_l1
+R2989:2992 Corelib.Init.Datatypes <> bool ind
+R2999:3029 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_layer_prefix_l1 def
+def 3044:3073 <> hydration_alpha_is_l0_g_engine
+R3077:3080 Corelib.Init.Datatypes <> bool ind
+R3085:3089 Corelib.Init.Datatypes <> false constr
+prf 3099:3134 <> hydration_alpha_layer_prefix_l1_true
+R3171:3173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3140:3170 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_layer_prefix_l1 def
+R3174:3177 Corelib.Init.Datatypes <> true constr
+prf 3212:3243 <> hydration_alpha_layer_is_l1_true
+R3276:3278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3249:3275 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_layer_is_l1 def
+R3279:3282 Corelib.Init.Datatypes <> true constr
+R3298:3333 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_layer_prefix_l1_true thm
+R3298:3333 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_layer_prefix_l1_true thm
+prf 3348:3383 <> hydration_alpha_is_l0_g_engine_false
+R3419:3421 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3389:3418 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine def
+R3422:3426 Corelib.Init.Datatypes <> false constr
+prf 3461:3498 <> hydration_layer_distinct_from_g_engine
+R3561:3566 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3554:3556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3504:3507 Corelib.Init.Datatypes <> negb def
+R3510:3519 Stdlib.Strings.String <> eqb def
+R3521:3539 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaLayer def
+R3541:3552 UMST.ChemConstants.CementHydrationNotL0G <> gEngineLayer def
+R3557:3560 Corelib.Init.Datatypes <> true constr
+R3597:3599 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3567:3596 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine def
+R3600:3604 Corelib.Init.Datatypes <> false constr
+ind 3877:3897 <> cementitious_material
+constr 3913:3933 <> material_cement_paste
+constr 3939:3961 <> material_hydrated_paste
+constr 3967:3990 <> material_capillary_water
+scheme 3877:3897 <> cementitious_material_rect
+scheme 3877:3897 <> cementitious_material_ind
+scheme 3877:3897 <> cementitious_material_rec
+scheme 3877:3897 <> cementitious_material_sind
+def 4005:4029 <> cementitious_material_beq
+R4038:4058 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material ind
+binder 4032:4032 <> a:5
+binder 4034:4034 <> b:6
+R4063:4066 Corelib.Init.Datatypes <> bool ind
+R4082:4082 UMST.ChemConstants.CementHydrationNotL0G <> b:6 var
+R4079:4079 UMST.ChemConstants.CementHydrationNotL0G <> a:5 var
+R4093:4113 UMST.ChemConstants.CementHydrationNotL0G <> material_cement_paste constr
+R4116:4136 UMST.ChemConstants.CementHydrationNotL0G <> material_cement_paste constr
+R4141:4144 Corelib.Init.Datatypes <> true constr
+R4150:4172 UMST.ChemConstants.CementHydrationNotL0G <> material_hydrated_paste constr
+R4175:4197 UMST.ChemConstants.CementHydrationNotL0G <> material_hydrated_paste constr
+R4202:4205 Corelib.Init.Datatypes <> true constr
+R4211:4234 UMST.ChemConstants.CementHydrationNotL0G <> material_capillary_water constr
+R4237:4260 UMST.ChemConstants.CementHydrationNotL0G <> material_capillary_water constr
+R4265:4268 Corelib.Init.Datatypes <> true constr
+R4282:4286 Corelib.Init.Datatypes <> false constr
+prf 4302:4331 <> cementitious_material_beq_refl
+R4338:4358 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material ind
+binder 4334:4334 <> m:9
+R4394:4396 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4365:4389 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material_beq def
+R4391:4391 UMST.ChemConstants.CementHydrationNotL0G <> m:9 var
+R4393:4393 UMST.ChemConstants.CementHydrationNotL0G <> m:9 var
+R4397:4400 Corelib.Init.Datatypes <> true constr
+prf 4447:4478 <> cement_paste_not_capillary_water
+R4556:4558 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4484:4508 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material_beq def
+R4510:4530 UMST.ChemConstants.CementHydrationNotL0G <> material_cement_paste constr
+R4532:4555 UMST.ChemConstants.CementHydrationNotL0G <> material_capillary_water constr
+R4559:4563 Corelib.Init.Datatypes <> false constr
+def 4603:4622 <> speciesIsL1Occupancy
+R4626:4629 Corelib.Init.Datatypes <> bool ind
+R4634:4637 Corelib.Init.Datatypes <> true constr
+def 4652:4677 <> oneMaterialOccupancyAnchor
+R4681:4701 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material ind
+R4708:4728 UMST.ChemConstants.CementHydrationNotL0G <> material_cement_paste constr
+prf 4738:4765 <> species_is_l1_occupancy_true
+R4791:4793 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4771:4790 UMST.ChemConstants.CementHydrationNotL0G <> speciesIsL1Occupancy def
+R4794:4797 Corelib.Init.Datatypes <> true constr
+prf 4832:4866 <> one_material_occupancy_anchor_named
+R4946:4948 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4872:4896 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material_beq def
+R4898:4923 UMST.ChemConstants.CementHydrationNotL0G <> oneMaterialOccupancyAnchor def
+R4925:4945 UMST.ChemConstants.CementHydrationNotL0G <> material_cement_paste constr
+R4949:4952 Corelib.Init.Datatypes <> true constr
+rec 5214:5238 <> hydration_alpha_occupancy
+proj 5254:5271 <> hydration_material
+proj 5300:5321 <> hydration_degree_milli
+proj 5332:5350 <> hydration_layer_tag
+R5275:5295 UMST.ChemConstants.CementHydrationNotL0G <> cementitious_material ind
+R5325:5327 Corelib.Init.Datatypes <> nat ind
+R5354:5359 Stdlib.Strings.String <> string ind
+def 5376:5395 <> sampleHydrationAlpha
+R5399:5423 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_occupancy rec
+R5433:5450 UMST.ChemConstants.CementHydrationNotL0G <> hydration_material proj
+R5433:5450 UMST.ChemConstants.CementHydrationNotL0G <> hydration_material proj
+R5433:5450 UMST.ChemConstants.CementHydrationNotL0G <> hydration_material proj
+R5483:5504 UMST.ChemConstants.CementHydrationNotL0G <> hydration_degree_milli proj
+R5483:5504 UMST.ChemConstants.CementHydrationNotL0G <> hydration_degree_milli proj
+R5519:5537 UMST.ChemConstants.CementHydrationNotL0G <> hydration_layer_tag proj
+R5519:5537 UMST.ChemConstants.CementHydrationNotL0G <> hydration_layer_tag proj
+R5455:5475 UMST.ChemConstants.CementHydrationNotL0G <> material_cement_paste constr
+R5542:5560 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaLayer def
+prf 5573:5606 <> sample_hydration_alpha_layer_is_l1
+R5685:5687 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5612:5621 Stdlib.Strings.String <> eqb def
+R5645:5663 UMST.ChemConstants.CementHydrationNotL0G <> hydration_layer_tag proj
+R5623:5642 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R5666:5684 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaLayer def
+R5688:5691 Corelib.Init.Datatypes <> true constr
+prf 5726:5763 <> sample_hydration_alpha_not_l0_g_engine
+R5807:5812 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5799:5801 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5769:5798 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine def
+R5802:5806 Corelib.Init.Datatypes <> false constr
+R5886:5888 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5813:5816 Corelib.Init.Datatypes <> negb def
+R5819:5828 Stdlib.Strings.String <> eqb def
+R5852:5870 UMST.ChemConstants.CementHydrationNotL0G <> hydration_layer_tag proj
+R5830:5849 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R5873:5884 UMST.ChemConstants.CementHydrationNotL0G <> gEngineLayer def
+R5889:5892 Corelib.Init.Datatypes <> true constr
+R5918:5953 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine_false thm
+R5918:5953 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine_false thm
+def 5988:6025 <> hydration_alpha_routes_l1_not_g_engine
+R6032:6056 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_occupancy rec
+binder 6028:6028 <> h:14
+R6061:6064 Corelib.Init.Datatypes <> bool ind
+R6125:6130 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6071:6080 Stdlib.Strings.String <> eqb def
+R6085:6103 UMST.ChemConstants.CementHydrationNotL0G <> hydration_layer_tag proj
+R6082:6082 UMST.ChemConstants.CementHydrationNotL0G <> h:14 var
+R6106:6124 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaLayer def
+R6131:6134 Corelib.Init.Datatypes <> negb def
+R6136:6165 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine def
+prf 6175:6219 <> hydration_alpha_routes_l1_not_g_engine_sample
+R6284:6286 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6225:6262 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_routes_l1_not_g_engine def
+R6264:6283 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R6287:6290 Corelib.Init.Datatypes <> true constr
+prf 6327:6370 <> cement_hydration_alpha_l1_occupancy_not_l0_g
+R6410:6415 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6403:6405 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6376:6402 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_layer_is_l1 def
+R6406:6409 Corelib.Init.Datatypes <> true constr
+R6454:6459 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6446:6448 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6416:6445 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine def
+R6449:6453 Corelib.Init.Datatypes <> false constr
+R6526:6531 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6519:6521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6460:6497 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_routes_l1_not_g_engine def
+R6499:6518 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R6522:6525 Corelib.Init.Datatypes <> true constr
+R6552:6554 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6532:6551 UMST.ChemConstants.CementHydrationNotL0G <> speciesIsL1Occupancy def
+R6555:6558 Corelib.Init.Datatypes <> true constr
+def 6839:6865 <> cementHydrationNotL0GProved
+R6869:6872 Corelib.Init.Datatypes <> bool ind
+R6877:6881 Corelib.Init.Datatypes <> false constr
+def 6896:6912 <> wave100LibRsWired
+R6916:6919 Corelib.Init.Datatypes <> bool ind
+R6924:6928 Corelib.Init.Datatypes <> false constr
+def 6943:6959 <> wave100EosRsWired
+R6963:6966 Corelib.Init.Datatypes <> bool ind
+R6971:6975 Corelib.Init.Datatypes <> false constr
+def 6990:7004 <> productionWired
+R7008:7011 Corelib.Init.Datatypes <> bool ind
+R7016:7020 Corelib.Init.Datatypes <> false constr
+prf 7030:7067 <> cement_hydration_not_l0_g_proved_false
+R7100:7102 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7073:7099 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationNotL0GProved def
+R7103:7107 Corelib.Init.Datatypes <> false constr
+prf 7142:7165 <> wave100_lib_rs_not_wired
+R7188:7190 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7171:7187 UMST.ChemConstants.CementHydrationNotL0G <> wave100LibRsWired def
+R7191:7195 Corelib.Init.Datatypes <> false constr
+prf 7230:7253 <> wave100_eos_rs_not_wired
+R7276:7278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7259:7275 UMST.ChemConstants.CementHydrationNotL0G <> wave100EosRsWired def
+R7279:7283 Corelib.Init.Datatypes <> false constr
+prf 7318:7339 <> production_wired_false
+R7360:7362 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7345:7359 UMST.ChemConstants.CementHydrationNotL0G <> productionWired def
+R7363:7367 Corelib.Init.Datatypes <> false constr
+ind 7631:7663 <> cement_hydration_not_l0_g_verdict
+constr 7679:7696 <> verdict_unwired_ok
+constr 7702:7724 <> verdict_l1_occupancy_ok
+constr 7730:7755 <> verdict_l0_g_engine_refuse
+constr 7761:7787 <> verdict_green_invent_refuse
+constr 7793:7823 <> verdict_production_wired_refuse
+scheme 7631:7663 <> cement_hydration_not_l0_g_verdict_rect
+scheme 7631:7663 <> cement_hydration_not_l0_g_verdict_ind
+scheme 7631:7663 <> cement_hydration_not_l0_g_verdict_rec
+scheme 7631:7663 <> cement_hydration_not_l0_g_verdict_sind
+def 7838:7864 <> cement_hydration_verdict_ok
+R7871:7903 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_verdict ind
+binder 7867:7867 <> v:17
+R7908:7911 Corelib.Init.Datatypes <> bool ind
+R7924:7924 UMST.ChemConstants.CementHydrationNotL0G <> v:17 var
+R7935:7952 UMST.ChemConstants.CementHydrationNotL0G <> verdict_unwired_ok constr
+R7957:7960 Corelib.Init.Datatypes <> true constr
+R7966:7988 UMST.ChemConstants.CementHydrationNotL0G <> verdict_l1_occupancy_ok constr
+R7993:7996 Corelib.Init.Datatypes <> true constr
+R8007:8011 Corelib.Init.Datatypes <> false constr
+def 8032:8065 <> evaluate_cement_hydration_not_l0_g
+R8074:8102 UMST.ChemConstants.CementHydrationNotL0G <> CementHydrationNotL0GModality ind
+binder 8070:8070 <> m:19
+R8112:8136 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_occupancy rec
+binder 8108:8108 <> h:20
+R8164:8167 Corelib.Init.Datatypes <> bool ind
+binder 8142:8160 <> claim_physics_green:21
+R8188:8191 Corelib.Init.Datatypes <> bool ind
+binder 8173:8184 <> claim_proved:22
+R8222:8225 Corelib.Init.Datatypes <> bool ind
+binder 8197:8218 <> claim_production_wired:23
+R8230:8262 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_verdict ind
+R8272:8290 UMST.ChemConstants.CementHydrationNotL0G <> claim_physics_green:21 var
+R8337:8358 UMST.ChemConstants.CementHydrationNotL0G <> claim_production_wired:23 var
+R8409:8438 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_is_l0_g_engine def
+R8484:8495 UMST.ChemConstants.CementHydrationNotL0G <> claim_proved:22 var
+R8538:8575 UMST.ChemConstants.CementHydrationNotL0G <> hydration_alpha_routes_l1_not_g_engine def
+R8577:8577 UMST.ChemConstants.CementHydrationNotL0G <> h:20 var
+R8715:8740 UMST.ChemConstants.CementHydrationNotL0G <> verdict_l0_g_engine_refuse constr
+R8596:8596 UMST.ChemConstants.CementHydrationNotL0G <> m:19 var
+R8609:8641 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr
+R8646:8663 UMST.ChemConstants.CementHydrationNotL0G <> verdict_unwired_ok constr
+R8676:8698 UMST.ChemConstants.CementHydrationNotL0G <> verdict_l1_occupancy_ok constr
+R8504:8526 UMST.ChemConstants.CementHydrationNotL0G <> verdict_l1_occupancy_ok constr
+R8447:8472 UMST.ChemConstants.CementHydrationNotL0G <> verdict_l0_g_engine_refuse constr
+R8367:8397 UMST.ChemConstants.CementHydrationNotL0G <> verdict_production_wired_refuse constr
+R8299:8325 UMST.ChemConstants.CementHydrationNotL0G <> verdict_green_invent_refuse constr
+prf 8750:8776 <> cement_hydration_unwired_ok
+R8893:8897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8782:8815 UMST.ChemConstants.CementHydrationNotL0G <> evaluate_cement_hydration_not_l0_g def
+R8821:8853 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr
+R8855:8874 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R8876:8880 Corelib.Init.Datatypes <> false constr
+R8882:8886 Corelib.Init.Datatypes <> false constr
+R8888:8892 Corelib.Init.Datatypes <> false constr
+R8898:8915 UMST.ChemConstants.CementHydrationNotL0G <> verdict_unwired_ok constr
+prf 8950:8985 <> cement_hydration_green_invent_refuse
+R9101:9105 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8991:9024 UMST.ChemConstants.CementHydrationNotL0G <> evaluate_cement_hydration_not_l0_g def
+R9030:9062 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr
+R9064:9083 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R9085:9088 Corelib.Init.Datatypes <> true constr
+R9090:9094 Corelib.Init.Datatypes <> false constr
+R9096:9100 Corelib.Init.Datatypes <> false constr
+R9106:9132 UMST.ChemConstants.CementHydrationNotL0G <> verdict_green_invent_refuse constr
+prf 9167:9206 <> cement_hydration_production_wired_refuse
+R9322:9326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9212:9245 UMST.ChemConstants.CementHydrationNotL0G <> evaluate_cement_hydration_not_l0_g def
+R9251:9283 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr
+R9285:9304 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R9306:9310 Corelib.Init.Datatypes <> false constr
+R9312:9316 Corelib.Init.Datatypes <> false constr
+R9318:9321 Corelib.Init.Datatypes <> true constr
+R9327:9357 UMST.ChemConstants.CementHydrationNotL0G <> verdict_production_wired_refuse constr
+prf 9394:9431 <> cement_hydration_not_l0_g_conservation
+R9571:9576 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9548:9552 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9437:9470 UMST.ChemConstants.CementHydrationNotL0G <> evaluate_cement_hydration_not_l0_g def
+R9476:9508 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr
+R9510:9529 UMST.ChemConstants.CementHydrationNotL0G <> sampleHydrationAlpha def
+R9531:9535 Corelib.Init.Datatypes <> false constr
+R9537:9541 Corelib.Init.Datatypes <> false constr
+R9543:9547 Corelib.Init.Datatypes <> false constr
+R9553:9570 UMST.ChemConstants.CementHydrationNotL0G <> verdict_unwired_ok constr
+R9612:9617 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9604:9606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9577:9603 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationNotL0GProved def
+R9607:9611 Corelib.Init.Datatypes <> false constr
+R9643:9648 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9635:9637 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9618:9634 UMST.ChemConstants.CementHydrationNotL0G <> wave100LibRsWired def
+R9638:9642 Corelib.Init.Datatypes <> false constr
+R9666:9668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9649:9665 UMST.ChemConstants.CementHydrationNotL0G <> wave100EosRsWired def
+R9669:9673 Corelib.Init.Datatypes <> false constr
+def 9954:9989 <> cementHydrationCrossWitnessAuthority
+R9993:9998 Stdlib.Strings.String <> string ind
+def 10075:10110 <> chemIntCrossCementHydrationAuthority
+R10114:10119 Stdlib.Strings.String <> string ind
+def 10195:10215 <> b2ChemInjectAuthority
+R10219:10224 Stdlib.Strings.String <> string ind
+def 10311:10341 <> hydrationAlphaFromChemAuthority
+R10345:10350 Stdlib.Strings.String <> string ind
+def 10415:10441 <> cementHydrationNotL0GCellId
+R10445:10450 Stdlib.Strings.String <> string ind
+def 10529:10557 <> cementHydrationNotL0GNonClaim
+R10561:10566 Stdlib.Strings.String <> string ind
+prf 10930:10962 <> cement_hydration_not_l0_g_cell_id
+R10995:10999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10968:10994 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationNotL0GCellId def
+prf 11092:11130 <> cement_hydration_cites_cross_witness_rs
+R11172:11175 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11136:11171 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationCrossWitnessAuthority def
+prf 11213:11248 <> cement_hydration_cites_int_cross_row
+R11290:11293 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11254:11289 UMST.ChemConstants.CementHydrationNotL0G <> chemIntCrossCementHydrationAuthority def
+prf 11331:11367 <> cement_hydration_cites_b2_chem_inject
+R11404:11407 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11373:11403 UMST.ChemConstants.CementHydrationNotL0G <> hydrationAlphaFromChemAuthority def
+def 11673:11686 <> soleAxiomCount
+R11690:11692 Corelib.Init.Datatypes <> nat ind
+def 11712:11754 <> cementHydrationSecondLawConservationFraming
+R11758:11763 Stdlib.Strings.String <> string ind
+prf 11846:11868 <> sole_axiom_count_is_one
+R11888:11890 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11874:11887 UMST.ChemConstants.CementHydrationNotL0G <> soleAxiomCount def
+prf 11926:11956 <> cement_hydration_not_26th_axiom
+R12005:12008 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11962:12004 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationSecondLawConservationFraming def
+prf 12056:12103 <> cement_hydration_second_law_conservation_framing
+R12152:12155 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12109:12151 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationSecondLawConservationFraming def
+def 12424:12445 <> physicsGreenAuthorized
+R12457:12461 Corelib.Init.Logic <> False ind
+prf 12471:12506 <> cement_hydration_physics_green_false
+R12512:12513 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12514:12535 UMST.ChemConstants.CementHydrationNotL0G <> physicsGreenAuthorized def
+prf 12575:12607 <> cement_hydration_modality_unwired
+R12649:12651 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12613:12648 UMST.ChemConstants.CementHydrationNotL0G <> cementHydrationNotL0GModalityCurrent def
+R12652:12684 UMST.ChemConstants.CementHydrationNotL0G <> cement_hydration_not_l0_g_unwired constr

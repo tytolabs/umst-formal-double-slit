@@ -1,0 +1,1202 @@
+DIGEST 7028ff6f6d1564049cff43c9ecaa6e1f
+FUMST.ChemConstants.AssemblageStabilityWhyConservation
+R1429:1433 Stdlib.Arith.Arith <> <> lib
+R1435:1440 Stdlib.ZArith.ZArith <> <> lib
+R1442:1447 Stdlib.Strings.String <> <> lib
+R1449:1452 Stdlib.Bool.Bool <> <> lib
+R1454:1456 Stdlib.micromega.Lia <> <> lib
+R1458:1461 Stdlib.Lists.List <> <> lib
+R1471:1483 Stdlib.Lists.List ListNotations <> mod
+ind 1812:1853 <> AssemblageStabilityWhyConservationModality
+constr 1869:1913 <> assemblage_stability_why_conservation_unwired
+constr 1919:1963 <> assemblage_stability_why_conservation_assumed
+constr 1969:2012 <> assemblage_stability_why_conservation_proved
+constr 2018:2064 <> assemblage_stability_why_conservation_surrogate
+scheme 1812:1853 <> AssemblageStabilityWhyConservationModality_rect
+scheme 1812:1853 <> AssemblageStabilityWhyConservationModality_ind
+scheme 1812:1853 <> AssemblageStabilityWhyConservationModality_rec
+scheme 1812:1853 <> AssemblageStabilityWhyConservationModality_sind
+def 2079:2127 <> assemblageStabilityWhyConservationModalityCurrent
+R2133:2174 UMST.ChemConstants.AssemblageStabilityWhyConservation <> AssemblageStabilityWhyConservationModality ind
+R2181:2225 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+def 2240:2283 <> assemblage_stability_why_lattice_cardinality
+R2287:2289 Corelib.Init.Datatypes <> nat ind
+prf 2304:2355 <> assemblage_stability_why_lattice_cardinality_is_four
+R2405:2407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2361:2404 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_lattice_cardinality def
+prf 2443:2490 <> assemblage_stability_why_lattice_not_118_squared
+R2567:2569 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2496:2499 Corelib.Init.Datatypes <> negb def
+R2502:2508 Stdlib.Arith.PeanoNat Nat eqb def
+R2510:2553 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_lattice_cardinality def
+R2559:2561 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2570:2573 Corelib.Init.Datatypes <> true constr
+R2592:2635 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_lattice_cardinality def
+def 2896:2920 <> pattern_class_cardinality
+R2924:2926 Corelib.Init.Datatypes <> nat ind
+prf 2942:2972 <> pattern_class_cardinality_is_25
+R3003:3005 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2978:3002 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_cardinality def
+prf 3042:3070 <> pattern_class_not_118_squared
+R3128:3130 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3076:3079 Corelib.Init.Datatypes <> negb def
+R3082:3088 Stdlib.Arith.PeanoNat Nat eqb def
+R3090:3114 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_cardinality def
+R3120:3122 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3131:3134 Corelib.Init.Datatypes <> true constr
+R3153:3177 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_cardinality def
+def 3212:3236 <> pattern_class_index_valid
+R3243:3245 Corelib.Init.Datatypes <> nat ind
+binder 3239:3239 <> i:3
+R3250:3253 Corelib.Init.Datatypes <> bool ind
+R3260:3266 Stdlib.Arith.PeanoNat Nat ltb def
+R3268:3268 UMST.ChemConstants.AssemblageStabilityWhyConservation <> i:3 var
+R3270:3294 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_cardinality def
+def 3391:3432 <> pattern_class_assemblage_stability_why_idx
+R3436:3438 Corelib.Init.Datatypes <> nat ind
+prf 3453:3499 <> pattern_class_assemblage_stability_why_idx_is_7
+R3547:3549 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3505:3546 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+prf 3585:3626 <> assemblage_stability_why_class_index_valid
+R3700:3702 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3632:3656 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_index_valid def
+R3658:3699 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+R3703:3706 Corelib.Init.Datatypes <> true constr
+R3725:3749 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_index_valid def
+R3752:3793 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+R3800:3824 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_cardinality def
+def 3859:3898 <> pattern_class_natural_ore_assemblage_idx
+R3902:3904 Corelib.Init.Datatypes <> nat ind
+prf 3919:3963 <> pattern_class_natural_ore_assemblage_idx_is_6
+R4009:4011 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3969:4008 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_natural_ore_assemblage_idx def
+def 4052:4093 <> crossClassifierAssemblageStabilityWhyRowId
+R4097:4102 Stdlib.Strings.String <> string ind
+prf 4121:4171 <> cross_classifier_assemblage_stability_why_row_named
+R4219:4221 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4177:4218 UMST.ChemConstants.AssemblageStabilityWhyConservation <> crossClassifierAssemblageStabilityWhyRowId def
+def 4266:4307 <> pattern_class_assemblage_stability_why_tag
+R4311:4316 Stdlib.Strings.String <> string ind
+def 4363:4402 <> pattern_class_natural_ore_assemblage_tag
+R4406:4411 Stdlib.Strings.String <> string ind
+prf 4451:4501 <> pattern_class_assemblage_stability_why_tag_nonempty
+R4549:4552 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4507:4548 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_tag def
+prf 4590:4638 <> pattern_class_natural_ore_assemblage_tag_nonempty
+R4684:4687 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4644:4683 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_natural_ore_assemblage_tag def
+def 4953:4975 <> iupac_table_cardinality
+R4979:4981 Corelib.Init.Datatypes <> nat ind
+prf 4998:5027 <> iupac_table_cardinality_is_118
+R5056:5058 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5033:5055 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iupac_table_cardinality def
+def 5101:5120 <> iron_atomic_number_z
+R5124:5126 Corelib.Init.Datatypes <> nat ind
+prf 5142:5167 <> iron_atomic_number_z_is_26
+R5193:5195 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5173:5192 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+def 5237:5248 <> iron_z_valid
+R5252:5255 Corelib.Init.Datatypes <> bool ind
+R5292:5297 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5262:5268 Stdlib.Arith.PeanoNat Nat ltb def
+R5272:5291 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+R5298:5304 Stdlib.Arith.PeanoNat Nat leb def
+R5306:5325 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+R5327:5349 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iupac_table_cardinality def
+prf 5359:5375 <> iron_z_valid_true
+R5391:5393 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5379:5390 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_z_valid def
+R5394:5397 Corelib.Init.Datatypes <> true constr
+R5416:5427 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_z_valid def
+R5430:5449 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+R5452:5474 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iupac_table_cardinality def
+def 5509:5543 <> assemblage_stability_why_factor_tag
+R5547:5552 Stdlib.Strings.String <> string ind
+def 5599:5623 <> ore_predicate_channel_tag
+R5627:5632 Stdlib.Strings.String <> string ind
+def 5666:5692 <> second_law_gmin_channel_tag
+R5696:5701 Stdlib.Strings.String <> string ind
+prf 5740:5783 <> assemblage_stability_why_factor_tag_nonempty
+R5824:5827 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5789:5823 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_factor_tag def
+prf 5865:5898 <> ore_predicate_channel_tag_nonempty
+R5929:5932 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5904:5928 UMST.ChemConstants.AssemblageStabilityWhyConservation <> ore_predicate_channel_tag def
+prf 5970:6005 <> second_law_gmin_channel_tag_nonempty
+R6038:6041 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6011:6037 UMST.ChemConstants.AssemblageStabilityWhyConservation <> second_law_gmin_channel_tag def
+ind 6307:6322 <> asw_channel_slot
+constr 6338:6353 <> asw_slot_unwired
+constr 6359:6373 <> asw_slot_absent
+constr 6379:6394 <> asw_slot_present
+scheme 6307:6322 <> asw_channel_slot_rect
+scheme 6307:6322 <> asw_channel_slot_ind
+scheme 6307:6322 <> asw_channel_slot_rec
+scheme 6307:6322 <> asw_channel_slot_sind
+def 6409:6428 <> asw_channel_slot_beq
+R6439:6454 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_slot ind
+binder 6431:6432 <> s1:6
+binder 6434:6435 <> s2:7
+R6459:6462 Corelib.Init.Datatypes <> bool ind
+R6479:6480 UMST.ChemConstants.AssemblageStabilityWhyConservation <> s2:7 var
+R6475:6476 UMST.ChemConstants.AssemblageStabilityWhyConservation <> s1:6 var
+R6491:6506 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_unwired constr
+R6509:6524 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_unwired constr
+R6529:6532 Corelib.Init.Datatypes <> true constr
+R6538:6552 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_absent constr
+R6555:6569 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_absent constr
+R6574:6577 Corelib.Init.Datatypes <> true constr
+R6583:6598 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_present constr
+R6601:6616 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_present constr
+R6621:6624 Corelib.Init.Datatypes <> true constr
+R6638:6642 Corelib.Init.Datatypes <> false constr
+def 6663:6689 <> asw_channel_slot_is_present
+R6696:6711 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_slot ind
+binder 6692:6692 <> s:10
+R6716:6719 Corelib.Init.Datatypes <> bool ind
+R6732:6732 UMST.ChemConstants.AssemblageStabilityWhyConservation <> s:10 var
+R6743:6758 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_present constr
+R6763:6766 Corelib.Init.Datatypes <> true constr
+R6777:6781 Corelib.Init.Datatypes <> false constr
+def 6802:6842 <> assemblageStabilityWhyProductChannelCount
+R6846:6848 Corelib.Init.Datatypes <> nat ind
+prf 6863:6917 <> assemblage_stability_why_product_channel_count_is_three
+R6964:6966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6923:6963 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyProductChannelCount def
+def 7088:7112 <> asw_channel_ore_predicate
+R7116:7118 Corelib.Init.Datatypes <> nat ind
+def 7137:7163 <> asw_channel_second_law_gmin
+R7167:7169 Corelib.Init.Datatypes <> nat ind
+def 7188:7209 <> asw_channel_class7_why
+R7213:7215 Corelib.Init.Datatypes <> nat ind
+prf 7230:7263 <> asw_channel_ore_predicate_idx_is_0
+R7294:7296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7269:7293 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_ore_predicate def
+prf 7332:7367 <> asw_channel_second_law_gmin_idx_is_1
+R7400:7402 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7373:7399 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_second_law_gmin def
+prf 7438:7468 <> asw_channel_class7_why_idx_is_2
+R7496:7498 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7474:7495 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_class7_why def
+def 7761:7778 <> asw_channel_bundle
+R7793:7796 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7790:7792 Corelib.Init.Datatypes <> nat ind
+R7797:7812 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_slot ind
+def 7827:7864 <> assemblageStabilityWhyBundleAllUnwired
+R7868:7885 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+R7901:7916 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_unwired constr
+def 7931:7960 <> assemblageStabilityWhyBundleAt
+R7967:7984 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 7963:7963 <> b:12
+R7994:7996 Corelib.Init.Datatypes <> nat ind
+binder 7988:7990 <> idx:13
+R8009:8024 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_slot ind
+binder 8002:8005 <> slot:14
+R8029:8046 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 8057:8057 <> i:15
+R8065:8071 Stdlib.Arith.PeanoNat Nat eqb def
+R8073:8073 UMST.ChemConstants.AssemblageStabilityWhyConservation <> i:15 var
+R8075:8077 UMST.ChemConstants.AssemblageStabilityWhyConservation <> idx:13 var
+R8094:8094 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:12 var
+R8096:8096 UMST.ChemConstants.AssemblageStabilityWhyConservation <> i:15 var
+R8084:8087 UMST.ChemConstants.AssemblageStabilityWhyConservation <> slot:14 var
+def 8111:8149 <> assemblageStabilityWhyBundleWithPresent
+R8158:8175 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 8154:8154 <> b:16
+R8185:8187 Corelib.Init.Datatypes <> nat ind
+binder 8179:8181 <> idx:17
+R8192:8209 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+R8216:8245 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleAt def
+R8247:8247 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:16 var
+R8249:8251 UMST.ChemConstants.AssemblageStabilityWhyConservation <> idx:17 var
+R8253:8268 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_slot_present constr
+def 8281:8303 <> count_asw_present_up_to
+R8310:8327 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 8306:8306 <> b:18
+R8339:8341 Corelib.Init.Datatypes <> nat ind
+binder 8331:8335 <> bound:19
+R8346:8348 Corelib.Init.Datatypes <> nat ind
+R8361:8365 UMST.ChemConstants.AssemblageStabilityWhyConservation <> bound:19 var
+R8387:8387 Corelib.Init.Datatypes <> S constr
+R8422:8448 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_slot_is_present def
+R8451:8451 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:18 var
+R8454:8457 Corelib.Init.Peano <> pred abbrev
+R8459:8463 UMST.ChemConstants.AssemblageStabilityWhyConservation <> bound:19 var
+binder 8404:8406 <> add:22
+R8525:8527 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8498:8520 UMST.ChemConstants.AssemblageStabilityWhyConservation <> count_asw_present_up_to:20 def
+R8522:8522 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:18 var
+R8528:8530 UMST.ChemConstants.AssemblageStabilityWhyConservation <> add:22 var
+def 8551:8590 <> assemblageStabilityWhyBundlePresentCount
+R8597:8614 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 8593:8593 <> b:23
+R8619:8621 Corelib.Init.Datatypes <> nat ind
+R8628:8650 UMST.ChemConstants.AssemblageStabilityWhyConservation <> count_asw_present_up_to def
+R8652:8652 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:23 var
+R8654:8694 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyProductChannelCount def
+def 8709:8741 <> assemblageStabilityWhyBundleHolds
+R8748:8765 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 8744:8744 <> b:24
+R8775:8777 Corelib.Init.Datatypes <> nat ind
+binder 8769:8771 <> idx:25
+R8782:8785 Corelib.Init.Datatypes <> bool ind
+R8792:8818 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_slot_is_present def
+R8821:8821 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:24 var
+R8823:8825 UMST.ChemConstants.AssemblageStabilityWhyConservation <> idx:25 var
+def 8841:8887 <> assemblageStabilityWhyBundleIsConcurrentProduct
+R8894:8911 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 8890:8890 <> b:26
+R8916:8919 Corelib.Init.Datatypes <> bool ind
+R8926:8932 Stdlib.Arith.PeanoNat Nat leb def
+R8937:8976 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundlePresentCount def
+R8978:8978 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:26 var
+def 9064:9096 <> assemblageStabilityWhyFe26Witness
+R9100:9117 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+R9124:9162 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleWithPresent def
+R9169:9207 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleWithPresent def
+R9216:9254 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleWithPresent def
+R9256:9293 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleAllUnwired def
+R9303:9327 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_ore_predicate def
+R9336:9362 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_second_law_gmin def
+R9369:9390 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_class7_why def
+def 9405:9438 <> assemblageStabilityWhyEmptyWitness
+R9442:9459 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+R9466:9503 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleAllUnwired def
+def 9518:9552 <> assemblageStabilityWhySinglePresent
+R9556:9573 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+R9580:9618 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleWithPresent def
+R9620:9657 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleAllUnwired def
+R9663:9687 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_ore_predicate def
+prf 9697:9725 <> ore_predicate_channel_present
+R9828:9830 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9731:9763 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleHolds def
+R9765:9797 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R9803:9827 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_ore_predicate def
+R9831:9834 Corelib.Init.Datatypes <> true constr
+prf 9869:9899 <> second_law_gmin_channel_present
+R10004:10006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9905:9937 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleHolds def
+R9939:9971 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R9977:10003 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_second_law_gmin def
+R10007:10010 Corelib.Init.Datatypes <> true constr
+prf 10045:10070 <> class7_why_channel_present
+R10170:10172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10076:10108 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleHolds def
+R10110:10142 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R10148:10169 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_class7_why def
+R10173:10176 Corelib.Init.Datatypes <> true constr
+prf 10211:10245 <> fe26_witness_present_count_is_three
+R10325:10327 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10251:10290 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundlePresentCount def
+R10292:10324 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+prf 10363:10396 <> fe26_witness_is_concurrent_product
+R10483:10485 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10402:10448 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R10450:10482 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R10486:10489 Corelib.Init.Datatypes <> true constr
+R10508:10554 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R10567:10601 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fe26_witness_present_count_is_three thm
+R10567:10601 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fe26_witness_present_count_is_three thm
+R10567:10601 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fe26_witness_present_count_is_three thm
+prf 10631:10661 <> empty_bundle_present_count_zero
+R10742:10744 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10667:10706 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundlePresentCount def
+R10708:10741 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyEmptyWitness def
+prf 10780:10814 <> empty_bundle_not_concurrent_product
+R10902:10904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10820:10866 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R10868:10901 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyEmptyWitness def
+R10905:10909 Corelib.Init.Datatypes <> false constr
+R10928:10974 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R10987:11017 UMST.ChemConstants.AssemblageStabilityWhyConservation <> empty_bundle_present_count_zero thm
+R10987:11017 UMST.ChemConstants.AssemblageStabilityWhyConservation <> empty_bundle_present_count_zero thm
+R10987:11017 UMST.ChemConstants.AssemblageStabilityWhyConservation <> empty_bundle_present_count_zero thm
+prf 11047:11073 <> single_present_count_is_one
+R11155:11157 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11079:11118 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundlePresentCount def
+R11120:11154 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhySinglePresent def
+prf 11193:11229 <> single_present_not_concurrent_product
+R11318:11320 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11235:11281 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R11283:11317 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhySinglePresent def
+R11321:11325 Corelib.Init.Datatypes <> false constr
+R11344:11390 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R11403:11429 UMST.ChemConstants.AssemblageStabilityWhyConservation <> single_present_count_is_one thm
+R11403:11429 UMST.ChemConstants.AssemblageStabilityWhyConservation <> single_present_count_is_one thm
+R11403:11429 UMST.ChemConstants.AssemblageStabilityWhyConservation <> single_present_count_is_one thm
+ind 11688:11702 <> asw_xor_posture
+constr 11718:11734 <> asw_xor_exclusive
+constr 11740:11765 <> asw_xor_concurrent_product
+scheme 11688:11702 <> asw_xor_posture_rect
+scheme 11688:11702 <> asw_xor_posture_ind
+scheme 11688:11702 <> asw_xor_posture_rec
+scheme 11688:11702 <> asw_xor_posture_sind
+def 11780:11801 <> aswXorClassifierMarker
+R11805:11810 Stdlib.Strings.String <> string ind
+def 11876:11901 <> aswConcurrentProductMarker
+R11905:11910 Stdlib.Strings.String <> string ind
+prf 11966:12008 <> asw_xor_marker_ne_concurrent_product_marker
+R12036:12039 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12014:12035 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierMarker def
+R12040:12065 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswConcurrentProductMarker def
+def 12106:12133 <> aswXorClassifierIncompatible
+R12148:12151 Corelib.Init.Datatypes <> bool ind
+binder 12136:12144 <> claim_xor:29
+R12161:12178 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 12157:12157 <> b:30
+R12183:12186 Corelib.Init.Datatypes <> bool ind
+R12202:12205 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12193:12201 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_xor:29 var
+R12206:12252 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R12254:12254 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:30 var
+prf 12264:12293 <> asw_xor_refuse_on_fe26_witness
+R12366:12368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12299:12326 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierIncompatible def
+R12328:12331 Corelib.Init.Datatypes <> true constr
+R12333:12365 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R12369:12372 Corelib.Init.Datatypes <> true constr
+R12391:12418 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierIncompatible def
+prf 12471:12508 <> asw_xor_ok_on_concurrent_product_claim
+R12582:12584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12514:12541 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierIncompatible def
+R12543:12547 Corelib.Init.Datatypes <> false constr
+R12549:12581 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R12585:12589 Corelib.Init.Datatypes <> false constr
+def 12629:12644 <> aswProductNotXor
+R12648:12651 Corelib.Init.Datatypes <> bool ind
+R12739:12744 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12658:12704 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R12706:12738 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R12745:12772 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierIncompatible def
+R12774:12777 Corelib.Init.Datatypes <> true constr
+R12779:12811 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+prf 12821:12844 <> asw_product_not_xor_true
+R12864:12866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12848:12863 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswProductNotXor def
+R12867:12870 Corelib.Init.Datatypes <> true constr
+R12889:12904 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswProductNotXor def
+prf 12959:12984 <> concurrent_product_not_xor
+R13013:13018 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13006:13008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12990:13005 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswProductNotXor def
+R13009:13012 Corelib.Init.Datatypes <> true constr
+R13116:13121 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13109:13111 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13019:13025 Stdlib.Arith.PeanoNat Nat leb def
+R13030:13069 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundlePresentCount def
+R13075:13107 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R13112:13115 Corelib.Init.Datatypes <> true constr
+R13144:13147 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13122:13143 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierMarker def
+R13148:13173 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswConcurrentProductMarker def
+R13202:13225 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_product_not_xor_true thm
+R13202:13225 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_product_not_xor_true thm
+R13253:13287 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fe26_witness_present_count_is_three thm
+R13253:13287 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fe26_witness_present_count_is_three thm
+R13253:13287 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fe26_witness_present_count_is_three thm
+R13321:13363 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_xor_marker_ne_concurrent_product_marker thm
+R13321:13363 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_xor_marker_ne_concurrent_product_marker thm
+def 13610:13633 <> goldschmidtXorEnumMarker
+R13637:13642 Stdlib.Strings.String <> string ind
+def 13697:13730 <> goldschmidtConcurrentProductMarker
+R13734:13739 Stdlib.Strings.String <> string ind
+prf 13800:13843 <> goldschmidt_xor_marker_ne_concurrent_product
+R13873:13876 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13849:13872 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtXorEnumMarker def
+R13877:13910 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtConcurrentProductMarker def
+def 13951:13976 <> goldschmidtXorIncompatible
+R13996:13999 Corelib.Init.Datatypes <> bool ind
+binder 13979:13992 <> claim_xor_enum:31
+R14009:14026 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 14005:14005 <> b:32
+R14031:14034 Corelib.Init.Datatypes <> bool ind
+R14055:14058 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14041:14054 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_xor_enum:31 var
+R14059:14105 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R14107:14107 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:32 var
+prf 14117:14154 <> goldschmidt_xor_refuse_on_fe26_witness
+R14225:14227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14160:14185 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtXorIncompatible def
+R14187:14190 Corelib.Init.Datatypes <> true constr
+R14192:14224 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R14228:14231 Corelib.Init.Datatypes <> true constr
+R14250:14275 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtXorIncompatible def
+prf 14330:14381 <> goldschmidt_xor_not_assemblage_stability_why_product
+R14449:14454 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14411:14414 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14387:14410 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtXorEnumMarker def
+R14415:14448 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtConcurrentProductMarker def
+R14527:14532 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14520:14522 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14455:14480 UMST.ChemConstants.AssemblageStabilityWhyConservation <> goldschmidtXorIncompatible def
+R14482:14485 Corelib.Init.Datatypes <> true constr
+R14487:14519 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R14523:14526 Corelib.Init.Datatypes <> true constr
+R14575:14577 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14533:14574 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+ind 14874:14889 <> asw_bar_presence
+constr 14905:14918 <> asw_bar_absent
+constr 14924:14938 <> asw_bar_present
+scheme 14874:14889 <> asw_bar_presence_rect
+scheme 14874:14889 <> asw_bar_presence_ind
+scheme 14874:14889 <> asw_bar_presence_rec
+scheme 14874:14889 <> asw_bar_presence_sind
+rec 14949:14961 <> asw_claim_bar
+proj 14977:14998 <> asw_bar_presence_field
+proj 15022:15041 <> asw_bar_defect_total
+R15002:15017 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence ind
+R15045:15047 Corelib.Init.Datatypes <> nat ind
+def 15064:15099 <> assemblageStabilityWhyClaimBarAbsent
+R15103:15115 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_claim_bar rec
+R15125:15146 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15125:15146 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15125:15146 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15172:15191 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_defect_total proj
+R15172:15191 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_defect_total proj
+R15151:15164 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_absent constr
+def 15214:15253 <> assemblageStabilityWhyClaimBarZeroDefect
+R15257:15269 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_claim_bar rec
+R15279:15300 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15279:15300 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15279:15300 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15327:15346 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_defect_total proj
+R15327:15346 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_defect_total proj
+R15305:15319 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_present constr
+def 15369:15393 <> asw_claim_bar_zero_defect
+R15400:15412 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_claim_bar rec
+binder 15396:15396 <> b:38
+R15417:15420 Corelib.Init.Datatypes <> bool ind
+R15433:15454 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_presence_field proj
+R15456:15456 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:38 var
+R15467:15480 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_absent constr
+R15485:15489 Corelib.Init.Datatypes <> false constr
+R15495:15509 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_present constr
+R15514:15520 Stdlib.Arith.PeanoNat Nat eqb def
+R15523:15542 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_bar_defect_total proj
+R15544:15544 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:38 var
+prf 15563:15592 <> asw_claim_bar_zero_defect_true
+R15664:15666 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15598:15622 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_claim_bar_zero_defect def
+R15624:15663 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarZeroDefect def
+R15667:15670 Corelib.Init.Datatypes <> true constr
+prf 15705:15740 <> asw_claim_bar_absent_not_zero_defect
+R15808:15810 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15746:15770 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_claim_bar_zero_defect def
+R15772:15807 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R15811:15815 Corelib.Init.Datatypes <> false constr
+ind 16080:16103 <> asw_conservation_verdict
+constr 16119:16140 <> asw_verdict_unwired_ok
+constr 16146:16165 <> asw_verdict_named_ok
+constr 16171:16191 <> asw_verdict_design_ok
+constr 16197:16222 <> asw_verdict_trivial_refuse
+constr 16228:16249 <> asw_verdict_xor_refuse
+constr 16255:16288 <> asw_verdict_goldschmidt_xor_refuse
+constr 16294:16324 <> asw_verdict_green_invent_refuse
+constr 16330:16366 <> asw_verdict_proved_without_bar_refuse
+constr 16372:16406 <> asw_verdict_production_wired_refuse
+constr 16412:16454 <> asw_verdict_parallel_stability_axiom_refuse
+constr 16460:16496 <> asw_verdict_species_id_smuggle_refuse
+constr 16502:16532 <> asw_verdict_tp_float_pin_refuse
+scheme 16080:16103 <> asw_conservation_verdict_rect
+scheme 16080:16103 <> asw_conservation_verdict_ind
+scheme 16080:16103 <> asw_conservation_verdict_rec
+scheme 16080:16103 <> asw_conservation_verdict_sind
+def 16547:16573 <> asw_conservation_verdict_ok
+R16580:16603 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict ind
+binder 16576:16576 <> v:41
+R16608:16611 Corelib.Init.Datatypes <> bool ind
+R16624:16624 UMST.ChemConstants.AssemblageStabilityWhyConservation <> v:41 var
+R16635:16656 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_unwired_ok constr
+R16661:16664 Corelib.Init.Datatypes <> true constr
+R16670:16689 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R16694:16697 Corelib.Init.Datatypes <> true constr
+R16703:16723 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_design_ok constr
+R16728:16731 Corelib.Init.Datatypes <> true constr
+R16742:16746 Corelib.Init.Datatypes <> false constr
+def 16767:16804 <> assemblageStabilityWhyBundleNontrivial
+R16811:16828 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 16807:16807 <> b:43
+R16833:16836 Corelib.Init.Datatypes <> bool ind
+R16843:16849 Stdlib.Arith.PeanoNat Nat ltb def
+R16854:16893 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundlePresentCount def
+R16895:16895 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:43 var
+def 16911:16950 <> evaluate_assemblage_stability_why_bundle
+R16959:17000 UMST.ChemConstants.AssemblageStabilityWhyConservation <> AssemblageStabilityWhyConservationModality ind
+binder 16955:16955 <> m:44
+R17010:17027 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_channel_bundle def
+binder 17006:17006 <> b:45
+R17039:17051 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_claim_bar rec
+binder 17033:17035 <> bar:46
+R17080:17083 Corelib.Init.Datatypes <> bool ind
+binder 17057:17076 <> claim_xor_classifier:47
+R17111:17114 Corelib.Init.Datatypes <> bool ind
+binder 17089:17107 <> claim_physics_green:48
+R17135:17138 Corelib.Init.Datatypes <> bool ind
+binder 17120:17131 <> claim_proved:49
+R17143:17166 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict ind
+R17176:17194 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_physics_green:48 var
+R17245:17256 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_proved:49 var
+R17323:17326 Corelib.Init.Datatypes <> negb def
+R17329:17366 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleNontrivial def
+R17368:17368 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:45 var
+R17435:17462 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswXorClassifierIncompatible def
+R17464:17483 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_xor_classifier:47 var
+R17485:17485 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:45 var
+R17579:17579 UMST.ChemConstants.AssemblageStabilityWhyConservation <> m:44 var
+R17607:17651 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R17682:17728 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R17730:17730 UMST.ChemConstants.AssemblageStabilityWhyConservation <> b:45 var
+R17809:17829 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_design_ok constr
+R17760:17779 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R17852:17896 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_assumed constr
+R17919:17965 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_surrogate constr
+R17993:18013 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_design_ok constr
+R17993:18013 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_design_ok constr
+R18036:18079 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R18107:18143 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_proved_without_bar_refuse constr
+R17509:17530 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_xor_refuse constr
+R17388:17413 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_trivial_refuse constr
+R17270:17306 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_proved_without_bar_refuse constr
+R17203:17233 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_green_invent_refuse constr
+def 18181:18232 <> evaluate_assemblage_stability_why_conservation_close
+R18241:18282 UMST.ChemConstants.AssemblageStabilityWhyConservation <> AssemblageStabilityWhyConservationModality ind
+binder 18237:18237 <> m:51
+R18310:18313 Corelib.Init.Datatypes <> bool ind
+binder 18288:18306 <> claim_physics_green:52
+R18344:18347 Corelib.Init.Datatypes <> bool ind
+binder 18319:18340 <> claim_production_wired:53
+R18352:18375 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict ind
+R18385:18403 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_physics_green:52 var
+R18454:18475 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_production_wired:53 var
+R18537:18537 UMST.ChemConstants.AssemblageStabilityWhyConservation <> m:51 var
+R18550:18594 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R18599:18620 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_unwired_ok constr
+R18628:18672 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_assumed constr
+R18680:18723 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R18731:18777 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_surrogate constr
+R18782:18801 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R18782:18801 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R18782:18801 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R18484:18518 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_production_wired_refuse constr
+R18412:18442 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_green_invent_refuse constr
+def 18824:18871 <> assemblage_stability_why_conservation_authorized
+R18898:18901 Corelib.Init.Datatypes <> bool ind
+binder 18876:18894 <> claim_physics_green:55
+R18932:18935 Corelib.Init.Datatypes <> bool ind
+binder 18907:18928 <> claim_production_wired:56
+R18940:18943 Corelib.Init.Datatypes <> bool ind
+R18956:19007 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R19019:19062 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R19064:19082 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_physics_green:55 var
+R19084:19105 UMST.ChemConstants.AssemblageStabilityWhyConservation <> claim_production_wired:56 var
+R19116:19135 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R19140:19143 Corelib.Init.Datatypes <> true constr
+R19154:19158 Corelib.Init.Datatypes <> false constr
+ind 19404:19423 <> asw_conservation_law
+constr 19439:19455 <> asw_law_conserved
+constr 19461:19476 <> asw_law_named_ok
+constr 19482:19503 <> asw_law_trivial_refuse
+constr 19509:19535 <> asw_law_green_invent_refuse
+scheme 19404:19423 <> asw_conservation_law_rect
+scheme 19404:19423 <> asw_conservation_law_ind
+scheme 19404:19423 <> asw_conservation_law_rec
+scheme 19404:19423 <> asw_conservation_law_sind
+def 19550:19575 <> asw_conservation_law_count
+R19579:19581 Corelib.Init.Datatypes <> nat ind
+prf 19596:19629 <> asw_conservation_law_count_is_four
+R19661:19663 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19635:19660 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_law_count def
+ind 19703:19730 <> asw_conservation_law_witness
+constr 19746:19765 <> asw_law_witness_open
+constr 19771:19792 <> asw_law_witness_proved
+scheme 19703:19730 <> asw_conservation_law_witness_rect
+scheme 19703:19730 <> asw_conservation_law_witness_ind
+scheme 19703:19730 <> asw_conservation_law_witness_rec
+scheme 19703:19730 <> asw_conservation_law_witness_sind
+def 19807:19843 <> evaluate_asw_conservation_law_witness
+R19854:19873 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_law ind
+binder 19848:19850 <> law:61
+R19883:19924 UMST.ChemConstants.AssemblageStabilityWhyConservation <> AssemblageStabilityWhyConservationModality ind
+binder 19879:19879 <> m:62
+R19931:19958 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_law_witness ind
+R19971:19971 UMST.ChemConstants.AssemblageStabilityWhyConservation <> m:62 var
+R19982:20026 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R20032:20076 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_assumed constr
+R20082:20128 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_surrogate constr
+R20133:20152 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+R20133:20152 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+R20133:20152 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+R20158:20201 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R20206:20227 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_proved constr
+prf 20243:20283 <> all_asw_conservation_laws_open_at_unwired
+R20417:20422 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20394:20396 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20289:20325 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_asw_conservation_law_witness def
+R20327:20343 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_conserved constr
+R20349:20393 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R20397:20416 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+R20550:20555 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20527:20529 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20423:20459 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_asw_conservation_law_witness def
+R20461:20476 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_named_ok constr
+R20482:20526 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R20530:20549 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+R20689:20694 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20666:20668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20556:20592 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_asw_conservation_law_witness def
+R20594:20615 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_trivial_refuse constr
+R20621:20665 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R20669:20688 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+R20810:20812 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20695:20731 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_asw_conservation_law_witness def
+R20733:20759 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_green_invent_refuse constr
+R20765:20809 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R20813:20832 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_law_witness_open constr
+def 21112:21151 <> assemblageStabilityWhyConservationProved
+R21155:21158 Corelib.Init.Datatypes <> bool ind
+R21163:21167 Corelib.Init.Datatypes <> false constr
+prf 21177:21226 <> assemblage_stability_why_conservation_proved_false
+R21272:21274 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21232:21271 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationProved def
+R21275:21279 Corelib.Init.Datatypes <> false constr
+def 21319:21341 <> not118SquaredGreenTable
+R21345:21348 Corelib.Init.Datatypes <> bool ind
+R21353:21356 Corelib.Init.Datatypes <> true constr
+prf 21366:21392 <> not_118_squared_green_table
+R21419:21421 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21396:21418 UMST.ChemConstants.AssemblageStabilityWhyConservation <> not118SquaredGreenTable def
+R21422:21425 Corelib.Init.Datatypes <> true constr
+prf 21682:21720 <> unwired_close_without_production_wiring
+R21840:21844 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21726:21777 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R21783:21827 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R21829:21833 Corelib.Init.Datatypes <> false constr
+R21835:21839 Corelib.Init.Datatypes <> false constr
+R21845:21866 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_unwired_ok constr
+prf 21903:21954 <> unwired_modality_always_ok_without_production_wiring
+R22074:22078 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21960:22011 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R22017:22061 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R22063:22067 Corelib.Init.Datatypes <> false constr
+R22069:22073 Corelib.Init.Datatypes <> false constr
+R22079:22100 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_unwired_ok constr
+R22116:22154 UMST.ChemConstants.AssemblageStabilityWhyConservation <> unwired_close_without_production_wiring thm
+R22116:22154 UMST.ChemConstants.AssemblageStabilityWhyConservation <> unwired_close_without_production_wiring thm
+prf 22169:22212 <> unwired_verdict_ok_without_production_wiring
+R22369:22373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22218:22244 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R22251:22302 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R22311:22355 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R22357:22361 Corelib.Init.Datatypes <> false constr
+R22363:22367 Corelib.Init.Datatypes <> false constr
+R22374:22377 Corelib.Init.Datatypes <> true constr
+R22396:22422 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R22435:22473 UMST.ChemConstants.AssemblageStabilityWhyConservation <> unwired_close_without_production_wiring thm
+R22435:22473 UMST.ChemConstants.AssemblageStabilityWhyConservation <> unwired_close_without_production_wiring thm
+R22435:22473 UMST.ChemConstants.AssemblageStabilityWhyConservation <> unwired_close_without_production_wiring thm
+prf 22727:22747 <> fe26_witness_named_ok
+R22940:22944 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22753:22792 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R22798:22842 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R22848:22880 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R22886:22921 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R22923:22927 Corelib.Init.Datatypes <> false constr
+R22929:22933 Corelib.Init.Datatypes <> false constr
+R22935:22939 Corelib.Init.Datatypes <> false constr
+R22945:22964 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+prf 23001:23048 <> named_fe26_assemblage_stability_why_conservation
+R23266:23271 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23241:23245 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23054:23093 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R23099:23143 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R23149:23181 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R23187:23222 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R23224:23228 Corelib.Init.Datatypes <> false constr
+R23230:23234 Corelib.Init.Datatypes <> false constr
+R23236:23240 Corelib.Init.Datatypes <> false constr
+R23246:23265 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R23360:23365 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23353:23355 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23272:23318 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyBundleIsConcurrentProduct def
+R23320:23352 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R23356:23359 Corelib.Init.Datatypes <> true constr
+R23391:23396 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23386:23388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23366:23385 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+R23439:23441 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23397:23438 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+prf 23493:23510 <> asw_named_close_ok
+R23629:23633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23516:23567 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R23573:23616 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R23618:23622 Corelib.Init.Datatypes <> false constr
+R23624:23628 Corelib.Init.Datatypes <> false constr
+R23634:23653 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+prf 23690:23738 <> named_assemblage_stability_why_conservation_close
+R23882:23887 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23857:23861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23744:23795 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R23801:23844 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R23846:23850 Corelib.Init.Datatypes <> false constr
+R23852:23856 Corelib.Init.Datatypes <> false constr
+R23862:23881 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R23948:23950 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23888:23935 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_authorized def
+R23937:23941 Corelib.Init.Datatypes <> false constr
+R23943:23947 Corelib.Init.Datatypes <> false constr
+R23951:23954 Corelib.Init.Datatypes <> true constr
+R23983:24000 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_named_close_ok thm
+R23983:24000 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_named_close_ok thm
+R24014:24061 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_authorized def
+R24076:24093 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_named_close_ok thm
+R24076:24093 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_named_close_ok thm
+R24076:24093 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_named_close_ok thm
+prf 24351:24372 <> trivial_bundle_refused
+R24566:24570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24378:24417 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R24423:24467 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R24473:24506 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyEmptyWitness def
+R24512:24547 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R24549:24553 Corelib.Init.Datatypes <> false constr
+R24555:24559 Corelib.Init.Datatypes <> false constr
+R24561:24565 Corelib.Init.Datatypes <> false constr
+R24571:24596 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_trivial_refuse constr
+prf 24633:24664 <> trivial_empty_bundle_fail_closed
+R24889:24894 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24858:24862 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24670:24709 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R24715:24759 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R24765:24798 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyEmptyWitness def
+R24804:24839 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R24841:24845 Corelib.Init.Datatypes <> false constr
+R24847:24851 Corelib.Init.Datatypes <> false constr
+R24853:24857 Corelib.Init.Datatypes <> false constr
+R24863:24888 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_trivial_refuse constr
+R25126:25130 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24895:24921 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R24928:24967 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R24976:25020 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R25029:25062 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyEmptyWitness def
+R25071:25106 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R25108:25112 Corelib.Init.Datatypes <> false constr
+R25114:25118 Corelib.Init.Datatypes <> false constr
+R25120:25124 Corelib.Init.Datatypes <> false constr
+R25131:25135 Corelib.Init.Datatypes <> false constr
+R25164:25185 UMST.ChemConstants.AssemblageStabilityWhyConservation <> trivial_bundle_refused thm
+R25164:25185 UMST.ChemConstants.AssemblageStabilityWhyConservation <> trivial_bundle_refused thm
+R25199:25225 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R25240:25261 UMST.ChemConstants.AssemblageStabilityWhyConservation <> trivial_bundle_refused thm
+R25240:25261 UMST.ChemConstants.AssemblageStabilityWhyConservation <> trivial_bundle_refused thm
+R25240:25261 UMST.ChemConstants.AssemblageStabilityWhyConservation <> trivial_bundle_refused thm
+prf 25519:25540 <> xor_classifier_refused
+R25732:25736 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25546:25585 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R25591:25635 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R25641:25673 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R25679:25714 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R25716:25719 Corelib.Init.Datatypes <> true constr
+R25721:25725 Corelib.Init.Datatypes <> false constr
+R25727:25731 Corelib.Init.Datatypes <> false constr
+R25737:25758 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_xor_refuse constr
+prf 25795:25839 <> xor_mutually_exclusive_classifier_fail_closed
+R26058:26063 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26031:26035 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25845:25884 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R25890:25934 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R25940:25972 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R25978:26013 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R26015:26018 Corelib.Init.Datatypes <> true constr
+R26020:26024 Corelib.Init.Datatypes <> false constr
+R26026:26030 Corelib.Init.Datatypes <> false constr
+R26036:26057 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_xor_refuse constr
+R26293:26297 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26064:26090 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R26097:26136 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R26145:26189 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R26198:26230 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R26239:26274 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R26276:26279 Corelib.Init.Datatypes <> true constr
+R26281:26285 Corelib.Init.Datatypes <> false constr
+R26287:26291 Corelib.Init.Datatypes <> false constr
+R26298:26302 Corelib.Init.Datatypes <> false constr
+R26331:26352 UMST.ChemConstants.AssemblageStabilityWhyConservation <> xor_classifier_refused thm
+R26331:26352 UMST.ChemConstants.AssemblageStabilityWhyConservation <> xor_classifier_refused thm
+R26366:26392 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R26407:26428 UMST.ChemConstants.AssemblageStabilityWhyConservation <> xor_classifier_refused thm
+R26407:26428 UMST.ChemConstants.AssemblageStabilityWhyConservation <> xor_classifier_refused thm
+R26407:26428 UMST.ChemConstants.AssemblageStabilityWhyConservation <> xor_classifier_refused thm
+prf 26684:26710 <> green_invent_refuse_unwired
+R26829:26833 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26716:26767 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R26773:26817 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R26819:26822 Corelib.Init.Datatypes <> true constr
+R26824:26828 Corelib.Init.Datatypes <> false constr
+R26834:26864 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_green_invent_refuse constr
+prf 26901:26926 <> green_invent_always_refuse
+R27082:27086 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26932:26958 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R26965:27016 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R27025:27069 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R27071:27074 Corelib.Init.Datatypes <> true constr
+R27076:27080 Corelib.Init.Datatypes <> false constr
+R27087:27091 Corelib.Init.Datatypes <> false constr
+R27110:27136 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R27149:27175 UMST.ChemConstants.AssemblageStabilityWhyConservation <> green_invent_refuse_unwired thm
+R27149:27175 UMST.ChemConstants.AssemblageStabilityWhyConservation <> green_invent_refuse_unwired thm
+R27149:27175 UMST.ChemConstants.AssemblageStabilityWhyConservation <> green_invent_refuse_unwired thm
+prf 27205:27234 <> green_invent_asw_bundle_refuse
+R27426:27430 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27240:27279 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R27285:27329 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R27335:27367 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R27373:27408 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R27410:27414 Corelib.Init.Datatypes <> false constr
+R27416:27419 Corelib.Init.Datatypes <> true constr
+R27421:27425 Corelib.Init.Datatypes <> false constr
+R27431:27461 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_green_invent_refuse constr
+prf 27720:27744 <> proved_without_bar_refuse
+R27936:27940 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27750:27789 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R27795:27839 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R27845:27877 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R27883:27918 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R27920:27924 Corelib.Init.Datatypes <> false constr
+R27926:27930 Corelib.Init.Datatypes <> false constr
+R27932:27935 Corelib.Init.Datatypes <> true constr
+R27941:27977 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_proved_without_bar_refuse constr
+prf 28014:28043 <> proved_without_bar_fail_closed
+R28277:28282 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28235:28239 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28049:28088 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R28094:28138 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R28144:28176 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R28182:28217 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R28219:28223 Corelib.Init.Datatypes <> false constr
+R28225:28229 Corelib.Init.Datatypes <> false constr
+R28231:28234 Corelib.Init.Datatypes <> true constr
+R28240:28276 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_proved_without_bar_refuse constr
+R28512:28516 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28283:28309 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R28316:28355 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R28364:28408 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R28417:28449 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R28458:28493 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R28495:28499 Corelib.Init.Datatypes <> false constr
+R28501:28505 Corelib.Init.Datatypes <> false constr
+R28507:28510 Corelib.Init.Datatypes <> true constr
+R28517:28521 Corelib.Init.Datatypes <> false constr
+R28550:28574 UMST.ChemConstants.AssemblageStabilityWhyConservation <> proved_without_bar_refuse thm
+R28550:28574 UMST.ChemConstants.AssemblageStabilityWhyConservation <> proved_without_bar_refuse thm
+R28588:28614 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R28629:28653 UMST.ChemConstants.AssemblageStabilityWhyConservation <> proved_without_bar_refuse thm
+R28629:28653 UMST.ChemConstants.AssemblageStabilityWhyConservation <> proved_without_bar_refuse thm
+R28629:28653 UMST.ChemConstants.AssemblageStabilityWhyConservation <> proved_without_bar_refuse thm
+prf 28910:28932 <> production_wired_refuse
+R29050:29054 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28938:28989 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R28995:29038 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R29040:29044 Corelib.Init.Datatypes <> false constr
+R29046:29049 Corelib.Init.Datatypes <> true constr
+R29055:29089 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_production_wired_refuse constr
+prf 29126:29155 <> production_wired_claim_refused
+R29310:29314 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29161:29187 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R29194:29245 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R29254:29297 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R29299:29303 Corelib.Init.Datatypes <> false constr
+R29305:29308 Corelib.Init.Datatypes <> true constr
+R29315:29319 Corelib.Init.Datatypes <> false constr
+R29338:29364 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R29377:29399 UMST.ChemConstants.AssemblageStabilityWhyConservation <> production_wired_refuse thm
+R29377:29399 UMST.ChemConstants.AssemblageStabilityWhyConservation <> production_wired_refuse thm
+R29377:29399 UMST.ChemConstants.AssemblageStabilityWhyConservation <> production_wired_refuse thm
+def 29659:29701 <> assemblageStabilityWhyConservationAuthority
+R29705:29710 Stdlib.Strings.String <> string ind
+def 29789:29813 <> parallelStabilityAxiomTag
+R29817:29822 Stdlib.Strings.String <> string ind
+prf 29858:29888 <> parallel_stability_axiom_refuse
+R29968:29973 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29937:29942 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29894:29936 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationAuthority def
+R29943:29967 UMST.ChemConstants.AssemblageStabilityWhyConservation <> parallelStabilityAxiomTag def
+R30014:30016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29974:30013 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationProved def
+R30017:30021 Corelib.Init.Datatypes <> false constr
+R30068:30117 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved_false thm
+R30068:30117 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved_false thm
+prf 30134:30168 <> parallel_stability_axiom_not_minted
+R30280:30285 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30217:30221 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30174:30216 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationAuthority def
+R30334:30339 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30326:30328 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30286:30325 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationProved def
+R30329:30333 Corelib.Init.Datatypes <> false constr
+R30383:30386 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30340:30382 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationAuthority def
+R30387:30411 UMST.ChemConstants.AssemblageStabilityWhyConservation <> parallelStabilityAxiomTag def
+def 30709:30731 <> speciesIdSmuggleFraming
+R30735:30740 Stdlib.Strings.String <> string ind
+def 30797:30837 <> assemblageStabilityWhyConservationFraming
+R30841:30846 Stdlib.Strings.String <> string ind
+prf 30922:30946 <> species_id_smuggle_refuse
+R31022:31027 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30993:30998 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30952:30992 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationFraming def
+R30999:31021 UMST.ChemConstants.AssemblageStabilityWhyConservation <> speciesIdSmuggleFraming def
+R31053:31058 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31048:31050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31028:31047 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+R31101:31103 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31059:31100 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+prf 31173:31208 <> ore_predicate_not_species_id_smuggle
+R31284:31289 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31255:31260 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31214:31254 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationFraming def
+R31261:31283 UMST.ChemConstants.AssemblageStabilityWhyConservation <> speciesIdSmuggleFraming def
+R31315:31320 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31310:31312 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31290:31309 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+R31367:31372 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31363:31365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31321:31362 UMST.ChemConstants.AssemblageStabilityWhyConservation <> pattern_class_assemblage_stability_why_idx def
+R31413:31415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31373:31412 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationProved def
+R31416:31420 Corelib.Init.Datatypes <> false constr
+def 31718:31734 <> tpFloatPinFraming
+R31738:31743 Stdlib.Strings.String <> string ind
+prf 31813:31831 <> tp_float_pin_refuse
+R31901:31906 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31878:31883 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31837:31877 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationFraming def
+R31884:31900 UMST.ChemConstants.AssemblageStabilityWhyConservation <> tpFloatPinFraming def
+R31932:31934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31907:31931 UMST.ChemConstants.AssemblageStabilityWhyConservation <> ore_predicate_channel_tag def
+prf 32017:32047 <> tp_graph_function_not_float_pin
+R32117:32122 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32094:32099 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32053:32093 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationFraming def
+R32100:32116 UMST.ChemConstants.AssemblageStabilityWhyConservation <> tpFloatPinFraming def
+R32178:32183 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32150:32152 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32123:32149 UMST.ChemConstants.AssemblageStabilityWhyConservation <> second_law_gmin_channel_tag def
+R32204:32206 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32184:32203 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+def 32504:32538 <> asw_conservation_coherence_scaffold
+R32542:32545 Corelib.Init.Datatypes <> bool ind
+R32865:32870 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R32702:32707 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R32552:32578 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R32585:32636 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R32645:32688 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R32690:32694 Corelib.Init.Datatypes <> false constr
+R32696:32700 Corelib.Init.Datatypes <> false constr
+R32708:32711 Corelib.Init.Datatypes <> negb def
+R32714:32740 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R32747:32798 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R32807:32851 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R32853:32856 Corelib.Init.Datatypes <> true constr
+R32858:32862 Corelib.Init.Datatypes <> false constr
+R32871:32874 Corelib.Init.Datatypes <> negb def
+R32877:32903 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_verdict_ok def
+R32910:32961 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R32970:33013 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R33015:33019 Corelib.Init.Datatypes <> false constr
+R33021:33024 Corelib.Init.Datatypes <> true constr
+prf 33036:33075 <> asw_conservation_coherence_scaffold_true
+R33116:33118 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33081:33115 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_coherence_scaffold def
+R33119:33122 Corelib.Init.Datatypes <> true constr
+R33141:33175 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_coherence_scaffold def
+prf 33230:33272 <> asw_conservation_coherence_scaffold_theorem
+R33418:33423 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33391:33397 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33278:33329 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R33335:33378 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R33380:33384 Corelib.Init.Datatypes <> false constr
+R33386:33390 Corelib.Init.Datatypes <> false constr
+R33398:33417 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R33575:33580 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33537:33543 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33424:33475 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R33481:33525 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R33527:33530 Corelib.Init.Datatypes <> true constr
+R33532:33536 Corelib.Init.Datatypes <> false constr
+R33544:33574 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_green_invent_refuse constr
+R33693:33699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33581:33632 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R33638:33681 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_proved constr
+R33683:33687 Corelib.Init.Datatypes <> false constr
+R33689:33692 Corelib.Init.Datatypes <> true constr
+R33700:33734 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_production_wired_refuse constr
+ind 34013:34024 <> formal_fiber
+constr 34040:34060 <> fiber_quantum_knowing
+constr 34066:34082 <> fiber_meso_acting
+scheme 34013:34024 <> formal_fiber_rect
+scheme 34013:34024 <> formal_fiber_ind
+scheme 34013:34024 <> formal_fiber_rec
+scheme 34013:34024 <> formal_fiber_sind
+def 34097:34121 <> asw_conservation_fiber_ok
+R34128:34139 UMST.ChemConstants.AssemblageStabilityWhyConservation <> formal_fiber ind
+binder 34124:34124 <> f:66
+R34144:34147 Corelib.Init.Datatypes <> bool ind
+R34160:34160 UMST.ChemConstants.AssemblageStabilityWhyConservation <> f:66 var
+R34171:34191 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fiber_quantum_knowing constr
+R34196:34199 Corelib.Init.Datatypes <> true constr
+R34205:34221 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fiber_meso_acting constr
+R34226:34230 Corelib.Init.Datatypes <> false constr
+def 34251:34283 <> asw_conservation_knowing_fiber_ok
+R34287:34290 Corelib.Init.Datatypes <> bool ind
+R34297:34321 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_fiber_ok def
+R34323:34343 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fiber_quantum_knowing constr
+def 34358:34388 <> asw_conservation_meso_acting_ok
+R34392:34395 Corelib.Init.Datatypes <> bool ind
+R34402:34426 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_fiber_ok def
+R34428:34444 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fiber_meso_acting constr
+prf 34454:34491 <> asw_conservation_knowing_fiber_ok_true
+R34530:34532 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34497:34529 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok def
+R34533:34536 Corelib.Init.Datatypes <> true constr
+prf 34571:34605 <> asw_conservation_meso_acting_not_ok
+R34642:34644 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34611:34641 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_ok def
+R34645:34649 Corelib.Init.Datatypes <> false constr
+prf 34686:34725 <> asw_conservation_routes_knowing_not_meso
+R34771:34776 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34764:34766 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34731:34763 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok def
+R34767:34770 Corelib.Init.Datatypes <> true constr
+R34808:34810 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34777:34807 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_ok def
+R34811:34815 Corelib.Init.Datatypes <> false constr
+R34844:34881 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok_true thm
+R34844:34881 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok_true thm
+R34894:34928 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_not_ok thm
+R34894:34928 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_not_ok thm
+def 34948:34965 <> fiberNotMesoActing
+R34969:34972 Corelib.Init.Datatypes <> bool ind
+R35012:35017 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R34979:35011 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok def
+R35018:35021 Corelib.Init.Datatypes <> negb def
+R35023:35053 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_ok def
+prf 35063:35088 <> fiber_not_meso_acting_true
+R35110:35112 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35092:35109 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fiberNotMesoActing def
+R35113:35116 Corelib.Init.Datatypes <> true constr
+R35135:35152 UMST.ChemConstants.AssemblageStabilityWhyConservation <> fiberNotMesoActing def
+R35155:35187 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok def
+R35194:35224 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_ok def
+prf 35482:35535 <> assemblage_stability_why_conservation_fixture_scaffold
+R35755:35760 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35728:35734 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35541:35580 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R35586:35630 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R35636:35668 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R35674:35709 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R35711:35715 Corelib.Init.Datatypes <> false constr
+R35717:35721 Corelib.Init.Datatypes <> false constr
+R35723:35727 Corelib.Init.Datatypes <> false constr
+R35735:35754 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_named_ok constr
+R35982:35987 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35949:35955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35761:35800 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R35806:35850 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R35856:35889 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyEmptyWitness def
+R35895:35930 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R35932:35936 Corelib.Init.Datatypes <> false constr
+R35938:35942 Corelib.Init.Datatypes <> false constr
+R35944:35948 Corelib.Init.Datatypes <> false constr
+R35956:35981 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_trivial_refuse constr
+R36203:36208 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36174:36180 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35988:36027 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R36033:36077 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R36083:36115 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R36121:36156 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R36158:36161 Corelib.Init.Datatypes <> true constr
+R36163:36167 Corelib.Init.Datatypes <> false constr
+R36169:36173 Corelib.Init.Datatypes <> false constr
+R36181:36202 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_xor_refuse constr
+R36439:36444 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36395:36401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36209:36248 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_bundle def
+R36254:36298 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R36304:36336 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyFe26Witness def
+R36342:36377 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyClaimBarAbsent def
+R36379:36383 Corelib.Init.Datatypes <> false constr
+R36385:36389 Corelib.Init.Datatypes <> false constr
+R36391:36394 Corelib.Init.Datatypes <> true constr
+R36402:36438 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_proved_without_bar_refuse constr
+R36588:36593 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36559:36565 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36445:36496 UMST.ChemConstants.AssemblageStabilityWhyConservation <> evaluate_assemblage_stability_why_conservation_close def
+R36502:36546 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr
+R36548:36552 Corelib.Init.Datatypes <> false constr
+R36554:36558 Corelib.Init.Datatypes <> false constr
+R36566:36587 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_verdict_unwired_ok constr
+R36634:36639 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36627:36629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36594:36626 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_knowing_fiber_ok def
+R36630:36633 Corelib.Init.Datatypes <> true constr
+R36679:36684 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36671:36673 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36640:36670 UMST.ChemConstants.AssemblageStabilityWhyConservation <> asw_conservation_meso_acting_ok def
+R36674:36678 Corelib.Init.Datatypes <> false constr
+R36733:36738 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36725:36727 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36685:36724 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationProved def
+R36728:36732 Corelib.Init.Datatypes <> false constr
+R36762:36767 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36755:36757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36739:36754 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswProductNotXor def
+R36758:36761 Corelib.Init.Datatypes <> true constr
+R36788:36790 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36768:36787 UMST.ChemConstants.AssemblageStabilityWhyConservation <> iron_atomic_number_z def
+def 37072:37105 <> chemL0AssemblageStabilityAuthority
+R37109:37114 Stdlib.Strings.String <> string ind
+def 37179:37220 <> chemL0AssemblageStabilityWhyTableAuthority
+R37224:37229 Stdlib.Strings.String <> string ind
+def 37308:37329 <> oreAssemblageAuthority
+R37333:37338 Stdlib.Strings.String <> string ind
+def 37397:37431 <> patternProductConservationAuthority
+R37435:37440 Stdlib.Strings.String <> string ind
+def 37538:37569 <> goldschmidtConservationAuthority
+R37573:37578 Stdlib.Strings.String <> string ind
+def 37673:37712 <> assemblageStabilityWhyConservationCellId
+R37716:37721 Stdlib.Strings.String <> string ind
+def 37799:37840 <> assemblageStabilityWhyConservationNonClaim
+R37844:37849 Stdlib.Strings.String <> string ind
+prf 38570:38614 <> assemblage_stability_why_conservation_cell_id
+R38660:38664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38620:38659 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationCellId def
+prf 38756:38807 <> assemblage_stability_why_conservation_cites_l0_table
+R38855:38858 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38813:38854 UMST.ChemConstants.AssemblageStabilityWhyConservation <> chemL0AssemblageStabilityWhyTableAuthority def
+prf 38896:38947 <> assemblage_stability_why_conservation_authority_path
+R38996:39000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38953:38995 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationAuthority def
+prf 39093:39144 <> assemblage_stability_why_conservation_cites_l0_ore01
+R39184:39187 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39150:39183 UMST.ChemConstants.AssemblageStabilityWhyConservation <> chemL0AssemblageStabilityAuthority def
+prf 39225:39274 <> assemblage_stability_why_conservation_cites_marker
+R39306:39309 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39280:39305 UMST.ChemConstants.AssemblageStabilityWhyConservation <> aswConcurrentProductMarker def
+prf 39347:39405 <> assemblage_stability_why_conservation_cites_pattern_product
+R39446:39449 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39411:39445 UMST.ChemConstants.AssemblageStabilityWhyConservation <> patternProductConservationAuthority def
+prf 39709:39747 <> assemblage_stability_why_not_26th_axiom
+R39794:39797 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39753:39793 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationFraming def
+R39798:39822 UMST.ChemConstants.AssemblageStabilityWhyConservation <> parallelStabilityAxiomTag def
+prf 39858:39913 <> assemblage_stability_why_second_law_conservation_framing
+R39960:39963 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39919:39959 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationFraming def
+def 40230:40251 <> physicsGreenAuthorized
+R40263:40267 Corelib.Init.Logic <> False ind
+prf 40277:40333 <> assemblage_stability_why_conservation_physics_green_false
+R40339:40340 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R40341:40362 UMST.ChemConstants.AssemblageStabilityWhyConservation <> physicsGreenAuthorized def
+prf 40402:40455 <> assemblage_stability_why_conservation_modality_unwired
+R40510:40514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40461:40509 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblageStabilityWhyConservationModalityCurrent def
+R40515:40559 UMST.ChemConstants.AssemblageStabilityWhyConservation <> assemblage_stability_why_conservation_unwired constr

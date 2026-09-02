@@ -1,0 +1,389 @@
+DIGEST 0b14fdb69fd3dc0904b9b3461fc4b3d5
+FUMST.ChemConstants.DlvoKtNotPsi
+R1357:1361 Stdlib.Arith.Arith <> <> lib
+R1363:1368 Stdlib.ZArith.ZArith <> <> lib
+R1370:1375 Stdlib.Strings.String <> <> lib
+R1377:1380 Stdlib.Bool.Bool <> <> lib
+R1382:1384 Stdlib.micromega.Lia <> <> lib
+def 1419:1437 <> dlvoktnotpsiSurface
+R1441:1446 Stdlib.Strings.String <> string ind
+prf 1487:1512 <> dlvoktnotpsi_surface_named
+R1537:1540 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1518:1536 UMST.ChemConstants.DlvoKtNotPsi <> dlvoktnotpsiSurface def
+ind 1805:1824 <> DlvoKtNotPsiModality
+constr 1840:1862 <> dlvo_kt_not_psi_unwired
+constr 1868:1890 <> dlvo_kt_not_psi_assumed
+constr 1896:1917 <> dlvo_kt_not_psi_proved
+constr 1923:1947 <> dlvo_kt_not_psi_surrogate
+scheme 1805:1824 <> DlvoKtNotPsiModality_rect
+scheme 1805:1824 <> DlvoKtNotPsiModality_ind
+scheme 1805:1824 <> DlvoKtNotPsiModality_rec
+scheme 1805:1824 <> DlvoKtNotPsiModality_sind
+def 1962:1988 <> dlvoKtNotPsiModalityCurrent
+R1992:2011 UMST.ChemConstants.DlvoKtNotPsi <> DlvoKtNotPsiModality ind
+R2018:2040 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+def 2055:2090 <> dlvo_kt_modality_lattice_cardinality
+R2094:2096 Corelib.Init.Datatypes <> nat ind
+prf 2111:2154 <> dlvo_kt_modality_lattice_cardinality_is_four
+R2196:2198 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2160:2195 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_modality_lattice_cardinality def
+prf 2234:2273 <> dlvo_kt_modality_lattice_not_118_squared
+R2342:2344 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2279:2282 Corelib.Init.Datatypes <> negb def
+R2285:2291 Stdlib.Arith.PeanoNat Nat eqb def
+R2293:2328 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_modality_lattice_cardinality def
+R2334:2336 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2345:2348 Corelib.Init.Datatypes <> true constr
+R2367:2402 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_modality_lattice_cardinality def
+def 2663:2674 <> dlvoKtPinTag
+R2678:2683 Stdlib.Strings.String <> string ind
+def 2719:2736 <> constitutivePsiTag
+R2740:2745 Stdlib.Strings.String <> string ind
+prf 2777:2797 <> dlvo_kt_pin_tag_named
+R2815:2817 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2803:2814 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtPinTag def
+prf 2869:2894 <> constitutive_psi_tag_named
+R2918:2920 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2900:2917 UMST.ChemConstants.DlvoKtNotPsi <> constitutivePsiTag def
+prf 2973:2990 <> pin_tag_ne_psi_tag
+R3008:3011 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R2996:3007 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtPinTag def
+R3012:3029 UMST.ChemConstants.DlvoKtNotPsi <> constitutivePsiTag def
+def 3070:3080 <> dlvoKtIsPsi
+R3084:3087 Corelib.Init.Datatypes <> bool ind
+R3092:3096 Corelib.Init.Datatypes <> false constr
+prf 3106:3125 <> dlvo_kt_is_psi_false
+R3142:3144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3131:3141 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtIsPsi def
+R3145:3149 Corelib.Init.Datatypes <> false constr
+def 3189:3206 <> pinDistinctFromPsi
+R3210:3213 Corelib.Init.Datatypes <> bool ind
+R3236:3241 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3220:3223 Corelib.Init.Datatypes <> negb def
+R3225:3235 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtIsPsi def
+R3242:3245 Corelib.Init.Datatypes <> negb def
+R3248:3257 Stdlib.Strings.String <> eqb def
+R3259:3270 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtPinTag def
+R3272:3289 UMST.ChemConstants.DlvoKtNotPsi <> constitutivePsiTag def
+prf 3300:3325 <> pin_distinct_from_psi_true
+R3349:3351 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3331:3348 UMST.ChemConstants.DlvoKtNotPsi <> pinDistinctFromPsi def
+R3352:3355 Corelib.Init.Datatypes <> true constr
+R3374:3391 UMST.ChemConstants.DlvoKtNotPsi <> pinDistinctFromPsi def
+def 3673:3698 <> exactSiKUnitMorphismMarker
+R3702:3707 Stdlib.Strings.String <> string ind
+def 3757:3782 <> landauerFakeConstantMarker
+R3786:3791 Stdlib.Strings.String <> string ind
+prf 3842:3871 <> exact_si_k_unit_morphism_named
+R3903:3906 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3877:3902 UMST.ChemConstants.DlvoKtNotPsi <> exactSiKUnitMorphismMarker def
+prf 3944:3971 <> exact_si_k_not_landauer_fake
+R4003:4006 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3977:4002 UMST.ChemConstants.DlvoKtNotPsi <> exactSiKUnitMorphismMarker def
+R4007:4032 UMST.ChemConstants.DlvoKtNotPsi <> landauerFakeConstantMarker def
+def 4073:4094 <> exactSiKIsUnitMorphism
+R4098:4101 Corelib.Init.Datatypes <> bool ind
+R4106:4109 Corelib.Init.Datatypes <> true constr
+def 4124:4151 <> landauerFakeConstantsRefused
+R4155:4158 Corelib.Init.Datatypes <> bool ind
+R4163:4166 Corelib.Init.Datatypes <> true constr
+prf 4176:4207 <> exact_si_k_is_unit_morphism_true
+R4235:4237 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4213:4234 UMST.ChemConstants.DlvoKtNotPsi <> exactSiKIsUnitMorphism def
+R4238:4241 Corelib.Init.Datatypes <> true constr
+prf 4276:4311 <> landauer_fake_constants_refused_true
+R4345:4347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4317:4344 UMST.ChemConstants.DlvoKtNotPsi <> landauerFakeConstantsRefused def
+R4348:4351 Corelib.Init.Datatypes <> true constr
+def 4391:4412 <> enginesSortSheafMarker
+R4416:4421 Stdlib.Strings.String <> string ind
+prf 4464:4487 <> engines_sort_sheaf_named
+R4515:4518 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4493:4514 UMST.ChemConstants.DlvoKtNotPsi <> enginesSortSheafMarker def
+def 4788:4813 <> fluidsDlvoThermalPinMarker
+R4817:4822 Stdlib.Strings.String <> string ind
+def 4899:4921 <> dlvoTreatedAsPsiRefused
+R4925:4928 Corelib.Init.Datatypes <> bool ind
+R4933:4936 Corelib.Init.Datatypes <> true constr
+prf 4946:4974 <> fluids_dlvo_thermal_pin_named
+R5006:5009 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4980:5005 UMST.ChemConstants.DlvoKtNotPsi <> fluidsDlvoThermalPinMarker def
+prf 5047:5078 <> dlvo_treated_as_psi_refused_true
+R5107:5109 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5084:5106 UMST.ChemConstants.DlvoKtNotPsi <> dlvoTreatedAsPsiRefused def
+R5110:5113 Corelib.Init.Datatypes <> true constr
+def 5153:5178 <> dlvoKtNotPsiHonestConjunct
+R5182:5185 Corelib.Init.Datatypes <> bool ind
+R5301:5306 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5267:5272 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5239:5244 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5210:5215 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5192:5209 UMST.ChemConstants.DlvoKtNotPsi <> pinDistinctFromPsi def
+R5216:5238 UMST.ChemConstants.DlvoKtNotPsi <> dlvoTreatedAsPsiRefused def
+R5245:5266 UMST.ChemConstants.DlvoKtNotPsi <> exactSiKIsUnitMorphism def
+R5273:5300 UMST.ChemConstants.DlvoKtNotPsi <> landauerFakeConstantsRefused def
+R5307:5310 Corelib.Init.Datatypes <> negb def
+R5312:5322 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtIsPsi def
+prf 5332:5367 <> dlvo_kt_not_psi_honest_conjunct_true
+R5399:5401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5373:5398 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiHonestConjunct def
+R5402:5405 Corelib.Init.Datatypes <> true constr
+R5424:5449 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiHonestConjunct def
+def 5732:5748 <> wave100LibRsWired
+R5752:5755 Corelib.Init.Datatypes <> bool ind
+R5760:5764 Corelib.Init.Datatypes <> false constr
+def 5779:5795 <> wave100EosRsWired
+R5799:5802 Corelib.Init.Datatypes <> bool ind
+R5807:5811 Corelib.Init.Datatypes <> false constr
+def 5826:5840 <> productionWired
+R5844:5847 Corelib.Init.Datatypes <> bool ind
+R5852:5856 Corelib.Init.Datatypes <> false constr
+prf 5866:5889 <> wave100_lib_rs_not_wired
+R5912:5914 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5895:5911 UMST.ChemConstants.DlvoKtNotPsi <> wave100LibRsWired def
+R5915:5919 Corelib.Init.Datatypes <> false constr
+prf 5954:5977 <> wave100_eos_rs_not_wired
+R6000:6002 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5983:5999 UMST.ChemConstants.DlvoKtNotPsi <> wave100EosRsWired def
+R6003:6007 Corelib.Init.Datatypes <> false constr
+prf 6042:6063 <> production_wired_false
+R6084:6086 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6069:6083 UMST.ChemConstants.DlvoKtNotPsi <> productionWired def
+R6087:6091 Corelib.Init.Datatypes <> false constr
+prf 6126:6142 <> wave100_not_wired
+R6196:6198 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6170:6173 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6148:6151 Corelib.Init.Datatypes <> negb def
+R6153:6169 UMST.ChemConstants.DlvoKtNotPsi <> wave100LibRsWired def
+R6174:6177 Corelib.Init.Datatypes <> negb def
+R6179:6195 UMST.ChemConstants.DlvoKtNotPsi <> wave100EosRsWired def
+R6199:6202 Corelib.Init.Datatypes <> true constr
+ind 6467:6489 <> dlvo_kt_not_psi_verdict
+constr 6505:6522 <> verdict_unwired_ok
+constr 6528:6550 <> verdict_pin_distinct_ok
+constr 6556:6581 <> verdict_dlvo_as_psi_refuse
+constr 6587:6614 <> verdict_landauer_fake_refuse
+constr 6620:6646 <> verdict_green_invent_refuse
+constr 6652:6682 <> verdict_production_wired_refuse
+scheme 6467:6489 <> dlvo_kt_not_psi_verdict_rect
+scheme 6467:6489 <> dlvo_kt_not_psi_verdict_ind
+scheme 6467:6489 <> dlvo_kt_not_psi_verdict_rec
+scheme 6467:6489 <> dlvo_kt_not_psi_verdict_sind
+def 6697:6722 <> dlvo_kt_not_psi_verdict_ok
+R6729:6751 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_verdict ind
+binder 6725:6725 <> v:5
+R6756:6759 Corelib.Init.Datatypes <> bool ind
+R6772:6772 UMST.ChemConstants.DlvoKtNotPsi <> v:5 var
+R6783:6800 UMST.ChemConstants.DlvoKtNotPsi <> verdict_unwired_ok constr
+R6805:6808 Corelib.Init.Datatypes <> true constr
+R6814:6836 UMST.ChemConstants.DlvoKtNotPsi <> verdict_pin_distinct_ok constr
+R6841:6844 Corelib.Init.Datatypes <> true constr
+R6855:6859 Corelib.Init.Datatypes <> false constr
+def 6880:6903 <> evaluate_dlvo_kt_not_psi
+R6912:6931 UMST.ChemConstants.DlvoKtNotPsi <> DlvoKtNotPsiModality ind
+binder 6908:6908 <> m:7
+R6959:6962 Corelib.Init.Datatypes <> bool ind
+binder 6937:6955 <> claim_physics_green:8
+R6988:6991 Corelib.Init.Datatypes <> bool ind
+binder 6968:6984 <> claim_dlvo_is_psi:9
+R7019:7022 Corelib.Init.Datatypes <> bool ind
+binder 6997:7015 <> claim_landauer_fake:10
+R7053:7056 Corelib.Init.Datatypes <> bool ind
+binder 7028:7049 <> claim_production_wired:11
+R7061:7083 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_verdict ind
+R7093:7111 UMST.ChemConstants.DlvoKtNotPsi <> claim_physics_green:8 var
+R7158:7179 UMST.ChemConstants.DlvoKtNotPsi <> claim_production_wired:11 var
+R7230:7246 UMST.ChemConstants.DlvoKtNotPsi <> claim_dlvo_is_psi:9 var
+R7292:7310 UMST.ChemConstants.DlvoKtNotPsi <> claim_landauer_fake:10 var
+R7365:7365 UMST.ChemConstants.DlvoKtNotPsi <> m:7 var
+R7378:7400 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R7405:7422 UMST.ChemConstants.DlvoKtNotPsi <> verdict_unwired_ok constr
+R7430:7452 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_assumed constr
+R7460:7481 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_proved constr
+R7489:7513 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_surrogate constr
+R7518:7540 UMST.ChemConstants.DlvoKtNotPsi <> verdict_pin_distinct_ok constr
+R7518:7540 UMST.ChemConstants.DlvoKtNotPsi <> verdict_pin_distinct_ok constr
+R7518:7540 UMST.ChemConstants.DlvoKtNotPsi <> verdict_pin_distinct_ok constr
+R7319:7346 UMST.ChemConstants.DlvoKtNotPsi <> verdict_landauer_fake_refuse constr
+R7255:7280 UMST.ChemConstants.DlvoKtNotPsi <> verdict_dlvo_as_psi_refuse constr
+R7188:7218 UMST.ChemConstants.DlvoKtNotPsi <> verdict_production_wired_refuse constr
+R7120:7146 UMST.ChemConstants.DlvoKtNotPsi <> verdict_green_invent_refuse constr
+prf 7558:7575 <> dlvo_kt_unwired_ok
+R7657:7661 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7581:7604 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R7610:7632 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R7634:7638 Corelib.Init.Datatypes <> false constr
+R7640:7644 Corelib.Init.Datatypes <> false constr
+R7646:7650 Corelib.Init.Datatypes <> false constr
+R7652:7656 Corelib.Init.Datatypes <> false constr
+R7662:7679 UMST.ChemConstants.DlvoKtNotPsi <> verdict_unwired_ok constr
+prf 7714:7740 <> dlvo_kt_green_invent_refuse
+R7821:7825 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7746:7769 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R7775:7797 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R7799:7802 Corelib.Init.Datatypes <> true constr
+R7804:7808 Corelib.Init.Datatypes <> false constr
+R7810:7814 Corelib.Init.Datatypes <> false constr
+R7816:7820 Corelib.Init.Datatypes <> false constr
+R7826:7852 UMST.ChemConstants.DlvoKtNotPsi <> verdict_green_invent_refuse constr
+prf 7887:7904 <> dlvo_as_psi_refuse
+R7985:7989 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7910:7933 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R7939:7961 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R7963:7967 Corelib.Init.Datatypes <> false constr
+R7969:7972 Corelib.Init.Datatypes <> true constr
+R7974:7978 Corelib.Init.Datatypes <> false constr
+R7980:7984 Corelib.Init.Datatypes <> false constr
+R7990:8015 UMST.ChemConstants.DlvoKtNotPsi <> verdict_dlvo_as_psi_refuse constr
+prf 8050:8069 <> landauer_fake_refuse
+R8150:8154 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8075:8098 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R8104:8126 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R8128:8132 Corelib.Init.Datatypes <> false constr
+R8134:8138 Corelib.Init.Datatypes <> false constr
+R8140:8143 Corelib.Init.Datatypes <> true constr
+R8145:8149 Corelib.Init.Datatypes <> false constr
+R8155:8182 UMST.ChemConstants.DlvoKtNotPsi <> verdict_landauer_fake_refuse constr
+prf 8217:8247 <> dlvo_kt_production_wired_refuse
+R8328:8332 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8253:8276 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R8282:8304 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R8306:8310 Corelib.Init.Datatypes <> false constr
+R8312:8316 Corelib.Init.Datatypes <> false constr
+R8318:8322 Corelib.Init.Datatypes <> false constr
+R8324:8327 Corelib.Init.Datatypes <> true constr
+R8333:8363 UMST.ChemConstants.DlvoKtNotPsi <> verdict_production_wired_refuse constr
+def 8628:8645 <> dlvoKtNotPsiProved
+R8649:8652 Corelib.Init.Datatypes <> bool ind
+R8657:8661 Corelib.Init.Datatypes <> false constr
+prf 8671:8698 <> dlvo_kt_not_psi_proved_false
+R8722:8724 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8704:8721 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiProved def
+R8725:8729 Corelib.Init.Datatypes <> false constr
+prf 8766:8793 <> dlvo_kt_not_psi_conservation
+R8898:8903 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8875:8879 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8799:8822 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R8828:8850 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R8852:8856 Corelib.Init.Datatypes <> false constr
+R8858:8862 Corelib.Init.Datatypes <> false constr
+R8864:8868 Corelib.Init.Datatypes <> false constr
+R8870:8874 Corelib.Init.Datatypes <> false constr
+R8880:8897 UMST.ChemConstants.DlvoKtNotPsi <> verdict_unwired_ok constr
+R8937:8942 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8930:8932 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8904:8929 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiHonestConjunct def
+R8933:8936 Corelib.Init.Datatypes <> true constr
+R8969:8974 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8961:8963 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8943:8960 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiProved def
+R8964:8968 Corelib.Init.Datatypes <> false constr
+R9000:9005 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8992:8994 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8975:8991 UMST.ChemConstants.DlvoKtNotPsi <> wave100LibRsWired def
+R8995:8999 Corelib.Init.Datatypes <> false constr
+R9023:9025 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9006:9022 UMST.ChemConstants.DlvoKtNotPsi <> wave100EosRsWired def
+R9026:9030 Corelib.Init.Datatypes <> false constr
+def 9086:9108 <> not118SquaredGreenTable
+R9112:9115 Corelib.Init.Datatypes <> bool ind
+R9120:9123 Corelib.Init.Datatypes <> true constr
+prf 9133:9159 <> not_118_squared_green_table
+R9188:9190 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9165:9187 UMST.ChemConstants.DlvoKtNotPsi <> not118SquaredGreenTable def
+R9191:9194 Corelib.Init.Datatypes <> true constr
+def 9234:9247 <> soleAxiomCount
+R9251:9253 Corelib.Init.Datatypes <> nat ind
+prf 9268:9290 <> sole_axiom_count_is_one
+R9310:9312 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9296:9309 UMST.ChemConstants.DlvoKtNotPsi <> soleAxiomCount def
+prf 9575:9606 <> dlvo_kt_not_psi_fixture_scaffold
+R9645:9650 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9638:9640 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9612:9637 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiHonestConjunct def
+R9641:9644 Corelib.Init.Datatypes <> true constr
+R9676:9681 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9669:9671 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9651:9668 UMST.ChemConstants.DlvoKtNotPsi <> pinDistinctFromPsi def
+R9672:9675 Corelib.Init.Datatypes <> true constr
+R9783:9788 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9758:9764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9682:9705 UMST.ChemConstants.DlvoKtNotPsi <> evaluate_dlvo_kt_not_psi def
+R9711:9733 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr
+R9735:9739 Corelib.Init.Datatypes <> false constr
+R9741:9745 Corelib.Init.Datatypes <> false constr
+R9747:9751 Corelib.Init.Datatypes <> false constr
+R9753:9757 Corelib.Init.Datatypes <> false constr
+R9765:9782 UMST.ChemConstants.DlvoKtNotPsi <> verdict_unwired_ok constr
+R9815:9821 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9877:9877 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9807:9809 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9789:9806 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiProved def
+R9810:9814 Corelib.Init.Datatypes <> false constr
+R9870:9872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9844:9847 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9822:9825 Corelib.Init.Datatypes <> negb def
+R9827:9843 UMST.ChemConstants.DlvoKtNotPsi <> wave100LibRsWired def
+R9848:9851 Corelib.Init.Datatypes <> negb def
+R9853:9869 UMST.ChemConstants.DlvoKtNotPsi <> wave100EosRsWired def
+R9873:9876 Corelib.Init.Datatypes <> true constr
+R9896:9899 Corelib.Init.Logic <> conj constr
+R9943:9946 Corelib.Init.Logic <> conj constr
+R9982:9985 Corelib.Init.Logic <> conj constr
+R10015:10018 Corelib.Init.Logic <> conj constr
+R10049:10065 UMST.ChemConstants.DlvoKtNotPsi <> wave100_not_wired thm
+R10020:10047 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_proved_false thm
+R9987:10004 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_unwired_ok thm
+R9948:9973 UMST.ChemConstants.DlvoKtNotPsi <> pin_distinct_from_psi_true thm
+R9901:9936 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_honest_conjunct_true thm
+R9896:9899 Corelib.Init.Logic <> conj constr
+R9943:9946 Corelib.Init.Logic <> conj constr
+R9982:9985 Corelib.Init.Logic <> conj constr
+R10015:10018 Corelib.Init.Logic <> conj constr
+R10049:10065 UMST.ChemConstants.DlvoKtNotPsi <> wave100_not_wired thm
+R10020:10047 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_proved_false thm
+R9987:10004 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_unwired_ok thm
+R9948:9973 UMST.ChemConstants.DlvoKtNotPsi <> pin_distinct_from_psi_true thm
+R9901:9936 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_honest_conjunct_true thm
+def 10315:10337 <> dlvoKtNotPsiRsAuthority
+R10341:10346 Stdlib.Strings.String <> string ind
+def 10413:10445 <> chemIntCrossDlvoKtNotPsiAuthority
+R10449:10454 Stdlib.Strings.String <> string ind
+def 10520:10536 <> exactSiKAuthority
+R10540:10545 Stdlib.Strings.String <> string ind
+def 10608:10625 <> dlvoKtNotPsiCellId
+R10629:10634 Stdlib.Strings.String <> string ind
+def 10703:10722 <> dlvoKtNotPsiNonClaim
+R10726:10731 Stdlib.Strings.String <> string ind
+prf 11214:11236 <> dlvo_kt_not_psi_cell_id
+R11260:11264 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11242:11259 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiCellId def
+prf 11347:11366 <> dlvo_kt_cites_rs_row
+R11395:11398 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11372:11394 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiRsAuthority def
+prf 11436:11462 <> dlvo_kt_cites_int_cross_row
+R11501:11505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11468:11500 UMST.ChemConstants.DlvoKtNotPsi <> chemIntCrossDlvoKtNotPsiAuthority def
+prf 11585:11608 <> dlvo_kt_cites_exact_si_k
+R11631:11634 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11614:11630 UMST.ChemConstants.DlvoKtNotPsi <> exactSiKAuthority def
+prf 11672:11691 <> dlvo_kt_cites_marker
+R11723:11726 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11697:11722 UMST.ChemConstants.DlvoKtNotPsi <> fluidsDlvoThermalPinMarker def
+def 11993:12032 <> dlvoKtNotPsiSecondLawConservationFraming
+R12036:12041 Stdlib.Strings.String <> string ind
+prf 12129:12156 <> dlvo_kt_not_second_pin_axiom
+R12202:12205 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12162:12201 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiSecondLawConservationFraming def
+prf 12259:12297 <> dlvo_kt_second_law_conservation_framing
+R12343:12346 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12303:12342 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiSecondLawConservationFraming def
+def 12615:12636 <> physicsGreenAuthorized
+R12648:12652 Corelib.Init.Logic <> False ind
+prf 12662:12696 <> dlvo_kt_not_psi_physics_green_false
+R12702:12703 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12704:12725 UMST.ChemConstants.DlvoKtNotPsi <> physicsGreenAuthorized def
+prf 12765:12796 <> dlvo_kt_not_psi_modality_unwired
+R12829:12831 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12802:12828 UMST.ChemConstants.DlvoKtNotPsi <> dlvoKtNotPsiModalityCurrent def
+R12832:12854 UMST.ChemConstants.DlvoKtNotPsi <> dlvo_kt_not_psi_unwired constr

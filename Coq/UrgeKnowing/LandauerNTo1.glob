@@ -1,0 +1,376 @@
+DIGEST 9c67924bba3d4f6e59f96cf9c843f5be
+FUrgeKnowing.LandauerNTo1
+R1274:1278 Stdlib.Reals.Reals <> <> lib
+R1280:1284 Stdlib.Reals.RIneq <> <> lib
+R1286:1288 Stdlib.micromega.Lra <> <> lib
+R1290:1294 Stdlib.setoid_ring.Field <> <> lib
+R1296:1300 Stdlib.Arith.Arith <> <> lib
+R1302:1309 Stdlib.Arith.PeanoNat <> <> lib
+R1311:1316 Stdlib.Strings.String <> <> lib
+R1318:1321 Stdlib.Bool.Bool <> <> lib
+R1355:1376 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1378:1392 UMSTFormal.MeasurementCost <> <> lib
+ind 1745:1764 <> LandauerNTo1Modality
+constr 1780:1802 <> landauer_n_to_1_unwired
+constr 1808:1830 <> landauer_n_to_1_assumed
+constr 1836:1857 <> landauer_n_to_1_proved
+constr 1863:1887 <> landauer_n_to_1_surrogate
+scheme 1745:1764 <> LandauerNTo1Modality_rect
+scheme 1745:1764 <> LandauerNTo1Modality_ind
+scheme 1745:1764 <> LandauerNTo1Modality_rec
+scheme 1745:1764 <> LandauerNTo1Modality_sind
+def 1902:1928 <> landauerNTo1ModalityCurrent
+R1932:1951 UrgeKnowing.LandauerNTo1 <> LandauerNTo1Modality ind
+R1958:1980 UrgeKnowing.LandauerNTo1 <> landauer_n_to_1_unwired constr
+def 2219:2244 <> destroyed_distinction_bits
+R2251:2253 Corelib.Init.Datatypes <> nat ind
+binder 2247:2247 <> n:3
+R2258:2263 Corelib.Init.Datatypes <> option ind
+R2265:2267 Corelib.Init.Datatypes <> nat ind
+R2280:2280 UrgeKnowing.LandauerNTo1 <> n:3 var
+R2291:2291 Corelib.Init.Datatypes <> O constr
+R2295:2295 Corelib.Init.Datatypes <> S constr
+R2297:2297 Corelib.Init.Datatypes <> O constr
+R2302:2305 Corelib.Init.Datatypes <> None constr
+R2302:2305 Corelib.Init.Datatypes <> None constr
+R2311:2311 Corelib.Init.Datatypes <> S constr
+R2318:2321 Corelib.Init.Datatypes <> Some constr
+R2324:2331 Stdlib.Arith.PeanoNat Nat log2 def
+R2333:2333 UrgeKnowing.LandauerNTo1 <> n:3 var
+prf 2350:2380 <> destroyed_distinction_bits_four
+R2414:2416 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2386:2411 UrgeKnowing.LandauerNTo1 <> destroyed_distinction_bits def
+R2417:2420 Corelib.Init.Datatypes <> Some constr
+prf 2461:2490 <> destroyed_distinction_bits_two
+R2524:2526 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2496:2521 UrgeKnowing.LandauerNTo1 <> destroyed_distinction_bits def
+R2527:2530 Corelib.Init.Datatypes <> Some constr
+prf 2571:2600 <> destroyed_distinction_bits_one
+R2634:2636 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2606:2631 UrgeKnowing.LandauerNTo1 <> destroyed_distinction_bits def
+R2637:2640 Corelib.Init.Datatypes <> None constr
+prf 2675:2705 <> destroyed_distinction_bits_zero
+R2739:2741 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2711:2736 UrgeKnowing.LandauerNTo1 <> destroyed_distinction_bits def
+R2742:2745 Corelib.Init.Datatypes <> None constr
+prf 3003:3036 <> measurementEnergyLowerBound_nonneg
+R3046:3046 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3039:3039 <> T:5
+binder 3041:3042 <> mi:6
+R3059:3062 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3054:3057 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3058:3058 UrgeKnowing.LandauerNTo1 <> T:5 var
+R3070:3073 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3064:3067 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3068:3069 UrgeKnowing.LandauerNTo1 <> mi:6 var
+R3075:3078 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3079:3105 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3107:3107 UrgeKnowing.LandauerNTo1 <> T:5 var
+R3109:3110 UrgeKnowing.LandauerNTo1 <> mi:6 var
+R3146:3172 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3175:3188 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3199:3210 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3199:3210 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3235:3246 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3257:3262 Stdlib.Reals.RIneq <> Rlt_le thm
+R3265:3271 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3235:3246 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3257:3262 Stdlib.Reals.RIneq <> Rlt_le thm
+R3265:3271 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3283:3294 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3304:3309 Stdlib.Reals.RIneq <> Rlt_le thm
+R3312:3320 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3283:3294 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3304:3309 Stdlib.Reals.RIneq <> Rlt_le thm
+R3312:3320 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 3345:3365 <> E_Landauer_bit_nonneg
+R3372:3372 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3368:3368 <> T:7
+R3385:3388 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3380:3383 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3384:3384 UrgeKnowing.LandauerNTo1 <> T:7 var
+R3390:3393 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3394:3407 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3409:3409 UrgeKnowing.LandauerNTo1 <> T:7 var
+R3441:3454 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3465:3476 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3487:3492 Stdlib.Reals.RIneq <> Rlt_le thm
+R3495:3501 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3465:3476 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3487:3492 Stdlib.Reals.RIneq <> Rlt_le thm
+R3495:3501 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3513:3524 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3534:3539 Stdlib.Reals.RIneq <> Rlt_le thm
+R3542:3550 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3513:3524 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3534:3539 Stdlib.Reals.RIneq <> Rlt_le thm
+R3542:3550 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+def 3580:3613 <> landauer_floor_from_destroyed_bits
+R3620:3620 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3616:3616 <> T:8
+R3631:3633 Corelib.Init.Datatypes <> nat ind
+binder 3624:3627 <> bits:9
+R3638:3638 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3645:3671 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3673:3673 UrgeKnowing.LandauerNTo1 <> T:8 var
+R3676:3678 Stdlib.Reals.Raxioms <> INR def
+R3680:3683 UrgeKnowing.LandauerNTo1 <> bits:9 var
+prf 3694:3731 <> landauer_floor_two_bit_collapse_nonneg
+R3738:3738 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3734:3734 <> T:10
+R3751:3756 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3746:3749 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3750:3750 UrgeKnowing.LandauerNTo1 <> T:10 var
+R3758:3761 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3762:3795 UrgeKnowing.LandauerNTo1 <> landauer_floor_from_destroyed_bits def
+R3797:3797 UrgeKnowing.LandauerNTo1 <> T:10 var
+R3835:3868 UrgeKnowing.LandauerNTo1 <> landauer_floor_from_destroyed_bits def
+R3871:3897 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3908:3919 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3908:3919 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3948:3959 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3970:3975 Stdlib.Reals.RIneq <> Rlt_le thm
+R3978:3984 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3948:3959 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3970:3975 Stdlib.Reals.RIneq <> Rlt_le thm
+R3978:3984 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3998:4009 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4019:4024 Stdlib.Reals.RIneq <> Rlt_le thm
+R4027:4035 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3998:4009 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4019:4024 Stdlib.Reals.RIneq <> Rlt_le thm
+R4027:4035 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 4060:4095 <> landauer_floor_two_bit_le_bit_energy
+R4102:4102 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4098:4098 <> T:11
+R4115:4120 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4110:4113 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4114:4114 UrgeKnowing.LandauerNTo1 <> T:11 var
+R4163:4166 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4121:4154 UrgeKnowing.LandauerNTo1 <> landauer_floor_from_destroyed_bits def
+R4156:4156 UrgeKnowing.LandauerNTo1 <> T:11 var
+R4168:4170 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R4171:4184 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4186:4186 UrgeKnowing.LandauerNTo1 <> T:11 var
+R4218:4251 UrgeKnowing.LandauerNTo1 <> landauer_floor_from_destroyed_bits def
+R4254:4280 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R4283:4296 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+rec 4550:4569 <> CompressionCandidate
+proj 4578:4601 <> source_distinction_count
+proj 4612:4633 <> claimed_destroyed_bits
+proj 4651:4669 <> laptop_heat_theater
+proj 4681:4700 <> claims_physics_green
+proj 4712:4728 <> provenance_intact
+proj 4740:4754 <> evidence_tagged
+R4605:4607 Corelib.Init.Datatypes <> nat ind
+R4637:4642 Corelib.Init.Datatypes <> option ind
+R4644:4646 Corelib.Init.Datatypes <> nat ind
+R4673:4676 Corelib.Init.Datatypes <> bool ind
+R4704:4707 Corelib.Init.Datatypes <> bool ind
+R4732:4735 Corelib.Init.Datatypes <> bool ind
+R4758:4761 Corelib.Init.Datatypes <> bool ind
+ind 4777:4795 <> LandauerNTo1Refusal
+constr 4811:4836 <> refuse_laptop_heat_theater
+constr 4842:4873 <> refuse_invented_distinction_bits
+constr 4879:4908 <> refuse_false_green_compression
+constr 4914:4935 <> refuse_provenance_lost
+constr 4941:4967 <> refuse_missing_evidence_tag
+scheme 4777:4795 <> LandauerNTo1Refusal_rect
+scheme 4777:4795 <> LandauerNTo1Refusal_ind
+scheme 4777:4795 <> LandauerNTo1Refusal_rec
+scheme 4777:4795 <> LandauerNTo1Refusal_sind
+ind 4981:4998 <> CompressionVerdict
+constr 5014:5031 <> compression_accept
+constr 5037:5054 <> compression_refuse
+scheme 4981:4998 <> CompressionVerdict_rect
+scheme 4981:4998 <> CompressionVerdict_ind
+scheme 4981:4998 <> CompressionVerdict_rec
+scheme 4981:4998 <> CompressionVerdict_sind
+def 5069:5095 <> admit_compression_candidate
+R5102:5121 UrgeKnowing.LandauerNTo1 <> CompressionCandidate rec
+binder 5098:5098 <> c:23
+R5128:5133 Corelib.Init.Datatypes <> option ind
+R5135:5153 UrgeKnowing.LandauerNTo1 <> LandauerNTo1Refusal ind
+R5163:5181 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R5183:5183 UrgeKnowing.LandauerNTo1 <> c:23 var
+R5236:5255 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R5257:5257 UrgeKnowing.LandauerNTo1 <> c:23 var
+R5314:5317 Corelib.Init.Datatypes <> negb def
+R5320:5336 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R5338:5338 UrgeKnowing.LandauerNTo1 <> c:23 var
+R5388:5391 Corelib.Init.Datatypes <> negb def
+R5394:5408 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R5410:5410 UrgeKnowing.LandauerNTo1 <> c:23 var
+R5539:5560 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R5562:5562 UrgeKnowing.LandauerNTo1 <> c:23 var
+R5472:5497 UrgeKnowing.LandauerNTo1 <> destroyed_distinction_bits def
+R5500:5523 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R5525:5525 UrgeKnowing.LandauerNTo1 <> c:23 var
+R5575:5578 Corelib.Init.Datatypes <> Some constr
+R5590:5593 Corelib.Init.Datatypes <> Some constr
+R5617:5623 Stdlib.Arith.PeanoNat Nat eqb def
+R5665:5668 Corelib.Init.Datatypes <> Some constr
+R5670:5701 UrgeKnowing.LandauerNTo1 <> refuse_invented_distinction_bits constr
+R5647:5650 Corelib.Init.Datatypes <> None constr
+R5717:5720 Corelib.Init.Datatypes <> Some constr
+R5722:5753 UrgeKnowing.LandauerNTo1 <> refuse_invented_distinction_bits constr
+R5422:5425 Corelib.Init.Datatypes <> Some constr
+R5427:5453 UrgeKnowing.LandauerNTo1 <> refuse_missing_evidence_tag constr
+R5350:5353 Corelib.Init.Datatypes <> Some constr
+R5355:5376 UrgeKnowing.LandauerNTo1 <> refuse_provenance_lost constr
+R5268:5271 Corelib.Init.Datatypes <> Some constr
+R5273:5302 UrgeKnowing.LandauerNTo1 <> refuse_false_green_compression constr
+R5194:5197 Corelib.Init.Datatypes <> Some constr
+R5199:5224 UrgeKnowing.LandauerNTo1 <> refuse_laptop_heat_theater constr
+def 5776:5795 <> evaluate_compression
+R5802:5821 UrgeKnowing.LandauerNTo1 <> CompressionCandidate rec
+binder 5798:5798 <> c:24
+R5826:5843 UrgeKnowing.LandauerNTo1 <> CompressionVerdict ind
+R5856:5882 UrgeKnowing.LandauerNTo1 <> admit_compression_candidate def
+R5884:5884 UrgeKnowing.LandauerNTo1 <> c:24 var
+R5895:5898 Corelib.Init.Datatypes <> None constr
+R5903:5920 UrgeKnowing.LandauerNTo1 <> compression_accept constr
+R5926:5929 Corelib.Init.Datatypes <> Some constr
+R5936:5953 UrgeKnowing.LandauerNTo1 <> compression_refuse constr
+def 5974:6008 <> fixture_admissible_two_bit_collapse
+R6012:6031 UrgeKnowing.LandauerNTo1 <> CompressionCandidate rec
+R6041:6064 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6041:6064 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6041:6064 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6081:6102 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R6081:6102 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R6124:6142 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R6124:6142 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R6159:6178 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R6159:6178 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R6195:6211 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R6195:6211 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R6227:6241 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R6227:6241 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R6107:6110 Corelib.Init.Datatypes <> Some constr
+R6147:6151 Corelib.Init.Datatypes <> false constr
+R6183:6187 Corelib.Init.Datatypes <> false constr
+R6216:6219 Corelib.Init.Datatypes <> true constr
+R6246:6249 Corelib.Init.Datatypes <> true constr
+def 6267:6298 <> fixture_inadmissible_laptop_heat
+R6302:6321 UrgeKnowing.LandauerNTo1 <> CompressionCandidate rec
+R6331:6354 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6331:6354 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6331:6354 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6371:6392 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R6371:6392 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R6414:6432 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R6414:6432 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R6448:6467 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R6448:6467 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R6484:6500 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R6484:6500 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R6516:6530 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R6516:6530 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R6397:6400 Corelib.Init.Datatypes <> Some constr
+R6437:6440 Corelib.Init.Datatypes <> true constr
+R6472:6476 Corelib.Init.Datatypes <> false constr
+R6505:6508 Corelib.Init.Datatypes <> true constr
+R6535:6538 Corelib.Init.Datatypes <> true constr
+def 6556:6589 <> fixture_inadmissible_invented_bits
+R6593:6612 UrgeKnowing.LandauerNTo1 <> CompressionCandidate rec
+R6622:6645 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6622:6645 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6622:6645 UrgeKnowing.LandauerNTo1 <> source_distinction_count proj
+R6662:6683 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R6662:6683 UrgeKnowing.LandauerNTo1 <> claimed_destroyed_bits proj
+R6706:6724 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R6706:6724 UrgeKnowing.LandauerNTo1 <> laptop_heat_theater proj
+R6741:6760 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R6741:6760 UrgeKnowing.LandauerNTo1 <> claims_physics_green proj
+R6777:6793 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R6777:6793 UrgeKnowing.LandauerNTo1 <> provenance_intact proj
+R6809:6823 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R6809:6823 UrgeKnowing.LandauerNTo1 <> evidence_tagged proj
+R6688:6691 Corelib.Init.Datatypes <> Some constr
+R6729:6733 Corelib.Init.Datatypes <> false constr
+R6765:6769 Corelib.Init.Datatypes <> false constr
+R6798:6801 Corelib.Init.Datatypes <> true constr
+R6828:6831 Corelib.Init.Datatypes <> true constr
+prf 6844:6877 <> fixture_admissible_two_bit_accepts
+R6939:6941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6883:6902 UrgeKnowing.LandauerNTo1 <> evaluate_compression def
+R6904:6938 UrgeKnowing.LandauerNTo1 <> fixture_admissible_two_bit_collapse def
+R6942:6959 UrgeKnowing.LandauerNTo1 <> compression_accept constr
+prf 6994:7020 <> fixture_laptop_heat_refuses
+R7086:7090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7026:7052 UrgeKnowing.LandauerNTo1 <> admit_compression_candidate def
+R7054:7085 UrgeKnowing.LandauerNTo1 <> fixture_inadmissible_laptop_heat def
+R7091:7094 Corelib.Init.Datatypes <> Some constr
+R7096:7121 UrgeKnowing.LandauerNTo1 <> refuse_laptop_heat_theater constr
+prf 7156:7184 <> fixture_invented_bits_refuses
+R7252:7256 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7190:7216 UrgeKnowing.LandauerNTo1 <> admit_compression_candidate def
+R7218:7251 UrgeKnowing.LandauerNTo1 <> fixture_inadmissible_invented_bits def
+R7257:7260 Corelib.Init.Datatypes <> Some constr
+R7262:7293 UrgeKnowing.LandauerNTo1 <> refuse_invented_distinction_bits constr
+prf 7328:7370 <> landauer_n_to_1_laptop_heat_positive_refuse
+R7436:7440 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7376:7402 UrgeKnowing.LandauerNTo1 <> admit_compression_candidate def
+R7404:7435 UrgeKnowing.LandauerNTo1 <> fixture_inadmissible_laptop_heat def
+R7441:7444 Corelib.Init.Datatypes <> Some constr
+R7446:7471 UrgeKnowing.LandauerNTo1 <> refuse_laptop_heat_theater constr
+prf 7506:7550 <> landauer_n_to_1_invented_bits_positive_refuse
+R7618:7622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7556:7582 UrgeKnowing.LandauerNTo1 <> admit_compression_candidate def
+R7584:7617 UrgeKnowing.LandauerNTo1 <> fixture_inadmissible_invented_bits def
+R7623:7626 Corelib.Init.Datatypes <> Some constr
+R7628:7659 UrgeKnowing.LandauerNTo1 <> refuse_invented_distinction_bits constr
+def 7925:7946 <> landauerBoundAuthority
+R7950:7955 Stdlib.Strings.String <> string ind
+def 8030:8054 <> landauerNTo1LeanAuthority
+R8058:8063 Stdlib.Strings.String <> string ind
+def 8149:8168 <> landauerLawAuthority
+R8172:8177 Stdlib.Strings.String <> string ind
+def 8250:8275 <> physicalSecondLawAuthority
+R8279:8284 Stdlib.Strings.String <> string ind
+def 8336:8353 <> landauerNTo1CellId
+R8357:8362 Stdlib.Strings.String <> string ind
+def 8418:8437 <> landauerNTo1NonClaim
+R8441:8446 Stdlib.Strings.String <> string ind
+prf 8771:8793 <> landauer_n_to_1_cell_id
+R8817:8819 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8799:8816 UrgeKnowing.LandauerNTo1 <> landauerNTo1CellId def
+prf 8889:8924 <> landauer_n_to_1_cites_landauer_bound
+R8952:8955 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8930:8951 UrgeKnowing.LandauerNTo1 <> landauerBoundAuthority def
+prf 8993:9026 <> landauer_n_to_1_cites_lean_knowing
+R9057:9060 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9032:9056 UrgeKnowing.LandauerNTo1 <> landauerNTo1LeanAuthority def
+prf 9098:9138 <> landauer_n_to_1_cites_physical_second_law
+R9170:9172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9144:9169 UrgeKnowing.LandauerNTo1 <> physicalSecondLawAuthority def
+def 9464:9503 <> landauerNTo1SecondLawConservationFraming
+R9507:9512 Stdlib.Strings.String <> string ind
+prf 9596:9636 <> landauer_n_to_1_not_second_landauer_axiom
+R9682:9687 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9642:9681 UrgeKnowing.LandauerNTo1 <> landauerNTo1SecondLawConservationFraming def
+prf 9746:9792 <> landauer_n_to_1_second_law_conservation_framing
+R9838:9841 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9798:9837 UrgeKnowing.LandauerNTo1 <> landauerNTo1SecondLawConservationFraming def
+def 10108:10129 <> physicsGreenAuthorized
+R10141:10145 Corelib.Init.Logic <> False ind
+prf 10155:10189 <> landauer_n_to_1_physics_green_false
+R10195:10196 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10197:10218 UrgeKnowing.LandauerNTo1 <> physicsGreenAuthorized def
+prf 10258:10289 <> landauer_n_to_1_modality_unwired
+R10322:10324 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10295:10321 UrgeKnowing.LandauerNTo1 <> landauerNTo1ModalityCurrent def
+R10325:10347 UrgeKnowing.LandauerNTo1 <> landauer_n_to_1_unwired constr
+def 10609:10627 <> mesoThermoGRestated
+R10631:10636 Stdlib.Strings.String <> string ind
+prf 10681:10719 <> landauer_n_to_1_not_meso_thermo_restate
+R10745:10748 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10725:10744 UrgeKnowing.LandauerNTo1 <> landauerNTo1NonClaim def
+R10749:10767 UrgeKnowing.LandauerNTo1 <> mesoThermoGRestated def
+def 11032:11055 <> laptopHeatTheaterPrimary
+R11059:11064 Stdlib.Strings.String <> string ind
+prf 11114:11152 <> landauer_n_to_1_not_laptop_heat_theater
+R11178:11181 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11158:11177 UrgeKnowing.LandauerNTo1 <> landauerNTo1NonClaim def
+R11182:11205 UrgeKnowing.LandauerNTo1 <> laptopHeatTheaterPrimary def

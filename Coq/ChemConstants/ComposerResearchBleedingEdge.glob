@@ -1,0 +1,378 @@
+DIGEST 970d8d5ad93b73ddf5e74dcdc8eeccb4
+FUMST.ChemConstants.ComposerResearchBleedingEdge
+R979:983 Stdlib.Arith.Arith <> <> lib
+R985:988 Stdlib.Lists.List <> <> lib
+R990:993 Stdlib.Bool.Bool <> <> lib
+R995:1000 Stdlib.Strings.String <> <> lib
+R1002:1004 Stdlib.micromega.Lia <> <> lib
+R1014:1026 Stdlib.Lists.List ListNotations <> mod
+def 1061:1095 <> composerresearchbleedingedgeSurface
+R1099:1104 Stdlib.Strings.String <> string ind
+def 1166:1199 <> composerResearchBleedingEdgeMarker
+R1203:1208 Stdlib.Strings.String <> string ind
+prf 1275:1319 <> composer_research_bleeding_edge_surface_named
+R1360:1363 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1325:1359 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerresearchbleedingedgeSurface def
+prf 1401:1444 <> composer_research_bleeding_edge_marker_named
+R1484:1487 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1450:1483 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeMarker def
+ind 1750:1785 <> ComposerResearchBleedingEdgeModality
+constr 1801:1839 <> composer_research_bleeding_edge_unwired
+constr 1845:1883 <> composer_research_bleeding_edge_assumed
+constr 1889:1926 <> composer_research_bleeding_edge_proved
+constr 1932:1972 <> composer_research_bleeding_edge_surrogate
+scheme 1750:1785 <> ComposerResearchBleedingEdgeModality_rect
+scheme 1750:1785 <> ComposerResearchBleedingEdgeModality_ind
+scheme 1750:1785 <> ComposerResearchBleedingEdgeModality_rec
+scheme 1750:1785 <> ComposerResearchBleedingEdgeModality_sind
+def 1987:2029 <> composerResearchBleedingEdgeModalityCurrent
+R2035:2070 UMST.ChemConstants.ComposerResearchBleedingEdge <> ComposerResearchBleedingEdgeModality ind
+R2077:2115 UMST.ChemConstants.ComposerResearchBleedingEdge <> composer_research_bleeding_edge_unwired constr
+def 2130:2180 <> composer_research_bleeding_edge_lattice_cardinality
+R2184:2186 Corelib.Init.Datatypes <> nat ind
+prf 2201:2259 <> composer_research_bleeding_edge_lattice_cardinality_is_four
+R2316:2318 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2265:2315 UMST.ChemConstants.ComposerResearchBleedingEdge <> composer_research_bleeding_edge_lattice_cardinality def
+prf 2354:2408 <> composer_research_bleeding_edge_lattice_not_118_squared
+R2492:2496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2414:2417 Corelib.Init.Datatypes <> negb def
+R2420:2426 Stdlib.Arith.PeanoNat Nat eqb def
+R2428:2478 UMST.ChemConstants.ComposerResearchBleedingEdge <> composer_research_bleeding_edge_lattice_cardinality def
+R2484:2486 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2497:2500 Corelib.Init.Datatypes <> true constr
+R2519:2569 UMST.ChemConstants.ComposerResearchBleedingEdge <> composer_research_bleeding_edge_lattice_cardinality def
+def 2825:2859 <> composerResearchBleedingEdgeV50Stem
+R2863:2868 Stdlib.Strings.String <> string ind
+prf 2917:2962 <> composer_research_bleeding_edge_v50_stem_named
+R3003:3007 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2968:3002 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeV50Stem def
+def 3080:3114 <> composerResearchBleedingEdgeRowStem
+R3118:3123 Stdlib.Strings.String <> string ind
+prf 3172:3217 <> composer_research_bleeding_edge_row_stem_named
+R3258:3262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3223:3257 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeRowStem def
+ind 3559:3581 <> ResearchHypothesisClass
+constr 3597:3633 <> research_hypothesis_theorem_candidate
+constr 3639:3682 <> research_hypothesis_named_measured_remainder
+constr 3688:3722 <> research_hypothesis_already_unwired
+constr 3728:3753 <> research_hypothesis_absent
+scheme 3559:3581 <> ResearchHypothesisClass_rect
+scheme 3559:3581 <> ResearchHypothesisClass_ind
+scheme 3559:3581 <> ResearchHypothesisClass_rec
+scheme 3559:3581 <> ResearchHypothesisClass_sind
+def 3768:3793 <> researchHypothesisClassTag
+R3800:3822 UMST.ChemConstants.ComposerResearchBleedingEdge <> ResearchHypothesisClass ind
+binder 3796:3796 <> c:5
+R3827:3832 Stdlib.Strings.String <> string ind
+R3845:3845 UMST.ChemConstants.ComposerResearchBleedingEdge <> c:5 var
+R3856:3892 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_theorem_candidate constr
+R3921:3964 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_named_measured_remainder constr
+R4000:4034 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_already_unwired constr
+R4061:4086 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_absent constr
+prf 4114:4154 <> research_hypothesis_theorem_candidate_tag
+R4224:4228 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4160:4185 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesisClassTag def
+R4187:4223 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_theorem_candidate constr
+prf 4282:4329 <> research_hypothesis_named_measured_remainder_tag
+R4406:4410 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4335:4360 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesisClassTag def
+R4362:4405 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_named_measured_remainder constr
+prf 4471:4509 <> research_hypothesis_already_unwired_tag
+R4577:4581 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4515:4540 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesisClassTag def
+R4542:4576 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_already_unwired constr
+prf 4633:4662 <> research_hypothesis_absent_tag
+R4721:4723 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4668:4693 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesisClassTag def
+R4695:4720 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_absent constr
+def 4771:4801 <> research_hypothesis_class_count
+R4805:4807 Corelib.Init.Datatypes <> nat ind
+prf 4822:4860 <> research_hypothesis_class_count_is_four
+R4897:4899 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4866:4896 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_class_count def
+def 5165:5196 <> refuseCatalysisAxiomHypothesisId
+R5200:5205 Stdlib.Strings.String <> string ind
+def 5256:5289 <> chemPhysicsIsomorphismHypothesisId
+R5293:5298 Stdlib.Strings.String <> string ind
+def 5351:5375 <> bleedingEdgeHypothesisIds
+R5379:5382 Corelib.Init.Datatypes <> list ind
+R5384:5389 Stdlib.Strings.String <> string ind
+R5396:5397 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5430:5435 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5470:5471 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5398:5429 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomHypothesisId def
+R5436:5469 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismHypothesisId def
+prf 5481:5522 <> refuse_catalysis_axiom_hypothesis_id_named
+R5560:5564 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5528:5559 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomHypothesisId def
+prf 5629:5672 <> chem_physics_isomorphism_hypothesis_id_named
+R5712:5716 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5678:5711 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismHypothesisId def
+def 5788:5814 <> bleedingEdgeHypothesisCount
+R5818:5820 Corelib.Init.Datatypes <> nat ind
+prf 5835:5871 <> bleeding_edge_hypothesis_count_is_two
+R5904:5906 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5877:5903 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleedingEdgeHypothesisCount def
+def 5947:5958 <> stringInList
+R5965:5970 Stdlib.Strings.String <> string ind
+binder 5961:5961 <> s:7
+R5980:5983 Corelib.Init.Datatypes <> list ind
+R5985:5990 Stdlib.Strings.String <> string ind
+binder 5974:5976 <> ids:8
+R5995:5998 Corelib.Init.Datatypes <> bool ind
+R6005:6011 Stdlib.Lists.List <> existsb def
+R6028:6030 UMST.ChemConstants.ComposerResearchBleedingEdge <> ids:8 var
+R6014:6023 Stdlib.Strings.String <> eqb def
+R6025:6025 UMST.ChemConstants.ComposerResearchBleedingEdge <> s:7 var
+prf 6040:6082 <> refuse_catalysis_axiom_in_bleeding_edge_ids
+R6159:6161 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6088:6099 UMST.ChemConstants.ComposerResearchBleedingEdge <> stringInList def
+R6101:6132 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomHypothesisId def
+R6134:6158 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleedingEdgeHypothesisIds def
+R6162:6165 Corelib.Init.Datatypes <> true constr
+prf 6207:6251 <> chem_physics_isomorphism_in_bleeding_edge_ids
+R6330:6332 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6257:6268 UMST.ChemConstants.ComposerResearchBleedingEdge <> stringInList def
+R6270:6303 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismHypothesisId def
+R6305:6329 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleedingEdgeHypothesisIds def
+R6333:6336 Corelib.Init.Datatypes <> true constr
+rec 6602:6626 <> BleedingEdgeHypothesisRow
+proj 6635:6661 <> bleeding_edge_hypothesis_id
+proj 6675:6704 <> bleeding_edge_hypothesis_class
+proj 6735:6760 <> bleeding_edge_maps_to_stem
+proj 6772:6801 <> bleeding_edge_not_a_26th_axiom
+R6665:6670 Stdlib.Strings.String <> string ind
+R6708:6730 UMST.ChemConstants.ComposerResearchBleedingEdge <> ResearchHypothesisClass ind
+R6764:6767 Corelib.Init.Datatypes <> bool ind
+R6805:6808 Corelib.Init.Datatypes <> bool ind
+def 6825:6847 <> refuseCatalysisAxiomRow
+R6851:6875 UMST.ChemConstants.ComposerResearchBleedingEdge <> BleedingEdgeHypothesisRow rec
+R6885:6911 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_id proj
+R6885:6911 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_id proj
+R6885:6911 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_id proj
+R6955:6984 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_class proj
+R6955:6984 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_class proj
+R7022:7047 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_maps_to_stem proj
+R7022:7047 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_maps_to_stem proj
+R7063:7092 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_not_a_26th_axiom proj
+R7063:7092 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_not_a_26th_axiom proj
+R6916:6947 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomHypothesisId def
+R6989:7014 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_absent constr
+R7052:7055 Corelib.Init.Datatypes <> true constr
+R7097:7100 Corelib.Init.Datatypes <> true constr
+def 7118:7142 <> chemPhysicsIsomorphismRow
+R7146:7170 UMST.ChemConstants.ComposerResearchBleedingEdge <> BleedingEdgeHypothesisRow rec
+R7180:7206 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_id proj
+R7180:7206 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_id proj
+R7180:7206 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_id proj
+R7252:7281 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_class proj
+R7252:7281 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_class proj
+R7328:7353 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_maps_to_stem proj
+R7328:7353 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_maps_to_stem proj
+R7369:7398 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_not_a_26th_axiom proj
+R7369:7398 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_not_a_26th_axiom proj
+R7211:7244 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismHypothesisId def
+R7286:7320 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_already_unwired constr
+R7358:7361 Corelib.Init.Datatypes <> true constr
+R7403:7406 Corelib.Init.Datatypes <> true constr
+def 7424:7449 <> bleedingEdgeHypothesisRows
+R7453:7456 Corelib.Init.Datatypes <> list ind
+R7458:7482 UMST.ChemConstants.ComposerResearchBleedingEdge <> BleedingEdgeHypothesisRow rec
+R7489:7490 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7514:7515 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7541:7542 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7491:7513 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+R7516:7540 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+def 7557:7586 <> bleedingEdgeHypothesisRowCount
+R7590:7592 Corelib.Init.Datatypes <> nat ind
+prf 7607:7647 <> bleeding_edge_hypothesis_row_count_is_two
+R7683:7685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7653:7682 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleedingEdgeHypothesisRowCount def
+def 7726:7755 <> researchChartConservationHolds
+R7764:7788 UMST.ChemConstants.ComposerResearchBleedingEdge <> BleedingEdgeHypothesisRow rec
+binder 7758:7760 <> row:14
+R7793:7796 Corelib.Init.Datatypes <> bool ind
+R7833:7838 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7803:7828 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_maps_to_stem proj
+R7830:7832 UMST.ChemConstants.ComposerResearchBleedingEdge <> row:14 var
+R7839:7868 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_not_a_26th_axiom proj
+R7870:7872 UMST.ChemConstants.ComposerResearchBleedingEdge <> row:14 var
+prf 7882:7920 <> refuse_catalysis_axiom_row_conservation
+R7980:7982 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7926:7955 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R7957:7979 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+R7983:7986 Corelib.Init.Datatypes <> true constr
+R8005:8034 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R8037:8059 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+prf 8096:8136 <> chem_physics_isomorphism_row_conservation
+R8198:8200 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8142:8171 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R8173:8197 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+R8201:8204 Corelib.Init.Datatypes <> true constr
+R8223:8252 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R8255:8279 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+prf 8316:8354 <> refuse_catalysis_axiom_row_class_absent
+R8414:8418 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8360:8389 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_class proj
+R8391:8413 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+R8419:8444 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_absent constr
+R8463:8485 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+prf 8513:8562 <> chem_physics_isomorphism_row_class_already_unwired
+R8624:8628 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8568:8597 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleeding_edge_hypothesis_class proj
+R8599:8623 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+R8629:8663 UMST.ChemConstants.ComposerResearchBleedingEdge <> research_hypothesis_already_unwired constr
+R8682:8706 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+def 8739:8769 <> bleedingEdgeHypothesesConserved
+R8844:8849 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8837:8839 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8783:8812 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R8814:8836 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+R8840:8843 Corelib.Init.Datatypes <> true constr
+R8906:8908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8850:8879 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R8881:8905 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+R8909:8912 Corelib.Init.Datatypes <> true constr
+prf 8922:8955 <> bleeding_edge_hypotheses_conserved
+R8961:8991 UMST.ChemConstants.ComposerResearchBleedingEdge <> bleedingEdgeHypothesesConserved def
+R9017:9055 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuse_catalysis_axiom_row_conservation thm
+R9074:9114 UMST.ChemConstants.ComposerResearchBleedingEdge <> chem_physics_isomorphism_row_conservation thm
+R9017:9055 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuse_catalysis_axiom_row_conservation thm
+R9074:9114 UMST.ChemConstants.ComposerResearchBleedingEdge <> chem_physics_isomorphism_row_conservation thm
+def 9357:9390 <> composerResearchBleedingEdgeCellId
+R9394:9399 Stdlib.Strings.String <> string ind
+def 9484:9519 <> composerResearchBleedingEdgeNonClaim
+R9523:9528 Stdlib.Strings.String <> string ind
+def 10065:10091 <> researchHypothesesAuthority
+R10095:10100 Stdlib.Strings.String <> string ind
+prf 10168:10202 <> research_hypotheses_authority_named
+R10293:10298 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10235:10240 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10208:10234 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesAuthority def
+R10299:10303 Corelib.Init.Logic <> False ind
+def 10361:10392 <> researchHypothesesCitedNotForked
+R10396:10399 Corelib.Init.Datatypes <> bool ind
+R10517:10522 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10454:10459 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10406:10409 Corelib.Init.Datatypes <> negb def
+R10412:10421 Stdlib.Strings.String <> eqb def
+R10423:10449 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesAuthority def
+R10460:10463 Corelib.Init.Datatypes <> negb def
+R10466:10475 Stdlib.Strings.String <> eqb def
+R10477:10512 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeNonClaim def
+R10523:10526 Corelib.Init.Datatypes <> negb def
+R10529:10538 Stdlib.Strings.String <> eqb def
+R10540:10566 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesAuthority def
+R10568:10603 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeNonClaim def
+prf 10614:10654 <> research_hypotheses_cited_not_forked_true
+R10692:10694 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10660:10691 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesCitedNotForked def
+R10695:10698 Corelib.Init.Datatypes <> true constr
+R10717:10748 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesCitedNotForked def
+R10760:10786 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesAuthority def
+R10798:10833 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeNonClaim def
+def 11099:11112 <> soleAxiomCount
+R11116:11118 Corelib.Init.Datatypes <> nat ind
+prf 11133:11155 <> sole_axiom_count_is_one
+R11173:11175 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11159:11172 UMST.ChemConstants.ComposerResearchBleedingEdge <> soleAxiomCount def
+def 11216:11241 <> composerResearchIsNewAxiom
+R11253:11257 Corelib.Init.Logic <> False ind
+prf 11267:11297 <> composer_research_not_new_axiom
+R11301:11302 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R11303:11328 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchIsNewAxiom def
+def 11373:11402 <> composerResearchIsNewAxiomBool
+R11406:11409 Corelib.Init.Datatypes <> bool ind
+R11414:11418 Corelib.Init.Datatypes <> false constr
+prf 11428:11468 <> composer_research_is_new_axiom_bool_false
+R11504:11506 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11474:11503 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchIsNewAxiomBool def
+R11507:11511 Corelib.Init.Datatypes <> false constr
+def 11551:11589 <> researchChartNot26thAxiomOrPhysicsGreen
+R11593:11598 Stdlib.Strings.String <> string ind
+prf 11721:11772 <> research_chart_not_26th_axiom_or_physics_green_named
+R11817:11820 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11778:11816 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartNot26thAxiomOrPhysicsGreen def
+def 11863:11887 <> literatureNewAxiomRefused
+R11891:11894 Corelib.Init.Datatypes <> bool ind
+R11961:11966 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11901:11904 Corelib.Init.Datatypes <> negb def
+R11907:11916 Stdlib.Strings.String <> eqb def
+R11918:11956 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartNot26thAxiomOrPhysicsGreen def
+R11967:11970 Corelib.Init.Datatypes <> negb def
+R11972:12001 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchIsNewAxiomBool def
+prf 12011:12043 <> literature_new_axiom_refused_true
+R12074:12076 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12049:12073 UMST.ChemConstants.ComposerResearchBleedingEdge <> literatureNewAxiomRefused def
+R12077:12080 Corelib.Init.Datatypes <> true constr
+R12099:12123 UMST.ChemConstants.ComposerResearchBleedingEdge <> literatureNewAxiomRefused def
+R12126:12155 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchIsNewAxiomBool def
+def 12197:12225 <> secondLawConservationAxiomPin
+R12229:12234 Stdlib.Strings.String <> string ind
+prf 12333:12371 <> second_law_conservation_axiom_pin_named
+R12406:12409 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12377:12405 UMST.ChemConstants.ComposerResearchBleedingEdge <> secondLawConservationAxiomPin def
+def 12676:12715 <> composerResearchBleedingEdgeIntAuthority
+R12719:12724 Stdlib.Strings.String <> string ind
+def 12807:12852 <> chemIntCrossComposerResearchBleedingEdgeCellId
+R12856:12861 Stdlib.Strings.String <> string ind
+prf 12938:12976 <> composer_research_bleeding_edge_cell_id
+R13016:13020 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12982:13015 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeCellId def
+prf 13119:13169 <> composer_research_bleeding_edge_cites_int_authority
+R13215:13219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13175:13214 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeIntAuthority def
+prf 13316:13364 <> composer_research_bleeding_edge_cites_int_cell_id
+R13416:13420 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13370:13415 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemIntCrossComposerResearchBleedingEdgeCellId def
+prf 13516:13566 <> composer_research_bleeding_edge_int_authority_named
+R13612:13615 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13572:13611 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeIntAuthority def
+prf 13653:13700 <> composer_research_bleeding_edge_modality_unwired
+R13749:13753 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13706:13748 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeModalityCurrent def
+R13754:13792 UMST.ChemConstants.ComposerResearchBleedingEdge <> composer_research_bleeding_edge_unwired constr
+def 14057:14098 <> composerResearchBleedingEdgeHonestConjunct
+R14102:14105 Corelib.Init.Datatypes <> bool ind
+R14307:14312 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14269:14274 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14207:14212 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14147:14152 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14112:14115 Corelib.Init.Datatypes <> negb def
+R14117:14146 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchIsNewAxiomBool def
+R14153:14182 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R14184:14206 UMST.ChemConstants.ComposerResearchBleedingEdge <> refuseCatalysisAxiomRow def
+R14213:14242 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchChartConservationHolds def
+R14244:14268 UMST.ChemConstants.ComposerResearchBleedingEdge <> chemPhysicsIsomorphismRow def
+R14275:14306 UMST.ChemConstants.ComposerResearchBleedingEdge <> researchHypothesesCitedNotForked def
+R14313:14337 UMST.ChemConstants.ComposerResearchBleedingEdge <> literatureNewAxiomRefused def
+prf 14347:14398 <> composer_research_bleeding_edge_honest_conjunct_true
+R14446:14448 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14404:14445 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeHonestConjunct def
+R14449:14452 Corelib.Init.Datatypes <> true constr
+R14471:14512 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeHonestConjunct def
+def 14794:14827 <> composerResearchBleedingEdgeProved
+R14839:14843 Corelib.Init.Logic <> False ind
+prf 14853:14894 <> composer_research_bleeding_edge_not_proved
+R14900:14901 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R14902:14935 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeProved def
+def 15204:15253 <> composerResearchBleedingEdgePhysicsGreenAuthorized
+R15265:15269 Corelib.Init.Logic <> False ind
+prf 15279:15329 <> composer_research_bleeding_edge_physics_green_false
+R15335:15336 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R15337:15386 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgePhysicsGreenAuthorized def
+def 15654:15696 <> composerResearchBleedingEdgeProductionWired
+R15708:15712 Corelib.Init.Logic <> False ind
+prf 15722:15773 <> composer_research_bleeding_edge_not_production_wired
+R15779:15780 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R15781:15823 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeProductionWired def
+def 15868:15890 <> wave100NotWiredLibOrEos
+R15894:15899 Stdlib.Strings.String <> string ind
+prf 15999:16026 <> wave100_not_wired_lib_or_eos
+R16055:16058 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16032:16054 UMST.ChemConstants.ComposerResearchBleedingEdge <> wave100NotWiredLibOrEos def
+def 16101:16156 <> composerResearchBleedingEdgeSecondLawConservationFraming
+R16160:16165 Stdlib.Strings.String <> string ind
+prf 16263:16325 <> composer_research_bleeding_edge_second_law_conservation_framing
+R16387:16390 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16331:16386 UMST.ChemConstants.ComposerResearchBleedingEdge <> composerResearchBleedingEdgeSecondLawConservationFraming def

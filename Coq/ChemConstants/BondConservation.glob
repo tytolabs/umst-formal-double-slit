@@ -1,0 +1,1019 @@
+DIGEST 699743f18dd589219ffc3855ace2712e
+FUMST.ChemConstants.BondConservation
+R1208:1212 Stdlib.Arith.Arith <> <> lib
+R1214:1219 Stdlib.ZArith.ZArith <> <> lib
+R1221:1226 Stdlib.Strings.String <> <> lib
+R1228:1231 Stdlib.Bool.Bool <> <> lib
+R1233:1235 Stdlib.micromega.Lia <> <> lib
+R1237:1240 Stdlib.Lists.List <> <> lib
+R1250:1262 Stdlib.Lists.List ListNotations <> mod
+ind 1591:1614 <> BondConservationModality
+constr 1630:1654 <> bond_conservation_unwired
+constr 1660:1684 <> bond_conservation_assumed
+constr 1690:1713 <> bond_conservation_proved
+constr 1719:1745 <> bond_conservation_surrogate
+scheme 1591:1614 <> BondConservationModality_rect
+scheme 1591:1614 <> BondConservationModality_ind
+scheme 1591:1614 <> BondConservationModality_rec
+scheme 1591:1614 <> BondConservationModality_sind
+def 1760:1790 <> bondConservationModalityCurrent
+R1794:1817 UMST.ChemConstants.BondConservation <> BondConservationModality ind
+R1824:1848 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+def 1863:1886 <> bond_lattice_cardinality
+R1890:1892 Corelib.Init.Datatypes <> nat ind
+prf 1907:1938 <> bond_lattice_cardinality_is_four
+R1968:1970 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1944:1967 UMST.ChemConstants.BondConservation <> bond_lattice_cardinality def
+prf 2006:2033 <> bond_lattice_not_118_squared
+R2090:2092 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2039:2042 Corelib.Init.Datatypes <> negb def
+R2045:2051 Stdlib.Arith.PeanoNat Nat eqb def
+R2053:2076 UMST.ChemConstants.BondConservation <> bond_lattice_cardinality def
+R2082:2084 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2093:2096 Corelib.Init.Datatypes <> true constr
+R2115:2138 UMST.ChemConstants.BondConservation <> bond_lattice_cardinality def
+def 2399:2421 <> iupac_table_cardinality
+R2425:2427 Corelib.Init.Datatypes <> nat ind
+prf 2444:2473 <> iupac_table_cardinality_is_118
+R2502:2504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2479:2501 UMST.ChemConstants.BondConservation <> iupac_table_cardinality def
+def 2547:2566 <> bond_element_z_valid
+R2573:2575 Corelib.Init.Datatypes <> nat ind
+binder 2569:2569 <> z:3
+R2580:2583 Corelib.Init.Datatypes <> bool ind
+R2601:2604 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2590:2596 Stdlib.Arith.PeanoNat Nat ltb def
+R2600:2600 UMST.ChemConstants.BondConservation <> z:3 var
+R2605:2611 Stdlib.Arith.PeanoNat Nat leb def
+R2613:2613 UMST.ChemConstants.BondConservation <> z:3 var
+R2615:2637 UMST.ChemConstants.BondConservation <> iupac_table_cardinality def
+def 2652:2674 <> bond_element_hydrogen_z
+R2678:2680 Corelib.Init.Datatypes <> nat ind
+def 2699:2719 <> bond_element_oxygen_z
+R2723:2725 Corelib.Init.Datatypes <> nat ind
+def 2744:2767 <> bond_element_oganesson_z
+R2771:2773 Corelib.Init.Datatypes <> nat ind
+prf 2790:2811 <> bond_hydrogen_z_is_one
+R2840:2842 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2817:2839 UMST.ChemConstants.BondConservation <> bond_element_hydrogen_z def
+prf 2878:2899 <> bond_oxygen_z_is_eight
+R2926:2928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2905:2925 UMST.ChemConstants.BondConservation <> bond_element_oxygen_z def
+prf 2964:2986 <> bond_oganesson_z_is_118
+R3016:3018 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2992:3015 UMST.ChemConstants.BondConservation <> bond_element_oganesson_z def
+prf 3056:3071 <> bond_h_o_z_valid
+R3128:3133 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3121:3123 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3077:3096 UMST.ChemConstants.BondConservation <> bond_element_z_valid def
+R3098:3120 UMST.ChemConstants.BondConservation <> bond_element_hydrogen_z def
+R3124:3127 Corelib.Init.Datatypes <> true constr
+R3176:3178 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3134:3153 UMST.ChemConstants.BondConservation <> bond_element_z_valid def
+R3155:3175 UMST.ChemConstants.BondConservation <> bond_element_oxygen_z def
+R3179:3182 Corelib.Init.Datatypes <> true constr
+R3208:3227 UMST.ChemConstants.BondConservation <> bond_element_z_valid def
+R3230:3252 UMST.ChemConstants.BondConservation <> bond_element_hydrogen_z def
+R3259:3279 UMST.ChemConstants.BondConservation <> bond_element_oxygen_z def
+R3282:3304 UMST.ChemConstants.BondConservation <> iupac_table_cardinality def
+prf 3332:3353 <> bond_oganesson_z_valid
+R3404:3406 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3359:3378 UMST.ChemConstants.BondConservation <> bond_element_z_valid def
+R3380:3403 UMST.ChemConstants.BondConservation <> bond_element_oganesson_z def
+R3407:3410 Corelib.Init.Datatypes <> true constr
+R3429:3448 UMST.ChemConstants.BondConservation <> bond_element_z_valid def
+R3451:3474 UMST.ChemConstants.BondConservation <> bond_element_oganesson_z def
+R3477:3499 UMST.ChemConstants.BondConservation <> iupac_table_cardinality def
+ind 3757:3765 <> bond_kind
+constr 3781:3799 <> bond_covalent_named
+constr 3805:3820 <> bond_ionic_named
+constr 3826:3849 <> bond_hydrogen_bond_named
+constr 3855:3877 <> bond_coordination_named
+scheme 3757:3765 <> bond_kind_rect
+scheme 3757:3765 <> bond_kind_ind
+scheme 3757:3765 <> bond_kind_rec
+scheme 3757:3765 <> bond_kind_sind
+def 3892:3904 <> bond_kind_beq
+R3915:3923 UMST.ChemConstants.BondConservation <> bond_kind ind
+binder 3907:3908 <> k1:6
+binder 3910:3911 <> k2:7
+R3928:3931 Corelib.Init.Datatypes <> bool ind
+R3948:3949 UMST.ChemConstants.BondConservation <> k2:7 var
+R3944:3945 UMST.ChemConstants.BondConservation <> k1:6 var
+R3960:3978 UMST.ChemConstants.BondConservation <> bond_covalent_named constr
+R3981:3999 UMST.ChemConstants.BondConservation <> bond_covalent_named constr
+R4004:4007 Corelib.Init.Datatypes <> true constr
+R4013:4028 UMST.ChemConstants.BondConservation <> bond_ionic_named constr
+R4031:4046 UMST.ChemConstants.BondConservation <> bond_ionic_named constr
+R4051:4054 Corelib.Init.Datatypes <> true constr
+R4060:4083 UMST.ChemConstants.BondConservation <> bond_hydrogen_bond_named constr
+R4086:4109 UMST.ChemConstants.BondConservation <> bond_hydrogen_bond_named constr
+R4114:4117 Corelib.Init.Datatypes <> true constr
+R4123:4145 UMST.ChemConstants.BondConservation <> bond_coordination_named constr
+R4148:4170 UMST.ChemConstants.BondConservation <> bond_coordination_named constr
+R4175:4178 Corelib.Init.Datatypes <> true constr
+R4192:4196 Corelib.Init.Datatypes <> false constr
+ind 4216:4233 <> reaction_edge_kind
+constr 4249:4270 <> reaction_forward_named
+constr 4276:4297 <> reaction_reverse_named
+constr 4303:4326 <> reaction_catalytic_named
+constr 4332:4362 <> reaction_dissipative_path_named
+scheme 4216:4233 <> reaction_edge_kind_rect
+scheme 4216:4233 <> reaction_edge_kind_ind
+scheme 4216:4233 <> reaction_edge_kind_rec
+scheme 4216:4233 <> reaction_edge_kind_sind
+def 4377:4398 <> reaction_edge_kind_beq
+R4409:4426 UMST.ChemConstants.BondConservation <> reaction_edge_kind ind
+binder 4401:4402 <> k1:12
+binder 4404:4405 <> k2:13
+R4431:4434 Corelib.Init.Datatypes <> bool ind
+R4451:4452 UMST.ChemConstants.BondConservation <> k2:13 var
+R4447:4448 UMST.ChemConstants.BondConservation <> k1:12 var
+R4463:4484 UMST.ChemConstants.BondConservation <> reaction_forward_named constr
+R4487:4508 UMST.ChemConstants.BondConservation <> reaction_forward_named constr
+R4513:4516 Corelib.Init.Datatypes <> true constr
+R4522:4543 UMST.ChemConstants.BondConservation <> reaction_reverse_named constr
+R4546:4567 UMST.ChemConstants.BondConservation <> reaction_reverse_named constr
+R4572:4575 Corelib.Init.Datatypes <> true constr
+R4581:4604 UMST.ChemConstants.BondConservation <> reaction_catalytic_named constr
+R4607:4630 UMST.ChemConstants.BondConservation <> reaction_catalytic_named constr
+R4635:4638 Corelib.Init.Datatypes <> true constr
+R4644:4674 UMST.ChemConstants.BondConservation <> reaction_dissipative_path_named constr
+R4677:4707 UMST.ChemConstants.BondConservation <> reaction_dissipative_path_named constr
+R4712:4715 Corelib.Init.Datatypes <> true constr
+R4729:4733 Corelib.Init.Datatypes <> false constr
+rec 4974:4991 <> bond_graph_node_id
+proj 5007:5018 <> bond_node_id
+R5022:5024 Corelib.Init.Datatypes <> nat ind
+rec 5037:5055 <> reaction_vertex_ref
+proj 5071:5085 <> reaction_vertex
+R5089:5091 Corelib.Init.Datatypes <> nat ind
+rec 5104:5112 <> bond_edge
+proj 5128:5136 <> bond_from
+proj 5162:5168 <> bond_to
+proj 5194:5204 <> bond_from_z
+proj 5215:5223 <> bond_to_z
+proj 5234:5246 <> bond_kind_tag
+R5140:5157 UMST.ChemConstants.BondConservation <> bond_graph_node_id rec
+R5172:5189 UMST.ChemConstants.BondConservation <> bond_graph_node_id rec
+R5208:5210 Corelib.Init.Datatypes <> nat ind
+R5227:5229 Corelib.Init.Datatypes <> nat ind
+R5250:5258 UMST.ChemConstants.BondConservation <> bond_kind ind
+rec 5271:5283 <> reaction_edge
+proj 5299:5316 <> reaction_vertex_id
+proj 5343:5359 <> reaction_kind_tag
+R5320:5338 UMST.ChemConstants.BondConservation <> reaction_vertex_ref rec
+R5363:5380 UMST.ChemConstants.BondConservation <> reaction_edge_kind ind
+def 5397:5411 <> bondGraphNodeId
+R5418:5420 Corelib.Init.Datatypes <> nat ind
+binder 5414:5414 <> n:29
+R5425:5442 UMST.ChemConstants.BondConservation <> bond_graph_node_id rec
+R5452:5463 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5452:5463 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5452:5463 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5468:5468 UMST.ChemConstants.BondConservation <> n:29 var
+def 5486:5501 <> reactionVertexId
+R5508:5510 Corelib.Init.Datatypes <> nat ind
+binder 5504:5504 <> n:30
+R5515:5533 UMST.ChemConstants.BondConservation <> reaction_vertex_ref rec
+R5543:5557 UMST.ChemConstants.BondConservation <> reaction_vertex proj
+R5543:5557 UMST.ChemConstants.BondConservation <> reaction_vertex proj
+R5543:5557 UMST.ChemConstants.BondConservation <> reaction_vertex proj
+R5562:5562 UMST.ChemConstants.BondConservation <> n:30 var
+def 5580:5597 <> bondEdgeNontrivial
+R5604:5612 UMST.ChemConstants.BondConservation <> bond_edge rec
+binder 5600:5600 <> e:31
+R5617:5620 Corelib.Init.Datatypes <> bool ind
+R5627:5630 Corelib.Init.Datatypes <> negb def
+R5633:5639 Stdlib.Arith.PeanoNat Nat eqb def
+R5656:5667 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5642:5650 UMST.ChemConstants.BondConservation <> bond_from proj
+R5652:5652 UMST.ChemConstants.BondConservation <> e:31 var
+R5683:5694 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5671:5677 UMST.ChemConstants.BondConservation <> bond_to proj
+R5679:5679 UMST.ChemConstants.BondConservation <> e:31 var
+def 5711:5735 <> bondEdgeIdentityConserved
+R5746:5754 UMST.ChemConstants.BondConservation <> bond_edge rec
+binder 5738:5739 <> e1:32
+binder 5741:5742 <> e2:33
+R5759:5762 Corelib.Init.Datatypes <> bool ind
+R5995:6000 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5952:5957 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5905:5910 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5836:5841 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5769:5775 Stdlib.Arith.PeanoNat Nat eqb def
+R5793:5804 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5778:5786 UMST.ChemConstants.BondConservation <> bond_from proj
+R5788:5789 UMST.ChemConstants.BondConservation <> e1:32 var
+R5823:5834 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5808:5816 UMST.ChemConstants.BondConservation <> bond_from proj
+R5818:5819 UMST.ChemConstants.BondConservation <> e2:33 var
+R5842:5848 Stdlib.Arith.PeanoNat Nat eqb def
+R5864:5875 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5851:5857 UMST.ChemConstants.BondConservation <> bond_to proj
+R5859:5860 UMST.ChemConstants.BondConservation <> e1:32 var
+R5892:5903 UMST.ChemConstants.BondConservation <> bond_node_id proj
+R5879:5885 UMST.ChemConstants.BondConservation <> bond_to proj
+R5887:5888 UMST.ChemConstants.BondConservation <> e2:33 var
+R5911:5917 Stdlib.Arith.PeanoNat Nat eqb def
+R5923:5933 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R5919:5920 UMST.ChemConstants.BondConservation <> e1:32 var
+R5940:5950 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R5936:5937 UMST.ChemConstants.BondConservation <> e2:33 var
+R5958:5964 Stdlib.Arith.PeanoNat Nat eqb def
+R5970:5978 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R5966:5967 UMST.ChemConstants.BondConservation <> e1:32 var
+R5985:5993 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R5981:5982 UMST.ChemConstants.BondConservation <> e2:33 var
+R6001:6013 UMST.ChemConstants.BondConservation <> bond_kind_beq def
+R6019:6031 UMST.ChemConstants.BondConservation <> bond_kind_tag proj
+R6015:6016 UMST.ChemConstants.BondConservation <> e1:32 var
+R6038:6050 UMST.ChemConstants.BondConservation <> bond_kind_tag proj
+R6034:6035 UMST.ChemConstants.BondConservation <> e2:33 var
+def 6066:6092 <> bondEdgeHOHydrogenBondNamed
+R6096:6104 UMST.ChemConstants.BondConservation <> bond_edge rec
+R6114:6122 UMST.ChemConstants.BondConservation <> bond_from proj
+R6114:6122 UMST.ChemConstants.BondConservation <> bond_from proj
+R6114:6122 UMST.ChemConstants.BondConservation <> bond_from proj
+R6151:6157 UMST.ChemConstants.BondConservation <> bond_to proj
+R6151:6157 UMST.ChemConstants.BondConservation <> bond_to proj
+R6186:6196 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R6186:6196 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R6231:6239 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R6231:6239 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R6272:6284 UMST.ChemConstants.BondConservation <> bond_kind_tag proj
+R6272:6284 UMST.ChemConstants.BondConservation <> bond_kind_tag proj
+R6127:6141 UMST.ChemConstants.BondConservation <> bondGraphNodeId def
+R6162:6176 UMST.ChemConstants.BondConservation <> bondGraphNodeId def
+R6201:6223 UMST.ChemConstants.BondConservation <> bond_element_hydrogen_z def
+R6244:6264 UMST.ChemConstants.BondConservation <> bond_element_oxygen_z def
+R6289:6312 UMST.ChemConstants.BondConservation <> bond_hydrogen_bond_named constr
+def 6330:6354 <> bondEdgeOganessonSelfLoop
+R6358:6366 UMST.ChemConstants.BondConservation <> bond_edge rec
+R6376:6384 UMST.ChemConstants.BondConservation <> bond_from proj
+R6376:6384 UMST.ChemConstants.BondConservation <> bond_from proj
+R6376:6384 UMST.ChemConstants.BondConservation <> bond_from proj
+R6413:6419 UMST.ChemConstants.BondConservation <> bond_to proj
+R6413:6419 UMST.ChemConstants.BondConservation <> bond_to proj
+R6448:6458 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R6448:6458 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R6494:6502 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R6494:6502 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R6538:6550 UMST.ChemConstants.BondConservation <> bond_kind_tag proj
+R6538:6550 UMST.ChemConstants.BondConservation <> bond_kind_tag proj
+R6389:6403 UMST.ChemConstants.BondConservation <> bondGraphNodeId def
+R6424:6438 UMST.ChemConstants.BondConservation <> bondGraphNodeId def
+R6463:6486 UMST.ChemConstants.BondConservation <> bond_element_oganesson_z def
+R6507:6530 UMST.ChemConstants.BondConservation <> bond_element_oganesson_z def
+R6555:6573 UMST.ChemConstants.BondConservation <> bond_covalent_named constr
+def 6591:6623 <> reactionEdgeForwardHydrationNamed
+R6627:6639 UMST.ChemConstants.BondConservation <> reaction_edge rec
+R6649:6666 UMST.ChemConstants.BondConservation <> reaction_vertex_id proj
+R6649:6666 UMST.ChemConstants.BondConservation <> reaction_vertex_id proj
+R6649:6666 UMST.ChemConstants.BondConservation <> reaction_vertex_id proj
+R6696:6712 UMST.ChemConstants.BondConservation <> reaction_kind_tag proj
+R6696:6712 UMST.ChemConstants.BondConservation <> reaction_kind_tag proj
+R6671:6686 UMST.ChemConstants.BondConservation <> reactionVertexId def
+R6717:6738 UMST.ChemConstants.BondConservation <> reaction_forward_named constr
+prf 6751:6775 <> bond_h_o_hbond_nontrivial
+R6827:6829 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6781:6798 UMST.ChemConstants.BondConservation <> bondEdgeNontrivial def
+R6800:6826 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R6830:6833 Corelib.Init.Datatypes <> true constr
+prf 6868:6888 <> bond_h_o_hbond_z_pins
+R6939:6944 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6935:6937 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6923:6933 UMST.ChemConstants.BondConservation <> bond_from_z proj
+R6894:6920 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R6984:6986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6974:6982 UMST.ChemConstants.BondConservation <> bond_to_z proj
+R6945:6971 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R7006:7032 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R7035:7057 UMST.ChemConstants.BondConservation <> bond_element_hydrogen_z def
+R7060:7080 UMST.ChemConstants.BondConservation <> bond_element_oxygen_z def
+prf 7117:7149 <> bond_h_o_hbond_identity_conserved
+R7240:7242 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7155:7179 UMST.ChemConstants.BondConservation <> bondEdgeIdentityConserved def
+R7181:7207 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R7213:7239 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R7243:7246 Corelib.Init.Datatypes <> true constr
+prf 7281:7319 <> bond_oganesson_self_loop_not_nontrivial
+R7369:7371 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7325:7342 UMST.ChemConstants.BondConservation <> bondEdgeNontrivial def
+R7344:7368 UMST.ChemConstants.BondConservation <> bondEdgeOganessonSelfLoop def
+R7372:7376 Corelib.Init.Datatypes <> false constr
+def 7416:7445 <> forward_hydration_named_vertex
+R7449:7452 Corelib.Init.Datatypes <> bool ind
+R7459:7465 Stdlib.Arith.PeanoNat Nat ltb def
+R7531:7545 UMST.ChemConstants.BondConservation <> reaction_vertex proj
+R7509:7526 UMST.ChemConstants.BondConservation <> reaction_vertex_id proj
+R7474:7506 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+prf 7556:7590 <> forward_hydration_named_vertex_true
+R7626:7628 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7596:7625 UMST.ChemConstants.BondConservation <> forward_hydration_named_vertex def
+R7629:7632 Corelib.Init.Datatypes <> true constr
+ind 7896:7920 <> bond_path_census_presence
+constr 7936:7953 <> bond_census_absent
+constr 7959:7977 <> bond_census_present
+scheme 7896:7920 <> bond_path_census_presence_rect
+scheme 7896:7920 <> bond_path_census_presence_ind
+scheme 7896:7920 <> bond_path_census_presence_rec
+scheme 7896:7920 <> bond_path_census_presence_sind
+rec 7988:8009 <> bond_claim_path_census
+proj 8025:8044 <> bond_census_presence
+proj 8077:8100 <> bond_census_defect_total
+R8048:8072 UMST.ChemConstants.BondConservation <> bond_path_census_presence ind
+R8104:8106 Corelib.Init.Datatypes <> nat ind
+def 8123:8147 <> bondClaimPathCensusAbsent
+R8151:8172 UMST.ChemConstants.BondConservation <> bond_claim_path_census rec
+R8182:8201 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8182:8201 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8182:8201 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8226:8249 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R8226:8249 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R8206:8223 UMST.ChemConstants.BondConservation <> bond_census_absent constr
+def 8272:8300 <> bondClaimPathCensusZeroDefect
+R8304:8325 UMST.ChemConstants.BondConservation <> bond_claim_path_census rec
+R8335:8354 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8335:8354 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8335:8354 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8380:8403 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R8380:8403 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R8359:8377 UMST.ChemConstants.BondConservation <> bond_census_present constr
+def 8426:8459 <> bond_claim_path_census_zero_defect
+R8466:8487 UMST.ChemConstants.BondConservation <> bond_claim_path_census rec
+binder 8462:8462 <> c:39
+R8492:8495 Corelib.Init.Datatypes <> bool ind
+R8508:8527 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R8529:8529 UMST.ChemConstants.BondConservation <> c:39 var
+R8540:8557 UMST.ChemConstants.BondConservation <> bond_census_absent constr
+R8562:8566 Corelib.Init.Datatypes <> false constr
+R8572:8590 UMST.ChemConstants.BondConservation <> bond_census_present constr
+R8595:8601 Stdlib.Arith.PeanoNat Nat eqb def
+R8604:8627 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R8629:8629 UMST.ChemConstants.BondConservation <> c:39 var
+prf 8648:8686 <> bond_claim_path_census_zero_defect_true
+R8756:8758 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8692:8725 UMST.ChemConstants.BondConservation <> bond_claim_path_census_zero_defect def
+R8727:8755 UMST.ChemConstants.BondConservation <> bondClaimPathCensusZeroDefect def
+R8759:8762 Corelib.Init.Datatypes <> true constr
+prf 8797:8841 <> bond_claim_path_census_absent_not_zero_defect
+R8907:8909 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8847:8880 UMST.ChemConstants.BondConservation <> bond_claim_path_census_zero_defect def
+R8882:8906 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R8910:8914 Corelib.Init.Datatypes <> false constr
+ind 9179:9203 <> bond_conservation_verdict
+constr 9219:9236 <> verdict_unwired_ok
+constr 9242:9262 <> verdict_edge_named_ok
+constr 9268:9291 <> verdict_self_loop_refuse
+constr 9297:9323 <> verdict_green_invent_refuse
+constr 9329:9364 <> verdict_proved_without_census_refuse
+constr 9370:9400 <> verdict_production_wired_refuse
+scheme 9179:9203 <> bond_conservation_verdict_rect
+scheme 9179:9203 <> bond_conservation_verdict_ind
+scheme 9179:9203 <> bond_conservation_verdict_rec
+scheme 9179:9203 <> bond_conservation_verdict_sind
+def 9415:9442 <> bond_conservation_verdict_ok
+R9449:9473 UMST.ChemConstants.BondConservation <> bond_conservation_verdict ind
+binder 9445:9445 <> v:42
+R9478:9481 Corelib.Init.Datatypes <> bool ind
+R9494:9494 UMST.ChemConstants.BondConservation <> v:42 var
+R9505:9522 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R9527:9530 Corelib.Init.Datatypes <> true constr
+R9536:9556 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R9561:9564 Corelib.Init.Datatypes <> true constr
+R9575:9579 Corelib.Init.Datatypes <> false constr
+def 9600:9628 <> bond_conservation_verdict_beq
+R9641:9665 UMST.ChemConstants.BondConservation <> bond_conservation_verdict ind
+binder 9633:9634 <> v1:44
+binder 9636:9637 <> v2:45
+R9670:9673 Corelib.Init.Datatypes <> bool ind
+R9690:9691 UMST.ChemConstants.BondConservation <> v2:45 var
+R9686:9687 UMST.ChemConstants.BondConservation <> v1:44 var
+R9702:9719 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R9722:9739 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R9744:9747 Corelib.Init.Datatypes <> true constr
+R9753:9773 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R9776:9796 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R9801:9804 Corelib.Init.Datatypes <> true constr
+R9810:9833 UMST.ChemConstants.BondConservation <> verdict_self_loop_refuse constr
+R9836:9859 UMST.ChemConstants.BondConservation <> verdict_self_loop_refuse constr
+R9864:9867 Corelib.Init.Datatypes <> true constr
+R9873:9899 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+R9902:9928 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+R9933:9936 Corelib.Init.Datatypes <> true constr
+R9942:9977 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R9980:10015 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R10020:10023 Corelib.Init.Datatypes <> true constr
+R10029:10059 UMST.ChemConstants.BondConservation <> verdict_production_wired_refuse constr
+R10062:10092 UMST.ChemConstants.BondConservation <> verdict_production_wired_refuse constr
+R10097:10100 Corelib.Init.Datatypes <> true constr
+R10114:10118 Corelib.Init.Datatypes <> false constr
+def 10139:10169 <> evaluate_bond_edge_conservation
+R10178:10201 UMST.ChemConstants.BondConservation <> BondConservationModality ind
+binder 10174:10174 <> m:48
+R10211:10219 UMST.ChemConstants.BondConservation <> bond_edge rec
+binder 10207:10207 <> e:49
+R10229:10250 UMST.ChemConstants.BondConservation <> bond_claim_path_census rec
+binder 10225:10225 <> c:50
+R10278:10281 Corelib.Init.Datatypes <> bool ind
+binder 10256:10274 <> claim_physics_green:51
+R10302:10305 Corelib.Init.Datatypes <> bool ind
+binder 10287:10298 <> claim_proved:52
+R10310:10334 UMST.ChemConstants.BondConservation <> bond_conservation_verdict ind
+R10344:10362 UMST.ChemConstants.BondConservation <> claim_physics_green:51 var
+R10409:10420 UMST.ChemConstants.BondConservation <> claim_proved:52 var
+R10774:10777 Corelib.Init.Datatypes <> negb def
+R10780:10797 UMST.ChemConstants.BondConservation <> bondEdgeNontrivial def
+R10799:10799 UMST.ChemConstants.BondConservation <> e:49 var
+R10881:10881 UMST.ChemConstants.BondConservation <> m:48 var
+R10904:10928 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R10933:10953 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R10971:10995 UMST.ChemConstants.BondConservation <> bond_conservation_assumed constr
+R11013:11039 UMST.ChemConstants.BondConservation <> bond_conservation_surrogate constr
+R11044:11061 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R11044:11061 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R11079:11102 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R11107:11142 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R10819:10842 UMST.ChemConstants.BondConservation <> verdict_self_loop_refuse constr
+R10449:10468 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R10470:10470 UMST.ChemConstants.BondConservation <> c:50 var
+R10488:10505 UMST.ChemConstants.BondConservation <> bond_census_absent constr
+R10510:10545 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R10558:10576 UMST.ChemConstants.BondConservation <> bond_census_present constr
+R10597:10603 Stdlib.Arith.PeanoNat Nat eqb def
+R10606:10629 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R10631:10631 UMST.ChemConstants.BondConservation <> c:50 var
+R10709:10744 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R10654:10689 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R10371:10397 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+def 11175:11209 <> evaluate_reaction_edge_conservation
+R11218:11241 UMST.ChemConstants.BondConservation <> BondConservationModality ind
+binder 11214:11214 <> m:54
+R11251:11263 UMST.ChemConstants.BondConservation <> reaction_edge rec
+binder 11247:11247 <> e:55
+R11273:11294 UMST.ChemConstants.BondConservation <> bond_claim_path_census rec
+binder 11269:11269 <> c:56
+R11322:11325 Corelib.Init.Datatypes <> bool ind
+binder 11300:11318 <> claim_physics_green:57
+R11346:11349 Corelib.Init.Datatypes <> bool ind
+binder 11331:11342 <> claim_proved:58
+R11354:11378 UMST.ChemConstants.BondConservation <> bond_conservation_verdict ind
+R11388:11406 UMST.ChemConstants.BondConservation <> claim_physics_green:57 var
+R11453:11464 UMST.ChemConstants.BondConservation <> claim_proved:58 var
+R11830:11830 UMST.ChemConstants.BondConservation <> m:54 var
+R11848:11872 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R11877:11897 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R11910:11934 UMST.ChemConstants.BondConservation <> bond_conservation_assumed constr
+R11947:11973 UMST.ChemConstants.BondConservation <> bond_conservation_surrogate constr
+R11978:11995 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R11978:11995 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R12008:12031 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R12036:12071 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R11493:11512 UMST.ChemConstants.BondConservation <> bond_census_presence proj
+R11514:11514 UMST.ChemConstants.BondConservation <> c:56 var
+R11532:11549 UMST.ChemConstants.BondConservation <> bond_census_absent constr
+R11554:11589 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R11602:11620 UMST.ChemConstants.BondConservation <> bond_census_present constr
+R11641:11647 Stdlib.Arith.PeanoNat Nat eqb def
+R11650:11673 UMST.ChemConstants.BondConservation <> bond_census_defect_total proj
+R11675:11675 UMST.ChemConstants.BondConservation <> c:56 var
+R11753:11788 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R11698:11733 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R11415:11441 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+def 12099:12130 <> evaluate_bond_conservation_close
+R12139:12162 UMST.ChemConstants.BondConservation <> BondConservationModality ind
+binder 12135:12135 <> m:60
+R12190:12193 Corelib.Init.Datatypes <> bool ind
+binder 12168:12186 <> claim_physics_green:61
+R12224:12227 Corelib.Init.Datatypes <> bool ind
+binder 12199:12220 <> claim_production_wired:62
+R12232:12256 UMST.ChemConstants.BondConservation <> bond_conservation_verdict ind
+R12266:12284 UMST.ChemConstants.BondConservation <> claim_physics_green:61 var
+R12331:12352 UMST.ChemConstants.BondConservation <> claim_production_wired:62 var
+R12410:12410 UMST.ChemConstants.BondConservation <> m:60 var
+R12423:12447 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R12452:12469 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R12477:12501 UMST.ChemConstants.BondConservation <> bond_conservation_assumed constr
+R12509:12532 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R12540:12566 UMST.ChemConstants.BondConservation <> bond_conservation_surrogate constr
+R12571:12591 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R12571:12591 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R12571:12591 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R12361:12391 UMST.ChemConstants.BondConservation <> verdict_production_wired_refuse constr
+R12293:12319 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+def 12614:12641 <> bond_conservation_authorized
+R12668:12671 Corelib.Init.Datatypes <> bool ind
+binder 12646:12664 <> claim_physics_green:64
+R12702:12705 Corelib.Init.Datatypes <> bool ind
+binder 12677:12698 <> claim_production_wired:65
+R12710:12713 Corelib.Init.Datatypes <> bool ind
+R12726:12757 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R12769:12792 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R12794:12812 UMST.ChemConstants.BondConservation <> claim_physics_green:64 var
+R12814:12835 UMST.ChemConstants.BondConservation <> claim_production_wired:65 var
+R12846:12866 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R12871:12874 Corelib.Init.Datatypes <> true constr
+R12885:12889 Corelib.Init.Datatypes <> false constr
+ind 13133:13153 <> bond_conservation_law
+constr 13169:13191 <> law_edge_named_identity
+constr 13197:13216 <> law_self_loop_refuse
+constr 13222:13244 <> law_green_invent_refuse
+constr 13250:13276 <> law_production_wired_refuse
+scheme 13133:13153 <> bond_conservation_law_rect
+scheme 13133:13153 <> bond_conservation_law_ind
+scheme 13133:13153 <> bond_conservation_law_rec
+scheme 13133:13153 <> bond_conservation_law_sind
+def 13291:13317 <> bond_conservation_law_count
+R13321:13323 Corelib.Init.Datatypes <> nat ind
+prf 13338:13372 <> bond_conservation_law_count_is_four
+R13405:13407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13378:13404 UMST.ChemConstants.BondConservation <> bond_conservation_law_count def
+ind 13447:13475 <> bond_conservation_law_witness
+constr 13491:13511 <> bond_law_witness_open
+constr 13517:13539 <> bond_law_witness_proved
+scheme 13447:13475 <> bond_conservation_law_witness_rect
+scheme 13447:13475 <> bond_conservation_law_witness_ind
+scheme 13447:13475 <> bond_conservation_law_witness_rec
+scheme 13447:13475 <> bond_conservation_law_witness_sind
+def 13554:13591 <> evaluate_bond_conservation_law_witness
+R13602:13622 UMST.ChemConstants.BondConservation <> bond_conservation_law ind
+binder 13596:13598 <> law:70
+R13630:13653 UMST.ChemConstants.BondConservation <> BondConservationModality ind
+binder 13626:13626 <> m:71
+R13660:13688 UMST.ChemConstants.BondConservation <> bond_conservation_law_witness ind
+R13701:13701 UMST.ChemConstants.BondConservation <> m:71 var
+R13712:13736 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R13742:13766 UMST.ChemConstants.BondConservation <> bond_conservation_assumed constr
+R13772:13798 UMST.ChemConstants.BondConservation <> bond_conservation_surrogate constr
+R13803:13823 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+R13803:13823 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+R13803:13823 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+R13829:13852 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R13857:13879 UMST.ChemConstants.BondConservation <> bond_law_witness_proved constr
+prf 13895:13936 <> all_bond_conservation_laws_open_at_unwired
+R14058:14063 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14034:14036 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13942:13979 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_law_witness def
+R13981:14003 UMST.ChemConstants.BondConservation <> law_edge_named_identity constr
+R14009:14033 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R14037:14057 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+R14177:14182 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14153:14155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14064:14101 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_law_witness def
+R14103:14122 UMST.ChemConstants.BondConservation <> law_self_loop_refuse constr
+R14128:14152 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R14156:14176 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+R14299:14304 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14275:14277 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14183:14220 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_law_witness def
+R14222:14244 UMST.ChemConstants.BondConservation <> law_green_invent_refuse constr
+R14250:14274 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R14278:14298 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+R14401:14403 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14305:14342 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_law_witness def
+R14344:14370 UMST.ChemConstants.BondConservation <> law_production_wired_refuse constr
+R14376:14400 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R14404:14424 UMST.ChemConstants.BondConservation <> bond_law_witness_open constr
+def 14704:14720 <> graph01BondProved
+R14724:14727 Corelib.Init.Datatypes <> bool ind
+R14732:14736 Corelib.Init.Datatypes <> false constr
+prf 14746:14770 <> graph01_bond_proved_false
+R14791:14793 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14774:14790 UMST.ChemConstants.BondConservation <> graph01BondProved def
+R14794:14798 Corelib.Init.Datatypes <> false constr
+def 14838:14860 <> not118SquaredGreenTable
+R14864:14867 Corelib.Init.Datatypes <> bool ind
+R14872:14875 Corelib.Init.Datatypes <> true constr
+prf 14885:14911 <> not_118_squared_green_table
+R14938:14940 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14915:14937 UMST.ChemConstants.BondConservation <> not118SquaredGreenTable def
+R14941:14944 Corelib.Init.Datatypes <> true constr
+prf 15201:15239 <> unwired_close_without_production_wiring
+R15319:15323 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15245:15276 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R15282:15306 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R15308:15312 Corelib.Init.Datatypes <> false constr
+R15314:15318 Corelib.Init.Datatypes <> false constr
+R15324:15341 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+prf 15378:15429 <> unwired_modality_always_ok_without_production_wiring
+R15509:15513 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15435:15466 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R15472:15496 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R15498:15502 Corelib.Init.Datatypes <> false constr
+R15504:15508 Corelib.Init.Datatypes <> false constr
+R15514:15531 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R15547:15585 UMST.ChemConstants.BondConservation <> unwired_close_without_production_wiring thm
+R15547:15585 UMST.ChemConstants.BondConservation <> unwired_close_without_production_wiring thm
+prf 15600:15643 <> unwired_verdict_ok_without_production_wiring
+R15761:15765 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15649:15676 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R15683:15714 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R15723:15747 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R15749:15753 Corelib.Init.Datatypes <> false constr
+R15755:15759 Corelib.Init.Datatypes <> false constr
+R15766:15769 Corelib.Init.Datatypes <> true constr
+R15788:15815 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R15828:15866 UMST.ChemConstants.BondConservation <> unwired_close_without_production_wiring thm
+R15828:15866 UMST.ChemConstants.BondConservation <> unwired_close_without_production_wiring thm
+R15828:15866 UMST.ChemConstants.BondConservation <> unwired_close_without_production_wiring thm
+prf 16124:16151 <> bond_h_o_hbond_edge_named_ok
+R16288:16292 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16157:16187 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R16193:16217 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R16219:16245 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R16251:16275 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R16277:16281 Corelib.Init.Datatypes <> false constr
+R16283:16287 Corelib.Init.Datatypes <> false constr
+R16293:16313 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+prf 16350:16383 <> named_bond_edge_identity_conserved
+R16546:16551 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16520:16524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16389:16419 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R16425:16449 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R16451:16477 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R16483:16507 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R16509:16513 Corelib.Init.Datatypes <> false constr
+R16515:16519 Corelib.Init.Datatypes <> false constr
+R16525:16545 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R16637:16639 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16552:16576 UMST.ChemConstants.BondConservation <> bondEdgeIdentityConserved def
+R16578:16604 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R16610:16636 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R16640:16643 Corelib.Init.Datatypes <> true constr
+R16672:16699 UMST.ChemConstants.BondConservation <> bond_h_o_hbond_edge_named_ok thm
+R16672:16699 UMST.ChemConstants.BondConservation <> bond_h_o_hbond_edge_named_ok thm
+R16712:16744 UMST.ChemConstants.BondConservation <> bond_h_o_hbond_identity_conserved thm
+R16712:16744 UMST.ChemConstants.BondConservation <> bond_h_o_hbond_identity_conserved thm
+prf 16759:16784 <> forward_hydration_named_ok
+R16931:16935 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16790:16824 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R16830:16854 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R16856:16888 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R16894:16918 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R16920:16924 Corelib.Init.Datatypes <> false constr
+R16926:16930 Corelib.Init.Datatypes <> false constr
+R16936:16956 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+prf 16993:17028 <> forward_hydration_named_conservation
+R17201:17206 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17175:17179 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17034:17068 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R17074:17098 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R17100:17132 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R17138:17162 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R17164:17168 Corelib.Init.Datatypes <> false constr
+R17170:17174 Corelib.Init.Datatypes <> false constr
+R17180:17200 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R17237:17239 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17207:17236 UMST.ChemConstants.BondConservation <> forward_hydration_named_vertex def
+R17240:17243 Corelib.Init.Datatypes <> true constr
+R17272:17297 UMST.ChemConstants.BondConservation <> forward_hydration_named_ok thm
+R17272:17297 UMST.ChemConstants.BondConservation <> forward_hydration_named_ok thm
+R17310:17344 UMST.ChemConstants.BondConservation <> forward_hydration_named_vertex_true thm
+R17310:17344 UMST.ChemConstants.BondConservation <> forward_hydration_named_vertex_true thm
+prf 17359:17377 <> edge_named_close_ok
+R17456:17460 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17383:17414 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R17420:17443 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R17445:17449 Corelib.Init.Datatypes <> false constr
+R17451:17455 Corelib.Init.Datatypes <> false constr
+R17461:17481 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+prf 17518:17546 <> named_bond_conservation_close
+R17651:17656 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17625:17629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17552:17583 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R17589:17612 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R17614:17618 Corelib.Init.Datatypes <> false constr
+R17620:17624 Corelib.Init.Datatypes <> false constr
+R17630:17650 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R17697:17699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17657:17684 UMST.ChemConstants.BondConservation <> bond_conservation_authorized def
+R17686:17690 Corelib.Init.Datatypes <> false constr
+R17692:17696 Corelib.Init.Datatypes <> false constr
+R17700:17703 Corelib.Init.Datatypes <> true constr
+R17732:17750 UMST.ChemConstants.BondConservation <> edge_named_close_ok thm
+R17732:17750 UMST.ChemConstants.BondConservation <> edge_named_close_ok thm
+R17764:17791 UMST.ChemConstants.BondConservation <> bond_conservation_authorized def
+R17806:17824 UMST.ChemConstants.BondConservation <> edge_named_close_ok thm
+R17806:17824 UMST.ChemConstants.BondConservation <> edge_named_close_ok thm
+R17806:17824 UMST.ChemConstants.BondConservation <> edge_named_close_ok thm
+prf 18080:18096 <> self_loop_refused
+R18231:18235 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18102:18132 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R18138:18162 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R18164:18188 UMST.ChemConstants.BondConservation <> bondEdgeOganessonSelfLoop def
+R18194:18218 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R18220:18224 Corelib.Init.Datatypes <> false constr
+R18226:18230 Corelib.Init.Datatypes <> false constr
+R18236:18259 UMST.ChemConstants.BondConservation <> verdict_self_loop_refuse constr
+prf 18296:18316 <> self_loop_fail_closed
+R18480:18485 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18451:18455 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18322:18352 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R18358:18382 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R18384:18408 UMST.ChemConstants.BondConservation <> bondEdgeOganessonSelfLoop def
+R18414:18438 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R18440:18444 Corelib.Init.Datatypes <> false constr
+R18446:18450 Corelib.Init.Datatypes <> false constr
+R18456:18479 UMST.ChemConstants.BondConservation <> verdict_self_loop_refuse constr
+R18656:18660 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18486:18513 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R18520:18550 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R18559:18583 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R18585:18609 UMST.ChemConstants.BondConservation <> bondEdgeOganessonSelfLoop def
+R18618:18642 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R18644:18648 Corelib.Init.Datatypes <> false constr
+R18650:18654 Corelib.Init.Datatypes <> false constr
+R18661:18665 Corelib.Init.Datatypes <> false constr
+R18694:18710 UMST.ChemConstants.BondConservation <> self_loop_refused thm
+R18694:18710 UMST.ChemConstants.BondConservation <> self_loop_refused thm
+R18724:18751 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R18766:18782 UMST.ChemConstants.BondConservation <> self_loop_refused thm
+R18766:18782 UMST.ChemConstants.BondConservation <> self_loop_refused thm
+R18766:18782 UMST.ChemConstants.BondConservation <> self_loop_refused thm
+prf 19038:19064 <> green_invent_refuse_unwired
+R19143:19147 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19070:19101 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R19107:19131 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R19133:19136 Corelib.Init.Datatypes <> true constr
+R19138:19142 Corelib.Init.Datatypes <> false constr
+R19148:19174 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+prf 19211:19236 <> green_invent_always_refuse
+R19353:19357 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19242:19269 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R19276:19307 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R19316:19340 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R19342:19345 Corelib.Init.Datatypes <> true constr
+R19347:19351 Corelib.Init.Datatypes <> false constr
+R19358:19362 Corelib.Init.Datatypes <> false constr
+R19381:19408 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R19421:19447 UMST.ChemConstants.BondConservation <> green_invent_refuse_unwired thm
+R19421:19447 UMST.ChemConstants.BondConservation <> green_invent_refuse_unwired thm
+R19421:19447 UMST.ChemConstants.BondConservation <> green_invent_refuse_unwired thm
+prf 19477:19505 <> green_invent_bond_edge_refuse
+R19641:19645 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19511:19541 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R19547:19571 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R19573:19599 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R19605:19629 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R19631:19634 Corelib.Init.Datatypes <> true constr
+R19636:19640 Corelib.Init.Datatypes <> false constr
+R19646:19672 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+prf 19931:19958 <> proved_without_census_refuse
+R20104:20108 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19964:19998 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R20004:20028 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R20030:20062 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R20068:20092 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R20094:20098 Corelib.Init.Datatypes <> false constr
+R20100:20103 Corelib.Init.Datatypes <> true constr
+R20109:20144 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+prf 20181:20213 <> proved_without_census_fail_closed
+R20400:20405 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20359:20363 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20219:20253 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R20259:20283 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R20285:20317 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R20323:20347 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R20349:20353 Corelib.Init.Datatypes <> false constr
+R20355:20358 Corelib.Init.Datatypes <> true constr
+R20364:20399 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R20587:20591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20406:20433 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R20440:20474 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R20483:20507 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R20509:20541 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R20550:20574 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R20576:20580 Corelib.Init.Datatypes <> false constr
+R20582:20585 Corelib.Init.Datatypes <> true constr
+R20592:20596 Corelib.Init.Datatypes <> false constr
+R20625:20652 UMST.ChemConstants.BondConservation <> proved_without_census_refuse thm
+R20625:20652 UMST.ChemConstants.BondConservation <> proved_without_census_refuse thm
+R20666:20693 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R20708:20735 UMST.ChemConstants.BondConservation <> proved_without_census_refuse thm
+R20708:20735 UMST.ChemConstants.BondConservation <> proved_without_census_refuse thm
+R20708:20735 UMST.ChemConstants.BondConservation <> proved_without_census_refuse thm
+prf 20767:20812 <> proved_without_census_zero_defect_still_refuse
+R20962:20966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20818:20852 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R20858:20882 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R20884:20916 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R20922:20950 UMST.ChemConstants.BondConservation <> bondClaimPathCensusZeroDefect def
+R20952:20956 Corelib.Init.Datatypes <> false constr
+R20958:20961 Corelib.Init.Datatypes <> true constr
+R20967:21002 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+prf 21261:21283 <> production_wired_refuse
+R21361:21365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21289:21320 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R21326:21349 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R21351:21355 Corelib.Init.Datatypes <> false constr
+R21357:21360 Corelib.Init.Datatypes <> true constr
+R21366:21396 UMST.ChemConstants.BondConservation <> verdict_production_wired_refuse constr
+prf 21433:21462 <> production_wired_claim_refused
+R21578:21582 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21468:21495 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R21502:21533 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R21542:21565 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R21567:21571 Corelib.Init.Datatypes <> false constr
+R21573:21576 Corelib.Init.Datatypes <> true constr
+R21583:21587 Corelib.Init.Datatypes <> false constr
+R21606:21633 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_ok def
+R21646:21668 UMST.ChemConstants.BondConservation <> production_wired_refuse thm
+R21646:21668 UMST.ChemConstants.BondConservation <> production_wired_refuse thm
+R21646:21668 UMST.ChemConstants.BondConservation <> production_wired_refuse thm
+def 21927:21962 <> bond_conservation_coherence_scaffold
+R21966:21969 Corelib.Init.Datatypes <> bool ind
+R22264:22269 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R22114:22119 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R21976:22004 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_beq def
+R22011:22042 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R22051:22074 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R22076:22080 Corelib.Init.Datatypes <> false constr
+R22082:22086 Corelib.Init.Datatypes <> false constr
+R22093:22113 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R22120:22148 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_beq def
+R22155:22186 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R22195:22219 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R22221:22224 Corelib.Init.Datatypes <> true constr
+R22226:22230 Corelib.Init.Datatypes <> false constr
+R22237:22263 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+R22270:22298 UMST.ChemConstants.BondConservation <> bond_conservation_verdict_beq def
+R22305:22336 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R22345:22368 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R22370:22374 Corelib.Init.Datatypes <> false constr
+R22376:22379 Corelib.Init.Datatypes <> true constr
+R22386:22416 UMST.ChemConstants.BondConservation <> verdict_production_wired_refuse constr
+prf 22426:22466 <> bond_conservation_coherence_scaffold_true
+R22508:22510 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22472:22507 UMST.ChemConstants.BondConservation <> bond_conservation_coherence_scaffold def
+R22511:22514 Corelib.Init.Datatypes <> true constr
+R22533:22568 UMST.ChemConstants.BondConservation <> bond_conservation_coherence_scaffold def
+prf 22623:22666 <> bond_conservation_coherence_scaffold_theorem
+R22773:22778 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22745:22751 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22672:22703 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R22709:22732 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R22734:22738 Corelib.Init.Datatypes <> false constr
+R22740:22744 Corelib.Init.Datatypes <> false constr
+R22752:22772 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R22886:22891 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22852:22858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22779:22810 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R22816:22840 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R22842:22845 Corelib.Init.Datatypes <> true constr
+R22847:22851 Corelib.Init.Datatypes <> false constr
+R22859:22885 UMST.ChemConstants.BondConservation <> verdict_green_invent_refuse constr
+R22964:22970 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22892:22923 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R22929:22952 UMST.ChemConstants.BondConservation <> bond_conservation_proved constr
+R22954:22958 Corelib.Init.Datatypes <> false constr
+R22960:22963 Corelib.Init.Datatypes <> true constr
+R22971:23001 UMST.ChemConstants.BondConservation <> verdict_production_wired_refuse constr
+ind 23280:23291 <> formal_fiber
+constr 23307:23327 <> fiber_quantum_knowing
+constr 23333:23349 <> fiber_meso_acting
+scheme 23280:23291 <> formal_fiber_rect
+scheme 23280:23291 <> formal_fiber_ind
+scheme 23280:23291 <> formal_fiber_rec
+scheme 23280:23291 <> formal_fiber_sind
+ind 23363:23381 <> formal_claim_family
+constr 23397:23419 <> claim_bond_conservation
+scheme 23363:23381 <> formal_claim_family_rect
+scheme 23363:23381 <> formal_claim_family_ind
+scheme 23363:23381 <> formal_claim_family_rec
+scheme 23363:23381 <> formal_claim_family_sind
+def 23434:23459 <> bond_conservation_fiber_ok
+R23466:23477 UMST.ChemConstants.BondConservation <> formal_fiber ind
+binder 23462:23462 <> f:77
+R23482:23485 Corelib.Init.Datatypes <> bool ind
+R23498:23498 UMST.ChemConstants.BondConservation <> f:77 var
+R23509:23529 UMST.ChemConstants.BondConservation <> fiber_quantum_knowing constr
+R23534:23537 Corelib.Init.Datatypes <> true constr
+R23543:23559 UMST.ChemConstants.BondConservation <> fiber_meso_acting constr
+R23564:23568 Corelib.Init.Datatypes <> false constr
+def 23589:23622 <> bond_conservation_knowing_fiber_ok
+R23626:23629 Corelib.Init.Datatypes <> bool ind
+R23636:23661 UMST.ChemConstants.BondConservation <> bond_conservation_fiber_ok def
+R23663:23683 UMST.ChemConstants.BondConservation <> fiber_quantum_knowing constr
+def 23698:23729 <> bond_conservation_meso_acting_ok
+R23733:23736 Corelib.Init.Datatypes <> bool ind
+R23743:23768 UMST.ChemConstants.BondConservation <> bond_conservation_fiber_ok def
+R23770:23786 UMST.ChemConstants.BondConservation <> fiber_meso_acting constr
+prf 23796:23834 <> bond_conservation_knowing_fiber_ok_true
+R23874:23876 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23840:23873 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok def
+R23877:23880 Corelib.Init.Datatypes <> true constr
+prf 23915:23950 <> bond_conservation_meso_acting_not_ok
+R23988:23990 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23956:23987 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_ok def
+R23991:23995 Corelib.Init.Datatypes <> false constr
+prf 24032:24072 <> bond_conservation_routes_knowing_not_meso
+R24119:24124 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24112:24114 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24078:24111 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok def
+R24115:24118 Corelib.Init.Datatypes <> true constr
+R24157:24159 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24125:24156 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_ok def
+R24160:24164 Corelib.Init.Datatypes <> false constr
+R24193:24231 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok_true thm
+R24193:24231 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok_true thm
+R24244:24279 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_not_ok thm
+R24244:24279 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_not_ok thm
+def 24299:24316 <> fiberNotMesoActing
+R24320:24323 Corelib.Init.Datatypes <> bool ind
+R24364:24369 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R24330:24363 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok def
+R24370:24373 Corelib.Init.Datatypes <> negb def
+R24375:24406 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_ok def
+prf 24416:24441 <> fiber_not_meso_acting_true
+R24463:24465 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24445:24462 UMST.ChemConstants.BondConservation <> fiberNotMesoActing def
+R24466:24469 Corelib.Init.Datatypes <> true constr
+R24488:24505 UMST.ChemConstants.BondConservation <> fiberNotMesoActing def
+R24508:24541 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok def
+R24548:24579 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_ok def
+prf 24835:24868 <> bond_conservation_fixture_scaffold
+R25033:25038 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25005:25011 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24874:24904 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R24910:24934 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R24936:24962 UMST.ChemConstants.BondConservation <> bondEdgeHOHydrogenBondNamed def
+R24968:24992 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R24994:24998 Corelib.Init.Datatypes <> false constr
+R25000:25004 Corelib.Init.Datatypes <> false constr
+R25012:25032 UMST.ChemConstants.BondConservation <> verdict_edge_named_ok constr
+R25199:25204 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25168:25174 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25039:25069 UMST.ChemConstants.BondConservation <> evaluate_bond_edge_conservation def
+R25075:25099 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R25101:25125 UMST.ChemConstants.BondConservation <> bondEdgeOganessonSelfLoop def
+R25131:25155 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R25157:25161 Corelib.Init.Datatypes <> false constr
+R25163:25167 Corelib.Init.Datatypes <> false constr
+R25175:25198 UMST.ChemConstants.BondConservation <> verdict_self_loop_refuse constr
+R25388:25393 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25345:25351 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25205:25239 UMST.ChemConstants.BondConservation <> evaluate_reaction_edge_conservation def
+R25245:25269 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R25271:25303 UMST.ChemConstants.BondConservation <> reactionEdgeForwardHydrationNamed def
+R25309:25333 UMST.ChemConstants.BondConservation <> bondClaimPathCensusAbsent def
+R25335:25339 Corelib.Init.Datatypes <> false constr
+R25341:25344 Corelib.Init.Datatypes <> true constr
+R25352:25387 UMST.ChemConstants.BondConservation <> verdict_proved_without_census_refuse constr
+R25493:25498 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25468:25474 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25394:25425 UMST.ChemConstants.BondConservation <> evaluate_bond_conservation_close def
+R25431:25455 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr
+R25457:25461 Corelib.Init.Datatypes <> false constr
+R25463:25467 Corelib.Init.Datatypes <> false constr
+R25475:25492 UMST.ChemConstants.BondConservation <> verdict_unwired_ok constr
+R25540:25545 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25533:25535 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25499:25532 UMST.ChemConstants.BondConservation <> bond_conservation_knowing_fiber_ok def
+R25536:25539 Corelib.Init.Datatypes <> true constr
+R25586:25591 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25578:25580 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25546:25577 UMST.ChemConstants.BondConservation <> bond_conservation_meso_acting_ok def
+R25581:25585 Corelib.Init.Datatypes <> false constr
+R25609:25611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25592:25608 UMST.ChemConstants.BondConservation <> graph01BondProved def
+R25612:25616 Corelib.Init.Datatypes <> false constr
+def 25896:25921 <> bondReactionGraphAuthority
+R25925:25930 Stdlib.Strings.String <> string ind
+def 25994:26025 <> chemIntProveGraph01BondAuthority
+R26029:26034 Stdlib.Strings.String <> string ind
+def 26085:26107 <> bondReactionGraphMarker
+R26111:26116 Stdlib.Strings.String <> string ind
+def 26169:26190 <> bondConservationCellId
+R26194:26199 Stdlib.Strings.String <> string ind
+def 26257:26280 <> bondConservationNonClaim
+R26284:26289 Stdlib.Strings.String <> string ind
+prf 26739:26763 <> bond_conservation_cell_id
+R26791:26793 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26769:26790 UMST.ChemConstants.BondConservation <> bondConservationCellId def
+prf 26865:26910 <> bond_conservation_cites_bond_reaction_graph_rs
+R26942:26945 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R26916:26941 UMST.ChemConstants.BondConservation <> bondReactionGraphAuthority def
+prf 26983:27029 <> bond_conservation_cites_int_prove_graph_01_bond
+R27067:27069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27035:27066 UMST.ChemConstants.BondConservation <> chemIntProveGraph01BondAuthority def
+prf 27134:27163 <> bond_conservation_cites_marker
+R27192:27195 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27169:27191 UMST.ChemConstants.BondConservation <> bondReactionGraphMarker def
+def 27460:27491 <> bondSecondLawConservationFraming
+R27495:27500 Stdlib.Strings.String <> string ind
+prf 27578:27603 <> bond_not_second_bond_axiom
+R27641:27644 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27609:27640 UMST.ChemConstants.BondConservation <> bondSecondLawConservationFraming def
+prf 27699:27734 <> bond_second_law_conservation_framing
+R27772:27775 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27740:27771 UMST.ChemConstants.BondConservation <> bondSecondLawConservationFraming def
+def 28042:28063 <> physicsGreenAuthorized
+R28075:28079 Corelib.Init.Logic <> False ind
+prf 28089:28125 <> bond_conservation_physics_green_false
+R28131:28132 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R28133:28154 UMST.ChemConstants.BondConservation <> physicsGreenAuthorized def
+prf 28194:28227 <> bond_conservation_modality_unwired
+R28264:28266 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28233:28263 UMST.ChemConstants.BondConservation <> bondConservationModalityCurrent def
+R28267:28291 UMST.ChemConstants.BondConservation <> bond_conservation_unwired constr

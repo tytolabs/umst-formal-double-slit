@@ -1,0 +1,1750 @@
+DIGEST 4cf57ea6a2cbec25ea75997ca4639698
+FUMST.ChemConstants.GoldschmidtConservation
+R1290:1294 Stdlib.Arith.Arith <> <> lib
+R1296:1301 Stdlib.ZArith.ZArith <> <> lib
+R1303:1308 Stdlib.Strings.String <> <> lib
+R1310:1313 Stdlib.Bool.Bool <> <> lib
+R1315:1317 Stdlib.micromega.Lia <> <> lib
+R1319:1322 Stdlib.Lists.List <> <> lib
+R1332:1344 Stdlib.Lists.List ListNotations <> mod
+ind 1675:1705 <> GoldschmidtConservationModality
+constr 1721:1752 <> goldschmidt_conservation_unwired
+constr 1758:1789 <> goldschmidt_conservation_assumed
+constr 1795:1825 <> goldschmidt_conservation_proved
+constr 1831:1864 <> goldschmidt_conservation_surrogate
+scheme 1675:1705 <> GoldschmidtConservationModality_rect
+scheme 1675:1705 <> GoldschmidtConservationModality_ind
+scheme 1675:1705 <> GoldschmidtConservationModality_rec
+scheme 1675:1705 <> GoldschmidtConservationModality_sind
+def 1879:1916 <> goldschmidtConservationModalityCurrent
+R1920:1950 UMST.ChemConstants.GoldschmidtConservation <> GoldschmidtConservationModality ind
+R1957:1988 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+def 2003:2042 <> goldschmidt_modality_lattice_cardinality
+R2046:2048 Corelib.Init.Datatypes <> nat ind
+prf 2063:2110 <> goldschmidt_modality_lattice_cardinality_is_four
+R2156:2158 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2116:2155 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_modality_lattice_cardinality def
+prf 2194:2237 <> goldschmidt_modality_lattice_not_118_squared
+R2310:2312 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2243:2246 Corelib.Init.Datatypes <> negb def
+R2249:2255 Stdlib.Arith.PeanoNat Nat eqb def
+R2257:2296 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_modality_lattice_cardinality def
+R2302:2304 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2313:2316 Corelib.Init.Datatypes <> true constr
+R2335:2374 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_modality_lattice_cardinality def
+def 2634:2656 <> iupac_table_cardinality
+R2660:2662 Corelib.Init.Datatypes <> nat ind
+prf 2679:2708 <> iupac_table_cardinality_is_118
+R2737:2739 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2714:2736 UMST.ChemConstants.GoldschmidtConservation <> iupac_table_cardinality def
+def 2782:2808 <> goldschmidt_element_z_valid
+R2815:2817 Corelib.Init.Datatypes <> nat ind
+binder 2811:2811 <> z:3
+R2822:2825 Corelib.Init.Datatypes <> bool ind
+R2843:2846 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2832:2838 Stdlib.Arith.PeanoNat Nat ltb def
+R2842:2842 UMST.ChemConstants.GoldschmidtConservation <> z:3 var
+R2847:2853 Stdlib.Arith.PeanoNat Nat leb def
+R2855:2855 UMST.ChemConstants.GoldschmidtConservation <> z:3 var
+R2857:2879 UMST.ChemConstants.GoldschmidtConservation <> iupac_table_cardinality def
+def 2894:2919 <> goldschmidt_element_iron_z
+R2923:2925 Corelib.Init.Datatypes <> nat ind
+def 2945:2972 <> goldschmidt_element_copper_z
+R2976:2978 Corelib.Init.Datatypes <> nat ind
+def 2998:3026 <> goldschmidt_element_silicon_z
+R3030:3032 Corelib.Init.Datatypes <> nat ind
+def 3052:3079 <> goldschmidt_element_helium_z
+R3083:3085 Corelib.Init.Datatypes <> nat ind
+def 3104:3134 <> goldschmidt_element_oganesson_z
+R3138:3140 Corelib.Init.Datatypes <> nat ind
+prf 3157:3180 <> goldschmidt_iron_z_is_26
+R3212:3214 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3186:3211 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_iron_z def
+prf 3251:3276 <> goldschmidt_copper_z_is_29
+R3310:3312 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3282:3309 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_copper_z def
+prf 3349:3375 <> goldschmidt_silicon_z_is_14
+R3410:3412 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3381:3409 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_silicon_z def
+prf 3449:3473 <> goldschmidt_helium_z_is_2
+R3507:3509 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3479:3506 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_helium_z def
+prf 3545:3574 <> goldschmidt_oganesson_z_is_118
+R3611:3613 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3580:3610 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_oganesson_z def
+prf 3651:3675 <> goldschmidt_fe_cu_z_valid
+R3742:3747 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3735:3737 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3681:3707 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_z_valid def
+R3709:3734 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_iron_z def
+R3738:3741 Corelib.Init.Datatypes <> true constr
+R3804:3806 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3748:3774 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_z_valid def
+R3776:3803 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_copper_z def
+R3807:3810 Corelib.Init.Datatypes <> true constr
+R3836:3862 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_z_valid def
+R3865:3890 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_iron_z def
+R3897:3924 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_copper_z def
+R3927:3949 UMST.ChemConstants.GoldschmidtConservation <> iupac_table_cardinality def
+prf 3977:4001 <> goldschmidt_si_he_z_valid
+R4071:4076 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4064:4066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4007:4033 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_z_valid def
+R4035:4063 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_silicon_z def
+R4067:4070 Corelib.Init.Datatypes <> true constr
+R4133:4135 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4077:4103 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_z_valid def
+R4105:4132 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_helium_z def
+R4136:4139 Corelib.Init.Datatypes <> true constr
+R4165:4191 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_z_valid def
+R4194:4222 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_silicon_z def
+R4229:4256 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_helium_z def
+R4259:4281 UMST.ChemConstants.GoldschmidtConservation <> iupac_table_cardinality def
+def 4542:4564 <> pattern_class_6_ore_idx
+R4568:4570 Corelib.Init.Datatypes <> nat ind
+def 4589:4619 <> pattern_class_7_g_stability_idx
+R4623:4625 Corelib.Init.Datatypes <> nat ind
+def 4644:4667 <> pattern_class_17_fo2_idx
+R4671:4673 Corelib.Init.Datatypes <> nat ind
+prf 4689:4710 <> pattern_class_6_is_six
+R4739:4741 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4716:4738 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_6_ore_idx def
+prf 4777:4800 <> pattern_class_7_is_seven
+R4837:4839 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4806:4836 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_7_g_stability_idx def
+prf 4875:4903 <> pattern_class_17_is_seventeen
+R4933:4935 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4909:4932 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_17_fo2_idx def
+def 4977:5011 <> goldschmidt_x5_product_factor_count
+R5015:5017 Corelib.Init.Datatypes <> nat ind
+prf 5032:5064 <> goldschmidt_x5_concurrent_product
+R5105:5107 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5070:5104 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_x5_product_factor_count def
+prf 5143:5169 <> goldschmidt_x5_not_xor_enum
+R5227:5229 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5175:5178 Corelib.Init.Datatypes <> negb def
+R5181:5187 Stdlib.Arith.PeanoNat Nat eqb def
+R5189:5223 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_x5_product_factor_count def
+R5230:5233 Corelib.Init.Datatypes <> true constr
+def 5273:5294 <> crossClassifierX5RowId
+R5298:5303 Stdlib.Strings.String <> string ind
+prf 5321:5349 <> cross_classifier_x5_row_named
+R5377:5379 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5355:5376 UMST.ChemConstants.GoldschmidtConservation <> crossClassifierX5RowId def
+ind 5646:5664 <> ore_assemblage_kind
+constr 5680:5695 <> assemblage_metal
+constr 5701:5716 <> assemblage_oxide
+constr 5722:5739 <> assemblage_sulfide
+constr 5745:5767 <> assemblage_unauthorized
+scheme 5646:5664 <> ore_assemblage_kind_rect
+scheme 5646:5664 <> ore_assemblage_kind_ind
+scheme 5646:5664 <> ore_assemblage_kind_rec
+scheme 5646:5664 <> ore_assemblage_kind_sind
+def 5782:5804 <> ore_assemblage_kind_beq
+R5815:5833 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind ind
+binder 5807:5808 <> k1:6
+binder 5810:5811 <> k2:7
+R5838:5841 Corelib.Init.Datatypes <> bool ind
+R5858:5859 UMST.ChemConstants.GoldschmidtConservation <> k2:7 var
+R5854:5855 UMST.ChemConstants.GoldschmidtConservation <> k1:6 var
+R5870:5885 UMST.ChemConstants.GoldschmidtConservation <> assemblage_metal constr
+R5888:5903 UMST.ChemConstants.GoldschmidtConservation <> assemblage_metal constr
+R5908:5911 Corelib.Init.Datatypes <> true constr
+R5917:5932 UMST.ChemConstants.GoldschmidtConservation <> assemblage_oxide constr
+R5935:5950 UMST.ChemConstants.GoldschmidtConservation <> assemblage_oxide constr
+R5955:5958 Corelib.Init.Datatypes <> true constr
+R5964:5981 UMST.ChemConstants.GoldschmidtConservation <> assemblage_sulfide constr
+R5984:6001 UMST.ChemConstants.GoldschmidtConservation <> assemblage_sulfide constr
+R6006:6009 Corelib.Init.Datatypes <> true constr
+R6015:6037 UMST.ChemConstants.GoldschmidtConservation <> assemblage_unauthorized constr
+R6040:6062 UMST.ChemConstants.GoldschmidtConservation <> assemblage_unauthorized constr
+R6067:6070 Corelib.Init.Datatypes <> true constr
+R6084:6088 Corelib.Init.Datatypes <> false constr
+rec 6105:6123 <> goldschmidt_binding
+proj 6139:6158 <> goldschmidt_parent_z
+R6162:6164 Corelib.Init.Datatypes <> nat ind
+def 6181:6200 <> goldschmidtBindingFe
+R6204:6222 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R6232:6251 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6232:6251 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6232:6251 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6256:6281 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_iron_z def
+def 6299:6318 <> goldschmidtBindingCu
+R6322:6340 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R6350:6369 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6350:6369 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6350:6369 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6374:6401 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_copper_z def
+def 6419:6438 <> goldschmidtBindingSi
+R6442:6460 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R6470:6489 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6470:6489 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6470:6489 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6494:6522 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_silicon_z def
+def 6540:6559 <> goldschmidtBindingHe
+R6563:6581 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R6591:6610 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6591:6610 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6591:6610 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6615:6642 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_element_helium_z def
+def 6660:6684 <> goldschmidtBindingTrivial
+R6688:6706 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R6716:6735 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6716:6735 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6716:6735 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+def 6758:6785 <> goldschmidtBindingNontrivial
+R6792:6810 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+binder 6788:6788 <> b:12
+R6815:6818 Corelib.Init.Datatypes <> bool ind
+R6825:6831 Stdlib.Arith.PeanoNat Nat ltb def
+R6836:6855 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R6857:6857 UMST.ChemConstants.GoldschmidtConservation <> b:12 var
+prf 6868:6900 <> goldschmidt_binding_fe_nontrivial
+R6955:6957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6906:6933 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingNontrivial def
+R6935:6954 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R6958:6961 Corelib.Init.Datatypes <> true constr
+prf 6996:7037 <> goldschmidt_binding_trivial_not_nontrivial
+R7097:7099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7043:7070 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingNontrivial def
+R7072:7096 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingTrivial def
+R7100:7104 Corelib.Init.Datatypes <> false constr
+def 7144:7178 <> goldschmidtBindingIdentityConserved
+R7189:7207 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+binder 7181:7182 <> b1:13
+binder 7184:7185 <> b2:14
+R7212:7215 Corelib.Init.Datatypes <> bool ind
+R7222:7228 Stdlib.Arith.PeanoNat Nat eqb def
+R7231:7250 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R7252:7253 UMST.ChemConstants.GoldschmidtConservation <> b1:13 var
+R7257:7276 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R7278:7279 UMST.ChemConstants.GoldschmidtConservation <> b2:14 var
+rec 7291:7312 <> ore_assemblage_witness
+proj 7328:7349 <> ore_assemblage_binding
+proj 7376:7398 <> ore_assemblage_kind_tag
+proj 7425:7450 <> ore_assemblage_class_index
+R7353:7371 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R7402:7420 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind ind
+R7454:7456 Corelib.Init.Datatypes <> nat ind
+def 7473:7492 <> oreAssemblageFeMetal
+R7496:7517 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_witness rec
+R7527:7548 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7527:7548 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7527:7548 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7580:7602 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind_tag proj
+R7580:7602 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind_tag proj
+R7630:7655 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R7630:7655 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R7553:7572 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R7607:7622 UMST.ChemConstants.GoldschmidtConservation <> assemblage_metal constr
+R7660:7682 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_6_ore_idx def
+def 7700:7719 <> oreAssemblageFeOxide
+R7723:7744 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_witness rec
+R7754:7775 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7754:7775 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7754:7775 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7807:7829 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind_tag proj
+R7807:7829 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind_tag proj
+R7857:7882 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R7857:7882 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R7780:7799 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R7834:7849 UMST.ChemConstants.GoldschmidtConservation <> assemblage_oxide constr
+R7887:7909 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_6_ore_idx def
+def 7927:7948 <> oreAssemblageFeSulfide
+R7952:7973 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_witness rec
+R7983:8004 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7983:8004 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R7983:8004 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8036:8058 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind_tag proj
+R8036:8058 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_kind_tag proj
+R8088:8113 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R8088:8113 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R8009:8028 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R8063:8080 UMST.ChemConstants.GoldschmidtConservation <> assemblage_sulfide constr
+R8118:8140 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_6_ore_idx def
+prf 8153:8181 <> fe_metal_oxide_sulfide_same_z
+R8329:8334 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8322:8324 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8187:8221 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingIdentityConserved def
+R8228:8249 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8251:8270 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeMetal def
+R8278:8299 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8301:8320 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeOxide def
+R8325:8328 Corelib.Init.Datatypes <> true constr
+R8472:8474 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8335:8369 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingIdentityConserved def
+R8376:8397 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8399:8418 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeMetal def
+R8426:8447 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8449:8470 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeSulfide def
+R8475:8478 Corelib.Init.Datatypes <> true constr
+prf 8529:8558 <> fe_metal_oxide_sulfide_z_is_26
+R8635:8640 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8630:8632 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8564:8583 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R8586:8607 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8609:8628 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeMetal def
+R8712:8717 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8707:8709 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8641:8660 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R8663:8684 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8686:8705 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeOxide def
+R8786:8788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8718:8737 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R8740:8761 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_binding proj
+R8763:8784 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeSulfide def
+rec 9066:9084 <> g_stability_witness
+proj 9100:9114 <> g_stability_tag
+proj 9128:9150 <> g_stability_class_index
+R9118:9123 Stdlib.Strings.String <> string ind
+R9154:9156 Corelib.Init.Datatypes <> nat ind
+rec 9169:9186 <> fo2_ladder_witness
+proj 9202:9215 <> fo2_ladder_tag
+proj 9229:9250 <> fo2_ladder_class_index
+R9219:9224 Stdlib.Strings.String <> string ind
+R9254:9256 Corelib.Init.Datatypes <> nat ind
+def 9273:9290 <> gStabilityCoreGMin
+R9294:9312 UMST.ChemConstants.GoldschmidtConservation <> g_stability_witness rec
+R9322:9336 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9322:9336 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9322:9336 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9370:9392 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R9370:9392 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R9397:9427 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_7_g_stability_idx def
+def 9445:9463 <> gStabilityCrustGMin
+R9467:9485 UMST.ChemConstants.GoldschmidtConservation <> g_stability_witness rec
+R9495:9509 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9495:9509 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9495:9509 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9545:9567 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R9545:9567 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R9572:9602 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_7_g_stability_idx def
+def 9620:9640 <> gStabilitySulfideGMin
+R9644:9662 UMST.ChemConstants.GoldschmidtConservation <> g_stability_witness rec
+R9672:9686 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9672:9686 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9672:9686 UMST.ChemConstants.GoldschmidtConservation <> g_stability_tag proj
+R9723:9745 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R9723:9745 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R9750:9780 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_7_g_stability_idx def
+def 9798:9813 <> fo2LadderCoreLow
+R9817:9834 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_witness rec
+R9844:9857 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_tag proj
+R9844:9857 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_tag proj
+R9844:9857 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_tag proj
+R9890:9911 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_index proj
+R9890:9911 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_index proj
+R9916:9939 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_17_fo2_idx def
+def 9957:9970 <> fo2LadderCrust
+R9974:9991 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_witness rec
+R10001:10014 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_tag proj
+R10001:10014 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_tag proj
+R10001:10014 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_tag proj
+R10057:10078 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_index proj
+R10057:10078 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_index proj
+R10083:10106 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_17_fo2_idx def
+def 10124:10147 <> g_stability_class_honest
+R10154:10172 UMST.ChemConstants.GoldschmidtConservation <> g_stability_witness rec
+binder 10150:10150 <> g:25
+R10177:10180 Corelib.Init.Datatypes <> bool ind
+R10187:10193 Stdlib.Arith.PeanoNat Nat eqb def
+R10196:10218 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_index proj
+R10220:10220 UMST.ChemConstants.GoldschmidtConservation <> g:25 var
+R10223:10253 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_7_g_stability_idx def
+def 10268:10290 <> fo2_ladder_class_honest
+R10297:10314 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_witness rec
+binder 10293:10293 <> f:26
+R10319:10322 Corelib.Init.Datatypes <> bool ind
+R10329:10335 Stdlib.Arith.PeanoNat Nat eqb def
+R10338:10359 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_index proj
+R10361:10361 UMST.ChemConstants.GoldschmidtConservation <> f:26 var
+R10364:10387 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_17_fo2_idx def
+prf 10397:10419 <> g_stability_core_honest
+R10468:10470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10425:10448 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_honest def
+R10450:10467 UMST.ChemConstants.GoldschmidtConservation <> gStabilityCoreGMin def
+R10471:10474 Corelib.Init.Datatypes <> true constr
+prf 10509:10530 <> fo2_ladder_core_honest
+R10576:10578 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10536:10558 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_honest def
+R10560:10575 UMST.ChemConstants.GoldschmidtConservation <> fo2LadderCoreLow def
+R10579:10582 Corelib.Init.Datatypes <> true constr
+rec 10847:10876 <> goldschmidt_ore_product_factor
+proj 10892:10902 <> product_ore
+proj 10932:10950 <> product_g_stability
+proj 10977:10994 <> product_fo2_ladder
+R10906:10927 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_witness rec
+R10954:10972 UMST.ChemConstants.GoldschmidtConservation <> g_stability_witness rec
+R10998:11015 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_witness rec
+def 11032:11060 <> goldschmidtProductSiderophile
+R11064:11093 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_ore_product_factor rec
+R11103:11113 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11103:11113 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11103:11113 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11145:11163 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11145:11163 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11193:11210 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11193:11210 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11118:11137 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeMetal def
+R11168:11185 UMST.ChemConstants.GoldschmidtConservation <> gStabilityCoreGMin def
+R11215:11230 UMST.ChemConstants.GoldschmidtConservation <> fo2LadderCoreLow def
+def 11248:11275 <> goldschmidtProductLithophile
+R11279:11308 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_ore_product_factor rec
+R11318:11328 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11318:11328 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11318:11328 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11360:11378 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11360:11378 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11409:11426 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11409:11426 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11333:11352 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeOxide def
+R11383:11401 UMST.ChemConstants.GoldschmidtConservation <> gStabilityCrustGMin def
+R11431:11444 UMST.ChemConstants.GoldschmidtConservation <> fo2LadderCrust def
+def 11462:11490 <> goldschmidtProductChalcophile
+R11494:11523 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_ore_product_factor rec
+R11533:11543 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11533:11543 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11533:11543 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11577:11595 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11577:11595 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11628:11645 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11628:11645 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11548:11569 UMST.ChemConstants.GoldschmidtConservation <> oreAssemblageFeSulfide def
+R11600:11620 UMST.ChemConstants.GoldschmidtConservation <> gStabilitySulfideGMin def
+R11650:11663 UMST.ChemConstants.GoldschmidtConservation <> fo2LadderCrust def
+def 11681:11713 <> goldschmidt_product_factor_honest
+R11720:11749 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_ore_product_factor rec
+binder 11716:11716 <> p:31
+R11754:11757 Corelib.Init.Datatypes <> bool ind
+R11894:11899 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11840:11845 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11764:11770 Stdlib.Arith.PeanoNat Nat eqb def
+R11773:11798 UMST.ChemConstants.GoldschmidtConservation <> ore_assemblage_class_index proj
+R11801:11811 UMST.ChemConstants.GoldschmidtConservation <> product_ore proj
+R11813:11813 UMST.ChemConstants.GoldschmidtConservation <> p:31 var
+R11817:11839 UMST.ChemConstants.GoldschmidtConservation <> pattern_class_6_ore_idx def
+R11846:11869 UMST.ChemConstants.GoldschmidtConservation <> g_stability_class_honest def
+R11872:11890 UMST.ChemConstants.GoldschmidtConservation <> product_g_stability proj
+R11892:11892 UMST.ChemConstants.GoldschmidtConservation <> p:31 var
+R11900:11922 UMST.ChemConstants.GoldschmidtConservation <> fo2_ladder_class_honest def
+R11925:11942 UMST.ChemConstants.GoldschmidtConservation <> product_fo2_ladder proj
+R11944:11944 UMST.ChemConstants.GoldschmidtConservation <> p:31 var
+prf 11955:11980 <> siderophile_product_honest
+R12049:12051 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11986:12018 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_product_factor_honest def
+R12020:12048 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductSiderophile def
+R12052:12055 Corelib.Init.Datatypes <> true constr
+prf 12090:12114 <> lithophile_product_honest
+R12182:12184 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12120:12152 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_product_factor_honest def
+R12154:12181 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductLithophile def
+R12185:12188 Corelib.Init.Datatypes <> true constr
+prf 12223:12248 <> chalcophile_product_honest
+R12317:12319 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12254:12286 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_product_factor_honest def
+R12288:12316 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductChalcophile def
+R12320:12323 Corelib.Init.Datatypes <> true constr
+ind 12585:12608 <> goldschmidt_affinity_tag
+constr 12624:12643 <> affinity_siderophile
+constr 12649:12667 <> affinity_lithophile
+constr 12673:12692 <> affinity_chalcophile
+constr 12698:12721 <> affinity_xor_enum_bucket
+scheme 12585:12608 <> goldschmidt_affinity_tag_rect
+scheme 12585:12608 <> goldschmidt_affinity_tag_ind
+scheme 12585:12608 <> goldschmidt_affinity_tag_rec
+scheme 12585:12608 <> goldschmidt_affinity_tag_sind
+def 12736:12763 <> goldschmidt_affinity_tag_beq
+R12774:12797 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_tag ind
+binder 12766:12767 <> t1:34
+binder 12769:12770 <> t2:35
+R12802:12805 Corelib.Init.Datatypes <> bool ind
+R12822:12823 UMST.ChemConstants.GoldschmidtConservation <> t2:35 var
+R12818:12819 UMST.ChemConstants.GoldschmidtConservation <> t1:34 var
+R12834:12853 UMST.ChemConstants.GoldschmidtConservation <> affinity_siderophile constr
+R12856:12875 UMST.ChemConstants.GoldschmidtConservation <> affinity_siderophile constr
+R12880:12883 Corelib.Init.Datatypes <> true constr
+R12889:12907 UMST.ChemConstants.GoldschmidtConservation <> affinity_lithophile constr
+R12910:12928 UMST.ChemConstants.GoldschmidtConservation <> affinity_lithophile constr
+R12933:12936 Corelib.Init.Datatypes <> true constr
+R12942:12961 UMST.ChemConstants.GoldschmidtConservation <> affinity_chalcophile constr
+R12964:12983 UMST.ChemConstants.GoldschmidtConservation <> affinity_chalcophile constr
+R12988:12991 Corelib.Init.Datatypes <> true constr
+R12997:13020 UMST.ChemConstants.GoldschmidtConservation <> affinity_xor_enum_bucket constr
+R13023:13046 UMST.ChemConstants.GoldschmidtConservation <> affinity_xor_enum_bucket constr
+R13051:13054 Corelib.Init.Datatypes <> true constr
+R13068:13072 Corelib.Init.Datatypes <> false constr
+rec 13089:13116 <> goldschmidt_affinity_witness
+proj 13132:13143 <> affinity_tag
+proj 13175:13190 <> affinity_product
+R13147:13170 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_tag ind
+R13194:13223 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_ore_product_factor rec
+def 13240:13269 <> goldschmidtAffinitySiderophile
+R13273:13300 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_witness rec
+R13310:13321 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13310:13321 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13310:13321 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13353:13368 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13353:13368 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13326:13345 UMST.ChemConstants.GoldschmidtConservation <> affinity_siderophile constr
+R13373:13401 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductSiderophile def
+def 13419:13447 <> goldschmidtAffinityLithophile
+R13451:13478 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_witness rec
+R13488:13499 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13488:13499 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13488:13499 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13530:13545 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13530:13545 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13504:13522 UMST.ChemConstants.GoldschmidtConservation <> affinity_lithophile constr
+R13550:13577 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductLithophile def
+def 13595:13624 <> goldschmidtAffinityChalcophile
+R13628:13655 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_witness rec
+R13665:13676 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13665:13676 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13665:13676 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13708:13723 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13708:13723 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13681:13700 UMST.ChemConstants.GoldschmidtConservation <> affinity_chalcophile constr
+R13728:13756 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductChalcophile def
+def 13774:13799 <> goldschmidtAffinityXorEnum
+R13803:13830 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_witness rec
+R13840:13851 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13840:13851 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13840:13851 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R13887:13902 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13887:13902 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R13856:13879 UMST.ChemConstants.GoldschmidtConservation <> affinity_xor_enum_bucket constr
+R13907:13935 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProductSiderophile def
+def 13953:13993 <> goldschmidt_affinity_derived_from_product
+R14000:14027 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_witness rec
+binder 13996:13996 <> w:41
+R14032:14035 Corelib.Init.Datatypes <> bool ind
+R14096:14101 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14042:14074 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_product_factor_honest def
+R14077:14092 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R14094:14094 UMST.ChemConstants.GoldschmidtConservation <> w:41 var
+R14102:14105 Corelib.Init.Datatypes <> negb def
+R14108:14135 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_tag_beq def
+R14138:14149 UMST.ChemConstants.GoldschmidtConservation <> affinity_tag proj
+R14151:14151 UMST.ChemConstants.GoldschmidtConservation <> w:41 var
+R14154:14177 UMST.ChemConstants.GoldschmidtConservation <> affinity_xor_enum_bucket constr
+prf 14188:14215 <> siderophile_affinity_derived
+R14293:14295 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14221:14261 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R14263:14292 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitySiderophile def
+R14296:14299 Corelib.Init.Datatypes <> true constr
+prf 14334:14360 <> lithophile_affinity_derived
+R14437:14439 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14366:14406 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R14408:14436 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityLithophile def
+R14440:14443 Corelib.Init.Datatypes <> true constr
+prf 14478:14505 <> chalcophile_affinity_derived
+R14583:14585 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14511:14551 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R14553:14582 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityChalcophile def
+R14586:14589 Corelib.Init.Datatypes <> true constr
+prf 14624:14652 <> xor_enum_affinity_not_derived
+R14726:14728 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14658:14698 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R14700:14725 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityXorEnum def
+R14729:14733 Corelib.Init.Datatypes <> false constr
+def 14773:14810 <> goldschmidtAffinitiesConcurrentProduct
+R14814:14817 Corelib.Init.Datatypes <> bool ind
+R14973:14978 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14896:14901 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14824:14864 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R14866:14895 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitySiderophile def
+R14902:14942 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R14944:14972 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityLithophile def
+R14979:15019 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R15021:15050 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityChalcophile def
+prf 15060:15105 <> goldschmidt_affinities_concurrent_product_true
+R15149:15151 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15111:15148 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitiesConcurrentProduct def
+R15152:15155 Corelib.Init.Datatypes <> true constr
+R15174:15211 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitiesConcurrentProduct def
+def 15269:15281 <> xorEnumMarker
+R15285:15290 Stdlib.Strings.String <> string ind
+def 15340:15358 <> productFactorMarker
+R15362:15367 Stdlib.Strings.String <> string ind
+prf 15416:15450 <> xor_marker_ne_product_factor_marker
+R15469:15472 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15456:15468 UMST.ChemConstants.GoldschmidtConservation <> xorEnumMarker def
+R15473:15491 UMST.ChemConstants.GoldschmidtConservation <> productFactorMarker def
+ind 15755:15780 <> closed_shell_no_ore_reason
+constr 15796:15818 <> no_ore_missing_interact
+constr 15824:15846 <> no_ore_nobility_theater
+scheme 15755:15780 <> closed_shell_no_ore_reason_rect
+scheme 15755:15780 <> closed_shell_no_ore_reason_ind
+scheme 15755:15780 <> closed_shell_no_ore_reason_rec
+scheme 15755:15780 <> closed_shell_no_ore_reason_sind
+def 15861:15886 <> closed_shell_no_ore_honest
+R15893:15918 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_reason ind
+binder 15889:15889 <> r:44
+R15923:15926 Corelib.Init.Datatypes <> bool ind
+R15939:15939 UMST.ChemConstants.GoldschmidtConservation <> r:44 var
+R15950:15972 UMST.ChemConstants.GoldschmidtConservation <> no_ore_missing_interact constr
+R15977:15980 Corelib.Init.Datatypes <> true constr
+R15986:16008 UMST.ChemConstants.GoldschmidtConservation <> no_ore_nobility_theater constr
+R16013:16017 Corelib.Init.Datatypes <> false constr
+rec 16034:16060 <> closed_shell_no_ore_witness
+proj 16076:16089 <> no_ore_binding
+proj 16116:16132 <> no_ore_reason_tag
+proj 16166:16192 <> no_ore_has_interact_witness
+R16093:16111 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R16136:16161 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_reason ind
+R16196:16199 Corelib.Init.Datatypes <> bool ind
+def 16216:16233 <> closedShellNoOreCu
+R16237:16263 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_witness rec
+R16273:16286 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16273:16286 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16273:16286 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16318:16334 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16318:16334 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16369:16395 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16369:16395 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16291:16310 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingCu def
+R16339:16361 UMST.ChemConstants.GoldschmidtConservation <> no_ore_missing_interact constr
+R16400:16404 Corelib.Init.Datatypes <> false constr
+def 16422:16439 <> closedShellNoOreSi
+R16443:16469 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_witness rec
+R16479:16492 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16479:16492 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16479:16492 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16524:16540 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16524:16540 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16575:16601 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16575:16601 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16497:16516 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingSi def
+R16545:16567 UMST.ChemConstants.GoldschmidtConservation <> no_ore_missing_interact constr
+R16606:16610 Corelib.Init.Datatypes <> false constr
+def 16628:16645 <> closedShellNoOreHe
+R16649:16675 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_witness rec
+R16685:16698 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16685:16698 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16685:16698 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R16730:16746 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16730:16746 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16781:16807 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16781:16807 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16703:16722 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingHe def
+R16751:16773 UMST.ChemConstants.GoldschmidtConservation <> no_ore_missing_interact constr
+R16812:16816 Corelib.Init.Datatypes <> false constr
+def 16834:16858 <> closed_shell_no_ore_valid
+R16865:16891 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_witness rec
+binder 16861:16861 <> w:50
+R16896:16899 Corelib.Init.Datatypes <> bool ind
+R16954:16959 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16906:16931 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_honest def
+R16934:16950 UMST.ChemConstants.GoldschmidtConservation <> no_ore_reason_tag proj
+R16952:16952 UMST.ChemConstants.GoldschmidtConservation <> w:50 var
+R16960:16963 Corelib.Init.Datatypes <> negb def
+R16966:16992 UMST.ChemConstants.GoldschmidtConservation <> no_ore_has_interact_witness proj
+R16994:16994 UMST.ChemConstants.GoldschmidtConservation <> w:50 var
+prf 17005:17032 <> closed_shell_cu_no_ore_valid
+R17082:17084 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17038:17062 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_valid def
+R17064:17081 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreCu def
+R17085:17088 Corelib.Init.Datatypes <> true constr
+prf 17123:17150 <> closed_shell_si_no_ore_valid
+R17200:17202 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17156:17180 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_valid def
+R17182:17199 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreSi def
+R17203:17206 Corelib.Init.Datatypes <> true constr
+prf 17241:17268 <> closed_shell_he_no_ore_valid
+R17318:17320 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17274:17298 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_valid def
+R17300:17317 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreHe def
+R17321:17324 Corelib.Init.Datatypes <> true constr
+prf 17359:17381 <> closed_shell_cu_z_is_29
+R17443:17445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17387:17406 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R17409:17422 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R17424:17441 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreCu def
+prf 17482:17504 <> closed_shell_si_z_is_14
+R17566:17568 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17510:17529 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R17532:17545 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R17547:17564 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreSi def
+prf 17605:17626 <> closed_shell_he_z_is_2
+R17688:17690 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17632:17651 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R17654:17667 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R17669:17686 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreHe def
+ind 17954:17969 <> ore_witness_kind
+constr 17985:18002 <> ore_morphism_named
+constr 18008:18028 <> folklore_list_theater
+scheme 17954:17969 <> ore_witness_kind_rect
+scheme 17954:17969 <> ore_witness_kind_ind
+scheme 17954:17969 <> ore_witness_kind_rec
+scheme 17954:17969 <> ore_witness_kind_sind
+def 18043:18063 <> folklore_list_smuggle
+R18070:18085 UMST.ChemConstants.GoldschmidtConservation <> ore_witness_kind ind
+binder 18066:18066 <> k:53
+R18090:18093 Corelib.Init.Datatypes <> bool ind
+R18106:18106 UMST.ChemConstants.GoldschmidtConservation <> k:53 var
+R18117:18137 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_theater constr
+R18142:18145 Corelib.Init.Datatypes <> true constr
+R18151:18168 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+R18173:18177 Corelib.Init.Datatypes <> false constr
+def 18198:18220 <> oreWitnessMonoidalNamed
+R18224:18239 UMST.ChemConstants.GoldschmidtConservation <> ore_witness_kind ind
+R18244:18261 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+def 18275:18296 <> oreWitnessFolkloreList
+R18300:18315 UMST.ChemConstants.GoldschmidtConservation <> ore_witness_kind ind
+R18320:18340 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_theater constr
+prf 18350:18375 <> folklore_list_smuggle_true
+R18425:18427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18381:18401 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_smuggle def
+R18403:18424 UMST.ChemConstants.GoldschmidtConservation <> oreWitnessFolkloreList def
+R18428:18431 Corelib.Init.Datatypes <> true constr
+prf 18466:18490 <> monoidal_ore_not_folklore
+R18541:18543 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18496:18516 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_smuggle def
+R18518:18540 UMST.ChemConstants.GoldschmidtConservation <> oreWitnessMonoidalNamed def
+R18544:18548 Corelib.Init.Datatypes <> false constr
+def 18810:18837 <> fourthScienceCollisionMarker
+R18841:18846 Stdlib.Strings.String <> string ind
+def 18941:18971 <> twentySixthAxiomCollisionMarker
+R18975:18980 Stdlib.Strings.String <> string ind
+prf 19067:19096 <> fourth_science_collision_named
+R19130:19133 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R19102:19129 UMST.ChemConstants.GoldschmidtConservation <> fourthScienceCollisionMarker def
+prf 19171:19204 <> twenty_sixth_axiom_collision_named
+R19241:19244 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R19210:19240 UMST.ChemConstants.GoldschmidtConservation <> twentySixthAxiomCollisionMarker def
+def 19287:19304 <> claimFourthScience
+R19315:19318 Corelib.Init.Datatypes <> bool ind
+binder 19307:19311 <> claim:55
+R19323:19326 Corelib.Init.Datatypes <> bool ind
+R19331:19335 UMST.ChemConstants.GoldschmidtConservation <> claim:55 var
+def 19349:19369 <> claimTwentySixthAxiom
+R19380:19383 Corelib.Init.Datatypes <> bool ind
+binder 19372:19376 <> claim:56
+R19388:19391 Corelib.Init.Datatypes <> bool ind
+R19396:19400 UMST.ChemConstants.GoldschmidtConservation <> claim:56 var
+ind 19638:19661 <> goldschmidt_bar_presence
+constr 19677:19698 <> goldschmidt_bar_absent
+constr 19704:19726 <> goldschmidt_bar_present
+scheme 19638:19661 <> goldschmidt_bar_presence_rect
+scheme 19638:19661 <> goldschmidt_bar_presence_ind
+scheme 19638:19661 <> goldschmidt_bar_presence_rec
+scheme 19638:19661 <> goldschmidt_bar_presence_sind
+rec 19737:19757 <> goldschmidt_claim_bar
+proj 19773:19800 <> goldschmidt_bar_presence_tag
+proj 19832:19859 <> goldschmidt_bar_defect_total
+R19804:19827 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence ind
+R19863:19865 Corelib.Init.Datatypes <> nat ind
+def 19882:19906 <> goldschmidtClaimBarAbsent
+R19910:19930 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_claim_bar rec
+R19940:19967 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R19940:19967 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R19940:19967 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R20001:20028 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_defect_total proj
+R20001:20028 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_defect_total proj
+R19972:19993 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_absent constr
+def 20051:20079 <> goldschmidtClaimBarZeroDefect
+R20083:20103 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_claim_bar rec
+R20113:20140 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R20113:20140 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R20113:20140 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R20175:20202 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_defect_total proj
+R20175:20202 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_defect_total proj
+R20145:20167 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_present constr
+def 20225:20257 <> goldschmidt_claim_bar_zero_defect
+R20264:20284 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_claim_bar rec
+binder 20260:20260 <> b:62
+R20289:20292 Corelib.Init.Datatypes <> bool ind
+R20305:20332 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_presence_tag proj
+R20334:20334 UMST.ChemConstants.GoldschmidtConservation <> b:62 var
+R20345:20366 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_absent constr
+R20371:20375 Corelib.Init.Datatypes <> false constr
+R20381:20403 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_present constr
+R20408:20414 Stdlib.Arith.PeanoNat Nat eqb def
+R20417:20444 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_bar_defect_total proj
+R20446:20446 UMST.ChemConstants.GoldschmidtConservation <> b:62 var
+prf 20465:20502 <> goldschmidt_claim_bar_zero_defect_true
+R20571:20573 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20508:20540 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_claim_bar_zero_defect def
+R20542:20570 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarZeroDefect def
+R20574:20577 Corelib.Init.Datatypes <> true constr
+prf 20612:20655 <> goldschmidt_claim_bar_absent_not_zero_defect
+R20720:20722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20661:20693 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_claim_bar_zero_defect def
+R20695:20719 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R20723:20727 Corelib.Init.Datatypes <> false constr
+ind 20990:21021 <> goldschmidt_conservation_verdict
+constr 21037:21054 <> verdict_unwired_ok
+constr 21060:21087 <> verdict_goldschmidt_named_ok
+constr 21093:21116 <> verdict_trivial_z_refuse
+constr 21122:21144 <> verdict_xor_enum_refuse
+constr 21150:21177 <> verdict_folklore_list_refuse
+constr 21183:21211 <> verdict_fourth_science_refuse
+constr 21217:21249 <> verdict_twenty_sixth_axiom_refuse
+constr 21255:21290 <> verdict_closed_shell_nobility_refuse
+constr 21296:21322 <> verdict_green_invent_refuse
+constr 21328:21360 <> verdict_proved_without_bar_refuse
+constr 21366:21396 <> verdict_production_wired_refuse
+scheme 20990:21021 <> goldschmidt_conservation_verdict_rect
+scheme 20990:21021 <> goldschmidt_conservation_verdict_ind
+scheme 20990:21021 <> goldschmidt_conservation_verdict_rec
+scheme 20990:21021 <> goldschmidt_conservation_verdict_sind
+def 21411:21445 <> goldschmidt_conservation_verdict_ok
+R21454:21485 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict ind
+binder 21450:21450 <> v:65
+R21490:21493 Corelib.Init.Datatypes <> bool ind
+R21506:21506 UMST.ChemConstants.GoldschmidtConservation <> v:65 var
+R21517:21534 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R21539:21542 Corelib.Init.Datatypes <> true constr
+R21548:21575 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R21580:21583 Corelib.Init.Datatypes <> true constr
+R21594:21598 Corelib.Init.Datatypes <> false constr
+def 21619:21654 <> goldschmidt_conservation_verdict_beq
+R21667:21698 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict ind
+binder 21659:21660 <> v1:67
+binder 21662:21663 <> v2:68
+R21703:21706 Corelib.Init.Datatypes <> bool ind
+R21723:21724 UMST.ChemConstants.GoldschmidtConservation <> v2:68 var
+R21719:21720 UMST.ChemConstants.GoldschmidtConservation <> v1:67 var
+R21735:21752 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R21755:21772 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R21777:21780 Corelib.Init.Datatypes <> true constr
+R21786:21813 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R21816:21843 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R21848:21851 Corelib.Init.Datatypes <> true constr
+R21857:21880 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+R21883:21906 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+R21911:21914 Corelib.Init.Datatypes <> true constr
+R21920:21942 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+R21945:21967 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+R21972:21975 Corelib.Init.Datatypes <> true constr
+R21981:22008 UMST.ChemConstants.GoldschmidtConservation <> verdict_folklore_list_refuse constr
+R22011:22038 UMST.ChemConstants.GoldschmidtConservation <> verdict_folklore_list_refuse constr
+R22043:22046 Corelib.Init.Datatypes <> true constr
+R22052:22080 UMST.ChemConstants.GoldschmidtConservation <> verdict_fourth_science_refuse constr
+R22083:22111 UMST.ChemConstants.GoldschmidtConservation <> verdict_fourth_science_refuse constr
+R22116:22119 Corelib.Init.Datatypes <> true constr
+R22125:22157 UMST.ChemConstants.GoldschmidtConservation <> verdict_twenty_sixth_axiom_refuse constr
+R22160:22192 UMST.ChemConstants.GoldschmidtConservation <> verdict_twenty_sixth_axiom_refuse constr
+R22197:22200 Corelib.Init.Datatypes <> true constr
+R22206:22241 UMST.ChemConstants.GoldschmidtConservation <> verdict_closed_shell_nobility_refuse constr
+R22244:22279 UMST.ChemConstants.GoldschmidtConservation <> verdict_closed_shell_nobility_refuse constr
+R22284:22287 Corelib.Init.Datatypes <> true constr
+R22293:22319 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+R22322:22348 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+R22353:22356 Corelib.Init.Datatypes <> true constr
+R22362:22394 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+R22397:22429 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+R22434:22437 Corelib.Init.Datatypes <> true constr
+R22443:22473 UMST.ChemConstants.GoldschmidtConservation <> verdict_production_wired_refuse constr
+R22476:22506 UMST.ChemConstants.GoldschmidtConservation <> verdict_production_wired_refuse constr
+R22511:22514 Corelib.Init.Datatypes <> true constr
+R22528:22532 Corelib.Init.Datatypes <> false constr
+rec 22549:22569 <> goldschmidt_incidence
+proj 22585:22607 <> goldschmidt_inc_binding
+proj 22634:22657 <> goldschmidt_inc_affinity
+proj 22693:22724 <> goldschmidt_inc_ore_witness_kind
+proj 22748:22768 <> goldschmidt_inc_level
+R22611:22629 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_binding rec
+R22661:22688 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_witness rec
+R22728:22743 UMST.ChemConstants.GoldschmidtConservation <> ore_witness_kind ind
+R22772:22774 Corelib.Init.Datatypes <> nat ind
+def 22791:22820 <> goldschmidtIncidenceNontrivial
+R22827:22847 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+binder 22823:22823 <> h:76
+R22852:22855 Corelib.Init.Datatypes <> bool ind
+R22862:22868 Stdlib.Arith.PeanoNat Nat ltb def
+R22873:22893 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R22895:22895 UMST.ChemConstants.GoldschmidtConservation <> h:76 var
+def 22911:22945 <> goldschmidtIncidenceFeSiderophileL1
+R22949:22969 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+R22979:23001 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R22979:23001 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R22979:23001 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23033:23056 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23033:23056 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23098:23129 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23098:23129 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23159:23179 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23159:23179 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23006:23025 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R23061:23090 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitySiderophile def
+R23134:23151 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+def 23202:23235 <> goldschmidtIncidenceFeLithophileL1
+R23239:23259 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+R23269:23291 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23269:23291 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23269:23291 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23323:23346 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23323:23346 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23387:23418 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23387:23418 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23448:23468 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23448:23468 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23296:23315 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R23351:23379 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityLithophile def
+R23423:23440 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+def 23491:23525 <> goldschmidtIncidenceFeChalcophileL1
+R23529:23549 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+R23559:23581 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23559:23581 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23559:23581 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23613:23636 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23613:23636 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23678:23709 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23678:23709 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23739:23759 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23739:23759 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23586:23605 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R23641:23670 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityChalcophile def
+R23714:23731 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+def 23782:23808 <> goldschmidtIncidenceTrivial
+R23812:23832 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+R23842:23864 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23842:23864 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23842:23864 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R23901:23924 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23901:23924 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R23966:23997 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R23966:23997 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R24027:24047 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R24027:24047 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R23869:23893 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingTrivial def
+R23929:23958 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitySiderophile def
+R24002:24019 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+def 24070:24096 <> goldschmidtIncidenceXorEnum
+R24100:24120 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+R24130:24152 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R24130:24152 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R24130:24152 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R24184:24207 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R24184:24207 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R24245:24276 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R24245:24276 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R24306:24326 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R24306:24326 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R24157:24176 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R24212:24237 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinityXorEnum def
+R24281:24298 UMST.ChemConstants.GoldschmidtConservation <> ore_morphism_named constr
+def 24349:24380 <> goldschmidtIncidenceFolkloreList
+R24384:24404 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+R24414:24436 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R24414:24436 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R24414:24436 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R24468:24491 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R24468:24491 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R24533:24564 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R24533:24564 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R24597:24617 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R24597:24617 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_level proj
+R24441:24460 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingFe def
+R24496:24525 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitySiderophile def
+R24569:24589 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_theater constr
+def 24640:24669 <> evaluate_goldschmidt_incidence
+R24678:24708 UMST.ChemConstants.GoldschmidtConservation <> GoldschmidtConservationModality ind
+binder 24674:24674 <> m:77
+R24718:24738 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_incidence rec
+binder 24714:24714 <> h:78
+R24748:24768 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_claim_bar rec
+binder 24744:24744 <> b:79
+R24796:24799 Corelib.Init.Datatypes <> bool ind
+binder 24774:24792 <> claim_physics_green:80
+R24820:24823 Corelib.Init.Datatypes <> bool ind
+binder 24805:24816 <> claim_proved:81
+R24846:24849 Corelib.Init.Datatypes <> bool ind
+binder 24829:24842 <> claim_xor_enum:82
+R24878:24881 Corelib.Init.Datatypes <> bool ind
+binder 24855:24874 <> claim_fourth_science:83
+R24914:24917 Corelib.Init.Datatypes <> bool ind
+binder 24887:24910 <> claim_twenty_sixth_axiom:84
+R24922:24953 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict ind
+R24963:24981 UMST.ChemConstants.GoldschmidtConservation <> claim_physics_green:80 var
+R25028:25039 UMST.ChemConstants.GoldschmidtConservation <> claim_proved:81 var
+R25102:25121 UMST.ChemConstants.GoldschmidtConservation <> claim_fourth_science:83 var
+R25190:25213 UMST.ChemConstants.GoldschmidtConservation <> claim_twenty_sixth_axiom:84 var
+R25296:25316 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_smuggle def
+R25319:25350 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_ore_witness_kind proj
+R25352:25352 UMST.ChemConstants.GoldschmidtConservation <> h:78 var
+R25441:25454 UMST.ChemConstants.GoldschmidtConservation <> claim_xor_enum:82 var
+R25547:25550 Corelib.Init.Datatypes <> negb def
+R25553:25593 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_affinity_derived_from_product def
+R25639:25662 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R25664:25664 UMST.ChemConstants.GoldschmidtConservation <> h:78 var
+R25769:25772 Corelib.Init.Datatypes <> negb def
+R25775:25804 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceNontrivial def
+R25806:25806 UMST.ChemConstants.GoldschmidtConservation <> h:78 var
+R25921:25924 Corelib.Init.Datatypes <> negb def
+R25927:25954 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingNontrivial def
+R26010:26032 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R26034:26034 UMST.ChemConstants.GoldschmidtConservation <> h:78 var
+R26207:26207 UMST.ChemConstants.GoldschmidtConservation <> m:77 var
+R26260:26291 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R26344:26371 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R26419:26450 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_assumed constr
+R26498:26531 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_surrogate constr
+R26584:26601 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R26584:26601 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R26649:26679 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R26732:26764 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+R26085:26108 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+R25851:25874 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+R25705:25727 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+R25488:25510 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+R25382:25409 UMST.ChemConstants.GoldschmidtConservation <> verdict_folklore_list_refuse constr
+R25237:25269 UMST.ChemConstants.GoldschmidtConservation <> verdict_twenty_sixth_axiom_refuse constr
+R25140:25168 UMST.ChemConstants.GoldschmidtConservation <> verdict_fourth_science_refuse constr
+R25053:25085 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+R24990:25016 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+def 26827:26865 <> evaluate_goldschmidt_conservation_close
+R26874:26904 UMST.ChemConstants.GoldschmidtConservation <> GoldschmidtConservationModality ind
+binder 26870:26870 <> m:86
+R26932:26935 Corelib.Init.Datatypes <> bool ind
+binder 26910:26928 <> claim_physics_green:87
+R26966:26969 Corelib.Init.Datatypes <> bool ind
+binder 26941:26962 <> claim_production_wired:88
+R26974:27005 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict ind
+R27015:27033 UMST.ChemConstants.GoldschmidtConservation <> claim_physics_green:87 var
+R27080:27101 UMST.ChemConstants.GoldschmidtConservation <> claim_production_wired:88 var
+R27159:27159 UMST.ChemConstants.GoldschmidtConservation <> m:86 var
+R27172:27203 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R27208:27225 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R27233:27264 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_assumed constr
+R27272:27302 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R27310:27343 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_surrogate constr
+R27348:27375 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R27348:27375 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R27348:27375 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R27110:27140 UMST.ChemConstants.GoldschmidtConservation <> verdict_production_wired_refuse constr
+R27042:27068 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+def 27398:27432 <> goldschmidt_conservation_authorized
+R27459:27462 Corelib.Init.Datatypes <> bool ind
+binder 27437:27455 <> claim_physics_green:90
+R27493:27496 Corelib.Init.Datatypes <> bool ind
+binder 27468:27489 <> claim_production_wired:91
+R27501:27504 Corelib.Init.Datatypes <> bool ind
+R27517:27555 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R27567:27597 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R27599:27617 UMST.ChemConstants.GoldschmidtConservation <> claim_physics_green:90 var
+R27619:27640 UMST.ChemConstants.GoldschmidtConservation <> claim_production_wired:91 var
+R27651:27678 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R27683:27686 Corelib.Init.Datatypes <> true constr
+R27697:27701 Corelib.Init.Datatypes <> false constr
+def 27722:27749 <> evaluate_closed_shell_no_ore
+R27758:27784 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_witness rec
+binder 27754:27754 <> w:92
+R27789:27820 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict ind
+R27830:27854 UMST.ChemConstants.GoldschmidtConservation <> closed_shell_no_ore_valid def
+R27856:27856 UMST.ChemConstants.GoldschmidtConservation <> w:92 var
+R27901:27936 UMST.ChemConstants.GoldschmidtConservation <> verdict_closed_shell_nobility_refuse constr
+R27865:27892 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+ind 28175:28202 <> goldschmidt_conservation_law
+constr 28218:28246 <> law_goldschmidt_product_named
+constr 28252:28270 <> law_xor_enum_refuse
+constr 28276:28298 <> law_green_invent_refuse
+constr 28304:28330 <> law_production_wired_refuse
+scheme 28175:28202 <> goldschmidt_conservation_law_rect
+scheme 28175:28202 <> goldschmidt_conservation_law_ind
+scheme 28175:28202 <> goldschmidt_conservation_law_rec
+scheme 28175:28202 <> goldschmidt_conservation_law_sind
+def 28345:28378 <> goldschmidt_conservation_law_count
+R28382:28384 Corelib.Init.Datatypes <> nat ind
+prf 28399:28440 <> goldschmidt_conservation_law_count_is_four
+R28480:28482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28446:28479 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_law_count def
+ind 28522:28557 <> goldschmidt_conservation_law_witness
+constr 28573:28600 <> goldschmidt_law_witness_open
+constr 28606:28635 <> goldschmidt_law_witness_proved
+scheme 28522:28557 <> goldschmidt_conservation_law_witness_rect
+scheme 28522:28557 <> goldschmidt_conservation_law_witness_ind
+scheme 28522:28557 <> goldschmidt_conservation_law_witness_rec
+scheme 28522:28557 <> goldschmidt_conservation_law_witness_sind
+def 28650:28694 <> evaluate_goldschmidt_conservation_law_witness
+R28705:28732 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_law ind
+binder 28699:28701 <> law:97
+R28740:28770 UMST.ChemConstants.GoldschmidtConservation <> GoldschmidtConservationModality ind
+binder 28736:28736 <> m:98
+R28777:28812 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_law_witness ind
+R28825:28825 UMST.ChemConstants.GoldschmidtConservation <> m:98 var
+R28836:28867 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R28873:28904 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_assumed constr
+R28910:28943 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_surrogate constr
+R28948:28975 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+R28948:28975 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+R28948:28975 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+R28981:29011 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R29016:29045 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_proved constr
+prf 29061:29109 <> all_goldschmidt_conservation_laws_open_at_unwired
+R29258:29263 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29227:29229 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29115:29159 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_law_witness def
+R29161:29189 UMST.ChemConstants.GoldschmidtConservation <> law_goldschmidt_product_named constr
+R29195:29226 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R29230:29257 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+R29397:29402 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29366:29368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29264:29308 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_law_witness def
+R29310:29328 UMST.ChemConstants.GoldschmidtConservation <> law_xor_enum_refuse constr
+R29334:29365 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R29369:29396 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+R29540:29545 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29509:29511 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29403:29447 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_law_witness def
+R29449:29471 UMST.ChemConstants.GoldschmidtConservation <> law_green_invent_refuse constr
+R29477:29508 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R29512:29539 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+R29656:29658 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29546:29590 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_law_witness def
+R29592:29618 UMST.ChemConstants.GoldschmidtConservation <> law_production_wired_refuse constr
+R29624:29655 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R29659:29686 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_law_witness_open constr
+def 29964:29980 <> goldschmidtProved
+R29984:29987 Corelib.Init.Datatypes <> bool ind
+R29992:29996 Corelib.Init.Datatypes <> false constr
+prf 30006:30029 <> goldschmidt_proved_false
+R30050:30052 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30033:30049 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProved def
+R30053:30057 Corelib.Init.Datatypes <> false constr
+def 30097:30119 <> not118SquaredGreenTable
+R30123:30126 Corelib.Init.Datatypes <> bool ind
+R30131:30134 Corelib.Init.Datatypes <> true constr
+prf 30144:30170 <> not_118_squared_green_table
+R30197:30199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30174:30196 UMST.ChemConstants.GoldschmidtConservation <> not118SquaredGreenTable def
+R30200:30203 Corelib.Init.Datatypes <> true constr
+def 30243:30267 <> notFourthChemistryScience
+R30271:30274 Corelib.Init.Datatypes <> bool ind
+R30279:30282 Corelib.Init.Datatypes <> true constr
+prf 30292:30319 <> not_fourth_chemistry_science
+R30348:30350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30323:30347 UMST.ChemConstants.GoldschmidtConservation <> notFourthChemistryScience def
+R30351:30354 Corelib.Init.Datatypes <> true constr
+def 30394:30412 <> notTwentySixthAxiom
+R30416:30419 Corelib.Init.Datatypes <> bool ind
+R30424:30427 Corelib.Init.Datatypes <> true constr
+prf 30437:30458 <> not_twenty_sixth_axiom
+R30481:30483 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30462:30480 UMST.ChemConstants.GoldschmidtConservation <> notTwentySixthAxiom def
+R30484:30487 Corelib.Init.Datatypes <> true constr
+prf 30744:30782 <> unwired_close_without_production_wiring
+R30876:30880 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30788:30826 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R30832:30863 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R30865:30869 Corelib.Init.Datatypes <> false constr
+R30871:30875 Corelib.Init.Datatypes <> false constr
+R30881:30898 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+prf 30935:30986 <> unwired_modality_always_ok_without_production_wiring
+R31080:31084 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30992:31030 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R31036:31067 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R31069:31073 Corelib.Init.Datatypes <> false constr
+R31075:31079 Corelib.Init.Datatypes <> false constr
+R31085:31102 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R31118:31156 UMST.ChemConstants.GoldschmidtConservation <> unwired_close_without_production_wiring thm
+R31118:31156 UMST.ChemConstants.GoldschmidtConservation <> unwired_close_without_production_wiring thm
+prf 31171:31214 <> unwired_verdict_ok_without_production_wiring
+R31353:31357 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31220:31254 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R31261:31299 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R31308:31339 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R31341:31345 Corelib.Init.Datatypes <> false constr
+R31347:31351 Corelib.Init.Datatypes <> false constr
+R31358:31361 Corelib.Init.Datatypes <> true constr
+R31380:31414 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R31427:31465 UMST.ChemConstants.GoldschmidtConservation <> unwired_close_without_production_wiring thm
+R31427:31465 UMST.ChemConstants.GoldschmidtConservation <> unwired_close_without_production_wiring thm
+R31427:31465 UMST.ChemConstants.GoldschmidtConservation <> unwired_close_without_production_wiring thm
+prf 31721:31755 <> goldschmidt_fe_siderophile_named_ok
+R31924:31928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31761:31790 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R31796:31827 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R31829:31863 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R31869:31893 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R31895:31899 Corelib.Init.Datatypes <> false constr
+R31901:31905 Corelib.Init.Datatypes <> false constr
+R31907:31911 Corelib.Init.Datatypes <> false constr
+R31913:31917 Corelib.Init.Datatypes <> false constr
+R31919:31923 Corelib.Init.Datatypes <> false constr
+R31929:31956 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+prf 31991:32024 <> goldschmidt_fe_lithophile_named_ok
+R32192:32196 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32030:32059 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R32065:32096 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R32098:32131 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeLithophileL1 def
+R32137:32161 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R32163:32167 Corelib.Init.Datatypes <> false constr
+R32169:32173 Corelib.Init.Datatypes <> false constr
+R32175:32179 Corelib.Init.Datatypes <> false constr
+R32181:32185 Corelib.Init.Datatypes <> false constr
+R32187:32191 Corelib.Init.Datatypes <> false constr
+R32197:32224 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+prf 32259:32293 <> goldschmidt_fe_chalcophile_named_ok
+R32462:32466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32299:32328 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R32334:32365 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R32367:32401 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeChalcophileL1 def
+R32407:32431 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R32433:32437 Corelib.Init.Datatypes <> false constr
+R32439:32443 Corelib.Init.Datatypes <> false constr
+R32445:32449 Corelib.Init.Datatypes <> false constr
+R32451:32455 Corelib.Init.Datatypes <> false constr
+R32457:32461 Corelib.Init.Datatypes <> false constr
+R32467:32494 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+prf 32531:32570 <> named_goldschmidt_ore_class_conservation
+R32772:32777 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32739:32743 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32576:32605 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R32611:32642 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R32644:32678 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R32684:32708 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R32710:32714 Corelib.Init.Datatypes <> false constr
+R32716:32720 Corelib.Init.Datatypes <> false constr
+R32722:32726 Corelib.Init.Datatypes <> false constr
+R32728:32732 Corelib.Init.Datatypes <> false constr
+R32734:32738 Corelib.Init.Datatypes <> false constr
+R32744:32771 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R32951:32956 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32944:32946 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32778:32812 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtBindingIdentityConserved def
+R32819:32841 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R32843:32877 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R32885:32907 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_binding proj
+R32909:32942 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeLithophileL1 def
+R32947:32950 Corelib.Init.Datatypes <> true constr
+R33083:33088 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33076:33078 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32957:32989 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_product_factor_honest def
+R32996:33011 UMST.ChemConstants.GoldschmidtConservation <> affinity_product proj
+R33014:33037 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_inc_affinity proj
+R33039:33073 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R33079:33082 Corelib.Init.Datatypes <> true constr
+R33127:33129 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33089:33126 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitiesConcurrentProduct def
+R33130:33133 Corelib.Init.Datatypes <> true constr
+prf 33184:33209 <> goldschmidt_named_close_ok
+R33302:33306 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33215:33253 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R33259:33289 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R33291:33295 Corelib.Init.Datatypes <> false constr
+R33297:33301 Corelib.Init.Datatypes <> false constr
+R33307:33334 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+prf 33371:33406 <> named_goldschmidt_conservation_close
+R33532:33537 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33499:33503 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33412:33450 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R33456:33486 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R33488:33492 Corelib.Init.Datatypes <> false constr
+R33494:33498 Corelib.Init.Datatypes <> false constr
+R33504:33531 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R33585:33587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33538:33572 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_authorized def
+R33574:33578 Corelib.Init.Datatypes <> false constr
+R33580:33584 Corelib.Init.Datatypes <> false constr
+R33588:33591 Corelib.Init.Datatypes <> true constr
+R33620:33645 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_named_close_ok thm
+R33620:33645 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_named_close_ok thm
+R33659:33693 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_authorized def
+R33708:33733 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_named_close_ok thm
+R33708:33733 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_named_close_ok thm
+R33708:33733 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_named_close_ok thm
+prf 33989:34005 <> trivial_z_refused
+R34166:34170 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34011:34040 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R34046:34077 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R34079:34105 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceTrivial def
+R34111:34135 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R34137:34141 Corelib.Init.Datatypes <> false constr
+R34143:34147 Corelib.Init.Datatypes <> false constr
+R34149:34153 Corelib.Init.Datatypes <> false constr
+R34155:34159 Corelib.Init.Datatypes <> false constr
+R34161:34165 Corelib.Init.Datatypes <> false constr
+R34171:34194 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+prf 34231:34251 <> trivial_z_fail_closed
+R34441:34446 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34412:34416 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34257:34286 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R34292:34323 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R34325:34351 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceTrivial def
+R34357:34381 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R34383:34387 Corelib.Init.Datatypes <> false constr
+R34389:34393 Corelib.Init.Datatypes <> false constr
+R34395:34399 Corelib.Init.Datatypes <> false constr
+R34401:34405 Corelib.Init.Datatypes <> false constr
+R34407:34411 Corelib.Init.Datatypes <> false constr
+R34417:34440 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+R34650:34654 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34447:34481 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R34488:34517 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R34526:34557 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R34559:34585 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceTrivial def
+R34594:34618 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R34620:34624 Corelib.Init.Datatypes <> false constr
+R34626:34630 Corelib.Init.Datatypes <> false constr
+R34632:34636 Corelib.Init.Datatypes <> false constr
+R34638:34642 Corelib.Init.Datatypes <> false constr
+R34644:34648 Corelib.Init.Datatypes <> false constr
+R34655:34659 Corelib.Init.Datatypes <> false constr
+R34688:34704 UMST.ChemConstants.GoldschmidtConservation <> trivial_z_refused thm
+R34688:34704 UMST.ChemConstants.GoldschmidtConservation <> trivial_z_refused thm
+R34718:34752 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R34767:34783 UMST.ChemConstants.GoldschmidtConservation <> trivial_z_refused thm
+R34767:34783 UMST.ChemConstants.GoldschmidtConservation <> trivial_z_refused thm
+R34767:34783 UMST.ChemConstants.GoldschmidtConservation <> trivial_z_refused thm
+prf 35045:35060 <> xor_enum_refused
+R35221:35225 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35066:35095 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R35101:35132 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R35134:35160 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceXorEnum def
+R35166:35190 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R35192:35196 Corelib.Init.Datatypes <> false constr
+R35198:35202 Corelib.Init.Datatypes <> false constr
+R35204:35208 Corelib.Init.Datatypes <> false constr
+R35210:35214 Corelib.Init.Datatypes <> false constr
+R35216:35220 Corelib.Init.Datatypes <> false constr
+R35226:35248 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+prf 35285:35304 <> xor_enum_fail_closed
+R35493:35498 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35465:35469 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35310:35339 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R35345:35376 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R35378:35404 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceXorEnum def
+R35410:35434 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R35436:35440 Corelib.Init.Datatypes <> false constr
+R35442:35446 Corelib.Init.Datatypes <> false constr
+R35448:35452 Corelib.Init.Datatypes <> false constr
+R35454:35458 Corelib.Init.Datatypes <> false constr
+R35460:35464 Corelib.Init.Datatypes <> false constr
+R35470:35492 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+R35702:35706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35499:35533 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R35540:35569 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R35578:35609 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R35611:35637 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceXorEnum def
+R35646:35670 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R35672:35676 Corelib.Init.Datatypes <> false constr
+R35678:35682 Corelib.Init.Datatypes <> false constr
+R35684:35688 Corelib.Init.Datatypes <> false constr
+R35690:35694 Corelib.Init.Datatypes <> false constr
+R35696:35700 Corelib.Init.Datatypes <> false constr
+R35707:35711 Corelib.Init.Datatypes <> false constr
+R35740:35755 UMST.ChemConstants.GoldschmidtConservation <> xor_enum_refused thm
+R35740:35755 UMST.ChemConstants.GoldschmidtConservation <> xor_enum_refused thm
+R35769:35803 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R35818:35833 UMST.ChemConstants.GoldschmidtConservation <> xor_enum_refused thm
+R35818:35833 UMST.ChemConstants.GoldschmidtConservation <> xor_enum_refused thm
+R35818:35833 UMST.ChemConstants.GoldschmidtConservation <> xor_enum_refused thm
+prf 35865:35886 <> xor_enum_claim_refused
+R36054:36058 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35892:35921 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R35927:35958 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R35960:35994 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R36000:36024 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R36026:36030 Corelib.Init.Datatypes <> false constr
+R36032:36036 Corelib.Init.Datatypes <> false constr
+R36038:36041 Corelib.Init.Datatypes <> true constr
+R36043:36047 Corelib.Init.Datatypes <> false constr
+R36049:36053 Corelib.Init.Datatypes <> false constr
+R36059:36081 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+prf 36338:36358 <> folklore_list_refused
+R36524:36528 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36364:36393 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R36399:36430 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R36432:36463 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFolkloreList def
+R36469:36493 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R36495:36499 Corelib.Init.Datatypes <> false constr
+R36501:36505 Corelib.Init.Datatypes <> false constr
+R36507:36511 Corelib.Init.Datatypes <> false constr
+R36513:36517 Corelib.Init.Datatypes <> false constr
+R36519:36523 Corelib.Init.Datatypes <> false constr
+R36529:36556 UMST.ChemConstants.GoldschmidtConservation <> verdict_folklore_list_refuse constr
+prf 36593:36617 <> folklore_list_fail_closed
+R36816:36821 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36783:36787 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36623:36652 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R36658:36689 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R36691:36722 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFolkloreList def
+R36728:36752 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R36754:36758 Corelib.Init.Datatypes <> false constr
+R36760:36764 Corelib.Init.Datatypes <> false constr
+R36766:36770 Corelib.Init.Datatypes <> false constr
+R36772:36776 Corelib.Init.Datatypes <> false constr
+R36778:36782 Corelib.Init.Datatypes <> false constr
+R36788:36815 UMST.ChemConstants.GoldschmidtConservation <> verdict_folklore_list_refuse constr
+R37030:37034 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36822:36856 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R36863:36892 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R36901:36932 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R36934:36965 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFolkloreList def
+R36974:36998 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R37000:37004 Corelib.Init.Datatypes <> false constr
+R37006:37010 Corelib.Init.Datatypes <> false constr
+R37012:37016 Corelib.Init.Datatypes <> false constr
+R37018:37022 Corelib.Init.Datatypes <> false constr
+R37024:37028 Corelib.Init.Datatypes <> false constr
+R37035:37039 Corelib.Init.Datatypes <> false constr
+R37068:37088 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_refused thm
+R37068:37088 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_refused thm
+R37102:37136 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R37151:37171 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_refused thm
+R37151:37171 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_refused thm
+R37151:37171 UMST.ChemConstants.GoldschmidtConservation <> folklore_list_refused thm
+prf 37427:37448 <> fourth_science_refused
+R37616:37620 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37454:37483 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R37489:37520 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R37522:37556 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R37562:37586 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R37588:37592 Corelib.Init.Datatypes <> false constr
+R37594:37598 Corelib.Init.Datatypes <> false constr
+R37600:37604 Corelib.Init.Datatypes <> false constr
+R37606:37609 Corelib.Init.Datatypes <> true constr
+R37611:37615 Corelib.Init.Datatypes <> false constr
+R37621:37649 UMST.ChemConstants.GoldschmidtConservation <> verdict_fourth_science_refuse constr
+prf 37684:37709 <> twenty_sixth_axiom_refused
+R37877:37881 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37715:37744 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R37750:37781 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R37783:37817 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R37823:37847 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R37849:37853 Corelib.Init.Datatypes <> false constr
+R37855:37859 Corelib.Init.Datatypes <> false constr
+R37861:37865 Corelib.Init.Datatypes <> false constr
+R37867:37871 Corelib.Init.Datatypes <> false constr
+R37873:37876 Corelib.Init.Datatypes <> true constr
+R37882:37914 UMST.ChemConstants.GoldschmidtConservation <> verdict_twenty_sixth_axiom_refuse constr
+prf 38173:38199 <> green_invent_refuse_unwired
+R38292:38296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38205:38243 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R38249:38280 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R38282:38285 Corelib.Init.Datatypes <> true constr
+R38287:38291 Corelib.Init.Datatypes <> false constr
+R38297:38323 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+prf 38360:38385 <> green_invent_always_refuse
+R38523:38527 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38391:38425 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R38432:38470 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R38479:38510 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R38512:38515 Corelib.Init.Datatypes <> true constr
+R38517:38521 Corelib.Init.Datatypes <> false constr
+R38528:38532 Corelib.Init.Datatypes <> false constr
+R38551:38585 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R38598:38624 UMST.ChemConstants.GoldschmidtConservation <> green_invent_refuse_unwired thm
+R38598:38624 UMST.ChemConstants.GoldschmidtConservation <> green_invent_refuse_unwired thm
+R38598:38624 UMST.ChemConstants.GoldschmidtConservation <> green_invent_refuse_unwired thm
+prf 38654:38694 <> green_invent_goldschmidt_incidence_refuse
+R38862:38866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38700:38729 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R38735:38766 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R38768:38802 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R38808:38832 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R38834:38837 Corelib.Init.Datatypes <> true constr
+R38839:38843 Corelib.Init.Datatypes <> false constr
+R38845:38849 Corelib.Init.Datatypes <> false constr
+R38851:38855 Corelib.Init.Datatypes <> false constr
+R38857:38861 Corelib.Init.Datatypes <> false constr
+R38867:38893 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+prf 39152:39176 <> proved_without_bar_refuse
+R39344:39348 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39182:39211 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R39217:39248 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R39250:39284 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R39290:39314 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R39316:39320 Corelib.Init.Datatypes <> false constr
+R39322:39325 Corelib.Init.Datatypes <> true constr
+R39327:39331 Corelib.Init.Datatypes <> false constr
+R39333:39337 Corelib.Init.Datatypes <> false constr
+R39339:39343 Corelib.Init.Datatypes <> false constr
+R39349:39381 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+prf 39418:39447 <> proved_without_bar_fail_closed
+R39653:39658 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39615:39619 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39453:39482 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R39488:39519 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R39521:39555 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R39561:39585 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R39587:39591 Corelib.Init.Datatypes <> false constr
+R39593:39596 Corelib.Init.Datatypes <> true constr
+R39598:39602 Corelib.Init.Datatypes <> false constr
+R39604:39608 Corelib.Init.Datatypes <> false constr
+R39610:39614 Corelib.Init.Datatypes <> false constr
+R39620:39652 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+R39869:39873 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39659:39693 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R39700:39729 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R39738:39769 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R39771:39805 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R39814:39838 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R39840:39844 Corelib.Init.Datatypes <> false constr
+R39846:39849 Corelib.Init.Datatypes <> true constr
+R39851:39855 Corelib.Init.Datatypes <> false constr
+R39857:39861 Corelib.Init.Datatypes <> false constr
+R39863:39867 Corelib.Init.Datatypes <> false constr
+R39874:39878 Corelib.Init.Datatypes <> false constr
+R39907:39931 UMST.ChemConstants.GoldschmidtConservation <> proved_without_bar_refuse thm
+R39907:39931 UMST.ChemConstants.GoldschmidtConservation <> proved_without_bar_refuse thm
+R39945:39979 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R39994:40018 UMST.ChemConstants.GoldschmidtConservation <> proved_without_bar_refuse thm
+R39994:40018 UMST.ChemConstants.GoldschmidtConservation <> proved_without_bar_refuse thm
+R39994:40018 UMST.ChemConstants.GoldschmidtConservation <> proved_without_bar_refuse thm
+prf 40274:40296 <> production_wired_refuse
+R40388:40392 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40302:40340 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R40346:40376 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R40378:40382 Corelib.Init.Datatypes <> false constr
+R40384:40387 Corelib.Init.Datatypes <> true constr
+R40393:40423 UMST.ChemConstants.GoldschmidtConservation <> verdict_production_wired_refuse constr
+prf 40460:40489 <> production_wired_claim_refused
+R40626:40630 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40495:40529 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R40536:40574 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R40583:40613 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R40615:40619 Corelib.Init.Datatypes <> false constr
+R40621:40624 Corelib.Init.Datatypes <> true constr
+R40631:40635 Corelib.Init.Datatypes <> false constr
+R40654:40688 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_ok def
+R40701:40723 UMST.ChemConstants.GoldschmidtConservation <> production_wired_refuse thm
+R40701:40723 UMST.ChemConstants.GoldschmidtConservation <> production_wired_refuse thm
+R40701:40723 UMST.ChemConstants.GoldschmidtConservation <> production_wired_refuse thm
+prf 40979:41006 <> closed_shell_no_ore_cu_si_he
+R41094:41099 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41059:41065 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41012:41039 UMST.ChemConstants.GoldschmidtConservation <> evaluate_closed_shell_no_ore def
+R41041:41058 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreCu def
+R41066:41093 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R41182:41187 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41147:41153 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41100:41127 UMST.ChemConstants.GoldschmidtConservation <> evaluate_closed_shell_no_ore def
+R41129:41146 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreSi def
+R41154:41181 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R41270:41275 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41235:41241 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41188:41215 UMST.ChemConstants.GoldschmidtConservation <> evaluate_closed_shell_no_ore def
+R41217:41234 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreHe def
+R41242:41269 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R41337:41342 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41332:41334 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41276:41295 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R41298:41311 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R41313:41330 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreCu def
+R41404:41409 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41399:41401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41343:41362 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R41365:41378 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R41380:41397 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreSi def
+R41466:41468 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41410:41429 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_parent_z proj
+R41432:41445 UMST.ChemConstants.GoldschmidtConservation <> no_ore_binding proj
+R41447:41464 UMST.ChemConstants.GoldschmidtConservation <> closedShellNoOreHe def
+def 41748:41790 <> goldschmidt_conservation_coherence_scaffold
+R41794:41797 Corelib.Init.Datatypes <> bool ind
+R42141:42146 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R41970:41975 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R41804:41839 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_beq def
+R41846:41884 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R41893:41923 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R41925:41929 Corelib.Init.Datatypes <> false constr
+R41931:41935 Corelib.Init.Datatypes <> false constr
+R41942:41969 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R41976:42011 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_beq def
+R42018:42056 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R42065:42096 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R42098:42101 Corelib.Init.Datatypes <> true constr
+R42103:42107 Corelib.Init.Datatypes <> false constr
+R42114:42140 UMST.ChemConstants.GoldschmidtConservation <> verdict_green_invent_refuse constr
+R42147:42182 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_verdict_beq def
+R42189:42227 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R42236:42266 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_proved constr
+R42268:42272 Corelib.Init.Datatypes <> false constr
+R42274:42277 Corelib.Init.Datatypes <> true constr
+R42284:42314 UMST.ChemConstants.GoldschmidtConservation <> verdict_production_wired_refuse constr
+prf 42324:42371 <> goldschmidt_conservation_coherence_scaffold_true
+R42420:42422 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R42377:42419 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_coherence_scaffold def
+R42423:42426 Corelib.Init.Datatypes <> true constr
+R42445:42487 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_coherence_scaffold def
+ind 42768:42779 <> formal_fiber
+constr 42795:42815 <> fiber_quantum_knowing
+constr 42821:42837 <> fiber_meso_acting
+scheme 42768:42779 <> formal_fiber_rect
+scheme 42768:42779 <> formal_fiber_ind
+scheme 42768:42779 <> formal_fiber_rec
+scheme 42768:42779 <> formal_fiber_sind
+ind 42851:42869 <> formal_claim_family
+constr 42885:42914 <> claim_goldschmidt_conservation
+scheme 42851:42869 <> formal_claim_family_rect
+scheme 42851:42869 <> formal_claim_family_ind
+scheme 42851:42869 <> formal_claim_family_rec
+scheme 42851:42869 <> formal_claim_family_sind
+def 42929:42961 <> goldschmidt_conservation_fiber_ok
+R42968:42979 UMST.ChemConstants.GoldschmidtConservation <> formal_fiber ind
+binder 42964:42964 <> f:104
+R42984:42987 Corelib.Init.Datatypes <> bool ind
+R43000:43000 UMST.ChemConstants.GoldschmidtConservation <> f:104 var
+R43011:43027 UMST.ChemConstants.GoldschmidtConservation <> fiber_meso_acting constr
+R43032:43035 Corelib.Init.Datatypes <> true constr
+R43041:43061 UMST.ChemConstants.GoldschmidtConservation <> fiber_quantum_knowing constr
+R43066:43070 Corelib.Init.Datatypes <> false constr
+def 43091:43125 <> goldschmidtDoesNotMintFourthScience
+R43129:43132 Corelib.Init.Datatypes <> bool ind
+R43139:43163 UMST.ChemConstants.GoldschmidtConservation <> notFourthChemistryScience def
+def 43178:43206 <> goldschmidtDoesNotClaimProved
+R43210:43213 Corelib.Init.Datatypes <> bool ind
+R43220:43223 Corelib.Init.Datatypes <> negb def
+R43225:43241 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProved def
+prf 43251:43282 <> goldschmidt_meso_acting_fiber_ok
+R43339:43341 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43288:43320 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_fiber_ok def
+R43322:43338 UMST.ChemConstants.GoldschmidtConservation <> fiber_meso_acting constr
+R43342:43345 Corelib.Init.Datatypes <> true constr
+prf 43380:43411 <> goldschmidt_knowing_fiber_not_ok
+R43472:43474 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43417:43449 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_fiber_ok def
+R43451:43471 UMST.ChemConstants.GoldschmidtConservation <> fiber_quantum_knowing constr
+R43475:43479 Corelib.Init.Datatypes <> false constr
+prf 43516:43563 <> goldschmidt_conservation_routes_meso_not_knowing
+R43627:43632 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R43620:43622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43569:43601 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_fiber_ok def
+R43603:43619 UMST.ChemConstants.GoldschmidtConservation <> fiber_meso_acting constr
+R43623:43626 Corelib.Init.Datatypes <> true constr
+R43696:43701 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R43688:43690 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43633:43665 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_fiber_ok def
+R43667:43687 UMST.ChemConstants.GoldschmidtConservation <> fiber_quantum_knowing constr
+R43691:43695 Corelib.Init.Datatypes <> false constr
+R43744:43749 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R43737:43739 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43702:43736 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtDoesNotMintFourthScience def
+R43740:43743 Corelib.Init.Datatypes <> true constr
+R43779:43781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43750:43778 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtDoesNotClaimProved def
+R43782:43785 Corelib.Init.Datatypes <> true constr
+prf 44062:44102 <> goldschmidt_conservation_fixture_scaffold
+R44306:44311 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44271:44277 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44108:44137 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R44143:44174 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R44176:44210 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R44216:44240 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R44242:44246 Corelib.Init.Datatypes <> false constr
+R44248:44252 Corelib.Init.Datatypes <> false constr
+R44254:44258 Corelib.Init.Datatypes <> false constr
+R44260:44264 Corelib.Init.Datatypes <> false constr
+R44266:44270 Corelib.Init.Datatypes <> false constr
+R44278:44305 UMST.ChemConstants.GoldschmidtConservation <> verdict_goldschmidt_named_ok constr
+R44498:44503 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44467:44473 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44312:44341 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R44347:44378 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R44380:44406 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceTrivial def
+R44412:44436 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R44438:44442 Corelib.Init.Datatypes <> false constr
+R44444:44448 Corelib.Init.Datatypes <> false constr
+R44450:44454 Corelib.Init.Datatypes <> false constr
+R44456:44460 Corelib.Init.Datatypes <> false constr
+R44462:44466 Corelib.Init.Datatypes <> false constr
+R44474:44497 UMST.ChemConstants.GoldschmidtConservation <> verdict_trivial_z_refuse constr
+R44689:44694 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44659:44665 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44504:44533 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R44539:44570 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R44572:44598 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceXorEnum def
+R44604:44628 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R44630:44634 Corelib.Init.Datatypes <> false constr
+R44636:44640 Corelib.Init.Datatypes <> false constr
+R44642:44646 Corelib.Init.Datatypes <> false constr
+R44648:44652 Corelib.Init.Datatypes <> false constr
+R44654:44658 Corelib.Init.Datatypes <> false constr
+R44666:44688 UMST.ChemConstants.GoldschmidtConservation <> verdict_xor_enum_refuse constr
+R44890:44895 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R44855:44861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44695:44724 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R44730:44761 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R44763:44794 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFolkloreList def
+R44800:44824 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R44826:44830 Corelib.Init.Datatypes <> false constr
+R44832:44836 Corelib.Init.Datatypes <> false constr
+R44838:44842 Corelib.Init.Datatypes <> false constr
+R44844:44848 Corelib.Init.Datatypes <> false constr
+R44850:44854 Corelib.Init.Datatypes <> false constr
+R44862:44889 UMST.ChemConstants.GoldschmidtConservation <> verdict_folklore_list_refuse constr
+R45098:45103 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45058:45064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44896:44925 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_incidence def
+R44931:44962 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R44964:44998 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtIncidenceFeSiderophileL1 def
+R45004:45028 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtClaimBarAbsent def
+R45030:45034 Corelib.Init.Datatypes <> false constr
+R45036:45039 Corelib.Init.Datatypes <> true constr
+R45041:45045 Corelib.Init.Datatypes <> false constr
+R45047:45051 Corelib.Init.Datatypes <> false constr
+R45053:45057 Corelib.Init.Datatypes <> false constr
+R45065:45097 UMST.ChemConstants.GoldschmidtConservation <> verdict_proved_without_bar_refuse constr
+R45217:45222 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45192:45198 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45104:45142 UMST.ChemConstants.GoldschmidtConservation <> evaluate_goldschmidt_conservation_close def
+R45148:45179 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr
+R45181:45185 Corelib.Init.Datatypes <> false constr
+R45187:45191 Corelib.Init.Datatypes <> false constr
+R45199:45216 UMST.ChemConstants.GoldschmidtConservation <> verdict_unwired_ok constr
+R45281:45286 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45274:45276 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45223:45255 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_fiber_ok def
+R45257:45273 UMST.ChemConstants.GoldschmidtConservation <> fiber_meso_acting constr
+R45277:45280 Corelib.Init.Datatypes <> true constr
+R45350:45355 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45342:45344 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45287:45319 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_fiber_ok def
+R45321:45341 UMST.ChemConstants.GoldschmidtConservation <> fiber_quantum_knowing constr
+R45345:45349 Corelib.Init.Datatypes <> false constr
+R45381:45386 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45373:45375 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45356:45372 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtProved def
+R45376:45380 Corelib.Init.Datatypes <> false constr
+R45432:45437 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R45425:45427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R45387:45424 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtAffinitiesConcurrentProduct def
+R45428:45431 Corelib.Init.Datatypes <> true constr
+R45451:45454 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R45438:45450 UMST.ChemConstants.GoldschmidtConservation <> xorEnumMarker def
+R45455:45473 UMST.ChemConstants.GoldschmidtConservation <> productFactorMarker def
+R45531:45565 UMST.ChemConstants.GoldschmidtConservation <> xor_marker_ne_product_factor_marker thm
+R45531:45565 UMST.ChemConstants.GoldschmidtConservation <> xor_marker_ne_product_factor_marker thm
+def 45809:45831 <> goldschmidtOreAuthority
+R45835:45840 Stdlib.Strings.String <> string ind
+def 45907:45941 <> chemIntCrossGoldschmidtOreAuthority
+R45945:45950 Stdlib.Strings.String <> string ind
+def 46003:46031 <> goldschmidtConservationCellId
+R46035:46040 Stdlib.Strings.String <> string ind
+def 46105:46135 <> goldschmidtConservationNonClaim
+R46139:46144 Stdlib.Strings.String <> string ind
+prf 46751:46782 <> goldschmidt_conservation_cell_id
+R46817:46819 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R46788:46816 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtConservationCellId def
+prf 46898:46946 <> goldschmidt_conservation_cites_goldschmidt_ore_rs
+R46975:46978 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R46952:46974 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtOreAuthority def
+prf 47016:47055 <> goldschmidt_conservation_cites_int_cross
+R47096:47098 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R47061:47095 UMST.ChemConstants.GoldschmidtConservation <> chemIntCrossGoldschmidtOreAuthority def
+prf 47165:47201 <> goldschmidt_conservation_cites_x5_row
+R47229:47231 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R47207:47228 UMST.ChemConstants.GoldschmidtConservation <> crossClassifierX5RowId def
+def 47497:47535 <> goldschmidtSecondLawConservationFraming
+R47539:47544 Stdlib.Strings.String <> string ind
+prf 47641:47676 <> goldschmidt_not_fourth_science_axiom
+R47721:47724 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R47682:47720 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtSecondLawConservationFraming def
+prf 47792:47833 <> goldschmidt_not_twenty_sixth_axiom_framing
+R47878:47881 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R47839:47877 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtSecondLawConservationFraming def
+prf 47947:47989 <> goldschmidt_second_law_conservation_framing
+R48034:48037 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R47995:48033 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtSecondLawConservationFraming def
+def 48306:48327 <> physicsGreenAuthorized
+R48339:48343 Corelib.Init.Logic <> False ind
+prf 48353:48396 <> goldschmidt_conservation_physics_green_false
+R48402:48403 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R48404:48425 UMST.ChemConstants.GoldschmidtConservation <> physicsGreenAuthorized def
+prf 48465:48505 <> goldschmidt_conservation_modality_unwired
+R48549:48551 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R48511:48548 UMST.ChemConstants.GoldschmidtConservation <> goldschmidtConservationModalityCurrent def
+R48552:48583 UMST.ChemConstants.GoldschmidtConservation <> goldschmidt_conservation_unwired constr

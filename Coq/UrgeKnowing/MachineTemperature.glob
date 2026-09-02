@@ -1,0 +1,520 @@
+DIGEST 5d778817ef235a4d0f1a7c107a25e3f7
+FUrgeKnowing.MachineTemperature
+R1050:1054 Stdlib.Reals.Reals <> <> lib
+R1056:1060 Stdlib.Reals.RIneq <> <> lib
+R1062:1064 Stdlib.micromega.Lra <> <> lib
+R1066:1070 Stdlib.setoid_ring.Field <> <> lib
+R1072:1077 Stdlib.Strings.String <> <> lib
+R1111:1132 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1134:1148 UMSTFormal.MeasurementCost <> <> lib
+ind 1501:1526 <> MachineTemperatureModality
+constr 1542:1568 <> machine_temperature_unwired
+constr 1574:1600 <> machine_temperature_assumed
+constr 1606:1631 <> machine_temperature_proved
+constr 1637:1665 <> machine_temperature_surrogate
+scheme 1501:1526 <> MachineTemperatureModality_rect
+scheme 1501:1526 <> MachineTemperatureModality_ind
+scheme 1501:1526 <> MachineTemperatureModality_rec
+scheme 1501:1526 <> MachineTemperatureModality_sind
+def 1680:1712 <> machineTemperatureModalityCurrent
+R1716:1741 UrgeKnowing.MachineTemperature <> MachineTemperatureModality ind
+R1748:1774 UrgeKnowing.MachineTemperature <> machine_temperature_unwired constr
+ind 2011:2027 <> TemperatureSource
+constr 2043:2063 <> repository_in_machine
+constr 2069:2086 <> wall_clock_theater
+constr 2092:2110 <> abstract_dag_scalar
+scheme 2011:2027 <> TemperatureSource_rect
+scheme 2011:2027 <> TemperatureSource_ind
+scheme 2011:2027 <> TemperatureSource_rec
+scheme 2011:2027 <> TemperatureSource_sind
+ind 2348:2372 <> MachineTemperatureRefusal
+constr 2388:2412 <> wall_clock_as_temperature
+constr 2418:2451 <> abstract_dag_scalar_as_temperature
+constr 2457:2490 <> cross_node_energy_witness_mismatch
+constr 2552:2564 <> second_argmin
+R2503:2508 Stdlib.Strings.String <> string ind
+binder 2493:2499 <> node_id:7
+R2545:2545 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2518:2531 <> landauer_floor:8
+binder 2533:2541 <> available:9
+scheme 2348:2372 <> MachineTemperatureRefusal_rect
+scheme 2348:2372 <> MachineTemperatureRefusal_ind
+scheme 2348:2372 <> MachineTemperatureRefusal_rec
+scheme 2348:2372 <> MachineTemperatureRefusal_sind
+rec 2797:2814 <> MachineTemperature
+proj 2830:2838 <> mt_kelvin
+proj 2847:2856 <> mt_node_id
+proj 2870:2878 <> mt_source
+R2842:2842 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2860:2865 Stdlib.Strings.String <> string ind
+R2882:2898 UrgeKnowing.MachineTemperature <> TemperatureSource ind
+rec 2911:2937 <> MachineTemperatureCandidate
+proj 2953:2962 <> mtc_kelvin
+proj 2971:2981 <> mtc_node_id
+proj 2995:3004 <> mtc_source
+proj 3029:3044 <> mtc_erasure_bits
+proj 3053:3072 <> mtc_available_energy
+R2966:2966 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2985:2990 Stdlib.Strings.String <> string ind
+R3008:3024 UrgeKnowing.MachineTemperature <> TemperatureSource ind
+R3048:3048 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3076:3076 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+rec 3089:3113 <> MachineTemperatureWitness
+proj 3129:3143 <> mtw_temperature
+proj 3169:3186 <> mtw_landauer_floor
+proj 3195:3214 <> mtw_available_energy
+R3147:3164 UrgeKnowing.MachineTemperature <> MachineTemperature rec
+R3190:3190 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3218:3218 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+ind 3234:3255 <> MachineTemperatureEval
+constr 3271:3275 <> mt_ok
+constr 3335:3340 <> mt_err
+R3304:3307 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3279:3303 UrgeKnowing.MachineTemperature <> MachineTemperatureWitness rec
+R3308:3329 UrgeKnowing.MachineTemperature <> MachineTemperatureEval:24 ind
+R3369:3372 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3344:3368 UrgeKnowing.MachineTemperature <> MachineTemperatureRefusal ind
+R3373:3394 UrgeKnowing.MachineTemperature <> MachineTemperatureEval:24 ind
+scheme 3234:3255 <> MachineTemperatureEval_rect
+scheme 3234:3255 <> MachineTemperatureEval_ind
+scheme 3234:3255 <> MachineTemperatureEval_rec
+scheme 3234:3255 <> MachineTemperatureEval_sind
+def 3631:3643 <> landauerFloor
+R3663:3663 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3646:3646 <> T:26
+binder 3648:3659 <> erasure_bits:27
+R3668:3668 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3687:3689 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R3675:3686 UrgeKnowing.MachineTemperature <> erasure_bits:27 var
+R3690:3703 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3705:3705 UrgeKnowing.MachineTemperature <> T:26 var
+def 3720:3746 <> machineTemperatureAdmitPred
+R3753:3779 UrgeKnowing.MachineTemperature <> MachineTemperatureCandidate rec
+binder 3749:3749 <> c:28
+R3830:3835 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3806:3808 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3794:3803 UrgeKnowing.MachineTemperature <> mtc_source proj
+R3805:3805 UrgeKnowing.MachineTemperature <> c:28 var
+R3809:3829 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R3858:3861 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'>='_x not
+R3836:3855 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R3857:3857 UrgeKnowing.MachineTemperature <> c:28 var
+R3862:3874 UrgeKnowing.MachineTemperature <> landauerFloor def
+R3877:3886 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R3888:3888 UrgeKnowing.MachineTemperature <> c:28 var
+R3892:3907 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R3909:3909 UrgeKnowing.MachineTemperature <> c:28 var
+def 3925:3950 <> evaluateMachineTemperature
+R3957:3983 UrgeKnowing.MachineTemperature <> MachineTemperatureCandidate rec
+binder 3953:3953 <> c:29
+R3990:4011 UrgeKnowing.MachineTemperature <> MachineTemperatureEval ind
+R4024:4033 UrgeKnowing.MachineTemperature <> mtc_source proj
+R4035:4035 UrgeKnowing.MachineTemperature <> c:29 var
+R4046:4063 UrgeKnowing.MachineTemperature <> wall_clock_theater constr
+R4074:4079 UrgeKnowing.MachineTemperature <> mt_err constr
+R4081:4105 UrgeKnowing.MachineTemperature <> wall_clock_as_temperature constr
+R4111:4129 UrgeKnowing.MachineTemperature <> abstract_dag_scalar constr
+R4140:4145 UrgeKnowing.MachineTemperature <> mt_err constr
+R4147:4180 UrgeKnowing.MachineTemperature <> abstract_dag_scalar_as_temperature constr
+R4186:4206 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R4230:4242 UrgeKnowing.MachineTemperature <> landauerFloor def
+R4245:4254 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R4256:4256 UrgeKnowing.MachineTemperature <> c:29 var
+R4260:4275 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R4277:4277 UrgeKnowing.MachineTemperature <> c:29 var
+binder 4221:4225 <> floor:30
+R4292:4298 Stdlib.Reals.RIneq <> Rlt_dec thm
+R4301:4320 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R4322:4322 UrgeKnowing.MachineTemperature <> c:29 var
+R4325:4329 UrgeKnowing.MachineTemperature <> floor:30 var
+R4472:4476 UrgeKnowing.MachineTemperature <> mt_ok constr
+R4481:4495 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R4481:4495 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R4481:4495 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R4678:4695 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R4678:4695 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R4724:4743 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R4724:4743 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R4522:4530 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R4522:4530 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R4522:4530 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R4571:4580 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R4571:4580 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R4622:4630 UrgeKnowing.MachineTemperature <> mt_source proj
+R4622:4630 UrgeKnowing.MachineTemperature <> mt_source proj
+R4535:4544 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R4546:4546 UrgeKnowing.MachineTemperature <> c:29 var
+R4585:4595 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R4597:4597 UrgeKnowing.MachineTemperature <> c:29 var
+R4635:4655 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R4700:4704 UrgeKnowing.MachineTemperature <> floor:30 var
+R4748:4767 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R4769:4769 UrgeKnowing.MachineTemperature <> c:29 var
+R4344:4349 UrgeKnowing.MachineTemperature <> mt_err constr
+R4352:4385 UrgeKnowing.MachineTemperature <> cross_node_energy_witness_mismatch constr
+R4388:4398 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R4400:4400 UrgeKnowing.MachineTemperature <> c:29 var
+R4403:4407 UrgeKnowing.MachineTemperature <> floor:30 var
+R4428:4447 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R4449:4449 UrgeKnowing.MachineTemperature <> c:29 var
+prf 4789:4809 <> E_Landauer_bit_nonneg
+R4816:4816 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4812:4812 <> T:31
+R4829:4832 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4824:4827 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4828:4828 UrgeKnowing.MachineTemperature <> T:31 var
+R4834:4837 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4838:4851 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4853:4853 UrgeKnowing.MachineTemperature <> T:31 var
+R4885:4898 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4909:4920 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4931:4936 Stdlib.Reals.RIneq <> Rlt_le thm
+R4939:4945 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4909:4920 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4931:4936 Stdlib.Reals.RIneq <> Rlt_le thm
+R4939:4945 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4957:4968 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4978:4983 Stdlib.Reals.RIneq <> Rlt_le thm
+R4986:4994 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4957:4968 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4978:4983 Stdlib.Reals.RIneq <> Rlt_le thm
+R4986:4994 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 5019:5038 <> landauerFloor_nonneg
+R5058:5058 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5041:5041 <> T:32
+binder 5043:5054 <> erasure_bits:33
+R5071:5074 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5066:5069 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5070:5070 UrgeKnowing.MachineTemperature <> T:32 var
+R5092:5097 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5076:5079 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5080:5091 UrgeKnowing.MachineTemperature <> erasure_bits:33 var
+R5099:5102 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5103:5115 UrgeKnowing.MachineTemperature <> landauerFloor def
+R5117:5117 UrgeKnowing.MachineTemperature <> T:32 var
+R5119:5130 UrgeKnowing.MachineTemperature <> erasure_bits:33 var
+R5168:5180 UrgeKnowing.MachineTemperature <> landauerFloor def
+R5191:5202 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5191:5202 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5229:5249 UrgeKnowing.MachineTemperature <> E_Landauer_bit_nonneg thm
+R5229:5249 UrgeKnowing.MachineTemperature <> E_Landauer_bit_nonneg thm
+prf 5274:5317 <> measurementEnergyLowerBound_eq_landauerFloor
+R5329:5329 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5320:5320 <> T:34
+binder 5322:5325 <> bits:35
+R5370:5372 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5336:5362 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5364:5364 UrgeKnowing.MachineTemperature <> T:34 var
+R5366:5369 UrgeKnowing.MachineTemperature <> bits:35 var
+R5373:5385 UrgeKnowing.MachineTemperature <> landauerFloor def
+R5387:5387 UrgeKnowing.MachineTemperature <> T:34 var
+R5389:5392 UrgeKnowing.MachineTemperature <> bits:35 var
+R5411:5437 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5440:5452 UrgeKnowing.MachineTemperature <> landauerFloor def
+def 5702:5716 <> fixtureM3Accept
+R5720:5746 UrgeKnowing.MachineTemperature <> MachineTemperatureCandidate rec
+R5756:5765 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R5756:5765 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R5756:5765 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R5780:5790 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R5780:5790 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R5816:5825 UrgeKnowing.MachineTemperature <> mtc_source proj
+R5816:5825 UrgeKnowing.MachineTemperature <> mtc_source proj
+R5858:5873 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R5858:5873 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R5886:5905 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R5886:5905 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R5830:5850 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+def 5935:5956 <> fixtureWallClockRefuse
+R5960:5986 UrgeKnowing.MachineTemperature <> MachineTemperatureCandidate rec
+R5996:6005 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R5996:6005 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R5996:6005 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6018:6028 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R6018:6028 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R6060:6069 UrgeKnowing.MachineTemperature <> mtc_source proj
+R6060:6069 UrgeKnowing.MachineTemperature <> mtc_source proj
+R6099:6114 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R6099:6114 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R6127:6146 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R6127:6146 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R6074:6091 UrgeKnowing.MachineTemperature <> wall_clock_theater constr
+def 6169:6190 <> fixtureDagScalarRefuse
+R6194:6220 UrgeKnowing.MachineTemperature <> MachineTemperatureCandidate rec
+R6230:6239 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6230:6239 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6230:6239 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6252:6262 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R6252:6262 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R6294:6303 UrgeKnowing.MachineTemperature <> mtc_source proj
+R6294:6303 UrgeKnowing.MachineTemperature <> mtc_source proj
+R6334:6349 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R6334:6349 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R6362:6381 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R6362:6381 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R6308:6326 UrgeKnowing.MachineTemperature <> abstract_dag_scalar constr
+def 6404:6433 <> fixtureThinkpadCrossNodeRefuse
+R6437:6463 UrgeKnowing.MachineTemperature <> MachineTemperatureCandidate rec
+R6473:6482 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6473:6482 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6473:6482 UrgeKnowing.MachineTemperature <> mtc_kelvin proj
+R6497:6507 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R6497:6507 UrgeKnowing.MachineTemperature <> mtc_node_id proj
+R6534:6543 UrgeKnowing.MachineTemperature <> mtc_source proj
+R6534:6543 UrgeKnowing.MachineTemperature <> mtc_source proj
+R6576:6591 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R6576:6591 UrgeKnowing.MachineTemperature <> mtc_erasure_bits proj
+R6605:6624 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R6605:6624 UrgeKnowing.MachineTemperature <> mtc_available_energy proj
+R6548:6568 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+prf 6642:6661 <> fixture_m3_accept_ok
+R6667:6673 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6675:6676 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6674:6674 <> w:36
+R6719:6721 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6677:6702 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R6704:6718 UrgeKnowing.MachineTemperature <> fixtureM3Accept def
+R6722:6726 UrgeKnowing.MachineTemperature <> mt_ok constr
+R6728:6728 UrgeKnowing.MachineTemperature <> w:36 var
+R6747:6772 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R6775:6789 UrgeKnowing.MachineTemperature <> fixtureM3Accept def
+R6792:6804 UrgeKnowing.MachineTemperature <> landauerFloor def
+R6826:6832 Stdlib.Reals.RIneq <> Rlt_dec thm
+R6845:6847 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R6848:6861 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R6826:6832 Stdlib.Reals.RIneq <> Rlt_dec thm
+R6845:6847 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R6848:6861 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R6911:6925 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R6911:6925 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R6911:6925 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R7084:7101 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R7084:7101 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R7143:7162 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R7143:7162 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R6948:6956 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R6948:6956 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R6948:6956 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R6984:6993 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R6984:6993 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R7032:7040 UrgeKnowing.MachineTemperature <> mt_source proj
+R7032:7040 UrgeKnowing.MachineTemperature <> mt_source proj
+R7045:7065 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R7107:7109 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R7110:7123 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R6911:6925 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R6911:6925 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R6911:6925 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R7084:7101 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R7084:7101 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R7143:7162 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R7143:7162 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R6948:6956 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R6948:6956 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R6948:6956 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R6984:6993 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R6984:6993 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R7032:7040 UrgeKnowing.MachineTemperature <> mt_source proj
+R7032:7040 UrgeKnowing.MachineTemperature <> mt_source proj
+R7045:7065 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R7107:7109 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R7110:7123 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+prf 7209:7233 <> fixture_wall_clock_refuse
+R7288:7292 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7239:7264 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R7266:7287 UrgeKnowing.MachineTemperature <> fixtureWallClockRefuse def
+R7293:7298 UrgeKnowing.MachineTemperature <> mt_err constr
+R7300:7324 UrgeKnowing.MachineTemperature <> wall_clock_as_temperature constr
+R7343:7368 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R7371:7392 UrgeKnowing.MachineTemperature <> fixtureWallClockRefuse def
+prf 7422:7446 <> fixture_dag_scalar_refuse
+R7501:7505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7452:7477 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R7479:7500 UrgeKnowing.MachineTemperature <> fixtureDagScalarRefuse def
+R7506:7511 UrgeKnowing.MachineTemperature <> mt_err constr
+R7513:7546 UrgeKnowing.MachineTemperature <> abstract_dag_scalar_as_temperature constr
+R7565:7590 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R7593:7614 UrgeKnowing.MachineTemperature <> fixtureDagScalarRefuse def
+prf 7644:7677 <> fixture_thinkpad_cross_node_refuse
+R7683:7689 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7695:7700 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 7690:7694 <> floor:37
+R7758:7764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7701:7726 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R7728:7757 UrgeKnowing.MachineTemperature <> fixtureThinkpadCrossNodeRefuse def
+R7765:7770 UrgeKnowing.MachineTemperature <> mt_err constr
+R7773:7806 UrgeKnowing.MachineTemperature <> cross_node_energy_witness_mismatch constr
+R7824:7828 UrgeKnowing.MachineTemperature <> floor:37 var
+R7850:7875 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R7878:7907 UrgeKnowing.MachineTemperature <> fixtureThinkpadCrossNodeRefuse def
+R7914:7926 UrgeKnowing.MachineTemperature <> landauerFloor def
+R7948:7954 Stdlib.Reals.RIneq <> Rlt_dec thm
+R7961:7963 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R7964:7977 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R7948:7954 Stdlib.Reals.RIneq <> Rlt_dec thm
+R7961:7963 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R7964:7977 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R8009:8011 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R8012:8025 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R8009:8011 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R8012:8025 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R8079:8081 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R8084:8086 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R8087:8100 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R8079:8081 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R8084:8086 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R8087:8100 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R8120:8136 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R8120:8136 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R8166:8183 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit_pos thm
+R8166:8183 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit_pos thm
+prf 8214:8238 <> refuse_second_argmin_eval
+R8264:8267 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8244:8249 UrgeKnowing.MachineTemperature <> mt_err constr
+R8251:8263 UrgeKnowing.MachineTemperature <> second_argmin constr
+R8268:8272 UrgeKnowing.MachineTemperature <> mt_ok constr
+R8281:8295 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R8281:8295 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R8281:8295 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R8392:8409 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R8392:8409 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R8424:8443 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R8424:8443 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R8312:8320 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R8312:8320 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R8312:8320 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R8328:8337 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R8328:8337 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R8346:8354 UrgeKnowing.MachineTemperature <> mt_source proj
+R8346:8354 UrgeKnowing.MachineTemperature <> mt_source proj
+R8359:8379 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+def 8718:8743 <> excitementComposeSurrogate
+R8747:8752 Stdlib.Strings.String <> string ind
+def 8797:8816 <> metaExcitementModule
+R8820:8825 Stdlib.Strings.String <> string ind
+prf 8887:8926 <> machine_temperature_compose_surrogate_ok
+R8958:8960 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8932:8957 UrgeKnowing.MachineTemperature <> excitementComposeSurrogate def
+prf 9019:9059 <> machine_temperature_meta_excitement_cited
+R9085:9088 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9065:9084 UrgeKnowing.MachineTemperature <> metaExcitementModule def
+prf 9126:9162 <> machine_temperature_not_second_argmin
+R9194:9197 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9168:9193 UrgeKnowing.MachineTemperature <> excitementComposeSurrogate def
+def 9479:9509 <> leanMachineTemperatureAuthority
+R9513:9518 Stdlib.Strings.String <> string ind
+def 9610:9643 <> urgeIntMachineTemperatureAuthority
+R9647:9652 Stdlib.Strings.String <> string ind
+def 9716:9746 <> landauerEinsteinBridgeAuthority
+R9750:9755 Stdlib.Strings.String <> string ind
+def 9835:9858 <> machineTemperatureCellId
+R9862:9867 Stdlib.Strings.String <> string ind
+def 9927:9952 <> machineTemperatureNonClaim
+R9956:9961 Stdlib.Strings.String <> string ind
+prf 10332:10358 <> machine_temperature_cell_id
+R10388:10390 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10364:10387 UrgeKnowing.MachineTemperature <> machineTemperatureCellId def
+prf 10464:10500 <> machine_temperature_cites_lean_module
+R10537:10540 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10506:10536 UrgeKnowing.MachineTemperature <> leanMachineTemperatureAuthority def
+prf 10578:10611 <> machine_temperature_cites_urge_int
+R10651:10654 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10617:10650 UrgeKnowing.MachineTemperature <> urgeIntMachineTemperatureAuthority def
+prf 10692:10732 <> machine_temperature_cites_landauer_bridge
+R10769:10772 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10738:10768 UrgeKnowing.MachineTemperature <> landauerEinsteinBridgeAuthority def
+prf 10810:10853 <> machine_temperature_non_claim_not_wall_clock
+R10885:10888 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10859:10884 UrgeKnowing.MachineTemperature <> machineTemperatureNonClaim def
+prf 10952:10995 <> machine_temperature_non_claim_not_dag_scalar
+R11027:11030 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11001:11026 UrgeKnowing.MachineTemperature <> machineTemperatureNonClaim def
+prf 11092:11124 <> machine_temperature_deepen_honest
+R11156:11159 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11130:11155 UrgeKnowing.MachineTemperature <> machineTemperatureNonClaim def
+def 11424:11442 <> wallClockTheaterTag
+R11446:11451 Stdlib.Strings.String <> string ind
+def 11489:11508 <> abstractDagScalarTag
+R11512:11517 Stdlib.Strings.String <> string ind
+prf 11552:11600 <> machine_temperature_wall_clock_refused_positively
+R11655:11660 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11606:11631 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R11633:11654 UrgeKnowing.MachineTemperature <> fixtureWallClockRefuse def
+R11661:11665 UrgeKnowing.MachineTemperature <> mt_ok constr
+R11674:11688 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R11674:11688 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R11674:11688 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R11785:11802 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R11785:11802 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R11817:11836 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R11817:11836 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R11705:11713 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R11705:11713 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R11705:11713 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R11721:11730 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R11721:11730 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R11739:11747 UrgeKnowing.MachineTemperature <> mt_source proj
+R11739:11747 UrgeKnowing.MachineTemperature <> mt_source proj
+R11752:11772 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R11864:11888 UrgeKnowing.MachineTemperature <> fixture_wall_clock_refuse thm
+R11864:11888 UrgeKnowing.MachineTemperature <> fixture_wall_clock_refuse thm
+R11864:11888 UrgeKnowing.MachineTemperature <> fixture_wall_clock_refuse thm
+prf 11919:11967 <> machine_temperature_dag_scalar_refused_positively
+R12022:12027 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11973:11998 UrgeKnowing.MachineTemperature <> evaluateMachineTemperature def
+R12000:12021 UrgeKnowing.MachineTemperature <> fixtureDagScalarRefuse def
+R12028:12032 UrgeKnowing.MachineTemperature <> mt_ok constr
+R12041:12055 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R12041:12055 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R12041:12055 UrgeKnowing.MachineTemperature <> mtw_temperature proj
+R12152:12169 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R12152:12169 UrgeKnowing.MachineTemperature <> mtw_landauer_floor proj
+R12184:12203 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R12184:12203 UrgeKnowing.MachineTemperature <> mtw_available_energy proj
+R12072:12080 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R12072:12080 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R12072:12080 UrgeKnowing.MachineTemperature <> mt_kelvin proj
+R12088:12097 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R12088:12097 UrgeKnowing.MachineTemperature <> mt_node_id proj
+R12106:12114 UrgeKnowing.MachineTemperature <> mt_source proj
+R12106:12114 UrgeKnowing.MachineTemperature <> mt_source proj
+R12119:12139 UrgeKnowing.MachineTemperature <> repository_in_machine constr
+R12231:12255 UrgeKnowing.MachineTemperature <> fixture_dag_scalar_refuse thm
+R12231:12255 UrgeKnowing.MachineTemperature <> fixture_dag_scalar_refuse thm
+R12231:12255 UrgeKnowing.MachineTemperature <> fixture_dag_scalar_refuse thm
+def 12515:12536 <> physicsGreenAuthorized
+R12548:12552 Corelib.Init.Logic <> False ind
+def 12567:12591 <> productionWiredAuthorized
+R12603:12607 Corelib.Init.Logic <> False ind
+prf 12617:12655 <> machine_temperature_physics_green_false
+R12661:12662 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12663:12684 UrgeKnowing.MachineTemperature <> physicsGreenAuthorized def
+prf 12724:12765 <> machine_temperature_production_wired_false
+R12771:12772 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12773:12797 UrgeKnowing.MachineTemperature <> productionWiredAuthorized def
+prf 12837:12872 <> machine_temperature_modality_unwired
+R12911:12913 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12878:12910 UrgeKnowing.MachineTemperature <> machineTemperatureModalityCurrent def
+R12914:12940 UrgeKnowing.MachineTemperature <> machine_temperature_unwired constr
+def 13204:13222 <> mesoThermoGRestated
+R13226:13231 Stdlib.Strings.String <> string ind
+prf 13276:13318 <> machine_temperature_not_meso_thermo_restate
+R13350:13353 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13324:13349 UrgeKnowing.MachineTemperature <> machineTemperatureNonClaim def
+R13354:13372 UrgeKnowing.MachineTemperature <> mesoThermoGRestated def
+prf 13408:13443 <> machine_temperature_knowing_fiber_ok
+R13512:13517 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13482:13484 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13449:13481 UrgeKnowing.MachineTemperature <> machineTemperatureModalityCurrent def
+R13485:13511 UrgeKnowing.MachineTemperature <> machine_temperature_unwired constr
+R13542:13547 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13518:13519 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13520:13541 UrgeKnowing.MachineTemperature <> physicsGreenAuthorized def
+R13548:13549 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13550:13574 UrgeKnowing.MachineTemperature <> productionWiredAuthorized def
+R13614:13649 UrgeKnowing.MachineTemperature <> machine_temperature_modality_unwired thm
+R13614:13649 UrgeKnowing.MachineTemperature <> machine_temperature_modality_unwired thm
+R13662:13700 UrgeKnowing.MachineTemperature <> machine_temperature_physics_green_false thm
+R13662:13700 UrgeKnowing.MachineTemperature <> machine_temperature_physics_green_false thm
+R13713:13754 UrgeKnowing.MachineTemperature <> machine_temperature_production_wired_false thm
+R13713:13754 UrgeKnowing.MachineTemperature <> machine_temperature_production_wired_false thm

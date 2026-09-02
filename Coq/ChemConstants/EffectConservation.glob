@@ -1,0 +1,732 @@
+DIGEST 683c9735703e6d796b5fa8ac5be72ab1
+FUMST.ChemConstants.EffectConservation
+R1124:1128 Stdlib.Arith.Arith <> <> lib
+R1130:1135 Stdlib.Strings.String <> <> lib
+R1137:1140 Stdlib.Bool.Bool <> <> lib
+R1142:1144 Stdlib.micromega.Lia <> <> lib
+R1146:1149 Stdlib.Lists.List <> <> lib
+R1159:1171 Stdlib.Lists.List ListNotations <> mod
+ind 1499:1524 <> EffectConservationModality
+constr 1540:1566 <> effect_conservation_unwired
+constr 1572:1598 <> effect_conservation_assumed
+constr 1604:1629 <> effect_conservation_proved
+constr 1635:1663 <> effect_conservation_surrogate
+scheme 1499:1524 <> EffectConservationModality_rect
+scheme 1499:1524 <> EffectConservationModality_ind
+scheme 1499:1524 <> EffectConservationModality_rec
+scheme 1499:1524 <> EffectConservationModality_sind
+def 1678:1710 <> effectConservationModalityCurrent
+R1714:1739 UMST.ChemConstants.EffectConservation <> EffectConservationModality ind
+R1746:1772 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+def 1787:1812 <> effect_lattice_cardinality
+R1816:1818 Corelib.Init.Datatypes <> nat ind
+prf 1833:1866 <> effect_lattice_cardinality_is_four
+R1898:1900 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1872:1897 UMST.ChemConstants.EffectConservation <> effect_lattice_cardinality def
+prf 1936:1965 <> effect_lattice_not_118_squared
+R2024:2026 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1971:1974 Corelib.Init.Datatypes <> negb def
+R1977:1983 Stdlib.Arith.PeanoNat Nat eqb def
+R1985:2010 UMST.ChemConstants.EffectConservation <> effect_lattice_cardinality def
+R2016:2018 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2027:2030 Corelib.Init.Datatypes <> true constr
+R2049:2074 UMST.ChemConstants.EffectConservation <> effect_lattice_cardinality def
+ind 2332:2347 <> refine_direction
+constr 2363:2376 <> forward_refine
+constr 2382:2400 <> reverse_contaminate
+scheme 2332:2347 <> refine_direction_rect
+scheme 2332:2347 <> refine_direction_ind
+scheme 2332:2347 <> refine_direction_rec
+scheme 2332:2347 <> refine_direction_sind
+def 2415:2459 <> refine_direction_forward_requires_dissipation
+R2466:2481 UMST.ChemConstants.EffectConservation <> refine_direction ind
+binder 2462:2462 <> d:5
+R2486:2489 Corelib.Init.Datatypes <> bool ind
+R2502:2502 UMST.ChemConstants.EffectConservation <> d:5 var
+R2513:2526 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R2531:2534 Corelib.Init.Datatypes <> true constr
+R2540:2558 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R2563:2567 Corelib.Init.Datatypes <> false constr
+prf 2583:2617 <> forward_refine_requires_dissipation
+R2683:2685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2623:2667 UMST.ChemConstants.EffectConservation <> refine_direction_forward_requires_dissipation def
+R2669:2682 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R2686:2689 Corelib.Init.Datatypes <> true constr
+prf 2724:2765 <> reverse_contaminate_no_forward_dissipation
+R2836:2838 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2771:2815 UMST.ChemConstants.EffectConservation <> refine_direction_forward_requires_dissipation def
+R2817:2835 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R2839:2843 Corelib.Init.Datatypes <> false constr
+rec 3101:3118 <> chem_stamp_witness
+proj 3134:3156 <> dissipation_microjoules
+R3160:3162 Corelib.Init.Datatypes <> nat ind
+def 3179:3198 <> chemStampWitnessZero
+R3202:3219 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+R3229:3251 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+R3229:3251 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+R3229:3251 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+def 3274:3305 <> chemStampWitnessPositiveScaffold
+R3309:3326 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+R3336:3358 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+R3336:3358 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+R3336:3358 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+def 3381:3407 <> chem_stamp_witness_positive
+R3414:3431 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+binder 3410:3410 <> w:9
+R3436:3439 Corelib.Init.Datatypes <> bool ind
+R3446:3452 Stdlib.Arith.PeanoNat Nat ltb def
+R3457:3479 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+R3481:3481 UMST.ChemConstants.EffectConservation <> w:9 var
+prf 3492:3519 <> chem_stamp_zero_not_positive
+R3573:3575 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3525:3551 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+R3553:3572 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R3576:3580 Corelib.Init.Datatypes <> false constr
+prf 3615:3654 <> chem_stamp_positive_scaffold_is_positive
+R3720:3722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3660:3686 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+R3688:3719 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R3723:3726 Corelib.Init.Datatypes <> true constr
+prf 3761:3796 <> chem_stamp_positive_scaffold_gt_zero
+R3803:3805 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R3806:3828 UMST.ChemConstants.EffectConservation <> dissipation_microjoules proj
+R3830:3861 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R3884:3896 Stdlib.Arith.PeanoNat Nat lt_0_succ thm
+R3884:3896 Stdlib.Arith.PeanoNat Nat lt_0_succ thm
+ind 4139:4156 <> refine_effect_kind
+constr 4172:4187 <> effect_kind_pure
+constr 4193:4215 <> effect_kind_dissipative
+R4222:4239 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+binder 4218:4218 <> w:12
+scheme 4139:4156 <> refine_effect_kind_rect
+scheme 4139:4156 <> refine_effect_kind_ind
+scheme 4139:4156 <> refine_effect_kind_rec
+scheme 4139:4156 <> refine_effect_kind_sind
+def 4255:4293 <> refine_effect_kind_dissipative_positive
+R4300:4317 UMST.ChemConstants.EffectConservation <> refine_effect_kind ind
+binder 4296:4296 <> k:13
+R4322:4325 Corelib.Init.Datatypes <> bool ind
+R4338:4338 UMST.ChemConstants.EffectConservation <> k:13 var
+R4349:4364 UMST.ChemConstants.EffectConservation <> effect_kind_pure constr
+R4369:4373 Corelib.Init.Datatypes <> false constr
+R4379:4401 UMST.ChemConstants.EffectConservation <> effect_kind_dissipative constr
+R4408:4434 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+def 4457:4477 <> refine_effect_kind_of
+R4486:4501 UMST.ChemConstants.EffectConservation <> refine_direction ind
+binder 4482:4482 <> d:15
+R4509:4526 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+binder 4505:4505 <> w:16
+R4531:4548 UMST.ChemConstants.EffectConservation <> refine_effect_kind ind
+R4561:4561 UMST.ChemConstants.EffectConservation <> d:15 var
+R4572:4585 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R4599:4625 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+R4627:4627 UMST.ChemConstants.EffectConservation <> w:16 var
+R4677:4692 UMST.ChemConstants.EffectConservation <> effect_kind_pure constr
+R4640:4662 UMST.ChemConstants.EffectConservation <> effect_kind_dissipative constr
+R4664:4664 UMST.ChemConstants.EffectConservation <> w:16 var
+R4698:4716 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R4721:4743 UMST.ChemConstants.EffectConservation <> effect_kind_dissipative constr
+R4745:4745 UMST.ChemConstants.EffectConservation <> w:16 var
+prf 4761:4808 <> forward_positive_witness_effect_kind_dissipative
+R4883:4887 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4814:4834 UMST.ChemConstants.EffectConservation <> refine_effect_kind_of def
+R4836:4849 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R4851:4882 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R4888:4910 UMST.ChemConstants.EffectConservation <> effect_kind_dissipative constr
+R4912:4943 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+prf 4978:5014 <> forward_zero_witness_effect_kind_pure
+R5077:5079 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5020:5040 UMST.ChemConstants.EffectConservation <> refine_effect_kind_of def
+R5042:5055 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R5057:5076 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R5080:5095 UMST.ChemConstants.EffectConservation <> effect_kind_pure constr
+prf 5130:5172 <> reverse_contaminate_effect_kind_dissipative
+R5240:5244 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5178:5198 UMST.ChemConstants.EffectConservation <> refine_effect_kind_of def
+R5200:5218 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R5220:5239 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R5245:5267 UMST.ChemConstants.EffectConservation <> effect_kind_dissipative constr
+R5269:5288 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+ind 5551:5577 <> effect_conservation_verdict
+constr 5593:5610 <> verdict_unwired_ok
+constr 5616:5645 <> verdict_forward_dissipative_ok
+constr 5651:5682 <> verdict_free_purification_refuse
+constr 5688:5717 <> verdict_reverse_contaminate_ok
+constr 5723:5749 <> verdict_green_invent_refuse
+scheme 5551:5577 <> effect_conservation_verdict_rect
+scheme 5551:5577 <> effect_conservation_verdict_ind
+scheme 5551:5577 <> effect_conservation_verdict_rec
+scheme 5551:5577 <> effect_conservation_verdict_sind
+def 5764:5793 <> effect_conservation_verdict_ok
+R5800:5826 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict ind
+binder 5796:5796 <> v:20
+R5831:5834 Corelib.Init.Datatypes <> bool ind
+R5847:5847 UMST.ChemConstants.EffectConservation <> v:20 var
+R5858:5875 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+R5880:5883 Corelib.Init.Datatypes <> true constr
+R5889:5918 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R5923:5926 Corelib.Init.Datatypes <> true constr
+R5932:5961 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R5966:5969 Corelib.Init.Datatypes <> true constr
+R5980:5984 Corelib.Init.Datatypes <> false constr
+def 6005:6035 <> effect_conservation_verdict_beq
+R6048:6074 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict ind
+binder 6040:6041 <> v1:22
+binder 6043:6044 <> v2:23
+R6079:6082 Corelib.Init.Datatypes <> bool ind
+R6099:6100 UMST.ChemConstants.EffectConservation <> v2:23 var
+R6095:6096 UMST.ChemConstants.EffectConservation <> v1:22 var
+R6111:6128 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+R6131:6148 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+R6153:6156 Corelib.Init.Datatypes <> true constr
+R6162:6191 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R6194:6223 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R6228:6231 Corelib.Init.Datatypes <> true constr
+R6237:6268 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R6271:6302 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R6307:6310 Corelib.Init.Datatypes <> true constr
+R6316:6345 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R6348:6377 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R6382:6385 Corelib.Init.Datatypes <> true constr
+R6391:6417 UMST.ChemConstants.EffectConservation <> verdict_green_invent_refuse constr
+R6420:6446 UMST.ChemConstants.EffectConservation <> verdict_green_invent_refuse constr
+R6451:6454 Corelib.Init.Datatypes <> true constr
+R6468:6472 Corelib.Init.Datatypes <> false constr
+def 6493:6526 <> evaluate_effect_conservation_close
+R6535:6560 UMST.ChemConstants.EffectConservation <> EffectConservationModality ind
+binder 6531:6531 <> m:26
+R6568:6583 UMST.ChemConstants.EffectConservation <> refine_direction ind
+binder 6564:6564 <> d:27
+R6591:6608 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+binder 6587:6587 <> w:28
+R6636:6639 Corelib.Init.Datatypes <> bool ind
+binder 6614:6632 <> claim_physics_green:29
+R6644:6670 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict ind
+R6680:6698 UMST.ChemConstants.EffectConservation <> claim_physics_green:29 var
+R6752:6752 UMST.ChemConstants.EffectConservation <> m:26 var
+R6765:6791 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R6796:6813 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+R6821:6847 UMST.ChemConstants.EffectConservation <> effect_conservation_assumed constr
+R6855:6880 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R6888:6916 UMST.ChemConstants.EffectConservation <> effect_conservation_surrogate constr
+R6935:6935 UMST.ChemConstants.EffectConservation <> d:27 var
+R6952:6965 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R6985:7011 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+R7013:7013 UMST.ChemConstants.EffectConservation <> w:28 var
+R7080:7111 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R7032:7061 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R7123:7141 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R7146:7175 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R6935:6935 UMST.ChemConstants.EffectConservation <> d:27 var
+R6952:6965 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R6985:7011 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+R7013:7013 UMST.ChemConstants.EffectConservation <> w:28 var
+R7080:7111 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R7032:7061 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R7123:7141 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R7146:7175 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R6935:6935 UMST.ChemConstants.EffectConservation <> d:27 var
+R6952:6965 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R6985:7011 UMST.ChemConstants.EffectConservation <> chem_stamp_witness_positive def
+R7013:7013 UMST.ChemConstants.EffectConservation <> w:28 var
+R7080:7111 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R7032:7061 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R7123:7141 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R7146:7175 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R6707:6733 UMST.ChemConstants.EffectConservation <> verdict_green_invent_refuse constr
+def 7210:7234 <> forward_refine_authorized
+R7243:7260 UMST.ChemConstants.EffectConservation <> chem_stamp_witness rec
+binder 7239:7239 <> w:34
+R7286:7289 Corelib.Init.Datatypes <> bool ind
+binder 7264:7282 <> claim_physics_green:35
+R7294:7297 Corelib.Init.Datatypes <> bool ind
+R7310:7343 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R7355:7380 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R7382:7395 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R7397:7397 UMST.ChemConstants.EffectConservation <> w:34 var
+R7399:7417 UMST.ChemConstants.EffectConservation <> claim_physics_green:35 var
+R7428:7457 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R7462:7465 Corelib.Init.Datatypes <> true constr
+R7476:7480 Corelib.Init.Datatypes <> false constr
+ind 7724:7745 <> dissipative_effect_law
+constr 7761:7788 <> law_forward_requires_witness
+constr 7794:7816 <> law_zero_witness_refuse
+constr 7822:7850 <> law_reverse_contaminate_typed
+constr 7856:7878 <> law_green_invent_refuse
+scheme 7724:7745 <> dissipative_effect_law_rect
+scheme 7724:7745 <> dissipative_effect_law_ind
+scheme 7724:7745 <> dissipative_effect_law_rec
+scheme 7724:7745 <> dissipative_effect_law_sind
+def 7893:7920 <> dissipative_effect_law_count
+R7924:7926 Corelib.Init.Datatypes <> nat ind
+prf 7941:7976 <> dissipative_effect_law_count_is_four
+R8010:8012 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7982:8009 UMST.ChemConstants.EffectConservation <> dissipative_effect_law_count def
+ind 8052:8081 <> dissipative_effect_law_witness
+constr 8097:8112 <> law_witness_open
+constr 8118:8135 <> law_witness_proved
+scheme 8052:8081 <> dissipative_effect_law_witness_rect
+scheme 8052:8081 <> dissipative_effect_law_witness_ind
+scheme 8052:8081 <> dissipative_effect_law_witness_rec
+scheme 8052:8081 <> dissipative_effect_law_witness_sind
+def 8150:8188 <> evaluate_dissipative_effect_law_witness
+R8199:8220 UMST.ChemConstants.EffectConservation <> dissipative_effect_law ind
+binder 8193:8195 <> law:40
+R8228:8253 UMST.ChemConstants.EffectConservation <> EffectConservationModality ind
+binder 8224:8224 <> m:41
+R8260:8289 UMST.ChemConstants.EffectConservation <> dissipative_effect_law_witness ind
+R8302:8302 UMST.ChemConstants.EffectConservation <> m:41 var
+R8313:8339 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R8345:8371 UMST.ChemConstants.EffectConservation <> effect_conservation_assumed constr
+R8377:8405 UMST.ChemConstants.EffectConservation <> effect_conservation_surrogate constr
+R8410:8425 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+R8410:8425 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+R8410:8425 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+R8431:8456 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R8461:8478 UMST.ChemConstants.EffectConservation <> law_witness_proved constr
+prf 8494:8536 <> all_dissipative_effect_laws_open_at_unwired
+R8661:8666 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8642:8644 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8542:8580 UMST.ChemConstants.EffectConservation <> evaluate_dissipative_effect_law_witness def
+R8582:8609 UMST.ChemConstants.EffectConservation <> law_forward_requires_witness constr
+R8615:8641 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R8645:8660 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+R8781:8786 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8762:8764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8667:8705 UMST.ChemConstants.EffectConservation <> evaluate_dissipative_effect_law_witness def
+R8707:8729 UMST.ChemConstants.EffectConservation <> law_zero_witness_refuse constr
+R8735:8761 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R8765:8780 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+R8907:8912 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8888:8890 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8787:8825 UMST.ChemConstants.EffectConservation <> evaluate_dissipative_effect_law_witness def
+R8827:8855 UMST.ChemConstants.EffectConservation <> law_reverse_contaminate_typed constr
+R8861:8887 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R8891:8906 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+R9008:9010 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8913:8951 UMST.ChemConstants.EffectConservation <> evaluate_dissipative_effect_law_witness def
+R8953:8975 UMST.ChemConstants.EffectConservation <> law_green_invent_refuse constr
+R8981:9007 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R9011:9026 UMST.ChemConstants.EffectConservation <> law_witness_open constr
+def 9306:9323 <> type04EffectProved
+R9327:9330 Corelib.Init.Datatypes <> bool ind
+R9335:9339 Corelib.Init.Datatypes <> false constr
+prf 9349:9374 <> type04_effect_proved_false
+R9396:9398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9378:9395 UMST.ChemConstants.EffectConservation <> type04EffectProved def
+R9399:9403 Corelib.Init.Datatypes <> false constr
+def 9443:9465 <> not118SquaredGreenTable
+R9469:9472 Corelib.Init.Datatypes <> bool ind
+R9477:9480 Corelib.Init.Datatypes <> true constr
+prf 9490:9516 <> not_118_squared_green_table
+R9543:9545 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9520:9542 UMST.ChemConstants.EffectConservation <> not118SquaredGreenTable def
+R9546:9549 Corelib.Init.Datatypes <> true constr
+prf 9806:9843 <> unwired_close_without_positive_witness
+R9957:9961 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9849:9882 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R9888:9914 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R9916:9929 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R9931:9950 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R9952:9956 Corelib.Init.Datatypes <> false constr
+R9962:9979 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+prf 10016:10055 <> unwired_modality_always_ok_without_green
+R10169:10173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10061:10094 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R10100:10126 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R10128:10141 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R10143:10162 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R10164:10168 Corelib.Init.Datatypes <> false constr
+R10174:10191 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+R10207:10244 UMST.ChemConstants.EffectConservation <> unwired_close_without_positive_witness thm
+R10207:10244 UMST.ChemConstants.EffectConservation <> unwired_close_without_positive_witness thm
+prf 10259:10301 <> unwired_verdict_ok_without_positive_witness
+R10455:10459 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10307:10336 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R10343:10376 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R10385:10411 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R10413:10426 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R10428:10447 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R10449:10453 Corelib.Init.Datatypes <> false constr
+R10460:10463 Corelib.Init.Datatypes <> true constr
+R10482:10511 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R10524:10561 UMST.ChemConstants.EffectConservation <> unwired_close_without_positive_witness thm
+R10524:10561 UMST.ChemConstants.EffectConservation <> unwired_close_without_positive_witness thm
+R10524:10561 UMST.ChemConstants.EffectConservation <> unwired_close_without_positive_witness thm
+prf 10813:10846 <> forward_refine_positive_witness_ok
+R10971:10975 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10852:10885 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R10891:10916 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R10918:10931 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R10933:10964 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R10966:10970 Corelib.Init.Datatypes <> false constr
+R10976:11005 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+prf 11042:11101 <> forward_refine_requires_positive_chem_stamp_landauer_witness
+R11261:11266 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11226:11230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11107:11140 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R11146:11171 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R11173:11186 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R11188:11219 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R11221:11225 Corelib.Init.Datatypes <> false constr
+R11231:11260 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R11331:11333 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11267:11291 UMST.ChemConstants.EffectConservation <> forward_refine_authorized def
+R11293:11324 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R11326:11330 Corelib.Init.Datatypes <> false constr
+R11334:11337 Corelib.Init.Datatypes <> true constr
+R11366:11399 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+R11366:11399 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+R11413:11437 UMST.ChemConstants.EffectConservation <> forward_refine_authorized def
+R11452:11485 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+R11452:11485 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+R11452:11485 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+prf 11517:11550 <> forward_refine_positive_verdict_ok
+R11715:11719 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11556:11585 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R11592:11625 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R11634:11659 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R11661:11674 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R11676:11707 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R11709:11713 Corelib.Init.Datatypes <> false constr
+R11720:11723 Corelib.Init.Datatypes <> true constr
+R11742:11771 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R11784:11817 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+R11784:11817 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+R11784:11817 UMST.ChemConstants.EffectConservation <> forward_refine_positive_witness_ok thm
+prf 11847:11893 <> forward_refine_positive_still_not_physics_green
+R12067:12072 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12058:12062 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11899:11928 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R11935:11968 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R11977:12002 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R12004:12017 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R12019:12050 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R12052:12056 Corelib.Init.Datatypes <> false constr
+R12063:12066 Corelib.Init.Datatypes <> true constr
+R12091:12093 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12073:12090 UMST.ChemConstants.EffectConservation <> type04EffectProved def
+R12094:12098 Corelib.Init.Datatypes <> false constr
+R12127:12160 UMST.ChemConstants.EffectConservation <> forward_refine_positive_verdict_ok thm
+R12127:12160 UMST.ChemConstants.EffectConservation <> forward_refine_positive_verdict_ok thm
+R12173:12198 UMST.ChemConstants.EffectConservation <> type04_effect_proved_false thm
+R12173:12198 UMST.ChemConstants.EffectConservation <> type04_effect_proved_false thm
+prf 12437:12460 <> free_purification_refuse
+R12573:12577 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12466:12499 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R12505:12530 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R12532:12545 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R12547:12566 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R12568:12572 Corelib.Init.Datatypes <> false constr
+R12578:12609 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+prf 12646:12680 <> forward_refine_zero_witness_refused
+R12830:12835 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12793:12797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12686:12719 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R12725:12750 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R12752:12765 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R12767:12786 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R12788:12792 Corelib.Init.Datatypes <> false constr
+R12798:12829 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R12888:12890 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12836:12860 UMST.ChemConstants.EffectConservation <> forward_refine_authorized def
+R12862:12881 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R12883:12887 Corelib.Init.Datatypes <> false constr
+R12891:12895 Corelib.Init.Datatypes <> false constr
+R12924:12947 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+R12924:12947 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+R12961:12985 UMST.ChemConstants.EffectConservation <> forward_refine_authorized def
+R13000:13023 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+R13000:13023 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+R13000:13023 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+prf 13057:13080 <> free_purification_not_ok
+R13233:13237 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13086:13115 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R13122:13155 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R13164:13189 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R13191:13204 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R13206:13225 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R13227:13231 Corelib.Init.Datatypes <> false constr
+R13238:13242 Corelib.Init.Datatypes <> false constr
+R13261:13290 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R13303:13326 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+R13303:13326 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+R13303:13326 UMST.ChemConstants.EffectConservation <> free_purification_refuse thm
+prf 13580:13604 <> reverse_contaminate_typed
+R13722:13726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13610:13643 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R13649:13674 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R13676:13694 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R13696:13715 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R13717:13721 Corelib.Init.Datatypes <> false constr
+R13727:13756 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+prf 13793:13844 <> reverse_contaminate_scaffold_ok_without_forward_cost
+R13962:13966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13850:13883 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R13889:13914 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R13916:13934 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R13936:13955 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R13957:13961 Corelib.Init.Datatypes <> false constr
+R13967:13996 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R14012:14036 UMST.ChemConstants.EffectConservation <> reverse_contaminate_typed thm
+R14012:14036 UMST.ChemConstants.EffectConservation <> reverse_contaminate_typed thm
+prf 14051:14080 <> reverse_contaminate_verdict_ok
+R14238:14242 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14086:14115 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R14122:14155 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R14164:14189 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R14191:14209 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R14211:14230 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R14232:14236 Corelib.Init.Datatypes <> false constr
+R14243:14246 Corelib.Init.Datatypes <> true constr
+R14265:14294 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R14307:14331 UMST.ChemConstants.EffectConservation <> reverse_contaminate_typed thm
+R14307:14331 UMST.ChemConstants.EffectConservation <> reverse_contaminate_typed thm
+R14307:14331 UMST.ChemConstants.EffectConservation <> reverse_contaminate_typed thm
+prf 14585:14611 <> green_invent_refuse_unwired
+R14736:14740 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14617:14650 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R14656:14682 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R14684:14697 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R14699:14730 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R14732:14735 Corelib.Init.Datatypes <> true constr
+R14741:14767 UMST.ChemConstants.EffectConservation <> verdict_green_invent_refuse constr
+prf 14804:14829 <> green_invent_always_refuse
+R14994:14998 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14835:14864 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R14871:14904 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R14913:14939 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R14941:14954 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R14956:14987 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R14989:14992 Corelib.Init.Datatypes <> true constr
+R14999:15003 Corelib.Init.Datatypes <> false constr
+R15022:15051 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_ok def
+R15064:15090 UMST.ChemConstants.EffectConservation <> green_invent_refuse_unwired thm
+R15064:15090 UMST.ChemConstants.EffectConservation <> green_invent_refuse_unwired thm
+R15064:15090 UMST.ChemConstants.EffectConservation <> green_invent_refuse_unwired thm
+def 15349:15385 <> dissipative_effect_coherence_scaffold
+R15389:15392 Corelib.Init.Datatypes <> bool ind
+R15979:15984 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15785:15790 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15594:15599 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15399:15429 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_beq def
+R15436:15469 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R15478:15503 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R15505:15518 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R15520:15551 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R15553:15557 Corelib.Init.Datatypes <> false constr
+R15564:15593 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R15600:15630 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_beq def
+R15637:15670 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R15679:15704 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R15706:15719 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R15721:15740 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R15742:15746 Corelib.Init.Datatypes <> false constr
+R15753:15784 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R15791:15821 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_beq def
+R15828:15861 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R15870:15895 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R15897:15915 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R15917:15936 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R15938:15942 Corelib.Init.Datatypes <> false constr
+R15949:15978 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R15985:16015 UMST.ChemConstants.EffectConservation <> effect_conservation_verdict_beq def
+R16022:16055 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R16064:16090 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R16092:16105 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R16107:16138 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R16140:16143 Corelib.Init.Datatypes <> true constr
+R16150:16176 UMST.ChemConstants.EffectConservation <> verdict_green_invent_refuse constr
+prf 16186:16227 <> dissipative_effect_coherence_scaffold_true
+R16270:16272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16233:16269 UMST.ChemConstants.EffectConservation <> dissipative_effect_coherence_scaffold def
+R16273:16276 Corelib.Init.Datatypes <> true constr
+R16295:16331 UMST.ChemConstants.EffectConservation <> dissipative_effect_coherence_scaffold def
+prf 16386:16423 <> effect_conservation_coherence_scaffold
+R16585:16590 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16548:16554 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16429:16462 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R16468:16493 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R16495:16508 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R16510:16541 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R16543:16547 Corelib.Init.Datatypes <> false constr
+R16555:16584 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R16737:16742 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16698:16704 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16591:16624 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R16630:16655 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R16657:16670 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R16672:16691 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R16693:16697 Corelib.Init.Datatypes <> false constr
+R16705:16736 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R16892:16897 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16855:16861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16743:16776 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R16782:16807 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R16809:16827 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R16829:16848 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R16850:16854 Corelib.Init.Datatypes <> false constr
+R16862:16891 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R17017:17023 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16898:16931 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R16937:16963 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R16965:16978 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R16980:17011 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R17013:17016 Corelib.Init.Datatypes <> true constr
+R17024:17050 UMST.ChemConstants.EffectConservation <> verdict_green_invent_refuse constr
+ind 17329:17340 <> formal_fiber
+constr 17356:17376 <> fiber_quantum_knowing
+constr 17382:17398 <> fiber_meso_acting
+scheme 17329:17340 <> formal_fiber_rect
+scheme 17329:17340 <> formal_fiber_ind
+scheme 17329:17340 <> formal_fiber_rec
+scheme 17329:17340 <> formal_fiber_sind
+ind 17412:17430 <> formal_claim_family
+constr 17446:17470 <> claim_effect_conservation
+scheme 17412:17430 <> formal_claim_family_rect
+scheme 17412:17430 <> formal_claim_family_ind
+scheme 17412:17430 <> formal_claim_family_rec
+scheme 17412:17430 <> formal_claim_family_sind
+def 17485:17512 <> effect_conservation_fiber_ok
+R17519:17530 UMST.ChemConstants.EffectConservation <> formal_fiber ind
+binder 17515:17515 <> f:47
+R17535:17538 Corelib.Init.Datatypes <> bool ind
+R17551:17551 UMST.ChemConstants.EffectConservation <> f:47 var
+R17562:17582 UMST.ChemConstants.EffectConservation <> fiber_quantum_knowing constr
+R17587:17590 Corelib.Init.Datatypes <> true constr
+R17596:17612 UMST.ChemConstants.EffectConservation <> fiber_meso_acting constr
+R17617:17621 Corelib.Init.Datatypes <> false constr
+def 17642:17677 <> effect_conservation_knowing_fiber_ok
+R17681:17684 Corelib.Init.Datatypes <> bool ind
+R17691:17718 UMST.ChemConstants.EffectConservation <> effect_conservation_fiber_ok def
+R17720:17740 UMST.ChemConstants.EffectConservation <> fiber_quantum_knowing constr
+def 17755:17788 <> effect_conservation_meso_acting_ok
+R17792:17795 Corelib.Init.Datatypes <> bool ind
+R17802:17829 UMST.ChemConstants.EffectConservation <> effect_conservation_fiber_ok def
+R17831:17847 UMST.ChemConstants.EffectConservation <> fiber_meso_acting constr
+prf 17857:17897 <> effect_conservation_knowing_fiber_ok_true
+R17939:17941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17903:17938 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok def
+R17942:17945 Corelib.Init.Datatypes <> true constr
+prf 17980:18017 <> effect_conservation_meso_acting_not_ok
+R18057:18059 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18023:18056 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_ok def
+R18060:18064 Corelib.Init.Datatypes <> false constr
+prf 18101:18143 <> effect_conservation_routes_knowing_not_meso
+R18192:18197 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18185:18187 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18149:18184 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok def
+R18188:18191 Corelib.Init.Datatypes <> true constr
+R18232:18234 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18198:18231 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_ok def
+R18235:18239 Corelib.Init.Datatypes <> false constr
+R18268:18308 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok_true thm
+R18268:18308 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok_true thm
+R18321:18358 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_not_ok thm
+R18321:18358 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_not_ok thm
+def 18378:18395 <> fiberNotMesoActing
+R18399:18402 Corelib.Init.Datatypes <> bool ind
+R18445:18450 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18409:18444 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok def
+R18451:18454 Corelib.Init.Datatypes <> negb def
+R18456:18489 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_ok def
+prf 18499:18524 <> fiber_not_meso_acting_true
+R18546:18548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18528:18545 UMST.ChemConstants.EffectConservation <> fiberNotMesoActing def
+R18549:18552 Corelib.Init.Datatypes <> true constr
+R18571:18588 UMST.ChemConstants.EffectConservation <> fiberNotMesoActing def
+R18591:18626 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok def
+R18633:18666 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_ok def
+prf 18922:18957 <> effect_conservation_fixture_scaffold
+R19096:19101 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19071:19077 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18963:18996 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R19002:19028 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr
+R19030:19043 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R19045:19064 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R19066:19070 Corelib.Init.Datatypes <> false constr
+R19078:19095 UMST.ChemConstants.EffectConservation <> verdict_unwired_ok constr
+R19258:19263 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19221:19227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19102:19135 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R19141:19166 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R19168:19181 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R19183:19214 UMST.ChemConstants.EffectConservation <> chemStampWitnessPositiveScaffold def
+R19216:19220 Corelib.Init.Datatypes <> false constr
+R19228:19257 UMST.ChemConstants.EffectConservation <> verdict_forward_dissipative_ok constr
+R19410:19415 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19371:19377 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19264:19297 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R19303:19328 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R19330:19343 UMST.ChemConstants.EffectConservation <> forward_refine constr
+R19345:19364 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R19366:19370 Corelib.Init.Datatypes <> false constr
+R19378:19409 UMST.ChemConstants.EffectConservation <> verdict_free_purification_refuse constr
+R19565:19570 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19528:19534 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19416:19449 UMST.ChemConstants.EffectConservation <> evaluate_effect_conservation_close def
+R19455:19480 UMST.ChemConstants.EffectConservation <> effect_conservation_proved constr
+R19482:19500 UMST.ChemConstants.EffectConservation <> reverse_contaminate constr
+R19502:19521 UMST.ChemConstants.EffectConservation <> chemStampWitnessZero def
+R19523:19527 Corelib.Init.Datatypes <> false constr
+R19535:19564 UMST.ChemConstants.EffectConservation <> verdict_reverse_contaminate_ok constr
+R19614:19619 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19607:19609 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19571:19606 UMST.ChemConstants.EffectConservation <> effect_conservation_knowing_fiber_ok def
+R19610:19613 Corelib.Init.Datatypes <> true constr
+R19662:19667 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19654:19656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19620:19653 UMST.ChemConstants.EffectConservation <> effect_conservation_meso_acting_ok def
+R19657:19661 Corelib.Init.Datatypes <> false constr
+R19686:19688 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19668:19685 UMST.ChemConstants.EffectConservation <> type04EffectProved def
+R19689:19693 Corelib.Init.Datatypes <> false constr
+def 19973:19999 <> effectConservationAuthority
+R20003:20008 Stdlib.Strings.String <> string ind
+def 20072:20092 <> chemL0Type04Authority
+R20096:20101 Stdlib.Strings.String <> string ind
+def 20139:20171 <> chemIntProveType04EffectAuthority
+R20175:20180 Stdlib.Strings.String <> string ind
+def 20232:20266 <> contaminationReverseRefineAuthority
+R20270:20275 Stdlib.Strings.String <> string ind
+def 20348:20374 <> processingRefiningAuthority
+R20378:20383 Stdlib.Strings.String <> string ind
+def 20457:20480 <> effectConservationCellId
+R20484:20489 Stdlib.Strings.String <> string ind
+def 20549:20574 <> effectConservationNonClaim
+R20578:20583 Stdlib.Strings.String <> string ind
+prf 20980:21006 <> effect_conservation_cell_id
+R21036:21038 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21012:21035 UMST.ChemConstants.EffectConservation <> effectConservationCellId def
+prf 21112:21159 <> effect_conservation_cites_refine_effect_types_rs
+R21192:21195 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21165:21191 UMST.ChemConstants.EffectConservation <> effectConservationAuthority def
+prf 21233:21268 <> effect_conservation_cites_l0_type_04
+R21295:21297 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21274:21294 UMST.ChemConstants.EffectConservation <> chemL0Type04Authority def
+prf 21349:21398 <> effect_conservation_cites_int_prove_type_04_effect
+R21437:21440 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21404:21436 UMST.ChemConstants.EffectConservation <> chemIntProveType04EffectAuthority def
+prf 21478:21531 <> effect_conservation_cites_contamination_reverse_refine
+R21572:21575 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21537:21571 UMST.ChemConstants.EffectConservation <> contaminationReverseRefineAuthority def
+prf 21613:21657 <> effect_conservation_cites_processing_refining
+R21690:21693 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21663:21689 UMST.ChemConstants.EffectConservation <> processingRefiningAuthority def
+def 21958:21991 <> effectSecondLawConservationFraming
+R21995:22000 Stdlib.Strings.String <> string ind
+prf 22082:22111 <> effect_not_second_effect_axiom
+R22151:22154 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R22117:22150 UMST.ChemConstants.EffectConservation <> effectSecondLawConservationFraming def
+prf 22211:22248 <> effect_second_law_conservation_framing
+R22288:22291 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R22254:22287 UMST.ChemConstants.EffectConservation <> effectSecondLawConservationFraming def
+def 22560:22581 <> physicsGreenAuthorized
+R22593:22597 Corelib.Init.Logic <> False ind
+prf 22607:22645 <> effect_conservation_physics_green_false
+R22651:22652 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R22653:22674 UMST.ChemConstants.EffectConservation <> physicsGreenAuthorized def
+prf 22714:22749 <> effect_conservation_modality_unwired
+R22788:22790 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22755:22787 UMST.ChemConstants.EffectConservation <> effectConservationModalityCurrent def
+R22791:22817 UMST.ChemConstants.EffectConservation <> effect_conservation_unwired constr

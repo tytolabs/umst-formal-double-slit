@@ -1,0 +1,328 @@
+DIGEST d9520c69da429a87b296911598df2f81
+FUrgeKnowing.LandauerHistoryLook
+R1207:1211 Stdlib.Reals.Reals <> <> lib
+R1213:1217 Stdlib.Reals.RIneq <> <> lib
+R1219:1221 Stdlib.micromega.Lra <> <> lib
+R1223:1227 Stdlib.setoid_ring.Field <> <> lib
+R1229:1232 Stdlib.Lists.List <> <> lib
+R1234:1238 Stdlib.Arith.Arith <> <> lib
+R1240:1245 Stdlib.Strings.String <> <> lib
+R1279:1300 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1302:1316 UMSTFormal.MeasurementCost <> <> lib
+R1326:1338 Stdlib.Lists.List ListNotations <> mod
+ind 1689:1715 <> LandauerHistoryLookModality
+constr 1731:1759 <> landauer_history_look_unwired
+constr 1765:1793 <> landauer_history_look_assumed
+constr 1799:1826 <> landauer_history_look_proved
+constr 1832:1862 <> landauer_history_look_surrogate
+scheme 1689:1715 <> LandauerHistoryLookModality_rect
+scheme 1689:1715 <> LandauerHistoryLookModality_ind
+scheme 1689:1715 <> LandauerHistoryLookModality_rec
+scheme 1689:1715 <> LandauerHistoryLookModality_sind
+def 1877:1910 <> landauerHistoryLookModalityCurrent
+R1914:1940 UrgeKnowing.LandauerHistoryLook <> LandauerHistoryLookModality ind
+R1947:1975 UrgeKnowing.LandauerHistoryLook <> landauer_history_look_unwired constr
+def 2212:2234 <> history_step_mi_bounded
+R2242:2242 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2237:2238 <> mi:3
+R2264:2267 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2258:2261 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2262:2263 UrgeKnowing.LandauerHistoryLook <> mi:3 var
+R2270:2273 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2268:2269 UrgeKnowing.LandauerHistoryLook <> mi:3 var
+def 2289:2306 <> history_mi_bounded
+R2319:2322 Corelib.Init.Datatypes <> list ind
+R2324:2324 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2309:2315 <> history:4
+R2339:2344 Corelib.Lists.ListDef <> Forall ind
+R2370:2376 UrgeKnowing.LandauerHistoryLook <> history:4 var
+R2346:2368 UrgeKnowing.LandauerHistoryLook <> history_step_mi_bounded def
+def 2611:2635 <> sum_history_look_landauer
+R2642:2642 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2638:2638 <> T:5
+R2656:2659 Corelib.Init.Datatypes <> list ind
+R2661:2661 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2646:2652 <> history:6
+R2666:2666 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2679:2685 UrgeKnowing.LandauerHistoryLook <> history:6 var
+R2696:2697 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R2710:2713 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2760:2762 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R2728:2754 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R2756:2756 UrgeKnowing.LandauerHistoryLook <> T:5 var
+R2763:2787 UrgeKnowing.LandauerHistoryLook <> sum_history_look_landauer:7 def
+R2789:2789 UrgeKnowing.LandauerHistoryLook <> T:5 var
+def 2815:2837 <> historyLookLandauerCost
+R2844:2844 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2840:2840 <> T:9
+R2858:2861 Corelib.Init.Datatypes <> list ind
+R2863:2863 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2848:2854 <> history:10
+R2868:2868 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2875:2899 UrgeKnowing.LandauerHistoryLook <> sum_history_look_landauer def
+R2901:2901 UrgeKnowing.LandauerHistoryLook <> T:9 var
+R2903:2909 UrgeKnowing.LandauerHistoryLook <> history:10 var
+prf 2919:2952 <> measurementEnergyLowerBound_nonneg
+R2962:2962 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2955:2955 <> T:11
+binder 2957:2958 <> mi:12
+R2975:2978 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2970:2973 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2974:2974 UrgeKnowing.LandauerHistoryLook <> T:11 var
+R2986:2989 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2980:2983 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2984:2985 UrgeKnowing.LandauerHistoryLook <> mi:12 var
+R2991:2994 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2995:3021 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3023:3023 UrgeKnowing.LandauerHistoryLook <> T:11 var
+R3025:3026 UrgeKnowing.LandauerHistoryLook <> mi:12 var
+R3062:3088 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3091:3104 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3115:3126 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3115:3126 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3151:3162 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3173:3178 Stdlib.Reals.RIneq <> Rlt_le thm
+R3181:3187 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3151:3162 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3173:3178 Stdlib.Reals.RIneq <> Rlt_le thm
+R3181:3187 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3199:3210 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3220:3225 Stdlib.Reals.RIneq <> Rlt_le thm
+R3228:3236 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3199:3210 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3220:3225 Stdlib.Reals.RIneq <> Rlt_le thm
+R3228:3236 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 3261:3281 <> E_Landauer_bit_nonneg
+R3288:3288 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3284:3284 <> T:13
+R3301:3304 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3296:3299 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3300:3300 UrgeKnowing.LandauerHistoryLook <> T:13 var
+R3306:3309 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3310:3323 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3325:3325 UrgeKnowing.LandauerHistoryLook <> T:13 var
+R3357:3370 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3381:3392 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3403:3408 Stdlib.Reals.RIneq <> Rlt_le thm
+R3411:3417 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3381:3392 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3403:3408 Stdlib.Reals.RIneq <> Rlt_le thm
+R3411:3417 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3429:3440 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3450:3455 Stdlib.Reals.RIneq <> Rlt_le thm
+R3458:3466 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3429:3440 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3450:3455 Stdlib.Reals.RIneq <> Rlt_le thm
+R3458:3466 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 3491:3531 <> measurementEnergyLowerBound_le_bit_energy
+R3541:3541 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3534:3534 <> T:14
+binder 3536:3537 <> mi:15
+R3554:3557 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3549:3552 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3553:3553 UrgeKnowing.LandauerHistoryLook <> T:14 var
+R3565:3568 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3559:3562 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3563:3564 UrgeKnowing.LandauerHistoryLook <> mi:15 var
+R3576:3581 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3571:3574 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3569:3570 UrgeKnowing.LandauerHistoryLook <> mi:15 var
+R3614:3617 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3582:3608 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3610:3610 UrgeKnowing.LandauerHistoryLook <> T:14 var
+R3612:3613 UrgeKnowing.LandauerHistoryLook <> mi:15 var
+R3618:3631 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3633:3633 UrgeKnowing.LandauerHistoryLook <> T:14 var
+R3673:3699 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3715:3723 Stdlib.Reals.Raxioms <> Rmult_1_l thm
+R3715:3723 Stdlib.Reals.Raxioms <> Rmult_1_l thm
+R3715:3723 Stdlib.Reals.Raxioms <> Rmult_1_l thm
+R3734:3750 Stdlib.Reals.RIneq <> Rmult_le_compat_r thm
+R3734:3750 Stdlib.Reals.RIneq <> Rmult_le_compat_r thm
+R3763:3783 UrgeKnowing.LandauerHistoryLook <> E_Landauer_bit_nonneg thm
+R3763:3783 UrgeKnowing.LandauerHistoryLook <> E_Landauer_bit_nonneg thm
+prf 3823:3851 <> historyLookLandauerCost_empty
+R3858:3858 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3854:3854 <> T:16
+R3893:3895 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3865:3887 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R3889:3889 UrgeKnowing.LandauerHistoryLook <> T:16 var
+R3891:3892 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+prf 3931:3961 <> historyLookLandauerCost_zero_mi
+R3968:3968 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3964:3964 <> T:17
+R4004:4006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3975:3997 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R3999:3999 UrgeKnowing.LandauerHistoryLook <> T:17 var
+R4001:4001 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R4003:4003 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R4026:4048 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R4051:4075 UrgeKnowing.LandauerHistoryLook <> sum_history_look_landauer def
+R4082:4108 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+prf 4138:4167 <> historyLookLandauerCost_nonneg
+R4174:4174 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4170:4170 <> T:18
+R4188:4191 Corelib.Init.Datatypes <> list ind
+R4193:4193 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4178:4184 <> history:19
+R4206:4211 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4201:4204 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4205:4205 UrgeKnowing.LandauerHistoryLook <> T:18 var
+R4246:4251 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4212:4217 Corelib.Lists.ListDef <> Forall ind
+R4239:4245 UrgeKnowing.LandauerHistoryLook <> history:19 var
+binder 4224:4225 <> mi:20
+R4231:4234 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4235:4236 UrgeKnowing.LandauerHistoryLook <> mi:20 var
+R4253:4256 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4257:4279 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R4281:4281 UrgeKnowing.LandauerHistoryLook <> T:18 var
+R4283:4289 UrgeKnowing.LandauerHistoryLook <> history:19 var
+R4370:4392 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R4418:4440 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R4460:4479 Stdlib.Reals.RIneq <> Rplus_le_le_0_compat thm
+R4460:4479 Stdlib.Reals.RIneq <> Rplus_le_le_0_compat thm
+R4494:4527 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_nonneg thm
+R4494:4527 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_nonneg thm
+R4563:4572 Stdlib.Lists.List <> Forall_inv thm
+R4563:4572 Stdlib.Lists.List <> Forall_inv thm
+R4612:4626 Stdlib.Lists.List <> Forall_inv_tail thm
+R4612:4626 Stdlib.Lists.List <> Forall_inv_tail thm
+prf 4673:4707 <> historyLookLandauerCost_one_step_le
+R4717:4717 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4710:4710 <> T:21
+binder 4712:4713 <> mi:22
+R4730:4735 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4725:4728 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4729:4729 UrgeKnowing.LandauerHistoryLook <> T:21 var
+R4762:4767 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4736:4758 UrgeKnowing.LandauerHistoryLook <> history_step_mi_bounded def
+R4760:4761 UrgeKnowing.LandauerHistoryLook <> mi:22 var
+R4798:4801 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4768:4790 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R4792:4792 UrgeKnowing.LandauerHistoryLook <> T:21 var
+R4794:4794 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R4797:4797 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R4795:4796 UrgeKnowing.LandauerHistoryLook <> mi:22 var
+R4802:4815 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4817:4817 UrgeKnowing.LandauerHistoryLook <> T:21 var
+R4853:4875 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R4878:4902 UrgeKnowing.LandauerHistoryLook <> sum_history_look_landauer def
+R4954:4962 Stdlib.Reals.RIneq <> Rplus_0_r thm
+R4954:4962 Stdlib.Reals.RIneq <> Rplus_0_r thm
+R4954:4962 Stdlib.Reals.RIneq <> Rplus_0_r thm
+R4973:5013 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_le_bit_energy thm
+R4973:5013 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_le_bit_energy thm
+prf 5073:5107 <> historyLookLandauerCost_two_step_le
+R5122:5122 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5110:5110 <> T:23
+binder 5112:5114 <> mi1:24
+binder 5116:5118 <> mi2:25
+R5135:5140 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5130:5133 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5134:5134 UrgeKnowing.LandauerHistoryLook <> T:23 var
+R5168:5173 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5141:5163 UrgeKnowing.LandauerHistoryLook <> history_step_mi_bounded def
+R5165:5167 UrgeKnowing.LandauerHistoryLook <> mi1:24 var
+R5201:5206 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5174:5196 UrgeKnowing.LandauerHistoryLook <> history_step_mi_bounded def
+R5198:5200 UrgeKnowing.LandauerHistoryLook <> mi2:25 var
+R5243:5246 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5207:5229 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R5231:5231 UrgeKnowing.LandauerHistoryLook <> T:23 var
+R5233:5233 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5237:5238 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5242:5242 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5234:5236 UrgeKnowing.LandauerHistoryLook <> mi1:24 var
+R5239:5241 UrgeKnowing.LandauerHistoryLook <> mi2:25 var
+R5248:5250 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R5251:5264 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5266:5266 UrgeKnowing.LandauerHistoryLook <> T:23 var
+R5376:5398 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R5401:5425 UrgeKnowing.LandauerHistoryLook <> sum_history_look_landauer def
+R5428:5454 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5474:5482 Stdlib.Reals.RIneq <> Rplus_0_r thm
+R5474:5482 Stdlib.Reals.RIneq <> Rplus_0_r thm
+R5474:5482 Stdlib.Reals.RIneq <> Rplus_0_r thm
+R5526:5528 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5500:5500 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R5506:5509 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R5505:5505 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R5510:5523 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5545:5547 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R5529:5542 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5548:5561 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5526:5528 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5500:5500 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R5506:5509 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'*'_x not
+R5505:5505 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R5510:5523 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5545:5547 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R5529:5542 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5548:5561 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5601:5615 Stdlib.Reals.RIneq <> Rplus_le_compat thm
+R5601:5615 Stdlib.Reals.RIneq <> Rplus_le_compat thm
+R5628:5668 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_le_bit_energy thm
+R5628:5668 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_le_bit_energy thm
+R5686:5726 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_le_bit_energy thm
+R5686:5726 UrgeKnowing.LandauerHistoryLook <> measurementEnergyLowerBound_le_bit_energy thm
+prf 5746:5781 <> historyLookLandauerCost_null_history
+R5788:5788 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5784:5784 <> T:26
+R5835:5837 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5795:5817 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R5819:5819 UrgeKnowing.LandauerHistoryLook <> T:26 var
+R5823:5826 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5828:5831 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5832:5833 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R5857:5879 UrgeKnowing.LandauerHistoryLook <> historyLookLandauerCost def
+R5882:5906 UrgeKnowing.LandauerHistoryLook <> sum_history_look_landauer def
+R5913:5939 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5942:5955 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+def 6214:6235 <> landauerBoundAuthority
+R6239:6244 Stdlib.Strings.String <> string ind
+def 6319:6348 <> epistemicTrajectoryMIAuthority
+R6352:6357 Stdlib.Strings.String <> string ind
+def 6440:6459 <> landauerLawAuthority
+R6463:6468 Stdlib.Strings.String <> string ind
+def 6541:6566 <> physicalSecondLawAuthority
+R6570:6575 Stdlib.Strings.String <> string ind
+def 6627:6651 <> landauerHistoryLookCellId
+R6655:6660 Stdlib.Strings.String <> string ind
+def 6722:6748 <> landauerHistoryLookNonClaim
+R6752:6757 Stdlib.Strings.String <> string ind
+prf 7002:7030 <> landauer_history_look_cell_id
+R7061:7063 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7036:7060 UrgeKnowing.LandauerHistoryLook <> landauerHistoryLookCellId def
+prf 7139:7180 <> landauer_history_look_cites_landauer_bound
+R7208:7211 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7186:7207 UrgeKnowing.LandauerHistoryLook <> landauerBoundAuthority def
+prf 7249:7296 <> landauer_history_look_cites_epistemic_trajectory
+R7332:7335 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7302:7331 UrgeKnowing.LandauerHistoryLook <> epistemicTrajectoryMIAuthority def
+prf 7373:7419 <> landauer_history_look_cites_physical_second_law
+R7451:7453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7425:7450 UrgeKnowing.LandauerHistoryLook <> physicalSecondLawAuthority def
+def 7747:7789 <> landauerHistorySecondLawConservationFraming
+R7793:7798 Stdlib.Strings.String <> string ind
+prf 7888:7929 <> landauer_history_not_second_landauer_axiom
+R7978:7983 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7935:7977 UrgeKnowing.LandauerHistoryLook <> landauerHistorySecondLawConservationFraming def
+prf 8042:8089 <> landauer_history_second_law_conservation_framing
+R8138:8141 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8095:8137 UrgeKnowing.LandauerHistoryLook <> landauerHistorySecondLawConservationFraming def
+def 8408:8429 <> physicsGreenAuthorized
+R8441:8445 Corelib.Init.Logic <> False ind
+prf 8455:8495 <> landauer_history_look_physics_green_false
+R8501:8502 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R8503:8524 UrgeKnowing.LandauerHistoryLook <> physicsGreenAuthorized def
+prf 8564:8601 <> landauer_history_look_modality_unwired
+R8641:8643 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8607:8640 UrgeKnowing.LandauerHistoryLook <> landauerHistoryLookModalityCurrent def
+R8644:8672 UrgeKnowing.LandauerHistoryLook <> landauer_history_look_unwired constr
+def 8934:8952 <> mesoThermoGRestated
+R8956:8961 Stdlib.Strings.String <> string ind
+prf 9006:9050 <> landauer_history_look_not_meso_thermo_restate
+R9083:9086 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9056:9082 UrgeKnowing.LandauerHistoryLook <> landauerHistoryLookNonClaim def
+R9087:9105 UrgeKnowing.LandauerHistoryLook <> mesoThermoGRestated def

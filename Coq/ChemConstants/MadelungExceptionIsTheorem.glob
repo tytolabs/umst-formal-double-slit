@@ -1,0 +1,528 @@
+DIGEST cc6d312d01a3805442799f5e4151a201
+FUMST.ChemConstants.MadelungExceptionIsTheorem
+R975:1017 UMST.ChemConstants.NamedOccupancyExceptions <> <> lib
+R1035:1080 UMST.ChemConstants.ActinideOccupancyExceptions <> <> lib
+R1098:1141 UMST.ChemConstants.DBlockOccupancyExceptions <> <> lib
+R1159:1207 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> <> lib
+R1237:1241 Stdlib.Arith.Arith <> <> lib
+R1243:1246 Stdlib.Lists.List <> <> lib
+R1248:1251 Stdlib.Bool.Bool <> <> lib
+R1253:1258 Stdlib.Strings.String <> <> lib
+R1260:1262 Stdlib.micromega.Lia <> <> lib
+def 1297:1329 <> madelungexceptionistheoremSurface
+R1333:1338 Stdlib.Strings.String <> string ind
+def 1398:1429 <> madelungExceptionIsTheoremMarker
+R1433:1438 Stdlib.Strings.String <> string ind
+prf 1503:1545 <> madelung_exception_is_theorem_surface_named
+R1584:1587 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1551:1583 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungexceptionistheoremSurface def
+prf 1625:1666 <> madelung_exception_is_theorem_marker_named
+R1704:1707 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1672:1703 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremMarker def
+ind 1972:2005 <> MadelungExceptionIsTheoremModality
+constr 2021:2057 <> madelung_exception_is_theorem_unwired
+constr 2063:2099 <> madelung_exception_is_theorem_assumed
+constr 2105:2140 <> madelung_exception_is_theorem_proved
+constr 2146:2184 <> madelung_exception_is_theorem_surrogate
+scheme 1972:2005 <> MadelungExceptionIsTheoremModality_rect
+scheme 1972:2005 <> MadelungExceptionIsTheoremModality_ind
+scheme 1972:2005 <> MadelungExceptionIsTheoremModality_rec
+scheme 1972:2005 <> MadelungExceptionIsTheoremModality_sind
+def 2199:2239 <> madelungExceptionIsTheoremModalityCurrent
+R2243:2276 UMST.ChemConstants.MadelungExceptionIsTheorem <> MadelungExceptionIsTheoremModality ind
+R2283:2319 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelung_exception_is_theorem_unwired constr
+def 2334:2382 <> madelung_exception_is_theorem_lattice_cardinality
+R2386:2388 Corelib.Init.Datatypes <> nat ind
+prf 2403:2459 <> madelung_exception_is_theorem_lattice_cardinality_is_four
+R2514:2516 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2465:2513 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelung_exception_is_theorem_lattice_cardinality def
+prf 2552:2604 <> madelung_exception_is_theorem_lattice_not_118_squared
+R2686:2688 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2610:2613 Corelib.Init.Datatypes <> negb def
+R2616:2622 Stdlib.Arith.PeanoNat Nat eqb def
+R2624:2672 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelung_exception_is_theorem_lattice_cardinality def
+R2678:2680 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2689:2692 Corelib.Init.Datatypes <> true constr
+R2711:2759 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelung_exception_is_theorem_lattice_cardinality def
+def 3017:3062 <> crossClassifierMadelungExceptionIsTheoremRowId
+R3066:3071 Stdlib.Strings.String <> string ind
+prf 3090:3145 <> cross_classifier_madelung_exception_is_theorem_row_named
+R3197:3199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3151:3196 UMST.ChemConstants.MadelungExceptionIsTheorem <> crossClassifierMadelungExceptionIsTheoremRowId def
+ind 3468:3497 <> MadelungExceptionTheoremBucket
+constr 3513:3551 <> theorem_bucket_named_madelung_exception
+constr 3557:3598 <> theorem_bucket_actinide_madelung_exception
+constr 3604:3643 <> theorem_bucket_dblock_madelung_exception
+constr 3649:3681 <> theorem_bucket_lr_honest_override
+scheme 3468:3497 <> MadelungExceptionTheoremBucket_rect
+scheme 3468:3497 <> MadelungExceptionTheoremBucket_ind
+scheme 3468:3497 <> MadelungExceptionTheoremBucket_rec
+scheme 3468:3497 <> MadelungExceptionTheoremBucket_sind
+def 3696:3728 <> madelungExceptionTheoremBucketTag
+R3735:3764 UMST.ChemConstants.MadelungExceptionIsTheorem <> MadelungExceptionTheoremBucket ind
+binder 3731:3731 <> b:5
+R3769:3774 Stdlib.Strings.String <> string ind
+R3787:3787 UMST.ChemConstants.MadelungExceptionIsTheorem <> b:5 var
+R3798:3836 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_named_madelung_exception constr
+R3880:3921 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_actinide_madelung_exception constr
+R3968:4007 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_dblock_madelung_exception constr
+R4052:4084 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_lr_honest_override constr
+prf 4136:4159 <> theorem_bucket_named_tag
+R4238:4242 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4165:4197 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionTheoremBucketTag def
+R4199:4237 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_named_madelung_exception constr
+prf 4311:4337 <> theorem_bucket_actinide_tag
+R4419:4423 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4343:4375 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionTheoremBucketTag def
+R4377:4418 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_actinide_madelung_exception constr
+prf 4495:4519 <> theorem_bucket_dblock_tag
+R4599:4603 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4525:4557 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionTheoremBucketTag def
+R4559:4598 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_dblock_madelung_exception constr
+prf 4673:4693 <> theorem_bucket_lr_tag
+R4766:4770 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4699:4731 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionTheoremBucketTag def
+R4733:4765 UMST.ChemConstants.MadelungExceptionIsTheorem <> theorem_bucket_lr_honest_override constr
+def 4842:4880 <> madelung_exception_theorem_bucket_count
+R4884:4886 Corelib.Init.Datatypes <> nat ind
+prf 4901:4947 <> madelung_exception_theorem_bucket_count_is_four
+R4992:4994 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4953:4991 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelung_exception_theorem_bucket_count def
+def 5262:5292 <> namedMadelungExceptionIsTheorem
+R5300:5313 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 5295:5296 <> ex:7
+R5362:5367 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5328:5358 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R5360:5361 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:7 var
+R5368:5399 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R5401:5402 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:7 var
+prf 5412:5446 <> named_madelung_exception_is_theorem
+R5454:5467 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 5449:5450 <> ex:8
+R5474:5504 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R5506:5507 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:8 var
+R5526:5556 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R5567:5603 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_is_madelung_exception thm
+R5567:5603 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_is_madelung_exception thm
+prf 5618:5649 <> la_madelung_exception_is_theorem
+R5655:5685 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R5687:5704 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R5720:5754 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+R5720:5754 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+prf 5769:5800 <> ce_madelung_exception_is_theorem
+R5806:5836 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R5838:5855 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R5871:5905 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+R5871:5905 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+prf 5920:5951 <> gd_madelung_exception_is_theorem
+R5957:5987 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R5989:6006 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R6022:6056 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+R6022:6056 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+prf 6071:6102 <> pt_madelung_exception_is_theorem
+R6108:6138 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R6140:6157 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R6173:6207 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+R6173:6207 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+prf 6222:6253 <> au_madelung_exception_is_theorem
+R6259:6289 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R6291:6308 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+R6324:6358 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+R6324:6358 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+def 6378:6413 <> allNamedMadelungExceptionsAreTheorem
+R6439:6452 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 6434:6435 <> ex:9
+R6455:6485 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R6487:6488 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:9 var
+prf 6498:6538 <> all_named_madelung_exceptions_are_theorem
+R6544:6579 UMST.ChemConstants.MadelungExceptionIsTheorem <> allNamedMadelungExceptionsAreTheorem def
+R6598:6633 UMST.ChemConstants.MadelungExceptionIsTheorem <> allNamedMadelungExceptionsAreTheorem def
+R6657:6691 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+R6657:6691 UMST.ChemConstants.MadelungExceptionIsTheorem <> named_madelung_exception_is_theorem thm
+def 6932:6963 <> dBlockMadelungExceptionIsTheorem
+R6971:6985 UMST.ChemConstants.DBlockOccupancyExceptions <> DBlockException ind
+binder 6966:6967 <> ex:10
+R7000:7033 UMST.ChemConstants.DBlockOccupancyExceptions <> dBlockExceptionIsMadelungException def
+R7035:7036 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:10 var
+prf 7046:7082 <> d_block_madelung_exception_is_theorem
+R7090:7104 UMST.ChemConstants.DBlockOccupancyExceptions <> DBlockException ind
+binder 7085:7086 <> ex:11
+R7111:7142 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7144:7145 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:11 var
+R7164:7195 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7206:7244 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_is_madelung_exception thm
+R7206:7244 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_is_madelung_exception thm
+prf 7259:7290 <> cr_madelung_exception_is_theorem
+R7296:7327 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7329:7348 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_cr constr
+R7364:7400 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R7364:7400 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 7415:7446 <> cu_madelung_exception_is_theorem
+R7452:7483 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7485:7504 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_cu constr
+R7520:7556 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R7520:7556 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 7571:7602 <> nb_madelung_exception_is_theorem
+R7608:7639 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7641:7660 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_nb constr
+R7676:7712 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R7676:7712 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 7727:7758 <> mo_madelung_exception_is_theorem
+R7764:7795 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7797:7816 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_mo constr
+R7832:7868 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R7832:7868 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 7883:7914 <> ru_madelung_exception_is_theorem
+R7920:7951 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R7953:7972 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_ru constr
+R7988:8024 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R7988:8024 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 8039:8070 <> rh_madelung_exception_is_theorem
+R8076:8107 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R8109:8128 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_rh constr
+R8144:8180 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R8144:8180 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 8195:8226 <> pd_madelung_exception_is_theorem
+R8232:8263 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R8265:8284 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_pd constr
+R8300:8336 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R8300:8336 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+prf 8351:8382 <> ag_madelung_exception_is_theorem
+R8388:8419 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R8421:8440 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_exception_ag constr
+R8456:8492 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R8456:8492 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+def 8512:8548 <> allDBlockMadelungExceptionsAreTheorem
+R8574:8588 UMST.ChemConstants.DBlockOccupancyExceptions <> DBlockException ind
+binder 8569:8570 <> ex:12
+R8591:8622 UMST.ChemConstants.MadelungExceptionIsTheorem <> dBlockMadelungExceptionIsTheorem def
+R8624:8625 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:12 var
+prf 8635:8677 <> all_d_block_madelung_exceptions_are_theorem
+R8683:8719 UMST.ChemConstants.MadelungExceptionIsTheorem <> allDBlockMadelungExceptionsAreTheorem def
+R8738:8774 UMST.ChemConstants.MadelungExceptionIsTheorem <> allDBlockMadelungExceptionsAreTheorem def
+R8798:8834 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+R8798:8834 UMST.ChemConstants.MadelungExceptionIsTheorem <> d_block_madelung_exception_is_theorem thm
+def 9077:9110 <> actinideMadelungExceptionIsTheorem
+R9118:9134 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 9113:9114 <> ex:13
+R9149:9184 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R9186:9187 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:13 var
+prf 9197:9234 <> actinide_madelung_exception_is_theorem
+R9242:9258 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 9237:9238 <> ex:14
+R9302:9307 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9265:9298 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R9300:9301 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:14 var
+R9345:9350 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9308:9341 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R9343:9344 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:14 var
+R9351:9385 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R9387:9388 UMST.ChemConstants.MadelungExceptionIsTheorem <> ex:14 var
+R9418:9457 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_is_madelung_exception thm
+R9418:9457 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_is_madelung_exception thm
+prf 9483:9514 <> ac_madelung_exception_is_theorem
+R9520:9553 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R9555:9575 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R9591:9633 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac_is_madelung_exception thm
+R9591:9633 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac_is_madelung_exception thm
+prf 9648:9679 <> th_madelung_exception_is_theorem
+R9685:9718 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R9720:9740 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R9756:9798 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th_is_madelung_exception thm
+R9756:9798 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th_is_madelung_exception thm
+prf 9813:9844 <> pa_madelung_exception_is_theorem
+R9850:9883 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R9885:9905 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R9921:9963 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa_is_madelung_exception thm
+R9921:9963 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa_is_madelung_exception thm
+prf 9978:10008 <> u_madelung_exception_is_theorem
+R10014:10047 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10049:10068 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R10084:10125 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u_is_madelung_exception thm
+R10084:10125 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u_is_madelung_exception thm
+prf 10140:10171 <> np_madelung_exception_is_theorem
+R10177:10210 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10212:10232 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R10248:10290 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np_is_madelung_exception thm
+R10248:10290 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np_is_madelung_exception thm
+prf 10305:10336 <> cm_madelung_exception_is_theorem
+R10342:10375 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10377:10397 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R10413:10455 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm_is_madelung_exception thm
+R10413:10455 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm_is_madelung_exception thm
+prf 10470:10502 <> lr_not_madelung_exception_theorem
+R10508:10509 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10510:10543 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10545:10565 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+R10581:10624 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr_not_madelung_exception thm
+R10581:10624 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr_not_madelung_exception thm
+def 10644:10682 <> sixActinideMadelungExceptionsAreTheorem
+R10752:10757 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10696:10729 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10731:10751 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R10814:10819 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10758:10791 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10793:10813 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R10876:10881 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10820:10853 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10855:10875 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R10937:10942 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10882:10915 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10917:10936 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R10999:11004 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10943:10976 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R10978:10998 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R11005:11038 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R11040:11060 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+prf 11070:11113 <> six_actinide_madelung_exceptions_are_theorem
+R11119:11157 UMST.ChemConstants.MadelungExceptionIsTheorem <> sixActinideMadelungExceptionsAreTheorem def
+R11193:11224 UMST.ChemConstants.MadelungExceptionIsTheorem <> ac_madelung_exception_is_theorem thm
+R11236:11267 UMST.ChemConstants.MadelungExceptionIsTheorem <> th_madelung_exception_is_theorem thm
+R11279:11310 UMST.ChemConstants.MadelungExceptionIsTheorem <> pa_madelung_exception_is_theorem thm
+R11322:11352 UMST.ChemConstants.MadelungExceptionIsTheorem <> u_madelung_exception_is_theorem thm
+R11364:11395 UMST.ChemConstants.MadelungExceptionIsTheorem <> np_madelung_exception_is_theorem thm
+R11407:11438 UMST.ChemConstants.MadelungExceptionIsTheorem <> cm_madelung_exception_is_theorem thm
+R11193:11224 UMST.ChemConstants.MadelungExceptionIsTheorem <> ac_madelung_exception_is_theorem thm
+R11236:11267 UMST.ChemConstants.MadelungExceptionIsTheorem <> th_madelung_exception_is_theorem thm
+R11279:11310 UMST.ChemConstants.MadelungExceptionIsTheorem <> pa_madelung_exception_is_theorem thm
+R11322:11352 UMST.ChemConstants.MadelungExceptionIsTheorem <> u_madelung_exception_is_theorem thm
+R11364:11395 UMST.ChemConstants.MadelungExceptionIsTheorem <> np_madelung_exception_is_theorem thm
+R11407:11438 UMST.ChemConstants.MadelungExceptionIsTheorem <> cm_madelung_exception_is_theorem thm
+def 11684:11693 <> plutoniumZ
+R11697:11699 Corelib.Init.Datatypes <> nat ind
+prf 11715:11731 <> plutonium_z_is_94
+R11745:11747 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11735:11744 UMST.ChemConstants.MadelungExceptionIsTheorem <> plutoniumZ def
+def 11793:11801 <> natInList
+R11808:11810 Corelib.Init.Datatypes <> nat ind
+binder 11804:11804 <> z:15
+R11819:11822 Corelib.Init.Datatypes <> list ind
+R11824:11826 Corelib.Init.Datatypes <> nat ind
+binder 11814:11815 <> zs:16
+R11831:11834 Corelib.Init.Datatypes <> bool ind
+R11841:11847 Stdlib.Lists.List <> existsb def
+R11861:11862 UMST.ChemConstants.MadelungExceptionIsTheorem <> zs:16 var
+R11850:11856 Stdlib.Arith.PeanoNat Nat eqb def
+R11858:11858 UMST.ChemConstants.MadelungExceptionIsTheorem <> z:15 var
+def 11877:11900 <> isAnyOccupancyExceptionZ
+R11907:11909 Corelib.Init.Datatypes <> nat ind
+binder 11903:11903 <> z:17
+R11914:11917 Corelib.Init.Datatypes <> bool ind
+R11995:12000 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R11955:11960 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R11924:11932 UMST.ChemConstants.MadelungExceptionIsTheorem <> natInList def
+R11934:11934 UMST.ChemConstants.MadelungExceptionIsTheorem <> z:17 var
+R11936:11954 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> namedExceptionZList def
+R11961:11969 UMST.ChemConstants.MadelungExceptionIsTheorem <> natInList def
+R11971:11971 UMST.ChemConstants.MadelungExceptionIsTheorem <> z:17 var
+R11973:11994 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> actinideExceptionZList def
+R12001:12009 UMST.ChemConstants.MadelungExceptionIsTheorem <> natInList def
+R12011:12011 UMST.ChemConstants.MadelungExceptionIsTheorem <> z:17 var
+R12013:12032 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> dBlockExceptionZList def
+prf 12042:12070 <> plutonium_not_any_exception_z
+R12111:12113 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12076:12099 UMST.ChemConstants.MadelungExceptionIsTheorem <> isAnyOccupancyExceptionZ def
+R12101:12110 UMST.ChemConstants.MadelungExceptionIsTheorem <> plutoniumZ def
+R12114:12118 Corelib.Init.Datatypes <> false constr
+R12137:12160 UMST.ChemConstants.MadelungExceptionIsTheorem <> isAnyOccupancyExceptionZ def
+R12163:12172 UMST.ChemConstants.MadelungExceptionIsTheorem <> plutoniumZ def
+def 12439:12447 <> platinumZ
+R12451:12453 Corelib.Init.Datatypes <> nat ind
+def 12473:12485 <> darmstadtiumZ
+R12489:12491 Corelib.Init.Datatypes <> nat ind
+def 12512:12531 <> periodHomologZOffset
+R12535:12537 Corelib.Init.Datatypes <> nat ind
+prf 12553:12568 <> platinum_z_is_78
+R12581:12583 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12572:12580 UMST.ChemConstants.MadelungExceptionIsTheorem <> platinumZ def
+prf 12624:12644 <> darmstadtium_z_is_110
+R12661:12663 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12648:12660 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtiumZ def
+prf 12705:12733 <> period_homolog_z_offset_is_32
+R12757:12759 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12737:12756 UMST.ChemConstants.MadelungExceptionIsTheorem <> periodHomologZOffset def
+prf 12800:12821 <> ds_pt_homolog_z_offset
+R12840:12842 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12827:12839 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtiumZ def
+R12852:12854 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R12843:12851 UMST.ChemConstants.MadelungExceptionIsTheorem <> platinumZ def
+R12855:12874 UMST.ChemConstants.MadelungExceptionIsTheorem <> periodHomologZOffset def
+R12893:12905 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtiumZ def
+R12908:12916 UMST.ChemConstants.MadelungExceptionIsTheorem <> platinumZ def
+R12919:12938 UMST.ChemConstants.MadelungExceptionIsTheorem <> periodHomologZOffset def
+prf 12968:13011 <> platinum_named_madelung_exception_is_theorem
+R13017:13047 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R13049:13066 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R13082:13113 UMST.ChemConstants.MadelungExceptionIsTheorem <> pt_madelung_exception_is_theorem thm
+R13082:13113 UMST.ChemConstants.MadelungExceptionIsTheorem <> pt_madelung_exception_is_theorem thm
+prf 13128:13161 <> darmstadtium_not_named_exception_z
+R13210:13212 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13167:13175 UMST.ChemConstants.MadelungExceptionIsTheorem <> natInList def
+R13177:13189 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtiumZ def
+R13191:13209 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> namedExceptionZList def
+R13213:13217 Corelib.Init.Datatypes <> false constr
+R13236:13244 UMST.ChemConstants.MadelungExceptionIsTheorem <> natInList def
+R13247:13259 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtiumZ def
+prf 13296:13333 <> ds_pt_homolog_theorem_buckets_distinct
+R13389:13394 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13339:13369 UMST.ChemConstants.MadelungExceptionIsTheorem <> namedMadelungExceptionIsTheorem def
+R13371:13388 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R13438:13440 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13395:13403 UMST.ChemConstants.MadelungExceptionIsTheorem <> natInList def
+R13405:13417 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtiumZ def
+R13419:13437 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> namedExceptionZList def
+R13441:13445 Corelib.Init.Datatypes <> false constr
+R13471:13514 UMST.ChemConstants.MadelungExceptionIsTheorem <> platinum_named_madelung_exception_is_theorem thm
+R13524:13557 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtium_not_named_exception_z thm
+R13471:13514 UMST.ChemConstants.MadelungExceptionIsTheorem <> platinum_named_madelung_exception_is_theorem thm
+R13524:13557 UMST.ChemConstants.MadelungExceptionIsTheorem <> darmstadtium_not_named_exception_z thm
+def 13656:13687 <> homologExceptionNotCopyAuthority
+R13691:13696 Stdlib.Strings.String <> string ind
+def 13774:13802 <> homologExceptionNotCopyCellId
+R13806:13811 Stdlib.Strings.String <> string ind
+prf 13870:13901 <> homolog_exception_not_copy_cited
+R14002:14007 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13939:13944 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13907:13938 UMST.ChemConstants.MadelungExceptionIsTheorem <> homologExceptionNotCopyAuthority def
+R14008:14012 Corelib.Init.Logic <> False ind
+prf 14065:14098 <> homolog_exception_not_copy_cell_id
+R14133:14137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14104:14132 UMST.ChemConstants.MadelungExceptionIsTheorem <> homologExceptionNotCopyCellId def
+def 14444:14457 <> soleAxiomCount
+R14461:14463 Corelib.Init.Datatypes <> nat ind
+prf 14478:14500 <> sole_axiom_count_is_one
+R14518:14520 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14504:14517 UMST.ChemConstants.MadelungExceptionIsTheorem <> soleAxiomCount def
+def 14561:14587 <> madelungExceptionIsNewAxiom
+R14599:14603 Corelib.Init.Logic <> False ind
+prf 14613:14644 <> madelung_exception_not_new_axiom
+R14648:14649 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R14650:14676 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsNewAxiom def
+def 14721:14750 <> observedOverrideNotSecondAxiom
+R14754:14759 Stdlib.Strings.String <> string ind
+prf 14818:14851 <> observed_override_not_second_axiom
+R14887:14890 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14857:14886 UMST.ChemConstants.MadelungExceptionIsTheorem <> observedOverrideNotSecondAxiom def
+def 15157:15188 <> madelungExceptionIsTheoremCellId
+R15192:15197 Stdlib.Strings.String <> string ind
+def 15280:15313 <> madelungExceptionIsTheoremNonClaim
+R15317:15322 Stdlib.Strings.String <> string ind
+def 15782:15819 <> madelungExceptionIsTheoremIntAuthority
+R15823:15828 Stdlib.Strings.String <> string ind
+def 15896:15938 <> madelungExceptionIsTheoremQlatticeAuthority
+R15942:15947 Stdlib.Strings.String <> string ind
+def 16000:16047 <> madelungExceptionIsTheoremExceptionSetsAuthority
+R16051:16056 Stdlib.Strings.String <> string ind
+def 16132:16176 <> madelungExceptionIsTheoremExceptionSetsCellId
+R16180:16185 Stdlib.Strings.String <> string ind
+def 16247:16293 <> madelungExceptionIsTheoremMadelungWitnessCellId
+R16297:16302 Stdlib.Strings.String <> string ind
+prf 16351:16387 <> madelung_exception_is_theorem_cell_id
+R16425:16429 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16393:16424 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremCellId def
+prf 16526:16574 <> madelung_exception_is_theorem_cites_int_authority
+R16618:16622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16580:16617 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremIntAuthority def
+prf 16704:16747 <> madelung_exception_is_theorem_cites_qlattice
+R16796:16798 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16753:16795 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremQlatticeAuthority def
+prf 16865:16916 <> madelung_exception_is_theorem_cites_madelung_witness
+R16960:16963 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16922:16959 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremIntAuthority def
+prf 17001:17050 <> madelung_exception_is_theorem_cites_exception_sets
+R17104:17107 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17056:17103 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremExceptionSetsAuthority def
+prf 17145:17203 <> madelung_exception_is_theorem_cites_exception_sets_disjoint
+R17237:17241 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17209:17236 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancyExceptionSetsCellId def
+R17310:17341 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_cell_id thm
+R17310:17341 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_cell_id thm
+prf 17356:17401 <> madelung_exception_is_theorem_modality_unwired
+R17448:17450 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17407:17447 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremModalityCurrent def
+R17451:17487 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelung_exception_is_theorem_unwired constr
+prf 17522:17579 <> madelung_exception_is_theorem_named_modality_still_unwired
+R17614:17616 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17585:17613 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyModalityCurrent def
+R17617:17639 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_unwired constr
+R17655:17686 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_modality_unwired thm
+R17655:17686 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_modality_unwired thm
+prf 17701:17761 <> madelung_exception_is_theorem_actinide_modality_still_unwired
+R17799:17801 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17767:17798 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyModalityCurrent def
+R17802:17827 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_unwired constr
+R17843:17877 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_modality_unwired thm
+R17843:17877 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_modality_unwired thm
+prf 17892:17951 <> madelung_exception_is_theorem_d_block_modality_still_unwired
+R17987:17989 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17957:17986 UMST.ChemConstants.DBlockOccupancyExceptions <> dBlockOccupancyModalityCurrent def
+R17990:18014 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_occupancy_unwired constr
+R18030:18063 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_occupancy_modality_unwired thm
+R18030:18063 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_occupancy_modality_unwired thm
+prf 18078:18144 <> madelung_exception_is_theorem_exception_sets_modality_still_unwired
+R18187:18189 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18150:18186 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancyExceptionSetsModalityCurrent def
+R18190:18221 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_unwired constr
+R18237:18277 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_modality_unwired thm
+R18237:18277 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_modality_unwired thm
+def 18520:18557 <> madelungExceptionIsTheoremConservation
+R18607:18612 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18571:18606 UMST.ChemConstants.MadelungExceptionIsTheorem <> allNamedMadelungExceptionsAreTheorem def
+R18650:18655 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18613:18649 UMST.ChemConstants.MadelungExceptionIsTheorem <> allDBlockMadelungExceptionsAreTheorem def
+R18695:18700 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18656:18694 UMST.ChemConstants.MadelungExceptionIsTheorem <> sixActinideMadelungExceptionsAreTheorem def
+R18701:18702 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R18703:18736 UMST.ChemConstants.MadelungExceptionIsTheorem <> actinideMadelungExceptionIsTheorem def
+R18738:18758 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+prf 18768:18809 <> madelung_exception_is_theorem_conservation
+R18815:18852 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremConservation def
+R18871:18908 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremConservation def
+R18930:18970 UMST.ChemConstants.MadelungExceptionIsTheorem <> all_named_madelung_exceptions_are_theorem thm
+R18930:18970 UMST.ChemConstants.MadelungExceptionIsTheorem <> all_named_madelung_exceptions_are_theorem thm
+R18996:19038 UMST.ChemConstants.MadelungExceptionIsTheorem <> all_d_block_madelung_exceptions_are_theorem thm
+R18996:19038 UMST.ChemConstants.MadelungExceptionIsTheorem <> all_d_block_madelung_exceptions_are_theorem thm
+R19068:19111 UMST.ChemConstants.MadelungExceptionIsTheorem <> six_actinide_madelung_exceptions_are_theorem thm
+R19068:19111 UMST.ChemConstants.MadelungExceptionIsTheorem <> six_actinide_madelung_exceptions_are_theorem thm
+R19128:19160 UMST.ChemConstants.MadelungExceptionIsTheorem <> lr_not_madelung_exception_theorem thm
+R19128:19160 UMST.ChemConstants.MadelungExceptionIsTheorem <> lr_not_madelung_exception_theorem thm
+def 19404:19435 <> madelungExceptionIsTheoremProved
+R19447:19451 Corelib.Init.Logic <> False ind
+prf 19461:19500 <> madelung_exception_is_theorem_not_proved
+R19504:19505 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R19506:19537 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremProved def
+def 19806:19853 <> madelungExceptionIsTheoremPhysicsGreenAuthorized
+R19865:19869 Corelib.Init.Logic <> False ind
+prf 19879:19927 <> madelung_exception_is_theorem_physics_green_false
+R19933:19934 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R19935:19982 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremPhysicsGreenAuthorized def
+prf 20022:20076 <> madelung_exception_is_theorem_named_physics_green_false
+R20082:20083 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20084:20119 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyPhysicsGreenAuthorized def
+R20135:20169 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_physics_green_false thm
+R20135:20169 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_physics_green_false thm
+prf 20184:20241 <> madelung_exception_is_theorem_actinide_physics_green_false
+R20247:20248 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20249:20287 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyPhysicsGreenAuthorized def
+R20303:20340 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_physics_green_false thm
+R20303:20340 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_physics_green_false thm
+prf 20355:20411 <> madelung_exception_is_theorem_d_block_physics_green_false
+R20417:20418 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20419:20455 UMST.ChemConstants.DBlockOccupancyExceptions <> dBlockOccupancyPhysicsGreenAuthorized def
+R20471:20507 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_occupancy_physics_green_false thm
+R20471:20507 UMST.ChemConstants.DBlockOccupancyExceptions <> d_block_occupancy_physics_green_false thm
+prf 20522:20585 <> madelung_exception_is_theorem_exception_sets_physics_green_false
+R20591:20592 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20593:20636 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancyExceptionSetsPhysicsGreenAuthorized def
+R20652:20695 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_physics_green_false thm
+R20652:20695 UMST.ChemConstants.OccupancyExceptionSetsDisjoint <> occupancy_exception_sets_physics_green_false thm
+def 20938:20978 <> madelungExceptionIsTheoremProductionWired
+R20990:20994 Corelib.Init.Logic <> False ind
+prf 21004:21053 <> madelung_exception_is_theorem_not_production_wired
+R21059:21060 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R21061:21101 UMST.ChemConstants.MadelungExceptionIsTheorem <> madelungExceptionIsTheoremProductionWired def
+def 21146:21168 <> wave100NotWiredLibOrEos
+R21172:21177 Stdlib.Strings.String <> string ind
+prf 21277:21304 <> wave100_not_wired_lib_or_eos
+R21333:21336 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21310:21332 UMST.ChemConstants.MadelungExceptionIsTheorem <> wave100NotWiredLibOrEos def

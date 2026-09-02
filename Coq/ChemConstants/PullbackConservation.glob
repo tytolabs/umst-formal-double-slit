@@ -1,0 +1,406 @@
+DIGEST a520096feaf3a864a04c901d701f6083
+FUMST.ChemConstants.PullbackConservation
+R1051:1055 Stdlib.Arith.Arith <> <> lib
+R1057:1062 Stdlib.Strings.String <> <> lib
+R1064:1067 Stdlib.Bool.Bool <> <> lib
+R1069:1071 Stdlib.micromega.Lia <> <> lib
+ind 1329:1356 <> PullbackConservationModality
+constr 1372:1400 <> pullback_conservation_unwired
+constr 1406:1434 <> pullback_conservation_assumed
+constr 1440:1467 <> pullback_conservation_proved
+constr 1473:1503 <> pullback_conservation_surrogate
+scheme 1329:1356 <> PullbackConservationModality_rect
+scheme 1329:1356 <> PullbackConservationModality_ind
+scheme 1329:1356 <> PullbackConservationModality_rec
+scheme 1329:1356 <> PullbackConservationModality_sind
+def 1518:1552 <> pullbackConservationModalityCurrent
+R1556:1583 UMST.ChemConstants.PullbackConservation <> PullbackConservationModality ind
+R1590:1618 UMST.ChemConstants.PullbackConservation <> pullback_conservation_unwired constr
+ind 1854:1875 <> SubstructureOverlapTag
+constr 1891:1909 <> overlap_quartz_vein
+constr 1915:1936 <> overlap_sulfide_matrix
+constr 1942:1965 <> overlap_carbonate_gangue
+scheme 1854:1875 <> SubstructureOverlapTag_rect
+scheme 1854:1875 <> SubstructureOverlapTag_ind
+scheme 1854:1875 <> SubstructureOverlapTag_rec
+scheme 1854:1875 <> SubstructureOverlapTag_sind
+ind 1979:2007 <> SharedSubstructureDiagramKind
+constr 2023:2038 <> diagram_pullback
+constr 2044:2058 <> diagram_pushout
+scheme 1979:2007 <> SharedSubstructureDiagramKind_rect
+scheme 1979:2007 <> SharedSubstructureDiagramKind_ind
+scheme 1979:2007 <> SharedSubstructureDiagramKind_rec
+scheme 1979:2007 <> SharedSubstructureDiagramKind_sind
+rec 2069:2101 <> SharedSubstructureDiagramScaffold
+proj 2117:2128 <> diagram_kind
+proj 2165:2179 <> diagram_overlap
+proj 2209:2224 <> diagram_left_leg
+proj 2235:2251 <> diagram_right_leg
+R2132:2160 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramKind ind
+R2183:2204 UMST.ChemConstants.PullbackConservation <> SubstructureOverlapTag ind
+R2228:2230 Corelib.Init.Datatypes <> nat ind
+R2255:2257 Corelib.Init.Datatypes <> nat ind
+def 2274:2288 <> overlap_tag_beq
+R2297:2318 UMST.ChemConstants.PullbackConservation <> SubstructureOverlapTag ind
+binder 2291:2291 <> a:12
+binder 2293:2293 <> b:13
+R2323:2326 Corelib.Init.Datatypes <> bool ind
+R2342:2342 UMST.ChemConstants.PullbackConservation <> b:13 var
+R2339:2339 UMST.ChemConstants.PullbackConservation <> a:12 var
+R2353:2371 UMST.ChemConstants.PullbackConservation <> overlap_quartz_vein constr
+R2374:2392 UMST.ChemConstants.PullbackConservation <> overlap_quartz_vein constr
+R2397:2400 Corelib.Init.Datatypes <> true constr
+R2406:2427 UMST.ChemConstants.PullbackConservation <> overlap_sulfide_matrix constr
+R2430:2451 UMST.ChemConstants.PullbackConservation <> overlap_sulfide_matrix constr
+R2456:2459 Corelib.Init.Datatypes <> true constr
+R2465:2488 UMST.ChemConstants.PullbackConservation <> overlap_carbonate_gangue constr
+R2491:2514 UMST.ChemConstants.PullbackConservation <> overlap_carbonate_gangue constr
+R2519:2522 Corelib.Init.Datatypes <> true constr
+R2536:2540 Corelib.Init.Datatypes <> false constr
+prf 2556:2575 <> overlap_tag_beq_refl
+R2582:2603 UMST.ChemConstants.PullbackConservation <> SubstructureOverlapTag ind
+binder 2578:2578 <> t:16
+R2629:2631 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2610:2624 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq def
+R2626:2626 UMST.ChemConstants.PullbackConservation <> t:16 var
+R2628:2628 UMST.ChemConstants.PullbackConservation <> t:16 var
+R2632:2635 Corelib.Init.Datatypes <> true constr
+def 2687:2702 <> diagram_kind_beq
+R2711:2739 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramKind ind
+binder 2705:2705 <> a:17
+binder 2707:2707 <> b:18
+R2744:2747 Corelib.Init.Datatypes <> bool ind
+R2763:2763 UMST.ChemConstants.PullbackConservation <> b:18 var
+R2760:2760 UMST.ChemConstants.PullbackConservation <> a:17 var
+R2774:2789 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R2792:2807 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R2812:2815 Corelib.Init.Datatypes <> true constr
+R2821:2835 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R2838:2852 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R2857:2860 Corelib.Init.Datatypes <> true constr
+R2874:2878 Corelib.Init.Datatypes <> false constr
+prf 2894:2914 <> diagram_kind_beq_refl
+R2921:2949 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramKind ind
+binder 2917:2917 <> k:21
+R2976:2978 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2956:2971 UMST.ChemConstants.PullbackConservation <> diagram_kind_beq def
+R2973:2973 UMST.ChemConstants.PullbackConservation <> k:21 var
+R2975:2975 UMST.ChemConstants.PullbackConservation <> k:21 var
+R2979:2982 Corelib.Init.Datatypes <> true constr
+def 3034:3046 <> legs_distinct
+R3053:3085 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+binder 3049:3049 <> d:22
+R3090:3093 Corelib.Init.Datatypes <> bool ind
+R3100:3103 Corelib.Init.Datatypes <> negb def
+R3106:3112 Stdlib.Arith.PeanoNat Nat eqb def
+R3117:3132 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R3114:3114 UMST.ChemConstants.PullbackConservation <> d:22 var
+R3138:3154 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R3135:3135 UMST.ChemConstants.PullbackConservation <> d:22 var
+def 3171:3194 <> pullback_quartz_scaffold
+R3198:3230 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+R3240:3251 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R3240:3251 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R3240:3251 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R3279:3293 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R3279:3293 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R3324:3339 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R3324:3339 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R3352:3368 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R3352:3368 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R3256:3271 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R3298:3316 UMST.ChemConstants.PullbackConservation <> overlap_quartz_vein constr
+def 3391:3414 <> pushout_sulfide_scaffold
+R3418:3450 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+R3460:3471 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R3460:3471 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R3460:3471 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R3498:3512 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R3498:3512 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R3546:3561 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R3546:3561 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R3574:3590 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R3574:3590 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R3476:3490 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R3517:3538 UMST.ChemConstants.PullbackConservation <> overlap_sulfide_matrix constr
+def 3613:3639 <> shared_substructure_witness
+R3646:3678 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+binder 3642:3642 <> d:23
+R3685:3706 UMST.ChemConstants.PullbackConservation <> SubstructureOverlapTag ind
+R3716:3730 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R3713:3713 UMST.ChemConstants.PullbackConservation <> d:23 var
+def 3970:3994 <> universalPropertiesProved
+R3998:4001 Corelib.Init.Datatypes <> bool ind
+R4006:4010 Corelib.Init.Datatypes <> false constr
+prf 4020:4052 <> universal_properties_proved_false
+R4081:4083 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4056:4080 UMST.ChemConstants.PullbackConservation <> universalPropertiesProved def
+R4084:4088 Corelib.Init.Datatypes <> false constr
+def 4128:4146 <> cat02PullbackProved
+R4150:4153 Corelib.Init.Datatypes <> bool ind
+R4158:4162 Corelib.Init.Datatypes <> false constr
+prf 4172:4196 <> cat02_pullback_not_proved
+R4219:4221 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4200:4218 UMST.ChemConstants.PullbackConservation <> cat02PullbackProved def
+R4222:4226 Corelib.Init.Datatypes <> false constr
+def 4266:4288 <> not118SquaredGreenTable
+R4292:4295 Corelib.Init.Datatypes <> bool ind
+R4300:4303 Corelib.Init.Datatypes <> true constr
+prf 4313:4339 <> not_118_squared_green_table
+R4366:4368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4343:4365 UMST.ChemConstants.PullbackConservation <> not118SquaredGreenTable def
+R4369:4372 Corelib.Init.Datatypes <> true constr
+def 4634:4659 <> pullback_overlap_conserved
+R4666:4698 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+binder 4662:4662 <> d:24
+R4703:4706 Corelib.Init.Datatypes <> bool ind
+R4722:4733 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R4719:4719 UMST.ChemConstants.PullbackConservation <> d:24 var
+R4745:4760 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R4771:4785 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq def
+R4796:4822 UMST.ChemConstants.PullbackConservation <> shared_substructure_witness def
+R4824:4824 UMST.ChemConstants.PullbackConservation <> d:24 var
+R4838:4852 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R4835:4835 UMST.ChemConstants.PullbackConservation <> d:24 var
+R4859:4873 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R4878:4882 Corelib.Init.Datatypes <> false constr
+prf 4898:4930 <> pullback_quartz_overlap_conserved
+R4987:4989 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4936:4961 UMST.ChemConstants.PullbackConservation <> pullback_overlap_conserved def
+R4963:4986 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+R4990:4993 Corelib.Init.Datatypes <> true constr
+R5012:5037 UMST.ChemConstants.PullbackConservation <> pullback_overlap_conserved def
+R5040:5063 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+prf 5102:5131 <> pullback_identity_conservation
+R5148:5180 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+binder 5144:5144 <> d:25
+R5222:5229 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5203:5205 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5190:5201 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R5187:5187 UMST.ChemConstants.PullbackConservation <> d:25 var
+R5206:5221 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R5252:5259 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5245:5247 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5230:5242 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R5244:5244 UMST.ChemConstants.PullbackConservation <> d:25 var
+R5248:5251 Corelib.Init.Datatypes <> true constr
+R5288:5290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5260:5285 UMST.ChemConstants.PullbackConservation <> pullback_overlap_conserved def
+R5287:5287 UMST.ChemConstants.PullbackConservation <> d:25 var
+R5291:5294 Corelib.Init.Datatypes <> true constr
+R5337:5362 UMST.ChemConstants.PullbackConservation <> pullback_overlap_conserved def
+R5365:5391 UMST.ChemConstants.PullbackConservation <> shared_substructure_witness def
+R5422:5441 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq_refl thm
+R5444:5458 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R5422:5441 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq_refl thm
+R5444:5458 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R5422:5441 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq_refl thm
+R5444:5458 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+def 5719:5743 <> pushout_overlap_conserved
+R5750:5782 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+binder 5746:5746 <> d:26
+R5787:5790 Corelib.Init.Datatypes <> bool ind
+R5806:5817 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R5803:5803 UMST.ChemConstants.PullbackConservation <> d:26 var
+R5829:5843 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R5854:5868 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq def
+R5879:5905 UMST.ChemConstants.PullbackConservation <> shared_substructure_witness def
+R5907:5907 UMST.ChemConstants.PullbackConservation <> d:26 var
+R5921:5935 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R5918:5918 UMST.ChemConstants.PullbackConservation <> d:26 var
+R5942:5957 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R5962:5966 Corelib.Init.Datatypes <> false constr
+prf 5982:6014 <> pushout_sulfide_overlap_conserved
+R6070:6072 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6020:6044 UMST.ChemConstants.PullbackConservation <> pushout_overlap_conserved def
+R6046:6069 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+R6073:6076 Corelib.Init.Datatypes <> true constr
+R6095:6119 UMST.ChemConstants.PullbackConservation <> pushout_overlap_conserved def
+R6122:6145 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+prf 6184:6212 <> pushout_identity_conservation
+R6229:6261 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+binder 6225:6225 <> d:27
+R6302:6309 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6284:6286 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6271:6282 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R6268:6268 UMST.ChemConstants.PullbackConservation <> d:27 var
+R6287:6301 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R6332:6339 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6325:6327 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6310:6322 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R6324:6324 UMST.ChemConstants.PullbackConservation <> d:27 var
+R6328:6331 Corelib.Init.Datatypes <> true constr
+R6367:6369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6340:6364 UMST.ChemConstants.PullbackConservation <> pushout_overlap_conserved def
+R6366:6366 UMST.ChemConstants.PullbackConservation <> d:27 var
+R6370:6373 Corelib.Init.Datatypes <> true constr
+R6416:6440 UMST.ChemConstants.PullbackConservation <> pushout_overlap_conserved def
+R6443:6469 UMST.ChemConstants.PullbackConservation <> shared_substructure_witness def
+R6500:6519 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq_refl thm
+R6522:6536 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R6500:6519 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq_refl thm
+R6522:6536 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R6500:6519 UMST.ChemConstants.PullbackConservation <> overlap_tag_beq_refl thm
+R6522:6536 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+def 6799:6811 <> is_limit_kind
+R6818:6846 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramKind ind
+binder 6814:6814 <> k:28
+R6851:6854 Corelib.Init.Datatypes <> bool ind
+R6867:6867 UMST.ChemConstants.PullbackConservation <> k:28 var
+R6878:6893 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R6898:6901 Corelib.Init.Datatypes <> true constr
+R6907:6921 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R6926:6930 Corelib.Init.Datatypes <> false constr
+prf 6946:6962 <> pullback_is_limit
+R6998:7000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6968:6980 UMST.ChemConstants.PullbackConservation <> is_limit_kind def
+R6982:6997 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R7001:7004 Corelib.Init.Datatypes <> true constr
+prf 7039:7055 <> pushout_not_limit
+R7090:7092 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7061:7073 UMST.ChemConstants.PullbackConservation <> is_limit_kind def
+R7075:7089 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R7093:7097 Corelib.Init.Datatypes <> false constr
+def 7137:7147 <> limitNotXor
+R7151:7154 Corelib.Init.Datatypes <> bool ind
+R7214:7219 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7161:7173 UMST.ChemConstants.PullbackConservation <> is_limit_kind def
+R7201:7212 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R7175:7198 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+R7220:7223 Corelib.Init.Datatypes <> negb def
+R7226:7238 UMST.ChemConstants.PullbackConservation <> is_limit_kind def
+R7266:7277 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R7240:7263 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+prf 7289:7306 <> limit_not_xor_true
+R7321:7323 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7310:7320 UMST.ChemConstants.PullbackConservation <> limitNotXor def
+R7324:7327 Corelib.Init.Datatypes <> true constr
+R7346:7356 UMST.ChemConstants.PullbackConservation <> limitNotXor def
+R7359:7382 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+R7385:7408 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+prf 7447:7467 <> limit_not_colimit_xor
+R7491:7496 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7484:7486 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7473:7483 UMST.ChemConstants.PullbackConservation <> limitNotXor def
+R7487:7490 Corelib.Init.Datatypes <> true constr
+R7534:7539 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7527:7529 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7497:7509 UMST.ChemConstants.PullbackConservation <> is_limit_kind def
+R7511:7526 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R7530:7533 Corelib.Init.Datatypes <> true constr
+R7569:7571 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7540:7552 UMST.ChemConstants.PullbackConservation <> is_limit_kind def
+R7554:7568 UMST.ChemConstants.PullbackConservation <> diagram_pushout constr
+R7572:7576 Corelib.Init.Datatypes <> false constr
+R7605:7622 UMST.ChemConstants.PullbackConservation <> limit_not_xor_true thm
+R7605:7622 UMST.ChemConstants.PullbackConservation <> limit_not_xor_true thm
+R7643:7659 UMST.ChemConstants.PullbackConservation <> pullback_is_limit thm
+R7669:7685 UMST.ChemConstants.PullbackConservation <> pushout_not_limit thm
+R7643:7659 UMST.ChemConstants.PullbackConservation <> pullback_is_limit thm
+R7669:7685 UMST.ChemConstants.PullbackConservation <> pushout_not_limit thm
+def 7932:7960 <> degenerate_carbonate_scaffold
+R7964:7996 UMST.ChemConstants.PullbackConservation <> SharedSubstructureDiagramScaffold rec
+R8006:8017 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R8006:8017 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R8006:8017 UMST.ChemConstants.PullbackConservation <> diagram_kind proj
+R8045:8059 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R8045:8059 UMST.ChemConstants.PullbackConservation <> diagram_overlap proj
+R8095:8110 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R8095:8110 UMST.ChemConstants.PullbackConservation <> diagram_left_leg proj
+R8123:8139 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R8123:8139 UMST.ChemConstants.PullbackConservation <> diagram_right_leg proj
+R8022:8037 UMST.ChemConstants.PullbackConservation <> diagram_pullback constr
+R8064:8087 UMST.ChemConstants.PullbackConservation <> overlap_carbonate_gangue constr
+prf 8157:8184 <> degenerate_legs_not_distinct
+R8233:8235 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8190:8202 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8204:8232 UMST.ChemConstants.PullbackConservation <> degenerate_carbonate_scaffold def
+R8236:8240 Corelib.Init.Datatypes <> false constr
+R8259:8271 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8274:8302 UMST.ChemConstants.PullbackConservation <> degenerate_carbonate_scaffold def
+prf 8339:8366 <> valid_pullback_legs_distinct
+R8410:8412 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8372:8384 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8386:8409 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+R8413:8416 Corelib.Init.Datatypes <> true constr
+R8435:8447 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8450:8473 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+prf 8510:8536 <> valid_pushout_legs_distinct
+R8580:8582 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8542:8554 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8556:8579 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+R8583:8586 Corelib.Init.Datatypes <> true constr
+R8605:8617 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8620:8643 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+prf 8682:8717 <> shared_substructure_fixture_scaffold
+R8781:8786 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8774:8776 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8723:8748 UMST.ChemConstants.PullbackConservation <> pullback_overlap_conserved def
+R8750:8773 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+R8777:8780 Corelib.Init.Datatypes <> true constr
+R8844:8849 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8837:8839 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8787:8811 UMST.ChemConstants.PullbackConservation <> pushout_overlap_conserved def
+R8813:8836 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+R8840:8843 Corelib.Init.Datatypes <> true constr
+R8895:8900 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8888:8890 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8850:8862 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8864:8887 UMST.ChemConstants.PullbackConservation <> pullback_quartz_scaffold def
+R8891:8894 Corelib.Init.Datatypes <> true constr
+R8939:8941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8901:8913 UMST.ChemConstants.PullbackConservation <> legs_distinct def
+R8915:8938 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_scaffold def
+R8942:8945 Corelib.Init.Datatypes <> true constr
+R8974:9006 UMST.ChemConstants.PullbackConservation <> pullback_quartz_overlap_conserved thm
+R8974:9006 UMST.ChemConstants.PullbackConservation <> pullback_quartz_overlap_conserved thm
+R9032:9064 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_overlap_conserved thm
+R9032:9064 UMST.ChemConstants.PullbackConservation <> pushout_sulfide_overlap_conserved thm
+R9087:9114 UMST.ChemConstants.PullbackConservation <> valid_pullback_legs_distinct thm
+R9124:9150 UMST.ChemConstants.PullbackConservation <> valid_pushout_legs_distinct thm
+R9087:9114 UMST.ChemConstants.PullbackConservation <> valid_pullback_legs_distinct thm
+R9124:9150 UMST.ChemConstants.PullbackConservation <> valid_pushout_legs_distinct thm
+def 9397:9429 <> sharedSubstructureLimitsAuthority
+R9433:9438 Stdlib.Strings.String <> string ind
+def 9509:9539 <> sharedSubstructureLeanAuthority
+R9543:9548 Stdlib.Strings.String <> string ind
+def 9621:9640 <> chemL0Cat02Authority
+R9644:9649 Stdlib.Strings.String <> string ind
+def 9686:9719 <> chemIntProveCat02PullbackAuthority
+R9723:9728 Stdlib.Strings.String <> string ind
+def 9781:9806 <> pullbackConservationCellId
+R9810:9815 Stdlib.Strings.String <> string ind
+def 9877:9904 <> pullbackConservationNonClaim
+R9908:9913 Stdlib.Strings.String <> string ind
+prf 10309:10337 <> pullback_conservation_cell_id
+R10369:10373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10343:10368 UMST.ChemConstants.PullbackConservation <> pullbackConservationCellId def
+prf 10449:10485 <> pullback_cites_shared_substructure_rs
+R10524:10529 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10491:10523 UMST.ChemConstants.PullbackConservation <> sharedSubstructureLimitsAuthority def
+prf 10567:10585 <> pullback_cites_lean
+R10622:10627 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10591:10621 UMST.ChemConstants.PullbackConservation <> sharedSubstructureLeanAuthority def
+prf 10665:10688 <> pullback_cites_l0_cat_02
+R10714:10716 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10694:10713 UMST.ChemConstants.PullbackConservation <> chemL0Cat02Authority def
+prf 10767:10797 <> pullback_cites_int_prove_cat_02
+R10837:10842 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10803:10836 UMST.ChemConstants.PullbackConservation <> chemIntProveCat02PullbackAuthority def
+def 11107:11142 <> pullbackSecondLawConservationFraming
+R11146:11151 Stdlib.Strings.String <> string ind
+prf 11237:11270 <> pullback_not_second_pullback_axiom
+R11312:11317 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11276:11311 UMST.ChemConstants.PullbackConservation <> pullbackSecondLawConservationFraming def
+prf 11376:11415 <> pullback_second_law_conservation_framing
+R11457:11462 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11421:11456 UMST.ChemConstants.PullbackConservation <> pullbackSecondLawConservationFraming def
+def 11731:11752 <> physicsGreenAuthorized
+R11764:11768 Corelib.Init.Logic <> False ind
+prf 11778:11805 <> pullback_physics_green_false
+R11811:11812 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R11813:11834 UMST.ChemConstants.PullbackConservation <> physicsGreenAuthorized def
+prf 11874:11898 <> pullback_modality_unwired
+R11939:11941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11904:11938 UMST.ChemConstants.PullbackConservation <> pullbackConservationModalityCurrent def
+R11942:11970 UMST.ChemConstants.PullbackConservation <> pullback_conservation_unwired constr

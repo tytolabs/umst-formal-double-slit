@@ -1,0 +1,1711 @@
+DIGEST 5d0974e806dfe44bdae4a5f7efb2c129
+FUMST.ChemConstants.DensityConservation
+R1448:1452 Stdlib.Arith.Arith <> <> lib
+R1454:1459 Stdlib.ZArith.ZArith <> <> lib
+R1461:1466 Stdlib.Strings.String <> <> lib
+R1468:1471 Stdlib.Bool.Bool <> <> lib
+R1473:1475 Stdlib.micromega.Lia <> <> lib
+R1477:1480 Stdlib.Lists.List <> <> lib
+R1490:1502 Stdlib.Lists.List ListNotations <> mod
+ind 1834:1860 <> DensityConservationModality
+constr 1876:1903 <> density_conservation_unwired
+constr 1909:1936 <> density_conservation_assumed
+constr 1942:1968 <> density_conservation_proved
+constr 1974:2003 <> density_conservation_surrogate
+scheme 1834:1860 <> DensityConservationModality_rect
+scheme 1834:1860 <> DensityConservationModality_ind
+scheme 1834:1860 <> DensityConservationModality_rec
+scheme 1834:1860 <> DensityConservationModality_sind
+def 2018:2051 <> densityConservationModalityCurrent
+R2055:2081 UMST.ChemConstants.DensityConservation <> DensityConservationModality ind
+R2088:2115 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+def 2130:2155 <> density_ladder_cardinality
+R2159:2161 Corelib.Init.Datatypes <> nat ind
+prf 2176:2209 <> density_ladder_cardinality_is_four
+R2241:2243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2215:2240 UMST.ChemConstants.DensityConservation <> density_ladder_cardinality def
+prf 2279:2308 <> density_ladder_not_118_squared
+R2367:2369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2314:2317 Corelib.Init.Datatypes <> negb def
+R2320:2326 Stdlib.Arith.PeanoNat Nat eqb def
+R2328:2353 UMST.ChemConstants.DensityConservation <> density_ladder_cardinality def
+R2359:2361 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2370:2373 Corelib.Init.Datatypes <> true constr
+R2392:2417 UMST.ChemConstants.DensityConservation <> density_ladder_cardinality def
+def 2752:2774 <> iupac_table_cardinality
+R2778:2780 Corelib.Init.Datatypes <> nat ind
+prf 2797:2826 <> iupac_table_cardinality_is_118
+R2855:2857 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2832:2854 UMST.ChemConstants.DensityConservation <> iupac_table_cardinality def
+def 2900:2922 <> density_element_z_valid
+R2929:2931 Corelib.Init.Datatypes <> nat ind
+binder 2925:2925 <> z:3
+R2936:2939 Corelib.Init.Datatypes <> bool ind
+R2957:2960 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2946:2952 Stdlib.Arith.PeanoNat Nat ltb def
+R2956:2956 UMST.ChemConstants.DensityConservation <> z:3 var
+R2961:2967 Stdlib.Arith.PeanoNat Nat leb def
+R2969:2969 UMST.ChemConstants.DensityConservation <> z:3 var
+R2971:2993 UMST.ChemConstants.DensityConservation <> iupac_table_cardinality def
+def 3008:3029 <> density_element_iron_z
+R3033:3035 Corelib.Init.Datatypes <> nat ind
+def 3055:3078 <> density_element_copper_z
+R3082:3084 Corelib.Init.Datatypes <> nat ind
+def 3104:3130 <> density_element_oganesson_z
+R3134:3136 Corelib.Init.Datatypes <> nat ind
+prf 3153:3172 <> density_iron_z_is_26
+R3200:3202 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3178:3199 UMST.ChemConstants.DensityConservation <> density_element_iron_z def
+prf 3239:3260 <> density_copper_z_is_29
+R3290:3292 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3266:3289 UMST.ChemConstants.DensityConservation <> density_element_copper_z def
+prf 3329:3354 <> density_oganesson_z_is_118
+R3387:3389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3360:3386 UMST.ChemConstants.DensityConservation <> density_element_oganesson_z def
+prf 3427:3447 <> density_fe_cu_z_valid
+R3506:3511 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3499:3501 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3453:3475 UMST.ChemConstants.DensityConservation <> density_element_z_valid def
+R3477:3498 UMST.ChemConstants.DensityConservation <> density_element_iron_z def
+R3502:3505 Corelib.Init.Datatypes <> true constr
+R3560:3562 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3512:3534 UMST.ChemConstants.DensityConservation <> density_element_z_valid def
+R3536:3559 UMST.ChemConstants.DensityConservation <> density_element_copper_z def
+R3563:3566 Corelib.Init.Datatypes <> true constr
+R3592:3614 UMST.ChemConstants.DensityConservation <> density_element_z_valid def
+R3617:3638 UMST.ChemConstants.DensityConservation <> density_element_iron_z def
+R3645:3668 UMST.ChemConstants.DensityConservation <> density_element_copper_z def
+R3671:3693 UMST.ChemConstants.DensityConservation <> iupac_table_cardinality def
+prf 3721:3745 <> density_oganesson_z_valid
+R3802:3804 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3751:3773 UMST.ChemConstants.DensityConservation <> density_element_z_valid def
+R3775:3801 UMST.ChemConstants.DensityConservation <> density_element_oganesson_z def
+R3805:3808 Corelib.Init.Datatypes <> true constr
+R3827:3849 UMST.ChemConstants.DensityConservation <> density_element_z_valid def
+R3852:3878 UMST.ChemConstants.DensityConservation <> density_element_oganesson_z def
+R3881:3903 UMST.ChemConstants.DensityConservation <> iupac_table_cardinality def
+ind 4165:4183 <> density_scalar_kind
+constr 4199:4228 <> scalar_signed_distance_generic
+constr 4234:4266 <> scalar_named_electron_density_rho
+constr 4272:4287 <> scalar_named_elf
+constr 4293:4308 <> scalar_named_nci
+constr 4314:4334 <> scalar_named_gate_sdf
+scheme 4165:4183 <> density_scalar_kind_rect
+scheme 4165:4183 <> density_scalar_kind_ind
+scheme 4165:4183 <> density_scalar_kind_rec
+scheme 4165:4183 <> density_scalar_kind_sind
+def 4349:4371 <> density_scalar_kind_beq
+R4382:4400 UMST.ChemConstants.DensityConservation <> density_scalar_kind ind
+binder 4374:4375 <> k1:6
+binder 4377:4378 <> k2:7
+R4405:4408 Corelib.Init.Datatypes <> bool ind
+R4425:4426 UMST.ChemConstants.DensityConservation <> k2:7 var
+R4421:4422 UMST.ChemConstants.DensityConservation <> k1:6 var
+R4437:4466 UMST.ChemConstants.DensityConservation <> scalar_signed_distance_generic constr
+R4469:4498 UMST.ChemConstants.DensityConservation <> scalar_signed_distance_generic constr
+R4503:4506 Corelib.Init.Datatypes <> true constr
+R4512:4544 UMST.ChemConstants.DensityConservation <> scalar_named_electron_density_rho constr
+R4547:4579 UMST.ChemConstants.DensityConservation <> scalar_named_electron_density_rho constr
+R4584:4587 Corelib.Init.Datatypes <> true constr
+R4593:4608 UMST.ChemConstants.DensityConservation <> scalar_named_elf constr
+R4611:4626 UMST.ChemConstants.DensityConservation <> scalar_named_elf constr
+R4631:4634 Corelib.Init.Datatypes <> true constr
+R4640:4655 UMST.ChemConstants.DensityConservation <> scalar_named_nci constr
+R4658:4673 UMST.ChemConstants.DensityConservation <> scalar_named_nci constr
+R4678:4681 Corelib.Init.Datatypes <> true constr
+R4687:4707 UMST.ChemConstants.DensityConservation <> scalar_named_gate_sdf constr
+R4710:4730 UMST.ChemConstants.DensityConservation <> scalar_named_gate_sdf constr
+R4735:4738 Corelib.Init.Datatypes <> true constr
+R4752:4756 Corelib.Init.Datatypes <> false constr
+def 4777:4803 <> densityScalarSignedDistance
+R4807:4825 UMST.ChemConstants.DensityConservation <> density_scalar_kind ind
+R4832:4861 UMST.ChemConstants.DensityConservation <> scalar_signed_distance_generic constr
+def 4876:4906 <> densityScalarElectronDensityRho
+R4910:4928 UMST.ChemConstants.DensityConservation <> density_scalar_kind ind
+R4935:4967 UMST.ChemConstants.DensityConservation <> scalar_named_electron_density_rho constr
+def 4982:5019 <> density_scalar_is_electron_density_rho
+R5026:5044 UMST.ChemConstants.DensityConservation <> density_scalar_kind ind
+binder 5022:5022 <> k:10
+R5049:5052 Corelib.Init.Datatypes <> bool ind
+R5065:5065 UMST.ChemConstants.DensityConservation <> k:10 var
+R5076:5108 UMST.ChemConstants.DensityConservation <> scalar_named_electron_density_rho constr
+R5113:5116 Corelib.Init.Datatypes <> true constr
+R5127:5131 Corelib.Init.Datatypes <> false constr
+def 5152:5190 <> density_scalar_sdf_not_rho_unless_named
+R5197:5215 UMST.ChemConstants.DensityConservation <> density_scalar_kind ind
+binder 5193:5193 <> k:12
+R5220:5223 Corelib.Init.Datatypes <> bool ind
+R5236:5236 UMST.ChemConstants.DensityConservation <> k:12 var
+R5247:5276 UMST.ChemConstants.DensityConservation <> scalar_signed_distance_generic constr
+R5281:5284 Corelib.Init.Datatypes <> true constr
+R5290:5322 UMST.ChemConstants.DensityConservation <> scalar_named_electron_density_rho constr
+R5327:5330 Corelib.Init.Datatypes <> true constr
+R5336:5351 UMST.ChemConstants.DensityConservation <> scalar_named_elf constr
+R5356:5359 Corelib.Init.Datatypes <> true constr
+R5365:5380 UMST.ChemConstants.DensityConservation <> scalar_named_nci constr
+R5385:5388 Corelib.Init.Datatypes <> true constr
+R5394:5414 UMST.ChemConstants.DensityConservation <> scalar_named_gate_sdf constr
+R5419:5422 Corelib.Init.Datatypes <> true constr
+prf 5438:5468 <> density_signed_distance_not_rho
+R5540:5542 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5474:5511 UMST.ChemConstants.DensityConservation <> density_scalar_is_electron_density_rho def
+R5513:5539 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+R5543:5547 Corelib.Init.Datatypes <> false constr
+prf 5582:5615 <> density_electron_density_rho_named
+R5691:5693 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5621:5658 UMST.ChemConstants.DensityConservation <> density_scalar_is_electron_density_rho def
+R5660:5690 UMST.ChemConstants.DensityConservation <> densityScalarElectronDensityRho def
+R5694:5697 Corelib.Init.Datatypes <> true constr
+prf 5732:5779 <> density_sdf_not_rho_unless_named_signed_distance
+R5852:5854 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5785:5823 UMST.ChemConstants.DensityConservation <> density_scalar_sdf_not_rho_unless_named def
+R5825:5851 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+R5855:5858 Corelib.Init.Datatypes <> true constr
+prf 5893:5937 <> density_sdf_not_rho_unless_named_electron_rho
+R6014:6016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5943:5981 UMST.ChemConstants.DensityConservation <> density_scalar_sdf_not_rho_unless_named def
+R5983:6013 UMST.ChemConstants.DensityConservation <> densityScalarElectronDensityRho def
+R6017:6020 Corelib.Init.Datatypes <> true constr
+prf 6055:6093 <> density_signed_distance_ne_electron_rho
+R6193:6195 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6099:6102 Corelib.Init.Datatypes <> negb def
+R6105:6127 UMST.ChemConstants.DensityConservation <> density_scalar_kind_beq def
+R6133:6159 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+R6161:6191 UMST.ChemConstants.DensityConservation <> densityScalarElectronDensityRho def
+R6196:6199 Corelib.Init.Datatypes <> true constr
+ind 6468:6479 <> density_rung
+constr 6495:6508 <> rung_micro_sdf
+constr 6514:6524 <> rung_te_sdf
+constr 6530:6537 <> rung_sdf
+constr 6543:6551 <> rung_frep
+scheme 6468:6479 <> density_rung_rect
+scheme 6468:6479 <> density_rung_ind
+scheme 6468:6479 <> density_rung_rec
+scheme 6468:6479 <> density_rung_sind
+def 6566:6581 <> density_rung_beq
+R6592:6603 UMST.ChemConstants.DensityConservation <> density_rung ind
+binder 6584:6585 <> r1:16
+binder 6587:6588 <> r2:17
+R6608:6611 Corelib.Init.Datatypes <> bool ind
+R6628:6629 UMST.ChemConstants.DensityConservation <> r2:17 var
+R6624:6625 UMST.ChemConstants.DensityConservation <> r1:16 var
+R6640:6653 UMST.ChemConstants.DensityConservation <> rung_micro_sdf constr
+R6656:6669 UMST.ChemConstants.DensityConservation <> rung_micro_sdf constr
+R6674:6677 Corelib.Init.Datatypes <> true constr
+R6683:6693 UMST.ChemConstants.DensityConservation <> rung_te_sdf constr
+R6696:6706 UMST.ChemConstants.DensityConservation <> rung_te_sdf constr
+R6711:6714 Corelib.Init.Datatypes <> true constr
+R6720:6727 UMST.ChemConstants.DensityConservation <> rung_sdf constr
+R6730:6737 UMST.ChemConstants.DensityConservation <> rung_sdf constr
+R6742:6745 Corelib.Init.Datatypes <> true constr
+R6751:6759 UMST.ChemConstants.DensityConservation <> rung_frep constr
+R6762:6770 UMST.ChemConstants.DensityConservation <> rung_frep constr
+R6775:6778 Corelib.Init.Datatypes <> true constr
+R6792:6796 Corelib.Init.Datatypes <> false constr
+ind 7041:7058 <> density_ladder_leg
+constr 7074:7092 <> leg_micro_to_te_sdf
+constr 7098:7114 <> leg_te_sdf_to_sdf
+constr 7120:7134 <> leg_sdf_to_frep
+constr 7140:7163 <> leg_micro_to_frep_direct
+scheme 7041:7058 <> density_ladder_leg_rect
+scheme 7041:7058 <> density_ladder_leg_ind
+scheme 7041:7058 <> density_ladder_leg_rec
+scheme 7041:7058 <> density_ladder_leg_sind
+def 7178:7195 <> density_leg_source
+R7204:7221 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+binder 7198:7200 <> leg:22
+R7226:7237 UMST.ChemConstants.DensityConservation <> density_rung ind
+R7250:7252 UMST.ChemConstants.DensityConservation <> leg:22 var
+R7263:7281 UMST.ChemConstants.DensityConservation <> leg_micro_to_te_sdf constr
+R7286:7299 UMST.ChemConstants.DensityConservation <> rung_micro_sdf constr
+R7305:7321 UMST.ChemConstants.DensityConservation <> leg_te_sdf_to_sdf constr
+R7326:7336 UMST.ChemConstants.DensityConservation <> rung_te_sdf constr
+R7342:7356 UMST.ChemConstants.DensityConservation <> leg_sdf_to_frep constr
+R7361:7368 UMST.ChemConstants.DensityConservation <> rung_sdf constr
+R7374:7397 UMST.ChemConstants.DensityConservation <> leg_micro_to_frep_direct constr
+R7402:7415 UMST.ChemConstants.DensityConservation <> rung_micro_sdf constr
+def 7436:7453 <> density_leg_target
+R7462:7479 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+binder 7456:7458 <> leg:24
+R7484:7495 UMST.ChemConstants.DensityConservation <> density_rung ind
+R7508:7510 UMST.ChemConstants.DensityConservation <> leg:24 var
+R7521:7539 UMST.ChemConstants.DensityConservation <> leg_micro_to_te_sdf constr
+R7544:7554 UMST.ChemConstants.DensityConservation <> rung_te_sdf constr
+R7560:7576 UMST.ChemConstants.DensityConservation <> leg_te_sdf_to_sdf constr
+R7581:7588 UMST.ChemConstants.DensityConservation <> rung_sdf constr
+R7594:7608 UMST.ChemConstants.DensityConservation <> leg_sdf_to_frep constr
+R7613:7621 UMST.ChemConstants.DensityConservation <> rung_frep constr
+R7627:7650 UMST.ChemConstants.DensityConservation <> leg_micro_to_frep_direct constr
+R7655:7663 UMST.ChemConstants.DensityConservation <> rung_frep constr
+def 7684:7705 <> densityLegMicroToTeSdf
+R7709:7726 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R7731:7749 UMST.ChemConstants.DensityConservation <> leg_micro_to_te_sdf constr
+def 7763:7782 <> densityLegTeSdfToSdf
+R7786:7803 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R7808:7824 UMST.ChemConstants.DensityConservation <> leg_te_sdf_to_sdf constr
+def 7838:7856 <> densityLegSdfToFrep
+R7860:7877 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R7882:7896 UMST.ChemConstants.DensityConservation <> leg_sdf_to_frep constr
+def 7910:7936 <> densityLegMicroToFrepDirect
+R7940:7957 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R7964:7987 UMST.ChemConstants.DensityConservation <> leg_micro_to_frep_direct constr
+prf 7997:8025 <> density_leg_micro_to_te_named
+R8053:8055 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8031:8052 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R8056:8074 UMST.ChemConstants.DensityConservation <> leg_micro_to_te_sdf constr
+prf 8109:8139 <> density_leg_te_sdf_to_sdf_named
+R8165:8167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8145:8164 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R8168:8184 UMST.ChemConstants.DensityConservation <> leg_te_sdf_to_sdf constr
+prf 8219:8247 <> density_leg_sdf_to_frep_named
+R8272:8274 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8253:8271 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R8275:8289 UMST.ChemConstants.DensityConservation <> leg_sdf_to_frep constr
+prf 8324:8361 <> density_leg_micro_to_frep_direct_named
+R8394:8396 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8367:8393 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R8397:8420 UMST.ChemConstants.DensityConservation <> leg_micro_to_frep_direct constr
+def 8460:8493 <> density_leg_indirect_composes_bool
+R8497:8500 Corelib.Init.Datatypes <> bool ind
+R8617:8622 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8507:8522 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R8529:8546 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R8548:8569 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R8577:8594 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R8596:8615 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R8623:8638 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R8645:8662 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R8664:8683 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R8691:8708 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R8710:8728 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+def 8744:8782 <> density_leg_direct_endpoints_match_bool
+R8786:8789 Corelib.Init.Datatypes <> bool ind
+R8913:8918 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8796:8811 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R8818:8835 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R8837:8858 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R8866:8883 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R8885:8911 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R8919:8934 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R8941:8958 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R8960:8978 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R8986:9003 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R9005:9031 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+prf 9042:9077 <> density_leg_indirect_composes_levels
+R9166:9171 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9124:9126 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9083:9100 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R9102:9123 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R9127:9144 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R9146:9165 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R9211:9213 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9172:9189 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R9191:9210 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R9214:9231 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R9233:9251 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+prf 9280:9318 <> density_leg_indirect_composes_bool_true
+R9358:9360 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9324:9357 UMST.ChemConstants.DensityConservation <> density_leg_indirect_composes_bool def
+R9361:9364 Corelib.Init.Datatypes <> true constr
+prf 9399:9432 <> density_leg_direct_endpoints_match
+R9532:9537 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9479:9485 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9438:9455 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R9457:9478 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R9486:9503 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R9505:9531 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R9576:9582 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9538:9555 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R9557:9575 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R9583:9600 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R9602:9628 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+prf 9657:9700 <> density_leg_direct_endpoints_match_bool_true
+R9745:9747 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9706:9744 UMST.ChemConstants.DensityConservation <> density_leg_direct_endpoints_match_bool def
+R9748:9751 Corelib.Init.Datatypes <> true constr
+prf 9786:9820 <> density_leg_distinct_step_vs_direct
+R9945:9947 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9826:9829 Corelib.Init.Datatypes <> negb def
+R9832:9847 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R9854:9871 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R9873:9894 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R9902:9919 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R9921:9942 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R9948:9951 Corelib.Init.Datatypes <> true constr
+rec 10211:10225 <> density_binding
+proj 10241:10256 <> density_parent_z
+R10260:10262 Corelib.Init.Datatypes <> nat ind
+def 10279:10294 <> densityBindingFe
+R10298:10312 UMST.ChemConstants.DensityConservation <> density_binding rec
+R10322:10337 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10322:10337 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10322:10337 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10342:10363 UMST.ChemConstants.DensityConservation <> density_element_iron_z def
+def 10381:10396 <> densityBindingCu
+R10400:10414 UMST.ChemConstants.DensityConservation <> density_binding rec
+R10424:10439 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10424:10439 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10424:10439 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10444:10467 UMST.ChemConstants.DensityConservation <> density_element_copper_z def
+def 10484:10499 <> densityBindingOg
+R10503:10517 UMST.ChemConstants.DensityConservation <> density_binding rec
+R10527:10542 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10527:10542 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10527:10542 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10547:10573 UMST.ChemConstants.DensityConservation <> density_element_oganesson_z def
+def 10591:10611 <> densityBindingTrivial
+R10615:10629 UMST.ChemConstants.DensityConservation <> density_binding rec
+R10639:10654 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10639:10654 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10639:10654 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+def 10677:10700 <> densityBindingNontrivial
+R10707:10721 UMST.ChemConstants.DensityConservation <> density_binding rec
+binder 10703:10703 <> b:28
+R10726:10729 Corelib.Init.Datatypes <> bool ind
+R10736:10742 Stdlib.Arith.PeanoNat Nat ltb def
+R10747:10762 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R10764:10764 UMST.ChemConstants.DensityConservation <> b:28 var
+prf 10775:10803 <> density_binding_fe_nontrivial
+R10850:10852 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10809:10832 UMST.ChemConstants.DensityConservation <> densityBindingNontrivial def
+R10834:10849 UMST.ChemConstants.DensityConservation <> densityBindingFe def
+R10853:10856 Corelib.Init.Datatypes <> true constr
+prf 10891:10928 <> density_binding_trivial_not_nontrivial
+R10980:10982 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10934:10957 UMST.ChemConstants.DensityConservation <> densityBindingNontrivial def
+R10959:10979 UMST.ChemConstants.DensityConservation <> densityBindingTrivial def
+R10983:10987 Corelib.Init.Datatypes <> false constr
+def 11027:11057 <> densityBindingIdentityConserved
+R11068:11082 UMST.ChemConstants.DensityConservation <> density_binding rec
+binder 11060:11061 <> b1:29
+binder 11063:11064 <> b2:30
+R11087:11090 Corelib.Init.Datatypes <> bool ind
+R11097:11103 Stdlib.Arith.PeanoNat Nat eqb def
+R11106:11121 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R11123:11124 UMST.ChemConstants.DensityConservation <> b1:29 var
+R11128:11143 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R11145:11146 UMST.ChemConstants.DensityConservation <> b2:30 var
+prf 11157:11193 <> density_binding_fe_identity_conserved
+R11264:11266 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11199:11229 UMST.ChemConstants.DensityConservation <> densityBindingIdentityConserved def
+R11231:11246 UMST.ChemConstants.DensityConservation <> densityBindingFe def
+R11248:11263 UMST.ChemConstants.DensityConservation <> densityBindingFe def
+R11267:11270 Corelib.Init.Datatypes <> true constr
+def 11534:11549 <> liftMicroToTeSdf
+R11556:11558 Corelib.Init.Datatypes <> nat ind
+binder 11552:11552 <> z:31
+R11563:11565 Corelib.Init.Datatypes <> nat ind
+R11570:11570 UMST.ChemConstants.DensityConservation <> z:31 var
+def 11585:11598 <> liftTeSdfToSdf
+R11605:11607 Corelib.Init.Datatypes <> nat ind
+binder 11601:11601 <> z:32
+R11612:11614 Corelib.Init.Datatypes <> nat ind
+R11619:11619 UMST.ChemConstants.DensityConservation <> z:32 var
+def 11634:11646 <> liftSdfToFrep
+R11653:11655 Corelib.Init.Datatypes <> nat ind
+binder 11649:11649 <> z:33
+R11660:11662 Corelib.Init.Datatypes <> nat ind
+R11667:11667 UMST.ChemConstants.DensityConservation <> z:33 var
+def 11682:11702 <> liftMicroToFrepDirect
+R11709:11711 Corelib.Init.Datatypes <> nat ind
+binder 11705:11705 <> z:34
+R11716:11718 Corelib.Init.Datatypes <> nat ind
+R11723:11723 UMST.ChemConstants.DensityConservation <> z:34 var
+prf 11733:11761 <> lift_micro_to_te_sdf_identity
+R11768:11770 Corelib.Init.Datatypes <> nat ind
+binder 11764:11764 <> z:35
+R11795:11797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11777:11792 UMST.ChemConstants.DensityConservation <> liftMicroToTeSdf def
+R11794:11794 UMST.ChemConstants.DensityConservation <> z:35 var
+R11798:11798 UMST.ChemConstants.DensityConservation <> z:35 var
+prf 11833:11859 <> lift_te_sdf_to_sdf_identity
+R11866:11868 Corelib.Init.Datatypes <> nat ind
+binder 11862:11862 <> z:36
+R11891:11893 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11875:11888 UMST.ChemConstants.DensityConservation <> liftTeSdfToSdf def
+R11890:11890 UMST.ChemConstants.DensityConservation <> z:36 var
+R11894:11894 UMST.ChemConstants.DensityConservation <> z:36 var
+prf 11929:11953 <> lift_sdf_to_frep_identity
+R11960:11962 Corelib.Init.Datatypes <> nat ind
+binder 11956:11956 <> z:37
+R11984:11986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11969:11981 UMST.ChemConstants.DensityConservation <> liftSdfToFrep def
+R11983:11983 UMST.ChemConstants.DensityConservation <> z:37 var
+R11987:11987 UMST.ChemConstants.DensityConservation <> z:37 var
+prf 12022:12055 <> lift_micro_to_frep_direct_identity
+R12062:12064 Corelib.Init.Datatypes <> nat ind
+binder 12058:12058 <> z:38
+R12094:12096 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12071:12091 UMST.ChemConstants.DensityConservation <> liftMicroToFrepDirect def
+R12093:12093 UMST.ChemConstants.DensityConservation <> z:38 var
+R12097:12097 UMST.ChemConstants.DensityConservation <> z:38 var
+def 12137:12159 <> densityComposedIdentity
+R12166:12168 Corelib.Init.Datatypes <> nat ind
+binder 12162:12162 <> z:39
+R12173:12175 Corelib.Init.Datatypes <> nat ind
+R12182:12194 UMST.ChemConstants.DensityConservation <> liftSdfToFrep def
+R12197:12210 UMST.ChemConstants.DensityConservation <> liftTeSdfToSdf def
+R12213:12228 UMST.ChemConstants.DensityConservation <> liftMicroToTeSdf def
+R12230:12230 UMST.ChemConstants.DensityConservation <> z:39 var
+def 12247:12267 <> densityDirectIdentity
+R12274:12276 Corelib.Init.Datatypes <> nat ind
+binder 12270:12270 <> z:40
+R12281:12283 Corelib.Init.Datatypes <> nat ind
+R12290:12310 UMST.ChemConstants.DensityConservation <> liftMicroToFrepDirect def
+R12312:12312 UMST.ChemConstants.DensityConservation <> z:40 var
+def 12327:12353 <> densityComposedEqualsDirect
+R12360:12362 Corelib.Init.Datatypes <> nat ind
+binder 12356:12356 <> z:41
+R12367:12370 Corelib.Init.Datatypes <> bool ind
+R12377:12383 Stdlib.Arith.PeanoNat Nat eqb def
+R12386:12408 UMST.ChemConstants.DensityConservation <> densityComposedIdentity def
+R12410:12410 UMST.ChemConstants.DensityConservation <> z:41 var
+R12414:12434 UMST.ChemConstants.DensityConservation <> densityDirectIdentity def
+R12436:12436 UMST.ChemConstants.DensityConservation <> z:41 var
+prf 12447:12485 <> density_composed_equals_direct_identity
+R12492:12494 Corelib.Init.Datatypes <> nat ind
+binder 12488:12488 <> z:42
+R12530:12532 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12501:12527 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R12529:12529 UMST.ChemConstants.DensityConservation <> z:42 var
+R12533:12536 Corelib.Init.Datatypes <> true constr
+R12555:12581 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R12584:12606 UMST.ChemConstants.DensityConservation <> densityComposedIdentity def
+R12609:12629 UMST.ChemConstants.DensityConservation <> densityDirectIdentity def
+R12636:12648 UMST.ChemConstants.DensityConservation <> liftSdfToFrep def
+R12651:12664 UMST.ChemConstants.DensityConservation <> liftTeSdfToSdf def
+R12667:12682 UMST.ChemConstants.DensityConservation <> liftMicroToTeSdf def
+R12685:12705 UMST.ChemConstants.DensityConservation <> liftMicroToFrepDirect def
+R12716:12727 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+R12716:12727 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+prf 12744:12776 <> density_ladder_identity_conserved
+R12793:12795 Corelib.Init.Datatypes <> nat ind
+binder 12789:12789 <> z:43
+R12827:12829 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12802:12824 UMST.ChemConstants.DensityConservation <> densityComposedIdentity def
+R12826:12826 UMST.ChemConstants.DensityConservation <> z:43 var
+R12830:12850 UMST.ChemConstants.DensityConservation <> densityDirectIdentity def
+R12852:12852 UMST.ChemConstants.DensityConservation <> z:43 var
+prf 12901:12933 <> density_fe_composed_equals_direct
+R12989:12991 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12939:12965 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R12967:12988 UMST.ChemConstants.DensityConservation <> density_element_iron_z def
+R12992:12995 Corelib.Init.Datatypes <> true constr
+R13011:13049 UMST.ChemConstants.DensityConservation <> density_composed_equals_direct_identity thm
+R13011:13049 UMST.ChemConstants.DensityConservation <> density_composed_equals_direct_identity thm
+prf 13064:13096 <> density_cu_composed_equals_direct
+R13154:13156 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13102:13128 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R13130:13153 UMST.ChemConstants.DensityConservation <> density_element_copper_z def
+R13157:13160 Corelib.Init.Datatypes <> true constr
+R13176:13214 UMST.ChemConstants.DensityConservation <> density_composed_equals_direct_identity thm
+R13176:13214 UMST.ChemConstants.DensityConservation <> density_composed_equals_direct_identity thm
+rec 13454:13475 <> density_ladder_diagram
+proj 13491:13500 <> via_te_sdf
+proj 13526:13533 <> then_sdf
+proj 13559:13567 <> then_frep
+proj 13593:13598 <> direct
+proj 13624:13642 <> has_micro_to_te_sdf
+proj 13654:13670 <> has_te_sdf_to_sdf
+proj 13682:13696 <> has_sdf_to_frep
+proj 13708:13731 <> has_micro_to_frep_direct
+R13504:13521 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R13537:13554 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R13571:13588 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R13602:13619 UMST.ChemConstants.DensityConservation <> density_ladder_leg ind
+R13646:13649 Corelib.Init.Datatypes <> bool ind
+R13674:13677 Corelib.Init.Datatypes <> bool ind
+R13700:13703 Corelib.Init.Datatypes <> bool ind
+R13735:13738 Corelib.Init.Datatypes <> bool ind
+def 13755:13779 <> densityLadderDiagramNamed
+R13783:13804 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+R13814:13823 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R13814:13823 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R13814:13823 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R13857:13864 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R13857:13864 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R13896:13904 UMST.ChemConstants.DensityConservation <> then_frep proj
+R13896:13904 UMST.ChemConstants.DensityConservation <> then_frep proj
+R13935:13940 UMST.ChemConstants.DensityConservation <> direct proj
+R13935:13940 UMST.ChemConstants.DensityConservation <> direct proj
+R13979:13997 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R13979:13997 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R14013:14029 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R14013:14029 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R14045:14059 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R14045:14059 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R14075:14098 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R14075:14098 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R13828:13849 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R13869:13888 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R13909:13927 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R13945:13971 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R14002:14005 Corelib.Init.Datatypes <> true constr
+R14034:14037 Corelib.Init.Datatypes <> true constr
+R14064:14067 Corelib.Init.Datatypes <> true constr
+R14103:14106 Corelib.Init.Datatypes <> true constr
+def 14124:14156 <> densityLadderDiagramMissingDirect
+R14160:14181 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+R14191:14200 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14191:14200 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14191:14200 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14234:14241 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R14234:14241 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R14273:14281 UMST.ChemConstants.DensityConservation <> then_frep proj
+R14273:14281 UMST.ChemConstants.DensityConservation <> then_frep proj
+R14312:14317 UMST.ChemConstants.DensityConservation <> direct proj
+R14312:14317 UMST.ChemConstants.DensityConservation <> direct proj
+R14356:14374 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R14356:14374 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R14390:14406 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R14390:14406 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R14422:14436 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R14422:14436 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R14452:14475 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R14452:14475 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R14205:14226 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R14246:14265 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R14286:14304 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R14322:14348 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R14379:14382 Corelib.Init.Datatypes <> true constr
+R14411:14414 Corelib.Init.Datatypes <> true constr
+R14441:14444 Corelib.Init.Datatypes <> true constr
+R14480:14484 Corelib.Init.Datatypes <> false constr
+def 14502:14535 <> densityLadderDiagramScrambledOrder
+R14539:14560 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+R14570:14579 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14570:14579 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14570:14579 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14610:14617 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R14610:14617 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R14649:14657 UMST.ChemConstants.DensityConservation <> then_frep proj
+R14649:14657 UMST.ChemConstants.DensityConservation <> then_frep proj
+R14691:14696 UMST.ChemConstants.DensityConservation <> direct proj
+R14691:14696 UMST.ChemConstants.DensityConservation <> direct proj
+R14735:14753 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R14735:14753 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R14769:14785 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R14769:14785 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R14801:14815 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R14801:14815 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R14831:14854 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R14831:14854 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R14584:14602 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R14622:14641 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R14662:14683 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R14701:14727 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R14758:14761 Corelib.Init.Datatypes <> true constr
+R14790:14793 Corelib.Init.Datatypes <> true constr
+R14820:14823 Corelib.Init.Datatypes <> true constr
+R14859:14862 Corelib.Init.Datatypes <> true constr
+def 14880:14906 <> densityLadderDiagramTrivial
+R14910:14931 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+R14941:14950 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14941:14950 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14941:14950 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R14984:14991 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R14984:14991 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R15023:15031 UMST.ChemConstants.DensityConservation <> then_frep proj
+R15023:15031 UMST.ChemConstants.DensityConservation <> then_frep proj
+R15062:15067 UMST.ChemConstants.DensityConservation <> direct proj
+R15062:15067 UMST.ChemConstants.DensityConservation <> direct proj
+R15106:15124 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R15106:15124 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R15141:15157 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R15141:15157 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R15174:15188 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R15174:15188 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R15205:15228 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R15205:15228 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R14955:14976 UMST.ChemConstants.DensityConservation <> densityLegMicroToTeSdf def
+R14996:15015 UMST.ChemConstants.DensityConservation <> densityLegTeSdfToSdf def
+R15036:15054 UMST.ChemConstants.DensityConservation <> densityLegSdfToFrep def
+R15072:15098 UMST.ChemConstants.DensityConservation <> densityLegMicroToFrepDirect def
+R15129:15133 Corelib.Init.Datatypes <> false constr
+R15162:15166 Corelib.Init.Datatypes <> false constr
+R15193:15197 Corelib.Init.Datatypes <> false constr
+R15233:15237 Corelib.Init.Datatypes <> false constr
+def 15255:15288 <> densityLadderDiagramAllLegsPresent
+R15295:15316 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+binder 15291:15291 <> d:53
+R15321:15324 Corelib.Init.Datatypes <> bool ind
+R15406:15411 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15381:15386 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15354:15359 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15334:15352 UMST.ChemConstants.DensityConservation <> has_micro_to_te_sdf proj
+R15331:15331 UMST.ChemConstants.DensityConservation <> d:53 var
+R15363:15379 UMST.ChemConstants.DensityConservation <> has_te_sdf_to_sdf proj
+R15360:15360 UMST.ChemConstants.DensityConservation <> d:53 var
+R15390:15404 UMST.ChemConstants.DensityConservation <> has_sdf_to_frep proj
+R15387:15387 UMST.ChemConstants.DensityConservation <> d:53 var
+R15415:15438 UMST.ChemConstants.DensityConservation <> has_micro_to_frep_direct proj
+R15412:15412 UMST.ChemConstants.DensityConservation <> d:53 var
+def 15454:15482 <> densityLadderDiagramLegsNamed
+R15489:15510 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+binder 15485:15485 <> d:54
+R15515:15518 Corelib.Init.Datatypes <> bool ind
+R15997:16002 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15928:15933 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15861:15866 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15795:15800 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15730:15735 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15662:15667 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15592:15597 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15525:15540 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15543:15560 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R15565:15574 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R15562:15562 UMST.ChemConstants.DensityConservation <> d:54 var
+R15578:15591 UMST.ChemConstants.DensityConservation <> rung_micro_sdf constr
+R15598:15613 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15616:15633 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R15638:15647 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R15635:15635 UMST.ChemConstants.DensityConservation <> d:54 var
+R15651:15661 UMST.ChemConstants.DensityConservation <> rung_te_sdf constr
+R15668:15683 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15686:15703 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R15708:15715 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R15705:15705 UMST.ChemConstants.DensityConservation <> d:54 var
+R15719:15729 UMST.ChemConstants.DensityConservation <> rung_te_sdf constr
+R15736:15751 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15754:15771 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R15776:15783 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R15773:15773 UMST.ChemConstants.DensityConservation <> d:54 var
+R15787:15794 UMST.ChemConstants.DensityConservation <> rung_sdf constr
+R15801:15816 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15819:15836 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R15841:15849 UMST.ChemConstants.DensityConservation <> then_frep proj
+R15838:15838 UMST.ChemConstants.DensityConservation <> d:54 var
+R15853:15860 UMST.ChemConstants.DensityConservation <> rung_sdf constr
+R15867:15882 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15885:15902 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R15907:15915 UMST.ChemConstants.DensityConservation <> then_frep proj
+R15904:15904 UMST.ChemConstants.DensityConservation <> d:54 var
+R15919:15927 UMST.ChemConstants.DensityConservation <> rung_frep constr
+R15934:15949 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R15952:15969 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R15974:15979 UMST.ChemConstants.DensityConservation <> direct proj
+R15971:15971 UMST.ChemConstants.DensityConservation <> d:54 var
+R15983:15996 UMST.ChemConstants.DensityConservation <> rung_micro_sdf constr
+R16003:16018 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R16021:16038 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R16043:16048 UMST.ChemConstants.DensityConservation <> direct proj
+R16040:16040 UMST.ChemConstants.DensityConservation <> d:54 var
+R16052:16060 UMST.ChemConstants.DensityConservation <> rung_frep constr
+def 16075:16101 <> densityLadderDiagramOrderOk
+R16108:16129 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+binder 16104:16104 <> d:55
+R16134:16137 Corelib.Init.Datatypes <> bool ind
+R16435:16440 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16337:16342 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16238:16243 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16144:16159 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R16166:16183 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R16188:16197 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R16185:16185 UMST.ChemConstants.DensityConservation <> d:55 var
+R16206:16223 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R16228:16235 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R16225:16225 UMST.ChemConstants.DensityConservation <> d:55 var
+R16244:16259 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R16266:16283 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R16288:16295 UMST.ChemConstants.DensityConservation <> then_sdf proj
+R16285:16285 UMST.ChemConstants.DensityConservation <> d:55 var
+R16304:16321 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R16326:16334 UMST.ChemConstants.DensityConservation <> then_frep proj
+R16323:16323 UMST.ChemConstants.DensityConservation <> d:55 var
+R16343:16358 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R16365:16382 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R16387:16396 UMST.ChemConstants.DensityConservation <> via_te_sdf proj
+R16384:16384 UMST.ChemConstants.DensityConservation <> d:55 var
+R16405:16422 UMST.ChemConstants.DensityConservation <> density_leg_source def
+R16427:16432 UMST.ChemConstants.DensityConservation <> direct proj
+R16424:16424 UMST.ChemConstants.DensityConservation <> d:55 var
+R16441:16456 UMST.ChemConstants.DensityConservation <> density_rung_beq def
+R16463:16480 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R16485:16493 UMST.ChemConstants.DensityConservation <> then_frep proj
+R16482:16482 UMST.ChemConstants.DensityConservation <> d:55 var
+R16502:16519 UMST.ChemConstants.DensityConservation <> density_leg_target def
+R16524:16529 UMST.ChemConstants.DensityConservation <> direct proj
+R16521:16521 UMST.ChemConstants.DensityConservation <> d:55 var
+prf 16541:16577 <> density_ladder_diagram_named_all_legs
+R16643:16645 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16583:16616 UMST.ChemConstants.DensityConservation <> densityLadderDiagramAllLegsPresent def
+R16618:16642 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+R16646:16649 Corelib.Init.Datatypes <> true constr
+prf 16684:16722 <> density_ladder_diagram_named_legs_named
+R16783:16785 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16728:16756 UMST.ChemConstants.DensityConservation <> densityLadderDiagramLegsNamed def
+R16758:16782 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+R16786:16789 Corelib.Init.Datatypes <> true constr
+prf 16824:16860 <> density_ladder_diagram_named_order_ok
+R16919:16921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16866:16892 UMST.ChemConstants.DensityConservation <> densityLadderDiagramOrderOk def
+R16894:16918 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+R16922:16925 Corelib.Init.Datatypes <> true constr
+prf 16960:17004 <> density_ladder_diagram_scrambled_order_not_ok
+R17072:17074 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17010:17036 UMST.ChemConstants.DensityConservation <> densityLadderDiagramOrderOk def
+R17038:17071 UMST.ChemConstants.DensityConservation <> densityLadderDiagramScrambledOrder def
+R17075:17079 Corelib.Init.Datatypes <> false constr
+prf 17114:17163 <> density_ladder_diagram_missing_direct_not_all_legs
+R17237:17239 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17169:17202 UMST.ChemConstants.DensityConservation <> densityLadderDiagramAllLegsPresent def
+R17204:17236 UMST.ChemConstants.DensityConservation <> densityLadderDiagramMissingDirect def
+R17240:17244 Corelib.Init.Datatypes <> false constr
+prf 17279:17321 <> density_ladder_diagram_trivial_not_all_legs
+R17389:17391 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17327:17360 UMST.ChemConstants.DensityConservation <> densityLadderDiagramAllLegsPresent def
+R17362:17388 UMST.ChemConstants.DensityConservation <> densityLadderDiagramTrivial def
+R17392:17396 Corelib.Init.Datatypes <> false constr
+rec 17658:17674 <> density_incidence
+proj 17690:17708 <> density_inc_binding
+proj 17731:17749 <> density_inc_diagram
+proj 17779:17796 <> density_inc_scalar
+proj 17823:17839 <> density_inc_level
+R17712:17726 UMST.ChemConstants.DensityConservation <> density_binding rec
+R17753:17774 UMST.ChemConstants.DensityConservation <> density_ladder_diagram rec
+R17800:17818 UMST.ChemConstants.DensityConservation <> density_scalar_kind ind
+R17843:17845 Corelib.Init.Datatypes <> nat ind
+def 17862:17887 <> densityIncidenceNontrivial
+R17894:17910 UMST.ChemConstants.DensityConservation <> density_incidence rec
+binder 17890:17890 <> h:61
+R17915:17918 Corelib.Init.Datatypes <> bool ind
+R17925:17931 Stdlib.Arith.PeanoNat Nat ltb def
+R17936:17952 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R17954:17954 UMST.ChemConstants.DensityConservation <> h:61 var
+def 17970:17994 <> densityIncidenceFeNamedL1
+R17998:18014 UMST.ChemConstants.DensityConservation <> density_incidence rec
+R18024:18042 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18024:18042 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18024:18042 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18070:18088 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18070:18088 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18125:18142 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18125:18142 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18181:18197 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18181:18197 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18047:18062 UMST.ChemConstants.DensityConservation <> densityBindingFe def
+R18093:18117 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+R18147:18173 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+def 18220:18244 <> densityIncidenceCuNamedL1
+R18248:18264 UMST.ChemConstants.DensityConservation <> density_incidence rec
+R18274:18292 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18274:18292 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18274:18292 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18320:18338 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18320:18338 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18375:18392 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18375:18392 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18431:18447 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18431:18447 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18297:18312 UMST.ChemConstants.DensityConservation <> densityBindingCu def
+R18343:18367 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+R18397:18423 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+def 18470:18492 <> densityIncidenceTrivial
+R18496:18512 UMST.ChemConstants.DensityConservation <> density_incidence rec
+R18522:18540 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18522:18540 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18522:18540 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18573:18591 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18573:18591 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18630:18647 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18630:18647 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18686:18702 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18686:18702 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18545:18565 UMST.ChemConstants.DensityConservation <> densityBindingTrivial def
+R18596:18622 UMST.ChemConstants.DensityConservation <> densityLadderDiagramTrivial def
+R18652:18678 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+def 18725:18754 <> densityIncidenceScrambledOrder
+R18758:18774 UMST.ChemConstants.DensityConservation <> density_incidence rec
+R18784:18802 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18784:18802 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18784:18802 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R18830:18848 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18830:18848 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R18894:18911 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18894:18911 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R18950:18966 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18950:18966 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R18807:18822 UMST.ChemConstants.DensityConservation <> densityBindingFe def
+R18853:18886 UMST.ChemConstants.DensityConservation <> densityLadderDiagramScrambledOrder def
+R18916:18942 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+def 18989:19020 <> densityIncidenceMissingDirectLeg
+R19024:19040 UMST.ChemConstants.DensityConservation <> density_incidence rec
+R19050:19068 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R19050:19068 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R19050:19068 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R19096:19114 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R19096:19114 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R19159:19176 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R19159:19176 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R19215:19231 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R19215:19231 UMST.ChemConstants.DensityConservation <> density_inc_level proj
+R19073:19088 UMST.ChemConstants.DensityConservation <> densityBindingFe def
+R19119:19151 UMST.ChemConstants.DensityConservation <> densityLadderDiagramMissingDirect def
+R19181:19207 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+prf 19249:19285 <> density_incidence_fe_named_nontrivial
+R19343:19345 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19291:19316 UMST.ChemConstants.DensityConservation <> densityIncidenceNontrivial def
+R19318:19342 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R19346:19349 Corelib.Init.Datatypes <> true constr
+prf 19384:19423 <> density_incidence_trivial_not_nontrivial
+R19479:19481 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19429:19454 UMST.ChemConstants.DensityConservation <> densityIncidenceNontrivial def
+R19456:19478 UMST.ChemConstants.DensityConservation <> densityIncidenceTrivial def
+R19482:19486 Corelib.Init.Datatypes <> false constr
+prf 19521:19556 <> density_incidence_fe_composed_direct
+R19656:19658 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19562:19588 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R19591:19606 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R19609:19627 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R19629:19653 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R19659:19662 Corelib.Init.Datatypes <> true constr
+R19678:19716 UMST.ChemConstants.DensityConservation <> density_composed_equals_direct_identity thm
+R19678:19716 UMST.ChemConstants.DensityConservation <> density_composed_equals_direct_identity thm
+prf 19731:19768 <> density_incidence_scaffold_sdf_not_rho
+R19864:19866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19774:19812 UMST.ChemConstants.DensityConservation <> density_scalar_sdf_not_rho_unless_named def
+R19819:19836 UMST.ChemConstants.DensityConservation <> density_inc_scalar proj
+R19838:19862 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R19867:19870 Corelib.Init.Datatypes <> true constr
+def 20136:20155 <> indirectLadderMarker
+R20159:20164 Stdlib.Strings.String <> string ind
+def 20218:20235 <> directLadderMarker
+R20239:20244 Stdlib.Strings.String <> string ind
+prf 20299:20330 <> indirect_ne_direct_ladder_marker
+R20356:20359 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20336:20355 UMST.ChemConstants.DensityConservation <> indirectLadderMarker def
+R20360:20377 UMST.ChemConstants.DensityConservation <> directLadderMarker def
+def 20418:20439 <> indirectNeDirectLadder
+R20443:20446 Corelib.Init.Datatypes <> bool ind
+R20654:20659 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20588:20593 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20532:20537 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20487:20492 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R20453:20486 UMST.ChemConstants.DensityConservation <> density_leg_indirect_composes_bool def
+R20493:20531 UMST.ChemConstants.DensityConservation <> density_leg_direct_endpoints_match_bool def
+R20538:20564 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R20566:20587 UMST.ChemConstants.DensityConservation <> density_element_iron_z def
+R20594:20627 UMST.ChemConstants.DensityConservation <> densityLadderDiagramAllLegsPresent def
+R20629:20653 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+R20660:20686 UMST.ChemConstants.DensityConservation <> densityLadderDiagramOrderOk def
+R20688:20712 UMST.ChemConstants.DensityConservation <> densityLadderDiagramNamed def
+prf 20722:20751 <> indirect_ne_direct_ladder_true
+R20777:20779 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20755:20776 UMST.ChemConstants.DensityConservation <> indirectNeDirectLadder def
+R20780:20783 Corelib.Init.Datatypes <> true constr
+R20802:20823 UMST.ChemConstants.DensityConservation <> indirectNeDirectLadder def
+R20836:20874 UMST.ChemConstants.DensityConservation <> density_leg_indirect_composes_bool_true thm
+R20836:20874 UMST.ChemConstants.DensityConservation <> density_leg_indirect_composes_bool_true thm
+R20836:20874 UMST.ChemConstants.DensityConservation <> density_leg_indirect_composes_bool_true thm
+R20887:20930 UMST.ChemConstants.DensityConservation <> density_leg_direct_endpoints_match_bool_true thm
+R20887:20930 UMST.ChemConstants.DensityConservation <> density_leg_direct_endpoints_match_bool_true thm
+R20887:20930 UMST.ChemConstants.DensityConservation <> density_leg_direct_endpoints_match_bool_true thm
+R20943:20975 UMST.ChemConstants.DensityConservation <> density_fe_composed_equals_direct thm
+R20943:20975 UMST.ChemConstants.DensityConservation <> density_fe_composed_equals_direct thm
+R20943:20975 UMST.ChemConstants.DensityConservation <> density_fe_composed_equals_direct thm
+prf 21016:21049 <> indirect_ne_direct_ladder_identity
+R21084:21089 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21077:21079 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21055:21076 UMST.ChemConstants.DensityConservation <> indirectNeDirectLadder def
+R21080:21083 Corelib.Init.Datatypes <> true constr
+R21110:21113 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21090:21109 UMST.ChemConstants.DensityConservation <> indirectLadderMarker def
+R21114:21131 UMST.ChemConstants.DensityConservation <> directLadderMarker def
+R21160:21189 UMST.ChemConstants.DensityConservation <> indirect_ne_direct_ladder_true thm
+R21160:21189 UMST.ChemConstants.DensityConservation <> indirect_ne_direct_ladder_true thm
+R21202:21233 UMST.ChemConstants.DensityConservation <> indirect_ne_direct_ladder_marker thm
+R21202:21233 UMST.ChemConstants.DensityConservation <> indirect_ne_direct_ladder_marker thm
+ind 21477:21503 <> density_ladder_bar_presence
+constr 21519:21536 <> density_bar_absent
+constr 21542:21560 <> density_bar_present
+scheme 21477:21503 <> density_ladder_bar_presence_rect
+scheme 21477:21503 <> density_ladder_bar_presence_ind
+scheme 21477:21503 <> density_ladder_bar_presence_rec
+scheme 21477:21503 <> density_ladder_bar_presence_sind
+rec 21571:21594 <> density_claim_ladder_bar
+proj 21610:21629 <> density_bar_presence
+proj 21664:21687 <> density_bar_defect_total
+R21633:21659 UMST.ChemConstants.DensityConservation <> density_ladder_bar_presence ind
+R21691:21693 Corelib.Init.Datatypes <> nat ind
+def 21710:21736 <> densityClaimLadderBarAbsent
+R21740:21763 UMST.ChemConstants.DensityConservation <> density_claim_ladder_bar rec
+R21773:21792 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R21773:21792 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R21773:21792 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R21817:21840 UMST.ChemConstants.DensityConservation <> density_bar_defect_total proj
+R21817:21840 UMST.ChemConstants.DensityConservation <> density_bar_defect_total proj
+R21797:21814 UMST.ChemConstants.DensityConservation <> density_bar_absent constr
+def 21863:21893 <> densityClaimLadderBarZeroDefect
+R21897:21920 UMST.ChemConstants.DensityConservation <> density_claim_ladder_bar rec
+R21930:21949 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R21930:21949 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R21930:21949 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R21975:21998 UMST.ChemConstants.DensityConservation <> density_bar_defect_total proj
+R21975:21998 UMST.ChemConstants.DensityConservation <> density_bar_defect_total proj
+R21954:21972 UMST.ChemConstants.DensityConservation <> density_bar_present constr
+def 22021:22056 <> density_claim_ladder_bar_zero_defect
+R22063:22086 UMST.ChemConstants.DensityConservation <> density_claim_ladder_bar rec
+binder 22059:22059 <> b:67
+R22091:22094 Corelib.Init.Datatypes <> bool ind
+R22107:22126 UMST.ChemConstants.DensityConservation <> density_bar_presence proj
+R22128:22128 UMST.ChemConstants.DensityConservation <> b:67 var
+R22139:22156 UMST.ChemConstants.DensityConservation <> density_bar_absent constr
+R22161:22165 Corelib.Init.Datatypes <> false constr
+R22171:22189 UMST.ChemConstants.DensityConservation <> density_bar_present constr
+R22194:22200 Stdlib.Arith.PeanoNat Nat eqb def
+R22203:22226 UMST.ChemConstants.DensityConservation <> density_bar_defect_total proj
+R22228:22228 UMST.ChemConstants.DensityConservation <> b:67 var
+prf 22247:22287 <> density_claim_ladder_bar_zero_defect_true
+R22361:22363 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22293:22328 UMST.ChemConstants.DensityConservation <> density_claim_ladder_bar_zero_defect def
+R22330:22360 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarZeroDefect def
+R22364:22367 Corelib.Init.Datatypes <> true constr
+prf 22402:22448 <> density_claim_ladder_bar_absent_not_zero_defect
+R22518:22520 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22454:22489 UMST.ChemConstants.DensityConservation <> density_claim_ladder_bar_zero_defect def
+R22491:22517 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R22521:22525 Corelib.Init.Datatypes <> false constr
+ind 22789:22816 <> density_conservation_verdict
+constr 22832:22849 <> verdict_unwired_ok
+constr 22855:22878 <> verdict_density_named_ok
+constr 22884:22913 <> verdict_trivial_density_refuse
+constr 22919:22948 <> verdict_scrambled_order_refuse
+constr 22954:22980 <> verdict_green_invent_refuse
+constr 22986:23018 <> verdict_proved_without_bar_refuse
+constr 23024:23054 <> verdict_production_wired_refuse
+scheme 22789:22816 <> density_conservation_verdict_rect
+scheme 22789:22816 <> density_conservation_verdict_ind
+scheme 22789:22816 <> density_conservation_verdict_rec
+scheme 22789:22816 <> density_conservation_verdict_sind
+def 23069:23099 <> density_conservation_verdict_ok
+R23108:23135 UMST.ChemConstants.DensityConservation <> density_conservation_verdict ind
+binder 23104:23104 <> v:70
+R23140:23143 Corelib.Init.Datatypes <> bool ind
+R23156:23156 UMST.ChemConstants.DensityConservation <> v:70 var
+R23167:23184 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R23189:23192 Corelib.Init.Datatypes <> true constr
+R23198:23221 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R23226:23229 Corelib.Init.Datatypes <> true constr
+R23240:23244 Corelib.Init.Datatypes <> false constr
+def 23265:23296 <> density_conservation_verdict_beq
+R23309:23336 UMST.ChemConstants.DensityConservation <> density_conservation_verdict ind
+binder 23301:23302 <> v1:72
+binder 23304:23305 <> v2:73
+R23341:23344 Corelib.Init.Datatypes <> bool ind
+R23361:23362 UMST.ChemConstants.DensityConservation <> v2:73 var
+R23357:23358 UMST.ChemConstants.DensityConservation <> v1:72 var
+R23373:23390 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R23393:23410 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R23415:23418 Corelib.Init.Datatypes <> true constr
+R23424:23447 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R23450:23473 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R23478:23481 Corelib.Init.Datatypes <> true constr
+R23487:23516 UMST.ChemConstants.DensityConservation <> verdict_trivial_density_refuse constr
+R23519:23548 UMST.ChemConstants.DensityConservation <> verdict_trivial_density_refuse constr
+R23553:23556 Corelib.Init.Datatypes <> true constr
+R23562:23591 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R23594:23623 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R23628:23631 Corelib.Init.Datatypes <> true constr
+R23637:23663 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+R23666:23692 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+R23697:23700 Corelib.Init.Datatypes <> true constr
+R23706:23738 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+R23741:23773 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+R23778:23781 Corelib.Init.Datatypes <> true constr
+R23787:23817 UMST.ChemConstants.DensityConservation <> verdict_production_wired_refuse constr
+R23820:23850 UMST.ChemConstants.DensityConservation <> verdict_production_wired_refuse constr
+R23855:23858 Corelib.Init.Datatypes <> true constr
+R23872:23876 Corelib.Init.Datatypes <> false constr
+def 23897:23922 <> evaluate_density_incidence
+R23931:23957 UMST.ChemConstants.DensityConservation <> DensityConservationModality ind
+binder 23927:23927 <> m:76
+R23967:23983 UMST.ChemConstants.DensityConservation <> density_incidence rec
+binder 23963:23963 <> h:77
+R23993:24016 UMST.ChemConstants.DensityConservation <> density_claim_ladder_bar rec
+binder 23989:23989 <> b:78
+R24044:24047 Corelib.Init.Datatypes <> bool ind
+binder 24022:24040 <> claim_physics_green:79
+R24068:24071 Corelib.Init.Datatypes <> bool ind
+binder 24053:24064 <> claim_proved:80
+R24076:24103 UMST.ChemConstants.DensityConservation <> density_conservation_verdict ind
+R24113:24131 UMST.ChemConstants.DensityConservation <> claim_physics_green:79 var
+R24178:24189 UMST.ChemConstants.DensityConservation <> claim_proved:80 var
+R24252:24255 Corelib.Init.Datatypes <> negb def
+R24258:24283 UMST.ChemConstants.DensityConservation <> densityIncidenceNontrivial def
+R24285:24285 UMST.ChemConstants.DensityConservation <> h:77 var
+R24356:24359 Corelib.Init.Datatypes <> negb def
+R24362:24395 UMST.ChemConstants.DensityConservation <> densityLadderDiagramAllLegsPresent def
+R24398:24416 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R24418:24418 UMST.ChemConstants.DensityConservation <> h:77 var
+R24500:24503 Corelib.Init.Datatypes <> negb def
+R24506:24532 UMST.ChemConstants.DensityConservation <> densityLadderDiagramOrderOk def
+R24535:24553 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R24555:24555 UMST.ChemConstants.DensityConservation <> h:77 var
+R24674:24674 UMST.ChemConstants.DensityConservation <> m:76 var
+R24707:24734 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R24739:24762 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R24790:24817 UMST.ChemConstants.DensityConservation <> density_conservation_assumed constr
+R24845:24874 UMST.ChemConstants.DensityConservation <> density_conservation_surrogate constr
+R24879:24896 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R24879:24896 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R24924:24950 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R24955:24987 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+R24586:24615 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R24444:24473 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R24305:24334 UMST.ChemConstants.DensityConservation <> verdict_trivial_density_refuse constr
+R24203:24235 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+R24140:24166 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+def 25030:25064 <> evaluate_density_conservation_close
+R25073:25099 UMST.ChemConstants.DensityConservation <> DensityConservationModality ind
+binder 25069:25069 <> m:82
+R25127:25130 Corelib.Init.Datatypes <> bool ind
+binder 25105:25123 <> claim_physics_green:83
+R25161:25164 Corelib.Init.Datatypes <> bool ind
+binder 25136:25157 <> claim_production_wired:84
+R25169:25196 UMST.ChemConstants.DensityConservation <> density_conservation_verdict ind
+R25206:25224 UMST.ChemConstants.DensityConservation <> claim_physics_green:83 var
+R25271:25292 UMST.ChemConstants.DensityConservation <> claim_production_wired:84 var
+R25350:25350 UMST.ChemConstants.DensityConservation <> m:82 var
+R25363:25390 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R25395:25412 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R25420:25447 UMST.ChemConstants.DensityConservation <> density_conservation_assumed constr
+R25455:25481 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R25489:25518 UMST.ChemConstants.DensityConservation <> density_conservation_surrogate constr
+R25523:25546 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R25523:25546 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R25523:25546 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R25301:25331 UMST.ChemConstants.DensityConservation <> verdict_production_wired_refuse constr
+R25233:25259 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+def 25569:25599 <> density_conservation_authorized
+R25626:25629 Corelib.Init.Datatypes <> bool ind
+binder 25604:25622 <> claim_physics_green:86
+R25660:25663 Corelib.Init.Datatypes <> bool ind
+binder 25635:25656 <> claim_production_wired:87
+R25668:25671 Corelib.Init.Datatypes <> bool ind
+R25684:25718 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R25730:25756 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R25758:25776 UMST.ChemConstants.DensityConservation <> claim_physics_green:86 var
+R25778:25799 UMST.ChemConstants.DensityConservation <> claim_production_wired:87 var
+R25810:25833 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R25838:25841 Corelib.Init.Datatypes <> true constr
+R25852:25856 Corelib.Init.Datatypes <> false constr
+ind 26102:26125 <> density_conservation_law
+constr 26141:26164 <> law_density_ladder_named
+constr 26170:26195 <> law_scrambled_order_refuse
+constr 26201:26223 <> law_green_invent_refuse
+constr 26229:26255 <> law_production_wired_refuse
+scheme 26102:26125 <> density_conservation_law_rect
+scheme 26102:26125 <> density_conservation_law_ind
+scheme 26102:26125 <> density_conservation_law_rec
+scheme 26102:26125 <> density_conservation_law_sind
+def 26270:26299 <> density_conservation_law_count
+R26303:26305 Corelib.Init.Datatypes <> nat ind
+prf 26320:26357 <> density_conservation_law_count_is_four
+R26393:26395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26363:26392 UMST.ChemConstants.DensityConservation <> density_conservation_law_count def
+ind 26435:26466 <> density_conservation_law_witness
+constr 26482:26505 <> density_law_witness_open
+constr 26511:26536 <> density_law_witness_proved
+scheme 26435:26466 <> density_conservation_law_witness_rect
+scheme 26435:26466 <> density_conservation_law_witness_ind
+scheme 26435:26466 <> density_conservation_law_witness_rec
+scheme 26435:26466 <> density_conservation_law_witness_sind
+def 26551:26591 <> evaluate_density_conservation_law_witness
+R26602:26625 UMST.ChemConstants.DensityConservation <> density_conservation_law ind
+binder 26596:26598 <> law:92
+R26633:26659 UMST.ChemConstants.DensityConservation <> DensityConservationModality ind
+binder 26629:26629 <> m:93
+R26666:26697 UMST.ChemConstants.DensityConservation <> density_conservation_law_witness ind
+R26710:26710 UMST.ChemConstants.DensityConservation <> m:93 var
+R26721:26748 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R26754:26781 UMST.ChemConstants.DensityConservation <> density_conservation_assumed constr
+R26787:26816 UMST.ChemConstants.DensityConservation <> density_conservation_surrogate constr
+R26821:26844 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+R26821:26844 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+R26821:26844 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+R26850:26876 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R26881:26906 UMST.ChemConstants.DensityConservation <> density_law_witness_proved constr
+prf 26922:26966 <> all_density_conservation_laws_open_at_unwired
+R27098:27103 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27071:27073 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26972:27012 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_law_witness def
+R27014:27037 UMST.ChemConstants.DensityConservation <> law_density_ladder_named constr
+R27043:27070 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R27074:27097 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+R27232:27237 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27205:27207 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27104:27144 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_law_witness def
+R27146:27171 UMST.ChemConstants.DensityConservation <> law_scrambled_order_refuse constr
+R27177:27204 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R27208:27231 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+R27363:27368 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27336:27338 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27238:27278 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_law_witness def
+R27280:27302 UMST.ChemConstants.DensityConservation <> law_green_invent_refuse constr
+R27308:27335 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R27339:27362 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+R27471:27473 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27369:27409 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_law_witness def
+R27411:27437 UMST.ChemConstants.DensityConservation <> law_production_wired_refuse constr
+R27443:27470 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R27474:27497 UMST.ChemConstants.DensityConservation <> density_law_witness_open constr
+def 27777:27795 <> densityLadderProved
+R27799:27802 Corelib.Init.Datatypes <> bool ind
+R27807:27811 Corelib.Init.Datatypes <> false constr
+prf 27821:27847 <> density_ladder_proved_false
+R27870:27872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27851:27869 UMST.ChemConstants.DensityConservation <> densityLadderProved def
+R27873:27877 Corelib.Init.Datatypes <> false constr
+def 27917:27939 <> not118SquaredGreenTable
+R27943:27946 Corelib.Init.Datatypes <> bool ind
+R27951:27954 Corelib.Init.Datatypes <> true constr
+prf 27964:27990 <> not_118_squared_green_table
+R28017:28019 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27994:28016 UMST.ChemConstants.DensityConservation <> not118SquaredGreenTable def
+R28020:28023 Corelib.Init.Datatypes <> true constr
+prf 28280:28318 <> unwired_close_without_production_wiring
+R28404:28408 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28324:28358 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R28364:28391 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R28393:28397 Corelib.Init.Datatypes <> false constr
+R28399:28403 Corelib.Init.Datatypes <> false constr
+R28409:28426 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+prf 28463:28514 <> unwired_modality_always_ok_without_production_wiring
+R28600:28604 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28520:28554 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R28560:28587 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R28589:28593 Corelib.Init.Datatypes <> false constr
+R28595:28599 Corelib.Init.Datatypes <> false constr
+R28605:28622 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R28638:28676 UMST.ChemConstants.DensityConservation <> unwired_close_without_production_wiring thm
+R28638:28676 UMST.ChemConstants.DensityConservation <> unwired_close_without_production_wiring thm
+prf 28691:28734 <> unwired_verdict_ok_without_production_wiring
+R28861:28865 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28740:28770 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R28777:28811 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R28820:28847 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R28849:28853 Corelib.Init.Datatypes <> false constr
+R28855:28859 Corelib.Init.Datatypes <> false constr
+R28866:28869 Corelib.Init.Datatypes <> true constr
+R28888:28918 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R28931:28969 UMST.ChemConstants.DensityConservation <> unwired_close_without_production_wiring thm
+R28931:28969 UMST.ChemConstants.DensityConservation <> unwired_close_without_production_wiring thm
+R28931:28969 UMST.ChemConstants.DensityConservation <> unwired_close_without_production_wiring thm
+prf 29223:29241 <> density_fe_named_ok
+R29376:29380 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29247:29272 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R29278:29305 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R29307:29331 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R29337:29363 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R29365:29369 Corelib.Init.Datatypes <> false constr
+R29371:29375 Corelib.Init.Datatypes <> false constr
+R29381:29404 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+prf 29441:29473 <> named_density_ladder_conservation
+R29637:29642 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29608:29612 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29479:29504 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R29510:29537 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R29539:29563 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R29569:29595 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R29597:29601 Corelib.Init.Datatypes <> false constr
+R29603:29607 Corelib.Init.Datatypes <> false constr
+R29613:29636 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R29744:29749 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29737:29739 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29643:29669 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R29672:29687 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R29690:29708 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R29710:29734 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R29740:29743 Corelib.Init.Datatypes <> true constr
+R29888:29893 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29881:29883 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29750:29780 UMST.ChemConstants.DensityConservation <> densityBindingIdentityConserved def
+R29783:29801 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R29803:29827 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R29835:29853 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R29855:29879 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R29884:29887 Corelib.Init.Datatypes <> true constr
+R29983:29988 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29976:29978 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29894:29927 UMST.ChemConstants.DensityConservation <> densityLadderDiagramAllLegsPresent def
+R29930:29948 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R29950:29974 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R29979:29982 Corelib.Init.Datatypes <> true constr
+R30064:30066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29989:30015 UMST.ChemConstants.DensityConservation <> densityLadderDiagramOrderOk def
+R30018:30036 UMST.ChemConstants.DensityConservation <> density_inc_diagram proj
+R30038:30062 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R30067:30070 Corelib.Init.Datatypes <> true constr
+prf 30121:30139 <> density_cu_named_ok
+R30274:30278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30145:30170 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R30176:30203 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R30205:30229 UMST.ChemConstants.DensityConservation <> densityIncidenceCuNamedL1 def
+R30235:30261 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R30263:30267 Corelib.Init.Datatypes <> false constr
+R30269:30273 Corelib.Init.Datatypes <> false constr
+R30279:30302 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+prf 30339:30374 <> named_cu_density_ladder_conservation
+R30538:30543 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30509:30513 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30380:30405 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R30411:30438 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R30440:30464 UMST.ChemConstants.DensityConservation <> densityIncidenceCuNamedL1 def
+R30470:30496 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R30498:30502 Corelib.Init.Datatypes <> false constr
+R30504:30508 Corelib.Init.Datatypes <> false constr
+R30514:30537 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R30638:30640 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30544:30570 UMST.ChemConstants.DensityConservation <> densityComposedEqualsDirect def
+R30573:30588 UMST.ChemConstants.DensityConservation <> density_parent_z proj
+R30591:30609 UMST.ChemConstants.DensityConservation <> density_inc_binding proj
+R30611:30635 UMST.ChemConstants.DensityConservation <> densityIncidenceCuNamedL1 def
+R30641:30644 Corelib.Init.Datatypes <> true constr
+R30673:30691 UMST.ChemConstants.DensityConservation <> density_cu_named_ok thm
+R30673:30691 UMST.ChemConstants.DensityConservation <> density_cu_named_ok thm
+R30704:30736 UMST.ChemConstants.DensityConservation <> density_cu_composed_equals_direct thm
+R30704:30736 UMST.ChemConstants.DensityConservation <> density_cu_composed_equals_direct thm
+prf 30751:30772 <> density_named_close_ok
+R30857:30861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30778:30812 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R30818:30844 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R30846:30850 Corelib.Init.Datatypes <> false constr
+R30852:30856 Corelib.Init.Datatypes <> false constr
+R30862:30885 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+prf 30922:30953 <> named_density_conservation_close
+R31067:31072 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31038:31042 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30959:30993 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R30999:31025 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R31027:31031 Corelib.Init.Datatypes <> false constr
+R31033:31037 Corelib.Init.Datatypes <> false constr
+R31043:31066 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R31116:31118 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31073:31103 UMST.ChemConstants.DensityConservation <> density_conservation_authorized def
+R31105:31109 Corelib.Init.Datatypes <> false constr
+R31111:31115 Corelib.Init.Datatypes <> false constr
+R31119:31122 Corelib.Init.Datatypes <> true constr
+R31151:31172 UMST.ChemConstants.DensityConservation <> density_named_close_ok thm
+R31151:31172 UMST.ChemConstants.DensityConservation <> density_named_close_ok thm
+R31186:31216 UMST.ChemConstants.DensityConservation <> density_conservation_authorized def
+R31231:31252 UMST.ChemConstants.DensityConservation <> density_named_close_ok thm
+R31231:31252 UMST.ChemConstants.DensityConservation <> density_named_close_ok thm
+R31231:31252 UMST.ChemConstants.DensityConservation <> density_named_close_ok thm
+prf 31508:31530 <> trivial_density_refused
+R31663:31667 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31536:31561 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R31567:31594 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R31596:31618 UMST.ChemConstants.DensityConservation <> densityIncidenceTrivial def
+R31624:31650 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R31652:31656 Corelib.Init.Datatypes <> false constr
+R31658:31662 Corelib.Init.Datatypes <> false constr
+R31668:31697 UMST.ChemConstants.DensityConservation <> verdict_trivial_density_refuse constr
+prf 31734:31760 <> trivial_density_fail_closed
+R31928:31933 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31893:31897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31766:31791 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R31797:31824 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R31826:31848 UMST.ChemConstants.DensityConservation <> densityIncidenceTrivial def
+R31854:31880 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R31882:31886 Corelib.Init.Datatypes <> false constr
+R31888:31892 Corelib.Init.Datatypes <> false constr
+R31898:31927 UMST.ChemConstants.DensityConservation <> verdict_trivial_density_refuse constr
+R32105:32109 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31934:31964 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R31971:31996 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R32005:32032 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R32034:32056 UMST.ChemConstants.DensityConservation <> densityIncidenceTrivial def
+R32065:32091 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R32093:32097 Corelib.Init.Datatypes <> false constr
+R32099:32103 Corelib.Init.Datatypes <> false constr
+R32110:32114 Corelib.Init.Datatypes <> false constr
+R32143:32165 UMST.ChemConstants.DensityConservation <> trivial_density_refused thm
+R32143:32165 UMST.ChemConstants.DensityConservation <> trivial_density_refused thm
+R32179:32209 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R32224:32246 UMST.ChemConstants.DensityConservation <> trivial_density_refused thm
+R32224:32246 UMST.ChemConstants.DensityConservation <> trivial_density_refused thm
+R32224:32246 UMST.ChemConstants.DensityConservation <> trivial_density_refused thm
+prf 32502:32524 <> scrambled_order_refused
+R32664:32668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32530:32555 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R32561:32588 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R32590:32619 UMST.ChemConstants.DensityConservation <> densityIncidenceScrambledOrder def
+R32625:32651 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R32653:32657 Corelib.Init.Datatypes <> false constr
+R32659:32663 Corelib.Init.Datatypes <> false constr
+R32669:32698 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+prf 32735:32761 <> scrambled_order_fail_closed
+R32936:32941 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32901:32905 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32767:32792 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R32798:32825 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R32827:32856 UMST.ChemConstants.DensityConservation <> densityIncidenceScrambledOrder def
+R32862:32888 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R32890:32894 Corelib.Init.Datatypes <> false constr
+R32896:32900 Corelib.Init.Datatypes <> false constr
+R32906:32935 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R33120:33124 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32942:32972 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R32979:33004 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R33013:33040 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R33042:33071 UMST.ChemConstants.DensityConservation <> densityIncidenceScrambledOrder def
+R33080:33106 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R33108:33112 Corelib.Init.Datatypes <> false constr
+R33114:33118 Corelib.Init.Datatypes <> false constr
+R33125:33129 Corelib.Init.Datatypes <> false constr
+R33158:33180 UMST.ChemConstants.DensityConservation <> scrambled_order_refused thm
+R33158:33180 UMST.ChemConstants.DensityConservation <> scrambled_order_refused thm
+R33194:33224 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R33239:33261 UMST.ChemConstants.DensityConservation <> scrambled_order_refused thm
+R33239:33261 UMST.ChemConstants.DensityConservation <> scrambled_order_refused thm
+R33239:33261 UMST.ChemConstants.DensityConservation <> scrambled_order_refused thm
+prf 33293:33328 <> missing_direct_leg_scrambled_refused
+R33470:33474 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33334:33359 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R33365:33392 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R33394:33425 UMST.ChemConstants.DensityConservation <> densityIncidenceMissingDirectLeg def
+R33431:33457 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R33459:33463 Corelib.Init.Datatypes <> false constr
+R33465:33469 Corelib.Init.Datatypes <> false constr
+R33475:33504 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+prf 33541:33580 <> missing_direct_leg_scrambled_fail_closed
+R33757:33762 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33722:33726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33586:33611 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R33617:33644 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R33646:33677 UMST.ChemConstants.DensityConservation <> densityIncidenceMissingDirectLeg def
+R33683:33709 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R33711:33715 Corelib.Init.Datatypes <> false constr
+R33717:33721 Corelib.Init.Datatypes <> false constr
+R33727:33756 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R33943:33947 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33763:33793 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R33800:33825 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R33834:33861 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R33863:33894 UMST.ChemConstants.DensityConservation <> densityIncidenceMissingDirectLeg def
+R33903:33929 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R33931:33935 Corelib.Init.Datatypes <> false constr
+R33937:33941 Corelib.Init.Datatypes <> false constr
+R33948:33952 Corelib.Init.Datatypes <> false constr
+R33981:34016 UMST.ChemConstants.DensityConservation <> missing_direct_leg_scrambled_refused thm
+R33981:34016 UMST.ChemConstants.DensityConservation <> missing_direct_leg_scrambled_refused thm
+R34030:34060 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R34075:34110 UMST.ChemConstants.DensityConservation <> missing_direct_leg_scrambled_refused thm
+R34075:34110 UMST.ChemConstants.DensityConservation <> missing_direct_leg_scrambled_refused thm
+R34075:34110 UMST.ChemConstants.DensityConservation <> missing_direct_leg_scrambled_refused thm
+prf 34366:34392 <> green_invent_refuse_unwired
+R34477:34481 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34398:34432 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R34438:34465 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R34467:34470 Corelib.Init.Datatypes <> true constr
+R34472:34476 Corelib.Init.Datatypes <> false constr
+R34482:34508 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+prf 34545:34570 <> green_invent_always_refuse
+R34696:34700 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34576:34606 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R34613:34647 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R34656:34683 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R34685:34688 Corelib.Init.Datatypes <> true constr
+R34690:34694 Corelib.Init.Datatypes <> false constr
+R34701:34705 Corelib.Init.Datatypes <> false constr
+R34724:34754 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R34767:34793 UMST.ChemConstants.DensityConservation <> green_invent_refuse_unwired thm
+R34767:34793 UMST.ChemConstants.DensityConservation <> green_invent_refuse_unwired thm
+R34767:34793 UMST.ChemConstants.DensityConservation <> green_invent_refuse_unwired thm
+prf 34823:34859 <> green_invent_density_incidence_refuse
+R34993:34997 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34865:34890 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R34896:34923 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R34925:34949 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R34955:34981 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R34983:34986 Corelib.Init.Datatypes <> true constr
+R34988:34992 Corelib.Init.Datatypes <> false constr
+R34998:35024 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+prf 35284:35308 <> proved_without_bar_refuse
+R35442:35446 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35314:35339 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R35345:35372 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R35374:35398 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R35404:35430 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R35432:35436 Corelib.Init.Datatypes <> false constr
+R35438:35441 Corelib.Init.Datatypes <> true constr
+R35447:35479 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+prf 35516:35545 <> proved_without_bar_fail_closed
+R35717:35722 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35679:35683 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35551:35576 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R35582:35609 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R35611:35635 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R35641:35667 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R35669:35673 Corelib.Init.Datatypes <> false constr
+R35675:35678 Corelib.Init.Datatypes <> true constr
+R35684:35716 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+R35895:35899 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35723:35753 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R35760:35785 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R35794:35821 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R35823:35847 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R35856:35882 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R35884:35888 Corelib.Init.Datatypes <> false constr
+R35890:35893 Corelib.Init.Datatypes <> true constr
+R35900:35904 Corelib.Init.Datatypes <> false constr
+R35933:35957 UMST.ChemConstants.DensityConservation <> proved_without_bar_refuse thm
+R35933:35957 UMST.ChemConstants.DensityConservation <> proved_without_bar_refuse thm
+R35971:36001 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R36016:36040 UMST.ChemConstants.DensityConservation <> proved_without_bar_refuse thm
+R36016:36040 UMST.ChemConstants.DensityConservation <> proved_without_bar_refuse thm
+R36016:36040 UMST.ChemConstants.DensityConservation <> proved_without_bar_refuse thm
+prf 36072:36114 <> proved_without_bar_zero_defect_still_refuse
+R36252:36256 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36120:36145 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R36151:36178 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R36180:36204 UMST.ChemConstants.DensityConservation <> densityIncidenceCuNamedL1 def
+R36210:36240 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarZeroDefect def
+R36242:36246 Corelib.Init.Datatypes <> false constr
+R36248:36251 Corelib.Init.Datatypes <> true constr
+R36257:36289 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+prf 36550:36572 <> production_wired_refuse
+R36656:36660 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36578:36612 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R36618:36644 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R36646:36650 Corelib.Init.Datatypes <> false constr
+R36652:36655 Corelib.Init.Datatypes <> true constr
+R36661:36691 UMST.ChemConstants.DensityConservation <> verdict_production_wired_refuse constr
+prf 36728:36757 <> production_wired_claim_refused
+R36882:36886 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36763:36793 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R36800:36834 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R36843:36869 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R36871:36875 Corelib.Init.Datatypes <> false constr
+R36877:36880 Corelib.Init.Datatypes <> true constr
+R36887:36891 Corelib.Init.Datatypes <> false constr
+R36910:36940 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_ok def
+R36953:36975 UMST.ChemConstants.DensityConservation <> production_wired_refuse thm
+R36953:36975 UMST.ChemConstants.DensityConservation <> production_wired_refuse thm
+R36953:36975 UMST.ChemConstants.DensityConservation <> production_wired_refuse thm
+def 37236:37274 <> density_conservation_coherence_scaffold
+R37278:37281 Corelib.Init.Datatypes <> bool ind
+R37597:37602 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R37438:37443 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R37288:37319 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_beq def
+R37326:37360 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R37369:37395 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R37397:37401 Corelib.Init.Datatypes <> false constr
+R37403:37407 Corelib.Init.Datatypes <> false constr
+R37414:37437 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R37444:37475 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_beq def
+R37482:37516 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R37525:37552 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R37554:37557 Corelib.Init.Datatypes <> true constr
+R37559:37563 Corelib.Init.Datatypes <> false constr
+R37570:37596 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+R37603:37634 UMST.ChemConstants.DensityConservation <> density_conservation_verdict_beq def
+R37641:37675 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R37684:37710 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R37712:37716 Corelib.Init.Datatypes <> false constr
+R37718:37721 Corelib.Init.Datatypes <> true constr
+R37728:37758 UMST.ChemConstants.DensityConservation <> verdict_production_wired_refuse constr
+prf 37768:37811 <> density_conservation_coherence_scaffold_true
+R37856:37858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37817:37855 UMST.ChemConstants.DensityConservation <> density_conservation_coherence_scaffold def
+R37859:37862 Corelib.Init.Datatypes <> true constr
+R37881:37919 UMST.ChemConstants.DensityConservation <> density_conservation_coherence_scaffold def
+prf 37974:38020 <> density_conservation_coherence_scaffold_theorem
+R38136:38141 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38105:38111 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38026:38060 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R38066:38092 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R38094:38098 Corelib.Init.Datatypes <> false constr
+R38100:38104 Corelib.Init.Datatypes <> false constr
+R38112:38135 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R38255:38260 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38221:38227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38142:38176 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R38182:38209 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R38211:38214 Corelib.Init.Datatypes <> true constr
+R38216:38220 Corelib.Init.Datatypes <> false constr
+R38228:38254 UMST.ChemConstants.DensityConservation <> verdict_green_invent_refuse constr
+R38339:38345 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38261:38295 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R38301:38327 UMST.ChemConstants.DensityConservation <> density_conservation_proved constr
+R38329:38333 Corelib.Init.Datatypes <> false constr
+R38335:38338 Corelib.Init.Datatypes <> true constr
+R38346:38376 UMST.ChemConstants.DensityConservation <> verdict_production_wired_refuse constr
+ind 38655:38666 <> formal_fiber
+constr 38682:38702 <> fiber_quantum_knowing
+constr 38708:38724 <> fiber_meso_acting
+scheme 38655:38666 <> formal_fiber_rect
+scheme 38655:38666 <> formal_fiber_ind
+scheme 38655:38666 <> formal_fiber_rec
+scheme 38655:38666 <> formal_fiber_sind
+ind 38738:38756 <> formal_claim_family
+constr 38772:38797 <> claim_density_conservation
+scheme 38738:38756 <> formal_claim_family_rect
+scheme 38738:38756 <> formal_claim_family_ind
+scheme 38738:38756 <> formal_claim_family_rec
+scheme 38738:38756 <> formal_claim_family_sind
+def 38812:38840 <> density_conservation_fiber_ok
+R38847:38858 UMST.ChemConstants.DensityConservation <> formal_fiber ind
+binder 38843:38843 <> f:99
+R38863:38866 Corelib.Init.Datatypes <> bool ind
+R38879:38879 UMST.ChemConstants.DensityConservation <> f:99 var
+R38890:38910 UMST.ChemConstants.DensityConservation <> fiber_quantum_knowing constr
+R38915:38918 Corelib.Init.Datatypes <> true constr
+R38924:38940 UMST.ChemConstants.DensityConservation <> fiber_meso_acting constr
+R38945:38949 Corelib.Init.Datatypes <> false constr
+def 38970:39006 <> density_conservation_knowing_fiber_ok
+R39010:39013 Corelib.Init.Datatypes <> bool ind
+R39020:39048 UMST.ChemConstants.DensityConservation <> density_conservation_fiber_ok def
+R39050:39070 UMST.ChemConstants.DensityConservation <> fiber_quantum_knowing constr
+def 39085:39119 <> density_conservation_meso_acting_ok
+R39123:39126 Corelib.Init.Datatypes <> bool ind
+R39133:39161 UMST.ChemConstants.DensityConservation <> density_conservation_fiber_ok def
+R39163:39179 UMST.ChemConstants.DensityConservation <> fiber_meso_acting constr
+prf 39189:39230 <> density_conservation_knowing_fiber_ok_true
+R39273:39275 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39236:39272 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok def
+R39276:39279 Corelib.Init.Datatypes <> true constr
+prf 39314:39352 <> density_conservation_meso_acting_not_ok
+R39393:39395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39358:39392 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_ok def
+R39396:39400 Corelib.Init.Datatypes <> false constr
+prf 39437:39480 <> density_conservation_routes_knowing_not_meso
+R39530:39535 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39523:39525 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39486:39522 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok def
+R39526:39529 Corelib.Init.Datatypes <> true constr
+R39571:39573 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39536:39570 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_ok def
+R39574:39578 Corelib.Init.Datatypes <> false constr
+R39607:39648 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok_true thm
+R39607:39648 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok_true thm
+R39661:39699 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_not_ok thm
+R39661:39699 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_not_ok thm
+def 39719:39736 <> fiberNotMesoActing
+R39740:39743 Corelib.Init.Datatypes <> bool ind
+R39787:39792 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R39750:39786 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok def
+R39793:39796 Corelib.Init.Datatypes <> negb def
+R39798:39832 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_ok def
+prf 39842:39867 <> fiber_not_meso_acting_true
+R39889:39891 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39871:39888 UMST.ChemConstants.DensityConservation <> fiberNotMesoActing def
+R39892:39895 Corelib.Init.Datatypes <> true constr
+R39914:39931 UMST.ChemConstants.DensityConservation <> fiberNotMesoActing def
+R39934:39970 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok def
+R39977:40011 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_ok def
+prf 40269:40305 <> density_conservation_fixture_scaffold
+R40471:40476 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R40440:40446 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40311:40336 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R40342:40369 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R40371:40395 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R40401:40427 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R40429:40433 Corelib.Init.Datatypes <> false constr
+R40435:40439 Corelib.Init.Datatypes <> false constr
+R40447:40470 UMST.ChemConstants.DensityConservation <> verdict_density_named_ok constr
+R40641:40646 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R40604:40610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40477:40502 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R40508:40535 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R40537:40559 UMST.ChemConstants.DensityConservation <> densityIncidenceTrivial def
+R40565:40591 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R40593:40597 Corelib.Init.Datatypes <> false constr
+R40599:40603 Corelib.Init.Datatypes <> false constr
+R40611:40640 UMST.ChemConstants.DensityConservation <> verdict_trivial_density_refuse constr
+R40818:40823 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R40781:40787 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40647:40672 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R40678:40705 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R40707:40736 UMST.ChemConstants.DensityConservation <> densityIncidenceScrambledOrder def
+R40742:40768 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R40770:40774 Corelib.Init.Datatypes <> false constr
+R40776:40780 Corelib.Init.Datatypes <> false constr
+R40788:40817 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R40997:41002 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R40960:40966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40824:40849 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R40855:40882 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R40884:40915 UMST.ChemConstants.DensityConservation <> densityIncidenceMissingDirectLeg def
+R40921:40947 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R40949:40953 Corelib.Init.Datatypes <> false constr
+R40955:40959 Corelib.Init.Datatypes <> false constr
+R40967:40996 UMST.ChemConstants.DensityConservation <> verdict_scrambled_order_refuse constr
+R41171:41176 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41131:41137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41003:41028 UMST.ChemConstants.DensityConservation <> evaluate_density_incidence def
+R41034:41061 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R41063:41087 UMST.ChemConstants.DensityConservation <> densityIncidenceFeNamedL1 def
+R41093:41119 UMST.ChemConstants.DensityConservation <> densityClaimLadderBarAbsent def
+R41121:41125 Corelib.Init.Datatypes <> false constr
+R41127:41130 Corelib.Init.Datatypes <> true constr
+R41138:41170 UMST.ChemConstants.DensityConservation <> verdict_proved_without_bar_refuse constr
+R41282:41287 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41257:41263 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41177:41211 UMST.ChemConstants.DensityConservation <> evaluate_density_conservation_close def
+R41217:41244 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr
+R41246:41250 Corelib.Init.Datatypes <> false constr
+R41252:41256 Corelib.Init.Datatypes <> false constr
+R41264:41281 UMST.ChemConstants.DensityConservation <> verdict_unwired_ok constr
+R41332:41337 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41325:41327 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41288:41324 UMST.ChemConstants.DensityConservation <> density_conservation_knowing_fiber_ok def
+R41328:41331 Corelib.Init.Datatypes <> true constr
+R41381:41386 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41373:41375 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41338:41372 UMST.ChemConstants.DensityConservation <> density_conservation_meso_acting_ok def
+R41376:41380 Corelib.Init.Datatypes <> false constr
+R41414:41419 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41406:41408 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41387:41405 UMST.ChemConstants.DensityConservation <> densityLadderProved def
+R41409:41413 Corelib.Init.Datatypes <> false constr
+R41449:41454 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R41442:41444 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41420:41441 UMST.ChemConstants.DensityConservation <> indirectNeDirectLadder def
+R41445:41448 Corelib.Init.Datatypes <> true constr
+R41522:41524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41455:41493 UMST.ChemConstants.DensityConservation <> density_scalar_sdf_not_rho_unless_named def
+R41495:41521 UMST.ChemConstants.DensityConservation <> densityScalarSignedDistance def
+R41525:41528 Corelib.Init.Datatypes <> true constr
+def 41808:41829 <> densityLadderAuthority
+R41833:41838 Stdlib.Strings.String <> string ind
+def 41897:41929 <> chemIntDensityLadderTypeAuthority
+R41933:41938 Stdlib.Strings.String <> string ind
+def 41989:42028 <> chemIntCrossDensityConservationAuthority
+R42032:42037 Stdlib.Strings.String <> string ind
+def 42095:42119 <> densityConservationCellId
+R42123:42128 Stdlib.Strings.String <> string ind
+def 42189:42215 <> densityConservationNonClaim
+R42219:42224 Stdlib.Strings.String <> string ind
+prf 42703:42730 <> density_conservation_cell_id
+R42761:42763 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R42736:42760 UMST.ChemConstants.DensityConservation <> densityConservationCellId def
+prf 42838:42881 <> density_conservation_cites_density_ladder_rs
+R42909:42912 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R42887:42908 UMST.ChemConstants.DensityConservation <> densityLadderAuthority def
+prf 42950:42999 <> density_conservation_cites_int_density_ladder_type
+R43038:43040 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43005:43037 UMST.ChemConstants.DensityConservation <> chemIntDensityLadderTypeAuthority def
+prf 43105:43161 <> density_conservation_cites_int_cross_density_conservation
+R43207:43209 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R43167:43206 UMST.ChemConstants.DensityConservation <> chemIntCrossDensityConservationAuthority def
+prf 43281:43313 <> density_conservation_cites_marker
+R43339:43342 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R43319:43338 UMST.ChemConstants.DensityConservation <> indirectLadderMarker def
+def 43608:43642 <> densitySecondLawConservationFraming
+R43646:43651 Stdlib.Strings.String <> string ind
+prf 43735:43766 <> density_not_second_density_axiom
+R43807:43810 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R43772:43806 UMST.ChemConstants.DensityConservation <> densitySecondLawConservationFraming def
+prf 43868:43906 <> density_second_law_conservation_framing
+R43947:43950 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R43912:43946 UMST.ChemConstants.DensityConservation <> densitySecondLawConservationFraming def
+def 44219:44240 <> physicsGreenAuthorized
+R44252:44256 Corelib.Init.Logic <> False ind
+prf 44266:44305 <> density_conservation_physics_green_false
+R44311:44312 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R44313:44334 UMST.ChemConstants.DensityConservation <> physicsGreenAuthorized def
+prf 44374:44410 <> density_conservation_modality_unwired
+R44450:44452 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R44416:44449 UMST.ChemConstants.DensityConservation <> densityConservationModalityCurrent def
+R44453:44480 UMST.ChemConstants.DensityConservation <> density_conservation_unwired constr

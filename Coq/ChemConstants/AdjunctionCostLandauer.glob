@@ -1,0 +1,170 @@
+DIGEST 5fe00a404429d8861266e70ea6f034dd
+FUMST.ChemConstants.AdjunctionCostLandauer
+R902:906 Stdlib.Arith.Arith <> <> lib
+R908:913 Stdlib.Strings.String <> <> lib
+R915:918 Stdlib.Bool.Bool <> <> lib
+ind 1175:1204 <> AdjunctionCostLandauerModality
+constr 1220:1251 <> adjunction_cost_landauer_unwired
+constr 1257:1288 <> adjunction_cost_landauer_assumed
+constr 1294:1324 <> adjunction_cost_landauer_proved
+constr 1330:1363 <> adjunction_cost_landauer_surrogate
+scheme 1175:1204 <> AdjunctionCostLandauerModality_rect
+scheme 1175:1204 <> AdjunctionCostLandauerModality_ind
+scheme 1175:1204 <> AdjunctionCostLandauerModality_rec
+scheme 1175:1204 <> AdjunctionCostLandauerModality_sind
+def 1378:1414 <> adjunctionCostLandauerModalityCurrent
+R1418:1447 UMST.ChemConstants.AdjunctionCostLandauer <> AdjunctionCostLandauerModality ind
+R1454:1485 UMST.ChemConstants.AdjunctionCostLandauer <> adjunction_cost_landauer_unwired constr
+def 1724:1735 <> purewardCost
+R1739:1741 Corelib.Init.Datatypes <> nat ind
+def 1761:1779 <> contaminantsPresent
+R1783:1786 Corelib.Init.Datatypes <> bool ind
+R1791:1794 Corelib.Init.Datatypes <> true constr
+def 1809:1823 <> minPurewardCost
+R1844:1847 Corelib.Init.Datatypes <> bool ind
+binder 1826:1840 <> hasContaminants:3
+R1852:1854 Corelib.Init.Datatypes <> nat ind
+R1864:1878 UMST.ChemConstants.AdjunctionCostLandauer <> hasContaminants:3 var
+R1885:1896 UMST.ChemConstants.AdjunctionCostLandauer <> purewardCost def
+prf 1913:1934 <> pureward_cost_positive
+R1939:1941 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R1942:1953 UMST.ChemConstants.AdjunctionCostLandauer <> purewardCost def
+R1970:1981 UMST.ChemConstants.AdjunctionCostLandauer <> purewardCost def
+R1990:2002 Stdlib.Arith.PeanoNat Nat lt_0_succ thm
+R1990:2002 Stdlib.Arith.PeanoNat Nat lt_0_succ thm
+prf 2017:2036 <> pureward_cost_nonneg
+R2041:2044 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R2045:2056 UMST.ChemConstants.AdjunctionCostLandauer <> purewardCost def
+R2072:2081 Stdlib.Arith.PeanoNat Nat le_0_l thm
+R2072:2081 Stdlib.Arith.PeanoNat Nat le_0_l thm
+prf 2096:2119 <> min_pureward_cost_nonneg
+R2140:2143 Corelib.Init.Datatypes <> bool ind
+binder 2122:2136 <> hasContaminants:4
+R2151:2154 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R2155:2169 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R2171:2185 UMST.ChemConstants.AdjunctionCostLandauer <> hasContaminants:4 var
+R2204:2218 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R2266:2285 UMST.ChemConstants.AdjunctionCostLandauer <> pureward_cost_nonneg thm
+R2266:2285 UMST.ChemConstants.AdjunctionCostLandauer <> pureward_cost_nonneg thm
+R2298:2307 Stdlib.Arith.PeanoNat Nat le_0_l thm
+R2298:2307 Stdlib.Arith.PeanoNat Nat le_0_l thm
+prf 2322:2353 <> min_pureward_cost_zero_when_pure
+R2380:2382 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2359:2373 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R2375:2379 Corelib.Init.Datatypes <> false constr
+def 2646:2669 <> freePurificationAdmitted
+R2693:2695 Corelib.Init.Datatypes <> nat ind
+binder 2674:2681 <> paidCost:5
+binder 2683:2689 <> minCost:6
+R2717:2720 Corelib.Init.Datatypes <> bool ind
+binder 2699:2713 <> hasContaminants:7
+R2725:2728 Corelib.Init.Datatypes <> bool ind
+R2738:2752 UMST.ChemConstants.AdjunctionCostLandauer <> hasContaminants:7 var
+R2789:2792 Corelib.Init.Datatypes <> true constr
+R2759:2765 Stdlib.Arith.PeanoNat Nat leb def
+R2767:2773 UMST.ChemConstants.AdjunctionCostLandauer <> minCost:6 var
+R2775:2782 UMST.ChemConstants.AdjunctionCostLandauer <> paidCost:5 var
+def 2807:2833 <> attemptZeroCostPurification
+R2854:2857 Corelib.Init.Datatypes <> bool ind
+binder 2836:2850 <> hasContaminants:8
+R2862:2865 Corelib.Init.Datatypes <> bool ind
+R2872:2895 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationAdmitted def
+R2900:2914 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R2916:2930 UMST.ChemConstants.AdjunctionCostLandauer <> hasContaminants:8 var
+R2933:2947 UMST.ChemConstants.AdjunctionCostLandauer <> hasContaminants:8 var
+prf 2957:3000 <> free_purification_admitted_false_when_impure
+R3038:3040 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3006:3032 UMST.ChemConstants.AdjunctionCostLandauer <> attemptZeroCostPurification def
+R3034:3037 Corelib.Init.Datatypes <> true constr
+R3041:3045 Corelib.Init.Datatypes <> false constr
+R3064:3090 UMST.ChemConstants.AdjunctionCostLandauer <> attemptZeroCostPurification def
+R3093:3116 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationAdmitted def
+R3119:3133 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+prf 3172:3196 <> freePurificationForbidden
+R3234:3236 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3202:3228 UMST.ChemConstants.AdjunctionCostLandauer <> attemptZeroCostPurification def
+R3230:3233 Corelib.Init.Datatypes <> true constr
+R3237:3241 Corelib.Init.Datatypes <> false constr
+R3257:3300 UMST.ChemConstants.AdjunctionCostLandauer <> free_purification_admitted_false_when_impure thm
+R3257:3300 UMST.ChemConstants.AdjunctionCostLandauer <> free_purification_admitted_false_when_impure thm
+prf 3315:3355 <> free_purification_admitted_true_when_pure
+R3394:3396 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3361:3387 UMST.ChemConstants.AdjunctionCostLandauer <> attemptZeroCostPurification def
+R3389:3393 Corelib.Init.Datatypes <> false constr
+R3397:3400 Corelib.Init.Datatypes <> true constr
+R3419:3445 UMST.ChemConstants.AdjunctionCostLandauer <> attemptZeroCostPurification def
+R3448:3471 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationAdmitted def
+R3474:3488 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+prf 3748:3778 <> purificationImpliesPositiveCost
+R3804:3806 Corelib.Init.Peano <> ::nat_scope:x_'>'_x not
+R3784:3798 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R3800:3803 Corelib.Init.Datatypes <> true constr
+R3826:3840 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R3860:3881 UMST.ChemConstants.AdjunctionCostLandauer <> pureward_cost_positive thm
+R3860:3881 UMST.ChemConstants.AdjunctionCostLandauer <> pureward_cost_positive thm
+prf 3896:3933 <> paid_pureward_cost_admits_purification
+R4004:4006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3939:3962 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationAdmitted def
+R3964:3975 UMST.ChemConstants.AdjunctionCostLandauer <> purewardCost def
+R3978:3992 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R3994:3997 Corelib.Init.Datatypes <> true constr
+R4000:4003 Corelib.Init.Datatypes <> true constr
+R4007:4010 Corelib.Init.Datatypes <> true constr
+R4029:4052 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationAdmitted def
+R4055:4069 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+prf 4108:4143 <> adjunction_cost_paid_pureward_admits
+R4221:4226 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4214:4216 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4149:4172 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationAdmitted def
+R4174:4185 UMST.ChemConstants.AdjunctionCostLandauer <> purewardCost def
+R4188:4202 UMST.ChemConstants.AdjunctionCostLandauer <> minPurewardCost def
+R4204:4207 Corelib.Init.Datatypes <> true constr
+R4210:4213 Corelib.Init.Datatypes <> true constr
+R4217:4220 Corelib.Init.Datatypes <> true constr
+R4259:4261 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4227:4253 UMST.ChemConstants.AdjunctionCostLandauer <> attemptZeroCostPurification def
+R4255:4258 Corelib.Init.Datatypes <> true constr
+R4262:4266 Corelib.Init.Datatypes <> false constr
+R4295:4332 UMST.ChemConstants.AdjunctionCostLandauer <> paid_pureward_cost_admits_purification thm
+R4295:4332 UMST.ChemConstants.AdjunctionCostLandauer <> paid_pureward_cost_admits_purification thm
+R4345:4369 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationForbidden thm
+R4345:4369 UMST.ChemConstants.AdjunctionCostLandauer <> freePurificationForbidden thm
+def 4614:4642 <> impurePureAdjunctionAuthority
+R4646:4651 Stdlib.Strings.String <> string ind
+def 4718:4737 <> chemL0Cat03Authority
+R4741:4746 Stdlib.Strings.String <> string ind
+def 4783:4801 <> refineCostAuthority
+R4805:4810 Stdlib.Strings.String <> string ind
+def 4875:4902 <> adjunctionCostLandauerCellId
+R4906:4911 Stdlib.Strings.String <> string ind
+def 4976:5005 <> adjunctionCostLandauerNonClaim
+R5009:5014 Stdlib.Strings.String <> string ind
+prf 5301:5332 <> adjunction_cost_landauer_cell_id
+R5366:5370 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5338:5365 UMST.ChemConstants.AdjunctionCostLandauer <> adjunctionCostLandauerCellId def
+prf 5449:5492 <> adjunction_cost_cites_impure_pure_adjunction
+R5527:5532 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5498:5526 UMST.ChemConstants.AdjunctionCostLandauer <> impurePureAdjunctionAuthority def
+prf 5570:5600 <> adjunction_cost_cites_l0_cat_03
+R5626:5628 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5606:5625 UMST.ChemConstants.AdjunctionCostLandauer <> chemL0Cat03Authority def
+prf 5679:5711 <> adjunction_cost_cites_refine_cost
+R5736:5741 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5717:5735 UMST.ChemConstants.AdjunctionCostLandauer <> refineCostAuthority def
+def 6007:6044 <> adjunctionSecondLawConservationFraming
+R6048:6053 Stdlib.Strings.String <> string ind
+prf 6146:6181 <> adjunction_not_second_landauer_axiom
+R6225:6230 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6187:6224 UMST.ChemConstants.AdjunctionCostLandauer <> adjunctionSecondLawConservationFraming def
+prf 6289:6330 <> adjunction_second_law_conservation_framing
+R6374:6379 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6336:6373 UMST.ChemConstants.AdjunctionCostLandauer <> adjunctionSecondLawConservationFraming def
+def 6646:6667 <> physicsGreenAuthorized
+R6679:6683 Corelib.Init.Logic <> False ind
+prf 6693:6727 <> adjunction_cost_physics_green_false
+R6733:6734 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R6735:6756 UMST.ChemConstants.AdjunctionCostLandauer <> physicsGreenAuthorized def
+prf 6796:6827 <> adjunction_cost_modality_unwired
+R6870:6872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6833:6869 UMST.ChemConstants.AdjunctionCostLandauer <> adjunctionCostLandauerModalityCurrent def
+R6873:6904 UMST.ChemConstants.AdjunctionCostLandauer <> adjunction_cost_landauer_unwired constr

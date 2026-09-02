@@ -1,0 +1,1126 @@
+DIGEST b816e7b4435b5c908c8ec95d87e492a3
+FUMST.ChemConstants.StructureEnablingConservation
+R1509:1513 Stdlib.Arith.Arith <> <> lib
+R1515:1520 Stdlib.ZArith.ZArith <> <> lib
+R1522:1527 Stdlib.Strings.String <> <> lib
+R1529:1532 Stdlib.Bool.Bool <> <> lib
+R1534:1536 Stdlib.micromega.Lia <> <> lib
+R1538:1541 Stdlib.Lists.List <> <> lib
+R1551:1563 Stdlib.Lists.List ListNotations <> mod
+ind 1894:1930 <> StructureEnablingConservationModality
+constr 1946:1984 <> structure_enabling_conservation_unwired
+constr 1990:2028 <> structure_enabling_conservation_assumed
+constr 2034:2071 <> structure_enabling_conservation_proved
+constr 2077:2117 <> structure_enabling_conservation_surrogate
+scheme 1894:1930 <> StructureEnablingConservationModality_rect
+scheme 1894:1930 <> StructureEnablingConservationModality_ind
+scheme 1894:1930 <> StructureEnablingConservationModality_rec
+scheme 1894:1930 <> StructureEnablingConservationModality_sind
+def 2132:2175 <> structureEnablingConservationModalityCurrent
+R2179:2215 UMST.ChemConstants.StructureEnablingConservation <> StructureEnablingConservationModality ind
+R2222:2260 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+def 2275:2312 <> structure_enabling_lattice_cardinality
+R2316:2318 Corelib.Init.Datatypes <> nat ind
+prf 2333:2378 <> structure_enabling_lattice_cardinality_is_four
+R2422:2424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2384:2421 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_lattice_cardinality def
+prf 2460:2501 <> structure_enabling_lattice_not_118_squared
+R2572:2574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2507:2510 Corelib.Init.Datatypes <> negb def
+R2513:2519 Stdlib.Arith.PeanoNat Nat eqb def
+R2521:2558 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_lattice_cardinality def
+R2564:2566 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2575:2578 Corelib.Init.Datatypes <> true constr
+R2597:2634 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_lattice_cardinality def
+def 2890:2919 <> structure_enabling_class_index
+R2923:2925 Corelib.Init.Datatypes <> nat ind
+prf 2940:2977 <> structure_enabling_class_index_is_four
+R3013:3015 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2983:3012 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_class_index def
+prf 3051:3090 <> structure_enabling_class_not_118_squared
+R3153:3155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3096:3099 Corelib.Init.Datatypes <> negb def
+R3102:3108 Stdlib.Arith.PeanoNat Nat eqb def
+R3110:3139 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_class_index def
+R3145:3147 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3156:3159 Corelib.Init.Datatypes <> true constr
+R3178:3207 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_class_index def
+def 3465:3495 <> structure_enabling_domain_count
+R3499:3501 Corelib.Init.Datatypes <> nat ind
+prf 3516:3553 <> structure_enabling_domain_count_is_two
+R3590:3592 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3559:3589 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+prf 3628:3668 <> structure_enabling_domain_not_118_squared
+R3732:3734 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3674:3677 Corelib.Init.Datatypes <> negb def
+R3680:3686 Stdlib.Arith.PeanoNat Nat eqb def
+R3688:3718 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+R3724:3726 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3735:3738 Corelib.Init.Datatypes <> true constr
+R3757:3787 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+def 3822:3858 <> structure_enabling_domain_index_valid
+R3865:3867 Corelib.Init.Datatypes <> nat ind
+binder 3861:3861 <> i:3
+R3872:3875 Corelib.Init.Datatypes <> bool ind
+R3882:3888 Stdlib.Arith.PeanoNat Nat ltb def
+R3890:3890 UMST.ChemConstants.StructureEnablingConservation <> i:3 var
+R3892:3922 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+def 3937:3971 <> structure_enabling_connectivity_idx
+R3975:3977 Corelib.Init.Datatypes <> nat ind
+def 3996:4026 <> structure_enabling_interact_idx
+R4030:4032 Corelib.Init.Datatypes <> nat ind
+prf 4047:4089 <> structure_enabling_connectivity_idx_is_zero
+R4130:4132 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4095:4129 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_connectivity_idx def
+prf 4168:4205 <> structure_enabling_interact_idx_is_one
+R4242:4244 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4211:4241 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_interact_idx def
+prf 4280:4318 <> structure_enabling_domain_indices_valid
+R4404:4409 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4397:4399 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4324:4360 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_index_valid def
+R4362:4396 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_connectivity_idx def
+R4400:4403 Corelib.Init.Datatypes <> true constr
+R4479:4481 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4410:4446 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_index_valid def
+R4448:4478 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_interact_idx def
+R4482:4485 Corelib.Init.Datatypes <> true constr
+R4518:4554 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_index_valid def
+R4561:4591 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+ind 4847:4873 <> structure_enabling_net_slot
+constr 4889:4904 <> net_slot_unwired
+constr 4910:4924 <> net_slot_absent
+constr 4930:4945 <> net_slot_present
+scheme 4847:4873 <> structure_enabling_net_slot_rect
+scheme 4847:4873 <> structure_enabling_net_slot_ind
+scheme 4847:4873 <> structure_enabling_net_slot_rec
+scheme 4847:4873 <> structure_enabling_net_slot_sind
+def 4960:4990 <> structure_enabling_net_slot_beq
+R5001:5027 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+binder 4993:4994 <> s1:6
+binder 4996:4997 <> s2:7
+R5032:5035 Corelib.Init.Datatypes <> bool ind
+R5052:5053 UMST.ChemConstants.StructureEnablingConservation <> s2:7 var
+R5048:5049 UMST.ChemConstants.StructureEnablingConservation <> s1:6 var
+R5064:5079 UMST.ChemConstants.StructureEnablingConservation <> net_slot_unwired constr
+R5082:5097 UMST.ChemConstants.StructureEnablingConservation <> net_slot_unwired constr
+R5102:5105 Corelib.Init.Datatypes <> true constr
+R5111:5125 UMST.ChemConstants.StructureEnablingConservation <> net_slot_absent constr
+R5128:5142 UMST.ChemConstants.StructureEnablingConservation <> net_slot_absent constr
+R5147:5150 Corelib.Init.Datatypes <> true constr
+R5156:5171 UMST.ChemConstants.StructureEnablingConservation <> net_slot_present constr
+R5174:5189 UMST.ChemConstants.StructureEnablingConservation <> net_slot_present constr
+R5194:5197 Corelib.Init.Datatypes <> true constr
+R5211:5215 Corelib.Init.Datatypes <> false constr
+def 5236:5273 <> structure_enabling_net_slot_is_present
+R5280:5306 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+binder 5276:5276 <> s:10
+R5311:5314 Corelib.Init.Datatypes <> bool ind
+R5327:5327 UMST.ChemConstants.StructureEnablingConservation <> s:10 var
+R5338:5353 UMST.ChemConstants.StructureEnablingConservation <> net_slot_present constr
+R5358:5361 Corelib.Init.Datatypes <> true constr
+R5372:5376 Corelib.Init.Datatypes <> false constr
+def 5397:5434 <> structure_enabling_net_slot_is_unwired
+R5441:5467 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+binder 5437:5437 <> s:12
+R5472:5475 Corelib.Init.Datatypes <> bool ind
+R5488:5488 UMST.ChemConstants.StructureEnablingConservation <> s:12 var
+R5499:5514 UMST.ChemConstants.StructureEnablingConservation <> net_slot_unwired constr
+R5519:5522 Corelib.Init.Datatypes <> true constr
+R5533:5537 Corelib.Init.Datatypes <> false constr
+def 5558:5588 <> structureEnablingNetUnwiredSlot
+R5592:5618 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+R5623:5638 UMST.ChemConstants.StructureEnablingConservation <> net_slot_unwired constr
+def 5653:5682 <> structureEnablingNetAbsentSlot
+R5686:5712 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+R5717:5731 UMST.ChemConstants.StructureEnablingConservation <> net_slot_absent constr
+def 5746:5776 <> structureEnablingNetPresentSlot
+R5780:5806 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+R5811:5826 UMST.ChemConstants.StructureEnablingConservation <> net_slot_present constr
+prf 5836:5862 <> present_net_slot_is_present
+R5923:5925 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5868:5905 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot_is_present def
+R5907:5922 UMST.ChemConstants.StructureEnablingConservation <> net_slot_present constr
+R5926:5929 Corelib.Init.Datatypes <> true constr
+prf 5964:5991 <> unwired_net_slot_not_present
+R6052:6054 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5997:6034 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot_is_present def
+R6036:6051 UMST.ChemConstants.StructureEnablingConservation <> net_slot_unwired constr
+R6055:6059 Corelib.Init.Datatypes <> false constr
+prf 6094:6120 <> absent_net_slot_not_present
+R6180:6182 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6126:6163 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot_is_present def
+R6165:6179 UMST.ChemConstants.StructureEnablingConservation <> net_slot_absent constr
+R6183:6187 Corelib.Init.Datatypes <> false constr
+def 6454:6475 <> structure_enabling_net
+R6490:6493 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6487:6489 Corelib.Init.Datatypes <> nat ind
+R6494:6520 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+def 6535:6564 <> structureEnablingNetAllUnwired
+R6568:6589 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+R6605:6620 UMST.ChemConstants.StructureEnablingConservation <> net_slot_unwired constr
+def 6635:6656 <> structureEnablingNetAt
+R6663:6684 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 6659:6659 <> n:14
+R6694:6696 Corelib.Init.Datatypes <> nat ind
+binder 6688:6690 <> idx:15
+R6709:6735 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot ind
+binder 6702:6705 <> slot:16
+R6740:6761 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 6772:6772 <> i:17
+R6780:6786 Stdlib.Arith.PeanoNat Nat eqb def
+R6788:6788 UMST.ChemConstants.StructureEnablingConservation <> i:17 var
+R6790:6792 UMST.ChemConstants.StructureEnablingConservation <> idx:15 var
+R6809:6809 UMST.ChemConstants.StructureEnablingConservation <> n:14 var
+R6811:6811 UMST.ChemConstants.StructureEnablingConservation <> i:17 var
+R6799:6802 UMST.ChemConstants.StructureEnablingConservation <> slot:16 var
+def 6826:6856 <> structureEnablingNetWithPresent
+R6863:6884 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 6859:6859 <> n:18
+R6894:6896 Corelib.Init.Datatypes <> nat ind
+binder 6888:6890 <> idx:19
+R6901:6922 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+R6929:6950 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetAt def
+R6952:6952 UMST.ChemConstants.StructureEnablingConservation <> n:18 var
+R6954:6956 UMST.ChemConstants.StructureEnablingConservation <> idx:19 var
+R6958:6973 UMST.ChemConstants.StructureEnablingConservation <> net_slot_present constr
+def 6986:7008 <> count_net_present_up_to
+R7015:7036 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 7011:7011 <> n:20
+R7048:7050 Corelib.Init.Datatypes <> nat ind
+binder 7040:7044 <> bound:21
+R7055:7057 Corelib.Init.Datatypes <> nat ind
+R7070:7074 UMST.ChemConstants.StructureEnablingConservation <> bound:21 var
+R7096:7096 Corelib.Init.Datatypes <> S constr
+R7131:7168 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot_is_present def
+R7171:7171 UMST.ChemConstants.StructureEnablingConservation <> n:20 var
+R7174:7177 Corelib.Init.Peano <> pred abbrev
+R7179:7183 UMST.ChemConstants.StructureEnablingConservation <> bound:21 var
+binder 7113:7115 <> add:24
+R7245:7247 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R7218:7240 UMST.ChemConstants.StructureEnablingConservation <> count_net_present_up_to:22 def
+R7242:7242 UMST.ChemConstants.StructureEnablingConservation <> n:20 var
+R7248:7250 UMST.ChemConstants.StructureEnablingConservation <> add:24 var
+def 7271:7302 <> structureEnablingNetPresentCount
+R7309:7330 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 7305:7305 <> n:25
+R7335:7337 Corelib.Init.Datatypes <> nat ind
+R7344:7366 UMST.ChemConstants.StructureEnablingConservation <> count_net_present_up_to def
+R7368:7368 UMST.ChemConstants.StructureEnablingConservation <> n:25 var
+R7370:7400 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+def 7415:7439 <> structureEnablingNetHolds
+R7446:7467 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 7442:7442 <> n:26
+R7477:7479 Corelib.Init.Datatypes <> nat ind
+binder 7471:7473 <> idx:27
+R7484:7487 Corelib.Init.Datatypes <> bool ind
+R7494:7531 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot_is_present def
+R7534:7534 UMST.ChemConstants.StructureEnablingConservation <> n:26 var
+R7536:7538 UMST.ChemConstants.StructureEnablingConservation <> idx:27 var
+def 7554:7592 <> structureEnablingNetIsConcurrentProduct
+R7599:7620 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 7595:7595 <> n:28
+R7625:7628 Corelib.Init.Datatypes <> bool ind
+R7635:7641 Stdlib.Arith.PeanoNat Nat leb def
+R7646:7677 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetPresentCount def
+R7679:7679 UMST.ChemConstants.StructureEnablingConservation <> n:28 var
+def 7693:7732 <> structure_enabling_net_slots_match_up_to
+R7745:7766 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 7737:7738 <> n1:29
+binder 7740:7741 <> n2:30
+R7778:7780 Corelib.Init.Datatypes <> nat ind
+binder 7770:7774 <> bound:31
+R7785:7788 Corelib.Init.Datatypes <> bool ind
+R7801:7805 UMST.ChemConstants.StructureEnablingConservation <> bound:31 var
+R7821:7824 Corelib.Init.Datatypes <> true constr
+R7830:7830 Corelib.Init.Datatypes <> S constr
+R7910:7919 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7843:7873 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slot_beq def
+R7876:7877 UMST.ChemConstants.StructureEnablingConservation <> n1:29 var
+R7880:7883 Corelib.Init.Peano <> pred abbrev
+R7885:7889 UMST.ChemConstants.StructureEnablingConservation <> bound:31 var
+R7894:7895 UMST.ChemConstants.StructureEnablingConservation <> n2:30 var
+R7898:7901 Corelib.Init.Peano <> pred abbrev
+R7903:7907 UMST.ChemConstants.StructureEnablingConservation <> bound:31 var
+R7920:7959 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slots_match_up_to:32 def
+R7964:7965 UMST.ChemConstants.StructureEnablingConservation <> n2:30 var
+R7961:7962 UMST.ChemConstants.StructureEnablingConservation <> n1:29 var
+def 7988:8024 <> structureEnablingNetIdentityConserved
+R8035:8056 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 8027:8028 <> n1:34
+binder 8030:8031 <> n2:35
+R8061:8064 Corelib.Init.Datatypes <> bool ind
+R8071:8110 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net_slots_match_up_to def
+R8112:8113 UMST.ChemConstants.StructureEnablingConservation <> n1:34 var
+R8115:8116 UMST.ChemConstants.StructureEnablingConservation <> n2:35 var
+R8118:8148 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_domain_count def
+def 8254:8287 <> structureEnablingConcurrentWitness
+R8291:8312 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+R8319:8349 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetWithPresent def
+R8356:8386 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetWithPresent def
+R8388:8417 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetAllUnwired def
+R8425:8459 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_connectivity_idx def
+R8466:8496 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_interact_idx def
+def 8511:8542 <> structureEnablingNetEmptyWitness
+R8546:8567 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+R8574:8603 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetAllUnwired def
+def 8618:8650 <> structureEnablingNetSinglePresent
+R8654:8675 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+R8682:8712 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetWithPresent def
+R8714:8743 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetAllUnwired def
+R8749:8783 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_connectivity_idx def
+prf 8793:8831 <> concurrent_witness_connectivity_present
+R8937:8939 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8837:8861 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetHolds def
+R8863:8896 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R8902:8936 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_connectivity_idx def
+R8940:8943 Corelib.Init.Datatypes <> true constr
+prf 8978:9012 <> concurrent_witness_interact_present
+R9114:9116 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9018:9042 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetHolds def
+R9044:9077 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R9083:9113 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_interact_idx def
+R9117:9120 Corelib.Init.Datatypes <> true constr
+prf 9155:9193 <> concurrent_witness_present_count_is_two
+R9266:9268 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9199:9230 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetPresentCount def
+R9232:9265 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+prf 9304:9343 <> concurrent_witness_is_concurrent_product
+R9423:9425 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9349:9387 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R9389:9422 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R9426:9429 Corelib.Init.Datatypes <> true constr
+R9448:9486 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R9499:9537 UMST.ChemConstants.StructureEnablingConservation <> concurrent_witness_present_count_is_two thm
+R9499:9537 UMST.ChemConstants.StructureEnablingConservation <> concurrent_witness_present_count_is_two thm
+R9499:9537 UMST.ChemConstants.StructureEnablingConservation <> concurrent_witness_present_count_is_two thm
+prf 9567:9594 <> empty_net_present_count_zero
+R9665:9667 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9600:9631 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetPresentCount def
+R9633:9664 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetEmptyWitness def
+prf 9703:9734 <> empty_net_not_concurrent_product
+R9812:9814 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9740:9778 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R9780:9811 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetEmptyWitness def
+R9815:9819 Corelib.Init.Datatypes <> false constr
+R9838:9876 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R9889:9916 UMST.ChemConstants.StructureEnablingConservation <> empty_net_present_count_zero thm
+R9889:9916 UMST.ChemConstants.StructureEnablingConservation <> empty_net_present_count_zero thm
+R9889:9916 UMST.ChemConstants.StructureEnablingConservation <> empty_net_present_count_zero thm
+prf 9946:9972 <> single_present_count_is_one
+R10044:10046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9978:10009 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetPresentCount def
+R10011:10043 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetSinglePresent def
+prf 10082:10118 <> single_present_not_concurrent_product
+R10197:10199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10124:10162 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R10164:10196 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetSinglePresent def
+R10200:10204 Corelib.Init.Datatypes <> false constr
+R10223:10261 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R10274:10300 UMST.ChemConstants.StructureEnablingConservation <> single_present_count_is_one thm
+R10274:10300 UMST.ChemConstants.StructureEnablingConservation <> single_present_count_is_one thm
+R10274:10300 UMST.ChemConstants.StructureEnablingConservation <> single_present_count_is_one thm
+prf 10330:10366 <> concurrent_witness_identity_conserved
+R10483:10485 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10372:10408 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIdentityConserved def
+R10410:10443 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R10449:10482 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R10486:10489 Corelib.Init.Datatypes <> true constr
+ind 10753:10773 <> xor_classifier_bucket
+constr 10789:10808 <> xor_bucket_exclusive
+constr 10814:10842 <> xor_bucket_concurrent_product
+scheme 10753:10773 <> xor_classifier_bucket_rect
+scheme 10753:10773 <> xor_classifier_bucket_ind
+scheme 10753:10773 <> xor_classifier_bucket_rec
+scheme 10753:10773 <> xor_classifier_bucket_sind
+def 10857:10875 <> xorClassifierMarker
+R10879:10884 Stdlib.Strings.String <> string ind
+def 10948:10980 <> structureEnablingConcurrentMarker
+R10984:10989 Stdlib.Strings.String <> string ind
+prf 11047:11085 <> xor_marker_ne_concurrent_product_marker
+R11110:11113 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11091:11109 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierMarker def
+R11114:11146 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentMarker def
+def 11187:11211 <> xorClassifierIncompatible
+R11226:11229 Corelib.Init.Datatypes <> bool ind
+binder 11214:11222 <> claim_xor:38
+R11237:11258 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 11233:11233 <> n:39
+R11263:11266 Corelib.Init.Datatypes <> bool ind
+R11282:11285 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11273:11281 UMST.ChemConstants.StructureEnablingConservation <> claim_xor:38 var
+R11286:11324 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R11326:11326 UMST.ChemConstants.StructureEnablingConservation <> n:39 var
+prf 11336:11367 <> xor_refuse_on_concurrent_witness
+R11438:11440 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11373:11397 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierIncompatible def
+R11399:11402 Corelib.Init.Datatypes <> true constr
+R11404:11437 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R11441:11444 Corelib.Init.Datatypes <> true constr
+R11463:11487 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierIncompatible def
+prf 11540:11573 <> xor_ok_on_concurrent_product_claim
+R11645:11647 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11579:11603 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierIncompatible def
+R11605:11609 Corelib.Init.Datatypes <> false constr
+R11611:11644 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R11648:11652 Corelib.Init.Datatypes <> false constr
+def 11692:11707 <> enablementNotXor
+R11711:11714 Corelib.Init.Datatypes <> bool ind
+R11795:11800 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11721:11759 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R11761:11794 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R11801:11825 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierIncompatible def
+R11827:11830 Corelib.Init.Datatypes <> true constr
+R11832:11865 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+prf 11875:11897 <> enablement_not_xor_true
+R11917:11919 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11901:11916 UMST.ChemConstants.StructureEnablingConservation <> enablementNotXor def
+R11920:11923 Corelib.Init.Datatypes <> true constr
+R11942:11957 UMST.ChemConstants.StructureEnablingConservation <> enablementNotXor def
+prf 12012:12040 <> concurrent_enablement_not_xor
+R12069:12074 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12062:12064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12046:12061 UMST.ChemConstants.StructureEnablingConservation <> enablementNotXor def
+R12065:12068 Corelib.Init.Datatypes <> true constr
+R12161:12166 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12154:12156 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12075:12081 Stdlib.Arith.PeanoNat Nat leb def
+R12086:12117 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetPresentCount def
+R12119:12152 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R12157:12160 Corelib.Init.Datatypes <> true constr
+R12186:12189 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12167:12185 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierMarker def
+R12190:12222 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentMarker def
+R12251:12273 UMST.ChemConstants.StructureEnablingConservation <> enablement_not_xor_true thm
+R12251:12273 UMST.ChemConstants.StructureEnablingConservation <> enablement_not_xor_true thm
+R12301:12339 UMST.ChemConstants.StructureEnablingConservation <> concurrent_witness_present_count_is_two thm
+R12301:12339 UMST.ChemConstants.StructureEnablingConservation <> concurrent_witness_present_count_is_two thm
+R12301:12339 UMST.ChemConstants.StructureEnablingConservation <> concurrent_witness_present_count_is_two thm
+R12373:12411 UMST.ChemConstants.StructureEnablingConservation <> xor_marker_ne_concurrent_product_marker thm
+R12373:12411 UMST.ChemConstants.StructureEnablingConservation <> xor_marker_ne_concurrent_product_marker thm
+ind 12654:12684 <> structure_enabling_bar_presence
+constr 12700:12728 <> structure_enabling_bar_absent
+constr 12734:12763 <> structure_enabling_bar_present
+scheme 12654:12684 <> structure_enabling_bar_presence_rect
+scheme 12654:12684 <> structure_enabling_bar_presence_ind
+scheme 12654:12684 <> structure_enabling_bar_presence_rec
+scheme 12654:12684 <> structure_enabling_bar_presence_sind
+rec 12774:12801 <> structure_claim_enabling_bar
+proj 12817:12838 <> structure_bar_presence
+proj 12877:12911 <> structure_enabling_bar_defect_total
+R12842:12872 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_presence ind
+R12915:12917 Corelib.Init.Datatypes <> nat ind
+def 12934:12964 <> structureClaimEnablingBarAbsent
+R12968:12995 UMST.ChemConstants.StructureEnablingConservation <> structure_claim_enabling_bar rec
+R13005:13026 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13005:13026 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13005:13026 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13067:13101 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_defect_total proj
+R13067:13101 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_defect_total proj
+R13031:13059 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_absent constr
+def 13124:13158 <> structureClaimEnablingBarZeroDefect
+R13162:13189 UMST.ChemConstants.StructureEnablingConservation <> structure_claim_enabling_bar rec
+R13199:13220 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13199:13220 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13199:13220 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13262:13296 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_defect_total proj
+R13262:13296 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_defect_total proj
+R13225:13254 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_present constr
+def 13319:13358 <> structure_claim_enabling_bar_zero_defect
+R13365:13392 UMST.ChemConstants.StructureEnablingConservation <> structure_claim_enabling_bar rec
+binder 13361:13361 <> b:45
+R13397:13400 Corelib.Init.Datatypes <> bool ind
+R13413:13434 UMST.ChemConstants.StructureEnablingConservation <> structure_bar_presence proj
+R13436:13436 UMST.ChemConstants.StructureEnablingConservation <> b:45 var
+R13447:13475 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_absent constr
+R13480:13484 Corelib.Init.Datatypes <> false constr
+R13490:13519 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_present constr
+R13530:13536 Stdlib.Arith.PeanoNat Nat eqb def
+R13539:13573 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_bar_defect_total proj
+R13575:13575 UMST.ChemConstants.StructureEnablingConservation <> b:45 var
+prf 13594:13638 <> structure_claim_enabling_bar_zero_defect_true
+R13720:13722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13644:13683 UMST.ChemConstants.StructureEnablingConservation <> structure_claim_enabling_bar_zero_defect def
+R13685:13719 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarZeroDefect def
+R13723:13726 Corelib.Init.Datatypes <> true constr
+prf 13761:13811 <> structure_claim_enabling_bar_absent_not_zero_defect
+R13889:13891 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13817:13856 UMST.ChemConstants.StructureEnablingConservation <> structure_claim_enabling_bar_zero_defect def
+R13858:13888 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R13892:13896 Corelib.Init.Datatypes <> false constr
+ind 14159:14197 <> structure_enabling_conservation_verdict
+constr 14213:14230 <> verdict_unwired_ok
+constr 14236:14262 <> verdict_enablement_named_ok
+constr 14268:14293 <> verdict_trivial_net_refuse
+constr 14299:14327 <> verdict_xor_classifier_refuse
+constr 14333:14359 <> verdict_green_invent_refuse
+constr 14365:14397 <> verdict_proved_without_bar_refuse
+constr 14403:14433 <> verdict_production_wired_refuse
+scheme 14159:14197 <> structure_enabling_conservation_verdict_rect
+scheme 14159:14197 <> structure_enabling_conservation_verdict_ind
+scheme 14159:14197 <> structure_enabling_conservation_verdict_rec
+scheme 14159:14197 <> structure_enabling_conservation_verdict_sind
+def 14448:14489 <> structure_enabling_conservation_verdict_ok
+R14498:14536 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict ind
+binder 14494:14494 <> v:48
+R14541:14544 Corelib.Init.Datatypes <> bool ind
+R14557:14557 UMST.ChemConstants.StructureEnablingConservation <> v:48 var
+R14568:14585 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R14590:14593 Corelib.Init.Datatypes <> true constr
+R14599:14625 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R14630:14633 Corelib.Init.Datatypes <> true constr
+R14644:14648 Corelib.Init.Datatypes <> false constr
+def 14669:14711 <> structure_enabling_conservation_verdict_beq
+R14724:14762 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict ind
+binder 14716:14717 <> v1:50
+binder 14719:14720 <> v2:51
+R14767:14770 Corelib.Init.Datatypes <> bool ind
+R14787:14788 UMST.ChemConstants.StructureEnablingConservation <> v2:51 var
+R14783:14784 UMST.ChemConstants.StructureEnablingConservation <> v1:50 var
+R14799:14816 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R14819:14836 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R14841:14844 Corelib.Init.Datatypes <> true constr
+R14850:14876 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R14879:14905 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R14910:14913 Corelib.Init.Datatypes <> true constr
+R14919:14944 UMST.ChemConstants.StructureEnablingConservation <> verdict_trivial_net_refuse constr
+R14947:14972 UMST.ChemConstants.StructureEnablingConservation <> verdict_trivial_net_refuse constr
+R14977:14980 Corelib.Init.Datatypes <> true constr
+R14986:15014 UMST.ChemConstants.StructureEnablingConservation <> verdict_xor_classifier_refuse constr
+R15017:15045 UMST.ChemConstants.StructureEnablingConservation <> verdict_xor_classifier_refuse constr
+R15050:15053 Corelib.Init.Datatypes <> true constr
+R15059:15085 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+R15088:15114 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+R15119:15122 Corelib.Init.Datatypes <> true constr
+R15128:15160 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+R15163:15195 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+R15200:15203 Corelib.Init.Datatypes <> true constr
+R15209:15239 UMST.ChemConstants.StructureEnablingConservation <> verdict_production_wired_refuse constr
+R15242:15272 UMST.ChemConstants.StructureEnablingConservation <> verdict_production_wired_refuse constr
+R15277:15280 Corelib.Init.Datatypes <> true constr
+R15294:15298 Corelib.Init.Datatypes <> false constr
+def 15319:15348 <> structureEnablingNetNontrivial
+R15355:15376 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 15351:15351 <> n:54
+R15381:15384 Corelib.Init.Datatypes <> bool ind
+R15391:15397 Stdlib.Arith.PeanoNat Nat ltb def
+R15402:15433 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetPresentCount def
+R15435:15435 UMST.ChemConstants.StructureEnablingConservation <> n:54 var
+def 15451:15481 <> evaluate_structure_enabling_net
+R15490:15526 UMST.ChemConstants.StructureEnablingConservation <> StructureEnablingConservationModality ind
+binder 15486:15486 <> m:55
+R15536:15557 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_net def
+binder 15532:15532 <> n:56
+R15569:15596 UMST.ChemConstants.StructureEnablingConservation <> structure_claim_enabling_bar rec
+binder 15563:15565 <> bar:57
+R15625:15628 Corelib.Init.Datatypes <> bool ind
+binder 15602:15621 <> claim_xor_classifier:58
+R15656:15659 Corelib.Init.Datatypes <> bool ind
+binder 15634:15652 <> claim_physics_green:59
+R15680:15683 Corelib.Init.Datatypes <> bool ind
+binder 15665:15676 <> claim_proved:60
+R15688:15726 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict ind
+R15736:15754 UMST.ChemConstants.StructureEnablingConservation <> claim_physics_green:59 var
+R15801:15812 UMST.ChemConstants.StructureEnablingConservation <> claim_proved:60 var
+R15875:15878 Corelib.Init.Datatypes <> negb def
+R15881:15910 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetNontrivial def
+R15912:15912 UMST.ChemConstants.StructureEnablingConservation <> n:56 var
+R15979:16003 UMST.ChemConstants.StructureEnablingConservation <> xorClassifierIncompatible def
+R16005:16024 UMST.ChemConstants.StructureEnablingConservation <> claim_xor_classifier:58 var
+R16026:16026 UMST.ChemConstants.StructureEnablingConservation <> n:56 var
+R16127:16127 UMST.ChemConstants.StructureEnablingConservation <> m:55 var
+R16155:16193 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R16198:16224 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R16247:16285 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_assumed constr
+R16308:16348 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_surrogate constr
+R16353:16370 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R16353:16370 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R16393:16430 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R16458:16490 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+R16050:16078 UMST.ChemConstants.StructureEnablingConservation <> verdict_xor_classifier_refuse constr
+R15932:15957 UMST.ChemConstants.StructureEnablingConservation <> verdict_trivial_net_refuse constr
+R15826:15858 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+R15763:15789 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+def 16528:16573 <> evaluate_structure_enabling_conservation_close
+R16582:16618 UMST.ChemConstants.StructureEnablingConservation <> StructureEnablingConservationModality ind
+binder 16578:16578 <> m:62
+R16646:16649 Corelib.Init.Datatypes <> bool ind
+binder 16624:16642 <> claim_physics_green:63
+R16680:16683 Corelib.Init.Datatypes <> bool ind
+binder 16655:16676 <> claim_production_wired:64
+R16688:16726 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict ind
+R16736:16754 UMST.ChemConstants.StructureEnablingConservation <> claim_physics_green:63 var
+R16801:16822 UMST.ChemConstants.StructureEnablingConservation <> claim_production_wired:64 var
+R16880:16880 UMST.ChemConstants.StructureEnablingConservation <> m:62 var
+R16893:16931 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R16936:16953 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R16961:16999 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_assumed constr
+R17007:17044 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R17052:17092 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_surrogate constr
+R17097:17123 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R17097:17123 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R17097:17123 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R16831:16861 UMST.ChemConstants.StructureEnablingConservation <> verdict_production_wired_refuse constr
+R16763:16789 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+def 17146:17187 <> structure_enabling_conservation_authorized
+R17214:17217 Corelib.Init.Datatypes <> bool ind
+binder 17192:17210 <> claim_physics_green:66
+R17248:17251 Corelib.Init.Datatypes <> bool ind
+binder 17223:17244 <> claim_production_wired:67
+R17256:17259 Corelib.Init.Datatypes <> bool ind
+R17272:17317 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R17329:17366 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R17368:17386 UMST.ChemConstants.StructureEnablingConservation <> claim_physics_green:66 var
+R17388:17409 UMST.ChemConstants.StructureEnablingConservation <> claim_production_wired:67 var
+R17420:17446 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R17451:17454 Corelib.Init.Datatypes <> true constr
+R17465:17469 Corelib.Init.Datatypes <> false constr
+ind 17712:17746 <> structure_enabling_conservation_law
+constr 17762:17789 <> law_structure_enabling_named
+constr 17795:17819 <> law_xor_classifier_refuse
+constr 17825:17847 <> law_green_invent_refuse
+constr 17853:17879 <> law_production_wired_refuse
+scheme 17712:17746 <> structure_enabling_conservation_law_rect
+scheme 17712:17746 <> structure_enabling_conservation_law_ind
+scheme 17712:17746 <> structure_enabling_conservation_law_rec
+scheme 17712:17746 <> structure_enabling_conservation_law_sind
+def 17894:17934 <> structure_enabling_conservation_law_count
+R17938:17940 Corelib.Init.Datatypes <> nat ind
+prf 17955:18003 <> structure_enabling_conservation_law_count_is_four
+R18050:18052 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18009:18049 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_law_count def
+ind 18092:18134 <> structure_enabling_conservation_law_witness
+constr 18150:18184 <> structure_enabling_law_witness_open
+constr 18190:18226 <> structure_enabling_law_witness_proved
+scheme 18092:18134 <> structure_enabling_conservation_law_witness_rect
+scheme 18092:18134 <> structure_enabling_conservation_law_witness_ind
+scheme 18092:18134 <> structure_enabling_conservation_law_witness_rec
+scheme 18092:18134 <> structure_enabling_conservation_law_witness_sind
+def 18241:18292 <> evaluate_structure_enabling_conservation_law_witness
+R18303:18337 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_law ind
+binder 18297:18299 <> law:72
+R18345:18381 UMST.ChemConstants.StructureEnablingConservation <> StructureEnablingConservationModality ind
+binder 18341:18341 <> m:73
+R18388:18430 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_law_witness ind
+R18443:18443 UMST.ChemConstants.StructureEnablingConservation <> m:73 var
+R18454:18492 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R18498:18536 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_assumed constr
+R18542:18582 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_surrogate constr
+R18587:18621 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+R18587:18621 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+R18587:18621 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+R18627:18664 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R18669:18705 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_proved constr
+prf 18721:18776 <> all_structure_enabling_conservation_laws_open_at_unwired
+R18945:18950 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18907:18909 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18782:18833 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_law_witness def
+R18835:18862 UMST.ChemConstants.StructureEnablingConservation <> law_structure_enabling_named constr
+R18868:18906 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R18910:18944 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+R19111:19116 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19073:19075 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18951:19002 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_law_witness def
+R19004:19028 UMST.ChemConstants.StructureEnablingConservation <> law_xor_classifier_refuse constr
+R19034:19072 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R19076:19110 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+R19275:19280 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19237:19239 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19117:19168 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_law_witness def
+R19170:19192 UMST.ChemConstants.StructureEnablingConservation <> law_green_invent_refuse constr
+R19198:19236 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R19240:19274 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+R19405:19407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19281:19332 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_law_witness def
+R19334:19360 UMST.ChemConstants.StructureEnablingConservation <> law_production_wired_refuse constr
+R19366:19404 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R19408:19442 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_law_witness_open constr
+def 19722:19750 <> class4StructureEnablingProved
+R19754:19757 Corelib.Init.Datatypes <> bool ind
+R19762:19766 Corelib.Init.Datatypes <> false constr
+prf 19776:19813 <> class4_structure_enabling_proved_false
+R19846:19848 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19817:19845 UMST.ChemConstants.StructureEnablingConservation <> class4StructureEnablingProved def
+R19849:19853 Corelib.Init.Datatypes <> false constr
+def 19893:19915 <> not118SquaredGreenTable
+R19919:19922 Corelib.Init.Datatypes <> bool ind
+R19927:19930 Corelib.Init.Datatypes <> true constr
+prf 19940:19966 <> not_118_squared_green_table
+R19993:19995 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19970:19992 UMST.ChemConstants.StructureEnablingConservation <> not118SquaredGreenTable def
+R19996:19999 Corelib.Init.Datatypes <> true constr
+prf 20256:20294 <> unwired_close_without_production_wiring
+R20402:20406 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20300:20345 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R20351:20389 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R20391:20395 Corelib.Init.Datatypes <> false constr
+R20397:20401 Corelib.Init.Datatypes <> false constr
+R20407:20424 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+prf 20461:20512 <> unwired_modality_always_ok_without_production_wiring
+R20620:20624 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20518:20563 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R20569:20607 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R20609:20613 Corelib.Init.Datatypes <> false constr
+R20615:20619 Corelib.Init.Datatypes <> false constr
+R20625:20642 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R20658:20696 UMST.ChemConstants.StructureEnablingConservation <> unwired_close_without_production_wiring thm
+R20658:20696 UMST.ChemConstants.StructureEnablingConservation <> unwired_close_without_production_wiring thm
+prf 20711:20754 <> unwired_verdict_ok_without_production_wiring
+R20914:20918 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20760:20801 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R20808:20853 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R20862:20900 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R20902:20906 Corelib.Init.Datatypes <> false constr
+R20908:20912 Corelib.Init.Datatypes <> false constr
+R20919:20922 Corelib.Init.Datatypes <> true constr
+R20941:20982 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R20995:21033 UMST.ChemConstants.StructureEnablingConservation <> unwired_close_without_production_wiring thm
+R20995:21033 UMST.ChemConstants.StructureEnablingConservation <> unwired_close_without_production_wiring thm
+R20995:21033 UMST.ChemConstants.StructureEnablingConservation <> unwired_close_without_production_wiring thm
+prf 21292:21318 <> concurrent_witness_named_ok
+R21488:21492 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21324:21354 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R21360:21398 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R21400:21433 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R21439:21469 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R21471:21475 Corelib.Init.Datatypes <> false constr
+R21477:21481 Corelib.Init.Datatypes <> false constr
+R21483:21487 Corelib.Init.Datatypes <> false constr
+R21493:21519 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+prf 21556:21611 <> named_concurrent_witness_structure_enabling_conservation
+R21813:21818 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21781:21785 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21617:21647 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R21653:21691 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R21693:21726 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R21732:21762 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R21764:21768 Corelib.Init.Datatypes <> false constr
+R21770:21774 Corelib.Init.Datatypes <> false constr
+R21776:21780 Corelib.Init.Datatypes <> false constr
+R21786:21812 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R21937:21942 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21930:21932 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21819:21855 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIdentityConserved def
+R21857:21890 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R21896:21929 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R21933:21936 Corelib.Init.Datatypes <> true constr
+R22017:22019 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21943:21981 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetIsConcurrentProduct def
+R21983:22016 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R22020:22023 Corelib.Init.Datatypes <> true constr
+prf 22074:22106 <> structure_enabling_named_close_ok
+R22213:22217 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22112:22157 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R22163:22200 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R22202:22206 Corelib.Init.Datatypes <> false constr
+R22208:22212 Corelib.Init.Datatypes <> false constr
+R22218:22244 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+prf 22281:22323 <> named_structure_enabling_conservation_close
+R22462:22467 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22430:22434 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22329:22374 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R22380:22417 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R22419:22423 Corelib.Init.Datatypes <> false constr
+R22425:22429 Corelib.Init.Datatypes <> false constr
+R22435:22461 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R22522:22524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22468:22509 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_authorized def
+R22511:22515 Corelib.Init.Datatypes <> false constr
+R22517:22521 Corelib.Init.Datatypes <> false constr
+R22525:22528 Corelib.Init.Datatypes <> true constr
+R22557:22589 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_named_close_ok thm
+R22557:22589 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_named_close_ok thm
+R22603:22644 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_authorized def
+R22659:22691 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_named_close_ok thm
+R22659:22691 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_named_close_ok thm
+R22659:22691 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_named_close_ok thm
+prf 22949:22967 <> trivial_net_refused
+R23135:23139 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22973:23003 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R23009:23047 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R23049:23080 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetEmptyWitness def
+R23086:23116 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R23118:23122 Corelib.Init.Datatypes <> false constr
+R23124:23128 Corelib.Init.Datatypes <> false constr
+R23130:23134 Corelib.Init.Datatypes <> false constr
+R23140:23165 UMST.ChemConstants.StructureEnablingConservation <> verdict_trivial_net_refuse constr
+prf 23202:23230 <> trivial_empty_net_fail_closed
+R23429:23434 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23398:23402 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23236:23266 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R23272:23310 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R23312:23343 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetEmptyWitness def
+R23349:23379 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R23381:23385 Corelib.Init.Datatypes <> false constr
+R23387:23391 Corelib.Init.Datatypes <> false constr
+R23393:23397 Corelib.Init.Datatypes <> false constr
+R23403:23428 UMST.ChemConstants.StructureEnablingConservation <> verdict_trivial_net_refuse constr
+R23652:23656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23435:23476 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R23483:23513 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R23522:23560 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R23562:23593 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetEmptyWitness def
+R23602:23632 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R23634:23638 Corelib.Init.Datatypes <> false constr
+R23640:23644 Corelib.Init.Datatypes <> false constr
+R23646:23650 Corelib.Init.Datatypes <> false constr
+R23657:23661 Corelib.Init.Datatypes <> false constr
+R23690:23708 UMST.ChemConstants.StructureEnablingConservation <> trivial_net_refused thm
+R23690:23708 UMST.ChemConstants.StructureEnablingConservation <> trivial_net_refused thm
+R23722:23763 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R23778:23796 UMST.ChemConstants.StructureEnablingConservation <> trivial_net_refused thm
+R23778:23796 UMST.ChemConstants.StructureEnablingConservation <> trivial_net_refused thm
+R23778:23796 UMST.ChemConstants.StructureEnablingConservation <> trivial_net_refused thm
+prf 24052:24073 <> xor_classifier_refused
+R24242:24246 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24079:24109 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R24115:24153 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R24155:24188 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R24194:24224 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R24226:24229 Corelib.Init.Datatypes <> true constr
+R24231:24235 Corelib.Init.Datatypes <> false constr
+R24237:24241 Corelib.Init.Datatypes <> false constr
+R24247:24275 UMST.ChemConstants.StructureEnablingConservation <> verdict_xor_classifier_refuse constr
+prf 24312:24356 <> xor_mutually_exclusive_classifier_fail_closed
+R24559:24564 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24525:24529 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24362:24392 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R24398:24436 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R24438:24471 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R24477:24507 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R24509:24512 Corelib.Init.Datatypes <> true constr
+R24514:24518 Corelib.Init.Datatypes <> false constr
+R24520:24524 Corelib.Init.Datatypes <> false constr
+R24530:24558 UMST.ChemConstants.StructureEnablingConservation <> verdict_xor_classifier_refuse constr
+R24783:24787 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24565:24606 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R24613:24643 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R24652:24690 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R24692:24725 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R24734:24764 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R24766:24769 Corelib.Init.Datatypes <> true constr
+R24771:24775 Corelib.Init.Datatypes <> false constr
+R24777:24781 Corelib.Init.Datatypes <> false constr
+R24788:24792 Corelib.Init.Datatypes <> false constr
+R24821:24842 UMST.ChemConstants.StructureEnablingConservation <> xor_classifier_refused thm
+R24821:24842 UMST.ChemConstants.StructureEnablingConservation <> xor_classifier_refused thm
+R24856:24897 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R24912:24933 UMST.ChemConstants.StructureEnablingConservation <> xor_classifier_refused thm
+R24912:24933 UMST.ChemConstants.StructureEnablingConservation <> xor_classifier_refused thm
+R24912:24933 UMST.ChemConstants.StructureEnablingConservation <> xor_classifier_refused thm
+prf 25189:25215 <> green_invent_refuse_unwired
+R25322:25326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25221:25266 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R25272:25310 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R25312:25315 Corelib.Init.Datatypes <> true constr
+R25317:25321 Corelib.Init.Datatypes <> false constr
+R25327:25353 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+prf 25390:25415 <> green_invent_always_refuse
+R25574:25578 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25421:25462 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R25469:25514 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R25523:25561 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R25563:25566 Corelib.Init.Datatypes <> true constr
+R25568:25572 Corelib.Init.Datatypes <> false constr
+R25579:25583 Corelib.Init.Datatypes <> false constr
+R25602:25643 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R25656:25682 UMST.ChemConstants.StructureEnablingConservation <> green_invent_refuse_unwired thm
+R25656:25682 UMST.ChemConstants.StructureEnablingConservation <> green_invent_refuse_unwired thm
+R25656:25682 UMST.ChemConstants.StructureEnablingConservation <> green_invent_refuse_unwired thm
+prf 25712:25744 <> green_invent_structure_net_refuse
+R25913:25917 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25750:25780 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R25786:25824 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R25826:25859 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R25865:25895 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R25897:25901 Corelib.Init.Datatypes <> false constr
+R25903:25906 Corelib.Init.Datatypes <> true constr
+R25908:25912 Corelib.Init.Datatypes <> false constr
+R25918:25944 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+prf 26206:26230 <> proved_without_bar_refuse
+R26399:26403 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26236:26266 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R26272:26310 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R26312:26345 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R26351:26381 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R26383:26387 Corelib.Init.Datatypes <> false constr
+R26389:26393 Corelib.Init.Datatypes <> false constr
+R26395:26398 Corelib.Init.Datatypes <> true constr
+R26404:26436 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+prf 26473:26502 <> proved_without_bar_fail_closed
+R26709:26714 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26671:26675 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26508:26538 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R26544:26582 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R26584:26617 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R26623:26653 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R26655:26659 Corelib.Init.Datatypes <> false constr
+R26661:26665 Corelib.Init.Datatypes <> false constr
+R26667:26670 Corelib.Init.Datatypes <> true constr
+R26676:26708 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+R26933:26937 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26715:26756 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R26763:26793 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R26802:26840 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R26842:26875 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R26884:26914 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R26916:26920 Corelib.Init.Datatypes <> false constr
+R26922:26926 Corelib.Init.Datatypes <> false constr
+R26928:26931 Corelib.Init.Datatypes <> true constr
+R26938:26942 Corelib.Init.Datatypes <> false constr
+R26971:26995 UMST.ChemConstants.StructureEnablingConservation <> proved_without_bar_refuse thm
+R26971:26995 UMST.ChemConstants.StructureEnablingConservation <> proved_without_bar_refuse thm
+R27009:27050 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R27065:27089 UMST.ChemConstants.StructureEnablingConservation <> proved_without_bar_refuse thm
+R27065:27089 UMST.ChemConstants.StructureEnablingConservation <> proved_without_bar_refuse thm
+R27065:27089 UMST.ChemConstants.StructureEnablingConservation <> proved_without_bar_refuse thm
+prf 27121:27163 <> proved_without_bar_zero_defect_still_refuse
+R27336:27340 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27169:27199 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R27205:27243 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R27245:27278 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R27284:27318 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarZeroDefect def
+R27320:27324 Corelib.Init.Datatypes <> false constr
+R27326:27330 Corelib.Init.Datatypes <> false constr
+R27332:27335 Corelib.Init.Datatypes <> true constr
+R27341:27373 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+prf 27632:27654 <> production_wired_refuse
+R27760:27764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27660:27705 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R27711:27748 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R27750:27754 Corelib.Init.Datatypes <> false constr
+R27756:27759 Corelib.Init.Datatypes <> true constr
+R27765:27795 UMST.ChemConstants.StructureEnablingConservation <> verdict_production_wired_refuse constr
+prf 27832:27861 <> production_wired_claim_refused
+R28019:28023 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27867:27908 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R27915:27960 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R27969:28006 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R28008:28012 Corelib.Init.Datatypes <> false constr
+R28014:28017 Corelib.Init.Datatypes <> true constr
+R28024:28028 Corelib.Init.Datatypes <> false constr
+R28047:28088 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_ok def
+R28101:28123 UMST.ChemConstants.StructureEnablingConservation <> production_wired_refuse thm
+R28101:28123 UMST.ChemConstants.StructureEnablingConservation <> production_wired_refuse thm
+R28101:28123 UMST.ChemConstants.StructureEnablingConservation <> production_wired_refuse thm
+def 28379:28428 <> structure_enabling_conservation_coherence_scaffold
+R28432:28435 Corelib.Init.Datatypes <> bool ind
+R28820:28825 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28628:28633 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28442:28484 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_beq def
+R28491:28536 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R28545:28582 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R28584:28588 Corelib.Init.Datatypes <> false constr
+R28590:28594 Corelib.Init.Datatypes <> false constr
+R28601:28627 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R28634:28676 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_beq def
+R28683:28728 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R28737:28775 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R28777:28780 Corelib.Init.Datatypes <> true constr
+R28782:28786 Corelib.Init.Datatypes <> false constr
+R28793:28819 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+R28826:28868 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_verdict_beq def
+R28875:28920 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R28929:28966 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R28968:28972 Corelib.Init.Datatypes <> false constr
+R28974:28977 Corelib.Init.Datatypes <> true constr
+R28984:29014 UMST.ChemConstants.StructureEnablingConservation <> verdict_production_wired_refuse constr
+prf 29024:29078 <> structure_enabling_conservation_coherence_scaffold_true
+R29134:29136 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29084:29133 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_coherence_scaffold def
+R29137:29140 Corelib.Init.Datatypes <> true constr
+R29159:29208 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_coherence_scaffold def
+prf 29263:29320 <> structure_enabling_conservation_coherence_scaffold_theorem
+R29461:29466 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29427:29433 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29326:29371 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R29377:29414 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R29416:29420 Corelib.Init.Datatypes <> false constr
+R29422:29426 Corelib.Init.Datatypes <> false constr
+R29434:29460 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R29602:29607 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29568:29574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29467:29512 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R29518:29556 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R29558:29561 Corelib.Init.Datatypes <> true constr
+R29563:29567 Corelib.Init.Datatypes <> false constr
+R29575:29601 UMST.ChemConstants.StructureEnablingConservation <> verdict_green_invent_refuse constr
+R29708:29714 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29608:29653 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R29659:29696 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_proved constr
+R29698:29702 Corelib.Init.Datatypes <> false constr
+R29704:29707 Corelib.Init.Datatypes <> true constr
+R29715:29745 UMST.ChemConstants.StructureEnablingConservation <> verdict_production_wired_refuse constr
+ind 30024:30035 <> formal_fiber
+constr 30051:30071 <> fiber_quantum_knowing
+constr 30077:30093 <> fiber_meso_acting
+scheme 30024:30035 <> formal_fiber_rect
+scheme 30024:30035 <> formal_fiber_ind
+scheme 30024:30035 <> formal_fiber_rec
+scheme 30024:30035 <> formal_fiber_sind
+ind 30107:30125 <> formal_claim_family
+constr 30141:30177 <> claim_structure_enabling_conservation
+scheme 30107:30125 <> formal_claim_family_rect
+scheme 30107:30125 <> formal_claim_family_ind
+scheme 30107:30125 <> formal_claim_family_rec
+scheme 30107:30125 <> formal_claim_family_sind
+def 30192:30231 <> structure_enabling_conservation_fiber_ok
+R30238:30249 UMST.ChemConstants.StructureEnablingConservation <> formal_fiber ind
+binder 30234:30234 <> f:79
+R30254:30257 Corelib.Init.Datatypes <> bool ind
+R30270:30270 UMST.ChemConstants.StructureEnablingConservation <> f:79 var
+R30281:30301 UMST.ChemConstants.StructureEnablingConservation <> fiber_quantum_knowing constr
+R30306:30309 Corelib.Init.Datatypes <> true constr
+R30315:30331 UMST.ChemConstants.StructureEnablingConservation <> fiber_meso_acting constr
+R30336:30340 Corelib.Init.Datatypes <> false constr
+def 30361:30408 <> structure_enabling_conservation_knowing_fiber_ok
+R30412:30415 Corelib.Init.Datatypes <> bool ind
+R30422:30461 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_fiber_ok def
+R30463:30483 UMST.ChemConstants.StructureEnablingConservation <> fiber_quantum_knowing constr
+def 30498:30543 <> structure_enabling_conservation_meso_acting_ok
+R30547:30550 Corelib.Init.Datatypes <> bool ind
+R30557:30596 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_fiber_ok def
+R30598:30614 UMST.ChemConstants.StructureEnablingConservation <> fiber_meso_acting constr
+prf 30624:30676 <> structure_enabling_conservation_knowing_fiber_ok_true
+R30730:30732 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30682:30729 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok def
+R30733:30736 Corelib.Init.Datatypes <> true constr
+prf 30771:30820 <> structure_enabling_conservation_meso_acting_not_ok
+R30872:30874 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30826:30871 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_ok def
+R30875:30879 Corelib.Init.Datatypes <> false constr
+prf 30916:30970 <> structure_enabling_conservation_routes_knowing_not_meso
+R31031:31036 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31024:31026 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30976:31023 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok def
+R31027:31030 Corelib.Init.Datatypes <> true constr
+R31083:31085 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31037:31082 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_ok def
+R31086:31090 Corelib.Init.Datatypes <> false constr
+R31119:31171 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok_true thm
+R31119:31171 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok_true thm
+R31184:31233 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_not_ok thm
+R31184:31233 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_not_ok thm
+def 31253:31270 <> fiberNotMesoActing
+R31274:31277 Corelib.Init.Datatypes <> bool ind
+R31332:31337 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R31284:31331 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok def
+R31338:31341 Corelib.Init.Datatypes <> negb def
+R31343:31388 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_ok def
+prf 31398:31423 <> fiber_not_meso_acting_true
+R31445:31447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31427:31444 UMST.ChemConstants.StructureEnablingConservation <> fiberNotMesoActing def
+R31448:31451 Corelib.Init.Datatypes <> true constr
+R31470:31487 UMST.ChemConstants.StructureEnablingConservation <> fiberNotMesoActing def
+R31490:31537 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok def
+R31544:31589 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_ok def
+prf 31846:31893 <> structure_enabling_conservation_fixture_scaffold
+R32097:32102 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32063:32069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31899:31929 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R31935:31973 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R31975:32008 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R32014:32044 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R32046:32050 Corelib.Init.Datatypes <> false constr
+R32052:32056 Corelib.Init.Datatypes <> false constr
+R32058:32062 Corelib.Init.Datatypes <> false constr
+R32070:32096 UMST.ChemConstants.StructureEnablingConservation <> verdict_enablement_named_ok constr
+R32298:32303 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32265:32271 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32103:32133 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R32139:32177 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R32179:32210 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingNetEmptyWitness def
+R32216:32246 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R32248:32252 Corelib.Init.Datatypes <> false constr
+R32254:32258 Corelib.Init.Datatypes <> false constr
+R32260:32264 Corelib.Init.Datatypes <> false constr
+R32272:32297 UMST.ChemConstants.StructureEnablingConservation <> verdict_trivial_net_refuse constr
+R32503:32508 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32467:32473 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32304:32334 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R32340:32378 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R32380:32413 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R32419:32449 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R32451:32454 Corelib.Init.Datatypes <> true constr
+R32456:32460 Corelib.Init.Datatypes <> false constr
+R32462:32466 Corelib.Init.Datatypes <> false constr
+R32474:32502 UMST.ChemConstants.StructureEnablingConservation <> verdict_xor_classifier_refuse constr
+R32712:32717 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32672:32678 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32509:32539 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_net def
+R32545:32583 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R32585:32618 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentWitness def
+R32624:32654 UMST.ChemConstants.StructureEnablingConservation <> structureClaimEnablingBarAbsent def
+R32656:32660 Corelib.Init.Datatypes <> false constr
+R32662:32666 Corelib.Init.Datatypes <> false constr
+R32668:32671 Corelib.Init.Datatypes <> true constr
+R32679:32711 UMST.ChemConstants.StructureEnablingConservation <> verdict_proved_without_bar_refuse constr
+R32845:32850 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32820:32826 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32718:32763 UMST.ChemConstants.StructureEnablingConservation <> evaluate_structure_enabling_conservation_close def
+R32769:32807 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr
+R32809:32813 Corelib.Init.Datatypes <> false constr
+R32815:32819 Corelib.Init.Datatypes <> false constr
+R32827:32844 UMST.ChemConstants.StructureEnablingConservation <> verdict_unwired_ok constr
+R32906:32911 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32899:32901 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32851:32898 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_knowing_fiber_ok def
+R32902:32905 Corelib.Init.Datatypes <> true constr
+R32966:32971 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32958:32960 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32912:32957 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_meso_acting_ok def
+R32961:32965 Corelib.Init.Datatypes <> false constr
+R33009:33014 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33001:33003 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32972:33000 UMST.ChemConstants.StructureEnablingConservation <> class4StructureEnablingProved def
+R33004:33008 Corelib.Init.Datatypes <> false constr
+R33031:33033 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33015:33030 UMST.ChemConstants.StructureEnablingConservation <> enablementNotXor def
+R33034:33037 Corelib.Init.Datatypes <> true constr
+def 33316:33353 <> structureEnablingConservationAuthority
+R33357:33362 Stdlib.Strings.String <> string ind
+def 33445:33475 <> structureEnablingTableAuthority
+R33479:33484 Stdlib.Strings.String <> string ind
+def 33557:33595 <> chemIntNuanceStructureEnablingAuthority
+R33599:33604 Stdlib.Strings.String <> string ind
+def 33661:33710 <> chemIntCrossStructureEnablingConservationAuthority
+R33714:33719 Stdlib.Strings.String <> string ind
+def 33788:33822 <> structureEnablingConservationCellId
+R33826:33831 Stdlib.Strings.String <> string ind
+def 33903:33939 <> structureEnablingConservationNonClaim
+R33943:33948 Stdlib.Strings.String <> string ind
+prf 34540:34578 <> structure_enabling_conservation_cell_id
+R34619:34623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34584:34618 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConservationCellId def
+prf 34709:34765 <> structure_enabling_conservation_cites_int_conservation_rs
+R34809:34812 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R34771:34808 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConservationAuthority def
+prf 34850:34911 <> structure_enabling_conservation_cites_structure_enabling_table
+R34948:34951 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R34917:34947 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingTableAuthority def
+prf 34989:35036 <> structure_enabling_conservation_cites_int_nuance
+R35081:35083 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35042:35080 UMST.ChemConstants.StructureEnablingConservation <> chemIntNuanceStructureEnablingAuthority def
+prf 35154:35200 <> structure_enabling_conservation_cites_int_cross
+R35256:35260 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35206:35255 UMST.ChemConstants.StructureEnablingConservation <> chemIntCrossStructureEnablingConservationAuthority def
+prf 35343:35386 <> structure_enabling_conservation_cites_marker
+R35425:35428 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R35392:35424 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConcurrentMarker def
+def 35694:35738 <> structureEnablingSecondLawConservationFraming
+R35742:35747 Stdlib.Strings.String <> string ind
+prf 35842:35884 <> structure_enabling_not_second_product_axiom
+R35935:35938 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R35890:35934 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingSecondLawConservationFraming def
+prf 35996:36045 <> structure_enabling_second_law_conservation_framing
+R36096:36099 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36051:36095 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingSecondLawConservationFraming def
+def 36366:36387 <> physicsGreenAuthorized
+R36399:36403 Corelib.Init.Logic <> False ind
+prf 36413:36463 <> structure_enabling_conservation_physics_green_false
+R36469:36470 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R36471:36492 UMST.ChemConstants.StructureEnablingConservation <> physicsGreenAuthorized def
+prf 36532:36579 <> structure_enabling_conservation_modality_unwired
+R36629:36631 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36585:36628 UMST.ChemConstants.StructureEnablingConservation <> structureEnablingConservationModalityCurrent def
+R36632:36670 UMST.ChemConstants.StructureEnablingConservation <> structure_enabling_conservation_unwired constr

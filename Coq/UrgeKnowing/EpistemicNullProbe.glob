@@ -1,0 +1,285 @@
+DIGEST 320ed1d07cee2edd31da2c82ac886a91
+FUrgeKnowing.EpistemicNullProbe
+R968:972 Stdlib.Reals.Reals <> <> lib
+R974:978 Stdlib.Reals.RIneq <> <> lib
+R980:982 Stdlib.micromega.Lra <> <> lib
+R984:988 Stdlib.setoid_ring.Field <> <> lib
+R990:995 Stdlib.Strings.String <> <> lib
+R1029:1050 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1052:1066 UMSTFormal.MeasurementCost <> <> lib
+R1070:1085 UMSTFormal.DensityStateSpec <> <> lib
+R1087:1107 UMSTFormal.VonNeumannEntropySpec <> <> lib
+ind 1458:1483 <> EpistemicNullProbeModality
+constr 1499:1526 <> epistemic_null_probe_unwired
+constr 1532:1559 <> epistemic_null_probe_assumed
+constr 1565:1591 <> epistemic_null_probe_proved
+constr 1597:1626 <> epistemic_null_probe_surrogate
+scheme 1458:1483 <> EpistemicNullProbeModality_rect
+scheme 1458:1483 <> EpistemicNullProbeModality_ind
+scheme 1458:1483 <> EpistemicNullProbeModality_rec
+scheme 1458:1483 <> EpistemicNullProbeModality_sind
+def 1641:1673 <> epistemicNullProbeModalityCurrent
+R1677:1702 UrgeKnowing.EpistemicNullProbe <> EpistemicNullProbeModality ind
+R1709:1736 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_unwired constr
+ind 1974:1982 <> PathProbe
+constr 1998:2012 <> path_probe_null
+constr 2018:2038 <> path_probe_which_path
+scheme 1974:1982 <> PathProbe_rect
+scheme 1974:1982 <> PathProbe_ind
+scheme 1974:1982 <> PathProbe_rec
+scheme 1974:1982 <> PathProbe_sind
+def 2053:2063 <> EpistemicMI
+R2070:2078 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
+binder 2066:2066 <> p:5
+R2088:2101 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 2082:2084 <> rho:6
+R2106:2106 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2119:2119 UrgeKnowing.EpistemicNullProbe <> p:5 var
+R2130:2144 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R2155:2175 UrgeKnowing.EpistemicNullProbe <> path_probe_which_path constr
+R2180:2197 UMSTFormal.VonNeumannEntropySpec <> vonNeumannDiagonal def
+R2199:2201 UrgeKnowing.EpistemicNullProbe <> rho:6 var
+def 2222:2236 <> epistemicMIBits
+R2243:2251 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
+binder 2239:2239 <> p:8
+R2261:2274 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 2255:2257 <> rho:9
+R2279:2279 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2303:2305 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R2286:2296 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
+R2298:2298 UrgeKnowing.EpistemicNullProbe <> p:8 var
+R2300:2302 UrgeKnowing.EpistemicNullProbe <> rho:9 var
+R2306:2308 UMSTFormal.LandauerEinsteinBridge <> ln2 defax
+def 2323:2343 <> epistemicLandauerCost
+R2350:2358 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
+binder 2346:2346 <> p:10
+R2368:2381 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 2362:2364 <> rho:11
+R2391:2391 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2387:2387 <> T:12
+R2396:2396 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2403:2429 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R2431:2431 UrgeKnowing.EpistemicNullProbe <> T:12 var
+R2434:2448 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
+R2450:2450 UrgeKnowing.EpistemicNullProbe <> p:10 var
+R2452:2454 UrgeKnowing.EpistemicNullProbe <> rho:11 var
+prf 2688:2703 <> epistemicMI_null
+R2712:2725 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 2706:2708 <> rho:13
+R2763:2765 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2732:2742 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
+R2744:2758 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R2760:2762 UrgeKnowing.EpistemicNullProbe <> rho:13 var
+prf 2801:2820 <> epistemicMIBits_null
+R2829:2842 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 2823:2825 <> rho:14
+R2884:2886 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2849:2863 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
+R2865:2879 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R2881:2883 UrgeKnowing.EpistemicNullProbe <> rho:14 var
+R2906:2920 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
+R2923:2933 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
+R2962:2971 Stdlib.Reals.RIneq <> Rgt_not_eq thm
+R2962:2971 Stdlib.Reals.RIneq <> Rgt_not_eq thm
+R2982:2988 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R2982:2988 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+prf 3003:3028 <> epistemicLandauerCost_null
+R3037:3050 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 3031:3033 <> rho:15
+R3058:3058 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3054:3054 <> T:16
+R3108:3110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3065:3085 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost def
+R3087:3101 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R3103:3105 UrgeKnowing.EpistemicNullProbe <> rho:15 var
+R3107:3107 UrgeKnowing.EpistemicNullProbe <> T:16 var
+R3130:3150 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost def
+R3163:3182 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_null thm
+R3163:3182 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_null thm
+R3163:3182 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_null thm
+R3193:3213 UMSTFormal.MeasurementCost <> zero_info_zero_energy thm
+R3193:3213 UMSTFormal.MeasurementCost <> zero_info_zero_energy thm
+prf 3228:3261 <> measurementEnergyLowerBound_nonneg
+R3271:3271 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3264:3264 <> T:17
+binder 3266:3267 <> mi:18
+R3284:3287 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3279:3282 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3283:3283 UrgeKnowing.EpistemicNullProbe <> T:17 var
+R3295:3298 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3289:3292 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3293:3294 UrgeKnowing.EpistemicNullProbe <> mi:18 var
+R3300:3303 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3304:3330 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3332:3332 UrgeKnowing.EpistemicNullProbe <> T:17 var
+R3334:3335 UrgeKnowing.EpistemicNullProbe <> mi:18 var
+R3371:3397 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R3400:3413 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R3424:3435 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3424:3435 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3460:3471 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3482:3487 Stdlib.Reals.RIneq <> Rlt_le thm
+R3490:3496 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3460:3471 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3482:3487 Stdlib.Reals.RIneq <> Rlt_le thm
+R3490:3496 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3508:3519 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3529:3534 Stdlib.Reals.RIneq <> Rlt_le thm
+R3537:3545 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3508:3519 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3529:3534 Stdlib.Reals.RIneq <> Rlt_le thm
+R3537:3545 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 3570:3587 <> epistemicMI_nonneg
+R3594:3602 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
+binder 3590:3590 <> p:19
+R3612:3625 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 3606:3608 <> rho:20
+R3633:3636 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3637:3647 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
+R3649:3649 UrgeKnowing.EpistemicNullProbe <> p:19 var
+R3651:3653 UrgeKnowing.EpistemicNullProbe <> rho:20 var
+R3710:3734 UMSTFormal.VonNeumannEntropySpec <> vonNeumannDiagonal_nonneg thm
+R3710:3734 UMSTFormal.VonNeumannEntropySpec <> vonNeumannDiagonal_nonneg thm
+prf 3749:3770 <> epistemicMIBits_nonneg
+R3777:3785 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
+binder 3773:3773 <> p:21
+R3795:3808 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 3789:3791 <> rho:22
+R3816:3819 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3820:3834 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
+R3836:3836 UrgeKnowing.EpistemicNullProbe <> p:21 var
+R3838:3840 UrgeKnowing.EpistemicNullProbe <> rho:22 var
+R3859:3873 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
+R3884:3895 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3884:3895 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R3908:3925 UrgeKnowing.EpistemicNullProbe <> epistemicMI_nonneg thm
+R3908:3925 UrgeKnowing.EpistemicNullProbe <> epistemicMI_nonneg thm
+R3938:3943 Stdlib.Reals.RIneq <> Rlt_le thm
+R3946:3961 Stdlib.Reals.RIneq <> Rinv_0_lt_compat thm
+R3964:3970 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3938:3943 Stdlib.Reals.RIneq <> Rlt_le thm
+R3946:3961 Stdlib.Reals.RIneq <> Rinv_0_lt_compat thm
+R3964:3970 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+prf 3985:4012 <> epistemicLandauerCost_nonneg
+R4019:4027 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
+binder 4015:4015 <> p:23
+R4037:4050 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 4031:4033 <> rho:24
+R4060:4060 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4056:4056 <> T:25
+R4073:4076 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4068:4071 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4072:4072 UrgeKnowing.EpistemicNullProbe <> T:25 var
+R4078:4081 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4082:4102 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost def
+R4104:4104 UrgeKnowing.EpistemicNullProbe <> p:23 var
+R4106:4108 UrgeKnowing.EpistemicNullProbe <> rho:24 var
+R4110:4110 UrgeKnowing.EpistemicNullProbe <> T:25 var
+R4142:4162 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost def
+R4173:4206 UrgeKnowing.EpistemicNullProbe <> measurementEnergyLowerBound_nonneg thm
+R4217:4238 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_nonneg thm
+R4173:4206 UrgeKnowing.EpistemicNullProbe <> measurementEnergyLowerBound_nonneg thm
+R4217:4238 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_nonneg thm
+prf 4266:4301 <> epistemicLandauerCost_null_all_temps
+R4310:4323 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 4304:4306 <> rho:26
+R4341:4341 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4337:4337 <> T:27
+R4387:4389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4344:4364 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost def
+R4366:4380 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R4382:4384 UrgeKnowing.EpistemicNullProbe <> rho:26 var
+R4386:4386 UrgeKnowing.EpistemicNullProbe <> T:27 var
+R4419:4444 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost_null thm
+R4419:4444 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost_null thm
+def 4471:4494 <> epistemicNullProbePolicy
+R4503:4516 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 4497:4499 <> rho:28
+R4566:4571 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4562:4564 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4531:4541 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
+R4543:4557 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R4559:4561 UrgeKnowing.EpistemicNullProbe <> rho:28 var
+R4611:4616 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4607:4609 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4572:4586 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
+R4588:4602 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R4604:4606 UrgeKnowing.EpistemicNullProbe <> rho:28 var
+R4628:4628 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4624:4624 <> T:29
+R4674:4676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4631:4651 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost def
+R4653:4667 UrgeKnowing.EpistemicNullProbe <> path_probe_null constr
+R4669:4671 UrgeKnowing.EpistemicNullProbe <> rho:28 var
+R4673:4673 UrgeKnowing.EpistemicNullProbe <> T:29 var
+prf 4687:4713 <> epistemic_null_probe_policy
+R4722:4735 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
+binder 4716:4718 <> rho:30
+R4742:4765 UrgeKnowing.EpistemicNullProbe <> epistemicNullProbePolicy def
+R4767:4769 UrgeKnowing.EpistemicNullProbe <> rho:30 var
+R4808:4823 UrgeKnowing.EpistemicNullProbe <> epistemicMI_null thm
+R4808:4823 UrgeKnowing.EpistemicNullProbe <> epistemicMI_null thm
+R4836:4855 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_null thm
+R4836:4855 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits_null thm
+R4878:4903 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost_null thm
+R4878:4903 UrgeKnowing.EpistemicNullProbe <> epistemicLandauerCost_null thm
+def 5147:5166 <> epistemicMIAuthority
+R5170:5175 Stdlib.Strings.String <> string ind
+def 5248:5267 <> landauerLawAuthority
+R5271:5276 Stdlib.Strings.String <> string ind
+def 5349:5374 <> physicalSecondLawAuthority
+R5378:5383 Stdlib.Strings.String <> string ind
+def 5435:5458 <> epistemicNullProbeCellId
+R5462:5467 Stdlib.Strings.String <> string ind
+def 5528:5550 <> epistemicNullProbeNamed
+R5554:5559 Stdlib.Strings.String <> string ind
+def 5705:5730 <> epistemicNullProbeNonClaim
+R5734:5739 Stdlib.Strings.String <> string ind
+prf 5985:6012 <> epistemic_null_probe_cell_id
+R6042:6044 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6018:6041 UrgeKnowing.EpistemicNullProbe <> epistemicNullProbeCellId def
+prf 6119:6157 <> epistemic_null_probe_cites_epistemic_mi
+R6183:6186 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6163:6182 UrgeKnowing.EpistemicNullProbe <> epistemicMIAuthority def
+prf 6224:6269 <> epistemic_null_probe_cites_physical_second_law
+R6301:6303 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6275:6300 UrgeKnowing.EpistemicNullProbe <> physicalSecondLawAuthority def
+prf 6369:6407 <> epistemic_null_probe_cites_landauer_law
+R6433:6436 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6413:6432 UrgeKnowing.EpistemicNullProbe <> landauerLawAuthority def
+def 6700:6740 <> epistemicNullSecondLawConservationFraming
+R6744:6749 Stdlib.Strings.String <> string ind
+prf 6837:6876 <> epistemic_null_not_second_landauer_axiom
+R6923:6928 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6882:6922 UrgeKnowing.EpistemicNullProbe <> epistemicNullSecondLawConservationFraming def
+prf 6987:7032 <> epistemic_null_second_law_conservation_framing
+R7079:7082 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7038:7078 UrgeKnowing.EpistemicNullProbe <> epistemicNullSecondLawConservationFraming def
+def 7349:7370 <> physicsGreenAuthorized
+R7382:7386 Corelib.Init.Logic <> False ind
+prf 7396:7435 <> epistemic_null_probe_physics_green_false
+R7441:7442 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R7443:7464 UrgeKnowing.EpistemicNullProbe <> physicsGreenAuthorized def
+prf 7504:7540 <> epistemic_null_probe_modality_unwired
+R7579:7581 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7546:7578 UrgeKnowing.EpistemicNullProbe <> epistemicNullProbeModalityCurrent def
+R7582:7609 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_unwired constr
+def 7649:7680 <> epistemicNullProbeKnowingFiberOk
+R7758:7763 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7727:7729 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7694:7726 UrgeKnowing.EpistemicNullProbe <> epistemicNullProbeModalityCurrent def
+R7730:7757 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_unwired constr
+R7764:7765 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R7766:7787 UrgeKnowing.EpistemicNullProbe <> physicsGreenAuthorized def
+prf 7797:7833 <> epistemic_null_probe_knowing_fiber_ok
+R7839:7870 UrgeKnowing.EpistemicNullProbe <> epistemicNullProbeKnowingFiberOk def
+R7899:7935 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_modality_unwired thm
+R7899:7935 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_modality_unwired thm
+R7948:7987 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_physics_green_false thm
+R7948:7987 UrgeKnowing.EpistemicNullProbe <> epistemic_null_probe_physics_green_false thm
+def 8229:8247 <> mesoThermoGRestated
+R8251:8256 Stdlib.Strings.String <> string ind
+prf 8301:8344 <> epistemic_null_probe_not_meso_thermo_restate
+R8376:8379 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8350:8375 UrgeKnowing.EpistemicNullProbe <> epistemicNullProbeNonClaim def
+R8380:8398 UrgeKnowing.EpistemicNullProbe <> mesoThermoGRestated def

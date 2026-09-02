@@ -1,0 +1,1124 @@
+DIGEST e3f776aa22ca7b9fd39e866db880c206
+FUMST.ChemConstants.NaturalOccurrenceZ118
+R1131:1135 Stdlib.Arith.Arith <> <> lib
+R1137:1142 Stdlib.ZArith.ZArith <> <> lib
+R1144:1149 Stdlib.Strings.String <> <> lib
+R1151:1154 Stdlib.Bool.Bool <> <> lib
+R1156:1158 Stdlib.micromega.Lia <> <> lib
+R1160:1163 Stdlib.Lists.List <> <> lib
+R1173:1185 Stdlib.Lists.List ListNotations <> mod
+def 1220:1247 <> naturaloccurrencez118Surface
+R1251:1256 Stdlib.Strings.String <> string ind
+prf 1305:1339 <> naturaloccurrencez118_surface_named
+R1373:1376 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1345:1372 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturaloccurrencez118Surface def
+ind 1715:1743 <> NaturalOccurrenceZ118Modality
+constr 1759:1789 <> natural_occurrence_z118_unwired
+constr 1795:1825 <> natural_occurrence_z118_assumed
+constr 1831:1860 <> natural_occurrence_z118_proved
+constr 1866:1898 <> natural_occurrence_z118_surrogate
+scheme 1715:1743 <> NaturalOccurrenceZ118Modality_rect
+scheme 1715:1743 <> NaturalOccurrenceZ118Modality_ind
+scheme 1715:1743 <> NaturalOccurrenceZ118Modality_rec
+scheme 1715:1743 <> NaturalOccurrenceZ118Modality_sind
+def 1913:1948 <> naturalOccurrenceZ118ModalityCurrent
+R1952:1980 UMST.ChemConstants.NaturalOccurrenceZ118 <> NaturalOccurrenceZ118Modality ind
+R1987:2017 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+def 2032:2078 <> natural_occurrence_modality_lattice_cardinality
+R2082:2084 Corelib.Init.Datatypes <> nat ind
+prf 2099:2153 <> natural_occurrence_modality_lattice_cardinality_is_four
+R2206:2208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2159:2205 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_modality_lattice_cardinality def
+prf 2244:2294 <> natural_occurrence_modality_lattice_not_118_squared
+R2374:2378 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2300:2303 Corelib.Init.Datatypes <> negb def
+R2306:2312 Stdlib.Arith.PeanoNat Nat eqb def
+R2314:2360 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_modality_lattice_cardinality def
+R2366:2368 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2379:2382 Corelib.Init.Datatypes <> true constr
+R2401:2447 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_modality_lattice_cardinality def
+def 2706:2728 <> iupac_table_cardinality
+R2732:2734 Corelib.Init.Datatypes <> nat ind
+prf 2751:2780 <> iupac_table_cardinality_is_118
+R2809:2811 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2786:2808 UMST.ChemConstants.NaturalOccurrenceZ118 <> iupac_table_cardinality def
+def 2854:2879 <> occurrence_element_z_valid
+R2886:2888 Corelib.Init.Datatypes <> nat ind
+binder 2882:2882 <> z:3
+R2893:2896 Corelib.Init.Datatypes <> bool ind
+R2914:2917 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2903:2909 Stdlib.Arith.PeanoNat Nat ltb def
+R2913:2913 UMST.ChemConstants.NaturalOccurrenceZ118 <> z:3 var
+R2918:2924 Stdlib.Arith.PeanoNat Nat leb def
+R2926:2926 UMST.ChemConstants.NaturalOccurrenceZ118 <> z:3 var
+R2928:2950 UMST.ChemConstants.NaturalOccurrenceZ118 <> iupac_table_cardinality def
+def 3187:3196 <> bit_native
+R3200:3202 Corelib.Init.Datatypes <> nat ind
+def 3221:3229 <> bit_oxide
+R3233:3235 Corelib.Init.Datatypes <> nat ind
+def 3254:3264 <> bit_sulfide
+R3268:3270 Corelib.Init.Datatypes <> nat ind
+def 3289:3300 <> bit_silicate
+R3304:3306 Corelib.Init.Datatypes <> nat ind
+def 3325:3344 <> bit_halide_carbonate
+R3348:3350 Corelib.Init.Datatypes <> nat ind
+def 3370:3382 <> bit_atmophile
+R3386:3388 Corelib.Init.Datatypes <> nat ind
+def 3408:3426 <> bit_synthetic_trace
+R3430:3432 Corelib.Init.Datatypes <> nat ind
+prf 3448:3462 <> bit_native_is_1
+R3476:3478 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3466:3475 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_native def
+prf 3514:3527 <> bit_oxide_is_2
+R3540:3542 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3531:3539 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_oxide def
+prf 3578:3593 <> bit_sulfide_is_4
+R3608:3610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3597:3607 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_sulfide def
+prf 3646:3664 <> bit_atmophile_is_32
+R3681:3683 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3668:3680 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_atmophile def
+def 3725:3742 <> occurrence_bit_has
+R3763:3765 Corelib.Init.Datatypes <> nat ind
+binder 3745:3748 <> bits:4
+binder 3750:3759 <> classifier:5
+R3770:3773 Corelib.Init.Datatypes <> bool ind
+R3780:3786 Stdlib.Arith.PeanoNat Nat eqb def
+R3789:3789 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3807:3812 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3794:3796 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R3790:3793 UMST.ChemConstants.NaturalOccurrenceZ118 <> bits:4 var
+R3797:3806 UMST.ChemConstants.NaturalOccurrenceZ118 <> classifier:5 var
+def 4053:4076 <> occurrence_product_table
+R4080:4083 Corelib.Init.Datatypes <> list ind
+R4085:4087 Corelib.Init.Datatypes <> nat ind
+R4094:4094 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4097:4098 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4101:4102 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4105:4106 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4108:4109 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4112:4113 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4116:4117 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4120:4121 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4124:4125 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4128:4129 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4132:4133 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4136:4137 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4140:4141 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4144:4145 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4147:4148 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4151:4152 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4154:4155 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4158:4159 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4162:4166 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4169:4170 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4173:4174 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4176:4177 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4179:4180 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4182:4183 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4185:4186 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4188:4189 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4191:4192 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4194:4195 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4197:4198 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4200:4201 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4203:4204 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4206:4207 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4209:4210 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4212:4213 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4215:4216 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4219:4220 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4223:4227 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4229:4230 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4233:4234 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4237:4238 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4240:4241 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4243:4244 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4246:4247 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4250:4251 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4253:4254 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4256:4257 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4259:4260 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4262:4263 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4265:4266 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4268:4269 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4271:4272 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4274:4275 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4277:4278 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4281:4282 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4285:4289 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4291:4292 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4295:4296 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4299:4300 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4303:4304 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4307:4308 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4311:4312 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4315:4316 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4319:4320 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4323:4324 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4327:4328 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4331:4332 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4335:4336 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4339:4340 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4343:4344 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4347:4348 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4351:4352 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4355:4356 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4358:4362 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4364:4365 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4367:4368 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4370:4371 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4373:4374 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4376:4377 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4379:4380 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4382:4383 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4385:4386 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4388:4389 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4391:4392 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4394:4395 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4398:4399 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4402:4403 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4406:4407 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4410:4411 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4414:4415 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4418:4419 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4422:4426 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4429:4430 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4432:4433 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4436:4437 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4440:4441 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4444:4445 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4448:4449 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4452:4453 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4456:4457 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4460:4461 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4464:4465 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4468:4469 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4472:4473 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4476:4477 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4480:4481 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4484:4485 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4488:4489 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4492:4493 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4496:4500 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4503:4504 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4507:4508 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4511:4512 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4515:4516 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4519:4520 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4523:4524 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4527:4528 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4531:4532 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4535:4536 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R4539:4539 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+def 4556:4574 <> list_nth_occurrence
+R4581:4583 Corelib.Init.Datatypes <> nat ind
+binder 4577:4577 <> n:6
+R4591:4594 Corelib.Init.Datatypes <> list ind
+R4596:4598 Corelib.Init.Datatypes <> nat ind
+binder 4587:4587 <> l:7
+R4603:4608 Corelib.Init.Datatypes <> option ind
+R4610:4612 Corelib.Init.Datatypes <> nat ind
+R4628:4628 UMST.ChemConstants.NaturalOccurrenceZ118 <> l:7 var
+R4625:4625 UMST.ChemConstants.NaturalOccurrenceZ118 <> n:6 var
+R4639:4639 Corelib.Init.Datatypes <> O constr
+R4643:4646 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4652:4655 Corelib.Init.Datatypes <> Some constr
+R4663:4663 Corelib.Init.Datatypes <> S constr
+R4670:4673 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4680:4698 UMST.ChemConstants.NaturalOccurrenceZ118 <> list_nth_occurrence:8 def
+R4713:4715 Corelib.Init.Datatypes <> nil constr
+R4720:4723 Corelib.Init.Datatypes <> None constr
+def 4744:4758 <> occurrence_bits
+R4765:4767 Corelib.Init.Datatypes <> nat ind
+binder 4761:4761 <> z:11
+R4772:4777 Corelib.Init.Datatypes <> option ind
+R4779:4781 Corelib.Init.Datatypes <> nat ind
+R4791:4797 Stdlib.Arith.PeanoNat Nat eqb def
+R4799:4799 UMST.ChemConstants.NaturalOccurrenceZ118 <> z:11 var
+R4825:4831 Stdlib.Arith.PeanoNat Nat ltb def
+R4833:4855 UMST.ChemConstants.NaturalOccurrenceZ118 <> iupac_table_cardinality def
+R4857:4857 UMST.ChemConstants.NaturalOccurrenceZ118 <> z:11 var
+R4888:4906 UMST.ChemConstants.NaturalOccurrenceZ118 <> list_nth_occurrence def
+R4909:4912 Corelib.Init.Peano <> pred abbrev
+R4914:4914 UMST.ChemConstants.NaturalOccurrenceZ118 <> z:11 var
+R4917:4940 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_table def
+R4871:4874 Corelib.Init.Datatypes <> None constr
+R4810:4813 Corelib.Init.Datatypes <> None constr
+prf 4950:4976 <> occurrence_table_length_118
+R5013:5015 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4982:4987 Stdlib.Lists.List <> length abbrev
+R4989:5012 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_table def
+def 5056:5077 <> all_occurrence_nonzero
+R5084:5087 Corelib.Init.Datatypes <> list ind
+R5089:5091 Corelib.Init.Datatypes <> nat ind
+binder 5080:5080 <> l:12
+R5096:5099 Corelib.Init.Datatypes <> bool ind
+R5112:5112 UMST.ChemConstants.NaturalOccurrenceZ118 <> l:12 var
+R5123:5125 Corelib.Init.Datatypes <> nil constr
+R5130:5133 Corelib.Init.Datatypes <> true constr
+R5140:5143 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5168:5171 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5150:5153 Corelib.Init.Datatypes <> negb def
+R5156:5162 Stdlib.Arith.PeanoNat Nat eqb def
+R5172:5193 UMST.ChemConstants.NaturalOccurrenceZ118 <> all_occurrence_nonzero:13 def
+def 5217:5234 <> every_z_classified
+R5238:5241 Corelib.Init.Datatypes <> bool ind
+R5248:5269 UMST.ChemConstants.NaturalOccurrenceZ118 <> all_occurrence_nonzero def
+R5271:5294 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_table def
+prf 5304:5326 <> every_z_classified_true
+R5348:5350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5330:5347 UMST.ChemConstants.NaturalOccurrenceZ118 <> every_z_classified def
+R5351:5354 Corelib.Init.Datatypes <> true constr
+def 5394:5410 <> table_covers_z118
+R5414:5417 Corelib.Init.Datatypes <> bool ind
+R5424:5430 Stdlib.Arith.PeanoNat Nat eqb def
+R5433:5438 Stdlib.Lists.List <> length abbrev
+R5440:5463 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_table def
+R5466:5488 UMST.ChemConstants.NaturalOccurrenceZ118 <> iupac_table_cardinality def
+prf 5498:5519 <> table_covers_z118_true
+R5540:5542 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5523:5539 UMST.ChemConstants.NaturalOccurrenceZ118 <> table_covers_z118 def
+R5543:5546 Corelib.Init.Datatypes <> true constr
+def 5647:5654 <> helium_z
+R5658:5660 Corelib.Init.Datatypes <> nat ind
+def 5679:5684 <> iron_z
+R5688:5690 Corelib.Init.Datatypes <> nat ind
+def 5710:5715 <> gold_z
+R5719:5721 Corelib.Init.Datatypes <> nat ind
+def 5741:5752 <> technetium_z
+R5756:5758 Corelib.Init.Datatypes <> nat ind
+prf 5774:5786 <> helium_z_is_2
+R5798:5800 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5790:5797 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_z def
+prf 5836:5847 <> iron_z_is_26
+R5857:5859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5851:5856 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_z def
+prf 5896:5907 <> gold_z_is_79
+R5917:5919 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5911:5916 UMST.ChemConstants.NaturalOccurrenceZ118 <> gold_z def
+prf 5956:5973 <> technetium_z_is_43
+R5989:5991 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5977:5988 UMST.ChemConstants.NaturalOccurrenceZ118 <> technetium_z def
+prf 6028:6053 <> helium_bits_atmophile_only
+R6083:6085 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6059:6073 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bits def
+R6075:6082 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_z def
+R6086:6089 Corelib.Init.Datatypes <> Some constr
+R6091:6103 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_atmophile def
+prf 6138:6175 <> iron_bits_native_oxide_sulfide_product
+R6212:6217 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6203:6205 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6181:6195 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bits def
+R6197:6202 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_z def
+R6206:6209 Corelib.Init.Datatypes <> Some constr
+R6256:6261 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6249:6251 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6218:6235 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bit_has def
+R6239:6248 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_native def
+R6252:6255 Corelib.Init.Datatypes <> true constr
+R6299:6304 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6292:6294 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6262:6279 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bit_has def
+R6283:6291 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_oxide def
+R6295:6298 Corelib.Init.Datatypes <> true constr
+R6337:6339 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6305:6322 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bit_has def
+R6326:6336 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_sulfide def
+R6340:6343 Corelib.Init.Datatypes <> true constr
+prf 6392:6407 <> gold_bits_native
+R6435:6437 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6413:6427 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bits def
+R6429:6434 UMST.ChemConstants.NaturalOccurrenceZ118 <> gold_z def
+R6438:6441 Corelib.Init.Datatypes <> Some constr
+R6443:6452 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_native def
+prf 6487:6517 <> technetium_bits_synthetic_trace
+R6551:6553 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6523:6537 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bits def
+R6539:6550 UMST.ChemConstants.NaturalOccurrenceZ118 <> technetium_z def
+R6554:6557 Corelib.Init.Datatypes <> Some constr
+R6559:6577 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_synthetic_trace def
+def 6617:6645 <> helium_has_no_crustal_ore_bit
+R6649:6652 Corelib.Init.Datatypes <> bool ind
+R6665:6679 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bits def
+R6681:6688 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_z def
+R6699:6702 Corelib.Init.Datatypes <> Some constr
+R6709:6715 Stdlib.Arith.PeanoNat Nat eqb def
+R6719:6731 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_atmophile def
+R6737:6740 Corelib.Init.Datatypes <> None constr
+R6745:6749 Corelib.Init.Datatypes <> false constr
+prf 6765:6798 <> helium_has_no_crustal_ore_bit_true
+R6833:6835 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6804:6832 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_has_no_crustal_ore_bit def
+R6836:6839 Corelib.Init.Datatypes <> true constr
+def 6879:6904 <> iron_is_occurrence_product
+R6908:6911 Corelib.Init.Datatypes <> bool ind
+R6924:6938 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bits def
+R6940:6945 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_z def
+R6956:6959 Corelib.Init.Datatypes <> Some constr
+R7043:7052 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7003:7012 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6972:6989 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bit_has def
+R6993:7002 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_native def
+R7013:7030 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bit_has def
+R7034:7042 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_oxide def
+R7053:7070 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_bit_has def
+R7074:7084 UMST.ChemConstants.NaturalOccurrenceZ118 <> bit_sulfide def
+R7090:7093 Corelib.Init.Datatypes <> None constr
+R7098:7102 Corelib.Init.Datatypes <> false constr
+prf 7118:7148 <> iron_is_occurrence_product_true
+R7180:7182 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7154:7179 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_is_occurrence_product def
+R7183:7186 Corelib.Init.Datatypes <> true constr
+def 7448:7465 <> folkloreListMarker
+R7469:7474 Stdlib.Strings.String <> string ind
+def 7529:7551 <> productClassifierMarker
+R7555:7560 Stdlib.Strings.String <> string ind
+prf 7618:7661 <> folklore_marker_ne_product_classifier_marker
+R7685:7688 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7667:7684 UMST.ChemConstants.NaturalOccurrenceZ118 <> folkloreListMarker def
+R7689:7711 UMST.ChemConstants.NaturalOccurrenceZ118 <> productClassifierMarker def
+ind 7751:7773 <> occurrence_witness_kind
+constr 7789:7812 <> occurrence_product_named
+constr 7818:7838 <> folklore_list_theater
+constr 7844:7866 <> xor_enum_bucket_theater
+scheme 7751:7773 <> occurrence_witness_kind_rect
+scheme 7751:7773 <> occurrence_witness_kind_ind
+scheme 7751:7773 <> occurrence_witness_kind_rec
+scheme 7751:7773 <> occurrence_witness_kind_sind
+def 7881:7901 <> folklore_list_smuggle
+R7908:7930 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_witness_kind ind
+binder 7904:7904 <> k:17
+R7935:7938 Corelib.Init.Datatypes <> bool ind
+R7951:7951 UMST.ChemConstants.NaturalOccurrenceZ118 <> k:17 var
+R7962:7982 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_theater constr
+R7987:7990 Corelib.Init.Datatypes <> true constr
+R8001:8005 Corelib.Init.Datatypes <> false constr
+def 8026:8041 <> xor_enum_smuggle
+R8048:8070 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_witness_kind ind
+binder 8044:8044 <> k:19
+R8075:8078 Corelib.Init.Datatypes <> bool ind
+R8091:8091 UMST.ChemConstants.NaturalOccurrenceZ118 <> k:19 var
+R8102:8124 UMST.ChemConstants.NaturalOccurrenceZ118 <> xor_enum_bucket_theater constr
+R8129:8132 Corelib.Init.Datatypes <> true constr
+R8143:8147 Corelib.Init.Datatypes <> false constr
+def 8168:8192 <> occurrenceWitnessFolklore
+R8196:8218 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_witness_kind ind
+R8225:8245 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_theater constr
+def 8259:8280 <> occurrenceWitnessNamed
+R8284:8306 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_witness_kind ind
+R8313:8336 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_named constr
+prf 8346:8371 <> folklore_list_smuggle_true
+R8424:8426 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8377:8397 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_smuggle def
+R8399:8423 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrenceWitnessFolklore def
+R8427:8430 Corelib.Init.Datatypes <> true constr
+prf 8465:8498 <> named_occurrence_not_folklore_list
+R8548:8550 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8504:8524 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_smuggle def
+R8526:8547 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrenceWitnessNamed def
+R8551:8555 Corelib.Init.Datatypes <> false constr
+def 8595:8607 <> xorEnumMarker
+R8611:8616 Stdlib.Strings.String <> string ind
+def 8673:8691 <> productFactorMarker
+R8695:8700 Stdlib.Strings.String <> string ind
+prf 8765:8799 <> xor_marker_ne_product_factor_marker
+R8818:8821 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8805:8817 UMST.ChemConstants.NaturalOccurrenceZ118 <> xorEnumMarker def
+R8822:8840 UMST.ChemConstants.NaturalOccurrenceZ118 <> productFactorMarker def
+def 9103:9130 <> fourthScienceCollisionMarker
+R9134:9139 Stdlib.Strings.String <> string ind
+def 9249:9279 <> twentySixthAxiomCollisionMarker
+R9283:9288 Stdlib.Strings.String <> string ind
+prf 9379:9408 <> fourth_science_collision_named
+R9442:9445 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9414:9441 UMST.ChemConstants.NaturalOccurrenceZ118 <> fourthScienceCollisionMarker def
+prf 9483:9516 <> twenty_sixth_axiom_collision_named
+R9553:9556 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9522:9552 UMST.ChemConstants.NaturalOccurrenceZ118 <> twentySixthAxiomCollisionMarker def
+ind 9822:9852 <> natural_occurrence_bar_presence
+constr 9868:9896 <> natural_occurrence_bar_absent
+constr 9902:9931 <> natural_occurrence_bar_present
+scheme 9822:9852 <> natural_occurrence_bar_presence_rect
+scheme 9822:9852 <> natural_occurrence_bar_presence_ind
+scheme 9822:9852 <> natural_occurrence_bar_presence_rec
+scheme 9822:9852 <> natural_occurrence_bar_presence_sind
+rec 9942:9969 <> natural_occurrence_claim_bar
+proj 9985:10019 <> natural_occurrence_bar_presence_tag
+proj 10058:10092 <> natural_occurrence_bar_defect_total
+R10023:10053 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_presence ind
+R10096:10098 Corelib.Init.Datatypes <> nat ind
+def 10115:10145 <> naturalOccurrenceClaimBarAbsent
+R10149:10176 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_claim_bar rec
+R10186:10220 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_presence_tag proj
+R10186:10220 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_presence_tag proj
+R10186:10220 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_presence_tag proj
+R10261:10295 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_defect_total proj
+R10261:10295 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_defect_total proj
+R10225:10253 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_bar_absent constr
+ind 10541:10571 <> natural_occurrence_z118_verdict
+constr 10587:10604 <> verdict_unwired_ok
+constr 10610:10636 <> verdict_occurrence_named_ok
+constr 10642:10665 <> verdict_trivial_z_refuse
+constr 10671:10698 <> verdict_folklore_list_refuse
+constr 10704:10726 <> verdict_xor_enum_refuse
+constr 10732:10760 <> verdict_fourth_science_refuse
+constr 10766:10798 <> verdict_twenty_sixth_axiom_refuse
+constr 10804:10830 <> verdict_green_invent_refuse
+constr 10836:10868 <> verdict_proved_without_bar_refuse
+constr 10874:10904 <> verdict_production_wired_refuse
+scheme 10541:10571 <> natural_occurrence_z118_verdict_rect
+scheme 10541:10571 <> natural_occurrence_z118_verdict_ind
+scheme 10541:10571 <> natural_occurrence_z118_verdict_rec
+scheme 10541:10571 <> natural_occurrence_z118_verdict_sind
+def 10919:10952 <> natural_occurrence_z118_verdict_ok
+R10961:10991 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict ind
+binder 10957:10957 <> v:28
+R10996:10999 Corelib.Init.Datatypes <> bool ind
+R11012:11012 UMST.ChemConstants.NaturalOccurrenceZ118 <> v:28 var
+R11023:11040 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+R11045:11048 Corelib.Init.Datatypes <> true constr
+R11054:11080 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R11085:11088 Corelib.Init.Datatypes <> true constr
+R11099:11103 Corelib.Init.Datatypes <> false constr
+rec 11120:11147 <> natural_occurrence_incidence
+proj 11163:11186 <> natural_occurrence_inc_z
+proj 11197:11231 <> natural_occurrence_inc_witness_kind
+proj 11262:11289 <> natural_occurrence_inc_level
+R11190:11192 Corelib.Init.Datatypes <> nat ind
+R11235:11257 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_witness_kind ind
+R11293:11295 Corelib.Init.Datatypes <> nat ind
+def 11312:11347 <> naturalOccurrenceIncidenceNontrivial
+R11354:11381 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+binder 11350:11350 <> h:34
+R11386:11389 Corelib.Init.Datatypes <> bool ind
+R11396:11402 Stdlib.Arith.PeanoNat Nat ltb def
+R11407:11434 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R11436:11436 UMST.ChemConstants.NaturalOccurrenceZ118 <> h:34 var
+def 11452:11483 <> naturalOccurrenceIncidenceIronL1
+R11487:11514 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+R11524:11547 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11524:11547 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11524:11547 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11565:11599 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R11565:11599 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R11635:11662 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R11635:11662 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R11552:11557 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_z def
+R11604:11627 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_named constr
+def 11685:11718 <> naturalOccurrenceIncidenceHeliumL1
+R11722:11749 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+R11759:11782 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11759:11782 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11759:11782 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11802:11836 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R11802:11836 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R11872:11899 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R11872:11899 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R11787:11794 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_z def
+R11841:11864 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_named constr
+def 11922:11954 <> naturalOccurrenceIncidenceTrivial
+R11958:11985 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+R11995:12018 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11995:12018 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R11995:12018 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12031:12065 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R12031:12065 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R12101:12128 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R12101:12128 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R12070:12093 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_product_named constr
+def 12151:12184 <> naturalOccurrenceIncidenceFolklore
+R12188:12215 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+R12225:12248 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12225:12248 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12225:12248 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12266:12300 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R12266:12300 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R12333:12360 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R12333:12360 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R12253:12258 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_z def
+R12305:12325 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_theater constr
+def 12383:12415 <> naturalOccurrenceIncidenceXorEnum
+R12419:12446 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+R12456:12479 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12456:12479 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12456:12479 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R12497:12531 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R12497:12531 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R12566:12593 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R12566:12593 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_level proj
+R12484:12489 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_z def
+R12536:12558 UMST.ChemConstants.NaturalOccurrenceZ118 <> xor_enum_bucket_theater constr
+def 12616:12652 <> evaluate_natural_occurrence_incidence
+R12661:12689 UMST.ChemConstants.NaturalOccurrenceZ118 <> NaturalOccurrenceZ118Modality ind
+binder 12657:12657 <> m:35
+R12699:12726 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_incidence rec
+binder 12695:12695 <> h:36
+R12736:12763 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_claim_bar rec
+binder 12732:12732 <> b:37
+R12791:12794 Corelib.Init.Datatypes <> bool ind
+binder 12769:12787 <> claim_physics_green:38
+R12815:12818 Corelib.Init.Datatypes <> bool ind
+binder 12800:12811 <> claim_proved:39
+R12841:12844 Corelib.Init.Datatypes <> bool ind
+binder 12824:12837 <> claim_xor_enum:40
+R12873:12876 Corelib.Init.Datatypes <> bool ind
+binder 12850:12869 <> claim_fourth_science:41
+R12909:12912 Corelib.Init.Datatypes <> bool ind
+binder 12882:12905 <> claim_twenty_sixth_axiom:42
+R12917:12947 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict ind
+R12957:12975 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_physics_green:38 var
+R13022:13033 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_proved:39 var
+R13096:13115 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_fourth_science:41 var
+R13184:13207 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_twenty_sixth_axiom:42 var
+R13290:13310 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_smuggle def
+R13313:13347 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R13349:13349 UMST.ChemConstants.NaturalOccurrenceZ118 <> h:36 var
+R13438:13453 UMST.ChemConstants.NaturalOccurrenceZ118 <> xor_enum_smuggle def
+R13456:13490 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_witness_kind proj
+R13492:13492 UMST.ChemConstants.NaturalOccurrenceZ118 <> h:36 var
+R13586:13599 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_xor_enum:40 var
+R13702:13705 Corelib.Init.Datatypes <> negb def
+R13708:13743 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceNontrivial def
+R13745:13745 UMST.ChemConstants.NaturalOccurrenceZ118 <> h:36 var
+R13860:13863 Corelib.Init.Datatypes <> negb def
+R13866:13891 UMST.ChemConstants.NaturalOccurrenceZ118 <> occurrence_element_z_valid def
+R13947:13970 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_inc_z proj
+R13972:13972 UMST.ChemConstants.NaturalOccurrenceZ118 <> h:36 var
+R14145:14145 UMST.ChemConstants.NaturalOccurrenceZ118 <> m:35 var
+R14198:14228 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R14281:14307 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R14355:14385 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_assumed constr
+R14433:14465 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_surrogate constr
+R14518:14535 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+R14518:14535 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+R14583:14612 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_proved constr
+R14665:14697 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_proved_without_bar_refuse constr
+R14023:14046 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_trivial_z_refuse constr
+R13790:13813 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_trivial_z_refuse constr
+R13638:13660 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_xor_enum_refuse constr
+R13527:13549 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_xor_enum_refuse constr
+R13379:13406 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_folklore_list_refuse constr
+R13231:13263 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_twenty_sixth_axiom_refuse constr
+R13134:13162 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_fourth_science_refuse constr
+R13047:13079 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_proved_without_bar_refuse constr
+R12984:13010 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_green_invent_refuse constr
+def 14760:14792 <> evaluate_natural_occurrence_close
+R14801:14829 UMST.ChemConstants.NaturalOccurrenceZ118 <> NaturalOccurrenceZ118Modality ind
+binder 14797:14797 <> m:44
+R14857:14860 Corelib.Init.Datatypes <> bool ind
+binder 14835:14853 <> claim_physics_green:45
+R14891:14894 Corelib.Init.Datatypes <> bool ind
+binder 14866:14887 <> claim_production_wired:46
+R14899:14929 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict ind
+R14939:14957 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_physics_green:45 var
+R15004:15025 UMST.ChemConstants.NaturalOccurrenceZ118 <> claim_production_wired:46 var
+R15083:15083 UMST.ChemConstants.NaturalOccurrenceZ118 <> m:44 var
+R15096:15126 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R15131:15148 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+R15156:15186 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_assumed constr
+R15194:15223 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_proved constr
+R15231:15263 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_surrogate constr
+R15268:15294 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R15268:15294 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R15268:15294 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R15034:15064 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_production_wired_refuse constr
+R14966:14992 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_green_invent_refuse constr
+def 15541:15576 <> natural_occurrence_z118_wired_in_lib
+R15580:15583 Corelib.Init.Datatypes <> bool ind
+R15588:15592 Corelib.Init.Datatypes <> false constr
+def 15607:15642 <> natural_occurrence_z118_wired_in_eos
+R15646:15649 Corelib.Init.Datatypes <> bool ind
+R15654:15658 Corelib.Init.Datatypes <> false constr
+prf 15668:15699 <> natural_occurrence_not_wired_lib
+R15741:15743 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15705:15740 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_wired_in_lib def
+R15744:15748 Corelib.Init.Datatypes <> false constr
+prf 15783:15814 <> natural_occurrence_not_wired_eos
+R15856:15858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15820:15855 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_wired_in_eos def
+R15859:15863 Corelib.Init.Datatypes <> false constr
+prf 15898:15914 <> wave100_not_wired
+R16008:16010 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15961:15966 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15920:15923 Corelib.Init.Datatypes <> negb def
+R15925:15960 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_wired_in_lib def
+R15967:15970 Corelib.Init.Datatypes <> negb def
+R15972:16007 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_wired_in_eos def
+R16011:16014 Corelib.Init.Datatypes <> true constr
+def 16278:16304 <> naturalOccurrenceZ118Proved
+R16308:16311 Corelib.Init.Datatypes <> bool ind
+R16316:16320 Corelib.Init.Datatypes <> false constr
+prf 16330:16365 <> natural_occurrence_z118_proved_false
+R16398:16400 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16371:16397 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceZ118Proved def
+R16401:16405 Corelib.Init.Datatypes <> false constr
+def 16445:16467 <> not118SquaredGreenTable
+R16471:16474 Corelib.Init.Datatypes <> bool ind
+R16479:16482 Corelib.Init.Datatypes <> true constr
+prf 16492:16518 <> not_118_squared_green_table
+R16545:16547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16522:16544 UMST.ChemConstants.NaturalOccurrenceZ118 <> not118SquaredGreenTable def
+R16548:16551 Corelib.Init.Datatypes <> true constr
+def 16591:16615 <> notFourthChemistryScience
+R16619:16622 Corelib.Init.Datatypes <> bool ind
+R16627:16630 Corelib.Init.Datatypes <> true constr
+prf 16640:16667 <> not_fourth_chemistry_science
+R16696:16698 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16671:16695 UMST.ChemConstants.NaturalOccurrenceZ118 <> notFourthChemistryScience def
+R16699:16702 Corelib.Init.Datatypes <> true constr
+def 16742:16760 <> notTwentySixthAxiom
+R16764:16767 Corelib.Init.Datatypes <> bool ind
+R16772:16775 Corelib.Init.Datatypes <> true constr
+prf 16785:16806 <> not_twenty_sixth_axiom
+R16829:16831 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16810:16828 UMST.ChemConstants.NaturalOccurrenceZ118 <> notTwentySixthAxiom def
+R16832:16835 Corelib.Init.Datatypes <> true constr
+def 16875:16890 <> sole_axiom_count
+R16894:16896 Corelib.Init.Datatypes <> nat ind
+prf 16911:16933 <> sole_axiom_count_is_one
+R16953:16955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16937:16952 UMST.ChemConstants.NaturalOccurrenceZ118 <> sole_axiom_count def
+def 16996:17029 <> natural_occurrence_honest_conjunct
+R17033:17036 Corelib.Init.Datatypes <> bool ind
+R17127:17132 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17095:17100 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17060:17065 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17043:17059 UMST.ChemConstants.NaturalOccurrenceZ118 <> table_covers_z118 def
+R17066:17094 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_has_no_crustal_ore_bit def
+R17101:17126 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_is_occurrence_product def
+R17133:17150 UMST.ChemConstants.NaturalOccurrenceZ118 <> every_z_classified def
+prf 17160:17198 <> natural_occurrence_honest_conjunct_true
+R17238:17240 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17204:17237 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_honest_conjunct def
+R17241:17244 Corelib.Init.Datatypes <> true constr
+R17263:17296 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_honest_conjunct def
+prf 17571:17609 <> unwired_close_without_production_wiring
+R17696:17700 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17615:17647 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_close def
+R17653:17683 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R17685:17689 Corelib.Init.Datatypes <> false constr
+R17691:17695 Corelib.Init.Datatypes <> false constr
+R17701:17718 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+prf 17755:17806 <> unwired_modality_always_ok_without_production_wiring
+R17893:17897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17812:17844 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_close def
+R17850:17880 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R17882:17886 Corelib.Init.Datatypes <> false constr
+R17888:17892 Corelib.Init.Datatypes <> false constr
+R17898:17915 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+R17931:17969 UMST.ChemConstants.NaturalOccurrenceZ118 <> unwired_close_without_production_wiring thm
+R17931:17969 UMST.ChemConstants.NaturalOccurrenceZ118 <> unwired_close_without_production_wiring thm
+prf 17984:18007 <> iron_occurrence_named_ok
+R18185:18189 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18013:18049 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R18055:18085 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R18087:18118 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceIronL1 def
+R18124:18154 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R18156:18160 Corelib.Init.Datatypes <> false constr
+R18162:18166 Corelib.Init.Datatypes <> false constr
+R18168:18172 Corelib.Init.Datatypes <> false constr
+R18174:18178 Corelib.Init.Datatypes <> false constr
+R18180:18184 Corelib.Init.Datatypes <> false constr
+R18190:18216 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+prf 18251:18276 <> helium_occurrence_named_ok
+R18456:18460 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18282:18318 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R18324:18354 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R18356:18389 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceHeliumL1 def
+R18395:18425 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R18427:18431 Corelib.Init.Datatypes <> false constr
+R18433:18437 Corelib.Init.Datatypes <> false constr
+R18439:18443 Corelib.Init.Datatypes <> false constr
+R18445:18449 Corelib.Init.Datatypes <> false constr
+R18451:18455 Corelib.Init.Datatypes <> false constr
+R18461:18487 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+prf 18524:18552 <> named_natural_occurrence_z118
+R18762:18767 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18730:18734 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18558:18594 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R18600:18630 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R18632:18663 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceIronL1 def
+R18669:18699 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R18701:18705 Corelib.Init.Datatypes <> false constr
+R18707:18711 Corelib.Init.Datatypes <> false constr
+R18713:18717 Corelib.Init.Datatypes <> false constr
+R18719:18723 Corelib.Init.Datatypes <> false constr
+R18725:18729 Corelib.Init.Datatypes <> false constr
+R18735:18761 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R18974:18979 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18942:18946 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18768:18804 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R18810:18840 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R18842:18875 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceHeliumL1 def
+R18881:18911 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R18913:18917 Corelib.Init.Datatypes <> false constr
+R18919:18923 Corelib.Init.Datatypes <> false constr
+R18925:18929 Corelib.Init.Datatypes <> false constr
+R18931:18935 Corelib.Init.Datatypes <> false constr
+R18937:18941 Corelib.Init.Datatypes <> false constr
+R18947:18973 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R19013:19018 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19006:19008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18980:19005 UMST.ChemConstants.NaturalOccurrenceZ118 <> iron_is_occurrence_product def
+R19009:19012 Corelib.Init.Datatypes <> true constr
+R19055:19060 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19048:19050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19019:19047 UMST.ChemConstants.NaturalOccurrenceZ118 <> helium_has_no_crustal_ore_bit def
+R19051:19054 Corelib.Init.Datatypes <> true constr
+R19085:19090 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19078:19080 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19061:19077 UMST.ChemConstants.NaturalOccurrenceZ118 <> table_covers_z118 def
+R19081:19084 Corelib.Init.Datatypes <> true constr
+R19109:19111 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19091:19108 UMST.ChemConstants.NaturalOccurrenceZ118 <> every_z_classified def
+R19112:19115 Corelib.Init.Datatypes <> true constr
+prf 19166:19182 <> trivial_z_refused
+R19361:19365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19188:19224 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R19230:19260 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R19262:19294 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceTrivial def
+R19300:19330 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R19332:19336 Corelib.Init.Datatypes <> false constr
+R19338:19342 Corelib.Init.Datatypes <> false constr
+R19344:19348 Corelib.Init.Datatypes <> false constr
+R19350:19354 Corelib.Init.Datatypes <> false constr
+R19356:19360 Corelib.Init.Datatypes <> false constr
+R19366:19389 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_trivial_z_refuse constr
+prf 19426:19446 <> trivial_z_fail_closed
+R19654:19659 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19625:19629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19452:19488 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R19494:19524 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R19526:19558 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceTrivial def
+R19564:19594 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R19596:19600 Corelib.Init.Datatypes <> false constr
+R19602:19606 Corelib.Init.Datatypes <> false constr
+R19608:19612 Corelib.Init.Datatypes <> false constr
+R19614:19618 Corelib.Init.Datatypes <> false constr
+R19620:19624 Corelib.Init.Datatypes <> false constr
+R19630:19653 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_trivial_z_refuse constr
+R19880:19884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19660:19693 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict_ok def
+R19700:19736 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R19745:19775 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R19777:19809 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceTrivial def
+R19818:19848 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R19850:19854 Corelib.Init.Datatypes <> false constr
+R19856:19860 Corelib.Init.Datatypes <> false constr
+R19862:19866 Corelib.Init.Datatypes <> false constr
+R19868:19872 Corelib.Init.Datatypes <> false constr
+R19874:19878 Corelib.Init.Datatypes <> false constr
+R19885:19889 Corelib.Init.Datatypes <> false constr
+R19918:19934 UMST.ChemConstants.NaturalOccurrenceZ118 <> trivial_z_refused thm
+R19918:19934 UMST.ChemConstants.NaturalOccurrenceZ118 <> trivial_z_refused thm
+R19948:19981 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict_ok def
+R19996:20012 UMST.ChemConstants.NaturalOccurrenceZ118 <> trivial_z_refused thm
+R19996:20012 UMST.ChemConstants.NaturalOccurrenceZ118 <> trivial_z_refused thm
+R19996:20012 UMST.ChemConstants.NaturalOccurrenceZ118 <> trivial_z_refused thm
+prf 20044:20064 <> folklore_list_refused
+R20244:20248 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20070:20106 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R20112:20142 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R20144:20177 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceFolklore def
+R20183:20213 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R20215:20219 Corelib.Init.Datatypes <> false constr
+R20221:20225 Corelib.Init.Datatypes <> false constr
+R20227:20231 Corelib.Init.Datatypes <> false constr
+R20233:20237 Corelib.Init.Datatypes <> false constr
+R20239:20243 Corelib.Init.Datatypes <> false constr
+R20249:20276 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_folklore_list_refuse constr
+prf 20313:20337 <> folklore_list_fail_closed
+R20550:20555 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20517:20521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20343:20379 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R20385:20415 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R20417:20450 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceFolklore def
+R20456:20486 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R20488:20492 Corelib.Init.Datatypes <> false constr
+R20494:20498 Corelib.Init.Datatypes <> false constr
+R20500:20504 Corelib.Init.Datatypes <> false constr
+R20506:20510 Corelib.Init.Datatypes <> false constr
+R20512:20516 Corelib.Init.Datatypes <> false constr
+R20522:20549 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_folklore_list_refuse constr
+R20777:20781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20556:20589 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict_ok def
+R20596:20632 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R20641:20671 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R20673:20706 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceFolklore def
+R20715:20745 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R20747:20751 Corelib.Init.Datatypes <> false constr
+R20753:20757 Corelib.Init.Datatypes <> false constr
+R20759:20763 Corelib.Init.Datatypes <> false constr
+R20765:20769 Corelib.Init.Datatypes <> false constr
+R20771:20775 Corelib.Init.Datatypes <> false constr
+R20782:20786 Corelib.Init.Datatypes <> false constr
+R20815:20835 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_refused thm
+R20815:20835 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_refused thm
+R20849:20882 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict_ok def
+R20897:20917 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_refused thm
+R20897:20917 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_refused thm
+R20897:20917 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_list_refused thm
+prf 20949:20964 <> xor_enum_refused
+R21143:21147 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20970:21006 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R21012:21042 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R21044:21076 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceXorEnum def
+R21082:21112 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R21114:21118 Corelib.Init.Datatypes <> false constr
+R21120:21124 Corelib.Init.Datatypes <> false constr
+R21126:21130 Corelib.Init.Datatypes <> false constr
+R21132:21136 Corelib.Init.Datatypes <> false constr
+R21138:21142 Corelib.Init.Datatypes <> false constr
+R21148:21170 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_xor_enum_refuse constr
+prf 21205:21231 <> green_invent_refuse_unwired
+R21317:21321 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21237:21269 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_close def
+R21275:21305 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R21307:21310 Corelib.Init.Datatypes <> true constr
+R21312:21316 Corelib.Init.Datatypes <> false constr
+R21322:21348 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_green_invent_refuse constr
+prf 21385:21410 <> green_invent_always_refuse
+R21540:21544 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21416:21449 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict_ok def
+R21456:21488 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_close def
+R21497:21527 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R21529:21532 Corelib.Init.Datatypes <> true constr
+R21534:21538 Corelib.Init.Datatypes <> false constr
+R21545:21549 Corelib.Init.Datatypes <> false constr
+R21568:21601 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_verdict_ok def
+R21614:21640 UMST.ChemConstants.NaturalOccurrenceZ118 <> green_invent_refuse_unwired thm
+R21614:21640 UMST.ChemConstants.NaturalOccurrenceZ118 <> green_invent_refuse_unwired thm
+R21614:21640 UMST.ChemConstants.NaturalOccurrenceZ118 <> green_invent_refuse_unwired thm
+prf 21670:21694 <> proved_without_bar_refuse
+R21871:21875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21700:21736 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R21742:21772 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R21774:21805 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceIronL1 def
+R21811:21841 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R21843:21847 Corelib.Init.Datatypes <> false constr
+R21849:21852 Corelib.Init.Datatypes <> true constr
+R21854:21858 Corelib.Init.Datatypes <> false constr
+R21860:21864 Corelib.Init.Datatypes <> false constr
+R21866:21870 Corelib.Init.Datatypes <> false constr
+R21876:21908 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_proved_without_bar_refuse constr
+prf 21943:21965 <> production_wired_refuse
+R22050:22054 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21971:22003 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_close def
+R22009:22038 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_proved constr
+R22040:22044 Corelib.Init.Datatypes <> false constr
+R22046:22049 Corelib.Init.Datatypes <> true constr
+R22055:22085 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_production_wired_refuse constr
+ind 22350:22361 <> formal_fiber
+constr 22377:22397 <> fiber_quantum_knowing
+constr 22403:22419 <> fiber_meso_acting
+scheme 22350:22361 <> formal_fiber_rect
+scheme 22350:22361 <> formal_fiber_ind
+scheme 22350:22361 <> formal_fiber_rec
+scheme 22350:22361 <> formal_fiber_sind
+def 22434:22460 <> natural_occurrence_fiber_ok
+R22467:22478 UMST.ChemConstants.NaturalOccurrenceZ118 <> formal_fiber ind
+binder 22463:22463 <> f:50
+R22483:22486 Corelib.Init.Datatypes <> bool ind
+R22499:22499 UMST.ChemConstants.NaturalOccurrenceZ118 <> f:50 var
+R22510:22530 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_quantum_knowing constr
+R22535:22538 Corelib.Init.Datatypes <> true constr
+R22544:22560 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_meso_acting constr
+R22565:22569 Corelib.Init.Datatypes <> false constr
+def 22590:22630 <> naturalOccurrenceDoesNotMintFourthScience
+R22634:22637 Corelib.Init.Datatypes <> bool ind
+R22644:22668 UMST.ChemConstants.NaturalOccurrenceZ118 <> notFourthChemistryScience def
+def 22683:22717 <> naturalOccurrenceDoesNotClaimProved
+R22721:22724 Corelib.Init.Datatypes <> bool ind
+R22731:22734 Corelib.Init.Datatypes <> negb def
+R22736:22762 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceZ118Proved def
+prf 22772:22806 <> natural_occurrence_knowing_fiber_ok
+R22861:22863 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22812:22838 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_fiber_ok def
+R22840:22860 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_quantum_knowing constr
+R22864:22867 Corelib.Init.Datatypes <> true constr
+prf 22902:22944 <> natural_occurrence_meso_acting_fiber_not_ok
+R22995:22997 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22950:22976 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_fiber_ok def
+R22978:22994 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_meso_acting constr
+R22998:23002 Corelib.Init.Datatypes <> false constr
+prf 23039:23080 <> natural_occurrence_routes_knowing_not_meso
+R23142:23147 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23135:23137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23086:23112 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_fiber_ok def
+R23114:23134 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_quantum_knowing constr
+R23138:23141 Corelib.Init.Datatypes <> true constr
+R23201:23206 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23193:23195 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23148:23174 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_fiber_ok def
+R23176:23192 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_meso_acting constr
+R23196:23200 Corelib.Init.Datatypes <> false constr
+R23255:23260 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23248:23250 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23207:23247 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceDoesNotMintFourthScience def
+R23251:23254 Corelib.Init.Datatypes <> true constr
+R23303:23308 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23296:23298 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23261:23295 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceDoesNotClaimProved def
+R23299:23302 Corelib.Init.Datatypes <> true constr
+R23328:23330 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23309:23327 UMST.ChemConstants.NaturalOccurrenceZ118 <> notTwentySixthAxiom def
+R23331:23334 Corelib.Init.Datatypes <> true constr
+prf 23611:23650 <> natural_occurrence_z118_fixture_scaffold
+R23862:23867 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23828:23834 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23656:23692 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R23698:23728 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R23730:23761 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceIronL1 def
+R23767:23797 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R23799:23803 Corelib.Init.Datatypes <> false constr
+R23805:23809 Corelib.Init.Datatypes <> false constr
+R23811:23815 Corelib.Init.Datatypes <> false constr
+R23817:23821 Corelib.Init.Datatypes <> false constr
+R23823:23827 Corelib.Init.Datatypes <> false constr
+R23835:23861 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R24076:24081 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24042:24048 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23868:23904 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R23910:23940 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R23942:23975 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceHeliumL1 def
+R23981:24011 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R24013:24017 Corelib.Init.Datatypes <> false constr
+R24019:24023 Corelib.Init.Datatypes <> false constr
+R24025:24029 Corelib.Init.Datatypes <> false constr
+R24031:24035 Corelib.Init.Datatypes <> false constr
+R24037:24041 Corelib.Init.Datatypes <> false constr
+R24049:24075 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_occurrence_named_ok constr
+R24286:24291 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24255:24261 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24082:24118 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R24124:24154 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R24156:24188 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceTrivial def
+R24194:24224 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R24226:24230 Corelib.Init.Datatypes <> false constr
+R24232:24236 Corelib.Init.Datatypes <> false constr
+R24238:24242 Corelib.Init.Datatypes <> false constr
+R24244:24248 Corelib.Init.Datatypes <> false constr
+R24250:24254 Corelib.Init.Datatypes <> false constr
+R24262:24285 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_trivial_z_refuse constr
+R24501:24506 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24466:24472 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24292:24328 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R24334:24364 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R24366:24399 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceFolklore def
+R24405:24435 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R24437:24441 Corelib.Init.Datatypes <> false constr
+R24443:24447 Corelib.Init.Datatypes <> false constr
+R24449:24453 Corelib.Init.Datatypes <> false constr
+R24455:24459 Corelib.Init.Datatypes <> false constr
+R24461:24465 Corelib.Init.Datatypes <> false constr
+R24473:24500 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_folklore_list_refuse constr
+R24710:24715 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24680:24686 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24507:24543 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R24549:24579 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R24581:24613 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceXorEnum def
+R24619:24649 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R24651:24655 Corelib.Init.Datatypes <> false constr
+R24657:24661 Corelib.Init.Datatypes <> false constr
+R24663:24667 Corelib.Init.Datatypes <> false constr
+R24669:24673 Corelib.Init.Datatypes <> false constr
+R24675:24679 Corelib.Init.Datatypes <> false constr
+R24687:24709 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_xor_enum_refuse constr
+R24927:24932 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24887:24893 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24716:24752 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_incidence def
+R24758:24788 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R24790:24821 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceIncidenceIronL1 def
+R24827:24857 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceClaimBarAbsent def
+R24859:24863 Corelib.Init.Datatypes <> false constr
+R24865:24868 Corelib.Init.Datatypes <> true constr
+R24870:24874 Corelib.Init.Datatypes <> false constr
+R24876:24880 Corelib.Init.Datatypes <> false constr
+R24882:24886 Corelib.Init.Datatypes <> false constr
+R24894:24926 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_proved_without_bar_refuse constr
+R25039:25044 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25014:25020 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24933:24965 UMST.ChemConstants.NaturalOccurrenceZ118 <> evaluate_natural_occurrence_close def
+R24971:25001 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr
+R25003:25007 Corelib.Init.Datatypes <> false constr
+R25009:25013 Corelib.Init.Datatypes <> false constr
+R25021:25038 UMST.ChemConstants.NaturalOccurrenceZ118 <> verdict_unwired_ok constr
+R25101:25106 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25094:25096 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25045:25071 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_fiber_ok def
+R25073:25093 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_quantum_knowing constr
+R25097:25100 Corelib.Init.Datatypes <> true constr
+R25160:25165 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25152:25154 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25107:25133 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_fiber_ok def
+R25135:25151 UMST.ChemConstants.NaturalOccurrenceZ118 <> fiber_meso_acting constr
+R25155:25159 Corelib.Init.Datatypes <> false constr
+R25201:25206 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25193:25195 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25166:25192 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceZ118Proved def
+R25196:25200 Corelib.Init.Datatypes <> false constr
+R25248:25253 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25241:25243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25207:25240 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_honest_conjunct def
+R25244:25247 Corelib.Init.Datatypes <> true constr
+R25254:25254 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25351:25357 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25344:25346 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25296:25302 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R25255:25258 Corelib.Init.Datatypes <> negb def
+R25260:25295 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_wired_in_lib def
+R25303:25306 Corelib.Init.Datatypes <> negb def
+R25308:25343 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_wired_in_eos def
+R25347:25350 Corelib.Init.Datatypes <> true constr
+R25403:25408 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25376:25379 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R25358:25375 UMST.ChemConstants.NaturalOccurrenceZ118 <> folkloreListMarker def
+R25380:25402 UMST.ChemConstants.NaturalOccurrenceZ118 <> productClassifierMarker def
+R25422:25425 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R25409:25421 UMST.ChemConstants.NaturalOccurrenceZ118 <> xorEnumMarker def
+R25426:25444 UMST.ChemConstants.NaturalOccurrenceZ118 <> productFactorMarker def
+R25504:25547 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_marker_ne_product_classifier_marker thm
+R25504:25547 UMST.ChemConstants.NaturalOccurrenceZ118 <> folklore_marker_ne_product_classifier_marker thm
+R25560:25594 UMST.ChemConstants.NaturalOccurrenceZ118 <> xor_marker_ne_product_factor_marker thm
+R25560:25594 UMST.ChemConstants.NaturalOccurrenceZ118 <> xor_marker_ne_product_factor_marker thm
+def 25838:25869 <> naturalOccurrenceZ118RsAuthority
+R25873:25878 Stdlib.Strings.String <> string ind
+def 25953:25990 <> chemIntCrossNaturalOccurrenceAuthority
+R25994:25999 Stdlib.Strings.String <> string ind
+def 26073:26099 <> naturalOccurrenceZ118CellId
+R26103:26108 Stdlib.Strings.String <> string ind
+def 26185:26213 <> naturalOccurrenceZ118NonClaim
+R26217:26222 Stdlib.Strings.String <> string ind
+prf 26803:26833 <> natural_occurrence_z118_cell_id
+R26866:26870 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26839:26865 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceZ118CellId def
+prf 26961:26991 <> natural_occurrence_cites_rs_row
+R27029:27032 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R26997:27028 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceZ118RsAuthority def
+prf 27070:27107 <> natural_occurrence_cites_int_cross_row
+R27151:27155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27113:27150 UMST.ChemConstants.NaturalOccurrenceZ118 <> chemIntCrossNaturalOccurrenceAuthority def
+prf 27243:27274 <> natural_occurrence_cites_surface
+R27308:27310 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27280:27307 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturaloccurrencez118Surface def
+def 27605:27649 <> naturalOccurrenceSecondLawConservationFraming
+R27653:27658 Stdlib.Strings.String <> string ind
+prf 27748:27796 <> natural_occurrence_not_twenty_sixth_axiom_framing
+R27847:27852 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27802:27846 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceSecondLawConservationFraming def
+prf 27918:27960 <> natural_occurrence_not_fourth_science_axiom
+R28011:28016 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27966:28010 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceSecondLawConservationFraming def
+prf 28084:28133 <> natural_occurrence_second_law_conservation_framing
+R28184:28187 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28139:28183 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceSecondLawConservationFraming def
+def 28456:28477 <> physicsGreenAuthorized
+R28489:28493 Corelib.Init.Logic <> False ind
+prf 28503:28545 <> natural_occurrence_z118_physics_green_false
+R28551:28552 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R28553:28574 UMST.ChemConstants.NaturalOccurrenceZ118 <> physicsGreenAuthorized def
+prf 28614:28653 <> natural_occurrence_z118_modality_unwired
+R28695:28697 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28659:28694 UMST.ChemConstants.NaturalOccurrenceZ118 <> naturalOccurrenceZ118ModalityCurrent def
+R28698:28728 UMST.ChemConstants.NaturalOccurrenceZ118 <> natural_occurrence_z118_unwired constr

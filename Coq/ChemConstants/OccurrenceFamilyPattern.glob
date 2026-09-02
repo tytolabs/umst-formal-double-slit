@@ -1,0 +1,983 @@
+DIGEST 291b611a318a45c5220f5432fab5867e
+FUMST.ChemConstants.OccurrenceFamilyPattern
+R1268:1272 Stdlib.Arith.Arith <> <> lib
+R1274:1279 Stdlib.ZArith.ZArith <> <> lib
+R1281:1286 Stdlib.Strings.String <> <> lib
+R1288:1291 Stdlib.Bool.Bool <> <> lib
+R1293:1295 Stdlib.micromega.Lia <> <> lib
+R1297:1300 Stdlib.Lists.List <> <> lib
+R1310:1322 Stdlib.Lists.List ListNotations <> mod
+def 1357:1386 <> occurrencefamilypatternSurface
+R1390:1395 Stdlib.Strings.String <> string ind
+prf 1447:1483 <> occurrencefamilypattern_surface_named
+R1519:1522 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1489:1518 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrencefamilypatternSurface def
+ind 1860:1890 <> OccurrenceFamilyPatternModality
+constr 1906:1938 <> occurrence_family_pattern_unwired
+constr 1944:1976 <> occurrence_family_pattern_assumed
+constr 1982:2013 <> occurrence_family_pattern_proved
+constr 2019:2053 <> occurrence_family_pattern_surrogate
+scheme 1860:1890 <> OccurrenceFamilyPatternModality_rect
+scheme 1860:1890 <> OccurrenceFamilyPatternModality_ind
+scheme 1860:1890 <> OccurrenceFamilyPatternModality_rec
+scheme 1860:1890 <> OccurrenceFamilyPatternModality_sind
+def 2068:2105 <> occurrenceFamilyPatternModalityCurrent
+R2111:2141 UMST.ChemConstants.OccurrenceFamilyPattern <> OccurrenceFamilyPatternModality ind
+R2148:2180 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+def 2195:2240 <> occurrence_family_modality_lattice_cardinality
+R2244:2246 Corelib.Init.Datatypes <> nat ind
+prf 2261:2314 <> occurrence_family_modality_lattice_cardinality_is_four
+R2366:2368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2320:2365 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_modality_lattice_cardinality def
+prf 2404:2453 <> occurrence_family_modality_lattice_not_118_squared
+R2532:2536 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2459:2462 Corelib.Init.Datatypes <> negb def
+R2465:2471 Stdlib.Arith.PeanoNat Nat eqb def
+R2473:2518 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_modality_lattice_cardinality def
+R2524:2526 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2537:2540 Corelib.Init.Datatypes <> true constr
+R2559:2604 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_modality_lattice_cardinality def
+def 2860:2886 <> occurrence_family_tag_count
+R2890:2892 Corelib.Init.Datatypes <> nat ind
+prf 2907:2942 <> occurrence_family_tag_count_is_seven
+R2975:2977 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2948:2974 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_tag_count def
+ind 3017:3037 <> occurrence_family_tag
+constr 3053:3069 <> family_tag_native
+constr 3075:3090 <> family_tag_oxide
+constr 3096:3113 <> family_tag_sulfide
+constr 3119:3137 <> family_tag_silicate
+constr 3143:3169 <> family_tag_halide_carbonate
+constr 3175:3194 <> family_tag_atmophile
+constr 3200:3228 <> family_tag_synthetic_or_trace
+scheme 3017:3037 <> occurrence_family_tag_rect
+scheme 3017:3037 <> occurrence_family_tag_ind
+scheme 3017:3037 <> occurrence_family_tag_rec
+scheme 3017:3037 <> occurrence_family_tag_sind
+def 3243:3267 <> occurrence_family_tag_beq
+R3278:3298 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_tag ind
+binder 3270:3271 <> t1:5
+binder 3273:3274 <> t2:6
+R3303:3306 Corelib.Init.Datatypes <> bool ind
+R3323:3324 UMST.ChemConstants.OccurrenceFamilyPattern <> t2:6 var
+R3319:3320 UMST.ChemConstants.OccurrenceFamilyPattern <> t1:5 var
+R3335:3351 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_native constr
+R3354:3370 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_native constr
+R3375:3378 Corelib.Init.Datatypes <> true constr
+R3384:3399 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_oxide constr
+R3402:3417 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_oxide constr
+R3422:3425 Corelib.Init.Datatypes <> true constr
+R3431:3448 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_sulfide constr
+R3451:3468 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_sulfide constr
+R3473:3476 Corelib.Init.Datatypes <> true constr
+R3482:3500 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_silicate constr
+R3503:3521 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_silicate constr
+R3526:3529 Corelib.Init.Datatypes <> true constr
+R3535:3561 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_halide_carbonate constr
+R3564:3590 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_halide_carbonate constr
+R3595:3598 Corelib.Init.Datatypes <> true constr
+R3604:3623 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_atmophile constr
+R3626:3645 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_atmophile constr
+R3650:3653 Corelib.Init.Datatypes <> true constr
+R3659:3687 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_synthetic_or_trace constr
+R3690:3718 UMST.ChemConstants.OccurrenceFamilyPattern <> family_tag_synthetic_or_trace constr
+R3723:3726 Corelib.Init.Datatypes <> true constr
+R3740:3744 Corelib.Init.Datatypes <> false constr
+def 3844:3853 <> bit_native
+R3857:3859 Corelib.Init.Datatypes <> nat ind
+def 3878:3886 <> bit_oxide
+R3890:3892 Corelib.Init.Datatypes <> nat ind
+def 3911:3921 <> bit_sulfide
+R3925:3927 Corelib.Init.Datatypes <> nat ind
+def 3946:3958 <> bit_atmophile
+R3962:3964 Corelib.Init.Datatypes <> nat ind
+prf 3980:3996 <> bit_native_is_one
+R4010:4012 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4000:4009 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+prf 4048:4063 <> bit_oxide_is_two
+R4076:4078 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4067:4075 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_oxide def
+prf 4114:4132 <> bit_sulfide_is_four
+R4147:4149 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4136:4146 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_sulfide def
+prf 4185:4203 <> bit_atmophile_is_32
+R4220:4222 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4207:4219 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_atmophile def
+def 4264:4278 <> family_bits_has
+R4293:4295 Corelib.Init.Datatypes <> nat ind
+binder 4281:4284 <> bits:9
+binder 4286:4289 <> mask:10
+R4300:4303 Corelib.Init.Datatypes <> bool ind
+R4310:4316 Stdlib.Arith.PeanoNat Nat eqb def
+R4319:4326 Stdlib.Arith.PeanoNat Nat land def
+R4328:4331 UMST.ChemConstants.OccurrenceFamilyPattern <> bits:9 var
+R4333:4336 UMST.ChemConstants.OccurrenceFamilyPattern <> mask:10 var
+R4339:4342 UMST.ChemConstants.OccurrenceFamilyPattern <> mask:10 var
+def 4357:4372 <> family_bit_count
+R4382:4384 Corelib.Init.Datatypes <> nat ind
+binder 4375:4378 <> bits:11
+R4389:4391 Corelib.Init.Datatypes <> nat ind
+R4558:4563 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4615:4615 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4502:4507 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4557:4557 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4398:4398 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4447:4453 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4501:4501 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4402:4416 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R4418:4421 UMST.ChemConstants.OccurrenceFamilyPattern <> bits:11 var
+R4423:4432 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+R4457:4471 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R4473:4476 UMST.ChemConstants.OccurrenceFamilyPattern <> bits:11 var
+R4478:4486 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_oxide def
+R4511:4525 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R4527:4530 UMST.ChemConstants.OccurrenceFamilyPattern <> bits:11 var
+R4532:4542 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_sulfide def
+R4567:4581 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R4583:4586 UMST.ChemConstants.OccurrenceFamilyPattern <> bits:11 var
+R4588:4600 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_atmophile def
+def 4630:4651 <> family_bits_concurrent
+R4661:4663 Corelib.Init.Datatypes <> nat ind
+binder 4654:4657 <> bits:12
+R4668:4671 Corelib.Init.Datatypes <> bool ind
+R4678:4684 Stdlib.Arith.PeanoNat Nat leb def
+R4689:4704 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bit_count def
+R4706:4709 UMST.ChemConstants.OccurrenceFamilyPattern <> bits:12 var
+def 4949:4971 <> iupac_table_cardinality
+R4975:4977 Corelib.Init.Datatypes <> nat ind
+prf 4994:5023 <> iupac_table_cardinality_is_118
+R5052:5054 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5029:5051 UMST.ChemConstants.OccurrenceFamilyPattern <> iupac_table_cardinality def
+def 5097:5103 <> z_valid
+R5110:5112 Corelib.Init.Datatypes <> nat ind
+binder 5106:5106 <> z:13
+R5117:5120 Corelib.Init.Datatypes <> bool ind
+R5138:5141 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5127:5133 Stdlib.Arith.PeanoNat Nat ltb def
+R5137:5137 UMST.ChemConstants.OccurrenceFamilyPattern <> z:13 var
+R5142:5148 Stdlib.Arith.PeanoNat Nat leb def
+R5150:5150 UMST.ChemConstants.OccurrenceFamilyPattern <> z:13 var
+R5152:5174 UMST.ChemConstants.OccurrenceFamilyPattern <> iupac_table_cardinality def
+def 5231:5236 <> gold_z
+R5240:5242 Corelib.Init.Datatypes <> nat ind
+def 5262:5267 <> iron_z
+R5271:5273 Corelib.Init.Datatypes <> nat ind
+def 5293:5300 <> helium_z
+R5304:5306 Corelib.Init.Datatypes <> nat ind
+prf 5321:5332 <> gold_z_is_79
+R5342:5344 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5336:5341 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_z def
+prf 5381:5392 <> iron_z_is_26
+R5402:5404 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5396:5401 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_z def
+prf 5441:5453 <> helium_z_is_2
+R5465:5467 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5457:5464 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_z def
+prf 5503:5525 <> outlier_z_factors_valid
+R5552:5557 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5545:5547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5531:5537 UMST.ChemConstants.OccurrenceFamilyPattern <> z_valid def
+R5539:5544 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_z def
+R5548:5551 Corelib.Init.Datatypes <> true constr
+R5579:5584 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5572:5574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5558:5564 UMST.ChemConstants.OccurrenceFamilyPattern <> z_valid def
+R5566:5571 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_z def
+R5575:5578 Corelib.Init.Datatypes <> true constr
+R5601:5603 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5585:5591 UMST.ChemConstants.OccurrenceFamilyPattern <> z_valid def
+R5593:5600 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_z def
+R5604:5607 Corelib.Init.Datatypes <> true constr
+R5640:5646 UMST.ChemConstants.OccurrenceFamilyPattern <> z_valid def
+R5649:5671 UMST.ChemConstants.OccurrenceFamilyPattern <> iupac_table_cardinality def
+def 5742:5758 <> gold_outlier_bits
+R5762:5764 Corelib.Init.Datatypes <> nat ind
+R5769:5778 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+def 5792:5808 <> iron_outlier_bits
+R5812:5814 Corelib.Init.Datatypes <> nat ind
+R5841:5843 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R5829:5831 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R5819:5828 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+R5832:5840 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_oxide def
+R5844:5854 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_sulfide def
+def 5868:5886 <> helium_outlier_bits
+R5890:5892 Corelib.Init.Datatypes <> nat ind
+R5897:5909 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_atmophile def
+prf 5919:5950 <> gold_outlier_bits_is_native_only
+R5973:5975 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5956:5972 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_outlier_bits def
+R5976:5985 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+prf 6020:6045 <> iron_outlier_bits_is_seven
+R6068:6070 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6051:6067 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+prf 6106:6142 <> helium_outlier_bits_is_atmophile_only
+R6167:6169 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6148:6166 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_outlier_bits def
+R6170:6182 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_atmophile def
+def 6444:6472 <> gold_is_native_family_outlier
+R6476:6479 Corelib.Init.Datatypes <> bool ind
+R6486:6492 Stdlib.Arith.PeanoNat Nat eqb def
+R6494:6510 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_outlier_bits def
+R6512:6521 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+def 6536:6563 <> iron_is_oxide_family_product
+R6567:6570 Corelib.Init.Datatypes <> bool ind
+R6670:6675 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6620:6625 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6577:6591 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R6593:6609 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+R6611:6619 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_oxide def
+R6626:6640 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R6642:6658 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+R6660:6669 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+R6676:6690 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R6692:6708 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+R6710:6720 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_sulfide def
+def 6735:6760 <> helium_is_no_ore_atmophile
+R6764:6767 Corelib.Init.Datatypes <> bool ind
+R6815:6820 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6774:6780 Stdlib.Arith.PeanoNat Nat eqb def
+R6782:6800 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_outlier_bits def
+R6802:6814 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_atmophile def
+R6821:6824 Corelib.Init.Datatypes <> negb def
+R6827:6841 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R6843:6861 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_outlier_bits def
+R6863:6872 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+def 6888:6920 <> helium_no_ore_is_missing_interact
+R6924:6927 Corelib.Init.Datatypes <> bool ind
+R6934:6959 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_is_no_ore_atmophile def
+prf 6969:7002 <> gold_is_native_family_outlier_true
+R7037:7039 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7008:7036 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_is_native_family_outlier def
+R7040:7043 Corelib.Init.Datatypes <> true constr
+prf 7078:7110 <> iron_is_oxide_family_product_true
+R7144:7146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7116:7143 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_is_oxide_family_product def
+R7147:7150 Corelib.Init.Datatypes <> true constr
+prf 7185:7215 <> helium_is_no_ore_atmophile_true
+R7247:7249 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7221:7246 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_is_no_ore_atmophile def
+R7250:7253 Corelib.Init.Datatypes <> true constr
+prf 7288:7325 <> helium_no_ore_is_missing_interact_true
+R7364:7366 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7331:7363 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_no_ore_is_missing_interact def
+R7367:7370 Corelib.Init.Datatypes <> true constr
+def 7410:7439 <> ore_engine_outliers_sort_named
+R7443:7446 Corelib.Init.Datatypes <> bool ind
+R7548:7553 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7516:7521 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7482:7487 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7453:7481 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_is_native_family_outlier def
+R7488:7515 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_is_oxide_family_product def
+R7522:7547 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_is_no_ore_atmophile def
+R7554:7586 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_no_ore_is_missing_interact def
+prf 7596:7630 <> ore_engine_outliers_sort_named_true
+R7666:7668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7636:7665 UMST.ChemConstants.OccurrenceFamilyPattern <> ore_engine_outliers_sort_named def
+R7669:7672 Corelib.Init.Datatypes <> true constr
+def 7789:7811 <> same_z_many_assemblages
+R7815:7818 Corelib.Init.Datatypes <> bool ind
+R7825:7852 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_is_oxide_family_product def
+prf 7862:7889 <> same_z_many_assemblages_true
+R7918:7920 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7895:7917 UMST.ChemConstants.OccurrenceFamilyPattern <> same_z_many_assemblages def
+R7921:7924 Corelib.Init.Datatypes <> true constr
+def 8040:8070 <> folklore_exclusive_list_refused
+R8074:8077 Corelib.Init.Datatypes <> bool ind
+R8082:8085 Corelib.Init.Datatypes <> true constr
+prf 8095:8130 <> folklore_exclusive_list_refused_true
+R8167:8169 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8136:8166 UMST.ChemConstants.OccurrenceFamilyPattern <> folklore_exclusive_list_refused def
+R8170:8173 Corelib.Init.Datatypes <> true constr
+def 8213:8246 <> occurrence_family_pattern_conjunct
+R8250:8253 Corelib.Init.Datatypes <> bool ind
+R8362:8367 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8333:8338 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8297:8302 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8260:8266 Stdlib.Arith.PeanoNat Nat eqb def
+R8268:8294 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_tag_count def
+R8303:8332 UMST.ChemConstants.OccurrenceFamilyPattern <> ore_engine_outliers_sort_named def
+R8339:8361 UMST.ChemConstants.OccurrenceFamilyPattern <> same_z_many_assemblages def
+R8368:8398 UMST.ChemConstants.OccurrenceFamilyPattern <> folklore_exclusive_list_refused def
+prf 8408:8446 <> occurrence_family_pattern_conjunct_true
+R8486:8488 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8452:8485 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_conjunct def
+R8489:8492 Corelib.Init.Datatypes <> true constr
+def 8756:8768 <> xorEnumMarker
+R8772:8777 Stdlib.Strings.String <> string ind
+def 8833:8851 <> productFactorMarker
+R8855:8860 Stdlib.Strings.String <> string ind
+prf 8917:8951 <> xor_marker_ne_product_factor_marker
+R8970:8973 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8957:8969 UMST.ChemConstants.OccurrenceFamilyPattern <> xorEnumMarker def
+R8974:8992 UMST.ChemConstants.OccurrenceFamilyPattern <> productFactorMarker def
+def 9033:9066 <> iron_outlier_is_concurrent_product
+R9070:9073 Corelib.Init.Datatypes <> bool ind
+R9080:9101 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_concurrent def
+R9103:9119 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+prf 9129:9167 <> iron_outlier_is_concurrent_product_true
+R9207:9209 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9173:9206 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_is_concurrent_product def
+R9210:9213 Corelib.Init.Datatypes <> true constr
+R9232:9265 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_is_concurrent_product def
+R9268:9289 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_concurrent def
+R9301:9317 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+R9320:9335 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bit_count def
+R9338:9352 UMST.ChemConstants.OccurrenceFamilyPattern <> family_bits_has def
+R9364:9373 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_native def
+R9376:9384 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_oxide def
+R9387:9397 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_sulfide def
+R9400:9412 UMST.ChemConstants.OccurrenceFamilyPattern <> bit_atmophile def
+def 9669:9696 <> fourthScienceCollisionMarker
+R9700:9705 Stdlib.Strings.String <> string ind
+def 9797:9827 <> twentySixthAxiomCollisionMarker
+R9831:9836 Stdlib.Strings.String <> string ind
+prf 9913:9942 <> fourth_science_collision_named
+R9976:9979 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9948:9975 UMST.ChemConstants.OccurrenceFamilyPattern <> fourthScienceCollisionMarker def
+prf 10017:10050 <> twenty_sixth_axiom_collision_named
+R10087:10090 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10056:10086 UMST.ChemConstants.OccurrenceFamilyPattern <> twentySixthAxiomCollisionMarker def
+ind 10356:10385 <> occurrence_family_bar_presence
+constr 10401:10428 <> occurrence_family_bar_absent
+constr 10434:10462 <> occurrence_family_bar_present
+scheme 10356:10385 <> occurrence_family_bar_presence_rect
+scheme 10356:10385 <> occurrence_family_bar_presence_ind
+scheme 10356:10385 <> occurrence_family_bar_presence_rec
+scheme 10356:10385 <> occurrence_family_bar_presence_sind
+rec 10473:10499 <> occurrence_family_claim_bar
+proj 10515:10548 <> occurrence_family_bar_presence_tag
+proj 10586:10619 <> occurrence_family_bar_defect_total
+R10552:10581 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_presence ind
+R10623:10625 Corelib.Init.Datatypes <> nat ind
+def 10642:10671 <> occurrenceFamilyClaimBarAbsent
+R10675:10701 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_claim_bar rec
+R10711:10744 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_presence_tag proj
+R10711:10744 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_presence_tag proj
+R10711:10744 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_presence_tag proj
+R10784:10817 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_defect_total proj
+R10784:10817 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_defect_total proj
+R10749:10776 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_bar_absent constr
+ind 11063:11087 <> occurrence_family_verdict
+constr 11103:11120 <> verdict_unwired_ok
+constr 11126:11156 <> verdict_family_pattern_named_ok
+constr 11162:11185 <> verdict_trivial_z_refuse
+constr 11191:11218 <> verdict_folklore_list_refuse
+constr 11224:11246 <> verdict_xor_enum_refuse
+constr 11252:11280 <> verdict_fourth_science_refuse
+constr 11286:11318 <> verdict_twenty_sixth_axiom_refuse
+constr 11324:11350 <> verdict_green_invent_refuse
+constr 11356:11388 <> verdict_proved_without_bar_refuse
+constr 11394:11424 <> verdict_production_wired_refuse
+scheme 11063:11087 <> occurrence_family_verdict_rect
+scheme 11063:11087 <> occurrence_family_verdict_ind
+scheme 11063:11087 <> occurrence_family_verdict_rec
+scheme 11063:11087 <> occurrence_family_verdict_sind
+def 11439:11466 <> occurrence_family_verdict_ok
+R11475:11499 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict ind
+binder 11471:11471 <> v:21
+R11504:11507 Corelib.Init.Datatypes <> bool ind
+R11520:11520 UMST.ChemConstants.OccurrenceFamilyPattern <> v:21 var
+R11531:11548 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+R11553:11556 Corelib.Init.Datatypes <> true constr
+R11562:11592 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R11597:11600 Corelib.Init.Datatypes <> true constr
+R11611:11615 Corelib.Init.Datatypes <> false constr
+rec 11632:11658 <> occurrence_family_incidence
+proj 11674:11685 <> family_inc_z
+proj 11696:11710 <> family_inc_bits
+proj 11721:11736 <> family_inc_level
+R11689:11691 Corelib.Init.Datatypes <> nat ind
+R11714:11716 Corelib.Init.Datatypes <> nat ind
+R11740:11742 Corelib.Init.Datatypes <> nat ind
+def 11759:11793 <> occurrenceFamilyIncidenceNontrivial
+R11802:11828 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_incidence rec
+binder 11798:11798 <> h:27
+R11833:11836 Corelib.Init.Datatypes <> bool ind
+R11843:11849 Stdlib.Arith.PeanoNat Nat ltb def
+R11854:11869 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R11871:11871 UMST.ChemConstants.OccurrenceFamilyPattern <> h:27 var
+def 11887:11917 <> occurrenceFamilyIncidenceGoldL1
+R11921:11947 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_incidence rec
+R11957:11968 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R11957:11968 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R11957:11968 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R11986:12000 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R11986:12000 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12029:12044 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12029:12044 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R11973:11978 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_z def
+R12005:12021 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_outlier_bits def
+def 12067:12097 <> occurrenceFamilyIncidenceIronL1
+R12101:12127 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_incidence rec
+R12137:12148 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12137:12148 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12137:12148 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12166:12180 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12166:12180 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12209:12224 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12209:12224 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12153:12158 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_z def
+R12185:12201 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_outlier_bits def
+def 12247:12279 <> occurrenceFamilyIncidenceHeliumL1
+R12283:12309 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_incidence rec
+R12319:12330 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12319:12330 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12319:12330 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12350:12364 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12350:12364 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12395:12410 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12395:12410 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12335:12342 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_z def
+R12369:12387 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_outlier_bits def
+def 12433:12464 <> occurrenceFamilyIncidenceTrivial
+R12468:12494 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_incidence rec
+R12504:12515 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12504:12515 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12504:12515 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R12533:12547 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12533:12547 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_bits proj
+R12576:12591 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12576:12591 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_level proj
+R12520:12525 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_z def
+R12552:12568 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_outlier_bits def
+def 12614:12649 <> evaluate_occurrence_family_incidence
+R12658:12688 UMST.ChemConstants.OccurrenceFamilyPattern <> OccurrenceFamilyPatternModality ind
+binder 12654:12654 <> m:28
+R12698:12724 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_incidence rec
+binder 12694:12694 <> h:29
+R12734:12760 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_claim_bar rec
+binder 12730:12730 <> b:30
+R12788:12791 Corelib.Init.Datatypes <> bool ind
+binder 12766:12784 <> claim_physics_green:31
+R12812:12815 Corelib.Init.Datatypes <> bool ind
+binder 12797:12808 <> claim_proved:32
+R12838:12841 Corelib.Init.Datatypes <> bool ind
+binder 12821:12834 <> claim_xor_enum:33
+R12869:12872 Corelib.Init.Datatypes <> bool ind
+binder 12847:12865 <> claim_folklore_list:34
+R12901:12904 Corelib.Init.Datatypes <> bool ind
+binder 12878:12897 <> claim_fourth_science:35
+R12937:12940 Corelib.Init.Datatypes <> bool ind
+binder 12910:12933 <> claim_twenty_sixth_axiom:36
+R12945:12969 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict ind
+R12979:12997 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_physics_green:31 var
+R13044:13055 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_proved:32 var
+R13118:13137 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_fourth_science:35 var
+R13206:13229 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_twenty_sixth_axiom:36 var
+R13312:13330 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_folklore_list:34 var
+R13418:13431 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_xor_enum:33 var
+R13524:13527 Corelib.Init.Datatypes <> negb def
+R13530:13564 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceNontrivial def
+R13566:13566 UMST.ChemConstants.OccurrenceFamilyPattern <> h:29 var
+R13671:13674 Corelib.Init.Datatypes <> negb def
+R13677:13683 UMST.ChemConstants.OccurrenceFamilyPattern <> z_valid def
+R13686:13697 UMST.ChemConstants.OccurrenceFamilyPattern <> family_inc_z proj
+R13699:13699 UMST.ChemConstants.OccurrenceFamilyPattern <> h:29 var
+R13857:13857 UMST.ChemConstants.OccurrenceFamilyPattern <> m:28 var
+R13905:13937 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R13985:14015 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R14058:14090 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_assumed constr
+R14133:14167 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_surrogate constr
+R14215:14232 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+R14215:14232 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+R14275:14306 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_proved constr
+R14354:14386 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_proved_without_bar_refuse constr
+R13745:13768 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_trivial_z_refuse constr
+R13606:13629 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_trivial_z_refuse constr
+R13465:13487 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_xor_enum_refuse constr
+R13359:13386 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_folklore_list_refuse constr
+R13253:13285 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_twenty_sixth_axiom_refuse constr
+R13156:13184 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_fourth_science_refuse constr
+R13069:13101 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_proved_without_bar_refuse constr
+R13006:13032 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_green_invent_refuse constr
+def 14444:14475 <> evaluate_occurrence_family_close
+R14484:14514 UMST.ChemConstants.OccurrenceFamilyPattern <> OccurrenceFamilyPatternModality ind
+binder 14480:14480 <> m:38
+R14542:14545 Corelib.Init.Datatypes <> bool ind
+binder 14520:14538 <> claim_physics_green:39
+R14576:14579 Corelib.Init.Datatypes <> bool ind
+binder 14551:14572 <> claim_production_wired:40
+R14584:14608 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict ind
+R14618:14636 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_physics_green:39 var
+R14683:14704 UMST.ChemConstants.OccurrenceFamilyPattern <> claim_production_wired:40 var
+R14762:14762 UMST.ChemConstants.OccurrenceFamilyPattern <> m:38 var
+R14775:14807 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R14812:14829 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+R14837:14869 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_assumed constr
+R14877:14908 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_proved constr
+R14916:14950 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_surrogate constr
+R14955:14985 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R14955:14985 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R14955:14985 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R14713:14743 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_production_wired_refuse constr
+R14645:14671 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_green_invent_refuse constr
+def 15232:15269 <> occurrence_family_pattern_wired_in_lib
+R15273:15276 Corelib.Init.Datatypes <> bool ind
+R15281:15285 Corelib.Init.Datatypes <> false constr
+def 15300:15337 <> occurrence_family_pattern_wired_in_eos
+R15341:15344 Corelib.Init.Datatypes <> bool ind
+R15349:15353 Corelib.Init.Datatypes <> false constr
+prf 15363:15401 <> occurrence_family_pattern_not_wired_lib
+R15445:15447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15407:15444 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_wired_in_lib def
+R15448:15452 Corelib.Init.Datatypes <> false constr
+prf 15487:15525 <> occurrence_family_pattern_not_wired_eos
+R15569:15571 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15531:15568 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_wired_in_eos def
+R15572:15576 Corelib.Init.Datatypes <> false constr
+prf 15611:15627 <> wave100_not_wired
+R15725:15727 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15676:15681 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15633:15636 Corelib.Init.Datatypes <> negb def
+R15638:15675 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_wired_in_lib def
+R15682:15685 Corelib.Init.Datatypes <> negb def
+R15687:15724 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_wired_in_eos def
+R15728:15731 Corelib.Init.Datatypes <> true constr
+def 15995:16023 <> occurrenceFamilyPatternProved
+R16027:16030 Corelib.Init.Datatypes <> bool ind
+R16035:16039 Corelib.Init.Datatypes <> false constr
+prf 16049:16086 <> occurrence_family_pattern_proved_false
+R16121:16123 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16092:16120 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternProved def
+R16124:16128 Corelib.Init.Datatypes <> false constr
+def 16168:16190 <> not118SquaredGreenTable
+R16194:16197 Corelib.Init.Datatypes <> bool ind
+R16202:16205 Corelib.Init.Datatypes <> true constr
+prf 16215:16241 <> not_118_squared_green_table
+R16268:16270 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16245:16267 UMST.ChemConstants.OccurrenceFamilyPattern <> not118SquaredGreenTable def
+R16271:16274 Corelib.Init.Datatypes <> true constr
+def 16314:16338 <> notFourthChemistryScience
+R16342:16345 Corelib.Init.Datatypes <> bool ind
+R16350:16353 Corelib.Init.Datatypes <> true constr
+prf 16363:16390 <> not_fourth_chemistry_science
+R16419:16421 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16394:16418 UMST.ChemConstants.OccurrenceFamilyPattern <> notFourthChemistryScience def
+R16422:16425 Corelib.Init.Datatypes <> true constr
+def 16465:16483 <> notTwentySixthAxiom
+R16487:16490 Corelib.Init.Datatypes <> bool ind
+R16495:16498 Corelib.Init.Datatypes <> true constr
+prf 16508:16529 <> not_twenty_sixth_axiom
+R16552:16554 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16533:16551 UMST.ChemConstants.OccurrenceFamilyPattern <> notTwentySixthAxiom def
+R16555:16558 Corelib.Init.Datatypes <> true constr
+def 16598:16613 <> sole_axiom_count
+R16617:16619 Corelib.Init.Datatypes <> nat ind
+prf 16634:16656 <> sole_axiom_count_is_one
+R16676:16678 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16660:16675 UMST.ChemConstants.OccurrenceFamilyPattern <> sole_axiom_count def
+prf 16934:16972 <> unwired_close_without_production_wiring
+R17060:17064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16978:17009 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_close def
+R17015:17047 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R17049:17053 Corelib.Init.Datatypes <> false constr
+R17055:17059 Corelib.Init.Datatypes <> false constr
+R17065:17082 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+prf 17119:17170 <> unwired_modality_always_ok_without_production_wiring
+R17258:17262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17176:17207 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_close def
+R17213:17245 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R17247:17251 Corelib.Init.Datatypes <> false constr
+R17253:17257 Corelib.Init.Datatypes <> false constr
+R17263:17280 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+R17296:17334 UMST.ChemConstants.OccurrenceFamilyPattern <> unwired_close_without_production_wiring thm
+R17296:17334 UMST.ChemConstants.OccurrenceFamilyPattern <> unwired_close_without_production_wiring thm
+prf 17349:17369 <> gold_outlier_named_ok
+R17552:17556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17375:17410 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R17416:17448 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R17450:17480 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceGoldL1 def
+R17486:17515 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R17517:17521 Corelib.Init.Datatypes <> false constr
+R17523:17527 Corelib.Init.Datatypes <> false constr
+R17529:17533 Corelib.Init.Datatypes <> false constr
+R17535:17539 Corelib.Init.Datatypes <> false constr
+R17541:17545 Corelib.Init.Datatypes <> false constr
+R17547:17551 Corelib.Init.Datatypes <> false constr
+R17557:17587 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+prf 17622:17642 <> iron_outlier_named_ok
+R17825:17829 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17648:17683 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R17689:17721 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R17723:17753 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceIronL1 def
+R17759:17788 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R17790:17794 Corelib.Init.Datatypes <> false constr
+R17796:17800 Corelib.Init.Datatypes <> false constr
+R17802:17806 Corelib.Init.Datatypes <> false constr
+R17808:17812 Corelib.Init.Datatypes <> false constr
+R17814:17818 Corelib.Init.Datatypes <> false constr
+R17820:17824 Corelib.Init.Datatypes <> false constr
+R17830:17860 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+prf 17895:17917 <> helium_outlier_named_ok
+R18102:18106 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17923:17958 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R17964:17996 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R17998:18030 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceHeliumL1 def
+R18036:18065 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R18067:18071 Corelib.Init.Datatypes <> false constr
+R18073:18077 Corelib.Init.Datatypes <> false constr
+R18079:18083 Corelib.Init.Datatypes <> false constr
+R18085:18089 Corelib.Init.Datatypes <> false constr
+R18091:18095 Corelib.Init.Datatypes <> false constr
+R18097:18101 Corelib.Init.Datatypes <> false constr
+R18107:18137 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+prf 18174:18205 <> named_occurrence_family_outliers
+R18424:18429 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18388:18392 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18211:18246 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R18252:18284 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R18286:18316 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceGoldL1 def
+R18322:18351 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R18353:18357 Corelib.Init.Datatypes <> false constr
+R18359:18363 Corelib.Init.Datatypes <> false constr
+R18365:18369 Corelib.Init.Datatypes <> false constr
+R18371:18375 Corelib.Init.Datatypes <> false constr
+R18377:18381 Corelib.Init.Datatypes <> false constr
+R18383:18387 Corelib.Init.Datatypes <> false constr
+R18393:18423 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R18643:18648 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18607:18611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18430:18465 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R18471:18503 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R18505:18535 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceIronL1 def
+R18541:18570 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R18572:18576 Corelib.Init.Datatypes <> false constr
+R18578:18582 Corelib.Init.Datatypes <> false constr
+R18584:18588 Corelib.Init.Datatypes <> false constr
+R18590:18594 Corelib.Init.Datatypes <> false constr
+R18596:18600 Corelib.Init.Datatypes <> false constr
+R18602:18606 Corelib.Init.Datatypes <> false constr
+R18612:18642 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R18864:18869 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18828:18832 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18649:18684 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R18690:18722 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R18724:18756 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceHeliumL1 def
+R18762:18791 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R18793:18797 Corelib.Init.Datatypes <> false constr
+R18799:18803 Corelib.Init.Datatypes <> false constr
+R18805:18809 Corelib.Init.Datatypes <> false constr
+R18811:18815 Corelib.Init.Datatypes <> false constr
+R18817:18821 Corelib.Init.Datatypes <> false constr
+R18823:18827 Corelib.Init.Datatypes <> false constr
+R18833:18863 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R18906:18911 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18899:18901 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18870:18898 UMST.ChemConstants.OccurrenceFamilyPattern <> gold_is_native_family_outlier def
+R18902:18905 Corelib.Init.Datatypes <> true constr
+R18947:18952 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18940:18942 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18912:18939 UMST.ChemConstants.OccurrenceFamilyPattern <> iron_is_oxide_family_product def
+R18943:18946 Corelib.Init.Datatypes <> true constr
+R18986:18991 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18979:18981 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18953:18978 UMST.ChemConstants.OccurrenceFamilyPattern <> helium_is_no_ore_atmophile def
+R18982:18985 Corelib.Init.Datatypes <> true constr
+R19026:19028 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18992:19025 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_conjunct def
+R19029:19032 Corelib.Init.Datatypes <> true constr
+prf 19083:19099 <> trivial_z_refused
+R19283:19287 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19105:19140 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R19146:19178 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R19180:19211 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceTrivial def
+R19217:19246 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R19248:19252 Corelib.Init.Datatypes <> false constr
+R19254:19258 Corelib.Init.Datatypes <> false constr
+R19260:19264 Corelib.Init.Datatypes <> false constr
+R19266:19270 Corelib.Init.Datatypes <> false constr
+R19272:19276 Corelib.Init.Datatypes <> false constr
+R19278:19282 Corelib.Init.Datatypes <> false constr
+R19288:19311 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_trivial_z_refuse constr
+prf 19348:19368 <> trivial_z_fail_closed
+R19581:19586 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19552:19556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19374:19409 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R19415:19447 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R19449:19480 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceTrivial def
+R19486:19515 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R19517:19521 Corelib.Init.Datatypes <> false constr
+R19523:19527 Corelib.Init.Datatypes <> false constr
+R19529:19533 Corelib.Init.Datatypes <> false constr
+R19535:19539 Corelib.Init.Datatypes <> false constr
+R19541:19545 Corelib.Init.Datatypes <> false constr
+R19547:19551 Corelib.Init.Datatypes <> false constr
+R19557:19580 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_trivial_z_refuse constr
+R19806:19810 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19587:19614 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict_ok def
+R19621:19656 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R19665:19697 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R19699:19730 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceTrivial def
+R19739:19768 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R19770:19774 Corelib.Init.Datatypes <> false constr
+R19776:19780 Corelib.Init.Datatypes <> false constr
+R19782:19786 Corelib.Init.Datatypes <> false constr
+R19788:19792 Corelib.Init.Datatypes <> false constr
+R19794:19798 Corelib.Init.Datatypes <> false constr
+R19800:19804 Corelib.Init.Datatypes <> false constr
+R19811:19815 Corelib.Init.Datatypes <> false constr
+R19844:19860 UMST.ChemConstants.OccurrenceFamilyPattern <> trivial_z_refused thm
+R19844:19860 UMST.ChemConstants.OccurrenceFamilyPattern <> trivial_z_refused thm
+R19874:19901 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict_ok def
+R19916:19932 UMST.ChemConstants.OccurrenceFamilyPattern <> trivial_z_refused thm
+R19916:19932 UMST.ChemConstants.OccurrenceFamilyPattern <> trivial_z_refused thm
+R19916:19932 UMST.ChemConstants.OccurrenceFamilyPattern <> trivial_z_refused thm
+prf 19964:19990 <> green_invent_refuse_unwired
+R20077:20081 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19996:20027 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_close def
+R20033:20065 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R20067:20070 Corelib.Init.Datatypes <> true constr
+R20072:20076 Corelib.Init.Datatypes <> false constr
+R20082:20108 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_green_invent_refuse constr
+prf 20145:20170 <> green_invent_always_refuse
+R20295:20299 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20176:20203 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict_ok def
+R20210:20241 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_close def
+R20250:20282 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R20284:20287 Corelib.Init.Datatypes <> true constr
+R20289:20293 Corelib.Init.Datatypes <> false constr
+R20300:20304 Corelib.Init.Datatypes <> false constr
+R20323:20350 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_verdict_ok def
+R20363:20389 UMST.ChemConstants.OccurrenceFamilyPattern <> green_invent_refuse_unwired thm
+R20363:20389 UMST.ChemConstants.OccurrenceFamilyPattern <> green_invent_refuse_unwired thm
+R20363:20389 UMST.ChemConstants.OccurrenceFamilyPattern <> green_invent_refuse_unwired thm
+prf 20419:20443 <> proved_without_bar_refuse
+R20625:20629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20449:20484 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R20490:20522 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R20524:20554 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceGoldL1 def
+R20560:20589 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R20591:20595 Corelib.Init.Datatypes <> false constr
+R20597:20600 Corelib.Init.Datatypes <> true constr
+R20602:20606 Corelib.Init.Datatypes <> false constr
+R20608:20612 Corelib.Init.Datatypes <> false constr
+R20614:20618 Corelib.Init.Datatypes <> false constr
+R20620:20624 Corelib.Init.Datatypes <> false constr
+R20630:20662 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_proved_without_bar_refuse constr
+prf 20697:20719 <> production_wired_refuse
+R20805:20809 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20725:20756 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_close def
+R20762:20793 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_proved constr
+R20795:20799 Corelib.Init.Datatypes <> false constr
+R20801:20804 Corelib.Init.Datatypes <> true constr
+R20810:20840 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_production_wired_refuse constr
+prf 20875:20894 <> folklore_list_refuse
+R21076:21080 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20900:20935 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R20941:20973 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R20975:21005 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceGoldL1 def
+R21011:21040 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R21042:21046 Corelib.Init.Datatypes <> false constr
+R21048:21052 Corelib.Init.Datatypes <> false constr
+R21054:21058 Corelib.Init.Datatypes <> false constr
+R21060:21063 Corelib.Init.Datatypes <> true constr
+R21065:21069 Corelib.Init.Datatypes <> false constr
+R21071:21075 Corelib.Init.Datatypes <> false constr
+R21081:21108 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_folklore_list_refuse constr
+ind 21373:21384 <> formal_fiber
+constr 21400:21420 <> fiber_quantum_knowing
+constr 21426:21442 <> fiber_meso_acting
+scheme 21373:21384 <> formal_fiber_rect
+scheme 21373:21384 <> formal_fiber_ind
+scheme 21373:21384 <> formal_fiber_rec
+scheme 21373:21384 <> formal_fiber_sind
+def 21457:21482 <> occurrence_family_fiber_ok
+R21489:21500 UMST.ChemConstants.OccurrenceFamilyPattern <> formal_fiber ind
+binder 21485:21485 <> f:44
+R21505:21508 Corelib.Init.Datatypes <> bool ind
+R21521:21521 UMST.ChemConstants.OccurrenceFamilyPattern <> f:44 var
+R21532:21552 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_quantum_knowing constr
+R21557:21560 Corelib.Init.Datatypes <> true constr
+R21566:21582 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_meso_acting constr
+R21587:21591 Corelib.Init.Datatypes <> false constr
+def 21612:21658 <> occurrenceFamilyPatternDoesNotMintFourthScience
+R21662:21665 Corelib.Init.Datatypes <> bool ind
+R21672:21696 UMST.ChemConstants.OccurrenceFamilyPattern <> notFourthChemistryScience def
+def 21711:21751 <> occurrenceFamilyPatternDoesNotClaimProved
+R21755:21758 Corelib.Init.Datatypes <> bool ind
+R21765:21768 Corelib.Init.Datatypes <> negb def
+R21770:21798 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternProved def
+prf 21808:21841 <> occurrence_family_knowing_fiber_ok
+R21895:21897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21847:21872 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_fiber_ok def
+R21874:21894 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_quantum_knowing constr
+R21898:21901 Corelib.Init.Datatypes <> true constr
+prf 21936:21977 <> occurrence_family_meso_acting_fiber_not_ok
+R22027:22029 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21983:22008 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_fiber_ok def
+R22010:22026 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_meso_acting constr
+R22030:22034 Corelib.Init.Datatypes <> false constr
+prf 22071:22111 <> occurrence_family_routes_knowing_not_meso
+R22172:22177 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22165:22167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22117:22142 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_fiber_ok def
+R22144:22164 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_quantum_knowing constr
+R22168:22171 Corelib.Init.Datatypes <> true constr
+R22230:22235 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22222:22224 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22178:22203 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_fiber_ok def
+R22205:22221 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_meso_acting constr
+R22225:22229 Corelib.Init.Datatypes <> false constr
+R22290:22295 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22283:22285 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22236:22282 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternDoesNotMintFourthScience def
+R22286:22289 Corelib.Init.Datatypes <> true constr
+R22344:22349 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22337:22339 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22296:22336 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternDoesNotClaimProved def
+R22340:22343 Corelib.Init.Datatypes <> true constr
+R22369:22371 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22350:22368 UMST.ChemConstants.OccurrenceFamilyPattern <> notTwentySixthAxiom def
+R22372:22375 Corelib.Init.Datatypes <> true constr
+prf 22652:22693 <> occurrence_family_pattern_fixture_scaffold
+R22914:22919 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22876:22882 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22699:22734 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R22740:22772 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R22774:22804 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceGoldL1 def
+R22810:22839 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R22841:22845 Corelib.Init.Datatypes <> false constr
+R22847:22851 Corelib.Init.Datatypes <> false constr
+R22853:22857 Corelib.Init.Datatypes <> false constr
+R22859:22863 Corelib.Init.Datatypes <> false constr
+R22865:22869 Corelib.Init.Datatypes <> false constr
+R22871:22875 Corelib.Init.Datatypes <> false constr
+R22883:22913 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R23135:23140 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23097:23103 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22920:22955 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R22961:22993 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R22995:23025 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceIronL1 def
+R23031:23060 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R23062:23066 Corelib.Init.Datatypes <> false constr
+R23068:23072 Corelib.Init.Datatypes <> false constr
+R23074:23078 Corelib.Init.Datatypes <> false constr
+R23080:23084 Corelib.Init.Datatypes <> false constr
+R23086:23090 Corelib.Init.Datatypes <> false constr
+R23092:23096 Corelib.Init.Datatypes <> false constr
+R23104:23134 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R23358:23363 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23320:23326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23141:23176 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R23182:23214 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R23216:23248 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceHeliumL1 def
+R23254:23283 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R23285:23289 Corelib.Init.Datatypes <> false constr
+R23291:23295 Corelib.Init.Datatypes <> false constr
+R23297:23301 Corelib.Init.Datatypes <> false constr
+R23303:23307 Corelib.Init.Datatypes <> false constr
+R23309:23313 Corelib.Init.Datatypes <> false constr
+R23315:23319 Corelib.Init.Datatypes <> false constr
+R23327:23357 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_family_pattern_named_ok constr
+R23573:23578 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23542:23548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23364:23399 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R23405:23437 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R23439:23470 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceTrivial def
+R23476:23505 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R23507:23511 Corelib.Init.Datatypes <> false constr
+R23513:23517 Corelib.Init.Datatypes <> false constr
+R23519:23523 Corelib.Init.Datatypes <> false constr
+R23525:23529 Corelib.Init.Datatypes <> false constr
+R23531:23535 Corelib.Init.Datatypes <> false constr
+R23537:23541 Corelib.Init.Datatypes <> false constr
+R23549:23572 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_trivial_z_refuse constr
+R23795:23800 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23755:23761 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23579:23614 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_incidence def
+R23620:23652 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R23654:23684 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyIncidenceGoldL1 def
+R23690:23719 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyClaimBarAbsent def
+R23721:23725 Corelib.Init.Datatypes <> false constr
+R23727:23730 Corelib.Init.Datatypes <> true constr
+R23732:23736 Corelib.Init.Datatypes <> false constr
+R23738:23742 Corelib.Init.Datatypes <> false constr
+R23744:23748 Corelib.Init.Datatypes <> false constr
+R23750:23754 Corelib.Init.Datatypes <> false constr
+R23762:23794 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_proved_without_bar_refuse constr
+R23908:23913 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23883:23889 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23801:23832 UMST.ChemConstants.OccurrenceFamilyPattern <> evaluate_occurrence_family_close def
+R23838:23870 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+R23872:23876 Corelib.Init.Datatypes <> false constr
+R23878:23882 Corelib.Init.Datatypes <> false constr
+R23890:23907 UMST.ChemConstants.OccurrenceFamilyPattern <> verdict_unwired_ok constr
+R23969:23974 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23962:23964 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23914:23939 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_fiber_ok def
+R23941:23961 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_quantum_knowing constr
+R23965:23968 Corelib.Init.Datatypes <> true constr
+R24027:24032 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24019:24021 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23975:24000 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_fiber_ok def
+R24002:24018 UMST.ChemConstants.OccurrenceFamilyPattern <> fiber_meso_acting constr
+R24022:24026 Corelib.Init.Datatypes <> false constr
+R24070:24075 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24062:24064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24033:24061 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternProved def
+R24065:24069 Corelib.Init.Datatypes <> false constr
+R24117:24122 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24110:24112 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24076:24109 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_conjunct def
+R24113:24116 Corelib.Init.Datatypes <> true constr
+R24123:24123 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24224:24230 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24217:24219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24167:24173 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R24124:24127 Corelib.Init.Datatypes <> negb def
+R24129:24166 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_wired_in_lib def
+R24174:24177 Corelib.Init.Datatypes <> negb def
+R24179:24216 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_wired_in_eos def
+R24220:24223 Corelib.Init.Datatypes <> true constr
+R24244:24247 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R24231:24243 UMST.ChemConstants.OccurrenceFamilyPattern <> xorEnumMarker def
+R24248:24266 UMST.ChemConstants.OccurrenceFamilyPattern <> productFactorMarker def
+R24324:24358 UMST.ChemConstants.OccurrenceFamilyPattern <> xor_marker_ne_product_factor_marker thm
+R24324:24358 UMST.ChemConstants.OccurrenceFamilyPattern <> xor_marker_ne_product_factor_marker thm
+def 24602:24635 <> occurrenceFamilyPatternRsAuthority
+R24639:24644 Stdlib.Strings.String <> string ind
+def 24721:24764 <> chemIntCrossOccurrenceFamilyPatternAuthority
+R24768:24773 Stdlib.Strings.String <> string ind
+def 24849:24877 <> occurrenceFamilyPatternCellId
+R24881:24886 Stdlib.Strings.String <> string ind
+def 24965:24995 <> occurrenceFamilyPatternNonClaim
+R24999:25004 Stdlib.Strings.String <> string ind
+prf 25591:25623 <> occurrence_family_pattern_cell_id
+R25658:25662 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25629:25657 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternCellId def
+prf 25755:25792 <> occurrence_family_pattern_cites_rs_row
+R25832:25835 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R25798:25831 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternRsAuthority def
+prf 25873:25917 <> occurrence_family_pattern_cites_int_cross_row
+R25967:25971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25923:25966 UMST.ChemConstants.OccurrenceFamilyPattern <> chemIntCrossOccurrenceFamilyPatternAuthority def
+def 26066:26089 <> occurrence_family_marker
+R26093:26098 Stdlib.Strings.String <> string ind
+prf 26159:26196 <> occurrence_family_pattern_cites_marker
+R26226:26229 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R26202:26225 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_marker def
+def 26494:26544 <> occurrenceFamilyPatternSecondLawConservationFraming
+R26548:26553 Stdlib.Strings.String <> string ind
+prf 26645:26700 <> occurrence_family_pattern_not_twenty_sixth_axiom_framing
+R26757:26762 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R26706:26756 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternSecondLawConservationFraming def
+prf 26828:26877 <> occurrence_family_pattern_not_fourth_science_axiom
+R26934:26939 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R26883:26933 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternSecondLawConservationFraming def
+prf 27007:27063 <> occurrence_family_pattern_second_law_conservation_framing
+R27120:27123 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27069:27119 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternSecondLawConservationFraming def
+def 27392:27413 <> physicsGreenAuthorized
+R27425:27429 Corelib.Init.Logic <> False ind
+prf 27439:27483 <> occurrence_family_pattern_physics_green_false
+R27489:27490 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R27491:27512 UMST.ChemConstants.OccurrenceFamilyPattern <> physicsGreenAuthorized def
+prf 27552:27593 <> occurrence_family_pattern_modality_unwired
+R27637:27641 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27599:27636 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrenceFamilyPatternModalityCurrent def
+R27642:27674 UMST.ChemConstants.OccurrenceFamilyPattern <> occurrence_family_pattern_unwired constr
+def 27940:27958 <> wave100FreezeMarker
+R27962:27967 Stdlib.Strings.String <> string ind
+prf 28048:28074 <> wave100_freeze_marker_named
+R28099:28102 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28080:28098 UMST.ChemConstants.OccurrenceFamilyPattern <> wave100FreezeMarker def

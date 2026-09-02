@@ -1,0 +1,40 @@
+LandauerEinsteinBridge.vo LandauerEinsteinBridge.glob LandauerEinsteinBridge.v.beautified LandauerEinsteinBridge.required_vo: LandauerEinsteinBridge.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+LandauerEinsteinBridge.vos LandauerEinsteinBridge.vok LandauerEinsteinBridge.required_vos: LandauerEinsteinBridge.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+DensityStateSpec.vo DensityStateSpec.glob DensityStateSpec.v.beautified DensityStateSpec.required_vo: DensityStateSpec.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+DensityStateSpec.vos DensityStateSpec.vok DensityStateSpec.required_vos: DensityStateSpec.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+ComplementaritySpec.vo ComplementaritySpec.glob ComplementaritySpec.v.beautified ComplementaritySpec.required_vo: ComplementaritySpec.v DensityStateSpec.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+ComplementaritySpec.vos ComplementaritySpec.vok ComplementaritySpec.required_vos: ComplementaritySpec.v DensityStateSpec.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+VonNeumannEntropySpec.vo VonNeumannEntropySpec.glob VonNeumannEntropySpec.v.beautified VonNeumannEntropySpec.required_vo: VonNeumannEntropySpec.v DensityStateSpec.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+VonNeumannEntropySpec.vos VonNeumannEntropySpec.vok VonNeumannEntropySpec.required_vos: VonNeumannEntropySpec.v DensityStateSpec.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MeasurementCost.vo MeasurementCost.glob MeasurementCost.v.beautified MeasurementCost.required_vo: MeasurementCost.v LandauerEinsteinBridge.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MeasurementCost.vos MeasurementCost.vok MeasurementCost.required_vos: MeasurementCost.v LandauerEinsteinBridge.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+InfoTheory.vo InfoTheory.glob InfoTheory.v.beautified InfoTheory.required_vo: InfoTheory.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+InfoTheory.vos InfoTheory.vok InfoTheory.required_vos: InfoTheory.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+Gate.vo Gate.glob Gate.v.beautified Gate.required_vo: Gate.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+Gate.vos Gate.vok Gate.required_vos: Gate.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+Extraction.vo Extraction.glob Extraction.v.beautified Extraction.required_vo: Extraction.v Gate.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+Extraction.vos Extraction.vok Extraction.required_vos: Extraction.v Gate.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+Constitutional.vo Constitutional.glob Constitutional.v.beautified Constitutional.required_vo: Constitutional.v Gate.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+Constitutional.vos Constitutional.vok Constitutional.required_vos: Constitutional.v Gate.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+ChemGeometry.vo ChemGeometry.glob ChemGeometry.v.beautified ChemGeometry.required_vo: ChemGeometry.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+ChemGeometry.vos ChemGeometry.vok ChemGeometry.required_vos: ChemGeometry.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/CompactionMiCost.vo UrgeKnowing/CompactionMiCost.glob UrgeKnowing/CompactionMiCost.v.beautified UrgeKnowing/CompactionMiCost.required_vo: UrgeKnowing/CompactionMiCost.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/CompactionMiCost.vos UrgeKnowing/CompactionMiCost.vok UrgeKnowing/CompactionMiCost.required_vos: UrgeKnowing/CompactionMiCost.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/EpistemicNullProbe.vo UrgeKnowing/EpistemicNullProbe.glob UrgeKnowing/EpistemicNullProbe.v.beautified UrgeKnowing/EpistemicNullProbe.required_vo: UrgeKnowing/EpistemicNullProbe.v DensityStateSpec.vo LandauerEinsteinBridge.vo MeasurementCost.vo VonNeumannEntropySpec.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/EpistemicNullProbe.vos UrgeKnowing/EpistemicNullProbe.vok UrgeKnowing/EpistemicNullProbe.required_vos: UrgeKnowing/EpistemicNullProbe.v DensityStateSpec.vos LandauerEinsteinBridge.vos MeasurementCost.vos VonNeumannEntropySpec.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/EpistemicQueryLook.vo UrgeKnowing/EpistemicQueryLook.glob UrgeKnowing/EpistemicQueryLook.v.beautified UrgeKnowing/EpistemicQueryLook.required_vo: UrgeKnowing/EpistemicQueryLook.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/EpistemicQueryLook.vos UrgeKnowing/EpistemicQueryLook.vok UrgeKnowing/EpistemicQueryLook.required_vos: UrgeKnowing/EpistemicQueryLook.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/LandauerHistoryLook.vo UrgeKnowing/LandauerHistoryLook.glob UrgeKnowing/LandauerHistoryLook.v.beautified UrgeKnowing/LandauerHistoryLook.required_vo: UrgeKnowing/LandauerHistoryLook.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/LandauerHistoryLook.vos UrgeKnowing/LandauerHistoryLook.vok UrgeKnowing/LandauerHistoryLook.required_vos: UrgeKnowing/LandauerHistoryLook.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/LandauerNTo1.vo UrgeKnowing/LandauerNTo1.glob UrgeKnowing/LandauerNTo1.v.beautified UrgeKnowing/LandauerNTo1.required_vo: UrgeKnowing/LandauerNTo1.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/LandauerNTo1.vos UrgeKnowing/LandauerNTo1.vok UrgeKnowing/LandauerNTo1.required_vos: UrgeKnowing/LandauerNTo1.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/MachineTemperature.vo UrgeKnowing/MachineTemperature.glob UrgeKnowing/MachineTemperature.v.beautified UrgeKnowing/MachineTemperature.required_vo: UrgeKnowing/MachineTemperature.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/MachineTemperature.vos UrgeKnowing/MachineTemperature.vok UrgeKnowing/MachineTemperature.required_vos: UrgeKnowing/MachineTemperature.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/MeasurementCostSync.vo UrgeKnowing/MeasurementCostSync.glob UrgeKnowing/MeasurementCostSync.v.beautified UrgeKnowing/MeasurementCostSync.required_vo: UrgeKnowing/MeasurementCostSync.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/MeasurementCostSync.vos UrgeKnowing/MeasurementCostSync.vok UrgeKnowing/MeasurementCostSync.required_vos: UrgeKnowing/MeasurementCostSync.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/ObserveMinMi.vo UrgeKnowing/ObserveMinMi.glob UrgeKnowing/ObserveMinMi.v.beautified UrgeKnowing/ObserveMinMi.required_vo: UrgeKnowing/ObserveMinMi.v LandauerEinsteinBridge.vo MeasurementCost.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/ObserveMinMi.vos UrgeKnowing/ObserveMinMi.vok UrgeKnowing/ObserveMinMi.required_vos: UrgeKnowing/ObserveMinMi.v LandauerEinsteinBridge.vos MeasurementCost.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/PersistVsOccupancy.vo UrgeKnowing/PersistVsOccupancy.glob UrgeKnowing/PersistVsOccupancy.v.beautified UrgeKnowing/PersistVsOccupancy.required_vo: UrgeKnowing/PersistVsOccupancy.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/PersistVsOccupancy.vos UrgeKnowing/PersistVsOccupancy.vok UrgeKnowing/PersistVsOccupancy.required_vos: UrgeKnowing/PersistVsOccupancy.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/TwoHilberts.vo UrgeKnowing/TwoHilberts.glob UrgeKnowing/TwoHilberts.v.beautified UrgeKnowing/TwoHilberts.required_vo: UrgeKnowing/TwoHilberts.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+UrgeKnowing/TwoHilberts.vos UrgeKnowing/TwoHilberts.vok UrgeKnowing/TwoHilberts.required_vos: UrgeKnowing/TwoHilberts.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker

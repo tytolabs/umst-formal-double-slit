@@ -1,0 +1,450 @@
+DIGEST ca0c13d0d6ed6f2232f6455b159141ea
+FUrgeKnowing.EpistemicQueryLook
+R1131:1135 Stdlib.Reals.Reals <> <> lib
+R1137:1141 Stdlib.Reals.RIneq <> <> lib
+R1143:1145 Stdlib.micromega.Lra <> <> lib
+R1147:1151 Stdlib.setoid_ring.Field <> <> lib
+R1153:1158 Stdlib.Strings.String <> <> lib
+R1192:1213 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1215:1229 UMSTFormal.MeasurementCost <> <> lib
+prf 1278:1311 <> measurementEnergyLowerBound_nonneg
+R1321:1321 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 1314:1314 <> T:1
+binder 1316:1317 <> mi:2
+R1334:1337 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1329:1332 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R1333:1333 UrgeKnowing.EpistemicQueryLook <> T:1 var
+R1345:1348 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1339:1342 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R1343:1344 UrgeKnowing.EpistemicQueryLook <> mi:2 var
+R1350:1353 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R1354:1380 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R1382:1382 UrgeKnowing.EpistemicQueryLook <> T:1 var
+R1384:1385 UrgeKnowing.EpistemicQueryLook <> mi:2 var
+R1421:1447 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R1450:1463 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R1474:1485 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R1474:1485 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R1510:1521 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R1532:1537 Stdlib.Reals.RIneq <> Rlt_le thm
+R1540:1546 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R1510:1521 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R1532:1537 Stdlib.Reals.RIneq <> Rlt_le thm
+R1540:1546 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R1558:1569 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R1579:1584 Stdlib.Reals.RIneq <> Rlt_le thm
+R1587:1595 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R1558:1569 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R1579:1584 Stdlib.Reals.RIneq <> Rlt_le thm
+R1587:1595 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+ind 1921:1946 <> EpistemicQueryLookModality
+constr 1962:1989 <> epistemic_query_look_unwired
+constr 1995:2022 <> epistemic_query_look_assumed
+constr 2028:2054 <> epistemic_query_look_proved
+constr 2060:2089 <> epistemic_query_look_surrogate
+scheme 1921:1946 <> EpistemicQueryLookModality_rect
+scheme 1921:1946 <> EpistemicQueryLookModality_ind
+scheme 1921:1946 <> EpistemicQueryLookModality_rec
+scheme 1921:1946 <> EpistemicQueryLookModality_sind
+def 2104:2136 <> epistemicQueryLookModalityCurrent
+R2140:2165 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLookModality ind
+R2172:2199 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_unwired constr
+ind 2437:2447 <> FormalFiber
+constr 2463:2486 <> formal_fiber_meso_acting
+constr 2492:2519 <> formal_fiber_quantum_knowing
+scheme 2437:2447 <> FormalFiber_rect
+scheme 2437:2447 <> FormalFiber_ind
+scheme 2437:2447 <> FormalFiber_rec
+scheme 2437:2447 <> FormalFiber_sind
+def 2534:2558 <> formalFiberQuantumKnowing
+R2562:2572 UrgeKnowing.EpistemicQueryLook <> FormalFiber ind
+R2579:2606 UrgeKnowing.EpistemicQueryLook <> formal_fiber_quantum_knowing constr
+def 2621:2641 <> formalFiberMesoActing
+R2645:2655 UrgeKnowing.EpistemicQueryLook <> FormalFiber ind
+R2662:2685 UrgeKnowing.EpistemicQueryLook <> formal_fiber_meso_acting constr
+ind 2924:2937 <> QueryLookClass
+constr 2953:2975 <> query_verification_cost
+constr 3005:3030 <> query_coordination_theater
+R2998:2998 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2978:2994 <> verification_bits:9
+scheme 2924:2937 <> QueryLookClass_rect
+scheme 2924:2937 <> QueryLookClass_ind
+scheme 2924:2937 <> QueryLookClass_rec
+scheme 2924:2937 <> QueryLookClass_sind
+def 3045:3076 <> queryLookClassIsVerificationCost
+R3083:3096 UrgeKnowing.EpistemicQueryLook <> QueryLookClass ind
+binder 3079:3079 <> c:10
+R3117:3117 UrgeKnowing.EpistemicQueryLook <> c:10 var
+R3128:3150 UrgeKnowing.EpistemicQueryLook <> query_verification_cost constr
+R3157:3160 Corelib.Init.Logic <> True ind
+R3166:3191 UrgeKnowing.EpistemicQueryLook <> query_coordination_theater constr
+R3196:3200 Corelib.Init.Logic <> False ind
+def 3221:3255 <> queryLookClassIsCoordinationTheater
+R3262:3275 UrgeKnowing.EpistemicQueryLook <> QueryLookClass ind
+binder 3258:3258 <> c:12
+R3296:3296 UrgeKnowing.EpistemicQueryLook <> c:12 var
+R3307:3329 UrgeKnowing.EpistemicQueryLook <> query_verification_cost constr
+R3336:3340 Corelib.Init.Logic <> False ind
+R3346:3371 UrgeKnowing.EpistemicQueryLook <> query_coordination_theater constr
+R3376:3379 Corelib.Init.Logic <> True ind
+rec 3396:3413 <> EpistemicQueryLook
+proj 3422:3431 <> look_class
+proj 3453:3462 <> look_fiber
+R3435:3448 UrgeKnowing.EpistemicQueryLook <> QueryLookClass ind
+R3466:3476 UrgeKnowing.EpistemicQueryLook <> FormalFiber ind
+def 3493:3526 <> epistemicQueryLookVerificationCost
+R3549:3549 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3529:3545 <> verification_bits:17
+R3556:3573 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLook rec
+R3583:3592 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R3583:3592 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R3583:3592 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R3645:3654 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R3645:3654 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R3597:3619 UrgeKnowing.EpistemicQueryLook <> query_verification_cost constr
+R3621:3637 UrgeKnowing.EpistemicQueryLook <> verification_bits:17 var
+R3659:3686 UrgeKnowing.EpistemicQueryLook <> formal_fiber_quantum_knowing constr
+def 3704:3740 <> epistemicQueryLookCoordinationTheater
+R3744:3761 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLook rec
+R3771:3780 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R3771:3780 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R3771:3780 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R3818:3827 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R3818:3827 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R3785:3810 UrgeKnowing.EpistemicQueryLook <> query_coordination_theater constr
+R3832:3859 UrgeKnowing.EpistemicQueryLook <> formal_fiber_quantum_knowing constr
+def 3877:3899 <> verificationBitsBounded
+R3909:3909 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3902:3905 <> bits:18
+R3932:3935 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3925:3927 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R3928:3931 UrgeKnowing.EpistemicQueryLook <> bits:18 var
+R3940:3943 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3936:3939 UrgeKnowing.EpistemicQueryLook <> bits:18 var
+ind 4180:4204 <> EpistemicQueryLookRefusal
+constr 4220:4247 <> refusal_coordination_theater
+constr 4253:4279 <> refusal_meso_fiber_misroute
+constr 4285:4322 <> refusal_non_positive_verification_bits
+constr 4328:4348 <> refusal_second_argmin
+scheme 4180:4204 <> EpistemicQueryLookRefusal_rect
+scheme 4180:4204 <> EpistemicQueryLookRefusal_ind
+scheme 4180:4204 <> EpistemicQueryLookRefusal_rec
+scheme 4180:4204 <> EpistemicQueryLookRefusal_sind
+ind 4362:4386 <> EpistemicQueryLookOutcome
+constr 4402:4417 <> outcome_admitted
+constr 4447:4461 <> outcome_refused
+R4440:4440 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4420:4436 <> verification_bits:23
+R4473:4497 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLookRefusal ind
+binder 4464:4469 <> reason:24
+scheme 4362:4386 <> EpistemicQueryLookOutcome_rect
+scheme 4362:4386 <> EpistemicQueryLookOutcome_ind
+scheme 4362:4386 <> EpistemicQueryLookOutcome_rec
+scheme 4362:4386 <> EpistemicQueryLookOutcome_sind
+def 4513:4535 <> admitEpistemicQueryLook
+R4545:4562 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLook rec
+binder 4538:4541 <> look:25
+R4569:4593 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLookOutcome ind
+R4606:4609 UrgeKnowing.EpistemicQueryLook <> look:25 var
+R4623:4632 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4623:4632 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4623:4632 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4665:4674 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R4665:4674 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R4637:4662 UrgeKnowing.EpistemicQueryLook <> query_coordination_theater constr
+R4693:4707 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R4709:4736 UrgeKnowing.EpistemicQueryLook <> refusal_coordination_theater constr
+R4745:4754 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4745:4754 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4745:4754 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4796:4805 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R4796:4805 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R4810:4833 UrgeKnowing.EpistemicQueryLook <> formal_fiber_meso_acting constr
+R4759:4781 UrgeKnowing.EpistemicQueryLook <> query_verification_cost constr
+R4847:4861 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R4863:4889 UrgeKnowing.EpistemicQueryLook <> refusal_meso_fiber_misroute constr
+R4898:4907 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4898:4907 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4898:4907 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R4949:4958 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R4949:4958 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R4963:4990 UrgeKnowing.EpistemicQueryLook <> formal_fiber_quantum_knowing constr
+R4912:4934 UrgeKnowing.EpistemicQueryLook <> query_verification_cost constr
+R5007:5013 Stdlib.Reals.RIneq <> Rlt_dec thm
+R5109:5124 UrgeKnowing.EpistemicQueryLook <> outcome_admitted constr
+R5035:5049 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R5051:5088 UrgeKnowing.EpistemicQueryLook <> refusal_non_positive_verification_bits constr
+def 5150:5174 <> refuseCoordinationTheater
+R5180:5185 Corelib.Init.Datatypes <> option ind
+R5187:5211 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLookRefusal ind
+R5218:5221 Corelib.Init.Datatypes <> Some constr
+R5223:5250 UrgeKnowing.EpistemicQueryLook <> refusal_coordination_theater constr
+def 5265:5290 <> refuseSecondArgminSelector
+R5296:5301 Corelib.Init.Datatypes <> option ind
+R5303:5327 UrgeKnowing.EpistemicQueryLook <> EpistemicQueryLookRefusal ind
+R5334:5337 Corelib.Init.Datatypes <> Some constr
+R5339:5359 UrgeKnowing.EpistemicQueryLook <> refusal_second_argmin constr
+def 5596:5622 <> queryLookVerificationEnergy
+R5647:5647 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5625:5625 <> T:27
+binder 5627:5643 <> verification_bits:28
+R5652:5652 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R5659:5685 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5687:5687 UrgeKnowing.EpistemicQueryLook <> T:27 var
+R5689:5705 UrgeKnowing.EpistemicQueryLook <> verification_bits:28 var
+prf 5715:5748 <> queryLookVerificationEnergy_nonneg
+R5773:5773 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5751:5751 <> T:29
+binder 5753:5769 <> verification_bits:30
+R5786:5789 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5781:5784 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5785:5785 UrgeKnowing.EpistemicQueryLook <> T:29 var
+R5812:5817 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5791:5794 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5795:5811 UrgeKnowing.EpistemicQueryLook <> verification_bits:30 var
+R5819:5822 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5823:5849 UrgeKnowing.EpistemicQueryLook <> queryLookVerificationEnergy def
+R5851:5851 UrgeKnowing.EpistemicQueryLook <> T:29 var
+R5853:5869 UrgeKnowing.EpistemicQueryLook <> verification_bits:30 var
+R5907:5933 UrgeKnowing.EpistemicQueryLook <> queryLookVerificationEnergy def
+R5944:5977 UrgeKnowing.EpistemicQueryLook <> measurementEnergyLowerBound_nonneg thm
+R5944:5977 UrgeKnowing.EpistemicQueryLook <> measurementEnergyLowerBound_nonneg thm
+prf 6023:6059 <> queryLookVerificationEnergy_zero_bits
+R6066:6066 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 6062:6062 <> T:31
+R6104:6106 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6073:6099 UrgeKnowing.EpistemicQueryLook <> queryLookVerificationEnergy def
+R6101:6101 UrgeKnowing.EpistemicQueryLook <> T:31 var
+R6126:6152 UrgeKnowing.EpistemicQueryLook <> queryLookVerificationEnergy def
+R6163:6183 UMSTFormal.MeasurementCost <> zero_info_zero_energy thm
+R6163:6183 UMSTFormal.MeasurementCost <> zero_info_zero_energy thm
+prf 6198:6238 <> queryLookVerificationEnergy_positive_bits
+R6250:6250 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 6241:6241 <> T:32
+binder 6243:6246 <> bits:33
+R6262:6265 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6258:6260 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R6261:6261 UrgeKnowing.EpistemicQueryLook <> T:32 var
+R6294:6299 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6266:6288 UrgeKnowing.EpistemicQueryLook <> verificationBitsBounded def
+R6290:6293 UrgeKnowing.EpistemicQueryLook <> bits:33 var
+R6301:6303 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R6304:6330 UrgeKnowing.EpistemicQueryLook <> queryLookVerificationEnergy def
+R6332:6332 UrgeKnowing.EpistemicQueryLook <> T:32 var
+R6334:6337 UrgeKnowing.EpistemicQueryLook <> bits:33 var
+R6378:6404 UrgeKnowing.EpistemicQueryLook <> queryLookVerificationEnergy def
+R6407:6429 UrgeKnowing.EpistemicQueryLook <> verificationBitsBounded def
+R6446:6472 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R6475:6488 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R6499:6515 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R6499:6515 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R6541:6557 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R6541:6557 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R6570:6586 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R6596:6604 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R6570:6586 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
+R6596:6604 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R6628:6634 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R6628:6634 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+def 6878:6897 <> metaExcitementModule
+R6901:6906 Stdlib.Strings.String <> string ind
+def 6973:6991 <> composeSurrogateFor
+R6995:7000 Stdlib.Strings.String <> string ind
+def 7045:7067 <> secondArgminSelectorTag
+R7071:7076 Stdlib.Strings.String <> string ind
+prf 7118:7158 <> epistemic_query_look_compose_surrogate_ok
+R7183:7185 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7164:7182 UrgeKnowing.EpistemicQueryLook <> composeSurrogateFor def
+prf 7244:7281 <> epistemic_query_look_not_second_argmin
+R7306:7309 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7287:7305 UrgeKnowing.EpistemicQueryLook <> composeSurrogateFor def
+R7310:7332 UrgeKnowing.EpistemicQueryLook <> secondArgminSelectorTag def
+prf 7368:7409 <> epistemic_query_look_meta_excitement_cited
+R7435:7438 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7415:7434 UrgeKnowing.EpistemicQueryLook <> metaExcitementModule def
+prf 7698:7742 <> epistemic_query_look_admits_verification_cost
+R7752:7752 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 7745:7748 <> bits:34
+R7768:7773 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7760:7763 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R7764:7767 UrgeKnowing.EpistemicQueryLook <> bits:34 var
+R7839:7843 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7774:7796 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R7799:7832 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R7834:7837 UrgeKnowing.EpistemicQueryLook <> bits:34 var
+R7844:7859 UrgeKnowing.EpistemicQueryLook <> outcome_admitted constr
+R7861:7864 UrgeKnowing.EpistemicQueryLook <> bits:34 var
+R7899:7921 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R7924:7957 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R7972:7978 Stdlib.Reals.RIneq <> Rlt_dec thm
+R7972:7978 Stdlib.Reals.RIneq <> Rlt_dec thm
+prf 8020:8068 <> epistemic_query_look_refuses_coordination_theater
+R8135:8139 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8074:8096 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R8098:8134 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookCoordinationTheater def
+R8140:8154 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R8156:8183 UrgeKnowing.EpistemicQueryLook <> refusal_coordination_theater constr
+prf 8218:8256 <> epistemic_query_look_refuses_meso_fiber
+R8266:8266 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 8259:8262 <> bits:35
+R8396:8400 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8273:8295 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R8304:8313 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R8304:8313 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R8304:8313 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R8355:8364 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R8355:8364 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R8318:8340 UrgeKnowing.EpistemicQueryLook <> query_verification_cost constr
+R8342:8345 UrgeKnowing.EpistemicQueryLook <> bits:35 var
+R8369:8392 UrgeKnowing.EpistemicQueryLook <> formal_fiber_meso_acting constr
+R8401:8415 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R8417:8443 UrgeKnowing.EpistemicQueryLook <> refusal_meso_fiber_misroute constr
+prf 8478:8519 <> epistemic_query_look_refuses_negative_bits
+R8529:8529 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 8522:8525 <> bits:36
+R8544:8549 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8540:8542 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R8536:8539 UrgeKnowing.EpistemicQueryLook <> bits:36 var
+R8615:8619 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8550:8572 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R8575:8608 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R8610:8613 UrgeKnowing.EpistemicQueryLook <> bits:36 var
+R8620:8634 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R8636:8673 UrgeKnowing.EpistemicQueryLook <> refusal_non_positive_verification_bits constr
+R8707:8729 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R8732:8765 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R8780:8786 Stdlib.Reals.RIneq <> Rlt_dec thm
+R8780:8786 Stdlib.Reals.RIneq <> Rlt_dec thm
+prf 8828:8878 <> epistemic_query_look_refuse_coordination_theater_ok
+R8909:8911 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8884:8908 UrgeKnowing.EpistemicQueryLook <> refuseCoordinationTheater def
+R8912:8915 Corelib.Init.Datatypes <> Some constr
+R8917:8944 UrgeKnowing.EpistemicQueryLook <> refusal_coordination_theater constr
+prf 8979:9022 <> epistemic_query_look_refuse_second_argmin_ok
+R9054:9056 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9028:9053 UrgeKnowing.EpistemicQueryLook <> refuseSecondArgminSelector def
+R9057:9060 Corelib.Init.Datatypes <> Some constr
+R9062:9082 UrgeKnowing.EpistemicQueryLook <> refusal_second_argmin constr
+prf 9117:9153 <> epistemic_query_look_knowing_fiber_ok
+R9214:9218 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9203:9212 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R9160:9193 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R9197:9197 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R9219:9246 UrgeKnowing.EpistemicQueryLook <> formal_fiber_quantum_knowing constr
+prf 9281:9322 <> epistemic_query_look_verification_class_ok
+R9332:9332 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 9325:9328 <> bits:37
+R9339:9370 UrgeKnowing.EpistemicQueryLook <> queryLookClassIsVerificationCost def
+R9419:9428 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R9377:9410 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R9412:9415 UrgeKnowing.EpistemicQueryLook <> bits:37 var
+R9452:9452 Corelib.Init.Logic <> I constr
+R9452:9452 Corelib.Init.Logic <> I constr
+prf 9467:9508 <> epistemic_query_look_coordination_class_ok
+R9514:9548 UrgeKnowing.EpistemicQueryLook <> queryLookClassIsCoordinationTheater def
+R9593:9602 UrgeKnowing.EpistemicQueryLook <> look_class proj
+R9554:9590 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookCoordinationTheater def
+R9626:9626 Corelib.Init.Logic <> I constr
+R9626:9626 Corelib.Init.Logic <> I constr
+def 9870:9889 <> landauerLawAuthority
+R9893:9898 Stdlib.Strings.String <> string ind
+def 9966:9991 <> physicalSecondLawAuthority
+R9995:10000 Stdlib.Strings.String <> string ind
+def 10052:10077 <> hsAnchorEpistemicQueryLook
+R10081:10086 Stdlib.Strings.String <> string ind
+def 10178:10211 <> formalFiberQuantumKnowingAuthority
+R10215:10220 Stdlib.Strings.String <> string ind
+def 10282:10305 <> epistemicQueryLookCellId
+R10309:10314 Stdlib.Strings.String <> string ind
+def 10375:10400 <> epistemicQueryLookNonClaim
+R10404:10409 Stdlib.Strings.String <> string ind
+prf 10710:10737 <> epistemic_query_look_cell_id
+R10767:10769 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10743:10766 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookCellId def
+prf 10844:10889 <> epistemic_query_look_cites_physical_second_law
+R10921:10923 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10895:10920 UrgeKnowing.EpistemicQueryLook <> physicalSecondLawAuthority def
+prf 10989:11027 <> epistemic_query_look_cites_landauer_law
+R11053:11056 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11033:11052 UrgeKnowing.EpistemicQueryLook <> landauerLawAuthority def
+prf 11094:11141 <> epistemic_query_look_non_claim_verification_cost
+R11173:11176 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11147:11172 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookNonClaim def
+prf 11239:11285 <> epistemic_query_look_non_claim_not_coordination
+R11317:11320 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11291:11316 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookNonClaim def
+def 11620:11649 <> epistemicQuerySecondLawFraming
+R11653:11658 Stdlib.Strings.String <> string ind
+def 11734:11747 <> secondAxiomTag
+R11751:11756 Stdlib.Strings.String <> string ind
+prf 11802:11838 <> epistemic_query_look_not_second_axiom
+R11874:11877 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11844:11873 UrgeKnowing.EpistemicQueryLook <> epistemicQuerySecondLawFraming def
+R11878:11891 UrgeKnowing.EpistemicQueryLook <> secondAxiomTag def
+prf 11927:11965 <> epistemic_query_look_second_law_framing
+R12001:12004 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11971:12000 UrgeKnowing.EpistemicQueryLook <> epistemicQuerySecondLawFraming def
+def 12271:12292 <> physicsGreenAuthorized
+R12304:12308 Corelib.Init.Logic <> False ind
+def 12323:12347 <> productionWiredAuthorized
+R12359:12363 Corelib.Init.Logic <> False ind
+prf 12373:12412 <> epistemic_query_look_physics_green_false
+R12418:12419 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12420:12441 UrgeKnowing.EpistemicQueryLook <> physicsGreenAuthorized def
+prf 12481:12523 <> epistemic_query_look_production_wired_false
+R12529:12530 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12531:12555 UrgeKnowing.EpistemicQueryLook <> productionWiredAuthorized def
+prf 12595:12631 <> epistemic_query_look_modality_unwired
+R12670:12672 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12637:12669 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookModalityCurrent def
+R12673:12700 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_unwired constr
+def 12962:12991 <> epistemicQueryLookDeepenHonest
+R13069:13074 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13038:13040 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13005:13037 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookModalityCurrent def
+R13041:13068 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_unwired constr
+R13099:13104 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13075:13076 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13077:13098 UrgeKnowing.EpistemicQueryLook <> physicsGreenAuthorized def
+R13132:13137 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13105:13106 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13107:13131 UrgeKnowing.EpistemicQueryLook <> productionWiredAuthorized def
+R13235:13240 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13205:13211 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13138:13160 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R13163:13196 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R13200:13200 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R13212:13227 UrgeKnowing.EpistemicQueryLook <> outcome_admitted constr
+R13231:13231 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R13353:13358 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13302:13308 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13241:13263 UrgeKnowing.EpistemicQueryLook <> admitEpistemicQueryLook def
+R13265:13301 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookCoordinationTheater def
+R13309:13323 UrgeKnowing.EpistemicQueryLook <> outcome_refused constr
+R13325:13352 UrgeKnowing.EpistemicQueryLook <> refusal_coordination_theater constr
+R13414:13419 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13385:13387 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13359:13384 UrgeKnowing.EpistemicQueryLook <> refuseSecondArgminSelector def
+R13388:13391 Corelib.Init.Datatypes <> Some constr
+R13393:13413 UrgeKnowing.EpistemicQueryLook <> refusal_second_argmin constr
+R13466:13471 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13439:13441 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13420:13438 UrgeKnowing.EpistemicQueryLook <> composeSurrogateFor def
+R13527:13533 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13516:13525 UrgeKnowing.EpistemicQueryLook <> look_fiber proj
+R13473:13506 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookVerificationCost def
+R13510:13510 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
+R13534:13561 UrgeKnowing.EpistemicQueryLook <> formal_fiber_quantum_knowing constr
+prf 13571:13604 <> epistemic_query_look_deepen_honest
+R13610:13639 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookDeepenHonest def
+R13658:13687 UrgeKnowing.EpistemicQueryLook <> epistemicQueryLookDeepenHonest def
+R13791:13835 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_admits_verification_cost thm
+R13791:13835 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_admits_verification_cost thm
+R13861:13909 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_refuses_coordination_theater thm
+R13861:13909 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_refuses_coordination_theater thm
+R13930:13973 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_refuse_second_argmin_ok thm
+R13930:13973 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_refuse_second_argmin_ok thm
+R13994:14034 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_compose_surrogate_ok thm
+R13994:14034 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_compose_surrogate_ok thm
+R14047:14083 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_knowing_fiber_ok thm
+R14047:14083 UrgeKnowing.EpistemicQueryLook <> epistemic_query_look_knowing_fiber_ok thm

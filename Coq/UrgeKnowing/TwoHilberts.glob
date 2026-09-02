@@ -1,0 +1,469 @@
+DIGEST a699bdab51d761b27881b166e0987ad6
+FUrgeKnowing.TwoHilberts
+R1054:1058 Stdlib.Arith.Arith <> <> lib
+R1060:1062 Stdlib.micromega.Lia <> <> lib
+R1064:1067 Stdlib.Lists.List <> <> lib
+R1069:1074 Stdlib.Strings.String <> <> lib
+R1076:1080 Stdlib.Strings.Ascii <> <> lib
+R1090:1102 Stdlib.Lists.List ListNotations <> mod
+ind 1136:1154 <> TwoHilbertsModality
+constr 1170:1189 <> two_hilberts_unwired
+constr 1195:1214 <> two_hilberts_assumed
+constr 1220:1238 <> two_hilberts_proved
+constr 1244:1265 <> two_hilberts_surrogate
+scheme 1136:1154 <> TwoHilbertsModality_rect
+scheme 1136:1154 <> TwoHilbertsModality_ind
+scheme 1136:1154 <> TwoHilbertsModality_rec
+scheme 1136:1154 <> TwoHilbertsModality_sind
+def 1280:1305 <> twoHilbertsModalityCurrent
+R1309:1327 UrgeKnowing.TwoHilberts <> TwoHilbertsModality ind
+R1334:1353 UrgeKnowing.TwoHilberts <> two_hilberts_unwired constr
+ind 1367:1377 <> HilbertRole
+constr 1393:1419 <> hilbert_role_persist_acting
+constr 1425:1454 <> hilbert_role_occupancy_knowing
+scheme 1367:1377 <> HilbertRole_rect
+scheme 1367:1377 <> HilbertRole_ind
+scheme 1367:1377 <> HilbertRole_rec
+scheme 1367:1377 <> HilbertRole_sind
+def 1469:1486 <> persistHilbertRole
+R1490:1500 UrgeKnowing.TwoHilberts <> HilbertRole ind
+R1505:1531 UrgeKnowing.TwoHilberts <> hilbert_role_persist_acting constr
+def 1545:1564 <> occupancyHilbertRole
+R1568:1578 UrgeKnowing.TwoHilberts <> HilbertRole ind
+R1583:1612 UrgeKnowing.TwoHilberts <> hilbert_role_occupancy_knowing constr
+prf 1622:1646 <> persist_ne_occupancy_role
+R1668:1671 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1650:1667 UrgeKnowing.TwoHilberts <> persistHilbertRole def
+R1672:1691 UrgeKnowing.TwoHilberts <> occupancyHilbertRole def
+rec 1728:1741 <> PersistHilbert
+proj 1748:1758 <> persist_raw
+R1762:1764 Corelib.Init.Datatypes <> nat ind
+rec 1776:1791 <> OccupancyHilbert
+proj 1798:1810 <> occupancy_raw
+R1814:1816 Corelib.Init.Datatypes <> nat ind
+def 1833:1852 <> persistHilbertRoleOf
+R1859:1872 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+R1877:1887 UrgeKnowing.TwoHilberts <> HilbertRole ind
+R1894:1920 UrgeKnowing.TwoHilberts <> hilbert_role_persist_acting constr
+def 1935:1956 <> occupancyHilbertRoleOf
+R1963:1978 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+R1983:1993 UrgeKnowing.TwoHilberts <> HilbertRole ind
+R2000:2029 UrgeKnowing.TwoHilberts <> hilbert_role_occupancy_knowing constr
+ind 2043:2060 <> HilbertFuseRefused
+constr 2076:2110 <> hilbert_fuse_persist_into_occupancy
+constr 2116:2150 <> hilbert_fuse_occupancy_into_persist
+constr 2156:2187 <> hilbert_fuse_homolog_is_not_copy
+scheme 2043:2060 <> HilbertFuseRefused_rect
+scheme 2043:2060 <> HilbertFuseRefused_ind
+scheme 2043:2060 <> HilbertFuseRefused_rec
+scheme 2043:2060 <> HilbertFuseRefused_sind
+def 2202:2232 <> fusePersistIntoOccupancyRefused
+R2236:2253 UrgeKnowing.TwoHilberts <> HilbertFuseRefused ind
+R2260:2294 UrgeKnowing.TwoHilberts <> hilbert_fuse_persist_into_occupancy constr
+def 2309:2339 <> fuseOccupancyIntoPersistRefused
+R2343:2360 UrgeKnowing.TwoHilberts <> HilbertFuseRefused ind
+R2367:2401 UrgeKnowing.TwoHilberts <> hilbert_fuse_occupancy_into_persist constr
+def 2416:2436 <> homologNotCopyRefused
+R2440:2457 UrgeKnowing.TwoHilberts <> HilbertFuseRefused ind
+R2464:2495 UrgeKnowing.TwoHilberts <> hilbert_fuse_homolog_is_not_copy constr
+ind 2509:2525 <> HilbertFuseResult
+constr 2552:2558 <> fuse_ok
+constr 2591:2602 <> fuse_refused
+binder 2528:2528 <> A:11
+R2563:2566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2562:2562 UrgeKnowing.TwoHilberts <> A:11 var
+R2567:2583 UrgeKnowing.TwoHilberts <> HilbertFuseResult:12 ind
+R2585:2585 UrgeKnowing.TwoHilberts <> A:11 var
+R2624:2627 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2606:2623 UrgeKnowing.TwoHilberts <> HilbertFuseRefused ind
+R2628:2644 UrgeKnowing.TwoHilberts <> HilbertFuseResult:12 ind
+R2646:2646 UrgeKnowing.TwoHilberts <> A:11 var
+scheme 2509:2525 <> HilbertFuseResult_rect
+scheme 2509:2525 <> HilbertFuseResult_ind
+scheme 2509:2525 <> HilbertFuseResult_rec
+scheme 2509:2525 <> HilbertFuseResult_sind
+def 2661:2690 <> refuseFusePersistIntoOccupancy
+R2697:2710 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+R2717:2733 UrgeKnowing.TwoHilberts <> HilbertFuseResult ind
+R2735:2750 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+R2758:2769 UrgeKnowing.TwoHilberts <> fuse_refused constr
+R2771:2786 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+R2788:2822 UrgeKnowing.TwoHilberts <> hilbert_fuse_persist_into_occupancy constr
+def 2837:2866 <> refuseFuseOccupancyIntoPersist
+R2873:2888 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+R2895:2911 UrgeKnowing.TwoHilberts <> HilbertFuseResult ind
+R2913:2926 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+R2934:2945 UrgeKnowing.TwoHilberts <> fuse_refused constr
+R2947:2960 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+R2962:2996 UrgeKnowing.TwoHilberts <> hilbert_fuse_occupancy_into_persist constr
+prf 3006:3040 <> fuse_persist_into_occupancy_refused
+R3057:3070 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+binder 3053:3053 <> p:14
+R3109:3115 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3077:3106 UrgeKnowing.TwoHilberts <> refuseFusePersistIntoOccupancy def
+R3108:3108 UrgeKnowing.TwoHilberts <> p:14 var
+R3117:3128 UrgeKnowing.TwoHilberts <> fuse_refused constr
+R3132:3166 UrgeKnowing.TwoHilberts <> hilbert_fuse_persist_into_occupancy constr
+prf 3209:3243 <> fuse_occupancy_into_persist_refused
+R3260:3275 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+binder 3256:3256 <> o:15
+R3314:3320 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3282:3311 UrgeKnowing.TwoHilberts <> refuseFuseOccupancyIntoPersist def
+R3313:3313 UrgeKnowing.TwoHilberts <> o:15 var
+R3322:3333 UrgeKnowing.TwoHilberts <> fuse_refused constr
+R3337:3371 UrgeKnowing.TwoHilberts <> hilbert_fuse_occupancy_into_persist constr
+def 3419:3436 <> persistHilbertBits
+R3440:3442 Corelib.Init.Datatypes <> nat ind
+def 3462:3481 <> persistHilbertCoords
+R3496:3498 Corelib.Init.Datatypes <> nat ind
+binder 3484:3487 <> ucrs:16
+binder 3489:3492 <> grid:17
+R3509:3511 Corelib.Init.Datatypes <> nat ind
+binder 3502:3505 <> bits:18
+R3519:3521 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3516:3518 Corelib.Init.Datatypes <> nat ind
+R3522:3524 Corelib.Init.Datatypes <> nat ind
+R3543:3552 Stdlib.Arith.PeanoNat Nat shiftl def
+R3556:3559 UrgeKnowing.TwoHilberts <> bits:18 var
+binder 3535:3538 <> side:19
+R3582:3584 Corelib.Init.Peano <> ::nat_scope:x_'-'_x not
+R3578:3581 UrgeKnowing.TwoHilberts <> side:19 var
+binder 3570:3573 <> mask:20
+R3605:3610 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3619:3619 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3601:3604 UrgeKnowing.TwoHilberts <> ucrs:16 var
+R3615:3617 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3611:3614 UrgeKnowing.TwoHilberts <> mask:20 var
+binder 3596:3596 <> x:21
+R3639:3644 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3653:3653 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3635:3638 UrgeKnowing.TwoHilberts <> grid:17 var
+R3649:3651 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3645:3648 UrgeKnowing.TwoHilberts <> mask:20 var
+binder 3630:3630 <> y:22
+R3660:3660 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3662:3663 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3665:3665 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3661:3661 UrgeKnowing.TwoHilberts <> x:21 var
+R3664:3664 UrgeKnowing.TwoHilberts <> y:22 var
+def 3680:3696 <> persistCurveIndex
+R3710:3712 Corelib.Init.Datatypes <> nat ind
+binder 3699:3699 <> x:23
+binder 3701:3701 <> y:24
+binder 3703:3706 <> bits:25
+R3717:3719 Corelib.Init.Datatypes <> nat ind
+R3738:3747 Stdlib.Arith.PeanoNat Nat shiftl def
+R3751:3754 UrgeKnowing.TwoHilberts <> bits:25 var
+binder 3730:3733 <> side:26
+R3761:3761 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3772:3775 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3763:3767 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3762:3762 UrgeKnowing.TwoHilberts <> x:23 var
+R3768:3771 UrgeKnowing.TwoHilberts <> side:26 var
+R3776:3776 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3787:3790 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3778:3782 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R3777:3777 UrgeKnowing.TwoHilberts <> y:24 var
+R3783:3786 UrgeKnowing.TwoHilberts <> side:26 var
+R3791:3794 UrgeKnowing.TwoHilberts <> side:26 var
+def 3809:3827 <> persistHilbertIndex
+R3842:3844 Corelib.Init.Datatypes <> nat ind
+binder 3830:3833 <> ucrs:27
+binder 3835:3838 <> grid:28
+R3849:3862 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+R3881:3898 UrgeKnowing.TwoHilberts <> persistHilbertBits def
+binder 3873:3876 <> bits:29
+R3919:3938 UrgeKnowing.TwoHilberts <> persistHilbertCoords def
+R3940:3943 UrgeKnowing.TwoHilberts <> ucrs:27 var
+R3945:3948 UrgeKnowing.TwoHilberts <> grid:28 var
+R3950:3953 UrgeKnowing.TwoHilberts <> bits:29 var
+binder 3910:3910 <> x:30
+binder 3913:3913 <> y:31
+R3963:3973 UrgeKnowing.TwoHilberts <> persist_raw proj
+R3963:3973 UrgeKnowing.TwoHilberts <> persist_raw proj
+R3963:3973 UrgeKnowing.TwoHilberts <> persist_raw proj
+R3978:3994 UrgeKnowing.TwoHilberts <> persistCurveIndex def
+R3996:3996 UrgeKnowing.TwoHilberts <> x:30 var
+R3998:3998 UrgeKnowing.TwoHilberts <> y:31 var
+R4000:4003 UrgeKnowing.TwoHilberts <> bits:29 var
+def 4019:4037 <> occupancy_hash_byte
+R4044:4046 Corelib.Init.Datatypes <> nat ind
+binder 4040:4040 <> h:32
+R4054:4056 Corelib.Init.Datatypes <> nat ind
+binder 4050:4050 <> b:33
+R4061:4063 Corelib.Init.Datatypes <> nat ind
+R4070:4070 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R4081:4086 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R4077:4079 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4072:4074 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R4071:4071 UrgeKnowing.TwoHilberts <> h:32 var
+R4080:4080 UrgeKnowing.TwoHilberts <> b:33 var
+def 4104:4124 <> occupancy_hash_string
+R4131:4133 Corelib.Init.Datatypes <> nat ind
+binder 4127:4127 <> h:35
+R4141:4146 Stdlib.Strings.String <> string ind
+binder 4137:4137 <> s:36
+R4151:4153 Corelib.Init.Datatypes <> nat ind
+R4166:4166 UrgeKnowing.TwoHilberts <> s:36 var
+R4177:4187 Stdlib.Strings.String <> EmptyString constr
+R4192:4192 UrgeKnowing.TwoHilberts <> h:35 var
+R4198:4203 Stdlib.Strings.String <> String constr
+R4221:4241 UrgeKnowing.TwoHilberts <> occupancy_hash_string:37 def
+R4244:4262 UrgeKnowing.TwoHilberts <> occupancy_hash_byte def
+R4264:4264 UrgeKnowing.TwoHilberts <> h:35 var
+R4267:4278 Stdlib.Strings.Ascii <> nat_of_ascii def
+def 4306:4325 <> occupancy_hash_paths
+R4332:4334 Corelib.Init.Datatypes <> nat ind
+binder 4328:4328 <> h:39
+R4346:4349 Corelib.Init.Datatypes <> list ind
+R4351:4356 Stdlib.Strings.String <> string ind
+binder 4338:4342 <> paths:40
+R4361:4363 Corelib.Init.Datatypes <> nat ind
+R4376:4380 UrgeKnowing.TwoHilberts <> paths:40 var
+R4391:4393 Corelib.Init.Datatypes <> nil constr
+R4398:4398 UrgeKnowing.TwoHilberts <> h:39 var
+R4405:4408 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4433:4453 UrgeKnowing.TwoHilberts <> occupancy_hash_string def
+R4455:4455 UrgeKnowing.TwoHilberts <> h:39 var
+binder 4427:4428 <> h1:43
+R4478:4496 UrgeKnowing.TwoHilberts <> occupancy_hash_byte def
+R4498:4499 UrgeKnowing.TwoHilberts <> h1:43 var
+binder 4472:4473 <> h2:44
+R4512:4531 UrgeKnowing.TwoHilberts <> occupancy_hash_paths:41 def
+R4533:4534 UrgeKnowing.TwoHilberts <> h2:44 var
+def 4560:4580 <> occupancyHilbertIndex
+R4593:4598 Stdlib.Strings.String <> string ind
+binder 4583:4589 <> cell_id:45
+R4614:4617 Corelib.Init.Datatypes <> list ind
+R4619:4624 Stdlib.Strings.String <> string ind
+binder 4602:4610 <> write_set:46
+R4631:4646 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+R4656:4668 UrgeKnowing.TwoHilberts <> occupancy_raw proj
+R4656:4668 UrgeKnowing.TwoHilberts <> occupancy_raw proj
+R4656:4668 UrgeKnowing.TwoHilberts <> occupancy_raw proj
+R4680:4699 UrgeKnowing.TwoHilberts <> occupancy_hash_paths def
+R4702:4722 UrgeKnowing.TwoHilberts <> occupancy_hash_string def
+R4729:4735 UrgeKnowing.TwoHilberts <> cell_id:45 var
+R4738:4746 UrgeKnowing.TwoHilberts <> write_set:46 var
+def 4765:4778 <> hilbertRoleEqb
+R4789:4799 UrgeKnowing.TwoHilberts <> HilbertRole ind
+binder 4781:4782 <> r1:47
+binder 4784:4785 <> r2:48
+R4804:4807 Corelib.Init.Datatypes <> bool ind
+R4824:4825 UrgeKnowing.TwoHilberts <> r2:48 var
+R4820:4821 UrgeKnowing.TwoHilberts <> r1:47 var
+R4836:4862 UrgeKnowing.TwoHilberts <> hilbert_role_persist_acting constr
+R4865:4891 UrgeKnowing.TwoHilberts <> hilbert_role_persist_acting constr
+R4896:4899 Corelib.Init.Datatypes <> true constr
+R4905:4934 UrgeKnowing.TwoHilberts <> hilbert_role_occupancy_knowing constr
+R4937:4966 UrgeKnowing.TwoHilberts <> hilbert_role_occupancy_knowing constr
+R4971:4974 Corelib.Init.Datatypes <> true constr
+R4988:4992 Corelib.Init.Datatypes <> false constr
+rec 5009:5029 <> HilbertHomologWitness
+proj 5038:5052 <> homolog_persist
+proj 5074:5090 <> homolog_occupancy
+proj 5114:5135 <> homolog_raw_coincident
+R5056:5069 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+R5094:5109 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+R5139:5142 Corelib.Init.Datatypes <> bool ind
+def 5159:5183 <> homologClaimsIdentityCopy
+R5190:5210 UrgeKnowing.TwoHilberts <> HilbertHomologWitness rec
+binder 5186:5186 <> w:55
+R5215:5218 Corelib.Init.Datatypes <> bool ind
+R5225:5238 UrgeKnowing.TwoHilberts <> hilbertRoleEqb def
+R5245:5264 UrgeKnowing.TwoHilberts <> persistHilbertRoleOf def
+R5267:5281 UrgeKnowing.TwoHilberts <> homolog_persist proj
+R5283:5283 UrgeKnowing.TwoHilberts <> w:55 var
+R5292:5313 UrgeKnowing.TwoHilberts <> occupancyHilbertRoleOf def
+R5316:5332 UrgeKnowing.TwoHilberts <> homolog_occupancy proj
+R5334:5334 UrgeKnowing.TwoHilberts <> w:55 var
+def 5351:5375 <> homologPersistToOccupancy
+R5384:5397 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+binder 5380:5380 <> p:56
+R5411:5416 Stdlib.Strings.String <> string ind
+binder 5401:5407 <> cell_id:57
+R5432:5435 Corelib.Init.Datatypes <> list ind
+R5437:5442 Stdlib.Strings.String <> string ind
+binder 5420:5428 <> write_set:58
+R5449:5469 UrgeKnowing.TwoHilberts <> HilbertHomologWitness rec
+R5485:5505 UrgeKnowing.TwoHilberts <> occupancyHilbertIndex def
+R5507:5513 UrgeKnowing.TwoHilberts <> cell_id:57 var
+R5515:5523 UrgeKnowing.TwoHilberts <> write_set:58 var
+binder 5480:5480 <> o:59
+R5533:5547 UrgeKnowing.TwoHilberts <> homolog_persist proj
+R5533:5547 UrgeKnowing.TwoHilberts <> homolog_persist proj
+R5533:5547 UrgeKnowing.TwoHilberts <> homolog_persist proj
+R5560:5576 UrgeKnowing.TwoHilberts <> homolog_occupancy proj
+R5560:5576 UrgeKnowing.TwoHilberts <> homolog_occupancy proj
+R5589:5610 UrgeKnowing.TwoHilberts <> homolog_raw_coincident proj
+R5589:5610 UrgeKnowing.TwoHilberts <> homolog_raw_coincident proj
+R5552:5552 UrgeKnowing.TwoHilberts <> p:56 var
+R5581:5581 UrgeKnowing.TwoHilberts <> o:59 var
+R5625:5631 Stdlib.Arith.PeanoNat Nat eqb def
+R5634:5644 UrgeKnowing.TwoHilberts <> persist_raw proj
+R5646:5646 UrgeKnowing.TwoHilberts <> p:56 var
+R5650:5662 UrgeKnowing.TwoHilberts <> occupancy_raw proj
+R5664:5664 UrgeKnowing.TwoHilberts <> o:59 var
+R5682:5686 Corelib.Init.Datatypes <> false constr
+R5672:5675 Corelib.Init.Datatypes <> true constr
+def 5704:5717 <> homologNotCopy
+R5724:5744 UrgeKnowing.TwoHilberts <> HilbertHomologWitness rec
+binder 5720:5720 <> w:60
+R5849:5854 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5799:5804 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5759:5778 UrgeKnowing.TwoHilberts <> persistHilbertRoleOf def
+R5781:5795 UrgeKnowing.TwoHilberts <> homolog_persist proj
+R5797:5797 UrgeKnowing.TwoHilberts <> w:60 var
+R5805:5826 UrgeKnowing.TwoHilberts <> occupancyHilbertRoleOf def
+R5829:5845 UrgeKnowing.TwoHilberts <> homolog_occupancy proj
+R5847:5847 UrgeKnowing.TwoHilberts <> w:60 var
+R5882:5884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5855:5879 UrgeKnowing.TwoHilberts <> homologClaimsIdentityCopy def
+R5881:5881 UrgeKnowing.TwoHilberts <> w:60 var
+R5885:5889 Corelib.Init.Datatypes <> false constr
+prf 5899:5920 <> homolog_not_copy_holds
+R5938:5951 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+binder 5934:5934 <> p:61
+R5965:5970 Stdlib.Strings.String <> string ind
+binder 5955:5961 <> cell_id:62
+R5979:5982 Corelib.Init.Datatypes <> list ind
+R5984:5989 Stdlib.Strings.String <> string ind
+binder 5974:5975 <> ws:63
+R5997:6010 UrgeKnowing.TwoHilberts <> homologNotCopy def
+R6013:6037 UrgeKnowing.TwoHilberts <> homologPersistToOccupancy def
+R6039:6039 UrgeKnowing.TwoHilberts <> p:61 var
+R6041:6047 UrgeKnowing.TwoHilberts <> cell_id:62 var
+R6049:6050 UrgeKnowing.TwoHilberts <> ws:63 var
+R6093:6106 UrgeKnowing.TwoHilberts <> homologNotCopy def
+R6109:6133 UrgeKnowing.TwoHilberts <> homologPersistToOccupancy def
+R6140:6164 UrgeKnowing.TwoHilberts <> homologClaimsIdentityCopy def
+R6171:6190 UrgeKnowing.TwoHilberts <> persistHilbertRoleOf def
+R6193:6214 UrgeKnowing.TwoHilberts <> occupancyHilbertRoleOf def
+prf 6273:6294 <> homolog_roles_distinct
+R6311:6331 UrgeKnowing.TwoHilberts <> HilbertHomologWitness rec
+binder 6307:6307 <> w:64
+R6378:6385 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6338:6357 UrgeKnowing.TwoHilberts <> persistHilbertRoleOf def
+R6360:6374 UrgeKnowing.TwoHilberts <> homolog_persist proj
+R6376:6376 UrgeKnowing.TwoHilberts <> w:64 var
+R6386:6407 UrgeKnowing.TwoHilberts <> occupancyHilbertRoleOf def
+R6410:6426 UrgeKnowing.TwoHilberts <> homolog_occupancy proj
+R6428:6428 UrgeKnowing.TwoHilberts <> w:64 var
+R6458:6477 UrgeKnowing.TwoHilberts <> persistHilbertRoleOf def
+R6480:6501 UrgeKnowing.TwoHilberts <> occupancyHilbertRoleOf def
+def 6535:6565 <> twoHilbertsPositiveRefuseHonest
+R6579:6579 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6703:6709 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6591:6604 UrgeKnowing.TwoHilberts <> PersistHilbert rec
+binder 6587:6587 <> p:65
+R6644:6651 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6612:6641 UrgeKnowing.TwoHilberts <> refuseFusePersistIntoOccupancy def
+R6643:6643 UrgeKnowing.TwoHilberts <> p:65 var
+R6653:6664 UrgeKnowing.TwoHilberts <> fuse_refused constr
+R6668:6702 UrgeKnowing.TwoHilberts <> hilbert_fuse_persist_into_occupancy constr
+R6710:6710 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6836:6842 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6722:6737 UrgeKnowing.TwoHilberts <> OccupancyHilbert rec
+binder 6718:6718 <> o:66
+R6777:6784 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6745:6774 UrgeKnowing.TwoHilberts <> refuseFuseOccupancyIntoPersist def
+R6776:6776 UrgeKnowing.TwoHilberts <> o:66 var
+R6786:6797 UrgeKnowing.TwoHilberts <> fuse_refused constr
+R6801:6835 UrgeKnowing.TwoHilberts <> hilbert_fuse_occupancy_into_persist constr
+R6912:6917 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6874:6876 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6843:6873 UrgeKnowing.TwoHilberts <> fusePersistIntoOccupancyRefused def
+R6877:6911 UrgeKnowing.TwoHilberts <> hilbert_fuse_persist_into_occupancy constr
+R6939:6941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6918:6938 UrgeKnowing.TwoHilberts <> homologNotCopyRefused def
+R6942:6973 UrgeKnowing.TwoHilberts <> hilbert_fuse_homolog_is_not_copy constr
+prf 6983:7017 <> two_hilberts_positive_refuse_honest
+R7021:7051 UrgeKnowing.TwoHilberts <> twoHilbertsPositiveRefuseHonest def
+R7070:7100 UrgeKnowing.TwoHilberts <> twoHilbertsPositiveRefuseHonest def
+R7132:7166 UrgeKnowing.TwoHilberts <> fuse_persist_into_occupancy_refused thm
+R7132:7166 UrgeKnowing.TwoHilberts <> fuse_persist_into_occupancy_refused thm
+R7202:7236 UrgeKnowing.TwoHilberts <> fuse_occupancy_into_persist_refused thm
+R7202:7236 UrgeKnowing.TwoHilberts <> fuse_occupancy_into_persist_refused thm
+prf 7277:7303 <> persist_index_deterministic
+R7318:7320 Corelib.Init.Datatypes <> nat ind
+binder 7306:7309 <> ucrs:67
+binder 7311:7314 <> grid:68
+R7356:7358 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7327:7345 UrgeKnowing.TwoHilberts <> persistHilbertIndex def
+R7347:7350 UrgeKnowing.TwoHilberts <> ucrs:67 var
+R7352:7355 UrgeKnowing.TwoHilberts <> grid:68 var
+R7359:7377 UrgeKnowing.TwoHilberts <> persistHilbertIndex def
+R7379:7382 UrgeKnowing.TwoHilberts <> ucrs:67 var
+R7384:7387 UrgeKnowing.TwoHilberts <> grid:68 var
+prf 7422:7450 <> occupancy_index_cell_distinct
+R7535:7540 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7456:7468 UrgeKnowing.TwoHilberts <> occupancy_raw proj
+R7475:7495 UrgeKnowing.TwoHilberts <> occupancyHilbertIndex def
+R7506:7506 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7519:7520 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7533:7533 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7541:7553 UrgeKnowing.TwoHilberts <> occupancy_raw proj
+R7560:7580 UrgeKnowing.TwoHilberts <> occupancyHilbertIndex def
+R7591:7591 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7604:7605 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R7618:7618 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+def 7672:7694 <> persistHilbertAuthority
+R7698:7703 Stdlib.Strings.String <> string ind
+def 7771:7795 <> occupancyHilbertAuthority
+R7799:7804 Stdlib.Strings.String <> string ind
+def 7881:7909 <> twoHilbertsBlueprintAuthority
+R7913:7918 Stdlib.Strings.String <> string ind
+def 7978:7999 <> carrierStrataAuthority
+R8003:8008 Stdlib.Strings.String <> string ind
+def 8068:8093 <> physicalSecondLawAuthority
+R8097:8102 Stdlib.Strings.String <> string ind
+def 8154:8170 <> twoHilbertsCellId
+R8174:8179 Stdlib.Strings.String <> string ind
+def 8232:8250 <> twoHilbertsNonClaim
+R8254:8259 Stdlib.Strings.String <> string ind
+def 8602:8633 <> persistNotOccupancyCopyCollision
+R8637:8642 Stdlib.Strings.String <> string ind
+prf 8763:8791 <> persist_ne_occupancy_morphism
+R8820:8823 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8797:8819 UrgeKnowing.TwoHilberts <> persistHilbertAuthority def
+R8824:8848 UrgeKnowing.TwoHilberts <> occupancyHilbertAuthority def
+prf 8884:8903 <> two_hilberts_cell_id
+R8926:8928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8909:8925 UrgeKnowing.TwoHilberts <> twoHilbertsCellId def
+prf 8995:9030 <> two_hilberts_cites_persist_authority
+R9059:9062 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9036:9058 UrgeKnowing.TwoHilberts <> persistHilbertAuthority def
+prf 9100:9137 <> two_hilberts_cites_occupancy_authority
+R9168:9171 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9143:9167 UrgeKnowing.TwoHilberts <> occupancyHilbertAuthority def
+prf 9209:9246 <> two_hilberts_cites_physical_second_law
+R9278:9280 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9252:9277 UrgeKnowing.TwoHilberts <> physicalSecondLawAuthority def
+prf 9346:9379 <> two_hilberts_collision_fence_named
+R9417:9420 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9385:9416 UrgeKnowing.TwoHilberts <> persistNotOccupancyCopyCollision def
+def 9463:9501 <> twoHilbertsSecondLawConservationFraming
+R9505:9510 Stdlib.Strings.String <> string ind
+prf 9599:9635 <> two_hilberts_not_second_hilbert_axiom
+R9680:9685 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9641:9679 UrgeKnowing.TwoHilberts <> twoHilbertsSecondLawConservationFraming def
+def 9748:9769 <> physicsGreenAuthorized
+R9781:9785 Corelib.Init.Logic <> False ind
+prf 9795:9826 <> two_hilberts_physics_green_false
+R9832:9833 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R9834:9855 UrgeKnowing.TwoHilberts <> physicsGreenAuthorized def
+prf 9895:9923 <> two_hilberts_modality_unwired
+R9955:9957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9929:9954 UrgeKnowing.TwoHilberts <> twoHilbertsModalityCurrent def
+R9958:9977 UrgeKnowing.TwoHilberts <> two_hilberts_unwired constr
+def 10017:10031 <> knowingFiberTag
+R10035:10040 Stdlib.Strings.String <> string ind
+def 10082:10100 <> mesoThermoGRestated
+R10104:10109 Stdlib.Strings.String <> string ind
+prf 10154:10189 <> two_hilberts_not_meso_thermo_restate
+R10214:10217 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10195:10213 UrgeKnowing.TwoHilberts <> twoHilbertsNonClaim def
+R10218:10236 UrgeKnowing.TwoHilberts <> mesoThermoGRestated def
+prf 10272:10303 <> two_hilberts_knowing_fiber_named
+R10324:10326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10309:10323 UrgeKnowing.TwoHilberts <> knowingFiberTag def

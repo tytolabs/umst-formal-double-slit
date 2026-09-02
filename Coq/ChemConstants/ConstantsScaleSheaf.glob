@@ -1,0 +1,595 @@
+DIGEST 05353cc2407871dd4eb7f77bd5ff6f9d
+FUMSTFormal.ChemConstants.ConstantsScaleSheaf
+R1116:1138 UMSTFormal.ChemGeometry <> <> lib
+R1156:1189 UMSTFormal.EnvironmentScaleCommute <> <> lib
+R1219:1223 Stdlib.Reals.Reals <> <> lib
+R1225:1229 Stdlib.Reals.RIneq <> <> lib
+R1231:1233 Stdlib.micromega.Lra <> <> lib
+ind 1489:1510 <> ConstantsScaleModality
+constr 1526:1548 <> constants_scale_unwired
+constr 1552:1574 <> constants_scale_assumed
+constr 1580:1601 <> constants_scale_proved
+constr 1605:1629 <> constants_scale_surrogate
+scheme 1489:1510 <> ConstantsScaleModality_rect
+scheme 1489:1510 <> ConstantsScaleModality_ind
+scheme 1489:1510 <> ConstantsScaleModality_rec
+scheme 1489:1510 <> ConstantsScaleModality_sind
+def 1644:1672 <> constantsScaleModalityCurrent
+R1676:1697 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleModality ind
+R1704:1726 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constants_scale_unwired constr
+rec 1737:1754 <> TemperatureSection
+proj 1791:1796 <> kelvin
+R1800:1800 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+rec 1813:1827 <> PressureSection
+proj 1861:1866 <> pascal
+R1870:1870 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+rec 1883:1903 <> NamedConstantsSection
+proj 1943:1954 <> gasConstantR
+proj 1963:1972 <> boltzmannK
+proj 1981:1998 <> standardPressurePa
+R1958:1958 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R1976:1976 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2002:2002 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+rec 2015:2035 <> ConstantsSheafSection
+proj 2075:2085 <> temperature
+proj 2111:2118 <> pressure
+proj 2141:2145 <> named
+R2089:2106 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> TemperatureSection rec
+R2122:2136 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> PressureSection rec
+R2149:2169 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> NamedConstantsSection rec
+rec 2182:2200 <> ConstantsSheafField
+proj 2238:2246 <> atQuantum
+proj 2275:2280 <> atMeso
+proj 2309:2315 <> atMacro
+R2250:2270 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+R2284:2304 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+R2319:2339 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+def 2356:2371 <> constantsAtLevel
+R2378:2396 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 2374:2374 <> f:19
+R2406:2415 UMSTFormal.ChemGeometry <> ScaleLevel ind
+binder 2400:2402 <> lvl:20
+R2422:2442 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+R2455:2457 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> lvl:20 var
+R2468:2480 UMSTFormal.ChemGeometry <> scale_quantum constr
+R2485:2493 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R2495:2495 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:19 var
+R2501:2510 UMSTFormal.ChemGeometry <> scale_meso constr
+R2515:2520 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMeso proj
+R2522:2522 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:19 var
+R2528:2538 UMSTFormal.ChemGeometry <> scale_macro constr
+R2543:2549 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMacro proj
+R2551:2551 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:19 var
+def 2572:2596 <> temperatureSectionAtLevel
+R2603:2621 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 2599:2599 <> f:22
+R2631:2640 UMSTFormal.ChemGeometry <> ScaleLevel ind
+binder 2625:2627 <> lvl:23
+R2647:2664 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> TemperatureSection rec
+R2671:2681 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperature proj
+R2684:2699 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLevel def
+R2701:2701 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:22 var
+R2703:2705 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> lvl:23 var
+def 2721:2742 <> pressureSectionAtLevel
+R2749:2767 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 2745:2745 <> f:24
+R2777:2786 UMSTFormal.ChemGeometry <> ScaleLevel ind
+binder 2771:2773 <> lvl:25
+R2793:2807 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> PressureSection rec
+R2814:2821 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pressure proj
+R2824:2839 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLevel def
+R2841:2841 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:24 var
+R2843:2845 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> lvl:25 var
+def 2861:2881 <> namedConstantsAtLevel
+R2888:2906 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 2884:2884 <> f:26
+R2916:2925 UMSTFormal.ChemGeometry <> ScaleLevel ind
+binder 2910:2912 <> lvl:27
+R2932:2952 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> NamedConstantsSection rec
+R2959:2963 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> named proj
+R2966:2981 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLevel def
+R2983:2983 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:26 var
+R2985:2987 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> lvl:27 var
+def 3003:3022 <> constantsAtLegSource
+R3029:3047 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 3025:3025 <> f:28
+R3059:3075 UMSTFormal.ChemGeometry <> ScaleCommutingLeg ind
+binder 3053:3055 <> leg:29
+R3080:3100 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+R3107:3122 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLevel def
+R3124:3124 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:28 var
+R3127:3140 UMSTFormal.ChemGeometry <> scaleLegSource def
+R3142:3144 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> leg:29 var
+def 3160:3179 <> constantsAtLegTarget
+R3186:3204 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 3182:3182 <> f:30
+R3216:3232 UMSTFormal.ChemGeometry <> ScaleCommutingLeg ind
+binder 3210:3212 <> leg:31
+R3237:3257 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+R3264:3279 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLevel def
+R3281:3281 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:30 var
+R3284:3297 UMSTFormal.ChemGeometry <> scaleLegTarget def
+R3299:3301 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> leg:31 var
+prf 3537:3575 <> constants_at_leg_source_quantum_to_meso
+R3582:3600 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 3578:3578 <> f:32
+R3651:3653 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3607:3626 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R3628:3628 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:32 var
+R3630:3650 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMeso def
+R3654:3662 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R3664:3664 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:32 var
+prf 3699:3737 <> constants_at_leg_target_quantum_to_meso
+R3744:3762 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 3740:3740 <> f:33
+R3813:3815 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3769:3788 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R3790:3790 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:33 var
+R3792:3812 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMeso def
+R3816:3821 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMeso proj
+R3823:3823 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:33 var
+prf 3858:3894 <> constants_at_leg_source_meso_to_macro
+R3901:3919 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 3897:3897 <> f:34
+R3968:3970 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3926:3945 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R3947:3947 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:34 var
+R3949:3967 UMSTFormal.EnvironmentScaleCommute <> scaleLegMesoToMacro def
+R3971:3976 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMeso proj
+R3978:3978 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:34 var
+prf 4013:4049 <> constants_at_leg_target_meso_to_macro
+R4056:4074 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 4052:4052 <> f:35
+R4123:4125 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4081:4100 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R4102:4102 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:35 var
+R4104:4122 UMSTFormal.EnvironmentScaleCommute <> scaleLegMesoToMacro def
+R4126:4132 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMacro proj
+R4134:4134 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:35 var
+prf 4169:4215 <> constants_at_leg_source_quantum_to_macro_direct
+R4222:4240 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 4218:4218 <> f:36
+R4298:4300 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4247:4266 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R4268:4268 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:36 var
+R4270:4297 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMacroDirect def
+R4301:4309 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R4311:4311 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:36 var
+prf 4346:4392 <> constants_at_leg_target_quantum_to_macro_direct
+R4399:4417 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 4395:4395 <> f:37
+R4475:4477 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4424:4443 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R4445:4445 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:37 var
+R4447:4474 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMacroDirect def
+R4478:4484 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMacro proj
+R4486:4486 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:37 var
+prf 4521:4551 <> constants_indirect_leg_composes
+R4558:4576 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 4554:4554 <> f:38
+R4627:4631 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4583:4602 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R4604:4604 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:38 var
+R4606:4626 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMeso def
+R4632:4651 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R4653:4653 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:38 var
+R4655:4673 UMSTFormal.EnvironmentScaleCommute <> scaleLegMesoToMacro def
+prf 4708:4739 <> constants_direct_endpoints_match
+R4746:4764 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 4742:4742 <> f:39
+R4871:4876 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4815:4819 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4771:4790 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R4792:4792 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:39 var
+R4794:4814 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMeso def
+R4820:4839 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R4841:4841 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:39 var
+R4843:4870 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMacroDirect def
+R4919:4923 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4877:4896 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R4898:4898 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:39 var
+R4900:4918 UMSTFormal.EnvironmentScaleCommute <> scaleLegMesoToMacro def
+R4924:4943 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R4945:4945 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:39 var
+R4947:4974 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMacroDirect def
+prf 5003:5051 <> temperature_section_at_leg_source_quantum_to_meso
+R5058:5076 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 5054:5054 <> f:40
+R5141:5145 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5083:5093 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperature proj
+R5096:5115 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R5117:5117 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:40 var
+R5119:5139 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMeso def
+R5146:5156 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperature proj
+R5159:5167 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R5169:5169 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:40 var
+prf 5205:5248 <> pressure_section_at_leg_target_meso_to_macro
+R5255:5273 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 5251:5251 <> f:41
+R5333:5337 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5280:5287 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pressure proj
+R5290:5309 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R5311:5311 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:41 var
+R5313:5331 UMSTFormal.EnvironmentScaleCommute <> scaleLegMesoToMacro def
+R5338:5345 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pressure proj
+R5348:5354 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMacro proj
+R5356:5356 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:41 var
+prf 5392:5444 <> named_constants_at_leg_source_quantum_to_macro_direct
+R5451:5469 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 5447:5447 <> f:42
+R5535:5539 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5476:5480 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> named proj
+R5483:5502 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R5504:5504 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:42 var
+R5506:5533 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMacroDirect def
+R5540:5544 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> named proj
+R5547:5555 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R5557:5557 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:42 var
+rec 5594:5619 <> ConstantsScaleSheafBinding
+proj 5664:5669 <> parent
+proj 5694:5698 <> field
+proj 5725:5736 <> scaleCommute
+R5673:5689 UMSTFormal.ChemGeometry <> ElementElectronic rec
+R5702:5720 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+R5740:5751 UMSTFormal.EnvironmentScaleCommute <> ScaleCommute rec
+def 5768:5788 <> constantsScaleElement
+R5795:5820 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafBinding rec
+binder 5791:5791 <> b:47
+R5825:5836 UMSTFormal.ChemGeometry <> AtomicNumber rec
+R5879:5884 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R5886:5886 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> b:47 var
+R5849:5867 UMSTFormal.ChemGeometry <> mkElementElectronic constr
+prf 5901:5936 <> constants_scale_binding_same_element
+R5945:5970 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafBinding rec
+binder 5939:5939 <> a:48
+binder 5941:5941 <> b:49
+R6005:6007 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5982:6002 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleElement def
+R6004:6004 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> a:48 var
+R6008:6028 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleElement def
+R6030:6030 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> b:49 var
+binder 5976:5978 <> Heq:50
+R6074:6079 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R6081:6081 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> a:48 var
+R6043:6061 UMSTFormal.ChemGeometry <> mkElementElectronic constr
+R6125:6130 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R6132:6132 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> b:49 var
+R6094:6112 UMSTFormal.ChemGeometry <> mkElementElectronic constr
+R6141:6143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6164:6184 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleElement def
+R6206:6211 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R6206:6211 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R6241:6246 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R6241:6246 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+rec 6306:6331 <> ConstantsScaleSheafDiagram
+proj 6376:6380 <> scale
+proj 6407:6420 <> constantsField
+R6384:6402 UMSTFormal.EnvironmentScaleCommute <> ScaleCommuteDiagram rec
+R6424:6442 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+def 6459:6489 <> constantsScaleSheafDiagramNamed
+R6496:6514 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 6492:6492 <> f:54
+R6521:6546 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafDiagram rec
+R6556:6560 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R6556:6560 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R6556:6560 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R6596:6609 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsField proj
+R6596:6609 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsField proj
+R6565:6588 UMSTFormal.EnvironmentScaleCommute <> scaleCommuteDiagramNamed def
+R6614:6614 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:54 var
+prf 6627:6667 <> constants_scale_sheaf_diagram_named_scale
+R6674:6692 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 6670:6670 <> f:55
+R6740:6742 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6699:6703 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R6706:6736 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R6738:6738 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:55 var
+R6743:6766 UMSTFormal.EnvironmentScaleCommute <> scaleCommuteDiagramNamed def
+rec 6802:6820 <> ConstantsScaleSheaf
+proj 6858:6864 <> binding
+proj 6898:6904 <> diagram
+proj 6938:6950 <> scaleModality
+proj 6978:6989 <> edgeModality
+proj 7017:7038 <> constantsScaleModality
+R6868:6893 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafBinding rec
+R6908:6933 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafDiagram rec
+R6954:6973 UMSTFormal.ChemGeometry <> ChemGeometryModality ind
+R6993:7012 UMSTFormal.ChemGeometry <> ChemGeometryModality ind
+R7042:7063 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleModality ind
+def 7080:7100 <> namedConstantsAmbient
+R7104:7124 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> NamedConstantsSection rec
+R7134:7145 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> gasConstantR proj
+R7134:7145 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> gasConstantR proj
+R7134:7145 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> gasConstantR proj
+R7168:7177 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> boltzmannK proj
+R7168:7177 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> boltzmannK proj
+R7201:7218 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> standardPressurePa proj
+R7201:7218 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> standardPressurePa proj
+def 7246:7273 <> constantsSheafSectionAmbient
+R7277:7297 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafSection rec
+R7307:7317 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperature proj
+R7307:7317 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperature proj
+R7307:7317 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperature proj
+R7351:7358 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pressure proj
+R7351:7358 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pressure proj
+R7392:7396 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> named proj
+R7392:7396 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> named proj
+R7325:7330 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> kelvin proj
+R7325:7330 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> kelvin proj
+R7325:7330 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> kelvin proj
+R7366:7371 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pascal proj
+R7366:7371 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pascal proj
+R7366:7371 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pascal proj
+R7401:7421 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> namedConstantsAmbient def
+def 7439:7464 <> constantsSheafFieldAmbient
+R7468:7486 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+R7496:7504 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R7496:7504 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R7496:7504 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atQuantum proj
+R7544:7549 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMeso proj
+R7544:7549 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMeso proj
+R7589:7595 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMacro proj
+R7589:7595 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> atMacro proj
+R7509:7536 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafSectionAmbient def
+R7554:7581 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafSectionAmbient def
+R7600:7627 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafSectionAmbient def
+def 7645:7670 <> constantsScaleSheafUnwired
+R7677:7693 UMSTFormal.ChemGeometry <> ElementElectronic rec
+binder 7673:7673 <> e:62
+R7698:7716 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheaf rec
+R7726:7732 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R7726:7732 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R7726:7732 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R7864:7870 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> diagram proj
+R7864:7870 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> diagram proj
+R7940:7952 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleModality proj
+R7940:7952 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleModality proj
+R7991:8002 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> edgeModality proj
+R7991:8002 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> edgeModality proj
+R8041:8062 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModality proj
+R8041:8062 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModality proj
+R7747:7752 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R7747:7752 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R7747:7752 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R7770:7774 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> field proj
+R7770:7774 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> field proj
+R7817:7828 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleCommute proj
+R7817:7828 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleCommute proj
+R7757:7757 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:62 var
+R7779:7804 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafFieldAmbient def
+R7833:7851 UMSTFormal.EnvironmentScaleCommute <> scaleCommuteUnwired def
+R7853:7853 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:62 var
+R7875:7905 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R7907:7932 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafFieldAmbient def
+R7957:7983 UMSTFormal.ChemGeometry <> chemGeometryModalityCurrent def
+R8007:8033 UMSTFormal.ChemGeometry <> chemGeometryModalityCurrent def
+R8067:8095 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModalityCurrent def
+prf 8108:8145 <> constants_scale_sheaf_modality_unwired
+R8152:8170 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheaf rec
+binder 8148:8148 <> c:63
+R8334:8340 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R8222:8227 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8192:8194 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8177:8189 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleModality proj
+R8191:8191 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:63 var
+R8195:8221 UMSTFormal.ChemGeometry <> chemGeometryModalityCurrent def
+R8272:8277 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8242:8244 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8228:8239 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> edgeModality proj
+R8241:8241 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:63 var
+R8245:8271 UMSTFormal.ChemGeometry <> chemGeometryModalityCurrent def
+R8302:8304 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8278:8299 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModality proj
+R8301:8301 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:63 var
+R8305:8333 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModalityCurrent def
+R8371:8376 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8356:8358 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8341:8353 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleModality proj
+R8355:8355 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:63 var
+R8359:8370 UMSTFormal.ChemGeometry <> geom_unwired constr
+R8406:8411 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8391:8393 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8377:8388 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> edgeModality proj
+R8390:8390 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:63 var
+R8394:8405 UMSTFormal.ChemGeometry <> geom_unwired constr
+R8436:8438 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8412:8433 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModality proj
+R8435:8435 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:63 var
+R8439:8461 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constants_scale_unwired constr
+R8480:8506 UMSTFormal.ChemGeometry <> chemGeometryModalityCurrent def
+R8509:8537 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleModalityCurrent def
+prf 8561:8596 <> constants_scale_sheaf_lattice_anchor
+R8603:8621 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheaf rec
+binder 8599:8599 <> c:64
+R8676:8680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8628:8643 UMSTFormal.ChemGeometry <> madelungPriority def
+R8646:8653 UMSTFormal.ChemGeometry <> occupied proj
+R8656:8661 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R8664:8670 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R8672:8672 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:64 var
+R8681:8696 UMSTFormal.ChemGeometry <> madelungPriority def
+R8699:8706 UMSTFormal.ChemGeometry <> occupied proj
+R8709:8714 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R8717:8723 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R8725:8725 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:64 var
+prf 8763:8804 <> constants_scale_sheaf_diagram_scale_fields
+R8811:8829 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 8807:8807 <> f:65
+R8911:8916 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8887:8889 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8836:8842 UMSTFormal.EnvironmentScaleCommute <> viaMeso proj
+R8845:8849 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R8852:8882 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R8884:8884 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:65 var
+R8890:8910 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMeso def
+R8992:8997 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8970:8972 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8917:8925 UMSTFormal.EnvironmentScaleCommute <> thenMacro proj
+R8928:8932 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R8935:8965 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R8967:8967 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:65 var
+R8973:8991 UMSTFormal.EnvironmentScaleCommute <> scaleLegMesoToMacro def
+R9048:9050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8998:9003 UMSTFormal.EnvironmentScaleCommute <> direct proj
+R9006:9010 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9013:9043 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9045:9045 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:65 var
+R9051:9078 UMSTFormal.EnvironmentScaleCommute <> scaleLegQuantumToMacroDirect def
+prf 9107:9145 <> constants_scale_sheaf_indirect_composes
+R9152:9170 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 9148:9148 <> f:66
+R9253:9257 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9177:9196 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R9198:9198 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:66 var
+R9201:9207 UMSTFormal.EnvironmentScaleCommute <> viaMeso proj
+R9210:9214 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9217:9247 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9249:9249 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:66 var
+R9258:9277 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R9279:9279 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:66 var
+R9282:9290 UMSTFormal.EnvironmentScaleCommute <> thenMacro proj
+R9293:9297 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9300:9330 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9332:9332 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:66 var
+R9362:9392 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constants_indirect_leg_composes thm
+R9362:9392 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constants_indirect_leg_composes thm
+prf 9407:9444 <> constants_scale_sheaf_direct_endpoints
+R9451:9469 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 9447:9447 <> f:67
+R9632:9637 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9552:9556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9476:9495 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R9497:9497 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9500:9506 UMSTFormal.EnvironmentScaleCommute <> viaMeso proj
+R9509:9513 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9516:9546 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9548:9548 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9557:9576 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegSource def
+R9578:9578 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9581:9586 UMSTFormal.EnvironmentScaleCommute <> direct proj
+R9589:9593 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9596:9626 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9628:9628 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9716:9720 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9638:9657 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R9659:9659 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9662:9670 UMSTFormal.EnvironmentScaleCommute <> thenMacro proj
+R9673:9677 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9680:9710 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9712:9712 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9721:9740 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsAtLegTarget def
+R9742:9742 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9745:9750 UMSTFormal.EnvironmentScaleCommute <> direct proj
+R9753:9757 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scale proj
+R9760:9790 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafDiagramNamed def
+R9792:9792 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:67 var
+R9822:9853 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constants_direct_endpoints_match thm
+R9822:9853 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constants_direct_endpoints_match thm
+prf 9868:9911 <> constants_scale_sheaf_unwired_binding_parent
+R9918:9934 UMSTFormal.ChemGeometry <> ElementElectronic rec
+binder 9914:9914 <> e:68
+R9988:9990 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9941:9946 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> parent proj
+R9949:9955 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R9958:9983 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafUnwired def
+R9985:9985 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:68 var
+R9991:9991 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:68 var
+prf 10026:10075 <> constants_scale_sheaf_unwired_scale_commute_parent
+R10082:10098 UMSTFormal.ChemGeometry <> ElementElectronic rec
+binder 10078:10078 <> e:69
+R10172:10174 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10105:10115 UMSTFormal.EnvironmentScaleCommute <> scaleParent proj
+R10118:10129 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> scaleCommute proj
+R10132:10138 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> binding proj
+R10141:10166 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafUnwired def
+R10168:10168 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:69 var
+R10175:10175 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:69 var
+prf 10210:10250 <> constants_scale_sheaf_ambient_temperature
+R10257:10275 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 10253:10253 <> f:70
+R10288:10290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10287:10287 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:70 var
+R10291:10316 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafFieldAmbient def
+binder 10281:10283 <> Heq:71
+R10364:10369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10386:10388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10323:10347 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> temperatureSectionAtLevel def
+R10349:10349 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:70 var
+R10351:10363 UMSTFormal.ChemGeometry <> scale_quantum constr
+R10370:10375 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> kelvin proj
+R10370:10375 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> kelvin proj
+R10370:10375 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> kelvin proj
+prf 10440:10477 <> constants_scale_sheaf_ambient_pressure
+R10484:10502 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsSheafField rec
+binder 10480:10480 <> f:72
+R10515:10517 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10514:10514 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:72 var
+R10518:10543 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsSheafFieldAmbient def
+binder 10508:10510 <> Heq:73
+R10586:10591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10608:10610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10550:10571 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pressureSectionAtLevel def
+R10573:10573 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> f:72 var
+R10575:10585 UMSTFormal.ChemGeometry <> scale_macro constr
+R10592:10597 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pascal proj
+R10592:10597 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pascal proj
+R10592:10597 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> pascal proj
+prf 10662:10691 <> constants_classify_bulk_of_neg
+R10700:10700 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 10694:10696 <> sdf:74
+R10711:10713 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R10708:10710 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> sdf:74 var
+binder 10704:10704 <> h:75
+R10744:10746 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10721:10739 UMSTFormal.ChemGeometry <> classifyEdgeSurface def
+R10741:10743 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> sdf:74 var
+R10747:10757 UMSTFormal.ChemGeometry <> regime_bulk constr
+R10775:10805 UMSTFormal.ChemGeometry <> classifyEdgeSurface_bulk_of_neg thm
+R10775:10805 UMSTFormal.ChemGeometry <> classifyEdgeSurface_bulk_of_neg thm
+prf 10831:10863 <> constants_classify_surface_of_pos
+R10872:10872 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 10866:10868 <> sdf:76
+R10885:10886 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10894:10894 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10890:10892 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R10887:10889 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> sdf:76 var
+binder 10878:10881 <> hneg:77
+R10907:10910 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10904:10906 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> sdf:76 var
+binder 10898:10900 <> hne:78
+R10941:10943 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10918:10936 UMSTFormal.ChemGeometry <> classifyEdgeSurface def
+R10938:10940 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> sdf:76 var
+R10944:10957 UMSTFormal.ChemGeometry <> regime_surface constr
+R10975:11008 UMSTFormal.ChemGeometry <> classifyEdgeSurface_surface_of_pos thm
+R10975:11008 UMSTFormal.ChemGeometry <> classifyEdgeSurface_surface_of_pos thm
+def 11059:11095 <> constantsScaleSheafEqualityAuthorized
+R11105:11130 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafDiagram rec
+binder 11100:11101 <> _d:79
+R11143:11147 Corelib.Init.Logic <> False ind
+prf 11157:11206 <> constants_scale_sheaf_equality_physics_green_false
+R11215:11240 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheafDiagram rec
+binder 11211:11211 <> d:80
+R11247:11248 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R11249:11285 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafEqualityAuthorized def
+R11287:11287 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> d:80 var
+def 11332:11372 <> constantsScaleSheafPhysicsGreenAuthorized
+R11382:11400 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheaf rec
+binder 11377:11378 <> _c:81
+R11413:11417 Corelib.Init.Logic <> False ind
+prf 11427:11467 <> constants_scale_sheaf_physics_green_false
+R11474:11492 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> ConstantsScaleSheaf rec
+binder 11470:11470 <> c:82
+R11499:11500 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R11501:11541 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleSheafPhysicsGreenAuthorized def
+R11543:11543 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> c:82 var
+def 11588:11640 <> constantsScaleElementElectronicPhysicsGreenAuthorized
+R11650:11666 UMSTFormal.ChemGeometry <> ElementElectronic rec
+binder 11645:11646 <> _e:83
+R11679:11683 Corelib.Init.Logic <> False ind
+prf 11693:11735 <> constants_scale_element_physics_green_false
+R11742:11758 UMSTFormal.ChemGeometry <> ElementElectronic rec
+binder 11738:11738 <> e:84
+R11765:11766 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R11767:11819 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> constantsScaleElementElectronicPhysicsGreenAuthorized def
+R11821:11821 UMSTFormal.ChemConstants.ConstantsScaleSheaf <> e:84 var

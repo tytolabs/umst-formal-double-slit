@@ -1,0 +1,539 @@
+DIGEST c8dda38eca101986e3ce99bc34fc9f31
+FUMST.ChemConstants.LinearConservation
+R1126:1130 Stdlib.Arith.Arith <> <> lib
+R1132:1137 Stdlib.Strings.String <> <> lib
+R1139:1142 Stdlib.Bool.Bool <> <> lib
+R1144:1146 Stdlib.micromega.Lia <> <> lib
+R1148:1151 Stdlib.Lists.List <> <> lib
+R1161:1173 Stdlib.Lists.List ListNotations <> mod
+ind 1429:1454 <> LinearConservationModality
+constr 1470:1496 <> linear_conservation_unwired
+constr 1502:1528 <> linear_conservation_assumed
+constr 1534:1559 <> linear_conservation_proved
+constr 1565:1593 <> linear_conservation_surrogate
+scheme 1429:1454 <> LinearConservationModality_rect
+scheme 1429:1454 <> LinearConservationModality_ind
+scheme 1429:1454 <> LinearConservationModality_rec
+scheme 1429:1454 <> LinearConservationModality_sind
+def 1608:1640 <> linearConservationModalityCurrent
+R1644:1669 UMST.ChemConstants.LinearConservation <> LinearConservationModality ind
+R1676:1702 UMST.ChemConstants.LinearConservation <> linear_conservation_unwired constr
+ind 1943:1959 <> conservation_axis
+constr 1975:1983 <> axis_mass
+constr 1989:1999 <> axis_charge
+constr 2005:2019 <> axis_atom_count
+constr 2025:2037 <> axis_enthalpy
+scheme 1943:1959 <> conservation_axis_rect
+scheme 1943:1959 <> conservation_axis_ind
+scheme 1943:1959 <> conservation_axis_rec
+scheme 1943:1959 <> conservation_axis_sind
+def 2052:2072 <> conservation_axis_beq
+R2081:2097 UMST.ChemConstants.LinearConservation <> conservation_axis ind
+binder 2075:2075 <> a:5
+binder 2077:2077 <> b:6
+R2102:2105 Corelib.Init.Datatypes <> bool ind
+R2121:2121 UMST.ChemConstants.LinearConservation <> b:6 var
+R2118:2118 UMST.ChemConstants.LinearConservation <> a:5 var
+R2132:2140 UMST.ChemConstants.LinearConservation <> axis_mass constr
+R2143:2151 UMST.ChemConstants.LinearConservation <> axis_mass constr
+R2156:2159 Corelib.Init.Datatypes <> true constr
+R2165:2175 UMST.ChemConstants.LinearConservation <> axis_charge constr
+R2178:2188 UMST.ChemConstants.LinearConservation <> axis_charge constr
+R2193:2196 Corelib.Init.Datatypes <> true constr
+R2202:2216 UMST.ChemConstants.LinearConservation <> axis_atom_count constr
+R2219:2233 UMST.ChemConstants.LinearConservation <> axis_atom_count constr
+R2238:2241 Corelib.Init.Datatypes <> true constr
+R2247:2259 UMST.ChemConstants.LinearConservation <> axis_enthalpy constr
+R2262:2274 UMST.ChemConstants.LinearConservation <> axis_enthalpy constr
+R2279:2282 Corelib.Init.Datatypes <> true constr
+R2296:2300 Corelib.Init.Datatypes <> false constr
+prf 2316:2341 <> conservation_axis_beq_refl
+R2348:2364 UMST.ChemConstants.LinearConservation <> conservation_axis ind
+binder 2344:2344 <> a:9
+R2396:2398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2371:2391 UMST.ChemConstants.LinearConservation <> conservation_axis_beq def
+R2393:2393 UMST.ChemConstants.LinearConservation <> a:9 var
+R2395:2395 UMST.ChemConstants.LinearConservation <> a:9 var
+R2399:2402 Corelib.Init.Datatypes <> true constr
+prf 2449:2468 <> mass_axis_not_charge
+R2517:2519 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2474:2494 UMST.ChemConstants.LinearConservation <> conservation_axis_beq def
+R2496:2504 UMST.ChemConstants.LinearConservation <> axis_mass constr
+R2506:2516 UMST.ChemConstants.LinearConservation <> axis_charge constr
+R2520:2524 Corelib.Init.Datatypes <> false constr
+rec 2782:2793 <> linear_coeff
+proj 2809:2818 <> coeff_sign
+proj 2830:2844 <> coeff_magnitude
+R2822:2825 Corelib.Init.Datatypes <> bool ind
+R2848:2850 Corelib.Init.Datatypes <> nat ind
+def 2867:2887 <> linear_coeff_positive
+R2894:2896 Corelib.Init.Datatypes <> nat ind
+binder 2890:2890 <> m:13
+R2901:2912 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+R2922:2931 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R2922:2931 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R2922:2931 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R2942:2956 UMST.ChemConstants.LinearConservation <> coeff_magnitude proj
+R2942:2956 UMST.ChemConstants.LinearConservation <> coeff_magnitude proj
+R2936:2939 Corelib.Init.Datatypes <> true constr
+R2961:2961 UMST.ChemConstants.LinearConservation <> m:13 var
+def 2979:2999 <> linear_coeff_negative
+R3006:3008 Corelib.Init.Datatypes <> nat ind
+binder 3002:3002 <> m:14
+R3013:3024 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+R3034:3043 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R3034:3043 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R3034:3043 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R3055:3069 UMST.ChemConstants.LinearConservation <> coeff_magnitude proj
+R3055:3069 UMST.ChemConstants.LinearConservation <> coeff_magnitude proj
+R3048:3052 Corelib.Init.Datatypes <> false constr
+R3074:3074 UMST.ChemConstants.LinearConservation <> m:14 var
+def 3090:3109 <> row_signed_magnitude
+R3117:3120 Corelib.Init.Datatypes <> list ind
+R3122:3133 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 3112:3113 <> cs:15
+R3148:3151 Corelib.Init.Datatypes <> bool ind
+binder 3137:3144 <> positive:16
+R3156:3158 Corelib.Init.Datatypes <> nat ind
+R3171:3172 UMST.ChemConstants.LinearConservation <> cs:15 var
+R3183:3185 Corelib.Init.Datatypes <> nil constr
+R3197:3200 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3227:3246 UMST.ChemConstants.LinearConservation <> row_signed_magnitude:17 def
+R3253:3260 UMST.ChemConstants.LinearConservation <> positive:16 var
+binder 3219:3222 <> tail:19
+R3274:3281 Stdlib.Bool.Bool <> eqb def
+R3284:3293 UMST.ChemConstants.LinearConservation <> coeff_sign proj
+R3298:3305 UMST.ChemConstants.LinearConservation <> positive:16 var
+R3354:3357 UMST.ChemConstants.LinearConservation <> tail:19 var
+R3335:3337 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3318:3332 UMST.ChemConstants.LinearConservation <> coeff_magnitude proj
+R3338:3341 UMST.ChemConstants.LinearConservation <> tail:19 var
+def 3378:3400 <> linear_row_positive_sum
+R3408:3411 Corelib.Init.Datatypes <> list ind
+R3413:3424 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 3403:3404 <> cs:20
+R3429:3431 Corelib.Init.Datatypes <> nat ind
+R3438:3457 UMST.ChemConstants.LinearConservation <> row_signed_magnitude def
+R3459:3460 UMST.ChemConstants.LinearConservation <> cs:20 var
+R3462:3465 Corelib.Init.Datatypes <> true constr
+def 3480:3502 <> linear_row_negative_sum
+R3510:3513 Corelib.Init.Datatypes <> list ind
+R3515:3526 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 3505:3506 <> cs:21
+R3531:3533 Corelib.Init.Datatypes <> nat ind
+R3540:3559 UMST.ChemConstants.LinearConservation <> row_signed_magnitude def
+R3561:3562 UMST.ChemConstants.LinearConservation <> cs:21 var
+R3564:3568 Corelib.Init.Datatypes <> false constr
+def 3583:3609 <> linear_row_exactly_balanced
+R3617:3620 Corelib.Init.Datatypes <> list ind
+R3622:3633 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 3612:3613 <> cs:22
+R3638:3641 Corelib.Init.Datatypes <> bool ind
+R3648:3654 Stdlib.Arith.PeanoNat Nat eqb def
+R3657:3679 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R3681:3682 UMST.ChemConstants.LinearConservation <> cs:22 var
+R3686:3708 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R3710:3711 UMST.ChemConstants.LinearConservation <> cs:22 var
+def 3727:3748 <> linear_row_dissipative
+R3756:3759 Corelib.Init.Datatypes <> list ind
+R3761:3772 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 3751:3752 <> cs:23
+R3777:3780 Corelib.Init.Datatypes <> bool ind
+R3787:3793 Stdlib.Arith.PeanoNat Nat leb def
+R3796:3818 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R3820:3821 UMST.ChemConstants.LinearConservation <> cs:23 var
+R3825:3847 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R3849:3850 UMST.ChemConstants.LinearConservation <> cs:23 var
+rec 4084:4102 <> dissipative_witness
+proj 4118:4129 <> witness_axis
+proj 4154:4166 <> witness_slack
+R4133:4149 UMST.ChemConstants.LinearConservation <> conservation_axis ind
+R4170:4172 Corelib.Init.Datatypes <> nat ind
+def 4189:4210 <> linear_conservation_ok
+R4220:4223 Corelib.Init.Datatypes <> list ind
+R4225:4236 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 4215:4216 <> cs:27
+R4244:4249 Corelib.Init.Datatypes <> option ind
+R4251:4269 UMST.ChemConstants.LinearConservation <> dissipative_witness rec
+binder 4240:4240 <> w:28
+R4274:4277 Corelib.Init.Datatypes <> bool ind
+R4290:4290 UMST.ChemConstants.LinearConservation <> w:28 var
+R4301:4304 Corelib.Init.Datatypes <> None constr
+R4309:4335 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R4337:4338 UMST.ChemConstants.LinearConservation <> cs:27 var
+R4344:4347 Corelib.Init.Datatypes <> Some constr
+R4390:4393 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R4360:4386 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R4388:4389 UMST.ChemConstants.LinearConservation <> cs:27 var
+R4394:4415 UMST.ChemConstants.LinearConservation <> linear_row_dissipative def
+R4417:4418 UMST.ChemConstants.LinearConservation <> cs:27 var
+def 4665:4682 <> type02LinearProved
+R4686:4689 Corelib.Init.Datatypes <> bool ind
+R4694:4698 Corelib.Init.Datatypes <> false constr
+prf 4708:4733 <> type02_linear_proved_false
+R4755:4757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4737:4754 UMST.ChemConstants.LinearConservation <> type02LinearProved def
+R4758:4762 Corelib.Init.Datatypes <> false constr
+def 4802:4824 <> not118SquaredGreenTable
+R4828:4831 Corelib.Init.Datatypes <> bool ind
+R4836:4839 Corelib.Init.Datatypes <> true constr
+prf 4849:4875 <> not_118_squared_green_table
+R4902:4904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4879:4901 UMST.ChemConstants.LinearConservation <> not118SquaredGreenTable def
+R4905:4908 Corelib.Init.Datatypes <> true constr
+def 5172:5188 <> balanced_mass_row
+R5192:5195 Corelib.Init.Datatypes <> list ind
+R5197:5208 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+R5215:5215 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5239:5240 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5264:5264 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5216:5236 UMST.ChemConstants.LinearConservation <> linear_coeff_positive def
+R5241:5261 UMST.ChemConstants.LinearConservation <> linear_coeff_negative def
+def 5279:5299 <> imbalanced_charge_row
+R5303:5306 Corelib.Init.Datatypes <> list ind
+R5308:5319 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+R5326:5326 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5350:5351 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5375:5375 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5327:5347 UMST.ChemConstants.LinearConservation <> linear_coeff_positive def
+R5352:5372 UMST.ChemConstants.LinearConservation <> linear_coeff_negative def
+def 5390:5413 <> dissipative_enthalpy_row
+R5417:5420 Corelib.Init.Datatypes <> list ind
+R5422:5433 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+R5440:5440 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5464:5465 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5489:5489 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5441:5461 UMST.ChemConstants.LinearConservation <> linear_coeff_positive def
+R5466:5486 UMST.ChemConstants.LinearConservation <> linear_coeff_negative def
+def 5504:5520 <> mass_axis_witness
+R5524:5542 UMST.ChemConstants.LinearConservation <> dissipative_witness rec
+R5552:5563 UMST.ChemConstants.LinearConservation <> witness_axis proj
+R5552:5563 UMST.ChemConstants.LinearConservation <> witness_axis proj
+R5552:5563 UMST.ChemConstants.LinearConservation <> witness_axis proj
+R5579:5591 UMST.ChemConstants.LinearConservation <> witness_slack proj
+R5579:5591 UMST.ChemConstants.LinearConservation <> witness_slack proj
+R5568:5576 UMST.ChemConstants.LinearConservation <> axis_mass constr
+prf 5833:5855 <> balanced_mass_row_exact
+R5906:5908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5861:5887 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R5889:5905 UMST.ChemConstants.LinearConservation <> balanced_mass_row def
+R5909:5912 Corelib.Init.Datatypes <> true constr
+R5931:5957 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R5960:5976 UMST.ChemConstants.LinearConservation <> balanced_mass_row def
+R5983:6005 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R6008:6030 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R6037:6056 UMST.ChemConstants.LinearConservation <> row_signed_magnitude def
+R6059:6079 UMST.ChemConstants.LinearConservation <> linear_coeff_positive def
+R6082:6102 UMST.ChemConstants.LinearConservation <> linear_coeff_negative def
+prf 6139:6171 <> balanced_row_positive_eq_negative
+R6179:6182 Corelib.Init.Datatypes <> list ind
+R6184:6195 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 6174:6175 <> cs:30
+R6239:6244 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6232:6234 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6202:6228 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R6230:6231 UMST.ChemConstants.LinearConservation <> cs:30 var
+R6235:6238 Corelib.Init.Datatypes <> true constr
+R6271:6273 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6245:6267 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R6269:6270 UMST.ChemConstants.LinearConservation <> cs:30 var
+R6274:6296 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R6298:6299 UMST.ChemConstants.LinearConservation <> cs:30 var
+R6330:6356 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R6372:6381 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+R6372:6381 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+prf 6414:6451 <> linear_row_balanced_conserves_identity
+R6469:6472 Corelib.Init.Datatypes <> list ind
+R6474:6485 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 6464:6465 <> cs:31
+R6529:6536 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6522:6524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6492:6518 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R6520:6521 UMST.ChemConstants.LinearConservation <> cs:31 var
+R6525:6528 Corelib.Init.Datatypes <> true constr
+R6563:6565 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6537:6559 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R6561:6562 UMST.ChemConstants.LinearConservation <> cs:31 var
+R6566:6588 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R6590:6591 UMST.ChemConstants.LinearConservation <> cs:31 var
+R6622:6654 UMST.ChemConstants.LinearConservation <> balanced_row_positive_eq_negative thm
+R6622:6654 UMST.ChemConstants.LinearConservation <> balanced_row_positive_eq_negative thm
+prf 6680:6715 <> balanced_mass_row_conserves_identity
+R6762:6766 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6721:6743 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R6745:6761 UMST.ChemConstants.LinearConservation <> balanced_mass_row def
+R6767:6789 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R6791:6807 UMST.ChemConstants.LinearConservation <> balanced_mass_row def
+R6825:6862 UMST.ChemConstants.LinearConservation <> linear_row_balanced_conserves_identity thm
+R6825:6862 UMST.ChemConstants.LinearConservation <> linear_row_balanced_conserves_identity thm
+R6873:6895 UMST.ChemConstants.LinearConservation <> balanced_mass_row_exact thm
+R6873:6895 UMST.ChemConstants.LinearConservation <> balanced_mass_row_exact thm
+prf 7134:7164 <> imbalanced_charge_row_not_exact
+R7219:7221 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7170:7196 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R7198:7218 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row def
+R7222:7226 Corelib.Init.Datatypes <> false constr
+R7245:7271 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R7274:7294 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row def
+R7301:7323 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R7326:7348 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R7355:7374 UMST.ChemConstants.LinearConservation <> row_signed_magnitude def
+R7377:7397 UMST.ChemConstants.LinearConservation <> linear_coeff_positive def
+R7400:7420 UMST.ChemConstants.LinearConservation <> linear_coeff_negative def
+prf 7457:7500 <> linear_row_imbalanced_refuse_without_witness
+R7508:7511 Corelib.Init.Datatypes <> list ind
+R7513:7524 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 7503:7504 <> cs:32
+R7569:7574 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7561:7563 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7531:7557 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R7559:7560 UMST.ChemConstants.LinearConservation <> cs:32 var
+R7564:7568 Corelib.Init.Datatypes <> false constr
+R7605:7607 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7575:7596 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R7598:7599 UMST.ChemConstants.LinearConservation <> cs:32 var
+R7601:7604 Corelib.Init.Datatypes <> None constr
+R7608:7612 Corelib.Init.Datatypes <> false constr
+R7643:7664 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R7679:7705 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R7679:7705 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+prf 7765:7793 <> imbalanced_charge_row_refused
+R7848:7850 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7799:7820 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R7822:7842 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row def
+R7844:7847 Corelib.Init.Datatypes <> None constr
+R7851:7855 Corelib.Init.Datatypes <> false constr
+R7873:7916 UMST.ChemConstants.LinearConservation <> linear_row_imbalanced_refuse_without_witness thm
+R7873:7916 UMST.ChemConstants.LinearConservation <> linear_row_imbalanced_refuse_without_witness thm
+R7927:7957 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row_not_exact thm
+R7927:7957 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row_not_exact thm
+prf 8196:8231 <> dissipative_enthalpy_row_dissipative
+R8284:8286 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8237:8258 UMST.ChemConstants.LinearConservation <> linear_row_dissipative def
+R8260:8283 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row def
+R8287:8290 Corelib.Init.Datatypes <> true constr
+R8309:8330 UMST.ChemConstants.LinearConservation <> linear_row_dissipative def
+R8333:8356 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row def
+R8363:8385 UMST.ChemConstants.LinearConservation <> linear_row_positive_sum def
+R8388:8410 UMST.ChemConstants.LinearConservation <> linear_row_negative_sum def
+R8417:8436 UMST.ChemConstants.LinearConservation <> row_signed_magnitude def
+R8439:8459 UMST.ChemConstants.LinearConservation <> linear_coeff_positive def
+R8462:8482 UMST.ChemConstants.LinearConservation <> linear_coeff_negative def
+prf 8519:8562 <> affine_weakening_with_dissipative_witness_ok
+R8570:8573 Corelib.Init.Datatypes <> list ind
+R8575:8586 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 8565:8566 <> cs:33
+R8597:8615 UMST.ChemConstants.LinearConservation <> dissipative_witness rec
+binder 8592:8593 <> dw:34
+R8654:8659 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8647:8649 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8622:8643 UMST.ChemConstants.LinearConservation <> linear_row_dissipative def
+R8645:8646 UMST.ChemConstants.LinearConservation <> cs:33 var
+R8650:8653 Corelib.Init.Datatypes <> true constr
+R8695:8697 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8660:8681 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R8683:8684 UMST.ChemConstants.LinearConservation <> cs:33 var
+R8687:8690 Corelib.Init.Datatypes <> Some constr
+R8692:8693 UMST.ChemConstants.LinearConservation <> dw:34 var
+R8698:8701 Corelib.Init.Datatypes <> true constr
+R8732:8753 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R8768:8794 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R8768:8794 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+prf 8873:8916 <> dissipative_enthalpy_row_affine_weakening_ok
+R8998:9000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8922:8943 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R8945:8968 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row def
+R8975:8978 Corelib.Init.Datatypes <> Some constr
+R8980:8996 UMST.ChemConstants.LinearConservation <> mass_axis_witness def
+R9001:9004 Corelib.Init.Datatypes <> true constr
+R9022:9065 UMST.ChemConstants.LinearConservation <> affine_weakening_with_dissipative_witness_ok thm
+R9022:9065 UMST.ChemConstants.LinearConservation <> affine_weakening_with_dissipative_witness_ok thm
+R9076:9111 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row_dissipative thm
+R9076:9111 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row_dissipative thm
+prf 9126:9164 <> affine_weakening_without_witness_refuse
+R9172:9175 Corelib.Init.Datatypes <> list ind
+R9177:9188 UMST.ChemConstants.LinearConservation <> linear_coeff rec
+binder 9167:9168 <> cs:35
+R9233:9238 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9225:9227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9195:9221 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R9223:9224 UMST.ChemConstants.LinearConservation <> cs:35 var
+R9228:9232 Corelib.Init.Datatypes <> false constr
+R9269:9271 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9239:9260 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R9262:9263 UMST.ChemConstants.LinearConservation <> cs:35 var
+R9265:9268 Corelib.Init.Datatypes <> None constr
+R9272:9276 Corelib.Init.Datatypes <> false constr
+R9302:9345 UMST.ChemConstants.LinearConservation <> linear_row_imbalanced_refuse_without_witness thm
+R9302:9345 UMST.ChemConstants.LinearConservation <> linear_row_imbalanced_refuse_without_witness thm
+prf 9371:9418 <> imbalanced_charge_affine_without_witness_refused
+R9473:9475 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9424:9445 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R9447:9467 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row def
+R9469:9472 Corelib.Init.Datatypes <> None constr
+R9476:9480 Corelib.Init.Datatypes <> false constr
+R9498:9536 UMST.ChemConstants.LinearConservation <> affine_weakening_without_witness_refuse thm
+R9498:9536 UMST.ChemConstants.LinearConservation <> affine_weakening_without_witness_refuse thm
+R9547:9577 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row_not_exact thm
+R9547:9577 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row_not_exact thm
+ind 9820:9831 <> formal_fiber
+constr 9847:9867 <> fiber_quantum_knowing
+constr 9873:9889 <> fiber_meso_acting
+scheme 9820:9831 <> formal_fiber_rect
+scheme 9820:9831 <> formal_fiber_ind
+scheme 9820:9831 <> formal_fiber_rec
+scheme 9820:9831 <> formal_fiber_sind
+ind 9903:9921 <> formal_claim_family
+constr 9937:9961 <> claim_linear_conservation
+scheme 9903:9921 <> formal_claim_family_rect
+scheme 9903:9921 <> formal_claim_family_ind
+scheme 9903:9921 <> formal_claim_family_rec
+scheme 9903:9921 <> formal_claim_family_sind
+def 9976:10003 <> linear_conservation_fiber_ok
+R10010:10021 UMST.ChemConstants.LinearConservation <> formal_fiber ind
+binder 10006:10006 <> f:40
+R10026:10029 Corelib.Init.Datatypes <> bool ind
+R10042:10042 UMST.ChemConstants.LinearConservation <> f:40 var
+R10053:10073 UMST.ChemConstants.LinearConservation <> fiber_quantum_knowing constr
+R10078:10081 Corelib.Init.Datatypes <> true constr
+R10087:10103 UMST.ChemConstants.LinearConservation <> fiber_meso_acting constr
+R10108:10112 Corelib.Init.Datatypes <> false constr
+def 10133:10168 <> linear_conservation_knowing_fiber_ok
+R10172:10175 Corelib.Init.Datatypes <> bool ind
+R10182:10209 UMST.ChemConstants.LinearConservation <> linear_conservation_fiber_ok def
+R10211:10231 UMST.ChemConstants.LinearConservation <> fiber_quantum_knowing constr
+def 10246:10279 <> linear_conservation_meso_acting_ok
+R10283:10286 Corelib.Init.Datatypes <> bool ind
+R10293:10320 UMST.ChemConstants.LinearConservation <> linear_conservation_fiber_ok def
+R10322:10338 UMST.ChemConstants.LinearConservation <> fiber_meso_acting constr
+prf 10348:10388 <> linear_conservation_knowing_fiber_ok_true
+R10430:10432 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10394:10429 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok def
+R10433:10436 Corelib.Init.Datatypes <> true constr
+prf 10471:10508 <> linear_conservation_meso_acting_not_ok
+R10548:10550 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10514:10547 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_ok def
+R10551:10555 Corelib.Init.Datatypes <> false constr
+prf 10592:10634 <> linear_conservation_routes_knowing_not_meso
+R10683:10688 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10676:10678 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10640:10675 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok def
+R10679:10682 Corelib.Init.Datatypes <> true constr
+R10723:10725 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10689:10722 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_ok def
+R10726:10730 Corelib.Init.Datatypes <> false constr
+R10759:10799 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok_true thm
+R10759:10799 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok_true thm
+R10812:10849 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_not_ok thm
+R10812:10849 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_not_ok thm
+def 10869:10886 <> fiberNotMesoActing
+R10890:10893 Corelib.Init.Datatypes <> bool ind
+R10936:10941 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10900:10935 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok def
+R10942:10945 Corelib.Init.Datatypes <> negb def
+R10947:10980 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_ok def
+prf 10990:11015 <> fiber_not_meso_acting_true
+R11037:11039 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11019:11036 UMST.ChemConstants.LinearConservation <> fiberNotMesoActing def
+R11040:11043 Corelib.Init.Datatypes <> true constr
+R11062:11079 UMST.ChemConstants.LinearConservation <> fiberNotMesoActing def
+R11082:11117 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok def
+R11124:11157 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_ok def
+def 11417:11426 <> axis_count
+R11430:11432 Corelib.Init.Datatypes <> nat ind
+prf 11447:11464 <> axis_count_is_four
+R11478:11480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11468:11477 UMST.ChemConstants.LinearConservation <> axis_count def
+def 11521:11540 <> axes_not_118_squared
+R11544:11547 Corelib.Init.Datatypes <> bool ind
+R11554:11557 Corelib.Init.Datatypes <> negb def
+R11560:11566 Stdlib.Arith.PeanoNat Nat eqb def
+R11568:11577 UMST.ChemConstants.LinearConservation <> axis_count def
+R11583:11585 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+prf 11600:11624 <> axes_not_118_squared_true
+R11648:11650 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11628:11647 UMST.ChemConstants.LinearConservation <> axes_not_118_squared def
+R11651:11654 Corelib.Init.Datatypes <> true constr
+R11673:11692 UMST.ChemConstants.LinearConservation <> axes_not_118_squared def
+R11695:11704 UMST.ChemConstants.LinearConservation <> axis_count def
+prf 11960:11995 <> linear_conservation_fixture_scaffold
+R12053:12058 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12046:12048 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12001:12027 UMST.ChemConstants.LinearConservation <> linear_row_exactly_balanced def
+R12029:12045 UMST.ChemConstants.LinearConservation <> balanced_mass_row def
+R12049:12052 Corelib.Init.Datatypes <> true constr
+R12116:12121 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12108:12110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12059:12080 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R12082:12102 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row def
+R12104:12107 Corelib.Init.Datatypes <> None constr
+R12111:12115 Corelib.Init.Datatypes <> false constr
+R12205:12210 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12198:12200 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12122:12143 UMST.ChemConstants.LinearConservation <> linear_conservation_ok def
+R12145:12168 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row def
+R12175:12178 Corelib.Init.Datatypes <> Some constr
+R12180:12196 UMST.ChemConstants.LinearConservation <> mass_axis_witness def
+R12201:12204 Corelib.Init.Datatypes <> true constr
+R12254:12259 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12247:12249 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12211:12246 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok def
+R12250:12253 Corelib.Init.Datatypes <> true constr
+R12302:12307 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12294:12296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12260:12293 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_ok def
+R12297:12301 Corelib.Init.Datatypes <> false constr
+R12326:12328 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12308:12325 UMST.ChemConstants.LinearConservation <> type02LinearProved def
+R12329:12333 Corelib.Init.Datatypes <> false constr
+R12362:12384 UMST.ChemConstants.LinearConservation <> balanced_mass_row_exact thm
+R12362:12384 UMST.ChemConstants.LinearConservation <> balanced_mass_row_exact thm
+R12410:12438 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row_refused thm
+R12410:12438 UMST.ChemConstants.LinearConservation <> imbalanced_charge_row_refused thm
+R12468:12511 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row_affine_weakening_ok thm
+R12468:12511 UMST.ChemConstants.LinearConservation <> dissipative_enthalpy_row_affine_weakening_ok thm
+R12546:12586 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok_true thm
+R12546:12586 UMST.ChemConstants.LinearConservation <> linear_conservation_knowing_fiber_ok_true thm
+R12627:12664 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_not_ok thm
+R12627:12664 UMST.ChemConstants.LinearConservation <> linear_conservation_meso_acting_not_ok thm
+R12687:12712 UMST.ChemConstants.LinearConservation <> type02_linear_proved_false thm
+R12687:12712 UMST.ChemConstants.LinearConservation <> type02_linear_proved_false thm
+def 12956:12982 <> linearConservationAuthority
+R12986:12991 Stdlib.Strings.String <> string ind
+def 13055:13075 <> chemL0Type02Authority
+R13079:13084 Stdlib.Strings.String <> string ind
+def 13122:13154 <> chemIntProveType02LinearAuthority
+R13158:13163 Stdlib.Strings.String <> string ind
+def 13215:13238 <> linearConservationCellId
+R13242:13247 Stdlib.Strings.String <> string ind
+def 13307:13332 <> linearConservationNonClaim
+R13336:13341 Stdlib.Strings.String <> string ind
+prf 13767:13793 <> linear_conservation_cell_id
+R13823:13825 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13799:13822 UMST.ChemConstants.LinearConservation <> linearConservationCellId def
+prf 13899:13933 <> linear_conservation_cites_linear_rs
+R13966:13969 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13939:13965 UMST.ChemConstants.LinearConservation <> linearConservationAuthority def
+prf 14007:14042 <> linear_conservation_cites_l0_type_02
+R14069:14071 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14048:14068 UMST.ChemConstants.LinearConservation <> chemL0Type02Authority def
+prf 14123:14172 <> linear_conservation_cites_int_prove_type_02_linear
+R14211:14214 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14178:14210 UMST.ChemConstants.LinearConservation <> chemIntProveType02LinearAuthority def
+def 14479:14512 <> linearSecondLawConservationFraming
+R14516:14521 Stdlib.Strings.String <> string ind
+prf 14603:14632 <> linear_not_second_linear_axiom
+R14672:14675 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14638:14671 UMST.ChemConstants.LinearConservation <> linearSecondLawConservationFraming def
+prf 14732:14769 <> linear_second_law_conservation_framing
+R14809:14812 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14775:14808 UMST.ChemConstants.LinearConservation <> linearSecondLawConservationFraming def
+def 15081:15102 <> physicsGreenAuthorized
+R15114:15118 Corelib.Init.Logic <> False ind
+prf 15128:15166 <> linear_conservation_physics_green_false
+R15172:15173 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R15174:15195 UMST.ChemConstants.LinearConservation <> physicsGreenAuthorized def
+prf 15235:15270 <> linear_conservation_modality_unwired
+R15309:15311 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15276:15308 UMST.ChemConstants.LinearConservation <> linearConservationModalityCurrent def
+R15312:15338 UMST.ChemConstants.LinearConservation <> linear_conservation_unwired constr

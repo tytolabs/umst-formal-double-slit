@@ -1,0 +1,1422 @@
+DIGEST 3574cf1e339f2ad143158ee634b50c1f
+FUMST.ChemConstants.PerElementNuanceConservation
+R1277:1281 Stdlib.Arith.Arith <> <> lib
+R1283:1288 Stdlib.ZArith.ZArith <> <> lib
+R1290:1295 Stdlib.Strings.String <> <> lib
+R1297:1300 Stdlib.Bool.Bool <> <> lib
+R1302:1304 Stdlib.micromega.Lia <> <> lib
+R1306:1309 Stdlib.Lists.List <> <> lib
+R1319:1331 Stdlib.Lists.List ListNotations <> mod
+ind 1661:1696 <> PerElementNuanceConservationModality
+constr 1712:1750 <> per_element_nuance_conservation_unwired
+constr 1756:1794 <> per_element_nuance_conservation_assumed
+constr 1800:1837 <> per_element_nuance_conservation_proved
+constr 1843:1883 <> per_element_nuance_conservation_surrogate
+scheme 1661:1696 <> PerElementNuanceConservationModality_rect
+scheme 1661:1696 <> PerElementNuanceConservationModality_ind
+scheme 1661:1696 <> PerElementNuanceConservationModality_rec
+scheme 1661:1696 <> PerElementNuanceConservationModality_sind
+def 1898:1940 <> perElementNuanceConservationModalityCurrent
+R1944:1979 UMST.ChemConstants.PerElementNuanceConservation <> PerElementNuanceConservationModality ind
+R1986:2024 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+def 2039:2085 <> per_element_nuance_modality_lattice_cardinality
+R2089:2091 Corelib.Init.Datatypes <> nat ind
+prf 2106:2160 <> per_element_nuance_modality_lattice_cardinality_is_four
+R2213:2215 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2166:2212 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_modality_lattice_cardinality def
+prf 2251:2301 <> per_element_nuance_modality_lattice_not_118_squared
+R2381:2383 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2307:2310 Corelib.Init.Datatypes <> negb def
+R2313:2319 Stdlib.Arith.PeanoNat Nat eqb def
+R2321:2367 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_modality_lattice_cardinality def
+R2373:2375 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2384:2387 Corelib.Init.Datatypes <> true constr
+R2406:2452 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_modality_lattice_cardinality def
+def 2713:2748 <> pattern_class_per_element_nuance_idx
+R2752:2754 Corelib.Init.Datatypes <> nat ind
+prf 2769:2809 <> pattern_class_per_element_nuance_idx_is_0
+R2851:2853 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2815:2850 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+def 2894:2918 <> pattern_class_cardinality
+R2922:2924 Corelib.Init.Datatypes <> nat ind
+prf 2940:2970 <> pattern_class_cardinality_is_25
+R3001:3003 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2976:3000 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+def 3045:3069 <> pattern_class_index_valid
+R3076:3078 Corelib.Init.Datatypes <> nat ind
+binder 3072:3072 <> i:3
+R3083:3086 Corelib.Init.Datatypes <> bool ind
+R3093:3099 Stdlib.Arith.PeanoNat Nat ltb def
+R3101:3101 UMST.ChemConstants.PerElementNuanceConservation <> i:3 var
+R3103:3127 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+prf 3137:3172 <> per_element_nuance_class_index_valid
+R3240:3242 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3178:3202 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_index_valid def
+R3204:3239 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+R3243:3246 Corelib.Init.Datatypes <> true constr
+R3265:3289 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_index_valid def
+R3292:3327 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+R3334:3358 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+prf 3388:3416 <> pattern_class_not_118_squared
+R3474:3476 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3422:3425 Corelib.Init.Datatypes <> negb def
+R3428:3434 Stdlib.Arith.PeanoNat Nat eqb def
+R3436:3460 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+R3466:3468 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3477:3480 Corelib.Init.Datatypes <> true constr
+R3499:3523 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+def 3558:3593 <> crossClassifierPerElementNuanceRowId
+R3597:3602 Stdlib.Strings.String <> string ind
+prf 3621:3665 <> cross_classifier_per_element_nuance_row_named
+R3707:3709 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3671:3706 UMST.ChemConstants.PerElementNuanceConservation <> crossClassifierPerElementNuanceRowId def
+def 4052:4074 <> iupac_table_cardinality
+R4078:4080 Corelib.Init.Datatypes <> nat ind
+prf 4097:4126 <> iupac_table_cardinality_is_118
+R4155:4157 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4132:4154 UMST.ChemConstants.PerElementNuanceConservation <> iupac_table_cardinality def
+def 4200:4225 <> per_element_nuance_z_valid
+R4232:4234 Corelib.Init.Datatypes <> nat ind
+binder 4228:4228 <> z:4
+R4239:4242 Corelib.Init.Datatypes <> bool ind
+R4260:4263 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4249:4255 Stdlib.Arith.PeanoNat Nat ltb def
+R4259:4259 UMST.ChemConstants.PerElementNuanceConservation <> z:4 var
+R4264:4270 Stdlib.Arith.PeanoNat Nat leb def
+R4272:4272 UMST.ChemConstants.PerElementNuanceConservation <> z:4 var
+R4274:4296 UMST.ChemConstants.PerElementNuanceConservation <> iupac_table_cardinality def
+def 4311:4335 <> per_element_nuance_iron_z
+R4339:4341 Corelib.Init.Datatypes <> nat ind
+def 4361:4387 <> per_element_nuance_copper_z
+R4391:4393 Corelib.Init.Datatypes <> nat ind
+def 4413:4441 <> per_element_nuance_platinum_z
+R4445:4447 Corelib.Init.Datatypes <> nat ind
+def 4467:4499 <> per_element_nuance_darmstadtium_z
+R4503:4505 Corelib.Init.Datatypes <> nat ind
+prf 4522:4552 <> per_element_nuance_iron_z_is_26
+R4583:4585 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4558:4582 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_iron_z def
+prf 4622:4654 <> per_element_nuance_copper_z_is_29
+R4687:4689 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4660:4686 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_copper_z def
+prf 4726:4760 <> per_element_nuance_platinum_z_is_78
+R4795:4797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4766:4794 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_platinum_z def
+prf 4834:4873 <> per_element_nuance_darmstadtium_z_is_110
+R4912:4914 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4879:4911 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_darmstadtium_z def
+prf 4952:4983 <> per_element_nuance_fe_cu_z_valid
+R5048:5053 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5041:5043 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4989:5014 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_z_valid def
+R5016:5040 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_iron_z def
+R5044:5047 Corelib.Init.Datatypes <> true constr
+R5108:5110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5054:5079 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_z_valid def
+R5081:5107 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_copper_z def
+R5111:5114 Corelib.Init.Datatypes <> true constr
+R5149:5174 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_z_valid def
+R5177:5199 UMST.ChemConstants.PerElementNuanceConservation <> iupac_table_cardinality def
+prf 5227:5258 <> per_element_nuance_pt_ds_z_valid
+R5327:5332 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5320:5322 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5264:5289 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_z_valid def
+R5291:5319 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_platinum_z def
+R5323:5326 Corelib.Init.Datatypes <> true constr
+R5393:5395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5333:5358 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_z_valid def
+R5360:5392 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_darmstadtium_z def
+R5396:5399 Corelib.Init.Datatypes <> true constr
+R5434:5459 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_z_valid def
+R5462:5484 UMST.ChemConstants.PerElementNuanceConservation <> iupac_table_cardinality def
+ind 5740:5760 <> qlattice_cell_posture
+constr 5776:5796 <> qlattice_cell_unwired
+constr 5802:5823 <> qlattice_cell_occupied
+constr 5829:5848 <> qlattice_cell_absent
+scheme 5740:5760 <> qlattice_cell_posture_rect
+scheme 5740:5760 <> qlattice_cell_posture_ind
+scheme 5740:5760 <> qlattice_cell_posture_rec
+scheme 5740:5760 <> qlattice_cell_posture_sind
+def 5863:5887 <> qlattice_cell_is_occupied
+R5894:5914 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_posture ind
+binder 5890:5890 <> c:7
+R5919:5922 Corelib.Init.Datatypes <> bool ind
+R5935:5935 UMST.ChemConstants.PerElementNuanceConservation <> c:7 var
+R5946:5967 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_occupied constr
+R5972:5975 Corelib.Init.Datatypes <> true constr
+R5986:5990 Corelib.Init.Datatypes <> false constr
+def 6011:6034 <> qlattice_cell_is_unwired
+R6041:6061 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_posture ind
+binder 6037:6037 <> c:9
+R6066:6069 Corelib.Init.Datatypes <> bool ind
+R6082:6082 UMST.ChemConstants.PerElementNuanceConservation <> c:9 var
+R6093:6113 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_unwired constr
+R6118:6121 Corelib.Init.Datatypes <> true constr
+R6132:6136 Corelib.Init.Datatypes <> false constr
+rec 6153:6180 <> per_element_qlattice_binding
+proj 6196:6212 <> qlattice_parent_z
+proj 6223:6235 <> qlattice_cell
+R6216:6218 Corelib.Init.Datatypes <> nat ind
+R6239:6259 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_posture ind
+def 6276:6305 <> perElementQlatticeIronOccupied
+R6309:6336 UMST.ChemConstants.PerElementNuanceConservation <> per_element_qlattice_binding rec
+R6346:6362 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6346:6362 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6346:6362 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6399:6411 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6399:6411 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6367:6391 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_iron_z def
+R6416:6437 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_occupied constr
+def 6455:6486 <> perElementQlatticeCopperOccupied
+R6490:6517 UMST.ChemConstants.PerElementNuanceConservation <> per_element_qlattice_binding rec
+R6527:6543 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6527:6543 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6527:6543 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6582:6594 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6582:6594 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6548:6574 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_copper_z def
+R6599:6620 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_occupied constr
+def 6638:6662 <> perElementQlatticeTrivial
+R6666:6693 UMST.ChemConstants.PerElementNuanceConservation <> per_element_qlattice_binding rec
+R6703:6719 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6703:6719 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6703:6719 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6732:6744 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6732:6744 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6749:6769 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_unwired constr
+def 6787:6821 <> perElementQlatticeBindingNontrivial
+R6828:6855 UMST.ChemConstants.PerElementNuanceConservation <> per_element_qlattice_binding rec
+binder 6824:6824 <> b:14
+R6860:6863 Corelib.Init.Datatypes <> bool ind
+R6901:6906 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6870:6876 Stdlib.Arith.PeanoNat Nat ltb def
+R6881:6897 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R6899:6899 UMST.ChemConstants.PerElementNuanceConservation <> b:14 var
+R6907:6931 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_is_occupied def
+R6934:6946 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R6948:6948 UMST.ChemConstants.PerElementNuanceConservation <> b:14 var
+prf 6959:6991 <> iron_qlattice_occupied_nontrivial
+R7063:7065 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6997:7031 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeBindingNontrivial def
+R7033:7062 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeIronOccupied def
+R7066:7069 Corelib.Init.Datatypes <> true constr
+prf 7104:7138 <> copper_qlattice_occupied_nontrivial
+R7212:7214 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7144:7178 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeBindingNontrivial def
+R7180:7211 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeCopperOccupied def
+R7215:7218 Corelib.Init.Datatypes <> true constr
+prf 7253:7283 <> trivial_qlattice_not_nontrivial
+R7350:7352 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7289:7323 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeBindingNontrivial def
+R7325:7349 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeTrivial def
+R7353:7357 Corelib.Init.Datatypes <> false constr
+def 7397:7428 <> qlatticeBindingIdentityConserved
+R7439:7466 UMST.ChemConstants.PerElementNuanceConservation <> per_element_qlattice_binding rec
+binder 7431:7432 <> b1:15
+binder 7434:7435 <> b2:16
+R7471:7474 Corelib.Init.Datatypes <> bool ind
+R7481:7487 Stdlib.Arith.PeanoNat Nat eqb def
+R7490:7506 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R7508:7509 UMST.ChemConstants.PerElementNuanceConservation <> b1:15 var
+R7513:7529 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R7531:7532 UMST.ChemConstants.PerElementNuanceConservation <> b2:16 var
+prf 7543:7564 <> iron_copper_distinct_z
+R7638:7640 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7570:7573 Corelib.Init.Datatypes <> negb def
+R7576:7582 Stdlib.Arith.PeanoNat Nat eqb def
+R7584:7608 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_iron_z def
+R7610:7636 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_copper_z def
+R7641:7644 Corelib.Init.Datatypes <> true constr
+def 7909:7928 <> periodHomologZOffset
+R7932:7934 Corelib.Init.Datatypes <> nat ind
+prf 7950:7978 <> period_homolog_z_offset_is_32
+R8002:8004 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7982:8001 UMST.ChemConstants.PerElementNuanceConservation <> periodHomologZOffset def
+prf 8045:8066 <> ds_pt_homolog_z_offset
+R8105:8107 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8072:8104 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_darmstadtium_z def
+R8137:8139 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8108:8136 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_platinum_z def
+R8140:8159 UMST.ChemConstants.PerElementNuanceConservation <> periodHomologZOffset def
+R8178:8210 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_darmstadtium_z def
+R8213:8241 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_platinum_z def
+R8248:8267 UMST.ChemConstants.PerElementNuanceConservation <> periodHomologZOffset def
+def 8302:8322 <> homologNotCopyWitness
+R8326:8329 Corelib.Init.Datatypes <> bool ind
+R8336:8339 Corelib.Init.Datatypes <> negb def
+R8342:8348 Stdlib.Arith.PeanoNat Nat eqb def
+R8350:8382 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_darmstadtium_z def
+R8384:8412 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_platinum_z def
+prf 8423:8451 <> homolog_not_copy_witness_true
+R8476:8478 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8455:8475 UMST.ChemConstants.PerElementNuanceConservation <> homologNotCopyWitness def
+R8479:8482 Corelib.Init.Datatypes <> true constr
+def 8522:8545 <> homologCopyTheaterMarker
+R8549:8554 Stdlib.Strings.String <> string ind
+prf 8622:8647 <> homolog_copy_theater_named
+R8677:8680 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8653:8676 UMST.ChemConstants.PerElementNuanceConservation <> homologCopyTheaterMarker def
+ind 8947:8969 <> per_element_nuance_slot
+constr 8985:9003 <> nuance_slot_unwired
+constr 9009:9026 <> nuance_slot_absent
+constr 9032:9050 <> nuance_slot_present
+scheme 8947:8969 <> per_element_nuance_slot_rect
+scheme 8947:8969 <> per_element_nuance_slot_ind
+scheme 8947:8969 <> per_element_nuance_slot_rec
+scheme 8947:8969 <> per_element_nuance_slot_sind
+def 9065:9091 <> per_element_nuance_slot_beq
+R9102:9124 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+binder 9094:9095 <> s1:19
+binder 9097:9098 <> s2:20
+R9129:9132 Corelib.Init.Datatypes <> bool ind
+R9149:9150 UMST.ChemConstants.PerElementNuanceConservation <> s2:20 var
+R9145:9146 UMST.ChemConstants.PerElementNuanceConservation <> s1:19 var
+R9161:9179 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_unwired constr
+R9182:9200 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_unwired constr
+R9205:9208 Corelib.Init.Datatypes <> true constr
+R9214:9231 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_absent constr
+R9234:9251 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_absent constr
+R9256:9259 Corelib.Init.Datatypes <> true constr
+R9265:9283 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_present constr
+R9286:9304 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_present constr
+R9309:9312 Corelib.Init.Datatypes <> true constr
+R9326:9330 Corelib.Init.Datatypes <> false constr
+def 9351:9384 <> per_element_nuance_slot_is_present
+R9391:9413 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+binder 9387:9387 <> s:23
+R9418:9421 Corelib.Init.Datatypes <> bool ind
+R9434:9434 UMST.ChemConstants.PerElementNuanceConservation <> s:23 var
+R9445:9463 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_present constr
+R9468:9471 Corelib.Init.Datatypes <> true constr
+R9482:9486 Corelib.Init.Datatypes <> false constr
+def 9507:9533 <> perElementNuanceUnwiredSlot
+R9537:9559 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+R9564:9582 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_unwired constr
+def 9596:9621 <> perElementNuanceAbsentSlot
+R9625:9647 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+R9652:9669 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_absent constr
+def 9683:9709 <> perElementNuancePresentSlot
+R9713:9735 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+R9740:9758 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_present constr
+prf 9768:9797 <> present_nuance_slot_is_present
+R9857:9859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9803:9836 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot_is_present def
+R9838:9856 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_present constr
+R9860:9863 Corelib.Init.Datatypes <> true constr
+prf 9898:9928 <> unwired_nuance_slot_not_present
+R9988:9990 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9934:9967 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot_is_present def
+R9969:9987 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_unwired constr
+R9991:9995 Corelib.Init.Datatypes <> false constr
+def 10335:10348 <> pattern_bundle
+R10363:10366 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10360:10362 Corelib.Init.Datatypes <> nat ind
+R10367:10389 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+def 10404:10426 <> patternBundleAllUnwired
+R10430:10443 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+R10459:10477 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_unwired constr
+def 10492:10506 <> patternBundleAt
+R10513:10526 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 10509:10509 <> b:25
+R10536:10538 Corelib.Init.Datatypes <> nat ind
+binder 10530:10532 <> idx:26
+R10551:10573 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot ind
+binder 10544:10547 <> slot:27
+R10578:10591 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 10602:10602 <> i:28
+R10610:10616 Stdlib.Arith.PeanoNat Nat eqb def
+R10618:10618 UMST.ChemConstants.PerElementNuanceConservation <> i:28 var
+R10620:10622 UMST.ChemConstants.PerElementNuanceConservation <> idx:26 var
+R10639:10639 UMST.ChemConstants.PerElementNuanceConservation <> b:25 var
+R10641:10641 UMST.ChemConstants.PerElementNuanceConservation <> i:28 var
+R10629:10632 UMST.ChemConstants.PerElementNuanceConservation <> slot:27 var
+def 10656:10679 <> patternBundleWithPresent
+R10686:10699 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 10682:10682 <> b:29
+R10709:10711 Corelib.Init.Datatypes <> nat ind
+binder 10703:10705 <> idx:30
+R10716:10729 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+R10736:10750 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleAt def
+R10752:10752 UMST.ChemConstants.PerElementNuanceConservation <> b:29 var
+R10754:10756 UMST.ChemConstants.PerElementNuanceConservation <> idx:30 var
+R10758:10776 UMST.ChemConstants.PerElementNuanceConservation <> nuance_slot_present constr
+def 10789:10807 <> count_present_up_to
+R10814:10827 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 10810:10810 <> b:31
+R10839:10841 Corelib.Init.Datatypes <> nat ind
+binder 10831:10835 <> bound:32
+R10846:10848 Corelib.Init.Datatypes <> nat ind
+R10861:10865 UMST.ChemConstants.PerElementNuanceConservation <> bound:32 var
+R10887:10887 Corelib.Init.Datatypes <> S constr
+R10922:10955 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot_is_present def
+R10958:10958 UMST.ChemConstants.PerElementNuanceConservation <> b:31 var
+R10961:10964 Corelib.Init.Peano <> pred abbrev
+R10966:10970 UMST.ChemConstants.PerElementNuanceConservation <> bound:32 var
+binder 10904:10906 <> add:35
+R11028:11030 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R11005:11023 UMST.ChemConstants.PerElementNuanceConservation <> count_present_up_to:33 def
+R11025:11025 UMST.ChemConstants.PerElementNuanceConservation <> b:31 var
+R11031:11033 UMST.ChemConstants.PerElementNuanceConservation <> add:35 var
+def 11054:11078 <> patternBundlePresentCount
+R11085:11098 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 11081:11081 <> b:36
+R11103:11105 Corelib.Init.Datatypes <> nat ind
+R11112:11130 UMST.ChemConstants.PerElementNuanceConservation <> count_present_up_to def
+R11132:11132 UMST.ChemConstants.PerElementNuanceConservation <> b:36 var
+R11134:11158 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+def 11173:11190 <> patternBundleHolds
+R11197:11210 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 11193:11193 <> b:37
+R11220:11222 Corelib.Init.Datatypes <> nat ind
+binder 11214:11216 <> idx:38
+R11227:11230 Corelib.Init.Datatypes <> bool ind
+R11237:11270 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot_is_present def
+R11273:11273 UMST.ChemConstants.PerElementNuanceConservation <> b:37 var
+R11275:11277 UMST.ChemConstants.PerElementNuanceConservation <> idx:38 var
+def 11293:11324 <> patternBundleIsConcurrentProduct
+R11331:11344 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 11327:11327 <> b:39
+R11349:11352 Corelib.Init.Datatypes <> bool ind
+R11359:11365 Stdlib.Arith.PeanoNat Nat leb def
+R11370:11394 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePresentCount def
+R11396:11396 UMST.ChemConstants.PerElementNuanceConservation <> b:39 var
+def 11410:11441 <> pattern_bundle_slots_match_up_to
+R11454:11467 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 11446:11447 <> b1:40
+binder 11449:11450 <> b2:41
+R11479:11481 Corelib.Init.Datatypes <> nat ind
+binder 11471:11475 <> bound:42
+R11486:11489 Corelib.Init.Datatypes <> bool ind
+R11502:11506 UMST.ChemConstants.PerElementNuanceConservation <> bound:42 var
+R11522:11525 Corelib.Init.Datatypes <> true constr
+R11531:11531 Corelib.Init.Datatypes <> S constr
+R11607:11616 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11544:11570 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_slot_beq def
+R11573:11574 UMST.ChemConstants.PerElementNuanceConservation <> b1:40 var
+R11577:11580 Corelib.Init.Peano <> pred abbrev
+R11582:11586 UMST.ChemConstants.PerElementNuanceConservation <> bound:42 var
+R11591:11592 UMST.ChemConstants.PerElementNuanceConservation <> b2:41 var
+R11595:11598 Corelib.Init.Peano <> pred abbrev
+R11600:11604 UMST.ChemConstants.PerElementNuanceConservation <> bound:42 var
+R11617:11648 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle_slots_match_up_to:43 def
+R11653:11654 UMST.ChemConstants.PerElementNuanceConservation <> b2:41 var
+R11650:11651 UMST.ChemConstants.PerElementNuanceConservation <> b1:40 var
+def 11677:11706 <> patternBundleIdentityConserved
+R11717:11730 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 11709:11710 <> b1:45
+binder 11712:11713 <> b2:46
+R11735:11738 Corelib.Init.Datatypes <> bool ind
+R11745:11776 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle_slots_match_up_to def
+R11778:11779 UMST.ChemConstants.PerElementNuanceConservation <> b1:45 var
+R11781:11782 UMST.ChemConstants.PerElementNuanceConservation <> b2:46 var
+R11784:11808 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_cardinality def
+def 11823:11849 <> pattern_class_allotrope_idx
+R11853:11855 Corelib.Init.Datatypes <> nat ind
+def 11875:11901 <> pattern_class_catalysis_idx
+R11905:11907 Corelib.Init.Datatypes <> nat ind
+def 11927:11953 <> pattern_class_continuum_idx
+R11957:11959 Corelib.Init.Datatypes <> nat ind
+def 12057:12092 <> patternBundlePerElementNuanceWitness
+R12096:12109 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+R12116:12139 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleWithPresent def
+R12146:12169 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleWithPresent def
+R12178:12201 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleWithPresent def
+R12203:12225 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleAllUnwired def
+R12235:12270 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+R12279:12305 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_allotrope_idx def
+R12312:12338 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_catalysis_idx def
+def 12353:12377 <> patternBundleEmptyWitness
+R12381:12394 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+R12401:12423 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleAllUnwired def
+def 12438:12463 <> patternBundleSinglePresent
+R12467:12480 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+R12487:12510 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleWithPresent def
+R12512:12534 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleAllUnwired def
+R12536:12571 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+prf 12581:12613 <> per_element_nuance_class0_present
+R12715:12717 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12619:12636 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleHolds def
+R12638:12673 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R12679:12714 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+R12718:12721 Corelib.Init.Datatypes <> true constr
+prf 12756:12791 <> per_element_nuance_allotrope_present
+R12884:12886 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12797:12814 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleHolds def
+R12816:12851 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R12857:12883 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_allotrope_idx def
+R12887:12890 Corelib.Init.Datatypes <> true constr
+prf 12925:12960 <> per_element_nuance_catalysis_present
+R13053:13055 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12966:12983 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleHolds def
+R12985:13020 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R13026:13052 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_catalysis_idx def
+R13056:13059 Corelib.Init.Datatypes <> true constr
+prf 13094:13134 <> per_element_nuance_present_count_is_three
+R13202:13204 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13140:13164 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePresentCount def
+R13166:13201 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+prf 13240:13279 <> per_element_nuance_is_concurrent_product
+R13354:13356 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13285:13316 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R13318:13353 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R13357:13360 Corelib.Init.Datatypes <> true constr
+R13379:13410 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R13423:13463 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_present_count_is_three thm
+R13423:13463 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_present_count_is_three thm
+R13423:13463 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_present_count_is_three thm
+prf 13493:13523 <> empty_bundle_present_count_zero
+R13580:13582 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13529:13553 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePresentCount def
+R13555:13579 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleEmptyWitness def
+prf 13618:13652 <> empty_bundle_not_concurrent_product
+R13716:13718 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13658:13689 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R13691:13715 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleEmptyWitness def
+R13719:13723 Corelib.Init.Datatypes <> false constr
+R13742:13773 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R13786:13816 UMST.ChemConstants.PerElementNuanceConservation <> empty_bundle_present_count_zero thm
+R13786:13816 UMST.ChemConstants.PerElementNuanceConservation <> empty_bundle_present_count_zero thm
+R13786:13816 UMST.ChemConstants.PerElementNuanceConservation <> empty_bundle_present_count_zero thm
+prf 13846:13872 <> single_present_count_is_one
+R13930:13932 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13878:13902 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePresentCount def
+R13904:13929 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleSinglePresent def
+prf 13968:14004 <> single_present_not_concurrent_product
+R14069:14071 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14010:14041 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R14043:14068 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleSinglePresent def
+R14072:14076 Corelib.Init.Datatypes <> false constr
+R14095:14126 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R14139:14165 UMST.ChemConstants.PerElementNuanceConservation <> single_present_count_is_one thm
+R14139:14165 UMST.ChemConstants.PerElementNuanceConservation <> single_present_count_is_one thm
+R14139:14165 UMST.ChemConstants.PerElementNuanceConservation <> single_present_count_is_one thm
+prf 14195:14231 <> per_element_nuance_identity_conserved
+R14345:14347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14237:14266 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIdentityConserved def
+R14268:14303 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R14309:14344 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R14348:14351 Corelib.Init.Datatypes <> true constr
+ind 14615:14635 <> xor_classifier_bucket
+constr 14651:14670 <> xor_bucket_exclusive
+constr 14676:14704 <> xor_bucket_concurrent_product
+scheme 14615:14635 <> xor_classifier_bucket_rect
+scheme 14615:14635 <> xor_classifier_bucket_ind
+scheme 14615:14635 <> xor_classifier_bucket_rec
+scheme 14615:14635 <> xor_classifier_bucket_sind
+def 14719:14737 <> xorClassifierMarker
+R14741:14746 Stdlib.Strings.String <> string ind
+def 14799:14821 <> concurrentProductMarker
+R14825:14830 Stdlib.Strings.String <> string ind
+prf 14884:14922 <> xor_marker_ne_concurrent_product_marker
+R14947:14950 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14928:14946 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierMarker def
+R14951:14973 UMST.ChemConstants.PerElementNuanceConservation <> concurrentProductMarker def
+def 15014:15038 <> xorClassifierIncompatible
+R15053:15056 Corelib.Init.Datatypes <> bool ind
+binder 15041:15049 <> claim_xor:49
+R15064:15077 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+binder 15060:15060 <> b:50
+R15082:15085 Corelib.Init.Datatypes <> bool ind
+R15101:15104 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15092:15100 UMST.ChemConstants.PerElementNuanceConservation <> claim_xor:49 var
+R15105:15136 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R15138:15138 UMST.ChemConstants.PerElementNuanceConservation <> b:50 var
+prf 15148:15179 <> xor_refuse_on_per_element_nuance
+R15252:15254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15185:15209 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierIncompatible def
+R15211:15214 Corelib.Init.Datatypes <> true constr
+R15216:15251 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R15255:15258 Corelib.Init.Datatypes <> true constr
+R15277:15301 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierIncompatible def
+prf 15354:15387 <> xor_ok_on_concurrent_product_claim
+R15461:15463 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15393:15417 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierIncompatible def
+R15419:15423 Corelib.Init.Datatypes <> false constr
+R15425:15460 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R15464:15468 Corelib.Init.Datatypes <> false constr
+def 15508:15520 <> productNotXor
+R15524:15527 Corelib.Init.Datatypes <> bool ind
+R15603:15608 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15534:15565 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R15567:15602 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R15609:15633 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierIncompatible def
+R15635:15638 Corelib.Init.Datatypes <> true constr
+R15640:15675 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+prf 15685:15704 <> product_not_xor_true
+R15721:15723 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15708:15720 UMST.ChemConstants.PerElementNuanceConservation <> productNotXor def
+R15724:15727 Corelib.Init.Datatypes <> true constr
+R15746:15758 UMST.ChemConstants.PerElementNuanceConservation <> productNotXor def
+prf 15813:15838 <> concurrent_product_not_xor
+R15864:15869 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15857:15859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15844:15856 UMST.ChemConstants.PerElementNuanceConservation <> productNotXor def
+R15860:15863 Corelib.Init.Datatypes <> true constr
+R15951:15956 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15944:15946 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15870:15876 Stdlib.Arith.PeanoNat Nat leb def
+R15881:15905 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePresentCount def
+R15907:15942 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R15947:15950 Corelib.Init.Datatypes <> true constr
+R15976:15979 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15957:15975 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierMarker def
+R15980:16002 UMST.ChemConstants.PerElementNuanceConservation <> concurrentProductMarker def
+R16031:16050 UMST.ChemConstants.PerElementNuanceConservation <> product_not_xor_true thm
+R16031:16050 UMST.ChemConstants.PerElementNuanceConservation <> product_not_xor_true thm
+R16078:16118 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_present_count_is_three thm
+R16078:16118 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_present_count_is_three thm
+R16078:16118 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_present_count_is_three thm
+R16152:16190 UMST.ChemConstants.PerElementNuanceConservation <> xor_marker_ne_concurrent_product_marker thm
+R16152:16190 UMST.ChemConstants.PerElementNuanceConservation <> xor_marker_ne_concurrent_product_marker thm
+ind 16433:16463 <> per_element_nuance_bar_presence
+constr 16479:16507 <> per_element_nuance_bar_absent
+constr 16513:16542 <> per_element_nuance_bar_present
+scheme 16433:16463 <> per_element_nuance_bar_presence_rect
+scheme 16433:16463 <> per_element_nuance_bar_presence_ind
+scheme 16433:16463 <> per_element_nuance_bar_presence_rec
+scheme 16433:16463 <> per_element_nuance_bar_presence_sind
+rec 16553:16580 <> per_element_nuance_claim_bar
+proj 16596:16630 <> per_element_nuance_bar_presence_tag
+proj 16669:16703 <> per_element_nuance_bar_defect_total
+R16634:16664 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence ind
+R16707:16709 Corelib.Init.Datatypes <> nat ind
+def 16726:16755 <> perElementNuanceClaimBarAbsent
+R16759:16786 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_claim_bar rec
+R16796:16830 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R16796:16830 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R16796:16830 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R16871:16905 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_defect_total proj
+R16871:16905 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_defect_total proj
+R16835:16863 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_absent constr
+def 16928:16961 <> perElementNuanceClaimBarZeroDefect
+R16965:16992 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_claim_bar rec
+R17002:17036 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R17002:17036 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R17002:17036 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R17078:17112 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_defect_total proj
+R17078:17112 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_defect_total proj
+R17041:17070 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_present constr
+def 17135:17174 <> per_element_nuance_claim_bar_zero_defect
+R17181:17208 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_claim_bar rec
+binder 17177:17177 <> b:56
+R17213:17216 Corelib.Init.Datatypes <> bool ind
+R17229:17263 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_presence_tag proj
+R17265:17265 UMST.ChemConstants.PerElementNuanceConservation <> b:56 var
+R17276:17304 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_absent constr
+R17309:17313 Corelib.Init.Datatypes <> false constr
+R17319:17348 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_present constr
+R17359:17365 Stdlib.Arith.PeanoNat Nat eqb def
+R17368:17402 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_bar_defect_total proj
+R17404:17404 UMST.ChemConstants.PerElementNuanceConservation <> b:56 var
+prf 17423:17467 <> per_element_nuance_claim_bar_zero_defect_true
+R17548:17550 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17473:17512 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_claim_bar_zero_defect def
+R17514:17547 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarZeroDefect def
+R17551:17554 Corelib.Init.Datatypes <> true constr
+prf 17589:17639 <> per_element_nuance_claim_bar_absent_not_zero_defect
+R17716:17718 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17645:17684 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_claim_bar_zero_defect def
+R17686:17715 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R17719:17723 Corelib.Init.Datatypes <> false constr
+ind 17987:18025 <> per_element_nuance_conservation_verdict
+constr 18041:18058 <> verdict_unwired_ok
+constr 18064:18086 <> verdict_nuance_named_ok
+constr 18092:18115 <> verdict_trivial_z_refuse
+constr 18121:18149 <> verdict_xor_classifier_refuse
+constr 18155:18181 <> verdict_homolog_copy_refuse
+constr 18187:18213 <> verdict_green_invent_refuse
+constr 18219:18251 <> verdict_proved_without_bar_refuse
+constr 18257:18287 <> verdict_production_wired_refuse
+constr 18293:18325 <> verdict_twenty_sixth_axiom_refuse
+scheme 17987:18025 <> per_element_nuance_conservation_verdict_rect
+scheme 17987:18025 <> per_element_nuance_conservation_verdict_ind
+scheme 17987:18025 <> per_element_nuance_conservation_verdict_rec
+scheme 17987:18025 <> per_element_nuance_conservation_verdict_sind
+def 18340:18381 <> per_element_nuance_conservation_verdict_ok
+R18390:18428 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict ind
+binder 18386:18386 <> v:59
+R18433:18436 Corelib.Init.Datatypes <> bool ind
+R18449:18449 UMST.ChemConstants.PerElementNuanceConservation <> v:59 var
+R18460:18477 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+R18482:18485 Corelib.Init.Datatypes <> true constr
+R18491:18513 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R18518:18521 Corelib.Init.Datatypes <> true constr
+R18532:18536 Corelib.Init.Datatypes <> false constr
+rec 18553:18580 <> per_element_nuance_incidence
+proj 18596:18614 <> nuance_inc_qlattice
+proj 18650:18666 <> nuance_inc_bundle
+proj 18688:18703 <> nuance_inc_level
+R18618:18645 UMST.ChemConstants.PerElementNuanceConservation <> per_element_qlattice_binding rec
+R18670:18683 UMST.ChemConstants.PerElementNuanceConservation <> pattern_bundle def
+R18707:18709 Corelib.Init.Datatypes <> nat ind
+def 18726:18760 <> perElementNuanceIncidenceNontrivial
+R18767:18794 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_incidence rec
+binder 18763:18763 <> h:65
+R18799:18802 Corelib.Init.Datatypes <> bool ind
+R18839:18844 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18809:18815 Stdlib.Arith.PeanoNat Nat ltb def
+R18820:18835 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R18837:18837 UMST.ChemConstants.PerElementNuanceConservation <> h:65 var
+R18845:18879 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeBindingNontrivial def
+R18882:18900 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R18902:18902 UMST.ChemConstants.PerElementNuanceConservation <> h:65 var
+def 18918:18948 <> perElementNuanceIncidenceIronL1
+R18952:18979 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_incidence rec
+R18989:19007 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R18989:19007 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R18989:19007 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19049:19065 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19049:19065 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19113:19128 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19113:19128 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19012:19041 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeIronOccupied def
+R19070:19105 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+def 19151:19183 <> perElementNuanceIncidenceCopperL1
+R19187:19214 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_incidence rec
+R19224:19242 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19224:19242 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19224:19242 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19286:19302 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19286:19302 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19350:19365 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19350:19365 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19247:19278 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeCopperOccupied def
+R19307:19342 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+def 19388:19419 <> perElementNuanceIncidenceTrivial
+R19423:19450 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_incidence rec
+R19460:19478 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19460:19478 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19460:19478 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19515:19531 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19515:19531 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19568:19583 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19568:19583 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19483:19507 UMST.ChemConstants.PerElementNuanceConservation <> perElementQlatticeTrivial def
+R19536:19560 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleEmptyWitness def
+def 19606:19641 <> perElementNuanceIncidenceHomologCopy
+R19645:19672 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_incidence rec
+R19682:19700 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19682:19700 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19682:19700 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_qlattice proj
+R19830:19846 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19830:19846 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R19894:19909 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19894:19909 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_level proj
+R19715:19731 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R19715:19731 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R19715:19731 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_parent_z proj
+R19781:19793 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R19781:19793 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell proj
+R19736:19768 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_darmstadtium_z def
+R19798:19819 UMST.ChemConstants.PerElementNuanceConservation <> qlattice_cell_occupied constr
+R19851:19886 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+def 19932:19968 <> evaluate_per_element_nuance_incidence
+R19977:20012 UMST.ChemConstants.PerElementNuanceConservation <> PerElementNuanceConservationModality ind
+binder 19973:19973 <> m:66
+R20022:20049 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_incidence rec
+binder 20018:20018 <> h:67
+R20061:20088 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_claim_bar rec
+binder 20055:20057 <> bar:68
+R20117:20120 Corelib.Init.Datatypes <> bool ind
+binder 20094:20113 <> claim_xor_classifier:69
+R20148:20151 Corelib.Init.Datatypes <> bool ind
+binder 20126:20144 <> claim_physics_green:70
+R20172:20175 Corelib.Init.Datatypes <> bool ind
+binder 20157:20168 <> claim_proved:71
+R20202:20205 Corelib.Init.Datatypes <> bool ind
+binder 20181:20198 <> claim_homolog_copy:72
+R20238:20241 Corelib.Init.Datatypes <> bool ind
+binder 20211:20234 <> claim_twenty_sixth_axiom:73
+R20246:20284 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict ind
+R20294:20312 UMST.ChemConstants.PerElementNuanceConservation <> claim_physics_green:70 var
+R20359:20370 UMST.ChemConstants.PerElementNuanceConservation <> claim_proved:71 var
+R20433:20456 UMST.ChemConstants.PerElementNuanceConservation <> claim_twenty_sixth_axiom:73 var
+R20529:20532 Corelib.Init.Datatypes <> negb def
+R20535:20569 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceNontrivial def
+R20571:20571 UMST.ChemConstants.PerElementNuanceConservation <> h:67 var
+R20646:20663 UMST.ChemConstants.PerElementNuanceConservation <> claim_homolog_copy:72 var
+R20750:20774 UMST.ChemConstants.PerElementNuanceConservation <> xorClassifierIncompatible def
+R20776:20795 UMST.ChemConstants.PerElementNuanceConservation <> claim_xor_classifier:69 var
+R20829:20845 UMST.ChemConstants.PerElementNuanceConservation <> nuance_inc_bundle proj
+R20847:20847 UMST.ChemConstants.PerElementNuanceConservation <> h:67 var
+R20979:20979 UMST.ChemConstants.PerElementNuanceConservation <> m:66 var
+R21017:21055 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R21093:21115 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R21148:21186 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_assumed constr
+R21219:21259 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_surrogate constr
+R21297:21314 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+R21297:21314 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+R21347:21384 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R21422:21454 UMST.ChemConstants.PerElementNuanceConservation <> verdict_proved_without_bar_refuse constr
+R20882:20910 UMST.ChemConstants.PerElementNuanceConservation <> verdict_xor_classifier_refuse constr
+R20692:20718 UMST.ChemConstants.PerElementNuanceConservation <> verdict_homolog_copy_refuse constr
+R20596:20619 UMST.ChemConstants.PerElementNuanceConservation <> verdict_trivial_z_refuse constr
+R20475:20507 UMST.ChemConstants.PerElementNuanceConservation <> verdict_twenty_sixth_axiom_refuse constr
+R20384:20416 UMST.ChemConstants.PerElementNuanceConservation <> verdict_proved_without_bar_refuse constr
+R20321:20347 UMST.ChemConstants.PerElementNuanceConservation <> verdict_green_invent_refuse constr
+def 21502:21547 <> evaluate_per_element_nuance_conservation_close
+R21556:21591 UMST.ChemConstants.PerElementNuanceConservation <> PerElementNuanceConservationModality ind
+binder 21552:21552 <> m:75
+R21619:21622 Corelib.Init.Datatypes <> bool ind
+binder 21597:21615 <> claim_physics_green:76
+R21653:21656 Corelib.Init.Datatypes <> bool ind
+binder 21628:21649 <> claim_production_wired:77
+R21661:21699 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict ind
+R21709:21727 UMST.ChemConstants.PerElementNuanceConservation <> claim_physics_green:76 var
+R21774:21795 UMST.ChemConstants.PerElementNuanceConservation <> claim_production_wired:77 var
+R21853:21853 UMST.ChemConstants.PerElementNuanceConservation <> m:75 var
+R21866:21904 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R21909:21926 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+R21934:21972 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_assumed constr
+R21980:22017 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R22025:22065 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_surrogate constr
+R22070:22092 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R22070:22092 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R22070:22092 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R21804:21834 UMST.ChemConstants.PerElementNuanceConservation <> verdict_production_wired_refuse constr
+R21736:21762 UMST.ChemConstants.PerElementNuanceConservation <> verdict_green_invent_refuse constr
+def 22115:22156 <> per_element_nuance_conservation_authorized
+R22183:22186 Corelib.Init.Datatypes <> bool ind
+binder 22161:22179 <> claim_physics_green:79
+R22217:22220 Corelib.Init.Datatypes <> bool ind
+binder 22192:22213 <> claim_production_wired:80
+R22225:22228 Corelib.Init.Datatypes <> bool ind
+R22241:22286 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R22298:22335 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R22337:22355 UMST.ChemConstants.PerElementNuanceConservation <> claim_physics_green:79 var
+R22357:22378 UMST.ChemConstants.PerElementNuanceConservation <> claim_production_wired:80 var
+R22389:22411 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R22416:22419 Corelib.Init.Datatypes <> true constr
+R22430:22434 Corelib.Init.Datatypes <> false constr
+ind 22679:22713 <> per_element_nuance_conservation_law
+constr 22729:22756 <> law_per_element_nuance_named
+constr 22762:22786 <> law_xor_classifier_refuse
+constr 22792:22814 <> law_homolog_copy_refuse
+constr 22820:22842 <> law_green_invent_refuse
+constr 22848:22874 <> law_production_wired_refuse
+scheme 22679:22713 <> per_element_nuance_conservation_law_rect
+scheme 22679:22713 <> per_element_nuance_conservation_law_ind
+scheme 22679:22713 <> per_element_nuance_conservation_law_rec
+scheme 22679:22713 <> per_element_nuance_conservation_law_sind
+def 22889:22929 <> per_element_nuance_conservation_law_count
+R22933:22935 Corelib.Init.Datatypes <> nat ind
+prf 22950:22998 <> per_element_nuance_conservation_law_count_is_five
+R23045:23047 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23004:23044 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_law_count def
+ind 23087:23129 <> per_element_nuance_conservation_law_witness
+constr 23145:23179 <> per_element_nuance_law_witness_open
+constr 23185:23221 <> per_element_nuance_law_witness_proved
+scheme 23087:23129 <> per_element_nuance_conservation_law_witness_rect
+scheme 23087:23129 <> per_element_nuance_conservation_law_witness_ind
+scheme 23087:23129 <> per_element_nuance_conservation_law_witness_rec
+scheme 23087:23129 <> per_element_nuance_conservation_law_witness_sind
+def 23236:23287 <> evaluate_per_element_nuance_conservation_law_witness
+R23298:23332 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_law ind
+binder 23292:23294 <> law:85
+R23340:23375 UMST.ChemConstants.PerElementNuanceConservation <> PerElementNuanceConservationModality ind
+binder 23336:23336 <> m:86
+R23382:23424 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_law_witness ind
+R23437:23437 UMST.ChemConstants.PerElementNuanceConservation <> m:86 var
+R23448:23486 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R23492:23530 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_assumed constr
+R23536:23576 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_surrogate constr
+R23581:23615 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R23581:23615 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R23581:23615 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R23621:23658 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R23663:23699 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_proved constr
+prf 23715:23770 <> all_per_element_nuance_conservation_laws_open_at_unwired
+R23939:23944 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23901:23903 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23776:23827 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_law_witness def
+R23829:23856 UMST.ChemConstants.PerElementNuanceConservation <> law_per_element_nuance_named constr
+R23862:23900 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R23904:23938 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R24105:24110 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24067:24069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23945:23996 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_law_witness def
+R23998:24022 UMST.ChemConstants.PerElementNuanceConservation <> law_xor_classifier_refuse constr
+R24028:24066 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R24070:24104 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R24269:24274 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24231:24233 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24111:24162 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_law_witness def
+R24164:24186 UMST.ChemConstants.PerElementNuanceConservation <> law_homolog_copy_refuse constr
+R24192:24230 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R24234:24268 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R24433:24438 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24395:24397 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24275:24326 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_law_witness def
+R24328:24350 UMST.ChemConstants.PerElementNuanceConservation <> law_green_invent_refuse constr
+R24356:24394 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R24398:24432 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+R24563:24565 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24439:24490 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_law_witness def
+R24492:24518 UMST.ChemConstants.PerElementNuanceConservation <> law_production_wired_refuse constr
+R24524:24562 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R24566:24600 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_law_witness_open constr
+def 24881:24902 <> perElementNuanceProved
+R24906:24909 Corelib.Init.Datatypes <> bool ind
+R24914:24918 Corelib.Init.Datatypes <> false constr
+prf 24928:24958 <> per_element_nuance_proved_false
+R24984:24986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24962:24983 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceProved def
+R24987:24991 Corelib.Init.Datatypes <> false constr
+def 25031:25053 <> not118SquaredGreenTable
+R25057:25060 Corelib.Init.Datatypes <> bool ind
+R25065:25068 Corelib.Init.Datatypes <> true constr
+prf 25078:25104 <> not_118_squared_green_table
+R25131:25133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25108:25130 UMST.ChemConstants.PerElementNuanceConservation <> not118SquaredGreenTable def
+R25134:25137 Corelib.Init.Datatypes <> true constr
+def 25177:25207 <> twentySixthAxiomCollisionMarker
+R25211:25216 Stdlib.Strings.String <> string ind
+prf 25306:25339 <> twenty_sixth_axiom_collision_named
+R25376:25379 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R25345:25375 UMST.ChemConstants.PerElementNuanceConservation <> twentySixthAxiomCollisionMarker def
+prf 25639:25677 <> unwired_close_without_production_wiring
+R25785:25789 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25683:25728 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R25734:25772 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R25774:25778 Corelib.Init.Datatypes <> false constr
+R25780:25784 Corelib.Init.Datatypes <> false constr
+R25790:25807 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+prf 25844:25895 <> unwired_modality_always_ok_without_production_wiring
+R26003:26007 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25901:25946 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R25952:25990 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R25992:25996 Corelib.Init.Datatypes <> false constr
+R25998:26002 Corelib.Init.Datatypes <> false constr
+R26008:26025 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+R26041:26079 UMST.ChemConstants.PerElementNuanceConservation <> unwired_close_without_production_wiring thm
+R26041:26079 UMST.ChemConstants.PerElementNuanceConservation <> unwired_close_without_production_wiring thm
+prf 26094:26137 <> unwired_verdict_ok_without_production_wiring
+R26297:26301 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26143:26184 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R26191:26236 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R26245:26283 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R26285:26289 Corelib.Init.Datatypes <> false constr
+R26291:26295 Corelib.Init.Datatypes <> false constr
+R26302:26305 Corelib.Init.Datatypes <> true constr
+R26324:26365 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R26378:26416 UMST.ChemConstants.PerElementNuanceConservation <> unwired_close_without_production_wiring thm
+R26378:26416 UMST.ChemConstants.PerElementNuanceConservation <> unwired_close_without_production_wiring thm
+R26378:26416 UMST.ChemConstants.PerElementNuanceConservation <> unwired_close_without_production_wiring thm
+prf 26675:26701 <> per_element_nuance_named_ok
+R26885:26889 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26707:26743 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R26749:26787 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R26789:26819 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R26825:26854 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R26856:26860 Corelib.Init.Datatypes <> false constr
+R26862:26866 Corelib.Init.Datatypes <> false constr
+R26868:26872 Corelib.Init.Datatypes <> false constr
+R26874:26878 Corelib.Init.Datatypes <> false constr
+R26880:26884 Corelib.Init.Datatypes <> false constr
+R26890:26912 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+prf 26949:26985 <> named_per_element_nuance_conservation
+R27197:27202 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27169:27173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26991:27027 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R27033:27071 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R27073:27103 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R27109:27138 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R27140:27144 Corelib.Init.Datatypes <> false constr
+R27146:27150 Corelib.Init.Datatypes <> false constr
+R27152:27156 Corelib.Init.Datatypes <> false constr
+R27158:27162 Corelib.Init.Datatypes <> false constr
+R27164:27168 Corelib.Init.Datatypes <> false constr
+R27174:27196 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R27318:27323 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27311:27313 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27203:27232 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIdentityConserved def
+R27234:27269 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R27275:27310 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R27314:27317 Corelib.Init.Datatypes <> true constr
+R27400:27405 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27393:27395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27324:27355 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleIsConcurrentProduct def
+R27357:27392 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R27396:27399 Corelib.Init.Datatypes <> true constr
+R27502:27504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27406:27423 UMST.ChemConstants.PerElementNuanceConservation <> patternBundleHolds def
+R27425:27460 UMST.ChemConstants.PerElementNuanceConservation <> patternBundlePerElementNuanceWitness def
+R27466:27501 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+R27505:27508 Corelib.Init.Datatypes <> true constr
+prf 27559:27591 <> per_element_nuance_named_close_ok
+R27698:27702 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27597:27642 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R27648:27685 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R27687:27691 Corelib.Init.Datatypes <> false constr
+R27693:27697 Corelib.Init.Datatypes <> false constr
+R27703:27725 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+prf 27762:27804 <> named_per_element_nuance_conservation_close
+R27939:27944 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27911:27915 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27810:27855 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R27861:27898 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R27900:27904 Corelib.Init.Datatypes <> false constr
+R27906:27910 Corelib.Init.Datatypes <> false constr
+R27916:27938 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R27999:28001 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27945:27986 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_authorized def
+R27988:27992 Corelib.Init.Datatypes <> false constr
+R27994:27998 Corelib.Init.Datatypes <> false constr
+R28002:28005 Corelib.Init.Datatypes <> true constr
+R28034:28066 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_named_close_ok thm
+R28034:28066 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_named_close_ok thm
+R28080:28121 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_authorized def
+R28136:28168 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_named_close_ok thm
+R28136:28168 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_named_close_ok thm
+R28136:28168 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_named_close_ok thm
+prf 28423:28439 <> trivial_z_refused
+R28624:28628 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28445:28481 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R28487:28525 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R28527:28558 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceTrivial def
+R28564:28593 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R28595:28599 Corelib.Init.Datatypes <> false constr
+R28601:28605 Corelib.Init.Datatypes <> false constr
+R28607:28611 Corelib.Init.Datatypes <> false constr
+R28613:28617 Corelib.Init.Datatypes <> false constr
+R28619:28623 Corelib.Init.Datatypes <> false constr
+R28629:28652 UMST.ChemConstants.PerElementNuanceConservation <> verdict_trivial_z_refuse constr
+prf 28689:28715 <> trivial_empty_z_fail_closed
+R28929:28934 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28900:28904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28721:28757 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R28763:28801 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R28803:28834 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceTrivial def
+R28840:28869 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R28871:28875 Corelib.Init.Datatypes <> false constr
+R28877:28881 Corelib.Init.Datatypes <> false constr
+R28883:28887 Corelib.Init.Datatypes <> false constr
+R28889:28893 Corelib.Init.Datatypes <> false constr
+R28895:28899 Corelib.Init.Datatypes <> false constr
+R28905:28928 UMST.ChemConstants.PerElementNuanceConservation <> verdict_trivial_z_refuse constr
+R29169:29173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28935:28976 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R28983:29019 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R29028:29066 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R29068:29099 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceTrivial def
+R29108:29137 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R29139:29143 Corelib.Init.Datatypes <> false constr
+R29145:29149 Corelib.Init.Datatypes <> false constr
+R29151:29155 Corelib.Init.Datatypes <> false constr
+R29157:29161 Corelib.Init.Datatypes <> false constr
+R29163:29167 Corelib.Init.Datatypes <> false constr
+R29174:29178 Corelib.Init.Datatypes <> false constr
+R29207:29223 UMST.ChemConstants.PerElementNuanceConservation <> trivial_z_refused thm
+R29207:29223 UMST.ChemConstants.PerElementNuanceConservation <> trivial_z_refused thm
+R29237:29278 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R29293:29309 UMST.ChemConstants.PerElementNuanceConservation <> trivial_z_refused thm
+R29293:29309 UMST.ChemConstants.PerElementNuanceConservation <> trivial_z_refused thm
+R29293:29309 UMST.ChemConstants.PerElementNuanceConservation <> trivial_z_refused thm
+prf 29565:29586 <> xor_classifier_refused
+R29769:29773 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29592:29628 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R29634:29672 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R29674:29704 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R29710:29739 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R29741:29744 Corelib.Init.Datatypes <> true constr
+R29746:29750 Corelib.Init.Datatypes <> false constr
+R29752:29756 Corelib.Init.Datatypes <> false constr
+R29758:29762 Corelib.Init.Datatypes <> false constr
+R29764:29768 Corelib.Init.Datatypes <> false constr
+R29774:29802 UMST.ChemConstants.PerElementNuanceConservation <> verdict_xor_classifier_refuse constr
+prf 29839:29883 <> xor_mutually_exclusive_classifier_fail_closed
+R30100:30105 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30066:30070 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29889:29925 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R29931:29969 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R29971:30001 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R30007:30036 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R30038:30041 Corelib.Init.Datatypes <> true constr
+R30043:30047 Corelib.Init.Datatypes <> false constr
+R30049:30053 Corelib.Init.Datatypes <> false constr
+R30055:30059 Corelib.Init.Datatypes <> false constr
+R30061:30065 Corelib.Init.Datatypes <> false constr
+R30071:30099 UMST.ChemConstants.PerElementNuanceConservation <> verdict_xor_classifier_refuse constr
+R30338:30342 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30106:30147 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R30154:30190 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R30199:30237 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R30239:30269 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R30278:30307 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R30309:30312 Corelib.Init.Datatypes <> true constr
+R30314:30318 Corelib.Init.Datatypes <> false constr
+R30320:30324 Corelib.Init.Datatypes <> false constr
+R30326:30330 Corelib.Init.Datatypes <> false constr
+R30332:30336 Corelib.Init.Datatypes <> false constr
+R30343:30347 Corelib.Init.Datatypes <> false constr
+R30376:30397 UMST.ChemConstants.PerElementNuanceConservation <> xor_classifier_refused thm
+R30376:30397 UMST.ChemConstants.PerElementNuanceConservation <> xor_classifier_refused thm
+R30411:30452 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R30467:30488 UMST.ChemConstants.PerElementNuanceConservation <> xor_classifier_refused thm
+R30467:30488 UMST.ChemConstants.PerElementNuanceConservation <> xor_classifier_refused thm
+R30467:30488 UMST.ChemConstants.PerElementNuanceConservation <> xor_classifier_refused thm
+prf 30746:30765 <> homolog_copy_refused
+R30953:30957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30771:30807 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R30813:30851 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R30853:30888 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceHomologCopy def
+R30894:30923 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R30925:30929 Corelib.Init.Datatypes <> false constr
+R30931:30935 Corelib.Init.Datatypes <> false constr
+R30937:30941 Corelib.Init.Datatypes <> false constr
+R30943:30946 Corelib.Init.Datatypes <> true constr
+R30948:30952 Corelib.Init.Datatypes <> false constr
+R30958:30984 UMST.ChemConstants.PerElementNuanceConservation <> verdict_homolog_copy_refuse constr
+prf 31021:31044 <> homolog_copy_fail_closed
+R31264:31269 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31232:31236 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31050:31086 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R31092:31130 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R31132:31167 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceHomologCopy def
+R31173:31202 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R31204:31208 Corelib.Init.Datatypes <> false constr
+R31210:31214 Corelib.Init.Datatypes <> false constr
+R31216:31220 Corelib.Init.Datatypes <> false constr
+R31222:31225 Corelib.Init.Datatypes <> true constr
+R31227:31231 Corelib.Init.Datatypes <> false constr
+R31237:31263 UMST.ChemConstants.PerElementNuanceConservation <> verdict_homolog_copy_refuse constr
+R31507:31511 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31270:31311 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R31318:31354 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R31363:31401 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R31403:31438 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceHomologCopy def
+R31447:31476 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R31478:31482 Corelib.Init.Datatypes <> false constr
+R31484:31488 Corelib.Init.Datatypes <> false constr
+R31490:31494 Corelib.Init.Datatypes <> false constr
+R31496:31499 Corelib.Init.Datatypes <> true constr
+R31501:31505 Corelib.Init.Datatypes <> false constr
+R31512:31516 Corelib.Init.Datatypes <> false constr
+R31545:31564 UMST.ChemConstants.PerElementNuanceConservation <> homolog_copy_refused thm
+R31545:31564 UMST.ChemConstants.PerElementNuanceConservation <> homolog_copy_refused thm
+R31578:31619 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R31634:31653 UMST.ChemConstants.PerElementNuanceConservation <> homolog_copy_refused thm
+R31634:31653 UMST.ChemConstants.PerElementNuanceConservation <> homolog_copy_refused thm
+R31634:31653 UMST.ChemConstants.PerElementNuanceConservation <> homolog_copy_refused thm
+prf 31909:31935 <> green_invent_refuse_unwired
+R32042:32046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31941:31986 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R31992:32030 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R32032:32035 Corelib.Init.Datatypes <> true constr
+R32037:32041 Corelib.Init.Datatypes <> false constr
+R32047:32073 UMST.ChemConstants.PerElementNuanceConservation <> verdict_green_invent_refuse constr
+prf 32110:32135 <> green_invent_always_refuse
+R32294:32298 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32141:32182 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R32189:32234 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R32243:32281 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R32283:32286 Corelib.Init.Datatypes <> true constr
+R32288:32292 Corelib.Init.Datatypes <> false constr
+R32299:32303 Corelib.Init.Datatypes <> false constr
+R32322:32363 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R32376:32402 UMST.ChemConstants.PerElementNuanceConservation <> green_invent_refuse_unwired thm
+R32376:32402 UMST.ChemConstants.PerElementNuanceConservation <> green_invent_refuse_unwired thm
+R32376:32402 UMST.ChemConstants.PerElementNuanceConservation <> green_invent_refuse_unwired thm
+prf 32432:32460 <> green_invent_incidence_refuse
+R32643:32647 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32466:32502 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R32508:32546 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R32548:32578 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R32584:32613 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R32615:32619 Corelib.Init.Datatypes <> false constr
+R32621:32624 Corelib.Init.Datatypes <> true constr
+R32626:32630 Corelib.Init.Datatypes <> false constr
+R32632:32636 Corelib.Init.Datatypes <> false constr
+R32638:32642 Corelib.Init.Datatypes <> false constr
+R32648:32674 UMST.ChemConstants.PerElementNuanceConservation <> verdict_green_invent_refuse constr
+prf 32933:32957 <> proved_without_bar_refuse
+R33140:33144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32963:32999 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R33005:33043 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R33045:33075 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R33081:33110 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R33112:33116 Corelib.Init.Datatypes <> false constr
+R33118:33122 Corelib.Init.Datatypes <> false constr
+R33124:33127 Corelib.Init.Datatypes <> true constr
+R33129:33133 Corelib.Init.Datatypes <> false constr
+R33135:33139 Corelib.Init.Datatypes <> false constr
+R33145:33177 UMST.ChemConstants.PerElementNuanceConservation <> verdict_proved_without_bar_refuse constr
+prf 33214:33243 <> proved_without_bar_fail_closed
+R33464:33469 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33426:33430 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33249:33285 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R33291:33329 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R33331:33361 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R33367:33396 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R33398:33402 Corelib.Init.Datatypes <> false constr
+R33404:33408 Corelib.Init.Datatypes <> false constr
+R33410:33413 Corelib.Init.Datatypes <> true constr
+R33415:33419 Corelib.Init.Datatypes <> false constr
+R33421:33425 Corelib.Init.Datatypes <> false constr
+R33431:33463 UMST.ChemConstants.PerElementNuanceConservation <> verdict_proved_without_bar_refuse constr
+R33702:33706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33470:33511 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R33518:33554 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R33563:33601 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R33603:33633 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R33642:33671 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R33673:33677 Corelib.Init.Datatypes <> false constr
+R33679:33683 Corelib.Init.Datatypes <> false constr
+R33685:33688 Corelib.Init.Datatypes <> true constr
+R33690:33694 Corelib.Init.Datatypes <> false constr
+R33696:33700 Corelib.Init.Datatypes <> false constr
+R33707:33711 Corelib.Init.Datatypes <> false constr
+R33740:33764 UMST.ChemConstants.PerElementNuanceConservation <> proved_without_bar_refuse thm
+R33740:33764 UMST.ChemConstants.PerElementNuanceConservation <> proved_without_bar_refuse thm
+R33778:33819 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R33834:33858 UMST.ChemConstants.PerElementNuanceConservation <> proved_without_bar_refuse thm
+R33834:33858 UMST.ChemConstants.PerElementNuanceConservation <> proved_without_bar_refuse thm
+R33834:33858 UMST.ChemConstants.PerElementNuanceConservation <> proved_without_bar_refuse thm
+prf 34114:34136 <> production_wired_refuse
+R34242:34246 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34142:34187 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R34193:34230 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R34232:34236 Corelib.Init.Datatypes <> false constr
+R34238:34241 Corelib.Init.Datatypes <> true constr
+R34247:34277 UMST.ChemConstants.PerElementNuanceConservation <> verdict_production_wired_refuse constr
+prf 34314:34343 <> production_wired_claim_refused
+R34501:34505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34349:34390 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R34397:34442 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R34451:34488 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R34490:34494 Corelib.Init.Datatypes <> false constr
+R34496:34499 Corelib.Init.Datatypes <> true constr
+R34506:34510 Corelib.Init.Datatypes <> false constr
+R34529:34570 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R34583:34605 UMST.ChemConstants.PerElementNuanceConservation <> production_wired_refuse thm
+R34583:34605 UMST.ChemConstants.PerElementNuanceConservation <> production_wired_refuse thm
+R34583:34605 UMST.ChemConstants.PerElementNuanceConservation <> production_wired_refuse thm
+prf 34859:34884 <> twenty_sixth_axiom_refused
+R35067:35071 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34890:34926 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R34932:34970 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R34972:35002 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R35008:35037 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R35039:35043 Corelib.Init.Datatypes <> false constr
+R35045:35049 Corelib.Init.Datatypes <> false constr
+R35051:35055 Corelib.Init.Datatypes <> false constr
+R35057:35061 Corelib.Init.Datatypes <> false constr
+R35063:35066 Corelib.Init.Datatypes <> true constr
+R35072:35104 UMST.ChemConstants.PerElementNuanceConservation <> verdict_twenty_sixth_axiom_refuse constr
+def 35366:35415 <> per_element_nuance_conservation_coherence_scaffold
+R35419:35422 Corelib.Init.Datatypes <> bool ind
+R35748:35753 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R35582:35587 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R35429:35470 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R35477:35522 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R35531:35568 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R35570:35574 Corelib.Init.Datatypes <> false constr
+R35576:35580 Corelib.Init.Datatypes <> false constr
+R35588:35591 Corelib.Init.Datatypes <> negb def
+R35594:35635 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R35642:35687 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R35696:35734 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R35736:35739 Corelib.Init.Datatypes <> true constr
+R35741:35745 Corelib.Init.Datatypes <> false constr
+R35754:35757 Corelib.Init.Datatypes <> negb def
+R35760:35801 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+R35808:35853 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R35862:35899 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_proved constr
+R35901:35905 Corelib.Init.Datatypes <> false constr
+R35907:35910 Corelib.Init.Datatypes <> true constr
+prf 35922:35976 <> per_element_nuance_conservation_coherence_scaffold_true
+R36032:36034 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35982:36031 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_coherence_scaffold def
+R36035:36038 Corelib.Init.Datatypes <> true constr
+R36057:36106 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_coherence_scaffold def
+R36113:36154 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_verdict_ok def
+ind 36435:36446 <> formal_fiber
+constr 36462:36482 <> fiber_quantum_knowing
+constr 36488:36504 <> fiber_meso_acting
+scheme 36435:36446 <> formal_fiber_rect
+scheme 36435:36446 <> formal_fiber_ind
+scheme 36435:36446 <> formal_fiber_rec
+scheme 36435:36446 <> formal_fiber_sind
+ind 36518:36536 <> formal_claim_family
+constr 36552:36588 <> claim_per_element_nuance_conservation
+scheme 36518:36536 <> formal_claim_family_rect
+scheme 36518:36536 <> formal_claim_family_ind
+scheme 36518:36536 <> formal_claim_family_rec
+scheme 36518:36536 <> formal_claim_family_sind
+def 36603:36642 <> per_element_nuance_conservation_fiber_ok
+R36649:36660 UMST.ChemConstants.PerElementNuanceConservation <> formal_fiber ind
+binder 36645:36645 <> f:92
+R36665:36668 Corelib.Init.Datatypes <> bool ind
+R36681:36681 UMST.ChemConstants.PerElementNuanceConservation <> f:92 var
+R36692:36712 UMST.ChemConstants.PerElementNuanceConservation <> fiber_quantum_knowing constr
+R36717:36720 Corelib.Init.Datatypes <> true constr
+R36726:36742 UMST.ChemConstants.PerElementNuanceConservation <> fiber_meso_acting constr
+R36747:36751 Corelib.Init.Datatypes <> false constr
+def 36772:36819 <> per_element_nuance_conservation_knowing_fiber_ok
+R36823:36826 Corelib.Init.Datatypes <> bool ind
+R36833:36872 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_fiber_ok def
+R36874:36894 UMST.ChemConstants.PerElementNuanceConservation <> fiber_quantum_knowing constr
+def 36909:36954 <> per_element_nuance_conservation_meso_acting_ok
+R36958:36961 Corelib.Init.Datatypes <> bool ind
+R36968:37007 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_fiber_ok def
+R37009:37025 UMST.ChemConstants.PerElementNuanceConservation <> fiber_meso_acting constr
+prf 37035:37074 <> per_element_nuance_knowing_fiber_ok_true
+R37128:37130 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37080:37127 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_knowing_fiber_ok def
+R37131:37134 Corelib.Init.Datatypes <> true constr
+prf 37169:37205 <> per_element_nuance_meso_acting_not_ok
+R37257:37259 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37211:37256 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_meso_acting_ok def
+R37260:37264 Corelib.Init.Datatypes <> false constr
+prf 37301:37342 <> per_element_nuance_routes_knowing_not_meso
+R37403:37408 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37396:37398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37348:37395 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_knowing_fiber_ok def
+R37399:37402 Corelib.Init.Datatypes <> true constr
+R37455:37457 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37409:37454 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_meso_acting_ok def
+R37458:37462 Corelib.Init.Datatypes <> false constr
+R37491:37530 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_knowing_fiber_ok_true thm
+R37491:37530 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_knowing_fiber_ok_true thm
+R37543:37579 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_meso_acting_not_ok thm
+R37543:37579 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_meso_acting_not_ok thm
+prf 37818:37865 <> per_element_nuance_conservation_fixture_scaffold
+R38079:38084 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38049:38055 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37871:37907 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R37913:37951 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R37953:37983 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R37989:38018 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R38020:38024 Corelib.Init.Datatypes <> false constr
+R38026:38030 Corelib.Init.Datatypes <> false constr
+R38032:38036 Corelib.Init.Datatypes <> false constr
+R38038:38042 Corelib.Init.Datatypes <> false constr
+R38044:38048 Corelib.Init.Datatypes <> false constr
+R38056:38078 UMST.ChemConstants.PerElementNuanceConservation <> verdict_nuance_named_ok constr
+R38295:38300 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38264:38270 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38085:38121 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R38127:38165 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R38167:38198 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceTrivial def
+R38204:38233 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R38235:38239 Corelib.Init.Datatypes <> false constr
+R38241:38245 Corelib.Init.Datatypes <> false constr
+R38247:38251 Corelib.Init.Datatypes <> false constr
+R38253:38257 Corelib.Init.Datatypes <> false constr
+R38259:38263 Corelib.Init.Datatypes <> false constr
+R38271:38294 UMST.ChemConstants.PerElementNuanceConservation <> verdict_trivial_z_refuse constr
+R38514:38519 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38478:38484 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38301:38337 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R38343:38381 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R38383:38413 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R38419:38448 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R38450:38453 Corelib.Init.Datatypes <> true constr
+R38455:38459 Corelib.Init.Datatypes <> false constr
+R38461:38465 Corelib.Init.Datatypes <> false constr
+R38467:38471 Corelib.Init.Datatypes <> false constr
+R38473:38477 Corelib.Init.Datatypes <> false constr
+R38485:38513 UMST.ChemConstants.PerElementNuanceConservation <> verdict_xor_classifier_refuse constr
+R38737:38742 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38697:38703 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38520:38556 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R38562:38600 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R38602:38632 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceIronL1 def
+R38638:38667 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R38669:38673 Corelib.Init.Datatypes <> false constr
+R38675:38679 Corelib.Init.Datatypes <> false constr
+R38681:38684 Corelib.Init.Datatypes <> true constr
+R38686:38690 Corelib.Init.Datatypes <> false constr
+R38692:38696 Corelib.Init.Datatypes <> false constr
+R38704:38736 UMST.ChemConstants.PerElementNuanceConservation <> verdict_proved_without_bar_refuse constr
+R38959:38964 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R38925:38931 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38743:38779 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_incidence def
+R38785:38823 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R38825:38860 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceIncidenceHomologCopy def
+R38866:38895 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceClaimBarAbsent def
+R38897:38901 Corelib.Init.Datatypes <> false constr
+R38903:38907 Corelib.Init.Datatypes <> false constr
+R38909:38913 Corelib.Init.Datatypes <> false constr
+R38915:38918 Corelib.Init.Datatypes <> true constr
+R38920:38924 Corelib.Init.Datatypes <> false constr
+R38932:38958 UMST.ChemConstants.PerElementNuanceConservation <> verdict_homolog_copy_refuse constr
+R39092:39097 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39067:39073 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38965:39010 UMST.ChemConstants.PerElementNuanceConservation <> evaluate_per_element_nuance_conservation_close def
+R39016:39054 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr
+R39056:39060 Corelib.Init.Datatypes <> false constr
+R39062:39066 Corelib.Init.Datatypes <> false constr
+R39074:39091 UMST.ChemConstants.PerElementNuanceConservation <> verdict_unwired_ok constr
+R39153:39158 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39146:39148 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39098:39145 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_knowing_fiber_ok def
+R39149:39152 Corelib.Init.Datatypes <> true constr
+R39213:39218 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39205:39207 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39159:39204 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_meso_acting_ok def
+R39208:39212 Corelib.Init.Datatypes <> false constr
+R39249:39254 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39241:39243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39219:39240 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceProved def
+R39244:39248 Corelib.Init.Datatypes <> false constr
+R39275:39280 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39268:39270 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39255:39267 UMST.ChemConstants.PerElementNuanceConservation <> productNotXor def
+R39271:39274 Corelib.Init.Datatypes <> true constr
+R39309:39314 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R39302:39304 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39281:39301 UMST.ChemConstants.PerElementNuanceConservation <> homologNotCopyWitness def
+R39305:39308 Corelib.Init.Datatypes <> true constr
+R39351:39353 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39315:39350 UMST.ChemConstants.PerElementNuanceConservation <> pattern_class_per_element_nuance_idx def
+def 39634:39668 <> patternProductConservationAuthority
+R39672:39677 Stdlib.Strings.String <> string ind
+def 39775:39814 <> perElementNuanceConservationIntAuthority
+R39818:39823 Stdlib.Strings.String <> string ind
+def 39906:39942 <> chemIntCrossPerElementNuanceAuthority
+R39946:39951 Stdlib.Strings.String <> string ind
+def 40020:40057 <> chemIntNuancePerElementNuanceAuthority
+R40061:40066 Stdlib.Strings.String <> string ind
+def 40123:40156 <> perElementNuanceConservationCellId
+R40160:40165 Stdlib.Strings.String <> string ind
+def 40237:40272 <> perElementNuanceConservationNonClaim
+R40276:40281 Stdlib.Strings.String <> string ind
+prf 40805:40843 <> per_element_nuance_conservation_cell_id
+R40883:40887 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40849:40882 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceConservationCellId def
+prf 40973:41038 <> per_element_nuance_conservation_cites_pattern_product_conservation
+R41079:41082 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R41044:41078 UMST.ChemConstants.PerElementNuanceConservation <> patternProductConservationAuthority def
+prf 41120:41166 <> per_element_nuance_conservation_cites_int_x_row
+R41212:41215 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R41172:41211 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceConservationIntAuthority def
+prf 41253:41299 <> per_element_nuance_conservation_cites_int_cross
+R41342:41346 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41305:41341 UMST.ChemConstants.PerElementNuanceConservation <> chemIntCrossPerElementNuanceAuthority def
+prf 41429:41482 <> per_element_nuance_conservation_cites_int_nuance_table
+R41526:41528 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41488:41525 UMST.ChemConstants.PerElementNuanceConservation <> chemIntNuancePerElementNuanceAuthority def
+prf 41599:41643 <> per_element_nuance_conservation_cites_x00_row
+R41685:41687 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41649:41684 UMST.ChemConstants.PerElementNuanceConservation <> crossClassifierPerElementNuanceRowId def
+prf 41727:41770 <> per_element_nuance_conservation_cites_marker
+R41799:41802 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R41776:41798 UMST.ChemConstants.PerElementNuanceConservation <> concurrentProductMarker def
+def 42067:42110 <> perElementNuanceSecondLawConservationFraming
+R42114:42119 Stdlib.Strings.String <> string ind
+prf 42221:42253 <> per_element_nuance_not_26th_axiom
+R42303:42306 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R42259:42302 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceSecondLawConservationFraming def
+prf 42373:42422 <> per_element_nuance_second_law_conservation_framing
+R42472:42475 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R42428:42471 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceSecondLawConservationFraming def
+def 42742:42763 <> physicsGreenAuthorized
+R42775:42779 Corelib.Init.Logic <> False ind
+prf 42789:42839 <> per_element_nuance_conservation_physics_green_false
+R42845:42846 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R42847:42868 UMST.ChemConstants.PerElementNuanceConservation <> physicsGreenAuthorized def
+prf 42908:42955 <> per_element_nuance_conservation_modality_unwired
+R43004:43006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R42961:43003 UMST.ChemConstants.PerElementNuanceConservation <> perElementNuanceConservationModalityCurrent def
+R43007:43045 UMST.ChemConstants.PerElementNuanceConservation <> per_element_nuance_conservation_unwired constr

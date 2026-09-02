@@ -1,0 +1,1023 @@
+DIGEST 04bfe06874dc559ba131f8e53e88abc8
+FUMST.ChemConstants.RewriteConservation
+R1134:1138 Stdlib.Arith.Arith <> <> lib
+R1140:1145 Stdlib.ZArith.ZArith <> <> lib
+R1147:1152 Stdlib.Strings.String <> <> lib
+R1154:1157 Stdlib.Bool.Bool <> <> lib
+R1159:1161 Stdlib.micromega.Lia <> <> lib
+R1163:1166 Stdlib.Lists.List <> <> lib
+R1176:1188 Stdlib.Lists.List ListNotations <> mod
+ind 1518:1544 <> RewriteConservationModality
+constr 1560:1587 <> rewrite_conservation_unwired
+constr 1593:1620 <> rewrite_conservation_assumed
+constr 1626:1652 <> rewrite_conservation_proved
+constr 1658:1687 <> rewrite_conservation_surrogate
+scheme 1518:1544 <> RewriteConservationModality_rect
+scheme 1518:1544 <> RewriteConservationModality_ind
+scheme 1518:1544 <> RewriteConservationModality_rec
+scheme 1518:1544 <> RewriteConservationModality_sind
+def 1702:1735 <> rewriteConservationModalityCurrent
+R1739:1765 UMST.ChemConstants.RewriteConservation <> RewriteConservationModality ind
+R1772:1799 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+def 1814:1840 <> rewrite_lattice_cardinality
+R1844:1846 Corelib.Init.Datatypes <> nat ind
+prf 1861:1895 <> rewrite_lattice_cardinality_is_four
+R1928:1930 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1901:1927 UMST.ChemConstants.RewriteConservation <> rewrite_lattice_cardinality def
+prf 1966:1996 <> rewrite_lattice_not_118_squared
+R2056:2058 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2002:2005 Corelib.Init.Datatypes <> negb def
+R2008:2014 Stdlib.Arith.PeanoNat Nat eqb def
+R2016:2042 UMST.ChemConstants.RewriteConservation <> rewrite_lattice_cardinality def
+R2048:2050 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2059:2062 Corelib.Init.Datatypes <> true constr
+R2081:2107 UMST.ChemConstants.RewriteConservation <> rewrite_lattice_cardinality def
+ind 2366:2381 <> thermo_invariant
+constr 2397:2423 <> invariant_mass_conservation
+constr 2429:2452 <> invariant_energy_balance
+constr 2458:2487 <> invariant_entropy_non_decrease
+scheme 2366:2381 <> thermo_invariant_rect
+scheme 2366:2381 <> thermo_invariant_ind
+scheme 2366:2381 <> thermo_invariant_rec
+scheme 2366:2381 <> thermo_invariant_sind
+def 2502:2523 <> thermo_invariant_count
+R2527:2529 Corelib.Init.Datatypes <> nat ind
+prf 2544:2574 <> thermo_invariant_count_is_three
+R2602:2604 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2580:2601 UMST.ChemConstants.RewriteConservation <> thermo_invariant_count def
+def 2645:2664 <> thermo_invariant_all
+R2668:2671 Corelib.Init.Datatypes <> list ind
+R2673:2688 UMST.ChemConstants.RewriteConservation <> thermo_invariant ind
+R2695:2695 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2723:2727 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2752:2756 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2787:2787 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2696:2722 UMST.ChemConstants.RewriteConservation <> invariant_mass_conservation constr
+R2728:2751 UMST.ChemConstants.RewriteConservation <> invariant_energy_balance constr
+R2757:2786 UMST.ChemConstants.RewriteConservation <> invariant_entropy_non_decrease constr
+prf 2797:2823 <> thermo_invariant_all_length
+R2856:2858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2829:2834 Stdlib.Lists.List <> length abbrev
+R2836:2855 UMST.ChemConstants.RewriteConservation <> thermo_invariant_all def
+R2859:2880 UMST.ChemConstants.RewriteConservation <> thermo_invariant_count def
+rec 3140:3161 <> thermo_rewrite_witness
+proj 3177:3192 <> mass_delta_milli
+proj 3203:3221 <> energy_delta_microj
+proj 3232:3250 <> entropy_delta_milli
+proj 3259:3278 <> external_work_microj
+R3196:3198 Corelib.Init.Datatypes <> nat ind
+R3225:3227 Corelib.Init.Datatypes <> nat ind
+R3254:3254 Corelib.Numbers.BinNums <> Z ind
+R3282:3284 Corelib.Init.Datatypes <> nat ind
+def 3301:3328 <> thermoRewriteWitnessBalanced
+R3332:3353 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_witness rec
+R3363:3378 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3363:3378 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3363:3378 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3391:3409 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R3391:3409 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R3422:3440 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R3422:3440 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R3455:3474 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+R3455:3474 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+def 3497:3527 <> thermoRewriteWitnessMassViolate
+R3531:3552 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_witness rec
+R3562:3577 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3562:3577 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3562:3577 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3590:3608 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R3590:3608 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R3621:3639 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R3621:3639 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R3654:3673 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+R3654:3673 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+def 3696:3731 <> thermoRewriteWitnessSecondLawViolate
+R3735:3756 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_witness rec
+R3766:3781 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3766:3781 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3766:3781 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3794:3812 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R3794:3812 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R3825:3843 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R3825:3843 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R3859:3878 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+R3859:3878 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+R3848:3848 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+prf 3896:3921 <> balanced_witness_mass_zero
+R3974:3976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3957:3972 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R3927:3954 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+prf 4012:4039 <> balanced_witness_energy_zero
+R4095:4097 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4075:4093 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R4045:4072 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+prf 4133:4166 <> mass_violate_witness_mass_positive
+R4173:4175 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R4209:4224 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R4176:4206 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessMassViolate def
+R4241:4253 Stdlib.Arith.PeanoNat Nat lt_0_succ thm
+R4241:4253 Stdlib.Arith.PeanoNat Nat lt_0_succ thm
+def 4273:4291 <> entropy_is_negative
+R4298:4298 Corelib.Numbers.BinNums <> Z ind
+binder 4294:4294 <> z:10
+R4303:4306 Corelib.Init.Datatypes <> bool ind
+R4319:4319 UMST.ChemConstants.RewriteConservation <> z:10 var
+R4330:4333 Corelib.Numbers.BinNums <> Zpos constr
+R4340:4344 Corelib.Init.Datatypes <> false constr
+R4350:4351 Corelib.Numbers.BinNums <> Z0 constr
+R4356:4360 Corelib.Init.Datatypes <> false constr
+R4366:4369 Corelib.Numbers.BinNums <> Zneg constr
+R4376:4379 Corelib.Init.Datatypes <> true constr
+prf 4395:4429 <> second_law_violate_entropy_negative
+R4519:4521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4435:4453 UMST.ChemConstants.RewriteConservation <> entropy_is_negative def
+R4498:4516 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R4460:4495 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessSecondLawViolate def
+R4522:4525 Corelib.Init.Datatypes <> true constr
+ind 4788:4812 <> thermo_preserving_verdict
+constr 4828:4844 <> verdict_design_ok
+constr 4850:4870 <> verdict_preserving_ok
+constr 4876:4892 <> verdict_fusion_ok
+constr 4898:4925 <> verdict_conservation_violate
+constr 4931:4956 <> verdict_second_law_violate
+constr 4962:4988 <> verdict_green_invent_refuse
+scheme 4788:4812 <> thermo_preserving_verdict_rect
+scheme 4788:4812 <> thermo_preserving_verdict_ind
+scheme 4788:4812 <> thermo_preserving_verdict_rec
+scheme 4788:4812 <> thermo_preserving_verdict_sind
+def 5003:5030 <> thermo_preserving_verdict_ok
+R5037:5061 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict ind
+binder 5033:5033 <> v:14
+R5066:5069 Corelib.Init.Datatypes <> bool ind
+R5082:5082 UMST.ChemConstants.RewriteConservation <> v:14 var
+R5093:5109 UMST.ChemConstants.RewriteConservation <> verdict_design_ok constr
+R5114:5117 Corelib.Init.Datatypes <> true constr
+R5123:5143 UMST.ChemConstants.RewriteConservation <> verdict_preserving_ok constr
+R5148:5151 Corelib.Init.Datatypes <> true constr
+R5157:5173 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+R5178:5181 Corelib.Init.Datatypes <> true constr
+R5192:5196 Corelib.Init.Datatypes <> false constr
+def 5217:5239 <> evaluate_thermo_witness
+R5248:5269 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_witness rec
+binder 5244:5244 <> w:16
+R5295:5298 Corelib.Init.Datatypes <> bool ind
+binder 5273:5291 <> claim_physics_green:17
+R5305:5329 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict ind
+R5339:5357 UMST.ChemConstants.RewriteConservation <> claim_physics_green:17 var
+R5434:5444 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5404:5410 Stdlib.Arith.PeanoNat Nat ltb def
+R5417:5432 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R5414:5414 UMST.ChemConstants.RewriteConservation <> w:16 var
+R5445:5451 Stdlib.Arith.PeanoNat Nat ltb def
+R5458:5476 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R5455:5455 UMST.ChemConstants.RewriteConservation <> w:16 var
+R5525:5543 UMST.ChemConstants.RewriteConservation <> entropy_is_negative def
+R5548:5566 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R5545:5545 UMST.ChemConstants.RewriteConservation <> w:16 var
+R5721:5741 UMST.ChemConstants.RewriteConservation <> verdict_preserving_ok constr
+R5584:5587 Corelib.Init.Datatypes <> negb def
+R5590:5596 Stdlib.Arith.PeanoNat Nat ltb def
+R5603:5622 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+R5600:5600 UMST.ChemConstants.RewriteConservation <> w:16 var
+R5687:5707 UMST.ChemConstants.RewriteConservation <> verdict_preserving_ok constr
+R5643:5668 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+R5486:5513 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R5366:5392 UMST.ChemConstants.RewriteConservation <> verdict_green_invent_refuse constr
+prf 5751:5780 <> balanced_witness_preserving_ok
+R5844:5848 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5786:5808 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R5810:5837 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+R5839:5843 Corelib.Init.Datatypes <> false constr
+R5849:5869 UMST.ChemConstants.RewriteConservation <> verdict_preserving_ok constr
+prf 5906:5932 <> balanced_witness_preserving
+R6022:6027 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5996:6000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5938:5960 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R5962:5989 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+R5991:5995 Corelib.Init.Datatypes <> false constr
+R6001:6021 UMST.ChemConstants.RewriteConservation <> verdict_preserving_ok constr
+R6121:6123 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6028:6055 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R6062:6084 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R6086:6113 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+R6115:6119 Corelib.Init.Datatypes <> false constr
+R6124:6127 Corelib.Init.Datatypes <> true constr
+R6156:6185 UMST.ChemConstants.RewriteConservation <> balanced_witness_preserving_ok thm
+R6156:6185 UMST.ChemConstants.RewriteConservation <> balanced_witness_preserving_ok thm
+R6199:6226 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R6241:6270 UMST.ChemConstants.RewriteConservation <> balanced_witness_preserving_ok thm
+R6241:6270 UMST.ChemConstants.RewriteConservation <> balanced_witness_preserving_ok thm
+R6241:6270 UMST.ChemConstants.RewriteConservation <> balanced_witness_preserving_ok thm
+prf 6302:6321 <> mass_violate_refused
+R6388:6392 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6327:6349 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R6351:6381 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessMassViolate def
+R6383:6387 Corelib.Init.Datatypes <> false constr
+R6393:6420 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+prf 6457:6488 <> conservation_violate_fail_closed
+R6588:6593 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6555:6559 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6494:6516 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R6518:6548 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessMassViolate def
+R6550:6554 Corelib.Init.Datatypes <> false constr
+R6560:6587 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R6690:6692 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6594:6621 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R6628:6650 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R6652:6682 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessMassViolate def
+R6684:6688 Corelib.Init.Datatypes <> false constr
+R6693:6697 Corelib.Init.Datatypes <> false constr
+R6726:6745 UMST.ChemConstants.RewriteConservation <> mass_violate_refused thm
+R6726:6745 UMST.ChemConstants.RewriteConservation <> mass_violate_refused thm
+R6759:6786 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R6801:6820 UMST.ChemConstants.RewriteConservation <> mass_violate_refused thm
+R6801:6820 UMST.ChemConstants.RewriteConservation <> mass_violate_refused thm
+R6801:6820 UMST.ChemConstants.RewriteConservation <> mass_violate_refused thm
+prf 6852:6877 <> second_law_violate_refused
+R6949:6953 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6883:6905 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R6907:6942 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessSecondLawViolate def
+R6944:6948 Corelib.Init.Datatypes <> false constr
+R6954:6979 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+prf 7016:7045 <> second_law_violate_fail_closed
+R7148:7153 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7117:7121 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7051:7073 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R7075:7110 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessSecondLawViolate def
+R7112:7116 Corelib.Init.Datatypes <> false constr
+R7122:7147 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+R7255:7257 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7154:7181 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R7188:7210 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R7212:7247 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessSecondLawViolate def
+R7249:7253 Corelib.Init.Datatypes <> false constr
+R7258:7262 Corelib.Init.Datatypes <> false constr
+R7291:7316 UMST.ChemConstants.RewriteConservation <> second_law_violate_refused thm
+R7291:7316 UMST.ChemConstants.RewriteConservation <> second_law_violate_refused thm
+R7330:7357 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R7372:7397 UMST.ChemConstants.RewriteConservation <> second_law_violate_refused thm
+R7372:7397 UMST.ChemConstants.RewriteConservation <> second_law_violate_refused thm
+R7372:7397 UMST.ChemConstants.RewriteConservation <> second_law_violate_refused thm
+ind 7657:7675 <> thermo_rewrite_step
+constr 7691:7711 <> rewrite_step_identity
+constr 7717:7739 <> rewrite_step_admissible
+constr 7745:7777 <> rewrite_step_conservation_violate
+constr 7783:7813 <> rewrite_step_second_law_violate
+scheme 7657:7675 <> thermo_rewrite_step_rect
+scheme 7657:7675 <> thermo_rewrite_step_ind
+scheme 7657:7675 <> thermo_rewrite_step_rec
+scheme 7657:7675 <> thermo_rewrite_step_sind
+def 7828:7857 <> thermo_rewrite_step_preserving
+R7864:7882 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step ind
+binder 7860:7860 <> s:20
+R7887:7890 Corelib.Init.Datatypes <> bool ind
+R7903:7903 UMST.ChemConstants.RewriteConservation <> s:20 var
+R7914:7934 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R7939:7942 Corelib.Init.Datatypes <> true constr
+R7948:7970 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R7975:7978 Corelib.Init.Datatypes <> true constr
+R7984:8016 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R8021:8025 Corelib.Init.Datatypes <> false constr
+R8031:8061 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R8066:8070 Corelib.Init.Datatypes <> false constr
+prf 8086:8109 <> identity_step_preserving
+R8167:8169 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8115:8144 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R8146:8166 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R8170:8173 Corelib.Init.Datatypes <> true constr
+prf 8208:8233 <> admissible_step_preserving
+R8293:8295 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8239:8268 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R8270:8292 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R8296:8299 Corelib.Init.Datatypes <> true constr
+prf 8334:8373 <> conservation_violate_step_not_preserving
+R8443:8445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8379:8408 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R8410:8442 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R8446:8450 Corelib.Init.Datatypes <> false constr
+prf 8485:8522 <> second_law_violate_step_not_preserving
+R8590:8592 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8528:8557 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R8559:8589 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R8593:8597 Corelib.Init.Datatypes <> false constr
+def 8637:8655 <> witness_is_identity
+R8662:8683 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_witness rec
+binder 8658:8658 <> w:22
+R8688:8691 Corelib.Init.Datatypes <> bool ind
+R8823:8828 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8767:8772 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8728:8733 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8698:8704 Stdlib.Arith.PeanoNat Nat eqb def
+R8709:8724 UMST.ChemConstants.RewriteConservation <> mass_delta_milli proj
+R8706:8706 UMST.ChemConstants.RewriteConservation <> w:22 var
+R8734:8740 Stdlib.Arith.PeanoNat Nat eqb def
+R8745:8763 UMST.ChemConstants.RewriteConservation <> energy_delta_microj proj
+R8742:8742 UMST.ChemConstants.RewriteConservation <> w:22 var
+R8773:8776 Corelib.Init.Datatypes <> negb def
+R8779:8797 UMST.ChemConstants.RewriteConservation <> entropy_is_negative def
+R8802:8820 UMST.ChemConstants.RewriteConservation <> entropy_delta_milli proj
+R8799:8799 UMST.ChemConstants.RewriteConservation <> w:22 var
+R8829:8835 Stdlib.Arith.PeanoNat Nat eqb def
+R8840:8859 UMST.ChemConstants.RewriteConservation <> external_work_microj proj
+R8837:8837 UMST.ChemConstants.RewriteConservation <> w:22 var
+def 8877:8897 <> classify_rewrite_step
+R8904:8925 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_witness rec
+binder 8900:8900 <> w:23
+R8930:8948 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step ind
+R8961:8983 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R8985:8985 UMST.ChemConstants.RewriteConservation <> w:23 var
+R8987:8991 Corelib.Init.Datatypes <> false constr
+R9002:9022 UMST.ChemConstants.RewriteConservation <> verdict_preserving_ok constr
+R9036:9054 UMST.ChemConstants.RewriteConservation <> witness_is_identity def
+R9056:9056 UMST.ChemConstants.RewriteConservation <> w:23 var
+R9090:9112 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R9063:9083 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R9118:9145 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R9150:9182 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R9188:9213 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+R9218:9248 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R9259:9291 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+prf 9307:9335 <> classify_balanced_is_identity
+R9391:9393 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9341:9361 UMST.ChemConstants.RewriteConservation <> classify_rewrite_step def
+R9363:9390 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+R9394:9414 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+prf 9449:9493 <> classify_mass_violate_is_conservation_violate
+R9552:9556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9499:9519 UMST.ChemConstants.RewriteConservation <> classify_rewrite_step def
+R9521:9551 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessMassViolate def
+R9557:9589 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+prf 9624:9650 <> classify_second_law_violate
+R9714:9718 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9656:9676 UMST.ChemConstants.RewriteConservation <> classify_rewrite_step def
+R9678:9713 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessSecondLawViolate def
+R9719:9749 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+ind 10012:10031 <> fused_thermo_rewrite
+constr 10047:10068 <> fused_rewrite_identity
+constr 10074:10097 <> fused_rewrite_sequential
+R10115:10133 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step ind
+binder 10100:10104 <> first:26
+binder 10106:10111 <> second:27
+scheme 10012:10031 <> fused_thermo_rewrite_rect
+scheme 10012:10031 <> fused_thermo_rewrite_ind
+scheme 10012:10031 <> fused_thermo_rewrite_rec
+scheme 10012:10031 <> fused_thermo_rewrite_sind
+def 10149:10171 <> thermo_rewrite_step_beq
+R10182:10200 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step ind
+binder 10174:10175 <> s1:28
+binder 10177:10178 <> s2:29
+R10205:10208 Corelib.Init.Datatypes <> bool ind
+R10225:10226 UMST.ChemConstants.RewriteConservation <> s2:29 var
+R10221:10222 UMST.ChemConstants.RewriteConservation <> s1:28 var
+R10237:10257 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R10260:10280 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R10285:10288 Corelib.Init.Datatypes <> true constr
+R10294:10316 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R10319:10341 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R10346:10349 Corelib.Init.Datatypes <> true constr
+R10355:10387 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R10390:10422 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R10427:10430 Corelib.Init.Datatypes <> true constr
+R10436:10466 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R10469:10499 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R10504:10507 Corelib.Init.Datatypes <> true constr
+R10521:10525 Corelib.Init.Datatypes <> false constr
+def 10546:10563 <> fuse_rewrite_steps
+R10583:10601 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step ind
+binder 10568:10572 <> first:32
+binder 10574:10579 <> second:33
+R10606:10625 UMST.ChemConstants.RewriteConservation <> fused_thermo_rewrite ind
+R10686:10694 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10635:10657 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_beq def
+R10659:10663 UMST.ChemConstants.RewriteConservation <> first:32 var
+R10665:10685 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R10695:10717 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_beq def
+R10719:10724 UMST.ChemConstants.RewriteConservation <> second:33 var
+R10726:10746 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R10785:10808 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R10810:10814 UMST.ChemConstants.RewriteConservation <> first:32 var
+R10816:10821 UMST.ChemConstants.RewriteConservation <> second:33 var
+R10755:10776 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+def 10836:10860 <> fuse_rewrite_steps_direct
+R10880:10898 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step ind
+binder 10865:10869 <> first:34
+binder 10871:10876 <> second:35
+R10903:10922 UMST.ChemConstants.RewriteConservation <> fused_thermo_rewrite ind
+R10929:10946 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps def
+R10948:10952 UMST.ChemConstants.RewriteConservation <> first:34 var
+R10954:10959 UMST.ChemConstants.RewriteConservation <> second:35 var
+prf 10969:10990 <> fuse_identity_identity
+R11065:11069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10996:11020 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps_direct def
+R11022:11042 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R11044:11064 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R11070:11091 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+prf 11126:11149 <> fuse_admissible_identity
+R11226:11230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11155:11179 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps_direct def
+R11181:11203 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R11205:11225 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R11231:11254 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R11256:11278 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R11280:11300 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+def 11340:11361 <> evaluate_fused_rewrite
+R11374:11393 UMST.ChemConstants.RewriteConservation <> fused_thermo_rewrite ind
+binder 11366:11370 <> fused:36
+R11419:11422 Corelib.Init.Datatypes <> bool ind
+binder 11397:11415 <> claim_physics_green:37
+R11429:11453 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict ind
+R11463:11481 UMST.ChemConstants.RewriteConservation <> claim_physics_green:37 var
+R11535:11539 UMST.ChemConstants.RewriteConservation <> fused:36 var
+R11552:11573 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+R11578:11594 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+R11602:11625 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R11654:11657 Corelib.Init.Datatypes <> negb def
+R11660:11689 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R11955:11958 Corelib.Init.Datatypes <> negb def
+R11961:11990 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R12255:12271 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+R12053:12085 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R12090:12117 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R12131:12161 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R12166:12191 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+R12210:12226 UMST.ChemConstants.RewriteConservation <> verdict_design_ok constr
+R11750:11782 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R11787:11814 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R11828:11858 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R11863:11888 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+R11907:11923 UMST.ChemConstants.RewriteConservation <> verdict_design_ok constr
+R11490:11516 UMST.ChemConstants.RewriteConservation <> verdict_green_invent_refuse constr
+prf 12289:12305 <> fused_identity_ok
+R12362:12364 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12311:12332 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R12334:12355 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+R12357:12361 Corelib.Init.Datatypes <> false constr
+R12365:12381 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+prf 12418:12460 <> thermo_preserving_fusion_identity_conserved
+R12562:12567 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12535:12539 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12466:12490 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps_direct def
+R12492:12512 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R12514:12534 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R12540:12561 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+R12619:12621 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12568:12589 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R12591:12612 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+R12614:12618 Corelib.Init.Datatypes <> false constr
+R12622:12638 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+R12667:12688 UMST.ChemConstants.RewriteConservation <> fuse_identity_identity thm
+R12667:12688 UMST.ChemConstants.RewriteConservation <> fuse_identity_identity thm
+R12701:12717 UMST.ChemConstants.RewriteConservation <> fused_identity_ok thm
+R12701:12717 UMST.ChemConstants.RewriteConservation <> fused_identity_ok thm
+prf 12732:12771 <> fusion_preserving_admissible_identity_ok
+R12887:12891 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12777:12798 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R12805:12829 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps_direct def
+R12831:12853 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R12855:12875 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R12882:12886 Corelib.Init.Datatypes <> false constr
+R12892:12908 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+prf 12945:12974 <> fusion_preserving_steps_admits
+R13041:13046 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13034:13036 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12980:13009 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R13011:13033 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R13037:13040 Corelib.Init.Datatypes <> true constr
+R13106:13111 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13099:13101 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13047:13076 UMST.ChemConstants.RewriteConservation <> thermo_rewrite_step_preserving def
+R13078:13098 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R13102:13105 Corelib.Init.Datatypes <> true constr
+R13222:13226 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13112:13133 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R13140:13164 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps_direct def
+R13166:13188 UMST.ChemConstants.RewriteConservation <> rewrite_step_admissible constr
+R13190:13210 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R13217:13221 Corelib.Init.Datatypes <> false constr
+R13227:13243 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+prf 13294:13327 <> fused_conservation_violate_refused
+R13459:13463 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13333:13354 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R13361:13384 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R13386:13418 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R13427:13447 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R13454:13458 Corelib.Init.Datatypes <> false constr
+R13464:13491 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+prf 13528:13558 <> non_preserving_step_fail_closed
+R13723:13728 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13690:13694 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13564:13585 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R13592:13615 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R13617:13649 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R13658:13678 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R13685:13689 Corelib.Init.Datatypes <> false constr
+R13695:13722 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R13899:13903 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13729:13756 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R13763:13784 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R13794:13817 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R13819:13851 UMST.ChemConstants.RewriteConservation <> rewrite_step_conservation_violate constr
+R13863:13883 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R13893:13897 Corelib.Init.Datatypes <> false constr
+R13904:13908 Corelib.Init.Datatypes <> false constr
+R13937:13970 UMST.ChemConstants.RewriteConservation <> fused_conservation_violate_refused thm
+R13937:13970 UMST.ChemConstants.RewriteConservation <> fused_conservation_violate_refused thm
+R13984:14011 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R14026:14059 UMST.ChemConstants.RewriteConservation <> fused_conservation_violate_refused thm
+R14026:14059 UMST.ChemConstants.RewriteConservation <> fused_conservation_violate_refused thm
+R14026:14059 UMST.ChemConstants.RewriteConservation <> fused_conservation_violate_refused thm
+prf 14091:14122 <> fused_second_law_violate_refused
+R14252:14256 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14128:14149 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R14156:14179 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R14181:14201 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R14210:14240 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R14247:14251 Corelib.Init.Datatypes <> false constr
+R14257:14282 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+prf 14319:14360 <> non_preserving_second_law_step_fail_closed
+R14521:14526 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14490:14494 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14366:14387 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R14394:14417 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R14419:14439 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R14448:14478 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R14485:14489 Corelib.Init.Datatypes <> false constr
+R14495:14520 UMST.ChemConstants.RewriteConservation <> verdict_second_law_violate constr
+R14695:14699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14527:14554 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R14561:14582 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R14592:14615 UMST.ChemConstants.RewriteConservation <> fused_rewrite_sequential constr
+R14617:14637 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R14649:14679 UMST.ChemConstants.RewriteConservation <> rewrite_step_second_law_violate constr
+R14689:14693 Corelib.Init.Datatypes <> false constr
+R14700:14704 Corelib.Init.Datatypes <> false constr
+R14733:14764 UMST.ChemConstants.RewriteConservation <> fused_second_law_violate_refused thm
+R14733:14764 UMST.ChemConstants.RewriteConservation <> fused_second_law_violate_refused thm
+R14778:14805 UMST.ChemConstants.RewriteConservation <> thermo_preserving_verdict_ok def
+R14820:14851 UMST.ChemConstants.RewriteConservation <> fused_second_law_violate_refused thm
+R14820:14851 UMST.ChemConstants.RewriteConservation <> fused_second_law_violate_refused thm
+R14820:14851 UMST.ChemConstants.RewriteConservation <> fused_second_law_violate_refused thm
+ind 15111:15138 <> rewrite_conservation_verdict
+constr 15154:15171 <> verdict_unwired_ok
+constr 15177:15202 <> verdict_fusion_identity_ok
+constr 15208:15236 <> verdict_non_preserving_refuse
+constr 15242:15276 <> verdict_rewrite_green_invent_refuse
+constr 15282:15312 <> verdict_production_wired_refuse
+scheme 15111:15138 <> rewrite_conservation_verdict_rect
+scheme 15111:15138 <> rewrite_conservation_verdict_ind
+scheme 15111:15138 <> rewrite_conservation_verdict_rec
+scheme 15111:15138 <> rewrite_conservation_verdict_sind
+def 15327:15357 <> rewrite_conservation_verdict_ok
+R15364:15391 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict ind
+binder 15360:15360 <> v:43
+R15396:15399 Corelib.Init.Datatypes <> bool ind
+R15412:15412 UMST.ChemConstants.RewriteConservation <> v:43 var
+R15423:15440 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+R15445:15448 Corelib.Init.Datatypes <> true constr
+R15454:15479 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R15484:15487 Corelib.Init.Datatypes <> true constr
+R15498:15502 Corelib.Init.Datatypes <> false constr
+def 15523:15554 <> rewrite_conservation_verdict_beq
+R15567:15594 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict ind
+binder 15559:15560 <> v1:45
+binder 15562:15563 <> v2:46
+R15599:15602 Corelib.Init.Datatypes <> bool ind
+R15619:15620 UMST.ChemConstants.RewriteConservation <> v2:46 var
+R15615:15616 UMST.ChemConstants.RewriteConservation <> v1:45 var
+R15631:15648 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+R15651:15668 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+R15673:15676 Corelib.Init.Datatypes <> true constr
+R15682:15707 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R15710:15735 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R15740:15743 Corelib.Init.Datatypes <> true constr
+R15749:15777 UMST.ChemConstants.RewriteConservation <> verdict_non_preserving_refuse constr
+R15780:15808 UMST.ChemConstants.RewriteConservation <> verdict_non_preserving_refuse constr
+R15813:15816 Corelib.Init.Datatypes <> true constr
+R15822:15856 UMST.ChemConstants.RewriteConservation <> verdict_rewrite_green_invent_refuse constr
+R15859:15893 UMST.ChemConstants.RewriteConservation <> verdict_rewrite_green_invent_refuse constr
+R15898:15901 Corelib.Init.Datatypes <> true constr
+R15907:15937 UMST.ChemConstants.RewriteConservation <> verdict_production_wired_refuse constr
+R15940:15970 UMST.ChemConstants.RewriteConservation <> verdict_production_wired_refuse constr
+R15975:15978 Corelib.Init.Datatypes <> true constr
+R15992:15996 Corelib.Init.Datatypes <> false constr
+def 16017:16051 <> evaluate_rewrite_conservation_close
+R16060:16086 UMST.ChemConstants.RewriteConservation <> RewriteConservationModality ind
+binder 16056:16056 <> m:49
+R16114:16117 Corelib.Init.Datatypes <> bool ind
+binder 16092:16110 <> claim_physics_green:50
+R16148:16151 Corelib.Init.Datatypes <> bool ind
+binder 16123:16144 <> claim_production_wired:51
+R16156:16183 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict ind
+R16193:16211 UMST.ChemConstants.RewriteConservation <> claim_physics_green:50 var
+R16266:16287 UMST.ChemConstants.RewriteConservation <> claim_production_wired:51 var
+R16345:16345 UMST.ChemConstants.RewriteConservation <> m:49 var
+R16358:16385 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R16390:16407 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+R16415:16442 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_assumed constr
+R16450:16476 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R16484:16513 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_surrogate constr
+R16518:16543 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R16518:16543 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R16518:16543 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R16296:16326 UMST.ChemConstants.RewriteConservation <> verdict_production_wired_refuse constr
+R16220:16254 UMST.ChemConstants.RewriteConservation <> verdict_rewrite_green_invent_refuse constr
+def 16566:16596 <> rewrite_conservation_authorized
+R16623:16626 Corelib.Init.Datatypes <> bool ind
+binder 16601:16619 <> claim_physics_green:53
+R16657:16660 Corelib.Init.Datatypes <> bool ind
+binder 16632:16653 <> claim_production_wired:54
+R16665:16668 Corelib.Init.Datatypes <> bool ind
+R16681:16715 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R16727:16753 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R16755:16773 UMST.ChemConstants.RewriteConservation <> claim_physics_green:53 var
+R16775:16796 UMST.ChemConstants.RewriteConservation <> claim_production_wired:54 var
+R16807:16832 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R16837:16840 Corelib.Init.Datatypes <> true constr
+R16851:16855 Corelib.Init.Datatypes <> false constr
+ind 17101:17124 <> rewrite_conservation_law
+constr 17140:17158 <> law_fusion_identity
+constr 17164:17188 <> law_non_preserving_refuse
+constr 17194:17216 <> law_green_invent_refuse
+constr 17222:17248 <> law_production_wired_refuse
+scheme 17101:17124 <> rewrite_conservation_law_rect
+scheme 17101:17124 <> rewrite_conservation_law_ind
+scheme 17101:17124 <> rewrite_conservation_law_rec
+scheme 17101:17124 <> rewrite_conservation_law_sind
+def 17263:17292 <> rewrite_conservation_law_count
+R17296:17298 Corelib.Init.Datatypes <> nat ind
+prf 17313:17350 <> rewrite_conservation_law_count_is_four
+R17386:17388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17356:17385 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_law_count def
+ind 17428:17459 <> rewrite_conservation_law_witness
+constr 17475:17498 <> rewrite_law_witness_open
+constr 17504:17529 <> rewrite_law_witness_proved
+scheme 17428:17459 <> rewrite_conservation_law_witness_rect
+scheme 17428:17459 <> rewrite_conservation_law_witness_ind
+scheme 17428:17459 <> rewrite_conservation_law_witness_rec
+scheme 17428:17459 <> rewrite_conservation_law_witness_sind
+def 17544:17584 <> evaluate_rewrite_conservation_law_witness
+R17595:17618 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_law ind
+binder 17589:17591 <> law:59
+R17626:17652 UMST.ChemConstants.RewriteConservation <> RewriteConservationModality ind
+binder 17622:17622 <> m:60
+R17659:17690 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_law_witness ind
+R17703:17703 UMST.ChemConstants.RewriteConservation <> m:60 var
+R17714:17741 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R17747:17774 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_assumed constr
+R17780:17809 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_surrogate constr
+R17814:17837 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+R17814:17837 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+R17814:17837 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+R17843:17869 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R17874:17899 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_proved constr
+prf 17915:17959 <> all_rewrite_conservation_laws_open_at_unwired
+R18086:18091 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18059:18061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17965:18005 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_law_witness def
+R18007:18025 UMST.ChemConstants.RewriteConservation <> law_fusion_identity constr
+R18031:18058 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R18062:18085 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+R18219:18224 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18192:18194 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18092:18132 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_law_witness def
+R18134:18158 UMST.ChemConstants.RewriteConservation <> law_non_preserving_refuse constr
+R18164:18191 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R18195:18218 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+R18350:18355 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18323:18325 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18225:18265 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_law_witness def
+R18267:18289 UMST.ChemConstants.RewriteConservation <> law_green_invent_refuse constr
+R18295:18322 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R18326:18349 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+R18458:18460 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18356:18396 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_law_witness def
+R18398:18424 UMST.ChemConstants.RewriteConservation <> law_production_wired_refuse constr
+R18430:18457 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R18461:18484 UMST.ChemConstants.RewriteConservation <> rewrite_law_witness_open constr
+def 18762:18778 <> fp03RewriteProved
+R18782:18785 Corelib.Init.Datatypes <> bool ind
+R18790:18794 Corelib.Init.Datatypes <> false constr
+prf 18804:18828 <> fp03_rewrite_proved_false
+R18849:18851 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18832:18848 UMST.ChemConstants.RewriteConservation <> fp03RewriteProved def
+R18852:18856 Corelib.Init.Datatypes <> false constr
+def 18896:18918 <> not118SquaredGreenTable
+R18922:18925 Corelib.Init.Datatypes <> bool ind
+R18930:18933 Corelib.Init.Datatypes <> true constr
+prf 18943:18969 <> not_118_squared_green_table
+R18996:18998 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18973:18995 UMST.ChemConstants.RewriteConservation <> not118SquaredGreenTable def
+R18999:19002 Corelib.Init.Datatypes <> true constr
+prf 19259:19297 <> unwired_close_without_production_wiring
+R19383:19387 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19303:19337 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R19343:19370 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R19372:19376 Corelib.Init.Datatypes <> false constr
+R19378:19382 Corelib.Init.Datatypes <> false constr
+R19388:19405 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+prf 19442:19493 <> unwired_modality_always_ok_without_production_wiring
+R19579:19583 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19499:19533 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R19539:19566 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R19568:19572 Corelib.Init.Datatypes <> false constr
+R19574:19578 Corelib.Init.Datatypes <> false constr
+R19584:19601 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+R19617:19655 UMST.ChemConstants.RewriteConservation <> unwired_close_without_production_wiring thm
+R19617:19655 UMST.ChemConstants.RewriteConservation <> unwired_close_without_production_wiring thm
+prf 19670:19713 <> unwired_verdict_ok_without_production_wiring
+R19840:19844 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19719:19749 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R19756:19790 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R19799:19826 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R19828:19832 Corelib.Init.Datatypes <> false constr
+R19834:19838 Corelib.Init.Datatypes <> false constr
+R19845:19848 Corelib.Init.Datatypes <> true constr
+R19867:19897 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R19910:19948 UMST.ChemConstants.RewriteConservation <> unwired_close_without_production_wiring thm
+R19910:19948 UMST.ChemConstants.RewriteConservation <> unwired_close_without_production_wiring thm
+R19910:19948 UMST.ChemConstants.RewriteConservation <> unwired_close_without_production_wiring thm
+prf 20202:20225 <> fusion_identity_close_ok
+R20310:20314 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20231:20265 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R20271:20297 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R20299:20303 Corelib.Init.Datatypes <> false constr
+R20305:20309 Corelib.Init.Datatypes <> false constr
+R20315:20340 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+prf 20377:20428 <> thermo_preserving_fusion_identity_conservation_close
+R20544:20549 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20513:20517 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20434:20468 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R20474:20500 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R20502:20506 Corelib.Init.Datatypes <> false constr
+R20508:20512 Corelib.Init.Datatypes <> false constr
+R20518:20543 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R20593:20595 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20550:20580 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_authorized def
+R20582:20586 Corelib.Init.Datatypes <> false constr
+R20588:20592 Corelib.Init.Datatypes <> false constr
+R20596:20599 Corelib.Init.Datatypes <> true constr
+R20628:20651 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+R20628:20651 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+R20665:20695 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_authorized def
+R20710:20733 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+R20710:20733 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+R20710:20733 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+prf 20765:20790 <> fusion_identity_verdict_ok
+R20916:20920 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20796:20826 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R20833:20867 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R20876:20902 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R20904:20908 Corelib.Init.Datatypes <> false constr
+R20910:20914 Corelib.Init.Datatypes <> false constr
+R20921:20924 Corelib.Init.Datatypes <> true constr
+R20943:20973 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R20986:21009 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+R20986:21009 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+R20986:21009 UMST.ChemConstants.RewriteConservation <> fusion_identity_close_ok thm
+prf 21039:21075 <> fusion_identity_still_not_fp03_proved
+R21210:21215 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21201:21205 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21081:21111 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R21118:21152 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R21161:21187 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R21189:21193 Corelib.Init.Datatypes <> false constr
+R21195:21199 Corelib.Init.Datatypes <> false constr
+R21206:21209 Corelib.Init.Datatypes <> true constr
+R21233:21235 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21216:21232 UMST.ChemConstants.RewriteConservation <> fp03RewriteProved def
+R21236:21240 Corelib.Init.Datatypes <> false constr
+R21269:21294 UMST.ChemConstants.RewriteConservation <> fusion_identity_verdict_ok thm
+R21269:21294 UMST.ChemConstants.RewriteConservation <> fusion_identity_verdict_ok thm
+R21307:21331 UMST.ChemConstants.RewriteConservation <> fp03_rewrite_proved_false thm
+R21307:21331 UMST.ChemConstants.RewriteConservation <> fp03_rewrite_proved_false thm
+prf 21570:21596 <> green_invent_refuse_unwired
+R21681:21685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21602:21636 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R21642:21669 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R21671:21674 Corelib.Init.Datatypes <> true constr
+R21676:21680 Corelib.Init.Datatypes <> false constr
+R21686:21720 UMST.ChemConstants.RewriteConservation <> verdict_rewrite_green_invent_refuse constr
+prf 21757:21782 <> green_invent_always_refuse
+R21908:21912 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21788:21818 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R21825:21859 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R21868:21895 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R21897:21900 Corelib.Init.Datatypes <> true constr
+R21902:21906 Corelib.Init.Datatypes <> false constr
+R21913:21917 Corelib.Init.Datatypes <> false constr
+R21936:21966 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R21979:22005 UMST.ChemConstants.RewriteConservation <> green_invent_refuse_unwired thm
+R21979:22005 UMST.ChemConstants.RewriteConservation <> green_invent_refuse_unwired thm
+R21979:22005 UMST.ChemConstants.RewriteConservation <> green_invent_refuse_unwired thm
+prf 22035:22061 <> green_invent_witness_refuse
+R22124:22128 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22067:22089 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R22091:22118 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessBalanced def
+R22120:22123 Corelib.Init.Datatypes <> true constr
+R22129:22155 UMST.ChemConstants.RewriteConservation <> verdict_green_invent_refuse constr
+prf 22414:22436 <> production_wired_refuse
+R22520:22524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22442:22476 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R22482:22508 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R22510:22514 Corelib.Init.Datatypes <> false constr
+R22516:22519 Corelib.Init.Datatypes <> true constr
+R22525:22555 UMST.ChemConstants.RewriteConservation <> verdict_production_wired_refuse constr
+prf 22592:22621 <> production_wired_claim_refused
+R22746:22750 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22627:22657 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R22664:22698 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R22707:22733 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R22735:22739 Corelib.Init.Datatypes <> false constr
+R22741:22744 Corelib.Init.Datatypes <> true constr
+R22751:22755 Corelib.Init.Datatypes <> false constr
+R22774:22804 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_ok def
+R22817:22839 UMST.ChemConstants.RewriteConservation <> production_wired_refuse thm
+R22817:22839 UMST.ChemConstants.RewriteConservation <> production_wired_refuse thm
+R22817:22839 UMST.ChemConstants.RewriteConservation <> production_wired_refuse thm
+def 23098:23136 <> rewrite_conservation_coherence_scaffold
+R23140:23143 Corelib.Init.Datatypes <> bool ind
+R23469:23474 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23302:23307 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23150:23181 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_beq def
+R23188:23222 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R23231:23257 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R23259:23263 Corelib.Init.Datatypes <> false constr
+R23265:23269 Corelib.Init.Datatypes <> false constr
+R23276:23301 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R23308:23339 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_beq def
+R23346:23380 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R23389:23416 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R23418:23421 Corelib.Init.Datatypes <> true constr
+R23423:23427 Corelib.Init.Datatypes <> false constr
+R23434:23468 UMST.ChemConstants.RewriteConservation <> verdict_rewrite_green_invent_refuse constr
+R23475:23506 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_verdict_beq def
+R23513:23547 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R23556:23582 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R23584:23588 Corelib.Init.Datatypes <> false constr
+R23590:23593 Corelib.Init.Datatypes <> true constr
+R23600:23630 UMST.ChemConstants.RewriteConservation <> verdict_production_wired_refuse constr
+prf 23640:23683 <> rewrite_conservation_coherence_scaffold_true
+R23728:23730 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23689:23727 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_coherence_scaffold def
+R23731:23734 Corelib.Init.Datatypes <> true constr
+R23753:23791 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_coherence_scaffold def
+prf 23846:23892 <> rewrite_conservation_coherence_scaffold_theorem
+R24010:24015 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23977:23983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23898:23932 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R23938:23964 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R23966:23970 Corelib.Init.Datatypes <> false constr
+R23972:23976 Corelib.Init.Datatypes <> false constr
+R23984:24009 UMST.ChemConstants.RewriteConservation <> verdict_fusion_identity_ok constr
+R24137:24142 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24095:24101 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24016:24050 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R24056:24083 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R24085:24088 Corelib.Init.Datatypes <> true constr
+R24090:24094 Corelib.Init.Datatypes <> false constr
+R24102:24136 UMST.ChemConstants.RewriteConservation <> verdict_rewrite_green_invent_refuse constr
+R24221:24227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24143:24177 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R24183:24209 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_proved constr
+R24211:24215 Corelib.Init.Datatypes <> false constr
+R24217:24220 Corelib.Init.Datatypes <> true constr
+R24228:24258 UMST.ChemConstants.RewriteConservation <> verdict_production_wired_refuse constr
+ind 24537:24548 <> formal_fiber
+constr 24564:24584 <> fiber_quantum_knowing
+constr 24590:24606 <> fiber_meso_acting
+scheme 24537:24548 <> formal_fiber_rect
+scheme 24537:24548 <> formal_fiber_ind
+scheme 24537:24548 <> formal_fiber_rec
+scheme 24537:24548 <> formal_fiber_sind
+ind 24620:24638 <> formal_claim_family
+constr 24654:24679 <> claim_rewrite_conservation
+scheme 24620:24638 <> formal_claim_family_rect
+scheme 24620:24638 <> formal_claim_family_ind
+scheme 24620:24638 <> formal_claim_family_rec
+scheme 24620:24638 <> formal_claim_family_sind
+def 24694:24722 <> rewrite_conservation_fiber_ok
+R24729:24740 UMST.ChemConstants.RewriteConservation <> formal_fiber ind
+binder 24725:24725 <> f:66
+R24745:24748 Corelib.Init.Datatypes <> bool ind
+R24761:24761 UMST.ChemConstants.RewriteConservation <> f:66 var
+R24772:24792 UMST.ChemConstants.RewriteConservation <> fiber_quantum_knowing constr
+R24797:24800 Corelib.Init.Datatypes <> true constr
+R24806:24822 UMST.ChemConstants.RewriteConservation <> fiber_meso_acting constr
+R24827:24831 Corelib.Init.Datatypes <> false constr
+def 24852:24888 <> rewrite_conservation_knowing_fiber_ok
+R24892:24895 Corelib.Init.Datatypes <> bool ind
+R24902:24930 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_fiber_ok def
+R24932:24952 UMST.ChemConstants.RewriteConservation <> fiber_quantum_knowing constr
+def 24967:25001 <> rewrite_conservation_meso_acting_ok
+R25005:25008 Corelib.Init.Datatypes <> bool ind
+R25015:25043 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_fiber_ok def
+R25045:25061 UMST.ChemConstants.RewriteConservation <> fiber_meso_acting constr
+prf 25071:25112 <> rewrite_conservation_knowing_fiber_ok_true
+R25155:25157 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25118:25154 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok def
+R25158:25161 Corelib.Init.Datatypes <> true constr
+prf 25196:25234 <> rewrite_conservation_meso_acting_not_ok
+R25275:25277 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25240:25274 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_ok def
+R25278:25282 Corelib.Init.Datatypes <> false constr
+prf 25319:25362 <> rewrite_conservation_routes_knowing_not_meso
+R25412:25417 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25405:25407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25368:25404 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok def
+R25408:25411 Corelib.Init.Datatypes <> true constr
+R25453:25455 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25418:25452 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_ok def
+R25456:25460 Corelib.Init.Datatypes <> false constr
+R25489:25530 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok_true thm
+R25489:25530 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok_true thm
+R25543:25581 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_not_ok thm
+R25543:25581 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_not_ok thm
+def 25601:25618 <> fiberNotMesoActing
+R25622:25625 Corelib.Init.Datatypes <> bool ind
+R25669:25674 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R25632:25668 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok def
+R25675:25678 Corelib.Init.Datatypes <> negb def
+R25680:25714 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_ok def
+prf 25724:25749 <> fiber_not_meso_acting_true
+R25771:25773 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25753:25770 UMST.ChemConstants.RewriteConservation <> fiberNotMesoActing def
+R25774:25777 Corelib.Init.Datatypes <> true constr
+R25796:25813 UMST.ChemConstants.RewriteConservation <> fiberNotMesoActing def
+R25816:25852 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok def
+R25859:25893 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_ok def
+prf 26147:26183 <> rewrite_conservation_fixture_scaffold
+R26287:26292 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26258:26264 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26189:26213 UMST.ChemConstants.RewriteConservation <> fuse_rewrite_steps_direct def
+R26215:26235 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R26237:26257 UMST.ChemConstants.RewriteConservation <> rewrite_step_identity constr
+R26265:26286 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+R26364:26369 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26344:26346 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26293:26314 UMST.ChemConstants.RewriteConservation <> evaluate_fused_rewrite def
+R26316:26337 UMST.ChemConstants.RewriteConservation <> fused_rewrite_identity constr
+R26339:26343 Corelib.Init.Datatypes <> false constr
+R26347:26363 UMST.ChemConstants.RewriteConservation <> verdict_fusion_ok constr
+R26466:26471 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26431:26437 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26370:26392 UMST.ChemConstants.RewriteConservation <> evaluate_thermo_witness def
+R26394:26424 UMST.ChemConstants.RewriteConservation <> thermoRewriteWitnessMassViolate def
+R26426:26430 Corelib.Init.Datatypes <> false constr
+R26438:26465 UMST.ChemConstants.RewriteConservation <> verdict_conservation_violate constr
+R26577:26582 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26552:26558 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26472:26506 UMST.ChemConstants.RewriteConservation <> evaluate_rewrite_conservation_close def
+R26512:26539 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr
+R26541:26545 Corelib.Init.Datatypes <> false constr
+R26547:26551 Corelib.Init.Datatypes <> false constr
+R26559:26576 UMST.ChemConstants.RewriteConservation <> verdict_unwired_ok constr
+R26627:26632 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26620:26622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26583:26619 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_knowing_fiber_ok def
+R26623:26626 Corelib.Init.Datatypes <> true constr
+R26676:26681 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26668:26670 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26633:26667 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_meso_acting_ok def
+R26671:26675 Corelib.Init.Datatypes <> false constr
+R26699:26701 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26682:26698 UMST.ChemConstants.RewriteConservation <> fp03RewriteProved def
+R26702:26706 Corelib.Init.Datatypes <> false constr
+def 26987:27018 <> thermoPreservingRewriteAuthority
+R27022:27027 Stdlib.Strings.String <> string ind
+def 27097:27128 <> chemIntProveFp03RewriteAuthority
+R27132:27137 Stdlib.Strings.String <> string ind
+def 27188:27216 <> thermoPreservingRewriteMarker
+R27220:27225 Stdlib.Strings.String <> string ind
+def 27284:27308 <> rewriteConservationCellId
+R27312:27317 Stdlib.Strings.String <> string ind
+def 27378:27404 <> rewriteConservationNonClaim
+R27408:27413 Stdlib.Strings.String <> string ind
+prf 27758:27785 <> rewrite_conservation_cell_id
+R27816:27818 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27791:27815 UMST.ChemConstants.RewriteConservation <> rewriteConservationCellId def
+prf 27893:27947 <> rewrite_conservation_cites_thermo_preserving_rewrite_rs
+R27985:27988 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27953:27984 UMST.ChemConstants.RewriteConservation <> thermoPreservingRewriteAuthority def
+prf 28026:28075 <> rewrite_conservation_cites_int_prove_fp_03_rewrite
+R28113:28115 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28081:28112 UMST.ChemConstants.RewriteConservation <> chemIntProveFp03RewriteAuthority def
+prf 28180:28212 <> rewrite_conservation_cites_marker
+R28247:28250 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28218:28246 UMST.ChemConstants.RewriteConservation <> thermoPreservingRewriteMarker def
+def 28518:28552 <> rewriteSecondLawConservationFraming
+R28556:28561 Stdlib.Strings.String <> string ind
+prf 28645:28676 <> rewrite_not_second_rewrite_axiom
+R28717:28720 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28682:28716 UMST.ChemConstants.RewriteConservation <> rewriteSecondLawConservationFraming def
+prf 28778:28816 <> rewrite_second_law_conservation_framing
+R28857:28860 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28822:28856 UMST.ChemConstants.RewriteConservation <> rewriteSecondLawConservationFraming def
+def 29127:29148 <> physicsGreenAuthorized
+R29160:29164 Corelib.Init.Logic <> False ind
+prf 29174:29213 <> rewrite_conservation_physics_green_false
+R29219:29220 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R29221:29242 UMST.ChemConstants.RewriteConservation <> physicsGreenAuthorized def
+prf 29282:29318 <> rewrite_conservation_modality_unwired
+R29358:29360 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29324:29357 UMST.ChemConstants.RewriteConservation <> rewriteConservationModalityCurrent def
+R29361:29388 UMST.ChemConstants.RewriteConservation <> rewrite_conservation_unwired constr

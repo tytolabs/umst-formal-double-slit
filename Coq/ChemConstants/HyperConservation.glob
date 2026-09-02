@@ -1,0 +1,1305 @@
+DIGEST 9803b1e20ea7e4f10576292935ec543a
+FUMST.ChemConstants.HyperConservation
+R1198:1202 Stdlib.Arith.Arith <> <> lib
+R1204:1209 Stdlib.ZArith.ZArith <> <> lib
+R1211:1216 Stdlib.Strings.String <> <> lib
+R1218:1221 Stdlib.Bool.Bool <> <> lib
+R1223:1225 Stdlib.micromega.Lia <> <> lib
+R1227:1230 Stdlib.Lists.List <> <> lib
+R1240:1252 Stdlib.Lists.List ListNotations <> mod
+ind 1580:1604 <> HyperConservationModality
+constr 1620:1645 <> hyper_conservation_unwired
+constr 1651:1676 <> hyper_conservation_assumed
+constr 1682:1706 <> hyper_conservation_proved
+constr 1712:1739 <> hyper_conservation_surrogate
+scheme 1580:1604 <> HyperConservationModality_rect
+scheme 1580:1604 <> HyperConservationModality_ind
+scheme 1580:1604 <> HyperConservationModality_rec
+scheme 1580:1604 <> HyperConservationModality_sind
+def 1754:1785 <> hyperConservationModalityCurrent
+R1789:1813 UMST.ChemConstants.HyperConservation <> HyperConservationModality ind
+R1820:1845 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+def 1860:1884 <> hyper_lattice_cardinality
+R1888:1890 Corelib.Init.Datatypes <> nat ind
+prf 1905:1937 <> hyper_lattice_cardinality_is_four
+R1968:1970 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1943:1967 UMST.ChemConstants.HyperConservation <> hyper_lattice_cardinality def
+prf 2006:2034 <> hyper_lattice_not_118_squared
+R2092:2094 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2040:2043 Corelib.Init.Datatypes <> negb def
+R2046:2052 Stdlib.Arith.PeanoNat Nat eqb def
+R2054:2078 UMST.ChemConstants.HyperConservation <> hyper_lattice_cardinality def
+R2084:2086 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2095:2098 Corelib.Init.Datatypes <> true constr
+R2117:2141 UMST.ChemConstants.HyperConservation <> hyper_lattice_cardinality def
+def 2401:2423 <> iupac_table_cardinality
+R2427:2429 Corelib.Init.Datatypes <> nat ind
+prf 2446:2475 <> iupac_table_cardinality_is_118
+R2504:2506 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2481:2503 UMST.ChemConstants.HyperConservation <> iupac_table_cardinality def
+def 2549:2569 <> hyper_element_z_valid
+R2576:2578 Corelib.Init.Datatypes <> nat ind
+binder 2572:2572 <> z:3
+R2583:2586 Corelib.Init.Datatypes <> bool ind
+R2604:2607 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2593:2599 Stdlib.Arith.PeanoNat Nat ltb def
+R2603:2603 UMST.ChemConstants.HyperConservation <> z:3 var
+R2608:2614 Stdlib.Arith.PeanoNat Nat leb def
+R2616:2616 UMST.ChemConstants.HyperConservation <> z:3 var
+R2618:2640 UMST.ChemConstants.HyperConservation <> iupac_table_cardinality def
+def 2655:2674 <> hyper_element_iron_z
+R2678:2680 Corelib.Init.Datatypes <> nat ind
+def 2700:2721 <> hyper_element_copper_z
+R2725:2727 Corelib.Init.Datatypes <> nat ind
+def 2747:2771 <> hyper_element_oganesson_z
+R2775:2777 Corelib.Init.Datatypes <> nat ind
+prf 2794:2811 <> hyper_iron_z_is_26
+R2837:2839 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2817:2836 UMST.ChemConstants.HyperConservation <> hyper_element_iron_z def
+prf 2876:2895 <> hyper_copper_z_is_29
+R2923:2925 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2901:2922 UMST.ChemConstants.HyperConservation <> hyper_element_copper_z def
+prf 2962:2985 <> hyper_oganesson_z_is_118
+R3016:3018 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2991:3015 UMST.ChemConstants.HyperConservation <> hyper_element_oganesson_z def
+prf 3056:3074 <> hyper_fe_cu_z_valid
+R3129:3134 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3122:3124 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3080:3100 UMST.ChemConstants.HyperConservation <> hyper_element_z_valid def
+R3102:3121 UMST.ChemConstants.HyperConservation <> hyper_element_iron_z def
+R3125:3128 Corelib.Init.Datatypes <> true constr
+R3179:3181 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3135:3155 UMST.ChemConstants.HyperConservation <> hyper_element_z_valid def
+R3157:3178 UMST.ChemConstants.HyperConservation <> hyper_element_copper_z def
+R3182:3185 Corelib.Init.Datatypes <> true constr
+R3211:3231 UMST.ChemConstants.HyperConservation <> hyper_element_z_valid def
+R3234:3253 UMST.ChemConstants.HyperConservation <> hyper_element_iron_z def
+R3260:3281 UMST.ChemConstants.HyperConservation <> hyper_element_copper_z def
+R3284:3306 UMST.ChemConstants.HyperConservation <> iupac_table_cardinality def
+prf 3334:3356 <> hyper_oganesson_z_valid
+R3409:3411 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3362:3382 UMST.ChemConstants.HyperConservation <> hyper_element_z_valid def
+R3384:3408 UMST.ChemConstants.HyperConservation <> hyper_element_oganesson_z def
+R3412:3415 Corelib.Init.Datatypes <> true constr
+R3434:3454 UMST.ChemConstants.HyperConservation <> hyper_element_z_valid def
+R3457:3481 UMST.ChemConstants.HyperConservation <> hyper_element_oganesson_z def
+R3484:3506 UMST.ChemConstants.HyperConservation <> iupac_table_cardinality def
+ind 3766:3780 <> ore_constituent
+constr 3796:3807 <> ore_hematite
+constr 3813:3825 <> ore_magnetite
+constr 3831:3849 <> ore_silicate_gangue
+constr 3855:3872 <> ore_calcite_gangue
+scheme 3766:3780 <> ore_constituent_rect
+scheme 3766:3780 <> ore_constituent_ind
+scheme 3766:3780 <> ore_constituent_rec
+scheme 3766:3780 <> ore_constituent_sind
+def 3887:3905 <> ore_constituent_beq
+R3916:3930 UMST.ChemConstants.HyperConservation <> ore_constituent ind
+binder 3908:3909 <> c1:6
+binder 3911:3912 <> c2:7
+R3935:3938 Corelib.Init.Datatypes <> bool ind
+R3955:3956 UMST.ChemConstants.HyperConservation <> c2:7 var
+R3951:3952 UMST.ChemConstants.HyperConservation <> c1:6 var
+R3967:3978 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R3981:3992 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R3997:4000 Corelib.Init.Datatypes <> true constr
+R4006:4018 UMST.ChemConstants.HyperConservation <> ore_magnetite constr
+R4021:4033 UMST.ChemConstants.HyperConservation <> ore_magnetite constr
+R4038:4041 Corelib.Init.Datatypes <> true constr
+R4047:4065 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R4068:4086 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R4091:4094 Corelib.Init.Datatypes <> true constr
+R4100:4117 UMST.ChemConstants.HyperConservation <> ore_calcite_gangue constr
+R4120:4137 UMST.ChemConstants.HyperConservation <> ore_calcite_gangue constr
+R4142:4145 Corelib.Init.Datatypes <> true constr
+R4159:4163 Corelib.Init.Datatypes <> false constr
+def 4184:4202 <> ore_constituent_tag
+R4209:4223 UMST.ChemConstants.HyperConservation <> ore_constituent ind
+binder 4205:4205 <> c:10
+R4228:4233 Stdlib.Strings.String <> string ind
+R4246:4246 UMST.ChemConstants.HyperConservation <> c:10 var
+R4257:4268 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R4288:4300 UMST.ChemConstants.HyperConservation <> ore_magnetite constr
+R4321:4339 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R4366:4383 UMST.ChemConstants.HyperConservation <> ore_calcite_gangue constr
+prf 4419:4449 <> hematite_ne_silicate_gangue_tag
+R4487:4490 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4455:4473 UMST.ChemConstants.HyperConservation <> ore_constituent_tag def
+R4475:4486 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R4491:4509 UMST.ChemConstants.HyperConservation <> ore_constituent_tag def
+R4511:4529 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+prf 4565:4582 <> hematite_ne_gangue
+R4648:4653 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4640:4642 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4588:4606 UMST.ChemConstants.HyperConservation <> ore_constituent_beq def
+R4608:4619 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R4621:4639 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R4643:4647 Corelib.Init.Datatypes <> false constr
+R4705:4707 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4654:4672 UMST.ChemConstants.HyperConservation <> ore_constituent_beq def
+R4674:4685 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R4687:4704 UMST.ChemConstants.HyperConservation <> ore_calcite_gangue constr
+R4708:4712 Corelib.Init.Datatypes <> false constr
+ind 4982:4996 <> hyperedge_arity
+constr 5012:5029 <> hyper_arity_binary
+constr 5035:5053 <> hyper_arity_ternary
+constr 5059:5087 <> hyper_arity_multi_constituent
+scheme 4982:4996 <> hyperedge_arity_rect
+scheme 4982:4996 <> hyperedge_arity_ind
+scheme 4982:4996 <> hyperedge_arity_rec
+scheme 4982:4996 <> hyperedge_arity_sind
+def 5102:5120 <> hyperedge_arity_beq
+R5131:5145 UMST.ChemConstants.HyperConservation <> hyperedge_arity ind
+binder 5123:5124 <> a1:14
+binder 5126:5127 <> a2:15
+R5150:5153 Corelib.Init.Datatypes <> bool ind
+R5170:5171 UMST.ChemConstants.HyperConservation <> a2:15 var
+R5166:5167 UMST.ChemConstants.HyperConservation <> a1:14 var
+R5182:5199 UMST.ChemConstants.HyperConservation <> hyper_arity_binary constr
+R5202:5219 UMST.ChemConstants.HyperConservation <> hyper_arity_binary constr
+R5224:5227 Corelib.Init.Datatypes <> true constr
+R5233:5251 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R5254:5272 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R5277:5280 Corelib.Init.Datatypes <> true constr
+R5286:5314 UMST.ChemConstants.HyperConservation <> hyper_arity_multi_constituent constr
+R5317:5345 UMST.ChemConstants.HyperConservation <> hyper_arity_multi_constituent constr
+R5350:5353 Corelib.Init.Datatypes <> true constr
+R5367:5371 Corelib.Init.Datatypes <> false constr
+def 5392:5416 <> hyperedge_arity_min_count
+R5423:5437 UMST.ChemConstants.HyperConservation <> hyperedge_arity ind
+binder 5419:5419 <> a:18
+R5442:5444 Corelib.Init.Datatypes <> nat ind
+R5457:5457 UMST.ChemConstants.HyperConservation <> a:18 var
+R5468:5485 UMST.ChemConstants.HyperConservation <> hyper_arity_binary constr
+R5496:5514 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R5525:5553 UMST.ChemConstants.HyperConservation <> hyper_arity_multi_constituent constr
+def 5579:5602 <> hyperedge_arity_is_multi
+R5609:5623 UMST.ChemConstants.HyperConservation <> hyperedge_arity ind
+binder 5605:5605 <> a:20
+R5628:5631 Corelib.Init.Datatypes <> bool ind
+R5644:5644 UMST.ChemConstants.HyperConservation <> a:20 var
+R5655:5672 UMST.ChemConstants.HyperConservation <> hyper_arity_binary constr
+R5677:5681 Corelib.Init.Datatypes <> false constr
+R5687:5705 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R5710:5713 Corelib.Init.Datatypes <> true constr
+R5719:5747 UMST.ChemConstants.HyperConservation <> hyper_arity_multi_constituent constr
+R5752:5755 Corelib.Init.Datatypes <> true constr
+prf 5771:5792 <> ternary_arity_is_multi
+R5842:5844 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5798:5821 UMST.ChemConstants.HyperConservation <> hyperedge_arity_is_multi def
+R5823:5841 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R5845:5848 Corelib.Init.Datatypes <> true constr
+prf 5883:5904 <> binary_arity_not_multi
+R5953:5955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5910:5933 UMST.ChemConstants.HyperConservation <> hyperedge_arity_is_multi def
+R5935:5952 UMST.ChemConstants.HyperConservation <> hyper_arity_binary constr
+R5956:5960 Corelib.Init.Datatypes <> false constr
+prf 5995:6020 <> ternary_min_count_is_three
+R6071:6073 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6026:6050 UMST.ChemConstants.HyperConservation <> hyperedge_arity_min_count def
+R6052:6070 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+ind 6339:6352 <> graph_topology
+constr 6368:6389 <> topology_pairwise_bond
+constr 6395:6423 <> topology_multi_head_hyperedge
+scheme 6339:6352 <> graph_topology_rect
+scheme 6339:6352 <> graph_topology_ind
+scheme 6339:6352 <> graph_topology_rec
+scheme 6339:6352 <> graph_topology_sind
+def 6438:6455 <> graph_topology_beq
+R6466:6479 UMST.ChemConstants.HyperConservation <> graph_topology ind
+binder 6458:6459 <> t1:24
+binder 6461:6462 <> t2:25
+R6484:6487 Corelib.Init.Datatypes <> bool ind
+R6504:6505 UMST.ChemConstants.HyperConservation <> t2:25 var
+R6500:6501 UMST.ChemConstants.HyperConservation <> t1:24 var
+R6516:6537 UMST.ChemConstants.HyperConservation <> topology_pairwise_bond constr
+R6540:6561 UMST.ChemConstants.HyperConservation <> topology_pairwise_bond constr
+R6566:6569 Corelib.Init.Datatypes <> true constr
+R6575:6603 UMST.ChemConstants.HyperConservation <> topology_multi_head_hyperedge constr
+R6606:6634 UMST.ChemConstants.HyperConservation <> topology_multi_head_hyperedge constr
+R6639:6642 Corelib.Init.Datatypes <> true constr
+R6656:6660 Corelib.Init.Datatypes <> false constr
+def 6681:6703 <> graph_topology_is_hyper
+R6710:6723 UMST.ChemConstants.HyperConservation <> graph_topology ind
+binder 6706:6706 <> t:28
+R6728:6731 Corelib.Init.Datatypes <> bool ind
+R6744:6744 UMST.ChemConstants.HyperConservation <> t:28 var
+R6755:6776 UMST.ChemConstants.HyperConservation <> topology_pairwise_bond constr
+R6781:6785 Corelib.Init.Datatypes <> false constr
+R6791:6819 UMST.ChemConstants.HyperConservation <> topology_multi_head_hyperedge constr
+R6824:6827 Corelib.Init.Datatypes <> true constr
+prf 6843:6861 <> multi_head_is_hyper
+R6920:6922 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6867:6889 UMST.ChemConstants.HyperConservation <> graph_topology_is_hyper def
+R6891:6919 UMST.ChemConstants.HyperConservation <> topology_multi_head_hyperedge constr
+R6923:6926 Corelib.Init.Datatypes <> true constr
+prf 6961:6983 <> pairwise_bond_not_hyper
+R7035:7037 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6989:7011 UMST.ChemConstants.HyperConservation <> graph_topology_is_hyper def
+R7013:7034 UMST.ChemConstants.HyperConservation <> topology_pairwise_bond constr
+R7038:7042 Corelib.Init.Datatypes <> false constr
+ind 7303:7322 <> optional_constituent
+constr 7338:7348 <> head_absent
+constr 7354:7365 <> head_present
+R7384:7387 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7369:7383 UMST.ChemConstants.HyperConservation <> ore_constituent ind
+R7388:7407 UMST.ChemConstants.HyperConservation <> optional_constituent:30 ind
+scheme 7303:7322 <> optional_constituent_rect
+scheme 7303:7322 <> optional_constituent_ind
+scheme 7303:7322 <> optional_constituent_rec
+scheme 7303:7322 <> optional_constituent_sind
+def 7422:7445 <> optional_constituent_beq
+R7456:7475 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+binder 7448:7449 <> h1:32
+binder 7451:7452 <> h2:33
+R7480:7483 Corelib.Init.Datatypes <> bool ind
+R7500:7501 UMST.ChemConstants.HyperConservation <> h2:33 var
+R7496:7497 UMST.ChemConstants.HyperConservation <> h1:32 var
+R7512:7522 UMST.ChemConstants.HyperConservation <> head_absent constr
+R7525:7535 UMST.ChemConstants.HyperConservation <> head_absent constr
+R7540:7543 Corelib.Init.Datatypes <> true constr
+R7549:7560 UMST.ChemConstants.HyperConservation <> head_present constr
+R7566:7577 UMST.ChemConstants.HyperConservation <> head_present constr
+R7585:7603 UMST.ChemConstants.HyperConservation <> ore_constituent_beq def
+R7623:7627 Corelib.Init.Datatypes <> false constr
+rec 7644:7656 <> ore_hyperedge
+proj 7672:7686 <> hyper_arity_tag
+proj 7709:7731 <> hyper_constituent_count
+proj 7742:7752 <> hyper_head0
+proj 7780:7790 <> hyper_head1
+proj 7818:7828 <> hyper_head2
+proj 7856:7866 <> hyper_head3
+R7690:7704 UMST.ChemConstants.HyperConservation <> hyperedge_arity ind
+R7735:7737 Corelib.Init.Datatypes <> nat ind
+R7756:7775 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+R7794:7813 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+R7832:7851 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+R7870:7889 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+rec 7902:7916 <> hyper_incidence
+proj 7932:7945 <> hyper_inc_edge
+proj 7966:7980 <> hyper_inc_level
+R7949:7961 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+R7984:7986 Corelib.Init.Datatypes <> nat ind
+def 8003:8026 <> hyperIncidenceNontrivial
+R8033:8047 UMST.ChemConstants.HyperConservation <> hyper_incidence rec
+binder 8029:8029 <> h:46
+R8052:8055 Corelib.Init.Datatypes <> bool ind
+R8062:8068 Stdlib.Arith.PeanoNat Nat ltb def
+R8073:8087 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R8089:8089 UMST.ChemConstants.HyperConservation <> h:46 var
+def 8103:8121 <> count_present_heads
+R8132:8135 Corelib.Init.Datatypes <> list ind
+R8137:8156 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+binder 8124:8128 <> heads:47
+R8161:8163 Corelib.Init.Datatypes <> nat ind
+R8176:8180 UMST.ChemConstants.HyperConservation <> heads:47 var
+R8191:8193 Corelib.Init.Datatypes <> nil constr
+R8205:8208 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8223:8223 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8302:8305 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8246:8256 UMST.ChemConstants.HyperConservation <> head_absent constr
+R8272:8283 UMST.ChemConstants.HyperConservation <> head_present constr
+R8306:8324 UMST.ChemConstants.HyperConservation <> count_present_heads:48 def
+def 8350:8364 <> hyperedge_heads
+R8371:8383 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+binder 8367:8367 <> e:51
+R8388:8391 Corelib.Init.Datatypes <> list ind
+R8393:8412 UMST.ChemConstants.HyperConservation <> optional_constituent ind
+R8419:8419 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8433:8434 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8448:8449 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8463:8464 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8478:8478 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8420:8430 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R8432:8432 UMST.ChemConstants.HyperConservation <> e:51 var
+R8435:8445 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R8447:8447 UMST.ChemConstants.HyperConservation <> e:51 var
+R8450:8460 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R8462:8462 UMST.ChemConstants.HyperConservation <> e:51 var
+R8465:8475 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R8477:8477 UMST.ChemConstants.HyperConservation <> e:51 var
+def 8493:8512 <> hyperArityConsistent
+R8519:8531 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+binder 8515:8515 <> e:52
+R8536:8539 Corelib.Init.Datatypes <> bool ind
+R8633:8638 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8546:8552 Stdlib.Arith.PeanoNat Nat leb def
+R8555:8579 UMST.ChemConstants.HyperConservation <> hyperedge_arity_min_count def
+R8582:8596 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R8598:8598 UMST.ChemConstants.HyperConservation <> e:52 var
+R8607:8629 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R8631:8631 UMST.ChemConstants.HyperConservation <> e:52 var
+R8639:8645 Stdlib.Arith.PeanoNat Nat eqb def
+R8648:8666 UMST.ChemConstants.HyperConservation <> count_present_heads def
+R8669:8683 UMST.ChemConstants.HyperConservation <> hyperedge_heads def
+R8685:8685 UMST.ChemConstants.HyperConservation <> e:52 var
+R8694:8716 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R8718:8718 UMST.ChemConstants.HyperConservation <> e:52 var
+def 8734:8755 <> hyperIdentityConserved
+R8766:8778 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+binder 8758:8759 <> e1:53
+binder 8761:8762 <> e2:54
+R8783:8786 Corelib.Init.Datatypes <> bool ind
+R9117:9122 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9053:9058 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8989:8994 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8925:8930 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8854:8859 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8793:8811 UMST.ChemConstants.HyperConservation <> hyperedge_arity_beq def
+R8817:8831 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R8813:8814 UMST.ChemConstants.HyperConservation <> e1:53 var
+R8838:8852 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R8834:8835 UMST.ChemConstants.HyperConservation <> e2:54 var
+R8860:8866 Stdlib.Arith.PeanoNat Nat eqb def
+R8872:8894 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R8868:8869 UMST.ChemConstants.HyperConservation <> e1:53 var
+R8901:8923 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R8897:8898 UMST.ChemConstants.HyperConservation <> e2:54 var
+R8931:8954 UMST.ChemConstants.HyperConservation <> optional_constituent_beq def
+R8960:8970 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R8956:8957 UMST.ChemConstants.HyperConservation <> e1:53 var
+R8977:8987 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R8973:8974 UMST.ChemConstants.HyperConservation <> e2:54 var
+R8995:9018 UMST.ChemConstants.HyperConservation <> optional_constituent_beq def
+R9024:9034 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R9020:9021 UMST.ChemConstants.HyperConservation <> e1:53 var
+R9041:9051 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R9037:9038 UMST.ChemConstants.HyperConservation <> e2:54 var
+R9059:9082 UMST.ChemConstants.HyperConservation <> optional_constituent_beq def
+R9088:9098 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R9084:9085 UMST.ChemConstants.HyperConservation <> e1:53 var
+R9105:9115 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R9101:9102 UMST.ChemConstants.HyperConservation <> e2:54 var
+R9123:9146 UMST.ChemConstants.HyperConservation <> optional_constituent_beq def
+R9152:9162 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9148:9149 UMST.ChemConstants.HyperConservation <> e1:53 var
+R9169:9179 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9165:9166 UMST.ChemConstants.HyperConservation <> e2:54 var
+def 9195:9209 <> hyperTernaryOre
+R9213:9225 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+R9235:9249 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9235:9249 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9235:9249 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9280:9302 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R9280:9302 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R9315:9325 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R9315:9325 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R9362:9372 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R9362:9372 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R9410:9420 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R9410:9420 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R9464:9474 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9464:9474 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9254:9272 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R9330:9341 UMST.ChemConstants.HyperConservation <> head_present constr
+R9343:9354 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R9377:9388 UMST.ChemConstants.HyperConservation <> head_present constr
+R9390:9402 UMST.ChemConstants.HyperConservation <> ore_magnetite constr
+R9425:9436 UMST.ChemConstants.HyperConservation <> head_present constr
+R9438:9456 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R9479:9489 UMST.ChemConstants.HyperConservation <> head_absent constr
+def 9507:9519 <> hyperMultiOre
+R9523:9535 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+R9545:9559 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9545:9559 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9545:9559 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9600:9622 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R9600:9622 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R9635:9645 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R9635:9645 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R9682:9692 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R9682:9692 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R9730:9740 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R9730:9740 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R9784:9794 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9784:9794 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9564:9592 UMST.ChemConstants.HyperConservation <> hyper_arity_multi_constituent constr
+R9650:9661 UMST.ChemConstants.HyperConservation <> head_present constr
+R9663:9674 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R9697:9708 UMST.ChemConstants.HyperConservation <> head_present constr
+R9710:9722 UMST.ChemConstants.HyperConservation <> ore_magnetite constr
+R9745:9756 UMST.ChemConstants.HyperConservation <> head_present constr
+R9758:9776 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R9799:9810 UMST.ChemConstants.HyperConservation <> head_present constr
+R9812:9829 UMST.ChemConstants.HyperConservation <> ore_calcite_gangue constr
+def 9847:9862 <> hyperArityBroken
+R9866:9878 UMST.ChemConstants.HyperConservation <> ore_hyperedge rec
+R9888:9902 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9888:9902 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9888:9902 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R9933:9955 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R9933:9955 UMST.ChemConstants.HyperConservation <> hyper_constituent_count proj
+R9968:9978 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R9968:9978 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R10015:10025 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R10015:10025 UMST.ChemConstants.HyperConservation <> hyper_head1 proj
+R10063:10073 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R10063:10073 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R10096:10106 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R10096:10106 UMST.ChemConstants.HyperConservation <> hyper_head3 proj
+R9907:9925 UMST.ChemConstants.HyperConservation <> hyper_arity_ternary constr
+R9983:9994 UMST.ChemConstants.HyperConservation <> head_present constr
+R9996:10007 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R10030:10041 UMST.ChemConstants.HyperConservation <> head_present constr
+R10043:10055 UMST.ChemConstants.HyperConservation <> ore_magnetite constr
+R10078:10088 UMST.ChemConstants.HyperConservation <> head_absent constr
+R10111:10121 UMST.ChemConstants.HyperConservation <> head_absent constr
+def 10139:10161 <> hyperIncidenceTernaryL1
+R10165:10179 UMST.ChemConstants.HyperConservation <> hyper_incidence rec
+R10189:10202 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10189:10202 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10189:10202 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10224:10238 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10224:10238 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10207:10221 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+def 10261:10281 <> hyperIncidenceMultiL1
+R10285:10299 UMST.ChemConstants.HyperConservation <> hyper_incidence rec
+R10309:10322 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10309:10322 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10309:10322 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10342:10356 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10342:10356 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10327:10339 UMST.ChemConstants.HyperConservation <> hyperMultiOre def
+def 10379:10399 <> hyperIncidenceTrivial
+R10403:10417 UMST.ChemConstants.HyperConservation <> hyper_incidence rec
+R10427:10440 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10427:10440 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10427:10440 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10462:10476 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10462:10476 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10445:10459 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+def 10499:10523 <> hyperIncidenceArityBroken
+R10527:10541 UMST.ChemConstants.HyperConservation <> hyper_incidence rec
+R10551:10564 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10551:10564 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10551:10564 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R10587:10601 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10587:10601 UMST.ChemConstants.HyperConservation <> hyper_inc_level proj
+R10569:10584 UMST.ChemConstants.HyperConservation <> hyperArityBroken def
+prf 10619:10652 <> hyper_ternary_ore_arity_consistent
+R10694:10696 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10658:10677 UMST.ChemConstants.HyperConservation <> hyperArityConsistent def
+R10679:10693 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R10697:10700 Corelib.Init.Datatypes <> true constr
+prf 10735:10766 <> hyper_multi_ore_arity_consistent
+R10806:10808 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10772:10791 UMST.ChemConstants.HyperConservation <> hyperArityConsistent def
+R10793:10805 UMST.ChemConstants.HyperConservation <> hyperMultiOre def
+R10809:10812 Corelib.Init.Datatypes <> true constr
+prf 10847:10879 <> hyper_arity_broken_not_consistent
+R10922:10924 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10885:10904 UMST.ChemConstants.HyperConservation <> hyperArityConsistent def
+R10906:10921 UMST.ChemConstants.HyperConservation <> hyperArityBroken def
+R10925:10929 Corelib.Init.Datatypes <> false constr
+prf 10964:10997 <> hyper_ternary_incidence_nontrivial
+R11051:11053 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11003:11026 UMST.ChemConstants.HyperConservation <> hyperIncidenceNontrivial def
+R11028:11050 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R11054:11057 Corelib.Init.Datatypes <> true constr
+prf 11092:11123 <> hyper_ternary_identity_conserved
+R11183:11185 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11129:11150 UMST.ChemConstants.HyperConservation <> hyperIdentityConserved def
+R11152:11166 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R11168:11182 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R11186:11189 Corelib.Init.Datatypes <> true constr
+prf 11224:11253 <> hyper_ternary_hematite_present
+R11345:11347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11259:11282 UMST.ChemConstants.HyperConservation <> optional_constituent_beq def
+R11285:11295 UMST.ChemConstants.HyperConservation <> hyper_head0 proj
+R11297:11311 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R11319:11330 UMST.ChemConstants.HyperConservation <> head_present constr
+R11332:11343 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R11348:11351 Corelib.Init.Datatypes <> true constr
+prf 11386:11413 <> hyper_ternary_gangue_present
+R11512:11514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11419:11442 UMST.ChemConstants.HyperConservation <> optional_constituent_beq def
+R11445:11455 UMST.ChemConstants.HyperConservation <> hyper_head2 proj
+R11457:11471 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R11479:11490 UMST.ChemConstants.HyperConservation <> head_present constr
+R11492:11510 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+R11515:11518 Corelib.Init.Datatypes <> true constr
+prf 11553:11580 <> hyper_trivial_not_nontrivial
+R11632:11634 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11586:11609 UMST.ChemConstants.HyperConservation <> hyperIncidenceNontrivial def
+R11611:11631 UMST.ChemConstants.HyperConservation <> hyperIncidenceTrivial def
+R11635:11639 Corelib.Init.Datatypes <> false constr
+def 11679:11708 <> multi_constituent_named_vertex
+R11712:11715 Corelib.Init.Datatypes <> bool ind
+R11722:11745 UMST.ChemConstants.HyperConservation <> hyperedge_arity_is_multi def
+R11748:11762 UMST.ChemConstants.HyperConservation <> hyper_arity_tag proj
+R11764:11778 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+prf 11789:11823 <> multi_constituent_named_vertex_true
+R11859:11861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11829:11858 UMST.ChemConstants.HyperConservation <> multi_constituent_named_vertex def
+R11862:11865 Corelib.Init.Datatypes <> true constr
+def 12129:12148 <> petgraphKernelForked
+R12152:12155 Corelib.Init.Datatypes <> bool ind
+R12160:12164 Corelib.Init.Datatypes <> false constr
+prf 12174:12199 <> petgraph_kernel_not_forked
+R12225:12227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12205:12224 UMST.ChemConstants.HyperConservation <> petgraphKernelForked def
+R12228:12232 Corelib.Init.Datatypes <> false constr
+def 12499:12513 <> bondGraphMarker
+R12517:12522 Stdlib.Strings.String <> string ind
+def 12572:12587 <> hyperGraphMarker
+R12591:12596 Stdlib.Strings.String <> string ind
+prf 12637:12656 <> hyper_ne_bond_marker
+R12678:12681 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12662:12677 UMST.ChemConstants.HyperConservation <> hyperGraphMarker def
+R12682:12696 UMST.ChemConstants.HyperConservation <> bondGraphMarker def
+def 12737:12752 <> hyperNeBondGraph
+R12756:12759 Corelib.Init.Datatypes <> bool ind
+R12920:12925 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12878:12883 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12819:12824 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12766:12788 UMST.ChemConstants.HyperConservation <> graph_topology_is_hyper def
+R12790:12818 UMST.ChemConstants.HyperConservation <> topology_multi_head_hyperedge constr
+R12825:12828 Corelib.Init.Datatypes <> negb def
+R12831:12853 UMST.ChemConstants.HyperConservation <> graph_topology_is_hyper def
+R12855:12876 UMST.ChemConstants.HyperConservation <> topology_pairwise_bond constr
+R12884:12903 UMST.ChemConstants.HyperConservation <> hyperArityConsistent def
+R12905:12919 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R12926:12929 Corelib.Init.Datatypes <> negb def
+R12932:12950 UMST.ChemConstants.HyperConservation <> ore_constituent_beq def
+R12952:12963 UMST.ChemConstants.HyperConservation <> ore_hematite constr
+R12965:12983 UMST.ChemConstants.HyperConservation <> ore_silicate_gangue constr
+prf 12994:13017 <> hyper_ne_bond_graph_true
+R13037:13039 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13021:13036 UMST.ChemConstants.HyperConservation <> hyperNeBondGraph def
+R13040:13043 Corelib.Init.Datatypes <> true constr
+R13062:13077 UMST.ChemConstants.HyperConservation <> hyperNeBondGraph def
+prf 13132:13160 <> hyper_incidence_ne_bond_graph
+R13189:13194 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13182:13184 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13166:13181 UMST.ChemConstants.HyperConservation <> hyperNeBondGraph def
+R13185:13188 Corelib.Init.Datatypes <> true constr
+R13211:13214 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13195:13210 UMST.ChemConstants.HyperConservation <> hyperGraphMarker def
+R13215:13229 UMST.ChemConstants.HyperConservation <> bondGraphMarker def
+R13258:13281 UMST.ChemConstants.HyperConservation <> hyper_ne_bond_graph_true thm
+R13258:13281 UMST.ChemConstants.HyperConservation <> hyper_ne_bond_graph_true thm
+R13294:13313 UMST.ChemConstants.HyperConservation <> hyper_ne_bond_marker thm
+R13294:13313 UMST.ChemConstants.HyperConservation <> hyper_ne_bond_marker thm
+ind 13557:13579 <> hyper_path_bar_presence
+constr 13595:13610 <> hyper_bar_absent
+constr 13616:13632 <> hyper_bar_present
+scheme 13557:13579 <> hyper_path_bar_presence_rect
+scheme 13557:13579 <> hyper_path_bar_presence_ind
+scheme 13557:13579 <> hyper_path_bar_presence_rec
+scheme 13557:13579 <> hyper_path_bar_presence_sind
+rec 13643:13662 <> hyper_claim_path_bar
+proj 13678:13695 <> hyper_bar_presence
+proj 13726:13747 <> hyper_bar_defect_total
+R13699:13721 UMST.ChemConstants.HyperConservation <> hyper_path_bar_presence ind
+R13751:13753 Corelib.Init.Datatypes <> nat ind
+def 13770:13792 <> hyperClaimPathBarAbsent
+R13796:13815 UMST.ChemConstants.HyperConservation <> hyper_claim_path_bar rec
+R13825:13842 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R13825:13842 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R13825:13842 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R13865:13886 UMST.ChemConstants.HyperConservation <> hyper_bar_defect_total proj
+R13865:13886 UMST.ChemConstants.HyperConservation <> hyper_bar_defect_total proj
+R13847:13862 UMST.ChemConstants.HyperConservation <> hyper_bar_absent constr
+def 13909:13935 <> hyperClaimPathBarZeroDefect
+R13939:13958 UMST.ChemConstants.HyperConservation <> hyper_claim_path_bar rec
+R13968:13985 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R13968:13985 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R13968:13985 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R14009:14030 UMST.ChemConstants.HyperConservation <> hyper_bar_defect_total proj
+R14009:14030 UMST.ChemConstants.HyperConservation <> hyper_bar_defect_total proj
+R13990:14006 UMST.ChemConstants.HyperConservation <> hyper_bar_present constr
+def 14053:14084 <> hyper_claim_path_bar_zero_defect
+R14091:14110 UMST.ChemConstants.HyperConservation <> hyper_claim_path_bar rec
+binder 14087:14087 <> b:60
+R14115:14118 Corelib.Init.Datatypes <> bool ind
+R14131:14148 UMST.ChemConstants.HyperConservation <> hyper_bar_presence proj
+R14150:14150 UMST.ChemConstants.HyperConservation <> b:60 var
+R14161:14176 UMST.ChemConstants.HyperConservation <> hyper_bar_absent constr
+R14181:14185 Corelib.Init.Datatypes <> false constr
+R14191:14207 UMST.ChemConstants.HyperConservation <> hyper_bar_present constr
+R14212:14218 Stdlib.Arith.PeanoNat Nat eqb def
+R14221:14242 UMST.ChemConstants.HyperConservation <> hyper_bar_defect_total proj
+R14244:14244 UMST.ChemConstants.HyperConservation <> b:60 var
+prf 14263:14299 <> hyper_claim_path_bar_zero_defect_true
+R14365:14367 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14305:14336 UMST.ChemConstants.HyperConservation <> hyper_claim_path_bar_zero_defect def
+R14338:14364 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarZeroDefect def
+R14368:14371 Corelib.Init.Datatypes <> true constr
+prf 14406:14448 <> hyper_claim_path_bar_absent_not_zero_defect
+R14510:14512 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14454:14485 UMST.ChemConstants.HyperConservation <> hyper_claim_path_bar_zero_defect def
+R14487:14509 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R14513:14517 Corelib.Init.Datatypes <> false constr
+ind 14781:14806 <> hyper_conservation_verdict
+constr 14822:14839 <> verdict_unwired_ok
+constr 14845:14870 <> verdict_incidence_named_ok
+constr 14876:14903 <> verdict_trivial_hyper_refuse
+constr 14909:14941 <> verdict_arity_inconsistent_refuse
+constr 14947:14973 <> verdict_green_invent_refuse
+constr 14979:15011 <> verdict_proved_without_bar_refuse
+constr 15017:15047 <> verdict_production_wired_refuse
+scheme 14781:14806 <> hyper_conservation_verdict_rect
+scheme 14781:14806 <> hyper_conservation_verdict_ind
+scheme 14781:14806 <> hyper_conservation_verdict_rec
+scheme 14781:14806 <> hyper_conservation_verdict_sind
+def 15062:15090 <> hyper_conservation_verdict_ok
+R15097:15122 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict ind
+binder 15093:15093 <> v:63
+R15127:15130 Corelib.Init.Datatypes <> bool ind
+R15143:15143 UMST.ChemConstants.HyperConservation <> v:63 var
+R15154:15171 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R15176:15179 Corelib.Init.Datatypes <> true constr
+R15185:15210 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R15215:15218 Corelib.Init.Datatypes <> true constr
+R15229:15233 Corelib.Init.Datatypes <> false constr
+def 15254:15283 <> hyper_conservation_verdict_beq
+R15296:15321 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict ind
+binder 15288:15289 <> v1:65
+binder 15291:15292 <> v2:66
+R15326:15329 Corelib.Init.Datatypes <> bool ind
+R15346:15347 UMST.ChemConstants.HyperConservation <> v2:66 var
+R15342:15343 UMST.ChemConstants.HyperConservation <> v1:65 var
+R15358:15375 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R15378:15395 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R15400:15403 Corelib.Init.Datatypes <> true constr
+R15409:15434 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R15437:15462 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R15467:15470 Corelib.Init.Datatypes <> true constr
+R15476:15503 UMST.ChemConstants.HyperConservation <> verdict_trivial_hyper_refuse constr
+R15506:15533 UMST.ChemConstants.HyperConservation <> verdict_trivial_hyper_refuse constr
+R15538:15541 Corelib.Init.Datatypes <> true constr
+R15547:15579 UMST.ChemConstants.HyperConservation <> verdict_arity_inconsistent_refuse constr
+R15582:15614 UMST.ChemConstants.HyperConservation <> verdict_arity_inconsistent_refuse constr
+R15619:15622 Corelib.Init.Datatypes <> true constr
+R15628:15654 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+R15657:15683 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+R15688:15691 Corelib.Init.Datatypes <> true constr
+R15697:15729 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+R15732:15764 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+R15769:15772 Corelib.Init.Datatypes <> true constr
+R15778:15808 UMST.ChemConstants.HyperConservation <> verdict_production_wired_refuse constr
+R15811:15841 UMST.ChemConstants.HyperConservation <> verdict_production_wired_refuse constr
+R15846:15849 Corelib.Init.Datatypes <> true constr
+R15863:15867 Corelib.Init.Datatypes <> false constr
+def 15888:15911 <> evaluate_hyper_incidence
+R15920:15944 UMST.ChemConstants.HyperConservation <> HyperConservationModality ind
+binder 15916:15916 <> m:69
+R15954:15968 UMST.ChemConstants.HyperConservation <> hyper_incidence rec
+binder 15950:15950 <> h:70
+R15978:15997 UMST.ChemConstants.HyperConservation <> hyper_claim_path_bar rec
+binder 15974:15974 <> b:71
+R16025:16028 Corelib.Init.Datatypes <> bool ind
+binder 16003:16021 <> claim_physics_green:72
+R16049:16052 Corelib.Init.Datatypes <> bool ind
+binder 16034:16045 <> claim_proved:73
+R16057:16082 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict ind
+R16092:16110 UMST.ChemConstants.HyperConservation <> claim_physics_green:72 var
+R16157:16168 UMST.ChemConstants.HyperConservation <> claim_proved:73 var
+R16231:16234 Corelib.Init.Datatypes <> negb def
+R16237:16260 UMST.ChemConstants.HyperConservation <> hyperIncidenceNontrivial def
+R16262:16262 UMST.ChemConstants.HyperConservation <> h:70 var
+R16331:16334 Corelib.Init.Datatypes <> negb def
+R16337:16356 UMST.ChemConstants.HyperConservation <> hyperArityConsistent def
+R16359:16372 UMST.ChemConstants.HyperConservation <> hyper_inc_edge proj
+R16374:16374 UMST.ChemConstants.HyperConservation <> h:70 var
+R16481:16481 UMST.ChemConstants.HyperConservation <> m:69 var
+R16509:16534 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R16539:16564 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R16587:16612 UMST.ChemConstants.HyperConservation <> hyper_conservation_assumed constr
+R16635:16662 UMST.ChemConstants.HyperConservation <> hyper_conservation_surrogate constr
+R16667:16684 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R16667:16684 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R16707:16731 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R16736:16768 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+R16400:16432 UMST.ChemConstants.HyperConservation <> verdict_arity_inconsistent_refuse constr
+R16282:16309 UMST.ChemConstants.HyperConservation <> verdict_trivial_hyper_refuse constr
+R16182:16214 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+R16119:16145 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+def 16806:16838 <> evaluate_hyper_conservation_close
+R16847:16871 UMST.ChemConstants.HyperConservation <> HyperConservationModality ind
+binder 16843:16843 <> m:75
+R16899:16902 Corelib.Init.Datatypes <> bool ind
+binder 16877:16895 <> claim_physics_green:76
+R16933:16936 Corelib.Init.Datatypes <> bool ind
+binder 16908:16929 <> claim_production_wired:77
+R16941:16966 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict ind
+R16976:16994 UMST.ChemConstants.HyperConservation <> claim_physics_green:76 var
+R17041:17062 UMST.ChemConstants.HyperConservation <> claim_production_wired:77 var
+R17120:17120 UMST.ChemConstants.HyperConservation <> m:75 var
+R17133:17158 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R17163:17180 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R17188:17213 UMST.ChemConstants.HyperConservation <> hyper_conservation_assumed constr
+R17221:17245 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R17253:17280 UMST.ChemConstants.HyperConservation <> hyper_conservation_surrogate constr
+R17285:17310 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R17285:17310 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R17285:17310 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R17071:17101 UMST.ChemConstants.HyperConservation <> verdict_production_wired_refuse constr
+R17003:17029 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+def 17333:17361 <> hyper_conservation_authorized
+R17388:17391 Corelib.Init.Datatypes <> bool ind
+binder 17366:17384 <> claim_physics_green:79
+R17422:17425 Corelib.Init.Datatypes <> bool ind
+binder 17397:17418 <> claim_production_wired:80
+R17430:17433 Corelib.Init.Datatypes <> bool ind
+R17446:17478 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R17490:17514 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R17516:17534 UMST.ChemConstants.HyperConservation <> claim_physics_green:79 var
+R17536:17557 UMST.ChemConstants.HyperConservation <> claim_production_wired:80 var
+R17568:17593 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R17598:17601 Corelib.Init.Datatypes <> true constr
+R17612:17616 Corelib.Init.Datatypes <> false constr
+ind 17861:17882 <> hyper_conservation_law
+constr 17898:17922 <> law_hyper_incidence_named
+constr 17928:17956 <> law_arity_inconsistent_refuse
+constr 17962:17984 <> law_green_invent_refuse
+constr 17990:18016 <> law_production_wired_refuse
+scheme 17861:17882 <> hyper_conservation_law_rect
+scheme 17861:17882 <> hyper_conservation_law_ind
+scheme 17861:17882 <> hyper_conservation_law_rec
+scheme 17861:17882 <> hyper_conservation_law_sind
+def 18031:18058 <> hyper_conservation_law_count
+R18062:18064 Corelib.Init.Datatypes <> nat ind
+prf 18079:18114 <> hyper_conservation_law_count_is_four
+R18148:18150 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18120:18147 UMST.ChemConstants.HyperConservation <> hyper_conservation_law_count def
+ind 18190:18219 <> hyper_conservation_law_witness
+constr 18235:18256 <> hyper_law_witness_open
+constr 18262:18285 <> hyper_law_witness_proved
+scheme 18190:18219 <> hyper_conservation_law_witness_rect
+scheme 18190:18219 <> hyper_conservation_law_witness_ind
+scheme 18190:18219 <> hyper_conservation_law_witness_rec
+scheme 18190:18219 <> hyper_conservation_law_witness_sind
+def 18300:18338 <> evaluate_hyper_conservation_law_witness
+R18349:18370 UMST.ChemConstants.HyperConservation <> hyper_conservation_law ind
+binder 18343:18345 <> law:85
+R18378:18402 UMST.ChemConstants.HyperConservation <> HyperConservationModality ind
+binder 18374:18374 <> m:86
+R18409:18438 UMST.ChemConstants.HyperConservation <> hyper_conservation_law_witness ind
+R18451:18451 UMST.ChemConstants.HyperConservation <> m:86 var
+R18462:18487 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R18493:18518 UMST.ChemConstants.HyperConservation <> hyper_conservation_assumed constr
+R18524:18551 UMST.ChemConstants.HyperConservation <> hyper_conservation_surrogate constr
+R18556:18577 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+R18556:18577 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+R18556:18577 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+R18583:18607 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R18612:18635 UMST.ChemConstants.HyperConservation <> hyper_law_witness_proved constr
+prf 18651:18693 <> all_hyper_conservation_laws_open_at_unwired
+R18820:18825 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18795:18797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18699:18737 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_law_witness def
+R18739:18763 UMST.ChemConstants.HyperConservation <> law_hyper_incidence_named constr
+R18769:18794 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R18798:18819 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+R18951:18956 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18926:18928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18826:18864 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_law_witness def
+R18866:18894 UMST.ChemConstants.HyperConservation <> law_arity_inconsistent_refuse constr
+R18900:18925 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R18929:18950 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+R19076:19081 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19051:19053 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18957:18995 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_law_witness def
+R18997:19019 UMST.ChemConstants.HyperConservation <> law_green_invent_refuse constr
+R19025:19050 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R19054:19075 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+R19180:19182 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19082:19120 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_law_witness def
+R19122:19148 UMST.ChemConstants.HyperConservation <> law_production_wired_refuse constr
+R19154:19179 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R19183:19204 UMST.ChemConstants.HyperConservation <> hyper_law_witness_open constr
+def 19483:19500 <> graph03HyperProved
+R19504:19507 Corelib.Init.Datatypes <> bool ind
+R19512:19516 Corelib.Init.Datatypes <> false constr
+prf 19526:19551 <> graph03_hyper_proved_false
+R19573:19575 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19555:19572 UMST.ChemConstants.HyperConservation <> graph03HyperProved def
+R19576:19580 Corelib.Init.Datatypes <> false constr
+def 19620:19642 <> not118SquaredGreenTable
+R19646:19649 Corelib.Init.Datatypes <> bool ind
+R19654:19657 Corelib.Init.Datatypes <> true constr
+prf 19667:19693 <> not_118_squared_green_table
+R19720:19722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19697:19719 UMST.ChemConstants.HyperConservation <> not118SquaredGreenTable def
+R19723:19726 Corelib.Init.Datatypes <> true constr
+prf 19983:20021 <> unwired_close_without_production_wiring
+R20103:20107 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20027:20059 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R20065:20090 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R20092:20096 Corelib.Init.Datatypes <> false constr
+R20098:20102 Corelib.Init.Datatypes <> false constr
+R20108:20125 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+prf 20162:20213 <> unwired_modality_always_ok_without_production_wiring
+R20295:20299 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20219:20251 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R20257:20282 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R20284:20288 Corelib.Init.Datatypes <> false constr
+R20290:20294 Corelib.Init.Datatypes <> false constr
+R20300:20317 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R20333:20371 UMST.ChemConstants.HyperConservation <> unwired_close_without_production_wiring thm
+R20333:20371 UMST.ChemConstants.HyperConservation <> unwired_close_without_production_wiring thm
+prf 20386:20429 <> unwired_verdict_ok_without_production_wiring
+R20550:20554 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20435:20463 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R20470:20502 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R20511:20536 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R20538:20542 Corelib.Init.Datatypes <> false constr
+R20544:20548 Corelib.Init.Datatypes <> false constr
+R20555:20558 Corelib.Init.Datatypes <> true constr
+R20577:20605 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R20618:20656 UMST.ChemConstants.HyperConservation <> unwired_close_without_production_wiring thm
+R20618:20656 UMST.ChemConstants.HyperConservation <> unwired_close_without_production_wiring thm
+R20618:20656 UMST.ChemConstants.HyperConservation <> unwired_close_without_production_wiring thm
+prf 20908:20932 <> hyper_ternary_l1_named_ok
+R21057:21061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20938:20961 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R20967:20992 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R20994:21016 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R21022:21044 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R21046:21050 Corelib.Init.Datatypes <> false constr
+R21052:21056 Corelib.Init.Datatypes <> false constr
+R21062:21087 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+prf 21124:21155 <> named_ternary_hyper_conservation
+R21311:21316 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21280:21284 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21161:21184 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R21190:21215 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R21217:21239 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R21245:21267 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R21269:21273 Corelib.Init.Datatypes <> false constr
+R21275:21279 Corelib.Init.Datatypes <> false constr
+R21285:21310 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R21378:21383 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21371:21373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21317:21338 UMST.ChemConstants.HyperConservation <> hyperIdentityConserved def
+R21340:21354 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R21356:21370 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R21374:21377 Corelib.Init.Datatypes <> true constr
+R21420:21422 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21384:21403 UMST.ChemConstants.HyperConservation <> hyperArityConsistent def
+R21405:21419 UMST.ChemConstants.HyperConservation <> hyperTernaryOre def
+R21423:21426 Corelib.Init.Datatypes <> true constr
+prf 21477:21499 <> hyper_multi_l1_named_ok
+R21622:21626 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21505:21528 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R21534:21559 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R21561:21581 UMST.ChemConstants.HyperConservation <> hyperIncidenceMultiL1 def
+R21587:21609 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R21611:21615 Corelib.Init.Datatypes <> false constr
+R21617:21621 Corelib.Init.Datatypes <> false constr
+R21627:21652 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+prf 21689:21724 <> multi_constituent_hyper_conservation
+R21878:21883 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21847:21851 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21730:21753 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R21759:21784 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R21786:21806 UMST.ChemConstants.HyperConservation <> hyperIncidenceMultiL1 def
+R21812:21834 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R21836:21840 Corelib.Init.Datatypes <> false constr
+R21842:21846 Corelib.Init.Datatypes <> false constr
+R21852:21877 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R21914:21916 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21884:21913 UMST.ChemConstants.HyperConservation <> multi_constituent_named_vertex def
+R21917:21920 Corelib.Init.Datatypes <> true constr
+R21949:21971 UMST.ChemConstants.HyperConservation <> hyper_multi_l1_named_ok thm
+R21949:21971 UMST.ChemConstants.HyperConservation <> hyper_multi_l1_named_ok thm
+R21984:22018 UMST.ChemConstants.HyperConservation <> multi_constituent_named_vertex_true thm
+R21984:22018 UMST.ChemConstants.HyperConservation <> multi_constituent_named_vertex_true thm
+prf 22033:22052 <> hyper_named_close_ok
+R22133:22137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22058:22090 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R22096:22120 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R22122:22126 Corelib.Init.Datatypes <> false constr
+R22128:22132 Corelib.Init.Datatypes <> false constr
+R22138:22163 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+prf 22200:22229 <> named_hyper_conservation_close
+R22341:22346 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22310:22314 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22235:22267 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R22273:22297 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R22299:22303 Corelib.Init.Datatypes <> false constr
+R22305:22309 Corelib.Init.Datatypes <> false constr
+R22315:22340 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R22388:22390 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22347:22375 UMST.ChemConstants.HyperConservation <> hyper_conservation_authorized def
+R22377:22381 Corelib.Init.Datatypes <> false constr
+R22383:22387 Corelib.Init.Datatypes <> false constr
+R22391:22394 Corelib.Init.Datatypes <> true constr
+R22423:22442 UMST.ChemConstants.HyperConservation <> hyper_named_close_ok thm
+R22423:22442 UMST.ChemConstants.HyperConservation <> hyper_named_close_ok thm
+R22456:22484 UMST.ChemConstants.HyperConservation <> hyper_conservation_authorized def
+R22499:22518 UMST.ChemConstants.HyperConservation <> hyper_named_close_ok thm
+R22499:22518 UMST.ChemConstants.HyperConservation <> hyper_named_close_ok thm
+R22499:22518 UMST.ChemConstants.HyperConservation <> hyper_named_close_ok thm
+prf 22774:22794 <> trivial_hyper_refused
+R22917:22921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22800:22823 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R22829:22854 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R22856:22876 UMST.ChemConstants.HyperConservation <> hyperIncidenceTrivial def
+R22882:22904 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R22906:22910 Corelib.Init.Datatypes <> false constr
+R22912:22916 Corelib.Init.Datatypes <> false constr
+R22922:22949 UMST.ChemConstants.HyperConservation <> verdict_trivial_hyper_refuse constr
+prf 22986:23010 <> trivial_hyper_fail_closed
+R23166:23171 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23133:23137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23016:23039 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R23045:23070 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R23072:23092 UMST.ChemConstants.HyperConservation <> hyperIncidenceTrivial def
+R23098:23120 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R23122:23126 Corelib.Init.Datatypes <> false constr
+R23128:23132 Corelib.Init.Datatypes <> false constr
+R23138:23165 UMST.ChemConstants.HyperConservation <> verdict_trivial_hyper_refuse constr
+R23331:23335 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23172:23200 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R23207:23230 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R23239:23264 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R23266:23286 UMST.ChemConstants.HyperConservation <> hyperIncidenceTrivial def
+R23295:23317 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R23319:23323 Corelib.Init.Datatypes <> false constr
+R23325:23329 Corelib.Init.Datatypes <> false constr
+R23336:23340 Corelib.Init.Datatypes <> false constr
+R23369:23389 UMST.ChemConstants.HyperConservation <> trivial_hyper_refused thm
+R23369:23389 UMST.ChemConstants.HyperConservation <> trivial_hyper_refused thm
+R23403:23431 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R23446:23466 UMST.ChemConstants.HyperConservation <> trivial_hyper_refused thm
+R23446:23466 UMST.ChemConstants.HyperConservation <> trivial_hyper_refused thm
+R23446:23466 UMST.ChemConstants.HyperConservation <> trivial_hyper_refused thm
+prf 23722:23747 <> arity_inconsistent_refused
+R23874:23878 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23753:23776 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R23782:23807 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R23809:23833 UMST.ChemConstants.HyperConservation <> hyperIncidenceArityBroken def
+R23839:23861 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R23863:23867 Corelib.Init.Datatypes <> false constr
+R23869:23873 Corelib.Init.Datatypes <> false constr
+R23879:23911 UMST.ChemConstants.HyperConservation <> verdict_arity_inconsistent_refuse constr
+prf 23948:23977 <> arity_inconsistent_fail_closed
+R24142:24147 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24104:24108 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23983:24006 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R24012:24037 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R24039:24063 UMST.ChemConstants.HyperConservation <> hyperIncidenceArityBroken def
+R24069:24091 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R24093:24097 Corelib.Init.Datatypes <> false constr
+R24099:24103 Corelib.Init.Datatypes <> false constr
+R24109:24141 UMST.ChemConstants.HyperConservation <> verdict_arity_inconsistent_refuse constr
+R24311:24315 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24148:24176 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R24183:24206 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R24215:24240 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R24242:24266 UMST.ChemConstants.HyperConservation <> hyperIncidenceArityBroken def
+R24275:24297 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R24299:24303 Corelib.Init.Datatypes <> false constr
+R24305:24309 Corelib.Init.Datatypes <> false constr
+R24316:24320 Corelib.Init.Datatypes <> false constr
+R24349:24374 UMST.ChemConstants.HyperConservation <> arity_inconsistent_refused thm
+R24349:24374 UMST.ChemConstants.HyperConservation <> arity_inconsistent_refused thm
+R24388:24416 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R24431:24456 UMST.ChemConstants.HyperConservation <> arity_inconsistent_refused thm
+R24431:24456 UMST.ChemConstants.HyperConservation <> arity_inconsistent_refused thm
+R24431:24456 UMST.ChemConstants.HyperConservation <> arity_inconsistent_refused thm
+prf 24712:24738 <> green_invent_refuse_unwired
+R24819:24823 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24744:24776 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R24782:24807 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R24809:24812 Corelib.Init.Datatypes <> true constr
+R24814:24818 Corelib.Init.Datatypes <> false constr
+R24824:24850 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+prf 24887:24912 <> green_invent_always_refuse
+R25032:25036 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24918:24946 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R24953:24985 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R24994:25019 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R25021:25024 Corelib.Init.Datatypes <> true constr
+R25026:25030 Corelib.Init.Datatypes <> false constr
+R25037:25041 Corelib.Init.Datatypes <> false constr
+R25060:25088 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R25101:25127 UMST.ChemConstants.HyperConservation <> green_invent_refuse_unwired thm
+R25101:25127 UMST.ChemConstants.HyperConservation <> green_invent_refuse_unwired thm
+R25101:25127 UMST.ChemConstants.HyperConservation <> green_invent_refuse_unwired thm
+prf 25157:25191 <> green_invent_hyper_incidence_refuse
+R25315:25319 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25197:25220 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R25226:25251 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R25253:25275 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R25281:25303 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R25305:25308 Corelib.Init.Datatypes <> true constr
+R25310:25314 Corelib.Init.Datatypes <> false constr
+R25320:25346 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+prf 25605:25629 <> proved_without_bar_refuse
+R25753:25757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25635:25658 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R25664:25689 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R25691:25713 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R25719:25741 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R25743:25747 Corelib.Init.Datatypes <> false constr
+R25749:25752 Corelib.Init.Datatypes <> true constr
+R25758:25790 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+prf 25827:25856 <> proved_without_bar_fail_closed
+R26018:26023 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25980:25984 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25862:25885 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R25891:25916 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R25918:25940 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R25946:25968 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R25970:25974 Corelib.Init.Datatypes <> false constr
+R25976:25979 Corelib.Init.Datatypes <> true constr
+R25985:26017 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+R26184:26188 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26024:26052 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R26059:26082 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R26091:26116 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R26118:26140 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R26149:26171 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R26173:26177 Corelib.Init.Datatypes <> false constr
+R26179:26182 Corelib.Init.Datatypes <> true constr
+R26189:26193 Corelib.Init.Datatypes <> false constr
+R26222:26246 UMST.ChemConstants.HyperConservation <> proved_without_bar_refuse thm
+R26222:26246 UMST.ChemConstants.HyperConservation <> proved_without_bar_refuse thm
+R26260:26288 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R26303:26327 UMST.ChemConstants.HyperConservation <> proved_without_bar_refuse thm
+R26303:26327 UMST.ChemConstants.HyperConservation <> proved_without_bar_refuse thm
+R26303:26327 UMST.ChemConstants.HyperConservation <> proved_without_bar_refuse thm
+prf 26359:26401 <> proved_without_bar_zero_defect_still_refuse
+R26527:26531 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26407:26430 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R26436:26461 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R26463:26483 UMST.ChemConstants.HyperConservation <> hyperIncidenceMultiL1 def
+R26489:26515 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarZeroDefect def
+R26517:26521 Corelib.Init.Datatypes <> false constr
+R26523:26526 Corelib.Init.Datatypes <> true constr
+R26532:26564 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+prf 26823:26845 <> production_wired_refuse
+R26925:26929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26851:26883 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R26889:26913 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R26915:26919 Corelib.Init.Datatypes <> false constr
+R26921:26924 Corelib.Init.Datatypes <> true constr
+R26930:26960 UMST.ChemConstants.HyperConservation <> verdict_production_wired_refuse constr
+prf 26997:27026 <> production_wired_claim_refused
+R27145:27149 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27032:27060 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R27067:27099 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R27108:27132 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R27134:27138 Corelib.Init.Datatypes <> false constr
+R27140:27143 Corelib.Init.Datatypes <> true constr
+R27150:27154 Corelib.Init.Datatypes <> false constr
+R27173:27201 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_ok def
+R27214:27236 UMST.ChemConstants.HyperConservation <> production_wired_refuse thm
+R27214:27236 UMST.ChemConstants.HyperConservation <> production_wired_refuse thm
+R27214:27236 UMST.ChemConstants.HyperConservation <> production_wired_refuse thm
+def 27497:27533 <> hyper_conservation_coherence_scaffold
+R27537:27540 Corelib.Init.Datatypes <> bool ind
+R27846:27851 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R27693:27698 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R27547:27576 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_beq def
+R27583:27615 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R27624:27648 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R27650:27654 Corelib.Init.Datatypes <> false constr
+R27656:27660 Corelib.Init.Datatypes <> false constr
+R27667:27692 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R27699:27728 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_beq def
+R27735:27767 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R27776:27801 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R27803:27806 Corelib.Init.Datatypes <> true constr
+R27808:27812 Corelib.Init.Datatypes <> false constr
+R27819:27845 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+R27852:27881 UMST.ChemConstants.HyperConservation <> hyper_conservation_verdict_beq def
+R27888:27920 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R27929:27953 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R27955:27959 Corelib.Init.Datatypes <> false constr
+R27961:27964 Corelib.Init.Datatypes <> true constr
+R27971:28001 UMST.ChemConstants.HyperConservation <> verdict_production_wired_refuse constr
+prf 28011:28052 <> hyper_conservation_coherence_scaffold_true
+R28095:28097 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28058:28094 UMST.ChemConstants.HyperConservation <> hyper_conservation_coherence_scaffold def
+R28098:28101 Corelib.Init.Datatypes <> true constr
+R28120:28156 UMST.ChemConstants.HyperConservation <> hyper_conservation_coherence_scaffold def
+prf 28211:28255 <> hyper_conservation_coherence_scaffold_theorem
+R28369:28374 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28336:28342 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28261:28293 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R28299:28323 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R28325:28329 Corelib.Init.Datatypes <> false constr
+R28331:28335 Corelib.Init.Datatypes <> false constr
+R28343:28368 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R28484:28489 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28450:28456 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28375:28407 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R28413:28438 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R28440:28443 Corelib.Init.Datatypes <> true constr
+R28445:28449 Corelib.Init.Datatypes <> false constr
+R28457:28483 UMST.ChemConstants.HyperConservation <> verdict_green_invent_refuse constr
+R28564:28570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28490:28522 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R28528:28552 UMST.ChemConstants.HyperConservation <> hyper_conservation_proved constr
+R28554:28558 Corelib.Init.Datatypes <> false constr
+R28560:28563 Corelib.Init.Datatypes <> true constr
+R28571:28601 UMST.ChemConstants.HyperConservation <> verdict_production_wired_refuse constr
+ind 28880:28891 <> formal_fiber
+constr 28907:28927 <> fiber_quantum_knowing
+constr 28933:28949 <> fiber_meso_acting
+scheme 28880:28891 <> formal_fiber_rect
+scheme 28880:28891 <> formal_fiber_ind
+scheme 28880:28891 <> formal_fiber_rec
+scheme 28880:28891 <> formal_fiber_sind
+ind 28963:28981 <> formal_claim_family
+constr 28997:29020 <> claim_hyper_conservation
+scheme 28963:28981 <> formal_claim_family_rect
+scheme 28963:28981 <> formal_claim_family_ind
+scheme 28963:28981 <> formal_claim_family_rec
+scheme 28963:28981 <> formal_claim_family_sind
+def 29035:29061 <> hyper_conservation_fiber_ok
+R29068:29079 UMST.ChemConstants.HyperConservation <> formal_fiber ind
+binder 29064:29064 <> f:92
+R29084:29087 Corelib.Init.Datatypes <> bool ind
+R29100:29100 UMST.ChemConstants.HyperConservation <> f:92 var
+R29111:29131 UMST.ChemConstants.HyperConservation <> fiber_quantum_knowing constr
+R29136:29139 Corelib.Init.Datatypes <> true constr
+R29145:29161 UMST.ChemConstants.HyperConservation <> fiber_meso_acting constr
+R29166:29170 Corelib.Init.Datatypes <> false constr
+def 29191:29225 <> hyper_conservation_knowing_fiber_ok
+R29229:29232 Corelib.Init.Datatypes <> bool ind
+R29239:29265 UMST.ChemConstants.HyperConservation <> hyper_conservation_fiber_ok def
+R29267:29287 UMST.ChemConstants.HyperConservation <> fiber_quantum_knowing constr
+def 29302:29334 <> hyper_conservation_meso_acting_ok
+R29338:29341 Corelib.Init.Datatypes <> bool ind
+R29348:29374 UMST.ChemConstants.HyperConservation <> hyper_conservation_fiber_ok def
+R29376:29392 UMST.ChemConstants.HyperConservation <> fiber_meso_acting constr
+prf 29402:29441 <> hyper_conservation_knowing_fiber_ok_true
+R29482:29484 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29447:29481 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok def
+R29485:29488 Corelib.Init.Datatypes <> true constr
+prf 29523:29559 <> hyper_conservation_meso_acting_not_ok
+R29598:29600 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29565:29597 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_ok def
+R29601:29605 Corelib.Init.Datatypes <> false constr
+prf 29642:29683 <> hyper_conservation_routes_knowing_not_meso
+R29731:29736 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29724:29726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29689:29723 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok def
+R29727:29730 Corelib.Init.Datatypes <> true constr
+R29770:29772 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29737:29769 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_ok def
+R29773:29777 Corelib.Init.Datatypes <> false constr
+R29806:29845 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok_true thm
+R29806:29845 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok_true thm
+R29858:29894 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_not_ok thm
+R29858:29894 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_not_ok thm
+def 29914:29931 <> fiberNotMesoActing
+R29935:29938 Corelib.Init.Datatypes <> bool ind
+R29980:29985 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R29945:29979 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok def
+R29986:29989 Corelib.Init.Datatypes <> negb def
+R29991:30023 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_ok def
+prf 30033:30058 <> fiber_not_meso_acting_true
+R30080:30082 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30062:30079 UMST.ChemConstants.HyperConservation <> fiberNotMesoActing def
+R30083:30086 Corelib.Init.Datatypes <> true constr
+R30105:30122 UMST.ChemConstants.HyperConservation <> fiberNotMesoActing def
+R30125:30159 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok def
+R30166:30198 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_ok def
+prf 30452:30486 <> hyper_conservation_fixture_scaffold
+R30644:30649 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30611:30617 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30492:30515 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R30521:30546 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R30548:30570 UMST.ChemConstants.HyperConservation <> hyperIncidenceTernaryL1 def
+R30576:30598 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R30600:30604 Corelib.Init.Datatypes <> false constr
+R30606:30610 Corelib.Init.Datatypes <> false constr
+R30618:30643 UMST.ChemConstants.HyperConservation <> verdict_incidence_named_ok constr
+R30802:30807 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30767:30773 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30650:30673 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R30679:30704 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R30706:30726 UMST.ChemConstants.HyperConservation <> hyperIncidenceTrivial def
+R30732:30754 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R30756:30760 Corelib.Init.Datatypes <> false constr
+R30762:30766 Corelib.Init.Datatypes <> false constr
+R30774:30801 UMST.ChemConstants.HyperConservation <> verdict_trivial_hyper_refuse constr
+R30969:30974 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30929:30935 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30808:30831 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R30837:30862 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R30864:30888 UMST.ChemConstants.HyperConservation <> hyperIncidenceArityBroken def
+R30894:30916 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R30918:30922 Corelib.Init.Datatypes <> false constr
+R30924:30928 Corelib.Init.Datatypes <> false constr
+R30936:30968 UMST.ChemConstants.HyperConservation <> verdict_arity_inconsistent_refuse constr
+R31131:31136 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31091:31097 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30975:30998 UMST.ChemConstants.HyperConservation <> evaluate_hyper_incidence def
+R31004:31029 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R31031:31051 UMST.ChemConstants.HyperConservation <> hyperIncidenceMultiL1 def
+R31057:31079 UMST.ChemConstants.HyperConservation <> hyperClaimPathBarAbsent def
+R31081:31085 Corelib.Init.Datatypes <> false constr
+R31087:31090 Corelib.Init.Datatypes <> true constr
+R31098:31130 UMST.ChemConstants.HyperConservation <> verdict_proved_without_bar_refuse constr
+R31238:31243 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31213:31219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31137:31169 UMST.ChemConstants.HyperConservation <> evaluate_hyper_conservation_close def
+R31175:31200 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr
+R31202:31206 Corelib.Init.Datatypes <> false constr
+R31208:31212 Corelib.Init.Datatypes <> false constr
+R31220:31237 UMST.ChemConstants.HyperConservation <> verdict_unwired_ok constr
+R31286:31291 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31279:31281 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31244:31278 UMST.ChemConstants.HyperConservation <> hyper_conservation_knowing_fiber_ok def
+R31282:31285 Corelib.Init.Datatypes <> true constr
+R31333:31338 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31325:31327 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31292:31324 UMST.ChemConstants.HyperConservation <> hyper_conservation_meso_acting_ok def
+R31328:31332 Corelib.Init.Datatypes <> false constr
+R31365:31370 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31357:31359 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31339:31356 UMST.ChemConstants.HyperConservation <> graph03HyperProved def
+R31360:31364 Corelib.Init.Datatypes <> false constr
+R31394:31399 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31387:31389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31371:31386 UMST.ChemConstants.HyperConservation <> hyperNeBondGraph def
+R31390:31393 Corelib.Init.Datatypes <> true constr
+R31420:31422 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31400:31419 UMST.ChemConstants.HyperConservation <> petgraphKernelForked def
+R31423:31427 Corelib.Init.Datatypes <> false constr
+def 31707:31728 <> oreHypergraphAuthority
+R31732:31737 Stdlib.Strings.String <> string ind
+def 31796:31828 <> chemIntProveGraph03HyperAuthority
+R31832:31837 Stdlib.Strings.String <> string ind
+def 31889:31907 <> oreHypergraphMarker
+R31911:31916 Stdlib.Strings.String <> string ind
+def 31964:31986 <> hyperConservationCellId
+R31990:31995 Stdlib.Strings.String <> string ind
+def 32054:32078 <> hyperConservationNonClaim
+R32082:32087 Stdlib.Strings.String <> string ind
+prf 32567:32592 <> hyper_conservation_cell_id
+R32621:32623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32598:32620 UMST.ChemConstants.HyperConservation <> hyperConservationCellId def
+prf 32696:32737 <> hyper_conservation_cites_ore_hypergraph_rs
+R32765:32768 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32743:32764 UMST.ChemConstants.HyperConservation <> oreHypergraphAuthority def
+prf 32806:32854 <> hyper_conservation_cites_int_prove_graph_03_hyper
+R32893:32895 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32860:32892 UMST.ChemConstants.HyperConservation <> chemIntProveGraph03HyperAuthority def
+prf 32961:32991 <> hyper_conservation_cites_marker
+R33016:33019 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32997:33015 UMST.ChemConstants.HyperConservation <> oreHypergraphMarker def
+def 33286:33318 <> hyperSecondLawConservationFraming
+R33322:33327 Stdlib.Strings.String <> string ind
+prf 33407:33434 <> hyper_not_second_hyper_axiom
+R33473:33476 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33440:33472 UMST.ChemConstants.HyperConservation <> hyperSecondLawConservationFraming def
+prf 33532:33568 <> hyper_second_law_conservation_framing
+R33607:33610 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33574:33606 UMST.ChemConstants.HyperConservation <> hyperSecondLawConservationFraming def
+def 33877:33898 <> physicsGreenAuthorized
+R33910:33914 Corelib.Init.Logic <> False ind
+prf 33924:33961 <> hyper_conservation_physics_green_false
+R33967:33968 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R33969:33990 UMST.ChemConstants.HyperConservation <> physicsGreenAuthorized def
+prf 34030:34064 <> hyper_conservation_modality_unwired
+R34102:34104 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34070:34101 UMST.ChemConstants.HyperConservation <> hyperConservationModalityCurrent def
+R34105:34130 UMST.ChemConstants.HyperConservation <> hyper_conservation_unwired constr

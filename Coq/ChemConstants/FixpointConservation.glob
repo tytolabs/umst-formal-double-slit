@@ -1,0 +1,822 @@
+DIGEST fd17beb4595a44d7e6dfacab4903cba0
+FUMST.ChemConstants.FixpointConservation
+R1128:1132 Stdlib.Arith.Arith <> <> lib
+R1134:1139 Stdlib.Strings.String <> <> lib
+R1141:1144 Stdlib.Bool.Bool <> <> lib
+R1146:1148 Stdlib.micromega.Lia <> <> lib
+R1150:1153 Stdlib.Lists.List <> <> lib
+R1163:1175 Stdlib.Lists.List ListNotations <> mod
+ind 1504:1531 <> FixpointConservationModality
+constr 1547:1575 <> fixpoint_conservation_unwired
+constr 1581:1609 <> fixpoint_conservation_assumed
+constr 1615:1642 <> fixpoint_conservation_proved
+constr 1648:1678 <> fixpoint_conservation_surrogate
+scheme 1504:1531 <> FixpointConservationModality_rect
+scheme 1504:1531 <> FixpointConservationModality_ind
+scheme 1504:1531 <> FixpointConservationModality_rec
+scheme 1504:1531 <> FixpointConservationModality_sind
+def 1693:1727 <> fixpointConservationModalityCurrent
+R1731:1758 UMST.ChemConstants.FixpointConservation <> FixpointConservationModality ind
+R1765:1793 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+def 1808:1835 <> fixpoint_lattice_cardinality
+R1839:1841 Corelib.Init.Datatypes <> nat ind
+prf 1856:1891 <> fixpoint_lattice_cardinality_is_four
+R1925:1927 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1897:1924 UMST.ChemConstants.FixpointConservation <> fixpoint_lattice_cardinality def
+prf 1963:1994 <> fixpoint_lattice_not_118_squared
+R2055:2057 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2000:2003 Corelib.Init.Datatypes <> negb def
+R2006:2012 Stdlib.Arith.PeanoNat Nat eqb def
+R2014:2041 UMST.ChemConstants.FixpointConservation <> fixpoint_lattice_cardinality def
+R2047:2049 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2058:2061 Corelib.Init.Datatypes <> true constr
+R2080:2107 UMST.ChemConstants.FixpointConservation <> fixpoint_lattice_cardinality def
+def 2366:2382 <> refinement_bottom
+R2386:2388 Corelib.Init.Datatypes <> nat ind
+def 2407:2420 <> refinement_top
+R2424:2426 Corelib.Init.Datatypes <> nat ind
+def 2446:2457 <> lattice_meet
+R2466:2468 Corelib.Init.Datatypes <> nat ind
+binder 2460:2460 <> a:3
+binder 2462:2462 <> b:4
+R2473:2475 Corelib.Init.Datatypes <> nat ind
+R2480:2486 Stdlib.Arith.PeanoNat Nat min def
+R2488:2488 UMST.ChemConstants.FixpointConservation <> a:3 var
+R2490:2490 UMST.ChemConstants.FixpointConservation <> b:4 var
+def 2504:2515 <> lattice_join
+R2524:2526 Corelib.Init.Datatypes <> nat ind
+binder 2518:2518 <> a:5
+binder 2520:2520 <> b:6
+R2531:2533 Corelib.Init.Datatypes <> nat ind
+R2538:2544 Stdlib.Arith.PeanoNat Nat max def
+R2546:2546 UMST.ChemConstants.FixpointConservation <> a:5 var
+R2548:2548 UMST.ChemConstants.FixpointConservation <> b:6 var
+prf 2558:2581 <> lattice_meet_commutative
+R2590:2592 Corelib.Init.Datatypes <> nat ind
+binder 2584:2584 <> a:7
+binder 2586:2586 <> b:8
+R2615:2617 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2599:2610 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R2612:2612 UMST.ChemConstants.FixpointConservation <> a:7 var
+R2614:2614 UMST.ChemConstants.FixpointConservation <> b:8 var
+R2618:2629 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R2631:2631 UMST.ChemConstants.FixpointConservation <> b:8 var
+R2633:2633 UMST.ChemConstants.FixpointConservation <> a:7 var
+R2652:2663 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+prf 2685:2708 <> lattice_join_commutative
+R2717:2719 Corelib.Init.Datatypes <> nat ind
+binder 2711:2711 <> a:9
+binder 2713:2713 <> b:10
+R2742:2744 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2726:2737 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R2739:2739 UMST.ChemConstants.FixpointConservation <> a:9 var
+R2741:2741 UMST.ChemConstants.FixpointConservation <> b:10 var
+R2745:2756 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R2758:2758 UMST.ChemConstants.FixpointConservation <> b:10 var
+R2760:2760 UMST.ChemConstants.FixpointConservation <> a:9 var
+R2779:2790 UMST.ChemConstants.FixpointConservation <> lattice_join def
+prf 2812:2831 <> meet_bottom_identity
+R2838:2840 Corelib.Init.Datatypes <> nat ind
+binder 2834:2834 <> x:11
+R2879:2881 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2847:2858 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R2860:2860 UMST.ChemConstants.FixpointConservation <> x:11 var
+R2862:2878 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R2882:2898 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R2917:2928 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R2931:2947 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+prf 2989:3005 <> join_top_identity
+R3012:3014 Corelib.Init.Datatypes <> nat ind
+binder 3008:3008 <> x:12
+R3024:3027 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3023:3023 UMST.ChemConstants.FixpointConservation <> x:12 var
+R3028:3041 UMST.ChemConstants.FixpointConservation <> refinement_top def
+binder 3018:3019 <> Hx:13
+R3077:3079 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3048:3059 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3061:3061 UMST.ChemConstants.FixpointConservation <> x:12 var
+R3063:3076 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3080:3093 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3112:3123 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3126:3139 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3150:3158 Stdlib.Arith.PeanoNat Nat max_r thm
+R3150:3158 Stdlib.Arith.PeanoNat Nat max_r thm
+prf 3185:3214 <> meet_bottom_identity_conserved
+R3272:3277 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3252:3254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3220:3231 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R3235:3251 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3255:3271 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3310:3312 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3278:3289 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R3293:3309 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3313:3329 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3354:3373 UMST.ChemConstants.FixpointConservation <> meet_bottom_identity thm
+R3354:3373 UMST.ChemConstants.FixpointConservation <> meet_bottom_identity thm
+R3354:3373 UMST.ChemConstants.FixpointConservation <> meet_bottom_identity thm
+prf 3388:3414 <> join_top_identity_conserved
+R3466:3471 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3449:3451 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3420:3431 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3435:3448 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3452:3465 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3501:3503 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3472:3483 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3487:3500 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3504:3517 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3543:3554 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3557:3570 UMST.ChemConstants.FixpointConservation <> refinement_top def
+prf 3598:3633 <> meet_join_identity_conserved_on_pins
+R3704:3709 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3684:3686 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3639:3650 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R3652:3665 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3667:3683 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3687:3703 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3755:3757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3710:3721 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3723:3736 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3738:3754 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R3758:3771 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3797:3808 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R3811:3822 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R3825:3838 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R3841:3857 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+def 4118:4142 <> ascending_refinement_step
+R4157:4159 Corelib.Init.Datatypes <> nat ind
+binder 4145:4149 <> state:14
+binder 4151:4153 <> top:15
+R4164:4166 Corelib.Init.Datatypes <> nat ind
+R4176:4182 Stdlib.Arith.PeanoNat Nat leb def
+R4184:4186 UMST.ChemConstants.FixpointConservation <> top:15 var
+R4188:4192 UMST.ChemConstants.FixpointConservation <> state:14 var
+R4215:4217 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R4210:4214 UMST.ChemConstants.FixpointConservation <> state:14 var
+R4199:4203 UMST.ChemConstants.FixpointConservation <> state:14 var
+prf 4228:4261 <> ascending_refinement_step_monotone
+R4276:4278 Corelib.Init.Datatypes <> nat ind
+binder 4264:4268 <> state:16
+binder 4270:4272 <> top:17
+R4320:4323 Corelib.Init.Peano <> ::nat_scope:x_'>='_x not
+R4285:4309 UMST.ChemConstants.FixpointConservation <> ascending_refinement_step def
+R4311:4315 UMST.ChemConstants.FixpointConservation <> state:16 var
+R4317:4319 UMST.ChemConstants.FixpointConservation <> top:17 var
+R4324:4328 UMST.ChemConstants.FixpointConservation <> state:16 var
+R4347:4371 UMST.ChemConstants.FixpointConservation <> ascending_refinement_step def
+R4386:4392 Stdlib.Arith.PeanoNat Nat leb def
+R4386:4392 Stdlib.Arith.PeanoNat Nat leb def
+prf 4431:4457 <> ascending_refinement_at_top
+R4466:4468 Corelib.Init.Datatypes <> nat ind
+binder 4460:4462 <> top:18
+R4508:4510 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4475:4499 UMST.ChemConstants.FixpointConservation <> ascending_refinement_step def
+R4501:4503 UMST.ChemConstants.FixpointConservation <> top:18 var
+R4505:4507 UMST.ChemConstants.FixpointConservation <> top:18 var
+R4511:4513 UMST.ChemConstants.FixpointConservation <> top:18 var
+R4532:4556 UMST.ChemConstants.FixpointConservation <> ascending_refinement_step def
+R4569:4580 Stdlib.Arith.PeanoNat Nat leb_refl thm
+R4569:4580 Stdlib.Arith.PeanoNat Nat leb_refl thm
+R4569:4580 Stdlib.Arith.PeanoNat Nat leb_refl thm
+def 4615:4638 <> is_ascending_fixed_point
+R4653:4655 Corelib.Init.Datatypes <> nat ind
+binder 4641:4645 <> state:19
+binder 4647:4649 <> top:20
+R4660:4663 Corelib.Init.Datatypes <> bool ind
+R4670:4676 Stdlib.Arith.PeanoNat Nat eqb def
+R4679:4703 UMST.ChemConstants.FixpointConservation <> ascending_refinement_step def
+R4705:4709 UMST.ChemConstants.FixpointConservation <> state:19 var
+R4711:4713 UMST.ChemConstants.FixpointConservation <> top:20 var
+R4716:4720 UMST.ChemConstants.FixpointConservation <> state:19 var
+prf 4730:4757 <> is_ascending_fixed_point_top
+R4817:4819 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4763:4786 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point def
+R4788:4801 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R4803:4816 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R4820:4823 Corelib.Init.Datatypes <> true constr
+R4842:4865 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point def
+R4878:4904 UMST.ChemConstants.FixpointConservation <> ascending_refinement_at_top thm
+R4878:4904 UMST.ChemConstants.FixpointConservation <> ascending_refinement_at_top thm
+R4878:4904 UMST.ChemConstants.FixpointConservation <> ascending_refinement_at_top thm
+ind 4938:4959 <> fixpoint_chain_verdict
+constr 4975:4987 <> chain_reached
+constr 4993:5021 <> chain_budget_exhausted_refuse
+scheme 4938:4959 <> fixpoint_chain_verdict_rect
+scheme 4938:4959 <> fixpoint_chain_verdict_ind
+scheme 4938:4959 <> fixpoint_chain_verdict_rec
+scheme 4938:4959 <> fixpoint_chain_verdict_sind
+def 5036:5060 <> fixpoint_chain_verdict_ok
+R5067:5088 UMST.ChemConstants.FixpointConservation <> fixpoint_chain_verdict ind
+binder 5063:5063 <> v:23
+R5093:5096 Corelib.Init.Datatypes <> bool ind
+R5109:5109 UMST.ChemConstants.FixpointConservation <> v:23 var
+R5120:5132 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R5137:5140 Corelib.Init.Datatypes <> true constr
+R5146:5174 UMST.ChemConstants.FixpointConservation <> chain_budget_exhausted_refuse constr
+R5179:5183 Corelib.Init.Datatypes <> false constr
+def 5202:5232 <> reach_ascending_fixed_point_aux
+R5252:5254 Corelib.Init.Datatypes <> nat ind
+binder 5235:5239 <> state:25
+binder 5241:5243 <> top:26
+binder 5245:5248 <> fuel:27
+R5264:5266 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5261:5263 Corelib.Init.Datatypes <> nat ind
+R5267:5288 UMST.ChemConstants.FixpointConservation <> fixpoint_chain_verdict ind
+R5301:5304 UMST.ChemConstants.FixpointConservation <> fuel:27 var
+R5315:5315 Corelib.Init.Datatypes <> O constr
+R5329:5352 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point def
+R5354:5358 UMST.ChemConstants.FixpointConservation <> state:25 var
+R5360:5362 UMST.ChemConstants.FixpointConservation <> top:26 var
+R5419:5419 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5425:5426 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5456:5456 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5420:5424 UMST.ChemConstants.FixpointConservation <> state:25 var
+R5427:5455 UMST.ChemConstants.FixpointConservation <> chain_budget_exhausted_refuse constr
+R5377:5377 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5383:5384 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5398:5398 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5378:5382 UMST.ChemConstants.FixpointConservation <> state:25 var
+R5385:5397 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R5462:5462 Corelib.Init.Datatypes <> S constr
+R5491:5515 UMST.ChemConstants.FixpointConservation <> ascending_refinement_step def
+R5517:5521 UMST.ChemConstants.FixpointConservation <> state:25 var
+R5523:5525 UMST.ChemConstants.FixpointConservation <> top:26 var
+binder 5483:5486 <> next:30
+R5539:5562 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point def
+R5564:5568 UMST.ChemConstants.FixpointConservation <> state:25 var
+R5570:5572 UMST.ChemConstants.FixpointConservation <> top:26 var
+R5629:5659 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point_aux:28 def
+R5666:5668 UMST.ChemConstants.FixpointConservation <> top:26 var
+R5661:5664 UMST.ChemConstants.FixpointConservation <> next:30 var
+R5587:5587 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5593:5594 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5608:5608 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5588:5592 UMST.ChemConstants.FixpointConservation <> state:25 var
+R5595:5607 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+def 5695:5721 <> reach_ascending_fixed_point
+R5743:5745 Corelib.Init.Datatypes <> nat ind
+binder 5724:5730 <> initial:31
+binder 5732:5734 <> top:32
+binder 5736:5739 <> fuel:33
+R5755:5757 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5752:5754 Corelib.Init.Datatypes <> nat ind
+R5758:5779 UMST.ChemConstants.FixpointConservation <> fixpoint_chain_verdict ind
+R5786:5816 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point_aux def
+R5818:5824 UMST.ChemConstants.FixpointConservation <> initial:31 var
+R5826:5828 UMST.ChemConstants.FixpointConservation <> top:32 var
+R5830:5833 UMST.ChemConstants.FixpointConservation <> fuel:33 var
+prf 5843:5871 <> reach_from_bottom_reaches_top
+R5940:5944 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5877:5903 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R5905:5921 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R5923:5936 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R5945:5945 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5960:5961 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5975:5975 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5946:5959 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R5962:5974 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R5994:6020 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R6023:6039 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R6042:6055 UMST.ChemConstants.FixpointConservation <> refinement_top def
+prf 6087:6120 <> monotone_chain_reaches_fixed_point
+R6225:6230 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6189:6193 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6126:6152 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R6154:6170 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R6172:6185 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R6194:6194 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6209:6210 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6224:6224 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6195:6208 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R6211:6223 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R6285:6287 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6231:6254 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point def
+R6256:6269 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R6271:6284 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R6288:6291 Corelib.Init.Datatypes <> true constr
+R6320:6348 UMST.ChemConstants.FixpointConservation <> reach_from_bottom_reaches_top thm
+R6320:6348 UMST.ChemConstants.FixpointConservation <> reach_from_bottom_reaches_top thm
+R6361:6388 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point_top thm
+R6361:6388 UMST.ChemConstants.FixpointConservation <> is_ascending_fixed_point_top thm
+prf 6403:6441 <> budget_exhaust_refuses_incomplete_chain
+R6509:6514 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6447:6473 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R6475:6491 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R6493:6506 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R6515:6515 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6530:6531 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6545:6545 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6516:6529 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R6532:6544 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R6564:6590 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R6593:6609 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R6612:6625 UMST.ChemConstants.FixpointConservation <> refinement_top def
+ind 6884:6904 <> lattice_fixpoint_kind
+constr 6920:6933 <> fixpoint_least
+constr 6939:6955 <> fixpoint_greatest
+scheme 6884:6904 <> lattice_fixpoint_kind_rect
+scheme 6884:6904 <> lattice_fixpoint_kind_ind
+scheme 6884:6904 <> lattice_fixpoint_kind_rec
+scheme 6884:6904 <> lattice_fixpoint_kind_sind
+def 6970:6985 <> lattice_fixpoint
+R6995:7015 UMST.ChemConstants.FixpointConservation <> lattice_fixpoint_kind ind
+binder 6988:6991 <> kind:36
+R7025:7027 Corelib.Init.Datatypes <> nat ind
+binder 7019:7021 <> top:37
+R7032:7034 Corelib.Init.Datatypes <> nat ind
+R7047:7050 UMST.ChemConstants.FixpointConservation <> kind:36 var
+R7061:7074 UMST.ChemConstants.FixpointConservation <> fixpoint_least constr
+R7109:7135 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R7137:7153 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R7155:7157 UMST.ChemConstants.FixpointConservation <> top:37 var
+binder 7090:7094 <> state:39
+binder 7097:7103 <> verdict:40
+R7177:7183 UMST.ChemConstants.FixpointConservation <> verdict:40 var
+R7198:7210 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R7215:7219 UMST.ChemConstants.FixpointConservation <> state:39 var
+R7229:7257 UMST.ChemConstants.FixpointConservation <> chain_budget_exhausted_refuse constr
+R7262:7264 UMST.ChemConstants.FixpointConservation <> top:37 var
+R7280:7296 UMST.ChemConstants.FixpointConservation <> fixpoint_greatest constr
+R7301:7303 UMST.ChemConstants.FixpointConservation <> top:37 var
+prf 7319:7344 <> least_fixpoint_reaches_top
+R7396:7398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7350:7365 UMST.ChemConstants.FixpointConservation <> lattice_fixpoint def
+R7367:7380 UMST.ChemConstants.FixpointConservation <> fixpoint_least constr
+R7382:7395 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R7399:7412 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R7431:7446 UMST.ChemConstants.FixpointConservation <> lattice_fixpoint def
+R7449:7462 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R7465:7481 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+prf 7511:7534 <> greatest_fixpoint_is_top
+R7589:7591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7540:7555 UMST.ChemConstants.FixpointConservation <> lattice_fixpoint def
+R7557:7573 UMST.ChemConstants.FixpointConservation <> fixpoint_greatest constr
+R7575:7588 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R7592:7605 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R7624:7639 UMST.ChemConstants.FixpointConservation <> lattice_fixpoint def
+R7642:7655 UMST.ChemConstants.FixpointConservation <> refinement_top def
+ind 7915:7943 <> fixpoint_conservation_verdict
+constr 7959:7976 <> verdict_unwired_ok
+constr 7982:8010 <> verdict_meet_join_identity_ok
+constr 8016:8040 <> verdict_monotone_chain_ok
+constr 8046:8072 <> verdict_green_invent_refuse
+constr 8078:8108 <> verdict_production_wired_refuse
+scheme 7915:7943 <> fixpoint_conservation_verdict_rect
+scheme 7915:7943 <> fixpoint_conservation_verdict_ind
+scheme 7915:7943 <> fixpoint_conservation_verdict_rec
+scheme 7915:7943 <> fixpoint_conservation_verdict_sind
+def 8123:8154 <> fixpoint_conservation_verdict_ok
+R8161:8189 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict ind
+binder 8157:8157 <> v:44
+R8194:8197 Corelib.Init.Datatypes <> bool ind
+R8210:8210 UMST.ChemConstants.FixpointConservation <> v:44 var
+R8221:8238 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+R8243:8246 Corelib.Init.Datatypes <> true constr
+R8252:8280 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R8285:8288 Corelib.Init.Datatypes <> true constr
+R8294:8318 UMST.ChemConstants.FixpointConservation <> verdict_monotone_chain_ok constr
+R8323:8326 Corelib.Init.Datatypes <> true constr
+R8337:8341 Corelib.Init.Datatypes <> false constr
+def 8362:8394 <> fixpoint_conservation_verdict_beq
+R8407:8435 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict ind
+binder 8399:8400 <> v1:46
+binder 8402:8403 <> v2:47
+R8440:8443 Corelib.Init.Datatypes <> bool ind
+R8460:8461 UMST.ChemConstants.FixpointConservation <> v2:47 var
+R8456:8457 UMST.ChemConstants.FixpointConservation <> v1:46 var
+R8472:8489 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+R8492:8509 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+R8514:8517 Corelib.Init.Datatypes <> true constr
+R8523:8551 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R8554:8582 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R8587:8590 Corelib.Init.Datatypes <> true constr
+R8596:8620 UMST.ChemConstants.FixpointConservation <> verdict_monotone_chain_ok constr
+R8623:8647 UMST.ChemConstants.FixpointConservation <> verdict_monotone_chain_ok constr
+R8652:8655 Corelib.Init.Datatypes <> true constr
+R8661:8687 UMST.ChemConstants.FixpointConservation <> verdict_green_invent_refuse constr
+R8690:8716 UMST.ChemConstants.FixpointConservation <> verdict_green_invent_refuse constr
+R8721:8724 Corelib.Init.Datatypes <> true constr
+R8730:8760 UMST.ChemConstants.FixpointConservation <> verdict_production_wired_refuse constr
+R8763:8793 UMST.ChemConstants.FixpointConservation <> verdict_production_wired_refuse constr
+R8798:8801 Corelib.Init.Datatypes <> true constr
+R8815:8819 Corelib.Init.Datatypes <> false constr
+def 8840:8875 <> evaluate_fixpoint_conservation_close
+R8884:8911 UMST.ChemConstants.FixpointConservation <> FixpointConservationModality ind
+binder 8880:8880 <> m:50
+R8939:8942 Corelib.Init.Datatypes <> bool ind
+binder 8917:8935 <> claim_physics_green:51
+R8973:8976 Corelib.Init.Datatypes <> bool ind
+binder 8948:8969 <> claim_production_wired:52
+R8981:9009 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict ind
+R9019:9037 UMST.ChemConstants.FixpointConservation <> claim_physics_green:51 var
+R9084:9105 UMST.ChemConstants.FixpointConservation <> claim_production_wired:52 var
+R9163:9163 UMST.ChemConstants.FixpointConservation <> m:50 var
+R9176:9204 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R9209:9226 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+R9234:9262 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_assumed constr
+R9270:9297 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R9305:9335 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_surrogate constr
+R9340:9368 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R9340:9368 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R9340:9368 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R9114:9144 UMST.ChemConstants.FixpointConservation <> verdict_production_wired_refuse constr
+R9046:9072 UMST.ChemConstants.FixpointConservation <> verdict_green_invent_refuse constr
+def 9391:9422 <> fixpoint_conservation_authorized
+R9449:9452 Corelib.Init.Datatypes <> bool ind
+binder 9427:9445 <> claim_physics_green:54
+R9483:9486 Corelib.Init.Datatypes <> bool ind
+binder 9458:9479 <> claim_production_wired:55
+R9491:9494 Corelib.Init.Datatypes <> bool ind
+R9507:9542 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R9554:9581 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R9583:9601 UMST.ChemConstants.FixpointConservation <> claim_physics_green:54 var
+R9603:9624 UMST.ChemConstants.FixpointConservation <> claim_production_wired:55 var
+R9635:9663 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R9668:9671 Corelib.Init.Datatypes <> true constr
+R9677:9701 UMST.ChemConstants.FixpointConservation <> verdict_monotone_chain_ok constr
+R9706:9709 Corelib.Init.Datatypes <> true constr
+R9720:9724 Corelib.Init.Datatypes <> false constr
+ind 9968:9992 <> fixpoint_conservation_law
+constr 10008:10029 <> law_meet_join_identity
+constr 10035:10064 <> law_monotone_chain_fixed_point
+constr 10070:10092 <> law_green_invent_refuse
+constr 10098:10124 <> law_production_wired_refuse
+scheme 9968:9992 <> fixpoint_conservation_law_rect
+scheme 9968:9992 <> fixpoint_conservation_law_ind
+scheme 9968:9992 <> fixpoint_conservation_law_rec
+scheme 9968:9992 <> fixpoint_conservation_law_sind
+def 10139:10169 <> fixpoint_conservation_law_count
+R10173:10175 Corelib.Init.Datatypes <> nat ind
+prf 10190:10228 <> fixpoint_conservation_law_count_is_four
+R10265:10267 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10234:10264 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_law_count def
+ind 10307:10339 <> fixpoint_conservation_law_witness
+constr 10355:10379 <> fixpoint_law_witness_open
+constr 10385:10411 <> fixpoint_law_witness_proved
+scheme 10307:10339 <> fixpoint_conservation_law_witness_rect
+scheme 10307:10339 <> fixpoint_conservation_law_witness_ind
+scheme 10307:10339 <> fixpoint_conservation_law_witness_rec
+scheme 10307:10339 <> fixpoint_conservation_law_witness_sind
+def 10426:10467 <> evaluate_fixpoint_conservation_law_witness
+R10478:10502 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_law ind
+binder 10472:10474 <> law:60
+R10510:10537 UMST.ChemConstants.FixpointConservation <> FixpointConservationModality ind
+binder 10506:10506 <> m:61
+R10544:10576 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_law_witness ind
+R10589:10589 UMST.ChemConstants.FixpointConservation <> m:61 var
+R10600:10628 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R10634:10662 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_assumed constr
+R10668:10698 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_surrogate constr
+R10703:10727 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+R10703:10727 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+R10703:10727 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+R10733:10760 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R10765:10791 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_proved constr
+prf 10807:10852 <> all_fixpoint_conservation_laws_open_at_unwired
+R10985:10990 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10957:10959 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10858:10899 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_law_witness def
+R10901:10922 UMST.ChemConstants.FixpointConservation <> law_meet_join_identity constr
+R10928:10956 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R10960:10984 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+R11126:11131 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11098:11100 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10991:11032 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_law_witness def
+R11034:11063 UMST.ChemConstants.FixpointConservation <> law_monotone_chain_fixed_point constr
+R11069:11097 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R11101:11125 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+R11260:11265 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11232:11234 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11132:11173 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_law_witness def
+R11175:11197 UMST.ChemConstants.FixpointConservation <> law_green_invent_refuse constr
+R11203:11231 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R11235:11259 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+R11370:11372 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11266:11307 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_law_witness def
+R11309:11335 UMST.ChemConstants.FixpointConservation <> law_production_wired_refuse constr
+R11341:11369 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R11373:11397 UMST.ChemConstants.FixpointConservation <> fixpoint_law_witness_open constr
+def 11675:11692 <> fp02FixpointProved
+R11696:11699 Corelib.Init.Datatypes <> bool ind
+R11704:11708 Corelib.Init.Datatypes <> false constr
+prf 11718:11743 <> fp02_fixpoint_proved_false
+R11765:11767 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11747:11764 UMST.ChemConstants.FixpointConservation <> fp02FixpointProved def
+R11768:11772 Corelib.Init.Datatypes <> false constr
+def 11812:11834 <> not118SquaredGreenTable
+R11838:11841 Corelib.Init.Datatypes <> bool ind
+R11846:11849 Corelib.Init.Datatypes <> true constr
+prf 11859:11885 <> not_118_squared_green_table
+R11912:11914 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11889:11911 UMST.ChemConstants.FixpointConservation <> not118SquaredGreenTable def
+R11915:11918 Corelib.Init.Datatypes <> true constr
+prf 12175:12213 <> unwired_close_without_production_wiring
+R12301:12305 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12219:12254 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R12260:12288 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R12290:12294 Corelib.Init.Datatypes <> false constr
+R12296:12300 Corelib.Init.Datatypes <> false constr
+R12306:12323 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+prf 12360:12411 <> unwired_modality_always_ok_without_production_wiring
+R12499:12503 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12417:12452 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R12458:12486 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R12488:12492 Corelib.Init.Datatypes <> false constr
+R12494:12498 Corelib.Init.Datatypes <> false constr
+R12504:12521 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+R12537:12575 UMST.ChemConstants.FixpointConservation <> unwired_close_without_production_wiring thm
+R12537:12575 UMST.ChemConstants.FixpointConservation <> unwired_close_without_production_wiring thm
+prf 12590:12633 <> unwired_verdict_ok_without_production_wiring
+R12763:12767 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12639:12670 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R12677:12712 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R12721:12749 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R12751:12755 Corelib.Init.Datatypes <> false constr
+R12757:12761 Corelib.Init.Datatypes <> false constr
+R12768:12771 Corelib.Init.Datatypes <> true constr
+R12790:12821 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R12834:12872 UMST.ChemConstants.FixpointConservation <> unwired_close_without_production_wiring thm
+R12834:12872 UMST.ChemConstants.FixpointConservation <> unwired_close_without_production_wiring thm
+R12834:12872 UMST.ChemConstants.FixpointConservation <> unwired_close_without_production_wiring thm
+prf 13126:13152 <> meet_join_identity_close_ok
+R13239:13243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13158:13193 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R13199:13226 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R13228:13232 Corelib.Init.Datatypes <> false constr
+R13234:13238 Corelib.Init.Datatypes <> false constr
+R13244:13272 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+prf 13309:13353 <> lattice_meet_join_identity_conservation_close
+R13474:13479 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13440:13444 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13359:13394 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R13400:13427 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R13429:13433 Corelib.Init.Datatypes <> false constr
+R13435:13439 Corelib.Init.Datatypes <> false constr
+R13445:13473 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R13524:13526 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13480:13511 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_authorized def
+R13513:13517 Corelib.Init.Datatypes <> false constr
+R13519:13523 Corelib.Init.Datatypes <> false constr
+R13527:13530 Corelib.Init.Datatypes <> true constr
+R13559:13585 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+R13559:13585 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+R13599:13630 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_authorized def
+R13645:13671 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+R13645:13671 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+R13645:13671 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+prf 13703:13731 <> meet_join_identity_verdict_ok
+R13860:13864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13737:13768 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R13775:13810 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R13819:13846 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R13848:13852 Corelib.Init.Datatypes <> false constr
+R13854:13858 Corelib.Init.Datatypes <> false constr
+R13865:13868 Corelib.Init.Datatypes <> true constr
+R13887:13918 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R13931:13957 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+R13931:13957 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+R13931:13957 UMST.ChemConstants.FixpointConservation <> meet_join_identity_close_ok thm
+prf 13987:14026 <> meet_join_identity_still_not_fp02_proved
+R14164:14169 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14155:14159 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14032:14063 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R14070:14105 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R14114:14141 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R14143:14147 Corelib.Init.Datatypes <> false constr
+R14149:14153 Corelib.Init.Datatypes <> false constr
+R14160:14163 Corelib.Init.Datatypes <> true constr
+R14188:14190 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14170:14187 UMST.ChemConstants.FixpointConservation <> fp02FixpointProved def
+R14191:14195 Corelib.Init.Datatypes <> false constr
+R14224:14252 UMST.ChemConstants.FixpointConservation <> meet_join_identity_verdict_ok thm
+R14224:14252 UMST.ChemConstants.FixpointConservation <> meet_join_identity_verdict_ok thm
+R14265:14290 UMST.ChemConstants.FixpointConservation <> fp02_fixpoint_proved_false thm
+R14265:14290 UMST.ChemConstants.FixpointConservation <> fp02_fixpoint_proved_false thm
+prf 14529:14555 <> green_invent_refuse_unwired
+R14642:14646 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14561:14596 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R14602:14630 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R14632:14635 Corelib.Init.Datatypes <> true constr
+R14637:14641 Corelib.Init.Datatypes <> false constr
+R14647:14673 UMST.ChemConstants.FixpointConservation <> verdict_green_invent_refuse constr
+prf 14710:14735 <> green_invent_always_refuse
+R14864:14868 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14741:14772 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R14779:14814 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R14823:14851 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R14853:14856 Corelib.Init.Datatypes <> true constr
+R14858:14862 Corelib.Init.Datatypes <> false constr
+R14869:14873 Corelib.Init.Datatypes <> false constr
+R14892:14923 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R14936:14962 UMST.ChemConstants.FixpointConservation <> green_invent_refuse_unwired thm
+R14936:14962 UMST.ChemConstants.FixpointConservation <> green_invent_refuse_unwired thm
+R14936:14962 UMST.ChemConstants.FixpointConservation <> green_invent_refuse_unwired thm
+prf 15216:15238 <> production_wired_refuse
+R15324:15328 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15244:15279 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R15285:15312 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R15314:15318 Corelib.Init.Datatypes <> false constr
+R15320:15323 Corelib.Init.Datatypes <> true constr
+R15329:15359 UMST.ChemConstants.FixpointConservation <> verdict_production_wired_refuse constr
+prf 15396:15425 <> production_wired_claim_refused
+R15553:15557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15431:15462 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R15469:15504 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R15513:15540 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R15542:15546 Corelib.Init.Datatypes <> false constr
+R15548:15551 Corelib.Init.Datatypes <> true constr
+R15558:15562 Corelib.Init.Datatypes <> false constr
+R15581:15612 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_ok def
+R15625:15647 UMST.ChemConstants.FixpointConservation <> production_wired_refuse thm
+R15625:15647 UMST.ChemConstants.FixpointConservation <> production_wired_refuse thm
+R15625:15647 UMST.ChemConstants.FixpointConservation <> production_wired_refuse thm
+def 15906:15945 <> fixpoint_conservation_coherence_scaffold
+R15949:15952 Corelib.Init.Datatypes <> bool ind
+R16279:16284 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16117:16122 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15959:15991 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_beq def
+R15998:16033 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R16042:16069 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R16071:16075 Corelib.Init.Datatypes <> false constr
+R16077:16081 Corelib.Init.Datatypes <> false constr
+R16088:16116 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R16123:16155 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_beq def
+R16162:16197 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R16206:16234 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R16236:16239 Corelib.Init.Datatypes <> true constr
+R16241:16245 Corelib.Init.Datatypes <> false constr
+R16252:16278 UMST.ChemConstants.FixpointConservation <> verdict_green_invent_refuse constr
+R16285:16317 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_verdict_beq def
+R16324:16359 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R16368:16395 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R16397:16401 Corelib.Init.Datatypes <> false constr
+R16403:16406 Corelib.Init.Datatypes <> true constr
+R16413:16443 UMST.ChemConstants.FixpointConservation <> verdict_production_wired_refuse constr
+prf 16453:16497 <> fixpoint_conservation_coherence_scaffold_true
+R16543:16545 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16503:16542 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_coherence_scaffold def
+R16546:16549 Corelib.Init.Datatypes <> true constr
+R16568:16607 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_coherence_scaffold def
+prf 16662:16709 <> fixpoint_conservation_coherence_scaffold_theorem
+R16832:16837 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16796:16802 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16715:16750 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R16756:16783 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R16785:16789 Corelib.Init.Datatypes <> false constr
+R16791:16795 Corelib.Init.Datatypes <> false constr
+R16803:16831 UMST.ChemConstants.FixpointConservation <> verdict_meet_join_identity_ok constr
+R16953:16958 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16919:16925 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16838:16873 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R16879:16907 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R16909:16912 Corelib.Init.Datatypes <> true constr
+R16914:16918 Corelib.Init.Datatypes <> false constr
+R16926:16952 UMST.ChemConstants.FixpointConservation <> verdict_green_invent_refuse constr
+R17039:17045 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16959:16994 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R17000:17027 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_proved constr
+R17029:17033 Corelib.Init.Datatypes <> false constr
+R17035:17038 Corelib.Init.Datatypes <> true constr
+R17046:17076 UMST.ChemConstants.FixpointConservation <> verdict_production_wired_refuse constr
+ind 17355:17366 <> formal_fiber
+constr 17382:17402 <> fiber_quantum_knowing
+constr 17408:17424 <> fiber_meso_acting
+scheme 17355:17366 <> formal_fiber_rect
+scheme 17355:17366 <> formal_fiber_ind
+scheme 17355:17366 <> formal_fiber_rec
+scheme 17355:17366 <> formal_fiber_sind
+ind 17438:17456 <> formal_claim_family
+constr 17472:17498 <> claim_fixpoint_conservation
+scheme 17438:17456 <> formal_claim_family_rect
+scheme 17438:17456 <> formal_claim_family_ind
+scheme 17438:17456 <> formal_claim_family_rec
+scheme 17438:17456 <> formal_claim_family_sind
+def 17513:17542 <> fixpoint_conservation_fiber_ok
+R17549:17560 UMST.ChemConstants.FixpointConservation <> formal_fiber ind
+binder 17545:17545 <> f:67
+R17565:17568 Corelib.Init.Datatypes <> bool ind
+R17581:17581 UMST.ChemConstants.FixpointConservation <> f:67 var
+R17592:17612 UMST.ChemConstants.FixpointConservation <> fiber_quantum_knowing constr
+R17617:17620 Corelib.Init.Datatypes <> true constr
+R17626:17642 UMST.ChemConstants.FixpointConservation <> fiber_meso_acting constr
+R17647:17651 Corelib.Init.Datatypes <> false constr
+def 17672:17709 <> fixpoint_conservation_knowing_fiber_ok
+R17713:17716 Corelib.Init.Datatypes <> bool ind
+R17723:17752 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_fiber_ok def
+R17754:17774 UMST.ChemConstants.FixpointConservation <> fiber_quantum_knowing constr
+def 17789:17824 <> fixpoint_conservation_meso_acting_ok
+R17828:17831 Corelib.Init.Datatypes <> bool ind
+R17838:17867 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_fiber_ok def
+R17869:17885 UMST.ChemConstants.FixpointConservation <> fiber_meso_acting constr
+prf 17895:17937 <> fixpoint_conservation_knowing_fiber_ok_true
+R17981:17983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17943:17980 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok def
+R17984:17987 Corelib.Init.Datatypes <> true constr
+prf 18022:18061 <> fixpoint_conservation_meso_acting_not_ok
+R18103:18105 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18067:18102 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_ok def
+R18106:18110 Corelib.Init.Datatypes <> false constr
+prf 18147:18191 <> fixpoint_conservation_routes_knowing_not_meso
+R18242:18247 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18235:18237 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18197:18234 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok def
+R18238:18241 Corelib.Init.Datatypes <> true constr
+R18284:18286 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18248:18283 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_ok def
+R18287:18291 Corelib.Init.Datatypes <> false constr
+R18320:18362 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok_true thm
+R18320:18362 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok_true thm
+R18375:18414 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_not_ok thm
+R18375:18414 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_not_ok thm
+def 18434:18451 <> fiberNotMesoActing
+R18455:18458 Corelib.Init.Datatypes <> bool ind
+R18503:18508 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18465:18502 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok def
+R18509:18512 Corelib.Init.Datatypes <> negb def
+R18514:18549 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_ok def
+prf 18559:18584 <> fiber_not_meso_acting_true
+R18606:18608 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18588:18605 UMST.ChemConstants.FixpointConservation <> fiberNotMesoActing def
+R18609:18612 Corelib.Init.Datatypes <> true constr
+R18631:18648 UMST.ChemConstants.FixpointConservation <> fiberNotMesoActing def
+R18651:18688 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok def
+R18695:18730 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_ok def
+prf 18986:19023 <> fixpoint_conservation_fixture_scaffold
+R19094:19099 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19074:19076 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19029:19040 UMST.ChemConstants.FixpointConservation <> lattice_meet def
+R19042:19055 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R19057:19073 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R19077:19093 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R19162:19167 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19145:19147 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19100:19111 UMST.ChemConstants.FixpointConservation <> lattice_join def
+R19113:19126 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R19128:19144 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R19148:19161 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R19269:19274 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19231:19237 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19168:19194 UMST.ChemConstants.FixpointConservation <> reach_ascending_fixed_point def
+R19196:19212 UMST.ChemConstants.FixpointConservation <> refinement_bottom def
+R19214:19227 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R19238:19238 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19253:19254 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19268:19268 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R19239:19252 UMST.ChemConstants.FixpointConservation <> refinement_top def
+R19255:19267 UMST.ChemConstants.FixpointConservation <> chain_reached constr
+R19382:19387 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19357:19363 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19275:19310 UMST.ChemConstants.FixpointConservation <> evaluate_fixpoint_conservation_close def
+R19316:19344 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr
+R19346:19350 Corelib.Init.Datatypes <> false constr
+R19352:19356 Corelib.Init.Datatypes <> false constr
+R19364:19381 UMST.ChemConstants.FixpointConservation <> verdict_unwired_ok constr
+R19433:19438 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19426:19428 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19388:19425 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_knowing_fiber_ok def
+R19429:19432 Corelib.Init.Datatypes <> true constr
+R19483:19488 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19475:19477 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19439:19474 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_meso_acting_ok def
+R19478:19482 Corelib.Init.Datatypes <> false constr
+R19507:19509 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19489:19506 UMST.ChemConstants.FixpointConservation <> fp02FixpointProved def
+R19510:19514 Corelib.Init.Datatypes <> false constr
+def 19796:19822 <> patternFixedPointsAuthority
+R19826:19831 Stdlib.Strings.String <> string ind
+def 19896:19923 <> chemIntProveFp02FixAuthority
+R19927:19932 Stdlib.Strings.String <> string ind
+def 19979:20002 <> patternFixedPointsMarker
+R20006:20011 Stdlib.Strings.String <> string ind
+def 20065:20090 <> fixpointConservationCellId
+R20094:20099 Stdlib.Strings.String <> string ind
+def 20161:20188 <> fixpointConservationNonClaim
+R20192:20197 Stdlib.Strings.String <> string ind
+prf 20563:20591 <> fixpoint_conservation_cell_id
+R20623:20625 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20597:20622 UMST.ChemConstants.FixpointConservation <> fixpointConservationCellId def
+prf 20701:20751 <> fixpoint_conservation_cites_pattern_fixed_points_rs
+R20784:20787 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20757:20783 UMST.ChemConstants.FixpointConservation <> patternFixedPointsAuthority def
+prf 20825:20871 <> fixpoint_conservation_cites_int_prove_fp_02_fix
+R20905:20907 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20877:20904 UMST.ChemConstants.FixpointConservation <> chemIntProveFp02FixAuthority def
+prf 20968:21001 <> fixpoint_conservation_cites_marker
+R21031:21034 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21007:21030 UMST.ChemConstants.FixpointConservation <> patternFixedPointsMarker def
+def 21303:21338 <> fixpointSecondLawConservationFraming
+R21342:21347 Stdlib.Strings.String <> string ind
+prf 21433:21466 <> fixpoint_not_second_fixpoint_axiom
+R21508:21511 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21472:21507 UMST.ChemConstants.FixpointConservation <> fixpointSecondLawConservationFraming def
+prf 21570:21609 <> fixpoint_second_law_conservation_framing
+R21651:21654 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21615:21650 UMST.ChemConstants.FixpointConservation <> fixpointSecondLawConservationFraming def
+def 21921:21942 <> physicsGreenAuthorized
+R21954:21958 Corelib.Init.Logic <> False ind
+prf 21968:22008 <> fixpoint_conservation_physics_green_false
+R22014:22015 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R22016:22037 UMST.ChemConstants.FixpointConservation <> physicsGreenAuthorized def
+prf 22077:22114 <> fixpoint_conservation_modality_unwired
+R22155:22157 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22120:22154 UMST.ChemConstants.FixpointConservation <> fixpointConservationModalityCurrent def
+R22158:22186 UMST.ChemConstants.FixpointConservation <> fixpoint_conservation_unwired constr

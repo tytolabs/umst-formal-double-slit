@@ -1,0 +1,507 @@
+DIGEST 60d4ca4bc61b380a854cf4ee04783706
+FUMST.ChemConstants.ConstantDeriveSecondLawCensus
+R975:1011 UMST.ChemConstants.EngineRefusesNewSi <> <> lib
+R1041:1045 Stdlib.Arith.Arith <> <> lib
+R1047:1052 Stdlib.Strings.String <> <> lib
+R1054:1057 Stdlib.Bool.Bool <> <> lib
+R1059:1061 Stdlib.micromega.Lia <> <> lib
+def 1096:1131 <> constantderivesecondlawcensusSurface
+R1135:1140 Stdlib.Strings.String <> string ind
+def 1204:1238 <> constantDeriveSecondLawCensusMarker
+R1242:1247 Stdlib.Strings.String <> string ind
+prf 1316:1362 <> constant_derive_second_law_census_surface_named
+R1404:1407 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1368:1403 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantderivesecondlawcensusSurface def
+prf 1445:1490 <> constant_derive_second_law_census_marker_named
+R1531:1534 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1496:1530 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusMarker def
+ind 1797:1833 <> ConstantDeriveSecondLawCensusModality
+constr 1849:1889 <> constant_derive_second_law_census_unwired
+constr 1895:1935 <> constant_derive_second_law_census_assumed
+constr 1941:1980 <> constant_derive_second_law_census_proved
+constr 1986:2028 <> constant_derive_second_law_census_surrogate
+scheme 1797:1833 <> ConstantDeriveSecondLawCensusModality_rect
+scheme 1797:1833 <> ConstantDeriveSecondLawCensusModality_ind
+scheme 1797:1833 <> ConstantDeriveSecondLawCensusModality_rec
+scheme 1797:1833 <> ConstantDeriveSecondLawCensusModality_sind
+def 2043:2086 <> constantDeriveSecondLawCensusModalityCurrent
+R2092:2128 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> ConstantDeriveSecondLawCensusModality ind
+R2135:2175 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+def 2190:2233 <> constant_derive_modality_lattice_cardinality
+R2237:2239 Corelib.Init.Datatypes <> nat ind
+prf 2254:2305 <> constant_derive_modality_lattice_cardinality_is_four
+R2355:2357 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2311:2354 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_modality_lattice_cardinality def
+prf 2393:2440 <> constant_derive_modality_lattice_not_118_squared
+R2517:2521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2446:2449 Corelib.Init.Datatypes <> negb def
+R2452:2458 Stdlib.Arith.PeanoNat Nat eqb def
+R2460:2503 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_modality_lattice_cardinality def
+R2509:2511 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2522:2525 Corelib.Init.Datatypes <> true constr
+R2544:2587 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_modality_lattice_cardinality def
+ind 2845:2861 <> SheafConsultLayer
+constr 2877:2890 <> exact_si_layer
+constr 2896:2910 <> occupancy_layer
+constr 2916:2937 <> derived_morphism_layer
+scheme 2845:2861 <> SheafConsultLayer_rect
+scheme 2845:2861 <> SheafConsultLayer_ind
+scheme 2845:2861 <> SheafConsultLayer_rec
+scheme 2845:2861 <> SheafConsultLayer_sind
+def 2952:2971 <> sheafConsultLayerTag
+R2978:2994 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> SheafConsultLayer ind
+binder 2974:2974 <> l:5
+R2999:3004 Stdlib.Strings.String <> string ind
+R3017:3017 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> l:5 var
+R3028:3041 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> exact_si_layer constr
+R3060:3074 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> occupancy_layer constr
+R3095:3116 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> derived_morphism_layer constr
+prf 3154:3171 <> exact_si_layer_tag
+R3212:3214 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3177:3196 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> sheafConsultLayerTag def
+R3198:3211 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> exact_si_layer constr
+prf 3258:3276 <> occupancy_layer_tag
+R3318:3320 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3282:3301 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> sheafConsultLayerTag def
+R3303:3317 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> occupancy_layer constr
+prf 3366:3391 <> derived_morphism_layer_tag
+R3440:3442 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3397:3416 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> sheafConsultLayerTag def
+R3418:3439 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> derived_morphism_layer constr
+def 3500:3524 <> sheaf_consult_layer_count
+R3528:3530 Corelib.Init.Datatypes <> nat ind
+prf 3545:3578 <> sheaf_consult_layer_count_is_three
+R3609:3611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3584:3608 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> sheaf_consult_layer_count def
+ind 3878:3895 <> EngineCensusRowTag
+constr 3911:3941 <> si_exact_defining_constants_row
+constr 3947:3958 <> qlattice_row
+constr 3964:3996 <> gas_constant_derived_morphism_row
+constr 4002:4032 <> vacuum_permittivity_derived_row
+constr 4038:4062 <> engine_refuses_new_si_row
+scheme 3878:3895 <> EngineCensusRowTag_rect
+scheme 3878:3895 <> EngineCensusRowTag_ind
+scheme 3878:3895 <> EngineCensusRowTag_rec
+scheme 3878:3895 <> EngineCensusRowTag_sind
+def 4077:4101 <> engineCensusRowSheafLayer
+R4108:4125 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> EngineCensusRowTag ind
+binder 4104:4104 <> r:9
+R4130:4146 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> SheafConsultLayer ind
+R4159:4159 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> r:9 var
+R4170:4200 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> si_exact_defining_constants_row constr
+R4205:4218 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> exact_si_layer constr
+R4224:4235 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> qlattice_row constr
+R4240:4254 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> occupancy_layer constr
+R4260:4292 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> gas_constant_derived_morphism_row constr
+R4297:4318 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> derived_morphism_layer constr
+R4324:4354 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> vacuum_permittivity_derived_row constr
+R4359:4380 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> derived_morphism_layer constr
+R4386:4410 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> engine_refuses_new_si_row constr
+R4415:4428 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> exact_si_layer constr
+def 4449:4460 <> rowMayMintSi
+R4467:4484 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> EngineCensusRowTag ind
+binder 4463:4463 <> r:11
+R4489:4492 Corelib.Init.Datatypes <> bool ind
+R4497:4501 Corelib.Init.Datatypes <> false constr
+prf 4511:4529 <> row_may_not_mint_si
+R4536:4553 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> EngineCensusRowTag ind
+binder 4532:4532 <> r:12
+R4574:4576 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4560:4571 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> rowMayMintSi def
+R4573:4573 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> r:12 var
+R4577:4581 Corelib.Init.Datatypes <> false constr
+def 4633:4655 <> engine_census_row_count
+R4659:4661 Corelib.Init.Datatypes <> nat ind
+prf 4676:4706 <> engine_census_row_count_is_five
+R4735:4737 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4712:4734 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> engine_census_row_count def
+def 4778:4802 <> allCensusRowsConsultSheaf
+R4806:4809 Corelib.Init.Datatypes <> bool ind
+R4814:4817 Corelib.Init.Datatypes <> true constr
+prf 4827:4862 <> all_engine_census_rows_consult_sheaf
+R4893:4895 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4868:4892 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> allCensusRowsConsultSheaf def
+R4896:4899 Corelib.Init.Datatypes <> true constr
+def 4939:4960 <> forbiddenSiMintsPinned
+R4964:4967 Corelib.Init.Datatypes <> bool ind
+R4972:4975 Corelib.Init.Datatypes <> true constr
+prf 4985:5009 <> forbidden_si_mints_pinned
+R5037:5039 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5015:5036 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> forbiddenSiMintsPinned def
+R5040:5043 Corelib.Init.Datatypes <> true constr
+def 5083:5109 <> enginesUseExistingSheafBool
+R5113:5116 Corelib.Init.Datatypes <> bool ind
+R5121:5124 Corelib.Init.Datatypes <> true constr
+prf 5134:5164 <> engines_use_existing_sheaf_bool
+R5197:5199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5170:5196 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> enginesUseExistingSheafBool def
+R5200:5203 Corelib.Init.Datatypes <> true constr
+prf 5238:5270 <> engines_may_not_mint_forbidden_si
+R5294:5296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5276:5293 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+R5297:5301 Corelib.Init.Datatypes <> false constr
+R5317:5340 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si_false thm
+R5317:5340 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si_false thm
+def 5585:5609 <> fineStructureAlphaPinKind
+R5613:5618 Stdlib.Strings.String <> string ind
+def 5652:5681 <> landauerBridgeCoversKcNotAlpha
+R5685:5690 Stdlib.Strings.String <> string ind
+prf 5801:5835 <> fine_structure_alpha_pin_kind_named
+R5866:5868 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5841:5865 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> fineStructureAlphaPinKind def
+def 5923:5945 <> landauerFakeAlphaMinted
+R5949:5952 Corelib.Init.Datatypes <> bool ind
+R5957:5961 Corelib.Init.Datatypes <> false constr
+prf 5971:6000 <> landauer_fake_alpha_not_minted
+R6029:6031 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6006:6028 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> landauerFakeAlphaMinted def
+R6032:6036 Corelib.Init.Datatypes <> false constr
+def 6076:6108 <> alphaMeasuredCitedNotLandauerFake
+R6112:6115 Corelib.Init.Datatypes <> bool ind
+R6120:6123 Corelib.Init.Datatypes <> true constr
+prf 6133:6170 <> alpha_measured_cited_not_landauer_fake
+R6209:6211 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6176:6208 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> alphaMeasuredCitedNotLandauerFake def
+R6212:6215 Corelib.Init.Datatypes <> true constr
+def 6255:6284 <> landauerBridgeScopedKcNotAlpha
+R6288:6291 Corelib.Init.Datatypes <> bool ind
+R6296:6299 Corelib.Init.Datatypes <> true constr
+prf 6309:6343 <> landauer_bridge_scoped_kc_not_alpha
+R6379:6381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6349:6378 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> landauerBridgeScopedKcNotAlpha def
+R6382:6385 Corelib.Init.Datatypes <> true constr
+def 6425:6446 <> exactSiKCitedNotMinted
+R6450:6453 Corelib.Init.Datatypes <> bool ind
+R6458:6461 Corelib.Init.Datatypes <> true constr
+prf 6471:6497 <> exact_si_k_cited_not_minted
+R6525:6527 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6503:6524 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> exactSiKCitedNotMinted def
+R6528:6531 Corelib.Init.Datatypes <> true constr
+prf 6566:6608 <> alpha_not_landauer_fake_cites_engine_refuse
+R6651:6653 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6614:6650 UMST.ChemConstants.EngineRefusesNewSi <> alpha_is_deferred_codata_not_landauer def
+R6654:6657 Corelib.Init.Datatypes <> true constr
+R6673:6714 UMST.ChemConstants.EngineRefusesNewSi <> alpha_is_deferred_codata_not_landauer_true thm
+R6673:6714 UMST.ChemConstants.EngineRefusesNewSi <> alpha_is_deferred_codata_not_landauer_true thm
+def 6963:7005 <> constantDeriveSecondLawCensusHonestConjunct
+R7009:7012 Corelib.Init.Datatypes <> bool ind
+R7267:7272 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7233:7238 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7205:7210 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7169:7174 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7130:7135 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7097:7102 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7069:7074 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7038:7043 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7019:7037 UMST.ChemConstants.EngineRefusesNewSi <> engine_mint_refused def
+R7044:7068 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> allCensusRowsConsultSheaf def
+R7075:7096 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> forbiddenSiMintsPinned def
+R7103:7129 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> enginesUseExistingSheafBool def
+R7136:7168 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> alphaMeasuredCitedNotLandauerFake def
+R7175:7204 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> landauerBridgeScopedKcNotAlpha def
+R7211:7232 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> exactSiKCitedNotMinted def
+R7239:7242 Corelib.Init.Datatypes <> negb def
+R7244:7266 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> landauerFakeAlphaMinted def
+R7273:7300 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuse_not_26th_axiom def
+prf 7310:7363 <> constant_derive_second_law_census_honest_conjunct_true
+R7412:7414 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7369:7411 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusHonestConjunct def
+R7415:7418 Corelib.Init.Datatypes <> true constr
+R7437:7479 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusHonestConjunct def
+def 7762:7778 <> wave100LibRsWired
+R7782:7785 Corelib.Init.Datatypes <> bool ind
+R7790:7794 Corelib.Init.Datatypes <> false constr
+def 7808:7824 <> wave100EosRsWired
+R7828:7831 Corelib.Init.Datatypes <> bool ind
+R7836:7840 Corelib.Init.Datatypes <> false constr
+def 7854:7868 <> productionWired
+R7872:7875 Corelib.Init.Datatypes <> bool ind
+R7880:7884 Corelib.Init.Datatypes <> false constr
+prf 7894:7917 <> wave100_lib_rs_not_wired
+R7940:7942 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7923:7939 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100LibRsWired def
+R7943:7947 Corelib.Init.Datatypes <> false constr
+prf 7982:8005 <> wave100_eos_rs_not_wired
+R8028:8030 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8011:8027 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100EosRsWired def
+R8031:8035 Corelib.Init.Datatypes <> false constr
+prf 8070:8091 <> production_wired_false
+R8112:8114 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8097:8111 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> productionWired def
+R8115:8119 Corelib.Init.Datatypes <> false constr
+prf 8154:8170 <> wave100_not_wired
+R8224:8226 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8198:8201 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8176:8179 Corelib.Init.Datatypes <> negb def
+R8181:8197 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100LibRsWired def
+R8202:8205 Corelib.Init.Datatypes <> negb def
+R8207:8223 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100EosRsWired def
+R8227:8230 Corelib.Init.Datatypes <> true constr
+ind 8495:8535 <> constant_derive_second_law_census_verdict
+constr 8551:8568 <> verdict_unwired_ok
+constr 8574:8590 <> verdict_census_ok
+constr 8596:8622 <> verdict_green_invent_refuse
+constr 8628:8658 <> verdict_production_wired_refuse
+constr 8664:8685 <> verdict_si_mint_refuse
+scheme 8495:8535 <> constant_derive_second_law_census_verdict_rect
+scheme 8495:8535 <> constant_derive_second_law_census_verdict_ind
+scheme 8495:8535 <> constant_derive_second_law_census_verdict_rec
+scheme 8495:8535 <> constant_derive_second_law_census_verdict_sind
+def 8700:8743 <> constant_derive_second_law_census_verdict_ok
+R8752:8792 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_verdict ind
+binder 8748:8748 <> v:15
+R8797:8800 Corelib.Init.Datatypes <> bool ind
+R8813:8813 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> v:15 var
+R8824:8841 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_unwired_ok constr
+R8846:8849 Corelib.Init.Datatypes <> true constr
+R8855:8871 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_census_ok constr
+R8876:8879 Corelib.Init.Datatypes <> true constr
+R8890:8894 Corelib.Init.Datatypes <> false constr
+def 8915:8956 <> evaluate_constant_derive_second_law_census
+R8965:9001 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> ConstantDeriveSecondLawCensusModality ind
+binder 8961:8961 <> m:17
+R9029:9032 Corelib.Init.Datatypes <> bool ind
+binder 9007:9025 <> claim_physics_green:18
+R9053:9056 Corelib.Init.Datatypes <> bool ind
+binder 9038:9049 <> claim_proved:19
+R9087:9090 Corelib.Init.Datatypes <> bool ind
+binder 9062:9083 <> claim_production_wired:20
+R9095:9135 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_verdict ind
+R9145:9163 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> claim_physics_green:18 var
+R9210:9231 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> claim_production_wired:20 var
+R9282:9299 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+R9341:9352 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> claim_proved:19 var
+R9389:9431 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusHonestConjunct def
+R9708:9729 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_si_mint_refuse constr
+R9450:9450 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> m:17 var
+R9463:9503 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R9508:9525 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_unwired_ok constr
+R9533:9573 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_assumed constr
+R9581:9620 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_proved constr
+R9628:9670 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_surrogate constr
+R9675:9691 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_census_ok constr
+R9675:9691 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_census_ok constr
+R9675:9691 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_census_ok constr
+R9361:9377 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_census_ok constr
+R9308:9329 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_si_mint_refuse constr
+R9240:9270 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_production_wired_refuse constr
+R9172:9198 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_green_invent_refuse constr
+prf 9739:9782 <> constant_derive_second_law_census_unwired_ok
+R9894:9898 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9788:9829 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> evaluate_constant_derive_second_law_census def
+R9835:9875 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R9877:9881 Corelib.Init.Datatypes <> false constr
+R9883:9887 Corelib.Init.Datatypes <> false constr
+R9889:9893 Corelib.Init.Datatypes <> false constr
+R9899:9916 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_unwired_ok constr
+prf 9951:10003 <> constant_derive_second_law_census_green_invent_refuse
+R10114:10118 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10009:10050 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> evaluate_constant_derive_second_law_census def
+R10056:10096 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R10098:10101 Corelib.Init.Datatypes <> true constr
+R10103:10107 Corelib.Init.Datatypes <> false constr
+R10109:10113 Corelib.Init.Datatypes <> false constr
+R10119:10145 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_green_invent_refuse constr
+prf 10180:10236 <> constant_derive_second_law_census_production_wired_refuse
+R10347:10351 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10242:10283 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> evaluate_constant_derive_second_law_census def
+R10289:10329 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R10331:10335 Corelib.Init.Datatypes <> false constr
+R10337:10341 Corelib.Init.Datatypes <> false constr
+R10343:10346 Corelib.Init.Datatypes <> true constr
+R10352:10382 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_production_wired_refuse constr
+prf 10417:10476 <> constant_derive_second_law_census_green_refuse_verdict_false
+R10641:10645 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10482:10525 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_verdict_ok def
+R10532:10573 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> evaluate_constant_derive_second_law_census def
+R10582:10622 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R10624:10627 Corelib.Init.Datatypes <> true constr
+R10629:10633 Corelib.Init.Datatypes <> false constr
+R10635:10639 Corelib.Init.Datatypes <> false constr
+R10646:10650 Corelib.Init.Datatypes <> false constr
+R10669:10712 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_verdict_ok def
+R10725:10777 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_green_invent_refuse thm
+R10725:10777 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_green_invent_refuse thm
+R10725:10777 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_green_invent_refuse thm
+def 11037:11071 <> constantDeriveSecondLawCensusProved
+R11075:11078 Corelib.Init.Datatypes <> bool ind
+R11083:11087 Corelib.Init.Datatypes <> false constr
+prf 11097:11140 <> constant_derive_second_law_census_not_proved
+R11181:11183 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11146:11180 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusProved def
+R11184:11188 Corelib.Init.Datatypes <> false constr
+prf 11225:11270 <> constant_derive_second_law_census_conservation
+R11405:11410 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11382:11386 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11276:11317 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> evaluate_constant_derive_second_law_census def
+R11323:11363 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R11365:11369 Corelib.Init.Datatypes <> false constr
+R11371:11375 Corelib.Init.Datatypes <> false constr
+R11377:11381 Corelib.Init.Datatypes <> false constr
+R11387:11404 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_unwired_ok constr
+R11461:11466 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11454:11456 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11411:11453 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusHonestConjunct def
+R11457:11460 Corelib.Init.Datatypes <> true constr
+R11510:11515 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11502:11504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11467:11501 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusProved def
+R11505:11509 Corelib.Init.Datatypes <> false constr
+R11541:11546 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11533:11535 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11516:11532 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100LibRsWired def
+R11536:11540 Corelib.Init.Datatypes <> false constr
+R11564:11566 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11547:11563 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100EosRsWired def
+R11567:11571 Corelib.Init.Datatypes <> false constr
+prf 11846:11884 <> constant_derive_sole_axiom_count_is_one
+R11906:11908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11890:11905 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count def
+R11925:11947 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count_is_one thm
+R11925:11947 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count_is_one thm
+prf 11962:11991 <> constant_derive_not_26th_axiom
+R12025:12027 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11997:12024 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuse_not_26th_axiom def
+R12028:12031 Corelib.Init.Datatypes <> true constr
+R12047:12079 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuse_not_26th_axiom_true thm
+R12047:12079 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuse_not_26th_axiom_true thm
+prf 12094:12146 <> constant_derive_engine_refuses_modality_still_unwired
+R12185:12187 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12152:12184 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiModalityCurrent def
+R12188:12216 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R12232:12269 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_modality_unwired thm
+R12232:12269 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_modality_unwired thm
+def 12513:12547 <> constantDeriveSecondLawCensusCellId
+R12551:12556 Stdlib.Strings.String <> string ind
+def 12643:12680 <> constantDeriveSecondLawCensusIntCellId
+R12684:12689 Stdlib.Strings.String <> string ind
+def 12773:12809 <> constantDeriveSecondLawCensusNonClaim
+R12813:12818 Stdlib.Strings.String <> string ind
+def 13298:13347 <> constantDeriveSecondLawCensusCrossWitnessAuthority
+R13351:13356 Stdlib.Strings.String <> string ind
+def 13441:13473 <> constantDerivePreferenceAuthority
+R13477:13482 Stdlib.Strings.String <> string ind
+def 13553:13585 <> siExactDefiningConstantsAuthority
+R13589:13594 Stdlib.Strings.String <> string ind
+def 13666:13700 <> gasConstantDerivedMorphismAuthority
+R13704:13709 Stdlib.Strings.String <> string ind
+def 13786:13821 <> vacuumPermittivitySiDerivedAuthority
+R13825:13830 Stdlib.Strings.String <> string ind
+def 13905:13921 <> qlatticeAuthority
+R13925:13930 Stdlib.Strings.String <> string ind
+def 13983:14008 <> secondLawConservationAxiom
+R14012:14017 Stdlib.Strings.String <> string ind
+def 14141:14185 <> censusNotSiMintOrLandauerFakeAlphaOr26thAxiom
+R14189:14194 Stdlib.Strings.String <> string ind
+prf 14350:14390 <> constant_derive_second_law_census_cell_id
+R14431:14435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14396:14430 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusCellId def
+prf 14536:14591 <> constant_derive_second_law_census_cites_cross_witness_rs
+R14647:14651 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14597:14646 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusCrossWitnessAuthority def
+prf 14750:14810 <> constant_derive_second_law_census_cites_engine_refuses_new_si
+R14903:14908 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14845:14850 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14816:14844 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiRsAuthority def
+R14909:14913 Corelib.Init.Logic <> False ind
+prf 14966:15022 <> constant_derive_second_law_census_cites_derive_preference
+R15061:15066 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15028:15060 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDerivePreferenceAuthority def
+prf 15104:15151 <> constant_derive_second_law_census_cites_si_exact
+R15190:15195 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15157:15189 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> siExactDefiningConstantsAuthority def
+prf 15233:15292 <> constant_derive_second_law_census_cites_gas_constant_derived
+R15333:15338 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15298:15332 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> gasConstantDerivedMorphismAuthority def
+prf 15376:15434 <> constant_derive_second_law_census_cites_vacuum_permittivity
+R15476:15481 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15440:15475 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> vacuumPermittivitySiDerivedAuthority def
+prf 15519:15566 <> constant_derive_second_law_census_cites_qlattice
+R15589:15591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15572:15588 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> qlatticeAuthority def
+prf 15658:15707 <> constant_derive_second_law_census_modality_unwired
+R15757:15761 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15713:15756 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusModalityCurrent def
+R15762:15802 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+prf 15837:15881 <> constant_derive_second_law_census_int_cell_id
+R15925:15929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15887:15924 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusIntCellId def
+def 16256:16293 <> constantDeriveSecondLawCensusRowProved
+R16305:16309 Corelib.Init.Logic <> False ind
+prf 16319:16366 <> constant_derive_second_law_census_row_not_proved
+R16372:16373 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16374:16411 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusRowProved def
+def 16680:16730 <> constantDeriveSecondLawCensusPhysicsGreenAuthorized
+R16742:16746 Corelib.Init.Logic <> False ind
+prf 16756:16808 <> constant_derive_second_law_census_physics_green_false
+R16814:16815 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16816:16866 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusPhysicsGreenAuthorized def
+prf 16906:16973 <> constant_derive_second_law_census_engine_refuses_physics_green_false
+R16979:16980 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16981:17002 UMST.ChemConstants.EngineRefusesNewSi <> physicsGreenAuthorized def
+R17018:17058 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_physics_green_false thm
+R17018:17058 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_physics_green_false thm
+def 17301:17344 <> constantDeriveSecondLawCensusProductionWired
+R17356:17360 Corelib.Init.Logic <> False ind
+prf 17370:17423 <> constant_derive_second_law_census_not_production_wired
+R17429:17430 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R17431:17474 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusProductionWired def
+def 17519:17541 <> wave100NotWiredLibOrEos
+R17545:17550 Stdlib.Strings.String <> string ind
+prf 17650:17677 <> wave100_not_wired_lib_or_eos
+R17706:17709 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17683:17705 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100NotWiredLibOrEos def
+prf 17973:18022 <> constant_derive_second_law_census_fixture_scaffold
+R18078:18083 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18071:18073 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18028:18070 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusHonestConjunct def
+R18074:18077 Corelib.Init.Datatypes <> true constr
+R18215:18220 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18190:18196 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18084:18125 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> evaluate_constant_derive_second_law_census def
+R18131:18171 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired constr
+R18173:18177 Corelib.Init.Datatypes <> false constr
+R18179:18183 Corelib.Init.Datatypes <> false constr
+R18185:18189 Corelib.Init.Datatypes <> false constr
+R18197:18214 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> verdict_unwired_ok constr
+R18264:18269 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18256:18258 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18221:18255 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constantDeriveSecondLawCensusProved def
+R18259:18263 Corelib.Init.Datatypes <> false constr
+R18296:18301 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18288:18290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18270:18287 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+R18291:18295 Corelib.Init.Datatypes <> false constr
+R18302:18302 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18358:18364 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18351:18353 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18325:18328 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18303:18306 Corelib.Init.Datatypes <> negb def
+R18308:18324 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100LibRsWired def
+R18329:18332 Corelib.Init.Datatypes <> negb def
+R18334:18350 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100EosRsWired def
+R18354:18357 Corelib.Init.Datatypes <> true constr
+R18381:18383 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18365:18380 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count def
+R18403:18406 Corelib.Init.Logic <> conj constr
+R18468:18471 Corelib.Init.Logic <> conj constr
+R18525:18528 Corelib.Init.Logic <> conj constr
+R18584:18587 Corelib.Init.Logic <> conj constr
+R18625:18628 Corelib.Init.Logic <> conj constr
+R18648:18670 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count_is_one thm
+R18630:18646 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100_not_wired thm
+R18589:18612 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si_false thm
+R18530:18573 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_not_proved thm
+R18473:18516 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired_ok thm
+R18408:18461 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_honest_conjunct_true thm
+R18403:18406 Corelib.Init.Logic <> conj constr
+R18468:18471 Corelib.Init.Logic <> conj constr
+R18525:18528 Corelib.Init.Logic <> conj constr
+R18584:18587 Corelib.Init.Logic <> conj constr
+R18625:18628 Corelib.Init.Logic <> conj constr
+R18648:18670 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count_is_one thm
+R18630:18646 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> wave100_not_wired thm
+R18589:18612 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si_false thm
+R18530:18573 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_not_proved thm
+R18473:18516 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_unwired_ok thm
+R18408:18461 UMST.ChemConstants.ConstantDeriveSecondLawCensus <> constant_derive_second_law_census_honest_conjunct_true thm

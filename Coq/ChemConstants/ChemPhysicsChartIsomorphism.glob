@@ -1,0 +1,1188 @@
+DIGEST fd19deeddb7aacc31261db11526703f6
+FUMST.ChemConstants.ChemPhysicsChartIsomorphism
+R1361:1365 Stdlib.Arith.Arith <> <> lib
+R1367:1372 Stdlib.ZArith.ZArith <> <> lib
+R1374:1379 Stdlib.Strings.String <> <> lib
+R1381:1384 Stdlib.Bool.Bool <> <> lib
+R1386:1388 Stdlib.micromega.Lia <> <> lib
+R1390:1393 Stdlib.Lists.List <> <> lib
+R1403:1415 Stdlib.Lists.List ListNotations <> mod
+ind 1745:1779 <> ChemPhysicsChartIsomorphismModality
+constr 1795:1820 <> chem_physics_chart_unwired
+constr 1826:1851 <> chem_physics_chart_assumed
+constr 1857:1881 <> chem_physics_chart_proved
+constr 1887:1914 <> chem_physics_chart_surrogate
+scheme 1745:1779 <> ChemPhysicsChartIsomorphismModality_rect
+scheme 1745:1779 <> ChemPhysicsChartIsomorphismModality_ind
+scheme 1745:1779 <> ChemPhysicsChartIsomorphismModality_rec
+scheme 1745:1779 <> ChemPhysicsChartIsomorphismModality_sind
+def 1929:1970 <> chemPhysicsChartIsomorphismModalityCurrent
+R1976:2010 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> ChemPhysicsChartIsomorphismModality ind
+R2017:2042 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+def 2057:2103 <> chem_physics_chart_modality_lattice_cardinality
+R2107:2109 Corelib.Init.Datatypes <> nat ind
+prf 2124:2178 <> chem_physics_chart_modality_lattice_cardinality_is_four
+R2231:2233 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2184:2230 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_modality_lattice_cardinality def
+prf 2269:2319 <> chem_physics_chart_modality_lattice_not_118_squared
+R2399:2403 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2325:2328 Corelib.Init.Datatypes <> negb def
+R2331:2337 Stdlib.Arith.PeanoNat Nat eqb def
+R2339:2385 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_modality_lattice_cardinality def
+R2391:2393 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2404:2407 Corelib.Init.Datatypes <> true constr
+R2426:2472 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_modality_lattice_cardinality def
+def 2732:2754 <> iupac_table_cardinality
+R2758:2760 Corelib.Init.Datatypes <> nat ind
+prf 2777:2806 <> iupac_table_cardinality_is_118
+R2835:2837 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2812:2834 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> iupac_table_cardinality def
+def 2880:2907 <> chem_physics_element_z_valid
+R2914:2916 Corelib.Init.Datatypes <> nat ind
+binder 2910:2910 <> z:3
+R2921:2924 Corelib.Init.Datatypes <> bool ind
+R2942:2945 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2931:2937 Stdlib.Arith.PeanoNat Nat ltb def
+R2941:2941 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> z:3 var
+R2946:2952 Stdlib.Arith.PeanoNat Nat leb def
+R2954:2954 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> z:3 var
+R2956:2978 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> iupac_table_cardinality def
+def 2993:3019 <> chem_physics_element_iron_z
+R3023:3025 Corelib.Init.Datatypes <> nat ind
+def 3045:3073 <> chem_physics_element_copper_z
+R3077:3079 Corelib.Init.Datatypes <> nat ind
+def 3099:3127 <> chem_physics_element_carbon_z
+R3131:3133 Corelib.Init.Datatypes <> nat ind
+prf 3148:3172 <> chem_physics_iron_z_is_26
+R3205:3207 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3178:3204 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_iron_z def
+prf 3244:3270 <> chem_physics_copper_z_is_29
+R3305:3307 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3276:3304 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_copper_z def
+prf 3344:3369 <> chem_physics_carbon_z_is_6
+R3404:3406 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3375:3403 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_carbon_z def
+prf 3442:3469 <> chem_physics_fe_cu_c_z_valid
+R3538:3543 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3531:3533 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3475:3502 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_z_valid def
+R3504:3530 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_iron_z def
+R3534:3537 Corelib.Init.Datatypes <> true constr
+R3609:3614 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3602:3604 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3544:3571 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_z_valid def
+R3573:3601 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_copper_z def
+R3605:3608 Corelib.Init.Datatypes <> true constr
+R3673:3675 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3615:3642 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_z_valid def
+R3644:3672 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_carbon_z def
+R3676:3679 Corelib.Init.Datatypes <> true constr
+R3714:3741 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_z_valid def
+R3744:3766 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> iupac_table_cardinality def
+def 4023:4051 <> secondLawConservationObjectId
+R4055:4060 Stdlib.Strings.String <> string ind
+prf 4111:4146 <> second_law_conservation_object_named
+R4181:4184 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4152:4180 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+def 4227:4254 <> separateObjectPerChartMarker
+R4258:4263 Stdlib.Strings.String <> string ind
+def 4335:4356 <> chartIsomorphismMarker
+R4360:4365 Stdlib.Strings.String <> string ind
+prf 4420:4463 <> separate_object_marker_ne_isomorphism_marker
+R4497:4500 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4469:4496 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> separateObjectPerChartMarker def
+R4501:4522 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartIsomorphismMarker def
+ind 4786:4810 <> constitutive_engine_chart
+constr 4826:4845 <> chart_thermo_g_t_p_x
+constr 4851:4870 <> chart_density_ladder
+constr 4876:4903 <> chart_scale_commuting_square
+constr 4909:4931 <> chart_occupancy_physics
+constr 4937:4957 <> chart_xor_enum_bucket
+constr 4963:4980 <> chart_unauthorized
+scheme 4786:4810 <> constitutive_engine_chart_rect
+scheme 4786:4810 <> constitutive_engine_chart_ind
+scheme 4786:4810 <> constitutive_engine_chart_rec
+scheme 4786:4810 <> constitutive_engine_chart_sind
+def 4995:5023 <> constitutive_engine_chart_beq
+R5034:5058 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+binder 5026:5027 <> c1:6
+binder 5029:5030 <> c2:7
+R5063:5066 Corelib.Init.Datatypes <> bool ind
+R5083:5084 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> c2:7 var
+R5079:5080 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> c1:6 var
+R5095:5114 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_thermo_g_t_p_x constr
+R5117:5136 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_thermo_g_t_p_x constr
+R5141:5144 Corelib.Init.Datatypes <> true constr
+R5150:5169 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_density_ladder constr
+R5172:5191 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_density_ladder constr
+R5196:5199 Corelib.Init.Datatypes <> true constr
+R5205:5232 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_scale_commuting_square constr
+R5235:5262 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_scale_commuting_square constr
+R5267:5270 Corelib.Init.Datatypes <> true constr
+R5276:5298 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_occupancy_physics constr
+R5301:5323 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_occupancy_physics constr
+R5328:5331 Corelib.Init.Datatypes <> true constr
+R5337:5357 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_xor_enum_bucket constr
+R5360:5380 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_xor_enum_bucket constr
+R5385:5388 Corelib.Init.Datatypes <> true constr
+R5394:5411 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_unauthorized constr
+R5414:5431 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_unauthorized constr
+R5436:5439 Corelib.Init.Datatypes <> true constr
+R5453:5457 Corelib.Init.Datatypes <> false constr
+def 5478:5492 <> chartThermoGTPX
+R5496:5520 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+R5525:5544 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_thermo_g_t_p_x constr
+def 5558:5575 <> chartDensityLadder
+R5579:5603 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+R5608:5627 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_density_ladder constr
+def 5641:5665 <> chartScaleCommutingSquare
+R5669:5693 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+R5700:5727 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_scale_commuting_square constr
+def 5741:5761 <> chartOccupancyPhysics
+R5765:5789 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+R5796:5818 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_occupancy_physics constr
+def 5833:5859 <> constitutive_chart_is_named
+R5866:5890 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+binder 5862:5862 <> c:10
+R5895:5898 Corelib.Init.Datatypes <> bool ind
+R5911:5911 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> c:10 var
+R5922:5941 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_thermo_g_t_p_x constr
+R5947:5966 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_density_ladder constr
+R5972:5999 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_scale_commuting_square constr
+R6005:6027 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_occupancy_physics constr
+R6032:6035 Corelib.Init.Datatypes <> true constr
+R6032:6035 Corelib.Init.Datatypes <> true constr
+R6032:6035 Corelib.Init.Datatypes <> true constr
+R6032:6035 Corelib.Init.Datatypes <> true constr
+R6046:6050 Corelib.Init.Datatypes <> false constr
+def 6071:6100 <> constitutive_chart_is_xor_enum
+R6107:6131 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+binder 6103:6103 <> c:12
+R6136:6139 Corelib.Init.Datatypes <> bool ind
+R6152:6152 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> c:12 var
+R6163:6183 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_xor_enum_bucket constr
+R6188:6191 Corelib.Init.Datatypes <> true constr
+R6202:6206 Corelib.Init.Datatypes <> false constr
+prf 6222:6239 <> thermo_chart_named
+R6288:6290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6245:6271 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_named def
+R6273:6287 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartThermoGTPX def
+R6291:6294 Corelib.Init.Datatypes <> true constr
+prf 6329:6347 <> density_chart_named
+R6399:6401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6353:6379 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_named def
+R6381:6398 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartDensityLadder def
+R6402:6405 Corelib.Init.Datatypes <> true constr
+prf 6440:6456 <> scale_chart_named
+R6515:6517 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6462:6488 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_named def
+R6490:6514 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartScaleCommutingSquare def
+R6518:6521 Corelib.Init.Datatypes <> true constr
+prf 6556:6576 <> occupancy_chart_named
+R6631:6633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6582:6608 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_named def
+R6610:6630 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartOccupancyPhysics def
+R6634:6637 Corelib.Init.Datatypes <> true constr
+prf 6672:6695 <> xor_enum_chart_not_named
+R6750:6752 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6701:6727 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_named def
+R6729:6749 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_xor_enum_bucket constr
+R6753:6757 Corelib.Init.Datatypes <> false constr
+rec 7017:7042 <> chem_physics_chart_binding
+proj 7058:7079 <> chart_binding_parent_z
+R7083:7085 Corelib.Init.Datatypes <> nat ind
+def 7102:7126 <> chemPhysicsChartBindingFe
+R7130:7155 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+R7165:7186 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7165:7186 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7165:7186 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7191:7217 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_iron_z def
+def 7235:7259 <> chemPhysicsChartBindingCu
+R7263:7288 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+R7298:7319 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7298:7319 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7298:7319 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7324:7352 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_element_copper_z def
+def 7370:7399 <> chemPhysicsChartBindingTrivial
+R7403:7428 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+R7438:7459 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7438:7459 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7438:7459 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+def 7482:7514 <> chemPhysicsChartBindingNontrivial
+R7521:7546 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+binder 7517:7517 <> b:16
+R7551:7554 Corelib.Init.Datatypes <> bool ind
+R7561:7567 Stdlib.Arith.PeanoNat Nat ltb def
+R7572:7593 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R7595:7595 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> b:16 var
+prf 7606:7639 <> chem_physics_binding_fe_nontrivial
+R7704:7706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7645:7677 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingNontrivial def
+R7679:7703 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R7707:7710 Corelib.Init.Datatypes <> true constr
+prf 7745:7787 <> chem_physics_binding_trivial_not_nontrivial
+R7857:7859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7793:7825 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingNontrivial def
+R7827:7856 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingTrivial def
+R7860:7864 Corelib.Init.Datatypes <> false constr
+def 7904:7943 <> chemPhysicsChartBindingIdentityConserved
+R7956:7981 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+binder 7948:7949 <> b1:17
+binder 7951:7952 <> b2:18
+R7986:7989 Corelib.Init.Datatypes <> bool ind
+R7996:8002 Stdlib.Arith.PeanoNat Nat eqb def
+R8005:8026 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R8028:8029 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> b1:17 var
+R8033:8054 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_binding_parent_z proj
+R8056:8057 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> b2:18 var
+rec 8069:8094 <> chem_physics_chart_witness
+proj 8110:8130 <> chart_witness_binding
+proj 8164:8183 <> chart_witness_engine
+proj 8216:8248 <> chart_witness_conservation_object
+R8134:8159 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+R8187:8211 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart ind
+R8252:8257 Stdlib.Strings.String <> string ind
+def 8274:8304 <> chemPhysicsChartWitnessThermoFe
+R8308:8333 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R8343:8363 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8343:8363 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8343:8363 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8400:8419 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R8400:8419 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R8446:8478 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R8446:8478 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R8368:8392 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R8424:8438 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartThermoGTPX def
+R8483:8511 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+def 8529:8560 <> chemPhysicsChartWitnessDensityFe
+R8564:8589 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R8599:8619 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8599:8619 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8599:8619 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8656:8675 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R8656:8675 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R8705:8737 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R8705:8737 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R8624:8648 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R8680:8697 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartDensityLadder def
+R8742:8770 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+def 8788:8817 <> chemPhysicsChartWitnessScaleFe
+R8821:8846 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R8856:8876 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8856:8876 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8856:8876 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R8913:8932 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R8913:8932 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R8969:9001 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R8969:9001 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R8881:8905 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R8937:8961 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartScaleCommutingSquare def
+R9006:9034 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+def 9052:9085 <> chemPhysicsChartWitnessOccupancyFe
+R9089:9114 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R9124:9144 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9124:9144 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9124:9144 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9181:9200 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9181:9200 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9233:9265 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R9233:9265 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R9149:9173 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R9205:9225 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartOccupancyPhysics def
+R9270:9298 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+def 9316:9352 <> chemPhysicsChartWitnessSeparateObject
+R9356:9381 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R9391:9411 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9391:9411 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9391:9411 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9448:9467 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9448:9467 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9494:9526 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R9494:9526 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R9416:9440 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R9472:9486 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartThermoGTPX def
+R9531:9558 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> separateObjectPerChartMarker def
+def 9576:9605 <> chemPhysicsChartWitnessXorEnum
+R9609:9634 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R9644:9664 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9644:9664 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9644:9664 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R9701:9720 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9701:9720 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9753:9785 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R9753:9785 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R9669:9693 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R9725:9745 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_xor_enum_bucket constr
+R9790:9818 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+def 9836:9862 <> chart_witness_is_isomorphic
+R9869:9894 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+binder 9865:9865 <> w:23
+R9899:9902 Corelib.Init.Datatypes <> bool ind
+R10045:10050 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9961:9966 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9909:9935 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_named def
+R9938:9957 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R9959:9959 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w:23 var
+R9967:9976 Stdlib.Strings.String <> eqb def
+R9979:10011 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_conservation_object proj
+R10013:10013 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w:23 var
+R10016:10044 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> secondLawConservationObjectId def
+R10051:10083 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingNontrivial def
+R10086:10106 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R10108:10108 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w:23 var
+prf 10119:10144 <> thermo_fe_chart_isomorphic
+R10209:10211 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10150:10176 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R10178:10208 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R10212:10215 Corelib.Init.Datatypes <> true constr
+prf 10250:10276 <> density_fe_chart_isomorphic
+R10342:10344 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10282:10308 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R10310:10341 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessDensityFe def
+R10345:10348 Corelib.Init.Datatypes <> true constr
+prf 10383:10407 <> scale_fe_chart_isomorphic
+R10471:10473 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10413:10439 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R10441:10470 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessScaleFe def
+R10474:10477 Corelib.Init.Datatypes <> true constr
+prf 10512:10540 <> occupancy_fe_chart_isomorphic
+R10608:10610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10546:10572 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R10574:10607 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessOccupancyFe def
+R10611:10614 Corelib.Init.Datatypes <> true constr
+prf 10649:10678 <> separate_object_not_isomorphic
+R10749:10751 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10684:10710 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R10712:10748 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessSeparateObject def
+R10752:10756 Corelib.Init.Datatypes <> false constr
+prf 10791:10813 <> xor_enum_not_isomorphic
+R10877:10879 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10819:10845 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R10847:10876 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessXorEnum def
+R10880:10884 Corelib.Init.Datatypes <> false constr
+def 10924:10955 <> chemPhysicsChartsSameZIsomorphic
+R10966:10991 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+binder 10958:10959 <> w1:24
+binder 10961:10962 <> w2:25
+R10996:10999 Corelib.Init.Datatypes <> bool ind
+R11176:11181 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11140:11145 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11104:11109 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11006:11045 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingIdentityConserved def
+R11052:11072 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R11074:11075 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w1:24 var
+R11079:11099 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_binding proj
+R11101:11102 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w2:25 var
+R11110:11136 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R11138:11139 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w1:24 var
+R11146:11172 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R11174:11175 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w2:25 var
+R11182:11185 Corelib.Init.Datatypes <> negb def
+R11188:11216 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_engine_chart_beq def
+R11223:11242 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R11244:11245 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w1:24 var
+R11249:11268 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R11270:11271 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> w2:25 var
+prf 11283:11321 <> thermo_density_fe_same_z_distinct_chart
+R11428:11430 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11327:11358 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R11364:11394 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R11396:11427 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessDensityFe def
+R11431:11434 Corelib.Init.Datatypes <> true constr
+prf 11469:11505 <> thermo_scale_fe_same_z_distinct_chart
+R11610:11612 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11511:11542 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R11548:11578 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R11580:11609 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessScaleFe def
+R11613:11616 Corelib.Init.Datatypes <> true constr
+prf 11651:11691 <> thermo_occupancy_fe_same_z_distinct_chart
+R11800:11802 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11697:11728 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R11734:11764 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R11766:11799 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessOccupancyFe def
+R11803:11806 Corelib.Init.Datatypes <> true constr
+def 12070:12094 <> wave100LibRsSmuggleMarker
+R12098:12103 Stdlib.Strings.String <> string ind
+def 12151:12175 <> wave100EosRsSmuggleMarker
+R12179:12184 Stdlib.Strings.String <> string ind
+def 12232:12265 <> chart_authority_is_wave100_smuggle
+R12275:12280 Stdlib.Strings.String <> string ind
+binder 12268:12271 <> auth:26
+R12285:12288 Corelib.Init.Datatypes <> bool ind
+R12336:12341 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R12295:12304 Stdlib.Strings.String <> eqb def
+R12306:12309 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> auth:26 var
+R12311:12335 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> wave100LibRsSmuggleMarker def
+R12342:12351 Stdlib.Strings.String <> eqb def
+R12353:12356 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> auth:26 var
+R12358:12382 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> wave100EosRsSmuggleMarker def
+prf 12392:12414 <> lib_rs_smuggle_detected
+R12480:12482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12420:12453 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_authority_is_wave100_smuggle def
+R12455:12479 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> wave100LibRsSmuggleMarker def
+R12483:12486 Corelib.Init.Datatypes <> true constr
+prf 12521:12543 <> eos_rs_smuggle_detected
+R12609:12611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12549:12582 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_authority_is_wave100_smuggle def
+R12584:12608 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> wave100EosRsSmuggleMarker def
+R12612:12615 Corelib.Init.Datatypes <> true constr
+prf 12650:12681 <> occupancy_rs_not_wave100_smuggle
+R12775:12777 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12687:12720 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_authority_is_wave100_smuggle def
+R12778:12782 Corelib.Init.Datatypes <> false constr
+def 13044:13071 <> fourthScienceCollisionMarker
+R13075:13080 Stdlib.Strings.String <> string ind
+def 13173:13203 <> twentySixthAxiomCollisionMarker
+R13207:13212 Stdlib.Strings.String <> string ind
+prf 13292:13321 <> fourth_science_collision_named
+R13355:13358 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13327:13354 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fourthScienceCollisionMarker def
+prf 13396:13429 <> twenty_sixth_axiom_collision_named
+R13466:13469 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13435:13465 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> twentySixthAxiomCollisionMarker def
+ind 13735:13765 <> chem_physics_chart_bar_presence
+constr 13781:13809 <> chem_physics_chart_bar_absent
+constr 13815:13844 <> chem_physics_chart_bar_present
+scheme 13735:13765 <> chem_physics_chart_bar_presence_rect
+scheme 13735:13765 <> chem_physics_chart_bar_presence_ind
+scheme 13735:13765 <> chem_physics_chart_bar_presence_rec
+scheme 13735:13765 <> chem_physics_chart_bar_presence_sind
+rec 13855:13882 <> chem_physics_chart_claim_bar
+proj 13898:13932 <> chem_physics_chart_bar_presence_tag
+proj 13971:14005 <> chem_physics_chart_bar_defect_total
+R13936:13966 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_presence ind
+R14009:14011 Corelib.Init.Datatypes <> nat ind
+def 14028:14057 <> chemPhysicsChartClaimBarAbsent
+R14061:14088 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_claim_bar rec
+R14098:14132 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_presence_tag proj
+R14098:14132 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_presence_tag proj
+R14098:14132 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_presence_tag proj
+R14173:14207 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_defect_total proj
+R14173:14207 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_defect_total proj
+R14137:14165 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_bar_absent constr
+ind 14455:14492 <> chem_physics_chart_isomorphism_verdict
+constr 14508:14525 <> verdict_unwired_ok
+constr 14531:14564 <> verdict_chart_isomorphism_named_ok
+constr 14570:14593 <> verdict_trivial_z_refuse
+constr 14599:14621 <> verdict_xor_enum_refuse
+constr 14627:14656 <> verdict_separate_object_refuse
+constr 14662:14691 <> verdict_wave100_smuggle_refuse
+constr 14697:14725 <> verdict_fourth_science_refuse
+constr 14731:14763 <> verdict_twenty_sixth_axiom_refuse
+constr 14769:14795 <> verdict_green_invent_refuse
+constr 14801:14833 <> verdict_proved_without_bar_refuse
+constr 14839:14869 <> verdict_production_wired_refuse
+scheme 14455:14492 <> chem_physics_chart_isomorphism_verdict_rect
+scheme 14455:14492 <> chem_physics_chart_isomorphism_verdict_ind
+scheme 14455:14492 <> chem_physics_chart_isomorphism_verdict_rec
+scheme 14455:14492 <> chem_physics_chart_isomorphism_verdict_sind
+def 14884:14924 <> chem_physics_chart_isomorphism_verdict_ok
+R14933:14970 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict ind
+binder 14929:14929 <> v:34
+R14975:14978 Corelib.Init.Datatypes <> bool ind
+R14991:14991 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> v:34 var
+R15002:15019 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+R15024:15027 Corelib.Init.Datatypes <> true constr
+R15033:15066 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R15071:15074 Corelib.Init.Datatypes <> true constr
+R15085:15089 Corelib.Init.Datatypes <> false constr
+rec 15106:15133 <> chem_physics_chart_incidence
+proj 15149:15165 <> chart_inc_binding
+proj 15199:15215 <> chart_inc_witness
+proj 15249:15267 <> chart_inc_authority
+proj 15281:15295 <> chart_inc_level
+R15169:15194 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_binding rec
+R15219:15244 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_witness rec
+R15271:15276 Stdlib.Strings.String <> string ind
+R15299:15301 Corelib.Init.Datatypes <> nat ind
+def 15318:15352 <> chemPhysicsChartIncidenceNontrivial
+R15359:15386 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+binder 15355:15355 <> h:41
+R15391:15394 Corelib.Init.Datatypes <> bool ind
+R15401:15407 Stdlib.Arith.PeanoNat Nat ltb def
+R15412:15426 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R15428:15428 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> h:41 var
+def 15444:15478 <> chemPhysicsChartIncidenceThermoFeL1
+R15482:15509 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R15519:15535 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R15519:15535 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R15519:15535 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R15572:15588 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R15572:15588 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R15631:15649 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R15631:15649 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R15717:15731 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R15717:15731 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R15540:15564 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R15593:15623 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+def 15754:15789 <> chemPhysicsChartIncidenceDensityFeL1
+R15793:15820 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R15830:15846 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R15830:15846 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R15830:15846 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R15883:15899 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R15883:15899 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R15943:15961 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R15943:15961 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16029:16043 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16029:16043 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R15851:15875 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R15904:15935 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessDensityFe def
+def 16066:16097 <> chemPhysicsChartIncidenceTrivial
+R16101:16128 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R16138:16154 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16138:16154 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16138:16154 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16196:16212 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R16196:16212 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R16255:16273 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16255:16273 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16341:16355 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16341:16355 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16159:16188 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingTrivial def
+R16217:16247 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+def 16378:16416 <> chemPhysicsChartIncidenceSeparateObject
+R16420:16447 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R16457:16473 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16457:16473 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16457:16473 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16510:16526 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R16510:16526 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R16575:16593 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16575:16593 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16661:16675 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16661:16675 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16478:16502 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R16531:16567 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessSeparateObject def
+def 16698:16729 <> chemPhysicsChartIncidenceXorEnum
+R16733:16760 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R16770:16786 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16770:16786 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16770:16786 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R16823:16839 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R16823:16839 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R16881:16899 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16881:16899 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R16967:16981 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16967:16981 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R16791:16815 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R16844:16873 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessXorEnum def
+def 17004:17040 <> chemPhysicsChartIncidenceLibRsSmuggle
+R17044:17071 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R17081:17097 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R17081:17097 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R17081:17097 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R17134:17150 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R17134:17150 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R17193:17211 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R17193:17211 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R17248:17262 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R17248:17262 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R17102:17126 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R17155:17185 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R17216:17240 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> wave100LibRsSmuggleMarker def
+def 17285:17321 <> chemPhysicsChartIncidenceEosRsSmuggle
+R17325:17352 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+R17362:17378 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R17362:17378 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R17362:17378 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R17415:17431 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R17415:17431 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R17474:17492 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R17474:17492 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R17529:17543 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R17529:17543 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_level proj
+R17383:17407 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingFe def
+R17436:17466 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R17497:17521 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> wave100EosRsSmuggleMarker def
+def 17566:17602 <> evaluate_chem_physics_chart_incidence
+R17611:17645 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> ChemPhysicsChartIsomorphismModality ind
+binder 17607:17607 <> m:42
+R17655:17682 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_incidence rec
+binder 17651:17651 <> h:43
+R17692:17719 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_claim_bar rec
+binder 17688:17688 <> b:44
+R17747:17750 Corelib.Init.Datatypes <> bool ind
+binder 17725:17743 <> claim_physics_green:45
+R17771:17774 Corelib.Init.Datatypes <> bool ind
+binder 17756:17767 <> claim_proved:46
+R17797:17800 Corelib.Init.Datatypes <> bool ind
+binder 17780:17793 <> claim_xor_enum:47
+R17829:17832 Corelib.Init.Datatypes <> bool ind
+binder 17806:17825 <> claim_fourth_science:48
+R17865:17868 Corelib.Init.Datatypes <> bool ind
+binder 17838:17861 <> claim_twenty_sixth_axiom:49
+R17873:17910 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict ind
+R17920:17938 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_physics_green:45 var
+R17985:17996 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_proved:46 var
+R18059:18078 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_fourth_science:48 var
+R18147:18170 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_twenty_sixth_axiom:49 var
+R18253:18286 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_authority_is_wave100_smuggle def
+R18289:18307 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_authority proj
+R18309:18309 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> h:43 var
+R18400:18403 Corelib.Init.Datatypes <> negb def
+R18406:18432 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_is_isomorphic def
+R18435:18451 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R18453:18453 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> h:43 var
+R18766:18779 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_xor_enum:47 var
+R18882:18885 Corelib.Init.Datatypes <> negb def
+R18888:18922 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceNontrivial def
+R18924:18924 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> h:43 var
+R19039:19042 Corelib.Init.Datatypes <> negb def
+R19045:19077 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartBindingNontrivial def
+R19133:19149 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_binding proj
+R19151:19151 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> h:43 var
+R19324:19324 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> m:42 var
+R19377:19402 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R19455:19488 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R19536:19561 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_assumed constr
+R19609:19636 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_surrogate constr
+R19689:19706 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+R19689:19706 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+R19754:19778 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_proved constr
+R19831:19863 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_proved_without_bar_refuse constr
+R19202:19225 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_trivial_z_refuse constr
+R18969:18992 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_trivial_z_refuse constr
+R18818:18840 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_xor_enum_refuse constr
+R18492:18521 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> constitutive_chart_is_xor_enum def
+R18558:18577 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_witness_engine proj
+R18580:18596 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_inc_witness proj
+R18598:18598 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> h:43 var
+R18700:18729 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_separate_object_refuse constr
+R18639:18661 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_xor_enum_refuse constr
+R18339:18368 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+R18194:18226 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_twenty_sixth_axiom_refuse constr
+R18097:18125 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_fourth_science_refuse constr
+R18010:18042 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_proved_without_bar_refuse constr
+R17947:17973 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_green_invent_refuse constr
+def 19926:19970 <> evaluate_chem_physics_chart_isomorphism_close
+R19979:20013 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> ChemPhysicsChartIsomorphismModality ind
+binder 19975:19975 <> m:51
+R20041:20044 Corelib.Init.Datatypes <> bool ind
+binder 20019:20037 <> claim_physics_green:52
+R20075:20078 Corelib.Init.Datatypes <> bool ind
+binder 20050:20071 <> claim_production_wired:53
+R20083:20120 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict ind
+R20130:20148 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_physics_green:52 var
+R20195:20216 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> claim_production_wired:53 var
+R20274:20274 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> m:51 var
+R20287:20312 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R20317:20334 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+R20342:20367 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_assumed constr
+R20375:20399 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_proved constr
+R20407:20434 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_surrogate constr
+R20439:20472 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R20439:20472 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R20439:20472 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R20225:20255 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_production_wired_refuse constr
+R20157:20183 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_green_invent_refuse constr
+def 20719:20740 <> chemPhysicsChartProved
+R20744:20747 Corelib.Init.Datatypes <> bool ind
+R20752:20756 Corelib.Init.Datatypes <> false constr
+prf 20766:20796 <> chem_physics_chart_proved_false
+R20822:20824 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20800:20821 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartProved def
+R20825:20829 Corelib.Init.Datatypes <> false constr
+def 20869:20891 <> not118SquaredGreenTable
+R20895:20898 Corelib.Init.Datatypes <> bool ind
+R20903:20906 Corelib.Init.Datatypes <> true constr
+prf 20916:20942 <> not_118_squared_green_table
+R20969:20971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20946:20968 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not118SquaredGreenTable def
+R20972:20975 Corelib.Init.Datatypes <> true constr
+def 21015:21039 <> notFourthChemistryScience
+R21043:21046 Corelib.Init.Datatypes <> bool ind
+R21051:21054 Corelib.Init.Datatypes <> true constr
+prf 21064:21091 <> not_fourth_chemistry_science
+R21120:21122 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21095:21119 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> notFourthChemistryScience def
+R21123:21126 Corelib.Init.Datatypes <> true constr
+def 21166:21184 <> notTwentySixthAxiom
+R21188:21191 Corelib.Init.Datatypes <> bool ind
+R21196:21199 Corelib.Init.Datatypes <> true constr
+prf 21209:21230 <> not_twenty_sixth_axiom
+R21253:21255 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21234:21252 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> notTwentySixthAxiom def
+R21256:21259 Corelib.Init.Datatypes <> true constr
+def 21299:21325 <> chemistryIsOccupancyPhysics
+R21329:21332 Corelib.Init.Datatypes <> bool ind
+R21337:21340 Corelib.Init.Datatypes <> true constr
+prf 21350:21379 <> chemistry_is_occupancy_physics
+R21410:21412 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21383:21409 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistryIsOccupancyPhysics def
+R21413:21416 Corelib.Init.Datatypes <> true constr
+prf 21673:21711 <> unwired_close_without_production_wiring
+R21805:21809 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21717:21761 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_isomorphism_close def
+R21767:21792 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R21794:21798 Corelib.Init.Datatypes <> false constr
+R21800:21804 Corelib.Init.Datatypes <> false constr
+R21810:21827 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+prf 21864:21915 <> unwired_modality_always_ok_without_production_wiring
+R22009:22013 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21921:21965 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_isomorphism_close def
+R21971:21996 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R21998:22002 Corelib.Init.Datatypes <> false constr
+R22004:22008 Corelib.Init.Datatypes <> false constr
+R22014:22031 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+R22047:22085 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> unwired_close_without_production_wiring thm
+R22047:22085 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> unwired_close_without_production_wiring thm
+prf 22100:22117 <> thermo_fe_named_ok
+R22292:22296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22123:22159 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R22165:22190 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R22192:22226 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceThermoFeL1 def
+R22232:22261 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R22263:22267 Corelib.Init.Datatypes <> false constr
+R22269:22273 Corelib.Init.Datatypes <> false constr
+R22275:22279 Corelib.Init.Datatypes <> false constr
+R22281:22285 Corelib.Init.Datatypes <> false constr
+R22287:22291 Corelib.Init.Datatypes <> false constr
+R22297:22330 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+prf 22365:22383 <> density_fe_named_ok
+R22559:22563 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22389:22425 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R22431:22456 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R22458:22493 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceDensityFeL1 def
+R22499:22528 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R22530:22534 Corelib.Init.Datatypes <> false constr
+R22536:22540 Corelib.Init.Datatypes <> false constr
+R22542:22546 Corelib.Init.Datatypes <> false constr
+R22548:22552 Corelib.Init.Datatypes <> false constr
+R22554:22558 Corelib.Init.Datatypes <> false constr
+R22564:22597 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+prf 22634:22669 <> named_chart_isomorphism_conservation
+R22883:22888 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22844:22848 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22675:22711 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R22717:22742 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R22744:22778 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceThermoFeL1 def
+R22784:22813 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R22815:22819 Corelib.Init.Datatypes <> false constr
+R22821:22825 Corelib.Init.Datatypes <> false constr
+R22827:22831 Corelib.Init.Datatypes <> false constr
+R22833:22837 Corelib.Init.Datatypes <> false constr
+R22839:22843 Corelib.Init.Datatypes <> false constr
+R22849:22882 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R23098:23103 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23059:23063 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22889:22925 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R22931:22956 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R22958:22993 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceDensityFeL1 def
+R22999:23028 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R23030:23034 Corelib.Init.Datatypes <> false constr
+R23036:23040 Corelib.Init.Datatypes <> false constr
+R23042:23046 Corelib.Init.Datatypes <> false constr
+R23048:23052 Corelib.Init.Datatypes <> false constr
+R23054:23058 Corelib.Init.Datatypes <> false constr
+R23064:23097 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R23212:23217 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23205:23207 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23104:23135 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R23141:23171 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R23173:23204 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessDensityFe def
+R23208:23211 Corelib.Init.Datatypes <> true constr
+R23324:23329 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23317:23319 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23218:23249 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R23255:23285 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R23287:23316 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessScaleFe def
+R23320:23323 Corelib.Init.Datatypes <> true constr
+R23440:23445 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23433:23435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23330:23361 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R23367:23397 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R23399:23432 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessOccupancyFe def
+R23436:23439 Corelib.Init.Datatypes <> true constr
+R23473:23475 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23446:23472 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistryIsOccupancyPhysics def
+R23476:23479 Corelib.Init.Datatypes <> true constr
+prf 23530:23546 <> trivial_z_refused
+R23718:23722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23552:23588 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R23594:23619 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R23621:23652 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceTrivial def
+R23658:23687 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R23689:23693 Corelib.Init.Datatypes <> false constr
+R23695:23699 Corelib.Init.Datatypes <> false constr
+R23701:23705 Corelib.Init.Datatypes <> false constr
+R23707:23711 Corelib.Init.Datatypes <> false constr
+R23713:23717 Corelib.Init.Datatypes <> false constr
+R23723:23746 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_trivial_z_refuse constr
+prf 23783:23803 <> trivial_z_fail_closed
+R24004:24009 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23975:23979 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23809:23845 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R23851:23876 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R23878:23909 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceTrivial def
+R23915:23944 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R23946:23950 Corelib.Init.Datatypes <> false constr
+R23952:23956 Corelib.Init.Datatypes <> false constr
+R23958:23962 Corelib.Init.Datatypes <> false constr
+R23964:23968 Corelib.Init.Datatypes <> false constr
+R23970:23974 Corelib.Init.Datatypes <> false constr
+R23980:24003 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_trivial_z_refuse constr
+R24230:24234 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24010:24050 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict_ok def
+R24057:24093 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R24102:24127 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R24129:24160 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceTrivial def
+R24169:24198 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R24200:24204 Corelib.Init.Datatypes <> false constr
+R24206:24210 Corelib.Init.Datatypes <> false constr
+R24212:24216 Corelib.Init.Datatypes <> false constr
+R24218:24222 Corelib.Init.Datatypes <> false constr
+R24224:24228 Corelib.Init.Datatypes <> false constr
+R24235:24239 Corelib.Init.Datatypes <> false constr
+R24268:24284 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> trivial_z_refused thm
+R24268:24284 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> trivial_z_refused thm
+R24298:24338 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict_ok def
+R24353:24369 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> trivial_z_refused thm
+R24353:24369 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> trivial_z_refused thm
+R24353:24369 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> trivial_z_refused thm
+prf 24401:24423 <> separate_object_refused
+R24602:24606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24429:24465 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R24471:24496 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R24498:24536 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceSeparateObject def
+R24542:24571 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R24573:24577 Corelib.Init.Datatypes <> false constr
+R24579:24583 Corelib.Init.Datatypes <> false constr
+R24585:24589 Corelib.Init.Datatypes <> false constr
+R24591:24595 Corelib.Init.Datatypes <> false constr
+R24597:24601 Corelib.Init.Datatypes <> false constr
+R24607:24636 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_separate_object_refuse constr
+prf 24671:24686 <> xor_enum_refused
+R24858:24862 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24692:24728 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R24734:24759 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R24761:24792 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceXorEnum def
+R24798:24827 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R24829:24833 Corelib.Init.Datatypes <> false constr
+R24835:24839 Corelib.Init.Datatypes <> false constr
+R24841:24845 Corelib.Init.Datatypes <> false constr
+R24847:24851 Corelib.Init.Datatypes <> false constr
+R24853:24857 Corelib.Init.Datatypes <> false constr
+R24863:24885 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_xor_enum_refuse constr
+prf 24920:24941 <> lib_rs_smuggle_refused
+R25118:25122 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24947:24983 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R24989:25014 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R25016:25052 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceLibRsSmuggle def
+R25058:25087 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R25089:25093 Corelib.Init.Datatypes <> false constr
+R25095:25099 Corelib.Init.Datatypes <> false constr
+R25101:25105 Corelib.Init.Datatypes <> false constr
+R25107:25111 Corelib.Init.Datatypes <> false constr
+R25113:25117 Corelib.Init.Datatypes <> false constr
+R25123:25152 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+prf 25187:25208 <> eos_rs_smuggle_refused
+R25385:25389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25214:25250 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R25256:25281 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R25283:25319 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceEosRsSmuggle def
+R25325:25354 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R25356:25360 Corelib.Init.Datatypes <> false constr
+R25362:25366 Corelib.Init.Datatypes <> false constr
+R25368:25372 Corelib.Init.Datatypes <> false constr
+R25374:25378 Corelib.Init.Datatypes <> false constr
+R25380:25384 Corelib.Init.Datatypes <> false constr
+R25390:25419 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+prf 25456:25482 <> wave100_smuggle_fail_closed
+R25694:25699 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25659:25663 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25488:25524 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R25530:25555 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R25557:25593 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceLibRsSmuggle def
+R25599:25628 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R25630:25634 Corelib.Init.Datatypes <> false constr
+R25636:25640 Corelib.Init.Datatypes <> false constr
+R25642:25646 Corelib.Init.Datatypes <> false constr
+R25648:25652 Corelib.Init.Datatypes <> false constr
+R25654:25658 Corelib.Init.Datatypes <> false constr
+R25664:25693 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+R25871:25875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25700:25736 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R25742:25767 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R25769:25805 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceEosRsSmuggle def
+R25811:25840 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R25842:25846 Corelib.Init.Datatypes <> false constr
+R25848:25852 Corelib.Init.Datatypes <> false constr
+R25854:25858 Corelib.Init.Datatypes <> false constr
+R25860:25864 Corelib.Init.Datatypes <> false constr
+R25866:25870 Corelib.Init.Datatypes <> false constr
+R25876:25905 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+prf 25949:25975 <> green_invent_refuse_unwired
+R26068:26072 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25981:26025 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_isomorphism_close def
+R26031:26056 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R26058:26061 Corelib.Init.Datatypes <> true constr
+R26063:26067 Corelib.Init.Datatypes <> false constr
+R26073:26099 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_green_invent_refuse constr
+prf 26136:26161 <> green_invent_always_refuse
+R26305:26309 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26167:26207 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict_ok def
+R26214:26258 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_isomorphism_close def
+R26267:26292 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R26294:26297 Corelib.Init.Datatypes <> true constr
+R26299:26303 Corelib.Init.Datatypes <> false constr
+R26310:26314 Corelib.Init.Datatypes <> false constr
+R26333:26373 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_verdict_ok def
+R26386:26412 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> green_invent_refuse_unwired thm
+R26386:26412 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> green_invent_refuse_unwired thm
+R26386:26412 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> green_invent_refuse_unwired thm
+prf 26442:26466 <> proved_without_bar_refuse
+R26640:26644 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26472:26508 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R26514:26539 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R26541:26575 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceThermoFeL1 def
+R26581:26610 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R26612:26616 Corelib.Init.Datatypes <> false constr
+R26618:26621 Corelib.Init.Datatypes <> true constr
+R26623:26627 Corelib.Init.Datatypes <> false constr
+R26629:26633 Corelib.Init.Datatypes <> false constr
+R26635:26639 Corelib.Init.Datatypes <> false constr
+R26645:26677 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_proved_without_bar_refuse constr
+prf 26712:26734 <> production_wired_refuse
+R26826:26830 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26740:26784 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_isomorphism_close def
+R26790:26814 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_proved constr
+R26816:26820 Corelib.Init.Datatypes <> false constr
+R26822:26825 Corelib.Init.Datatypes <> true constr
+R26831:26861 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_production_wired_refuse constr
+ind 27125:27136 <> formal_fiber
+constr 27152:27172 <> fiber_quantum_knowing
+constr 27178:27194 <> fiber_meso_acting
+scheme 27125:27136 <> formal_fiber_rect
+scheme 27125:27136 <> formal_fiber_ind
+scheme 27125:27136 <> formal_fiber_rec
+scheme 27125:27136 <> formal_fiber_sind
+ind 27208:27226 <> formal_claim_family
+constr 27242:27277 <> claim_chem_physics_chart_isomorphism
+scheme 27208:27226 <> formal_claim_family_rect
+scheme 27208:27226 <> formal_claim_family_ind
+scheme 27208:27226 <> formal_claim_family_rec
+scheme 27208:27226 <> formal_claim_family_sind
+def 27292:27330 <> chem_physics_chart_isomorphism_fiber_ok
+R27337:27348 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> formal_fiber ind
+binder 27333:27333 <> f:59
+R27353:27356 Corelib.Init.Datatypes <> bool ind
+R27369:27369 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> f:59 var
+R27380:27400 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_quantum_knowing constr
+R27405:27408 Corelib.Init.Datatypes <> true constr
+R27414:27430 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_meso_acting constr
+R27435:27439 Corelib.Init.Datatypes <> false constr
+def 27460:27499 <> chemPhysicsChartDoesNotMintFourthScience
+R27503:27506 Corelib.Init.Datatypes <> bool ind
+R27513:27537 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> notFourthChemistryScience def
+def 27552:27585 <> chemPhysicsChartDoesNotClaimProved
+R27589:27592 Corelib.Init.Datatypes <> bool ind
+R27599:27602 Corelib.Init.Datatypes <> negb def
+R27604:27625 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartProved def
+prf 27635:27669 <> chem_physics_chart_knowing_fiber_ok
+R27736:27738 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27675:27713 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_fiber_ok def
+R27715:27735 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_quantum_knowing constr
+R27739:27742 Corelib.Init.Datatypes <> true constr
+prf 27777:27819 <> chem_physics_chart_meso_acting_fiber_not_ok
+R27882:27884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27825:27863 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_fiber_ok def
+R27865:27881 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_meso_acting constr
+R27885:27889 Corelib.Init.Datatypes <> false constr
+prf 27926:27979 <> chem_physics_chart_isomorphism_routes_knowing_not_meso
+R28053:28058 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28046:28048 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27985:28023 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_fiber_ok def
+R28025:28045 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_quantum_knowing constr
+R28049:28052 Corelib.Init.Datatypes <> true constr
+R28124:28129 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28116:28118 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28059:28097 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_fiber_ok def
+R28099:28115 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_meso_acting constr
+R28119:28123 Corelib.Init.Datatypes <> false constr
+R28177:28182 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28170:28172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28130:28169 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartDoesNotMintFourthScience def
+R28173:28176 Corelib.Init.Datatypes <> true constr
+R28224:28229 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28217:28219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28183:28216 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartDoesNotClaimProved def
+R28220:28223 Corelib.Init.Datatypes <> true constr
+R28257:28259 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28230:28256 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistryIsOccupancyPhysics def
+R28260:28263 Corelib.Init.Datatypes <> true constr
+prf 28540:28586 <> chem_physics_chart_isomorphism_fixture_scaffold
+R28802:28807 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28761:28767 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28592:28628 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R28634:28659 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R28661:28695 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceThermoFeL1 def
+R28701:28730 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R28732:28736 Corelib.Init.Datatypes <> false constr
+R28738:28742 Corelib.Init.Datatypes <> false constr
+R28744:28748 Corelib.Init.Datatypes <> false constr
+R28750:28754 Corelib.Init.Datatypes <> false constr
+R28756:28760 Corelib.Init.Datatypes <> false constr
+R28768:28801 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R29019:29024 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28978:28984 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28808:28844 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R28850:28875 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R28877:28912 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceDensityFeL1 def
+R28918:28947 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R28949:28953 Corelib.Init.Datatypes <> false constr
+R28955:28959 Corelib.Init.Datatypes <> false constr
+R28961:28965 Corelib.Init.Datatypes <> false constr
+R28967:28971 Corelib.Init.Datatypes <> false constr
+R28973:28977 Corelib.Init.Datatypes <> false constr
+R28985:29018 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_chart_isomorphism_named_ok constr
+R29222:29227 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29191:29197 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29025:29061 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R29067:29092 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R29094:29125 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceTrivial def
+R29131:29160 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R29162:29166 Corelib.Init.Datatypes <> false constr
+R29168:29172 Corelib.Init.Datatypes <> false constr
+R29174:29178 Corelib.Init.Datatypes <> false constr
+R29180:29184 Corelib.Init.Datatypes <> false constr
+R29186:29190 Corelib.Init.Datatypes <> false constr
+R29198:29221 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_trivial_z_refuse constr
+R29438:29443 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29401:29407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29228:29264 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R29270:29295 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R29297:29335 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceSeparateObject def
+R29341:29370 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R29372:29376 Corelib.Init.Datatypes <> false constr
+R29378:29382 Corelib.Init.Datatypes <> false constr
+R29384:29388 Corelib.Init.Datatypes <> false constr
+R29390:29394 Corelib.Init.Datatypes <> false constr
+R29396:29400 Corelib.Init.Datatypes <> false constr
+R29408:29437 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_separate_object_refuse constr
+R29640:29645 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29610:29616 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29444:29480 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R29486:29511 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R29513:29544 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceXorEnum def
+R29550:29579 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R29581:29585 Corelib.Init.Datatypes <> false constr
+R29587:29591 Corelib.Init.Datatypes <> false constr
+R29593:29597 Corelib.Init.Datatypes <> false constr
+R29599:29603 Corelib.Init.Datatypes <> false constr
+R29605:29609 Corelib.Init.Datatypes <> false constr
+R29617:29639 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_xor_enum_refuse constr
+R29854:29859 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29817:29823 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29646:29682 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R29688:29713 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R29715:29751 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceLibRsSmuggle def
+R29757:29786 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R29788:29792 Corelib.Init.Datatypes <> false constr
+R29794:29798 Corelib.Init.Datatypes <> false constr
+R29800:29804 Corelib.Init.Datatypes <> false constr
+R29806:29810 Corelib.Init.Datatypes <> false constr
+R29812:29816 Corelib.Init.Datatypes <> false constr
+R29824:29853 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+R30068:30073 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30031:30037 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29860:29896 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R29902:29927 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R29929:29965 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceEosRsSmuggle def
+R29971:30000 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R30002:30006 Corelib.Init.Datatypes <> false constr
+R30008:30012 Corelib.Init.Datatypes <> false constr
+R30014:30018 Corelib.Init.Datatypes <> false constr
+R30020:30024 Corelib.Init.Datatypes <> false constr
+R30026:30030 Corelib.Init.Datatypes <> false constr
+R30038:30067 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_wave100_smuggle_refuse constr
+R30282:30287 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30242:30248 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30074:30110 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_incidence def
+R30116:30141 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R30143:30177 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIncidenceThermoFeL1 def
+R30183:30212 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartClaimBarAbsent def
+R30214:30218 Corelib.Init.Datatypes <> false constr
+R30220:30223 Corelib.Init.Datatypes <> true constr
+R30225:30229 Corelib.Init.Datatypes <> false constr
+R30231:30235 Corelib.Init.Datatypes <> false constr
+R30237:30241 Corelib.Init.Datatypes <> false constr
+R30249:30281 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_proved_without_bar_refuse constr
+R30401:30406 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30376:30382 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30288:30332 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> evaluate_chem_physics_chart_isomorphism_close def
+R30338:30363 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R30365:30369 Corelib.Init.Datatypes <> false constr
+R30371:30375 Corelib.Init.Datatypes <> false constr
+R30383:30400 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> verdict_unwired_ok constr
+R30475:30480 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30468:30470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30407:30445 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_fiber_ok def
+R30447:30467 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_quantum_knowing constr
+R30471:30474 Corelib.Init.Datatypes <> true constr
+R30546:30551 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30538:30540 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30481:30519 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_fiber_ok def
+R30521:30537 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> fiber_meso_acting constr
+R30541:30545 Corelib.Init.Datatypes <> false constr
+R30582:30587 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30574:30576 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30552:30573 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartProved def
+R30577:30581 Corelib.Init.Datatypes <> false constr
+R30698:30703 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30691:30693 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30588:30619 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartsSameZIsomorphic def
+R30625:30655 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessThermoFe def
+R30657:30690 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartWitnessOccupancyFe def
+R30694:30697 Corelib.Init.Datatypes <> true constr
+R30732:30735 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30704:30731 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> separateObjectPerChartMarker def
+R30736:30757 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chartIsomorphismMarker def
+R30815:30858 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> separate_object_marker_ne_isomorphism_marker thm
+R30815:30858 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> separate_object_marker_ne_isomorphism_marker thm
+def 31102:31130 <> chemPhysicsOccupancyAuthority
+R31134:31139 Stdlib.Strings.String <> string ind
+def 31209:31245 <> chemIntCrossChartIsomorphismAuthority
+R31249:31254 Stdlib.Strings.String <> string ind
+def 31322:31354 <> chemPhysicsChartIsomorphismCellId
+R31358:31363 Stdlib.Strings.String <> string ind
+def 31447:31481 <> chemPhysicsChartIsomorphismNonClaim
+R31485:31490 Stdlib.Strings.String <> string ind
+prf 32086:32123 <> chem_physics_chart_isomorphism_cell_id
+R32162:32166 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32129:32161 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIsomorphismCellId def
+prf 32264:32312 <> chem_physics_chart_isomorphism_cites_occupancy_rs
+R32347:32350 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32318:32346 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsOccupancyAuthority def
+prf 32388:32433 <> chem_physics_chart_isomorphism_cites_int_cross
+R32476:32480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32439:32475 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemIntCrossChartIsomorphismAuthority def
+prf 32562:32602 <> chem_physics_chart_isomorphism_not_lib_rs
+R32679:32681 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32608:32611 Corelib.Init.Datatypes <> negb def
+R32614:32647 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chart_authority_is_wave100_smuggle def
+R32649:32677 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsOccupancyAuthority def
+R32682:32685 Corelib.Init.Datatypes <> true constr
+def 32947:32990 <> chemPhysicsChartSecondLawConservationFraming
+R32994:32999 Stdlib.Strings.String <> string ind
+prf 33122:33164 <> chem_physics_chart_not_fourth_science_axiom
+R33214:33217 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33170:33213 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartSecondLawConservationFraming def
+prf 33285:33333 <> chem_physics_chart_not_twenty_sixth_axiom_framing
+R33383:33386 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33339:33382 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartSecondLawConservationFraming def
+prf 33452:33497 <> chem_physics_chart_not_wave100_lib_eos_framing
+R33547:33550 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33503:33546 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartSecondLawConservationFraming def
+prf 33611:33660 <> chem_physics_chart_second_law_conservation_framing
+R33710:33713 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33666:33709 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartSecondLawConservationFraming def
+def 33980:34001 <> physicsGreenAuthorized
+R34013:34017 Corelib.Init.Logic <> False ind
+prf 34027:34076 <> chem_physics_chart_isomorphism_physics_green_false
+R34082:34083 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R34084:34105 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> physicsGreenAuthorized def
+prf 34145:34191 <> chem_physics_chart_isomorphism_modality_unwired
+R34239:34241 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34197:34238 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIsomorphismModalityCurrent def
+R34242:34267 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr

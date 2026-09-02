@@ -1,0 +1,1110 @@
+DIGEST f989fecfa5b9405e4d3ea8fae919f1f7
+FUMST.ChemConstants.CutConservation
+R1272:1276 Stdlib.Arith.Arith <> <> lib
+R1278:1283 Stdlib.ZArith.ZArith <> <> lib
+R1285:1290 Stdlib.Strings.String <> <> lib
+R1292:1295 Stdlib.Bool.Bool <> <> lib
+R1297:1299 Stdlib.micromega.Lia <> <> lib
+R1301:1304 Stdlib.Lists.List <> <> lib
+R1314:1326 Stdlib.Lists.List ListNotations <> mod
+ind 1655:1677 <> CutConservationModality
+constr 1693:1716 <> cut_conservation_unwired
+constr 1722:1745 <> cut_conservation_assumed
+constr 1751:1773 <> cut_conservation_proved
+constr 1779:1804 <> cut_conservation_surrogate
+scheme 1655:1677 <> CutConservationModality_rect
+scheme 1655:1677 <> CutConservationModality_ind
+scheme 1655:1677 <> CutConservationModality_rec
+scheme 1655:1677 <> CutConservationModality_sind
+def 1819:1848 <> cutConservationModalityCurrent
+R1852:1874 UMST.ChemConstants.CutConservation <> CutConservationModality ind
+R1881:1904 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+def 1919:1941 <> cut_lattice_cardinality
+R1945:1947 Corelib.Init.Datatypes <> nat ind
+prf 1962:1992 <> cut_lattice_cardinality_is_four
+R2021:2023 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1998:2020 UMST.ChemConstants.CutConservation <> cut_lattice_cardinality def
+prf 2059:2085 <> cut_lattice_not_118_squared
+R2141:2143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2091:2094 Corelib.Init.Datatypes <> negb def
+R2097:2103 Stdlib.Arith.PeanoNat Nat eqb def
+R2105:2127 UMST.ChemConstants.CutConservation <> cut_lattice_cardinality def
+R2133:2135 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2144:2147 Corelib.Init.Datatypes <> true constr
+R2166:2188 UMST.ChemConstants.CutConservation <> cut_lattice_cardinality def
+def 2448:2470 <> iupac_table_cardinality
+R2474:2476 Corelib.Init.Datatypes <> nat ind
+prf 2493:2522 <> iupac_table_cardinality_is_118
+R2551:2553 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2528:2550 UMST.ChemConstants.CutConservation <> iupac_table_cardinality def
+def 2596:2614 <> cut_element_z_valid
+R2621:2623 Corelib.Init.Datatypes <> nat ind
+binder 2617:2617 <> z:3
+R2628:2631 Corelib.Init.Datatypes <> bool ind
+R2649:2652 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2638:2644 Stdlib.Arith.PeanoNat Nat ltb def
+R2648:2648 UMST.ChemConstants.CutConservation <> z:3 var
+R2653:2659 Stdlib.Arith.PeanoNat Nat leb def
+R2661:2661 UMST.ChemConstants.CutConservation <> z:3 var
+R2663:2685 UMST.ChemConstants.CutConservation <> iupac_table_cardinality def
+def 2700:2717 <> cut_element_iron_z
+R2721:2723 Corelib.Init.Datatypes <> nat ind
+def 2743:2762 <> cut_element_copper_z
+R2766:2768 Corelib.Init.Datatypes <> nat ind
+def 2788:2810 <> cut_element_oganesson_z
+R2814:2816 Corelib.Init.Datatypes <> nat ind
+prf 2833:2848 <> cut_iron_z_is_26
+R2872:2874 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2854:2871 UMST.ChemConstants.CutConservation <> cut_element_iron_z def
+prf 2911:2928 <> cut_copper_z_is_29
+R2954:2956 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2934:2953 UMST.ChemConstants.CutConservation <> cut_element_copper_z def
+prf 2993:3014 <> cut_oganesson_z_is_118
+R3043:3045 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3020:3042 UMST.ChemConstants.CutConservation <> cut_element_oganesson_z def
+prf 3083:3099 <> cut_fe_cu_z_valid
+R3150:3155 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3143:3145 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3105:3123 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R3125:3142 UMST.ChemConstants.CutConservation <> cut_element_iron_z def
+R3146:3149 Corelib.Init.Datatypes <> true constr
+R3196:3198 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3156:3174 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R3176:3195 UMST.ChemConstants.CutConservation <> cut_element_copper_z def
+R3199:3202 Corelib.Init.Datatypes <> true constr
+R3228:3246 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R3249:3266 UMST.ChemConstants.CutConservation <> cut_element_iron_z def
+R3273:3292 UMST.ChemConstants.CutConservation <> cut_element_copper_z def
+R3295:3317 UMST.ChemConstants.CutConservation <> iupac_table_cardinality def
+prf 3345:3365 <> cut_oganesson_z_valid
+R3414:3416 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3371:3389 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R3391:3413 UMST.ChemConstants.CutConservation <> cut_element_oganesson_z def
+R3417:3420 Corelib.Init.Datatypes <> true constr
+R3439:3457 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R3460:3482 UMST.ChemConstants.CutConservation <> cut_element_oganesson_z def
+R3485:3507 UMST.ChemConstants.CutConservation <> iupac_table_cardinality def
+ind 3765:3772 <> cut_side
+constr 3788:3802 <> cut_side_source
+constr 3808:3820 <> cut_side_sink
+scheme 3765:3772 <> cut_side_rect
+scheme 3765:3772 <> cut_side_ind
+scheme 3765:3772 <> cut_side_rec
+scheme 3765:3772 <> cut_side_sind
+def 3835:3846 <> cut_side_beq
+R3857:3864 UMST.ChemConstants.CutConservation <> cut_side ind
+binder 3849:3850 <> s1:6
+binder 3852:3853 <> s2:7
+R3869:3872 Corelib.Init.Datatypes <> bool ind
+R3889:3890 UMST.ChemConstants.CutConservation <> s2:7 var
+R3885:3886 UMST.ChemConstants.CutConservation <> s1:6 var
+R3901:3915 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R3918:3932 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R3937:3940 Corelib.Init.Datatypes <> true constr
+R3946:3958 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R3961:3973 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R3978:3981 Corelib.Init.Datatypes <> true constr
+R3995:3999 Corelib.Init.Datatypes <> false constr
+def 4020:4038 <> cut_side_complement
+R4045:4052 UMST.ChemConstants.CutConservation <> cut_side ind
+binder 4041:4041 <> s:10
+R4057:4064 UMST.ChemConstants.CutConservation <> cut_side ind
+R4077:4077 UMST.ChemConstants.CutConservation <> s:10 var
+R4088:4102 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R4107:4119 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R4125:4137 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R4142:4156 UMST.ChemConstants.CutConservation <> cut_side_source constr
+prf 4172:4197 <> cut_side_complement_source
+R4238:4240 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4203:4221 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R4223:4237 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R4241:4253 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+prf 4288:4311 <> cut_side_complement_sink
+R4350:4352 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4317:4335 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R4337:4349 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R4353:4367 UMST.ChemConstants.CutConservation <> cut_side_source constr
+prf 4402:4431 <> cut_side_complement_involutive
+R4438:4445 UMST.ChemConstants.CutConservation <> cut_side ind
+binder 4434:4434 <> s:12
+R4495:4497 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4452:4470 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R4473:4491 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R4493:4493 UMST.ChemConstants.CutConservation <> s:12 var
+R4498:4498 UMST.ChemConstants.CutConservation <> s:12 var
+prf 4549:4582 <> cut_partition_complement_conserved
+R4639:4644 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4623:4625 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4588:4606 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R4608:4622 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R4626:4638 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R4678:4680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4645:4663 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R4665:4677 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R4681:4695 UMST.ChemConstants.CutConservation <> cut_side_source constr
+ind 4969:4985 <> refining_cut_role
+constr 5001:5021 <> cut_role_ore_fraction
+constr 5027:5045 <> cut_role_waste_tail
+constr 5051:5071 <> cut_role_recycle_loop
+scheme 4969:4985 <> refining_cut_role_rect
+scheme 4969:4985 <> refining_cut_role_ind
+scheme 4969:4985 <> refining_cut_role_rec
+scheme 4969:4985 <> refining_cut_role_sind
+def 5086:5106 <> refining_cut_role_beq
+R5117:5133 UMST.ChemConstants.CutConservation <> refining_cut_role ind
+binder 5109:5110 <> r1:15
+binder 5112:5113 <> r2:16
+R5138:5141 Corelib.Init.Datatypes <> bool ind
+R5158:5159 UMST.ChemConstants.CutConservation <> r2:16 var
+R5154:5155 UMST.ChemConstants.CutConservation <> r1:15 var
+R5170:5190 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R5193:5213 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R5218:5221 Corelib.Init.Datatypes <> true constr
+R5227:5245 UMST.ChemConstants.CutConservation <> cut_role_waste_tail constr
+R5248:5266 UMST.ChemConstants.CutConservation <> cut_role_waste_tail constr
+R5271:5274 Corelib.Init.Datatypes <> true constr
+R5280:5300 UMST.ChemConstants.CutConservation <> cut_role_recycle_loop constr
+R5303:5323 UMST.ChemConstants.CutConservation <> cut_role_recycle_loop constr
+R5328:5331 Corelib.Init.Datatypes <> true constr
+R5345:5349 Corelib.Init.Datatypes <> false constr
+def 5370:5399 <> refining_cut_role_default_side
+R5406:5422 UMST.ChemConstants.CutConservation <> refining_cut_role ind
+binder 5402:5402 <> r:19
+R5427:5434 UMST.ChemConstants.CutConservation <> cut_side ind
+R5447:5447 UMST.ChemConstants.CutConservation <> r:19 var
+R5458:5478 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R5483:5497 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R5503:5521 UMST.ChemConstants.CutConservation <> cut_role_waste_tail constr
+R5526:5538 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R5544:5564 UMST.ChemConstants.CutConservation <> cut_role_recycle_loop constr
+R5569:5583 UMST.ChemConstants.CutConservation <> cut_side_source constr
+prf 5599:5630 <> ore_waste_default_sides_distinct
+R5688:5693 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5636:5665 UMST.ChemConstants.CutConservation <> refining_cut_role_default_side def
+R5667:5687 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R5694:5723 UMST.ChemConstants.CutConservation <> refining_cut_role_default_side def
+R5725:5743 UMST.ChemConstants.CutConservation <> cut_role_waste_tail constr
+prf 5779:5804 <> ore_waste_separation_typed
+R5880:5885 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5862:5864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5810:5839 UMST.ChemConstants.CutConservation <> refining_cut_role_default_side def
+R5841:5861 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R5865:5879 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R5936:5938 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5886:5915 UMST.ChemConstants.CutConservation <> refining_cut_role_default_side def
+R5917:5935 UMST.ChemConstants.CutConservation <> cut_role_waste_tail constr
+R5939:5951 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+rec 6218:6235 <> refining_graph_cut
+proj 6251:6256 <> cut_id
+proj 6267:6278 <> cut_role_tag
+proj 6303:6317 <> cut_source_side
+proj 6333:6345 <> cut_element_z
+R6260:6262 Corelib.Init.Datatypes <> nat ind
+R6282:6298 UMST.ChemConstants.CutConservation <> refining_cut_role ind
+R6321:6328 UMST.ChemConstants.CutConservation <> cut_side ind
+R6349:6351 Corelib.Init.Datatypes <> nat ind
+rec 6364:6377 <> cut_separation
+proj 6393:6403 <> cut_sep_cut
+proj 6429:6441 <> cut_sep_level
+R6407:6424 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+R6445:6447 Corelib.Init.Datatypes <> nat ind
+def 6464:6486 <> cutSeparationNontrivial
+R6493:6506 UMST.ChemConstants.CutConservation <> cut_separation rec
+binder 6489:6489 <> s:29
+R6511:6514 Corelib.Init.Datatypes <> bool ind
+R6521:6527 Stdlib.Arith.PeanoNat Nat ltb def
+R6532:6544 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R6546:6546 UMST.ChemConstants.CutConservation <> s:29 var
+def 6562:6572 <> cutSinkSide
+R6579:6596 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+binder 6575:6575 <> c:30
+R6601:6608 UMST.ChemConstants.CutConservation <> cut_side ind
+R6615:6633 UMST.ChemConstants.CutConservation <> cut_side_complement def
+R6636:6650 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R6652:6652 UMST.ChemConstants.CutConservation <> c:30 var
+def 6668:6678 <> cutIsSource
+R6685:6702 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+binder 6681:6681 <> c:31
+R6713:6720 UMST.ChemConstants.CutConservation <> cut_side ind
+binder 6706:6709 <> side:32
+R6725:6728 Corelib.Init.Datatypes <> bool ind
+R6735:6746 UMST.ChemConstants.CutConservation <> cut_side_beq def
+R6749:6763 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R6765:6765 UMST.ChemConstants.CutConservation <> c:31 var
+R6768:6771 UMST.ChemConstants.CutConservation <> side:32 var
+def 6786:6805 <> cutIdentityConserved
+R6816:6833 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+binder 6808:6809 <> c1:33
+binder 6811:6812 <> c2:34
+R6838:6841 Corelib.Init.Datatypes <> bool ind
+R7002:7007 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6942:6947 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6879:6884 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6848:6854 Stdlib.Arith.PeanoNat Nat eqb def
+R6860:6865 UMST.ChemConstants.CutConservation <> cut_id proj
+R6856:6857 UMST.ChemConstants.CutConservation <> c1:33 var
+R6872:6877 UMST.ChemConstants.CutConservation <> cut_id proj
+R6868:6869 UMST.ChemConstants.CutConservation <> c2:34 var
+R6885:6905 UMST.ChemConstants.CutConservation <> refining_cut_role_beq def
+R6911:6922 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R6907:6908 UMST.ChemConstants.CutConservation <> c1:33 var
+R6929:6940 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R6925:6926 UMST.ChemConstants.CutConservation <> c2:34 var
+R6948:6959 UMST.ChemConstants.CutConservation <> cut_side_beq def
+R6965:6979 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R6961:6962 UMST.ChemConstants.CutConservation <> c1:33 var
+R6986:7000 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R6982:6983 UMST.ChemConstants.CutConservation <> c2:34 var
+R7008:7014 Stdlib.Arith.PeanoNat Nat eqb def
+R7020:7032 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7016:7017 UMST.ChemConstants.CutConservation <> c1:33 var
+R7039:7051 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7035:7036 UMST.ChemConstants.CutConservation <> c2:34 var
+def 7067:7079 <> cutOreWasteFe
+R7083:7100 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+R7110:7115 UMST.ChemConstants.CutConservation <> cut_id proj
+R7110:7115 UMST.ChemConstants.CutConservation <> cut_id proj
+R7110:7115 UMST.ChemConstants.CutConservation <> cut_id proj
+R7128:7139 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R7128:7139 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R7172:7186 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R7172:7186 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R7213:7225 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7213:7225 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7144:7164 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R7191:7205 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R7230:7247 UMST.ChemConstants.CutConservation <> cut_element_iron_z def
+def 7265:7276 <> cutRecycleCu
+R7280:7297 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+R7307:7312 UMST.ChemConstants.CutConservation <> cut_id proj
+R7307:7312 UMST.ChemConstants.CutConservation <> cut_id proj
+R7307:7312 UMST.ChemConstants.CutConservation <> cut_id proj
+R7325:7336 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R7325:7336 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R7369:7383 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R7369:7383 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R7410:7422 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7410:7422 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7341:7361 UMST.ChemConstants.CutConservation <> cut_role_recycle_loop constr
+R7388:7402 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R7427:7446 UMST.ChemConstants.CutConservation <> cut_element_copper_z def
+def 7464:7478 <> cutOganessonPin
+R7482:7499 UMST.ChemConstants.CutConservation <> refining_graph_cut rec
+R7509:7514 UMST.ChemConstants.CutConservation <> cut_id proj
+R7509:7514 UMST.ChemConstants.CutConservation <> cut_id proj
+R7509:7514 UMST.ChemConstants.CutConservation <> cut_id proj
+R7527:7538 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R7527:7538 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R7571:7585 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R7571:7585 UMST.ChemConstants.CutConservation <> cut_source_side proj
+R7612:7624 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7612:7624 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R7543:7563 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R7590:7604 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R7629:7651 UMST.ChemConstants.CutConservation <> cut_element_oganesson_z def
+def 7669:7691 <> cutSeparationOreWasteL1
+R7695:7708 UMST.ChemConstants.CutConservation <> cut_separation rec
+R7718:7728 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7718:7728 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7718:7728 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7748:7760 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R7748:7760 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R7733:7745 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+def 7783:7804 <> cutSeparationRecycleL1
+R7808:7821 UMST.ChemConstants.CutConservation <> cut_separation rec
+R7831:7841 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7831:7841 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7831:7841 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7860:7872 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R7860:7872 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R7846:7857 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+def 7895:7922 <> cutSeparationOreWasteTrivial
+R7926:7939 UMST.ChemConstants.CutConservation <> cut_separation rec
+R7949:7959 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7949:7959 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7949:7959 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R7979:7991 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R7979:7991 UMST.ChemConstants.CutConservation <> cut_sep_level proj
+R7964:7976 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+prf 8009:8035 <> cut_ore_waste_fe_nontrivial
+R8088:8090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8041:8063 UMST.ChemConstants.CutConservation <> cutSeparationNontrivial def
+R8065:8087 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R8091:8094 Corelib.Init.Datatypes <> true constr
+prf 8129:8150 <> cut_ore_waste_fe_z_pin
+R8185:8187 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8171:8183 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R8156:8168 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8208:8220 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8223:8240 UMST.ChemConstants.CutConservation <> cut_element_iron_z def
+prf 8270:8304 <> cut_ore_waste_fe_identity_conserved
+R8358:8360 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8310:8329 UMST.ChemConstants.CutConservation <> cutIdentityConserved def
+R8331:8343 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8345:8357 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8361:8364 Corelib.Init.Datatypes <> true constr
+prf 8399:8426 <> cut_ore_waste_fe_source_sink
+R8480:8485 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8473:8475 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8432:8442 UMST.ChemConstants.CutConservation <> cutIsSource def
+R8444:8456 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8458:8472 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R8476:8479 Corelib.Init.Datatypes <> true constr
+R8533:8538 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8525:8527 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8486:8496 UMST.ChemConstants.CutConservation <> cutIsSource def
+R8498:8510 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8512:8524 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R8528:8532 Corelib.Init.Datatypes <> false constr
+R8564:8566 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8539:8549 UMST.ChemConstants.CutConservation <> cutSinkSide def
+R8551:8563 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R8567:8579 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+prf 8630:8651 <> cut_recycle_loop_named
+R8735:8740 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8728:8730 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8657:8677 UMST.ChemConstants.CutConservation <> refining_cut_role_beq def
+R8693:8704 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R8679:8690 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+R8707:8727 UMST.ChemConstants.CutConservation <> cut_role_recycle_loop constr
+R8731:8734 Corelib.Init.Datatypes <> true constr
+R8789:8791 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8741:8759 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R8775:8787 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R8761:8772 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+R8792:8795 Corelib.Init.Datatypes <> true constr
+R8821:8832 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+prf 8860:8895 <> cut_ore_waste_trivial_not_nontrivial
+R8953:8955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8901:8923 UMST.ChemConstants.CutConservation <> cutSeparationNontrivial def
+R8925:8952 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteTrivial def
+R8956:8960 Corelib.Init.Datatypes <> false constr
+def 9000:9024 <> recycle_loop_named_vertex
+R9028:9031 Corelib.Init.Datatypes <> bool ind
+R9038:9044 Stdlib.Arith.PeanoNat Nat ltb def
+R9062:9067 UMST.ChemConstants.CutConservation <> cut_id proj
+R9048:9059 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+prf 9078:9107 <> recycle_loop_named_vertex_true
+R9138:9140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9113:9137 UMST.ChemConstants.CutConservation <> recycle_loop_named_vertex def
+R9141:9144 Corelib.Init.Datatypes <> true constr
+def 9411:9425 <> bondGraphMarker
+R9429:9434 Stdlib.Strings.String <> string ind
+def 9484:9497 <> cutGraphMarker
+R9501:9506 Stdlib.Strings.String <> string ind
+prf 9552:9569 <> cut_ne_bond_marker
+R9589:9592 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9575:9588 UMST.ChemConstants.CutConservation <> cutGraphMarker def
+R9593:9607 UMST.ChemConstants.CutConservation <> bondGraphMarker def
+def 9648:9661 <> cutNeBondGraph
+R9665:9668 Corelib.Init.Datatypes <> bool ind
+R9845:9850 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9768:9773 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9716:9721 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9675:9685 UMST.ChemConstants.CutConservation <> cutIsSource def
+R9687:9699 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R9701:9715 UMST.ChemConstants.CutConservation <> cut_side_source constr
+R9722:9725 Corelib.Init.Datatypes <> negb def
+R9728:9738 UMST.ChemConstants.CutConservation <> cutIsSource def
+R9740:9752 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R9754:9766 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+R9774:9794 UMST.ChemConstants.CutConservation <> refining_cut_role_beq def
+R9810:9821 UMST.ChemConstants.CutConservation <> cut_role_tag proj
+R9796:9807 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+R9824:9844 UMST.ChemConstants.CutConservation <> cut_role_recycle_loop constr
+R9851:9854 Corelib.Init.Datatypes <> negb def
+R9857:9877 UMST.ChemConstants.CutConservation <> refining_cut_role_beq def
+R9879:9899 UMST.ChemConstants.CutConservation <> cut_role_ore_fraction constr
+R9901:9919 UMST.ChemConstants.CutConservation <> cut_role_waste_tail constr
+prf 9930:9951 <> cut_ne_bond_graph_true
+R9969:9971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9955:9968 UMST.ChemConstants.CutConservation <> cutNeBondGraph def
+R9972:9975 Corelib.Init.Datatypes <> true constr
+R9994:10007 UMST.ChemConstants.CutConservation <> cutNeBondGraph def
+R10010:10022 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R10025:10036 UMST.ChemConstants.CutConservation <> cutRecycleCu def
+prf 10068:10095 <> cut_separation_ne_bond_graph
+R10122:10127 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10115:10117 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10101:10114 UMST.ChemConstants.CutConservation <> cutNeBondGraph def
+R10118:10121 Corelib.Init.Datatypes <> true constr
+R10142:10145 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10128:10141 UMST.ChemConstants.CutConservation <> cutGraphMarker def
+R10146:10160 UMST.ChemConstants.CutConservation <> bondGraphMarker def
+R10189:10210 UMST.ChemConstants.CutConservation <> cut_ne_bond_graph_true thm
+R10189:10210 UMST.ChemConstants.CutConservation <> cut_ne_bond_graph_true thm
+R10223:10240 UMST.ChemConstants.CutConservation <> cut_ne_bond_marker thm
+R10223:10240 UMST.ChemConstants.CutConservation <> cut_ne_bond_marker thm
+ind 10484:10504 <> cut_path_bar_presence
+constr 10520:10533 <> cut_bar_absent
+constr 10539:10553 <> cut_bar_present
+scheme 10484:10504 <> cut_path_bar_presence_rect
+scheme 10484:10504 <> cut_path_bar_presence_ind
+scheme 10484:10504 <> cut_path_bar_presence_rec
+scheme 10484:10504 <> cut_path_bar_presence_sind
+rec 10564:10581 <> cut_claim_path_bar
+proj 10597:10612 <> cut_bar_presence
+proj 10641:10660 <> cut_bar_defect_total
+R10616:10636 UMST.ChemConstants.CutConservation <> cut_path_bar_presence ind
+R10664:10666 Corelib.Init.Datatypes <> nat ind
+def 10683:10703 <> cutClaimPathBarAbsent
+R10707:10724 UMST.ChemConstants.CutConservation <> cut_claim_path_bar rec
+R10734:10749 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R10734:10749 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R10734:10749 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R10770:10789 UMST.ChemConstants.CutConservation <> cut_bar_defect_total proj
+R10770:10789 UMST.ChemConstants.CutConservation <> cut_bar_defect_total proj
+R10754:10767 UMST.ChemConstants.CutConservation <> cut_bar_absent constr
+def 10812:10836 <> cutClaimPathBarZeroDefect
+R10840:10857 UMST.ChemConstants.CutConservation <> cut_claim_path_bar rec
+R10867:10882 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R10867:10882 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R10867:10882 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R10904:10923 UMST.ChemConstants.CutConservation <> cut_bar_defect_total proj
+R10904:10923 UMST.ChemConstants.CutConservation <> cut_bar_defect_total proj
+R10887:10901 UMST.ChemConstants.CutConservation <> cut_bar_present constr
+def 10946:10975 <> cut_claim_path_bar_zero_defect
+R10982:10999 UMST.ChemConstants.CutConservation <> cut_claim_path_bar rec
+binder 10978:10978 <> b:40
+R11004:11007 Corelib.Init.Datatypes <> bool ind
+R11020:11035 UMST.ChemConstants.CutConservation <> cut_bar_presence proj
+R11037:11037 UMST.ChemConstants.CutConservation <> b:40 var
+R11048:11061 UMST.ChemConstants.CutConservation <> cut_bar_absent constr
+R11066:11070 Corelib.Init.Datatypes <> false constr
+R11076:11090 UMST.ChemConstants.CutConservation <> cut_bar_present constr
+R11095:11101 Stdlib.Arith.PeanoNat Nat eqb def
+R11104:11123 UMST.ChemConstants.CutConservation <> cut_bar_defect_total proj
+R11125:11125 UMST.ChemConstants.CutConservation <> b:40 var
+prf 11144:11178 <> cut_claim_path_bar_zero_defect_true
+R11240:11242 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11184:11213 UMST.ChemConstants.CutConservation <> cut_claim_path_bar_zero_defect def
+R11215:11239 UMST.ChemConstants.CutConservation <> cutClaimPathBarZeroDefect def
+R11243:11246 Corelib.Init.Datatypes <> true constr
+prf 11281:11321 <> cut_claim_path_bar_absent_not_zero_defect
+R11379:11381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11327:11356 UMST.ChemConstants.CutConservation <> cut_claim_path_bar_zero_defect def
+R11358:11378 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R11382:11386 Corelib.Init.Datatypes <> false constr
+ind 11650:11673 <> cut_conservation_verdict
+constr 11689:11706 <> verdict_unwired_ok
+constr 11712:11731 <> verdict_cut_named_ok
+constr 11737:11762 <> verdict_trivial_cut_refuse
+constr 11768:11794 <> verdict_green_invent_refuse
+constr 11800:11832 <> verdict_proved_without_bar_refuse
+constr 11838:11868 <> verdict_production_wired_refuse
+scheme 11650:11673 <> cut_conservation_verdict_rect
+scheme 11650:11673 <> cut_conservation_verdict_ind
+scheme 11650:11673 <> cut_conservation_verdict_rec
+scheme 11650:11673 <> cut_conservation_verdict_sind
+def 11883:11909 <> cut_conservation_verdict_ok
+R11916:11939 UMST.ChemConstants.CutConservation <> cut_conservation_verdict ind
+binder 11912:11912 <> v:43
+R11944:11947 Corelib.Init.Datatypes <> bool ind
+R11960:11960 UMST.ChemConstants.CutConservation <> v:43 var
+R11971:11988 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R11993:11996 Corelib.Init.Datatypes <> true constr
+R12002:12021 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R12026:12029 Corelib.Init.Datatypes <> true constr
+R12040:12044 Corelib.Init.Datatypes <> false constr
+def 12065:12092 <> cut_conservation_verdict_beq
+R12105:12128 UMST.ChemConstants.CutConservation <> cut_conservation_verdict ind
+binder 12097:12098 <> v1:45
+binder 12100:12101 <> v2:46
+R12133:12136 Corelib.Init.Datatypes <> bool ind
+R12153:12154 UMST.ChemConstants.CutConservation <> v2:46 var
+R12149:12150 UMST.ChemConstants.CutConservation <> v1:45 var
+R12165:12182 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R12185:12202 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R12207:12210 Corelib.Init.Datatypes <> true constr
+R12216:12235 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R12238:12257 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R12262:12265 Corelib.Init.Datatypes <> true constr
+R12271:12296 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+R12299:12324 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+R12329:12332 Corelib.Init.Datatypes <> true constr
+R12338:12364 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+R12367:12393 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+R12398:12401 Corelib.Init.Datatypes <> true constr
+R12407:12439 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+R12442:12474 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+R12479:12482 Corelib.Init.Datatypes <> true constr
+R12488:12518 UMST.ChemConstants.CutConservation <> verdict_production_wired_refuse constr
+R12521:12551 UMST.ChemConstants.CutConservation <> verdict_production_wired_refuse constr
+R12556:12559 Corelib.Init.Datatypes <> true constr
+R12573:12577 Corelib.Init.Datatypes <> false constr
+def 12598:12620 <> evaluate_cut_separation
+R12629:12651 UMST.ChemConstants.CutConservation <> CutConservationModality ind
+binder 12625:12625 <> m:49
+R12661:12674 UMST.ChemConstants.CutConservation <> cut_separation rec
+binder 12657:12657 <> s:50
+R12684:12701 UMST.ChemConstants.CutConservation <> cut_claim_path_bar rec
+binder 12680:12680 <> b:51
+R12729:12732 Corelib.Init.Datatypes <> bool ind
+binder 12707:12725 <> claim_physics_green:52
+R12753:12756 Corelib.Init.Datatypes <> bool ind
+binder 12738:12749 <> claim_proved:53
+R12761:12784 UMST.ChemConstants.CutConservation <> cut_conservation_verdict ind
+R12794:12812 UMST.ChemConstants.CutConservation <> claim_physics_green:52 var
+R12859:12870 UMST.ChemConstants.CutConservation <> claim_proved:53 var
+R12933:12936 Corelib.Init.Datatypes <> negb def
+R12939:12961 UMST.ChemConstants.CutConservation <> cutSeparationNontrivial def
+R12963:12963 UMST.ChemConstants.CutConservation <> s:50 var
+R13030:13033 Corelib.Init.Datatypes <> negb def
+R13036:13054 UMST.ChemConstants.CutConservation <> cut_element_z_valid def
+R13073:13085 UMST.ChemConstants.CutConservation <> cut_element_z proj
+R13057:13067 UMST.ChemConstants.CutConservation <> cut_sep_cut proj
+R13069:13069 UMST.ChemConstants.CutConservation <> s:50 var
+R13185:13185 UMST.ChemConstants.CutConservation <> m:49 var
+R13213:13236 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R13241:13260 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R13283:13306 UMST.ChemConstants.CutConservation <> cut_conservation_assumed constr
+R13329:13354 UMST.ChemConstants.CutConservation <> cut_conservation_surrogate constr
+R13359:13376 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R13359:13376 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R13399:13421 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R13426:13458 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+R13111:13136 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+R12983:13008 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+R12884:12916 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+R12821:12847 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+def 13496:13526 <> evaluate_cut_conservation_close
+R13535:13557 UMST.ChemConstants.CutConservation <> CutConservationModality ind
+binder 13531:13531 <> m:55
+R13585:13588 Corelib.Init.Datatypes <> bool ind
+binder 13563:13581 <> claim_physics_green:56
+R13619:13622 Corelib.Init.Datatypes <> bool ind
+binder 13594:13615 <> claim_production_wired:57
+R13627:13650 UMST.ChemConstants.CutConservation <> cut_conservation_verdict ind
+R13660:13678 UMST.ChemConstants.CutConservation <> claim_physics_green:56 var
+R13725:13746 UMST.ChemConstants.CutConservation <> claim_production_wired:57 var
+R13804:13804 UMST.ChemConstants.CutConservation <> m:55 var
+R13817:13840 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R13845:13862 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R13870:13893 UMST.ChemConstants.CutConservation <> cut_conservation_assumed constr
+R13901:13923 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R13931:13956 UMST.ChemConstants.CutConservation <> cut_conservation_surrogate constr
+R13961:13980 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R13961:13980 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R13961:13980 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R13755:13785 UMST.ChemConstants.CutConservation <> verdict_production_wired_refuse constr
+R13687:13713 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+def 14003:14029 <> cut_conservation_authorized
+R14056:14059 Corelib.Init.Datatypes <> bool ind
+binder 14034:14052 <> claim_physics_green:59
+R14090:14093 Corelib.Init.Datatypes <> bool ind
+binder 14065:14086 <> claim_production_wired:60
+R14098:14101 Corelib.Init.Datatypes <> bool ind
+R14114:14144 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R14156:14178 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R14180:14198 UMST.ChemConstants.CutConservation <> claim_physics_green:59 var
+R14200:14221 UMST.ChemConstants.CutConservation <> claim_production_wired:60 var
+R14232:14251 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R14256:14259 Corelib.Init.Datatypes <> true constr
+R14270:14274 Corelib.Init.Datatypes <> false constr
+ind 14517:14536 <> cut_conservation_law
+constr 14552:14573 <> law_cut_named_identity
+constr 14579:14600 <> law_trivial_cut_refuse
+constr 14606:14628 <> law_green_invent_refuse
+constr 14634:14660 <> law_production_wired_refuse
+scheme 14517:14536 <> cut_conservation_law_rect
+scheme 14517:14536 <> cut_conservation_law_ind
+scheme 14517:14536 <> cut_conservation_law_rec
+scheme 14517:14536 <> cut_conservation_law_sind
+def 14675:14700 <> cut_conservation_law_count
+R14704:14706 Corelib.Init.Datatypes <> nat ind
+prf 14721:14754 <> cut_conservation_law_count_is_four
+R14786:14788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14760:14785 UMST.ChemConstants.CutConservation <> cut_conservation_law_count def
+ind 14828:14855 <> cut_conservation_law_witness
+constr 14871:14890 <> cut_law_witness_open
+constr 14896:14917 <> cut_law_witness_proved
+scheme 14828:14855 <> cut_conservation_law_witness_rect
+scheme 14828:14855 <> cut_conservation_law_witness_ind
+scheme 14828:14855 <> cut_conservation_law_witness_rec
+scheme 14828:14855 <> cut_conservation_law_witness_sind
+def 14932:14968 <> evaluate_cut_conservation_law_witness
+R14979:14998 UMST.ChemConstants.CutConservation <> cut_conservation_law ind
+binder 14973:14975 <> law:65
+R15006:15028 UMST.ChemConstants.CutConservation <> CutConservationModality ind
+binder 15002:15002 <> m:66
+R15035:15062 UMST.ChemConstants.CutConservation <> cut_conservation_law_witness ind
+R15075:15075 UMST.ChemConstants.CutConservation <> m:66 var
+R15086:15109 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R15115:15138 UMST.ChemConstants.CutConservation <> cut_conservation_assumed constr
+R15144:15169 UMST.ChemConstants.CutConservation <> cut_conservation_surrogate constr
+R15174:15193 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+R15174:15193 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+R15174:15193 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+R15199:15221 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R15226:15247 UMST.ChemConstants.CutConservation <> cut_law_witness_proved constr
+prf 15263:15303 <> all_cut_conservation_laws_open_at_unwired
+R15421:15426 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15398:15400 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15309:15345 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_law_witness def
+R15347:15368 UMST.ChemConstants.CutConservation <> law_cut_named_identity constr
+R15374:15397 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R15401:15420 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+R15539:15544 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15516:15518 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15427:15463 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_law_witness def
+R15465:15486 UMST.ChemConstants.CutConservation <> law_trivial_cut_refuse constr
+R15492:15515 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R15519:15538 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+R15658:15663 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15635:15637 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15545:15581 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_law_witness def
+R15583:15605 UMST.ChemConstants.CutConservation <> law_green_invent_refuse constr
+R15611:15634 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R15638:15657 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+R15758:15760 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15664:15700 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_law_witness def
+R15702:15728 UMST.ChemConstants.CutConservation <> law_production_wired_refuse constr
+R15734:15757 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R15761:15780 UMST.ChemConstants.CutConservation <> cut_law_witness_open constr
+def 16059:16074 <> graph02CutProved
+R16078:16081 Corelib.Init.Datatypes <> bool ind
+R16086:16090 Corelib.Init.Datatypes <> false constr
+prf 16100:16123 <> graph02_cut_proved_false
+R16143:16145 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16127:16142 UMST.ChemConstants.CutConservation <> graph02CutProved def
+R16146:16150 Corelib.Init.Datatypes <> false constr
+def 16190:16212 <> not118SquaredGreenTable
+R16216:16219 Corelib.Init.Datatypes <> bool ind
+R16224:16227 Corelib.Init.Datatypes <> true constr
+prf 16237:16263 <> not_118_squared_green_table
+R16290:16292 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16267:16289 UMST.ChemConstants.CutConservation <> not118SquaredGreenTable def
+R16293:16296 Corelib.Init.Datatypes <> true constr
+prf 16553:16591 <> unwired_close_without_production_wiring
+R16669:16673 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16597:16627 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R16633:16656 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R16658:16662 Corelib.Init.Datatypes <> false constr
+R16664:16668 Corelib.Init.Datatypes <> false constr
+R16674:16691 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+prf 16728:16779 <> unwired_modality_always_ok_without_production_wiring
+R16857:16861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16785:16815 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R16821:16844 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R16846:16850 Corelib.Init.Datatypes <> false constr
+R16852:16856 Corelib.Init.Datatypes <> false constr
+R16862:16879 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R16895:16933 UMST.ChemConstants.CutConservation <> unwired_close_without_production_wiring thm
+R16895:16933 UMST.ChemConstants.CutConservation <> unwired_close_without_production_wiring thm
+prf 16948:16991 <> unwired_verdict_ok_without_production_wiring
+R17106:17110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16997:17023 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R17030:17060 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R17069:17092 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R17094:17098 Corelib.Init.Datatypes <> false constr
+R17100:17104 Corelib.Init.Datatypes <> false constr
+R17111:17114 Corelib.Init.Datatypes <> true constr
+R17133:17159 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R17172:17210 UMST.ChemConstants.CutConservation <> unwired_close_without_production_wiring thm
+R17172:17210 UMST.ChemConstants.CutConservation <> unwired_close_without_production_wiring thm
+R17172:17210 UMST.ChemConstants.CutConservation <> unwired_close_without_production_wiring thm
+prf 17464:17488 <> cut_ore_waste_l1_named_ok
+R17608:17612 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17494:17516 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R17522:17545 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R17547:17569 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R17575:17595 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R17597:17601 Corelib.Init.Datatypes <> false constr
+R17603:17607 Corelib.Init.Datatypes <> false constr
+R17613:17632 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+prf 17669:17700 <> named_ore_waste_cut_conservation
+R17845:17850 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17820:17824 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17706:17728 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R17734:17757 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R17759:17781 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R17787:17807 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R17809:17813 Corelib.Init.Datatypes <> false constr
+R17815:17819 Corelib.Init.Datatypes <> false constr
+R17825:17844 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R17906:17911 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17899:17901 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17851:17870 UMST.ChemConstants.CutConservation <> cutIdentityConserved def
+R17872:17884 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R17886:17898 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R17902:17905 Corelib.Init.Datatypes <> true constr
+R17937:17939 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17912:17922 UMST.ChemConstants.CutConservation <> cutSinkSide def
+R17924:17936 UMST.ChemConstants.CutConservation <> cutOreWasteFe def
+R17940:17952 UMST.ChemConstants.CutConservation <> cut_side_sink constr
+prf 18003:18026 <> recycle_loop_l1_named_ok
+R18145:18149 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18032:18054 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R18060:18083 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R18085:18106 UMST.ChemConstants.CutConservation <> cutSeparationRecycleL1 def
+R18112:18132 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R18134:18138 Corelib.Init.Datatypes <> false constr
+R18140:18144 Corelib.Init.Datatypes <> false constr
+R18150:18169 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+prf 18206:18236 <> recycle_loop_named_conservation
+R18380:18385 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18355:18359 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18242:18264 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R18270:18293 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R18295:18316 UMST.ChemConstants.CutConservation <> cutSeparationRecycleL1 def
+R18322:18342 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R18344:18348 Corelib.Init.Datatypes <> false constr
+R18350:18354 Corelib.Init.Datatypes <> false constr
+R18360:18379 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R18411:18413 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18386:18410 UMST.ChemConstants.CutConservation <> recycle_loop_named_vertex def
+R18414:18417 Corelib.Init.Datatypes <> true constr
+R18446:18469 UMST.ChemConstants.CutConservation <> recycle_loop_l1_named_ok thm
+R18446:18469 UMST.ChemConstants.CutConservation <> recycle_loop_l1_named_ok thm
+R18482:18511 UMST.ChemConstants.CutConservation <> recycle_loop_named_vertex_true thm
+R18482:18511 UMST.ChemConstants.CutConservation <> recycle_loop_named_vertex_true thm
+prf 18526:18543 <> cut_named_close_ok
+R18620:18624 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18549:18579 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R18585:18607 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R18609:18613 Corelib.Init.Datatypes <> false constr
+R18615:18619 Corelib.Init.Datatypes <> false constr
+R18625:18644 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+prf 18681:18708 <> named_cut_conservation_close
+R18810:18815 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18785:18789 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18714:18744 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R18750:18772 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R18774:18778 Corelib.Init.Datatypes <> false constr
+R18780:18784 Corelib.Init.Datatypes <> false constr
+R18790:18809 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R18855:18857 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18816:18842 UMST.ChemConstants.CutConservation <> cut_conservation_authorized def
+R18844:18848 Corelib.Init.Datatypes <> false constr
+R18850:18854 Corelib.Init.Datatypes <> false constr
+R18858:18861 Corelib.Init.Datatypes <> true constr
+R18890:18907 UMST.ChemConstants.CutConservation <> cut_named_close_ok thm
+R18890:18907 UMST.ChemConstants.CutConservation <> cut_named_close_ok thm
+R18921:18947 UMST.ChemConstants.CutConservation <> cut_conservation_authorized def
+R18962:18979 UMST.ChemConstants.CutConservation <> cut_named_close_ok thm
+R18962:18979 UMST.ChemConstants.CutConservation <> cut_named_close_ok thm
+R18962:18979 UMST.ChemConstants.CutConservation <> cut_named_close_ok thm
+prf 19235:19253 <> trivial_cut_refused
+R19378:19382 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19259:19281 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R19287:19310 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R19312:19339 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteTrivial def
+R19345:19365 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R19367:19371 Corelib.Init.Datatypes <> false constr
+R19373:19377 Corelib.Init.Datatypes <> false constr
+R19383:19408 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+prf 19445:19467 <> trivial_cut_fail_closed
+R19623:19628 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19592:19596 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19473:19495 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R19501:19524 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R19526:19553 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteTrivial def
+R19559:19579 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R19581:19585 Corelib.Init.Datatypes <> false constr
+R19587:19591 Corelib.Init.Datatypes <> false constr
+R19597:19622 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+R19788:19792 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19629:19655 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R19662:19684 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R19693:19716 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R19718:19745 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteTrivial def
+R19754:19774 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R19776:19780 Corelib.Init.Datatypes <> false constr
+R19782:19786 Corelib.Init.Datatypes <> false constr
+R19793:19797 Corelib.Init.Datatypes <> false constr
+R19826:19844 UMST.ChemConstants.CutConservation <> trivial_cut_refused thm
+R19826:19844 UMST.ChemConstants.CutConservation <> trivial_cut_refused thm
+R19858:19884 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R19899:19917 UMST.ChemConstants.CutConservation <> trivial_cut_refused thm
+R19899:19917 UMST.ChemConstants.CutConservation <> trivial_cut_refused thm
+R19899:19917 UMST.ChemConstants.CutConservation <> trivial_cut_refused thm
+prf 20173:20199 <> green_invent_refuse_unwired
+R20276:20280 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20205:20235 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R20241:20264 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R20266:20269 Corelib.Init.Datatypes <> true constr
+R20271:20275 Corelib.Init.Datatypes <> false constr
+R20281:20307 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+prf 20344:20369 <> green_invent_always_refuse
+R20483:20487 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20375:20401 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R20408:20438 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R20447:20470 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R20472:20475 Corelib.Init.Datatypes <> true constr
+R20477:20481 Corelib.Init.Datatypes <> false constr
+R20488:20492 Corelib.Init.Datatypes <> false constr
+R20511:20537 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R20550:20576 UMST.ChemConstants.CutConservation <> green_invent_refuse_unwired thm
+R20550:20576 UMST.ChemConstants.CutConservation <> green_invent_refuse_unwired thm
+R20550:20576 UMST.ChemConstants.CutConservation <> green_invent_refuse_unwired thm
+prf 20606:20639 <> green_invent_cut_separation_refuse
+R20758:20762 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20645:20667 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R20673:20696 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R20698:20720 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R20726:20746 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R20748:20751 Corelib.Init.Datatypes <> true constr
+R20753:20757 Corelib.Init.Datatypes <> false constr
+R20763:20789 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+prf 21048:21072 <> proved_without_bar_refuse
+R21191:21195 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21078:21100 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R21106:21129 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R21131:21153 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R21159:21179 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R21181:21185 Corelib.Init.Datatypes <> false constr
+R21187:21190 Corelib.Init.Datatypes <> true constr
+R21196:21228 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+prf 21265:21294 <> proved_without_bar_fail_closed
+R21451:21456 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21413:21417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21300:21322 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R21328:21351 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R21353:21375 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R21381:21401 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R21403:21407 Corelib.Init.Datatypes <> false constr
+R21409:21412 Corelib.Init.Datatypes <> true constr
+R21418:21450 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+R21610:21614 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21457:21483 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R21490:21512 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R21521:21544 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R21546:21568 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R21577:21597 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R21599:21603 Corelib.Init.Datatypes <> false constr
+R21605:21608 Corelib.Init.Datatypes <> true constr
+R21615:21619 Corelib.Init.Datatypes <> false constr
+R21648:21672 UMST.ChemConstants.CutConservation <> proved_without_bar_refuse thm
+R21648:21672 UMST.ChemConstants.CutConservation <> proved_without_bar_refuse thm
+R21686:21712 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R21727:21751 UMST.ChemConstants.CutConservation <> proved_without_bar_refuse thm
+R21727:21751 UMST.ChemConstants.CutConservation <> proved_without_bar_refuse thm
+R21727:21751 UMST.ChemConstants.CutConservation <> proved_without_bar_refuse thm
+prf 21783:21825 <> proved_without_bar_zero_defect_still_refuse
+R21947:21951 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21831:21853 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R21859:21882 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R21884:21905 UMST.ChemConstants.CutConservation <> cutSeparationRecycleL1 def
+R21911:21935 UMST.ChemConstants.CutConservation <> cutClaimPathBarZeroDefect def
+R21937:21941 Corelib.Init.Datatypes <> false constr
+R21943:21946 Corelib.Init.Datatypes <> true constr
+R21952:21984 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+prf 22243:22265 <> production_wired_refuse
+R22341:22345 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22271:22301 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R22307:22329 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R22331:22335 Corelib.Init.Datatypes <> false constr
+R22337:22340 Corelib.Init.Datatypes <> true constr
+R22346:22376 UMST.ChemConstants.CutConservation <> verdict_production_wired_refuse constr
+prf 22413:22442 <> production_wired_claim_refused
+R22555:22559 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22448:22474 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R22481:22511 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R22520:22542 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R22544:22548 Corelib.Init.Datatypes <> false constr
+R22550:22553 Corelib.Init.Datatypes <> true constr
+R22560:22564 Corelib.Init.Datatypes <> false constr
+R22583:22609 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_ok def
+R22622:22644 UMST.ChemConstants.CutConservation <> production_wired_refuse thm
+R22622:22644 UMST.ChemConstants.CutConservation <> production_wired_refuse thm
+R22622:22644 UMST.ChemConstants.CutConservation <> production_wired_refuse thm
+def 22903:22937 <> cut_conservation_coherence_scaffold
+R22941:22944 Corelib.Init.Datatypes <> bool ind
+R23232:23237 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R23085:23090 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R22951:22978 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_beq def
+R22985:23015 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R23024:23046 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R23048:23052 Corelib.Init.Datatypes <> false constr
+R23054:23058 Corelib.Init.Datatypes <> false constr
+R23065:23084 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R23091:23118 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_beq def
+R23125:23155 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R23164:23187 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R23189:23192 Corelib.Init.Datatypes <> true constr
+R23194:23198 Corelib.Init.Datatypes <> false constr
+R23205:23231 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+R23238:23265 UMST.ChemConstants.CutConservation <> cut_conservation_verdict_beq def
+R23272:23302 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R23311:23333 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R23335:23339 Corelib.Init.Datatypes <> false constr
+R23341:23344 Corelib.Init.Datatypes <> true constr
+R23351:23381 UMST.ChemConstants.CutConservation <> verdict_production_wired_refuse constr
+prf 23391:23430 <> cut_conservation_coherence_scaffold_true
+R23471:23473 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23436:23470 UMST.ChemConstants.CutConservation <> cut_conservation_coherence_scaffold def
+R23474:23477 Corelib.Init.Datatypes <> true constr
+R23496:23530 UMST.ChemConstants.CutConservation <> cut_conservation_coherence_scaffold def
+prf 23585:23627 <> cut_conservation_coherence_scaffold_theorem
+R23731:23736 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23704:23710 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23633:23663 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R23669:23691 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R23693:23697 Corelib.Init.Datatypes <> false constr
+R23699:23703 Corelib.Init.Datatypes <> false constr
+R23711:23730 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R23842:23847 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23808:23814 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23737:23767 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R23773:23796 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R23798:23801 Corelib.Init.Datatypes <> true constr
+R23803:23807 Corelib.Init.Datatypes <> false constr
+R23815:23841 UMST.ChemConstants.CutConservation <> verdict_green_invent_refuse constr
+R23918:23924 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23848:23878 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R23884:23906 UMST.ChemConstants.CutConservation <> cut_conservation_proved constr
+R23908:23912 Corelib.Init.Datatypes <> false constr
+R23914:23917 Corelib.Init.Datatypes <> true constr
+R23925:23955 UMST.ChemConstants.CutConservation <> verdict_production_wired_refuse constr
+ind 24234:24245 <> formal_fiber
+constr 24261:24281 <> fiber_quantum_knowing
+constr 24287:24303 <> fiber_meso_acting
+scheme 24234:24245 <> formal_fiber_rect
+scheme 24234:24245 <> formal_fiber_ind
+scheme 24234:24245 <> formal_fiber_rec
+scheme 24234:24245 <> formal_fiber_sind
+ind 24317:24335 <> formal_claim_family
+constr 24351:24372 <> claim_cut_conservation
+scheme 24317:24335 <> formal_claim_family_rect
+scheme 24317:24335 <> formal_claim_family_ind
+scheme 24317:24335 <> formal_claim_family_rec
+scheme 24317:24335 <> formal_claim_family_sind
+def 24387:24411 <> cut_conservation_fiber_ok
+R24418:24429 UMST.ChemConstants.CutConservation <> formal_fiber ind
+binder 24414:24414 <> f:72
+R24434:24437 Corelib.Init.Datatypes <> bool ind
+R24450:24450 UMST.ChemConstants.CutConservation <> f:72 var
+R24461:24481 UMST.ChemConstants.CutConservation <> fiber_quantum_knowing constr
+R24486:24489 Corelib.Init.Datatypes <> true constr
+R24495:24511 UMST.ChemConstants.CutConservation <> fiber_meso_acting constr
+R24516:24520 Corelib.Init.Datatypes <> false constr
+def 24541:24573 <> cut_conservation_knowing_fiber_ok
+R24577:24580 Corelib.Init.Datatypes <> bool ind
+R24587:24611 UMST.ChemConstants.CutConservation <> cut_conservation_fiber_ok def
+R24613:24633 UMST.ChemConstants.CutConservation <> fiber_quantum_knowing constr
+def 24648:24678 <> cut_conservation_meso_acting_ok
+R24682:24685 Corelib.Init.Datatypes <> bool ind
+R24692:24716 UMST.ChemConstants.CutConservation <> cut_conservation_fiber_ok def
+R24718:24734 UMST.ChemConstants.CutConservation <> fiber_meso_acting constr
+prf 24744:24781 <> cut_conservation_knowing_fiber_ok_true
+R24820:24822 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24787:24819 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok def
+R24823:24826 Corelib.Init.Datatypes <> true constr
+prf 24861:24895 <> cut_conservation_meso_acting_not_ok
+R24932:24934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24901:24931 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_ok def
+R24935:24939 Corelib.Init.Datatypes <> false constr
+prf 24976:25015 <> cut_conservation_routes_knowing_not_meso
+R25061:25066 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25054:25056 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25021:25053 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok def
+R25057:25060 Corelib.Init.Datatypes <> true constr
+R25098:25100 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25067:25097 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_ok def
+R25101:25105 Corelib.Init.Datatypes <> false constr
+R25134:25171 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok_true thm
+R25134:25171 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok_true thm
+R25184:25218 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_not_ok thm
+R25184:25218 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_not_ok thm
+def 25238:25255 <> fiberNotMesoActing
+R25259:25262 Corelib.Init.Datatypes <> bool ind
+R25302:25307 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R25269:25301 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok def
+R25308:25311 Corelib.Init.Datatypes <> negb def
+R25313:25343 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_ok def
+prf 25353:25378 <> fiber_not_meso_acting_true
+R25400:25402 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25382:25399 UMST.ChemConstants.CutConservation <> fiberNotMesoActing def
+R25403:25406 Corelib.Init.Datatypes <> true constr
+R25425:25442 UMST.ChemConstants.CutConservation <> fiberNotMesoActing def
+R25445:25477 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok def
+R25484:25514 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_ok def
+prf 25770:25802 <> cut_conservation_fixture_scaffold
+R25949:25954 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25922:25928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25808:25830 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R25836:25859 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R25861:25883 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteL1 def
+R25889:25909 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R25911:25915 Corelib.Init.Datatypes <> false constr
+R25917:25921 Corelib.Init.Datatypes <> false constr
+R25929:25948 UMST.ChemConstants.CutConservation <> verdict_cut_named_ok constr
+R26107:26112 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26074:26080 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25955:25977 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R25983:26006 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R26008:26035 UMST.ChemConstants.CutConservation <> cutSeparationOreWasteTrivial def
+R26041:26061 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R26063:26067 Corelib.Init.Datatypes <> false constr
+R26069:26073 Corelib.Init.Datatypes <> false constr
+R26081:26106 UMST.ChemConstants.CutConservation <> verdict_trivial_cut_refuse constr
+R26265:26270 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26225:26231 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26113:26135 UMST.ChemConstants.CutConservation <> evaluate_cut_separation def
+R26141:26164 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R26166:26187 UMST.ChemConstants.CutConservation <> cutSeparationRecycleL1 def
+R26193:26213 UMST.ChemConstants.CutConservation <> cutClaimPathBarAbsent def
+R26215:26219 Corelib.Init.Datatypes <> false constr
+R26221:26224 Corelib.Init.Datatypes <> true constr
+R26232:26264 UMST.ChemConstants.CutConservation <> verdict_proved_without_bar_refuse constr
+R26368:26373 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26343:26349 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26271:26301 UMST.ChemConstants.CutConservation <> evaluate_cut_conservation_close def
+R26307:26330 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr
+R26332:26336 Corelib.Init.Datatypes <> false constr
+R26338:26342 Corelib.Init.Datatypes <> false constr
+R26350:26367 UMST.ChemConstants.CutConservation <> verdict_unwired_ok constr
+R26414:26419 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26407:26409 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26374:26406 UMST.ChemConstants.CutConservation <> cut_conservation_knowing_fiber_ok def
+R26410:26413 Corelib.Init.Datatypes <> true constr
+R26459:26464 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26451:26453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26420:26450 UMST.ChemConstants.CutConservation <> cut_conservation_meso_acting_ok def
+R26454:26458 Corelib.Init.Datatypes <> false constr
+R26489:26494 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26481:26483 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26465:26480 UMST.ChemConstants.CutConservation <> graph02CutProved def
+R26484:26488 Corelib.Init.Datatypes <> false constr
+R26509:26511 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26495:26508 UMST.ChemConstants.CutConservation <> cutNeBondGraph def
+R26512:26515 Corelib.Init.Datatypes <> true constr
+def 26795:26820 <> refiningGraphCutsAuthority
+R26824:26829 Stdlib.Strings.String <> string ind
+def 26893:26924 <> chemIntProveGraph02CutsAuthority
+R26928:26933 Stdlib.Strings.String <> string ind
+def 26984:27006 <> refiningGraphCutsMarker
+R27010:27015 Stdlib.Strings.String <> string ind
+def 27068:27088 <> cutConservationCellId
+R27092:27097 Stdlib.Strings.String <> string ind
+def 27154:27176 <> cutConservationNonClaim
+R27180:27185 Stdlib.Strings.String <> string ind
+prf 27632:27655 <> cut_conservation_cell_id
+R27682:27684 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27661:27681 UMST.ChemConstants.CutConservation <> cutConservationCellId def
+prf 27755:27799 <> cut_conservation_cites_refining_graph_cuts_rs
+R27831:27834 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27805:27830 UMST.ChemConstants.CutConservation <> refiningGraphCutsAuthority def
+prf 27872:27917 <> cut_conservation_cites_int_prove_graph_02_cuts
+R27955:27957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27923:27954 UMST.ChemConstants.CutConservation <> chemIntProveGraph02CutsAuthority def
+prf 28022:28050 <> cut_conservation_cites_marker
+R28079:28082 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28056:28078 UMST.ChemConstants.CutConservation <> refiningGraphCutsMarker def
+def 28347:28377 <> cutSecondLawConservationFraming
+R28381:28386 Stdlib.Strings.String <> string ind
+prf 28462:28485 <> cut_not_second_cut_axiom
+R28522:28525 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28491:28521 UMST.ChemConstants.CutConservation <> cutSecondLawConservationFraming def
+prf 28579:28613 <> cut_second_law_conservation_framing
+R28650:28653 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28619:28649 UMST.ChemConstants.CutConservation <> cutSecondLawConservationFraming def
+def 28920:28941 <> physicsGreenAuthorized
+R28953:28957 Corelib.Init.Logic <> False ind
+prf 28967:29002 <> cut_conservation_physics_green_false
+R29008:29009 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R29010:29031 UMST.ChemConstants.CutConservation <> physicsGreenAuthorized def
+prf 29071:29103 <> cut_conservation_modality_unwired
+R29139:29141 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29109:29138 UMST.ChemConstants.CutConservation <> cutConservationModalityCurrent def
+R29142:29165 UMST.ChemConstants.CutConservation <> cut_conservation_unwired constr

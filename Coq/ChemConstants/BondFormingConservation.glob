@@ -1,0 +1,1224 @@
+DIGEST f7138efae40d3ac9a230cb905858c352
+FUMST.ChemConstants.BondFormingConservation
+R1510:1514 Stdlib.Arith.Arith <> <> lib
+R1516:1521 Stdlib.ZArith.ZArith <> <> lib
+R1523:1528 Stdlib.Strings.String <> <> lib
+R1530:1533 Stdlib.Bool.Bool <> <> lib
+R1535:1537 Stdlib.micromega.Lia <> <> lib
+R1539:1542 Stdlib.Lists.List <> <> lib
+R1552:1564 Stdlib.Lists.List ListNotations <> mod
+ind 1894:1924 <> BondFormingConservationModality
+constr 1940:1972 <> bond_forming_conservation_unwired
+constr 1978:2010 <> bond_forming_conservation_assumed
+constr 2016:2047 <> bond_forming_conservation_proved
+constr 2053:2087 <> bond_forming_conservation_surrogate
+scheme 1894:1924 <> BondFormingConservationModality_rect
+scheme 1894:1924 <> BondFormingConservationModality_ind
+scheme 1894:1924 <> BondFormingConservationModality_rec
+scheme 1894:1924 <> BondFormingConservationModality_sind
+def 2102:2139 <> bondFormingConservationModalityCurrent
+R2143:2173 UMST.ChemConstants.BondFormingConservation <> BondFormingConservationModality ind
+R2180:2212 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+def 2227:2258 <> bond_forming_lattice_cardinality
+R2262:2264 Corelib.Init.Datatypes <> nat ind
+prf 2279:2318 <> bond_forming_lattice_cardinality_is_four
+R2356:2358 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2324:2355 UMST.ChemConstants.BondFormingConservation <> bond_forming_lattice_cardinality def
+prf 2394:2429 <> bond_forming_lattice_not_118_squared
+R2494:2496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2435:2438 Corelib.Init.Datatypes <> negb def
+R2441:2447 Stdlib.Arith.PeanoNat Nat eqb def
+R2449:2480 UMST.ChemConstants.BondFormingConservation <> bond_forming_lattice_cardinality def
+R2486:2488 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2497:2500 Corelib.Init.Datatypes <> true constr
+R2519:2550 UMST.ChemConstants.BondFormingConservation <> bond_forming_lattice_cardinality def
+def 2811:2835 <> pattern_class_cardinality
+R2839:2841 Corelib.Init.Datatypes <> nat ind
+prf 2857:2887 <> pattern_class_cardinality_is_25
+R2918:2920 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2893:2917 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+prf 2957:2985 <> pattern_class_not_118_squared
+R3043:3045 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2991:2994 Corelib.Init.Datatypes <> negb def
+R2997:3003 Stdlib.Arith.PeanoNat Nat eqb def
+R3005:3029 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+R3035:3037 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3046:3049 Corelib.Init.Datatypes <> true constr
+R3068:3092 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+def 3127:3151 <> pattern_class_index_valid
+R3158:3160 Corelib.Init.Datatypes <> nat ind
+binder 3154:3154 <> i:3
+R3165:3168 Corelib.Init.Datatypes <> bool ind
+R3175:3181 Stdlib.Arith.PeanoNat Nat ltb def
+R3183:3183 UMST.ChemConstants.BondFormingConservation <> i:3 var
+R3185:3209 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+def 3292:3315 <> pattern_class_shared_idx
+R3319:3321 Corelib.Init.Datatypes <> nat ind
+def 3340:3369 <> pattern_class_bond_forming_idx
+R3373:3375 Corelib.Init.Datatypes <> nat ind
+prf 3390:3418 <> pattern_class_shared_idx_is_1
+R3448:3450 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3424:3447 UMST.ChemConstants.BondFormingConservation <> pattern_class_shared_idx def
+prf 3486:3520 <> pattern_class_bond_forming_idx_is_2
+R3556:3558 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3526:3555 UMST.ChemConstants.BondFormingConservation <> pattern_class_bond_forming_idx def
+prf 3594:3633 <> pattern_class_bond_forming_indices_valid
+R3696:3701 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3689:3691 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3639:3663 UMST.ChemConstants.BondFormingConservation <> pattern_class_index_valid def
+R3665:3688 UMST.ChemConstants.BondFormingConservation <> pattern_class_shared_idx def
+R3692:3695 Corelib.Init.Datatypes <> true constr
+R3758:3760 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3702:3726 UMST.ChemConstants.BondFormingConservation <> pattern_class_index_valid def
+R3728:3757 UMST.ChemConstants.BondFormingConservation <> pattern_class_bond_forming_idx def
+R3761:3764 Corelib.Init.Datatypes <> true constr
+R3797:3821 UMST.ChemConstants.BondFormingConservation <> pattern_class_index_valid def
+R3824:3848 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+ind 4106:4120 <> forming_channel
+constr 4136:4157 <> forming_interact_apply
+constr 4163:4187 <> forming_refine_separation
+scheme 4106:4120 <> forming_channel_rect
+scheme 4106:4120 <> forming_channel_ind
+scheme 4106:4120 <> forming_channel_rec
+scheme 4106:4120 <> forming_channel_sind
+def 4202:4234 <> forming_channel_is_interact_apply
+R4241:4255 UMST.ChemConstants.BondFormingConservation <> forming_channel ind
+binder 4237:4237 <> c:6
+R4260:4263 Corelib.Init.Datatypes <> bool ind
+R4276:4276 UMST.ChemConstants.BondFormingConservation <> c:6 var
+R4287:4308 UMST.ChemConstants.BondFormingConservation <> forming_interact_apply constr
+R4313:4316 Corelib.Init.Datatypes <> true constr
+R4327:4331 Corelib.Init.Datatypes <> false constr
+def 4352:4387 <> forming_channel_is_refine_separation
+R4394:4408 UMST.ChemConstants.BondFormingConservation <> forming_channel ind
+binder 4390:4390 <> c:8
+R4413:4416 Corelib.Init.Datatypes <> bool ind
+R4429:4429 UMST.ChemConstants.BondFormingConservation <> c:8 var
+R4440:4464 UMST.ChemConstants.BondFormingConservation <> forming_refine_separation constr
+R4469:4472 Corelib.Init.Datatypes <> true constr
+R4483:4487 Corelib.Init.Datatypes <> false constr
+prf 4503:4528 <> interact_apply_is_interact
+R4590:4592 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4534:4566 UMST.ChemConstants.BondFormingConservation <> forming_channel_is_interact_apply def
+R4568:4589 UMST.ChemConstants.BondFormingConservation <> forming_interact_apply constr
+R4593:4596 Corelib.Init.Datatypes <> true constr
+prf 4631:4666 <> interact_apply_not_refine_separation
+R4731:4733 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4672:4707 UMST.ChemConstants.BondFormingConservation <> forming_channel_is_refine_separation def
+R4709:4730 UMST.ChemConstants.BondFormingConservation <> forming_interact_apply constr
+R4734:4738 Corelib.Init.Datatypes <> false constr
+prf 4773:4808 <> refine_separation_not_interact_apply
+R4873:4875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4814:4846 UMST.ChemConstants.BondFormingConservation <> forming_channel_is_interact_apply def
+R4848:4872 UMST.ChemConstants.BondFormingConservation <> forming_refine_separation constr
+R4876:4880 Corelib.Init.Datatypes <> false constr
+def 4920:4930 <> qtaimBcpTag
+R4934:4939 Stdlib.Strings.String <> string ind
+def 4968:4983 <> interactApplyTag
+R4987:4992 Stdlib.Strings.String <> string ind
+def 5034:5045 <> mayerDdecTag
+R5049:5054 Stdlib.Strings.String <> string ind
+prf 5080:5101 <> qtaim_bcp_tag_nonempty
+R5116:5119 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5105:5115 UMST.ChemConstants.BondFormingConservation <> qtaimBcpTag def
+prf 5157:5183 <> interact_apply_tag_nonempty
+R5203:5206 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5187:5202 UMST.ChemConstants.BondFormingConservation <> interactApplyTag def
+def 5249:5273 <> interactNeRefineCollision
+R5277:5282 Stdlib.Strings.String <> string ind
+prf 5339:5375 <> interact_ne_refine_collision_nonempty
+R5406:5409 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5381:5405 UMST.ChemConstants.BondFormingConservation <> interactNeRefineCollision def
+ind 5675:5693 <> pattern_bundle_slot
+constr 5709:5727 <> bundle_slot_unwired
+constr 5733:5750 <> bundle_slot_absent
+constr 5756:5774 <> bundle_slot_present
+scheme 5675:5693 <> pattern_bundle_slot_rect
+scheme 5675:5693 <> pattern_bundle_slot_ind
+scheme 5675:5693 <> pattern_bundle_slot_rec
+scheme 5675:5693 <> pattern_bundle_slot_sind
+def 5789:5811 <> pattern_bundle_slot_beq
+R5822:5840 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot ind
+binder 5814:5815 <> s1:12
+binder 5817:5818 <> s2:13
+R5845:5848 Corelib.Init.Datatypes <> bool ind
+R5865:5866 UMST.ChemConstants.BondFormingConservation <> s2:13 var
+R5861:5862 UMST.ChemConstants.BondFormingConservation <> s1:12 var
+R5877:5895 UMST.ChemConstants.BondFormingConservation <> bundle_slot_unwired constr
+R5898:5916 UMST.ChemConstants.BondFormingConservation <> bundle_slot_unwired constr
+R5921:5924 Corelib.Init.Datatypes <> true constr
+R5930:5947 UMST.ChemConstants.BondFormingConservation <> bundle_slot_absent constr
+R5950:5967 UMST.ChemConstants.BondFormingConservation <> bundle_slot_absent constr
+R5972:5975 Corelib.Init.Datatypes <> true constr
+R5981:5999 UMST.ChemConstants.BondFormingConservation <> bundle_slot_present constr
+R6002:6020 UMST.ChemConstants.BondFormingConservation <> bundle_slot_present constr
+R6025:6028 Corelib.Init.Datatypes <> true constr
+R6042:6046 Corelib.Init.Datatypes <> false constr
+def 6067:6096 <> pattern_bundle_slot_is_present
+R6103:6121 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot ind
+binder 6099:6099 <> s:16
+R6126:6129 Corelib.Init.Datatypes <> bool ind
+R6142:6142 UMST.ChemConstants.BondFormingConservation <> s:16 var
+R6153:6171 UMST.ChemConstants.BondFormingConservation <> bundle_slot_present constr
+R6176:6179 Corelib.Init.Datatypes <> true constr
+R6190:6194 Corelib.Init.Datatypes <> false constr
+def 6215:6238 <> patternBundleUnwiredSlot
+R6242:6260 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot ind
+R6265:6283 UMST.ChemConstants.BondFormingConservation <> bundle_slot_unwired constr
+def 6297:6320 <> patternBundlePresentSlot
+R6324:6342 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot ind
+R6347:6365 UMST.ChemConstants.BondFormingConservation <> bundle_slot_present constr
+def 6605:6618 <> pattern_bundle
+R6633:6636 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6630:6632 Corelib.Init.Datatypes <> nat ind
+R6637:6655 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot ind
+def 6670:6692 <> patternBundleAllUnwired
+R6696:6709 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+R6725:6743 UMST.ChemConstants.BondFormingConservation <> bundle_slot_unwired constr
+def 6758:6772 <> patternBundleAt
+R6779:6792 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 6775:6775 <> b:18
+R6802:6804 Corelib.Init.Datatypes <> nat ind
+binder 6796:6798 <> idx:19
+R6817:6835 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot ind
+binder 6810:6813 <> slot:20
+R6840:6853 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 6864:6864 <> i:21
+R6872:6878 Stdlib.Arith.PeanoNat Nat eqb def
+R6880:6880 UMST.ChemConstants.BondFormingConservation <> i:21 var
+R6882:6884 UMST.ChemConstants.BondFormingConservation <> idx:19 var
+R6901:6901 UMST.ChemConstants.BondFormingConservation <> b:18 var
+R6903:6903 UMST.ChemConstants.BondFormingConservation <> i:21 var
+R6891:6894 UMST.ChemConstants.BondFormingConservation <> slot:20 var
+def 6918:6941 <> patternBundleWithPresent
+R6948:6961 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 6944:6944 <> b:22
+R6971:6973 Corelib.Init.Datatypes <> nat ind
+binder 6965:6967 <> idx:23
+R6978:6991 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+R6998:7012 UMST.ChemConstants.BondFormingConservation <> patternBundleAt def
+R7014:7014 UMST.ChemConstants.BondFormingConservation <> b:22 var
+R7016:7018 UMST.ChemConstants.BondFormingConservation <> idx:23 var
+R7020:7038 UMST.ChemConstants.BondFormingConservation <> bundle_slot_present constr
+def 7051:7069 <> count_present_up_to
+R7076:7089 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 7072:7072 <> b:24
+R7101:7103 Corelib.Init.Datatypes <> nat ind
+binder 7093:7097 <> bound:25
+R7108:7110 Corelib.Init.Datatypes <> nat ind
+R7123:7127 UMST.ChemConstants.BondFormingConservation <> bound:25 var
+R7149:7149 Corelib.Init.Datatypes <> S constr
+R7184:7213 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot_is_present def
+R7216:7216 UMST.ChemConstants.BondFormingConservation <> b:24 var
+R7219:7222 Corelib.Init.Peano <> pred abbrev
+R7224:7228 UMST.ChemConstants.BondFormingConservation <> bound:25 var
+binder 7166:7168 <> add:28
+R7286:7288 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R7263:7281 UMST.ChemConstants.BondFormingConservation <> count_present_up_to:26 def
+R7283:7283 UMST.ChemConstants.BondFormingConservation <> b:24 var
+R7289:7291 UMST.ChemConstants.BondFormingConservation <> add:28 var
+def 7312:7336 <> patternBundlePresentCount
+R7343:7356 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 7339:7339 <> b:29
+R7361:7363 Corelib.Init.Datatypes <> nat ind
+R7370:7388 UMST.ChemConstants.BondFormingConservation <> count_present_up_to def
+R7390:7390 UMST.ChemConstants.BondFormingConservation <> b:29 var
+R7392:7416 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+def 7431:7448 <> patternBundleHolds
+R7455:7468 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 7451:7451 <> b:30
+R7478:7480 Corelib.Init.Datatypes <> nat ind
+binder 7472:7474 <> idx:31
+R7485:7488 Corelib.Init.Datatypes <> bool ind
+R7495:7524 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot_is_present def
+R7527:7527 UMST.ChemConstants.BondFormingConservation <> b:30 var
+R7529:7531 UMST.ChemConstants.BondFormingConservation <> idx:31 var
+def 7547:7578 <> patternBundleIsConcurrentProduct
+R7585:7598 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 7581:7581 <> b:32
+R7603:7606 Corelib.Init.Datatypes <> bool ind
+R7613:7619 Stdlib.Arith.PeanoNat Nat leb def
+R7624:7648 UMST.ChemConstants.BondFormingConservation <> patternBundlePresentCount def
+R7650:7650 UMST.ChemConstants.BondFormingConservation <> b:32 var
+def 7664:7695 <> pattern_bundle_slots_match_up_to
+R7708:7721 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 7700:7701 <> b1:33
+binder 7703:7704 <> b2:34
+R7733:7735 Corelib.Init.Datatypes <> nat ind
+binder 7725:7729 <> bound:35
+R7740:7743 Corelib.Init.Datatypes <> bool ind
+R7756:7760 UMST.ChemConstants.BondFormingConservation <> bound:35 var
+R7776:7779 Corelib.Init.Datatypes <> true constr
+R7785:7785 Corelib.Init.Datatypes <> S constr
+R7857:7866 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7798:7820 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slot_beq def
+R7823:7824 UMST.ChemConstants.BondFormingConservation <> b1:33 var
+R7827:7830 Corelib.Init.Peano <> pred abbrev
+R7832:7836 UMST.ChemConstants.BondFormingConservation <> bound:35 var
+R7841:7842 UMST.ChemConstants.BondFormingConservation <> b2:34 var
+R7845:7848 Corelib.Init.Peano <> pred abbrev
+R7850:7854 UMST.ChemConstants.BondFormingConservation <> bound:35 var
+R7867:7898 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slots_match_up_to:36 def
+R7903:7904 UMST.ChemConstants.BondFormingConservation <> b2:34 var
+R7900:7901 UMST.ChemConstants.BondFormingConservation <> b1:33 var
+def 7927:7956 <> patternBundleIdentityConserved
+R7967:7980 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 7959:7960 <> b1:38
+binder 7962:7963 <> b2:39
+R7985:7988 Corelib.Init.Datatypes <> bool ind
+R7995:8026 UMST.ChemConstants.BondFormingConservation <> pattern_bundle_slots_match_up_to def
+R8028:8029 UMST.ChemConstants.BondFormingConservation <> b1:38 var
+R8031:8032 UMST.ChemConstants.BondFormingConservation <> b2:39 var
+R8034:8058 UMST.ChemConstants.BondFormingConservation <> pattern_class_cardinality def
+def 8147:8183 <> patternBundleBondFormingSharedWitness
+R8187:8200 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+R8207:8230 UMST.ChemConstants.BondFormingConservation <> patternBundleWithPresent def
+R8237:8260 UMST.ChemConstants.BondFormingConservation <> patternBundleWithPresent def
+R8262:8284 UMST.ChemConstants.BondFormingConservation <> patternBundleAllUnwired def
+R8292:8315 UMST.ChemConstants.BondFormingConservation <> pattern_class_shared_idx def
+R8322:8351 UMST.ChemConstants.BondFormingConservation <> pattern_class_bond_forming_idx def
+def 8366:8390 <> patternBundleEmptyWitness
+R8394:8407 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+R8414:8436 UMST.ChemConstants.BondFormingConservation <> patternBundleAllUnwired def
+def 8451:8476 <> patternBundleSinglePresent
+R8480:8493 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+R8500:8523 UMST.ChemConstants.BondFormingConservation <> patternBundleWithPresent def
+R8525:8547 UMST.ChemConstants.BondFormingConservation <> patternBundleAllUnwired def
+R8549:8578 UMST.ChemConstants.BondFormingConservation <> pattern_class_bond_forming_idx def
+prf 8588:8621 <> bond_forming_shared_shared_present
+R8708:8710 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8627:8644 UMST.ChemConstants.BondFormingConservation <> patternBundleHolds def
+R8646:8682 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R8684:8707 UMST.ChemConstants.BondFormingConservation <> pattern_class_shared_idx def
+R8711:8714 Corelib.Init.Datatypes <> true constr
+prf 8749:8788 <> bond_forming_shared_bond_forming_present
+R8881:8883 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8794:8811 UMST.ChemConstants.BondFormingConservation <> patternBundleHolds def
+R8813:8849 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R8851:8880 UMST.ChemConstants.BondFormingConservation <> pattern_class_bond_forming_idx def
+R8884:8887 Corelib.Init.Datatypes <> true constr
+prf 8922:8961 <> bond_forming_shared_present_count_is_two
+R9030:9032 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8967:8991 UMST.ChemConstants.BondFormingConservation <> patternBundlePresentCount def
+R8993:9029 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+prf 9068:9108 <> bond_forming_shared_is_concurrent_product
+R9184:9186 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9114:9145 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R9147:9183 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R9187:9190 Corelib.Init.Datatypes <> true constr
+R9209:9240 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R9253:9292 UMST.ChemConstants.BondFormingConservation <> bond_forming_shared_present_count_is_two thm
+R9253:9292 UMST.ChemConstants.BondFormingConservation <> bond_forming_shared_present_count_is_two thm
+R9253:9292 UMST.ChemConstants.BondFormingConservation <> bond_forming_shared_present_count_is_two thm
+prf 9322:9352 <> empty_bundle_present_count_zero
+R9409:9411 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9358:9382 UMST.ChemConstants.BondFormingConservation <> patternBundlePresentCount def
+R9384:9408 UMST.ChemConstants.BondFormingConservation <> patternBundleEmptyWitness def
+prf 9447:9481 <> empty_bundle_not_concurrent_product
+R9545:9547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9487:9518 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R9520:9544 UMST.ChemConstants.BondFormingConservation <> patternBundleEmptyWitness def
+R9548:9552 Corelib.Init.Datatypes <> false constr
+R9571:9602 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R9615:9645 UMST.ChemConstants.BondFormingConservation <> empty_bundle_present_count_zero thm
+R9615:9645 UMST.ChemConstants.BondFormingConservation <> empty_bundle_present_count_zero thm
+R9615:9645 UMST.ChemConstants.BondFormingConservation <> empty_bundle_present_count_zero thm
+prf 9675:9701 <> single_present_count_is_one
+R9759:9761 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9707:9731 UMST.ChemConstants.BondFormingConservation <> patternBundlePresentCount def
+R9733:9758 UMST.ChemConstants.BondFormingConservation <> patternBundleSinglePresent def
+prf 9797:9833 <> single_present_not_concurrent_product
+R9898:9900 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9839:9870 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R9872:9897 UMST.ChemConstants.BondFormingConservation <> patternBundleSinglePresent def
+R9901:9905 Corelib.Init.Datatypes <> false constr
+R9924:9955 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R9968:9994 UMST.ChemConstants.BondFormingConservation <> single_present_count_is_one thm
+R9968:9994 UMST.ChemConstants.BondFormingConservation <> single_present_count_is_one thm
+R9968:9994 UMST.ChemConstants.BondFormingConservation <> single_present_count_is_one thm
+prf 10024:10061 <> bond_forming_shared_identity_conserved
+R10177:10179 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10067:10096 UMST.ChemConstants.BondFormingConservation <> patternBundleIdentityConserved def
+R10098:10134 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R10140:10176 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R10180:10183 Corelib.Init.Datatypes <> true constr
+ind 10447:10467 <> xor_classifier_bucket
+constr 10483:10502 <> xor_bucket_exclusive
+constr 10508:10536 <> xor_bucket_concurrent_product
+scheme 10447:10467 <> xor_classifier_bucket_rect
+scheme 10447:10467 <> xor_classifier_bucket_ind
+scheme 10447:10467 <> xor_classifier_bucket_rec
+scheme 10447:10467 <> xor_classifier_bucket_sind
+def 10551:10569 <> xorClassifierMarker
+R10573:10578 Stdlib.Strings.String <> string ind
+def 10631:10653 <> concurrentProductMarker
+R10657:10662 Stdlib.Strings.String <> string ind
+prf 10712:10750 <> xor_marker_ne_concurrent_product_marker
+R10775:10778 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10756:10774 UMST.ChemConstants.BondFormingConservation <> xorClassifierMarker def
+R10779:10801 UMST.ChemConstants.BondFormingConservation <> concurrentProductMarker def
+def 10842:10866 <> xorClassifierIncompatible
+R10881:10884 Corelib.Init.Datatypes <> bool ind
+binder 10869:10877 <> claim_xor:42
+R10892:10905 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 10888:10888 <> b:43
+R10910:10913 Corelib.Init.Datatypes <> bool ind
+R10929:10932 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10920:10928 UMST.ChemConstants.BondFormingConservation <> claim_xor:42 var
+R10933:10964 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R10966:10966 UMST.ChemConstants.BondFormingConservation <> b:43 var
+prf 10976:11008 <> xor_refuse_on_bond_forming_shared
+R11082:11084 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11014:11038 UMST.ChemConstants.BondFormingConservation <> xorClassifierIncompatible def
+R11040:11043 Corelib.Init.Datatypes <> true constr
+R11045:11081 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R11085:11088 Corelib.Init.Datatypes <> true constr
+R11107:11131 UMST.ChemConstants.BondFormingConservation <> xorClassifierIncompatible def
+prf 11184:11217 <> xor_ok_on_concurrent_product_claim
+R11292:11294 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11223:11247 UMST.ChemConstants.BondFormingConservation <> xorClassifierIncompatible def
+R11249:11253 Corelib.Init.Datatypes <> false constr
+R11255:11291 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R11295:11299 Corelib.Init.Datatypes <> false constr
+def 11339:11351 <> productNotXor
+R11355:11358 Corelib.Init.Datatypes <> bool ind
+R11435:11440 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11365:11396 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R11398:11434 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R11441:11465 UMST.ChemConstants.BondFormingConservation <> xorClassifierIncompatible def
+R11467:11470 Corelib.Init.Datatypes <> true constr
+R11472:11508 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+prf 11518:11537 <> product_not_xor_true
+R11554:11556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11541:11553 UMST.ChemConstants.BondFormingConservation <> productNotXor def
+R11557:11560 Corelib.Init.Datatypes <> true constr
+R11579:11591 UMST.ChemConstants.BondFormingConservation <> productNotXor def
+prf 11646:11671 <> concurrent_product_not_xor
+R11697:11702 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11690:11692 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11677:11689 UMST.ChemConstants.BondFormingConservation <> productNotXor def
+R11693:11696 Corelib.Init.Datatypes <> true constr
+R11785:11790 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11778:11780 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11703:11709 Stdlib.Arith.PeanoNat Nat leb def
+R11714:11738 UMST.ChemConstants.BondFormingConservation <> patternBundlePresentCount def
+R11740:11776 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R11781:11784 Corelib.Init.Datatypes <> true constr
+R11810:11813 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11791:11809 UMST.ChemConstants.BondFormingConservation <> xorClassifierMarker def
+R11814:11836 UMST.ChemConstants.BondFormingConservation <> concurrentProductMarker def
+R11865:11884 UMST.ChemConstants.BondFormingConservation <> product_not_xor_true thm
+R11865:11884 UMST.ChemConstants.BondFormingConservation <> product_not_xor_true thm
+R11912:11951 UMST.ChemConstants.BondFormingConservation <> bond_forming_shared_present_count_is_two thm
+R11912:11951 UMST.ChemConstants.BondFormingConservation <> bond_forming_shared_present_count_is_two thm
+R11912:11951 UMST.ChemConstants.BondFormingConservation <> bond_forming_shared_present_count_is_two thm
+R11985:12023 UMST.ChemConstants.BondFormingConservation <> xor_marker_ne_concurrent_product_marker thm
+R11985:12023 UMST.ChemConstants.BondFormingConservation <> xor_marker_ne_concurrent_product_marker thm
+def 12267:12297 <> formingArrowIsInteractNotRefine
+R12301:12304 Corelib.Init.Datatypes <> bool ind
+R12367:12372 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12311:12343 UMST.ChemConstants.BondFormingConservation <> forming_channel_is_interact_apply def
+R12345:12366 UMST.ChemConstants.BondFormingConservation <> forming_interact_apply constr
+R12373:12376 Corelib.Init.Datatypes <> negb def
+R12379:12414 UMST.ChemConstants.BondFormingConservation <> forming_channel_is_refine_separation def
+R12416:12437 UMST.ChemConstants.BondFormingConservation <> forming_interact_apply constr
+prf 12448:12480 <> forming_arrow_interact_not_refine
+R12517:12519 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12486:12516 UMST.ChemConstants.BondFormingConservation <> formingArrowIsInteractNotRefine def
+R12520:12523 Corelib.Init.Datatypes <> true constr
+R12542:12572 UMST.ChemConstants.BondFormingConservation <> formingArrowIsInteractNotRefine def
+def 12607:12633 <> refineAsFormingArrowRefused
+R12659:12662 Corelib.Init.Datatypes <> bool ind
+binder 12636:12655 <> claim_refine_forming:44
+R12667:12670 Corelib.Init.Datatypes <> bool ind
+R12697:12702 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12677:12696 UMST.ChemConstants.BondFormingConservation <> claim_refine_forming:44 var
+R12703:12735 UMST.ChemConstants.BondFormingConservation <> forming_channel_is_interact_apply def
+R12737:12758 UMST.ChemConstants.BondFormingConservation <> forming_interact_apply constr
+prf 12768:12804 <> refine_as_forming_arrow_refused_false
+R12843:12845 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12810:12836 UMST.ChemConstants.BondFormingConservation <> refineAsFormingArrowRefused def
+R12838:12842 Corelib.Init.Datatypes <> false constr
+R12846:12850 Corelib.Init.Datatypes <> false constr
+prf 12885:12921 <> refine_as_forming_arrow_claim_refused
+R12959:12961 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12927:12953 UMST.ChemConstants.BondFormingConservation <> refineAsFormingArrowRefused def
+R12955:12958 Corelib.Init.Datatypes <> true constr
+R12962:12965 Corelib.Init.Datatypes <> true constr
+ind 13230:13254 <> bond_forming_bar_presence
+constr 13270:13292 <> bond_forming_bar_absent
+constr 13298:13321 <> bond_forming_bar_present
+scheme 13230:13254 <> bond_forming_bar_presence_rect
+scheme 13230:13254 <> bond_forming_bar_presence_ind
+scheme 13230:13254 <> bond_forming_bar_presence_rec
+scheme 13230:13254 <> bond_forming_bar_presence_sind
+rec 13332:13353 <> bond_claim_forming_bar
+proj 13369:13385 <> bond_bar_presence
+proj 13418:13446 <> bond_forming_bar_defect_total
+R13389:13413 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_presence ind
+R13450:13452 Corelib.Init.Datatypes <> nat ind
+def 13469:13493 <> bondClaimFormingBarAbsent
+R13497:13518 UMST.ChemConstants.BondFormingConservation <> bond_claim_forming_bar rec
+R13528:13544 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13528:13544 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13528:13544 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13579:13607 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_defect_total proj
+R13579:13607 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_defect_total proj
+R13549:13571 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_absent constr
+def 13630:13658 <> bondClaimFormingBarZeroDefect
+R13662:13683 UMST.ChemConstants.BondFormingConservation <> bond_claim_forming_bar rec
+R13693:13709 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13693:13709 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13693:13709 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13745:13773 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_defect_total proj
+R13745:13773 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_defect_total proj
+R13714:13737 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_present constr
+def 13796:13829 <> bond_claim_forming_bar_zero_defect
+R13836:13857 UMST.ChemConstants.BondFormingConservation <> bond_claim_forming_bar rec
+binder 13832:13832 <> b:50
+R13862:13865 Corelib.Init.Datatypes <> bool ind
+R13878:13894 UMST.ChemConstants.BondFormingConservation <> bond_bar_presence proj
+R13896:13896 UMST.ChemConstants.BondFormingConservation <> b:50 var
+R13907:13929 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_absent constr
+R13934:13938 Corelib.Init.Datatypes <> false constr
+R13944:13967 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_present constr
+R13978:13984 Stdlib.Arith.PeanoNat Nat eqb def
+R13987:14015 UMST.ChemConstants.BondFormingConservation <> bond_forming_bar_defect_total proj
+R14017:14017 UMST.ChemConstants.BondFormingConservation <> b:50 var
+prf 14036:14074 <> bond_claim_forming_bar_zero_defect_true
+R14144:14146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14080:14113 UMST.ChemConstants.BondFormingConservation <> bond_claim_forming_bar_zero_defect def
+R14115:14143 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarZeroDefect def
+R14147:14150 Corelib.Init.Datatypes <> true constr
+prf 14185:14229 <> bond_claim_forming_bar_absent_not_zero_defect
+R14295:14297 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14235:14268 UMST.ChemConstants.BondFormingConservation <> bond_claim_forming_bar_zero_defect def
+R14270:14294 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R14298:14302 Corelib.Init.Datatypes <> false constr
+ind 14565:14597 <> bond_forming_conservation_verdict
+constr 14613:14630 <> verdict_unwired_ok
+constr 14636:14664 <> verdict_bond_forming_named_ok
+constr 14670:14698 <> verdict_trivial_bundle_refuse
+constr 14704:14732 <> verdict_xor_classifier_refuse
+constr 14738:14766 <> verdict_refine_forming_refuse
+constr 14772:14798 <> verdict_green_invent_refuse
+constr 14804:14836 <> verdict_proved_without_bar_refuse
+constr 14842:14872 <> verdict_production_wired_refuse
+scheme 14565:14597 <> bond_forming_conservation_verdict_rect
+scheme 14565:14597 <> bond_forming_conservation_verdict_ind
+scheme 14565:14597 <> bond_forming_conservation_verdict_rec
+scheme 14565:14597 <> bond_forming_conservation_verdict_sind
+def 14887:14922 <> bond_forming_conservation_verdict_ok
+R14931:14963 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict ind
+binder 14927:14927 <> v:53
+R14968:14971 Corelib.Init.Datatypes <> bool ind
+R14984:14984 UMST.ChemConstants.BondFormingConservation <> v:53 var
+R14995:15012 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+R15017:15020 Corelib.Init.Datatypes <> true constr
+R15026:15054 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R15059:15062 Corelib.Init.Datatypes <> true constr
+R15073:15077 Corelib.Init.Datatypes <> false constr
+def 15098:15120 <> patternBundleNontrivial
+R15127:15140 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 15123:15123 <> b:55
+R15145:15148 Corelib.Init.Datatypes <> bool ind
+R15155:15161 Stdlib.Arith.PeanoNat Nat ltb def
+R15166:15190 UMST.ChemConstants.BondFormingConservation <> patternBundlePresentCount def
+R15192:15192 UMST.ChemConstants.BondFormingConservation <> b:55 var
+def 15208:15235 <> evaluate_bond_forming_bundle
+R15244:15274 UMST.ChemConstants.BondFormingConservation <> BondFormingConservationModality ind
+binder 15240:15240 <> m:56
+R15284:15297 UMST.ChemConstants.BondFormingConservation <> pattern_bundle def
+binder 15280:15280 <> b:57
+R15309:15330 UMST.ChemConstants.BondFormingConservation <> bond_claim_forming_bar rec
+binder 15303:15305 <> bar:58
+R15359:15362 Corelib.Init.Datatypes <> bool ind
+binder 15336:15355 <> claim_xor_classifier:59
+R15391:15394 Corelib.Init.Datatypes <> bool ind
+binder 15368:15387 <> claim_refine_forming:60
+R15422:15425 Corelib.Init.Datatypes <> bool ind
+binder 15400:15418 <> claim_physics_green:61
+R15446:15449 Corelib.Init.Datatypes <> bool ind
+binder 15431:15442 <> claim_proved:62
+R15454:15486 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict ind
+R15496:15514 UMST.ChemConstants.BondFormingConservation <> claim_physics_green:61 var
+R15561:15572 UMST.ChemConstants.BondFormingConservation <> claim_proved:62 var
+R15635:15654 UMST.ChemConstants.BondFormingConservation <> claim_refine_forming:60 var
+R15723:15726 Corelib.Init.Datatypes <> negb def
+R15729:15751 UMST.ChemConstants.BondFormingConservation <> patternBundleNontrivial def
+R15753:15753 UMST.ChemConstants.BondFormingConservation <> b:57 var
+R15833:15857 UMST.ChemConstants.BondFormingConservation <> xorClassifierIncompatible def
+R15859:15878 UMST.ChemConstants.BondFormingConservation <> claim_xor_classifier:59 var
+R15880:15880 UMST.ChemConstants.BondFormingConservation <> b:57 var
+R15996:15996 UMST.ChemConstants.BondFormingConservation <> m:56 var
+R16029:16061 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R16066:16094 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R16122:16154 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_assumed constr
+R16182:16216 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_surrogate constr
+R16221:16238 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+R16221:16238 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+R16266:16297 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R16330:16362 UMST.ChemConstants.BondFormingConservation <> verdict_proved_without_bar_refuse constr
+R15909:15937 UMST.ChemConstants.BondFormingConservation <> verdict_xor_classifier_refuse constr
+R15778:15806 UMST.ChemConstants.BondFormingConservation <> verdict_trivial_bundle_refuse constr
+R15673:15701 UMST.ChemConstants.BondFormingConservation <> verdict_refine_forming_refuse constr
+R15586:15618 UMST.ChemConstants.BondFormingConservation <> verdict_proved_without_bar_refuse constr
+R15523:15549 UMST.ChemConstants.BondFormingConservation <> verdict_green_invent_refuse constr
+def 16405:16444 <> evaluate_bond_forming_conservation_close
+R16453:16483 UMST.ChemConstants.BondFormingConservation <> BondFormingConservationModality ind
+binder 16449:16449 <> m:64
+R16511:16514 Corelib.Init.Datatypes <> bool ind
+binder 16489:16507 <> claim_physics_green:65
+R16545:16548 Corelib.Init.Datatypes <> bool ind
+binder 16520:16541 <> claim_production_wired:66
+R16553:16585 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict ind
+R16595:16613 UMST.ChemConstants.BondFormingConservation <> claim_physics_green:65 var
+R16660:16681 UMST.ChemConstants.BondFormingConservation <> claim_production_wired:66 var
+R16739:16739 UMST.ChemConstants.BondFormingConservation <> m:64 var
+R16752:16784 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R16789:16806 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+R16814:16846 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_assumed constr
+R16854:16885 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R16893:16927 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_surrogate constr
+R16932:16960 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R16932:16960 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R16932:16960 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R16690:16720 UMST.ChemConstants.BondFormingConservation <> verdict_production_wired_refuse constr
+R16622:16648 UMST.ChemConstants.BondFormingConservation <> verdict_green_invent_refuse constr
+def 16983:17018 <> bond_forming_conservation_authorized
+R17045:17048 Corelib.Init.Datatypes <> bool ind
+binder 17023:17041 <> claim_physics_green:68
+R17079:17082 Corelib.Init.Datatypes <> bool ind
+binder 17054:17075 <> claim_production_wired:69
+R17087:17090 Corelib.Init.Datatypes <> bool ind
+R17103:17142 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R17154:17185 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R17187:17205 UMST.ChemConstants.BondFormingConservation <> claim_physics_green:68 var
+R17207:17228 UMST.ChemConstants.BondFormingConservation <> claim_production_wired:69 var
+R17239:17267 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R17272:17275 Corelib.Init.Datatypes <> true constr
+R17286:17290 Corelib.Init.Datatypes <> false constr
+ind 17534:17562 <> bond_forming_conservation_law
+constr 17578:17599 <> law_bond_forming_named
+constr 17605:17629 <> law_xor_classifier_refuse
+constr 17635:17659 <> law_refine_forming_refuse
+constr 17665:17687 <> law_green_invent_refuse
+constr 17693:17719 <> law_production_wired_refuse
+scheme 17534:17562 <> bond_forming_conservation_law_rect
+scheme 17534:17562 <> bond_forming_conservation_law_ind
+scheme 17534:17562 <> bond_forming_conservation_law_rec
+scheme 17534:17562 <> bond_forming_conservation_law_sind
+def 17734:17768 <> bond_forming_conservation_law_count
+R17772:17774 Corelib.Init.Datatypes <> nat ind
+prf 17789:17831 <> bond_forming_conservation_law_count_is_five
+R17872:17874 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17837:17871 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_law_count def
+ind 17914:17950 <> bond_forming_conservation_law_witness
+constr 17966:17994 <> bond_forming_law_witness_open
+constr 18000:18030 <> bond_forming_law_witness_proved
+scheme 17914:17950 <> bond_forming_conservation_law_witness_rect
+scheme 17914:17950 <> bond_forming_conservation_law_witness_ind
+scheme 17914:17950 <> bond_forming_conservation_law_witness_rec
+scheme 17914:17950 <> bond_forming_conservation_law_witness_sind
+def 18045:18090 <> evaluate_bond_forming_conservation_law_witness
+R18101:18129 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_law ind
+binder 18095:18097 <> law:74
+R18137:18167 UMST.ChemConstants.BondFormingConservation <> BondFormingConservationModality ind
+binder 18133:18133 <> m:75
+R18174:18210 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_law_witness ind
+R18223:18223 UMST.ChemConstants.BondFormingConservation <> m:75 var
+R18234:18266 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R18272:18304 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_assumed constr
+R18310:18344 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_surrogate constr
+R18349:18377 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R18349:18377 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R18349:18377 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R18383:18414 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R18419:18449 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_proved constr
+prf 18465:18514 <> all_bond_forming_conservation_laws_open_at_unwired
+R18659:18664 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18627:18629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18520:18565 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_law_witness def
+R18567:18588 UMST.ChemConstants.BondFormingConservation <> law_bond_forming_named constr
+R18594:18626 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R18630:18658 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R18807:18812 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18775:18777 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18665:18710 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_law_witness def
+R18712:18736 UMST.ChemConstants.BondFormingConservation <> law_xor_classifier_refuse constr
+R18742:18774 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R18778:18806 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R18955:18960 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18923:18925 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18813:18858 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_law_witness def
+R18860:18884 UMST.ChemConstants.BondFormingConservation <> law_refine_forming_refuse constr
+R18890:18922 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R18926:18954 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R19101:19106 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19069:19071 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18961:19006 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_law_witness def
+R19008:19030 UMST.ChemConstants.BondFormingConservation <> law_green_invent_refuse constr
+R19036:19068 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R19072:19100 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+R19219:19221 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19107:19152 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_law_witness def
+R19154:19180 UMST.ChemConstants.BondFormingConservation <> law_production_wired_refuse constr
+R19186:19218 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R19222:19250 UMST.ChemConstants.BondFormingConservation <> bond_forming_law_witness_open constr
+def 19531:19547 <> bondFormingProved
+R19551:19554 Corelib.Init.Datatypes <> bool ind
+R19559:19563 Corelib.Init.Datatypes <> false constr
+prf 19573:19597 <> bond_forming_proved_false
+R19618:19620 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19601:19617 UMST.ChemConstants.BondFormingConservation <> bondFormingProved def
+R19621:19625 Corelib.Init.Datatypes <> false constr
+def 19665:19687 <> not118SquaredGreenTable
+R19691:19694 Corelib.Init.Datatypes <> bool ind
+R19699:19702 Corelib.Init.Datatypes <> true constr
+prf 19712:19738 <> not_118_squared_green_table
+R19765:19767 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19742:19764 UMST.ChemConstants.BondFormingConservation <> not118SquaredGreenTable def
+R19768:19771 Corelib.Init.Datatypes <> true constr
+def 19811:19827 <> interactNotRefine
+R19831:19834 Corelib.Init.Datatypes <> bool ind
+R19839:19842 Corelib.Init.Datatypes <> true constr
+prf 19852:19874 <> interact_not_refine_pin
+R19895:19897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19878:19894 UMST.ChemConstants.BondFormingConservation <> interactNotRefine def
+R19898:19901 Corelib.Init.Datatypes <> true constr
+prf 20158:20196 <> unwired_close_without_production_wiring
+R20292:20296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20202:20241 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R20247:20279 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R20281:20285 Corelib.Init.Datatypes <> false constr
+R20287:20291 Corelib.Init.Datatypes <> false constr
+R20297:20314 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+prf 20351:20402 <> unwired_modality_always_ok_without_production_wiring
+R20498:20502 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20408:20447 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R20453:20485 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R20487:20491 Corelib.Init.Datatypes <> false constr
+R20493:20497 Corelib.Init.Datatypes <> false constr
+R20503:20520 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+R20536:20574 UMST.ChemConstants.BondFormingConservation <> unwired_close_without_production_wiring thm
+R20536:20574 UMST.ChemConstants.BondFormingConservation <> unwired_close_without_production_wiring thm
+prf 20589:20632 <> unwired_verdict_ok_without_production_wiring
+R20774:20778 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20638:20673 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R20680:20719 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R20728:20760 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R20762:20766 Corelib.Init.Datatypes <> false constr
+R20768:20772 Corelib.Init.Datatypes <> false constr
+R20779:20782 Corelib.Init.Datatypes <> true constr
+R20801:20836 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R20849:20887 UMST.ChemConstants.BondFormingConservation <> unwired_close_without_production_wiring thm
+R20849:20887 UMST.ChemConstants.BondFormingConservation <> unwired_close_without_production_wiring thm
+R20849:20887 UMST.ChemConstants.BondFormingConservation <> unwired_close_without_production_wiring thm
+prf 21141:21168 <> bond_forming_shared_named_ok
+R21332:21336 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21174:21201 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R21207:21239 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R21241:21277 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R21283:21307 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R21309:21313 Corelib.Init.Datatypes <> false constr
+R21315:21319 Corelib.Init.Datatypes <> false constr
+R21321:21325 Corelib.Init.Datatypes <> false constr
+R21327:21331 Corelib.Init.Datatypes <> false constr
+R21337:21365 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+prf 21402:21439 <> named_bond_forming_shared_conservation
+R21637:21642 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21603:21607 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21445:21472 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R21478:21510 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R21512:21548 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R21554:21578 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R21580:21584 Corelib.Init.Datatypes <> false constr
+R21586:21590 Corelib.Init.Datatypes <> false constr
+R21592:21596 Corelib.Init.Datatypes <> false constr
+R21598:21602 Corelib.Init.Datatypes <> false constr
+R21608:21636 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R21760:21765 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21753:21755 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21643:21672 UMST.ChemConstants.BondFormingConservation <> patternBundleIdentityConserved def
+R21674:21710 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R21716:21752 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R21756:21759 Corelib.Init.Datatypes <> true constr
+R21836:21838 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21766:21797 UMST.ChemConstants.BondFormingConservation <> patternBundleIsConcurrentProduct def
+R21799:21835 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R21839:21842 Corelib.Init.Datatypes <> true constr
+prf 21893:21919 <> bond_forming_named_close_ok
+R22014:22018 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21925:21964 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R21970:22001 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R22003:22007 Corelib.Init.Datatypes <> false constr
+R22009:22013 Corelib.Init.Datatypes <> false constr
+R22019:22047 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+prf 22084:22120 <> named_bond_forming_conservation_close
+R22249:22254 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22215:22219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22126:22165 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R22171:22202 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R22204:22208 Corelib.Init.Datatypes <> false constr
+R22210:22214 Corelib.Init.Datatypes <> false constr
+R22220:22248 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R22303:22305 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22255:22290 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_authorized def
+R22292:22296 Corelib.Init.Datatypes <> false constr
+R22298:22302 Corelib.Init.Datatypes <> false constr
+R22306:22309 Corelib.Init.Datatypes <> true constr
+R22338:22364 UMST.ChemConstants.BondFormingConservation <> bond_forming_named_close_ok thm
+R22338:22364 UMST.ChemConstants.BondFormingConservation <> bond_forming_named_close_ok thm
+R22378:22413 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_authorized def
+R22428:22454 UMST.ChemConstants.BondFormingConservation <> bond_forming_named_close_ok thm
+R22428:22454 UMST.ChemConstants.BondFormingConservation <> bond_forming_named_close_ok thm
+R22428:22454 UMST.ChemConstants.BondFormingConservation <> bond_forming_named_close_ok thm
+prf 22710:22731 <> trivial_bundle_refused
+R22883:22887 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22737:22764 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R22770:22802 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R22804:22828 UMST.ChemConstants.BondFormingConservation <> patternBundleEmptyWitness def
+R22834:22858 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R22860:22864 Corelib.Init.Datatypes <> false constr
+R22866:22870 Corelib.Init.Datatypes <> false constr
+R22872:22876 Corelib.Init.Datatypes <> false constr
+R22878:22882 Corelib.Init.Datatypes <> false constr
+R22888:22916 UMST.ChemConstants.BondFormingConservation <> verdict_trivial_bundle_refuse constr
+prf 22953:22984 <> trivial_empty_bundle_fail_closed
+R23170:23175 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23136:23140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22990:23017 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R23023:23055 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R23057:23081 UMST.ChemConstants.BondFormingConservation <> patternBundleEmptyWitness def
+R23087:23111 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R23113:23117 Corelib.Init.Datatypes <> false constr
+R23119:23123 Corelib.Init.Datatypes <> false constr
+R23125:23129 Corelib.Init.Datatypes <> false constr
+R23131:23135 Corelib.Init.Datatypes <> false constr
+R23141:23169 UMST.ChemConstants.BondFormingConservation <> verdict_trivial_bundle_refuse constr
+R23371:23375 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23176:23211 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R23218:23245 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R23254:23286 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R23288:23312 UMST.ChemConstants.BondFormingConservation <> patternBundleEmptyWitness def
+R23321:23345 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R23347:23351 Corelib.Init.Datatypes <> false constr
+R23353:23357 Corelib.Init.Datatypes <> false constr
+R23359:23363 Corelib.Init.Datatypes <> false constr
+R23365:23369 Corelib.Init.Datatypes <> false constr
+R23376:23380 Corelib.Init.Datatypes <> false constr
+R23409:23430 UMST.ChemConstants.BondFormingConservation <> trivial_bundle_refused thm
+R23409:23430 UMST.ChemConstants.BondFormingConservation <> trivial_bundle_refused thm
+R23444:23479 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R23494:23515 UMST.ChemConstants.BondFormingConservation <> trivial_bundle_refused thm
+R23494:23515 UMST.ChemConstants.BondFormingConservation <> trivial_bundle_refused thm
+R23494:23515 UMST.ChemConstants.BondFormingConservation <> trivial_bundle_refused thm
+prf 23771:23792 <> xor_classifier_refused
+R23955:23959 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23798:23825 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R23831:23863 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R23865:23901 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R23907:23931 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R23933:23936 Corelib.Init.Datatypes <> true constr
+R23938:23942 Corelib.Init.Datatypes <> false constr
+R23944:23948 Corelib.Init.Datatypes <> false constr
+R23950:23954 Corelib.Init.Datatypes <> false constr
+R23960:23988 UMST.ChemConstants.BondFormingConservation <> verdict_xor_classifier_refuse constr
+prf 24025:24069 <> xor_mutually_exclusive_classifier_fail_closed
+R24266:24271 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24232:24236 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24075:24102 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R24108:24140 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R24142:24178 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R24184:24208 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R24210:24213 Corelib.Init.Datatypes <> true constr
+R24215:24219 Corelib.Init.Datatypes <> false constr
+R24221:24225 Corelib.Init.Datatypes <> false constr
+R24227:24231 Corelib.Init.Datatypes <> false constr
+R24237:24265 UMST.ChemConstants.BondFormingConservation <> verdict_xor_classifier_refuse constr
+R24478:24482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24272:24307 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R24314:24341 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R24350:24382 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R24384:24420 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R24429:24453 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R24455:24458 Corelib.Init.Datatypes <> true constr
+R24460:24464 Corelib.Init.Datatypes <> false constr
+R24466:24470 Corelib.Init.Datatypes <> false constr
+R24472:24476 Corelib.Init.Datatypes <> false constr
+R24483:24487 Corelib.Init.Datatypes <> false constr
+R24516:24537 UMST.ChemConstants.BondFormingConservation <> xor_classifier_refused thm
+R24516:24537 UMST.ChemConstants.BondFormingConservation <> xor_classifier_refused thm
+R24551:24586 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R24601:24622 UMST.ChemConstants.BondFormingConservation <> xor_classifier_refused thm
+R24601:24622 UMST.ChemConstants.BondFormingConservation <> xor_classifier_refused thm
+R24601:24622 UMST.ChemConstants.BondFormingConservation <> xor_classifier_refused thm
+prf 24878:24899 <> refine_forming_refused
+R25062:25066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24905:24932 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R24938:24970 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R24972:25008 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R25014:25038 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R25040:25044 Corelib.Init.Datatypes <> false constr
+R25046:25049 Corelib.Init.Datatypes <> true constr
+R25051:25055 Corelib.Init.Datatypes <> false constr
+R25057:25061 Corelib.Init.Datatypes <> false constr
+R25067:25095 UMST.ChemConstants.BondFormingConservation <> verdict_refine_forming_refuse constr
+prf 25132:25163 <> refine_forming_arrow_fail_closed
+R25360:25365 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25326:25330 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25169:25196 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R25202:25234 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R25236:25272 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R25278:25302 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R25304:25308 Corelib.Init.Datatypes <> false constr
+R25310:25313 Corelib.Init.Datatypes <> true constr
+R25315:25319 Corelib.Init.Datatypes <> false constr
+R25321:25325 Corelib.Init.Datatypes <> false constr
+R25331:25359 UMST.ChemConstants.BondFormingConservation <> verdict_refine_forming_refuse constr
+R25572:25576 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25366:25401 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R25408:25435 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R25444:25476 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R25478:25514 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R25523:25547 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R25549:25553 Corelib.Init.Datatypes <> false constr
+R25555:25558 Corelib.Init.Datatypes <> true constr
+R25560:25564 Corelib.Init.Datatypes <> false constr
+R25566:25570 Corelib.Init.Datatypes <> false constr
+R25577:25581 Corelib.Init.Datatypes <> false constr
+R25610:25631 UMST.ChemConstants.BondFormingConservation <> refine_forming_refused thm
+R25610:25631 UMST.ChemConstants.BondFormingConservation <> refine_forming_refused thm
+R25645:25680 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R25695:25716 UMST.ChemConstants.BondFormingConservation <> refine_forming_refused thm
+R25695:25716 UMST.ChemConstants.BondFormingConservation <> refine_forming_refused thm
+R25695:25716 UMST.ChemConstants.BondFormingConservation <> refine_forming_refused thm
+prf 25972:25998 <> green_invent_refuse_unwired
+R26093:26097 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26004:26043 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R26049:26081 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R26083:26086 Corelib.Init.Datatypes <> true constr
+R26088:26092 Corelib.Init.Datatypes <> false constr
+R26098:26124 UMST.ChemConstants.BondFormingConservation <> verdict_green_invent_refuse constr
+prf 26161:26186 <> green_invent_always_refuse
+R26327:26331 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26192:26227 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R26234:26273 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R26282:26314 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R26316:26319 Corelib.Init.Datatypes <> true constr
+R26321:26325 Corelib.Init.Datatypes <> false constr
+R26332:26336 Corelib.Init.Datatypes <> false constr
+R26355:26390 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R26403:26429 UMST.ChemConstants.BondFormingConservation <> green_invent_refuse_unwired thm
+R26403:26429 UMST.ChemConstants.BondFormingConservation <> green_invent_refuse_unwired thm
+R26403:26429 UMST.ChemConstants.BondFormingConservation <> green_invent_refuse_unwired thm
+prf 26459:26497 <> green_invent_bond_forming_bundle_refuse
+R26660:26664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26503:26530 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R26536:26568 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R26570:26606 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R26612:26636 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R26638:26642 Corelib.Init.Datatypes <> false constr
+R26644:26648 Corelib.Init.Datatypes <> false constr
+R26650:26653 Corelib.Init.Datatypes <> true constr
+R26655:26659 Corelib.Init.Datatypes <> false constr
+R26665:26691 UMST.ChemConstants.BondFormingConservation <> verdict_green_invent_refuse constr
+prf 26950:26974 <> proved_without_bar_refuse
+R27137:27141 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26980:27007 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R27013:27045 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R27047:27083 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R27089:27113 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R27115:27119 Corelib.Init.Datatypes <> false constr
+R27121:27125 Corelib.Init.Datatypes <> false constr
+R27127:27131 Corelib.Init.Datatypes <> false constr
+R27133:27136 Corelib.Init.Datatypes <> true constr
+R27142:27174 UMST.ChemConstants.BondFormingConservation <> verdict_proved_without_bar_refuse constr
+prf 27211:27240 <> proved_without_bar_fail_closed
+R27441:27446 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27403:27407 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27246:27273 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R27279:27311 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R27313:27349 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R27355:27379 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R27381:27385 Corelib.Init.Datatypes <> false constr
+R27387:27391 Corelib.Init.Datatypes <> false constr
+R27393:27397 Corelib.Init.Datatypes <> false constr
+R27399:27402 Corelib.Init.Datatypes <> true constr
+R27408:27440 UMST.ChemConstants.BondFormingConservation <> verdict_proved_without_bar_refuse constr
+R27653:27657 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27447:27482 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R27489:27516 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R27525:27557 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R27559:27595 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R27604:27628 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R27630:27634 Corelib.Init.Datatypes <> false constr
+R27636:27640 Corelib.Init.Datatypes <> false constr
+R27642:27646 Corelib.Init.Datatypes <> false constr
+R27648:27651 Corelib.Init.Datatypes <> true constr
+R27658:27662 Corelib.Init.Datatypes <> false constr
+R27691:27715 UMST.ChemConstants.BondFormingConservation <> proved_without_bar_refuse thm
+R27691:27715 UMST.ChemConstants.BondFormingConservation <> proved_without_bar_refuse thm
+R27729:27764 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R27779:27803 UMST.ChemConstants.BondFormingConservation <> proved_without_bar_refuse thm
+R27779:27803 UMST.ChemConstants.BondFormingConservation <> proved_without_bar_refuse thm
+R27779:27803 UMST.ChemConstants.BondFormingConservation <> proved_without_bar_refuse thm
+prf 28059:28081 <> production_wired_refuse
+R28175:28179 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28087:28126 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R28132:28163 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R28165:28169 Corelib.Init.Datatypes <> false constr
+R28171:28174 Corelib.Init.Datatypes <> true constr
+R28180:28210 UMST.ChemConstants.BondFormingConservation <> verdict_production_wired_refuse constr
+prf 28247:28276 <> production_wired_claim_refused
+R28416:28420 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28282:28317 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R28324:28363 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R28372:28403 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R28405:28409 Corelib.Init.Datatypes <> false constr
+R28411:28414 Corelib.Init.Datatypes <> true constr
+R28421:28425 Corelib.Init.Datatypes <> false constr
+R28444:28479 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R28492:28514 UMST.ChemConstants.BondFormingConservation <> production_wired_refuse thm
+R28492:28514 UMST.ChemConstants.BondFormingConservation <> production_wired_refuse thm
+R28492:28514 UMST.ChemConstants.BondFormingConservation <> production_wired_refuse thm
+def 28771:28814 <> bond_forming_conservation_coherence_scaffold
+R28818:28821 Corelib.Init.Datatypes <> bool ind
+R29111:29116 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28963:28968 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R28828:28863 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R28870:28909 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R28918:28949 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R28951:28955 Corelib.Init.Datatypes <> false constr
+R28957:28961 Corelib.Init.Datatypes <> false constr
+R28969:28972 Corelib.Init.Datatypes <> negb def
+R28975:29010 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R29017:29056 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R29065:29097 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R29099:29102 Corelib.Init.Datatypes <> true constr
+R29104:29108 Corelib.Init.Datatypes <> false constr
+R29117:29120 Corelib.Init.Datatypes <> negb def
+R29123:29158 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_verdict_ok def
+R29165:29204 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R29213:29244 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R29246:29250 Corelib.Init.Datatypes <> false constr
+R29252:29255 Corelib.Init.Datatypes <> true constr
+prf 29267:29315 <> bond_forming_conservation_coherence_scaffold_true
+R29365:29367 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29321:29364 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_coherence_scaffold def
+R29368:29371 Corelib.Init.Datatypes <> true constr
+R29390:29433 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_coherence_scaffold def
+prf 29488:29539 <> bond_forming_conservation_coherence_scaffold_theorem
+R29670:29675 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29634:29640 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29545:29584 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R29590:29621 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R29623:29627 Corelib.Init.Datatypes <> false constr
+R29629:29633 Corelib.Init.Datatypes <> false constr
+R29641:29669 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R29799:29804 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29765:29771 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29676:29715 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R29721:29753 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R29755:29758 Corelib.Init.Datatypes <> true constr
+R29760:29764 Corelib.Init.Datatypes <> false constr
+R29772:29798 UMST.ChemConstants.BondFormingConservation <> verdict_green_invent_refuse constr
+R29893:29899 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29805:29844 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R29850:29881 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_proved constr
+R29883:29887 Corelib.Init.Datatypes <> false constr
+R29889:29892 Corelib.Init.Datatypes <> true constr
+R29900:29930 UMST.ChemConstants.BondFormingConservation <> verdict_production_wired_refuse constr
+ind 30209:30220 <> formal_fiber
+constr 30236:30256 <> fiber_quantum_knowing
+constr 30262:30278 <> fiber_meso_acting
+scheme 30209:30220 <> formal_fiber_rect
+scheme 30209:30220 <> formal_fiber_ind
+scheme 30209:30220 <> formal_fiber_rec
+scheme 30209:30220 <> formal_fiber_sind
+def 30293:30326 <> bond_forming_conservation_fiber_ok
+R30333:30344 UMST.ChemConstants.BondFormingConservation <> formal_fiber ind
+binder 30329:30329 <> f:79
+R30349:30352 Corelib.Init.Datatypes <> bool ind
+R30365:30365 UMST.ChemConstants.BondFormingConservation <> f:79 var
+R30376:30396 UMST.ChemConstants.BondFormingConservation <> fiber_quantum_knowing constr
+R30401:30404 Corelib.Init.Datatypes <> true constr
+R30410:30426 UMST.ChemConstants.BondFormingConservation <> fiber_meso_acting constr
+R30431:30435 Corelib.Init.Datatypes <> false constr
+def 30456:30497 <> bond_forming_conservation_knowing_fiber_ok
+R30501:30504 Corelib.Init.Datatypes <> bool ind
+R30511:30544 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_fiber_ok def
+R30546:30566 UMST.ChemConstants.BondFormingConservation <> fiber_quantum_knowing constr
+def 30581:30620 <> bond_forming_conservation_meso_acting_ok
+R30624:30627 Corelib.Init.Datatypes <> bool ind
+R30634:30667 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_fiber_ok def
+R30669:30685 UMST.ChemConstants.BondFormingConservation <> fiber_meso_acting constr
+prf 30695:30741 <> bond_forming_conservation_knowing_fiber_ok_true
+R30789:30791 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30747:30788 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok def
+R30792:30795 Corelib.Init.Datatypes <> true constr
+prf 30830:30873 <> bond_forming_conservation_meso_acting_not_ok
+R30919:30921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30879:30918 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_ok def
+R30922:30926 Corelib.Init.Datatypes <> false constr
+prf 30963:31011 <> bond_forming_conservation_routes_knowing_not_meso
+R31066:31071 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31059:31061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31017:31058 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok def
+R31062:31065 Corelib.Init.Datatypes <> true constr
+R31112:31114 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31072:31111 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_ok def
+R31115:31119 Corelib.Init.Datatypes <> false constr
+R31148:31194 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok_true thm
+R31148:31194 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok_true thm
+R31207:31250 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_not_ok thm
+R31207:31250 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_not_ok thm
+def 31270:31287 <> fiberNotMesoActing
+R31291:31294 Corelib.Init.Datatypes <> bool ind
+R31343:31348 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R31301:31342 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok def
+R31349:31352 Corelib.Init.Datatypes <> negb def
+R31354:31393 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_ok def
+prf 31403:31428 <> fiber_not_meso_acting_true
+R31450:31452 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31432:31449 UMST.ChemConstants.BondFormingConservation <> fiberNotMesoActing def
+R31453:31456 Corelib.Init.Datatypes <> true constr
+R31475:31492 UMST.ChemConstants.BondFormingConservation <> fiberNotMesoActing def
+R31495:31536 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok def
+R31543:31582 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_ok def
+prf 31839:31880 <> bond_forming_conservation_fixture_scaffold
+R32080:32085 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32044:32050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31886:31913 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R31919:31951 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R31953:31989 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R31995:32019 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R32021:32025 Corelib.Init.Datatypes <> false constr
+R32027:32031 Corelib.Init.Datatypes <> false constr
+R32033:32037 Corelib.Init.Datatypes <> false constr
+R32039:32043 Corelib.Init.Datatypes <> false constr
+R32051:32079 UMST.ChemConstants.BondFormingConservation <> verdict_bond_forming_named_ok constr
+R32268:32273 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32232:32238 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32086:32113 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R32119:32151 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R32153:32177 UMST.ChemConstants.BondFormingConservation <> patternBundleEmptyWitness def
+R32183:32207 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R32209:32213 Corelib.Init.Datatypes <> false constr
+R32215:32219 Corelib.Init.Datatypes <> false constr
+R32221:32225 Corelib.Init.Datatypes <> false constr
+R32227:32231 Corelib.Init.Datatypes <> false constr
+R32239:32267 UMST.ChemConstants.BondFormingConservation <> verdict_trivial_bundle_refuse constr
+R32467:32472 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32431:32437 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32274:32301 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R32307:32339 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R32341:32377 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R32383:32407 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R32409:32412 Corelib.Init.Datatypes <> true constr
+R32414:32418 Corelib.Init.Datatypes <> false constr
+R32420:32424 Corelib.Init.Datatypes <> false constr
+R32426:32430 Corelib.Init.Datatypes <> false constr
+R32438:32466 UMST.ChemConstants.BondFormingConservation <> verdict_xor_classifier_refuse constr
+R32666:32671 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32630:32636 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32473:32500 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R32506:32538 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R32540:32576 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R32582:32606 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R32608:32612 Corelib.Init.Datatypes <> false constr
+R32614:32617 Corelib.Init.Datatypes <> true constr
+R32619:32623 Corelib.Init.Datatypes <> false constr
+R32625:32629 Corelib.Init.Datatypes <> false constr
+R32637:32665 UMST.ChemConstants.BondFormingConservation <> verdict_refine_forming_refuse constr
+R32869:32874 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32829:32835 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32672:32699 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_bundle def
+R32705:32737 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R32739:32775 UMST.ChemConstants.BondFormingConservation <> patternBundleBondFormingSharedWitness def
+R32781:32805 UMST.ChemConstants.BondFormingConservation <> bondClaimFormingBarAbsent def
+R32807:32811 Corelib.Init.Datatypes <> false constr
+R32813:32817 Corelib.Init.Datatypes <> false constr
+R32819:32823 Corelib.Init.Datatypes <> false constr
+R32825:32828 Corelib.Init.Datatypes <> true constr
+R32836:32868 UMST.ChemConstants.BondFormingConservation <> verdict_proved_without_bar_refuse constr
+R32990:32995 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32965:32971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32875:32914 UMST.ChemConstants.BondFormingConservation <> evaluate_bond_forming_conservation_close def
+R32920:32952 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr
+R32954:32958 Corelib.Init.Datatypes <> false constr
+R32960:32964 Corelib.Init.Datatypes <> false constr
+R32972:32989 UMST.ChemConstants.BondFormingConservation <> verdict_unwired_ok constr
+R33045:33050 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33038:33040 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32996:33037 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_knowing_fiber_ok def
+R33041:33044 Corelib.Init.Datatypes <> true constr
+R33099:33104 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33091:33093 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33051:33090 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_meso_acting_ok def
+R33094:33098 Corelib.Init.Datatypes <> false constr
+R33130:33135 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33122:33124 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33105:33121 UMST.ChemConstants.BondFormingConservation <> bondFormingProved def
+R33125:33129 Corelib.Init.Datatypes <> false constr
+R33156:33161 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33149:33151 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33136:33148 UMST.ChemConstants.BondFormingConservation <> productNotXor def
+R33152:33155 Corelib.Init.Datatypes <> true constr
+R33193:33195 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33162:33192 UMST.ChemConstants.BondFormingConservation <> formingArrowIsInteractNotRefine def
+R33196:33199 Corelib.Init.Datatypes <> true constr
+def 33479:33510 <> bondFormingConservationAuthority
+R33514:33519 Stdlib.Strings.String <> string ind
+def 33596:33620 <> bondFormingTableAuthority
+R33624:33629 Stdlib.Strings.String <> string ind
+def 33696:33719 <> patternTaxonomyAuthority
+R33723:33728 Stdlib.Strings.String <> string ind
+def 33789:33812 <> chemL0Pattern00Authority
+R33816:33821 Stdlib.Strings.String <> string ind
+def 33862:33897 <> chemIntPatternBundleProductAuthority
+R33901:33906 Stdlib.Strings.String <> string ind
+def 33960:33985 <> qtaimBcpMayerDdecAuthority
+R33989:33994 Stdlib.Strings.String <> string ind
+def 34089:34117 <> bondFormingConservationCellId
+R34121:34126 Stdlib.Strings.String <> string ind
+def 34192:34222 <> bondFormingConservationNonClaim
+R34226:34231 Stdlib.Strings.String <> string ind
+prf 34728:34760 <> bond_forming_conservation_cell_id
+R34795:34799 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34766:34794 UMST.ChemConstants.BondFormingConservation <> bondFormingConservationCellId def
+prf 34879:34942 <> bond_forming_conservation_cites_int_bond_forming_conservation_rs
+R34980:34985 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R34948:34979 UMST.ChemConstants.BondFormingConservation <> bondFormingConservationAuthority def
+prf 35023:35062 <> bond_forming_conservation_authority_path
+R35100:35104 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35068:35099 UMST.ChemConstants.BondFormingConservation <> bondFormingConservationAuthority def
+prf 35195:35239 <> bond_forming_conservation_cites_l0_pattern_00
+R35269:35271 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35245:35268 UMST.ChemConstants.BondFormingConservation <> chemL0Pattern00Authority def
+prf 35326:35383 <> bond_forming_conservation_cites_int_pattern_bundle_product
+R35425:35427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35389:35424 UMST.ChemConstants.BondFormingConservation <> chemIntPatternBundleProductAuthority def
+prf 35495:35535 <> bond_forming_conservation_cites_qtaim_bcp
+R35567:35570 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R35541:35566 UMST.ChemConstants.BondFormingConservation <> qtaimBcpMayerDdecAuthority def
+prf 35608:35645 <> bond_forming_conservation_cites_marker
+R35674:35677 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R35651:35673 UMST.ChemConstants.BondFormingConservation <> concurrentProductMarker def
+def 35942:35980 <> bondFormingSecondLawConservationFraming
+R35984:35989 Stdlib.Strings.String <> string ind
+prf 36083:36111 <> bond_forming_not_second_axiom
+R36156:36159 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36117:36155 UMST.ChemConstants.BondFormingConservation <> bondFormingSecondLawConservationFraming def
+prf 36222:36265 <> bond_forming_second_law_conservation_framing
+R36310:36313 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36271:36309 UMST.ChemConstants.BondFormingConservation <> bondFormingSecondLawConservationFraming def
+def 36580:36601 <> physicsGreenAuthorized
+R36613:36617 Corelib.Init.Logic <> False ind
+prf 36627:36671 <> bond_forming_conservation_physics_green_false
+R36677:36678 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R36679:36700 UMST.ChemConstants.BondFormingConservation <> physicsGreenAuthorized def
+prf 36740:36781 <> bond_forming_conservation_modality_unwired
+R36825:36827 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36787:36824 UMST.ChemConstants.BondFormingConservation <> bondFormingConservationModalityCurrent def
+R36828:36860 UMST.ChemConstants.BondFormingConservation <> bond_forming_conservation_unwired constr

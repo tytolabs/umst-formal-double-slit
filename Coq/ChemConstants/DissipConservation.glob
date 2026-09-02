@@ -1,0 +1,1492 @@
+DIGEST 8811978790c5be3971324b5d0c79ecbf
+FUMST.ChemConstants.DissipConservation
+R1193:1197 Stdlib.Arith.Arith <> <> lib
+R1199:1204 Stdlib.ZArith.ZArith <> <> lib
+R1206:1211 Stdlib.Strings.String <> <> lib
+R1213:1216 Stdlib.Bool.Bool <> <> lib
+R1218:1220 Stdlib.micromega.Lia <> <> lib
+R1222:1225 Stdlib.Lists.List <> <> lib
+R1235:1247 Stdlib.Lists.List ListNotations <> mod
+ind 1575:1600 <> DissipConservationModality
+constr 1616:1642 <> dissip_conservation_unwired
+constr 1648:1674 <> dissip_conservation_assumed
+constr 1680:1705 <> dissip_conservation_proved
+constr 1711:1739 <> dissip_conservation_surrogate
+scheme 1575:1600 <> DissipConservationModality_rect
+scheme 1575:1600 <> DissipConservationModality_ind
+scheme 1575:1600 <> DissipConservationModality_rec
+scheme 1575:1600 <> DissipConservationModality_sind
+def 1754:1786 <> dissipConservationModalityCurrent
+R1790:1815 UMST.ChemConstants.DissipConservation <> DissipConservationModality ind
+R1822:1848 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+def 1863:1888 <> dissip_lattice_cardinality
+R1892:1894 Corelib.Init.Datatypes <> nat ind
+prf 1909:1942 <> dissip_lattice_cardinality_is_four
+R1974:1976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1948:1973 UMST.ChemConstants.DissipConservation <> dissip_lattice_cardinality def
+prf 2012:2041 <> dissip_lattice_not_118_squared
+R2100:2102 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2047:2050 Corelib.Init.Datatypes <> negb def
+R2053:2059 Stdlib.Arith.PeanoNat Nat eqb def
+R2061:2086 UMST.ChemConstants.DissipConservation <> dissip_lattice_cardinality def
+R2092:2094 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2103:2106 Corelib.Init.Datatypes <> true constr
+R2125:2150 UMST.ChemConstants.DissipConservation <> dissip_lattice_cardinality def
+def 2408:2430 <> iupac_table_cardinality
+R2434:2436 Corelib.Init.Datatypes <> nat ind
+prf 2453:2482 <> iupac_table_cardinality_is_118
+R2511:2513 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2488:2510 UMST.ChemConstants.DissipConservation <> iupac_table_cardinality def
+def 2556:2577 <> dissip_element_z_valid
+R2584:2586 Corelib.Init.Datatypes <> nat ind
+binder 2580:2580 <> z:3
+R2591:2594 Corelib.Init.Datatypes <> bool ind
+R2612:2615 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R2601:2607 Stdlib.Arith.PeanoNat Nat ltb def
+R2611:2611 UMST.ChemConstants.DissipConservation <> z:3 var
+R2616:2622 Stdlib.Arith.PeanoNat Nat leb def
+R2624:2624 UMST.ChemConstants.DissipConservation <> z:3 var
+R2626:2648 UMST.ChemConstants.DissipConservation <> iupac_table_cardinality def
+def 2663:2683 <> dissip_element_iron_z
+R2687:2689 Corelib.Init.Datatypes <> nat ind
+def 2709:2731 <> dissip_element_copper_z
+R2735:2737 Corelib.Init.Datatypes <> nat ind
+def 2757:2782 <> dissip_element_oganesson_z
+R2786:2788 Corelib.Init.Datatypes <> nat ind
+prf 2805:2823 <> dissip_iron_z_is_26
+R2850:2852 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2829:2849 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+prf 2889:2909 <> dissip_copper_z_is_29
+R2938:2940 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2915:2937 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+prf 2977:3001 <> dissip_oganesson_z_is_118
+R3033:3035 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3007:3032 UMST.ChemConstants.DissipConservation <> dissip_element_oganesson_z def
+prf 3073:3092 <> dissip_fe_cu_z_valid
+R3149:3154 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3142:3144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3098:3119 UMST.ChemConstants.DissipConservation <> dissip_element_z_valid def
+R3121:3141 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R3145:3148 Corelib.Init.Datatypes <> true constr
+R3201:3203 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3155:3176 UMST.ChemConstants.DissipConservation <> dissip_element_z_valid def
+R3178:3200 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+R3204:3207 Corelib.Init.Datatypes <> true constr
+R3233:3254 UMST.ChemConstants.DissipConservation <> dissip_element_z_valid def
+R3257:3277 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R3284:3306 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+R3309:3331 UMST.ChemConstants.DissipConservation <> iupac_table_cardinality def
+prf 3359:3382 <> dissip_oganesson_z_valid
+R3437:3439 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3388:3409 UMST.ChemConstants.DissipConservation <> dissip_element_z_valid def
+R3411:3436 UMST.ChemConstants.DissipConservation <> dissip_element_oganesson_z def
+R3440:3443 Corelib.Init.Datatypes <> true constr
+R3462:3483 UMST.ChemConstants.DissipConservation <> dissip_element_z_valid def
+R3486:3511 UMST.ChemConstants.DissipConservation <> dissip_element_oganesson_z def
+R3514:3536 UMST.ChemConstants.DissipConservation <> iupac_table_cardinality def
+ind 3794:3802 <> path_kind
+constr 3818:3833 <> path_kind_cyclic
+constr 3839:3859 <> path_kind_dissipative
+scheme 3794:3802 <> path_kind_rect
+scheme 3794:3802 <> path_kind_ind
+scheme 3794:3802 <> path_kind_rec
+scheme 3794:3802 <> path_kind_sind
+def 3874:3886 <> path_kind_beq
+R3897:3905 UMST.ChemConstants.DissipConservation <> path_kind ind
+binder 3889:3890 <> k1:6
+binder 3892:3893 <> k2:7
+R3910:3913 Corelib.Init.Datatypes <> bool ind
+R3930:3931 UMST.ChemConstants.DissipConservation <> k2:7 var
+R3926:3927 UMST.ChemConstants.DissipConservation <> k1:6 var
+R3942:3957 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R3960:3975 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R3980:3983 Corelib.Init.Datatypes <> true constr
+R3989:4009 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4012:4032 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4037:4040 Corelib.Init.Datatypes <> true constr
+R4054:4058 Corelib.Init.Datatypes <> false constr
+def 4079:4097 <> path_kind_is_cyclic
+R4104:4112 UMST.ChemConstants.DissipConservation <> path_kind ind
+binder 4100:4100 <> k:10
+R4117:4120 Corelib.Init.Datatypes <> bool ind
+R4133:4133 UMST.ChemConstants.DissipConservation <> k:10 var
+R4144:4159 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R4164:4167 Corelib.Init.Datatypes <> true constr
+R4173:4193 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4198:4202 Corelib.Init.Datatypes <> false constr
+def 4223:4246 <> path_kind_is_dissipative
+R4253:4261 UMST.ChemConstants.DissipConservation <> path_kind ind
+binder 4249:4249 <> k:12
+R4266:4269 Corelib.Init.Datatypes <> bool ind
+R4282:4282 UMST.ChemConstants.DissipConservation <> k:12 var
+R4293:4308 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R4313:4317 Corelib.Init.Datatypes <> false constr
+R4323:4343 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4348:4351 Corelib.Init.Datatypes <> true constr
+prf 4367:4392 <> cyclic_path_kind_is_cyclic
+R4434:4436 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4398:4416 UMST.ChemConstants.DissipConservation <> path_kind_is_cyclic def
+R4418:4433 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R4437:4440 Corelib.Init.Datatypes <> true constr
+prf 4475:4510 <> dissipative_path_kind_is_dissipative
+R4562:4564 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4516:4539 UMST.ChemConstants.DissipConservation <> path_kind_is_dissipative def
+R4541:4561 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4565:4568 Corelib.Init.Datatypes <> true constr
+prf 4603:4629 <> cyclic_not_dissipative_kind
+R4678:4683 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4671:4673 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4635:4653 UMST.ChemConstants.DissipConservation <> path_kind_is_cyclic def
+R4655:4670 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R4674:4677 Corelib.Init.Datatypes <> true constr
+R4725:4727 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4684:4707 UMST.ChemConstants.DissipConservation <> path_kind_is_dissipative def
+R4709:4724 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R4728:4732 Corelib.Init.Datatypes <> false constr
+prf 4774:4800 <> dissipative_not_cyclic_kind
+R4859:4864 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4852:4854 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4806:4829 UMST.ChemConstants.DissipConservation <> path_kind_is_dissipative def
+R4831:4851 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4855:4858 Corelib.Init.Datatypes <> true constr
+R4906:4908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4865:4883 UMST.ChemConstants.DissipConservation <> path_kind_is_cyclic def
+R4885:4905 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R4909:4913 Corelib.Init.Datatypes <> false constr
+prf 4955:4979 <> cycle_ne_dissipative_kind
+R5037:5039 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4985:4997 UMST.ChemConstants.DissipConservation <> path_kind_beq def
+R4999:5014 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R5016:5036 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R5040:5044 Corelib.Init.Datatypes <> false constr
+rec 5304:5324 <> reaction_cycle_vertex
+proj 5340:5354 <> cycle_vertex_id
+proj 5365:5378 <> cycle_vertex_z
+R5358:5360 Corelib.Init.Datatypes <> nat ind
+R5382:5384 Corelib.Init.Datatypes <> nat ind
+def 5401:5419 <> reactionCycleVertex
+R5429:5431 Corelib.Init.Datatypes <> nat ind
+binder 5422:5423 <> id:17
+binder 5425:5425 <> z:18
+R5436:5456 UMST.ChemConstants.DissipConservation <> reaction_cycle_vertex rec
+R5466:5480 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R5466:5480 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R5466:5480 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R5489:5502 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R5489:5502 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R5485:5486 UMST.ChemConstants.DissipConservation <> id:17 var
+R5507:5507 UMST.ChemConstants.DissipConservation <> z:18 var
+rec 5521:5534 <> reaction_cycle
+proj 5550:5560 <> cycle_start
+proj 5589:5597 <> cycle_end
+proj 5626:5640 <> cycle_hop_count
+proj 5651:5665 <> cycle_path_kind
+R5564:5584 UMST.ChemConstants.DissipConservation <> reaction_cycle_vertex rec
+R5601:5621 UMST.ChemConstants.DissipConservation <> reaction_cycle_vertex rec
+R5644:5646 Corelib.Init.Datatypes <> nat ind
+R5669:5677 UMST.ChemConstants.DissipConservation <> path_kind ind
+def 5694:5712 <> reactionCycleClosed
+R5719:5732 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+binder 5715:5715 <> c:24
+R5737:5740 Corelib.Init.Datatypes <> bool ind
+R5824:5829 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5747:5753 Stdlib.Arith.PeanoNat Nat eqb def
+R5772:5786 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R5756:5766 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R5768:5768 UMST.ChemConstants.DissipConservation <> c:24 var
+R5808:5822 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R5794:5802 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R5804:5804 UMST.ChemConstants.DissipConservation <> c:24 var
+R5830:5836 Stdlib.Arith.PeanoNat Nat eqb def
+R5855:5868 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R5839:5849 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R5851:5851 UMST.ChemConstants.DissipConservation <> c:24 var
+R5890:5903 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R5876:5884 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R5886:5886 UMST.ChemConstants.DissipConservation <> c:24 var
+def 5919:5941 <> reactionCycleNontrivial
+R5948:5961 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+binder 5944:5944 <> c:25
+R5966:5969 Corelib.Init.Datatypes <> bool ind
+R5976:5982 Stdlib.Arith.PeanoNat Nat ltb def
+R5987:6001 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6003:6003 UMST.ChemConstants.DissipConservation <> c:25 var
+def 6019:6048 <> reactionCycleIdentityConserved
+R6059:6072 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+binder 6051:6052 <> c1:26
+binder 6054:6055 <> c2:27
+R6077:6080 Corelib.Init.Datatypes <> bool ind
+R6452:6457 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6369:6374 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6284:6289 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6197:6202 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6142:6147 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6087:6099 UMST.ChemConstants.DissipConservation <> path_kind_beq def
+R6105:6119 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R6101:6102 UMST.ChemConstants.DissipConservation <> c1:26 var
+R6126:6140 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R6122:6123 UMST.ChemConstants.DissipConservation <> c2:27 var
+R6148:6154 Stdlib.Arith.PeanoNat Nat eqb def
+R6160:6174 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6156:6157 UMST.ChemConstants.DissipConservation <> c1:26 var
+R6181:6195 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6177:6178 UMST.ChemConstants.DissipConservation <> c2:27 var
+R6203:6209 Stdlib.Arith.PeanoNat Nat eqb def
+R6229:6243 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R6212:6222 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6224:6225 UMST.ChemConstants.DissipConservation <> c1:26 var
+R6268:6282 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R6251:6261 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6263:6264 UMST.ChemConstants.DissipConservation <> c2:27 var
+R6290:6296 Stdlib.Arith.PeanoNat Nat eqb def
+R6316:6329 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R6299:6309 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6311:6312 UMST.ChemConstants.DissipConservation <> c1:26 var
+R6354:6367 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R6337:6347 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6349:6350 UMST.ChemConstants.DissipConservation <> c2:27 var
+R6375:6381 Stdlib.Arith.PeanoNat Nat eqb def
+R6399:6413 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R6384:6392 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6394:6395 UMST.ChemConstants.DissipConservation <> c1:26 var
+R6436:6450 UMST.ChemConstants.DissipConservation <> cycle_vertex_id proj
+R6421:6429 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6431:6432 UMST.ChemConstants.DissipConservation <> c2:27 var
+R6458:6464 Stdlib.Arith.PeanoNat Nat eqb def
+R6482:6495 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R6467:6475 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6477:6478 UMST.ChemConstants.DissipConservation <> c1:26 var
+R6518:6531 UMST.ChemConstants.DissipConservation <> cycle_vertex_z proj
+R6503:6511 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6513:6514 UMST.ChemConstants.DissipConservation <> c2:27 var
+def 6547:6569 <> reactionCycleFeCuClosed
+R6573:6586 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+R6602:6620 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R6624:6644 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+binder 6597:6597 <> v:28
+R6654:6664 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6654:6664 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6654:6664 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6677:6685 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6677:6685 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6698:6712 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6698:6712 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6725:6739 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R6725:6739 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R6669:6669 UMST.ChemConstants.DissipConservation <> v:28 var
+R6690:6690 UMST.ChemConstants.DissipConservation <> v:28 var
+R6744:6759 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+def 6777:6804 <> reactionCycleDissipativeOpen
+R6808:6821 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+R6831:6841 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6831:6841 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6831:6841 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R6896:6904 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6896:6904 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R6961:6975 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6961:6975 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R6988:7002 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R6988:7002 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R6846:6864 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R6868:6888 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R6909:6927 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R6931:6953 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+R7007:7027 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+def 7045:7064 <> reactionCycleTrivial
+R7068:7081 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+R7091:7101 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R7091:7101 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R7091:7101 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R7136:7144 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R7136:7144 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R7179:7193 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R7179:7193 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R7206:7220 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R7206:7220 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R7106:7124 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R7149:7167 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R7225:7240 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+def 7258:7276 <> reactionCycleBroken
+R7280:7293 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+R7303:7313 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R7303:7313 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R7303:7313 UMST.ChemConstants.DissipConservation <> cycle_start proj
+R7368:7376 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R7368:7376 UMST.ChemConstants.DissipConservation <> cycle_end proj
+R7433:7447 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R7433:7447 UMST.ChemConstants.DissipConservation <> cycle_hop_count proj
+R7460:7474 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R7460:7474 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R7318:7336 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R7340:7360 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R7381:7399 UMST.ChemConstants.DissipConservation <> reactionCycleVertex def
+R7403:7425 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+R7479:7494 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+prf 7507:7533 <> reaction_cycle_fe_cu_closed
+R7582:7584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7539:7557 UMST.ChemConstants.DissipConservation <> reactionCycleClosed def
+R7559:7581 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R7585:7588 Corelib.Init.Datatypes <> true constr
+prf 7623:7659 <> reaction_cycle_dissipative_not_closed
+R7713:7715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7665:7683 UMST.ChemConstants.DissipConservation <> reactionCycleClosed def
+R7685:7712 UMST.ChemConstants.DissipConservation <> reactionCycleDissipativeOpen def
+R7716:7720 Corelib.Init.Datatypes <> false constr
+prf 7755:7785 <> reaction_cycle_fe_cu_nontrivial
+R7838:7840 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7791:7813 UMST.ChemConstants.DissipConservation <> reactionCycleNontrivial def
+R7815:7837 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R7841:7844 Corelib.Init.Datatypes <> true constr
+prf 7879:7915 <> reaction_cycle_trivial_not_nontrivial
+R7965:7967 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7921:7943 UMST.ChemConstants.DissipConservation <> reactionCycleNontrivial def
+R7945:7964 UMST.ChemConstants.DissipConservation <> reactionCycleTrivial def
+R7968:7972 Corelib.Init.Datatypes <> false constr
+prf 8007:8038 <> reaction_cycle_broken_not_closed
+R8083:8085 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8044:8062 UMST.ChemConstants.DissipConservation <> reactionCycleClosed def
+R8064:8082 UMST.ChemConstants.DissipConservation <> reactionCycleBroken def
+R8086:8090 Corelib.Init.Datatypes <> false constr
+prf 8125:8163 <> reaction_cycle_fe_cu_identity_conserved
+R8251:8253 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8169:8198 UMST.ChemConstants.DissipConservation <> reactionCycleIdentityConserved def
+R8200:8222 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R8228:8250 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R8254:8257 Corelib.Init.Datatypes <> true constr
+prf 8292:8317 <> reaction_cycle_cyclic_kind
+R8384:8386 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8323:8341 UMST.ChemConstants.DissipConservation <> path_kind_is_cyclic def
+R8344:8358 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R8360:8382 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R8387:8390 Corelib.Init.Datatypes <> true constr
+prf 8425:8455 <> reaction_cycle_dissipative_kind
+R8532:8534 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8461:8484 UMST.ChemConstants.DissipConservation <> path_kind_is_dissipative def
+R8487:8501 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R8503:8530 UMST.ChemConstants.DissipConservation <> reactionCycleDissipativeOpen def
+R8535:8538 Corelib.Init.Datatypes <> true constr
+rec 8798:8826 <> bond_path_dissipation_witness
+proj 8842:8874 <> bond_path_dissipation_microjoules
+R8878:8880 Corelib.Init.Datatypes <> nat ind
+def 8897:8919 <> bondPathDissipationZero
+R8923:8951 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_witness rec
+R8961:8993 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R8961:8993 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R8961:8993 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+def 9016:9042 <> bondPathDissipationPositive
+R9046:9074 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_witness rec
+R9084:9116 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R9084:9116 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R9084:9116 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+def 9139:9168 <> bond_path_dissipation_positive
+R9175:9203 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_witness rec
+binder 9171:9171 <> w:31
+R9208:9211 Corelib.Init.Datatypes <> bool ind
+R9218:9224 Stdlib.Arith.PeanoNat Nat ltb def
+R9229:9261 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R9263:9263 UMST.ChemConstants.DissipConservation <> w:31 var
+rec 9275:9283 <> bond_path
+proj 9299:9312 <> bond_path_from
+proj 9323:9334 <> bond_path_to
+proj 9345:9360 <> bond_path_from_z
+proj 9371:9384 <> bond_path_to_z
+proj 9395:9412 <> bond_path_kind_tag
+proj 9429:9449 <> bond_path_dissipation
+R9316:9318 Corelib.Init.Datatypes <> nat ind
+R9338:9340 Corelib.Init.Datatypes <> nat ind
+R9364:9366 Corelib.Init.Datatypes <> nat ind
+R9388:9390 Corelib.Init.Datatypes <> nat ind
+R9416:9424 UMST.ChemConstants.DissipConservation <> path_kind ind
+R9453:9481 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_witness rec
+def 9498:9515 <> bondPathNontrivial
+R9522:9530 UMST.ChemConstants.DissipConservation <> bond_path rec
+binder 9518:9518 <> p:39
+R9535:9538 Corelib.Init.Datatypes <> bool ind
+R9545:9548 Corelib.Init.Datatypes <> negb def
+R9551:9557 Stdlib.Arith.PeanoNat Nat eqb def
+R9560:9573 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R9575:9575 UMST.ChemConstants.DissipConservation <> p:39 var
+R9579:9590 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R9592:9592 UMST.ChemConstants.DissipConservation <> p:39 var
+def 9609:9632 <> bondPathDissipativeTyped
+R9639:9647 UMST.ChemConstants.DissipConservation <> bond_path rec
+binder 9635:9635 <> p:40
+R9652:9655 Corelib.Init.Datatypes <> bool ind
+R9709:9714 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9662:9685 UMST.ChemConstants.DissipConservation <> path_kind_is_dissipative def
+R9688:9705 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R9707:9707 UMST.ChemConstants.DissipConservation <> p:40 var
+R9715:9744 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_positive def
+R9747:9767 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R9769:9769 UMST.ChemConstants.DissipConservation <> p:40 var
+def 9785:9809 <> bondPathIdentityConserved
+R9820:9828 UMST.ChemConstants.DissipConservation <> bond_path rec
+binder 9812:9813 <> p1:41
+binder 9815:9816 <> p2:42
+R9833:9836 Corelib.Init.Datatypes <> bool ind
+R10116:10121 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10049:10054 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9996:10001 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9939:9944 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9890:9895 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9843:9849 Stdlib.Arith.PeanoNat Nat eqb def
+R9852:9865 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R9867:9868 UMST.ChemConstants.DissipConservation <> p1:41 var
+R9872:9885 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R9887:9888 UMST.ChemConstants.DissipConservation <> p2:42 var
+R9896:9902 Stdlib.Arith.PeanoNat Nat eqb def
+R9905:9916 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R9918:9919 UMST.ChemConstants.DissipConservation <> p1:41 var
+R9923:9934 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R9936:9937 UMST.ChemConstants.DissipConservation <> p2:42 var
+R9945:9951 Stdlib.Arith.PeanoNat Nat eqb def
+R9957:9972 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R9953:9954 UMST.ChemConstants.DissipConservation <> p1:41 var
+R9979:9994 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R9975:9976 UMST.ChemConstants.DissipConservation <> p2:42 var
+R10002:10008 Stdlib.Arith.PeanoNat Nat eqb def
+R10014:10027 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R10010:10011 UMST.ChemConstants.DissipConservation <> p1:41 var
+R10034:10047 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R10030:10031 UMST.ChemConstants.DissipConservation <> p2:42 var
+R10055:10067 UMST.ChemConstants.DissipConservation <> path_kind_beq def
+R10073:10090 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R10069:10070 UMST.ChemConstants.DissipConservation <> p1:41 var
+R10097:10114 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R10093:10094 UMST.ChemConstants.DissipConservation <> p2:42 var
+R10122:10128 Stdlib.Arith.PeanoNat Nat eqb def
+R10131:10163 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R10166:10186 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10188:10189 UMST.ChemConstants.DissipConservation <> p1:41 var
+R10198:10230 UMST.ChemConstants.DissipConservation <> bond_path_dissipation_microjoules proj
+R10233:10253 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10255:10256 UMST.ChemConstants.DissipConservation <> p2:42 var
+def 10273:10300 <> bondPathFeCuDissipativeTyped
+R10304:10312 UMST.ChemConstants.DissipConservation <> bond_path rec
+R10322:10335 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10322:10335 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10322:10335 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10348:10359 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R10348:10359 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R10372:10387 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R10372:10387 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R10420:10433 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R10420:10433 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R10468:10485 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R10468:10485 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R10518:10538 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10518:10538 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10392:10412 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R10438:10460 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+R10490:10510 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R10543:10569 UMST.ChemConstants.DissipConservation <> bondPathDissipationPositive def
+def 10587:10607 <> bondPathCyclicUntyped
+R10611:10619 UMST.ChemConstants.DissipConservation <> bond_path rec
+R10629:10642 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10629:10642 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10629:10642 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10655:10666 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R10655:10666 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R10679:10694 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R10679:10694 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R10727:10740 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R10727:10740 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R10778:10795 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R10778:10795 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R10823:10843 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10823:10843 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10699:10719 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R10745:10770 UMST.ChemConstants.DissipConservation <> dissip_element_oganesson_z def
+R10800:10815 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R10848:10870 UMST.ChemConstants.DissipConservation <> bondPathDissipationZero def
+def 10888:10903 <> bondPathSelfLoop
+R10907:10915 UMST.ChemConstants.DissipConservation <> bond_path rec
+R10925:10938 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10925:10938 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10925:10938 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R10951:10962 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R10951:10962 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R10975:10990 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R10975:10990 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R11028:11041 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R11028:11041 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R11079:11096 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R11079:11096 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R11129:11149 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R11129:11149 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R10995:11020 UMST.ChemConstants.DissipConservation <> dissip_element_oganesson_z def
+R11046:11071 UMST.ChemConstants.DissipConservation <> dissip_element_oganesson_z def
+R11101:11121 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R11154:11180 UMST.ChemConstants.DissipConservation <> bondPathDissipationPositive def
+def 11198:11227 <> bondPathDissipativeZeroWitness
+R11231:11239 UMST.ChemConstants.DissipConservation <> bond_path rec
+R11249:11262 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R11249:11262 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R11249:11262 UMST.ChemConstants.DissipConservation <> bond_path_from proj
+R11275:11286 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R11275:11286 UMST.ChemConstants.DissipConservation <> bond_path_to proj
+R11299:11314 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R11299:11314 UMST.ChemConstants.DissipConservation <> bond_path_from_z proj
+R11347:11360 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R11347:11360 UMST.ChemConstants.DissipConservation <> bond_path_to_z proj
+R11395:11412 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R11395:11412 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R11445:11465 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R11445:11465 UMST.ChemConstants.DissipConservation <> bond_path_dissipation proj
+R11319:11339 UMST.ChemConstants.DissipConservation <> dissip_element_iron_z def
+R11365:11387 UMST.ChemConstants.DissipConservation <> dissip_element_copper_z def
+R11417:11437 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R11470:11492 UMST.ChemConstants.DissipConservation <> bondPathDissipationZero def
+prf 11505:11537 <> bond_path_fe_cu_dissipative_typed
+R11596:11598 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11543:11566 UMST.ChemConstants.DissipConservation <> bondPathDissipativeTyped def
+R11568:11595 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+R11599:11602 Corelib.Init.Datatypes <> true constr
+prf 11637:11674 <> bond_path_cyclic_not_dissipative_typed
+R11726:11728 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11680:11703 UMST.ChemConstants.DissipConservation <> bondPathDissipativeTyped def
+R11705:11725 UMST.ChemConstants.DissipConservation <> bondPathCyclicUntyped def
+R11729:11733 Corelib.Init.Datatypes <> false constr
+prf 11768:11793 <> bond_path_fe_cu_nontrivial
+R11846:11848 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11799:11816 UMST.ChemConstants.DissipConservation <> bondPathNontrivial def
+R11818:11845 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+R11849:11852 Corelib.Init.Datatypes <> true constr
+prf 11887:11920 <> bond_path_self_loop_not_nontrivial
+R11961:11963 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11926:11943 UMST.ChemConstants.DissipConservation <> bondPathNontrivial def
+R11945:11960 UMST.ChemConstants.DissipConservation <> bondPathSelfLoop def
+R11964:11968 Corelib.Init.Datatypes <> false constr
+prf 12003:12046 <> bond_path_dissipative_zero_witness_not_typed
+R12107:12109 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12052:12075 UMST.ChemConstants.DissipConservation <> bondPathDissipativeTyped def
+R12077:12106 UMST.ChemConstants.DissipConservation <> bondPathDissipativeZeroWitness def
+R12110:12114 Corelib.Init.Datatypes <> false constr
+prf 12149:12182 <> bond_path_fe_cu_identity_conserved
+R12275:12277 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12188:12212 UMST.ChemConstants.DissipConservation <> bondPathIdentityConserved def
+R12214:12241 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+R12247:12274 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+R12278:12281 Corelib.Init.Datatypes <> true constr
+rec 12539:12554 <> dissip_incidence
+proj 12570:12585 <> dissip_inc_cycle
+proj 12607:12626 <> dissip_inc_bond_path
+proj 12643:12658 <> dissip_inc_level
+R12589:12602 UMST.ChemConstants.DissipConservation <> reaction_cycle rec
+R12630:12638 UMST.ChemConstants.DissipConservation <> bond_path rec
+R12662:12664 Corelib.Init.Datatypes <> nat ind
+def 12681:12705 <> dissipIncidenceNontrivial
+R12712:12727 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+binder 12708:12708 <> h:47
+R12732:12735 Corelib.Init.Datatypes <> bool ind
+R12742:12748 Stdlib.Arith.PeanoNat Nat ltb def
+R12753:12768 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R12770:12770 UMST.ChemConstants.DissipConservation <> h:47 var
+def 12786:12809 <> dissipPathKindConsistent
+R12816:12831 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+binder 12812:12812 <> h:48
+R12836:12839 Corelib.Init.Datatypes <> bool ind
+R12846:12858 UMST.ChemConstants.DissipConservation <> path_kind_beq def
+R12861:12875 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R12878:12893 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R12895:12895 UMST.ChemConstants.DissipConservation <> h:48 var
+R12904:12921 UMST.ChemConstants.DissipConservation <> bond_path_kind_tag proj
+R12924:12943 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R12945:12945 UMST.ChemConstants.DissipConservation <> h:48 var
+def 12962:12988 <> dissipIncidenceFeCuCyclicL1
+R12992:13007 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+R13017:13032 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13017:13032 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13017:13032 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13067:13086 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13067:13086 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13119:13134 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13119:13134 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13037:13059 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R13091:13111 UMST.ChemConstants.DissipConservation <> bondPathCyclicUntyped def
+def 13157:13188 <> dissipIncidenceFeCuDissipativeL1
+R13192:13207 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+R13217:13232 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13217:13232 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13217:13232 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13272:13291 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13272:13291 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13331:13346 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13331:13346 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13237:13264 UMST.ChemConstants.DissipConservation <> reactionCycleDissipativeOpen def
+R13296:13323 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+def 13369:13390 <> dissipIncidenceTrivial
+R13394:13409 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+R13419:13434 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13419:13434 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13419:13434 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13466:13485 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13466:13485 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13518:13533 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13518:13533 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13439:13458 UMST.ChemConstants.DissipConservation <> reactionCycleTrivial def
+R13490:13510 UMST.ChemConstants.DissipConservation <> bondPathCyclicUntyped def
+def 13556:13581 <> dissipIncidenceCycleBroken
+R13585:13600 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+R13610:13625 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13610:13625 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13610:13625 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13656:13675 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13656:13675 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13708:13723 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13708:13723 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13630:13648 UMST.ChemConstants.DissipConservation <> reactionCycleBroken def
+R13680:13700 UMST.ChemConstants.DissipConservation <> bondPathCyclicUntyped def
+def 13746:13772 <> dissipIncidenceKindMismatch
+R13776:13791 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+R13801:13816 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13801:13816 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13801:13816 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R13851:13870 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13851:13870 UMST.ChemConstants.DissipConservation <> dissip_inc_bond_path proj
+R13910:13925 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13910:13925 UMST.ChemConstants.DissipConservation <> dissip_inc_level proj
+R13821:13843 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R13875:13902 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+prf 13943:13982 <> dissip_incidence_fe_cu_cyclic_consistent
+R14040:14042 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13988:14011 UMST.ChemConstants.DissipConservation <> dissipPathKindConsistent def
+R14013:14039 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R14043:14046 Corelib.Init.Datatypes <> true constr
+prf 14081:14125 <> dissip_incidence_fe_cu_dissipative_consistent
+R14188:14190 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14131:14154 UMST.ChemConstants.DissipConservation <> dissipPathKindConsistent def
+R14156:14187 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuDissipativeL1 def
+R14191:14194 Corelib.Init.Datatypes <> true constr
+prf 14229:14273 <> dissip_incidence_kind_mismatch_not_consistent
+R14331:14333 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14279:14302 UMST.ChemConstants.DissipConservation <> dissipPathKindConsistent def
+R14304:14330 UMST.ChemConstants.DissipConservation <> dissipIncidenceKindMismatch def
+R14334:14338 Corelib.Init.Datatypes <> false constr
+prf 14373:14405 <> dissip_incidence_fe_cu_nontrivial
+R14464:14466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14411:14435 UMST.ChemConstants.DissipConservation <> dissipIncidenceNontrivial def
+R14437:14463 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R14467:14470 Corelib.Init.Datatypes <> true constr
+prf 14505:14543 <> dissip_incidence_trivial_not_nontrivial
+R14597:14599 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14549:14573 UMST.ChemConstants.DissipConservation <> dissipIncidenceNontrivial def
+R14575:14596 UMST.ChemConstants.DissipConservation <> dissipIncidenceTrivial def
+R14600:14604 Corelib.Init.Datatypes <> false constr
+def 14868:14883 <> cyclicPathMarker
+R14887:14892 Stdlib.Strings.String <> string ind
+def 14937:14957 <> dissipativePathMarker
+R14961:14966 Stdlib.Strings.String <> string ind
+prf 15014:15040 <> cycle_ne_dissipative_marker
+R15062:15065 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15046:15061 UMST.ChemConstants.DissipConservation <> cyclicPathMarker def
+R15066:15086 UMST.ChemConstants.DissipConservation <> dissipativePathMarker def
+def 15127:15148 <> cycleNeDissipativePath
+R15152:15155 Corelib.Init.Datatypes <> bool ind
+R15364:15369 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15315:15320 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15250:15255 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15198:15203 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15162:15180 UMST.ChemConstants.DissipConservation <> path_kind_is_cyclic def
+R15182:15197 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R15204:15227 UMST.ChemConstants.DissipConservation <> path_kind_is_dissipative def
+R15229:15249 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R15256:15259 Corelib.Init.Datatypes <> negb def
+R15262:15274 UMST.ChemConstants.DissipConservation <> path_kind_beq def
+R15276:15291 UMST.ChemConstants.DissipConservation <> path_kind_cyclic constr
+R15293:15313 UMST.ChemConstants.DissipConservation <> path_kind_dissipative constr
+R15321:15339 UMST.ChemConstants.DissipConservation <> reactionCycleClosed def
+R15341:15363 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R15370:15393 UMST.ChemConstants.DissipConservation <> bondPathDissipativeTyped def
+R15395:15422 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+prf 15432:15461 <> cycle_ne_dissipative_path_true
+R15487:15489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15465:15486 UMST.ChemConstants.DissipConservation <> cycleNeDissipativePath def
+R15490:15493 Corelib.Init.Datatypes <> true constr
+R15512:15533 UMST.ChemConstants.DissipConservation <> cycleNeDissipativePath def
+prf 15588:15621 <> cycle_ne_dissipative_path_identity
+R15656:15661 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15649:15651 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15627:15648 UMST.ChemConstants.DissipConservation <> cycleNeDissipativePath def
+R15652:15655 Corelib.Init.Datatypes <> true constr
+R15678:15681 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15662:15677 UMST.ChemConstants.DissipConservation <> cyclicPathMarker def
+R15682:15702 UMST.ChemConstants.DissipConservation <> dissipativePathMarker def
+R15731:15760 UMST.ChemConstants.DissipConservation <> cycle_ne_dissipative_path_true thm
+R15731:15760 UMST.ChemConstants.DissipConservation <> cycle_ne_dissipative_path_true thm
+R15773:15799 UMST.ChemConstants.DissipConservation <> cycle_ne_dissipative_marker thm
+R15773:15799 UMST.ChemConstants.DissipConservation <> cycle_ne_dissipative_marker thm
+ind 16043:16066 <> dissip_path_bar_presence
+constr 16082:16098 <> dissip_bar_absent
+constr 16104:16121 <> dissip_bar_present
+scheme 16043:16066 <> dissip_path_bar_presence_rect
+scheme 16043:16066 <> dissip_path_bar_presence_ind
+scheme 16043:16066 <> dissip_path_bar_presence_rec
+scheme 16043:16066 <> dissip_path_bar_presence_sind
+rec 16132:16152 <> dissip_claim_path_bar
+proj 16168:16186 <> dissip_bar_presence
+proj 16218:16240 <> dissip_bar_defect_total
+R16190:16213 UMST.ChemConstants.DissipConservation <> dissip_path_bar_presence ind
+R16244:16246 Corelib.Init.Datatypes <> nat ind
+def 16263:16286 <> dissipClaimPathBarAbsent
+R16290:16310 UMST.ChemConstants.DissipConservation <> dissip_claim_path_bar rec
+R16320:16338 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16320:16338 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16320:16338 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16362:16384 UMST.ChemConstants.DissipConservation <> dissip_bar_defect_total proj
+R16362:16384 UMST.ChemConstants.DissipConservation <> dissip_bar_defect_total proj
+R16343:16359 UMST.ChemConstants.DissipConservation <> dissip_bar_absent constr
+def 16407:16434 <> dissipClaimPathBarZeroDefect
+R16438:16458 UMST.ChemConstants.DissipConservation <> dissip_claim_path_bar rec
+R16468:16486 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16468:16486 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16468:16486 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16511:16533 UMST.ChemConstants.DissipConservation <> dissip_bar_defect_total proj
+R16511:16533 UMST.ChemConstants.DissipConservation <> dissip_bar_defect_total proj
+R16491:16508 UMST.ChemConstants.DissipConservation <> dissip_bar_present constr
+def 16556:16588 <> dissip_claim_path_bar_zero_defect
+R16595:16615 UMST.ChemConstants.DissipConservation <> dissip_claim_path_bar rec
+binder 16591:16591 <> b:54
+R16620:16623 Corelib.Init.Datatypes <> bool ind
+R16636:16654 UMST.ChemConstants.DissipConservation <> dissip_bar_presence proj
+R16656:16656 UMST.ChemConstants.DissipConservation <> b:54 var
+R16667:16683 UMST.ChemConstants.DissipConservation <> dissip_bar_absent constr
+R16688:16692 Corelib.Init.Datatypes <> false constr
+R16698:16715 UMST.ChemConstants.DissipConservation <> dissip_bar_present constr
+R16720:16726 Stdlib.Arith.PeanoNat Nat eqb def
+R16729:16751 UMST.ChemConstants.DissipConservation <> dissip_bar_defect_total proj
+R16753:16753 UMST.ChemConstants.DissipConservation <> b:54 var
+prf 16772:16809 <> dissip_claim_path_bar_zero_defect_true
+R16877:16879 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16815:16847 UMST.ChemConstants.DissipConservation <> dissip_claim_path_bar_zero_defect def
+R16849:16876 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarZeroDefect def
+R16880:16883 Corelib.Init.Datatypes <> true constr
+prf 16918:16961 <> dissip_claim_path_bar_absent_not_zero_defect
+R17025:17027 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16967:16999 UMST.ChemConstants.DissipConservation <> dissip_claim_path_bar_zero_defect def
+R17001:17024 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R17028:17032 Corelib.Init.Datatypes <> false constr
+ind 17295:17321 <> dissip_conservation_verdict
+constr 17337:17354 <> verdict_unwired_ok
+constr 17360:17380 <> verdict_path_named_ok
+constr 17386:17414 <> verdict_trivial_dissip_refuse
+constr 17420:17444 <> verdict_cycle_open_refuse
+constr 17450:17477 <> verdict_kind_mismatch_refuse
+constr 17483:17509 <> verdict_green_invent_refuse
+constr 17515:17547 <> verdict_proved_without_bar_refuse
+constr 17553:17583 <> verdict_production_wired_refuse
+scheme 17295:17321 <> dissip_conservation_verdict_rect
+scheme 17295:17321 <> dissip_conservation_verdict_ind
+scheme 17295:17321 <> dissip_conservation_verdict_rec
+scheme 17295:17321 <> dissip_conservation_verdict_sind
+def 17598:17627 <> dissip_conservation_verdict_ok
+R17634:17660 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict ind
+binder 17630:17630 <> v:57
+R17665:17668 Corelib.Init.Datatypes <> bool ind
+R17681:17681 UMST.ChemConstants.DissipConservation <> v:57 var
+R17692:17709 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R17714:17717 Corelib.Init.Datatypes <> true constr
+R17723:17743 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R17748:17751 Corelib.Init.Datatypes <> true constr
+R17762:17766 Corelib.Init.Datatypes <> false constr
+def 17787:17817 <> dissip_conservation_verdict_beq
+R17830:17856 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict ind
+binder 17822:17823 <> v1:59
+binder 17825:17826 <> v2:60
+R17861:17864 Corelib.Init.Datatypes <> bool ind
+R17881:17882 UMST.ChemConstants.DissipConservation <> v2:60 var
+R17877:17878 UMST.ChemConstants.DissipConservation <> v1:59 var
+R17893:17910 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R17913:17930 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R17935:17938 Corelib.Init.Datatypes <> true constr
+R17944:17964 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R17967:17987 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R17992:17995 Corelib.Init.Datatypes <> true constr
+R18001:18029 UMST.ChemConstants.DissipConservation <> verdict_trivial_dissip_refuse constr
+R18032:18060 UMST.ChemConstants.DissipConservation <> verdict_trivial_dissip_refuse constr
+R18065:18068 Corelib.Init.Datatypes <> true constr
+R18074:18098 UMST.ChemConstants.DissipConservation <> verdict_cycle_open_refuse constr
+R18101:18125 UMST.ChemConstants.DissipConservation <> verdict_cycle_open_refuse constr
+R18130:18133 Corelib.Init.Datatypes <> true constr
+R18139:18166 UMST.ChemConstants.DissipConservation <> verdict_kind_mismatch_refuse constr
+R18169:18196 UMST.ChemConstants.DissipConservation <> verdict_kind_mismatch_refuse constr
+R18201:18204 Corelib.Init.Datatypes <> true constr
+R18210:18236 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+R18239:18265 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+R18270:18273 Corelib.Init.Datatypes <> true constr
+R18279:18311 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+R18314:18346 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+R18351:18354 Corelib.Init.Datatypes <> true constr
+R18360:18390 UMST.ChemConstants.DissipConservation <> verdict_production_wired_refuse constr
+R18393:18423 UMST.ChemConstants.DissipConservation <> verdict_production_wired_refuse constr
+R18428:18431 Corelib.Init.Datatypes <> true constr
+R18445:18449 Corelib.Init.Datatypes <> false constr
+def 18470:18494 <> evaluate_dissip_incidence
+R18503:18528 UMST.ChemConstants.DissipConservation <> DissipConservationModality ind
+binder 18499:18499 <> m:63
+R18538:18553 UMST.ChemConstants.DissipConservation <> dissip_incidence rec
+binder 18534:18534 <> h:64
+R18563:18583 UMST.ChemConstants.DissipConservation <> dissip_claim_path_bar rec
+binder 18559:18559 <> b:65
+R18611:18614 Corelib.Init.Datatypes <> bool ind
+binder 18589:18607 <> claim_physics_green:66
+R18635:18638 Corelib.Init.Datatypes <> bool ind
+binder 18620:18631 <> claim_proved:67
+R18643:18669 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict ind
+R18679:18697 UMST.ChemConstants.DissipConservation <> claim_physics_green:66 var
+R18744:18755 UMST.ChemConstants.DissipConservation <> claim_proved:67 var
+R18818:18821 Corelib.Init.Datatypes <> negb def
+R18824:18848 UMST.ChemConstants.DissipConservation <> dissipIncidenceNontrivial def
+R18850:18850 UMST.ChemConstants.DissipConservation <> h:64 var
+R18978:18999 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18920:18938 UMST.ChemConstants.DissipConservation <> path_kind_is_cyclic def
+R18941:18955 UMST.ChemConstants.DissipConservation <> cycle_path_kind proj
+R18958:18973 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R18975:18975 UMST.ChemConstants.DissipConservation <> h:64 var
+R19000:19003 Corelib.Init.Datatypes <> negb def
+R19006:19024 UMST.ChemConstants.DissipConservation <> reactionCycleClosed def
+R19027:19042 UMST.ChemConstants.DissipConservation <> dissip_inc_cycle proj
+R19044:19044 UMST.ChemConstants.DissipConservation <> h:64 var
+R19121:19124 Corelib.Init.Datatypes <> negb def
+R19127:19150 UMST.ChemConstants.DissipConservation <> dissipPathKindConsistent def
+R19152:19152 UMST.ChemConstants.DissipConservation <> h:64 var
+R19268:19268 UMST.ChemConstants.DissipConservation <> m:63 var
+R19301:19327 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R19332:19352 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R19380:19406 UMST.ChemConstants.DissipConservation <> dissip_conservation_assumed constr
+R19434:19462 UMST.ChemConstants.DissipConservation <> dissip_conservation_surrogate constr
+R19467:19484 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R19467:19484 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R19512:19537 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R19542:19574 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+R19182:19209 UMST.ChemConstants.DissipConservation <> verdict_kind_mismatch_refuse constr
+R19070:19094 UMST.ChemConstants.DissipConservation <> verdict_cycle_open_refuse constr
+R18870:18898 UMST.ChemConstants.DissipConservation <> verdict_trivial_dissip_refuse constr
+R18769:18801 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+R18706:18732 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+def 19617:19650 <> evaluate_dissip_conservation_close
+R19659:19684 UMST.ChemConstants.DissipConservation <> DissipConservationModality ind
+binder 19655:19655 <> m:69
+R19712:19715 Corelib.Init.Datatypes <> bool ind
+binder 19690:19708 <> claim_physics_green:70
+R19746:19749 Corelib.Init.Datatypes <> bool ind
+binder 19721:19742 <> claim_production_wired:71
+R19754:19780 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict ind
+R19790:19808 UMST.ChemConstants.DissipConservation <> claim_physics_green:70 var
+R19855:19876 UMST.ChemConstants.DissipConservation <> claim_production_wired:71 var
+R19934:19934 UMST.ChemConstants.DissipConservation <> m:69 var
+R19947:19973 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R19978:19995 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R20003:20029 UMST.ChemConstants.DissipConservation <> dissip_conservation_assumed constr
+R20037:20062 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R20070:20098 UMST.ChemConstants.DissipConservation <> dissip_conservation_surrogate constr
+R20103:20123 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R20103:20123 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R20103:20123 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R19885:19915 UMST.ChemConstants.DissipConservation <> verdict_production_wired_refuse constr
+R19817:19843 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+def 20146:20175 <> dissip_conservation_authorized
+R20202:20205 Corelib.Init.Datatypes <> bool ind
+binder 20180:20198 <> claim_physics_green:73
+R20236:20239 Corelib.Init.Datatypes <> bool ind
+binder 20211:20232 <> claim_production_wired:74
+R20244:20247 Corelib.Init.Datatypes <> bool ind
+R20260:20293 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R20305:20330 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R20332:20350 UMST.ChemConstants.DissipConservation <> claim_physics_green:73 var
+R20352:20373 UMST.ChemConstants.DissipConservation <> claim_production_wired:74 var
+R20384:20404 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R20409:20412 Corelib.Init.Datatypes <> true constr
+R20423:20427 Corelib.Init.Datatypes <> false constr
+ind 20671:20693 <> dissip_conservation_law
+constr 20709:20729 <> law_dissip_path_named
+constr 20735:20755 <> law_cycle_open_refuse
+constr 20761:20783 <> law_green_invent_refuse
+constr 20789:20815 <> law_production_wired_refuse
+scheme 20671:20693 <> dissip_conservation_law_rect
+scheme 20671:20693 <> dissip_conservation_law_ind
+scheme 20671:20693 <> dissip_conservation_law_rec
+scheme 20671:20693 <> dissip_conservation_law_sind
+def 20830:20858 <> dissip_conservation_law_count
+R20862:20864 Corelib.Init.Datatypes <> nat ind
+prf 20879:20915 <> dissip_conservation_law_count_is_four
+R20950:20952 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20921:20949 UMST.ChemConstants.DissipConservation <> dissip_conservation_law_count def
+ind 20992:21022 <> dissip_conservation_law_witness
+constr 21038:21060 <> dissip_law_witness_open
+constr 21066:21090 <> dissip_law_witness_proved
+scheme 20992:21022 <> dissip_conservation_law_witness_rect
+scheme 20992:21022 <> dissip_conservation_law_witness_ind
+scheme 20992:21022 <> dissip_conservation_law_witness_rec
+scheme 20992:21022 <> dissip_conservation_law_witness_sind
+def 21105:21144 <> evaluate_dissip_conservation_law_witness
+R21155:21177 UMST.ChemConstants.DissipConservation <> dissip_conservation_law ind
+binder 21149:21151 <> law:79
+R21185:21210 UMST.ChemConstants.DissipConservation <> DissipConservationModality ind
+binder 21181:21181 <> m:80
+R21217:21247 UMST.ChemConstants.DissipConservation <> dissip_conservation_law_witness ind
+R21260:21260 UMST.ChemConstants.DissipConservation <> m:80 var
+R21271:21297 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R21303:21329 UMST.ChemConstants.DissipConservation <> dissip_conservation_assumed constr
+R21335:21363 UMST.ChemConstants.DissipConservation <> dissip_conservation_surrogate constr
+R21368:21390 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+R21368:21390 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+R21368:21390 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+R21396:21421 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R21426:21450 UMST.ChemConstants.DissipConservation <> dissip_law_witness_proved constr
+prf 21466:21509 <> all_dissip_conservation_laws_open_at_unwired
+R21635:21640 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21609:21611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21515:21554 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_law_witness def
+R21556:21576 UMST.ChemConstants.DissipConservation <> law_dissip_path_named constr
+R21582:21608 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R21612:21634 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+R21761:21766 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21735:21737 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21641:21680 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_law_witness def
+R21682:21702 UMST.ChemConstants.DissipConservation <> law_cycle_open_refuse constr
+R21708:21734 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R21738:21760 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+R21889:21894 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21863:21865 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21767:21806 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_law_witness def
+R21808:21830 UMST.ChemConstants.DissipConservation <> law_green_invent_refuse constr
+R21836:21862 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R21866:21888 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+R21995:21997 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21895:21934 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_law_witness def
+R21936:21962 UMST.ChemConstants.DissipConservation <> law_production_wired_refuse constr
+R21968:21994 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R21998:22020 UMST.ChemConstants.DissipConservation <> dissip_law_witness_open constr
+def 22300:22318 <> graph04DissipProved
+R22322:22325 Corelib.Init.Datatypes <> bool ind
+R22330:22334 Corelib.Init.Datatypes <> false constr
+prf 22344:22370 <> graph04_dissip_proved_false
+R22393:22395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22374:22392 UMST.ChemConstants.DissipConservation <> graph04DissipProved def
+R22396:22400 Corelib.Init.Datatypes <> false constr
+def 22440:22462 <> not118SquaredGreenTable
+R22466:22469 Corelib.Init.Datatypes <> bool ind
+R22474:22477 Corelib.Init.Datatypes <> true constr
+prf 22487:22513 <> not_118_squared_green_table
+R22540:22542 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22517:22539 UMST.ChemConstants.DissipConservation <> not118SquaredGreenTable def
+R22543:22546 Corelib.Init.Datatypes <> true constr
+prf 22803:22841 <> unwired_close_without_production_wiring
+R22925:22929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22847:22880 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R22886:22912 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R22914:22918 Corelib.Init.Datatypes <> false constr
+R22920:22924 Corelib.Init.Datatypes <> false constr
+R22930:22947 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+prf 22984:23035 <> unwired_modality_always_ok_without_production_wiring
+R23119:23123 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23041:23074 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R23080:23106 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R23108:23112 Corelib.Init.Datatypes <> false constr
+R23114:23118 Corelib.Init.Datatypes <> false constr
+R23124:23141 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R23157:23195 UMST.ChemConstants.DissipConservation <> unwired_close_without_production_wiring thm
+R23157:23195 UMST.ChemConstants.DissipConservation <> unwired_close_without_production_wiring thm
+prf 23210:23253 <> unwired_verdict_ok_without_production_wiring
+R23377:23381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23259:23288 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R23295:23328 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R23337:23363 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R23365:23369 Corelib.Init.Datatypes <> false constr
+R23371:23375 Corelib.Init.Datatypes <> false constr
+R23382:23385 Corelib.Init.Datatypes <> true constr
+R23404:23433 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R23446:23484 UMST.ChemConstants.DissipConservation <> unwired_close_without_production_wiring thm
+R23446:23484 UMST.ChemConstants.DissipConservation <> unwired_close_without_production_wiring thm
+R23446:23484 UMST.ChemConstants.DissipConservation <> unwired_close_without_production_wiring thm
+prf 23736:23760 <> dissip_cyclic_l1_named_ok
+R23892:23896 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23766:23790 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R23796:23822 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R23824:23850 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R23856:23879 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R23881:23885 Corelib.Init.Datatypes <> false constr
+R23887:23891 Corelib.Init.Datatypes <> false constr
+R23897:23917 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+prf 23954:23985 <> named_cyclic_dissip_conservation
+R24143:24148 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24117:24121 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23991:24015 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R24021:24047 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R24049:24075 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R24081:24104 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R24106:24110 Corelib.Init.Datatypes <> false constr
+R24112:24116 Corelib.Init.Datatypes <> false constr
+R24122:24142 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R24238:24243 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24231:24233 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24149:24178 UMST.ChemConstants.DissipConservation <> reactionCycleIdentityConserved def
+R24180:24202 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R24208:24230 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R24234:24237 Corelib.Init.Datatypes <> true constr
+R24287:24289 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24244:24262 UMST.ChemConstants.DissipConservation <> reactionCycleClosed def
+R24264:24286 UMST.ChemConstants.DissipConservation <> reactionCycleFeCuClosed def
+R24290:24293 Corelib.Init.Datatypes <> true constr
+prf 24344:24373 <> dissip_dissipative_l1_named_ok
+R24510:24514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24379:24403 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R24409:24435 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R24437:24468 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuDissipativeL1 def
+R24474:24497 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R24499:24503 Corelib.Init.Datatypes <> false constr
+R24505:24509 Corelib.Init.Datatypes <> false constr
+R24515:24535 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+prf 24572:24606 <> named_dissipative_path_conservation
+R24769:24774 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24743:24747 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24612:24636 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R24642:24668 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R24670:24701 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuDissipativeL1 def
+R24707:24730 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R24732:24736 Corelib.Init.Datatypes <> false constr
+R24738:24742 Corelib.Init.Datatypes <> false constr
+R24748:24768 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R24828:24830 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24775:24798 UMST.ChemConstants.DissipConservation <> bondPathDissipativeTyped def
+R24800:24827 UMST.ChemConstants.DissipConservation <> bondPathFeCuDissipativeTyped def
+R24831:24834 Corelib.Init.Datatypes <> true constr
+R24863:24892 UMST.ChemConstants.DissipConservation <> dissip_dissipative_l1_named_ok thm
+R24863:24892 UMST.ChemConstants.DissipConservation <> dissip_dissipative_l1_named_ok thm
+R24905:24937 UMST.ChemConstants.DissipConservation <> bond_path_fe_cu_dissipative_typed thm
+R24905:24937 UMST.ChemConstants.DissipConservation <> bond_path_fe_cu_dissipative_typed thm
+prf 24952:24972 <> dissip_named_close_ok
+R25055:25059 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24978:25011 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R25017:25042 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R25044:25048 Corelib.Init.Datatypes <> false constr
+R25050:25054 Corelib.Init.Datatypes <> false constr
+R25060:25080 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+prf 25117:25147 <> named_dissip_conservation_close
+R25256:25261 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25230:25234 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25153:25186 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R25192:25217 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R25219:25223 Corelib.Init.Datatypes <> false constr
+R25225:25229 Corelib.Init.Datatypes <> false constr
+R25235:25255 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R25304:25306 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25262:25291 UMST.ChemConstants.DissipConservation <> dissip_conservation_authorized def
+R25293:25297 Corelib.Init.Datatypes <> false constr
+R25299:25303 Corelib.Init.Datatypes <> false constr
+R25307:25310 Corelib.Init.Datatypes <> true constr
+R25339:25359 UMST.ChemConstants.DissipConservation <> dissip_named_close_ok thm
+R25339:25359 UMST.ChemConstants.DissipConservation <> dissip_named_close_ok thm
+R25373:25402 UMST.ChemConstants.DissipConservation <> dissip_conservation_authorized def
+R25417:25437 UMST.ChemConstants.DissipConservation <> dissip_named_close_ok thm
+R25417:25437 UMST.ChemConstants.DissipConservation <> dissip_named_close_ok thm
+R25417:25437 UMST.ChemConstants.DissipConservation <> dissip_named_close_ok thm
+prf 25693:25714 <> trivial_dissip_refused
+R25841:25845 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25720:25744 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R25750:25776 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R25778:25799 UMST.ChemConstants.DissipConservation <> dissipIncidenceTrivial def
+R25805:25828 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R25830:25834 Corelib.Init.Datatypes <> false constr
+R25836:25840 Corelib.Init.Datatypes <> false constr
+R25846:25874 UMST.ChemConstants.DissipConservation <> verdict_trivial_dissip_refuse constr
+prf 25911:25936 <> trivial_dissip_fail_closed
+R26097:26102 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26063:26067 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25942:25966 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R25972:25998 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R26000:26021 UMST.ChemConstants.DissipConservation <> dissipIncidenceTrivial def
+R26027:26050 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R26052:26056 Corelib.Init.Datatypes <> false constr
+R26058:26062 Corelib.Init.Datatypes <> false constr
+R26068:26096 UMST.ChemConstants.DissipConservation <> verdict_trivial_dissip_refuse constr
+R26267:26271 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26103:26132 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R26139:26163 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R26172:26198 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R26200:26221 UMST.ChemConstants.DissipConservation <> dissipIncidenceTrivial def
+R26230:26253 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R26255:26259 Corelib.Init.Datatypes <> false constr
+R26261:26265 Corelib.Init.Datatypes <> false constr
+R26272:26276 Corelib.Init.Datatypes <> false constr
+R26305:26326 UMST.ChemConstants.DissipConservation <> trivial_dissip_refused thm
+R26305:26326 UMST.ChemConstants.DissipConservation <> trivial_dissip_refused thm
+R26340:26369 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R26384:26405 UMST.ChemConstants.DissipConservation <> trivial_dissip_refused thm
+R26384:26405 UMST.ChemConstants.DissipConservation <> trivial_dissip_refused thm
+R26384:26405 UMST.ChemConstants.DissipConservation <> trivial_dissip_refused thm
+prf 26661:26678 <> cycle_open_refused
+R26809:26813 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26684:26708 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R26714:26740 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R26742:26767 UMST.ChemConstants.DissipConservation <> dissipIncidenceCycleBroken def
+R26773:26796 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R26798:26802 Corelib.Init.Datatypes <> false constr
+R26804:26808 Corelib.Init.Datatypes <> false constr
+R26814:26838 UMST.ChemConstants.DissipConservation <> verdict_cycle_open_refuse constr
+prf 26875:26896 <> cycle_open_fail_closed
+R27057:27062 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27027:27031 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26902:26926 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R26932:26958 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R26960:26985 UMST.ChemConstants.DissipConservation <> dissipIncidenceCycleBroken def
+R26991:27014 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R27016:27020 Corelib.Init.Datatypes <> false constr
+R27022:27026 Corelib.Init.Datatypes <> false constr
+R27032:27056 UMST.ChemConstants.DissipConservation <> verdict_cycle_open_refuse constr
+R27231:27235 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27063:27092 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R27099:27123 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R27132:27158 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R27160:27185 UMST.ChemConstants.DissipConservation <> dissipIncidenceCycleBroken def
+R27194:27217 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R27219:27223 Corelib.Init.Datatypes <> false constr
+R27225:27229 Corelib.Init.Datatypes <> false constr
+R27236:27240 Corelib.Init.Datatypes <> false constr
+R27269:27286 UMST.ChemConstants.DissipConservation <> cycle_open_refused thm
+R27269:27286 UMST.ChemConstants.DissipConservation <> cycle_open_refused thm
+R27300:27329 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R27344:27361 UMST.ChemConstants.DissipConservation <> cycle_open_refused thm
+R27344:27361 UMST.ChemConstants.DissipConservation <> cycle_open_refused thm
+R27344:27361 UMST.ChemConstants.DissipConservation <> cycle_open_refused thm
+prf 27617:27637 <> kind_mismatch_refused
+R27769:27773 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27643:27667 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R27673:27699 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R27701:27727 UMST.ChemConstants.DissipConservation <> dissipIncidenceKindMismatch def
+R27733:27756 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R27758:27762 Corelib.Init.Datatypes <> false constr
+R27764:27768 Corelib.Init.Datatypes <> false constr
+R27774:27801 UMST.ChemConstants.DissipConservation <> verdict_kind_mismatch_refuse constr
+prf 27838:27862 <> kind_mismatch_fail_closed
+R28027:28032 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27994:27998 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27868:27892 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R27898:27924 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R27926:27952 UMST.ChemConstants.DissipConservation <> dissipIncidenceKindMismatch def
+R27958:27981 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R27983:27987 Corelib.Init.Datatypes <> false constr
+R27989:27993 Corelib.Init.Datatypes <> false constr
+R27999:28026 UMST.ChemConstants.DissipConservation <> verdict_kind_mismatch_refuse constr
+R28202:28206 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28033:28062 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R28069:28093 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R28102:28128 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R28130:28156 UMST.ChemConstants.DissipConservation <> dissipIncidenceKindMismatch def
+R28165:28188 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R28190:28194 Corelib.Init.Datatypes <> false constr
+R28196:28200 Corelib.Init.Datatypes <> false constr
+R28207:28211 Corelib.Init.Datatypes <> false constr
+R28240:28260 UMST.ChemConstants.DissipConservation <> kind_mismatch_refused thm
+R28240:28260 UMST.ChemConstants.DissipConservation <> kind_mismatch_refused thm
+R28274:28303 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R28318:28338 UMST.ChemConstants.DissipConservation <> kind_mismatch_refused thm
+R28318:28338 UMST.ChemConstants.DissipConservation <> kind_mismatch_refused thm
+R28318:28338 UMST.ChemConstants.DissipConservation <> kind_mismatch_refused thm
+prf 28594:28620 <> green_invent_refuse_unwired
+R28703:28707 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28626:28659 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R28665:28691 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R28693:28696 Corelib.Init.Datatypes <> true constr
+R28698:28702 Corelib.Init.Datatypes <> false constr
+R28708:28734 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+prf 28771:28796 <> green_invent_always_refuse
+R28919:28923 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28802:28831 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R28838:28871 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R28880:28906 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R28908:28911 Corelib.Init.Datatypes <> true constr
+R28913:28917 Corelib.Init.Datatypes <> false constr
+R28924:28928 Corelib.Init.Datatypes <> false constr
+R28947:28976 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R28989:29015 UMST.ChemConstants.DissipConservation <> green_invent_refuse_unwired thm
+R28989:29015 UMST.ChemConstants.DissipConservation <> green_invent_refuse_unwired thm
+R28989:29015 UMST.ChemConstants.DissipConservation <> green_invent_refuse_unwired thm
+prf 29045:29080 <> green_invent_dissip_incidence_refuse
+R29211:29215 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29086:29110 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R29116:29142 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R29144:29170 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R29176:29199 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R29201:29204 Corelib.Init.Datatypes <> true constr
+R29206:29210 Corelib.Init.Datatypes <> false constr
+R29216:29242 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+prf 29501:29525 <> proved_without_bar_refuse
+R29656:29660 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29531:29555 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R29561:29587 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R29589:29615 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R29621:29644 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R29646:29650 Corelib.Init.Datatypes <> false constr
+R29652:29655 Corelib.Init.Datatypes <> true constr
+R29661:29693 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+prf 29730:29759 <> proved_without_bar_fail_closed
+R29928:29933 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29890:29894 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29765:29789 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R29795:29821 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R29823:29849 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R29855:29878 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R29880:29884 Corelib.Init.Datatypes <> false constr
+R29886:29889 Corelib.Init.Datatypes <> true constr
+R29895:29927 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+R30102:30106 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29934:29963 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R29970:29994 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R30003:30029 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R30031:30057 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R30066:30089 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R30091:30095 Corelib.Init.Datatypes <> false constr
+R30097:30100 Corelib.Init.Datatypes <> true constr
+R30107:30111 Corelib.Init.Datatypes <> false constr
+R30140:30164 UMST.ChemConstants.DissipConservation <> proved_without_bar_refuse thm
+R30140:30164 UMST.ChemConstants.DissipConservation <> proved_without_bar_refuse thm
+R30178:30207 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R30222:30246 UMST.ChemConstants.DissipConservation <> proved_without_bar_refuse thm
+R30222:30246 UMST.ChemConstants.DissipConservation <> proved_without_bar_refuse thm
+R30222:30246 UMST.ChemConstants.DissipConservation <> proved_without_bar_refuse thm
+prf 30278:30320 <> proved_without_bar_zero_defect_still_refuse
+R30460:30464 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30326:30350 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R30356:30382 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R30384:30415 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuDissipativeL1 def
+R30421:30448 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarZeroDefect def
+R30450:30454 Corelib.Init.Datatypes <> false constr
+R30456:30459 Corelib.Init.Datatypes <> true constr
+R30465:30497 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+prf 30756:30778 <> production_wired_refuse
+R30860:30864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30784:30817 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R30823:30848 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R30850:30854 Corelib.Init.Datatypes <> false constr
+R30856:30859 Corelib.Init.Datatypes <> true constr
+R30865:30895 UMST.ChemConstants.DissipConservation <> verdict_production_wired_refuse constr
+prf 30932:30961 <> production_wired_claim_refused
+R31083:31087 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30967:30996 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R31003:31036 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R31045:31070 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R31072:31076 Corelib.Init.Datatypes <> false constr
+R31078:31081 Corelib.Init.Datatypes <> true constr
+R31088:31092 Corelib.Init.Datatypes <> false constr
+R31111:31140 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_ok def
+R31153:31175 UMST.ChemConstants.DissipConservation <> production_wired_refuse thm
+R31153:31175 UMST.ChemConstants.DissipConservation <> production_wired_refuse thm
+R31153:31175 UMST.ChemConstants.DissipConservation <> production_wired_refuse thm
+def 31434:31471 <> dissip_conservation_coherence_scaffold
+R31475:31478 Corelib.Init.Datatypes <> bool ind
+R31785:31790 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R31629:31634 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R31485:31515 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_beq def
+R31522:31555 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R31564:31589 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R31591:31595 Corelib.Init.Datatypes <> false constr
+R31597:31601 Corelib.Init.Datatypes <> false constr
+R31608:31628 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R31635:31665 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_beq def
+R31672:31705 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R31714:31740 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R31742:31745 Corelib.Init.Datatypes <> true constr
+R31747:31751 Corelib.Init.Datatypes <> false constr
+R31758:31784 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+R31791:31821 UMST.ChemConstants.DissipConservation <> dissip_conservation_verdict_beq def
+R31828:31861 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R31870:31895 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R31897:31901 Corelib.Init.Datatypes <> false constr
+R31903:31906 Corelib.Init.Datatypes <> true constr
+R31913:31943 UMST.ChemConstants.DissipConservation <> verdict_production_wired_refuse constr
+prf 31953:31995 <> dissip_conservation_coherence_scaffold_true
+R32039:32041 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32001:32038 UMST.ChemConstants.DissipConservation <> dissip_conservation_coherence_scaffold def
+R32042:32045 Corelib.Init.Datatypes <> true constr
+R32064:32101 UMST.ChemConstants.DissipConservation <> dissip_conservation_coherence_scaffold def
+prf 32156:32201 <> dissip_conservation_coherence_scaffold_theorem
+R32312:32317 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32284:32290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32207:32240 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R32246:32271 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R32273:32277 Corelib.Init.Datatypes <> false constr
+R32279:32283 Corelib.Init.Datatypes <> false constr
+R32291:32311 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R32429:32434 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32395:32401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32318:32351 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R32357:32383 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R32385:32388 Corelib.Init.Datatypes <> true constr
+R32390:32394 Corelib.Init.Datatypes <> false constr
+R32402:32428 UMST.ChemConstants.DissipConservation <> verdict_green_invent_refuse constr
+R32511:32517 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32435:32468 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R32474:32499 UMST.ChemConstants.DissipConservation <> dissip_conservation_proved constr
+R32501:32505 Corelib.Init.Datatypes <> false constr
+R32507:32510 Corelib.Init.Datatypes <> true constr
+R32518:32548 UMST.ChemConstants.DissipConservation <> verdict_production_wired_refuse constr
+ind 32827:32838 <> formal_fiber
+constr 32854:32874 <> fiber_quantum_knowing
+constr 32880:32896 <> fiber_meso_acting
+scheme 32827:32838 <> formal_fiber_rect
+scheme 32827:32838 <> formal_fiber_ind
+scheme 32827:32838 <> formal_fiber_rec
+scheme 32827:32838 <> formal_fiber_sind
+ind 32910:32928 <> formal_claim_family
+constr 32944:32968 <> claim_dissip_conservation
+scheme 32910:32928 <> formal_claim_family_rect
+scheme 32910:32928 <> formal_claim_family_ind
+scheme 32910:32928 <> formal_claim_family_rec
+scheme 32910:32928 <> formal_claim_family_sind
+def 32983:33010 <> dissip_conservation_fiber_ok
+R33017:33028 UMST.ChemConstants.DissipConservation <> formal_fiber ind
+binder 33013:33013 <> f:86
+R33033:33036 Corelib.Init.Datatypes <> bool ind
+R33049:33049 UMST.ChemConstants.DissipConservation <> f:86 var
+R33060:33080 UMST.ChemConstants.DissipConservation <> fiber_quantum_knowing constr
+R33085:33088 Corelib.Init.Datatypes <> true constr
+R33094:33110 UMST.ChemConstants.DissipConservation <> fiber_meso_acting constr
+R33115:33119 Corelib.Init.Datatypes <> false constr
+def 33140:33175 <> dissip_conservation_knowing_fiber_ok
+R33179:33182 Corelib.Init.Datatypes <> bool ind
+R33189:33216 UMST.ChemConstants.DissipConservation <> dissip_conservation_fiber_ok def
+R33218:33238 UMST.ChemConstants.DissipConservation <> fiber_quantum_knowing constr
+def 33253:33286 <> dissip_conservation_meso_acting_ok
+R33290:33293 Corelib.Init.Datatypes <> bool ind
+R33300:33327 UMST.ChemConstants.DissipConservation <> dissip_conservation_fiber_ok def
+R33329:33345 UMST.ChemConstants.DissipConservation <> fiber_meso_acting constr
+prf 33355:33395 <> dissip_conservation_knowing_fiber_ok_true
+R33437:33439 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33401:33436 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok def
+R33440:33443 Corelib.Init.Datatypes <> true constr
+prf 33478:33515 <> dissip_conservation_meso_acting_not_ok
+R33555:33557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33521:33554 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_ok def
+R33558:33562 Corelib.Init.Datatypes <> false constr
+prf 33599:33641 <> dissip_conservation_routes_knowing_not_meso
+R33690:33695 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33683:33685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33647:33682 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok def
+R33686:33689 Corelib.Init.Datatypes <> true constr
+R33730:33732 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33696:33729 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_ok def
+R33733:33737 Corelib.Init.Datatypes <> false constr
+R33766:33806 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok_true thm
+R33766:33806 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok_true thm
+R33819:33856 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_not_ok thm
+R33819:33856 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_not_ok thm
+def 33876:33893 <> fiberNotMesoActing
+R33897:33900 Corelib.Init.Datatypes <> bool ind
+R33943:33948 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R33907:33942 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok def
+R33949:33952 Corelib.Init.Datatypes <> negb def
+R33954:33987 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_ok def
+prf 33997:34022 <> fiber_not_meso_acting_true
+R34044:34046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34026:34043 UMST.ChemConstants.DissipConservation <> fiberNotMesoActing def
+R34047:34050 Corelib.Init.Datatypes <> true constr
+R34069:34086 UMST.ChemConstants.DissipConservation <> fiberNotMesoActing def
+R34089:34124 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok def
+R34131:34164 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_ok def
+prf 34418:34453 <> dissip_conservation_fixture_scaffold
+R34613:34618 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34585:34591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34459:34483 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R34489:34515 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R34517:34543 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuCyclicL1 def
+R34549:34572 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R34574:34578 Corelib.Init.Datatypes <> false constr
+R34580:34584 Corelib.Init.Datatypes <> false constr
+R34592:34612 UMST.ChemConstants.DissipConservation <> verdict_path_named_ok constr
+R34776:34781 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34740:34746 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34619:34643 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R34649:34675 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R34677:34698 UMST.ChemConstants.DissipConservation <> dissipIncidenceTrivial def
+R34704:34727 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R34729:34733 Corelib.Init.Datatypes <> false constr
+R34735:34739 Corelib.Init.Datatypes <> false constr
+R34747:34775 UMST.ChemConstants.DissipConservation <> verdict_trivial_dissip_refuse constr
+R34939:34944 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34907:34913 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34782:34806 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R34812:34838 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R34840:34865 UMST.ChemConstants.DissipConservation <> dissipIncidenceCycleBroken def
+R34871:34894 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R34896:34900 Corelib.Init.Datatypes <> false constr
+R34902:34906 Corelib.Init.Datatypes <> false constr
+R34914:34938 UMST.ChemConstants.DissipConservation <> verdict_cycle_open_refuse constr
+R35106:35111 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35071:35077 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34945:34969 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R34975:35001 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R35003:35029 UMST.ChemConstants.DissipConservation <> dissipIncidenceKindMismatch def
+R35035:35058 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R35060:35064 Corelib.Init.Datatypes <> false constr
+R35066:35070 Corelib.Init.Datatypes <> false constr
+R35078:35105 UMST.ChemConstants.DissipConservation <> verdict_kind_mismatch_refuse constr
+R35282:35287 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35242:35248 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35112:35136 UMST.ChemConstants.DissipConservation <> evaluate_dissip_incidence def
+R35142:35168 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R35170:35201 UMST.ChemConstants.DissipConservation <> dissipIncidenceFeCuDissipativeL1 def
+R35207:35230 UMST.ChemConstants.DissipConservation <> dissipClaimPathBarAbsent def
+R35232:35236 Corelib.Init.Datatypes <> false constr
+R35238:35241 Corelib.Init.Datatypes <> true constr
+R35249:35281 UMST.ChemConstants.DissipConservation <> verdict_proved_without_bar_refuse constr
+R35391:35396 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35366:35372 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35288:35321 UMST.ChemConstants.DissipConservation <> evaluate_dissip_conservation_close def
+R35327:35353 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr
+R35355:35359 Corelib.Init.Datatypes <> false constr
+R35361:35365 Corelib.Init.Datatypes <> false constr
+R35373:35390 UMST.ChemConstants.DissipConservation <> verdict_unwired_ok constr
+R35440:35445 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35433:35435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35397:35432 UMST.ChemConstants.DissipConservation <> dissip_conservation_knowing_fiber_ok def
+R35436:35439 Corelib.Init.Datatypes <> true constr
+R35488:35493 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35480:35482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35446:35479 UMST.ChemConstants.DissipConservation <> dissip_conservation_meso_acting_ok def
+R35483:35487 Corelib.Init.Datatypes <> false constr
+R35521:35526 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35513:35515 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35494:35512 UMST.ChemConstants.DissipConservation <> graph04DissipProved def
+R35516:35520 Corelib.Init.Datatypes <> false constr
+R35549:35551 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35527:35548 UMST.ChemConstants.DissipConservation <> cycleNeDissipativePath def
+R35552:35555 Corelib.Init.Datatypes <> true constr
+def 35835:35856 <> reactionCycleAuthority
+R35860:35865 Stdlib.Strings.String <> string ind
+def 35924:35957 <> chemIntProveGraph04DissipAuthority
+R35961:35966 Stdlib.Strings.String <> string ind
+def 36019:36042 <> dissipConservationCellId
+R36046:36051 Stdlib.Strings.String <> string ind
+def 36111:36136 <> dissipConservationNonClaim
+R36140:36145 Stdlib.Strings.String <> string ind
+prf 36626:36652 <> dissip_conservation_cell_id
+R36682:36684 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36658:36681 UMST.ChemConstants.DissipConservation <> dissipConservationCellId def
+prf 36758:36800 <> dissip_conservation_cites_reaction_cycle_rs
+R36828:36831 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36806:36827 UMST.ChemConstants.DissipConservation <> reactionCycleAuthority def
+prf 36869:36919 <> dissip_conservation_cites_int_prove_graph_04_dissip
+R36959:36961 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36925:36958 UMST.ChemConstants.DissipConservation <> chemIntProveGraph04DissipAuthority def
+prf 37028:37059 <> dissip_conservation_cites_marker
+R37086:37089 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R37065:37085 UMST.ChemConstants.DissipConservation <> dissipativePathMarker def
+def 37352:37385 <> dissipSecondLawConservationFraming
+R37389:37394 Stdlib.Strings.String <> string ind
+prf 37476:37505 <> dissip_not_second_dissip_axiom
+R37545:37548 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R37511:37544 UMST.ChemConstants.DissipConservation <> dissipSecondLawConservationFraming def
+prf 37605:37642 <> dissip_second_law_conservation_framing
+R37682:37685 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R37648:37681 UMST.ChemConstants.DissipConservation <> dissipSecondLawConservationFraming def
+def 37952:37973 <> physicsGreenAuthorized
+R37985:37989 Corelib.Init.Logic <> False ind
+prf 37999:38037 <> dissip_conservation_physics_green_false
+R38043:38044 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R38045:38066 UMST.ChemConstants.DissipConservation <> physicsGreenAuthorized def
+prf 38106:38141 <> dissip_conservation_modality_unwired
+R38180:38182 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38147:38179 UMST.ChemConstants.DissipConservation <> dissipConservationModalityCurrent def
+R38183:38209 UMST.ChemConstants.DissipConservation <> dissip_conservation_unwired constr

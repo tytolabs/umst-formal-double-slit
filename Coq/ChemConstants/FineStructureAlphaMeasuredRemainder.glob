@@ -1,0 +1,623 @@
+DIGEST 3ff9ac61229002f05f6bdf1cad20eacc
+FUMST.ChemConstants.FineStructureAlphaMeasuredRemainder
+R1282:1286 Stdlib.Arith.Arith <> <> lib
+R1288:1293 Stdlib.ZArith.ZArith <> <> lib
+R1295:1300 Stdlib.Strings.String <> <> lib
+R1302:1305 Stdlib.Bool.Bool <> <> lib
+R1307:1309 Stdlib.micromega.Lia <> <> lib
+R1311:1314 Stdlib.Lists.List <> <> lib
+R1324:1336 Stdlib.Lists.List ListNotations <> mod
+def 1371:1412 <> finestructurealphameasuredremainderSurface
+R1416:1421 Stdlib.Strings.String <> string ind
+def 1491:1531 <> fineStructureAlphaMeasuredRemainderMarker
+R1535:1540 Stdlib.Strings.String <> string ind
+prf 1618:1666 <> finestructurealphameasuredremainder_surface_named
+R1714:1717 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1672:1713 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> finestructurealphameasuredremainderSurface def
+prf 1755:1806 <> fine_structure_alpha_measured_remainder_marker_named
+R1853:1856 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1812:1852 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderMarker def
+ind 2122:2164 <> FineStructureAlphaMeasuredRemainderModality
+constr 2180:2226 <> fine_structure_alpha_measured_remainder_unwired
+constr 2232:2278 <> fine_structure_alpha_measured_remainder_assumed
+constr 2284:2329 <> fine_structure_alpha_measured_remainder_proved
+constr 2335:2383 <> fine_structure_alpha_measured_remainder_surrogate
+scheme 2122:2164 <> FineStructureAlphaMeasuredRemainderModality_rect
+scheme 2122:2164 <> FineStructureAlphaMeasuredRemainderModality_ind
+scheme 2122:2164 <> FineStructureAlphaMeasuredRemainderModality_rec
+scheme 2122:2164 <> FineStructureAlphaMeasuredRemainderModality_sind
+def 2398:2447 <> fineStructureAlphaMeasuredRemainderModalityCurrent
+R2453:2495 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> FineStructureAlphaMeasuredRemainderModality ind
+R2502:2548 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+def 2563:2611 <> fine_structure_alpha_modality_lattice_cardinality
+R2615:2617 Corelib.Init.Datatypes <> nat ind
+prf 2632:2688 <> fine_structure_alpha_modality_lattice_cardinality_is_four
+R2743:2745 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2694:2742 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_modality_lattice_cardinality def
+prf 2781:2833 <> fine_structure_alpha_modality_lattice_not_118_squared
+R2919:2921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2839:2842 Corelib.Init.Datatypes <> negb def
+R2845:2851 Stdlib.Arith.PeanoNat Nat eqb def
+R2853:2901 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_modality_lattice_cardinality def
+R2911:2913 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2922:2925 Corelib.Init.Datatypes <> true constr
+R2944:2992 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_modality_lattice_cardinality def
+def 3253:3293 <> codata_2018_fine_structure_alpha_citation
+R3297:3302 Stdlib.Strings.String <> string ind
+prf 3346:3372 <> codata_alpha_citation_named
+R3419:3422 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3378:3418 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> codata_2018_fine_structure_alpha_citation def
+def 3465:3504 <> codata_measured_fine_structure_alpha_pin
+R3508:3513 Stdlib.Strings.String <> string ind
+def 3551:3602 <> codata_measured_fine_structure_alpha_mantissa_digits
+R3606:3608 Corelib.Init.Datatypes <> nat ind
+prf 3624:3645 <> codata_alpha_pin_named
+R3691:3694 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3651:3690 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> codata_measured_fine_structure_alpha_pin def
+prf 3732:3768 <> codata_alpha_mantissa_digits_positive
+R3836:3838 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3774:3780 Stdlib.Arith.PeanoNat Nat ltb def
+R3784:3835 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> codata_measured_fine_structure_alpha_mantissa_digits def
+R3839:3842 Corelib.Init.Datatypes <> true constr
+def 3882:3914 <> alpha_deferred_composition_marker
+R3918:3923 Stdlib.Strings.String <> string ind
+def 4001:4026 <> landauer_fake_alpha_marker
+R4030:4035 Stdlib.Strings.String <> string ind
+def 4094:4124 <> impossibility_rest_alpha_marker
+R4128:4133 Stdlib.Strings.String <> string ind
+prf 4198:4228 <> alpha_deferred_ne_landauer_fake
+R4267:4270 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4234:4266 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_deferred_composition_marker def
+R4271:4296 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> landauer_fake_alpha_marker def
+prf 4332:4367 <> alpha_deferred_ne_impossibility_rest
+R4406:4409 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4373:4405 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_deferred_composition_marker def
+R4410:4440 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> impossibility_rest_alpha_marker def
+def 4481:4517 <> alpha_is_deferred_codata_not_landauer
+R4521:4524 Corelib.Init.Datatypes <> bool ind
+R4531:4534 Corelib.Init.Datatypes <> negb def
+R4537:4546 Stdlib.Strings.String <> eqb def
+R4548:4580 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_deferred_composition_marker def
+R4586:4611 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> landauer_fake_alpha_marker def
+prf 4622:4663 <> alpha_is_deferred_codata_not_landauer_true
+R4706:4708 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4669:4705 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_deferred_codata_not_landauer def
+R4709:4712 Corelib.Init.Datatypes <> true constr
+def 4752:4779 <> alpha_not_impossibility_rest
+R4783:4786 Corelib.Init.Datatypes <> bool ind
+R4793:4796 Corelib.Init.Datatypes <> negb def
+R4799:4808 Stdlib.Strings.String <> eqb def
+R4810:4842 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_deferred_composition_marker def
+R4848:4878 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> impossibility_rest_alpha_marker def
+prf 4889:4921 <> alpha_not_impossibility_rest_true
+R4955:4957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4927:4954 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_not_impossibility_rest def
+R4958:4961 Corelib.Init.Datatypes <> true constr
+def 5227:5252 <> landauer_ref_k_j_per_k_pin
+R5256:5261 Stdlib.Strings.String <> string ind
+def 5294:5319 <> landauer_ref_temperature_k
+R5323:5325 Corelib.Init.Datatypes <> nat ind
+def 5347:5359 <> ln_two_marker
+R5363:5368 Stdlib.Strings.String <> string ind
+prf 5388:5411 <> landauer_ref_k_pin_named
+R5443:5446 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5417:5442 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> landauer_ref_k_j_per_k_pin def
+prf 5484:5514 <> landauer_ref_temperature_is_300
+R5546:5548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5520:5545 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> landauer_ref_temperature_k def
+def 5591:5624 <> alpha_derived_from_landauer_kt_ln2
+R5628:5631 Corelib.Init.Datatypes <> bool ind
+R5636:5640 Corelib.Init.Datatypes <> false constr
+prf 5650:5689 <> alpha_derived_from_landauer_kt_ln2_false
+R5729:5731 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5695:5728 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2 def
+R5732:5736 Corelib.Init.Datatypes <> false constr
+def 5776:5824 <> landauer_kt_ln2_dimensionally_distinct_from_alpha
+R5828:5831 Corelib.Init.Datatypes <> bool ind
+R5877:5882 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5838:5841 Corelib.Init.Datatypes <> negb def
+R5843:5876 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2 def
+R5883:5886 Corelib.Init.Datatypes <> negb def
+R5889:5898 Stdlib.Strings.String <> eqb def
+R5900:5939 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> codata_measured_fine_structure_alpha_pin def
+prf 5953:5995 <> landauer_kt_ln2_dimensionally_distinct_true
+R6050:6052 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6001:6049 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> landauer_kt_ln2_dimensionally_distinct_from_alpha def
+R6053:6056 Corelib.Init.Datatypes <> true constr
+def 6321:6336 <> sole_axiom_count
+R6340:6342 Corelib.Init.Datatypes <> nat ind
+prf 6357:6379 <> sole_axiom_count_is_one
+R6399:6401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6383:6398 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> sole_axiom_count def
+def 6442:6466 <> twenty_sixth_axiom_marker
+R6470:6475 Stdlib.Strings.String <> string ind
+prf 6512:6533 <> not_twenty_sixth_axiom
+R6566:6568 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6539:6545 Stdlib.Arith.PeanoNat Nat eqb def
+R6547:6562 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> sole_axiom_count def
+R6569:6573 Corelib.Init.Datatypes <> false constr
+def 6613:6656 <> alpha_measured_remainder_second_axiom_minted
+R6660:6663 Corelib.Init.Datatypes <> bool ind
+R6668:6672 Corelib.Init.Datatypes <> false constr
+prf 6682:6729 <> alpha_measured_remainder_second_axiom_not_minted
+R6779:6781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6735:6778 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_measured_remainder_second_axiom_minted def
+R6782:6786 Corelib.Init.Datatypes <> false constr
+def 6826:6853 <> fineStructureAlphaIsNewAxiom
+R6865:6869 Corelib.Init.Logic <> False ind
+prf 6879:6912 <> fine_structure_alpha_not_new_axiom
+R6918:6919 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R6920:6947 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaIsNewAxiom def
+def 6992:7020 <> second_law_conservation_axiom
+R7024:7029 Stdlib.Strings.String <> string ind
+prf 7199:7233 <> second_law_conservation_axiom_named
+R7268:7271 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7239:7267 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> second_law_conservation_axiom def
+def 7540:7575 <> vacuumPermittivitySiDerivedAuthority
+R7579:7584 Stdlib.Strings.String <> string ind
+def 7659:7696 <> vacuumPermittivitySiDerivedCrossCellId
+R7700:7705 Stdlib.Strings.String <> string ind
+def 7767:7799 <> vacuumPermittivitySiDerivedMarker
+R7803:7808 Stdlib.Strings.String <> string ind
+prf 7859:7904 <> vacuum_permittivity_si_derived_authority_named
+R7946:7949 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7910:7945 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedAuthority def
+prf 7987:8030 <> vacuum_permittivity_si_derived_cross_cell_id
+R8121:8126 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8074:8079 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8036:8073 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedCrossCellId def
+R8127:8131 Corelib.Init.Logic <> False ind
+prf 8184:8226 <> vacuum_permittivity_si_derived_marker_named
+R8265:8268 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8232:8264 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedMarker def
+def 8311:8357 <> vacuum_permittivity_si_derived_cited_not_forked
+R8361:8364 Corelib.Init.Datatypes <> bool ind
+R8493:8498 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8428:8433 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8371:8374 Corelib.Init.Datatypes <> negb def
+R8377:8386 Stdlib.Strings.String <> eqb def
+R8388:8423 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedAuthority def
+R8434:8437 Corelib.Init.Datatypes <> negb def
+R8440:8449 Stdlib.Strings.String <> eqb def
+R8451:8488 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedCrossCellId def
+R8499:8502 Corelib.Init.Datatypes <> negb def
+R8505:8514 Stdlib.Strings.String <> eqb def
+R8516:8548 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedMarker def
+prf 8562:8613 <> vacuum_permittivity_si_derived_cited_not_forked_true
+R8666:8668 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8619:8665 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuum_permittivity_si_derived_cited_not_forked def
+R8669:8672 Corelib.Init.Datatypes <> true constr
+ind 8936:8960 <> FineStructureAlphaPinKind
+constr 8976:8998 <> pin_kind_measured_cited
+constr 9004:9035 <> pin_kind_landauer_kt_ln2_theater
+constr 9041:9075 <> pin_kind_impossibility_rest_theater
+scheme 8936:8960 <> FineStructureAlphaPinKind_rect
+scheme 8936:8960 <> FineStructureAlphaPinKind_ind
+scheme 8936:8960 <> FineStructureAlphaPinKind_rec
+scheme 8936:8960 <> FineStructureAlphaPinKind_sind
+def 9090:9117 <> fineStructureAlphaPinKindTag
+R9124:9148 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> FineStructureAlphaPinKind ind
+binder 9120:9120 <> k:5
+R9153:9158 Stdlib.Strings.String <> string ind
+R9171:9171 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> k:5 var
+R9182:9204 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> pin_kind_measured_cited constr
+R9229:9260 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> pin_kind_landauer_kt_ln2_theater constr
+R9292:9326 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> pin_kind_impossibility_rest_theater constr
+def 9377:9411 <> fineStructureAlphaAuthorizedPinKind
+R9415:9439 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> FineStructureAlphaPinKind ind
+R9446:9468 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> pin_kind_measured_cited constr
+prf 9478:9514 <> authorized_pin_kind_is_measured_cited
+R9584:9588 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9520:9547 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaPinKindTag def
+R9549:9583 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaAuthorizedPinKind def
+prf 9638:9676 <> authorized_pin_kind_ne_landauer_theater
+R9746:9751 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9682:9709 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaPinKindTag def
+R9711:9745 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaAuthorizedPinKind def
+def 10037:10063 <> alpha_is_impossibility_rest
+R10067:10070 Corelib.Init.Datatypes <> bool ind
+R10075:10079 Corelib.Init.Datatypes <> false constr
+prf 10089:10121 <> alpha_is_impossibility_rest_false
+R10154:10156 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10127:10153 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_impossibility_rest def
+R10157:10161 Corelib.Init.Datatypes <> false constr
+def 10201:10240 <> alpha_deferred_composition_on_second_law
+R10244:10247 Corelib.Init.Datatypes <> bool ind
+R10467:10472 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10424:10429 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10371:10376 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10331:10336 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10293:10298 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10254:10257 Corelib.Init.Datatypes <> negb def
+R10259:10292 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2 def
+R10299:10302 Corelib.Init.Datatypes <> negb def
+R10304:10330 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_impossibility_rest def
+R10337:10340 Corelib.Init.Datatypes <> negb def
+R10343:10349 Stdlib.Arith.PeanoNat Nat eqb def
+R10351:10366 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> sole_axiom_count def
+R10377:10423 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuum_permittivity_si_derived_cited_not_forked def
+R10430:10466 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_deferred_codata_not_landauer def
+R10473:10521 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> landauer_kt_ln2_dimensionally_distinct_from_alpha def
+prf 10531:10575 <> alpha_deferred_composition_on_second_law_true
+R10621:10623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10581:10620 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_deferred_composition_on_second_law def
+R10624:10627 Corelib.Init.Datatypes <> true constr
+def 10667:10714 <> fine_structure_alpha_measured_remainder_conjunct
+R10718:10721 Corelib.Init.Datatypes <> bool ind
+R10908:10913 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10863:10868 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10817:10822 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10762:10767 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10728:10731 Corelib.Init.Datatypes <> negb def
+R10734:10740 Stdlib.Arith.PeanoNat Nat eqb def
+R10742:10757 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> sole_axiom_count def
+R10768:10771 Corelib.Init.Datatypes <> negb def
+R10773:10816 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_measured_remainder_second_axiom_minted def
+R10823:10862 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_deferred_composition_on_second_law def
+R10869:10872 Corelib.Init.Datatypes <> negb def
+R10874:10907 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2 def
+R10914:10917 Corelib.Init.Datatypes <> negb def
+R10919:10945 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_impossibility_rest def
+prf 10955:11007 <> fine_structure_alpha_measured_remainder_conjunct_true
+R11061:11063 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11013:11060 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_conjunct def
+R11064:11067 Corelib.Init.Datatypes <> true constr
+ind 11333:11360 <> fine_structure_alpha_verdict
+constr 11376:11393 <> verdict_unwired_ok
+constr 11399:11430 <> verdict_alpha_remainder_named_ok
+constr 11436:11462 <> verdict_green_invent_refuse
+constr 11468:11500 <> verdict_proved_without_bar_refuse
+constr 11506:11536 <> verdict_production_wired_refuse
+constr 11542:11566 <> verdict_26th_axiom_refuse
+constr 11572:11599 <> verdict_landauer_fake_refuse
+constr 11605:11637 <> verdict_impossibility_rest_refuse
+scheme 11333:11360 <> fine_structure_alpha_verdict_rect
+scheme 11333:11360 <> fine_structure_alpha_verdict_ind
+scheme 11333:11360 <> fine_structure_alpha_verdict_rec
+scheme 11333:11360 <> fine_structure_alpha_verdict_sind
+def 11652:11682 <> fine_structure_alpha_verdict_ok
+R11691:11718 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_verdict ind
+binder 11687:11687 <> v:9
+R11723:11726 Corelib.Init.Datatypes <> bool ind
+R11739:11739 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> v:9 var
+R11750:11767 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_unwired_ok constr
+R11772:11775 Corelib.Init.Datatypes <> true constr
+R11781:11812 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_alpha_remainder_named_ok constr
+R11817:11820 Corelib.Init.Datatypes <> true constr
+R11831:11835 Corelib.Init.Datatypes <> false constr
+def 11856:11890 <> evaluate_fine_structure_alpha_close
+R11899:11941 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> FineStructureAlphaMeasuredRemainderModality ind
+binder 11895:11895 <> m:11
+R11969:11972 Corelib.Init.Datatypes <> bool ind
+binder 11947:11965 <> claim_physics_green:12
+R12003:12006 Corelib.Init.Datatypes <> bool ind
+binder 11978:11999 <> claim_production_wired:13
+R12031:12034 Corelib.Init.Datatypes <> bool ind
+binder 12012:12027 <> claim_26th_axiom:14
+R12062:12065 Corelib.Init.Datatypes <> bool ind
+binder 12040:12058 <> claim_landauer_fake:15
+R12098:12101 Corelib.Init.Datatypes <> bool ind
+binder 12071:12094 <> claim_impossibility_rest:16
+R12106:12133 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_verdict ind
+R12143:12161 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> claim_physics_green:12 var
+R12208:12229 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> claim_production_wired:13 var
+R12280:12295 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> claim_26th_axiom:14 var
+R12340:12358 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> claim_landauer_fake:15 var
+R12406:12429 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> claim_impossibility_rest:16 var
+R12489:12489 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> m:11 var
+R12502:12548 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R12553:12570 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_unwired_ok constr
+R12578:12624 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_assumed constr
+R12632:12677 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_proved constr
+R12685:12733 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_surrogate constr
+R12744:12775 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_alpha_remainder_named_ok constr
+R12744:12775 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_alpha_remainder_named_ok constr
+R12744:12775 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_alpha_remainder_named_ok constr
+R12438:12470 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_impossibility_rest_refuse constr
+R12367:12394 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_landauer_fake_refuse constr
+R12304:12328 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_26th_axiom_refuse constr
+R12238:12268 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_production_wired_refuse constr
+R12170:12196 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_green_invent_refuse constr
+prf 12793:12820 <> unwired_close_without_claims
+R12947:12949 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12826:12860 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R12866:12912 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R12918:12922 Corelib.Init.Datatypes <> false constr
+R12924:12928 Corelib.Init.Datatypes <> false constr
+R12930:12934 Corelib.Init.Datatypes <> false constr
+R12936:12940 Corelib.Init.Datatypes <> false constr
+R12942:12946 Corelib.Init.Datatypes <> false constr
+R12950:12967 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_unwired_ok constr
+prf 13004:13044 <> unwired_modality_always_ok_without_claims
+R13171:13173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13050:13084 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R13090:13136 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R13142:13146 Corelib.Init.Datatypes <> false constr
+R13148:13152 Corelib.Init.Datatypes <> false constr
+R13154:13158 Corelib.Init.Datatypes <> false constr
+R13160:13164 Corelib.Init.Datatypes <> false constr
+R13166:13170 Corelib.Init.Datatypes <> false constr
+R13174:13191 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_unwired_ok constr
+R13207:13234 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> unwired_close_without_claims thm
+R13207:13234 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> unwired_close_without_claims thm
+prf 13249:13275 <> green_invent_refuse_unwired
+R13401:13403 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13281:13315 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R13321:13367 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R13373:13376 Corelib.Init.Datatypes <> true constr
+R13378:13382 Corelib.Init.Datatypes <> false constr
+R13384:13388 Corelib.Init.Datatypes <> false constr
+R13390:13394 Corelib.Init.Datatypes <> false constr
+R13396:13400 Corelib.Init.Datatypes <> false constr
+R13404:13430 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_green_invent_refuse constr
+prf 13467:13492 <> green_invent_always_refuse
+R13662:13664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13498:13528 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_verdict_ok def
+R13535:13569 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R13578:13624 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R13633:13636 Corelib.Init.Datatypes <> true constr
+R13638:13642 Corelib.Init.Datatypes <> false constr
+R13644:13648 Corelib.Init.Datatypes <> false constr
+R13650:13654 Corelib.Init.Datatypes <> false constr
+R13656:13660 Corelib.Init.Datatypes <> false constr
+R13665:13669 Corelib.Init.Datatypes <> false constr
+R13688:13718 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_verdict_ok def
+R13731:13757 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> green_invent_refuse_unwired thm
+R13731:13757 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> green_invent_refuse_unwired thm
+R13731:13757 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> green_invent_refuse_unwired thm
+prf 13787:13806 <> landauer_fake_refuse
+R13932:13934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13812:13846 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R13852:13898 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R13904:13908 Corelib.Init.Datatypes <> false constr
+R13910:13914 Corelib.Init.Datatypes <> false constr
+R13916:13920 Corelib.Init.Datatypes <> false constr
+R13922:13925 Corelib.Init.Datatypes <> true constr
+R13927:13931 Corelib.Init.Datatypes <> false constr
+R13935:13962 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_landauer_fake_refuse constr
+prf 13997:14021 <> impossibility_rest_refuse
+R14147:14151 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14027:14061 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R14067:14113 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R14119:14123 Corelib.Init.Datatypes <> false constr
+R14125:14129 Corelib.Init.Datatypes <> false constr
+R14131:14135 Corelib.Init.Datatypes <> false constr
+R14137:14141 Corelib.Init.Datatypes <> false constr
+R14143:14146 Corelib.Init.Datatypes <> true constr
+R14152:14184 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_impossibility_rest_refuse constr
+prf 14219:14243 <> twenty_sixth_axiom_refuse
+R14369:14371 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14249:14283 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R14289:14335 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R14341:14345 Corelib.Init.Datatypes <> false constr
+R14347:14351 Corelib.Init.Datatypes <> false constr
+R14353:14356 Corelib.Init.Datatypes <> true constr
+R14358:14362 Corelib.Init.Datatypes <> false constr
+R14364:14368 Corelib.Init.Datatypes <> false constr
+R14372:14396 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_26th_axiom_refuse constr
+prf 14431:14453 <> production_wired_refuse
+R14578:14580 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14459:14493 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R14499:14544 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_proved constr
+R14550:14554 Corelib.Init.Datatypes <> false constr
+R14556:14559 Corelib.Init.Datatypes <> true constr
+R14561:14565 Corelib.Init.Datatypes <> false constr
+R14567:14571 Corelib.Init.Datatypes <> false constr
+R14573:14577 Corelib.Init.Datatypes <> false constr
+R14581:14611 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_production_wired_refuse constr
+def 14876:14903 <> fineStructureAlphaWiredInLib
+R14907:14910 Corelib.Init.Datatypes <> bool ind
+R14915:14919 Corelib.Init.Datatypes <> false constr
+def 14934:14961 <> fineStructureAlphaWiredInEos
+R14965:14968 Corelib.Init.Datatypes <> bool ind
+R14973:14977 Corelib.Init.Datatypes <> false constr
+def 14992:15020 <> fineStructureAlphaWiredInNano
+R15024:15027 Corelib.Init.Datatypes <> bool ind
+R15032:15036 Corelib.Init.Datatypes <> false constr
+def 15051:15083 <> fineStructureAlphaProductionWired
+R15087:15090 Corelib.Init.Datatypes <> bool ind
+R15095:15099 Corelib.Init.Datatypes <> false constr
+prf 15109:15142 <> fine_structure_alpha_not_wired_lib
+R15176:15178 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15148:15175 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInLib def
+R15179:15183 Corelib.Init.Datatypes <> false constr
+prf 15218:15251 <> fine_structure_alpha_not_wired_eos
+R15285:15287 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15257:15284 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInEos def
+R15288:15292 Corelib.Init.Datatypes <> false constr
+prf 15327:15361 <> fine_structure_alpha_not_wired_nano
+R15396:15398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15367:15395 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInNano def
+R15399:15403 Corelib.Init.Datatypes <> false constr
+prf 15438:15480 <> fine_structure_alpha_production_wired_false
+R15519:15521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15486:15518 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaProductionWired def
+R15522:15526 Corelib.Init.Datatypes <> false constr
+prf 15561:15590 <> wave100_not_wired_lib_eos_nano
+R15708:15710 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15668:15673 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15629:15634 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15596:15599 Corelib.Init.Datatypes <> negb def
+R15601:15628 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInLib def
+R15635:15638 Corelib.Init.Datatypes <> negb def
+R15640:15667 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInEos def
+R15674:15677 Corelib.Init.Datatypes <> negb def
+R15679:15707 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInNano def
+R15711:15714 Corelib.Init.Datatypes <> true constr
+def 15754:15778 <> wave100NotWiredLibEosNano
+R15782:15787 Stdlib.Strings.String <> string ind
+prf 15892:15921 <> wave100_not_wired_marker_named
+R15952:15955 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15927:15951 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> wave100NotWiredLibEosNano def
+def 16223:16263 <> fineStructureAlphaMeasuredRemainderProved
+R16267:16270 Corelib.Init.Datatypes <> bool ind
+R16275:16279 Corelib.Init.Datatypes <> false constr
+prf 16289:16340 <> fine_structure_alpha_measured_remainder_proved_false
+R16387:16389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16346:16386 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderProved def
+R16390:16394 Corelib.Init.Datatypes <> false constr
+def 16434:16456 <> not118SquaredGreenTable
+R16460:16463 Corelib.Init.Datatypes <> bool ind
+R16468:16471 Corelib.Init.Datatypes <> true constr
+prf 16481:16507 <> not_118_squared_green_table
+R16536:16538 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16513:16535 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> not118SquaredGreenTable def
+R16539:16542 Corelib.Init.Datatypes <> true constr
+ind 16803:16814 <> formal_fiber
+constr 16830:16854 <> fiber_matter_constitutive
+constr 16860:16880 <> fiber_quantum_knowing
+scheme 16803:16814 <> formal_fiber_rect
+scheme 16803:16814 <> formal_fiber_ind
+scheme 16803:16814 <> formal_fiber_rec
+scheme 16803:16814 <> formal_fiber_sind
+def 16895:16923 <> fine_structure_alpha_fiber_ok
+R16930:16941 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> formal_fiber ind
+binder 16926:16926 <> f:20
+R16946:16949 Corelib.Init.Datatypes <> bool ind
+R16962:16962 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> f:20 var
+R16973:16997 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fiber_matter_constitutive constr
+R17002:17005 Corelib.Init.Datatypes <> true constr
+R17011:17031 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fiber_quantum_knowing constr
+R17036:17039 Corelib.Init.Datatypes <> true constr
+prf 17055:17090 <> fine_structure_alpha_matter_fiber_ok
+R17151:17153 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17096:17124 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_fiber_ok def
+R17126:17150 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fiber_matter_constitutive constr
+R17154:17157 Corelib.Init.Datatypes <> true constr
+prf 17192:17228 <> fine_structure_alpha_knowing_fiber_ok
+R17285:17287 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17234:17262 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_fiber_ok def
+R17264:17284 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fiber_quantum_knowing constr
+R17288:17291 Corelib.Init.Datatypes <> true constr
+prf 17553:17608 <> fine_structure_alpha_measured_remainder_fixture_scaffold
+R17669:17674 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17662:17664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17614:17661 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_conjunct def
+R17665:17668 Corelib.Init.Datatypes <> true constr
+R17817:17822 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17796:17798 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17675:17709 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R17715:17761 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R17767:17771 Corelib.Init.Datatypes <> false constr
+R17773:17777 Corelib.Init.Datatypes <> false constr
+R17779:17783 Corelib.Init.Datatypes <> false constr
+R17785:17789 Corelib.Init.Datatypes <> false constr
+R17791:17795 Corelib.Init.Datatypes <> false constr
+R17799:17816 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_unwired_ok constr
+R17872:17877 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17864:17866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17823:17863 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderProved def
+R17867:17871 Corelib.Init.Datatypes <> false constr
+R17920:17925 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17912:17914 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17878:17911 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2 def
+R17915:17919 Corelib.Init.Datatypes <> false constr
+R17961:17966 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17953:17955 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17926:17952 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_impossibility_rest def
+R17956:17960 Corelib.Init.Datatypes <> false constr
+R18021:18027 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18149:18149 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18014:18016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17967:18013 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuum_permittivity_si_derived_cited_not_forked def
+R18017:18020 Corelib.Init.Datatypes <> true constr
+R18142:18144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18101:18107 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18061:18067 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18028:18031 Corelib.Init.Datatypes <> negb def
+R18033:18060 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInLib def
+R18068:18071 Corelib.Init.Datatypes <> negb def
+R18073:18100 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInEos def
+R18108:18111 Corelib.Init.Datatypes <> negb def
+R18113:18141 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInNano def
+R18145:18148 Corelib.Init.Datatypes <> true constr
+R18168:18171 Corelib.Init.Logic <> conj constr
+R18232:18235 Corelib.Init.Logic <> conj constr
+R18273:18276 Corelib.Init.Logic <> conj constr
+R18340:18343 Corelib.Init.Logic <> conj constr
+R18397:18400 Corelib.Init.Logic <> conj constr
+R18449:18452 Corelib.Init.Logic <> conj constr
+R18521:18550 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> wave100_not_wired_lib_eos_nano thm
+R18454:18505 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuum_permittivity_si_derived_cited_not_forked_true thm
+R18402:18434 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_impossibility_rest_false thm
+R18345:18384 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2_false thm
+R18278:18329 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_proved_false thm
+R18237:18264 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> unwired_close_without_claims thm
+R18173:18225 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_conjunct_true thm
+R18168:18171 Corelib.Init.Logic <> conj constr
+R18232:18235 Corelib.Init.Logic <> conj constr
+R18273:18276 Corelib.Init.Logic <> conj constr
+R18340:18343 Corelib.Init.Logic <> conj constr
+R18397:18400 Corelib.Init.Logic <> conj constr
+R18449:18452 Corelib.Init.Logic <> conj constr
+R18521:18550 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> wave100_not_wired_lib_eos_nano thm
+R18454:18505 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuum_permittivity_si_derived_cited_not_forked_true thm
+R18402:18434 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_is_impossibility_rest_false thm
+R18345:18384 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> alpha_derived_from_landauer_kt_ln2_false thm
+R18278:18329 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_proved_false thm
+R18237:18264 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> unwired_close_without_claims thm
+R18173:18225 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_conjunct_true thm
+def 18799:18839 <> fineStructureAlphaMeasuredRemainderCellId
+R18843:18848 Stdlib.Strings.String <> string ind
+def 18941:18983 <> fineStructureAlphaMeasuredRemainderNonClaim
+R18987:18992 Stdlib.Strings.String <> string ind
+def 19590:19619 <> fineStructureAlphaIntAuthority
+R19623:19628 Stdlib.Strings.String <> string ind
+def 19719:19750 <> fineStructureAlphaIntCrossCellId
+R19754:19759 Stdlib.Strings.String <> string ind
+def 19849:19890 <> fineStructureAlphaMeasuredRemainderRowStem
+R19894:19899 Stdlib.Strings.String <> string ind
+prf 19956:20002 <> fine_structure_alpha_measured_remainder_cell_id
+R20049:20053 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20008:20048 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderCellId def
+prf 20160:20199 <> fine_structure_alpha_cites_int_authority
+R20311:20316 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20235:20240 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20205:20234 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaIntAuthority def
+R20317:20321 Corelib.Init.Logic <> False ind
+prf 20374:20414 <> fine_structure_alpha_cites_int_cross_cell
+R20452:20456 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20420:20451 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaIntCrossCellId def
+prf 20560:20594 <> fine_structure_alpha_row_stem_named
+R20689:20694 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20642:20647 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20600:20641 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderRowStem def
+R20695:20699 Corelib.Init.Logic <> False ind
+prf 20752:20808 <> fine_structure_alpha_cites_vacuum_permittivity_si_derived
+R20850:20853 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20814:20849 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> vacuumPermittivitySiDerivedAuthority def
+prf 20891:20927 <> fine_structure_alpha_modality_unwired
+R20983:20987 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20933:20982 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderModalityCurrent def
+R20988:21034 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+def 21298:21337 <> fineStructureAlphaPhysicsGreenAuthorized
+R21349:21353 Corelib.Init.Logic <> False ind
+prf 21363:21402 <> fine_structure_alpha_physics_green_false
+R21408:21409 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R21410:21449 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaPhysicsGreenAuthorized def
+prf 21717:21768 <> fine_structure_alpha_measured_remainder_conservation
+R21916:21921 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21895:21897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21774:21808 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> evaluate_fine_structure_alpha_close def
+R21814:21860 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_unwired constr
+R21866:21870 Corelib.Init.Datatypes <> false constr
+R21872:21876 Corelib.Init.Datatypes <> false constr
+R21878:21882 Corelib.Init.Datatypes <> false constr
+R21884:21888 Corelib.Init.Datatypes <> false constr
+R21890:21894 Corelib.Init.Datatypes <> false constr
+R21898:21915 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> verdict_unwired_ok constr
+R21971:21976 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21963:21965 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21922:21962 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaMeasuredRemainderProved def
+R21966:21970 Corelib.Init.Datatypes <> false constr
+R22032:22037 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22025:22027 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21977:22024 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fine_structure_alpha_measured_remainder_conjunct def
+R22028:22031 Corelib.Init.Datatypes <> true constr
+R22074:22079 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22066:22068 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22038:22065 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInLib def
+R22069:22073 Corelib.Init.Datatypes <> false constr
+R22108:22110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22080:22107 UMST.ChemConstants.FineStructureAlphaMeasuredRemainder <> fineStructureAlphaWiredInEos def
+R22111:22115 Corelib.Init.Datatypes <> false constr

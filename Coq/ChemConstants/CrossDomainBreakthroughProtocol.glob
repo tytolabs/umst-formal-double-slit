@@ -1,0 +1,493 @@
+DIGEST 496b97c7823ea7671893f2288de6b6be
+FUMST.ChemConstants.CrossDomainBreakthroughProtocol
+R1042:1087 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> <> lib
+R1117:1121 Stdlib.Arith.Arith <> <> lib
+R1123:1126 Stdlib.Lists.List <> <> lib
+R1128:1131 Stdlib.Bool.Bool <> <> lib
+R1133:1138 Stdlib.Strings.String <> <> lib
+R1140:1142 Stdlib.micromega.Lia <> <> lib
+def 1177:1214 <> crossdomainbreakthroughprotocolSurface
+R1218:1223 Stdlib.Strings.String <> string ind
+def 1288:1324 <> crossDomainBreakthroughProtocolMarker
+R1328:1333 Stdlib.Strings.String <> string ind
+prf 1403:1450 <> cross_domain_breakthrough_protocol_surface_named
+R1494:1497 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1456:1493 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossdomainbreakthroughprotocolSurface def
+prf 1535:1581 <> cross_domain_breakthrough_protocol_marker_named
+R1624:1627 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1587:1623 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolMarker def
+ind 1893:1931 <> CrossDomainBreakthroughProtocolModality
+constr 1947:1979 <> cross_domain_breakthrough_unwired
+constr 1985:2017 <> cross_domain_breakthrough_assumed
+constr 2023:2054 <> cross_domain_breakthrough_proved
+constr 2060:2094 <> cross_domain_breakthrough_surrogate
+scheme 1893:1931 <> CrossDomainBreakthroughProtocolModality_rect
+scheme 1893:1931 <> CrossDomainBreakthroughProtocolModality_ind
+scheme 1893:1931 <> CrossDomainBreakthroughProtocolModality_rec
+scheme 1893:1931 <> CrossDomainBreakthroughProtocolModality_sind
+def 2109:2154 <> crossDomainBreakthroughProtocolModalityCurrent
+R2160:2198 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> CrossDomainBreakthroughProtocolModality ind
+R2205:2237 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_unwired constr
+def 2252:2305 <> cross_domain_breakthrough_modality_lattice_cardinality
+R2309:2311 Corelib.Init.Datatypes <> nat ind
+prf 2326:2387 <> cross_domain_breakthrough_modality_lattice_cardinality_is_four
+R2447:2449 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2393:2446 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_modality_lattice_cardinality def
+prf 2485:2542 <> cross_domain_breakthrough_modality_lattice_not_118_squared
+R2636:2638 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2548:2551 Corelib.Init.Datatypes <> negb def
+R2554:2560 Stdlib.Arith.PeanoNat Nat eqb def
+R2562:2615 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_modality_lattice_cardinality def
+R2628:2630 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2639:2642 Corelib.Init.Datatypes <> true constr
+R2661:2714 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_modality_lattice_cardinality def
+def 2970:2992 <> crossClassifierX40RowId
+R2996:3001 Stdlib.Strings.String <> string ind
+prf 3020:3049 <> cross_classifier_x40_row_named
+R3078:3080 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3055:3077 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossClassifierX40RowId def
+ind 3346:3362 <> BreakthroughFiber
+constr 3378:3405 <> breakthrough_fiber_chemistry
+constr 3411:3436 <> breakthrough_fiber_physics
+constr 3442:3476 <> breakthrough_fiber_environment_time
+constr 3482:3512 <> breakthrough_fiber_cross_domain
+scheme 3346:3362 <> BreakthroughFiber_rect
+scheme 3346:3362 <> BreakthroughFiber_ind
+scheme 3346:3362 <> BreakthroughFiber_rec
+scheme 3346:3362 <> BreakthroughFiber_sind
+def 3527:3546 <> breakthroughFiberTag
+R3553:3569 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> BreakthroughFiber ind
+binder 3549:3549 <> f:5
+R3574:3579 Stdlib.Strings.String <> string ind
+R3592:3592 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> f:5 var
+R3603:3630 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+R3657:3682 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R3707:3741 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_environment_time constr
+R3775:3805 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+prf 3845:3863 <> chemistry_fiber_tag
+R3918:3920 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3869:3888 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R3890:3917 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+prf 3972:3988 <> physics_fiber_tag
+R4041:4043 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3994:4013 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4015:4040 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+prf 4093:4118 <> environment_time_fiber_tag
+R4180:4184 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4124:4143 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4145:4179 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_environment_time constr
+prf 4243:4264 <> cross_domain_fiber_tag
+R4322:4326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4270:4289 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4291:4321 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+def 4386:4409 <> breakthrough_fiber_count
+R4413:4415 Corelib.Init.Datatypes <> nat ind
+prf 4430:4461 <> breakthrough_fiber_count_is_four
+R4491:4493 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4467:4490 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_count def
+def 4534:4562 <> breakthroughFiberTagsDistinct
+R4678:4683 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4625:4630 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4576:4595 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4597:4624 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+R4631:4650 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4652:4677 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R4795:4800 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4733:4738 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4684:4703 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4705:4732 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+R4739:4758 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4760:4794 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_environment_time constr
+R4908:4913 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4850:4855 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4801:4820 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4822:4849 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+R4856:4875 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4877:4907 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+R5023:5028 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4961:4966 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4914:4933 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4935:4960 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R4967:4986 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R4988:5022 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_environment_time constr
+R5134:5139 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5076:5081 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5029:5048 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R5050:5075 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R5082:5101 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R5103:5133 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+R5196:5201 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5140:5159 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R5161:5195 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_environment_time constr
+R5202:5221 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTag def
+R5223:5253 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+prf 5263:5294 <> breakthrough_fiber_tags_distinct
+R5300:5328 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTagsDistinct def
+ind 5604:5629 <> HonestBreakthroughTerminal
+constr 5645:5669 <> honest_terminal_new_chart
+constr 5675:5706 <> honest_terminal_commuting_square
+constr 5712:5742 <> honest_terminal_named_remainder
+scheme 5604:5629 <> HonestBreakthroughTerminal_rect
+scheme 5604:5629 <> HonestBreakthroughTerminal_ind
+scheme 5604:5629 <> HonestBreakthroughTerminal_rec
+scheme 5604:5629 <> HonestBreakthroughTerminal_sind
+def 5757:5785 <> honestBreakthroughTerminalTag
+R5792:5817 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> HonestBreakthroughTerminal ind
+binder 5788:5788 <> t:9
+R5822:5827 Stdlib.Strings.String <> string ind
+R5840:5840 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> t:9 var
+R5851:5875 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_new_chart constr
+R5896:5927 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_commuting_square constr
+R5955:5985 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_named_remainder constr
+prf 6022:6050 <> honest_terminal_new_chart_tag
+R6111:6113 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6056:6084 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honestBreakthroughTerminalTag def
+R6086:6110 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_new_chart constr
+prf 6159:6194 <> honest_terminal_commuting_square_tag
+R6262:6266 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6200:6228 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honestBreakthroughTerminalTag def
+R6230:6261 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_commuting_square constr
+prf 6319:6353 <> honest_terminal_named_remainder_tag
+R6420:6424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6359:6387 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honestBreakthroughTerminalTag def
+R6389:6419 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_named_remainder constr
+def 6481:6514 <> honest_breakthrough_terminal_count
+R6518:6520 Corelib.Init.Datatypes <> nat ind
+prf 6535:6577 <> honest_breakthrough_terminal_count_is_three
+R6617:6619 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6583:6616 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_breakthrough_terminal_count def
+ind 6881:6907 <> RefusedBreakthroughTerminal
+constr 6923:6948 <> refused_terminal_new_axiom
+constr 6954:6978 <> refused_terminal_folklore
+scheme 6881:6907 <> RefusedBreakthroughTerminal_rect
+scheme 6881:6907 <> RefusedBreakthroughTerminal_ind
+scheme 6881:6907 <> RefusedBreakthroughTerminal_rec
+scheme 6881:6907 <> RefusedBreakthroughTerminal_sind
+def 6993:7022 <> refusedBreakthroughTerminalTag
+R7029:7055 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> RefusedBreakthroughTerminal ind
+binder 7025:7025 <> t:13
+R7060:7065 Stdlib.Strings.String <> string ind
+R7078:7078 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> t:13 var
+R7089:7114 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_new_axiom constr
+R7135:7159 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_folklore constr
+prf 7189:7218 <> refused_terminal_new_axiom_tag
+R7281:7283 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7224:7253 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refusedBreakthroughTerminalTag def
+R7255:7280 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_new_axiom constr
+prf 7329:7357 <> refused_terminal_folklore_tag
+R7419:7421 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7363:7392 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refusedBreakthroughTerminalTag def
+R7394:7418 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_folklore constr
+def 7471:7505 <> refused_breakthrough_terminal_count
+R7509:7511 Corelib.Init.Datatypes <> nat ind
+prf 7526:7567 <> refused_breakthrough_terminal_count_is_two
+R7608:7610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7573:7607 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_breakthrough_terminal_count def
+prf 7646:7682 <> honest_new_chart_ne_refused_new_axiom
+R7743:7748 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7688:7716 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honestBreakthroughTerminalTag def
+R7718:7742 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_new_chart constr
+R7749:7778 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refusedBreakthroughTerminalTag def
+R7780:7805 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_new_axiom constr
+prf 7841:7883 <> honest_commuting_square_ne_refused_folklore
+R7951:7956 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7889:7917 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honestBreakthroughTerminalTag def
+R7919:7950 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_commuting_square constr
+R7957:7986 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refusedBreakthroughTerminalTag def
+R7988:8012 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_folklore constr
+rec 8273:8306 <> cross_domain_breakthrough_proposal
+proj 8322:8336 <> proposal_source
+proj 8361:8375 <> proposal_target
+proj 8400:8423 <> proposal_honest_terminal
+proj 8464:8488 <> proposal_refused_terminal
+R8340:8356 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> BreakthroughFiber ind
+R8379:8395 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> BreakthroughFiber ind
+R8427:8432 Corelib.Init.Datatypes <> option ind
+R8434:8459 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> HonestBreakthroughTerminal ind
+R8492:8497 Corelib.Init.Datatypes <> option ind
+R8499:8525 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> RefusedBreakthroughTerminal ind
+def 8542:8561 <> proposalIsAdmissible
+R8568:8601 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_proposal rec
+binder 8564:8564 <> p:20
+R8606:8609 Corelib.Init.Datatypes <> bool ind
+R8650:8674 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R8676:8676 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> p:20 var
+R8622:8645 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R8647:8647 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> p:20 var
+R8687:8690 Corelib.Init.Datatypes <> Some constr
+R8695:8698 Corelib.Init.Datatypes <> None constr
+R8703:8706 Corelib.Init.Datatypes <> true constr
+R8720:8724 Corelib.Init.Datatypes <> false constr
+def 8745:8771 <> sampleChemToPhysicsNewChart
+R8775:8808 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_proposal rec
+R8818:8832 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R8818:8832 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R8818:8832 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R8872:8886 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R8872:8886 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R8924:8947 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R8924:8947 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R8989:9013 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R8989:9013 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R8837:8864 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+R8891:8916 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R8952:8955 Corelib.Init.Datatypes <> Some constr
+R8957:8981 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_new_chart constr
+R9018:9021 Corelib.Init.Datatypes <> None constr
+def 9039:9079 <> sampleEnvTimeToCrossDomainCommutingSquare
+R9085:9118 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_proposal rec
+R9128:9142 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9128:9142 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9128:9142 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9189:9203 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R9189:9203 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R9246:9269 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R9246:9269 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R9318:9342 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R9318:9342 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R9147:9181 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_environment_time constr
+R9208:9238 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+R9274:9277 Corelib.Init.Datatypes <> Some constr
+R9279:9310 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_commuting_square constr
+R9347:9350 Corelib.Init.Datatypes <> None constr
+def 9368:9404 <> sampleCrossDomainToChemNamedRemainder
+R9410:9443 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_proposal rec
+R9453:9467 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9453:9467 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9453:9467 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9510:9524 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R9510:9524 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R9564:9587 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R9564:9587 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R9635:9659 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R9635:9659 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R9472:9502 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+R9529:9556 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_chemistry constr
+R9592:9595 Corelib.Init.Datatypes <> Some constr
+R9597:9627 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> honest_terminal_named_remainder constr
+R9664:9667 Corelib.Init.Datatypes <> None constr
+def 9685:9713 <> sampleRefusedFolkloreProposal
+R9717:9750 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_proposal rec
+R9760:9774 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9760:9774 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9760:9774 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R9817:9831 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R9817:9831 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R9869:9892 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R9869:9892 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R9908:9932 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R9908:9932 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R9779:9809 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+R9836:9861 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R9897:9900 Corelib.Init.Datatypes <> None constr
+R9937:9940 Corelib.Init.Datatypes <> Some constr
+R9942:9966 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_folklore constr
+def 9984:10012 <> sampleRefusedNewAxiomProposal
+R10016:10049 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_proposal rec
+R10059:10073 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R10059:10073 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R10059:10073 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_source proj
+R10111:10125 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R10111:10125 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_target proj
+R10168:10191 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R10168:10191 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_honest_terminal proj
+R10207:10231 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R10207:10231 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposal_refused_terminal proj
+R10078:10103 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_physics constr
+R10130:10160 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_cross_domain constr
+R10196:10199 Corelib.Init.Datatypes <> None constr
+R10236:10239 Corelib.Init.Datatypes <> Some constr
+R10241:10266 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> refused_terminal_new_axiom constr
+prf 10279:10321 <> sample_chem_to_physics_new_chart_admissible
+R10375:10377 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10327:10346 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R10348:10374 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleChemToPhysicsNewChart def
+R10378:10381 Corelib.Init.Datatypes <> true constr
+prf 10416:10474 <> sample_env_time_to_cross_domain_commuting_square_admissible
+R10542:10544 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10480:10499 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R10501:10541 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleEnvTimeToCrossDomainCommutingSquare def
+R10545:10548 Corelib.Init.Datatypes <> true constr
+prf 10583:10636 <> sample_cross_domain_to_chem_named_remainder_admissible
+R10700:10702 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10642:10661 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R10663:10699 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleCrossDomainToChemNamedRemainder def
+R10703:10706 Corelib.Init.Datatypes <> true constr
+prf 10741:10778 <> sample_refused_folklore_not_admissible
+R10834:10836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10784:10803 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R10805:10833 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleRefusedFolkloreProposal def
+R10837:10841 Corelib.Init.Datatypes <> false constr
+prf 10876:10914 <> sample_refused_new_axiom_not_admissible
+R10970:10972 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10920:10939 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R10941:10969 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleRefusedNewAxiomProposal def
+R10973:10977 Corelib.Init.Datatypes <> false constr
+def 11017:11046 <> sampleProposalsHonestPartition
+R11050:11053 Corelib.Init.Datatypes <> bool ind
+R11303:11308 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11240:11245 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11176:11181 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11108:11113 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11060:11079 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R11081:11107 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleChemToPhysicsNewChart def
+R11114:11133 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R11135:11175 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleEnvTimeToCrossDomainCommutingSquare def
+R11182:11201 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R11203:11239 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleCrossDomainToChemNamedRemainder def
+R11246:11249 Corelib.Init.Datatypes <> negb def
+R11252:11271 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R11273:11301 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleRefusedFolkloreProposal def
+R11309:11312 Corelib.Init.Datatypes <> negb def
+R11315:11334 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> proposalIsAdmissible def
+R11336:11364 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleRefusedNewAxiomProposal def
+prf 11375:11407 <> sample_proposals_honest_partition
+R11443:11445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11413:11442 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleProposalsHonestPartition def
+R11446:11449 Corelib.Init.Datatypes <> true constr
+def 11713:11726 <> soleAxiomCount
+R11730:11732 Corelib.Init.Datatypes <> nat ind
+prf 11747:11769 <> sole_axiom_count_is_one
+R11787:11789 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11773:11786 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> soleAxiomCount def
+def 11830:11859 <> breakthroughProtocolIsNewAxiom
+R11863:11866 Corelib.Init.Datatypes <> bool ind
+R11871:11875 Corelib.Init.Datatypes <> false constr
+prf 11885:11919 <> breakthrough_protocol_not_new_axiom
+R11955:11957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11925:11954 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughProtocolIsNewAxiom def
+R11958:11962 Corelib.Init.Datatypes <> false constr
+def 12002:12032 <> breakthroughNotNewLawOrFolklore
+R12036:12041 Stdlib.Strings.String <> string ind
+prf 12191:12232 <> breakthrough_not_new_law_or_folklore_named
+R12269:12272 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12238:12268 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughNotNewLawOrFolklore def
+def 12315:12343 <> secondLawConservationAxiomPin
+R12347:12352 Stdlib.Strings.String <> string ind
+prf 12492:12530 <> second_law_conservation_axiom_pin_named
+R12565:12568 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12536:12564 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> secondLawConservationAxiomPin def
+def 12836:12871 <> chemPhysicsChartIsomorphismAuthority
+R12875:12880 Stdlib.Strings.String <> string ind
+def 12962:12994 <> chemPhysicsChartIsomorphismCellId
+R12998:13003 Stdlib.Strings.String <> string ind
+prf 13066:13111 <> cross_domain_cites_chart_isomorphism_authority
+R13220:13225 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13153:13158 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13117:13152 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> chemPhysicsChartIsomorphismAuthority def
+R13226:13230 Corelib.Init.Logic <> False ind
+prf 13283:13326 <> cross_domain_cites_chart_isomorphism_cell_id
+R13365:13369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13332:13364 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> chemPhysicsChartIsomorphismCellId def
+prf 13451:13503 <> cross_domain_chart_isomorphism_modality_still_unwired
+R13551:13553 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13509:13550 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartIsomorphismModalityCurrent def
+R13554:13579 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_unwired constr
+R13595:13641 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_modality_unwired thm
+R13595:13641 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_modality_unwired thm
+prf 13656:13705 <> cross_domain_chart_isomorphism_physics_green_false
+R13711:13712 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13713:13734 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> physicsGreenAuthorized def
+R13750:13799 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_physics_green_false thm
+R13750:13799 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_isomorphism_physics_green_false thm
+prf 13814:13856 <> cross_domain_chemistry_is_occupancy_physics
+R13889:13891 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13862:13888 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistryIsOccupancyPhysics def
+R13892:13895 Corelib.Init.Datatypes <> true constr
+R13911:13940 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistry_is_occupancy_physics thm
+R13911:13940 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistry_is_occupancy_physics thm
+prf 13955:13989 <> cross_domain_not_twenty_sixth_axiom
+R14014:14016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13995:14013 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> notTwentySixthAxiom def
+R14017:14020 Corelib.Init.Datatypes <> true constr
+R14036:14057 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_twenty_sixth_axiom thm
+R14036:14057 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_twenty_sixth_axiom thm
+prf 14072:14112 <> cross_domain_chart_isomorphism_not_proved
+R14140:14142 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14118:14139 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemPhysicsChartProved def
+R14143:14147 Corelib.Init.Datatypes <> false constr
+R14163:14193 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_proved_false thm
+R14163:14193 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chem_physics_chart_proved_false thm
+prf 14208:14256 <> cross_domain_chart_isomorphism_not_fourth_science
+R14287:14289 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14262:14286 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> notFourthChemistryScience def
+R14290:14293 Corelib.Init.Datatypes <> true constr
+R14309:14336 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_fourth_chemistry_science thm
+R14309:14336 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_fourth_chemistry_science thm
+def 14580:14616 <> crossDomainBreakthroughProtocolCellId
+R14620:14625 Stdlib.Strings.String <> string ind
+def 14713:14751 <> crossDomainBreakthroughProtocolNonClaim
+R14755:14760 Stdlib.Strings.String <> string ind
+def 15208:15250 <> crossDomainBreakthroughProtocolIntAuthority
+R15254:15259 Stdlib.Strings.String <> string ind
+def 15345:15384 <> crossDomainBreakthroughProtocolIntCellId
+R15388:15393 Stdlib.Strings.String <> string ind
+prf 15473:15514 <> cross_domain_breakthrough_protocol_cell_id
+R15557:15561 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15520:15556 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolCellId def
+prf 15663:15716 <> cross_domain_breakthrough_protocol_cites_int_authority
+R15765:15769 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15722:15764 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolIntAuthority def
+prf 15869:15920 <> cross_domain_breakthrough_protocol_cites_int_cell_id
+R15966:15970 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15926:15965 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolIntCellId def
+prf 16069:16119 <> cross_domain_breakthrough_protocol_modality_unwired
+R16171:16173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16125:16170 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolModalityCurrent def
+R16174:16206 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> cross_domain_breakthrough_unwired constr
+def 16470:16506 <> crossDomainBreakthroughProtocolProved
+R16518:16522 Corelib.Init.Logic <> False ind
+prf 16532:16576 <> cross_domain_breakthrough_protocol_not_proved
+R16582:16583 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16584:16620 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolProved def
+def 16889:16941 <> crossDomainBreakthroughProtocolPhysicsGreenAuthorized
+R16953:16957 Corelib.Init.Logic <> False ind
+prf 16967:17020 <> cross_domain_breakthrough_protocol_physics_green_false
+R17026:17027 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R17028:17080 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolPhysicsGreenAuthorized def
+def 17348:17393 <> crossDomainBreakthroughProtocolProductionWired
+R17405:17409 Corelib.Init.Logic <> False ind
+prf 17419:17473 <> cross_domain_breakthrough_protocol_not_production_wired
+R17479:17480 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R17481:17526 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolProductionWired def
+def 17571:17593 <> wave100NotWiredLibOrEos
+R17597:17602 Stdlib.Strings.String <> string ind
+prf 17702:17729 <> wave100_not_wired_lib_or_eos
+R17758:17761 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17735:17757 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> wave100NotWiredLibOrEos def
+def 18030:18068 <> crossDomainBreakthroughProtocolConjunct
+R18072:18075 Corelib.Init.Datatypes <> bool ind
+R18186:18191 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18153:18158 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18117:18122 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18082:18085 Corelib.Init.Datatypes <> negb def
+R18087:18116 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughProtocolIsNewAxiom def
+R18123:18152 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sampleProposalsHonestPartition def
+R18159:18185 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistryIsOccupancyPhysics def
+R18192:18210 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> notTwentySixthAxiom def
+prf 18220:18262 <> cross_domain_breakthrough_protocol_conjunct
+R18307:18309 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18268:18306 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolConjunct def
+R18310:18313 Corelib.Init.Datatypes <> true constr
+R18332:18370 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> crossDomainBreakthroughProtocolConjunct def
+R18383:18417 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_protocol_not_new_axiom thm
+R18383:18417 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_protocol_not_new_axiom thm
+R18383:18417 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_protocol_not_new_axiom thm
+R18430:18462 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sample_proposals_honest_partition thm
+R18430:18462 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sample_proposals_honest_partition thm
+R18430:18462 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> sample_proposals_honest_partition thm
+R18475:18504 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistry_is_occupancy_physics thm
+R18475:18504 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistry_is_occupancy_physics thm
+R18475:18504 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> chemistry_is_occupancy_physics thm
+R18517:18538 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_twenty_sixth_axiom thm
+R18517:18538 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_twenty_sixth_axiom thm
+R18517:18538 UMST.ChemConstants.ChemPhysicsChartIsomorphism <> not_twenty_sixth_axiom thm
+prf 18568:18593 <> four_fibers_from_one_axiom
+R18627:18632 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18623:18625 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18599:18622 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_count def
+R18633:18661 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthroughFiberTagsDistinct def
+R18687:18718 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_count_is_four thm
+R18728:18759 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_tags_distinct thm
+R18687:18718 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_count_is_four thm
+R18728:18759 UMST.ChemConstants.CrossDomainBreakthroughProtocol <> breakthrough_fiber_tags_distinct thm

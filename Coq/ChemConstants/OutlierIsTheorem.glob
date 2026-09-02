@@ -1,0 +1,750 @@
+DIGEST cddee98733c7e8d65758b9d3b956d328
+FUMST.ChemConstants.OutlierIsTheorem
+R1350:1354 Stdlib.Arith.Arith <> <> lib
+R1356:1361 Stdlib.ZArith.ZArith <> <> lib
+R1363:1368 Stdlib.Strings.String <> <> lib
+R1370:1373 Stdlib.Bool.Bool <> <> lib
+R1375:1377 Stdlib.micromega.Lia <> <> lib
+R1379:1382 Stdlib.Lists.List <> <> lib
+R1392:1404 Stdlib.Lists.List ListNotations <> mod
+def 1439:1461 <> outlieristheoremSurface
+R1465:1470 Stdlib.Strings.String <> string ind
+def 1522:1543 <> outlierIsTheoremMarker
+R1547:1552 Stdlib.Strings.String <> string ind
+prf 1609:1638 <> outlieristheorem_surface_named
+R1667:1670 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1644:1666 UMST.ChemConstants.OutlierIsTheorem <> outlieristheoremSurface def
+prf 1708:1738 <> outlier_is_theorem_marker_named
+R1766:1769 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1744:1765 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremMarker def
+ind 2034:2057 <> OutlierIsTheoremModality
+constr 2073:2098 <> outlier_is_theorem_unwired
+constr 2104:2129 <> outlier_is_theorem_assumed
+constr 2135:2159 <> outlier_is_theorem_proved
+constr 2165:2192 <> outlier_is_theorem_surrogate
+scheme 2034:2057 <> OutlierIsTheoremModality_rect
+scheme 2034:2057 <> OutlierIsTheoremModality_ind
+scheme 2034:2057 <> OutlierIsTheoremModality_rec
+scheme 2034:2057 <> OutlierIsTheoremModality_sind
+def 2207:2237 <> outlierIsTheoremModalityCurrent
+R2241:2264 UMST.ChemConstants.OutlierIsTheorem <> OutlierIsTheoremModality ind
+R2271:2296 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+def 2311:2346 <> outlier_modality_lattice_cardinality
+R2350:2352 Corelib.Init.Datatypes <> nat ind
+prf 2367:2410 <> outlier_modality_lattice_cardinality_is_four
+R2452:2454 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2416:2451 UMST.ChemConstants.OutlierIsTheorem <> outlier_modality_lattice_cardinality def
+prf 2490:2529 <> outlier_modality_lattice_not_118_squared
+R2598:2600 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2535:2538 Corelib.Init.Datatypes <> negb def
+R2541:2547 Stdlib.Arith.PeanoNat Nat eqb def
+R2549:2584 UMST.ChemConstants.OutlierIsTheorem <> outlier_modality_lattice_cardinality def
+R2590:2592 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2601:2604 Corelib.Init.Datatypes <> true constr
+R2623:2658 UMST.ChemConstants.OutlierIsTheorem <> outlier_modality_lattice_cardinality def
+def 2918:2940 <> iupac_table_cardinality
+R2944:2946 Corelib.Init.Datatypes <> nat ind
+prf 2963:2992 <> iupac_table_cardinality_is_118
+R3021:3023 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2998:3020 UMST.ChemConstants.OutlierIsTheorem <> iupac_table_cardinality def
+def 3066:3072 <> z_valid
+R3079:3081 Corelib.Init.Datatypes <> nat ind
+binder 3075:3075 <> z:3
+R3086:3089 Corelib.Init.Datatypes <> bool ind
+R3107:3110 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3096:3102 Stdlib.Arith.PeanoNat Nat ltb def
+R3106:3106 UMST.ChemConstants.OutlierIsTheorem <> z:3 var
+R3111:3117 Stdlib.Arith.PeanoNat Nat leb def
+R3119:3119 UMST.ChemConstants.OutlierIsTheorem <> z:3 var
+R3121:3143 UMST.ChemConstants.OutlierIsTheorem <> iupac_table_cardinality def
+ind 3380:3393 <> outlier_domain
+constr 3409:3431 <> outlier_domain_interact
+constr 3437:3454 <> outlier_domain_ore
+constr 3460:3480 <> outlier_domain_refine
+scheme 3380:3393 <> outlier_domain_rect
+scheme 3380:3393 <> outlier_domain_ind
+scheme 3380:3393 <> outlier_domain_rec
+scheme 3380:3393 <> outlier_domain_sind
+def 3495:3510 <> outlierDomainTag
+R3517:3530 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain ind
+binder 3513:3513 <> d:6
+R3535:3540 Stdlib.Strings.String <> string ind
+R3553:3553 UMST.ChemConstants.OutlierIsTheorem <> d:6 var
+R3564:3586 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_interact constr
+R3606:3623 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+R3638:3658 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_refine constr
+prf 3686:3712 <> outlier_domain_interact_tag
+R3758:3760 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3718:3733 UMST.ChemConstants.OutlierIsTheorem <> outlierDomainTag def
+R3735:3757 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_interact constr
+prf 3805:3826 <> outlier_domain_ore_tag
+R3867:3869 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3832:3847 UMST.ChemConstants.OutlierIsTheorem <> outlierDomainTag def
+R3849:3866 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+prf 3909:3933 <> outlier_domain_refine_tag
+R3977:3979 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3939:3954 UMST.ChemConstants.OutlierIsTheorem <> outlierDomainTag def
+R3956:3976 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_refine constr
+def 4027:4046 <> outlier_domain_count
+R4050:4052 Corelib.Init.Datatypes <> nat ind
+prf 4067:4095 <> outlier_domain_count_is_three
+R4121:4123 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4101:4120 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_count def
+ind 4463:4478 <> outlier_terminal
+constr 4494:4517 <> outlier_terminal_theorem
+constr 4523:4559 <> outlier_terminal_deferred_composition
+constr 4565:4593 <> outlier_terminal_typed_absent
+scheme 4463:4478 <> outlier_terminal_rect
+scheme 4463:4478 <> outlier_terminal_ind
+scheme 4463:4478 <> outlier_terminal_rec
+scheme 4463:4478 <> outlier_terminal_sind
+def 4608:4625 <> outlierTerminalTag
+R4632:4647 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+binder 4628:4628 <> t:10
+R4652:4657 Stdlib.Strings.String <> string ind
+R4670:4670 UMST.ChemConstants.OutlierIsTheorem <> t:10 var
+R4681:4704 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+R4723:4759 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_deferred_composition constr
+R4791:4819 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+prf 4853:4880 <> outlier_terminal_theorem_tag
+R4929:4931 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4886:4903 UMST.ChemConstants.OutlierIsTheorem <> outlierTerminalTag def
+R4905:4928 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+prf 4975:5003 <> outlier_terminal_deferred_tag
+R5065:5069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5009:5026 UMST.ChemConstants.OutlierIsTheorem <> outlierTerminalTag def
+R5028:5064 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_deferred_composition constr
+prf 5126:5152 <> outlier_terminal_absent_tag
+R5206:5208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5158:5175 UMST.ChemConstants.OutlierIsTheorem <> outlierTerminalTag def
+R5177:5205 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+def 5262:5284 <> folklore_outlier_marker
+R5288:5293 Stdlib.Strings.String <> string ind
+def 5350:5371 <> honest_terminal_marker
+R5375:5380 Stdlib.Strings.String <> string ind
+prf 5448:5481 <> folklore_marker_ne_honest_terminal
+R5510:5513 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5487:5509 UMST.ChemConstants.OutlierIsTheorem <> folklore_outlier_marker def
+R5514:5535 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_marker def
+def 5576:5599 <> folklore_outlier_refused
+R5603:5606 Corelib.Init.Datatypes <> bool ind
+R5611:5614 Corelib.Init.Datatypes <> true constr
+prf 5624:5652 <> folklore_outlier_refused_true
+R5682:5684 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5658:5681 UMST.ChemConstants.OutlierIsTheorem <> folklore_outlier_refused def
+R5685:5688 Corelib.Init.Datatypes <> true constr
+def 5952:5959 <> helium_z
+R5963:5965 Corelib.Init.Datatypes <> nat ind
+def 5984:5989 <> neon_z
+R5993:5995 Corelib.Init.Datatypes <> nat ind
+def 6015:6020 <> iron_z
+R6024:6026 Corelib.Init.Datatypes <> nat ind
+def 6046:6051 <> gold_z
+R6055:6057 Corelib.Init.Datatypes <> nat ind
+prf 6073:6085 <> helium_z_is_2
+R6097:6099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6089:6096 UMST.ChemConstants.OutlierIsTheorem <> helium_z def
+prf 6135:6146 <> neon_z_is_10
+R6156:6158 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6150:6155 UMST.ChemConstants.OutlierIsTheorem <> neon_z def
+prf 6195:6206 <> iron_z_is_26
+R6216:6218 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6210:6215 UMST.ChemConstants.OutlierIsTheorem <> iron_z def
+prf 6255:6266 <> gold_z_is_79
+R6276:6278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6270:6275 UMST.ChemConstants.OutlierIsTheorem <> gold_z def
+prf 6315:6337 <> witness_z_factors_valid
+R6366:6371 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6359:6361 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6343:6349 UMST.ChemConstants.OutlierIsTheorem <> z_valid def
+R6351:6358 UMST.ChemConstants.OutlierIsTheorem <> helium_z def
+R6362:6365 Corelib.Init.Datatypes <> true constr
+R6393:6398 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6386:6388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6372:6378 UMST.ChemConstants.OutlierIsTheorem <> z_valid def
+R6380:6385 UMST.ChemConstants.OutlierIsTheorem <> neon_z def
+R6389:6392 Corelib.Init.Datatypes <> true constr
+R6420:6425 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6413:6415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6399:6405 UMST.ChemConstants.OutlierIsTheorem <> z_valid def
+R6407:6412 UMST.ChemConstants.OutlierIsTheorem <> iron_z def
+R6416:6419 Corelib.Init.Datatypes <> true constr
+R6440:6442 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6426:6432 UMST.ChemConstants.OutlierIsTheorem <> z_valid def
+R6434:6439 UMST.ChemConstants.OutlierIsTheorem <> gold_z def
+R6443:6446 Corelib.Init.Datatypes <> true constr
+R6479:6485 UMST.ChemConstants.OutlierIsTheorem <> z_valid def
+R6488:6510 UMST.ChemConstants.OutlierIsTheorem <> iupac_table_cardinality def
+def 6626:6647 <> helium_no_ore_terminal
+R6651:6666 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+R6673:6701 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+def 6716:6735 <> neon_no_ore_terminal
+R6739:6754 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+R6761:6789 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+prf 6799:6829 <> helium_terminal_is_typed_absent
+R6857:6859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6835:6856 UMST.ChemConstants.OutlierIsTheorem <> helium_no_ore_terminal def
+R6860:6888 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+prf 6923:6951 <> neon_terminal_is_typed_absent
+R6977:6979 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6957:6976 UMST.ChemConstants.OutlierIsTheorem <> neon_no_ore_terminal def
+R6980:7008 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+def 7124:7151 <> gold_native_outlier_terminal
+R7155:7170 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+R7177:7200 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+def 7215:7241 <> iron_oxide_product_terminal
+R7245:7260 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+R7267:7290 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+prf 7300:7323 <> gold_terminal_is_theorem
+R7357:7359 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7329:7356 UMST.ChemConstants.OutlierIsTheorem <> gold_native_outlier_terminal def
+R7360:7383 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+prf 7418:7441 <> iron_terminal_is_theorem
+R7474:7476 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7447:7473 UMST.ChemConstants.OutlierIsTheorem <> iron_oxide_product_terminal def
+R7477:7500 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+def 7611:7641 <> helium_trace_atmophile_terminal
+R7645:7660 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+R7667:7703 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_deferred_composition constr
+prf 7713:7745 <> helium_trace_terminal_is_deferred
+R7782:7784 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7751:7781 UMST.ChemConstants.OutlierIsTheorem <> helium_trace_atmophile_terminal def
+R7785:7821 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_deferred_composition constr
+def 7861:7888 <> honest_terminal_not_folklore
+R7895:7910 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+binder 7891:7891 <> t:12
+R7915:7918 Corelib.Init.Datatypes <> bool ind
+R7931:7931 UMST.ChemConstants.OutlierIsTheorem <> t:12 var
+R7942:7965 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_theorem constr
+R7970:7973 Corelib.Init.Datatypes <> true constr
+R7979:8015 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_deferred_composition constr
+R8020:8023 Corelib.Init.Datatypes <> true constr
+R8029:8057 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal_typed_absent constr
+R8062:8065 Corelib.Init.Datatypes <> true constr
+prf 8081:8108 <> all_witness_terminals_honest
+R8172:8177 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8165:8167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8114:8141 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R8143:8164 UMST.ChemConstants.OutlierIsTheorem <> helium_no_ore_terminal def
+R8168:8171 Corelib.Init.Datatypes <> true constr
+R8234:8239 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8227:8229 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8178:8205 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R8207:8226 UMST.ChemConstants.OutlierIsTheorem <> neon_no_ore_terminal def
+R8230:8233 Corelib.Init.Datatypes <> true constr
+R8304:8309 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8297:8299 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8240:8267 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R8269:8296 UMST.ChemConstants.OutlierIsTheorem <> gold_native_outlier_terminal def
+R8300:8303 Corelib.Init.Datatypes <> true constr
+R8373:8378 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8366:8368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8310:8337 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R8339:8365 UMST.ChemConstants.OutlierIsTheorem <> iron_oxide_product_terminal def
+R8369:8372 Corelib.Init.Datatypes <> true constr
+R8439:8441 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8379:8406 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R8408:8438 UMST.ChemConstants.OutlierIsTheorem <> helium_trace_atmophile_terminal def
+R8442:8445 Corelib.Init.Datatypes <> true constr
+rec 8719:8735 <> outlier_incidence
+proj 8751:8763 <> outlier_inc_z
+proj 8774:8791 <> outlier_inc_domain
+proj 8813:8832 <> outlier_inc_terminal
+proj 8856:8872 <> outlier_inc_level
+R8767:8769 Corelib.Init.Datatypes <> nat ind
+R8795:8808 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain ind
+R8836:8851 UMST.ChemConstants.OutlierIsTheorem <> outlier_terminal ind
+R8876:8878 Corelib.Init.Datatypes <> nat ind
+def 8895:8920 <> outlierIncidenceNontrivial
+R8927:8943 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+binder 8923:8923 <> h:19
+R8948:8951 Corelib.Init.Datatypes <> bool ind
+R8958:8964 Stdlib.Arith.PeanoNat Nat ltb def
+R8969:8985 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R8987:8987 UMST.ChemConstants.OutlierIsTheorem <> h:19 var
+def 9003:9029 <> outlierIncidenceHeliumNoOre
+R9033:9049 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+R9059:9071 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9059:9071 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9059:9071 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9091:9108 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9091:9108 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9138:9157 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9138:9157 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9191:9207 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9191:9207 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9076:9083 UMST.ChemConstants.OutlierIsTheorem <> helium_z def
+R9113:9130 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+R9162:9183 UMST.ChemConstants.OutlierIsTheorem <> helium_no_ore_terminal def
+def 9230:9254 <> outlierIncidenceNeonNoOre
+R9258:9274 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+R9284:9296 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9284:9296 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9284:9296 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9314:9331 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9314:9331 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9361:9380 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9361:9380 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9412:9428 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9412:9428 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9301:9306 UMST.ChemConstants.OutlierIsTheorem <> neon_z def
+R9336:9353 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+R9385:9404 UMST.ChemConstants.OutlierIsTheorem <> neon_no_ore_terminal def
+def 9451:9476 <> outlierIncidenceGoldNative
+R9480:9496 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+R9506:9518 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9506:9518 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9506:9518 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9536:9553 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9536:9553 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9583:9602 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9583:9602 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9642:9658 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9642:9658 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9523:9528 UMST.ChemConstants.OutlierIsTheorem <> gold_z def
+R9558:9575 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+R9607:9634 UMST.ChemConstants.OutlierIsTheorem <> gold_native_outlier_terminal def
+def 9681:9705 <> outlierIncidenceIronOxide
+R9709:9725 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+R9735:9747 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9735:9747 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9735:9747 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9765:9782 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9765:9782 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9812:9831 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9812:9831 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R9870:9886 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9870:9886 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9752:9757 UMST.ChemConstants.OutlierIsTheorem <> iron_z def
+R9787:9804 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+R9836:9862 UMST.ChemConstants.OutlierIsTheorem <> iron_oxide_product_terminal def
+def 9909:9935 <> outlierIncidenceHeliumTrace
+R9939:9955 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+R9965:9977 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9965:9977 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9965:9977 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R9997:10014 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R9997:10014 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R10047:10066 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R10047:10066 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R10109:10125 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R10109:10125 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R9982:9989 UMST.ChemConstants.OutlierIsTheorem <> helium_z def
+R10019:10039 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_refine constr
+R10071:10101 UMST.ChemConstants.OutlierIsTheorem <> helium_trace_atmophile_terminal def
+def 10148:10170 <> outlierIncidenceTrivial
+R10174:10190 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+R10200:10212 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R10200:10212 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R10200:10212 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R10230:10247 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R10230:10247 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_domain proj
+R10277:10296 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R10277:10296 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_terminal proj
+R10336:10352 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R10336:10352 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_level proj
+R10217:10222 UMST.ChemConstants.OutlierIsTheorem <> gold_z def
+R10252:10269 UMST.ChemConstants.OutlierIsTheorem <> outlier_domain_ore constr
+R10301:10328 UMST.ChemConstants.OutlierIsTheorem <> gold_native_outlier_terminal def
+ind 10598:10623 <> outlier_is_theorem_verdict
+constr 10639:10656 <> verdict_unwired_ok
+constr 10662:10694 <> verdict_outlier_terminal_named_ok
+constr 10700:10723 <> verdict_trivial_z_refuse
+constr 10729:10759 <> verdict_folklore_outlier_refuse
+constr 10765:10791 <> verdict_green_invent_refuse
+constr 10797:10829 <> verdict_proved_without_bar_refuse
+constr 10835:10865 <> verdict_production_wired_refuse
+scheme 10598:10623 <> outlier_is_theorem_verdict_rect
+scheme 10598:10623 <> outlier_is_theorem_verdict_ind
+scheme 10598:10623 <> outlier_is_theorem_verdict_rec
+scheme 10598:10623 <> outlier_is_theorem_verdict_sind
+def 10880:10908 <> outlier_is_theorem_verdict_ok
+R10915:10940 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_verdict ind
+binder 10911:10911 <> v:22
+R10945:10948 Corelib.Init.Datatypes <> bool ind
+R10961:10961 UMST.ChemConstants.OutlierIsTheorem <> v:22 var
+R10972:10989 UMST.ChemConstants.OutlierIsTheorem <> verdict_unwired_ok constr
+R10994:10997 Corelib.Init.Datatypes <> true constr
+R11003:11035 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R11040:11043 Corelib.Init.Datatypes <> true constr
+R11054:11058 Corelib.Init.Datatypes <> false constr
+def 11079:11104 <> evaluate_outlier_incidence
+R11113:11136 UMST.ChemConstants.OutlierIsTheorem <> OutlierIsTheoremModality ind
+binder 11109:11109 <> m:24
+R11146:11162 UMST.ChemConstants.OutlierIsTheorem <> outlier_incidence rec
+binder 11142:11142 <> h:25
+R11190:11193 Corelib.Init.Datatypes <> bool ind
+binder 11168:11186 <> claim_physics_green:26
+R11214:11217 Corelib.Init.Datatypes <> bool ind
+binder 11199:11210 <> claim_proved:27
+R11240:11243 Corelib.Init.Datatypes <> bool ind
+binder 11223:11236 <> claim_folklore:28
+R11248:11273 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_verdict ind
+R11283:11301 UMST.ChemConstants.OutlierIsTheorem <> claim_physics_green:26 var
+R11348:11359 UMST.ChemConstants.OutlierIsTheorem <> claim_proved:27 var
+R11412:11425 UMST.ChemConstants.OutlierIsTheorem <> claim_folklore:28 var
+R11476:11479 Corelib.Init.Datatypes <> negb def
+R11482:11507 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceNontrivial def
+R11509:11509 UMST.ChemConstants.OutlierIsTheorem <> h:25 var
+R11554:11557 Corelib.Init.Datatypes <> negb def
+R11560:11566 UMST.ChemConstants.OutlierIsTheorem <> z_valid def
+R11569:11581 UMST.ChemConstants.OutlierIsTheorem <> outlier_inc_z proj
+R11583:11583 UMST.ChemConstants.OutlierIsTheorem <> h:25 var
+R11636:11636 UMST.ChemConstants.OutlierIsTheorem <> m:24 var
+R11649:11674 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R11679:11711 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R11719:11744 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_assumed constr
+R11752:11779 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_surrogate constr
+R11784:11801 UMST.ChemConstants.OutlierIsTheorem <> verdict_unwired_ok constr
+R11784:11801 UMST.ChemConstants.OutlierIsTheorem <> verdict_unwired_ok constr
+R11809:11833 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_proved constr
+R11838:11870 UMST.ChemConstants.OutlierIsTheorem <> verdict_proved_without_bar_refuse constr
+R11594:11617 UMST.ChemConstants.OutlierIsTheorem <> verdict_trivial_z_refuse constr
+R11519:11542 UMST.ChemConstants.OutlierIsTheorem <> verdict_trivial_z_refuse constr
+R11434:11464 UMST.ChemConstants.OutlierIsTheorem <> verdict_folklore_outlier_refuse constr
+R11368:11400 UMST.ChemConstants.OutlierIsTheorem <> verdict_proved_without_bar_refuse constr
+R11310:11336 UMST.ChemConstants.OutlierIsTheorem <> verdict_green_invent_refuse constr
+def 11893:11914 <> evaluate_outlier_close
+R11923:11946 UMST.ChemConstants.OutlierIsTheorem <> OutlierIsTheoremModality ind
+binder 11919:11919 <> m:30
+R11974:11977 Corelib.Init.Datatypes <> bool ind
+binder 11952:11970 <> claim_physics_green:31
+R12008:12011 Corelib.Init.Datatypes <> bool ind
+binder 11983:12004 <> claim_production_wired:32
+R12016:12041 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_verdict ind
+R12051:12069 UMST.ChemConstants.OutlierIsTheorem <> claim_physics_green:31 var
+R12116:12137 UMST.ChemConstants.OutlierIsTheorem <> claim_production_wired:32 var
+R12195:12195 UMST.ChemConstants.OutlierIsTheorem <> m:30 var
+R12208:12233 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R12238:12255 UMST.ChemConstants.OutlierIsTheorem <> verdict_unwired_ok constr
+R12263:12288 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_assumed constr
+R12296:12320 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_proved constr
+R12328:12355 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_surrogate constr
+R12360:12392 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R12360:12392 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R12360:12392 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R12146:12176 UMST.ChemConstants.OutlierIsTheorem <> verdict_production_wired_refuse constr
+R12078:12104 UMST.ChemConstants.OutlierIsTheorem <> verdict_green_invent_refuse constr
+prf 12410:12448 <> unwired_close_without_production_wiring
+R12515:12519 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12454:12475 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_close def
+R12477:12502 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R12504:12508 Corelib.Init.Datatypes <> false constr
+R12510:12514 Corelib.Init.Datatypes <> false constr
+R12520:12537 UMST.ChemConstants.OutlierIsTheorem <> verdict_unwired_ok constr
+prf 12572:12593 <> helium_no_ore_named_ok
+R12706:12708 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12599:12624 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R12630:12655 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R12657:12683 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceHeliumNoOre def
+R12689:12693 Corelib.Init.Datatypes <> false constr
+R12695:12699 Corelib.Init.Datatypes <> false constr
+R12701:12705 Corelib.Init.Datatypes <> false constr
+R12709:12741 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+prf 12776:12795 <> neon_no_ore_named_ok
+R12906:12908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12801:12826 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R12832:12857 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R12859:12883 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceNeonNoOre def
+R12889:12893 Corelib.Init.Datatypes <> false constr
+R12895:12899 Corelib.Init.Datatypes <> false constr
+R12901:12905 Corelib.Init.Datatypes <> false constr
+R12909:12941 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+prf 12976:12995 <> gold_native_named_ok
+R13107:13109 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13001:13026 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R13032:13057 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R13059:13084 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceGoldNative def
+R13090:13094 Corelib.Init.Datatypes <> false constr
+R13096:13100 Corelib.Init.Datatypes <> false constr
+R13102:13106 Corelib.Init.Datatypes <> false constr
+R13110:13142 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+prf 13177:13195 <> iron_oxide_named_ok
+R13306:13308 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13201:13226 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R13232:13257 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R13259:13283 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceIronOxide def
+R13289:13293 Corelib.Init.Datatypes <> false constr
+R13295:13299 Corelib.Init.Datatypes <> false constr
+R13301:13305 Corelib.Init.Datatypes <> false constr
+R13309:13341 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+prf 13376:13396 <> helium_trace_named_ok
+R13509:13511 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13402:13427 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R13433:13458 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R13460:13486 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceHeliumTrace def
+R13492:13496 Corelib.Init.Datatypes <> false constr
+R13498:13502 Corelib.Init.Datatypes <> false constr
+R13504:13508 Corelib.Init.Datatypes <> false constr
+R13512:13544 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+prf 13581:13616 <> named_outlier_terminals_not_folklore
+R13765:13770 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13729:13731 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13622:13647 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R13653:13678 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R13680:13706 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceHeliumNoOre def
+R13712:13716 Corelib.Init.Datatypes <> false constr
+R13718:13722 Corelib.Init.Datatypes <> false constr
+R13724:13728 Corelib.Init.Datatypes <> false constr
+R13732:13764 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R13912:13917 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13876:13878 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13771:13796 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R13802:13827 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R13829:13853 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceNeonNoOre def
+R13859:13863 Corelib.Init.Datatypes <> false constr
+R13865:13869 Corelib.Init.Datatypes <> false constr
+R13871:13875 Corelib.Init.Datatypes <> false constr
+R13879:13911 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R14060:14065 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14024:14026 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13918:13943 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R13949:13974 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R13976:14001 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceGoldNative def
+R14007:14011 Corelib.Init.Datatypes <> false constr
+R14013:14017 Corelib.Init.Datatypes <> false constr
+R14019:14023 Corelib.Init.Datatypes <> false constr
+R14027:14059 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R14207:14212 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14171:14173 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14066:14091 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R14097:14122 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R14124:14148 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceIronOxide def
+R14154:14158 Corelib.Init.Datatypes <> false constr
+R14160:14164 Corelib.Init.Datatypes <> false constr
+R14166:14170 Corelib.Init.Datatypes <> false constr
+R14174:14206 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R14356:14361 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14320:14322 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14213:14238 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R14244:14269 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R14271:14297 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceHeliumTrace def
+R14303:14307 Corelib.Init.Datatypes <> false constr
+R14309:14313 Corelib.Init.Datatypes <> false constr
+R14315:14319 Corelib.Init.Datatypes <> false constr
+R14323:14355 UMST.ChemConstants.OutlierIsTheorem <> verdict_outlier_terminal_named_ok constr
+R14393:14398 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14386:14388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14362:14385 UMST.ChemConstants.OutlierIsTheorem <> folklore_outlier_refused def
+R14389:14392 Corelib.Init.Datatypes <> true constr
+R14457:14462 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14450:14452 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14399:14426 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R14428:14449 UMST.ChemConstants.OutlierIsTheorem <> helium_no_ore_terminal def
+R14453:14456 Corelib.Init.Datatypes <> true constr
+R14519:14524 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14512:14514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14463:14490 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R14492:14511 UMST.ChemConstants.OutlierIsTheorem <> neon_no_ore_terminal def
+R14515:14518 Corelib.Init.Datatypes <> true constr
+R14589:14594 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14582:14584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14525:14552 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R14554:14581 UMST.ChemConstants.OutlierIsTheorem <> gold_native_outlier_terminal def
+R14585:14588 Corelib.Init.Datatypes <> true constr
+R14658:14663 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14651:14653 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14595:14622 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R14624:14650 UMST.ChemConstants.OutlierIsTheorem <> iron_oxide_product_terminal def
+R14654:14657 Corelib.Init.Datatypes <> true constr
+R14724:14726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14664:14691 UMST.ChemConstants.OutlierIsTheorem <> honest_terminal_not_folklore def
+R14693:14723 UMST.ChemConstants.OutlierIsTheorem <> helium_trace_atmophile_terminal def
+R14727:14730 Corelib.Init.Datatypes <> true constr
+prf 14781:14797 <> trivial_z_refused
+R14906:14908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14803:14828 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R14834:14859 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R14861:14883 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceTrivial def
+R14889:14893 Corelib.Init.Datatypes <> false constr
+R14895:14899 Corelib.Init.Datatypes <> false constr
+R14901:14905 Corelib.Init.Datatypes <> false constr
+R14909:14932 UMST.ChemConstants.OutlierIsTheorem <> verdict_trivial_z_refuse constr
+prf 14969:14989 <> trivial_z_fail_closed
+R15125:15130 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15098:15100 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14995:15020 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R15026:15051 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R15053:15075 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceTrivial def
+R15081:15085 Corelib.Init.Datatypes <> false constr
+R15087:15091 Corelib.Init.Datatypes <> false constr
+R15093:15097 Corelib.Init.Datatypes <> false constr
+R15101:15124 UMST.ChemConstants.OutlierIsTheorem <> verdict_trivial_z_refuse constr
+R15276:15278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15131:15159 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_verdict_ok def
+R15166:15191 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R15200:15225 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R15227:15249 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceTrivial def
+R15258:15262 Corelib.Init.Datatypes <> false constr
+R15264:15268 Corelib.Init.Datatypes <> false constr
+R15270:15274 Corelib.Init.Datatypes <> false constr
+R15279:15283 Corelib.Init.Datatypes <> false constr
+R15312:15328 UMST.ChemConstants.OutlierIsTheorem <> trivial_z_refused thm
+R15312:15328 UMST.ChemConstants.OutlierIsTheorem <> trivial_z_refused thm
+R15342:15370 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_verdict_ok def
+R15385:15401 UMST.ChemConstants.OutlierIsTheorem <> trivial_z_refused thm
+R15385:15401 UMST.ChemConstants.OutlierIsTheorem <> trivial_z_refused thm
+R15385:15401 UMST.ChemConstants.OutlierIsTheorem <> trivial_z_refused thm
+prf 15433:15455 <> folklore_outlier_refuse
+R15566:15568 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15461:15486 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R15492:15517 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R15519:15544 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceGoldNative def
+R15550:15554 Corelib.Init.Datatypes <> false constr
+R15556:15560 Corelib.Init.Datatypes <> false constr
+R15562:15565 Corelib.Init.Datatypes <> true constr
+R15569:15599 UMST.ChemConstants.OutlierIsTheorem <> verdict_folklore_outlier_refuse constr
+prf 15634:15660 <> green_invent_refuse_unwired
+R15771:15773 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15666:15691 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R15697:15722 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R15724:15749 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceGoldNative def
+R15755:15758 Corelib.Init.Datatypes <> true constr
+R15760:15764 Corelib.Init.Datatypes <> false constr
+R15766:15770 Corelib.Init.Datatypes <> false constr
+R15774:15800 UMST.ChemConstants.OutlierIsTheorem <> verdict_green_invent_refuse constr
+prf 15835:15859 <> proved_without_bar_refuse
+R15970:15972 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15865:15890 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_incidence def
+R15896:15921 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R15923:15948 UMST.ChemConstants.OutlierIsTheorem <> outlierIncidenceGoldNative def
+R15954:15958 Corelib.Init.Datatypes <> false constr
+R15960:15963 Corelib.Init.Datatypes <> true constr
+R15965:15969 Corelib.Init.Datatypes <> false constr
+R15973:16005 UMST.ChemConstants.OutlierIsTheorem <> verdict_proved_without_bar_refuse constr
+prf 16040:16070 <> outlier_production_wired_refuse
+R16140:16142 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16076:16097 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_close def
+R16103:16128 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R16130:16134 Corelib.Init.Datatypes <> false constr
+R16136:16139 Corelib.Init.Datatypes <> true constr
+R16143:16173 UMST.ChemConstants.OutlierIsTheorem <> verdict_production_wired_refuse constr
+def 16438:16463 <> outlierIsTheoremWiredInLib
+R16467:16470 Corelib.Init.Datatypes <> bool ind
+R16475:16479 Corelib.Init.Datatypes <> false constr
+def 16494:16519 <> outlierIsTheoremWiredInEos
+R16523:16526 Corelib.Init.Datatypes <> bool ind
+R16531:16535 Corelib.Init.Datatypes <> false constr
+def 16550:16580 <> outlierIsTheoremProductionWired
+R16584:16587 Corelib.Init.Datatypes <> bool ind
+R16592:16596 Corelib.Init.Datatypes <> false constr
+prf 16606:16637 <> outlier_is_theorem_not_wired_lib
+R16669:16671 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16643:16668 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremWiredInLib def
+R16672:16676 Corelib.Init.Datatypes <> false constr
+prf 16711:16742 <> outlier_is_theorem_not_wired_eos
+R16774:16776 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16748:16773 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremWiredInEos def
+R16777:16781 Corelib.Init.Datatypes <> false constr
+prf 16816:16856 <> outlier_is_theorem_production_wired_false
+R16893:16895 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16862:16892 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremProductionWired def
+R16896:16900 Corelib.Init.Datatypes <> false constr
+prf 16935:16962 <> wave100_not_wired_lib_or_eos
+R17036:17038 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16999:17004 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16968:16971 Corelib.Init.Datatypes <> negb def
+R16973:16998 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremWiredInLib def
+R17005:17008 Corelib.Init.Datatypes <> negb def
+R17010:17035 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremWiredInEos def
+R17039:17042 Corelib.Init.Datatypes <> true constr
+def 17082:17104 <> wave100NotWiredLibOrEos
+R17108:17113 Stdlib.Strings.String <> string ind
+prf 17213:17242 <> wave100_not_wired_marker_named
+R17271:17274 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17248:17270 UMST.ChemConstants.OutlierIsTheorem <> wave100NotWiredLibOrEos def
+def 17541:17562 <> outlierIsTheoremProved
+R17566:17569 Corelib.Init.Datatypes <> bool ind
+R17574:17578 Corelib.Init.Datatypes <> false constr
+prf 17588:17618 <> outlier_is_theorem_proved_false
+R17646:17648 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17624:17645 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremProved def
+R17649:17653 Corelib.Init.Datatypes <> false constr
+def 17693:17715 <> not118SquaredGreenTable
+R17719:17722 Corelib.Init.Datatypes <> bool ind
+R17727:17730 Corelib.Init.Datatypes <> true constr
+prf 17740:17766 <> not_118_squared_green_table
+R17795:17797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17772:17794 UMST.ChemConstants.OutlierIsTheorem <> not118SquaredGreenTable def
+R17798:17801 Corelib.Init.Datatypes <> true constr
+def 17841:17854 <> soleAxiomCount
+R17858:17860 Corelib.Init.Datatypes <> nat ind
+prf 17875:17897 <> sole_axiom_count_is_one
+R17917:17919 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17903:17916 UMST.ChemConstants.OutlierIsTheorem <> soleAxiomCount def
+def 17960:17985 <> outlierIsTheoremIsNewAxiom
+R17997:18001 Corelib.Init.Logic <> False ind
+prf 18011:18042 <> outlier_is_theorem_not_new_axiom
+R18048:18049 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R18050:18075 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremIsNewAxiom def
+def 18343:18364 <> outlierIsTheoremCellId
+R18368:18373 Stdlib.Strings.String <> string ind
+def 18445:18468 <> outlierIsTheoremNonClaim
+R18472:18477 Stdlib.Strings.String <> string ind
+def 18954:18981 <> outlierIsTheoremIntAuthority
+R18985:18990 Stdlib.Strings.String <> string ind
+def 19060:19089 <> outlierIsTheoremIntCrossCellId
+R19093:19098 Stdlib.Strings.String <> string ind
+def 19167:19194 <> occupancyEngineSortAuthority
+R19198:19203 Stdlib.Strings.String <> string ind
+def 19276:19307 <> occurrenceFamilyPatternAuthority
+R19311:19316 Stdlib.Strings.String <> string ind
+def 19393:19424 <> homologExceptionNotCopyAuthority
+R19428:19433 Stdlib.Strings.String <> string ind
+def 19511:19544 <> interactEngineClosedShellAuthority
+R19548:19553 Stdlib.Strings.String <> string ind
+prf 19628:19653 <> outlier_is_theorem_cell_id
+R19681:19685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19659:19680 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremCellId def
+prf 19771:19808 <> outlier_is_theorem_cites_int_authority
+R19897:19902 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19842:19847 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R19814:19841 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremIntAuthority def
+R19903:19907 Corelib.Init.Logic <> False ind
+prf 19960:19998 <> outlier_is_theorem_cites_int_cross_cell
+R20034:20038 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20004:20033 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremIntCrossCellId def
+prf 20121:20166 <> outlier_is_theorem_cites_occupancy_engine_sort
+R20200:20203 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20172:20199 UMST.ChemConstants.OutlierIsTheorem <> occupancyEngineSortAuthority def
+prf 20241:20290 <> outlier_is_theorem_cites_occurrence_family_pattern
+R20328:20331 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20296:20327 UMST.ChemConstants.OutlierIsTheorem <> occurrenceFamilyPatternAuthority def
+prf 20369:20419 <> outlier_is_theorem_cites_homolog_exception_not_copy
+R20457:20460 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20425:20456 UMST.ChemConstants.OutlierIsTheorem <> homologExceptionNotCopyAuthority def
+prf 20498:20550 <> outlier_is_theorem_cites_interact_engine_closed_shell
+R20590:20593 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R20556:20589 UMST.ChemConstants.OutlierIsTheorem <> interactEngineClosedShellAuthority def
+prf 20631:20665 <> outlier_is_theorem_modality_unwired
+R20702:20704 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20671:20701 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremModalityCurrent def
+R20705:20730 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+def 20994:21031 <> outlierIsTheoremPhysicsGreenAuthorized
+R21043:21047 Corelib.Init.Logic <> False ind
+prf 21057:21094 <> outlier_is_theorem_physics_green_false
+R21100:21101 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R21102:21139 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremPhysicsGreenAuthorized def
+prf 21407:21437 <> outlier_is_theorem_conservation
+R21529:21534 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21508:21510 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21443:21464 UMST.ChemConstants.OutlierIsTheorem <> evaluate_outlier_close def
+R21470:21495 UMST.ChemConstants.OutlierIsTheorem <> outlier_is_theorem_unwired constr
+R21497:21501 Corelib.Init.Datatypes <> false constr
+R21503:21507 Corelib.Init.Datatypes <> false constr
+R21511:21528 UMST.ChemConstants.OutlierIsTheorem <> verdict_unwired_ok constr
+R21565:21570 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21557:21559 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21535:21556 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremProved def
+R21560:21564 Corelib.Init.Datatypes <> false constr
+R21602:21607 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21595:21597 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21571:21594 UMST.ChemConstants.OutlierIsTheorem <> folklore_outlier_refused def
+R21598:21601 Corelib.Init.Datatypes <> true constr
+R21642:21647 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21634:21636 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21608:21633 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremWiredInLib def
+R21637:21641 Corelib.Init.Datatypes <> false constr
+R21674:21676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21648:21673 UMST.ChemConstants.OutlierIsTheorem <> outlierIsTheoremWiredInEos def
+R21677:21681 Corelib.Init.Datatypes <> false constr

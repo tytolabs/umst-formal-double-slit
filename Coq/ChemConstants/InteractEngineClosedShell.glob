@@ -1,0 +1,927 @@
+DIGEST f5258339288a2eb9c3c30ee22acb3ba3
+FUMST.ChemConstants.InteractEngineClosedShell
+R1271:1275 Stdlib.Arith.Arith <> <> lib
+R1277:1282 Stdlib.ZArith.ZArith <> <> lib
+R1284:1289 Stdlib.Strings.String <> <> lib
+R1291:1294 Stdlib.Bool.Bool <> <> lib
+R1296:1298 Stdlib.micromega.Lia <> <> lib
+R1300:1303 Stdlib.Lists.List <> <> lib
+R1313:1325 Stdlib.Lists.List ListNotations <> mod
+def 1360:1391 <> interactengineclosedshellSurface
+R1395:1400 Stdlib.Strings.String <> string ind
+prf 1454:1492 <> interactengineclosedshell_surface_named
+R1530:1533 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1498:1529 UMST.ChemConstants.InteractEngineClosedShell <> interactengineclosedshellSurface def
+ind 1872:1904 <> InteractEngineClosedShellModality
+constr 1920:1955 <> interact_engine_closed_shell_unwired
+constr 1961:1996 <> interact_engine_closed_shell_assumed
+constr 2002:2036 <> interact_engine_closed_shell_proved
+constr 2042:2079 <> interact_engine_closed_shell_surrogate
+scheme 1872:1904 <> InteractEngineClosedShellModality_rect
+scheme 1872:1904 <> InteractEngineClosedShellModality_ind
+scheme 1872:1904 <> InteractEngineClosedShellModality_rec
+scheme 1872:1904 <> InteractEngineClosedShellModality_sind
+def 2094:2133 <> interactEngineClosedShellModalityCurrent
+R2139:2171 UMST.ChemConstants.InteractEngineClosedShell <> InteractEngineClosedShellModality ind
+R2178:2213 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+def 2228:2284 <> interact_engine_closed_shell_modality_lattice_cardinality
+R2288:2290 Corelib.Init.Datatypes <> nat ind
+prf 2305:2369 <> interact_engine_closed_shell_modality_lattice_cardinality_is_four
+R2432:2434 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2375:2431 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_modality_lattice_cardinality def
+prf 2470:2530 <> interact_engine_closed_shell_modality_lattice_not_118_squared
+R2631:2633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2536:2539 Corelib.Init.Datatypes <> negb def
+R2542:2548 Stdlib.Arith.PeanoNat Nat eqb def
+R2550:2606 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_modality_lattice_cardinality def
+R2623:2625 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2634:2637 Corelib.Init.Datatypes <> true constr
+R2656:2712 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_modality_lattice_cardinality def
+def 2973:2989 <> closed_shell_z_he
+R2993:2995 Corelib.Init.Datatypes <> nat ind
+def 3014:3030 <> closed_shell_z_ne
+R3034:3036 Corelib.Init.Datatypes <> nat ind
+def 3056:3072 <> closed_shell_z_ar
+R3076:3078 Corelib.Init.Datatypes <> nat ind
+def 3098:3114 <> closed_shell_z_kr
+R3118:3120 Corelib.Init.Datatypes <> nat ind
+def 3140:3156 <> closed_shell_z_xe
+R3160:3162 Corelib.Init.Datatypes <> nat ind
+def 3182:3198 <> closed_shell_z_rn
+R3202:3204 Corelib.Init.Datatypes <> nat ind
+def 3224:3240 <> closed_shell_z_og
+R3244:3246 Corelib.Init.Datatypes <> nat ind
+prf 3263:3284 <> closed_shell_z_he_is_2
+R3305:3307 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3288:3304 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_he def
+prf 3343:3365 <> closed_shell_z_ne_is_10
+R3386:3388 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3369:3385 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_ne def
+prf 3425:3447 <> closed_shell_z_ar_is_18
+R3468:3470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3451:3467 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_ar def
+prf 3507:3529 <> closed_shell_z_kr_is_36
+R3550:3552 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3533:3549 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_kr def
+prf 3589:3611 <> closed_shell_z_xe_is_54
+R3632:3634 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3615:3631 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_xe def
+prf 3671:3693 <> closed_shell_z_rn_is_86
+R3714:3716 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3697:3713 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_rn def
+prf 3753:3776 <> closed_shell_z_og_is_118
+R3797:3799 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3780:3796 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_og def
+def 3842:3861 <> closed_shell_z_count
+R3865:3867 Corelib.Init.Datatypes <> nat ind
+prf 3882:3910 <> closed_shell_z_count_is_seven
+R3934:3936 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3914:3933 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_count def
+def 3977:3996 <> closed_shell_z_valid
+R4003:4005 Corelib.Init.Datatypes <> nat ind
+binder 3999:3999 <> z:3
+R4010:4013 Corelib.Init.Datatypes <> bool ind
+R4031:4034 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4020:4026 Stdlib.Arith.PeanoNat Nat ltb def
+R4030:4030 UMST.ChemConstants.InteractEngineClosedShell <> z:3 var
+R4035:4041 Stdlib.Arith.PeanoNat Nat leb def
+R4043:4043 UMST.ChemConstants.InteractEngineClosedShell <> z:3 var
+prf 4057:4082 <> closed_shell_z_table_valid
+R4133:4138 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4126:4128 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4088:4107 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4109:4125 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_he def
+R4129:4132 Corelib.Init.Datatypes <> true constr
+R4184:4189 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4177:4179 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4139:4158 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4160:4176 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_ne def
+R4180:4183 Corelib.Init.Datatypes <> true constr
+R4235:4240 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4228:4230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4190:4209 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4211:4227 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_ar def
+R4231:4234 Corelib.Init.Datatypes <> true constr
+R4286:4291 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4279:4281 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4241:4260 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4262:4278 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_kr def
+R4282:4285 Corelib.Init.Datatypes <> true constr
+R4337:4342 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4330:4332 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4292:4311 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4313:4329 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_xe def
+R4333:4336 Corelib.Init.Datatypes <> true constr
+R4388:4393 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4381:4383 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4343:4362 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4364:4380 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_rn def
+R4384:4387 Corelib.Init.Datatypes <> true constr
+R4432:4434 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4394:4413 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+R4415:4431 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_og def
+R4435:4438 Corelib.Init.Datatypes <> true constr
+R4471:4490 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_valid def
+prf 4518:4545 <> oganesson_in_bar_not_xe_copy
+R4574:4579 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4568:4570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4551:4567 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_og def
+R4602:4607 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4597:4599 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4580:4596 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_xe def
+R4625:4628 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4608:4624 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_og def
+R4629:4645 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_xe def
+def 4944:4983 <> class_5_structure_blocking_pattern_index
+R4987:4989 Corelib.Init.Datatypes <> nat ind
+prf 5004:5051 <> class_5_structure_blocking_pattern_index_is_five
+R5097:5099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5057:5096 UMST.ChemConstants.InteractEngineClosedShell <> class_5_structure_blocking_pattern_index def
+def 5140:5177 <> structure_blocking_inertness_authority
+R5181:5186 Stdlib.Strings.String <> string ind
+def 5269:5312 <> pattern_bundle_structure_blocking_factor_tag
+R5316:5321 Stdlib.Strings.String <> string ind
+def 5372:5412 <> north_star_class_5_structure_blocking_tag
+R5416:5421 Stdlib.Strings.String <> string ind
+prf 5465:5508 <> structure_blocking_inertness_authority_named
+R5552:5555 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5514:5551 UMST.ChemConstants.InteractEngineClosedShell <> structure_blocking_inertness_authority def
+prf 5593:5642 <> pattern_bundle_structure_blocking_factor_tag_named
+R5692:5696 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5648:5691 UMST.ChemConstants.InteractEngineClosedShell <> pattern_bundle_structure_blocking_factor_tag def
+def 5989:6017 <> interact_partiality_authority
+R6021:6026 Stdlib.Strings.String <> string ind
+def 6090:6125 <> interact_kind_structure_blocking_tag
+R6129:6134 Stdlib.Strings.String <> string ind
+prf 6183:6217 <> interact_partiality_authority_named
+R6252:6255 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6223:6251 UMST.ChemConstants.InteractEngineClosedShell <> interact_partiality_authority def
+prf 6293:6334 <> interact_kind_structure_blocking_tag_named
+R6376:6380 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6340:6375 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_structure_blocking_tag def
+def 6453:6491 <> structure_blocking_interact_kind_pinned
+R6495:6498 Corelib.Init.Datatypes <> bool ind
+R6562:6567 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6505:6508 Corelib.Init.Datatypes <> negb def
+R6511:6520 Stdlib.Strings.String <> eqb def
+R6522:6557 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_structure_blocking_tag def
+R6568:6577 Stdlib.Strings.String <> eqb def
+R6579:6622 UMST.ChemConstants.InteractEngineClosedShell <> pattern_bundle_structure_blocking_factor_tag def
+prf 6667:6710 <> structure_blocking_interact_kind_pinned_true
+R6755:6757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6716:6754 UMST.ChemConstants.InteractEngineClosedShell <> structure_blocking_interact_kind_pinned def
+R6758:6761 Corelib.Init.Datatypes <> true constr
+def 7025:7067 <> he_no_ore_missing_interact_class5_collision
+R7071:7076 Stdlib.Strings.String <> string ind
+def 7212:7232 <> nobility_magic_marker
+R7236:7241 Stdlib.Strings.String <> string ind
+def 7306:7335 <> missing_interact_class5_marker
+R7339:7344 Stdlib.Strings.String <> string ind
+prf 7407:7431 <> he_no_ore_collision_named
+R7480:7483 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7437:7479 UMST.ChemConstants.InteractEngineClosedShell <> he_no_ore_missing_interact_class5_collision def
+prf 7521:7554 <> nobility_magic_ne_missing_interact
+R7581:7584 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7560:7580 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_marker def
+R7585:7614 UMST.ChemConstants.InteractEngineClosedShell <> missing_interact_class5_marker def
+def 7655:7687 <> helium_no_ore_is_missing_interact
+R7691:7694 Corelib.Init.Datatypes <> bool ind
+R7728:7733 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7701:7707 Stdlib.Arith.PeanoNat Nat eqb def
+R7709:7725 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_he def
+R7734:7740 Stdlib.Arith.PeanoNat Nat eqb def
+R7742:7781 UMST.ChemConstants.InteractEngineClosedShell <> class_5_structure_blocking_pattern_index def
+prf 7793:7830 <> helium_no_ore_is_missing_interact_true
+R7869:7871 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7836:7868 UMST.ChemConstants.InteractEngineClosedShell <> helium_no_ore_is_missing_interact def
+R7872:7875 Corelib.Init.Datatypes <> true constr
+def 7915:7941 <> he_no_ore_is_nobility_magic
+R7945:7948 Corelib.Init.Datatypes <> bool ind
+R7953:7957 Corelib.Init.Datatypes <> false constr
+prf 7967:7994 <> he_no_ore_not_nobility_magic
+R8025:8027 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7998:8024 UMST.ChemConstants.InteractEngineClosedShell <> he_no_ore_is_nobility_magic def
+R8028:8032 Corelib.Init.Datatypes <> false constr
+def 8072:8099 <> he_no_ore_is_atmophile_green
+R8103:8106 Corelib.Init.Datatypes <> bool ind
+R8111:8115 Corelib.Init.Datatypes <> false constr
+prf 8125:8153 <> he_no_ore_not_atmophile_green
+R8187:8189 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8159:8186 UMST.ChemConstants.InteractEngineClosedShell <> he_no_ore_is_atmophile_green def
+R8190:8194 Corelib.Init.Datatypes <> false constr
+def 8457:8490 <> catalysis_not_26th_axiom_collision
+R8494:8499 Stdlib.Strings.String <> string ind
+def 8599:8623 <> twenty_sixth_axiom_marker
+R8627:8632 Stdlib.Strings.String <> string ind
+prf 8669:8708 <> catalysis_not_26th_axiom_collision_named
+R8748:8751 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8714:8747 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_not_26th_axiom_collision def
+def 8794:8817 <> catalysis_is_extra_axiom
+R8821:8824 Corelib.Init.Datatypes <> bool ind
+R8829:8833 Corelib.Init.Datatypes <> false constr
+prf 8843:8870 <> catalysis_is_not_extra_axiom
+R8898:8900 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8874:8897 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_is_extra_axiom def
+R8901:8905 Corelib.Init.Datatypes <> false constr
+def 8945:8960 <> sole_axiom_count
+R8964:8966 Corelib.Init.Datatypes <> nat ind
+prf 8981:9003 <> sole_axiom_count_is_one
+R9023:9025 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9007:9022 UMST.ChemConstants.InteractEngineClosedShell <> sole_axiom_count def
+prf 9061:9084 <> catalysis_not_26th_axiom
+R9117:9119 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9090:9096 Stdlib.Arith.PeanoNat Nat eqb def
+R9098:9113 UMST.ChemConstants.InteractEngineClosedShell <> sole_axiom_count def
+R9120:9124 Corelib.Init.Datatypes <> false constr
+ind 9387:9404 <> interact_kind_slot
+constr 9420:9451 <> interact_slot_structure_blocking
+constr 9457:9491 <> interact_slot_bond_forming_folklore
+constr 9497:9522 <> interact_slot_unauthorized
+scheme 9387:9404 <> interact_kind_slot_rect
+scheme 9387:9404 <> interact_kind_slot_ind
+scheme 9387:9404 <> interact_kind_slot_rec
+scheme 9387:9404 <> interact_kind_slot_sind
+def 9537:9558 <> interact_kind_slot_beq
+R9569:9586 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot ind
+binder 9561:9562 <> s1:6
+binder 9564:9565 <> s2:7
+R9591:9594 Corelib.Init.Datatypes <> bool ind
+R9611:9612 UMST.ChemConstants.InteractEngineClosedShell <> s2:7 var
+R9607:9608 UMST.ChemConstants.InteractEngineClosedShell <> s1:6 var
+R9623:9654 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_structure_blocking constr
+R9657:9688 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_structure_blocking constr
+R9693:9696 Corelib.Init.Datatypes <> true constr
+R9702:9736 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_bond_forming_folklore constr
+R9739:9773 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_bond_forming_folklore constr
+R9784:9787 Corelib.Init.Datatypes <> true constr
+R9793:9818 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_unauthorized constr
+R9821:9846 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_unauthorized constr
+R9851:9854 Corelib.Init.Datatypes <> true constr
+R9868:9872 Corelib.Init.Datatypes <> false constr
+rec 9889:9909 <> interact_kind_binding
+proj 9925:9946 <> interact_kind_slot_tag
+proj 9972:9991 <> interact_class_index
+R9950:9967 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot ind
+R9995:9997 Corelib.Init.Datatypes <> nat ind
+def 10014:10049 <> interactKindBindingStructureBlocking
+R10053:10073 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_binding rec
+R10083:10104 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot_tag proj
+R10083:10104 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot_tag proj
+R10083:10104 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot_tag proj
+R10148:10167 UMST.ChemConstants.InteractEngineClosedShell <> interact_class_index proj
+R10148:10167 UMST.ChemConstants.InteractEngineClosedShell <> interact_class_index proj
+R10109:10140 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_structure_blocking constr
+def 10190:10217 <> interact_kind_binding_honest
+R10224:10244 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_binding rec
+binder 10220:10220 <> b:13
+R10249:10252 Corelib.Init.Datatypes <> bool ind
+R10293:10298 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10259:10265 Stdlib.Arith.PeanoNat Nat eqb def
+R10268:10287 UMST.ChemConstants.InteractEngineClosedShell <> interact_class_index proj
+R10289:10289 UMST.ChemConstants.InteractEngineClosedShell <> b:13 var
+R10299:10302 Corelib.Init.Datatypes <> negb def
+R10305:10326 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot_beq def
+R10329:10350 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_slot_tag proj
+R10352:10352 UMST.ChemConstants.InteractEngineClosedShell <> b:13 var
+R10366:10391 UMST.ChemConstants.InteractEngineClosedShell <> interact_slot_unauthorized constr
+prf 10402:10434 <> structure_blocking_binding_honest
+R10505:10507 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10440:10467 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_binding_honest def
+R10469:10504 UMST.ChemConstants.InteractEngineClosedShell <> interactKindBindingStructureBlocking def
+R10508:10511 Corelib.Init.Datatypes <> true constr
+ind 10774:10809 <> interact_engine_closed_shell_verdict
+constr 10825:10842 <> verdict_unwired_ok
+constr 10848:10876 <> verdict_closed_shell_named_ok
+constr 10882:10905 <> verdict_trivial_z_refuse
+constr 10911:10939 <> verdict_nobility_magic_refuse
+constr 10945:10974 <> verdict_atmophile_green_refuse
+constr 10980:11014 <> verdict_catalysis_26th_axiom_refuse
+constr 11020:11046 <> verdict_green_invent_refuse
+constr 11052:11084 <> verdict_proved_without_bar_refuse
+constr 11090:11120 <> verdict_production_wired_refuse
+scheme 10774:10809 <> interact_engine_closed_shell_verdict_rect
+scheme 10774:10809 <> interact_engine_closed_shell_verdict_ind
+scheme 10774:10809 <> interact_engine_closed_shell_verdict_rec
+scheme 10774:10809 <> interact_engine_closed_shell_verdict_sind
+def 11135:11173 <> interact_engine_closed_shell_verdict_ok
+R11182:11217 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict ind
+binder 11178:11178 <> v:16
+R11222:11225 Corelib.Init.Datatypes <> bool ind
+R11238:11238 UMST.ChemConstants.InteractEngineClosedShell <> v:16 var
+R11249:11266 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+R11271:11274 Corelib.Init.Datatypes <> true constr
+R11280:11308 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R11313:11316 Corelib.Init.Datatypes <> true constr
+R11327:11331 Corelib.Init.Datatypes <> false constr
+rec 11348:11385 <> interact_engine_closed_shell_incidence
+proj 11401:11414 <> interact_inc_z
+proj 11425:11441 <> interact_inc_kind
+proj 11470:11487 <> interact_inc_level
+R11418:11420 Corelib.Init.Datatypes <> nat ind
+R11445:11465 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_binding rec
+R11491:11493 Corelib.Init.Datatypes <> nat ind
+def 11510:11553 <> interactEngineClosedShellIncidenceNontrivial
+R11562:11599 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_incidence rec
+binder 11558:11558 <> h:22
+R11604:11607 Corelib.Init.Datatypes <> bool ind
+R11614:11620 Stdlib.Arith.PeanoNat Nat ltb def
+R11625:11642 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R11644:11644 UMST.ChemConstants.InteractEngineClosedShell <> h:22 var
+def 11660:11697 <> interactEngineClosedShellIncidenceHeL1
+R11703:11740 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_incidence rec
+R11750:11763 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R11750:11763 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R11750:11763 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R11792:11808 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R11792:11808 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R11856:11873 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R11856:11873 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R11768:11784 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_he def
+R11813:11848 UMST.ChemConstants.InteractEngineClosedShell <> interactKindBindingStructureBlocking def
+def 11896:11933 <> interactEngineClosedShellIncidenceOgL1
+R11939:11976 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_incidence rec
+R11986:11999 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R11986:11999 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R11986:11999 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R12028:12044 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R12028:12044 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R12092:12109 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R12092:12109 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R12004:12020 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_og def
+R12049:12084 UMST.ChemConstants.InteractEngineClosedShell <> interactKindBindingStructureBlocking def
+def 12132:12172 <> interactEngineClosedShellIncidenceTrivial
+R12178:12215 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_incidence rec
+R12225:12238 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R12225:12238 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R12225:12238 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_z proj
+R12267:12283 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R12267:12283 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R12331:12348 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R12331:12348 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_level proj
+R12243:12259 UMST.ChemConstants.InteractEngineClosedShell <> closed_shell_z_he def
+R12288:12323 UMST.ChemConstants.InteractEngineClosedShell <> interactKindBindingStructureBlocking def
+def 12371:12417 <> evaluate_interact_engine_closed_shell_incidence
+R12426:12458 UMST.ChemConstants.InteractEngineClosedShell <> InteractEngineClosedShellModality ind
+binder 12422:12422 <> m:23
+R12468:12505 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_incidence rec
+binder 12464:12464 <> h:24
+R12533:12536 Corelib.Init.Datatypes <> bool ind
+binder 12511:12529 <> claim_physics_green:25
+R12557:12560 Corelib.Init.Datatypes <> bool ind
+binder 12542:12553 <> claim_proved:26
+R12589:12592 Corelib.Init.Datatypes <> bool ind
+binder 12566:12585 <> claim_nobility_magic:27
+R12622:12625 Corelib.Init.Datatypes <> bool ind
+binder 12598:12618 <> claim_atmophile_green:28
+R12660:12663 Corelib.Init.Datatypes <> bool ind
+binder 12631:12656 <> claim_catalysis_26th_axiom:29
+R12668:12703 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict ind
+R12713:12731 UMST.ChemConstants.InteractEngineClosedShell <> claim_physics_green:25 var
+R12778:12789 UMST.ChemConstants.InteractEngineClosedShell <> claim_proved:26 var
+R12852:12871 UMST.ChemConstants.InteractEngineClosedShell <> claim_nobility_magic:27 var
+R12940:12960 UMST.ChemConstants.InteractEngineClosedShell <> claim_atmophile_green:28 var
+R13040:13065 UMST.ChemConstants.InteractEngineClosedShell <> claim_catalysis_26th_axiom:29 var
+R13160:13163 Corelib.Init.Datatypes <> negb def
+R13166:13209 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceNontrivial def
+R13211:13211 UMST.ChemConstants.InteractEngineClosedShell <> h:24 var
+R13306:13309 Corelib.Init.Datatypes <> negb def
+R13312:13339 UMST.ChemConstants.InteractEngineClosedShell <> interact_kind_binding_honest def
+R13385:13401 UMST.ChemConstants.InteractEngineClosedShell <> interact_inc_kind proj
+R13403:13403 UMST.ChemConstants.InteractEngineClosedShell <> h:24 var
+R13551:13551 UMST.ChemConstants.InteractEngineClosedShell <> m:23 var
+R13594:13629 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R13672:13700 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R13738:13773 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_assumed constr
+R13811:13848 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_surrogate constr
+R13891:13908 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+R13891:13908 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+R13946:13980 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_proved constr
+R14023:14055 UMST.ChemConstants.InteractEngineClosedShell <> verdict_proved_without_bar_refuse constr
+R13444:13472 UMST.ChemConstants.InteractEngineClosedShell <> verdict_nobility_magic_refuse constr
+R13246:13269 UMST.ChemConstants.InteractEngineClosedShell <> verdict_trivial_z_refuse constr
+R13094:13128 UMST.ChemConstants.InteractEngineClosedShell <> verdict_catalysis_26th_axiom_refuse constr
+R12984:13013 UMST.ChemConstants.InteractEngineClosedShell <> verdict_atmophile_green_refuse constr
+R12890:12918 UMST.ChemConstants.InteractEngineClosedShell <> verdict_nobility_magic_refuse constr
+R12803:12835 UMST.ChemConstants.InteractEngineClosedShell <> verdict_proved_without_bar_refuse constr
+R12740:12766 UMST.ChemConstants.InteractEngineClosedShell <> verdict_green_invent_refuse constr
+def 14108:14150 <> evaluate_interact_engine_closed_shell_close
+R14159:14191 UMST.ChemConstants.InteractEngineClosedShell <> InteractEngineClosedShellModality ind
+binder 14155:14155 <> m:31
+R14219:14222 Corelib.Init.Datatypes <> bool ind
+binder 14197:14215 <> claim_physics_green:32
+R14253:14256 Corelib.Init.Datatypes <> bool ind
+binder 14228:14249 <> claim_production_wired:33
+R14261:14296 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict ind
+R14306:14324 UMST.ChemConstants.InteractEngineClosedShell <> claim_physics_green:32 var
+R14371:14392 UMST.ChemConstants.InteractEngineClosedShell <> claim_production_wired:33 var
+R14450:14450 UMST.ChemConstants.InteractEngineClosedShell <> m:31 var
+R14463:14498 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R14503:14520 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+R14528:14563 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_assumed constr
+R14571:14605 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_proved constr
+R14613:14650 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_surrogate constr
+R14655:14683 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R14655:14683 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R14655:14683 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R14401:14431 UMST.ChemConstants.InteractEngineClosedShell <> verdict_production_wired_refuse constr
+R14333:14359 UMST.ChemConstants.InteractEngineClosedShell <> verdict_green_invent_refuse constr
+def 14930:14973 <> interact_engine_closed_shell_honest_conjunct
+R14977:14980 Corelib.Init.Datatypes <> bool ind
+R15138:15143 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15100:15105 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15055:15060 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15016:15021 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14987:14990 Corelib.Init.Datatypes <> negb def
+R14992:15015 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_is_extra_axiom def
+R15022:15054 UMST.ChemConstants.InteractEngineClosedShell <> helium_no_ore_is_missing_interact def
+R15061:15099 UMST.ChemConstants.InteractEngineClosedShell <> structure_blocking_interact_kind_pinned def
+R15106:15109 Corelib.Init.Datatypes <> negb def
+R15111:15137 UMST.ChemConstants.InteractEngineClosedShell <> he_no_ore_is_nobility_magic def
+R15144:15147 Corelib.Init.Datatypes <> negb def
+R15149:15176 UMST.ChemConstants.InteractEngineClosedShell <> he_no_ore_is_atmophile_green def
+prf 15186:15234 <> interact_engine_closed_shell_honest_conjunct_true
+R15284:15286 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15240:15283 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_honest_conjunct def
+R15287:15290 Corelib.Init.Datatypes <> true constr
+R15309:15352 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_honest_conjunct def
+def 15634:15674 <> interact_engine_closed_shell_wired_in_lib
+R15678:15681 Corelib.Init.Datatypes <> bool ind
+R15686:15690 Corelib.Init.Datatypes <> false constr
+def 15705:15745 <> interact_engine_closed_shell_wired_in_eos
+R15749:15752 Corelib.Init.Datatypes <> bool ind
+R15757:15761 Corelib.Init.Datatypes <> false constr
+prf 15771:15812 <> interact_engine_closed_shell_not_wired_lib
+R15859:15861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15818:15858 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_wired_in_lib def
+R15862:15866 Corelib.Init.Datatypes <> false constr
+prf 15901:15942 <> interact_engine_closed_shell_not_wired_eos
+R15989:15991 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15948:15988 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_wired_in_eos def
+R15992:15996 Corelib.Init.Datatypes <> false constr
+prf 16031:16047 <> wave100_not_wired
+R16151:16153 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16099:16104 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16053:16056 Corelib.Init.Datatypes <> negb def
+R16058:16098 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_wired_in_lib def
+R16105:16108 Corelib.Init.Datatypes <> negb def
+R16110:16150 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_wired_in_eos def
+R16154:16157 Corelib.Init.Datatypes <> true constr
+def 16421:16451 <> interactEngineClosedShellProved
+R16455:16458 Corelib.Init.Datatypes <> bool ind
+R16463:16467 Corelib.Init.Datatypes <> false constr
+prf 16477:16517 <> interact_engine_closed_shell_proved_false
+R16554:16556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16523:16553 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellProved def
+R16557:16561 Corelib.Init.Datatypes <> false constr
+def 16601:16623 <> not118SquaredGreenTable
+R16627:16630 Corelib.Init.Datatypes <> bool ind
+R16635:16638 Corelib.Init.Datatypes <> true constr
+prf 16648:16674 <> not_118_squared_green_table
+R16701:16703 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16678:16700 UMST.ChemConstants.InteractEngineClosedShell <> not118SquaredGreenTable def
+R16704:16707 Corelib.Init.Datatypes <> true constr
+def 16747:16765 <> notTwentySixthAxiom
+R16769:16772 Corelib.Init.Datatypes <> bool ind
+R16777:16780 Corelib.Init.Datatypes <> true constr
+prf 16790:16811 <> not_twenty_sixth_axiom
+R16834:16836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16815:16833 UMST.ChemConstants.InteractEngineClosedShell <> notTwentySixthAxiom def
+R16837:16840 Corelib.Init.Datatypes <> true constr
+prf 17097:17135 <> unwired_close_without_production_wiring
+R17237:17241 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17141:17183 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_close def
+R17189:17224 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R17226:17230 Corelib.Init.Datatypes <> false constr
+R17232:17236 Corelib.Init.Datatypes <> false constr
+R17242:17259 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+prf 17296:17347 <> unwired_modality_always_ok_without_production_wiring
+R17449:17453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17353:17395 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_close def
+R17401:17436 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R17438:17442 Corelib.Init.Datatypes <> false constr
+R17444:17448 Corelib.Init.Datatypes <> false constr
+R17454:17471 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+R17487:17525 UMST.ChemConstants.InteractEngineClosedShell <> unwired_close_without_production_wiring thm
+R17487:17525 UMST.ChemConstants.InteractEngineClosedShell <> unwired_close_without_production_wiring thm
+prf 17540:17563 <> he_closed_shell_named_ok
+R17730:17734 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17569:17615 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R17621:17656 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R17658:17695 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R17701:17705 Corelib.Init.Datatypes <> false constr
+R17707:17711 Corelib.Init.Datatypes <> false constr
+R17713:17717 Corelib.Init.Datatypes <> false constr
+R17719:17723 Corelib.Init.Datatypes <> false constr
+R17725:17729 Corelib.Init.Datatypes <> false constr
+R17735:17763 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+prf 17798:17821 <> og_closed_shell_named_ok
+R17988:17992 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17827:17873 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R17879:17914 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R17916:17953 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceOgL1 def
+R17959:17963 Corelib.Init.Datatypes <> false constr
+R17965:17969 Corelib.Init.Datatypes <> false constr
+R17971:17975 Corelib.Init.Datatypes <> false constr
+R17977:17981 Corelib.Init.Datatypes <> false constr
+R17983:17987 Corelib.Init.Datatypes <> false constr
+R17993:18021 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+prf 18058:18091 <> named_interact_engine_closed_shell
+R18292:18297 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18258:18262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18097:18143 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R18149:18184 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R18186:18223 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R18229:18233 Corelib.Init.Datatypes <> false constr
+R18235:18239 Corelib.Init.Datatypes <> false constr
+R18241:18245 Corelib.Init.Datatypes <> false constr
+R18247:18251 Corelib.Init.Datatypes <> false constr
+R18253:18257 Corelib.Init.Datatypes <> false constr
+R18263:18291 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R18493:18498 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18459:18463 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18298:18344 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R18350:18385 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R18387:18424 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceOgL1 def
+R18430:18434 Corelib.Init.Datatypes <> false constr
+R18436:18440 Corelib.Init.Datatypes <> false constr
+R18442:18446 Corelib.Init.Datatypes <> false constr
+R18448:18452 Corelib.Init.Datatypes <> false constr
+R18454:18458 Corelib.Init.Datatypes <> false constr
+R18464:18492 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R18539:18544 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18532:18534 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18499:18531 UMST.ChemConstants.InteractEngineClosedShell <> helium_no_ore_is_missing_interact def
+R18535:18538 Corelib.Init.Datatypes <> true constr
+R18591:18596 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18584:18586 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18545:18583 UMST.ChemConstants.InteractEngineClosedShell <> structure_blocking_interact_kind_pinned def
+R18587:18590 Corelib.Init.Datatypes <> true constr
+R18621:18623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18597:18620 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_is_extra_axiom def
+R18624:18628 Corelib.Init.Datatypes <> false constr
+prf 18679:18695 <> trivial_z_refused
+R18865:18869 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18701:18747 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R18753:18788 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R18790:18830 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceTrivial def
+R18836:18840 Corelib.Init.Datatypes <> false constr
+R18842:18846 Corelib.Init.Datatypes <> false constr
+R18848:18852 Corelib.Init.Datatypes <> false constr
+R18854:18858 Corelib.Init.Datatypes <> false constr
+R18860:18864 Corelib.Init.Datatypes <> false constr
+R18870:18893 UMST.ChemConstants.InteractEngineClosedShell <> verdict_trivial_z_refuse constr
+prf 18930:18950 <> trivial_z_fail_closed
+R19149:19154 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19120:19124 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18956:19002 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R19008:19043 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R19045:19085 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceTrivial def
+R19091:19095 Corelib.Init.Datatypes <> false constr
+R19097:19101 Corelib.Init.Datatypes <> false constr
+R19103:19107 Corelib.Init.Datatypes <> false constr
+R19109:19113 Corelib.Init.Datatypes <> false constr
+R19115:19119 Corelib.Init.Datatypes <> false constr
+R19125:19148 UMST.ChemConstants.InteractEngineClosedShell <> verdict_trivial_z_refuse constr
+R19371:19375 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19155:19193 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R19200:19246 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R19255:19290 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R19292:19332 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceTrivial def
+R19341:19345 Corelib.Init.Datatypes <> false constr
+R19347:19351 Corelib.Init.Datatypes <> false constr
+R19353:19357 Corelib.Init.Datatypes <> false constr
+R19359:19363 Corelib.Init.Datatypes <> false constr
+R19365:19369 Corelib.Init.Datatypes <> false constr
+R19376:19380 Corelib.Init.Datatypes <> false constr
+R19409:19425 UMST.ChemConstants.InteractEngineClosedShell <> trivial_z_refused thm
+R19409:19425 UMST.ChemConstants.InteractEngineClosedShell <> trivial_z_refused thm
+R19439:19477 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R19492:19508 UMST.ChemConstants.InteractEngineClosedShell <> trivial_z_refused thm
+R19492:19508 UMST.ChemConstants.InteractEngineClosedShell <> trivial_z_refused thm
+R19492:19508 UMST.ChemConstants.InteractEngineClosedShell <> trivial_z_refused thm
+prf 19540:19561 <> nobility_magic_refused
+R19727:19731 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19567:19613 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R19619:19654 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R19656:19693 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R19699:19703 Corelib.Init.Datatypes <> false constr
+R19705:19709 Corelib.Init.Datatypes <> false constr
+R19711:19714 Corelib.Init.Datatypes <> true constr
+R19716:19720 Corelib.Init.Datatypes <> false constr
+R19722:19726 Corelib.Init.Datatypes <> false constr
+R19732:19760 UMST.ChemConstants.InteractEngineClosedShell <> verdict_nobility_magic_refuse constr
+prf 19797:19822 <> nobility_magic_fail_closed
+R20022:20027 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19988:19992 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19828:19874 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R19880:19915 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R19917:19954 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R19960:19964 Corelib.Init.Datatypes <> false constr
+R19966:19970 Corelib.Init.Datatypes <> false constr
+R19972:19975 Corelib.Init.Datatypes <> true constr
+R19977:19981 Corelib.Init.Datatypes <> false constr
+R19983:19987 Corelib.Init.Datatypes <> false constr
+R19993:20021 UMST.ChemConstants.InteractEngineClosedShell <> verdict_nobility_magic_refuse constr
+R20240:20244 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20028:20066 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R20073:20119 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R20128:20163 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R20165:20202 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R20211:20215 Corelib.Init.Datatypes <> false constr
+R20217:20221 Corelib.Init.Datatypes <> false constr
+R20223:20226 Corelib.Init.Datatypes <> true constr
+R20228:20232 Corelib.Init.Datatypes <> false constr
+R20234:20238 Corelib.Init.Datatypes <> false constr
+R20245:20249 Corelib.Init.Datatypes <> false constr
+R20278:20299 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_refused thm
+R20278:20299 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_refused thm
+R20313:20351 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R20366:20387 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_refused thm
+R20366:20387 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_refused thm
+R20366:20387 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_refused thm
+prf 20419:20441 <> atmophile_green_refused
+R20607:20611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20447:20493 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R20499:20534 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R20536:20573 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R20579:20583 Corelib.Init.Datatypes <> false constr
+R20585:20589 Corelib.Init.Datatypes <> false constr
+R20591:20595 Corelib.Init.Datatypes <> false constr
+R20597:20600 Corelib.Init.Datatypes <> true constr
+R20602:20606 Corelib.Init.Datatypes <> false constr
+R20612:20641 UMST.ChemConstants.InteractEngineClosedShell <> verdict_atmophile_green_refuse constr
+prf 20678:20704 <> atmophile_green_fail_closed
+R20905:20910 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20870:20874 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20710:20756 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R20762:20797 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R20799:20836 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R20842:20846 Corelib.Init.Datatypes <> false constr
+R20848:20852 Corelib.Init.Datatypes <> false constr
+R20854:20858 Corelib.Init.Datatypes <> false constr
+R20860:20863 Corelib.Init.Datatypes <> true constr
+R20865:20869 Corelib.Init.Datatypes <> false constr
+R20875:20904 UMST.ChemConstants.InteractEngineClosedShell <> verdict_atmophile_green_refuse constr
+R21123:21127 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20911:20949 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R20956:21002 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R21011:21046 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R21048:21085 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R21094:21098 Corelib.Init.Datatypes <> false constr
+R21100:21104 Corelib.Init.Datatypes <> false constr
+R21106:21110 Corelib.Init.Datatypes <> false constr
+R21112:21115 Corelib.Init.Datatypes <> true constr
+R21117:21121 Corelib.Init.Datatypes <> false constr
+R21128:21132 Corelib.Init.Datatypes <> false constr
+R21161:21183 UMST.ChemConstants.InteractEngineClosedShell <> atmophile_green_refused thm
+R21161:21183 UMST.ChemConstants.InteractEngineClosedShell <> atmophile_green_refused thm
+R21197:21235 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R21250:21272 UMST.ChemConstants.InteractEngineClosedShell <> atmophile_green_refused thm
+R21250:21272 UMST.ChemConstants.InteractEngineClosedShell <> atmophile_green_refused thm
+R21250:21272 UMST.ChemConstants.InteractEngineClosedShell <> atmophile_green_refused thm
+prf 21304:21331 <> catalysis_26th_axiom_refused
+R21497:21501 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21337:21383 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R21389:21424 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R21426:21463 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R21469:21473 Corelib.Init.Datatypes <> false constr
+R21475:21479 Corelib.Init.Datatypes <> false constr
+R21481:21485 Corelib.Init.Datatypes <> false constr
+R21487:21491 Corelib.Init.Datatypes <> false constr
+R21493:21496 Corelib.Init.Datatypes <> true constr
+R21502:21536 UMST.ChemConstants.InteractEngineClosedShell <> verdict_catalysis_26th_axiom_refuse constr
+prf 21573:21604 <> catalysis_26th_axiom_fail_closed
+R21810:21815 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21770:21774 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21610:21656 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R21662:21697 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R21699:21736 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R21742:21746 Corelib.Init.Datatypes <> false constr
+R21748:21752 Corelib.Init.Datatypes <> false constr
+R21754:21758 Corelib.Init.Datatypes <> false constr
+R21760:21764 Corelib.Init.Datatypes <> false constr
+R21766:21769 Corelib.Init.Datatypes <> true constr
+R21775:21809 UMST.ChemConstants.InteractEngineClosedShell <> verdict_catalysis_26th_axiom_refuse constr
+R22028:22032 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21816:21854 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R21861:21907 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R21916:21951 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R21953:21990 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R21999:22003 Corelib.Init.Datatypes <> false constr
+R22005:22009 Corelib.Init.Datatypes <> false constr
+R22011:22015 Corelib.Init.Datatypes <> false constr
+R22017:22021 Corelib.Init.Datatypes <> false constr
+R22023:22026 Corelib.Init.Datatypes <> true constr
+R22033:22037 Corelib.Init.Datatypes <> false constr
+R22066:22093 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_26th_axiom_refused thm
+R22066:22093 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_26th_axiom_refused thm
+R22107:22145 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R22160:22187 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_26th_axiom_refused thm
+R22160:22187 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_26th_axiom_refused thm
+R22160:22187 UMST.ChemConstants.InteractEngineClosedShell <> catalysis_26th_axiom_refused thm
+prf 22219:22245 <> green_invent_refuse_unwired
+R22346:22350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22251:22293 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_close def
+R22299:22334 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R22336:22339 Corelib.Init.Datatypes <> true constr
+R22341:22345 Corelib.Init.Datatypes <> false constr
+R22351:22377 UMST.ChemConstants.InteractEngineClosedShell <> verdict_green_invent_refuse constr
+prf 22414:22439 <> green_invent_always_refuse
+R22589:22593 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22445:22483 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R22490:22532 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_close def
+R22541:22576 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R22578:22581 Corelib.Init.Datatypes <> true constr
+R22583:22587 Corelib.Init.Datatypes <> false constr
+R22594:22598 Corelib.Init.Datatypes <> false constr
+R22617:22655 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_verdict_ok def
+R22668:22694 UMST.ChemConstants.InteractEngineClosedShell <> green_invent_refuse_unwired thm
+R22668:22694 UMST.ChemConstants.InteractEngineClosedShell <> green_invent_refuse_unwired thm
+R22668:22694 UMST.ChemConstants.InteractEngineClosedShell <> green_invent_refuse_unwired thm
+prf 22724:22748 <> proved_without_bar_refuse
+R22914:22918 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22754:22800 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R22806:22841 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R22843:22880 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R22886:22890 Corelib.Init.Datatypes <> false constr
+R22892:22895 Corelib.Init.Datatypes <> true constr
+R22897:22901 Corelib.Init.Datatypes <> false constr
+R22903:22907 Corelib.Init.Datatypes <> false constr
+R22909:22913 Corelib.Init.Datatypes <> false constr
+R22919:22951 UMST.ChemConstants.InteractEngineClosedShell <> verdict_proved_without_bar_refuse constr
+prf 22986:23008 <> production_wired_refuse
+R23108:23112 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23014:23056 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_close def
+R23062:23096 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_proved constr
+R23098:23102 Corelib.Init.Datatypes <> false constr
+R23104:23107 Corelib.Init.Datatypes <> true constr
+R23113:23143 UMST.ChemConstants.InteractEngineClosedShell <> verdict_production_wired_refuse constr
+ind 23408:23419 <> formal_fiber
+constr 23435:23455 <> fiber_quantum_knowing
+constr 23461:23477 <> fiber_meso_acting
+scheme 23408:23419 <> formal_fiber_rect
+scheme 23408:23419 <> formal_fiber_ind
+scheme 23408:23419 <> formal_fiber_rec
+scheme 23408:23419 <> formal_fiber_sind
+def 23492:23528 <> interact_engine_closed_shell_fiber_ok
+R23535:23546 UMST.ChemConstants.InteractEngineClosedShell <> formal_fiber ind
+binder 23531:23531 <> f:37
+R23551:23554 Corelib.Init.Datatypes <> bool ind
+R23567:23567 UMST.ChemConstants.InteractEngineClosedShell <> f:37 var
+R23578:23598 UMST.ChemConstants.InteractEngineClosedShell <> fiber_quantum_knowing constr
+R23603:23606 Corelib.Init.Datatypes <> true constr
+R23612:23628 UMST.ChemConstants.InteractEngineClosedShell <> fiber_meso_acting constr
+R23633:23637 Corelib.Init.Datatypes <> false constr
+def 23658:23700 <> interactEngineClosedShellDoesNotClaimProved
+R23704:23707 Corelib.Init.Datatypes <> bool ind
+R23714:23717 Corelib.Init.Datatypes <> negb def
+R23719:23749 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellProved def
+prf 23759:23803 <> interact_engine_closed_shell_knowing_fiber_ok
+R23868:23870 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23809:23845 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_fiber_ok def
+R23847:23867 UMST.ChemConstants.InteractEngineClosedShell <> fiber_quantum_knowing constr
+R23871:23874 Corelib.Init.Datatypes <> true constr
+prf 23909:23961 <> interact_engine_closed_shell_meso_acting_fiber_not_ok
+R24022:24024 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23967:24003 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_fiber_ok def
+R24005:24021 UMST.ChemConstants.InteractEngineClosedShell <> fiber_meso_acting constr
+R24025:24029 Corelib.Init.Datatypes <> false constr
+prf 24066:24117 <> interact_engine_closed_shell_routes_knowing_not_meso
+R24189:24194 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24182:24184 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24123:24159 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_fiber_ok def
+R24161:24181 UMST.ChemConstants.InteractEngineClosedShell <> fiber_quantum_knowing constr
+R24185:24188 Corelib.Init.Datatypes <> true constr
+R24258:24263 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24250:24252 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24195:24231 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_fiber_ok def
+R24233:24249 UMST.ChemConstants.InteractEngineClosedShell <> fiber_meso_acting constr
+R24253:24257 Corelib.Init.Datatypes <> false constr
+R24314:24319 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24307:24309 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24264:24306 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellDoesNotClaimProved def
+R24310:24313 Corelib.Init.Datatypes <> true constr
+R24339:24341 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24320:24338 UMST.ChemConstants.InteractEngineClosedShell <> notTwentySixthAxiom def
+R24342:24345 Corelib.Init.Datatypes <> true constr
+prf 24622:24666 <> interact_engine_closed_shell_fixture_scaffold
+R24869:24874 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24833:24839 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24672:24718 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R24724:24759 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R24761:24798 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R24804:24808 Corelib.Init.Datatypes <> false constr
+R24810:24814 Corelib.Init.Datatypes <> false constr
+R24816:24820 Corelib.Init.Datatypes <> false constr
+R24822:24826 Corelib.Init.Datatypes <> false constr
+R24828:24832 Corelib.Init.Datatypes <> false constr
+R24840:24868 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R25072:25077 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25036:25042 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24875:24921 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R24927:24962 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R24964:25001 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceOgL1 def
+R25007:25011 Corelib.Init.Datatypes <> false constr
+R25013:25017 Corelib.Init.Datatypes <> false constr
+R25019:25023 Corelib.Init.Datatypes <> false constr
+R25025:25029 Corelib.Init.Datatypes <> false constr
+R25031:25035 Corelib.Init.Datatypes <> false constr
+R25043:25071 UMST.ChemConstants.InteractEngineClosedShell <> verdict_closed_shell_named_ok constr
+R25273:25278 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25242:25248 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25078:25124 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R25130:25165 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R25167:25207 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceTrivial def
+R25213:25217 Corelib.Init.Datatypes <> false constr
+R25219:25223 Corelib.Init.Datatypes <> false constr
+R25225:25229 Corelib.Init.Datatypes <> false constr
+R25231:25235 Corelib.Init.Datatypes <> false constr
+R25237:25241 Corelib.Init.Datatypes <> false constr
+R25249:25272 UMST.ChemConstants.InteractEngineClosedShell <> verdict_trivial_z_refuse constr
+R25479:25484 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25439:25445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25279:25325 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_incidence def
+R25331:25366 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R25368:25405 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellIncidenceHeL1 def
+R25411:25415 Corelib.Init.Datatypes <> false constr
+R25417:25420 Corelib.Init.Datatypes <> true constr
+R25422:25426 Corelib.Init.Datatypes <> false constr
+R25428:25432 Corelib.Init.Datatypes <> false constr
+R25434:25438 Corelib.Init.Datatypes <> false constr
+R25446:25478 UMST.ChemConstants.InteractEngineClosedShell <> verdict_proved_without_bar_refuse constr
+R25606:25611 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25581:25587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25485:25527 UMST.ChemConstants.InteractEngineClosedShell <> evaluate_interact_engine_closed_shell_close def
+R25533:25568 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr
+R25570:25574 Corelib.Init.Datatypes <> false constr
+R25576:25580 Corelib.Init.Datatypes <> false constr
+R25588:25605 UMST.ChemConstants.InteractEngineClosedShell <> verdict_unwired_ok constr
+R25678:25683 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25671:25673 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25612:25648 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_fiber_ok def
+R25650:25670 UMST.ChemConstants.InteractEngineClosedShell <> fiber_quantum_knowing constr
+R25674:25677 Corelib.Init.Datatypes <> true constr
+R25747:25752 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25739:25741 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25684:25720 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_fiber_ok def
+R25722:25738 UMST.ChemConstants.InteractEngineClosedShell <> fiber_meso_acting constr
+R25742:25746 Corelib.Init.Datatypes <> false constr
+R25792:25797 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25784:25786 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25753:25783 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellProved def
+R25787:25791 Corelib.Init.Datatypes <> false constr
+R25849:25854 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25842:25844 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25798:25841 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_honest_conjunct def
+R25845:25848 Corelib.Init.Datatypes <> true constr
+R25855:25855 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25962:25968 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25955:25957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25902:25908 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R25856:25859 Corelib.Init.Datatypes <> negb def
+R25861:25901 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_wired_in_lib def
+R25909:25912 Corelib.Init.Datatypes <> negb def
+R25914:25954 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_wired_in_eos def
+R25958:25961 Corelib.Init.Datatypes <> true constr
+R25990:25993 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R25969:25989 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_marker def
+R25994:26023 UMST.ChemConstants.InteractEngineClosedShell <> missing_interact_class5_marker def
+R26081:26114 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_ne_missing_interact thm
+R26081:26114 UMST.ChemConstants.InteractEngineClosedShell <> nobility_magic_ne_missing_interact thm
+def 26358:26393 <> interactEngineClosedShellRsAuthority
+R26397:26402 Stdlib.Strings.String <> string ind
+def 26482:26527 <> chemIntCrossInteractEngineClosedShellAuthority
+R26531:26536 Stdlib.Strings.String <> string ind
+def 26615:26645 <> interactEngineClosedShellCellId
+R26649:26654 Stdlib.Strings.String <> string ind
+def 26736:26768 <> interactEngineClosedShellNonClaim
+R26772:26777 Stdlib.Strings.String <> string ind
+prf 27373:27408 <> interact_engine_closed_shell_cell_id
+R27445:27449 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27414:27444 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellCellId def
+prf 27545:27585 <> interact_engine_closed_shell_cites_rs_row
+R27627:27630 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27591:27626 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellRsAuthority def
+prf 27668:27715 <> interact_engine_closed_shell_cites_int_cross_row
+R27767:27771 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27721:27766 UMST.ChemConstants.InteractEngineClosedShell <> chemIntCrossInteractEngineClosedShellAuthority def
+prf 27864:27904 <> interact_engine_closed_shell_cites_marker
+R27940:27943 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27910:27939 UMST.ChemConstants.InteractEngineClosedShell <> missing_interact_class5_marker def
+def 28208:28260 <> interactEngineClosedShellSecondLawConservationFraming
+R28264:28269 Stdlib.Strings.String <> string ind
+prf 28364:28422 <> interact_engine_closed_shell_not_twenty_sixth_axiom_framing
+R28481:28486 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28428:28480 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellSecondLawConservationFraming def
+prf 28552:28611 <> interact_engine_closed_shell_second_law_conservation_framing
+R28670:28673 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28617:28669 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellSecondLawConservationFraming def
+def 28942:28963 <> physicsGreenAuthorized
+R28975:28979 Corelib.Init.Logic <> False ind
+prf 28989:29036 <> interact_engine_closed_shell_physics_green_false
+R29042:29043 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R29044:29065 UMST.ChemConstants.InteractEngineClosedShell <> physicsGreenAuthorized def
+prf 29105:29149 <> interact_engine_closed_shell_modality_unwired
+R29195:29199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29155:29194 UMST.ChemConstants.InteractEngineClosedShell <> interactEngineClosedShellModalityCurrent def
+R29200:29235 UMST.ChemConstants.InteractEngineClosedShell <> interact_engine_closed_shell_unwired constr

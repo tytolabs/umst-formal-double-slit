@@ -1,0 +1,570 @@
+DIGEST 436f48dcfaf4f56e98d4f10eafbf7cf2
+FUMST.ChemConstants.ModalityConservation
+R1202:1206 Stdlib.Arith.Arith <> <> lib
+R1208:1213 Stdlib.Strings.String <> <> lib
+R1215:1218 Stdlib.Bool.Bool <> <> lib
+R1220:1222 Stdlib.micromega.Lia <> <> lib
+R1224:1227 Stdlib.Lists.List <> <> lib
+R1237:1249 Stdlib.Lists.List ListNotations <> mod
+ind 1577:1604 <> ModalityConservationModality
+constr 1620:1648 <> modality_conservation_unwired
+constr 1654:1682 <> modality_conservation_assumed
+constr 1688:1715 <> modality_conservation_proved
+constr 1721:1751 <> modality_conservation_surrogate
+scheme 1577:1604 <> ModalityConservationModality_rect
+scheme 1577:1604 <> ModalityConservationModality_ind
+scheme 1577:1604 <> ModalityConservationModality_rec
+scheme 1577:1604 <> ModalityConservationModality_sind
+def 1766:1800 <> modalityConservationModalityCurrent
+R1804:1831 UMST.ChemConstants.ModalityConservation <> ModalityConservationModality ind
+R1838:1866 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+def 1881:1908 <> modality_lattice_cardinality
+R1912:1914 Corelib.Init.Datatypes <> nat ind
+prf 1929:1964 <> modality_lattice_cardinality_is_four
+R1998:2000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1970:1997 UMST.ChemConstants.ModalityConservation <> modality_lattice_cardinality def
+prf 2036:2067 <> modality_lattice_not_118_squared
+R2128:2130 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2073:2076 Corelib.Init.Datatypes <> negb def
+R2079:2085 Stdlib.Arith.PeanoNat Nat eqb def
+R2087:2114 UMST.ChemConstants.ModalityConservation <> modality_lattice_cardinality def
+R2120:2122 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2131:2134 Corelib.Init.Datatypes <> true constr
+R2153:2180 UMST.ChemConstants.ModalityConservation <> modality_lattice_cardinality def
+ind 2437:2456 <> path_census_presence
+constr 2472:2484 <> census_absent
+constr 2490:2503 <> census_present
+scheme 2437:2456 <> path_census_presence_rect
+scheme 2437:2456 <> path_census_presence_ind
+scheme 2437:2456 <> path_census_presence_rec
+scheme 2437:2456 <> path_census_presence_sind
+def 2518:2533 <> pathCensusAbsent
+R2537:2556 UMST.ChemConstants.ModalityConservation <> path_census_presence ind
+R2561:2573 UMST.ChemConstants.ModalityConservation <> census_absent constr
+def 2587:2603 <> pathCensusPresent
+R2607:2626 UMST.ChemConstants.ModalityConservation <> path_census_presence ind
+R2631:2644 UMST.ChemConstants.ModalityConservation <> census_present constr
+rec 2655:2671 <> claim_path_census
+proj 2687:2701 <> census_presence
+proj 2729:2747 <> census_defect_total
+R2705:2724 UMST.ChemConstants.ModalityConservation <> path_census_presence ind
+R2751:2753 Corelib.Init.Datatypes <> nat ind
+def 2770:2790 <> claimPathCensusAbsent
+R2794:2810 UMST.ChemConstants.ModalityConservation <> claim_path_census rec
+R2820:2834 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R2820:2834 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R2820:2834 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R2854:2872 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R2854:2872 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R2839:2851 UMST.ChemConstants.ModalityConservation <> census_absent constr
+def 2895:2919 <> claimPathCensusZeroDefect
+R2923:2939 UMST.ChemConstants.ModalityConservation <> claim_path_census rec
+R2949:2963 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R2949:2963 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R2949:2963 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R2984:3002 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R2984:3002 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R2968:2981 UMST.ChemConstants.ModalityConservation <> census_present constr
+def 3025:3048 <> claimPathCensusDefective
+R3055:3057 Corelib.Init.Datatypes <> nat ind
+binder 3051:3051 <> n:8
+R3062:3078 UMST.ChemConstants.ModalityConservation <> claim_path_census rec
+R3088:3102 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R3088:3102 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R3088:3102 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R3123:3141 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R3123:3141 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R3107:3120 UMST.ChemConstants.ModalityConservation <> census_present constr
+R3146:3146 UMST.ChemConstants.ModalityConservation <> n:8 var
+def 3164:3192 <> claim_path_census_zero_defect
+R3199:3215 UMST.ChemConstants.ModalityConservation <> claim_path_census rec
+binder 3195:3195 <> c:9
+R3220:3223 Corelib.Init.Datatypes <> bool ind
+R3236:3250 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R3252:3252 UMST.ChemConstants.ModalityConservation <> c:9 var
+R3263:3275 UMST.ChemConstants.ModalityConservation <> census_absent constr
+R3280:3284 Corelib.Init.Datatypes <> false constr
+R3290:3303 UMST.ChemConstants.ModalityConservation <> census_present constr
+R3308:3314 Stdlib.Arith.PeanoNat Nat eqb def
+R3317:3335 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R3337:3337 UMST.ChemConstants.ModalityConservation <> c:9 var
+prf 3356:3389 <> claim_path_census_zero_defect_true
+R3450:3452 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3395:3423 UMST.ChemConstants.ModalityConservation <> claim_path_census_zero_defect def
+R3425:3449 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R3453:3456 Corelib.Init.Datatypes <> true constr
+prf 3491:3530 <> claim_path_census_absent_not_zero_defect
+R3587:3589 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3536:3564 UMST.ChemConstants.ModalityConservation <> claim_path_census_zero_defect def
+R3566:3586 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R3590:3594 Corelib.Init.Datatypes <> false constr
+prf 3629:3671 <> claim_path_census_defective_not_zero_defect
+R3678:3680 Corelib.Init.Datatypes <> nat ind
+binder 3674:3674 <> n:10
+R3693:3698 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3688:3691 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3687:3687 UMST.ChemConstants.ModalityConservation <> n:10 var
+R3757:3759 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3699:3727 UMST.ChemConstants.ModalityConservation <> claim_path_census_zero_defect def
+R3730:3753 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R3755:3755 UMST.ChemConstants.ModalityConservation <> n:10 var
+R3760:3764 Corelib.Init.Datatypes <> false constr
+R3796:3824 UMST.ChemConstants.ModalityConservation <> claim_path_census_zero_defect def
+R3827:3850 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R3874:3880 Stdlib.Arith.PeanoNat Nat eqb def
+R3874:3880 Stdlib.Arith.PeanoNat Nat eqb def
+R3919:3928 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+R3919:3928 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+ind 4193:4216 <> modality_lattice_verdict
+constr 4232:4248 <> verdict_design_ok
+constr 4254:4277 <> verdict_proved_census_ok
+constr 4283:4318 <> verdict_proved_without_census_refuse
+constr 4324:4351 <> verdict_proved_defect_refuse
+constr 4357:4383 <> verdict_green_invent_refuse
+scheme 4193:4216 <> modality_lattice_verdict_rect
+scheme 4193:4216 <> modality_lattice_verdict_ind
+scheme 4193:4216 <> modality_lattice_verdict_rec
+scheme 4193:4216 <> modality_lattice_verdict_sind
+def 4398:4424 <> modality_lattice_verdict_ok
+R4431:4454 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict ind
+binder 4427:4427 <> v:13
+R4459:4462 Corelib.Init.Datatypes <> bool ind
+R4475:4475 UMST.ChemConstants.ModalityConservation <> v:13 var
+R4486:4502 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R4507:4510 Corelib.Init.Datatypes <> true constr
+R4516:4539 UMST.ChemConstants.ModalityConservation <> verdict_proved_census_ok constr
+R4544:4547 Corelib.Init.Datatypes <> true constr
+R4558:4562 Corelib.Init.Datatypes <> false constr
+def 4583:4618 <> evaluate_modality_conservation_close
+R4627:4654 UMST.ChemConstants.ModalityConservation <> ModalityConservationModality ind
+binder 4623:4623 <> m:15
+R4662:4678 UMST.ChemConstants.ModalityConservation <> claim_path_census rec
+binder 4658:4658 <> c:16
+R4706:4709 Corelib.Init.Datatypes <> bool ind
+binder 4684:4702 <> claim_physics_green:17
+R4714:4737 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict ind
+R4747:4765 UMST.ChemConstants.ModalityConservation <> claim_physics_green:17 var
+R4819:4819 UMST.ChemConstants.ModalityConservation <> m:15 var
+R4832:4860 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R4868:4896 UMST.ChemConstants.ModalityConservation <> modality_conservation_assumed constr
+R4904:4934 UMST.ChemConstants.ModalityConservation <> modality_conservation_surrogate constr
+R4939:4955 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R4939:4955 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R4939:4955 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R4963:4990 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R5009:5023 UMST.ChemConstants.ModalityConservation <> census_presence proj
+R5025:5025 UMST.ChemConstants.ModalityConservation <> c:16 var
+R5042:5054 UMST.ChemConstants.ModalityConservation <> census_absent constr
+R5059:5094 UMST.ChemConstants.ModalityConservation <> verdict_proved_without_census_refuse constr
+R5106:5119 UMST.ChemConstants.ModalityConservation <> census_present constr
+R5139:5145 Stdlib.Arith.PeanoNat Nat eqb def
+R5148:5166 UMST.ChemConstants.ModalityConservation <> census_defect_total proj
+R5168:5168 UMST.ChemConstants.ModalityConservation <> c:16 var
+R5232:5259 UMST.ChemConstants.ModalityConservation <> verdict_proved_defect_refuse constr
+R5190:5213 UMST.ChemConstants.ModalityConservation <> verdict_proved_census_ok constr
+R4774:4800 UMST.ChemConstants.ModalityConservation <> verdict_green_invent_refuse constr
+def 5294:5322 <> modality_requires_path_census
+R5329:5356 UMST.ChemConstants.ModalityConservation <> ModalityConservationModality ind
+binder 5325:5325 <> m:19
+R5361:5364 Corelib.Init.Datatypes <> bool ind
+R5377:5377 UMST.ChemConstants.ModalityConservation <> m:19 var
+R5388:5415 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R5420:5423 Corelib.Init.Datatypes <> true constr
+R5434:5438 Corelib.Init.Datatypes <> false constr
+prf 5454:5488 <> modality_unwired_no_census_required
+R5553:5555 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5494:5522 UMST.ChemConstants.ModalityConservation <> modality_requires_path_census def
+R5524:5552 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R5556:5560 Corelib.Init.Datatypes <> false constr
+prf 5595:5625 <> modality_proved_census_required
+R5689:5691 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5631:5659 UMST.ChemConstants.ModalityConservation <> modality_requires_path_census def
+R5661:5688 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R5692:5695 Corelib.Init.Datatypes <> true constr
+def 5957:5976 <> type03ModalityProved
+R5980:5983 Corelib.Init.Datatypes <> bool ind
+R5988:5992 Corelib.Init.Datatypes <> false constr
+prf 6002:6029 <> type03_modality_proved_false
+R6053:6055 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6033:6052 UMST.ChemConstants.ModalityConservation <> type03ModalityProved def
+R6056:6060 Corelib.Init.Datatypes <> false constr
+def 6100:6122 <> not118SquaredGreenTable
+R6126:6129 Corelib.Init.Datatypes <> bool ind
+R6134:6137 Corelib.Init.Datatypes <> true constr
+prf 6147:6173 <> not_118_squared_green_table
+R6200:6202 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6177:6199 UMST.ChemConstants.ModalityConservation <> not118SquaredGreenTable def
+R6203:6206 Corelib.Init.Datatypes <> true constr
+prf 6463:6490 <> unwired_close_without_census
+R6594:6598 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6496:6531 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R6537:6565 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R6567:6587 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R6589:6593 Corelib.Init.Datatypes <> false constr
+R6599:6615 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+prf 6650:6677 <> assumed_close_without_census
+R6781:6785 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6683:6718 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R6724:6752 UMST.ChemConstants.ModalityConservation <> modality_conservation_assumed constr
+R6754:6774 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R6776:6780 Corelib.Init.Datatypes <> false constr
+R6786:6802 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+prf 6837:6866 <> surrogate_close_without_census
+R6972:6976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6872:6907 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R6913:6943 UMST.ChemConstants.ModalityConservation <> modality_conservation_surrogate constr
+R6945:6965 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R6967:6971 Corelib.Init.Datatypes <> false constr
+R6977:6993 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+prf 7030:7067 <> design_modalities_close_without_census
+R7195:7200 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7171:7177 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7073:7108 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R7114:7142 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R7144:7164 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R7166:7170 Corelib.Init.Datatypes <> false constr
+R7178:7194 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R7323:7328 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7299:7305 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7201:7236 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R7242:7270 UMST.ChemConstants.ModalityConservation <> modality_conservation_assumed constr
+R7272:7292 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R7294:7298 Corelib.Init.Datatypes <> false constr
+R7306:7322 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R7429:7435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7329:7364 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R7370:7400 UMST.ChemConstants.ModalityConservation <> modality_conservation_surrogate constr
+R7402:7422 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R7424:7428 Corelib.Init.Datatypes <> false constr
+R7436:7452 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R7481:7508 UMST.ChemConstants.ModalityConservation <> unwired_close_without_census thm
+R7481:7508 UMST.ChemConstants.ModalityConservation <> unwired_close_without_census thm
+R7532:7559 UMST.ChemConstants.ModalityConservation <> assumed_close_without_census thm
+R7532:7559 UMST.ChemConstants.ModalityConservation <> assumed_close_without_census thm
+R7572:7601 UMST.ChemConstants.ModalityConservation <> surrogate_close_without_census thm
+R7572:7601 UMST.ChemConstants.ModalityConservation <> surrogate_close_without_census thm
+prf 7616:7658 <> design_modalities_verdict_ok_without_census
+R7806:7811 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7799:7801 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7664:7690 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R7697:7732 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R7741:7769 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R7771:7791 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R7793:7797 Corelib.Init.Datatypes <> false constr
+R7802:7805 Corelib.Init.Datatypes <> true constr
+R7954:7959 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7947:7949 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7812:7838 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R7845:7880 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R7889:7917 UMST.ChemConstants.ModalityConservation <> modality_conservation_assumed constr
+R7919:7939 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R7941:7945 Corelib.Init.Datatypes <> false constr
+R7950:7953 Corelib.Init.Datatypes <> true constr
+R8097:8099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7960:7986 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R7993:8028 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R8037:8067 UMST.ChemConstants.ModalityConservation <> modality_conservation_surrogate constr
+R8069:8089 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R8091:8095 Corelib.Init.Datatypes <> false constr
+R8100:8103 Corelib.Init.Datatypes <> true constr
+R8122:8148 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+prf 8414:8441 <> proved_without_census_refuse
+R8544:8548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8447:8482 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R8488:8515 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R8517:8537 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R8539:8543 Corelib.Init.Datatypes <> false constr
+R8549:8584 UMST.ChemConstants.ModalityConservation <> verdict_proved_without_census_refuse constr
+prf 8621:8648 <> proved_without_census_not_ok
+R8788:8790 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8654:8680 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R8687:8722 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R8731:8758 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R8760:8780 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R8782:8786 Corelib.Init.Datatypes <> false constr
+R8791:8795 Corelib.Init.Datatypes <> false constr
+R8814:8840 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R8853:8880 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+R8853:8880 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+R8853:8880 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+prf 9132:9161 <> proved_defective_census_refuse
+R9271:9275 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9167:9202 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R9208:9235 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R9238:9261 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R9266:9270 Corelib.Init.Datatypes <> false constr
+R9276:9303 UMST.ChemConstants.ModalityConservation <> verdict_proved_defect_refuse constr
+prf 9340:9369 <> proved_defective_census_not_ok
+R9516:9520 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9375:9401 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R9408:9443 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R9452:9479 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R9482:9505 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R9510:9514 Corelib.Init.Datatypes <> false constr
+R9521:9525 Corelib.Init.Datatypes <> false constr
+R9544:9570 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R9583:9612 UMST.ChemConstants.ModalityConservation <> proved_defective_census_refuse thm
+R9583:9612 UMST.ChemConstants.ModalityConservation <> proved_defective_census_refuse thm
+R9583:9612 UMST.ChemConstants.ModalityConservation <> proved_defective_census_refuse thm
+prf 9642:9669 <> proved_defect_refuse_general
+R9676:9678 Corelib.Init.Datatypes <> nat ind
+binder 9672:9672 <> n:21
+R9691:9696 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9686:9689 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9685:9685 UMST.ChemConstants.ModalityConservation <> n:21 var
+R9801:9805 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9697:9732 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R9738:9765 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R9768:9791 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R9793:9793 UMST.ChemConstants.ModalityConservation <> n:21 var
+R9796:9800 Corelib.Init.Datatypes <> false constr
+R9806:9833 UMST.ChemConstants.ModalityConservation <> verdict_proved_defect_refuse constr
+R9865:9900 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R9907:9930 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R9954:9960 Stdlib.Arith.PeanoNat Nat eqb def
+R9954:9960 Stdlib.Arith.PeanoNat Nat eqb def
+R9984:9993 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+R9984:9993 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+prf 10268:10295 <> proved_zero_defect_census_ok
+R10402:10406 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10301:10336 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R10342:10369 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R10371:10395 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R10397:10401 Corelib.Init.Datatypes <> false constr
+R10407:10430 UMST.ChemConstants.ModalityConservation <> verdict_proved_census_ok constr
+prf 10467:10502 <> proved_zero_defect_census_verdict_ok
+R10646:10648 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10508:10534 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R10541:10576 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R10585:10612 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R10614:10638 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R10640:10644 Corelib.Init.Datatypes <> false constr
+R10649:10652 Corelib.Init.Datatypes <> true constr
+R10671:10697 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R10710:10737 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+R10710:10737 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+R10710:10737 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+def 10772:10788 <> proved_authorized
+R10795:10811 UMST.ChemConstants.ModalityConservation <> claim_path_census rec
+binder 10791:10791 <> c:22
+R10837:10840 Corelib.Init.Datatypes <> bool ind
+binder 10815:10833 <> claim_physics_green:23
+R10845:10848 Corelib.Init.Datatypes <> bool ind
+R10861:10896 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R10908:10935 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R10937:10937 UMST.ChemConstants.ModalityConservation <> c:22 var
+R10939:10957 UMST.ChemConstants.ModalityConservation <> claim_physics_green:23 var
+R10968:10991 UMST.ChemConstants.ModalityConservation <> verdict_proved_census_ok constr
+R10996:10999 Corelib.Init.Datatypes <> true constr
+R11010:11014 Corelib.Init.Datatypes <> false constr
+prf 11030:11058 <> proved_authorized_zero_defect
+R11113:11115 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11064:11080 UMST.ChemConstants.ModalityConservation <> proved_authorized def
+R11082:11106 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R11108:11112 Corelib.Init.Datatypes <> false constr
+R11116:11119 Corelib.Init.Datatypes <> true constr
+R11138:11154 UMST.ChemConstants.ModalityConservation <> proved_authorized def
+R11167:11194 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+R11167:11194 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+R11167:11194 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+prf 11224:11253 <> proved_authorized_absent_false
+R11304:11306 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11259:11275 UMST.ChemConstants.ModalityConservation <> proved_authorized def
+R11277:11297 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R11299:11303 Corelib.Init.Datatypes <> false constr
+R11307:11311 Corelib.Init.Datatypes <> false constr
+R11330:11346 UMST.ChemConstants.ModalityConservation <> proved_authorized def
+R11359:11386 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+R11359:11386 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+R11359:11386 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+prf 11416:11455 <> proved_census_ok_still_not_physics_green
+R11606:11611 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11599:11601 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11461:11487 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R11494:11529 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R11538:11565 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R11567:11591 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R11593:11597 Corelib.Init.Datatypes <> false constr
+R11602:11605 Corelib.Init.Datatypes <> true constr
+R11632:11634 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11612:11631 UMST.ChemConstants.ModalityConservation <> type03ModalityProved def
+R11635:11639 Corelib.Init.Datatypes <> false constr
+R11668:11703 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_verdict_ok thm
+R11668:11703 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_verdict_ok thm
+R11716:11743 UMST.ChemConstants.ModalityConservation <> type03_modality_proved_false thm
+R11716:11743 UMST.ChemConstants.ModalityConservation <> type03_modality_proved_false thm
+prf 11982:12008 <> green_invent_refuse_unwired
+R12115:12119 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12014:12049 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R12055:12083 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R12085:12109 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R12111:12114 Corelib.Init.Datatypes <> true constr
+R12120:12146 UMST.ChemConstants.ModalityConservation <> verdict_green_invent_refuse constr
+prf 12183:12208 <> green_invent_always_refuse
+R12352:12354 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12214:12240 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R12247:12282 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R12291:12319 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R12321:12345 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R12347:12350 Corelib.Init.Datatypes <> true constr
+R12355:12359 Corelib.Init.Datatypes <> false constr
+R12378:12404 UMST.ChemConstants.ModalityConservation <> modality_lattice_verdict_ok def
+R12417:12443 UMST.ChemConstants.ModalityConservation <> green_invent_refuse_unwired thm
+R12417:12443 UMST.ChemConstants.ModalityConservation <> green_invent_refuse_unwired thm
+R12417:12443 UMST.ChemConstants.ModalityConservation <> green_invent_refuse_unwired thm
+ind 12701:12712 <> formal_fiber
+constr 12728:12748 <> fiber_quantum_knowing
+constr 12754:12770 <> fiber_meso_acting
+scheme 12701:12712 <> formal_fiber_rect
+scheme 12701:12712 <> formal_fiber_ind
+scheme 12701:12712 <> formal_fiber_rec
+scheme 12701:12712 <> formal_fiber_sind
+ind 12784:12802 <> formal_claim_family
+constr 12818:12844 <> claim_modality_conservation
+scheme 12784:12802 <> formal_claim_family_rect
+scheme 12784:12802 <> formal_claim_family_ind
+scheme 12784:12802 <> formal_claim_family_rec
+scheme 12784:12802 <> formal_claim_family_sind
+def 12859:12888 <> modality_conservation_fiber_ok
+R12895:12906 UMST.ChemConstants.ModalityConservation <> formal_fiber ind
+binder 12891:12891 <> f:28
+R12911:12914 Corelib.Init.Datatypes <> bool ind
+R12927:12927 UMST.ChemConstants.ModalityConservation <> f:28 var
+R12938:12958 UMST.ChemConstants.ModalityConservation <> fiber_quantum_knowing constr
+R12963:12966 Corelib.Init.Datatypes <> true constr
+R12972:12988 UMST.ChemConstants.ModalityConservation <> fiber_meso_acting constr
+R12993:12997 Corelib.Init.Datatypes <> false constr
+def 13018:13055 <> modality_conservation_knowing_fiber_ok
+R13059:13062 Corelib.Init.Datatypes <> bool ind
+R13069:13098 UMST.ChemConstants.ModalityConservation <> modality_conservation_fiber_ok def
+R13100:13120 UMST.ChemConstants.ModalityConservation <> fiber_quantum_knowing constr
+def 13135:13170 <> modality_conservation_meso_acting_ok
+R13174:13177 Corelib.Init.Datatypes <> bool ind
+R13184:13213 UMST.ChemConstants.ModalityConservation <> modality_conservation_fiber_ok def
+R13215:13231 UMST.ChemConstants.ModalityConservation <> fiber_meso_acting constr
+prf 13241:13283 <> modality_conservation_knowing_fiber_ok_true
+R13327:13329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13289:13326 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok def
+R13330:13333 Corelib.Init.Datatypes <> true constr
+prf 13368:13407 <> modality_conservation_meso_acting_not_ok
+R13449:13451 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13413:13448 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_ok def
+R13452:13456 Corelib.Init.Datatypes <> false constr
+prf 13493:13537 <> modality_conservation_routes_knowing_not_meso
+R13588:13593 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13581:13583 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13543:13580 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok def
+R13584:13587 Corelib.Init.Datatypes <> true constr
+R13630:13632 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13594:13629 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_ok def
+R13633:13637 Corelib.Init.Datatypes <> false constr
+R13666:13708 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok_true thm
+R13666:13708 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok_true thm
+R13721:13760 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_not_ok thm
+R13721:13760 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_not_ok thm
+def 13780:13797 <> fiberNotMesoActing
+R13801:13804 Corelib.Init.Datatypes <> bool ind
+R13849:13854 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R13811:13848 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok def
+R13855:13858 Corelib.Init.Datatypes <> negb def
+R13860:13895 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_ok def
+prf 13905:13930 <> fiber_not_meso_acting_true
+R13952:13954 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13934:13951 UMST.ChemConstants.ModalityConservation <> fiberNotMesoActing def
+R13955:13958 Corelib.Init.Datatypes <> true constr
+R13977:13994 UMST.ChemConstants.ModalityConservation <> fiberNotMesoActing def
+R13997:14034 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok def
+R14041:14076 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_ok def
+prf 14332:14369 <> modality_conservation_fixture_scaffold
+R14497:14502 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14473:14479 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14375:14410 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R14416:14444 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr
+R14446:14466 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R14468:14472 Corelib.Init.Datatypes <> false constr
+R14480:14496 UMST.ChemConstants.ModalityConservation <> verdict_design_ok constr
+R14643:14648 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14600:14606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14503:14538 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R14544:14571 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R14573:14593 UMST.ChemConstants.ModalityConservation <> claimPathCensusAbsent def
+R14595:14599 Corelib.Init.Datatypes <> false constr
+R14607:14642 UMST.ChemConstants.ModalityConservation <> verdict_proved_without_census_refuse constr
+R14788:14793 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14753:14759 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14649:14684 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R14690:14717 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R14720:14743 UMST.ChemConstants.ModalityConservation <> claimPathCensusDefective def
+R14748:14752 Corelib.Init.Datatypes <> false constr
+R14760:14787 UMST.ChemConstants.ModalityConservation <> verdict_proved_defect_refuse constr
+R14926:14931 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14895:14901 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14794:14829 UMST.ChemConstants.ModalityConservation <> evaluate_modality_conservation_close def
+R14835:14862 UMST.ChemConstants.ModalityConservation <> modality_conservation_proved constr
+R14864:14888 UMST.ChemConstants.ModalityConservation <> claimPathCensusZeroDefect def
+R14890:14894 Corelib.Init.Datatypes <> false constr
+R14902:14925 UMST.ChemConstants.ModalityConservation <> verdict_proved_census_ok constr
+R14977:14982 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14970:14972 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14932:14969 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok def
+R14973:14976 Corelib.Init.Datatypes <> true constr
+R15027:15032 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15019:15021 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14983:15018 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_ok def
+R15022:15026 Corelib.Init.Datatypes <> false constr
+R15053:15055 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15033:15052 UMST.ChemConstants.ModalityConservation <> type03ModalityProved def
+R15056:15060 Corelib.Init.Datatypes <> false constr
+R15089:15116 UMST.ChemConstants.ModalityConservation <> unwired_close_without_census thm
+R15089:15116 UMST.ChemConstants.ModalityConservation <> unwired_close_without_census thm
+R15140:15167 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+R15140:15167 UMST.ChemConstants.ModalityConservation <> proved_without_census_refuse thm
+R15193:15222 UMST.ChemConstants.ModalityConservation <> proved_defective_census_refuse thm
+R15193:15222 UMST.ChemConstants.ModalityConservation <> proved_defective_census_refuse thm
+R15253:15280 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+R15253:15280 UMST.ChemConstants.ModalityConservation <> proved_zero_defect_census_ok thm
+R15317:15359 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok_true thm
+R15317:15359 UMST.ChemConstants.ModalityConservation <> modality_conservation_knowing_fiber_ok_true thm
+R15403:15442 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_not_ok thm
+R15403:15442 UMST.ChemConstants.ModalityConservation <> modality_conservation_meso_acting_not_ok thm
+R15467:15494 UMST.ChemConstants.ModalityConservation <> type03_modality_proved_false thm
+R15467:15494 UMST.ChemConstants.ModalityConservation <> type03_modality_proved_false thm
+def 15740:15768 <> modalityConservationAuthority
+R15772:15777 Stdlib.Strings.String <> string ind
+def 15836:15856 <> chemL0Type03Authority
+R15860:15865 Stdlib.Strings.String <> string ind
+def 15903:15937 <> chemIntProveType03ModalityAuthority
+R15941:15946 Stdlib.Strings.String <> string ind
+def 16000:16025 <> modalityConservationCellId
+R16029:16034 Stdlib.Strings.String <> string ind
+def 16096:16123 <> modalityConservationNonClaim
+R16127:16132 Stdlib.Strings.String <> string ind
+prf 16623:16651 <> modality_conservation_cell_id
+R16683:16685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16657:16682 UMST.ChemConstants.ModalityConservation <> modalityConservationCellId def
+prf 16761:16805 <> modality_conservation_cites_claim_modality_rs
+R16840:16843 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16811:16839 UMST.ChemConstants.ModalityConservation <> modalityConservationAuthority def
+prf 16881:16918 <> modality_conservation_cites_l0_type_03
+R16945:16947 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16924:16944 UMST.ChemConstants.ModalityConservation <> chemL0Type03Authority def
+prf 16999:17052 <> modality_conservation_cites_int_prove_type_03_modality
+R17093:17096 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17058:17092 UMST.ChemConstants.ModalityConservation <> chemIntProveType03ModalityAuthority def
+def 17361:17396 <> modalitySecondLawConservationFraming
+R17400:17405 Stdlib.Strings.String <> string ind
+prf 17491:17524 <> modality_not_second_modality_axiom
+R17566:17569 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17530:17565 UMST.ChemConstants.ModalityConservation <> modalitySecondLawConservationFraming def
+prf 17628:17667 <> modality_second_law_conservation_framing
+R17709:17712 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R17673:17708 UMST.ChemConstants.ModalityConservation <> modalitySecondLawConservationFraming def
+def 17981:18002 <> physicsGreenAuthorized
+R18014:18018 Corelib.Init.Logic <> False ind
+prf 18028:18068 <> modality_conservation_physics_green_false
+R18074:18075 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R18076:18097 UMST.ChemConstants.ModalityConservation <> physicsGreenAuthorized def
+prf 18137:18174 <> modality_conservation_modality_unwired
+R18215:18217 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18180:18214 UMST.ChemConstants.ModalityConservation <> modalityConservationModalityCurrent def
+R18218:18246 UMST.ChemConstants.ModalityConservation <> modality_conservation_unwired constr

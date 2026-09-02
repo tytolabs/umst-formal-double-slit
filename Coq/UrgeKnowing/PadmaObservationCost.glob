@@ -1,0 +1,55 @@
+DIGEST 0912d85e4b3c2f3aaa4caf8212c96f8f
+FUMST.UrgeKnowing.PadmaObservationCost
+R525:528 Stdlib.Bool.Bool <> <> lib
+mod 539:558 <> PadmaObservationCost
+ind 572:586 PadmaObservationCost ObsCostModality
+constr 602:617 PadmaObservationCost obs_cost_unwired
+constr 623:638 PadmaObservationCost obs_cost_assumed
+constr 644:658 PadmaObservationCost obs_cost_proved
+constr 664:681 PadmaObservationCost obs_cost_surrogate
+scheme 572:586 PadmaObservationCost ObsCostModality_rect
+scheme 572:586 PadmaObservationCost ObsCostModality_ind
+scheme 572:586 PadmaObservationCost ObsCostModality_rec
+scheme 572:586 PadmaObservationCost ObsCostModality_sind
+def 696:720 PadmaObservationCost obs_cost_modality_current
+R724:738 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost ObsCostModality ind
+R743:758 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost obs_cost_unwired constr
+def 772:791 PadmaObservationCost physics_green_formal
+R795:798 Corelib.Init.Datatypes <> bool ind
+R803:807 Corelib.Init.Datatypes <> false constr
+def 821:843 PadmaObservationCost production_wired_formal
+R847:850 Corelib.Init.Datatypes <> bool ind
+R855:859 Corelib.Init.Datatypes <> false constr
+def 873:902 PadmaObservationCost observation_cost_proved_formal
+R906:909 Corelib.Init.Datatypes <> bool ind
+R914:918 Corelib.Init.Datatypes <> false constr
+prf 928:952 PadmaObservationCost physics_green_stays_false
+R976:978 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R956:975 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost physics_green_formal def
+R979:983 Corelib.Init.Datatypes <> false constr
+prf 1018:1045 PadmaObservationCost production_wired_stays_false
+R1072:1074 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1049:1071 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost production_wired_formal def
+R1075:1079 Corelib.Init.Datatypes <> false constr
+prf 1114:1140 PadmaObservationCost observation_cost_not_proved
+R1174:1176 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1144:1173 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost observation_cost_proved_formal def
+R1177:1181 Corelib.Init.Datatypes <> false constr
+prf 1216:1231 PadmaObservationCost modality_unwired
+R1260:1262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1235:1259 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost obs_cost_modality_current def
+R1263:1278 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost obs_cost_unwired constr
+def 1318:1336 PadmaObservationCost four_arm_run_formal
+R1340:1343 Corelib.Init.Datatypes <> bool ind
+R1348:1352 Corelib.Init.Datatypes <> false constr
+prf 1362:1385 PadmaObservationCost four_arm_run_stays_false
+R1408:1410 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1389:1407 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost four_arm_run_formal def
+R1411:1415 Corelib.Init.Datatypes <> false constr
+prf 1450:1477 PadmaObservationCost invent_physics_green_refused
+R1510:1513 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1503:1505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1483:1502 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost physics_green_formal def
+R1506:1509 Corelib.Init.Datatypes <> true constr
+R1514:1518 Corelib.Init.Logic <> False ind
+R1552:1571 UMST.UrgeKnowing.PadmaObservationCost PadmaObservationCost <> mod

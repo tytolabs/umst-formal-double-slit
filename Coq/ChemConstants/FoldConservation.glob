@@ -1,0 +1,938 @@
+DIGEST 97f496631679e9ae26267db6f1246d3f
+FUMST.ChemConstants.FoldConservation
+R1130:1134 Stdlib.Arith.Arith <> <> lib
+R1136:1141 Stdlib.Strings.String <> <> lib
+R1143:1146 Stdlib.Bool.Bool <> <> lib
+R1148:1150 Stdlib.micromega.Lia <> <> lib
+R1152:1155 Stdlib.Lists.List <> <> lib
+R1165:1177 Stdlib.Lists.List ListNotations <> mod
+ind 1507:1530 <> FoldConservationModality
+constr 1546:1570 <> fold_conservation_unwired
+constr 1576:1600 <> fold_conservation_assumed
+constr 1606:1629 <> fold_conservation_proved
+constr 1635:1661 <> fold_conservation_surrogate
+scheme 1507:1530 <> FoldConservationModality_rect
+scheme 1507:1530 <> FoldConservationModality_ind
+scheme 1507:1530 <> FoldConservationModality_rec
+scheme 1507:1530 <> FoldConservationModality_sind
+def 1676:1706 <> foldConservationModalityCurrent
+R1710:1733 UMST.ChemConstants.FoldConservation <> FoldConservationModality ind
+R1740:1764 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+def 1779:1802 <> fold_lattice_cardinality
+R1806:1808 Corelib.Init.Datatypes <> nat ind
+prf 1823:1854 <> fold_lattice_cardinality_is_four
+R1884:1886 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1860:1883 UMST.ChemConstants.FoldConservation <> fold_lattice_cardinality def
+prf 1922:1949 <> fold_lattice_not_118_squared
+R2006:2008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1955:1958 Corelib.Init.Datatypes <> negb def
+R1961:1967 Stdlib.Arith.PeanoNat Nat eqb def
+R1969:1992 UMST.ChemConstants.FoldConservation <> fold_lattice_cardinality def
+R1998:2000 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2009:2012 Corelib.Init.Datatypes <> true constr
+R2031:2054 UMST.ChemConstants.FoldConservation <> fold_lattice_cardinality def
+rec 2310:2324 <> pattern_feature
+proj 2340:2358 <> feature_per_element
+proj 2370:2383 <> feature_shared
+proj 2395:2414 <> feature_bond_forming
+proj 2426:2447 <> feature_bond_repelling
+proj 2459:2484 <> feature_structure_enabling
+proj 2496:2521 <> feature_structure_blocking
+R2362:2365 Corelib.Init.Datatypes <> bool ind
+R2387:2390 Corelib.Init.Datatypes <> bool ind
+R2418:2421 Corelib.Init.Datatypes <> bool ind
+R2451:2454 Corelib.Init.Datatypes <> bool ind
+R2488:2491 Corelib.Init.Datatypes <> bool ind
+R2525:2528 Corelib.Init.Datatypes <> bool ind
+def 2545:2562 <> patternFeatureZero
+R2566:2580 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+R2590:2608 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R2590:2608 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R2590:2608 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R2625:2638 UMST.ChemConstants.FoldConservation <> feature_shared proj
+R2625:2638 UMST.ChemConstants.FoldConservation <> feature_shared proj
+R2655:2674 UMST.ChemConstants.FoldConservation <> feature_bond_forming proj
+R2655:2674 UMST.ChemConstants.FoldConservation <> feature_bond_forming proj
+R2691:2712 UMST.ChemConstants.FoldConservation <> feature_bond_repelling proj
+R2691:2712 UMST.ChemConstants.FoldConservation <> feature_bond_repelling proj
+R2729:2754 UMST.ChemConstants.FoldConservation <> feature_structure_enabling proj
+R2729:2754 UMST.ChemConstants.FoldConservation <> feature_structure_enabling proj
+R2771:2796 UMST.ChemConstants.FoldConservation <> feature_structure_blocking proj
+R2771:2796 UMST.ChemConstants.FoldConservation <> feature_structure_blocking proj
+R2613:2617 Corelib.Init.Datatypes <> false constr
+R2643:2647 Corelib.Init.Datatypes <> false constr
+R2679:2683 Corelib.Init.Datatypes <> false constr
+R2717:2721 Corelib.Init.Datatypes <> false constr
+R2759:2763 Corelib.Init.Datatypes <> false constr
+R2801:2805 Corelib.Init.Datatypes <> false constr
+def 2823:2847 <> patternFeatureBondForming
+R2851:2865 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+R2875:2893 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R2875:2893 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R2875:2893 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R2910:2923 UMST.ChemConstants.FoldConservation <> feature_shared proj
+R2910:2923 UMST.ChemConstants.FoldConservation <> feature_shared proj
+R2940:2959 UMST.ChemConstants.FoldConservation <> feature_bond_forming proj
+R2940:2959 UMST.ChemConstants.FoldConservation <> feature_bond_forming proj
+R2975:2996 UMST.ChemConstants.FoldConservation <> feature_bond_repelling proj
+R2975:2996 UMST.ChemConstants.FoldConservation <> feature_bond_repelling proj
+R3013:3038 UMST.ChemConstants.FoldConservation <> feature_structure_enabling proj
+R3013:3038 UMST.ChemConstants.FoldConservation <> feature_structure_enabling proj
+R3055:3080 UMST.ChemConstants.FoldConservation <> feature_structure_blocking proj
+R3055:3080 UMST.ChemConstants.FoldConservation <> feature_structure_blocking proj
+R2898:2902 Corelib.Init.Datatypes <> false constr
+R2928:2932 Corelib.Init.Datatypes <> false constr
+R2964:2967 Corelib.Init.Datatypes <> true constr
+R3001:3005 Corelib.Init.Datatypes <> false constr
+R3043:3047 Corelib.Init.Datatypes <> false constr
+R3085:3089 Corelib.Init.Datatypes <> false constr
+ind 3330:3352 <> pattern_classifier_kind
+constr 3368:3381 <> pc_per_element
+constr 3387:3395 <> pc_shared
+constr 3401:3415 <> pc_bond_forming
+constr 3421:3437 <> pc_bond_repelling
+constr 3443:3463 <> pc_structure_enabling
+constr 3469:3489 <> pc_structure_blocking
+scheme 3330:3352 <> pattern_classifier_kind_rect
+scheme 3330:3352 <> pattern_classifier_kind_ind
+scheme 3330:3352 <> pattern_classifier_kind_rec
+scheme 3330:3352 <> pattern_classifier_kind_sind
+def 3504:3511 <> classify
+R3518:3540 UMST.ChemConstants.FoldConservation <> pattern_classifier_kind ind
+binder 3514:3514 <> k:12
+R3548:3562 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 3544:3544 <> f:13
+R3567:3570 Corelib.Init.Datatypes <> bool ind
+R3583:3583 UMST.ChemConstants.FoldConservation <> k:12 var
+R3594:3607 UMST.ChemConstants.FoldConservation <> pc_per_element constr
+R3615:3633 UMST.ChemConstants.FoldConservation <> feature_per_element proj
+R3612:3612 UMST.ChemConstants.FoldConservation <> f:13 var
+R3640:3648 UMST.ChemConstants.FoldConservation <> pc_shared constr
+R3656:3669 UMST.ChemConstants.FoldConservation <> feature_shared proj
+R3653:3653 UMST.ChemConstants.FoldConservation <> f:13 var
+R3676:3690 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R3698:3717 UMST.ChemConstants.FoldConservation <> feature_bond_forming proj
+R3695:3695 UMST.ChemConstants.FoldConservation <> f:13 var
+R3724:3740 UMST.ChemConstants.FoldConservation <> pc_bond_repelling constr
+R3748:3769 UMST.ChemConstants.FoldConservation <> feature_bond_repelling proj
+R3745:3745 UMST.ChemConstants.FoldConservation <> f:13 var
+R3776:3796 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+R3804:3829 UMST.ChemConstants.FoldConservation <> feature_structure_enabling proj
+R3801:3801 UMST.ChemConstants.FoldConservation <> f:13 var
+R3836:3856 UMST.ChemConstants.FoldConservation <> pc_structure_blocking constr
+R3864:3889 UMST.ChemConstants.FoldConservation <> feature_structure_blocking proj
+R3861:3861 UMST.ChemConstants.FoldConservation <> f:13 var
+prf 3906:3943 <> classify_bond_forming_on_bond_features
+R3999:4001 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3949:3956 UMST.ChemConstants.FoldConservation <> classify def
+R3958:3972 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R3974:3998 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R4002:4005 Corelib.Init.Datatypes <> true constr
+prf 4040:4083 <> classify_structure_enabling_on_bond_features
+R4145:4147 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4089:4096 UMST.ChemConstants.FoldConservation <> classify def
+R4098:4118 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+R4120:4144 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R4148:4152 Corelib.Init.Datatypes <> false constr
+prf 4187:4217 <> classify_pure_bool_bond_forming
+R4273:4277 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4223:4230 UMST.ChemConstants.FoldConservation <> classify def
+R4232:4246 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R4248:4272 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R4305:4324 UMST.ChemConstants.FoldConservation <> feature_bond_forming proj
+R4278:4302 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+ind 4588:4605 <> classifier_fold_op
+constr 4621:4636 <> fold_conjunctive
+constr 4642:4657 <> fold_disjunctive
+scheme 4588:4605 <> classifier_fold_op_rect
+scheme 4588:4605 <> classifier_fold_op_ind
+scheme 4588:4605 <> classifier_fold_op_rec
+scheme 4588:4605 <> classifier_fold_op_sind
+def 4670:4690 <> fold_classifiers_step
+R4703:4706 Corelib.Init.Datatypes <> list ind
+R4708:4730 UMST.ChemConstants.FoldConservation <> pattern_classifier_kind ind
+binder 4695:4699 <> kinds:17
+R4741:4758 UMST.ChemConstants.FoldConservation <> classifier_fold_op ind
+binder 4736:4737 <> op:18
+R4775:4789 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 4764:4771 <> features:19
+R4801:4804 Corelib.Init.Datatypes <> bool ind
+binder 4795:4797 <> acc:20
+R4809:4812 Corelib.Init.Datatypes <> bool ind
+R4825:4829 UMST.ChemConstants.FoldConservation <> kinds:17 var
+R4840:4842 Corelib.Init.Datatypes <> nil constr
+R4847:4849 UMST.ChemConstants.FoldConservation <> acc:20 var
+R4856:4859 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4886:4893 UMST.ChemConstants.FoldConservation <> classify def
+R4897:4904 UMST.ChemConstants.FoldConservation <> features:19 var
+binder 4878:4881 <> next:23
+R4945:4946 UMST.ChemConstants.FoldConservation <> op:18 var
+R4963:4978 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R4986:4989 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4983:4985 UMST.ChemConstants.FoldConservation <> acc:20 var
+R4990:4993 UMST.ChemConstants.FoldConservation <> next:23 var
+R5005:5020 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R5028:5031 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5025:5027 UMST.ChemConstants.FoldConservation <> acc:20 var
+R5032:5035 UMST.ChemConstants.FoldConservation <> next:23 var
+binder 4919:4926 <> combined:25
+R5058:5078 UMST.ChemConstants.FoldConservation <> fold_classifiers_step:21 def
+R5097:5104 UMST.ChemConstants.FoldConservation <> combined:25 var
+R5088:5095 UMST.ChemConstants.FoldConservation <> features:19 var
+R5085:5086 UMST.ChemConstants.FoldConservation <> op:18 var
+def 5125:5140 <> fold_classifiers
+R5153:5156 Corelib.Init.Datatypes <> list ind
+R5158:5180 UMST.ChemConstants.FoldConservation <> pattern_classifier_kind ind
+binder 5145:5149 <> kinds:26
+R5191:5208 UMST.ChemConstants.FoldConservation <> classifier_fold_op ind
+binder 5186:5187 <> op:27
+R5225:5239 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 5214:5221 <> features:28
+R5244:5247 Corelib.Init.Datatypes <> bool ind
+R5260:5264 UMST.ChemConstants.FoldConservation <> kinds:26 var
+R5275:5277 Corelib.Init.Datatypes <> nil constr
+R5294:5295 UMST.ChemConstants.FoldConservation <> op:27 var
+R5310:5325 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R5330:5333 Corelib.Init.Datatypes <> true constr
+R5343:5358 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R5363:5367 Corelib.Init.Datatypes <> false constr
+R5384:5387 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5402:5422 UMST.ChemConstants.FoldConservation <> fold_classifiers_step def
+R5429:5430 UMST.ChemConstants.FoldConservation <> op:27 var
+R5432:5439 UMST.ChemConstants.FoldConservation <> features:28 var
+R5442:5449 UMST.ChemConstants.FoldConservation <> classify def
+R5453:5460 UMST.ChemConstants.FoldConservation <> features:28 var
+def 5482:5504 <> manual_conjunctive_fold
+R5517:5539 UMST.ChemConstants.FoldConservation <> pattern_classifier_kind ind
+binder 5509:5510 <> k1:31
+binder 5512:5513 <> k2:32
+R5547:5561 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 5543:5543 <> f:33
+R5566:5569 Corelib.Init.Datatypes <> bool ind
+R5589:5592 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5576:5583 UMST.ChemConstants.FoldConservation <> classify def
+R5585:5586 UMST.ChemConstants.FoldConservation <> k1:31 var
+R5588:5588 UMST.ChemConstants.FoldConservation <> f:33 var
+R5593:5600 UMST.ChemConstants.FoldConservation <> classify def
+R5602:5603 UMST.ChemConstants.FoldConservation <> k2:32 var
+R5605:5605 UMST.ChemConstants.FoldConservation <> f:33 var
+def 5620:5642 <> manual_disjunctive_fold
+R5655:5677 UMST.ChemConstants.FoldConservation <> pattern_classifier_kind ind
+binder 5647:5648 <> k1:34
+binder 5650:5651 <> k2:35
+R5685:5699 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 5681:5681 <> f:36
+R5704:5707 Corelib.Init.Datatypes <> bool ind
+R5727:5730 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5714:5721 UMST.ChemConstants.FoldConservation <> classify def
+R5723:5724 UMST.ChemConstants.FoldConservation <> k1:34 var
+R5726:5726 UMST.ChemConstants.FoldConservation <> f:36 var
+R5731:5738 UMST.ChemConstants.FoldConservation <> classify def
+R5740:5741 UMST.ChemConstants.FoldConservation <> k2:35 var
+R5743:5743 UMST.ChemConstants.FoldConservation <> f:36 var
+def 5758:5794 <> bond_forming_structure_enabling_kinds
+R5798:5801 Corelib.Init.Datatypes <> list ind
+R5803:5825 UMST.ChemConstants.FoldConservation <> pattern_classifier_kind ind
+R5832:5832 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5848:5849 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5871:5871 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R5833:5847 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R5850:5870 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+prf 6105:6135 <> conjunctive_empty_fold_identity
+R6196:6198 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6141:6156 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R6158:6159 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6161:6176 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R6178:6195 UMST.ChemConstants.FoldConservation <> patternFeatureZero def
+R6199:6202 Corelib.Init.Datatypes <> true constr
+prf 6237:6267 <> disjunctive_empty_fold_identity
+R6328:6330 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6273:6288 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R6290:6291 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6293:6308 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R6310:6327 UMST.ChemConstants.FoldConservation <> patternFeatureZero def
+R6331:6335 Corelib.Init.Datatypes <> false constr
+prf 6372:6412 <> conjunctive_empty_fold_identity_conserved
+R6480:6482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6418:6433 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R6435:6436 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6438:6453 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R6455:6479 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R6483:6486 Corelib.Init.Datatypes <> true constr
+prf 6523:6563 <> disjunctive_empty_fold_identity_conserved
+R6631:6633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6569:6584 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R6586:6587 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6589:6604 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R6606:6630 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R6634:6638 Corelib.Init.Datatypes <> false constr
+prf 6673:6713 <> conjunctive_empty_identity_on_any_feature
+R6720:6734 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 6716:6716 <> f:37
+R6779:6781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6741:6756 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R6758:6759 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6761:6776 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R6778:6778 UMST.ChemConstants.FoldConservation <> f:37 var
+R6782:6785 Corelib.Init.Datatypes <> true constr
+prf 6834:6874 <> disjunctive_empty_identity_on_any_feature
+R6881:6895 UMST.ChemConstants.FoldConservation <> pattern_feature rec
+binder 6877:6877 <> f:38
+R6940:6942 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6902:6917 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R6919:6920 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6922:6937 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R6939:6939 UMST.ChemConstants.FoldConservation <> f:38 var
+R6943:6947 Corelib.Init.Datatypes <> false constr
+prf 7218:7252 <> conjunctive_fold_identity_conserved
+R7359:7363 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7258:7273 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R7275:7311 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R7313:7328 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R7334:7358 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R7364:7386 UMST.ChemConstants.FoldConservation <> manual_conjunctive_fold def
+R7388:7402 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R7404:7424 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+R7430:7454 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+prf 7489:7523 <> disjunctive_fold_identity_conserved
+R7630:7634 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7529:7544 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R7546:7582 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R7584:7599 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R7605:7629 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R7635:7657 UMST.ChemConstants.FoldConservation <> manual_disjunctive_fold def
+R7659:7673 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R7675:7695 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+R7701:7725 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+prf 7762:7790 <> conjunctive_fold_conservation
+R7897:7901 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7796:7811 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R7813:7849 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R7851:7866 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R7872:7896 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R7952:7957 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7902:7909 UMST.ChemConstants.FoldConservation <> classify def
+R7911:7925 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R7927:7951 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R7958:7965 UMST.ChemConstants.FoldConservation <> classify def
+R7967:7987 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+R7989:8013 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R8033:8067 UMST.ChemConstants.FoldConservation <> conjunctive_fold_identity_conserved thm
+R8033:8067 UMST.ChemConstants.FoldConservation <> conjunctive_fold_identity_conserved thm
+R8033:8067 UMST.ChemConstants.FoldConservation <> conjunctive_fold_identity_conserved thm
+R8079:8101 UMST.ChemConstants.FoldConservation <> manual_conjunctive_fold def
+prf 8133:8161 <> disjunctive_fold_conservation
+R8268:8272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8167:8182 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R8184:8220 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R8222:8237 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R8243:8267 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R8323:8328 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R8273:8280 UMST.ChemConstants.FoldConservation <> classify def
+R8282:8296 UMST.ChemConstants.FoldConservation <> pc_bond_forming constr
+R8298:8322 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R8329:8336 UMST.ChemConstants.FoldConservation <> classify def
+R8338:8358 UMST.ChemConstants.FoldConservation <> pc_structure_enabling constr
+R8360:8384 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R8404:8438 UMST.ChemConstants.FoldConservation <> disjunctive_fold_identity_conserved thm
+R8404:8438 UMST.ChemConstants.FoldConservation <> disjunctive_fold_identity_conserved thm
+R8404:8438 UMST.ChemConstants.FoldConservation <> disjunctive_fold_identity_conserved thm
+R8450:8472 UMST.ChemConstants.FoldConservation <> manual_disjunctive_fold def
+prf 8502:8537 <> conjunctive_fold_bond_features_false
+R8644:8646 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8543:8558 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R8560:8596 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R8598:8613 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R8619:8643 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R8647:8651 Corelib.Init.Datatypes <> false constr
+R8671:8699 UMST.ChemConstants.FoldConservation <> conjunctive_fold_conservation thm
+R8671:8699 UMST.ChemConstants.FoldConservation <> conjunctive_fold_conservation thm
+R8671:8699 UMST.ChemConstants.FoldConservation <> conjunctive_fold_conservation thm
+R8712:8749 UMST.ChemConstants.FoldConservation <> classify_bond_forming_on_bond_features thm
+R8712:8749 UMST.ChemConstants.FoldConservation <> classify_bond_forming_on_bond_features thm
+R8712:8749 UMST.ChemConstants.FoldConservation <> classify_bond_forming_on_bond_features thm
+R8762:8805 UMST.ChemConstants.FoldConservation <> classify_structure_enabling_on_bond_features thm
+R8762:8805 UMST.ChemConstants.FoldConservation <> classify_structure_enabling_on_bond_features thm
+R8762:8805 UMST.ChemConstants.FoldConservation <> classify_structure_enabling_on_bond_features thm
+prf 8835:8869 <> disjunctive_fold_bond_features_true
+R8976:8978 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8875:8890 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R8892:8928 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R8930:8945 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R8951:8975 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R8979:8982 Corelib.Init.Datatypes <> true constr
+R9002:9030 UMST.ChemConstants.FoldConservation <> disjunctive_fold_conservation thm
+R9002:9030 UMST.ChemConstants.FoldConservation <> disjunctive_fold_conservation thm
+R9002:9030 UMST.ChemConstants.FoldConservation <> disjunctive_fold_conservation thm
+R9043:9080 UMST.ChemConstants.FoldConservation <> classify_bond_forming_on_bond_features thm
+R9043:9080 UMST.ChemConstants.FoldConservation <> classify_bond_forming_on_bond_features thm
+R9043:9080 UMST.ChemConstants.FoldConservation <> classify_bond_forming_on_bond_features thm
+R9093:9136 UMST.ChemConstants.FoldConservation <> classify_structure_enabling_on_bond_features thm
+R9093:9136 UMST.ChemConstants.FoldConservation <> classify_structure_enabling_on_bond_features thm
+R9093:9136 UMST.ChemConstants.FoldConservation <> classify_structure_enabling_on_bond_features thm
+ind 9394:9418 <> fold_conservation_verdict
+constr 9434:9451 <> verdict_unwired_ok
+constr 9457:9483 <> verdict_conjunctive_fold_ok
+constr 9489:9515 <> verdict_disjunctive_fold_ok
+constr 9521:9547 <> verdict_green_invent_refuse
+constr 9553:9583 <> verdict_production_wired_refuse
+scheme 9394:9418 <> fold_conservation_verdict_rect
+scheme 9394:9418 <> fold_conservation_verdict_ind
+scheme 9394:9418 <> fold_conservation_verdict_rec
+scheme 9394:9418 <> fold_conservation_verdict_sind
+def 9598:9625 <> fold_conservation_verdict_ok
+R9632:9656 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict ind
+binder 9628:9628 <> v:41
+R9661:9664 Corelib.Init.Datatypes <> bool ind
+R9677:9677 UMST.ChemConstants.FoldConservation <> v:41 var
+R9688:9705 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+R9710:9713 Corelib.Init.Datatypes <> true constr
+R9719:9745 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R9750:9753 Corelib.Init.Datatypes <> true constr
+R9759:9785 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R9790:9793 Corelib.Init.Datatypes <> true constr
+R9804:9808 Corelib.Init.Datatypes <> false constr
+def 9829:9857 <> fold_conservation_verdict_beq
+R9870:9894 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict ind
+binder 9862:9863 <> v1:43
+binder 9865:9866 <> v2:44
+R9899:9902 Corelib.Init.Datatypes <> bool ind
+R9919:9920 UMST.ChemConstants.FoldConservation <> v2:44 var
+R9915:9916 UMST.ChemConstants.FoldConservation <> v1:43 var
+R9931:9948 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+R9951:9968 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+R9973:9976 Corelib.Init.Datatypes <> true constr
+R9982:10008 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R10011:10037 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R10042:10045 Corelib.Init.Datatypes <> true constr
+R10051:10077 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R10080:10106 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R10111:10114 Corelib.Init.Datatypes <> true constr
+R10120:10146 UMST.ChemConstants.FoldConservation <> verdict_green_invent_refuse constr
+R10149:10175 UMST.ChemConstants.FoldConservation <> verdict_green_invent_refuse constr
+R10180:10183 Corelib.Init.Datatypes <> true constr
+R10189:10219 UMST.ChemConstants.FoldConservation <> verdict_production_wired_refuse constr
+R10222:10252 UMST.ChemConstants.FoldConservation <> verdict_production_wired_refuse constr
+R10257:10260 Corelib.Init.Datatypes <> true constr
+R10274:10278 Corelib.Init.Datatypes <> false constr
+def 10299:10330 <> evaluate_fold_conservation_close
+R10339:10362 UMST.ChemConstants.FoldConservation <> FoldConservationModality ind
+binder 10335:10335 <> m:47
+R10373:10390 UMST.ChemConstants.FoldConservation <> classifier_fold_op ind
+binder 10368:10369 <> op:48
+R10418:10421 Corelib.Init.Datatypes <> bool ind
+binder 10396:10414 <> claim_physics_green:49
+R10452:10455 Corelib.Init.Datatypes <> bool ind
+binder 10427:10448 <> claim_production_wired:50
+R10460:10484 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict ind
+R10494:10512 UMST.ChemConstants.FoldConservation <> claim_physics_green:49 var
+R10559:10580 UMST.ChemConstants.FoldConservation <> claim_production_wired:50 var
+R10638:10638 UMST.ChemConstants.FoldConservation <> m:47 var
+R10651:10675 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R10680:10697 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+R10705:10729 UMST.ChemConstants.FoldConservation <> fold_conservation_assumed constr
+R10737:10760 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R10768:10794 UMST.ChemConstants.FoldConservation <> fold_conservation_surrogate constr
+R10813:10814 UMST.ChemConstants.FoldConservation <> op:48 var
+R10831:10846 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R10851:10877 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R10889:10904 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R10909:10935 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R10813:10814 UMST.ChemConstants.FoldConservation <> op:48 var
+R10831:10846 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R10851:10877 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R10889:10904 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R10909:10935 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R10813:10814 UMST.ChemConstants.FoldConservation <> op:48 var
+R10831:10846 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R10851:10877 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R10889:10904 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R10909:10935 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R10589:10619 UMST.ChemConstants.FoldConservation <> verdict_production_wired_refuse constr
+R10521:10547 UMST.ChemConstants.FoldConservation <> verdict_green_invent_refuse constr
+def 10970:10997 <> fold_conservation_authorized
+R11007:11024 UMST.ChemConstants.FoldConservation <> classifier_fold_op ind
+binder 11002:11003 <> op:55
+R11052:11055 Corelib.Init.Datatypes <> bool ind
+binder 11030:11048 <> claim_physics_green:56
+R11086:11089 Corelib.Init.Datatypes <> bool ind
+binder 11061:11082 <> claim_production_wired:57
+R11094:11097 Corelib.Init.Datatypes <> bool ind
+R11110:11141 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R11153:11176 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R11178:11179 UMST.ChemConstants.FoldConservation <> op:55 var
+R11181:11199 UMST.ChemConstants.FoldConservation <> claim_physics_green:56 var
+R11201:11222 UMST.ChemConstants.FoldConservation <> claim_production_wired:57 var
+R11233:11259 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R11264:11267 Corelib.Init.Datatypes <> true constr
+R11273:11299 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R11304:11307 Corelib.Init.Datatypes <> true constr
+R11318:11322 Corelib.Init.Datatypes <> false constr
+ind 11566:11586 <> fold_conservation_law
+constr 11602:11630 <> law_conjunctive_fold_identity
+constr 11636:11664 <> law_disjunctive_fold_identity
+constr 11670:11692 <> law_green_invent_refuse
+constr 11698:11724 <> law_production_wired_refuse
+scheme 11566:11586 <> fold_conservation_law_rect
+scheme 11566:11586 <> fold_conservation_law_ind
+scheme 11566:11586 <> fold_conservation_law_rec
+scheme 11566:11586 <> fold_conservation_law_sind
+def 11739:11765 <> fold_conservation_law_count
+R11769:11771 Corelib.Init.Datatypes <> nat ind
+prf 11786:11820 <> fold_conservation_law_count_is_four
+R11853:11855 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11826:11852 UMST.ChemConstants.FoldConservation <> fold_conservation_law_count def
+ind 11895:11923 <> fold_conservation_law_witness
+constr 11939:11959 <> fold_law_witness_open
+constr 11965:11987 <> fold_law_witness_proved
+scheme 11895:11923 <> fold_conservation_law_witness_rect
+scheme 11895:11923 <> fold_conservation_law_witness_ind
+scheme 11895:11923 <> fold_conservation_law_witness_rec
+scheme 11895:11923 <> fold_conservation_law_witness_sind
+def 12002:12039 <> evaluate_fold_conservation_law_witness
+R12050:12070 UMST.ChemConstants.FoldConservation <> fold_conservation_law ind
+binder 12044:12046 <> law:62
+R12078:12101 UMST.ChemConstants.FoldConservation <> FoldConservationModality ind
+binder 12074:12074 <> m:63
+R12108:12136 UMST.ChemConstants.FoldConservation <> fold_conservation_law_witness ind
+R12149:12149 UMST.ChemConstants.FoldConservation <> m:63 var
+R12160:12184 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R12190:12214 UMST.ChemConstants.FoldConservation <> fold_conservation_assumed constr
+R12220:12246 UMST.ChemConstants.FoldConservation <> fold_conservation_surrogate constr
+R12251:12271 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+R12251:12271 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+R12251:12271 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+R12277:12300 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R12305:12327 UMST.ChemConstants.FoldConservation <> fold_law_witness_proved constr
+prf 12343:12384 <> all_fold_conservation_laws_open_at_unwired
+R12512:12517 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12488:12490 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12390:12427 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_law_witness def
+R12429:12457 UMST.ChemConstants.FoldConservation <> law_conjunctive_fold_identity constr
+R12463:12487 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R12491:12511 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+R12640:12645 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12616:12618 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12518:12555 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_law_witness def
+R12557:12585 UMST.ChemConstants.FoldConservation <> law_disjunctive_fold_identity constr
+R12591:12615 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R12619:12639 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+R12762:12767 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12738:12740 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12646:12683 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_law_witness def
+R12685:12707 UMST.ChemConstants.FoldConservation <> law_green_invent_refuse constr
+R12713:12737 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R12741:12761 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+R12864:12866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12768:12805 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_law_witness def
+R12807:12833 UMST.ChemConstants.FoldConservation <> law_production_wired_refuse constr
+R12839:12863 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R12867:12887 UMST.ChemConstants.FoldConservation <> fold_law_witness_open constr
+def 13165:13178 <> fp01FoldProved
+R13182:13185 Corelib.Init.Datatypes <> bool ind
+R13190:13194 Corelib.Init.Datatypes <> false constr
+prf 13204:13225 <> fp01_fold_proved_false
+R13243:13245 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13229:13242 UMST.ChemConstants.FoldConservation <> fp01FoldProved def
+R13246:13250 Corelib.Init.Datatypes <> false constr
+def 13290:13312 <> not118SquaredGreenTable
+R13316:13319 Corelib.Init.Datatypes <> bool ind
+R13324:13327 Corelib.Init.Datatypes <> true constr
+prf 13337:13363 <> not_118_squared_green_table
+R13390:13392 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13367:13389 UMST.ChemConstants.FoldConservation <> not118SquaredGreenTable def
+R13393:13396 Corelib.Init.Datatypes <> true constr
+prf 13653:13691 <> unwired_close_without_production_wiring
+R13788:13792 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13697:13728 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R13734:13758 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R13760:13775 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R13777:13781 Corelib.Init.Datatypes <> false constr
+R13783:13787 Corelib.Init.Datatypes <> false constr
+R13793:13810 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+prf 13847:13898 <> unwired_modality_always_ok_without_production_wiring
+R13995:13999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13904:13935 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R13941:13965 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R13967:13982 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R13984:13988 Corelib.Init.Datatypes <> false constr
+R13990:13994 Corelib.Init.Datatypes <> false constr
+R14000:14017 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+R14033:14071 UMST.ChemConstants.FoldConservation <> unwired_close_without_production_wiring thm
+R14033:14071 UMST.ChemConstants.FoldConservation <> unwired_close_without_production_wiring thm
+prf 14086:14129 <> unwired_verdict_ok_without_production_wiring
+R14264:14268 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14135:14162 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R14169:14200 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R14209:14233 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R14235:14250 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R14252:14256 Corelib.Init.Datatypes <> false constr
+R14258:14262 Corelib.Init.Datatypes <> false constr
+R14269:14272 Corelib.Init.Datatypes <> true constr
+R14291:14318 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R14331:14369 UMST.ChemConstants.FoldConservation <> unwired_close_without_production_wiring thm
+R14331:14369 UMST.ChemConstants.FoldConservation <> unwired_close_without_production_wiring thm
+R14331:14369 UMST.ChemConstants.FoldConservation <> unwired_close_without_production_wiring thm
+prf 14623:14647 <> conjunctive_fold_close_ok
+R14743:14747 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14653:14684 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R14690:14713 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R14715:14730 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R14732:14736 Corelib.Init.Datatypes <> false constr
+R14738:14742 Corelib.Init.Datatypes <> false constr
+R14748:14774 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+prf 14811:14856 <> classifier_conjunctive_fold_conservation_close
+R14984:14989 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14952:14956 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14862:14893 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R14899:14922 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R14924:14939 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R14941:14945 Corelib.Init.Datatypes <> false constr
+R14947:14951 Corelib.Init.Datatypes <> false constr
+R14957:14983 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R15047:15049 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14990:15017 UMST.ChemConstants.FoldConservation <> fold_conservation_authorized def
+R15019:15034 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R15036:15040 Corelib.Init.Datatypes <> false constr
+R15042:15046 Corelib.Init.Datatypes <> false constr
+R15050:15053 Corelib.Init.Datatypes <> true constr
+R15082:15106 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+R15082:15106 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+R15120:15147 UMST.ChemConstants.FoldConservation <> fold_conservation_authorized def
+R15162:15186 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+R15162:15186 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+R15162:15186 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+prf 15218:15244 <> conjunctive_fold_verdict_ok
+R15378:15382 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15250:15277 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R15284:15315 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R15324:15347 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R15349:15364 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R15366:15370 Corelib.Init.Datatypes <> false constr
+R15372:15376 Corelib.Init.Datatypes <> false constr
+R15383:15386 Corelib.Init.Datatypes <> true constr
+R15405:15432 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R15445:15469 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+R15445:15469 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+R15445:15469 UMST.ChemConstants.FoldConservation <> conjunctive_fold_close_ok thm
+prf 15499:15536 <> conjunctive_fold_still_not_fp01_proved
+R15679:15684 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R15670:15674 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15542:15569 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R15576:15607 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R15616:15639 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R15641:15656 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R15658:15662 Corelib.Init.Datatypes <> false constr
+R15664:15668 Corelib.Init.Datatypes <> false constr
+R15675:15678 Corelib.Init.Datatypes <> true constr
+R15699:15701 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15685:15698 UMST.ChemConstants.FoldConservation <> fp01FoldProved def
+R15702:15706 Corelib.Init.Datatypes <> false constr
+R15735:15761 UMST.ChemConstants.FoldConservation <> conjunctive_fold_verdict_ok thm
+R15735:15761 UMST.ChemConstants.FoldConservation <> conjunctive_fold_verdict_ok thm
+R15774:15795 UMST.ChemConstants.FoldConservation <> fp01_fold_proved_false thm
+R15774:15795 UMST.ChemConstants.FoldConservation <> fp01_fold_proved_false thm
+prf 16034:16058 <> disjunctive_fold_close_ok
+R16154:16158 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16064:16095 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R16101:16124 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R16126:16141 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R16143:16147 Corelib.Init.Datatypes <> false constr
+R16149:16153 Corelib.Init.Datatypes <> false constr
+R16159:16185 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+prf 16222:16267 <> classifier_disjunctive_fold_conservation_close
+R16395:16400 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16363:16367 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16273:16304 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R16310:16333 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R16335:16350 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R16352:16356 Corelib.Init.Datatypes <> false constr
+R16358:16362 Corelib.Init.Datatypes <> false constr
+R16368:16394 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R16458:16460 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16401:16428 UMST.ChemConstants.FoldConservation <> fold_conservation_authorized def
+R16430:16445 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R16447:16451 Corelib.Init.Datatypes <> false constr
+R16453:16457 Corelib.Init.Datatypes <> false constr
+R16461:16464 Corelib.Init.Datatypes <> true constr
+R16493:16517 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+R16493:16517 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+R16531:16558 UMST.ChemConstants.FoldConservation <> fold_conservation_authorized def
+R16573:16597 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+R16573:16597 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+R16573:16597 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+prf 16629:16655 <> disjunctive_fold_verdict_ok
+R16789:16793 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16661:16688 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R16695:16726 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R16735:16758 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R16760:16775 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R16777:16781 Corelib.Init.Datatypes <> false constr
+R16783:16787 Corelib.Init.Datatypes <> false constr
+R16794:16797 Corelib.Init.Datatypes <> true constr
+R16816:16843 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R16856:16880 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+R16856:16880 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+R16856:16880 UMST.ChemConstants.FoldConservation <> disjunctive_fold_close_ok thm
+prf 17134:17160 <> green_invent_refuse_unwired
+R17256:17260 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17166:17197 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R17203:17227 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R17229:17244 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R17246:17249 Corelib.Init.Datatypes <> true constr
+R17251:17255 Corelib.Init.Datatypes <> false constr
+R17261:17287 UMST.ChemConstants.FoldConservation <> verdict_green_invent_refuse constr
+prf 17324:17349 <> green_invent_always_refuse
+R17483:17487 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17355:17382 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R17389:17420 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R17429:17453 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R17455:17470 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R17472:17475 Corelib.Init.Datatypes <> true constr
+R17477:17481 Corelib.Init.Datatypes <> false constr
+R17488:17492 Corelib.Init.Datatypes <> false constr
+R17511:17538 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R17551:17577 UMST.ChemConstants.FoldConservation <> green_invent_refuse_unwired thm
+R17551:17577 UMST.ChemConstants.FoldConservation <> green_invent_refuse_unwired thm
+R17551:17577 UMST.ChemConstants.FoldConservation <> green_invent_refuse_unwired thm
+prf 17829:17851 <> production_wired_refuse
+R17946:17950 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17857:17888 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R17894:17917 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R17919:17934 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R17936:17940 Corelib.Init.Datatypes <> false constr
+R17942:17945 Corelib.Init.Datatypes <> true constr
+R17951:17981 UMST.ChemConstants.FoldConservation <> verdict_production_wired_refuse constr
+prf 18018:18047 <> production_wired_claim_refused
+R18180:18184 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18053:18080 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R18087:18118 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R18127:18150 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R18152:18167 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R18169:18173 Corelib.Init.Datatypes <> false constr
+R18175:18178 Corelib.Init.Datatypes <> true constr
+R18185:18189 Corelib.Init.Datatypes <> false constr
+R18208:18235 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_ok def
+R18248:18270 UMST.ChemConstants.FoldConservation <> production_wired_refuse thm
+R18248:18270 UMST.ChemConstants.FoldConservation <> production_wired_refuse thm
+R18248:18270 UMST.ChemConstants.FoldConservation <> production_wired_refuse thm
+def 18529:18564 <> fold_conservation_coherence_scaffold
+R18568:18571 Corelib.Init.Datatypes <> bool ind
+R19073:19078 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18906:18911 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18739:18744 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18578:18606 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_beq def
+R18613:18644 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R18653:18676 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R18678:18693 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R18695:18699 Corelib.Init.Datatypes <> false constr
+R18701:18705 Corelib.Init.Datatypes <> false constr
+R18712:18738 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R18745:18773 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_beq def
+R18780:18811 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R18820:18843 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R18845:18860 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R18862:18866 Corelib.Init.Datatypes <> false constr
+R18868:18872 Corelib.Init.Datatypes <> false constr
+R18879:18905 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R18912:18940 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_beq def
+R18947:18978 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R18987:19011 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R19013:19028 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R19030:19033 Corelib.Init.Datatypes <> true constr
+R19035:19039 Corelib.Init.Datatypes <> false constr
+R19046:19072 UMST.ChemConstants.FoldConservation <> verdict_green_invent_refuse constr
+R19079:19107 UMST.ChemConstants.FoldConservation <> fold_conservation_verdict_beq def
+R19114:19145 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R19154:19177 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R19179:19194 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R19196:19200 Corelib.Init.Datatypes <> false constr
+R19202:19205 Corelib.Init.Datatypes <> true constr
+R19212:19242 UMST.ChemConstants.FoldConservation <> verdict_production_wired_refuse constr
+prf 19252:19292 <> fold_conservation_coherence_scaffold_true
+R19334:19336 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19298:19333 UMST.ChemConstants.FoldConservation <> fold_conservation_coherence_scaffold def
+R19337:19340 Corelib.Init.Datatypes <> true constr
+R19359:19394 UMST.ChemConstants.FoldConservation <> fold_conservation_coherence_scaffold def
+prf 19449:19492 <> fold_conservation_coherence_scaffold_theorem
+R19622:19627 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19588:19594 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19498:19529 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R19535:19558 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R19560:19575 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R19577:19581 Corelib.Init.Datatypes <> false constr
+R19583:19587 Corelib.Init.Datatypes <> false constr
+R19595:19621 UMST.ChemConstants.FoldConservation <> verdict_conjunctive_fold_ok constr
+R19752:19757 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19718:19724 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19628:19659 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R19665:19688 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R19690:19705 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R19707:19711 Corelib.Init.Datatypes <> false constr
+R19713:19717 Corelib.Init.Datatypes <> false constr
+R19725:19751 UMST.ChemConstants.FoldConservation <> verdict_disjunctive_fold_ok constr
+R19882:19887 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19848:19854 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19758:19789 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R19795:19819 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R19821:19836 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R19838:19841 Corelib.Init.Datatypes <> true constr
+R19843:19847 Corelib.Init.Datatypes <> false constr
+R19855:19881 UMST.ChemConstants.FoldConservation <> verdict_green_invent_refuse constr
+R19977:19983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19888:19919 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R19925:19948 UMST.ChemConstants.FoldConservation <> fold_conservation_proved constr
+R19950:19965 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R19967:19971 Corelib.Init.Datatypes <> false constr
+R19973:19976 Corelib.Init.Datatypes <> true constr
+R19984:20014 UMST.ChemConstants.FoldConservation <> verdict_production_wired_refuse constr
+ind 20293:20304 <> formal_fiber
+constr 20320:20340 <> fiber_quantum_knowing
+constr 20346:20362 <> fiber_meso_acting
+scheme 20293:20304 <> formal_fiber_rect
+scheme 20293:20304 <> formal_fiber_ind
+scheme 20293:20304 <> formal_fiber_rec
+scheme 20293:20304 <> formal_fiber_sind
+ind 20376:20394 <> formal_claim_family
+constr 20410:20432 <> claim_fold_conservation
+scheme 20376:20394 <> formal_claim_family_rect
+scheme 20376:20394 <> formal_claim_family_ind
+scheme 20376:20394 <> formal_claim_family_rec
+scheme 20376:20394 <> formal_claim_family_sind
+def 20447:20472 <> fold_conservation_fiber_ok
+R20479:20490 UMST.ChemConstants.FoldConservation <> formal_fiber ind
+binder 20475:20475 <> f:69
+R20495:20498 Corelib.Init.Datatypes <> bool ind
+R20511:20511 UMST.ChemConstants.FoldConservation <> f:69 var
+R20522:20542 UMST.ChemConstants.FoldConservation <> fiber_quantum_knowing constr
+R20547:20550 Corelib.Init.Datatypes <> true constr
+R20556:20572 UMST.ChemConstants.FoldConservation <> fiber_meso_acting constr
+R20577:20581 Corelib.Init.Datatypes <> false constr
+def 20602:20635 <> fold_conservation_knowing_fiber_ok
+R20639:20642 Corelib.Init.Datatypes <> bool ind
+R20649:20674 UMST.ChemConstants.FoldConservation <> fold_conservation_fiber_ok def
+R20676:20696 UMST.ChemConstants.FoldConservation <> fiber_quantum_knowing constr
+def 20711:20742 <> fold_conservation_meso_acting_ok
+R20746:20749 Corelib.Init.Datatypes <> bool ind
+R20756:20781 UMST.ChemConstants.FoldConservation <> fold_conservation_fiber_ok def
+R20783:20799 UMST.ChemConstants.FoldConservation <> fiber_meso_acting constr
+prf 20809:20847 <> fold_conservation_knowing_fiber_ok_true
+R20887:20889 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20853:20886 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok def
+R20890:20893 Corelib.Init.Datatypes <> true constr
+prf 20928:20963 <> fold_conservation_meso_acting_not_ok
+R21001:21003 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20969:21000 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_ok def
+R21004:21008 Corelib.Init.Datatypes <> false constr
+prf 21045:21085 <> fold_conservation_routes_knowing_not_meso
+R21132:21137 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21125:21127 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21091:21124 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok def
+R21128:21131 Corelib.Init.Datatypes <> true constr
+R21170:21172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21138:21169 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_ok def
+R21173:21177 Corelib.Init.Datatypes <> false constr
+R21206:21244 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok_true thm
+R21206:21244 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok_true thm
+R21257:21292 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_not_ok thm
+R21257:21292 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_not_ok thm
+def 21312:21329 <> fiberNotMesoActing
+R21333:21336 Corelib.Init.Datatypes <> bool ind
+R21377:21382 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R21343:21376 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok def
+R21383:21386 Corelib.Init.Datatypes <> negb def
+R21388:21419 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_ok def
+prf 21429:21454 <> fiber_not_meso_acting_true
+R21476:21478 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21458:21475 UMST.ChemConstants.FoldConservation <> fiberNotMesoActing def
+R21479:21482 Corelib.Init.Datatypes <> true constr
+R21501:21518 UMST.ChemConstants.FoldConservation <> fiberNotMesoActing def
+R21521:21554 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok def
+R21561:21592 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_ok def
+prf 21846:21879 <> fold_conservation_fixture_scaffold
+R21947:21952 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21940:21942 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21885:21900 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R21902:21903 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R21905:21920 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R21922:21939 UMST.ChemConstants.FoldConservation <> patternFeatureZero def
+R21943:21946 Corelib.Init.Datatypes <> true constr
+R22016:22021 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22008:22010 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21953:21968 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R21970:21971 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R21973:21988 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R21990:22007 UMST.ChemConstants.FoldConservation <> patternFeatureZero def
+R22011:22015 Corelib.Init.Datatypes <> false constr
+R22131:22136 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22123:22125 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22022:22037 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R22039:22075 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R22077:22092 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R22098:22122 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R22126:22130 Corelib.Init.Datatypes <> false constr
+R22245:22250 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22238:22240 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22137:22152 UMST.ChemConstants.FoldConservation <> fold_classifiers def
+R22154:22190 UMST.ChemConstants.FoldConservation <> bond_forming_structure_enabling_kinds def
+R22192:22207 UMST.ChemConstants.FoldConservation <> fold_disjunctive constr
+R22213:22237 UMST.ChemConstants.FoldConservation <> patternFeatureBondForming def
+R22241:22244 Corelib.Init.Datatypes <> true constr
+R22367:22372 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22342:22348 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22251:22282 UMST.ChemConstants.FoldConservation <> evaluate_fold_conservation_close def
+R22288:22312 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr
+R22314:22329 UMST.ChemConstants.FoldConservation <> fold_conjunctive constr
+R22331:22335 Corelib.Init.Datatypes <> false constr
+R22337:22341 Corelib.Init.Datatypes <> false constr
+R22349:22366 UMST.ChemConstants.FoldConservation <> verdict_unwired_ok constr
+R22414:22419 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22407:22409 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22373:22406 UMST.ChemConstants.FoldConservation <> fold_conservation_knowing_fiber_ok def
+R22410:22413 Corelib.Init.Datatypes <> true constr
+R22460:22465 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22452:22454 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22420:22451 UMST.ChemConstants.FoldConservation <> fold_conservation_meso_acting_ok def
+R22455:22459 Corelib.Init.Datatypes <> false constr
+R22480:22482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22466:22479 UMST.ChemConstants.FoldConservation <> fp01FoldProved def
+R22483:22487 Corelib.Init.Datatypes <> false constr
+def 22767:22797 <> patternClassifierFoldsAuthority
+R22801:22806 Stdlib.Strings.String <> string ind
+def 22875:22904 <> chemIntProveFp01FoldsAuthority
+R22908:22913 Stdlib.Strings.String <> string ind
+def 22962:22989 <> patternClassifierFoldsMarker
+R22993:22998 Stdlib.Strings.String <> string ind
+def 23056:23077 <> foldConservationCellId
+R23081:23086 Stdlib.Strings.String <> string ind
+def 23144:23167 <> foldConservationNonClaim
+R23171:23176 Stdlib.Strings.String <> string ind
+prf 23530:23554 <> fold_conservation_cell_id
+R23582:23584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23560:23581 UMST.ChemConstants.FoldConservation <> foldConservationCellId def
+prf 23656:23706 <> fold_conservation_cites_pattern_classifier_folds_rs
+R23743:23746 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R23712:23742 UMST.ChemConstants.FoldConservation <> patternClassifierFoldsAuthority def
+prf 23784:23828 <> fold_conservation_cites_int_prove_fp_01_folds
+R23864:23866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23834:23863 UMST.ChemConstants.FoldConservation <> chemIntProveFp01FoldsAuthority def
+prf 23929:23958 <> fold_conservation_cites_marker
+R23992:23995 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R23964:23991 UMST.ChemConstants.FoldConservation <> patternClassifierFoldsMarker def
+def 24260:24291 <> foldSecondLawConservationFraming
+R24295:24300 Stdlib.Strings.String <> string ind
+prf 24378:24403 <> fold_not_second_fold_axiom
+R24441:24444 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R24409:24440 UMST.ChemConstants.FoldConservation <> foldSecondLawConservationFraming def
+prf 24499:24534 <> fold_second_law_conservation_framing
+R24572:24575 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R24540:24571 UMST.ChemConstants.FoldConservation <> foldSecondLawConservationFraming def
+def 24842:24863 <> physicsGreenAuthorized
+R24875:24879 Corelib.Init.Logic <> False ind
+prf 24889:24925 <> fold_conservation_physics_green_false
+R24931:24932 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R24933:24954 UMST.ChemConstants.FoldConservation <> physicsGreenAuthorized def
+prf 24994:25027 <> fold_conservation_modality_unwired
+R25064:25066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25033:25063 UMST.ChemConstants.FoldConservation <> foldConservationModalityCurrent def
+R25067:25091 UMST.ChemConstants.FoldConservation <> fold_conservation_unwired constr

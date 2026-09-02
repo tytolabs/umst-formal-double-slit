@@ -1,0 +1,520 @@
+DIGEST b2d20edcdcc07310bd21096233a67b07
+FUMST.ChemConstants.EngineRefusesNewSi
+R1206:1210 Stdlib.Arith.Arith <> <> lib
+R1212:1217 Stdlib.ZArith.ZArith <> <> lib
+R1219:1224 Stdlib.Strings.String <> <> lib
+R1226:1229 Stdlib.Bool.Bool <> <> lib
+R1231:1233 Stdlib.micromega.Lia <> <> lib
+R1235:1238 Stdlib.Lists.List <> <> lib
+R1248:1260 Stdlib.Lists.List ListNotations <> mod
+def 1295:1319 <> enginerefusesnewsiSurface
+R1323:1328 Stdlib.Strings.String <> string ind
+prf 1375:1406 <> enginerefusesnewsi_surface_named
+R1437:1440 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1412:1436 UMST.ChemConstants.EngineRefusesNewSi <> enginerefusesnewsiSurface def
+ind 1705:1730 <> EngineRefusesNewSiModality
+constr 1746:1774 <> engine_refuses_new_si_unwired
+constr 1780:1808 <> engine_refuses_new_si_assumed
+constr 1814:1841 <> engine_refuses_new_si_proved
+constr 1847:1877 <> engine_refuses_new_si_surrogate
+scheme 1705:1730 <> EngineRefusesNewSiModality_rect
+scheme 1705:1730 <> EngineRefusesNewSiModality_ind
+scheme 1705:1730 <> EngineRefusesNewSiModality_rec
+scheme 1705:1730 <> EngineRefusesNewSiModality_sind
+def 1892:1924 <> engineRefusesNewSiModalityCurrent
+R1928:1953 UMST.ChemConstants.EngineRefusesNewSi <> EngineRefusesNewSiModality ind
+R1960:1988 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+def 2003:2045 <> engine_refuses_modality_lattice_cardinality
+R2049:2051 Corelib.Init.Datatypes <> nat ind
+prf 2066:2116 <> engine_refuses_modality_lattice_cardinality_is_four
+R2165:2167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2122:2164 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_modality_lattice_cardinality def
+prf 2203:2249 <> engine_refuses_modality_lattice_not_118_squared
+R2325:2329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2255:2258 Corelib.Init.Datatypes <> negb def
+R2261:2267 Stdlib.Arith.PeanoNat Nat eqb def
+R2269:2311 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_modality_lattice_cardinality def
+R2317:2319 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2330:2333 Corelib.Init.Datatypes <> true constr
+R2352:2394 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_modality_lattice_cardinality def
+def 2656:2674 <> forbidden_si_mint_k
+R2678:2683 Stdlib.Strings.String <> string ind
+def 2704:2722 <> forbidden_si_mint_R
+R2726:2731 Stdlib.Strings.String <> string ind
+def 2752:2778 <> forbidden_si_mint_epsilon_0
+R2782:2787 Stdlib.Strings.String <> string ind
+def 2817:2839 <> forbidden_si_mint_count
+R2843:2845 Corelib.Init.Datatypes <> nat ind
+prf 2860:2891 <> forbidden_si_mint_count_is_three
+R2920:2922 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2897:2919 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_count def
+prf 2958:2979 <> forbidden_mint_k_named
+R3002:3004 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2983:3001 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_k def
+prf 3042:3063 <> forbidden_mint_R_named
+R3086:3088 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3067:3085 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_R def
+prf 3126:3155 <> forbidden_mint_epsilon_0_named
+R3188:3190 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3161:3187 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_epsilon_0 def
+prf 3236:3263 <> forbidden_mints_distinct_k_R
+R3288:3291 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3269:3287 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_k def
+R3292:3310 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_R def
+prf 3346:3379 <> forbidden_mints_distinct_k_epsilon
+R3404:3407 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3385:3403 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_k def
+R3408:3434 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_epsilon_0 def
+prf 3470:3503 <> forbidden_mints_distinct_R_epsilon
+R3528:3531 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3509:3527 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_R def
+R3532:3558 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_epsilon_0 def
+def 3599:3616 <> engine_may_mint_si
+R3620:3623 Corelib.Init.Datatypes <> bool ind
+R3628:3632 Corelib.Init.Datatypes <> false constr
+prf 3642:3665 <> engine_may_mint_si_false
+R3687:3689 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3669:3686 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+R3690:3694 Corelib.Init.Datatypes <> false constr
+def 3734:3759 <> engine_uses_existing_sheaf
+R3763:3766 Corelib.Init.Datatypes <> bool ind
+R3796:3801 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3773:3776 Corelib.Init.Datatypes <> negb def
+R3778:3795 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+R3802:3808 Stdlib.Arith.PeanoNat Nat eqb def
+R3810:3832 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_count def
+prf 3844:3874 <> engine_uses_existing_sheaf_true
+R3904:3906 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3878:3903 UMST.ChemConstants.EngineRefusesNewSi <> engine_uses_existing_sheaf def
+R3907:3910 Corelib.Init.Datatypes <> true constr
+def 4172:4186 <> si_sheaf_marker
+R4190:4195 Stdlib.Strings.String <> string ind
+def 4264:4285 <> occupancy_sheaf_marker
+R4289:4294 Stdlib.Strings.String <> string ind
+def 4355:4383 <> derived_morphism_sheaf_marker
+R4387:4392 Stdlib.Strings.String <> string ind
+prf 4443:4463 <> si_sheaf_marker_named
+R4482:4485 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4467:4481 UMST.ChemConstants.EngineRefusesNewSi <> si_sheaf_marker def
+prf 4523:4550 <> occupancy_sheaf_marker_named
+R4576:4579 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4554:4575 UMST.ChemConstants.EngineRefusesNewSi <> occupancy_sheaf_marker def
+prf 4617:4651 <> derived_morphism_sheaf_marker_named
+R4686:4689 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4657:4685 UMST.ChemConstants.EngineRefusesNewSi <> derived_morphism_sheaf_marker def
+prf 4727:4761 <> sheaf_markers_distinct_si_occupancy
+R4782:4785 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4767:4781 UMST.ChemConstants.EngineRefusesNewSi <> si_sheaf_marker def
+R4786:4807 UMST.ChemConstants.EngineRefusesNewSi <> occupancy_sheaf_marker def
+def 4848:4869 <> engine_sorts_via_sheaf
+R4873:4876 Corelib.Init.Datatypes <> bool ind
+R5000:5005 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4951:4956 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4909:4914 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4883:4908 UMST.ChemConstants.EngineRefusesNewSi <> engine_uses_existing_sheaf def
+R4915:4918 Corelib.Init.Datatypes <> negb def
+R4921:4930 Stdlib.Strings.String <> eqb def
+R4932:4946 UMST.ChemConstants.EngineRefusesNewSi <> si_sheaf_marker def
+R4957:4960 Corelib.Init.Datatypes <> negb def
+R4963:4972 Stdlib.Strings.String <> eqb def
+R4974:4995 UMST.ChemConstants.EngineRefusesNewSi <> occupancy_sheaf_marker def
+R5006:5009 Corelib.Init.Datatypes <> negb def
+R5012:5021 Stdlib.Strings.String <> eqb def
+R5023:5051 UMST.ChemConstants.EngineRefusesNewSi <> derived_morphism_sheaf_marker def
+prf 5065:5091 <> engine_sorts_via_sheaf_true
+R5117:5119 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5095:5116 UMST.ChemConstants.EngineRefusesNewSi <> engine_sorts_via_sheaf def
+R5120:5123 Corelib.Init.Datatypes <> true constr
+def 5390:5417 <> alpha_deferred_codata_marker
+R5421:5426 Stdlib.Strings.String <> string ind
+def 5503:5522 <> landauer_fake_marker
+R5526:5531 Stdlib.Strings.String <> string ind
+prf 5576:5609 <> alpha_deferred_codata_marker_named
+R5643:5646 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5615:5642 UMST.ChemConstants.EngineRefusesNewSi <> alpha_deferred_codata_marker def
+prf 5684:5706 <> alpha_not_landauer_fake
+R5740:5743 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5712:5739 UMST.ChemConstants.EngineRefusesNewSi <> alpha_deferred_codata_marker def
+R5744:5763 UMST.ChemConstants.EngineRefusesNewSi <> landauer_fake_marker def
+def 5804:5840 <> alpha_is_deferred_codata_not_landauer
+R5844:5847 Corelib.Init.Datatypes <> bool ind
+R5854:5857 Corelib.Init.Datatypes <> negb def
+R5860:5869 Stdlib.Strings.String <> eqb def
+R5871:5898 UMST.ChemConstants.EngineRefusesNewSi <> alpha_deferred_codata_marker def
+R5900:5919 UMST.ChemConstants.EngineRefusesNewSi <> landauer_fake_marker def
+prf 5930:5971 <> alpha_is_deferred_codata_not_landauer_true
+R6014:6016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5977:6013 UMST.ChemConstants.EngineRefusesNewSi <> alpha_is_deferred_codata_not_landauer def
+R6017:6020 Corelib.Init.Datatypes <> true constr
+def 6286:6310 <> twenty_sixth_axiom_marker
+R6314:6319 Stdlib.Strings.String <> string ind
+def 6361:6376 <> sole_axiom_count
+R6380:6382 Corelib.Init.Datatypes <> nat ind
+prf 6397:6419 <> sole_axiom_count_is_one
+R6439:6441 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6423:6438 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count def
+prf 6477:6498 <> not_twenty_sixth_axiom
+R6531:6533 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6504:6510 Stdlib.Arith.PeanoNat Nat eqb def
+R6512:6527 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count def
+R6534:6538 Corelib.Init.Datatypes <> false constr
+def 6578:6605 <> engine_refuse_not_26th_axiom
+R6609:6612 Corelib.Init.Datatypes <> bool ind
+R6619:6622 Corelib.Init.Datatypes <> negb def
+R6625:6631 Stdlib.Arith.PeanoNat Nat eqb def
+R6633:6648 UMST.ChemConstants.EngineRefusesNewSi <> sole_axiom_count def
+prf 6662:6694 <> engine_refuse_not_26th_axiom_true
+R6728:6730 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6700:6727 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuse_not_26th_axiom def
+R6731:6734 Corelib.Init.Datatypes <> true constr
+prf 6769:6801 <> twenty_sixth_axiom_marker_ne_sole
+R6832:6835 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6807:6831 UMST.ChemConstants.EngineRefusesNewSi <> twenty_sixth_axiom_marker def
+def 6912:6957 <> EngineRefusesNewSiSecondLawConservationFraming
+R6961:6966 Stdlib.Strings.String <> string ind
+prf 7046:7075 <> engine_refuse_not_second_axiom
+R7127:7132 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7081:7126 UMST.ChemConstants.EngineRefusesNewSi <> EngineRefusesNewSiSecondLawConservationFraming def
+def 7425:7442 <> new_si_mint_marker
+R7446:7451 Stdlib.Strings.String <> string ind
+def 7514:7533 <> sheaf_consult_marker
+R7537:7542 Stdlib.Strings.String <> string ind
+prf 7593:7627 <> new_si_mint_marker_ne_sheaf_consult
+R7651:7654 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7633:7650 UMST.ChemConstants.EngineRefusesNewSi <> new_si_mint_marker def
+R7655:7674 UMST.ChemConstants.EngineRefusesNewSi <> sheaf_consult_marker def
+def 7715:7733 <> engine_mint_refused
+R7737:7740 Corelib.Init.Datatypes <> bool ind
+R7747:7750 Corelib.Init.Datatypes <> negb def
+R7752:7769 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+prf 7779:7802 <> engine_mint_refused_true
+R7825:7827 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7806:7824 UMST.ChemConstants.EngineRefusesNewSi <> engine_mint_refused def
+R7828:7831 Corelib.Init.Datatypes <> true constr
+def 7871:7907 <> engine_refuses_new_si_honest_conjunct
+R7911:7914 Corelib.Init.Datatypes <> bool ind
+R8043:8048 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8000:8005 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7972:7977 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7940:7945 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7921:7939 UMST.ChemConstants.EngineRefusesNewSi <> engine_mint_refused def
+R7946:7971 UMST.ChemConstants.EngineRefusesNewSi <> engine_uses_existing_sheaf def
+R7978:7999 UMST.ChemConstants.EngineRefusesNewSi <> engine_sorts_via_sheaf def
+R8006:8042 UMST.ChemConstants.EngineRefusesNewSi <> alpha_is_deferred_codata_not_landauer def
+R8049:8076 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuse_not_26th_axiom def
+prf 8086:8127 <> engine_refuses_new_si_honest_conjunct_true
+R8170:8172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8133:8169 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_honest_conjunct def
+R8173:8176 Corelib.Init.Datatypes <> true constr
+R8195:8231 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_honest_conjunct def
+prf 8286:8321 <> engine_refuses_new_si_mint_and_sheaf
+R8353:8358 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8346:8348 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8327:8345 UMST.ChemConstants.EngineRefusesNewSi <> engine_mint_refused def
+R8349:8352 Corelib.Init.Datatypes <> true constr
+R8392:8397 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8385:8387 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8359:8384 UMST.ChemConstants.EngineRefusesNewSi <> engine_uses_existing_sheaf def
+R8388:8391 Corelib.Init.Datatypes <> true constr
+R8421:8423 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8398:8420 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_count def
+R8443:8446 Corelib.Init.Logic <> conj constr
+R8478:8481 Corelib.Init.Logic <> conj constr
+R8515:8546 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_count_is_three thm
+R8483:8513 UMST.ChemConstants.EngineRefusesNewSi <> engine_uses_existing_sheaf_true thm
+R8448:8471 UMST.ChemConstants.EngineRefusesNewSi <> engine_mint_refused_true thm
+R8443:8446 Corelib.Init.Logic <> conj constr
+R8478:8481 Corelib.Init.Logic <> conj constr
+R8515:8546 UMST.ChemConstants.EngineRefusesNewSi <> forbidden_si_mint_count_is_three thm
+R8483:8513 UMST.ChemConstants.EngineRefusesNewSi <> engine_uses_existing_sheaf_true thm
+R8448:8471 UMST.ChemConstants.EngineRefusesNewSi <> engine_mint_refused_true thm
+def 8792:8817 <> wave100_lib_smuggle_marker
+R8821:8826 Stdlib.Strings.String <> string ind
+def 8888:8914 <> engine_refuses_wired_in_lib
+R8918:8921 Corelib.Init.Datatypes <> bool ind
+R8926:8930 Corelib.Init.Datatypes <> false constr
+def 8944:8970 <> engine_refuses_wired_in_eos
+R8974:8977 Corelib.Init.Datatypes <> bool ind
+R8982:8986 Corelib.Init.Datatypes <> false constr
+prf 8996:9023 <> engine_refuses_not_wired_lib
+R9056:9058 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9029:9055 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_wired_in_lib def
+R9059:9063 Corelib.Init.Datatypes <> false constr
+prf 9098:9125 <> engine_refuses_not_wired_eos
+R9158:9160 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9131:9157 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_wired_in_eos def
+R9161:9165 Corelib.Init.Datatypes <> false constr
+prf 9200:9216 <> wave100_not_wired
+R9292:9294 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9254:9259 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9222:9225 Corelib.Init.Datatypes <> negb def
+R9227:9253 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_wired_in_lib def
+R9260:9263 Corelib.Init.Datatypes <> negb def
+R9265:9291 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_wired_in_eos def
+R9295:9298 Corelib.Init.Datatypes <> true constr
+ind 9563:9584 <> engine_refuses_verdict
+constr 9600:9617 <> verdict_unwired_ok
+constr 9623:9652 <> verdict_engine_refuse_named_ok
+constr 9658:9679 <> verdict_si_mint_refuse
+constr 9685:9711 <> verdict_green_invent_refuse
+constr 9717:9749 <> verdict_proved_without_bar_refuse
+constr 9755:9785 <> verdict_production_wired_refuse
+constr 9791:9815 <> verdict_26th_axiom_refuse
+constr 9821:9848 <> verdict_landauer_fake_refuse
+scheme 9563:9584 <> engine_refuses_verdict_rect
+scheme 9563:9584 <> engine_refuses_verdict_ind
+scheme 9563:9584 <> engine_refuses_verdict_rec
+scheme 9563:9584 <> engine_refuses_verdict_sind
+def 9863:9887 <> engine_refuses_verdict_ok
+R9894:9915 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_verdict ind
+binder 9890:9890 <> v:5
+R9920:9923 Corelib.Init.Datatypes <> bool ind
+R9936:9936 UMST.ChemConstants.EngineRefusesNewSi <> v:5 var
+R9947:9964 UMST.ChemConstants.EngineRefusesNewSi <> verdict_unwired_ok constr
+R9969:9972 Corelib.Init.Datatypes <> true constr
+R9978:10007 UMST.ChemConstants.EngineRefusesNewSi <> verdict_engine_refuse_named_ok constr
+R10012:10015 Corelib.Init.Datatypes <> true constr
+R10026:10030 Corelib.Init.Datatypes <> false constr
+def 10051:10079 <> evaluate_engine_refuses_close
+R10088:10113 UMST.ChemConstants.EngineRefusesNewSi <> EngineRefusesNewSiModality ind
+binder 10084:10084 <> m:7
+R10141:10144 Corelib.Init.Datatypes <> bool ind
+binder 10119:10137 <> claim_physics_green:8
+R10175:10178 Corelib.Init.Datatypes <> bool ind
+binder 10150:10171 <> claim_production_wired:9
+R10200:10203 Corelib.Init.Datatypes <> bool ind
+binder 10184:10196 <> claim_mint_si:10
+R10228:10231 Corelib.Init.Datatypes <> bool ind
+binder 10209:10224 <> claim_26th_axiom:11
+R10259:10262 Corelib.Init.Datatypes <> bool ind
+binder 10237:10255 <> claim_landauer_fake:12
+R10267:10288 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_verdict ind
+R10298:10316 UMST.ChemConstants.EngineRefusesNewSi <> claim_physics_green:8 var
+R10363:10384 UMST.ChemConstants.EngineRefusesNewSi <> claim_production_wired:9 var
+R10435:10447 UMST.ChemConstants.EngineRefusesNewSi <> claim_mint_si:10 var
+R10489:10504 UMST.ChemConstants.EngineRefusesNewSi <> claim_26th_axiom:11 var
+R10549:10567 UMST.ChemConstants.EngineRefusesNewSi <> claim_landauer_fake:12 var
+R10622:10622 UMST.ChemConstants.EngineRefusesNewSi <> m:7 var
+R10635:10663 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R10668:10685 UMST.ChemConstants.EngineRefusesNewSi <> verdict_unwired_ok constr
+R10693:10721 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_assumed constr
+R10729:10756 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_proved constr
+R10764:10794 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_surrogate constr
+R10799:10828 UMST.ChemConstants.EngineRefusesNewSi <> verdict_engine_refuse_named_ok constr
+R10799:10828 UMST.ChemConstants.EngineRefusesNewSi <> verdict_engine_refuse_named_ok constr
+R10799:10828 UMST.ChemConstants.EngineRefusesNewSi <> verdict_engine_refuse_named_ok constr
+R10576:10603 UMST.ChemConstants.EngineRefusesNewSi <> verdict_landauer_fake_refuse constr
+R10513:10537 UMST.ChemConstants.EngineRefusesNewSi <> verdict_26th_axiom_refuse constr
+R10456:10477 UMST.ChemConstants.EngineRefusesNewSi <> verdict_si_mint_refuse constr
+R10393:10423 UMST.ChemConstants.EngineRefusesNewSi <> verdict_production_wired_refuse constr
+R10325:10351 UMST.ChemConstants.EngineRefusesNewSi <> verdict_green_invent_refuse constr
+prf 10846:10873 <> unwired_close_without_claims
+R10972:10976 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10879:10907 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R10913:10941 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R10943:10947 Corelib.Init.Datatypes <> false constr
+R10949:10953 Corelib.Init.Datatypes <> false constr
+R10955:10959 Corelib.Init.Datatypes <> false constr
+R10961:10965 Corelib.Init.Datatypes <> false constr
+R10967:10971 Corelib.Init.Datatypes <> false constr
+R10977:10994 UMST.ChemConstants.EngineRefusesNewSi <> verdict_unwired_ok constr
+prf 11031:11071 <> unwired_modality_always_ok_without_claims
+R11170:11174 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11077:11105 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R11111:11139 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R11141:11145 Corelib.Init.Datatypes <> false constr
+R11147:11151 Corelib.Init.Datatypes <> false constr
+R11153:11157 Corelib.Init.Datatypes <> false constr
+R11159:11163 Corelib.Init.Datatypes <> false constr
+R11165:11169 Corelib.Init.Datatypes <> false constr
+R11175:11192 UMST.ChemConstants.EngineRefusesNewSi <> verdict_unwired_ok constr
+R11208:11235 UMST.ChemConstants.EngineRefusesNewSi <> unwired_close_without_claims thm
+R11208:11235 UMST.ChemConstants.EngineRefusesNewSi <> unwired_close_without_claims thm
+prf 11250:11276 <> green_invent_refuse_unwired
+R11374:11378 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11282:11310 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R11316:11344 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R11346:11349 Corelib.Init.Datatypes <> true constr
+R11351:11355 Corelib.Init.Datatypes <> false constr
+R11357:11361 Corelib.Init.Datatypes <> false constr
+R11363:11367 Corelib.Init.Datatypes <> false constr
+R11369:11373 Corelib.Init.Datatypes <> false constr
+R11379:11405 UMST.ChemConstants.EngineRefusesNewSi <> verdict_green_invent_refuse constr
+prf 11442:11467 <> green_invent_always_refuse
+R11600:11604 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11473:11497 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_verdict_ok def
+R11504:11532 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R11541:11569 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R11571:11574 Corelib.Init.Datatypes <> true constr
+R11576:11580 Corelib.Init.Datatypes <> false constr
+R11582:11586 Corelib.Init.Datatypes <> false constr
+R11588:11592 Corelib.Init.Datatypes <> false constr
+R11594:11598 Corelib.Init.Datatypes <> false constr
+R11605:11609 Corelib.Init.Datatypes <> false constr
+R11628:11652 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_verdict_ok def
+R11665:11691 UMST.ChemConstants.EngineRefusesNewSi <> green_invent_refuse_unwired thm
+R11665:11691 UMST.ChemConstants.EngineRefusesNewSi <> green_invent_refuse_unwired thm
+R11665:11691 UMST.ChemConstants.EngineRefusesNewSi <> green_invent_refuse_unwired thm
+prf 11721:11734 <> si_mint_refuse
+R11832:11836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11740:11768 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R11774:11802 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R11804:11808 Corelib.Init.Datatypes <> false constr
+R11810:11814 Corelib.Init.Datatypes <> false constr
+R11816:11819 Corelib.Init.Datatypes <> true constr
+R11821:11825 Corelib.Init.Datatypes <> false constr
+R11827:11831 Corelib.Init.Datatypes <> false constr
+R11837:11858 UMST.ChemConstants.EngineRefusesNewSi <> verdict_si_mint_refuse constr
+prf 11893:11915 <> production_wired_refuse
+R12012:12016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11921:11949 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R11955:11982 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_proved constr
+R11984:11988 Corelib.Init.Datatypes <> false constr
+R11990:11993 Corelib.Init.Datatypes <> true constr
+R11995:11999 Corelib.Init.Datatypes <> false constr
+R12001:12005 Corelib.Init.Datatypes <> false constr
+R12007:12011 Corelib.Init.Datatypes <> false constr
+R12017:12047 UMST.ChemConstants.EngineRefusesNewSi <> verdict_production_wired_refuse constr
+prf 12082:12106 <> twenty_sixth_axiom_refuse
+R12204:12208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12112:12140 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R12146:12174 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R12176:12180 Corelib.Init.Datatypes <> false constr
+R12182:12186 Corelib.Init.Datatypes <> false constr
+R12188:12192 Corelib.Init.Datatypes <> false constr
+R12194:12197 Corelib.Init.Datatypes <> true constr
+R12199:12203 Corelib.Init.Datatypes <> false constr
+R12209:12233 UMST.ChemConstants.EngineRefusesNewSi <> verdict_26th_axiom_refuse constr
+prf 12268:12287 <> landauer_fake_refuse
+R12385:12389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12293:12321 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R12327:12355 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R12357:12361 Corelib.Init.Datatypes <> false constr
+R12363:12367 Corelib.Init.Datatypes <> false constr
+R12369:12373 Corelib.Init.Datatypes <> false constr
+R12375:12379 Corelib.Init.Datatypes <> false constr
+R12381:12384 Corelib.Init.Datatypes <> true constr
+R12390:12417 UMST.ChemConstants.EngineRefusesNewSi <> verdict_landauer_fake_refuse constr
+def 12683:12706 <> engineRefusesNewSiProved
+R12710:12713 Corelib.Init.Datatypes <> bool ind
+R12718:12722 Corelib.Init.Datatypes <> false constr
+prf 12732:12765 <> engine_refuses_new_si_proved_false
+R12793:12795 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12769:12792 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiProved def
+R12796:12800 Corelib.Init.Datatypes <> false constr
+def 12840:12862 <> not118SquaredGreenTable
+R12866:12869 Corelib.Init.Datatypes <> bool ind
+R12874:12877 Corelib.Init.Datatypes <> true constr
+prf 12887:12913 <> not_118_squared_green_table
+R12940:12942 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12917:12939 UMST.ChemConstants.EngineRefusesNewSi <> not118SquaredGreenTable def
+R12943:12946 Corelib.Init.Datatypes <> true constr
+ind 13207:13218 <> formal_fiber
+constr 13234:13258 <> fiber_matter_constitutive
+constr 13264:13284 <> fiber_quantum_knowing
+scheme 13207:13218 <> formal_fiber_rect
+scheme 13207:13218 <> formal_fiber_ind
+scheme 13207:13218 <> formal_fiber_rec
+scheme 13207:13218 <> formal_fiber_sind
+def 13299:13321 <> engine_refuses_fiber_ok
+R13328:13339 UMST.ChemConstants.EngineRefusesNewSi <> formal_fiber ind
+binder 13324:13324 <> f:16
+R13344:13347 Corelib.Init.Datatypes <> bool ind
+R13360:13360 UMST.ChemConstants.EngineRefusesNewSi <> f:16 var
+R13371:13395 UMST.ChemConstants.EngineRefusesNewSi <> fiber_matter_constitutive constr
+R13400:13403 Corelib.Init.Datatypes <> true constr
+R13409:13429 UMST.ChemConstants.EngineRefusesNewSi <> fiber_quantum_knowing constr
+R13434:13437 Corelib.Init.Datatypes <> true constr
+prf 13453:13482 <> engine_refuses_matter_fiber_ok
+R13537:13539 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13488:13510 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_fiber_ok def
+R13512:13536 UMST.ChemConstants.EngineRefusesNewSi <> fiber_matter_constitutive constr
+R13540:13543 Corelib.Init.Datatypes <> true constr
+prf 13578:13608 <> engine_refuses_knowing_fiber_ok
+R13659:13661 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13614:13636 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_fiber_ok def
+R13638:13658 UMST.ChemConstants.EngineRefusesNewSi <> fiber_quantum_knowing constr
+R13662:13665 Corelib.Init.Datatypes <> true constr
+prf 13926:13963 <> engine_refuses_new_si_fixture_scaffold
+R14013:14018 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14006:14008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13969:14005 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_honest_conjunct def
+R14009:14012 Corelib.Init.Datatypes <> true constr
+R14137:14142 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14112:14118 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14019:14047 UMST.ChemConstants.EngineRefusesNewSi <> evaluate_engine_refuses_close def
+R14053:14081 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr
+R14083:14087 Corelib.Init.Datatypes <> false constr
+R14089:14093 Corelib.Init.Datatypes <> false constr
+R14095:14099 Corelib.Init.Datatypes <> false constr
+R14101:14105 Corelib.Init.Datatypes <> false constr
+R14107:14111 Corelib.Init.Datatypes <> false constr
+R14119:14136 UMST.ChemConstants.EngineRefusesNewSi <> verdict_unwired_ok constr
+R14175:14180 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14167:14169 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14143:14166 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiProved def
+R14170:14174 Corelib.Init.Datatypes <> false constr
+R14207:14213 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14292:14292 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14199:14201 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14181:14198 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si def
+R14202:14206 Corelib.Init.Datatypes <> false constr
+R14285:14287 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14246:14252 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R14214:14217 Corelib.Init.Datatypes <> negb def
+R14219:14245 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_wired_in_lib def
+R14253:14256 Corelib.Init.Datatypes <> negb def
+R14258:14284 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_wired_in_eos def
+R14288:14291 Corelib.Init.Datatypes <> true constr
+R14311:14314 Corelib.Init.Logic <> conj constr
+R14364:14367 Corelib.Init.Logic <> conj constr
+R14405:14408 Corelib.Init.Logic <> conj constr
+R14454:14457 Corelib.Init.Logic <> conj constr
+R14484:14500 UMST.ChemConstants.EngineRefusesNewSi <> wave100_not_wired thm
+R14459:14482 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si_false thm
+R14410:14443 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_proved_false thm
+R14369:14396 UMST.ChemConstants.EngineRefusesNewSi <> unwired_close_without_claims thm
+R14316:14357 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_honest_conjunct_true thm
+R14311:14314 Corelib.Init.Logic <> conj constr
+R14364:14367 Corelib.Init.Logic <> conj constr
+R14405:14408 Corelib.Init.Logic <> conj constr
+R14454:14457 Corelib.Init.Logic <> conj constr
+R14484:14500 UMST.ChemConstants.EngineRefusesNewSi <> wave100_not_wired thm
+R14459:14482 UMST.ChemConstants.EngineRefusesNewSi <> engine_may_mint_si_false thm
+R14410:14443 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_proved_false thm
+R14369:14396 UMST.ChemConstants.EngineRefusesNewSi <> unwired_close_without_claims thm
+R14316:14357 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_honest_conjunct_true thm
+def 14750:14778 <> engineRefusesNewSiRsAuthority
+R14782:14787 Stdlib.Strings.String <> string ind
+def 14860:14893 <> chemIntCrossEngineRefusesAuthority
+R14897:14902 Stdlib.Strings.String <> string ind
+def 14974:14995 <> chemL0ServiceAuthority
+R14999:15004 Stdlib.Strings.String <> string ind
+def 15042:15065 <> engineRefusesNewSiCellId
+R15069:15074 Stdlib.Strings.String <> string ind
+def 15149:15174 <> engineRefusesNewSiNonClaim
+R15178:15183 Stdlib.Strings.String <> string ind
+prf 15599:15627 <> engine_refuses_new_si_cell_id
+R15657:15661 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15633:15656 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiCellId def
+prf 15750:15776 <> engine_refuses_cites_rs_row
+R15811:15814 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15782:15810 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiRsAuthority def
+prf 15852:15885 <> engine_refuses_cites_int_cross_row
+R15925:15929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15891:15924 UMST.ChemConstants.EngineRefusesNewSi <> chemIntCrossEngineRefusesAuthority def
+prf 16015:16045 <> engine_refuses_cites_l0_service
+R16073:16075 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16051:16072 UMST.ChemConstants.EngineRefusesNewSi <> chemL0ServiceAuthority def
+prf 16127:16159 <> engine_refuses_cites_sheaf_marker
+R16180:16183 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16165:16179 UMST.ChemConstants.EngineRefusesNewSi <> si_sheaf_marker def
+def 16450:16471 <> physicsGreenAuthorized
+R16483:16487 Corelib.Init.Logic <> False ind
+prf 16497:16537 <> engine_refuses_new_si_physics_green_false
+R16543:16544 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16545:16566 UMST.ChemConstants.EngineRefusesNewSi <> physicsGreenAuthorized def
+prf 16606:16643 <> engine_refuses_new_si_modality_unwired
+R16682:16684 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16649:16681 UMST.ChemConstants.EngineRefusesNewSi <> engineRefusesNewSiModalityCurrent def
+R16685:16713 UMST.ChemConstants.EngineRefusesNewSi <> engine_refuses_new_si_unwired constr

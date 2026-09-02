@@ -1,0 +1,1281 @@
+DIGEST a61a64cb4f1c5826d3846985c00cfe33
+FUMST.ChemConstants.AllotropeConservation
+R1283:1287 Stdlib.Arith.Arith <> <> lib
+R1289:1294 Stdlib.ZArith.ZArith <> <> lib
+R1296:1301 Stdlib.Strings.String <> <> lib
+R1303:1306 Stdlib.Bool.Bool <> <> lib
+R1308:1310 Stdlib.micromega.Lia <> <> lib
+R1312:1315 Stdlib.Lists.List <> <> lib
+R1325:1337 Stdlib.Lists.List ListNotations <> mod
+ind 1668:1696 <> AllotropeConservationModality
+constr 1712:1741 <> allotrope_conservation_unwired
+constr 1747:1776 <> allotrope_conservation_assumed
+constr 1782:1810 <> allotrope_conservation_proved
+constr 1816:1847 <> allotrope_conservation_surrogate
+scheme 1668:1696 <> AllotropeConservationModality_rect
+scheme 1668:1696 <> AllotropeConservationModality_ind
+scheme 1668:1696 <> AllotropeConservationModality_rec
+scheme 1668:1696 <> AllotropeConservationModality_sind
+def 1862:1897 <> allotropeConservationModalityCurrent
+R1901:1929 UMST.ChemConstants.AllotropeConservation <> AllotropeConservationModality ind
+R1936:1965 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+def 1980:2017 <> allotrope_modality_lattice_cardinality
+R2021:2023 Corelib.Init.Datatypes <> nat ind
+prf 2038:2083 <> allotrope_modality_lattice_cardinality_is_four
+R2127:2129 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2089:2126 UMST.ChemConstants.AllotropeConservation <> allotrope_modality_lattice_cardinality def
+prf 2165:2206 <> allotrope_modality_lattice_not_118_squared
+R2277:2279 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2212:2215 Corelib.Init.Datatypes <> negb def
+R2218:2224 Stdlib.Arith.PeanoNat Nat eqb def
+R2226:2263 UMST.ChemConstants.AllotropeConservation <> allotrope_modality_lattice_cardinality def
+R2269:2271 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2280:2283 Corelib.Init.Datatypes <> true constr
+R2302:2339 UMST.ChemConstants.AllotropeConservation <> allotrope_modality_lattice_cardinality def
+def 2600:2626 <> pattern_class_allotrope_idx
+R2630:2632 Corelib.Init.Datatypes <> nat ind
+prf 2648:2680 <> pattern_class_allotrope_idx_is_10
+R2713:2715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2686:2712 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+def 2757:2781 <> pattern_class_cardinality
+R2785:2787 Corelib.Init.Datatypes <> nat ind
+prf 2803:2833 <> pattern_class_cardinality_is_25
+R2864:2866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2839:2863 UMST.ChemConstants.AllotropeConservation <> pattern_class_cardinality def
+def 2908:2932 <> pattern_class_index_valid
+R2939:2941 Corelib.Init.Datatypes <> nat ind
+binder 2935:2935 <> i:3
+R2946:2949 Corelib.Init.Datatypes <> bool ind
+R2956:2962 Stdlib.Arith.PeanoNat Nat ltb def
+R2964:2964 UMST.ChemConstants.AllotropeConservation <> i:3 var
+R2966:2990 UMST.ChemConstants.AllotropeConservation <> pattern_class_cardinality def
+prf 3000:3026 <> allotrope_class_index_valid
+R3085:3087 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3032:3056 UMST.ChemConstants.AllotropeConservation <> pattern_class_index_valid def
+R3058:3084 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+R3088:3091 Corelib.Init.Datatypes <> true constr
+R3110:3134 UMST.ChemConstants.AllotropeConservation <> pattern_class_index_valid def
+R3137:3163 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+R3170:3194 UMST.ChemConstants.AllotropeConservation <> pattern_class_cardinality def
+def 3229:3257 <> crossClassifierAllotropeRowId
+R3261:3266 Stdlib.Strings.String <> string ind
+prf 3285:3320 <> cross_classifier_allotrope_row_named
+R3355:3357 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3326:3354 UMST.ChemConstants.AllotropeConservation <> crossClassifierAllotropeRowId def
+def 3704:3726 <> iupac_table_cardinality
+R3730:3732 Corelib.Init.Datatypes <> nat ind
+prf 3749:3778 <> iupac_table_cardinality_is_118
+R3807:3809 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3784:3806 UMST.ChemConstants.AllotropeConservation <> iupac_table_cardinality def
+def 3852:3876 <> allotrope_element_z_valid
+R3883:3885 Corelib.Init.Datatypes <> nat ind
+binder 3879:3879 <> z:4
+R3890:3893 Corelib.Init.Datatypes <> bool ind
+R3911:3914 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3900:3906 Stdlib.Arith.PeanoNat Nat ltb def
+R3910:3910 UMST.ChemConstants.AllotropeConservation <> z:4 var
+R3915:3921 Stdlib.Arith.PeanoNat Nat leb def
+R3923:3923 UMST.ChemConstants.AllotropeConservation <> z:4 var
+R3925:3947 UMST.ChemConstants.AllotropeConservation <> iupac_table_cardinality def
+def 3962:3987 <> allotrope_element_carbon_z
+R3991:3993 Corelib.Init.Datatypes <> nat ind
+def 4012:4041 <> allotrope_element_phosphorus_z
+R4045:4047 Corelib.Init.Datatypes <> nat ind
+def 4067:4092 <> allotrope_element_oxygen_z
+R4096:4098 Corelib.Init.Datatypes <> nat ind
+def 4117:4141 <> allotrope_element_xenon_z
+R4145:4147 Corelib.Init.Datatypes <> nat ind
+prf 4163:4185 <> allotrope_carbon_z_is_6
+R4217:4219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4191:4216 UMST.ChemConstants.AllotropeConservation <> allotrope_element_carbon_z def
+prf 4255:4282 <> allotrope_phosphorus_z_is_15
+R4318:4320 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4288:4317 UMST.ChemConstants.AllotropeConservation <> allotrope_element_phosphorus_z def
+prf 4357:4379 <> allotrope_oxygen_z_is_8
+R4411:4413 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4385:4410 UMST.ChemConstants.AllotropeConservation <> allotrope_element_oxygen_z def
+prf 4449:4471 <> allotrope_xenon_z_is_54
+R4502:4504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4477:4501 UMST.ChemConstants.AllotropeConservation <> allotrope_element_xenon_z def
+prf 4541:4563 <> allotrope_c_p_o_z_valid
+R4628:4633 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4621:4623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4569:4593 UMST.ChemConstants.AllotropeConservation <> allotrope_element_z_valid def
+R4595:4620 UMST.ChemConstants.AllotropeConservation <> allotrope_element_carbon_z def
+R4624:4627 Corelib.Init.Datatypes <> true constr
+R4697:4702 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4690:4692 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4634:4658 UMST.ChemConstants.AllotropeConservation <> allotrope_element_z_valid def
+R4660:4689 UMST.ChemConstants.AllotropeConservation <> allotrope_element_phosphorus_z def
+R4693:4696 Corelib.Init.Datatypes <> true constr
+R4755:4757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4703:4727 UMST.ChemConstants.AllotropeConservation <> allotrope_element_z_valid def
+R4729:4754 UMST.ChemConstants.AllotropeConservation <> allotrope_element_oxygen_z def
+R4758:4761 Corelib.Init.Datatypes <> true constr
+R4796:4820 UMST.ChemConstants.AllotropeConservation <> allotrope_element_z_valid def
+R4823:4845 UMST.ChemConstants.AllotropeConservation <> iupac_table_cardinality def
+def 4878:4908 <> allotrope_witness_z_not_xe_copy
+R4915:4917 Corelib.Init.Datatypes <> nat ind
+binder 4911:4911 <> z:5
+R4922:4925 Corelib.Init.Datatypes <> bool ind
+R4932:4935 Corelib.Init.Datatypes <> negb def
+R4938:4944 Stdlib.Arith.PeanoNat Nat eqb def
+R4946:4946 UMST.ChemConstants.AllotropeConservation <> z:5 var
+R4948:4972 UMST.ChemConstants.AllotropeConservation <> allotrope_element_xenon_z def
+prf 4983:5000 <> carbon_not_xe_copy
+R5064:5066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5006:5036 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_z_not_xe_copy def
+R5038:5063 UMST.ChemConstants.AllotropeConservation <> allotrope_element_carbon_z def
+R5067:5070 Corelib.Init.Datatypes <> true constr
+prf 5105:5126 <> phosphorus_not_xe_copy
+R5194:5196 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5132:5162 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_z_not_xe_copy def
+R5164:5193 UMST.ChemConstants.AllotropeConservation <> allotrope_element_phosphorus_z def
+R5197:5200 Corelib.Init.Datatypes <> true constr
+prf 5235:5252 <> oxygen_not_xe_copy
+R5316:5318 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5258:5288 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_z_not_xe_copy def
+R5290:5315 UMST.ChemConstants.AllotropeConservation <> allotrope_element_oxygen_z def
+R5319:5322 Corelib.Init.Datatypes <> true constr
+ind 5585:5605 <> carbon_allotrope_kind
+constr 5621:5634 <> carbon_diamond
+constr 5640:5654 <> carbon_graphite
+constr 5660:5678 <> carbon_unauthorized
+scheme 5585:5605 <> carbon_allotrope_kind_rect
+scheme 5585:5605 <> carbon_allotrope_kind_ind
+scheme 5585:5605 <> carbon_allotrope_kind_rec
+scheme 5585:5605 <> carbon_allotrope_kind_sind
+ind 5692:5716 <> phosphorus_allotrope_kind
+constr 5732:5747 <> phosphorus_white
+constr 5753:5766 <> phosphorus_red
+constr 5772:5794 <> phosphorus_unauthorized
+scheme 5692:5716 <> phosphorus_allotrope_kind_rect
+scheme 5692:5716 <> phosphorus_allotrope_kind_ind
+scheme 5692:5716 <> phosphorus_allotrope_kind_rec
+scheme 5692:5716 <> phosphorus_allotrope_kind_sind
+ind 5808:5828 <> oxygen_allotrope_kind
+constr 5844:5858 <> oxygen_dioxygen
+constr 5864:5875 <> oxygen_ozone
+constr 5881:5899 <> oxygen_unauthorized
+scheme 5808:5828 <> oxygen_allotrope_kind_rect
+scheme 5808:5828 <> oxygen_allotrope_kind_ind
+scheme 5808:5828 <> oxygen_allotrope_kind_rec
+scheme 5808:5828 <> oxygen_allotrope_kind_sind
+def 5914:5938 <> carbon_allotrope_kind_beq
+R5949:5969 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind ind
+binder 5941:5942 <> k1:12
+binder 5944:5945 <> k2:13
+R5974:5977 Corelib.Init.Datatypes <> bool ind
+R5994:5995 UMST.ChemConstants.AllotropeConservation <> k2:13 var
+R5990:5991 UMST.ChemConstants.AllotropeConservation <> k1:12 var
+R6006:6019 UMST.ChemConstants.AllotropeConservation <> carbon_diamond constr
+R6022:6035 UMST.ChemConstants.AllotropeConservation <> carbon_diamond constr
+R6040:6043 Corelib.Init.Datatypes <> true constr
+R6049:6063 UMST.ChemConstants.AllotropeConservation <> carbon_graphite constr
+R6066:6080 UMST.ChemConstants.AllotropeConservation <> carbon_graphite constr
+R6085:6088 Corelib.Init.Datatypes <> true constr
+R6094:6112 UMST.ChemConstants.AllotropeConservation <> carbon_unauthorized constr
+R6115:6133 UMST.ChemConstants.AllotropeConservation <> carbon_unauthorized constr
+R6138:6141 Corelib.Init.Datatypes <> true constr
+R6155:6159 Corelib.Init.Datatypes <> false constr
+def 6180:6208 <> phosphorus_allotrope_kind_beq
+R6219:6243 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_kind ind
+binder 6211:6212 <> k1:16
+binder 6214:6215 <> k2:17
+R6248:6251 Corelib.Init.Datatypes <> bool ind
+R6268:6269 UMST.ChemConstants.AllotropeConservation <> k2:17 var
+R6264:6265 UMST.ChemConstants.AllotropeConservation <> k1:16 var
+R6280:6295 UMST.ChemConstants.AllotropeConservation <> phosphorus_white constr
+R6298:6313 UMST.ChemConstants.AllotropeConservation <> phosphorus_white constr
+R6318:6321 Corelib.Init.Datatypes <> true constr
+R6327:6340 UMST.ChemConstants.AllotropeConservation <> phosphorus_red constr
+R6343:6356 UMST.ChemConstants.AllotropeConservation <> phosphorus_red constr
+R6361:6364 Corelib.Init.Datatypes <> true constr
+R6370:6392 UMST.ChemConstants.AllotropeConservation <> phosphorus_unauthorized constr
+R6395:6417 UMST.ChemConstants.AllotropeConservation <> phosphorus_unauthorized constr
+R6422:6425 Corelib.Init.Datatypes <> true constr
+R6439:6443 Corelib.Init.Datatypes <> false constr
+def 6464:6488 <> oxygen_allotrope_kind_beq
+R6499:6519 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_kind ind
+binder 6491:6492 <> k1:20
+binder 6494:6495 <> k2:21
+R6524:6527 Corelib.Init.Datatypes <> bool ind
+R6544:6545 UMST.ChemConstants.AllotropeConservation <> k2:21 var
+R6540:6541 UMST.ChemConstants.AllotropeConservation <> k1:20 var
+R6556:6570 UMST.ChemConstants.AllotropeConservation <> oxygen_dioxygen constr
+R6573:6587 UMST.ChemConstants.AllotropeConservation <> oxygen_dioxygen constr
+R6592:6595 Corelib.Init.Datatypes <> true constr
+R6601:6612 UMST.ChemConstants.AllotropeConservation <> oxygen_ozone constr
+R6615:6626 UMST.ChemConstants.AllotropeConservation <> oxygen_ozone constr
+R6631:6634 Corelib.Init.Datatypes <> true constr
+R6640:6658 UMST.ChemConstants.AllotropeConservation <> oxygen_unauthorized constr
+R6661:6679 UMST.ChemConstants.AllotropeConservation <> oxygen_unauthorized constr
+R6684:6687 Corelib.Init.Datatypes <> true constr
+R6701:6705 Corelib.Init.Datatypes <> false constr
+rec 6722:6738 <> allotrope_binding
+proj 6754:6771 <> allotrope_parent_z
+R6775:6777 Corelib.Init.Datatypes <> nat ind
+def 6794:6815 <> allotropeBindingCarbon
+R6819:6835 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R6845:6862 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R6845:6862 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R6845:6862 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R6867:6892 UMST.ChemConstants.AllotropeConservation <> allotrope_element_carbon_z def
+def 6910:6935 <> allotropeBindingPhosphorus
+R6939:6955 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R6965:6982 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R6965:6982 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R6965:6982 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R6987:7016 UMST.ChemConstants.AllotropeConservation <> allotrope_element_phosphorus_z def
+def 7034:7055 <> allotropeBindingOxygen
+R7059:7075 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R7085:7102 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7085:7102 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7085:7102 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7107:7132 UMST.ChemConstants.AllotropeConservation <> allotrope_element_oxygen_z def
+def 7150:7172 <> allotropeBindingTrivial
+R7176:7192 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R7202:7219 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7202:7219 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7202:7219 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+def 7242:7267 <> allotropeBindingNontrivial
+R7274:7290 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+binder 7270:7270 <> b:26
+R7295:7298 Corelib.Init.Datatypes <> bool ind
+R7305:7311 Stdlib.Arith.PeanoNat Nat ltb def
+R7316:7333 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7335:7335 UMST.ChemConstants.AllotropeConservation <> b:26 var
+prf 7346:7380 <> allotrope_binding_carbon_nontrivial
+R7435:7437 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7386:7411 UMST.ChemConstants.AllotropeConservation <> allotropeBindingNontrivial def
+R7413:7434 UMST.ChemConstants.AllotropeConservation <> allotropeBindingCarbon def
+R7438:7441 Corelib.Init.Datatypes <> true constr
+prf 7476:7515 <> allotrope_binding_trivial_not_nontrivial
+R7571:7573 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7521:7546 UMST.ChemConstants.AllotropeConservation <> allotropeBindingNontrivial def
+R7548:7570 UMST.ChemConstants.AllotropeConservation <> allotropeBindingTrivial def
+R7574:7578 Corelib.Init.Datatypes <> false constr
+def 7618:7650 <> allotropeBindingIdentityConserved
+R7661:7677 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+binder 7653:7654 <> b1:27
+binder 7656:7657 <> b2:28
+R7682:7685 Corelib.Init.Datatypes <> bool ind
+R7692:7698 Stdlib.Arith.PeanoNat Nat eqb def
+R7701:7718 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7720:7721 UMST.ChemConstants.AllotropeConservation <> b1:27 var
+R7725:7742 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R7744:7745 UMST.ChemConstants.AllotropeConservation <> b2:28 var
+rec 7757:7780 <> carbon_allotrope_witness
+proj 7796:7819 <> carbon_allotrope_binding
+proj 7844:7868 <> carbon_allotrope_kind_tag
+proj 7897:7924 <> carbon_allotrope_class_index
+R7823:7839 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R7872:7892 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind ind
+R7928:7930 Corelib.Init.Datatypes <> nat ind
+rec 7943:7970 <> phosphorus_allotrope_witness
+proj 7986:8013 <> phosphorus_allotrope_binding
+proj 8038:8066 <> phosphorus_allotrope_kind_tag
+proj 8099:8130 <> phosphorus_allotrope_class_index
+R8017:8033 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R8070:8094 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_kind ind
+R8134:8136 Corelib.Init.Datatypes <> nat ind
+rec 8149:8172 <> oxygen_allotrope_witness
+proj 8188:8211 <> oxygen_allotrope_binding
+proj 8236:8260 <> oxygen_allotrope_kind_tag
+proj 8289:8316 <> oxygen_allotrope_class_index
+R8215:8231 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R8264:8284 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_kind ind
+R8320:8322 Corelib.Init.Datatypes <> nat ind
+def 8339:8360 <> carbonAllotropeDiamond
+R8364:8387 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_witness rec
+R8397:8420 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R8397:8420 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R8397:8420 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R8454:8478 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R8454:8478 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R8504:8531 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_index proj
+R8504:8531 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_index proj
+R8425:8446 UMST.ChemConstants.AllotropeConservation <> allotropeBindingCarbon def
+R8483:8496 UMST.ChemConstants.AllotropeConservation <> carbon_diamond constr
+R8536:8562 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+def 8580:8602 <> carbonAllotropeGraphite
+R8606:8629 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_witness rec
+R8639:8662 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R8639:8662 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R8639:8662 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R8696:8720 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R8696:8720 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R8747:8774 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_index proj
+R8747:8774 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_index proj
+R8667:8688 UMST.ChemConstants.AllotropeConservation <> allotropeBindingCarbon def
+R8725:8739 UMST.ChemConstants.AllotropeConservation <> carbon_graphite constr
+R8779:8805 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+def 8823:8846 <> phosphorusAllotropeWhite
+R8850:8877 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_witness rec
+R8887:8914 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R8887:8914 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R8887:8914 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R8952:8980 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_kind_tag proj
+R8952:8980 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_kind_tag proj
+R9008:9039 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_class_index proj
+R9008:9039 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_class_index proj
+R8919:8944 UMST.ChemConstants.AllotropeConservation <> allotropeBindingPhosphorus def
+R8985:9000 UMST.ChemConstants.AllotropeConservation <> phosphorus_white constr
+R9044:9070 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+def 9088:9109 <> phosphorusAllotropeRed
+R9113:9140 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_witness rec
+R9150:9177 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R9150:9177 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R9150:9177 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R9215:9243 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_kind_tag proj
+R9215:9243 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_kind_tag proj
+R9269:9300 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_class_index proj
+R9269:9300 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_class_index proj
+R9182:9207 UMST.ChemConstants.AllotropeConservation <> allotropeBindingPhosphorus def
+R9248:9261 UMST.ChemConstants.AllotropeConservation <> phosphorus_red constr
+R9305:9331 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+def 9349:9365 <> oxygenAllotropeO2
+R9369:9392 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_witness rec
+R9402:9425 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R9402:9425 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R9402:9425 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R9459:9483 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_kind_tag proj
+R9459:9483 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_kind_tag proj
+R9510:9537 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_class_index proj
+R9510:9537 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_class_index proj
+R9430:9451 UMST.ChemConstants.AllotropeConservation <> allotropeBindingOxygen def
+R9488:9502 UMST.ChemConstants.AllotropeConservation <> oxygen_dioxygen constr
+R9542:9568 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+def 9586:9602 <> oxygenAllotropeO3
+R9606:9629 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_witness rec
+R9639:9662 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R9639:9662 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R9639:9662 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R9696:9720 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_kind_tag proj
+R9696:9720 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_kind_tag proj
+R9744:9771 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_class_index proj
+R9744:9771 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_class_index proj
+R9667:9688 UMST.ChemConstants.AllotropeConservation <> allotropeBindingOxygen def
+R9725:9736 UMST.ChemConstants.AllotropeConservation <> oxygen_ozone constr
+R9776:9802 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+prf 9815:9844 <> carbon_diamond_graphite_same_z
+R9992:9994 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9850:9882 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R9889:9912 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R9914:9935 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R9943:9966 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R9968:9990 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+R9995:9998 Corelib.Init.Datatypes <> true constr
+prf 10033:10062 <> carbon_diamond_graphite_z_is_6
+R10140:10145 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10136:10138 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10068:10085 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R10088:10111 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R10113:10134 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R10215:10217 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10146:10163 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R10166:10189 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R10191:10213 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+prf 10267:10293 <> phosphorus_white_red_same_z
+R10450:10452 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10299:10331 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R10338:10365 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R10367:10390 UMST.ChemConstants.AllotropeConservation <> phosphorusAllotropeWhite def
+R10398:10425 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R10427:10448 UMST.ChemConstants.AllotropeConservation <> phosphorusAllotropeRed def
+R10453:10456 Corelib.Init.Datatypes <> true constr
+prf 10491:10509 <> oxygen_o2_o3_same_z
+R10646:10648 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10515:10547 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R10554:10577 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R10579:10595 UMST.ChemConstants.AllotropeConservation <> oxygenAllotropeO2 def
+R10603:10626 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R10628:10644 UMST.ChemConstants.AllotropeConservation <> oxygenAllotropeO3 def
+R10649:10652 Corelib.Init.Datatypes <> true constr
+def 10692:10720 <> carbon_allotrope_class_honest
+R10727:10750 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_witness rec
+binder 10723:10723 <> w:41
+R10755:10758 Corelib.Init.Datatypes <> bool ind
+R10833:10838 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10765:10771 Stdlib.Arith.PeanoNat Nat eqb def
+R10774:10801 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_index proj
+R10803:10803 UMST.ChemConstants.AllotropeConservation <> w:41 var
+R10806:10832 UMST.ChemConstants.AllotropeConservation <> pattern_class_allotrope_idx def
+R10839:10842 Corelib.Init.Datatypes <> negb def
+R10845:10869 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_beq def
+R10872:10896 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R10898:10898 UMST.ChemConstants.AllotropeConservation <> w:41 var
+R10901:10919 UMST.ChemConstants.AllotropeConservation <> carbon_unauthorized constr
+prf 10930:10956 <> carbon_diamond_class_honest
+R11014:11016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10962:10990 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_honest def
+R10992:11013 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R11017:11020 Corelib.Init.Datatypes <> true constr
+prf 11055:11082 <> carbon_graphite_class_honest
+R11141:11143 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11088:11116 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_honest def
+R11118:11140 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+R11144:11147 Corelib.Init.Datatypes <> true constr
+prf 11182:11218 <> carbon_diamond_graphite_distinct_kind
+R11367:11369 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11224:11227 Corelib.Init.Datatypes <> negb def
+R11230:11254 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_beq def
+R11261:11285 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R11287:11308 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R11316:11340 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R11342:11364 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+R11370:11373 Corelib.Init.Datatypes <> true constr
+ind 11637:11658 <> allotrope_product_slot
+constr 11674:11695 <> allotrope_slot_unwired
+constr 11701:11721 <> allotrope_slot_absent
+constr 11727:11748 <> allotrope_slot_present
+scheme 11637:11658 <> allotrope_product_slot_rect
+scheme 11637:11658 <> allotrope_product_slot_ind
+scheme 11637:11658 <> allotrope_product_slot_rec
+scheme 11637:11658 <> allotrope_product_slot_sind
+def 11763:11787 <> allotrope_slot_is_present
+R11794:11815 UMST.ChemConstants.AllotropeConservation <> allotrope_product_slot ind
+binder 11790:11790 <> s:44
+R11820:11823 Corelib.Init.Datatypes <> bool ind
+R11836:11836 UMST.ChemConstants.AllotropeConservation <> s:44 var
+R11847:11868 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_present constr
+R11873:11876 Corelib.Init.Datatypes <> true constr
+R11887:11891 Corelib.Init.Datatypes <> false constr
+rec 11908:11935 <> allotrope_concurrent_product
+proj 11951:11972 <> product_allotrope_slot
+proj 12002:12023 <> product_catalysis_slot
+proj 12053:12074 <> product_continuum_slot
+R11976:11997 UMST.ChemConstants.AllotropeConservation <> allotrope_product_slot ind
+R12027:12048 UMST.ChemConstants.AllotropeConservation <> allotrope_product_slot ind
+R12078:12099 UMST.ChemConstants.AllotropeConservation <> allotrope_product_slot ind
+def 12116:12143 <> allotropeProductCarbonNuance
+R12147:12174 UMST.ChemConstants.AllotropeConservation <> allotrope_concurrent_product rec
+R12184:12205 UMST.ChemConstants.AllotropeConservation <> product_allotrope_slot proj
+R12184:12205 UMST.ChemConstants.AllotropeConservation <> product_allotrope_slot proj
+R12184:12205 UMST.ChemConstants.AllotropeConservation <> product_allotrope_slot proj
+R12239:12260 UMST.ChemConstants.AllotropeConservation <> product_catalysis_slot proj
+R12239:12260 UMST.ChemConstants.AllotropeConservation <> product_catalysis_slot proj
+R12294:12315 UMST.ChemConstants.AllotropeConservation <> product_continuum_slot proj
+R12294:12315 UMST.ChemConstants.AllotropeConservation <> product_continuum_slot proj
+R12210:12231 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_present constr
+R12265:12286 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_present constr
+R12320:12341 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_present constr
+def 12359:12389 <> allotrope_product_present_count
+R12396:12423 UMST.ChemConstants.AllotropeConservation <> allotrope_concurrent_product rec
+binder 12392:12392 <> p:50
+R12428:12430 Corelib.Init.Datatypes <> nat ind
+R12584:12589 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R12659:12659 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R12437:12437 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R12507:12513 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R12583:12583 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R12441:12465 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_is_present def
+R12468:12489 UMST.ChemConstants.AllotropeConservation <> product_allotrope_slot proj
+R12491:12491 UMST.ChemConstants.AllotropeConservation <> p:50 var
+R12517:12541 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_is_present def
+R12544:12565 UMST.ChemConstants.AllotropeConservation <> product_catalysis_slot proj
+R12567:12567 UMST.ChemConstants.AllotropeConservation <> p:50 var
+R12593:12617 UMST.ChemConstants.AllotropeConservation <> allotrope_slot_is_present def
+R12620:12641 UMST.ChemConstants.AllotropeConservation <> product_continuum_slot proj
+R12643:12643 UMST.ChemConstants.AllotropeConservation <> p:50 var
+def 12674:12704 <> allotrope_product_is_concurrent
+R12711:12738 UMST.ChemConstants.AllotropeConservation <> allotrope_concurrent_product rec
+binder 12707:12707 <> p:51
+R12743:12746 Corelib.Init.Datatypes <> bool ind
+R12753:12759 Stdlib.Arith.PeanoNat Nat leb def
+R12764:12794 UMST.ChemConstants.AllotropeConservation <> allotrope_product_present_count def
+R12796:12796 UMST.ChemConstants.AllotropeConservation <> p:51 var
+prf 12807:12847 <> carbon_nuance_product_present_count_three
+R12913:12915 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12853:12883 UMST.ChemConstants.AllotropeConservation <> allotrope_product_present_count def
+R12885:12912 UMST.ChemConstants.AllotropeConservation <> allotropeProductCarbonNuance def
+prf 12951:12985 <> carbon_nuance_product_is_concurrent
+R13051:13053 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12991:13021 UMST.ChemConstants.AllotropeConservation <> allotrope_product_is_concurrent def
+R13023:13050 UMST.ChemConstants.AllotropeConservation <> allotropeProductCarbonNuance def
+R13054:13057 Corelib.Init.Datatypes <> true constr
+R13076:13106 UMST.ChemConstants.AllotropeConservation <> allotrope_product_is_concurrent def
+R13119:13159 UMST.ChemConstants.AllotropeConservation <> carbon_nuance_product_present_count_three thm
+R13119:13159 UMST.ChemConstants.AllotropeConservation <> carbon_nuance_product_present_count_three thm
+R13119:13159 UMST.ChemConstants.AllotropeConservation <> carbon_nuance_product_present_count_three thm
+ind 13193:13214 <> allotrope_witness_kind
+constr 13230:13253 <> allotrope_morphism_named
+constr 13259:13281 <> xor_enum_bucket_theater
+scheme 13193:13214 <> allotrope_witness_kind_rect
+scheme 13193:13214 <> allotrope_witness_kind_ind
+scheme 13193:13214 <> allotrope_witness_kind_rec
+scheme 13193:13214 <> allotrope_witness_kind_sind
+def 13296:13311 <> xor_enum_smuggle
+R13318:13339 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_kind ind
+binder 13314:13314 <> k:54
+R13344:13347 Corelib.Init.Datatypes <> bool ind
+R13360:13360 UMST.ChemConstants.AllotropeConservation <> k:54 var
+R13371:13393 UMST.ChemConstants.AllotropeConservation <> xor_enum_bucket_theater constr
+R13398:13401 Corelib.Init.Datatypes <> true constr
+R13407:13430 UMST.ChemConstants.AllotropeConservation <> allotrope_morphism_named constr
+R13435:13439 Corelib.Init.Datatypes <> false constr
+def 13460:13482 <> allotropeWitnessXorEnum
+R13486:13507 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_kind ind
+R13512:13534 UMST.ChemConstants.AllotropeConservation <> xor_enum_bucket_theater constr
+def 13548:13568 <> allotropeWitnessNamed
+R13572:13593 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_kind ind
+R13598:13621 UMST.ChemConstants.AllotropeConservation <> allotrope_morphism_named constr
+prf 13631:13651 <> xor_enum_smuggle_true
+R13697:13699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13657:13672 UMST.ChemConstants.AllotropeConservation <> xor_enum_smuggle def
+R13674:13696 UMST.ChemConstants.AllotropeConservation <> allotropeWitnessXorEnum def
+R13700:13703 Corelib.Init.Datatypes <> true constr
+prf 13738:13765 <> named_allotrope_not_xor_enum
+R13809:13811 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13771:13786 UMST.ChemConstants.AllotropeConservation <> xor_enum_smuggle def
+R13788:13808 UMST.ChemConstants.AllotropeConservation <> allotropeWitnessNamed def
+R13812:13816 Corelib.Init.Datatypes <> false constr
+def 13856:13868 <> xorEnumMarker
+R13872:13877 Stdlib.Strings.String <> string ind
+def 13925:13943 <> productFactorMarker
+R13947:13952 Stdlib.Strings.String <> string ind
+prf 14006:14040 <> xor_marker_ne_product_factor_marker
+R14059:14062 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14046:14058 UMST.ChemConstants.AllotropeConservation <> xorEnumMarker def
+R14063:14081 UMST.ChemConstants.AllotropeConservation <> productFactorMarker def
+def 14344:14371 <> fourthScienceCollisionMarker
+R14375:14380 Stdlib.Strings.String <> string ind
+def 14474:14504 <> twentySixthAxiomCollisionMarker
+R14508:14513 Stdlib.Strings.String <> string ind
+def 14601:14619 <> xeCopyTheaterMarker
+R14623:14628 Stdlib.Strings.String <> string ind
+prf 14724:14753 <> fourth_science_collision_named
+R14787:14790 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14759:14786 UMST.ChemConstants.AllotropeConservation <> fourthScienceCollisionMarker def
+prf 14828:14861 <> twenty_sixth_axiom_collision_named
+R14898:14901 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14867:14897 UMST.ChemConstants.AllotropeConservation <> twentySixthAxiomCollisionMarker def
+prf 14939:14959 <> xe_copy_theater_named
+R14984:14987 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14965:14983 UMST.ChemConstants.AllotropeConservation <> xeCopyTheaterMarker def
+ind 15253:15274 <> allotrope_bar_presence
+constr 15290:15309 <> allotrope_bar_absent
+constr 15315:15335 <> allotrope_bar_present
+scheme 15253:15274 <> allotrope_bar_presence_rect
+scheme 15253:15274 <> allotrope_bar_presence_ind
+scheme 15253:15274 <> allotrope_bar_presence_rec
+scheme 15253:15274 <> allotrope_bar_presence_sind
+rec 15346:15364 <> allotrope_claim_bar
+proj 15380:15405 <> allotrope_bar_presence_tag
+proj 15435:15460 <> allotrope_bar_defect_total
+R15409:15430 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_presence ind
+R15464:15466 Corelib.Init.Datatypes <> nat ind
+def 15483:15505 <> allotropeClaimBarAbsent
+R15509:15527 UMST.ChemConstants.AllotropeConservation <> allotrope_claim_bar rec
+R15537:15562 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_presence_tag proj
+R15537:15562 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_presence_tag proj
+R15537:15562 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_presence_tag proj
+R15594:15619 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_defect_total proj
+R15594:15619 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_defect_total proj
+R15567:15586 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_absent constr
+def 15642:15672 <> allotrope_claim_bar_zero_defect
+R15679:15697 UMST.ChemConstants.AllotropeConservation <> allotrope_claim_bar rec
+binder 15675:15675 <> b:61
+R15702:15705 Corelib.Init.Datatypes <> bool ind
+R15718:15743 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_presence_tag proj
+R15745:15745 UMST.ChemConstants.AllotropeConservation <> b:61 var
+R15756:15775 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_absent constr
+R15780:15784 Corelib.Init.Datatypes <> false constr
+R15790:15810 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_present constr
+R15815:15821 Stdlib.Arith.PeanoNat Nat eqb def
+R15824:15849 UMST.ChemConstants.AllotropeConservation <> allotrope_bar_defect_total proj
+R15851:15851 UMST.ChemConstants.AllotropeConservation <> b:61 var
+ind 16099:16128 <> allotrope_conservation_verdict
+constr 16144:16161 <> verdict_unwired_ok
+constr 16167:16192 <> verdict_allotrope_named_ok
+constr 16198:16221 <> verdict_trivial_z_refuse
+constr 16227:16249 <> verdict_xor_enum_refuse
+constr 16255:16276 <> verdict_xe_copy_refuse
+constr 16282:16310 <> verdict_fourth_science_refuse
+constr 16316:16348 <> verdict_twenty_sixth_axiom_refuse
+constr 16354:16380 <> verdict_green_invent_refuse
+constr 16386:16418 <> verdict_proved_without_bar_refuse
+constr 16424:16454 <> verdict_production_wired_refuse
+scheme 16099:16128 <> allotrope_conservation_verdict_rect
+scheme 16099:16128 <> allotrope_conservation_verdict_ind
+scheme 16099:16128 <> allotrope_conservation_verdict_rec
+scheme 16099:16128 <> allotrope_conservation_verdict_sind
+def 16469:16501 <> allotrope_conservation_verdict_ok
+R16510:16539 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict ind
+binder 16506:16506 <> v:64
+R16544:16547 Corelib.Init.Datatypes <> bool ind
+R16560:16560 UMST.ChemConstants.AllotropeConservation <> v:64 var
+R16571:16588 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+R16593:16596 Corelib.Init.Datatypes <> true constr
+R16602:16627 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R16632:16635 Corelib.Init.Datatypes <> true constr
+R16646:16650 Corelib.Init.Datatypes <> false constr
+rec 16667:16685 <> allotrope_incidence
+proj 16701:16721 <> allotrope_inc_binding
+proj 16746:16765 <> allotrope_inc_carbon
+proj 16797:16822 <> allotrope_inc_witness_kind
+proj 16852:16870 <> allotrope_inc_level
+R16725:16741 UMST.ChemConstants.AllotropeConservation <> allotrope_binding rec
+R16769:16792 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_witness rec
+R16826:16847 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_kind ind
+R16874:16876 Corelib.Init.Datatypes <> nat ind
+def 16893:16920 <> allotropeIncidenceNontrivial
+R16927:16945 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+binder 16923:16923 <> h:71
+R16950:16953 Corelib.Init.Datatypes <> bool ind
+R16960:16966 Stdlib.Arith.PeanoNat Nat ltb def
+R16971:16989 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R16991:16991 UMST.ChemConstants.AllotropeConservation <> h:71 var
+def 17007:17039 <> allotropeIncidenceCarbonDiamondL1
+R17043:17061 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+R17071:17091 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17071:17091 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17071:17091 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17125:17144 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17125:17144 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17178:17203 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17178:17203 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17239:17257 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17239:17257 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17096:17117 UMST.ChemConstants.AllotropeConservation <> allotropeBindingCarbon def
+R17149:17170 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R17208:17231 UMST.ChemConstants.AllotropeConservation <> allotrope_morphism_named constr
+def 17280:17313 <> allotropeIncidenceCarbonGraphiteL1
+R17317:17335 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+R17345:17365 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17345:17365 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17345:17365 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17399:17418 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17399:17418 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17453:17478 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17453:17478 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17514:17532 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17514:17532 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17370:17391 UMST.ChemConstants.AllotropeConservation <> allotropeBindingCarbon def
+R17423:17445 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+R17483:17506 UMST.ChemConstants.AllotropeConservation <> allotrope_morphism_named constr
+def 17555:17579 <> allotropeIncidenceTrivial
+R17583:17601 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+R17611:17631 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17611:17631 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17611:17631 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17666:17685 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17666:17685 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17719:17744 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17719:17744 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17780:17798 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17780:17798 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17636:17658 UMST.ChemConstants.AllotropeConservation <> allotropeBindingTrivial def
+R17690:17711 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R17749:17772 UMST.ChemConstants.AllotropeConservation <> allotrope_morphism_named constr
+def 17821:17845 <> allotropeIncidenceXorEnum
+R17849:17867 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+R17877:17897 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17877:17897 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17877:17897 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R17931:17950 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17931:17950 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R17984:18009 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R17984:18009 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R18044:18062 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R18044:18062 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R17902:17923 UMST.ChemConstants.AllotropeConservation <> allotropeBindingCarbon def
+R17955:17976 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R18014:18036 UMST.ChemConstants.AllotropeConservation <> xor_enum_bucket_theater constr
+def 18085:18108 <> allotropeIncidenceXeCopy
+R18112:18130 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+R18140:18160 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R18140:18160 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R18140:18160 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R18225:18244 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R18225:18244 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R18278:18303 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R18278:18303 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R18339:18357 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R18339:18357 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_level proj
+R18168:18185 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R18168:18185 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R18168:18185 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R18190:18214 UMST.ChemConstants.AllotropeConservation <> allotrope_element_xenon_z def
+R18249:18270 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R18308:18331 UMST.ChemConstants.AllotropeConservation <> allotrope_morphism_named constr
+def 18380:18407 <> evaluate_allotrope_incidence
+R18416:18444 UMST.ChemConstants.AllotropeConservation <> AllotropeConservationModality ind
+binder 18412:18412 <> m:72
+R18454:18472 UMST.ChemConstants.AllotropeConservation <> allotrope_incidence rec
+binder 18450:18450 <> h:73
+R18482:18500 UMST.ChemConstants.AllotropeConservation <> allotrope_claim_bar rec
+binder 18478:18478 <> b:74
+R18528:18531 Corelib.Init.Datatypes <> bool ind
+binder 18506:18524 <> claim_physics_green:75
+R18552:18555 Corelib.Init.Datatypes <> bool ind
+binder 18537:18548 <> claim_proved:76
+R18578:18581 Corelib.Init.Datatypes <> bool ind
+binder 18561:18574 <> claim_xor_enum:77
+R18610:18613 Corelib.Init.Datatypes <> bool ind
+binder 18587:18606 <> claim_fourth_science:78
+R18646:18649 Corelib.Init.Datatypes <> bool ind
+binder 18619:18642 <> claim_twenty_sixth_axiom:79
+R18671:18674 Corelib.Init.Datatypes <> bool ind
+binder 18655:18667 <> claim_xe_copy:80
+R18679:18708 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict ind
+R18718:18736 UMST.ChemConstants.AllotropeConservation <> claim_physics_green:75 var
+R18783:18794 UMST.ChemConstants.AllotropeConservation <> claim_proved:76 var
+R18857:18876 UMST.ChemConstants.AllotropeConservation <> claim_fourth_science:78 var
+R18945:18968 UMST.ChemConstants.AllotropeConservation <> claim_twenty_sixth_axiom:79 var
+R19051:19063 UMST.ChemConstants.AllotropeConservation <> claim_xe_copy:80 var
+R19145:19160 UMST.ChemConstants.AllotropeConservation <> xor_enum_smuggle def
+R19163:19188 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_witness_kind proj
+R19190:19190 UMST.ChemConstants.AllotropeConservation <> h:73 var
+R19284:19297 UMST.ChemConstants.AllotropeConservation <> claim_xor_enum:77 var
+R19400:19403 Corelib.Init.Datatypes <> negb def
+R19406:19433 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceNontrivial def
+R19435:19435 UMST.ChemConstants.AllotropeConservation <> h:73 var
+R19550:19553 Corelib.Init.Datatypes <> negb def
+R19556:19581 UMST.ChemConstants.AllotropeConservation <> allotropeBindingNontrivial def
+R19637:19657 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R19659:19659 UMST.ChemConstants.AllotropeConservation <> h:73 var
+R19785:19788 Corelib.Init.Datatypes <> negb def
+R19791:19819 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_class_honest def
+R19880:19899 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_carbon proj
+R19901:19901 UMST.ChemConstants.AllotropeConservation <> h:73 var
+R20036:20039 Corelib.Init.Datatypes <> negb def
+R20042:20072 UMST.ChemConstants.AllotropeConservation <> allotrope_witness_z_not_xe_copy def
+R20138:20155 UMST.ChemConstants.AllotropeConservation <> allotrope_parent_z proj
+R20224:20244 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R20246:20246 UMST.ChemConstants.AllotropeConservation <> h:73 var
+R20448:20448 UMST.ChemConstants.AllotropeConservation <> m:72 var
+R20511:20540 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R20603:20628 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R20686:20715 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_assumed constr
+R20773:20804 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_surrogate constr
+R20867:20884 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+R20867:20884 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+R20942:20970 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_proved constr
+R21033:21065 UMST.ChemConstants.AllotropeConservation <> verdict_proved_without_bar_refuse constr
+R20308:20329 UMST.ChemConstants.AllotropeConservation <> verdict_xe_copy_refuse constr
+R19957:19979 UMST.ChemConstants.AllotropeConservation <> verdict_xor_enum_refuse constr
+R19710:19733 UMST.ChemConstants.AllotropeConservation <> verdict_trivial_z_refuse constr
+R19480:19503 UMST.ChemConstants.AllotropeConservation <> verdict_trivial_z_refuse constr
+R19336:19358 UMST.ChemConstants.AllotropeConservation <> verdict_xor_enum_refuse constr
+R19225:19247 UMST.ChemConstants.AllotropeConservation <> verdict_xor_enum_refuse constr
+R19092:19113 UMST.ChemConstants.AllotropeConservation <> verdict_xe_copy_refuse constr
+R18992:19024 UMST.ChemConstants.AllotropeConservation <> verdict_twenty_sixth_axiom_refuse constr
+R18895:18923 UMST.ChemConstants.AllotropeConservation <> verdict_fourth_science_refuse constr
+R18808:18840 UMST.ChemConstants.AllotropeConservation <> verdict_proved_without_bar_refuse constr
+R18745:18771 UMST.ChemConstants.AllotropeConservation <> verdict_green_invent_refuse constr
+def 21138:21174 <> evaluate_allotrope_conservation_close
+R21183:21211 UMST.ChemConstants.AllotropeConservation <> AllotropeConservationModality ind
+binder 21179:21179 <> m:82
+R21239:21242 Corelib.Init.Datatypes <> bool ind
+binder 21217:21235 <> claim_physics_green:83
+R21273:21276 Corelib.Init.Datatypes <> bool ind
+binder 21248:21269 <> claim_production_wired:84
+R21281:21310 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict ind
+R21320:21338 UMST.ChemConstants.AllotropeConservation <> claim_physics_green:83 var
+R21385:21406 UMST.ChemConstants.AllotropeConservation <> claim_production_wired:84 var
+R21464:21464 UMST.ChemConstants.AllotropeConservation <> m:82 var
+R21477:21506 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R21511:21528 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+R21536:21565 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_assumed constr
+R21573:21601 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_proved constr
+R21609:21640 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_surrogate constr
+R21645:21670 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R21645:21670 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R21645:21670 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R21415:21445 UMST.ChemConstants.AllotropeConservation <> verdict_production_wired_refuse constr
+R21347:21373 UMST.ChemConstants.AllotropeConservation <> verdict_green_invent_refuse constr
+def 21917:21931 <> allotropeProved
+R21935:21938 Corelib.Init.Datatypes <> bool ind
+R21943:21947 Corelib.Init.Datatypes <> false constr
+prf 21957:21978 <> allotrope_proved_false
+R21997:21999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21982:21996 UMST.ChemConstants.AllotropeConservation <> allotropeProved def
+R22000:22004 Corelib.Init.Datatypes <> false constr
+def 22044:22066 <> not118SquaredGreenTable
+R22070:22073 Corelib.Init.Datatypes <> bool ind
+R22078:22081 Corelib.Init.Datatypes <> true constr
+prf 22091:22117 <> not_118_squared_green_table
+R22144:22146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22121:22143 UMST.ChemConstants.AllotropeConservation <> not118SquaredGreenTable def
+R22147:22150 Corelib.Init.Datatypes <> true constr
+def 22190:22214 <> notFourthChemistryScience
+R22218:22221 Corelib.Init.Datatypes <> bool ind
+R22226:22229 Corelib.Init.Datatypes <> true constr
+prf 22239:22266 <> not_fourth_chemistry_science
+R22295:22297 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22270:22294 UMST.ChemConstants.AllotropeConservation <> notFourthChemistryScience def
+R22298:22301 Corelib.Init.Datatypes <> true constr
+def 22341:22359 <> notTwentySixthAxiom
+R22363:22366 Corelib.Init.Datatypes <> bool ind
+R22371:22374 Corelib.Init.Datatypes <> true constr
+prf 22384:22405 <> not_twenty_sixth_axiom
+R22428:22430 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22409:22427 UMST.ChemConstants.AllotropeConservation <> notTwentySixthAxiom def
+R22431:22434 Corelib.Init.Datatypes <> true constr
+def 22474:22491 <> notXeCopyAllotrope
+R22495:22498 Corelib.Init.Datatypes <> bool ind
+R22503:22506 Corelib.Init.Datatypes <> true constr
+prf 22516:22536 <> not_xe_copy_allotrope
+R22558:22560 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22540:22557 UMST.ChemConstants.AllotropeConservation <> notXeCopyAllotrope def
+R22561:22564 Corelib.Init.Datatypes <> true constr
+prf 22821:22859 <> unwired_close_without_production_wiring
+R22949:22953 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22865:22901 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_conservation_close def
+R22907:22936 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R22938:22942 Corelib.Init.Datatypes <> false constr
+R22944:22948 Corelib.Init.Datatypes <> false constr
+R22954:22971 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+prf 23008:23059 <> unwired_modality_always_ok_without_production_wiring
+R23149:23153 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23065:23101 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_conservation_close def
+R23107:23136 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R23138:23142 Corelib.Init.Datatypes <> false constr
+R23144:23148 Corelib.Init.Datatypes <> false constr
+R23154:23171 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+R23187:23225 UMST.ChemConstants.AllotropeConservation <> unwired_close_without_production_wiring thm
+R23187:23225 UMST.ChemConstants.AllotropeConservation <> unwired_close_without_production_wiring thm
+prf 23240:23262 <> carbon_diamond_named_ok
+R23429:23433 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23268:23295 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R23301:23330 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R23332:23364 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonDiamondL1 def
+R23370:23392 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R23394:23398 Corelib.Init.Datatypes <> false constr
+R23400:23404 Corelib.Init.Datatypes <> false constr
+R23406:23410 Corelib.Init.Datatypes <> false constr
+R23412:23416 Corelib.Init.Datatypes <> false constr
+R23418:23422 Corelib.Init.Datatypes <> false constr
+R23424:23428 Corelib.Init.Datatypes <> false constr
+R23434:23459 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+prf 23494:23517 <> carbon_graphite_named_ok
+R23685:23689 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23523:23550 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R23556:23585 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R23587:23620 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonGraphiteL1 def
+R23626:23648 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R23650:23654 Corelib.Init.Datatypes <> false constr
+R23656:23660 Corelib.Init.Datatypes <> false constr
+R23662:23666 Corelib.Init.Datatypes <> false constr
+R23668:23672 Corelib.Init.Datatypes <> false constr
+R23674:23678 Corelib.Init.Datatypes <> false constr
+R23680:23684 Corelib.Init.Datatypes <> false constr
+R23690:23715 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+prf 23752:23786 <> named_carbon_allotrope_conservation
+R23984:23989 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23953:23957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23792:23819 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R23825:23854 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R23856:23888 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonDiamondL1 def
+R23894:23916 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R23918:23922 Corelib.Init.Datatypes <> false constr
+R23924:23928 Corelib.Init.Datatypes <> false constr
+R23930:23934 Corelib.Init.Datatypes <> false constr
+R23936:23940 Corelib.Init.Datatypes <> false constr
+R23942:23946 Corelib.Init.Datatypes <> false constr
+R23948:23952 Corelib.Init.Datatypes <> false constr
+R23958:23983 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R24183:24188 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24152:24156 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23990:24017 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R24023:24052 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R24054:24087 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonGraphiteL1 def
+R24093:24115 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R24117:24121 Corelib.Init.Datatypes <> false constr
+R24123:24127 Corelib.Init.Datatypes <> false constr
+R24129:24133 Corelib.Init.Datatypes <> false constr
+R24135:24139 Corelib.Init.Datatypes <> false constr
+R24141:24145 Corelib.Init.Datatypes <> false constr
+R24147:24151 Corelib.Init.Datatypes <> false constr
+R24157:24182 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R24354:24359 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24347:24349 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24189:24221 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R24228:24248 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R24250:24282 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonDiamondL1 def
+R24290:24310 UMST.ChemConstants.AllotropeConservation <> allotrope_inc_binding proj
+R24312:24345 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonGraphiteL1 def
+R24350:24353 Corelib.Init.Datatypes <> true constr
+R24510:24515 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24503:24505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24360:24363 Corelib.Init.Datatypes <> negb def
+R24366:24390 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_beq def
+R24397:24421 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R24423:24444 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R24452:24476 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_kind_tag proj
+R24478:24500 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+R24506:24509 Corelib.Init.Datatypes <> true constr
+R24576:24578 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24516:24546 UMST.ChemConstants.AllotropeConservation <> allotrope_product_is_concurrent def
+R24548:24575 UMST.ChemConstants.AllotropeConservation <> allotropeProductCarbonNuance def
+R24579:24582 Corelib.Init.Datatypes <> true constr
+prf 24633:24649 <> trivial_z_refused
+R24808:24812 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24655:24682 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R24688:24717 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R24719:24743 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceTrivial def
+R24749:24771 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R24773:24777 Corelib.Init.Datatypes <> false constr
+R24779:24783 Corelib.Init.Datatypes <> false constr
+R24785:24789 Corelib.Init.Datatypes <> false constr
+R24791:24795 Corelib.Init.Datatypes <> false constr
+R24797:24801 Corelib.Init.Datatypes <> false constr
+R24803:24807 Corelib.Init.Datatypes <> false constr
+R24813:24836 UMST.ChemConstants.AllotropeConservation <> verdict_trivial_z_refuse constr
+prf 24873:24893 <> trivial_z_fail_closed
+R25081:25086 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25052:25056 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24899:24926 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R24932:24961 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R24963:24987 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceTrivial def
+R24993:25015 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R25017:25021 Corelib.Init.Datatypes <> false constr
+R25023:25027 Corelib.Init.Datatypes <> false constr
+R25029:25033 Corelib.Init.Datatypes <> false constr
+R25035:25039 Corelib.Init.Datatypes <> false constr
+R25041:25045 Corelib.Init.Datatypes <> false constr
+R25047:25051 Corelib.Init.Datatypes <> false constr
+R25057:25080 UMST.ChemConstants.AllotropeConservation <> verdict_trivial_z_refuse constr
+R25286:25290 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25087:25119 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict_ok def
+R25126:25153 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R25162:25191 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R25193:25217 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceTrivial def
+R25226:25248 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R25250:25254 Corelib.Init.Datatypes <> false constr
+R25256:25260 Corelib.Init.Datatypes <> false constr
+R25262:25266 Corelib.Init.Datatypes <> false constr
+R25268:25272 Corelib.Init.Datatypes <> false constr
+R25274:25278 Corelib.Init.Datatypes <> false constr
+R25280:25284 Corelib.Init.Datatypes <> false constr
+R25291:25295 Corelib.Init.Datatypes <> false constr
+R25324:25340 UMST.ChemConstants.AllotropeConservation <> trivial_z_refused thm
+R25324:25340 UMST.ChemConstants.AllotropeConservation <> trivial_z_refused thm
+R25354:25386 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict_ok def
+R25401:25417 UMST.ChemConstants.AllotropeConservation <> trivial_z_refused thm
+R25401:25417 UMST.ChemConstants.AllotropeConservation <> trivial_z_refused thm
+R25401:25417 UMST.ChemConstants.AllotropeConservation <> trivial_z_refused thm
+prf 25449:25464 <> xor_enum_refused
+R25623:25627 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25470:25497 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R25503:25532 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R25534:25558 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceXorEnum def
+R25564:25586 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R25588:25592 Corelib.Init.Datatypes <> false constr
+R25594:25598 Corelib.Init.Datatypes <> false constr
+R25600:25604 Corelib.Init.Datatypes <> false constr
+R25606:25610 Corelib.Init.Datatypes <> false constr
+R25612:25616 Corelib.Init.Datatypes <> false constr
+R25618:25622 Corelib.Init.Datatypes <> false constr
+R25628:25650 UMST.ChemConstants.AllotropeConservation <> verdict_xor_enum_refuse constr
+prf 25685:25699 <> xe_copy_refused
+R25857:25861 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25705:25732 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R25738:25767 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R25769:25792 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceXeCopy def
+R25798:25820 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R25822:25826 Corelib.Init.Datatypes <> false constr
+R25828:25832 Corelib.Init.Datatypes <> false constr
+R25834:25838 Corelib.Init.Datatypes <> false constr
+R25840:25844 Corelib.Init.Datatypes <> false constr
+R25846:25850 Corelib.Init.Datatypes <> false constr
+R25852:25856 Corelib.Init.Datatypes <> false constr
+R25862:25883 UMST.ChemConstants.AllotropeConservation <> verdict_xe_copy_refuse constr
+prf 25920:25938 <> xe_copy_fail_closed
+R26123:26128 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26096:26100 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25944:25971 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R25977:26006 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R26008:26031 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceXeCopy def
+R26037:26059 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R26061:26065 Corelib.Init.Datatypes <> false constr
+R26067:26071 Corelib.Init.Datatypes <> false constr
+R26073:26077 Corelib.Init.Datatypes <> false constr
+R26079:26083 Corelib.Init.Datatypes <> false constr
+R26085:26089 Corelib.Init.Datatypes <> false constr
+R26091:26095 Corelib.Init.Datatypes <> false constr
+R26101:26122 UMST.ChemConstants.AllotropeConservation <> verdict_xe_copy_refuse constr
+R26327:26331 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26129:26161 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict_ok def
+R26168:26195 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R26204:26233 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R26235:26258 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceXeCopy def
+R26267:26289 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R26291:26295 Corelib.Init.Datatypes <> false constr
+R26297:26301 Corelib.Init.Datatypes <> false constr
+R26303:26307 Corelib.Init.Datatypes <> false constr
+R26309:26313 Corelib.Init.Datatypes <> false constr
+R26315:26319 Corelib.Init.Datatypes <> false constr
+R26321:26325 Corelib.Init.Datatypes <> false constr
+R26332:26336 Corelib.Init.Datatypes <> false constr
+R26365:26379 UMST.ChemConstants.AllotropeConservation <> xe_copy_refused thm
+R26365:26379 UMST.ChemConstants.AllotropeConservation <> xe_copy_refused thm
+R26393:26425 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict_ok def
+R26440:26454 UMST.ChemConstants.AllotropeConservation <> xe_copy_refused thm
+R26440:26454 UMST.ChemConstants.AllotropeConservation <> xe_copy_refused thm
+R26440:26454 UMST.ChemConstants.AllotropeConservation <> xe_copy_refused thm
+prf 26486:26512 <> green_invent_refuse_unwired
+R26601:26605 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26518:26554 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_conservation_close def
+R26560:26589 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R26591:26594 Corelib.Init.Datatypes <> true constr
+R26596:26600 Corelib.Init.Datatypes <> false constr
+R26606:26632 UMST.ChemConstants.AllotropeConservation <> verdict_green_invent_refuse constr
+prf 26669:26694 <> green_invent_always_refuse
+R26826:26830 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26700:26732 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict_ok def
+R26739:26775 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_conservation_close def
+R26784:26813 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R26815:26818 Corelib.Init.Datatypes <> true constr
+R26820:26824 Corelib.Init.Datatypes <> false constr
+R26831:26835 Corelib.Init.Datatypes <> false constr
+R26854:26886 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_verdict_ok def
+R26899:26925 UMST.ChemConstants.AllotropeConservation <> green_invent_refuse_unwired thm
+R26899:26925 UMST.ChemConstants.AllotropeConservation <> green_invent_refuse_unwired thm
+R26899:26925 UMST.ChemConstants.AllotropeConservation <> green_invent_refuse_unwired thm
+prf 26955:26979 <> proved_without_bar_refuse
+R27145:27149 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26985:27012 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R27018:27047 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R27049:27081 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonDiamondL1 def
+R27087:27109 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R27111:27115 Corelib.Init.Datatypes <> false constr
+R27117:27120 Corelib.Init.Datatypes <> true constr
+R27122:27126 Corelib.Init.Datatypes <> false constr
+R27128:27132 Corelib.Init.Datatypes <> false constr
+R27134:27138 Corelib.Init.Datatypes <> false constr
+R27140:27144 Corelib.Init.Datatypes <> false constr
+R27150:27182 UMST.ChemConstants.AllotropeConservation <> verdict_proved_without_bar_refuse constr
+prf 27217:27239 <> production_wired_refuse
+R27327:27331 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27245:27281 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_conservation_close def
+R27287:27315 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_proved constr
+R27317:27321 Corelib.Init.Datatypes <> false constr
+R27323:27326 Corelib.Init.Datatypes <> true constr
+R27332:27362 UMST.ChemConstants.AllotropeConservation <> verdict_production_wired_refuse constr
+ind 27625:27636 <> formal_fiber
+constr 27652:27672 <> fiber_quantum_knowing
+constr 27678:27694 <> fiber_meso_acting
+scheme 27625:27636 <> formal_fiber_rect
+scheme 27625:27636 <> formal_fiber_ind
+scheme 27625:27636 <> formal_fiber_rec
+scheme 27625:27636 <> formal_fiber_sind
+ind 27708:27726 <> formal_claim_family
+constr 27742:27769 <> claim_allotrope_conservation
+scheme 27708:27726 <> formal_claim_family_rect
+scheme 27708:27726 <> formal_claim_family_ind
+scheme 27708:27726 <> formal_claim_family_rec
+scheme 27708:27726 <> formal_claim_family_sind
+def 27784:27814 <> allotrope_conservation_fiber_ok
+R27821:27832 UMST.ChemConstants.AllotropeConservation <> formal_fiber ind
+binder 27817:27817 <> f:90
+R27837:27840 Corelib.Init.Datatypes <> bool ind
+R27853:27853 UMST.ChemConstants.AllotropeConservation <> f:90 var
+R27864:27884 UMST.ChemConstants.AllotropeConservation <> fiber_quantum_knowing constr
+R27889:27892 Corelib.Init.Datatypes <> true constr
+R27898:27914 UMST.ChemConstants.AllotropeConservation <> fiber_meso_acting constr
+R27919:27923 Corelib.Init.Datatypes <> false constr
+def 27944:27976 <> allotropeDoesNotMintFourthScience
+R27980:27983 Corelib.Init.Datatypes <> bool ind
+R27990:28014 UMST.ChemConstants.AllotropeConservation <> notFourthChemistryScience def
+def 28029:28055 <> allotropeDoesNotClaimProved
+R28059:28062 Corelib.Init.Datatypes <> bool ind
+R28069:28072 Corelib.Init.Datatypes <> negb def
+R28074:28088 UMST.ChemConstants.AllotropeConservation <> allotropeProved def
+prf 28098:28123 <> allotrope_knowing_fiber_ok
+R28182:28184 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28129:28159 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_fiber_ok def
+R28161:28181 UMST.ChemConstants.AllotropeConservation <> fiber_quantum_knowing constr
+R28185:28188 Corelib.Init.Datatypes <> true constr
+prf 28223:28256 <> allotrope_meso_acting_fiber_not_ok
+R28311:28313 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28262:28292 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_fiber_ok def
+R28294:28310 UMST.ChemConstants.AllotropeConservation <> fiber_meso_acting constr
+R28314:28318 Corelib.Init.Datatypes <> false constr
+prf 28355:28400 <> allotrope_conservation_routes_knowing_not_meso
+R28466:28471 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28459:28461 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28406:28436 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_fiber_ok def
+R28438:28458 UMST.ChemConstants.AllotropeConservation <> fiber_quantum_knowing constr
+R28462:28465 Corelib.Init.Datatypes <> true constr
+R28529:28534 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28521:28523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28472:28502 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_fiber_ok def
+R28504:28520 UMST.ChemConstants.AllotropeConservation <> fiber_meso_acting constr
+R28524:28528 Corelib.Init.Datatypes <> false constr
+R28575:28580 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28568:28570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28535:28567 UMST.ChemConstants.AllotropeConservation <> allotropeDoesNotMintFourthScience def
+R28571:28574 Corelib.Init.Datatypes <> true constr
+R28615:28620 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28608:28610 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28581:28607 UMST.ChemConstants.AllotropeConservation <> allotropeDoesNotClaimProved def
+R28611:28614 Corelib.Init.Datatypes <> true constr
+R28639:28641 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28621:28638 UMST.ChemConstants.AllotropeConservation <> notXeCopyAllotrope def
+R28642:28645 Corelib.Init.Datatypes <> true constr
+prf 28922:28960 <> allotrope_conservation_fixture_scaffold
+R29160:29165 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29127:29133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28966:28993 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R28999:29028 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R29030:29062 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonDiamondL1 def
+R29068:29090 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R29092:29096 Corelib.Init.Datatypes <> false constr
+R29098:29102 Corelib.Init.Datatypes <> false constr
+R29104:29108 Corelib.Init.Datatypes <> false constr
+R29110:29114 Corelib.Init.Datatypes <> false constr
+R29116:29120 Corelib.Init.Datatypes <> false constr
+R29122:29126 Corelib.Init.Datatypes <> false constr
+R29134:29159 UMST.ChemConstants.AllotropeConservation <> verdict_allotrope_named_ok constr
+R29350:29355 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29319:29325 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29166:29193 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R29199:29228 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R29230:29254 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceTrivial def
+R29260:29282 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R29284:29288 Corelib.Init.Datatypes <> false constr
+R29290:29294 Corelib.Init.Datatypes <> false constr
+R29296:29300 Corelib.Init.Datatypes <> false constr
+R29302:29306 Corelib.Init.Datatypes <> false constr
+R29308:29312 Corelib.Init.Datatypes <> false constr
+R29314:29318 Corelib.Init.Datatypes <> false constr
+R29326:29349 UMST.ChemConstants.AllotropeConservation <> verdict_trivial_z_refuse constr
+R29539:29544 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29509:29515 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29356:29383 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R29389:29418 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R29420:29444 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceXorEnum def
+R29450:29472 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R29474:29478 Corelib.Init.Datatypes <> false constr
+R29480:29484 Corelib.Init.Datatypes <> false constr
+R29486:29490 Corelib.Init.Datatypes <> false constr
+R29492:29496 Corelib.Init.Datatypes <> false constr
+R29498:29502 Corelib.Init.Datatypes <> false constr
+R29504:29508 Corelib.Init.Datatypes <> false constr
+R29516:29538 UMST.ChemConstants.AllotropeConservation <> verdict_xor_enum_refuse constr
+R29726:29731 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29697:29703 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29545:29572 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R29578:29607 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R29609:29632 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceXeCopy def
+R29638:29660 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R29662:29666 Corelib.Init.Datatypes <> false constr
+R29668:29672 Corelib.Init.Datatypes <> false constr
+R29674:29678 Corelib.Init.Datatypes <> false constr
+R29680:29684 Corelib.Init.Datatypes <> false constr
+R29686:29690 Corelib.Init.Datatypes <> false constr
+R29692:29696 Corelib.Init.Datatypes <> false constr
+R29704:29725 UMST.ChemConstants.AllotropeConservation <> verdict_xe_copy_refuse constr
+R29932:29937 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29892:29898 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29732:29759 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_incidence def
+R29765:29794 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R29796:29828 UMST.ChemConstants.AllotropeConservation <> allotropeIncidenceCarbonDiamondL1 def
+R29834:29856 UMST.ChemConstants.AllotropeConservation <> allotropeClaimBarAbsent def
+R29858:29862 Corelib.Init.Datatypes <> false constr
+R29864:29867 Corelib.Init.Datatypes <> true constr
+R29869:29873 Corelib.Init.Datatypes <> false constr
+R29875:29879 Corelib.Init.Datatypes <> false constr
+R29881:29885 Corelib.Init.Datatypes <> false constr
+R29887:29891 Corelib.Init.Datatypes <> false constr
+R29899:29931 UMST.ChemConstants.AllotropeConservation <> verdict_proved_without_bar_refuse constr
+R30047:30052 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30022:30028 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29938:29974 UMST.ChemConstants.AllotropeConservation <> evaluate_allotrope_conservation_close def
+R29980:30009 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr
+R30011:30015 Corelib.Init.Datatypes <> false constr
+R30017:30021 Corelib.Init.Datatypes <> false constr
+R30029:30046 UMST.ChemConstants.AllotropeConservation <> verdict_unwired_ok constr
+R30113:30118 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30106:30108 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30053:30083 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_fiber_ok def
+R30085:30105 UMST.ChemConstants.AllotropeConservation <> fiber_quantum_knowing constr
+R30109:30112 Corelib.Init.Datatypes <> true constr
+R30176:30181 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30168:30170 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30119:30149 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_fiber_ok def
+R30151:30167 UMST.ChemConstants.AllotropeConservation <> fiber_meso_acting constr
+R30171:30175 Corelib.Init.Datatypes <> false constr
+R30205:30210 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30197:30199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30182:30196 UMST.ChemConstants.AllotropeConservation <> allotropeProved def
+R30200:30204 Corelib.Init.Datatypes <> false constr
+R30360:30365 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30353:30355 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30211:30243 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R30250:30273 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R30275:30296 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeDiamond def
+R30304:30327 UMST.ChemConstants.AllotropeConservation <> carbon_allotrope_binding proj
+R30329:30351 UMST.ChemConstants.AllotropeConservation <> carbonAllotropeGraphite def
+R30356:30359 Corelib.Init.Datatypes <> true constr
+R30524:30529 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30517:30519 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30366:30398 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R30405:30432 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R30434:30457 UMST.ChemConstants.AllotropeConservation <> phosphorusAllotropeWhite def
+R30465:30492 UMST.ChemConstants.AllotropeConservation <> phosphorus_allotrope_binding proj
+R30494:30515 UMST.ChemConstants.AllotropeConservation <> phosphorusAllotropeRed def
+R30520:30523 Corelib.Init.Datatypes <> true constr
+R30668:30673 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30661:30663 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30530:30562 UMST.ChemConstants.AllotropeConservation <> allotropeBindingIdentityConserved def
+R30569:30592 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R30594:30610 UMST.ChemConstants.AllotropeConservation <> oxygenAllotropeO2 def
+R30618:30641 UMST.ChemConstants.AllotropeConservation <> oxygen_allotrope_binding proj
+R30643:30659 UMST.ChemConstants.AllotropeConservation <> oxygenAllotropeO3 def
+R30664:30667 Corelib.Init.Datatypes <> true constr
+R30741:30746 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30734:30736 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30674:30704 UMST.ChemConstants.AllotropeConservation <> allotrope_product_is_concurrent def
+R30706:30733 UMST.ChemConstants.AllotropeConservation <> allotropeProductCarbonNuance def
+R30737:30740 Corelib.Init.Datatypes <> true constr
+R30760:30763 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30747:30759 UMST.ChemConstants.AllotropeConservation <> xorEnumMarker def
+R30764:30782 UMST.ChemConstants.AllotropeConservation <> productFactorMarker def
+R30840:30874 UMST.ChemConstants.AllotropeConservation <> xor_marker_ne_product_factor_marker thm
+R30840:30874 UMST.ChemConstants.AllotropeConservation <> xor_marker_ne_product_factor_marker thm
+def 31118:31143 <> allotropeGeometryAuthority
+R31147:31152 Stdlib.Strings.String <> string ind
+def 31224:31253 <> chemIntCrossAllotropeAuthority
+R31257:31262 Stdlib.Strings.String <> string ind
+def 31322:31348 <> allotropeConservationCellId
+R31352:31357 Stdlib.Strings.String <> string ind
+def 31420:31448 <> allotropeConservationNonClaim
+R31452:31457 Stdlib.Strings.String <> string ind
+prf 32007:32036 <> allotrope_conservation_cell_id
+R32069:32071 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32042:32068 UMST.ChemConstants.AllotropeConservation <> allotropeConservationCellId def
+prf 32148:32187 <> allotrope_conservation_cites_geometry_rs
+R32219:32222 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32193:32218 UMST.ChemConstants.AllotropeConservation <> allotropeGeometryAuthority def
+prf 32260:32297 <> allotrope_conservation_cites_int_cross
+R32333:32335 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32303:32332 UMST.ChemConstants.AllotropeConservation <> chemIntCrossAllotropeAuthority def
+prf 32409:32444 <> allotrope_conservation_cites_x10_row
+R32479:32481 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32450:32478 UMST.ChemConstants.AllotropeConservation <> crossClassifierAllotropeRowId def
+def 32748:32784 <> allotropeSecondLawConservationFraming
+R32788:32793 Stdlib.Strings.String <> string ind
+prf 32900:32933 <> allotrope_not_fourth_science_axiom
+R32976:32979 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32939:32975 UMST.ChemConstants.AllotropeConservation <> allotropeSecondLawConservationFraming def
+prf 33047:33086 <> allotrope_not_twenty_sixth_axiom_framing
+R33129:33132 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33092:33128 UMST.ChemConstants.AllotropeConservation <> allotropeSecondLawConservationFraming def
+prf 33198:33226 <> allotrope_not_xe_copy_framing
+R33269:33272 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33232:33268 UMST.ChemConstants.AllotropeConservation <> allotropeSecondLawConservationFraming def
+prf 33344:33384 <> allotrope_second_law_conservation_framing
+R33427:33430 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33390:33426 UMST.ChemConstants.AllotropeConservation <> allotropeSecondLawConservationFraming def
+def 33699:33720 <> physicsGreenAuthorized
+R33732:33736 Corelib.Init.Logic <> False ind
+prf 33746:33787 <> allotrope_conservation_physics_green_false
+R33793:33794 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R33795:33816 UMST.ChemConstants.AllotropeConservation <> physicsGreenAuthorized def
+prf 33856:33894 <> allotrope_conservation_modality_unwired
+R33936:33938 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33900:33935 UMST.ChemConstants.AllotropeConservation <> allotropeConservationModalityCurrent def
+R33939:33968 UMST.ChemConstants.AllotropeConservation <> allotrope_conservation_unwired constr

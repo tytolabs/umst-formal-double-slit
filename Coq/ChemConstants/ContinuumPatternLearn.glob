@@ -1,0 +1,610 @@
+DIGEST f581df55a34df4e1e7f6601dd885fbee
+FUMST.ChemConstants.ContinuumPatternLearn
+R1434:1438 Stdlib.Arith.Arith <> <> lib
+R1440:1443 Stdlib.Lists.List <> <> lib
+R1445:1448 Stdlib.Bool.Bool <> <> lib
+R1450:1455 Stdlib.Strings.String <> <> lib
+R1457:1459 Stdlib.micromega.Lia <> <> lib
+R1469:1481 Stdlib.Lists.List ListNotations <> mod
+def 1516:1543 <> continuumpatternlearnSurface
+R1547:1552 Stdlib.Strings.String <> string ind
+def 1606:1632 <> continuumPatternLearnMarker
+R1636:1641 Stdlib.Strings.String <> string ind
+prf 1700:1736 <> continuum_pattern_learn_surface_named
+R1770:1773 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1742:1769 UMST.ChemConstants.ContinuumPatternLearn <> continuumpatternlearnSurface def
+prf 1811:1846 <> continuum_pattern_learn_marker_named
+R1879:1882 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1852:1878 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnMarker def
+ind 2148:2176 <> ContinuumPatternLearnModality
+constr 2192:2222 <> continuum_pattern_learn_unwired
+constr 2228:2258 <> continuum_pattern_learn_assumed
+constr 2264:2293 <> continuum_pattern_learn_proved
+constr 2299:2331 <> continuum_pattern_learn_surrogate
+scheme 2148:2176 <> ContinuumPatternLearnModality_rect
+scheme 2148:2176 <> ContinuumPatternLearnModality_ind
+scheme 2148:2176 <> ContinuumPatternLearnModality_rec
+scheme 2148:2176 <> ContinuumPatternLearnModality_sind
+def 2346:2381 <> continuumPatternLearnModalityCurrent
+R2385:2413 UMST.ChemConstants.ContinuumPatternLearn <> ContinuumPatternLearnModality ind
+R2420:2450 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+def 2465:2507 <> continuum_pattern_learn_lattice_cardinality
+R2511:2513 Corelib.Init.Datatypes <> nat ind
+prf 2528:2578 <> continuum_pattern_learn_lattice_cardinality_is_four
+R2627:2629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2584:2626 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_lattice_cardinality def
+prf 2665:2711 <> continuum_pattern_learn_lattice_not_118_squared
+R2787:2789 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2717:2720 Corelib.Init.Datatypes <> negb def
+R2723:2729 Stdlib.Arith.PeanoNat Nat eqb def
+R2731:2773 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_lattice_cardinality def
+R2779:2781 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2790:2793 Corelib.Init.Datatypes <> true constr
+R2812:2854 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_lattice_cardinality def
+def 3110:3150 <> crossClassifierContinuumPatternLearnRowId
+R3154:3159 Stdlib.Strings.String <> string ind
+prf 3178:3227 <> cross_classifier_continuum_pattern_learn_row_named
+R3274:3276 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3233:3273 UMST.ChemConstants.ContinuumPatternLearn <> crossClassifierContinuumPatternLearnRowId def
+def 3545:3571 <> continuumLearnSectionVacuum
+R3575:3580 Stdlib.Strings.String <> string ind
+def 3606:3635 <> continuumLearnSectionContained
+R3639:3644 Stdlib.Strings.String <> string ind
+def 3673:3698 <> continuumLearnSectionMessy
+R3702:3707 Stdlib.Strings.String <> string ind
+def 3733:3758 <> continuumLearnSectionCount
+R3762:3764 Corelib.Init.Datatypes <> nat ind
+prf 3779:3814 <> continuum_learn_section_vacuum_named
+R3847:3849 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3820:3846 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionVacuum def
+prf 3892:3930 <> continuum_learn_section_contained_named
+R3966:3968 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3936:3965 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionContained def
+prf 4014:4048 <> continuum_learn_section_messy_named
+R4080:4082 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4054:4079 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionMessy def
+prf 4124:4153 <> continuum_learn_sections_named
+R4189:4194 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4185:4187 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4159:4184 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionCount def
+R4233:4238 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4222:4224 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4195:4221 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionVacuum def
+R4283:4288 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4269:4271 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4239:4268 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionContained def
+R4315:4317 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4289:4314 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionMessy def
+def 4606:4630 <> pattern_class_cardinality
+R4634:4636 Corelib.Init.Datatypes <> nat ind
+prf 4652:4682 <> pattern_class_cardinality_is_25
+R4713:4715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4688:4712 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+prf 4752:4780 <> pattern_class_not_118_squared
+R4838:4840 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4786:4789 Corelib.Init.Datatypes <> negb def
+R4792:4798 Stdlib.Arith.PeanoNat Nat eqb def
+R4800:4824 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+R4830:4832 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R4841:4844 Corelib.Init.Datatypes <> true constr
+R4863:4887 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+def 4922:4946 <> pattern_class_index_valid
+R4953:4955 Corelib.Init.Datatypes <> nat ind
+binder 4949:4949 <> i:3
+R4960:4963 Corelib.Init.Datatypes <> bool ind
+R4970:4976 Stdlib.Arith.PeanoNat Nat ltb def
+R4978:4978 UMST.ChemConstants.ContinuumPatternLearn <> i:3 var
+R4980:5004 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+def 5101:5127 <> pattern_class_allotrope_idx
+R5131:5133 Corelib.Init.Datatypes <> nat ind
+def 5153:5179 <> pattern_class_catalysis_idx
+R5183:5185 Corelib.Init.Datatypes <> nat ind
+def 5205:5231 <> pattern_class_continuum_idx
+R5235:5237 Corelib.Init.Datatypes <> nat ind
+prf 5253:5285 <> pattern_class_allotrope_idx_is_10
+R5318:5320 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5291:5317 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_allotrope_idx def
+prf 5357:5389 <> pattern_class_catalysis_idx_is_14
+R5422:5424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5395:5421 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_catalysis_idx def
+prf 5461:5493 <> pattern_class_continuum_idx_is_23
+R5526:5528 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5499:5525 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_continuum_idx def
+def 5570:5596 <> pattern_class_allotrope_tag
+R5600:5605 Stdlib.Strings.String <> string ind
+def 5634:5660 <> pattern_class_catalysis_tag
+R5664:5669 Stdlib.Strings.String <> string ind
+def 5698:5724 <> pattern_class_continuum_tag
+R5728:5733 Stdlib.Strings.String <> string ind
+prf 5783:5815 <> carbon_nuance_chart_classes_named
+R5862:5867 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5848:5850 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5821:5847 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_allotrope_tag def
+R5909:5914 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5895:5897 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5868:5894 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_catalysis_tag def
+R5942:5944 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5915:5941 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_continuum_tag def
+prf 6027:6053 <> carbon_nuance_indices_valid
+R6119:6124 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6112:6114 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6059:6083 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R6085:6111 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_allotrope_idx def
+R6115:6118 Corelib.Init.Datatypes <> true constr
+R6185:6190 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R6178:6180 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6125:6149 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R6151:6177 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_catalysis_idx def
+R6181:6184 Corelib.Init.Datatypes <> true constr
+R6244:6246 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6191:6215 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R6217:6243 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_continuum_idx def
+R6247:6250 Corelib.Init.Datatypes <> true constr
+R6283:6307 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R6310:6334 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+def 6369:6398 <> concurrent_classifiers_not_xor
+R6402:6405 Corelib.Init.Datatypes <> bool ind
+R6410:6413 Corelib.Init.Datatypes <> true constr
+prf 6423:6457 <> concurrent_classifiers_not_xor_true
+R6493:6495 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6463:6492 UMST.ChemConstants.ContinuumPatternLearn <> concurrent_classifiers_not_xor def
+R6496:6499 Corelib.Init.Datatypes <> true constr
+def 6766:6793 <> explicitEnvCoordinateIndices
+R6797:6800 Corelib.Init.Datatypes <> list ind
+R6802:6804 Corelib.Init.Datatypes <> nat ind
+R6811:6811 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6814:6815 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6818:6819 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6822:6823 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6826:6827 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6830:6831 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6834:6834 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+def 6849:6878 <> explicit_env_coordinate_tag_15
+R6882:6887 Stdlib.Strings.String <> string ind
+def 6926:6955 <> explicit_env_coordinate_tag_16
+R6959:6964 Stdlib.Strings.String <> string ind
+def 7002:7031 <> explicit_env_coordinate_tag_19
+R7035:7040 Stdlib.Strings.String <> string ind
+def 7073:7102 <> explicit_env_coordinate_tag_20
+R7106:7111 Stdlib.Strings.String <> string ind
+def 7161:7190 <> explicit_env_coordinate_tag_21
+R7194:7199 Stdlib.Strings.String <> string ind
+def 7247:7276 <> explicit_env_coordinate_tag_22
+R7280:7285 Stdlib.Strings.String <> string ind
+def 7324:7349 <> explicitEnvCoordinateCount
+R7353:7355 Corelib.Init.Datatypes <> nat ind
+prf 7370:7406 <> explicit_env_coordinate_indices_count
+R7438:7440 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7412:7437 UMST.ChemConstants.ContinuumPatternLearn <> explicitEnvCoordinateCount def
+def 7481:7489 <> natInList
+R7496:7498 Corelib.Init.Datatypes <> nat ind
+binder 7492:7492 <> z:4
+R7507:7510 Corelib.Init.Datatypes <> list ind
+R7512:7514 Corelib.Init.Datatypes <> nat ind
+binder 7502:7503 <> zs:5
+R7519:7522 Corelib.Init.Datatypes <> bool ind
+R7529:7535 Stdlib.Lists.List <> existsb def
+R7549:7550 UMST.ChemConstants.ContinuumPatternLearn <> zs:5 var
+R7538:7544 Stdlib.Arith.PeanoNat Nat eqb def
+R7546:7546 UMST.ChemConstants.ContinuumPatternLearn <> z:4 var
+def 7565:7587 <> isExplicitEnvCoordinate
+R7596:7598 Corelib.Init.Datatypes <> nat ind
+binder 7590:7592 <> idx:6
+R7603:7606 Corelib.Init.Datatypes <> bool ind
+R7613:7621 UMST.ChemConstants.ContinuumPatternLearn <> natInList def
+R7623:7625 UMST.ChemConstants.ContinuumPatternLearn <> idx:6 var
+R7627:7654 UMST.ChemConstants.ContinuumPatternLearn <> explicitEnvCoordinateIndices def
+prf 7664:7684 <> explicit_env_15_named
+R7716:7718 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7690:7712 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R7719:7722 Corelib.Init.Datatypes <> true constr
+prf 7757:7777 <> explicit_env_16_named
+R7809:7811 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7783:7805 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R7812:7815 Corelib.Init.Datatypes <> true constr
+prf 7850:7870 <> explicit_env_19_named
+R7902:7904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7876:7898 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R7905:7908 Corelib.Init.Datatypes <> true constr
+prf 7943:7963 <> explicit_env_20_named
+R7995:7997 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7969:7991 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R7998:8001 Corelib.Init.Datatypes <> true constr
+prf 8036:8056 <> explicit_env_21_named
+R8088:8090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8062:8084 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R8091:8094 Corelib.Init.Datatypes <> true constr
+prf 8129:8149 <> explicit_env_22_named
+R8181:8183 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8155:8177 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R8184:8187 Corelib.Init.Datatypes <> true constr
+prf 8222:8251 <> explicit_env_10_not_coordinate
+R8283:8285 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8257:8279 UMST.ChemConstants.ContinuumPatternLearn <> isExplicitEnvCoordinate def
+R8286:8290 Corelib.Init.Datatypes <> false constr
+prf 8325:8364 <> explicit_env_coordinates_not_extra_axiom
+R8405:8410 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8398:8400 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8370:8394 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8401:8404 Corelib.Init.Datatypes <> true constr
+R8446:8451 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8439:8441 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8411:8435 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8442:8445 Corelib.Init.Datatypes <> true constr
+R8487:8492 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8480:8482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8452:8476 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8483:8486 Corelib.Init.Datatypes <> true constr
+R8528:8533 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8521:8523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8493:8517 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8524:8527 Corelib.Init.Datatypes <> true constr
+R8569:8574 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8562:8564 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8534:8558 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8565:8568 Corelib.Init.Datatypes <> true constr
+R8603:8605 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8575:8599 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8606:8609 Corelib.Init.Datatypes <> true constr
+R8642:8666 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_index_valid def
+R8669:8693 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+def 8952:8980 <> continuumVsDiscreteClassIndex
+R8984:8986 Corelib.Init.Datatypes <> nat ind
+prf 9002:9040 <> continuum_vs_discrete_class_index_is_23
+R9075:9077 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9046:9074 UMST.ChemConstants.ContinuumPatternLearn <> continuumVsDiscreteClassIndex def
+prf 9114:9137 <> continuum_class_23_named
+R9215:9220 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9208:9210 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9143:9149 Stdlib.Arith.PeanoNat Nat eqb def
+R9151:9179 UMST.ChemConstants.ContinuumPatternLearn <> continuumVsDiscreteClassIndex def
+R9181:9207 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_continuum_idx def
+R9211:9214 Corelib.Init.Datatypes <> true constr
+R9248:9250 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9221:9247 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_continuum_tag def
+def 9556:9579 <> livePatternBundlePiCWire
+R9583:9586 Corelib.Init.Datatypes <> bool ind
+R9591:9595 Corelib.Init.Datatypes <> false constr
+prf 9605:9641 <> live_pattern_bundle_pi_c_wire_refused
+R9671:9673 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9647:9670 UMST.ChemConstants.ContinuumPatternLearn <> livePatternBundlePiCWire def
+R9674:9678 Corelib.Init.Datatypes <> false constr
+def 9718:9742 <> chartNotLivePiCWireMarker
+R9746:9751 Stdlib.Strings.String <> string ind
+prf 9907:9943 <> chart_not_live_pi_c_wire_marker_named
+R9974:9977 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9949:9973 UMST.ChemConstants.ContinuumPatternLearn <> chartNotLivePiCWireMarker def
+def 10020:10040 <> xorEnvTagBucketMarker
+R10044:10049 Stdlib.Strings.String <> string ind
+def 10098:10120 <> concurrentProductMarker
+R10124:10129 Stdlib.Strings.String <> string ind
+prf 10196:10235 <> xor_env_tag_marker_ne_concurrent_product
+R10262:10265 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10241:10261 UMST.ChemConstants.ContinuumPatternLearn <> xorEnvTagBucketMarker def
+R10266:10288 UMST.ChemConstants.ContinuumPatternLearn <> concurrentProductMarker def
+def 10553:10580 <> chartHopPatternTaxonomyCited
+R10584:10589 Stdlib.Strings.String <> string ind
+def 10631:10660 <> chartHopContinuumSectionsNamed
+R10664:10669 Stdlib.Strings.String <> string ind
+def 10713:10736 <> chartHopConcurrentNotXor
+R10740:10745 Stdlib.Strings.String <> string ind
+def 10795:10819 <> chartHopExplicitEnvCoords
+R10823:10828 Stdlib.Strings.String <> string ind
+def 10890:10913 <> chartHopContinuumClass23
+R10917:10922 Stdlib.Strings.String <> string ind
+def 10966:10987 <> chartHopLivePiCRefused
+R10991:10996 Stdlib.Strings.String <> string ind
+def 11038:11059 <> chartHopNotSecondAxiom
+R11063:11068 Stdlib.Strings.String <> string ind
+def 11110:11126 <> chartHopSoleAxiom
+R11130:11135 Stdlib.Strings.String <> string ind
+def 11190:11219 <> continuumPatternLearnChartHops
+R11223:11226 Corelib.Init.Datatypes <> list ind
+R11228:11233 Stdlib.Strings.String <> string ind
+R11240:11240 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11269:11273 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11304:11308 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11333:11337 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11363:11367 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11392:11396 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11419:11423 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11446:11450 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11468:11468 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R11241:11268 UMST.ChemConstants.ContinuumPatternLearn <> chartHopPatternTaxonomyCited def
+R11274:11303 UMST.ChemConstants.ContinuumPatternLearn <> chartHopContinuumSectionsNamed def
+R11309:11332 UMST.ChemConstants.ContinuumPatternLearn <> chartHopConcurrentNotXor def
+R11338:11362 UMST.ChemConstants.ContinuumPatternLearn <> chartHopExplicitEnvCoords def
+R11368:11391 UMST.ChemConstants.ContinuumPatternLearn <> chartHopContinuumClass23 def
+R11397:11418 UMST.ChemConstants.ContinuumPatternLearn <> chartHopLivePiCRefused def
+R11424:11445 UMST.ChemConstants.ContinuumPatternLearn <> chartHopNotSecondAxiom def
+R11451:11467 UMST.ChemConstants.ContinuumPatternLearn <> chartHopSoleAxiom def
+def 11483:11516 <> continuumPatternLearnChartHopCount
+R11520:11522 Corelib.Init.Datatypes <> nat ind
+prf 11537:11576 <> continuum_pattern_learn_chart_hops_named
+R11616:11618 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11582:11615 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnChartHopCount def
+def 11883:11896 <> soleAxiomCount
+R11900:11902 Corelib.Init.Datatypes <> nat ind
+prf 11917:11939 <> sole_axiom_count_is_one
+R11957:11959 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11943:11956 UMST.ChemConstants.ContinuumPatternLearn <> soleAxiomCount def
+def 12000:12030 <> continuumPatternLearnIsNewAxiom
+R12042:12046 Corelib.Init.Logic <> False ind
+prf 12056:12092 <> continuum_pattern_learn_not_new_axiom
+R12096:12097 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R12098:12128 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnIsNewAxiom def
+def 12173:12201 <> secondLawConservationAxiomPin
+R12205:12210 Stdlib.Strings.String <> string ind
+prf 12348:12386 <> second_law_conservation_axiom_pin_named
+R12421:12424 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12392:12420 UMST.ChemConstants.ContinuumPatternLearn <> secondLawConservationAxiomPin def
+def 12691:12717 <> continuumPatternLearnCellId
+R12721:12726 Stdlib.Strings.String <> string ind
+def 12803:12832 <> continuumPatternLearnIntCellId
+R12836:12841 Stdlib.Strings.String <> string ind
+def 12915:12943 <> continuumPatternLearnNonClaim
+R12947:12952 Stdlib.Strings.String <> string ind
+def 13385:13414 <> patternTaxonomyModuleAuthority
+R13418:13423 Stdlib.Strings.String <> string ind
+def 13484:13515 <> nuanceAlongEnvContinuumAuthority
+R13519:13524 Stdlib.Strings.String <> string ind
+def 13603:13631 <> nuanceAlongEnvContinuumCellId
+R13635:13640 Stdlib.Strings.String <> string ind
+def 13698:13725 <> continuumVsDiscreteAuthority
+R13729:13734 Stdlib.Strings.String <> string ind
+def 13821:13841 <> patternTaxonomyMarker
+R13845:13850 Stdlib.Strings.String <> string ind
+def 13897:13917 <> chemL0Pattern00CellId
+R13921:13926 Stdlib.Strings.String <> string ind
+prf 13960:13990 <> continuum_pattern_learn_cell_id
+R14023:14027 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13996:14022 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnCellId def
+prf 14118:14152 <> continuum_pattern_learn_int_cell_id
+R14188:14192 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14158:14187 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnIntCellId def
+prf 14280:14312 <> pattern_taxonomy_cited_not_forked
+R14348:14352 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14318:14347 UMST.ChemConstants.ContinuumPatternLearn <> patternTaxonomyModuleAuthority def
+prf 14427:14458 <> nuance_along_env_continuum_cited
+R14496:14501 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14464:14495 UMST.ChemConstants.ContinuumPatternLearn <> nuanceAlongEnvContinuumAuthority def
+prf 14539:14572 <> nuance_along_env_continuum_cell_id
+R14607:14609 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14578:14606 UMST.ChemConstants.ContinuumPatternLearn <> nuanceAlongEnvContinuumCellId def
+prf 14681:14717 <> continuum_vs_discrete_authority_cited
+R14751:14754 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14723:14750 UMST.ChemConstants.ContinuumPatternLearn <> continuumVsDiscreteAuthority def
+prf 14792:14823 <> pattern_taxonomy_marker_nonempty
+R14850:14853 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14829:14849 UMST.ChemConstants.ContinuumPatternLearn <> patternTaxonomyMarker def
+prf 14891:14916 <> chem_l0_pattern_00_cell_id
+R14943:14945 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14922:14942 UMST.ChemConstants.ContinuumPatternLearn <> chemL0Pattern00CellId def
+prf 15000:15039 <> continuum_pattern_learn_modality_unwired
+R15081:15083 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15045:15080 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnModalityCurrent def
+R15084:15114 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+def 15378:15404 <> continuumPatternLearnProved
+R15416:15420 Corelib.Init.Logic <> False ind
+prf 15430:15463 <> continuum_pattern_learn_not_proved
+R15467:15468 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R15469:15495 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnProved def
+def 15764:15806 <> continuumPatternLearnPhysicsGreenAuthorized
+R15818:15822 Corelib.Init.Logic <> False ind
+prf 15832:15874 <> continuum_pattern_learn_physics_green_false
+R15880:15881 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R15882:15924 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnPhysicsGreenAuthorized def
+def 16192:16227 <> continuumPatternLearnProductionWired
+R16239:16243 Corelib.Init.Logic <> False ind
+prf 16253:16296 <> continuum_pattern_learn_not_production_wired
+R16302:16303 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16304:16339 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnProductionWired def
+def 16384:16406 <> wave100NotWiredLibOrEos
+R16410:16415 Stdlib.Strings.String <> string ind
+prf 16515:16542 <> wave100_not_wired_lib_or_eos
+R16571:16574 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16548:16570 UMST.ChemConstants.ContinuumPatternLearn <> wave100NotWiredLibOrEos def
+def 16617:16641 <> wave100LibRsSmuggleMarker
+R16645:16650 Stdlib.Strings.String <> string ind
+def 16698:16722 <> wave100EosRsSmuggleMarker
+R16726:16731 Stdlib.Strings.String <> string ind
+def 16779:16812 <> chart_authority_is_wave100_smuggle
+R16822:16827 Stdlib.Strings.String <> string ind
+binder 16815:16818 <> auth:7
+R16832:16835 Corelib.Init.Datatypes <> bool ind
+R16883:16888 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R16842:16851 Stdlib.Strings.String <> eqb def
+R16853:16856 UMST.ChemConstants.ContinuumPatternLearn <> auth:7 var
+R16858:16882 UMST.ChemConstants.ContinuumPatternLearn <> wave100LibRsSmuggleMarker def
+R16889:16898 Stdlib.Strings.String <> eqb def
+R16900:16903 UMST.ChemConstants.ContinuumPatternLearn <> auth:7 var
+R16905:16929 UMST.ChemConstants.ContinuumPatternLearn <> wave100EosRsSmuggleMarker def
+prf 16939:16974 <> pattern_taxonomy_not_wave100_smuggle
+R17052:17054 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16980:16983 Corelib.Init.Datatypes <> negb def
+R16986:17019 UMST.ChemConstants.ContinuumPatternLearn <> chart_authority_is_wave100_smuggle def
+R17021:17050 UMST.ChemConstants.ContinuumPatternLearn <> patternTaxonomyModuleAuthority def
+R17055:17058 Corelib.Init.Datatypes <> true constr
+prf 17093:17128 <> nuance_continuum_not_wave100_smuggle
+R17208:17212 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17134:17137 Corelib.Init.Datatypes <> negb def
+R17140:17173 UMST.ChemConstants.ContinuumPatternLearn <> chart_authority_is_wave100_smuggle def
+R17175:17206 UMST.ChemConstants.ContinuumPatternLearn <> nuanceAlongEnvContinuumAuthority def
+R17213:17216 Corelib.Init.Datatypes <> true constr
+ind 17479:17509 <> continuum_pattern_learn_verdict
+constr 17525:17542 <> verdict_unwired_ok
+constr 17548:17569 <> verdict_chart_named_ok
+constr 17575:17603 <> verdict_live_pi_c_wire_refuse
+constr 17609:17634 <> verdict_xor_env_tag_refuse
+constr 17640:17666 <> verdict_green_invent_refuse
+constr 17672:17704 <> verdict_proved_without_bar_refuse
+constr 17710:17740 <> verdict_production_wired_refuse
+constr 17746:17769 <> verdict_new_axiom_refuse
+scheme 17479:17509 <> continuum_pattern_learn_verdict_rect
+scheme 17479:17509 <> continuum_pattern_learn_verdict_ind
+scheme 17479:17509 <> continuum_pattern_learn_verdict_rec
+scheme 17479:17509 <> continuum_pattern_learn_verdict_sind
+def 17784:17817 <> continuum_pattern_learn_verdict_ok
+R17826:17856 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_verdict ind
+binder 17822:17822 <> v:10
+R17861:17864 Corelib.Init.Datatypes <> bool ind
+R17877:17877 UMST.ChemConstants.ContinuumPatternLearn <> v:10 var
+R17888:17905 UMST.ChemConstants.ContinuumPatternLearn <> verdict_unwired_ok constr
+R17910:17913 Corelib.Init.Datatypes <> true constr
+R17919:17940 UMST.ChemConstants.ContinuumPatternLearn <> verdict_chart_named_ok constr
+R17945:17948 Corelib.Init.Datatypes <> true constr
+R17959:17963 Corelib.Init.Datatypes <> false constr
+def 17984:18021 <> evaluate_continuum_pattern_learn_close
+R18030:18058 UMST.ChemConstants.ContinuumPatternLearn <> ContinuumPatternLearnModality ind
+binder 18026:18026 <> m:12
+R18086:18089 Corelib.Init.Datatypes <> bool ind
+binder 18064:18082 <> claim_physics_green:13
+R18120:18123 Corelib.Init.Datatypes <> bool ind
+binder 18095:18116 <> claim_production_wired:14
+R18152:18155 Corelib.Init.Datatypes <> bool ind
+binder 18129:18148 <> claim_live_pi_c_wire:15
+R18160:18190 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_verdict ind
+R18200:18218 UMST.ChemConstants.ContinuumPatternLearn <> claim_physics_green:13 var
+R18265:18286 UMST.ChemConstants.ContinuumPatternLearn <> claim_production_wired:14 var
+R18347:18366 UMST.ChemConstants.ContinuumPatternLearn <> claim_live_pi_c_wire:15 var
+R18452:18452 UMST.ChemConstants.ContinuumPatternLearn <> m:12 var
+R18475:18505 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R18510:18527 UMST.ChemConstants.ContinuumPatternLearn <> verdict_unwired_ok constr
+R18545:18575 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_assumed constr
+R18593:18622 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_proved constr
+R18640:18672 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_surrogate constr
+R18677:18698 UMST.ChemConstants.ContinuumPatternLearn <> verdict_chart_named_ok constr
+R18677:18698 UMST.ChemConstants.ContinuumPatternLearn <> verdict_chart_named_ok constr
+R18677:18698 UMST.ChemConstants.ContinuumPatternLearn <> verdict_chart_named_ok constr
+R18385:18413 UMST.ChemConstants.ContinuumPatternLearn <> verdict_live_pi_c_wire_refuse constr
+R18300:18330 UMST.ChemConstants.ContinuumPatternLearn <> verdict_production_wired_refuse constr
+R18227:18253 UMST.ChemConstants.ContinuumPatternLearn <> verdict_green_invent_refuse constr
+prf 18726:18761 <> unwired_close_without_live_pi_c_wire
+R18859:18863 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18767:18804 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R18810:18840 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R18842:18846 Corelib.Init.Datatypes <> false constr
+R18848:18852 Corelib.Init.Datatypes <> false constr
+R18854:18858 Corelib.Init.Datatypes <> false constr
+R18864:18881 UMST.ChemConstants.ContinuumPatternLearn <> verdict_unwired_ok constr
+prf 18918:18966 <> unwired_modality_always_ok_without_live_pi_c_wire
+R19064:19068 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18972:19009 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R19015:19045 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R19047:19051 Corelib.Init.Datatypes <> false constr
+R19053:19057 Corelib.Init.Datatypes <> false constr
+R19059:19063 Corelib.Init.Datatypes <> false constr
+R19069:19086 UMST.ChemConstants.ContinuumPatternLearn <> verdict_unwired_ok constr
+R19102:19137 UMST.ChemConstants.ContinuumPatternLearn <> unwired_close_without_live_pi_c_wire thm
+R19102:19137 UMST.ChemConstants.ContinuumPatternLearn <> unwired_close_without_live_pi_c_wire thm
+prf 19152:19173 <> live_pi_c_wire_refused
+R19270:19274 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19179:19216 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R19222:19252 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R19254:19258 Corelib.Init.Datatypes <> false constr
+R19260:19264 Corelib.Init.Datatypes <> false constr
+R19266:19269 Corelib.Init.Datatypes <> true constr
+R19275:19303 UMST.ChemConstants.ContinuumPatternLearn <> verdict_live_pi_c_wire_refuse constr
+prf 19338:19364 <> green_invent_refuse_unwired
+R19461:19465 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19370:19407 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R19413:19443 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R19445:19448 Corelib.Init.Datatypes <> true constr
+R19450:19454 Corelib.Init.Datatypes <> false constr
+R19456:19460 Corelib.Init.Datatypes <> false constr
+R19466:19492 UMST.ChemConstants.ContinuumPatternLearn <> verdict_green_invent_refuse constr
+prf 19529:19554 <> green_invent_always_refuse
+R19695:19699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19560:19593 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_verdict_ok def
+R19600:19637 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R19646:19676 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R19678:19681 Corelib.Init.Datatypes <> true constr
+R19683:19687 Corelib.Init.Datatypes <> false constr
+R19689:19693 Corelib.Init.Datatypes <> false constr
+R19700:19704 Corelib.Init.Datatypes <> false constr
+R19723:19756 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_verdict_ok def
+R19769:19795 UMST.ChemConstants.ContinuumPatternLearn <> green_invent_refuse_unwired thm
+R19769:19795 UMST.ChemConstants.ContinuumPatternLearn <> green_invent_refuse_unwired thm
+R19769:19795 UMST.ChemConstants.ContinuumPatternLearn <> green_invent_refuse_unwired thm
+prf 19825:19847 <> production_wired_refuse
+R19943:19947 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19853:19890 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R19896:19925 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_proved constr
+R19927:19931 Corelib.Init.Datatypes <> false constr
+R19933:19936 Corelib.Init.Datatypes <> true constr
+R19938:19942 Corelib.Init.Datatypes <> false constr
+R19948:19978 UMST.ChemConstants.ContinuumPatternLearn <> verdict_production_wired_refuse constr
+prf 20239:20278 <> continuum_pattern_learn_fixture_scaffold
+R20401:20406 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20376:20382 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20284:20321 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R20327:20357 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R20359:20363 Corelib.Init.Datatypes <> false constr
+R20365:20369 Corelib.Init.Datatypes <> false constr
+R20371:20375 Corelib.Init.Datatypes <> false constr
+R20383:20400 UMST.ChemConstants.ContinuumPatternLearn <> verdict_unwired_ok constr
+R20534:20539 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20498:20504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20407:20444 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R20450:20480 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R20482:20486 Corelib.Init.Datatypes <> false constr
+R20488:20492 Corelib.Init.Datatypes <> false constr
+R20494:20497 Corelib.Init.Datatypes <> true constr
+R20505:20533 UMST.ChemConstants.ContinuumPatternLearn <> verdict_live_pi_c_wire_refuse constr
+R20665:20670 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20631:20637 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20540:20577 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R20583:20613 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R20615:20618 Corelib.Init.Datatypes <> true constr
+R20620:20624 Corelib.Init.Datatypes <> false constr
+R20626:20630 Corelib.Init.Datatypes <> false constr
+R20638:20664 UMST.ChemConstants.ContinuumPatternLearn <> verdict_green_invent_refuse constr
+R20799:20804 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20761:20767 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20671:20708 UMST.ChemConstants.ContinuumPatternLearn <> evaluate_continuum_pattern_learn_close def
+R20714:20743 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_proved constr
+R20745:20749 Corelib.Init.Datatypes <> false constr
+R20751:20754 Corelib.Init.Datatypes <> true constr
+R20756:20760 Corelib.Init.Datatypes <> false constr
+R20768:20798 UMST.ChemConstants.ContinuumPatternLearn <> verdict_production_wired_refuse constr
+R20875:20880 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20841:20843 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20805:20840 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnModalityCurrent def
+R20844:20874 UMST.ChemConstants.ContinuumPatternLearn <> continuum_pattern_learn_unwired constr
+R20926:20931 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20881:20882 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20883:20925 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnPhysicsGreenAuthorized def
+R20970:20975 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20932:20933 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20934:20969 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnProductionWired def
+R21005:21010 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20976:20977 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R20978:21004 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnProved def
+R21044:21049 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21011:21012 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R21013:21043 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnIsNewAxiom def
+R21068:21073 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21064:21066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21050:21063 UMST.ChemConstants.ContinuumPatternLearn <> soleAxiomCount def
+R21106:21111 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21098:21100 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21074:21097 UMST.ChemConstants.ContinuumPatternLearn <> livePatternBundlePiCWire def
+R21101:21105 Corelib.Init.Datatypes <> false constr
+R21149:21154 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21142:21144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21112:21141 UMST.ChemConstants.ContinuumPatternLearn <> concurrent_classifiers_not_xor def
+R21145:21148 Corelib.Init.Datatypes <> true constr
+R21193:21198 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21189:21191 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21155:21188 UMST.ChemConstants.ContinuumPatternLearn <> continuumPatternLearnChartHopCount def
+R21229:21234 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21225:21227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21199:21224 UMST.ChemConstants.ContinuumPatternLearn <> continuumLearnSectionCount def
+R21265:21270 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21260:21262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21235:21259 UMST.ChemConstants.ContinuumPatternLearn <> pattern_class_cardinality def
+R21292:21295 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21271:21291 UMST.ChemConstants.ContinuumPatternLearn <> xorEnvTagBucketMarker def
+R21296:21318 UMST.ChemConstants.ContinuumPatternLearn <> concurrentProductMarker def
+R21407:21446 UMST.ChemConstants.ContinuumPatternLearn <> xor_env_tag_marker_ne_concurrent_product thm
+R21407:21446 UMST.ChemConstants.ContinuumPatternLearn <> xor_env_tag_marker_ne_concurrent_product thm

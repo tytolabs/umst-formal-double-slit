@@ -1,0 +1,117 @@
+DIGEST 1932641b2f08aa34067ac9d58a0dcc6e
+FUMST.ChemConstants.Eco02ConsumeNotFork
+R977:981 Stdlib.Arith.Arith <> <> lib
+R983:988 Stdlib.Strings.String <> <> lib
+ind 1246:1272 <> Eco02ConsumeNotForkModality
+constr 1288:1318 <> eco_02_consume_not_fork_unwired
+constr 1324:1354 <> eco_02_consume_not_fork_assumed
+constr 1360:1389 <> eco_02_consume_not_fork_proved
+constr 1395:1427 <> eco_02_consume_not_fork_surrogate
+scheme 1246:1272 <> Eco02ConsumeNotForkModality_rect
+scheme 1246:1272 <> Eco02ConsumeNotForkModality_ind
+scheme 1246:1272 <> Eco02ConsumeNotForkModality_rec
+scheme 1246:1272 <> Eco02ConsumeNotForkModality_sind
+def 1442:1475 <> eco02ConsumeNotForkModalityCurrent
+R1479:1505 UMST.ChemConstants.Eco02ConsumeNotFork <> Eco02ConsumeNotForkModality ind
+R1512:1542 UMST.ChemConstants.Eco02ConsumeNotFork <> eco_02_consume_not_fork_unwired constr
+def 1781:1804 <> chemForksLiquidPpoKernel
+R1808:1811 Corelib.Init.Datatypes <> bool ind
+R1816:1820 Corelib.Init.Datatypes <> false constr
+def 1835:1856 <> burnKernelCopiedToChem
+R1860:1863 Corelib.Init.Datatypes <> bool ind
+R1868:1872 Corelib.Init.Datatypes <> false constr
+def 1887:1910 <> liquidPpoProductionWired
+R1914:1917 Corelib.Init.Datatypes <> bool ind
+R1922:1926 Corelib.Init.Datatypes <> false constr
+def 1941:1966 <> bindAntichainUntilMeasured
+R1970:1973 Corelib.Init.Datatypes <> bool ind
+R1978:1981 Corelib.Init.Datatypes <> true constr
+prf 1991:2024 <> chem_forks_liquid_ppo_kernel_false
+R2054:2056 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2030:2053 UMST.ChemConstants.Eco02ConsumeNotFork <> chemForksLiquidPpoKernel def
+R2057:2061 Corelib.Init.Datatypes <> false constr
+prf 2096:2127 <> burn_kernel_copied_to_chem_false
+R2155:2157 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2133:2154 UMST.ChemConstants.Eco02ConsumeNotFork <> burnKernelCopiedToChem def
+R2158:2162 Corelib.Init.Datatypes <> false constr
+prf 2197:2229 <> liquid_ppo_production_wired_false
+R2259:2261 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2235:2258 UMST.ChemConstants.Eco02ConsumeNotFork <> liquidPpoProductionWired def
+R2262:2266 Corelib.Init.Datatypes <> false constr
+prf 2301:2334 <> bind_antichain_until_measured_true
+R2366:2368 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2340:2365 UMST.ChemConstants.Eco02ConsumeNotFork <> bindAntichainUntilMeasured def
+R2369:2372 Corelib.Init.Datatypes <> true constr
+prf 2628:2642 <> oneLearnerSpine
+R2670:2672 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2646:2669 UMST.ChemConstants.Eco02ConsumeNotFork <> chemForksLiquidPpoKernel def
+R2673:2677 Corelib.Init.Datatypes <> false constr
+R2693:2726 UMST.ChemConstants.Eco02ConsumeNotFork <> chem_forks_liquid_ppo_kernel_false thm
+R2693:2726 UMST.ChemConstants.Eco02ConsumeNotFork <> chem_forks_liquid_ppo_kernel_false thm
+prf 2743:2776 <> consume_not_fork_one_learner_spine
+R2814:2817 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2806:2808 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2782:2805 UMST.ChemConstants.Eco02ConsumeNotFork <> chemForksLiquidPpoKernel def
+R2809:2813 Corelib.Init.Datatypes <> false constr
+R2840:2842 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2818:2839 UMST.ChemConstants.Eco02ConsumeNotFork <> burnKernelCopiedToChem def
+R2843:2847 Corelib.Init.Datatypes <> false constr
+R2876:2890 UMST.ChemConstants.Eco02ConsumeNotFork <> oneLearnerSpine thm
+R2876:2890 UMST.ChemConstants.Eco02ConsumeNotFork <> oneLearnerSpine thm
+R2903:2934 UMST.ChemConstants.Eco02ConsumeNotFork <> burn_kernel_copied_to_chem_false thm
+R2903:2934 UMST.ChemConstants.Eco02ConsumeNotFork <> burn_kernel_copied_to_chem_false thm
+prf 2951:2981 <> consume_not_fork_bind_antichain
+R3020:3023 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3013:3015 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2987:3012 UMST.ChemConstants.Eco02ConsumeNotFork <> bindAntichainUntilMeasured def
+R3016:3019 Corelib.Init.Datatypes <> true constr
+R3048:3050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3024:3047 UMST.ChemConstants.Eco02ConsumeNotFork <> liquidPpoProductionWired def
+R3051:3055 Corelib.Init.Datatypes <> false constr
+R3084:3117 UMST.ChemConstants.Eco02ConsumeNotFork <> bind_antichain_until_measured_true thm
+R3084:3117 UMST.ChemConstants.Eco02ConsumeNotFork <> bind_antichain_until_measured_true thm
+R3130:3162 UMST.ChemConstants.Eco02ConsumeNotFork <> liquid_ppo_production_wired_false thm
+R3130:3162 UMST.ChemConstants.Eco02ConsumeNotFork <> liquid_ppo_production_wired_false thm
+def 3408:3431 <> liquidPpoSourceAuthority
+R3435:3440 Stdlib.Strings.String <> string ind
+def 3502:3525 <> liquidPpoGoldenAuthority
+R3529:3534 Stdlib.Strings.String <> string ind
+def 3636:3660 <> liquidPpoWitnessAuthority
+R3664:3669 Stdlib.Strings.String <> string ind
+def 3761:3780 <> adkLearningAuthority
+R3784:3789 Stdlib.Strings.String <> string ind
+def 3858:3882 <> adkLiquidPpoBindAuthority
+R3886:3891 Stdlib.Strings.String <> string ind
+def 3967:3991 <> eco02ConsumeNotForkCellId
+R3995:4000 Stdlib.Strings.String <> string ind
+def 4064:4090 <> eco02ConsumeNotForkNonClaim
+R4094:4099 Stdlib.Strings.String <> string ind
+prf 4514:4544 <> eco_02_consume_not_fork_cell_id
+R4575:4579 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4550:4574 UMST.ChemConstants.Eco02ConsumeNotFork <> eco02ConsumeNotForkCellId def
+prf 4657:4686 <> eco_02_cites_liquid_ppo_source
+R4716:4721 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4692:4715 UMST.ChemConstants.Eco02ConsumeNotFork <> liquidPpoSourceAuthority def
+prf 4759:4783 <> eco_02_cites_adk_learning
+R4809:4811 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4789:4808 UMST.ChemConstants.Eco02ConsumeNotFork <> adkLearningAuthority def
+prf 4894:4921 <> eco_02_cites_liquid_ppo_bind
+R4952:4957 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4927:4951 UMST.ChemConstants.Eco02ConsumeNotFork <> adkLiquidPpoBindAuthority def
+def 5222:5254 <> eco02SecondLawConservationFraming
+R5258:5263 Stdlib.Strings.String <> string ind
+prf 5352:5384 <> eco_02_not_second_optimizer_axiom
+R5423:5428 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5390:5422 UMST.ChemConstants.Eco02ConsumeNotFork <> eco02SecondLawConservationFraming def
+prf 5488:5525 <> eco_02_second_law_conservation_framing
+R5564:5569 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5531:5563 UMST.ChemConstants.Eco02ConsumeNotFork <> eco02SecondLawConservationFraming def
+def 5836:5857 <> physicsGreenAuthorized
+R5869:5873 Corelib.Init.Logic <> False ind
+prf 5883:5908 <> eco_02_physics_green_false
+R5914:5915 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R5916:5937 UMST.ChemConstants.Eco02ConsumeNotFork <> physicsGreenAuthorized def
+prf 5977:5999 <> eco_02_modality_unwired
+R6039:6041 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6005:6038 UMST.ChemConstants.Eco02ConsumeNotFork <> eco02ConsumeNotForkModalityCurrent def
+R6042:6072 UMST.ChemConstants.Eco02ConsumeNotFork <> eco_02_consume_not_fork_unwired constr

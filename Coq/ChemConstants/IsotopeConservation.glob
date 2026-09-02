@@ -1,0 +1,1277 @@
+DIGEST bdb87459444fee2bdbbfb730202207a6
+FUMST.ChemConstants.IsotopeConservation
+R1286:1290 Stdlib.Arith.Arith <> <> lib
+R1292:1297 Stdlib.ZArith.ZArith <> <> lib
+R1299:1304 Stdlib.Strings.String <> <> lib
+R1306:1309 Stdlib.Bool.Bool <> <> lib
+R1311:1313 Stdlib.micromega.Lia <> <> lib
+R1315:1318 Stdlib.Lists.List <> <> lib
+R1328:1340 Stdlib.Lists.List ListNotations <> mod
+ind 1671:1697 <> IsotopeConservationModality
+constr 1713:1740 <> isotope_conservation_unwired
+constr 1746:1773 <> isotope_conservation_assumed
+constr 1779:1805 <> isotope_conservation_proved
+constr 1811:1840 <> isotope_conservation_surrogate
+scheme 1671:1697 <> IsotopeConservationModality_rect
+scheme 1671:1697 <> IsotopeConservationModality_ind
+scheme 1671:1697 <> IsotopeConservationModality_rec
+scheme 1671:1697 <> IsotopeConservationModality_sind
+def 1855:1888 <> isotopeConservationModalityCurrent
+R1894:1920 UMST.ChemConstants.IsotopeConservation <> IsotopeConservationModality ind
+R1927:1954 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+def 1969:1995 <> isotope_lattice_cardinality
+R1999:2001 Corelib.Init.Datatypes <> nat ind
+prf 2016:2050 <> isotope_lattice_cardinality_is_four
+R2083:2085 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2056:2082 UMST.ChemConstants.IsotopeConservation <> isotope_lattice_cardinality def
+prf 2121:2151 <> isotope_lattice_not_118_squared
+R2211:2213 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2157:2160 Corelib.Init.Datatypes <> negb def
+R2163:2169 Stdlib.Arith.PeanoNat Nat eqb def
+R2171:2197 UMST.ChemConstants.IsotopeConservation <> isotope_lattice_cardinality def
+R2203:2205 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2214:2217 Corelib.Init.Datatypes <> true constr
+R2236:2262 UMST.ChemConstants.IsotopeConservation <> isotope_lattice_cardinality def
+def 2523:2547 <> pattern_class_cardinality
+R2551:2553 Corelib.Init.Datatypes <> nat ind
+prf 2569:2599 <> pattern_class_cardinality_is_25
+R2630:2632 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2605:2629 UMST.ChemConstants.IsotopeConservation <> pattern_class_cardinality def
+prf 2669:2697 <> pattern_class_not_118_squared
+R2755:2757 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2703:2706 Corelib.Init.Datatypes <> negb def
+R2709:2715 Stdlib.Arith.PeanoNat Nat eqb def
+R2717:2741 UMST.ChemConstants.IsotopeConservation <> pattern_class_cardinality def
+R2747:2749 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2758:2761 Corelib.Init.Datatypes <> true constr
+R2780:2804 UMST.ChemConstants.IsotopeConservation <> pattern_class_cardinality def
+def 2839:2863 <> pattern_class_index_valid
+R2870:2872 Corelib.Init.Datatypes <> nat ind
+binder 2866:2866 <> i:3
+R2877:2880 Corelib.Init.Datatypes <> bool ind
+R2887:2893 Stdlib.Arith.PeanoNat Nat ltb def
+R2895:2895 UMST.ChemConstants.IsotopeConservation <> i:3 var
+R2897:2921 UMST.ChemConstants.IsotopeConservation <> pattern_class_cardinality def
+def 3002:3026 <> pattern_class_isotope_idx
+R3030:3032 Corelib.Init.Datatypes <> nat ind
+prf 3048:3078 <> pattern_class_isotope_idx_is_11
+R3109:3111 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3084:3108 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_idx def
+prf 3148:3172 <> isotope_class_index_valid
+R3229:3231 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3178:3202 UMST.ChemConstants.IsotopeConservation <> pattern_class_index_valid def
+R3204:3228 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_idx def
+R3232:3235 Corelib.Init.Datatypes <> true constr
+R3254:3278 UMST.ChemConstants.IsotopeConservation <> pattern_class_index_valid def
+R3281:3305 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_idx def
+R3312:3336 UMST.ChemConstants.IsotopeConservation <> pattern_class_cardinality def
+def 3371:3397 <> crossClassifierIsotopeRowId
+R3401:3406 Stdlib.Strings.String <> string ind
+prf 3425:3458 <> cross_classifier_isotope_row_named
+R3491:3493 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3464:3490 UMST.ChemConstants.IsotopeConservation <> crossClassifierIsotopeRowId def
+def 3538:3562 <> pattern_class_isotope_tag
+R3566:3571 Stdlib.Strings.String <> string ind
+def 3601:3631 <> north_star_class_11_isotope_tag
+R3635:3640 Stdlib.Strings.String <> string ind
+prf 3675:3708 <> pattern_class_isotope_tag_nonempty
+R3739:3742 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3714:3738 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_tag def
+prf 3780:3819 <> north_star_class_11_isotope_tag_nonempty
+R3856:3859 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3825:3855 UMST.ChemConstants.IsotopeConservation <> north_star_class_11_isotope_tag def
+def 4125:4147 <> iupac_table_cardinality
+R4151:4153 Corelib.Init.Datatypes <> nat ind
+prf 4170:4199 <> iupac_table_cardinality_is_118
+R4228:4230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4205:4227 UMST.ChemConstants.IsotopeConservation <> iupac_table_cardinality def
+def 4273:4293 <> argon_atomic_number_z
+R4297:4299 Corelib.Init.Datatypes <> nat ind
+def 4319:4341 <> uranium_atomic_number_z
+R4345:4347 Corelib.Init.Datatypes <> nat ind
+prf 4363:4389 <> argon_atomic_number_z_is_18
+R4416:4418 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4395:4415 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+prf 4455:4483 <> uranium_atomic_number_z_is_92
+R4512:4514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4489:4511 UMST.ChemConstants.IsotopeConservation <> uranium_atomic_number_z def
+def 4556:4568 <> argon_z_valid
+R4572:4575 Corelib.Init.Datatypes <> bool ind
+R4613:4618 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4582:4588 Stdlib.Arith.PeanoNat Nat ltb def
+R4592:4612 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+R4619:4625 Stdlib.Arith.PeanoNat Nat leb def
+R4627:4647 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+R4649:4671 UMST.ChemConstants.IsotopeConservation <> iupac_table_cardinality def
+prf 4681:4698 <> argon_z_valid_true
+R4715:4717 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4702:4714 UMST.ChemConstants.IsotopeConservation <> argon_z_valid def
+R4718:4721 Corelib.Init.Datatypes <> true constr
+R4740:4752 UMST.ChemConstants.IsotopeConservation <> argon_z_valid def
+R4755:4775 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+R4778:4800 UMST.ChemConstants.IsotopeConservation <> iupac_table_cardinality def
+def 4835:4856 <> forbidden_z119_smuggle
+R4860:4862 Corelib.Init.Datatypes <> nat ind
+def 4884:4910 <> forbidden_z119_not_in_table
+R4914:4917 Corelib.Init.Datatypes <> bool ind
+R4924:4927 Corelib.Init.Datatypes <> negb def
+R4930:4936 Stdlib.Arith.PeanoNat Nat leb def
+R4938:4959 UMST.ChemConstants.IsotopeConservation <> forbidden_z119_smuggle def
+R4961:4983 UMST.ChemConstants.IsotopeConservation <> iupac_table_cardinality def
+prf 4994:5026 <> forbidden_z119_not_in_iupac_table
+R5059:5061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5032:5058 UMST.ChemConstants.IsotopeConservation <> forbidden_z119_not_in_table def
+R5062:5065 Corelib.Init.Datatypes <> true constr
+R5084:5110 UMST.ChemConstants.IsotopeConservation <> forbidden_z119_not_in_table def
+R5113:5134 UMST.ChemConstants.IsotopeConservation <> forbidden_z119_smuggle def
+R5137:5159 UMST.ChemConstants.IsotopeConservation <> iupac_table_cardinality def
+def 5194:5211 <> isotope_factor_tag
+R5215:5220 Stdlib.Strings.String <> string ind
+def 5250:5276 <> electronic_chem_channel_tag
+R5280:5285 Stdlib.Strings.String <> string ind
+def 5326:5350 <> nuclear_decay_channel_tag
+R5354:5359 Stdlib.Strings.String <> string ind
+prf 5402:5428 <> isotope_factor_tag_nonempty
+R5452:5455 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5434:5451 UMST.ChemConstants.IsotopeConservation <> isotope_factor_tag def
+prf 5493:5528 <> electronic_chem_channel_tag_nonempty
+R5561:5564 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5534:5560 UMST.ChemConstants.IsotopeConservation <> electronic_chem_channel_tag def
+prf 5602:5635 <> nuclear_decay_channel_tag_nonempty
+R5666:5669 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5641:5665 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_channel_tag def
+ind 5936:5951 <> iso_channel_slot
+constr 5967:5982 <> iso_slot_unwired
+constr 5988:6002 <> iso_slot_absent
+constr 6008:6023 <> iso_slot_present
+scheme 5936:5951 <> iso_channel_slot_rect
+scheme 5936:5951 <> iso_channel_slot_ind
+scheme 5936:5951 <> iso_channel_slot_rec
+scheme 5936:5951 <> iso_channel_slot_sind
+def 6038:6057 <> iso_channel_slot_beq
+R6068:6083 UMST.ChemConstants.IsotopeConservation <> iso_channel_slot ind
+binder 6060:6061 <> s1:6
+binder 6063:6064 <> s2:7
+R6088:6091 Corelib.Init.Datatypes <> bool ind
+R6108:6109 UMST.ChemConstants.IsotopeConservation <> s2:7 var
+R6104:6105 UMST.ChemConstants.IsotopeConservation <> s1:6 var
+R6120:6135 UMST.ChemConstants.IsotopeConservation <> iso_slot_unwired constr
+R6138:6153 UMST.ChemConstants.IsotopeConservation <> iso_slot_unwired constr
+R6158:6161 Corelib.Init.Datatypes <> true constr
+R6167:6181 UMST.ChemConstants.IsotopeConservation <> iso_slot_absent constr
+R6184:6198 UMST.ChemConstants.IsotopeConservation <> iso_slot_absent constr
+R6203:6206 Corelib.Init.Datatypes <> true constr
+R6212:6227 UMST.ChemConstants.IsotopeConservation <> iso_slot_present constr
+R6230:6245 UMST.ChemConstants.IsotopeConservation <> iso_slot_present constr
+R6250:6253 Corelib.Init.Datatypes <> true constr
+R6267:6271 Corelib.Init.Datatypes <> false constr
+def 6292:6318 <> iso_channel_slot_is_present
+R6325:6340 UMST.ChemConstants.IsotopeConservation <> iso_channel_slot ind
+binder 6321:6321 <> s:10
+R6345:6348 Corelib.Init.Datatypes <> bool ind
+R6361:6361 UMST.ChemConstants.IsotopeConservation <> s:10 var
+R6372:6387 UMST.ChemConstants.IsotopeConservation <> iso_slot_present constr
+R6392:6395 Corelib.Init.Datatypes <> true constr
+R6406:6410 Corelib.Init.Datatypes <> false constr
+def 6431:6456 <> isotopeProductChannelCount
+R6460:6462 Corelib.Init.Datatypes <> nat ind
+prf 6477:6514 <> isotope_product_channel_count_is_three
+R6546:6548 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6520:6545 UMST.ChemConstants.IsotopeConservation <> isotopeProductChannelCount def
+def 6666:6692 <> iso_channel_electronic_chem
+R6696:6698 Corelib.Init.Datatypes <> nat ind
+def 6717:6741 <> iso_channel_nuclear_decay
+R6745:6747 Corelib.Init.Datatypes <> nat ind
+def 6766:6792 <> iso_channel_class11_isotope
+R6796:6798 Corelib.Init.Datatypes <> nat ind
+prf 6813:6848 <> iso_channel_electronic_chem_idx_is_0
+R6881:6883 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6854:6880 UMST.ChemConstants.IsotopeConservation <> iso_channel_electronic_chem def
+prf 6919:6952 <> iso_channel_nuclear_decay_idx_is_1
+R6983:6985 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6958:6982 UMST.ChemConstants.IsotopeConservation <> iso_channel_nuclear_decay def
+prf 7021:7056 <> iso_channel_class11_isotope_idx_is_2
+R7089:7091 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7062:7088 UMST.ChemConstants.IsotopeConservation <> iso_channel_class11_isotope def
+def 7355:7372 <> iso_channel_bundle
+R7387:7390 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7384:7386 Corelib.Init.Datatypes <> nat ind
+R7391:7406 UMST.ChemConstants.IsotopeConservation <> iso_channel_slot ind
+def 7421:7443 <> isotopeBundleAllUnwired
+R7447:7464 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+R7480:7495 UMST.ChemConstants.IsotopeConservation <> iso_slot_unwired constr
+def 7510:7524 <> isotopeBundleAt
+R7531:7548 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 7527:7527 <> b:12
+R7558:7560 Corelib.Init.Datatypes <> nat ind
+binder 7552:7554 <> idx:13
+R7573:7588 UMST.ChemConstants.IsotopeConservation <> iso_channel_slot ind
+binder 7566:7569 <> slot:14
+R7593:7610 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 7621:7621 <> i:15
+R7629:7635 Stdlib.Arith.PeanoNat Nat eqb def
+R7637:7637 UMST.ChemConstants.IsotopeConservation <> i:15 var
+R7639:7641 UMST.ChemConstants.IsotopeConservation <> idx:13 var
+R7658:7658 UMST.ChemConstants.IsotopeConservation <> b:12 var
+R7660:7660 UMST.ChemConstants.IsotopeConservation <> i:15 var
+R7648:7651 UMST.ChemConstants.IsotopeConservation <> slot:14 var
+def 7675:7698 <> isotopeBundleWithPresent
+R7707:7724 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 7703:7703 <> b:16
+R7734:7736 Corelib.Init.Datatypes <> nat ind
+binder 7728:7730 <> idx:17
+R7741:7758 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+R7765:7779 UMST.ChemConstants.IsotopeConservation <> isotopeBundleAt def
+R7781:7781 UMST.ChemConstants.IsotopeConservation <> b:16 var
+R7783:7785 UMST.ChemConstants.IsotopeConservation <> idx:17 var
+R7787:7802 UMST.ChemConstants.IsotopeConservation <> iso_slot_present constr
+def 7815:7837 <> count_iso_present_up_to
+R7844:7861 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 7840:7840 <> b:18
+R7873:7875 Corelib.Init.Datatypes <> nat ind
+binder 7865:7869 <> bound:19
+R7880:7882 Corelib.Init.Datatypes <> nat ind
+R7895:7899 UMST.ChemConstants.IsotopeConservation <> bound:19 var
+R7921:7921 Corelib.Init.Datatypes <> S constr
+R7956:7982 UMST.ChemConstants.IsotopeConservation <> iso_channel_slot_is_present def
+R7985:7985 UMST.ChemConstants.IsotopeConservation <> b:18 var
+R7988:7991 Corelib.Init.Peano <> pred abbrev
+R7993:7997 UMST.ChemConstants.IsotopeConservation <> bound:19 var
+binder 7938:7940 <> add:22
+R8059:8061 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8032:8054 UMST.ChemConstants.IsotopeConservation <> count_iso_present_up_to:20 def
+R8056:8056 UMST.ChemConstants.IsotopeConservation <> b:18 var
+R8062:8064 UMST.ChemConstants.IsotopeConservation <> add:22 var
+def 8085:8109 <> isotopeBundlePresentCount
+R8116:8133 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 8112:8112 <> b:23
+R8138:8140 Corelib.Init.Datatypes <> nat ind
+R8147:8169 UMST.ChemConstants.IsotopeConservation <> count_iso_present_up_to def
+R8171:8171 UMST.ChemConstants.IsotopeConservation <> b:23 var
+R8173:8198 UMST.ChemConstants.IsotopeConservation <> isotopeProductChannelCount def
+def 8213:8230 <> isotopeBundleHolds
+R8237:8254 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 8233:8233 <> b:24
+R8264:8266 Corelib.Init.Datatypes <> nat ind
+binder 8258:8260 <> idx:25
+R8271:8274 Corelib.Init.Datatypes <> bool ind
+R8281:8307 UMST.ChemConstants.IsotopeConservation <> iso_channel_slot_is_present def
+R8310:8310 UMST.ChemConstants.IsotopeConservation <> b:24 var
+R8312:8314 UMST.ChemConstants.IsotopeConservation <> idx:25 var
+def 8330:8361 <> isotopeBundleIsConcurrentProduct
+R8368:8385 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 8364:8364 <> b:26
+R8390:8393 Corelib.Init.Datatypes <> bool ind
+R8400:8406 Stdlib.Arith.PeanoNat Nat leb def
+R8411:8435 UMST.ChemConstants.IsotopeConservation <> isotopeBundlePresentCount def
+R8437:8437 UMST.ChemConstants.IsotopeConservation <> b:26 var
+def 8542:8559 <> isotopeAr18Witness
+R8563:8580 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+R8587:8610 UMST.ChemConstants.IsotopeConservation <> isotopeBundleWithPresent def
+R8617:8640 UMST.ChemConstants.IsotopeConservation <> isotopeBundleWithPresent def
+R8649:8672 UMST.ChemConstants.IsotopeConservation <> isotopeBundleWithPresent def
+R8674:8696 UMST.ChemConstants.IsotopeConservation <> isotopeBundleAllUnwired def
+R8706:8732 UMST.ChemConstants.IsotopeConservation <> iso_channel_electronic_chem def
+R8741:8765 UMST.ChemConstants.IsotopeConservation <> iso_channel_nuclear_decay def
+R8772:8798 UMST.ChemConstants.IsotopeConservation <> iso_channel_class11_isotope def
+def 8813:8831 <> isotopeEmptyWitness
+R8835:8852 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+R8859:8881 UMST.ChemConstants.IsotopeConservation <> isotopeBundleAllUnwired def
+def 8896:8915 <> isotopeSinglePresent
+R8919:8936 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+R8943:8966 UMST.ChemConstants.IsotopeConservation <> isotopeBundleWithPresent def
+R8968:8990 UMST.ChemConstants.IsotopeConservation <> isotopeBundleAllUnwired def
+R8996:9022 UMST.ChemConstants.IsotopeConservation <> iso_channel_electronic_chem def
+prf 9032:9062 <> electronic_chem_channel_present
+R9137:9139 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9068:9085 UMST.ChemConstants.IsotopeConservation <> isotopeBundleHolds def
+R9087:9104 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R9110:9136 UMST.ChemConstants.IsotopeConservation <> iso_channel_electronic_chem def
+R9140:9143 Corelib.Init.Datatypes <> true constr
+prf 9178:9206 <> nuclear_decay_channel_present
+R9279:9281 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9212:9229 UMST.ChemConstants.IsotopeConservation <> isotopeBundleHolds def
+R9231:9248 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R9254:9278 UMST.ChemConstants.IsotopeConservation <> iso_channel_nuclear_decay def
+R9282:9285 Corelib.Init.Datatypes <> true constr
+prf 9320:9350 <> class11_isotope_channel_present
+R9425:9427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9356:9373 UMST.ChemConstants.IsotopeConservation <> isotopeBundleHolds def
+R9375:9392 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R9398:9424 UMST.ChemConstants.IsotopeConservation <> iso_channel_class11_isotope def
+R9428:9431 Corelib.Init.Datatypes <> true constr
+prf 9466:9500 <> ar18_witness_present_count_is_three
+R9550:9552 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9506:9530 UMST.ChemConstants.IsotopeConservation <> isotopeBundlePresentCount def
+R9532:9549 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+prf 9588:9621 <> ar18_witness_is_concurrent_product
+R9678:9680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9627:9658 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R9660:9677 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R9681:9684 Corelib.Init.Datatypes <> true constr
+R9703:9734 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R9747:9781 UMST.ChemConstants.IsotopeConservation <> ar18_witness_present_count_is_three thm
+R9747:9781 UMST.ChemConstants.IsotopeConservation <> ar18_witness_present_count_is_three thm
+R9747:9781 UMST.ChemConstants.IsotopeConservation <> ar18_witness_present_count_is_three thm
+prf 9811:9841 <> empty_bundle_present_count_zero
+R9892:9894 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9847:9871 UMST.ChemConstants.IsotopeConservation <> isotopeBundlePresentCount def
+R9873:9891 UMST.ChemConstants.IsotopeConservation <> isotopeEmptyWitness def
+prf 9930:9964 <> empty_bundle_not_concurrent_product
+R10022:10024 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9970:10001 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R10003:10021 UMST.ChemConstants.IsotopeConservation <> isotopeEmptyWitness def
+R10025:10029 Corelib.Init.Datatypes <> false constr
+R10048:10079 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R10092:10122 UMST.ChemConstants.IsotopeConservation <> empty_bundle_present_count_zero thm
+R10092:10122 UMST.ChemConstants.IsotopeConservation <> empty_bundle_present_count_zero thm
+R10092:10122 UMST.ChemConstants.IsotopeConservation <> empty_bundle_present_count_zero thm
+prf 10152:10178 <> single_present_count_is_one
+R10230:10232 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10184:10208 UMST.ChemConstants.IsotopeConservation <> isotopeBundlePresentCount def
+R10210:10229 UMST.ChemConstants.IsotopeConservation <> isotopeSinglePresent def
+prf 10268:10304 <> single_present_not_concurrent_product
+R10363:10365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10310:10341 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R10343:10362 UMST.ChemConstants.IsotopeConservation <> isotopeSinglePresent def
+R10366:10370 Corelib.Init.Datatypes <> false constr
+R10389:10420 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R10433:10459 UMST.ChemConstants.IsotopeConservation <> single_present_count_is_one thm
+R10433:10459 UMST.ChemConstants.IsotopeConservation <> single_present_count_is_one thm
+R10433:10459 UMST.ChemConstants.IsotopeConservation <> single_present_count_is_one thm
+ind 10718:10732 <> iso_xor_posture
+constr 10748:10764 <> iso_xor_exclusive
+constr 10770:10795 <> iso_xor_concurrent_product
+scheme 10718:10732 <> iso_xor_posture_rect
+scheme 10718:10732 <> iso_xor_posture_ind
+scheme 10718:10732 <> iso_xor_posture_rec
+scheme 10718:10732 <> iso_xor_posture_sind
+def 10810:10831 <> isoXorClassifierMarker
+R10835:10840 Stdlib.Strings.String <> string ind
+def 10893:10918 <> isoConcurrentProductMarker
+R10922:10927 Stdlib.Strings.String <> string ind
+prf 10970:11012 <> iso_xor_marker_ne_concurrent_product_marker
+R11040:11043 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11018:11039 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierMarker def
+R11044:11069 UMST.ChemConstants.IsotopeConservation <> isoConcurrentProductMarker def
+def 11110:11137 <> isoXorClassifierIncompatible
+R11152:11155 Corelib.Init.Datatypes <> bool ind
+binder 11140:11148 <> claim_xor:29
+R11165:11182 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 11161:11161 <> b:30
+R11187:11190 Corelib.Init.Datatypes <> bool ind
+R11206:11209 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11197:11205 UMST.ChemConstants.IsotopeConservation <> claim_xor:29 var
+R11210:11241 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R11243:11243 UMST.ChemConstants.IsotopeConservation <> b:30 var
+prf 11253:11282 <> iso_xor_refuse_on_ar18_witness
+R11340:11342 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11288:11315 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierIncompatible def
+R11317:11320 Corelib.Init.Datatypes <> true constr
+R11322:11339 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R11343:11346 Corelib.Init.Datatypes <> true constr
+R11365:11392 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierIncompatible def
+prf 11445:11482 <> iso_xor_ok_on_concurrent_product_claim
+R11541:11543 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11488:11515 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierIncompatible def
+R11517:11521 Corelib.Init.Datatypes <> false constr
+R11523:11540 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R11544:11548 Corelib.Init.Datatypes <> false constr
+def 11588:11603 <> isoProductNotXor
+R11607:11610 Corelib.Init.Datatypes <> bool ind
+R11668:11673 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11617:11648 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R11650:11667 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R11674:11701 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierIncompatible def
+R11703:11706 Corelib.Init.Datatypes <> true constr
+R11708:11725 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+prf 11735:11758 <> iso_product_not_xor_true
+R11778:11780 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11762:11777 UMST.ChemConstants.IsotopeConservation <> isoProductNotXor def
+R11781:11784 Corelib.Init.Datatypes <> true constr
+R11803:11818 UMST.ChemConstants.IsotopeConservation <> isoProductNotXor def
+prf 11873:11898 <> concurrent_product_not_xor
+R11927:11932 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11920:11922 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11904:11919 UMST.ChemConstants.IsotopeConservation <> isoProductNotXor def
+R11923:11926 Corelib.Init.Datatypes <> true constr
+R12000:12005 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11993:11995 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11933:11939 Stdlib.Arith.PeanoNat Nat leb def
+R11944:11968 UMST.ChemConstants.IsotopeConservation <> isotopeBundlePresentCount def
+R11974:11991 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R11996:11999 Corelib.Init.Datatypes <> true constr
+R12028:12031 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12006:12027 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierMarker def
+R12032:12057 UMST.ChemConstants.IsotopeConservation <> isoConcurrentProductMarker def
+R12086:12109 UMST.ChemConstants.IsotopeConservation <> iso_product_not_xor_true thm
+R12086:12109 UMST.ChemConstants.IsotopeConservation <> iso_product_not_xor_true thm
+R12137:12171 UMST.ChemConstants.IsotopeConservation <> ar18_witness_present_count_is_three thm
+R12137:12171 UMST.ChemConstants.IsotopeConservation <> ar18_witness_present_count_is_three thm
+R12137:12171 UMST.ChemConstants.IsotopeConservation <> ar18_witness_present_count_is_three thm
+R12205:12247 UMST.ChemConstants.IsotopeConservation <> iso_xor_marker_ne_concurrent_product_marker thm
+R12205:12247 UMST.ChemConstants.IsotopeConservation <> iso_xor_marker_ne_concurrent_product_marker thm
+ind 12490:12505 <> iso_bar_presence
+constr 12521:12534 <> iso_bar_absent
+constr 12540:12554 <> iso_bar_present
+scheme 12490:12505 <> iso_bar_presence_rect
+scheme 12490:12505 <> iso_bar_presence_ind
+scheme 12490:12505 <> iso_bar_presence_rec
+scheme 12490:12505 <> iso_bar_presence_sind
+rec 12565:12577 <> iso_claim_bar
+proj 12593:12614 <> iso_bar_presence_field
+proj 12638:12657 <> iso_bar_defect_total
+R12618:12633 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence ind
+R12661:12663 Corelib.Init.Datatypes <> nat ind
+def 12680:12700 <> isotopeClaimBarAbsent
+R12704:12716 UMST.ChemConstants.IsotopeConservation <> iso_claim_bar rec
+R12726:12747 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R12726:12747 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R12726:12747 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R12773:12792 UMST.ChemConstants.IsotopeConservation <> iso_bar_defect_total proj
+R12773:12792 UMST.ChemConstants.IsotopeConservation <> iso_bar_defect_total proj
+R12752:12765 UMST.ChemConstants.IsotopeConservation <> iso_bar_absent constr
+def 12815:12839 <> isotopeClaimBarZeroDefect
+R12843:12855 UMST.ChemConstants.IsotopeConservation <> iso_claim_bar rec
+R12865:12886 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R12865:12886 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R12865:12886 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R12913:12932 UMST.ChemConstants.IsotopeConservation <> iso_bar_defect_total proj
+R12913:12932 UMST.ChemConstants.IsotopeConservation <> iso_bar_defect_total proj
+R12891:12905 UMST.ChemConstants.IsotopeConservation <> iso_bar_present constr
+def 12955:12979 <> iso_claim_bar_zero_defect
+R12986:12998 UMST.ChemConstants.IsotopeConservation <> iso_claim_bar rec
+binder 12982:12982 <> b:36
+R13003:13006 Corelib.Init.Datatypes <> bool ind
+R13019:13040 UMST.ChemConstants.IsotopeConservation <> iso_bar_presence_field proj
+R13042:13042 UMST.ChemConstants.IsotopeConservation <> b:36 var
+R13053:13066 UMST.ChemConstants.IsotopeConservation <> iso_bar_absent constr
+R13071:13075 Corelib.Init.Datatypes <> false constr
+R13081:13095 UMST.ChemConstants.IsotopeConservation <> iso_bar_present constr
+R13100:13106 Stdlib.Arith.PeanoNat Nat eqb def
+R13109:13128 UMST.ChemConstants.IsotopeConservation <> iso_bar_defect_total proj
+R13130:13130 UMST.ChemConstants.IsotopeConservation <> b:36 var
+prf 13149:13178 <> iso_claim_bar_zero_defect_true
+R13235:13237 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13184:13208 UMST.ChemConstants.IsotopeConservation <> iso_claim_bar_zero_defect def
+R13210:13234 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarZeroDefect def
+R13238:13241 Corelib.Init.Datatypes <> true constr
+prf 13276:13311 <> iso_claim_bar_absent_not_zero_defect
+R13364:13366 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13317:13341 UMST.ChemConstants.IsotopeConservation <> iso_claim_bar_zero_defect def
+R13343:13363 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R13367:13371 Corelib.Init.Datatypes <> false constr
+ind 13634:13657 <> iso_conservation_verdict
+constr 13673:13694 <> iso_verdict_unwired_ok
+constr 13700:13719 <> iso_verdict_named_ok
+constr 13725:13745 <> iso_verdict_design_ok
+constr 13751:13776 <> iso_verdict_trivial_refuse
+constr 13782:13803 <> iso_verdict_xor_refuse
+constr 13809:13839 <> iso_verdict_green_invent_refuse
+constr 13845:13881 <> iso_verdict_proved_without_bar_refuse
+constr 13887:13921 <> iso_verdict_production_wired_refuse
+constr 13927:13967 <> iso_verdict_parallel_isotope_axiom_refuse
+constr 13973:14009 <> iso_verdict_species_id_smuggle_refuse
+constr 14015:14049 <> iso_verdict_extra_element_id_refuse
+constr 14055:14097 <> iso_verdict_nuclear_decay_chem_green_refuse
+constr 14103:14133 <> iso_verdict_tp_float_pin_refuse
+scheme 13634:13657 <> iso_conservation_verdict_rect
+scheme 13634:13657 <> iso_conservation_verdict_ind
+scheme 13634:13657 <> iso_conservation_verdict_rec
+scheme 13634:13657 <> iso_conservation_verdict_sind
+def 14148:14174 <> iso_conservation_verdict_ok
+R14181:14204 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict ind
+binder 14177:14177 <> v:39
+R14209:14212 Corelib.Init.Datatypes <> bool ind
+R14225:14225 UMST.ChemConstants.IsotopeConservation <> v:39 var
+R14236:14257 UMST.ChemConstants.IsotopeConservation <> iso_verdict_unwired_ok constr
+R14262:14265 Corelib.Init.Datatypes <> true constr
+R14271:14290 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R14295:14298 Corelib.Init.Datatypes <> true constr
+R14304:14324 UMST.ChemConstants.IsotopeConservation <> iso_verdict_design_ok constr
+R14329:14332 Corelib.Init.Datatypes <> true constr
+R14343:14347 Corelib.Init.Datatypes <> false constr
+def 14368:14390 <> isotopeBundleNontrivial
+R14397:14414 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 14393:14393 <> b:41
+R14419:14422 Corelib.Init.Datatypes <> bool ind
+R14429:14435 Stdlib.Arith.PeanoNat Nat ltb def
+R14440:14464 UMST.ChemConstants.IsotopeConservation <> isotopeBundlePresentCount def
+R14466:14466 UMST.ChemConstants.IsotopeConservation <> b:41 var
+def 14482:14504 <> evaluate_isotope_bundle
+R14513:14539 UMST.ChemConstants.IsotopeConservation <> IsotopeConservationModality ind
+binder 14509:14509 <> m:42
+R14549:14566 UMST.ChemConstants.IsotopeConservation <> iso_channel_bundle def
+binder 14545:14545 <> b:43
+R14578:14590 UMST.ChemConstants.IsotopeConservation <> iso_claim_bar rec
+binder 14572:14574 <> bar:44
+R14619:14622 Corelib.Init.Datatypes <> bool ind
+binder 14596:14615 <> claim_xor_classifier:45
+R14650:14653 Corelib.Init.Datatypes <> bool ind
+binder 14628:14646 <> claim_physics_green:46
+R14674:14677 Corelib.Init.Datatypes <> bool ind
+binder 14659:14670 <> claim_proved:47
+R14716:14719 Corelib.Init.Datatypes <> bool ind
+binder 14683:14712 <> claim_nuclear_decay_chem_green:48
+R14724:14747 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict ind
+R14757:14775 UMST.ChemConstants.IsotopeConservation <> claim_physics_green:46 var
+R14826:14855 UMST.ChemConstants.IsotopeConservation <> claim_nuclear_decay_chem_green:48 var
+R14928:14939 UMST.ChemConstants.IsotopeConservation <> claim_proved:47 var
+R15016:15019 Corelib.Init.Datatypes <> negb def
+R15022:15044 UMST.ChemConstants.IsotopeConservation <> isotopeBundleNontrivial def
+R15046:15046 UMST.ChemConstants.IsotopeConservation <> b:43 var
+R15123:15150 UMST.ChemConstants.IsotopeConservation <> isoXorClassifierIncompatible def
+R15152:15171 UMST.ChemConstants.IsotopeConservation <> claim_xor_classifier:45 var
+R15173:15173 UMST.ChemConstants.IsotopeConservation <> b:43 var
+R15282:15282 UMST.ChemConstants.IsotopeConservation <> m:42 var
+R15315:15342 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R15378:15409 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R15411:15411 UMST.ChemConstants.IsotopeConservation <> b:43 var
+R15500:15520 UMST.ChemConstants.IsotopeConservation <> iso_verdict_design_ok constr
+R15446:15465 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R15548:15575 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_assumed constr
+R15603:15632 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_surrogate constr
+R15665:15685 UMST.ChemConstants.IsotopeConservation <> iso_verdict_design_ok constr
+R15665:15685 UMST.ChemConstants.IsotopeConservation <> iso_verdict_design_ok constr
+R15713:15739 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R15772:15808 UMST.ChemConstants.IsotopeConservation <> iso_verdict_proved_without_bar_refuse constr
+R15202:15223 UMST.ChemConstants.IsotopeConservation <> iso_verdict_xor_refuse constr
+R15071:15096 UMST.ChemConstants.IsotopeConservation <> iso_verdict_trivial_refuse constr
+R14958:14994 UMST.ChemConstants.IsotopeConservation <> iso_verdict_proved_without_bar_refuse constr
+R14869:14911 UMST.ChemConstants.IsotopeConservation <> iso_verdict_nuclear_decay_chem_green_refuse constr
+R14784:14814 UMST.ChemConstants.IsotopeConservation <> iso_verdict_green_invent_refuse constr
+def 15851:15885 <> evaluate_isotope_conservation_close
+R15894:15920 UMST.ChemConstants.IsotopeConservation <> IsotopeConservationModality ind
+binder 15890:15890 <> m:50
+R15948:15951 Corelib.Init.Datatypes <> bool ind
+binder 15926:15944 <> claim_physics_green:51
+R15982:15985 Corelib.Init.Datatypes <> bool ind
+binder 15957:15978 <> claim_production_wired:52
+R15990:16013 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict ind
+R16023:16041 UMST.ChemConstants.IsotopeConservation <> claim_physics_green:51 var
+R16092:16113 UMST.ChemConstants.IsotopeConservation <> claim_production_wired:52 var
+R16175:16175 UMST.ChemConstants.IsotopeConservation <> m:50 var
+R16188:16215 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R16220:16241 UMST.ChemConstants.IsotopeConservation <> iso_verdict_unwired_ok constr
+R16249:16276 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_assumed constr
+R16284:16310 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R16318:16347 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_surrogate constr
+R16352:16371 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R16352:16371 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R16352:16371 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R16122:16156 UMST.ChemConstants.IsotopeConservation <> iso_verdict_production_wired_refuse constr
+R16050:16080 UMST.ChemConstants.IsotopeConservation <> iso_verdict_green_invent_refuse constr
+def 16394:16424 <> isotope_conservation_authorized
+R16451:16454 Corelib.Init.Datatypes <> bool ind
+binder 16429:16447 <> claim_physics_green:54
+R16485:16488 Corelib.Init.Datatypes <> bool ind
+binder 16460:16481 <> claim_production_wired:55
+R16493:16496 Corelib.Init.Datatypes <> bool ind
+R16509:16543 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R16555:16581 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R16583:16601 UMST.ChemConstants.IsotopeConservation <> claim_physics_green:54 var
+R16603:16624 UMST.ChemConstants.IsotopeConservation <> claim_production_wired:55 var
+R16635:16654 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R16659:16662 Corelib.Init.Datatypes <> true constr
+R16673:16677 Corelib.Init.Datatypes <> false constr
+ind 16921:16940 <> iso_conservation_law
+constr 16956:16972 <> iso_law_conserved
+constr 16978:16993 <> iso_law_named_ok
+constr 16999:17020 <> iso_law_trivial_refuse
+constr 17026:17052 <> iso_law_green_invent_refuse
+scheme 16921:16940 <> iso_conservation_law_rect
+scheme 16921:16940 <> iso_conservation_law_ind
+scheme 16921:16940 <> iso_conservation_law_rec
+scheme 16921:16940 <> iso_conservation_law_sind
+def 17067:17092 <> iso_conservation_law_count
+R17096:17098 Corelib.Init.Datatypes <> nat ind
+prf 17113:17146 <> iso_conservation_law_count_is_four
+R17178:17180 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17152:17177 UMST.ChemConstants.IsotopeConservation <> iso_conservation_law_count def
+ind 17220:17247 <> iso_conservation_law_witness
+constr 17263:17282 <> iso_law_witness_open
+constr 17288:17309 <> iso_law_witness_proved
+scheme 17220:17247 <> iso_conservation_law_witness_rect
+scheme 17220:17247 <> iso_conservation_law_witness_ind
+scheme 17220:17247 <> iso_conservation_law_witness_rec
+scheme 17220:17247 <> iso_conservation_law_witness_sind
+def 17324:17360 <> evaluate_iso_conservation_law_witness
+R17371:17390 UMST.ChemConstants.IsotopeConservation <> iso_conservation_law ind
+binder 17365:17367 <> law:60
+R17400:17426 UMST.ChemConstants.IsotopeConservation <> IsotopeConservationModality ind
+binder 17396:17396 <> m:61
+R17433:17460 UMST.ChemConstants.IsotopeConservation <> iso_conservation_law_witness ind
+R17473:17473 UMST.ChemConstants.IsotopeConservation <> m:61 var
+R17484:17511 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R17517:17544 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_assumed constr
+R17550:17579 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_surrogate constr
+R17584:17603 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+R17584:17603 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+R17584:17603 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+R17609:17635 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R17640:17661 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_proved constr
+prf 17677:17717 <> all_iso_conservation_laws_open_at_unwired
+R17834:17839 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17811:17813 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17723:17759 UMST.ChemConstants.IsotopeConservation <> evaluate_iso_conservation_law_witness def
+R17761:17777 UMST.ChemConstants.IsotopeConservation <> iso_law_conserved constr
+R17783:17810 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R17814:17833 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+R17950:17955 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17927:17929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17840:17876 UMST.ChemConstants.IsotopeConservation <> evaluate_iso_conservation_law_witness def
+R17878:17893 UMST.ChemConstants.IsotopeConservation <> iso_law_named_ok constr
+R17899:17926 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R17930:17949 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+R18072:18077 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18049:18051 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17956:17992 UMST.ChemConstants.IsotopeConservation <> evaluate_iso_conservation_law_witness def
+R17994:18015 UMST.ChemConstants.IsotopeConservation <> iso_law_trivial_refuse constr
+R18021:18048 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R18052:18071 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+R18176:18178 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18078:18114 UMST.ChemConstants.IsotopeConservation <> evaluate_iso_conservation_law_witness def
+R18116:18142 UMST.ChemConstants.IsotopeConservation <> iso_law_green_invent_refuse constr
+R18148:18175 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R18179:18198 UMST.ChemConstants.IsotopeConservation <> iso_law_witness_open constr
+def 18478:18502 <> isotopeConservationProved
+R18506:18509 Corelib.Init.Datatypes <> bool ind
+R18514:18518 Corelib.Init.Datatypes <> false constr
+prf 18528:18560 <> isotope_conservation_proved_false
+R18591:18593 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18566:18590 UMST.ChemConstants.IsotopeConservation <> isotopeConservationProved def
+R18594:18598 Corelib.Init.Datatypes <> false constr
+def 18638:18660 <> not118SquaredGreenTable
+R18664:18667 Corelib.Init.Datatypes <> bool ind
+R18672:18675 Corelib.Init.Datatypes <> true constr
+prf 18685:18711 <> not_118_squared_green_table
+R18738:18740 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18715:18737 UMST.ChemConstants.IsotopeConservation <> not118SquaredGreenTable def
+R18741:18744 Corelib.Init.Datatypes <> true constr
+prf 19001:19039 <> unwired_close_without_production_wiring
+R19125:19129 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19045:19079 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R19085:19112 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R19114:19118 Corelib.Init.Datatypes <> false constr
+R19120:19124 Corelib.Init.Datatypes <> false constr
+R19130:19151 UMST.ChemConstants.IsotopeConservation <> iso_verdict_unwired_ok constr
+prf 19188:19239 <> unwired_modality_always_ok_without_production_wiring
+R19325:19329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19245:19279 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R19285:19312 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R19314:19318 Corelib.Init.Datatypes <> false constr
+R19320:19324 Corelib.Init.Datatypes <> false constr
+R19330:19351 UMST.ChemConstants.IsotopeConservation <> iso_verdict_unwired_ok constr
+R19367:19405 UMST.ChemConstants.IsotopeConservation <> unwired_close_without_production_wiring thm
+R19367:19405 UMST.ChemConstants.IsotopeConservation <> unwired_close_without_production_wiring thm
+prf 19420:19463 <> unwired_verdict_ok_without_production_wiring
+R19586:19590 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19469:19495 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R19502:19536 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R19545:19572 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R19574:19578 Corelib.Init.Datatypes <> false constr
+R19580:19584 Corelib.Init.Datatypes <> false constr
+R19591:19594 Corelib.Init.Datatypes <> true constr
+R19613:19639 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R19652:19690 UMST.ChemConstants.IsotopeConservation <> unwired_close_without_production_wiring thm
+R19652:19690 UMST.ChemConstants.IsotopeConservation <> unwired_close_without_production_wiring thm
+R19652:19690 UMST.ChemConstants.IsotopeConservation <> unwired_close_without_production_wiring thm
+prf 19945:19965 <> ar18_witness_named_ok
+R20100:20104 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19971:19993 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R19999:20026 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R20032:20049 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R20055:20075 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R20077:20081 Corelib.Init.Datatypes <> false constr
+R20083:20087 Corelib.Init.Datatypes <> false constr
+R20089:20093 Corelib.Init.Datatypes <> false constr
+R20095:20099 Corelib.Init.Datatypes <> false constr
+R20105:20124 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+prf 20161:20191 <> named_ar18_isotope_conservation
+R20351:20356 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20326:20330 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20197:20219 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R20225:20252 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R20258:20275 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R20281:20301 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R20303:20307 Corelib.Init.Datatypes <> false constr
+R20309:20313 Corelib.Init.Datatypes <> false constr
+R20315:20319 Corelib.Init.Datatypes <> false constr
+R20321:20325 Corelib.Init.Datatypes <> false constr
+R20331:20350 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R20415:20420 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20408:20410 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20357:20388 UMST.ChemConstants.IsotopeConservation <> isotopeBundleIsConcurrentProduct def
+R20390:20407 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R20411:20414 Corelib.Init.Datatypes <> true constr
+R20447:20452 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20442:20444 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20421:20441 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+R20478:20480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20453:20477 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_idx def
+prf 20533:20550 <> iso_named_close_ok
+R20635:20639 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20556:20590 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R20596:20622 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R20624:20628 Corelib.Init.Datatypes <> false constr
+R20630:20634 Corelib.Init.Datatypes <> false constr
+R20640:20659 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+prf 20696:20727 <> named_isotope_conservation_close
+R20837:20842 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20812:20816 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20733:20767 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R20773:20799 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R20801:20805 Corelib.Init.Datatypes <> false constr
+R20807:20811 Corelib.Init.Datatypes <> false constr
+R20817:20836 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R20886:20888 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20843:20873 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_authorized def
+R20875:20879 Corelib.Init.Datatypes <> false constr
+R20881:20885 Corelib.Init.Datatypes <> false constr
+R20889:20892 Corelib.Init.Datatypes <> true constr
+R20921:20938 UMST.ChemConstants.IsotopeConservation <> iso_named_close_ok thm
+R20921:20938 UMST.ChemConstants.IsotopeConservation <> iso_named_close_ok thm
+R20952:20982 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_authorized def
+R20997:21014 UMST.ChemConstants.IsotopeConservation <> iso_named_close_ok thm
+R20997:21014 UMST.ChemConstants.IsotopeConservation <> iso_named_close_ok thm
+R20997:21014 UMST.ChemConstants.IsotopeConservation <> iso_named_close_ok thm
+prf 21270:21291 <> trivial_bundle_refused
+R21427:21431 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21297:21319 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R21325:21352 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R21358:21376 UMST.ChemConstants.IsotopeConservation <> isotopeEmptyWitness def
+R21382:21402 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R21404:21408 Corelib.Init.Datatypes <> false constr
+R21410:21414 Corelib.Init.Datatypes <> false constr
+R21416:21420 Corelib.Init.Datatypes <> false constr
+R21422:21426 Corelib.Init.Datatypes <> false constr
+R21432:21457 UMST.ChemConstants.IsotopeConservation <> iso_verdict_trivial_refuse constr
+prf 21494:21525 <> trivial_empty_bundle_fail_closed
+R21692:21697 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21661:21665 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21531:21553 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R21559:21586 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R21592:21610 UMST.ChemConstants.IsotopeConservation <> isotopeEmptyWitness def
+R21616:21636 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R21638:21642 Corelib.Init.Datatypes <> false constr
+R21644:21648 Corelib.Init.Datatypes <> false constr
+R21650:21654 Corelib.Init.Datatypes <> false constr
+R21656:21660 Corelib.Init.Datatypes <> false constr
+R21666:21691 UMST.ChemConstants.IsotopeConservation <> iso_verdict_trivial_refuse constr
+R21871:21875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21698:21724 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R21731:21753 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R21762:21789 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R21798:21816 UMST.ChemConstants.IsotopeConservation <> isotopeEmptyWitness def
+R21825:21845 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R21847:21851 Corelib.Init.Datatypes <> false constr
+R21853:21857 Corelib.Init.Datatypes <> false constr
+R21859:21863 Corelib.Init.Datatypes <> false constr
+R21865:21869 Corelib.Init.Datatypes <> false constr
+R21876:21880 Corelib.Init.Datatypes <> false constr
+R21909:21930 UMST.ChemConstants.IsotopeConservation <> trivial_bundle_refused thm
+R21909:21930 UMST.ChemConstants.IsotopeConservation <> trivial_bundle_refused thm
+R21944:21970 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R21985:22006 UMST.ChemConstants.IsotopeConservation <> trivial_bundle_refused thm
+R21985:22006 UMST.ChemConstants.IsotopeConservation <> trivial_bundle_refused thm
+R21985:22006 UMST.ChemConstants.IsotopeConservation <> trivial_bundle_refused thm
+prf 22264:22285 <> xor_classifier_refused
+R22419:22423 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22291:22313 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R22319:22346 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R22352:22369 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R22375:22395 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R22397:22400 Corelib.Init.Datatypes <> true constr
+R22402:22406 Corelib.Init.Datatypes <> false constr
+R22408:22412 Corelib.Init.Datatypes <> false constr
+R22414:22418 Corelib.Init.Datatypes <> false constr
+R22424:22445 UMST.ChemConstants.IsotopeConservation <> iso_verdict_xor_refuse constr
+prf 22482:22526 <> xor_mutually_exclusive_classifier_fail_closed
+R22687:22692 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22660:22664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22532:22554 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R22560:22587 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R22593:22610 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R22616:22636 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R22638:22641 Corelib.Init.Datatypes <> true constr
+R22643:22647 Corelib.Init.Datatypes <> false constr
+R22649:22653 Corelib.Init.Datatypes <> false constr
+R22655:22659 Corelib.Init.Datatypes <> false constr
+R22665:22686 UMST.ChemConstants.IsotopeConservation <> iso_verdict_xor_refuse constr
+R22864:22868 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22693:22719 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R22726:22748 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R22757:22784 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R22793:22810 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R22819:22839 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R22841:22844 Corelib.Init.Datatypes <> true constr
+R22846:22850 Corelib.Init.Datatypes <> false constr
+R22852:22856 Corelib.Init.Datatypes <> false constr
+R22858:22862 Corelib.Init.Datatypes <> false constr
+R22869:22873 Corelib.Init.Datatypes <> false constr
+R22902:22923 UMST.ChemConstants.IsotopeConservation <> xor_classifier_refused thm
+R22902:22923 UMST.ChemConstants.IsotopeConservation <> xor_classifier_refused thm
+R22937:22963 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R22978:22999 UMST.ChemConstants.IsotopeConservation <> xor_classifier_refused thm
+R22978:22999 UMST.ChemConstants.IsotopeConservation <> xor_classifier_refused thm
+R22978:22999 UMST.ChemConstants.IsotopeConservation <> xor_classifier_refused thm
+prf 23255:23281 <> green_invent_refuse_unwired
+R23366:23370 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23287:23321 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R23327:23354 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R23356:23359 Corelib.Init.Datatypes <> true constr
+R23361:23365 Corelib.Init.Datatypes <> false constr
+R23371:23401 UMST.ChemConstants.IsotopeConservation <> iso_verdict_green_invent_refuse constr
+prf 23438:23463 <> green_invent_always_refuse
+R23585:23589 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23469:23495 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R23502:23536 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R23545:23572 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R23574:23577 Corelib.Init.Datatypes <> true constr
+R23579:23583 Corelib.Init.Datatypes <> false constr
+R23590:23594 Corelib.Init.Datatypes <> false constr
+R23613:23639 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R23652:23678 UMST.ChemConstants.IsotopeConservation <> green_invent_refuse_unwired thm
+R23652:23678 UMST.ChemConstants.IsotopeConservation <> green_invent_refuse_unwired thm
+R23652:23678 UMST.ChemConstants.IsotopeConservation <> green_invent_refuse_unwired thm
+prf 23708:23737 <> green_invent_iso_bundle_refuse
+R23871:23875 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23743:23765 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R23771:23798 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R23804:23821 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R23827:23847 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R23849:23853 Corelib.Init.Datatypes <> false constr
+R23855:23858 Corelib.Init.Datatypes <> true constr
+R23860:23864 Corelib.Init.Datatypes <> false constr
+R23866:23870 Corelib.Init.Datatypes <> false constr
+R23876:23906 UMST.ChemConstants.IsotopeConservation <> iso_verdict_green_invent_refuse constr
+prf 24167:24197 <> nuclear_decay_chem_green_refuse
+R24331:24335 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24203:24225 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R24231:24258 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R24264:24281 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R24287:24307 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R24309:24313 Corelib.Init.Datatypes <> false constr
+R24315:24319 Corelib.Init.Datatypes <> false constr
+R24321:24325 Corelib.Init.Datatypes <> false constr
+R24327:24330 Corelib.Init.Datatypes <> true constr
+R24336:24378 UMST.ChemConstants.IsotopeConservation <> iso_verdict_nuclear_decay_chem_green_refuse constr
+prf 24415:24454 <> nuclear_decay_not_chem_green_fail_closed
+R24636:24641 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24588:24592 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24460:24482 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R24488:24515 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R24521:24538 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R24544:24564 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R24566:24570 Corelib.Init.Datatypes <> false constr
+R24572:24576 Corelib.Init.Datatypes <> false constr
+R24578:24582 Corelib.Init.Datatypes <> false constr
+R24584:24587 Corelib.Init.Datatypes <> true constr
+R24593:24635 UMST.ChemConstants.IsotopeConservation <> iso_verdict_nuclear_decay_chem_green_refuse constr
+R24813:24817 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24642:24668 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R24675:24697 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R24706:24733 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R24742:24759 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R24768:24788 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R24790:24794 Corelib.Init.Datatypes <> false constr
+R24796:24800 Corelib.Init.Datatypes <> false constr
+R24802:24806 Corelib.Init.Datatypes <> false constr
+R24808:24811 Corelib.Init.Datatypes <> true constr
+R24818:24822 Corelib.Init.Datatypes <> false constr
+R24851:24881 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_chem_green_refuse thm
+R24851:24881 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_chem_green_refuse thm
+R24895:24921 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R24936:24966 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_chem_green_refuse thm
+R24936:24966 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_chem_green_refuse thm
+R24936:24966 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_chem_green_refuse thm
+prf 25224:25248 <> proved_without_bar_refuse
+R25382:25386 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25254:25276 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R25282:25309 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R25315:25332 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R25338:25358 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R25360:25364 Corelib.Init.Datatypes <> false constr
+R25366:25370 Corelib.Init.Datatypes <> false constr
+R25372:25375 Corelib.Init.Datatypes <> true constr
+R25377:25381 Corelib.Init.Datatypes <> false constr
+R25387:25423 UMST.ChemConstants.IsotopeConservation <> iso_verdict_proved_without_bar_refuse constr
+prf 25460:25489 <> proved_without_bar_fail_closed
+R25665:25670 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25623:25627 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25495:25517 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R25523:25550 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R25556:25573 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R25579:25599 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R25601:25605 Corelib.Init.Datatypes <> false constr
+R25607:25611 Corelib.Init.Datatypes <> false constr
+R25613:25616 Corelib.Init.Datatypes <> true constr
+R25618:25622 Corelib.Init.Datatypes <> false constr
+R25628:25664 UMST.ChemConstants.IsotopeConservation <> iso_verdict_proved_without_bar_refuse constr
+R25842:25846 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25671:25697 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R25704:25726 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R25735:25762 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R25771:25788 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R25797:25817 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R25819:25823 Corelib.Init.Datatypes <> false constr
+R25825:25829 Corelib.Init.Datatypes <> false constr
+R25831:25834 Corelib.Init.Datatypes <> true constr
+R25836:25840 Corelib.Init.Datatypes <> false constr
+R25847:25851 Corelib.Init.Datatypes <> false constr
+R25880:25904 UMST.ChemConstants.IsotopeConservation <> proved_without_bar_refuse thm
+R25880:25904 UMST.ChemConstants.IsotopeConservation <> proved_without_bar_refuse thm
+R25918:25944 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R25959:25983 UMST.ChemConstants.IsotopeConservation <> proved_without_bar_refuse thm
+R25959:25983 UMST.ChemConstants.IsotopeConservation <> proved_without_bar_refuse thm
+R25959:25983 UMST.ChemConstants.IsotopeConservation <> proved_without_bar_refuse thm
+prf 26241:26263 <> production_wired_refuse
+R26347:26351 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26269:26303 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R26309:26335 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R26337:26341 Corelib.Init.Datatypes <> false constr
+R26343:26346 Corelib.Init.Datatypes <> true constr
+R26352:26386 UMST.ChemConstants.IsotopeConservation <> iso_verdict_production_wired_refuse constr
+prf 26423:26452 <> production_wired_claim_refused
+R26573:26577 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26458:26484 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R26491:26525 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R26534:26560 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R26562:26566 Corelib.Init.Datatypes <> false constr
+R26568:26571 Corelib.Init.Datatypes <> true constr
+R26578:26582 Corelib.Init.Datatypes <> false constr
+R26601:26627 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R26640:26662 UMST.ChemConstants.IsotopeConservation <> production_wired_refuse thm
+R26640:26662 UMST.ChemConstants.IsotopeConservation <> production_wired_refuse thm
+R26640:26662 UMST.ChemConstants.IsotopeConservation <> production_wired_refuse thm
+def 26923:26950 <> isotopeConservationAuthority
+R26954:26959 Stdlib.Strings.String <> string ind
+def 27021:27043 <> parallelIsotopeAxiomTag
+R27047:27052 Stdlib.Strings.String <> string ind
+prf 27088:27116 <> parallel_isotope_axiom_refuse
+R27179:27184 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27150:27155 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27122:27149 UMST.ChemConstants.IsotopeConservation <> isotopeConservationAuthority def
+R27156:27178 UMST.ChemConstants.IsotopeConservation <> parallelIsotopeAxiomTag def
+R27210:27212 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27185:27209 UMST.ChemConstants.IsotopeConservation <> isotopeConservationProved def
+R27213:27217 Corelib.Init.Datatypes <> false constr
+R27264:27296 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved_false thm
+R27264:27296 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved_false thm
+prf 27313:27345 <> parallel_isotope_axiom_not_minted
+R27425:27430 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27379:27383 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27351:27378 UMST.ChemConstants.IsotopeConservation <> isotopeConservationAuthority def
+R27464:27469 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27456:27458 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27431:27455 UMST.ChemConstants.IsotopeConservation <> isotopeConservationProved def
+R27459:27463 Corelib.Init.Datatypes <> false constr
+R27498:27501 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27470:27497 UMST.ChemConstants.IsotopeConservation <> isotopeConservationAuthority def
+R27502:27524 UMST.ChemConstants.IsotopeConservation <> parallelIsotopeAxiomTag def
+def 27824:27846 <> speciesIdSmuggleFraming
+R27850:27855 Stdlib.Strings.String <> string ind
+def 27912:27937 <> isotopeConservationFraming
+R27941:27946 Stdlib.Strings.String <> string ind
+prf 28005:28029 <> species_id_smuggle_refuse
+R28090:28095 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28061:28066 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28035:28060 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R28067:28089 UMST.ChemConstants.IsotopeConservation <> speciesIdSmuggleFraming def
+R28122:28127 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28117:28119 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28096:28116 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+R28153:28155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28128:28152 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_idx def
+prf 28226:28255 <> isotope_not_species_id_smuggle
+R28316:28321 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28287:28292 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28261:28286 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R28293:28315 UMST.ChemConstants.IsotopeConservation <> speciesIdSmuggleFraming def
+R28348:28353 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28343:28345 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28322:28342 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+R28384:28389 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28379:28381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28354:28378 UMST.ChemConstants.IsotopeConservation <> pattern_class_isotope_idx def
+R28415:28417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28390:28414 UMST.ChemConstants.IsotopeConservation <> isotopeConservationProved def
+R28418:28422 Corelib.Init.Datatypes <> false constr
+def 28722:28749 <> extraElementIdSmuggleFraming
+R28753:28758 Stdlib.Strings.String <> string ind
+prf 28815:28837 <> extra_element_id_refuse
+R28903:28908 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28869:28874 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28843:28868 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R28875:28902 UMST.ChemConstants.IsotopeConservation <> extraElementIdSmuggleFraming def
+R28936:28938 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28909:28935 UMST.ChemConstants.IsotopeConservation <> forbidden_z119_not_in_table def
+R28939:28942 Corelib.Init.Datatypes <> true constr
+prf 29010:29037 <> isotope_not_extra_element_id
+R29103:29108 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29069:29074 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29043:29068 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R29075:29102 UMST.ChemConstants.IsotopeConservation <> extraElementIdSmuggleFraming def
+R29137:29142 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29131:29133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29109:29130 UMST.ChemConstants.IsotopeConservation <> forbidden_z119_smuggle def
+R29164:29166 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29143:29163 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+def 29468:29484 <> tpFloatPinFraming
+R29488:29493 Stdlib.Strings.String <> string ind
+prf 29561:29579 <> tp_float_pin_refuse
+R29634:29639 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29611:29616 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29585:29610 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R29617:29633 UMST.ChemConstants.IsotopeConservation <> tpFloatPinFraming def
+R29665:29667 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29640:29664 UMST.ChemConstants.IsotopeConservation <> nuclear_decay_channel_tag def
+prf 29764:29794 <> tp_graph_function_not_float_pin
+R29849:29854 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29826:29831 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29800:29825 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R29832:29848 UMST.ChemConstants.IsotopeConservation <> tpFloatPinFraming def
+R29907:29912 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29882:29884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29855:29881 UMST.ChemConstants.IsotopeConservation <> electronic_chem_channel_tag def
+R29934:29936 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29913:29933 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+def 30234:30268 <> iso_conservation_coherence_scaffold
+R30272:30275 Corelib.Init.Datatypes <> bool ind
+R30527:30532 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R30398:30403 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R30282:30308 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R30315:30349 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R30358:30384 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R30386:30390 Corelib.Init.Datatypes <> false constr
+R30392:30396 Corelib.Init.Datatypes <> false constr
+R30404:30407 Corelib.Init.Datatypes <> negb def
+R30410:30436 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R30443:30477 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R30486:30513 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R30515:30518 Corelib.Init.Datatypes <> true constr
+R30520:30524 Corelib.Init.Datatypes <> false constr
+R30533:30536 Corelib.Init.Datatypes <> negb def
+R30539:30565 UMST.ChemConstants.IsotopeConservation <> iso_conservation_verdict_ok def
+R30572:30606 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R30615:30641 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R30643:30647 Corelib.Init.Datatypes <> false constr
+R30649:30652 Corelib.Init.Datatypes <> true constr
+prf 30664:30703 <> iso_conservation_coherence_scaffold_true
+R30744:30746 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30709:30743 UMST.ChemConstants.IsotopeConservation <> iso_conservation_coherence_scaffold def
+R30747:30750 Corelib.Init.Datatypes <> true constr
+R30769:30803 UMST.ChemConstants.IsotopeConservation <> iso_conservation_coherence_scaffold def
+prf 30858:30900 <> iso_conservation_coherence_scaffold_theorem
+R31012:31017 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30985:30991 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30906:30940 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R30946:30972 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R30974:30978 Corelib.Init.Datatypes <> false constr
+R30980:30984 Corelib.Init.Datatypes <> false constr
+R30992:31011 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R31135:31140 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31097:31103 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31018:31052 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R31058:31085 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R31087:31090 Corelib.Init.Datatypes <> true constr
+R31092:31096 Corelib.Init.Datatypes <> false constr
+R31104:31134 UMST.ChemConstants.IsotopeConservation <> iso_verdict_green_invent_refuse constr
+R31219:31225 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31141:31175 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R31181:31207 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_proved constr
+R31209:31213 Corelib.Init.Datatypes <> false constr
+R31215:31218 Corelib.Init.Datatypes <> true constr
+R31226:31260 UMST.ChemConstants.IsotopeConservation <> iso_verdict_production_wired_refuse constr
+ind 31541:31552 <> formal_fiber
+constr 31568:31588 <> fiber_quantum_knowing
+constr 31594:31610 <> fiber_meso_acting
+scheme 31541:31552 <> formal_fiber_rect
+scheme 31541:31552 <> formal_fiber_ind
+scheme 31541:31552 <> formal_fiber_rec
+scheme 31541:31552 <> formal_fiber_sind
+def 31625:31649 <> iso_conservation_fiber_ok
+R31656:31667 UMST.ChemConstants.IsotopeConservation <> formal_fiber ind
+binder 31652:31652 <> f:65
+R31672:31675 Corelib.Init.Datatypes <> bool ind
+R31688:31688 UMST.ChemConstants.IsotopeConservation <> f:65 var
+R31699:31719 UMST.ChemConstants.IsotopeConservation <> fiber_quantum_knowing constr
+R31724:31727 Corelib.Init.Datatypes <> true constr
+R31733:31749 UMST.ChemConstants.IsotopeConservation <> fiber_meso_acting constr
+R31754:31758 Corelib.Init.Datatypes <> false constr
+def 31779:31811 <> iso_conservation_knowing_fiber_ok
+R31815:31818 Corelib.Init.Datatypes <> bool ind
+R31825:31849 UMST.ChemConstants.IsotopeConservation <> iso_conservation_fiber_ok def
+R31851:31871 UMST.ChemConstants.IsotopeConservation <> fiber_quantum_knowing constr
+def 31886:31916 <> iso_conservation_meso_acting_ok
+R31920:31923 Corelib.Init.Datatypes <> bool ind
+R31930:31954 UMST.ChemConstants.IsotopeConservation <> iso_conservation_fiber_ok def
+R31956:31972 UMST.ChemConstants.IsotopeConservation <> fiber_meso_acting constr
+prf 31982:32019 <> iso_conservation_knowing_fiber_ok_true
+R32058:32060 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32025:32057 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok def
+R32061:32064 Corelib.Init.Datatypes <> true constr
+prf 32099:32133 <> iso_conservation_meso_acting_not_ok
+R32170:32172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32139:32169 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_ok def
+R32173:32177 Corelib.Init.Datatypes <> false constr
+prf 32214:32253 <> iso_conservation_routes_knowing_not_meso
+R32299:32304 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32292:32294 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32259:32291 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok def
+R32295:32298 Corelib.Init.Datatypes <> true constr
+R32336:32338 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32305:32335 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_ok def
+R32339:32343 Corelib.Init.Datatypes <> false constr
+R32372:32409 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok_true thm
+R32372:32409 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok_true thm
+R32422:32456 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_not_ok thm
+R32422:32456 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_not_ok thm
+def 32476:32493 <> fiberNotMesoActing
+R32497:32500 Corelib.Init.Datatypes <> bool ind
+R32540:32545 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R32507:32539 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok def
+R32546:32549 Corelib.Init.Datatypes <> negb def
+R32551:32581 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_ok def
+prf 32591:32616 <> fiber_not_meso_acting_true
+R32638:32640 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32620:32637 UMST.ChemConstants.IsotopeConservation <> fiberNotMesoActing def
+R32641:32644 Corelib.Init.Datatypes <> true constr
+R32663:32680 UMST.ChemConstants.IsotopeConservation <> fiberNotMesoActing def
+R32683:32715 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok def
+R32722:32752 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_ok def
+prf 33010:33046 <> isotope_conservation_fixture_scaffold
+R33208:33213 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33181:33187 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33052:33074 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R33080:33107 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R33113:33130 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R33136:33156 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R33158:33162 Corelib.Init.Datatypes <> false constr
+R33164:33168 Corelib.Init.Datatypes <> false constr
+R33170:33174 Corelib.Init.Datatypes <> false constr
+R33176:33180 Corelib.Init.Datatypes <> false constr
+R33188:33207 UMST.ChemConstants.IsotopeConservation <> iso_verdict_named_ok constr
+R33377:33382 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33344:33350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33214:33236 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R33242:33269 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R33275:33293 UMST.ChemConstants.IsotopeConservation <> isotopeEmptyWitness def
+R33299:33319 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R33321:33325 Corelib.Init.Datatypes <> false constr
+R33327:33331 Corelib.Init.Datatypes <> false constr
+R33333:33337 Corelib.Init.Datatypes <> false constr
+R33339:33343 Corelib.Init.Datatypes <> false constr
+R33351:33376 UMST.ChemConstants.IsotopeConservation <> iso_verdict_trivial_refuse constr
+R33540:33545 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33511:33517 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33383:33405 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R33411:33438 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R33444:33461 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R33467:33487 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R33489:33492 Corelib.Init.Datatypes <> true constr
+R33494:33498 Corelib.Init.Datatypes <> false constr
+R33500:33504 Corelib.Init.Datatypes <> false constr
+R33506:33510 Corelib.Init.Datatypes <> false constr
+R33518:33539 UMST.ChemConstants.IsotopeConservation <> iso_verdict_xor_refuse constr
+R33718:33723 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33674:33680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33546:33568 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R33574:33601 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R33607:33624 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R33630:33650 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R33652:33656 Corelib.Init.Datatypes <> false constr
+R33658:33662 Corelib.Init.Datatypes <> false constr
+R33664:33667 Corelib.Init.Datatypes <> true constr
+R33669:33673 Corelib.Init.Datatypes <> false constr
+R33681:33717 UMST.ChemConstants.IsotopeConservation <> iso_verdict_proved_without_bar_refuse constr
+R33902:33907 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33852:33858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33724:33746 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_bundle def
+R33752:33779 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R33785:33802 UMST.ChemConstants.IsotopeConservation <> isotopeAr18Witness def
+R33808:33828 UMST.ChemConstants.IsotopeConservation <> isotopeClaimBarAbsent def
+R33830:33834 Corelib.Init.Datatypes <> false constr
+R33836:33840 Corelib.Init.Datatypes <> false constr
+R33842:33846 Corelib.Init.Datatypes <> false constr
+R33848:33851 Corelib.Init.Datatypes <> true constr
+R33859:33901 UMST.ChemConstants.IsotopeConservation <> iso_verdict_nuclear_decay_chem_green_refuse constr
+R34017:34022 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33988:33994 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33908:33942 UMST.ChemConstants.IsotopeConservation <> evaluate_isotope_conservation_close def
+R33948:33975 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr
+R33977:33981 Corelib.Init.Datatypes <> false constr
+R33983:33987 Corelib.Init.Datatypes <> false constr
+R33995:34016 UMST.ChemConstants.IsotopeConservation <> iso_verdict_unwired_ok constr
+R34063:34068 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34056:34058 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34023:34055 UMST.ChemConstants.IsotopeConservation <> iso_conservation_knowing_fiber_ok def
+R34059:34062 Corelib.Init.Datatypes <> true constr
+R34108:34113 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34100:34102 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34069:34099 UMST.ChemConstants.IsotopeConservation <> iso_conservation_meso_acting_ok def
+R34103:34107 Corelib.Init.Datatypes <> false constr
+R34147:34152 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34139:34141 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34114:34138 UMST.ChemConstants.IsotopeConservation <> isotopeConservationProved def
+R34142:34146 Corelib.Init.Datatypes <> false constr
+R34176:34181 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34169:34171 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34153:34168 UMST.ChemConstants.IsotopeConservation <> isoProductNotXor def
+R34172:34175 Corelib.Init.Datatypes <> true constr
+R34203:34205 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34182:34202 UMST.ChemConstants.IsotopeConservation <> argon_atomic_number_z def
+def 34487:34513 <> chemL0IsotopeTableAuthority
+R34517:34522 Stdlib.Strings.String <> string ind
+def 34584:34607 <> isotopeBoundaryAuthority
+R34611:34616 Stdlib.Strings.String <> string ind
+def 34696:34730 <> patternProductConservationAuthority
+R34734:34739 Stdlib.Strings.String <> string ind
+def 34837:34859 <> chemL0EdgeIsotopeCellId
+R34863:34868 Stdlib.Strings.String <> string ind
+def 34909:34934 <> chemIntNuanceIsotopeCellId
+R34938:34943 Stdlib.Strings.String <> string ind
+def 34987:35011 <> isotopeConservationCellId
+R35015:35020 Stdlib.Strings.String <> string ind
+def 35081:35107 <> isotopeConservationNonClaim
+R35111:35116 Stdlib.Strings.String <> string ind
+prf 35774:35801 <> isotope_conservation_cell_id
+R35832:35836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35807:35831 UMST.ChemConstants.IsotopeConservation <> isotopeConservationCellId def
+prf 35911:35945 <> isotope_conservation_cites_l0_table
+R35978:35981 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R35951:35977 UMST.ChemConstants.IsotopeConservation <> chemL0IsotopeTableAuthority def
+prf 36019:36053 <> isotope_conservation_authority_path
+R36087:36091 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36059:36086 UMST.ChemConstants.IsotopeConservation <> isotopeConservationAuthority def
+prf 36167:36201 <> isotope_conservation_cites_boundary
+R36231:36234 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36207:36230 UMST.ChemConstants.IsotopeConservation <> isotopeBoundaryAuthority def
+prf 36272:36304 <> isotope_conservation_cites_marker
+R36336:36339 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36310:36335 UMST.ChemConstants.IsotopeConservation <> isoConcurrentProductMarker def
+prf 36377:36418 <> isotope_conservation_cites_pattern_product
+R36459:36462 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R36424:36458 UMST.ChemConstants.IsotopeConservation <> patternProductConservationAuthority def
+prf 36500:36535 <> isotope_conservation_cites_edge_cell
+R36564:36566 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36541:36563 UMST.ChemConstants.IsotopeConservation <> chemL0EdgeIsotopeCellId def
+prf 36623:36660 <> isotope_conservation_cites_nuance_cell
+R36692:36694 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36666:36691 UMST.ChemConstants.IsotopeConservation <> chemIntNuanceIsotopeCellId def
+prf 36977:36998 <> isotope_not_26th_axiom
+R37030:37033 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R37004:37029 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+R37034:37056 UMST.ChemConstants.IsotopeConservation <> parallelIsotopeAxiomTag def
+prf 37092:37130 <> isotope_second_law_conservation_framing
+R37162:37165 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R37136:37161 UMST.ChemConstants.IsotopeConservation <> isotopeConservationFraming def
+def 37432:37453 <> physicsGreenAuthorized
+R37465:37469 Corelib.Init.Logic <> False ind
+prf 37479:37518 <> isotope_conservation_physics_green_false
+R37524:37525 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R37526:37547 UMST.ChemConstants.IsotopeConservation <> physicsGreenAuthorized def
+prf 37587:37623 <> isotope_conservation_modality_unwired
+R37663:37667 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37629:37662 UMST.ChemConstants.IsotopeConservation <> isotopeConservationModalityCurrent def
+R37668:37695 UMST.ChemConstants.IsotopeConservation <> isotope_conservation_unwired constr

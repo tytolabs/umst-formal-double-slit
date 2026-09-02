@@ -1,0 +1,548 @@
+DIGEST 9d25b0203f7a9872069883ba50058b43
+FUMST.ChemConstants.CartridgeConstitutiveCompose
+R1207:1211 Stdlib.Arith.Arith <> <> lib
+R1213:1218 Stdlib.ZArith.ZArith <> <> lib
+R1220:1225 Stdlib.Strings.String <> <> lib
+R1227:1230 Stdlib.Bool.Bool <> <> lib
+R1232:1234 Stdlib.micromega.Lia <> <> lib
+def 1269:1303 <> cartridgeconstitutivecomposeSurface
+R1307:1312 Stdlib.Strings.String <> string ind
+prf 1369:1410 <> cartridgeconstitutivecompose_surface_named
+R1451:1454 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1416:1450 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeconstitutivecomposeSurface def
+ind 1717:1752 <> CartridgeConstitutiveComposeModality
+constr 1768:1805 <> cartridge_constitutive_compose_unwired
+constr 1811:1848 <> cartridge_constitutive_compose_assumed
+constr 1854:1890 <> cartridge_constitutive_compose_proved
+constr 1896:1935 <> cartridge_constitutive_compose_surrogate
+scheme 1717:1752 <> CartridgeConstitutiveComposeModality_rect
+scheme 1717:1752 <> CartridgeConstitutiveComposeModality_ind
+scheme 1717:1752 <> CartridgeConstitutiveComposeModality_rec
+scheme 1717:1752 <> CartridgeConstitutiveComposeModality_sind
+def 1950:1992 <> cartridgeConstitutiveComposeModalityCurrent
+R1998:2033 UMST.ChemConstants.CartridgeConstitutiveCompose <> CartridgeConstitutiveComposeModality ind
+R2040:2077 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+def 2092:2137 <> cartridge_compose_modality_lattice_cardinality
+R2141:2143 Corelib.Init.Datatypes <> nat ind
+prf 2158:2211 <> cartridge_compose_modality_lattice_cardinality_is_four
+R2263:2265 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2217:2262 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_modality_lattice_cardinality def
+prf 2301:2350 <> cartridge_compose_modality_lattice_not_118_squared
+R2429:2433 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2356:2359 Corelib.Init.Datatypes <> negb def
+R2362:2368 Stdlib.Arith.PeanoNat Nat eqb def
+R2370:2415 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_modality_lattice_cardinality def
+R2421:2423 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2434:2437 Corelib.Init.Datatypes <> true constr
+R2456:2501 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_modality_lattice_cardinality def
+def 2764:2781 <> psi_compose_is_sum
+R2785:2788 Corelib.Init.Datatypes <> bool ind
+R2793:2796 Corelib.Init.Datatypes <> true constr
+def 2811:2836 <> dissipation_compose_is_sum
+R2840:2843 Corelib.Init.Datatypes <> bool ind
+R2848:2851 Corelib.Init.Datatypes <> true constr
+prf 2861:2883 <> psi_compose_is_sum_true
+R2905:2907 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2887:2904 UMST.ChemConstants.CartridgeConstitutiveCompose <> psi_compose_is_sum def
+R2908:2911 Corelib.Init.Datatypes <> true constr
+prf 2946:2976 <> dissipation_compose_is_sum_true
+R3006:3008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2980:3005 UMST.ChemConstants.CartridgeConstitutiveCompose <> dissipation_compose_is_sum def
+R3009:3012 Corelib.Init.Datatypes <> true constr
+def 3052:3062 <> compose_psi
+R3079:3079 Corelib.Numbers.BinNums <> Z ind
+binder 3065:3069 <> psi_a:3
+binder 3071:3075 <> psi_b:4
+R3084:3084 Corelib.Numbers.BinNums <> Z ind
+R3089:3093 Stdlib.ZArith.BinInt Z add def
+R3095:3099 UMST.ChemConstants.CartridgeConstitutiveCompose <> psi_a:3 var
+R3101:3105 UMST.ChemConstants.CartridgeConstitutiveCompose <> psi_b:4 var
+def 3120:3138 <> compose_dissipation
+R3151:3151 Corelib.Numbers.BinNums <> Z ind
+binder 3141:3143 <> d_a:5
+binder 3145:3147 <> d_b:6
+R3156:3156 Corelib.Numbers.BinNums <> Z ind
+R3161:3165 Stdlib.ZArith.BinInt Z add def
+R3167:3169 UMST.ChemConstants.CartridgeConstitutiveCompose <> d_a:5 var
+R3171:3173 UMST.ChemConstants.CartridgeConstitutiveCompose <> d_b:6 var
+prf 3183:3202 <> compose_psi_additive
+R3211:3211 Corelib.Numbers.BinNums <> Z ind
+binder 3205:3205 <> a:7
+binder 3207:3207 <> b:8
+R3233:3235 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3218:3228 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi def
+R3230:3230 UMST.ChemConstants.CartridgeConstitutiveCompose <> a:7 var
+R3232:3232 UMST.ChemConstants.CartridgeConstitutiveCompose <> b:8 var
+R3236:3240 Stdlib.ZArith.BinInt Z add def
+R3242:3242 UMST.ChemConstants.CartridgeConstitutiveCompose <> a:7 var
+R3244:3244 UMST.ChemConstants.CartridgeConstitutiveCompose <> b:8 var
+prf 3279:3306 <> compose_dissipation_additive
+R3315:3315 Corelib.Numbers.BinNums <> Z ind
+binder 3309:3309 <> a:9
+binder 3311:3311 <> b:10
+R3345:3347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3322:3340 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation def
+R3342:3342 UMST.ChemConstants.CartridgeConstitutiveCompose <> a:9 var
+R3344:3344 UMST.ChemConstants.CartridgeConstitutiveCompose <> b:10 var
+R3348:3352 Stdlib.ZArith.BinInt Z add def
+R3354:3354 UMST.ChemConstants.CartridgeConstitutiveCompose <> a:9 var
+R3356:3356 UMST.ChemConstants.CartridgeConstitutiveCompose <> b:10 var
+prf 3391:3420 <> compose_psi_witness_10_minus_4
+R3451:3453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3426:3436 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi def
+R3446:3446 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+prf 3491:3521 <> compose_dissipation_witness_3_5
+R3558:3561 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3565:3565 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3527:3545 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation def
+prf 3600:3622 <> compose_psi_witness_2_3
+R3651:3654 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3658:3658 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3628:3638 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi def
+prf 3693:3723 <> compose_dissipation_witness_1_1
+R3760:3763 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3767:3767 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3729:3747 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation def
+def 3893:3918 <> xor_cartridge_merge_marker
+R3922:3927 Stdlib.Strings.String <> string ind
+def 3980:4002 <> additive_compose_marker
+R4006:4011 Stdlib.Strings.String <> string ind
+prf 4058:4093 <> xor_merge_marker_ne_additive_compose
+R4125:4128 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4099:4124 UMST.ChemConstants.CartridgeConstitutiveCompose <> xor_cartridge_merge_marker def
+R4129:4151 UMST.ChemConstants.CartridgeConstitutiveCompose <> additive_compose_marker def
+def 4192:4218 <> xor_cartridge_merge_refused
+R4222:4225 Corelib.Init.Datatypes <> bool ind
+R4230:4233 Corelib.Init.Datatypes <> true constr
+prf 4243:4274 <> xor_cartridge_merge_refused_true
+R4305:4307 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4278:4304 UMST.ChemConstants.CartridgeConstitutiveCompose <> xor_cartridge_merge_refused def
+R4308:4311 Corelib.Init.Datatypes <> true constr
+def 4577:4599 <> iupac_table_cardinality
+R4603:4605 Corelib.Init.Datatypes <> nat ind
+prf 4622:4651 <> iupac_table_cardinality_is_118
+R4680:4682 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4657:4679 UMST.ChemConstants.CartridgeConstitutiveCompose <> iupac_table_cardinality def
+def 4725:4753 <> cartridge_owns_periodic_table
+R4757:4760 Corelib.Init.Datatypes <> bool ind
+R4765:4769 Corelib.Init.Datatypes <> false constr
+prf 4779:4813 <> cartridge_owns_periodic_table_false
+R4848:4850 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4819:4847 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table def
+R4851:4855 Corelib.Init.Datatypes <> false constr
+def 4895:4918 <> chemistry_service_marker
+R4922:4927 Stdlib.Strings.String <> string ind
+prf 4991:5020 <> chemistry_service_marker_named
+R5050:5053 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5026:5049 UMST.ChemConstants.CartridgeConstitutiveCompose <> chemistry_service_marker def
+prf 5091:5124 <> chemistry_service_consult_required
+R5154:5159 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5130:5153 UMST.ChemConstants.CartridgeConstitutiveCompose <> chemistry_service_marker def
+ind 5462:5468 <> ore_tag
+constr 5484:5499 <> ore_tag_hematite
+constr 5505:5519 <> ore_tag_bauxite
+constr 5525:5538 <> ore_tag_vacuum
+scheme 5462:5468 <> ore_tag_rect
+scheme 5462:5468 <> ore_tag_ind
+scheme 5462:5468 <> ore_tag_rec
+scheme 5462:5468 <> ore_tag_sind
+ind 5552:5559 <> ore_tree
+constr 5575:5582 <> ore_leaf
+constr 5610:5619 <> ore_tensor
+R5593:5596 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5586:5592 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tag ind
+R5597:5604 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree:13 ind
+R5631:5634 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5623:5630 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree:13 ind
+R5643:5646 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5635:5642 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree:13 ind
+R5647:5654 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree:13 ind
+scheme 5552:5559 <> ore_tree_rect
+scheme 5552:5559 <> ore_tree_ind
+scheme 5552:5559 <> ore_tree_rec
+scheme 5552:5559 <> ore_tree_sind
+def 5669:5678 <> ore_unit_i
+R5682:5689 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+R5694:5701 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_leaf constr
+R5703:5716 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tag_vacuum constr
+def 5731:5748 <> ore_tensor_product
+R5757:5764 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+binder 5751:5751 <> a:15
+binder 5753:5753 <> b:16
+R5769:5776 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+R5781:5790 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tensor constr
+R5792:5792 UMST.ChemConstants.CartridgeConstitutiveCompose <> a:15 var
+R5794:5794 UMST.ChemConstants.CartridgeConstitutiveCompose <> b:16 var
+def 5809:5821 <> hematite_leaf
+R5825:5832 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+R5837:5844 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_leaf constr
+R5846:5861 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tag_hematite constr
+def 5875:5886 <> bauxite_leaf
+R5890:5897 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+R5902:5909 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_leaf constr
+R5911:5925 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tag_bauxite constr
+def 5940:5957 <> triple_ore_product
+R5961:5968 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+R5975:5992 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tensor_product def
+R5995:6012 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tensor_product def
+R6014:6026 UMST.ChemConstants.CartridgeConstitutiveCompose <> hematite_leaf def
+R6028:6039 UMST.ChemConstants.CartridgeConstitutiveCompose <> bauxite_leaf def
+R6047:6054 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_leaf constr
+R6056:6069 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tag_vacuum constr
+def 6083:6103 <> ore_constituent_count
+R6110:6117 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tree ind
+binder 6106:6106 <> t:17
+R6122:6124 Corelib.Init.Datatypes <> nat ind
+R6137:6137 UMST.ChemConstants.CartridgeConstitutiveCompose <> t:17 var
+R6148:6155 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_leaf constr
+R6191:6204 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tag_vacuum constr
+R6240:6249 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_tensor constr
+R6281:6283 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R6258:6278 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_constituent_count:18 def
+R6284:6304 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_constituent_count:18 def
+prf 6322:6348 <> triple_ore_concurrent_count
+R6394:6396 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6354:6374 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_constituent_count def
+R6376:6393 UMST.ChemConstants.CartridgeConstitutiveCompose <> triple_ore_product def
+def 6437:6455 <> ore_product_not_xor
+R6459:6462 Corelib.Init.Datatypes <> bool ind
+R6469:6475 Stdlib.Arith.PeanoNat Nat leb def
+R6480:6500 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_constituent_count def
+R6502:6519 UMST.ChemConstants.CartridgeConstitutiveCompose <> triple_ore_product def
+prf 6530:6553 <> ore_product_not_xor_true
+R6576:6578 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6557:6575 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_product_not_xor def
+R6579:6582 Corelib.Init.Datatypes <> true constr
+R6601:6619 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_product_not_xor def
+R6632:6658 UMST.ChemConstants.CartridgeConstitutiveCompose <> triple_ore_concurrent_count thm
+R6632:6658 UMST.ChemConstants.CartridgeConstitutiveCompose <> triple_ore_concurrent_count thm
+R6632:6658 UMST.ChemConstants.CartridgeConstitutiveCompose <> triple_ore_concurrent_count thm
+def 6693:6716 <> matter_fiber_dual_marker
+R6720:6725 Stdlib.Strings.String <> string ind
+def 6816:6833 <> ore_product_marker
+R6837:6842 Stdlib.Strings.String <> string ind
+prf 6894:6924 <> matter_fiber_dual_ne_ore_marker
+R6954:6957 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6930:6953 UMST.ChemConstants.CartridgeConstitutiveCompose <> matter_fiber_dual_marker def
+R6958:6975 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_product_marker def
+def 7016:7048 <> cartridge_compose_honest_conjunct
+R7052:7055 Corelib.Init.Datatypes <> bool ind
+R7228:7233 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7185:7190 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7145:7150 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7112:7117 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7080:7085 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7062:7079 UMST.ChemConstants.CartridgeConstitutiveCompose <> psi_compose_is_sum def
+R7086:7111 UMST.ChemConstants.CartridgeConstitutiveCompose <> dissipation_compose_is_sum def
+R7118:7144 UMST.ChemConstants.CartridgeConstitutiveCompose <> xor_cartridge_merge_refused def
+R7151:7154 Corelib.Init.Datatypes <> negb def
+R7156:7184 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table def
+R7191:7195 Stdlib.ZArith.BinInt Z eqb def
+R7198:7208 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi def
+R7234:7238 Stdlib.ZArith.BinInt Z eqb def
+R7241:7259 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation def
+prf 7288:7325 <> cartridge_compose_honest_conjunct_true
+R7364:7366 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7331:7363 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_honest_conjunct def
+R7367:7370 Corelib.Init.Datatypes <> true constr
+R7389:7421 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_honest_conjunct def
+def 7479:7493 <> product_not_xor
+R7497:7500 Corelib.Init.Datatypes <> bool ind
+R7583:7588 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7559:7564 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7526:7531 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7507:7525 UMST.ChemConstants.CartridgeConstitutiveCompose <> ore_product_not_xor def
+R7532:7558 UMST.ChemConstants.CartridgeConstitutiveCompose <> xor_cartridge_merge_refused def
+R7565:7582 UMST.ChemConstants.CartridgeConstitutiveCompose <> psi_compose_is_sum def
+R7589:7614 UMST.ChemConstants.CartridgeConstitutiveCompose <> dissipation_compose_is_sum def
+prf 7624:7643 <> product_not_xor_true
+R7662:7664 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7647:7661 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor def
+R7665:7668 Corelib.Init.Datatypes <> true constr
+R7687:7701 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor def
+prf 7756:7789 <> cartridge_compose_additive_not_xor
+R7817:7822 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7810:7812 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7795:7809 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor def
+R7813:7816 Corelib.Init.Datatypes <> true constr
+R7856:7861 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7848:7851 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7855:7855 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7823:7833 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi def
+R7843:7843 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R7901:7906 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7893:7896 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7900:7900 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7862:7880 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation def
+R7936:7938 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7907:7935 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table def
+R7939:7943 Corelib.Init.Datatypes <> false constr
+R7962:7965 Corelib.Init.Logic <> conj constr
+R7993:7996 Corelib.Init.Logic <> conj constr
+R8036:8039 Corelib.Init.Logic <> conj constr
+R8073:8107 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table_false thm
+R8041:8071 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation_witness_3_5 thm
+R7998:8027 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi_witness_10_minus_4 thm
+R7967:7986 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor_true thm
+R7962:7965 Corelib.Init.Logic <> conj constr
+R7993:7996 Corelib.Init.Logic <> conj constr
+R8036:8039 Corelib.Init.Logic <> conj constr
+R8073:8107 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table_false thm
+R8041:8071 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_dissipation_witness_3_5 thm
+R7998:8027 UMST.ChemConstants.CartridgeConstitutiveCompose <> compose_psi_witness_10_minus_4 thm
+R7967:7986 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor_true thm
+def 8354:8379 <> wave100_lib_smuggle_marker
+R8383:8388 Stdlib.Strings.String <> string ind
+def 8450:8479 <> cartridge_compose_wired_in_lib
+R8483:8486 Corelib.Init.Datatypes <> bool ind
+R8491:8495 Corelib.Init.Datatypes <> false constr
+def 8510:8539 <> cartridge_compose_wired_in_eos
+R8543:8546 Corelib.Init.Datatypes <> bool ind
+R8551:8555 Corelib.Init.Datatypes <> false constr
+prf 8565:8595 <> cartridge_compose_not_wired_lib
+R8631:8633 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8601:8630 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_wired_in_lib def
+R8634:8638 Corelib.Init.Datatypes <> false constr
+prf 8673:8703 <> cartridge_compose_not_wired_eos
+R8739:8741 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8709:8738 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_wired_in_eos def
+R8742:8746 Corelib.Init.Datatypes <> false constr
+prf 8781:8797 <> wave100_not_wired
+R8879:8881 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8838:8843 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8803:8806 Corelib.Init.Datatypes <> negb def
+R8808:8837 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_wired_in_lib def
+R8844:8847 Corelib.Init.Datatypes <> negb def
+R8849:8878 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_wired_in_eos def
+R8882:8885 Corelib.Init.Datatypes <> true constr
+ind 9148:9172 <> cartridge_compose_verdict
+constr 9188:9205 <> verdict_unwired_ok
+constr 9211:9234 <> verdict_compose_named_ok
+constr 9240:9263 <> verdict_xor_merge_refuse
+constr 9269:9295 <> verdict_second_table_refuse
+constr 9301:9327 <> verdict_green_invent_refuse
+constr 9333:9365 <> verdict_proved_without_bar_refuse
+constr 9371:9401 <> verdict_production_wired_refuse
+scheme 9148:9172 <> cartridge_compose_verdict_rect
+scheme 9148:9172 <> cartridge_compose_verdict_ind
+scheme 9148:9172 <> cartridge_compose_verdict_rec
+scheme 9148:9172 <> cartridge_compose_verdict_sind
+def 9416:9443 <> cartridge_compose_verdict_ok
+R9450:9474 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_verdict ind
+binder 9446:9446 <> v:23
+R9479:9482 Corelib.Init.Datatypes <> bool ind
+R9495:9495 UMST.ChemConstants.CartridgeConstitutiveCompose <> v:23 var
+R9506:9523 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_unwired_ok constr
+R9528:9531 Corelib.Init.Datatypes <> true constr
+R9537:9560 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_compose_named_ok constr
+R9565:9568 Corelib.Init.Datatypes <> true constr
+R9579:9583 Corelib.Init.Datatypes <> false constr
+def 9604:9635 <> evaluate_cartridge_compose_close
+R9644:9679 UMST.ChemConstants.CartridgeConstitutiveCompose <> CartridgeConstitutiveComposeModality ind
+binder 9640:9640 <> m:25
+R9707:9710 Corelib.Init.Datatypes <> bool ind
+binder 9685:9703 <> claim_physics_green:26
+R9741:9744 Corelib.Init.Datatypes <> bool ind
+binder 9716:9737 <> claim_production_wired:27
+R9749:9773 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_verdict ind
+R9783:9801 UMST.ChemConstants.CartridgeConstitutiveCompose <> claim_physics_green:26 var
+R9848:9869 UMST.ChemConstants.CartridgeConstitutiveCompose <> claim_production_wired:27 var
+R9927:9927 UMST.ChemConstants.CartridgeConstitutiveCompose <> m:25 var
+R9940:9977 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+R9982:9999 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_unwired_ok constr
+R10007:10044 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_assumed constr
+R10052:10088 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_proved constr
+R10096:10135 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_surrogate constr
+R10140:10163 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_compose_named_ok constr
+R10140:10163 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_compose_named_ok constr
+R10140:10163 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_compose_named_ok constr
+R9878:9908 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_production_wired_refuse constr
+R9810:9836 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_green_invent_refuse constr
+prf 10181:10219 <> unwired_close_without_production_wiring
+R10312:10316 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10225:10256 UMST.ChemConstants.CartridgeConstitutiveCompose <> evaluate_cartridge_compose_close def
+R10262:10299 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+R10301:10305 Corelib.Init.Datatypes <> false constr
+R10307:10311 Corelib.Init.Datatypes <> false constr
+R10317:10334 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_unwired_ok constr
+prf 10371:10422 <> unwired_modality_always_ok_without_production_wiring
+R10515:10519 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10428:10459 UMST.ChemConstants.CartridgeConstitutiveCompose <> evaluate_cartridge_compose_close def
+R10465:10502 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+R10504:10508 Corelib.Init.Datatypes <> false constr
+R10510:10514 Corelib.Init.Datatypes <> false constr
+R10520:10537 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_unwired_ok constr
+R10553:10591 UMST.ChemConstants.CartridgeConstitutiveCompose <> unwired_close_without_production_wiring thm
+R10553:10591 UMST.ChemConstants.CartridgeConstitutiveCompose <> unwired_close_without_production_wiring thm
+prf 10606:10632 <> green_invent_refuse_unwired
+R10724:10728 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10638:10669 UMST.ChemConstants.CartridgeConstitutiveCompose <> evaluate_cartridge_compose_close def
+R10675:10712 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+R10714:10717 Corelib.Init.Datatypes <> true constr
+R10719:10723 Corelib.Init.Datatypes <> false constr
+R10729:10755 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_green_invent_refuse constr
+prf 10792:10817 <> green_invent_always_refuse
+R10947:10951 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10823:10850 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_verdict_ok def
+R10857:10888 UMST.ChemConstants.CartridgeConstitutiveCompose <> evaluate_cartridge_compose_close def
+R10897:10934 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+R10936:10939 Corelib.Init.Datatypes <> true constr
+R10941:10945 Corelib.Init.Datatypes <> false constr
+R10952:10956 Corelib.Init.Datatypes <> false constr
+R10975:11002 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_verdict_ok def
+R11015:11041 UMST.ChemConstants.CartridgeConstitutiveCompose <> green_invent_refuse_unwired thm
+R11015:11041 UMST.ChemConstants.CartridgeConstitutiveCompose <> green_invent_refuse_unwired thm
+R11015:11041 UMST.ChemConstants.CartridgeConstitutiveCompose <> green_invent_refuse_unwired thm
+prf 11071:11093 <> production_wired_refuse
+R11184:11188 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11099:11130 UMST.ChemConstants.CartridgeConstitutiveCompose <> evaluate_cartridge_compose_close def
+R11136:11172 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_proved constr
+R11174:11178 Corelib.Init.Datatypes <> false constr
+R11180:11183 Corelib.Init.Datatypes <> true constr
+R11189:11219 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_production_wired_refuse constr
+def 11485:11506 <> cartridgeComposeProved
+R11510:11513 Corelib.Init.Datatypes <> bool ind
+R11518:11522 Corelib.Init.Datatypes <> false constr
+prf 11532:11561 <> cartridge_compose_proved_false
+R11587:11589 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11565:11586 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeComposeProved def
+R11590:11594 Corelib.Init.Datatypes <> false constr
+def 11634:11656 <> not118SquaredGreenTable
+R11660:11663 Corelib.Init.Datatypes <> bool ind
+R11668:11671 Corelib.Init.Datatypes <> true constr
+prf 11681:11707 <> not_118_squared_green_table
+R11734:11736 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11711:11733 UMST.ChemConstants.CartridgeConstitutiveCompose <> not118SquaredGreenTable def
+R11737:11740 Corelib.Init.Datatypes <> true constr
+def 11780:11795 <> sole_axiom_count
+R11799:11801 Corelib.Init.Datatypes <> nat ind
+prf 11816:11838 <> sole_axiom_count_is_one
+R11858:11860 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11842:11857 UMST.ChemConstants.CartridgeConstitutiveCompose <> sole_axiom_count def
+ind 12122:12133 <> formal_fiber
+constr 12149:12173 <> fiber_matter_constitutive
+constr 12179:12199 <> fiber_quantum_knowing
+scheme 12122:12133 <> formal_fiber_rect
+scheme 12122:12133 <> formal_fiber_ind
+scheme 12122:12133 <> formal_fiber_rec
+scheme 12122:12133 <> formal_fiber_sind
+def 12214:12239 <> cartridge_compose_fiber_ok
+R12246:12257 UMST.ChemConstants.CartridgeConstitutiveCompose <> formal_fiber ind
+binder 12242:12242 <> f:31
+R12262:12265 Corelib.Init.Datatypes <> bool ind
+R12278:12278 UMST.ChemConstants.CartridgeConstitutiveCompose <> f:31 var
+R12289:12313 UMST.ChemConstants.CartridgeConstitutiveCompose <> fiber_matter_constitutive constr
+R12318:12321 Corelib.Init.Datatypes <> true constr
+R12327:12347 UMST.ChemConstants.CartridgeConstitutiveCompose <> fiber_quantum_knowing constr
+R12352:12355 Corelib.Init.Datatypes <> true constr
+prf 12371:12403 <> cartridge_compose_matter_fiber_ok
+R12461:12463 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12409:12434 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_fiber_ok def
+R12436:12460 UMST.ChemConstants.CartridgeConstitutiveCompose <> fiber_matter_constitutive constr
+R12464:12467 Corelib.Init.Datatypes <> true constr
+prf 12502:12535 <> cartridge_compose_knowing_fiber_ok
+R12589:12591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12541:12566 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_fiber_ok def
+R12568:12588 UMST.ChemConstants.CartridgeConstitutiveCompose <> fiber_quantum_knowing constr
+R12592:12595 Corelib.Init.Datatypes <> true constr
+prf 12856:12902 <> cartridge_constitutive_compose_fixture_scaffold
+R12948:12953 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12941:12943 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12908:12940 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_honest_conjunct def
+R12944:12947 Corelib.Init.Datatypes <> true constr
+R12976:12981 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12969:12971 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12954:12968 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor def
+R12972:12975 Corelib.Init.Datatypes <> true constr
+R13094:13099 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13069:13075 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12982:13013 UMST.ChemConstants.CartridgeConstitutiveCompose <> evaluate_cartridge_compose_close def
+R13019:13056 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr
+R13058:13062 Corelib.Init.Datatypes <> false constr
+R13064:13068 Corelib.Init.Datatypes <> false constr
+R13076:13093 UMST.ChemConstants.CartridgeConstitutiveCompose <> verdict_unwired_ok constr
+R13130:13135 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13122:13124 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13100:13121 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeComposeProved def
+R13125:13129 Corelib.Init.Datatypes <> false constr
+R13173:13179 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13264:13264 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13165:13167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13136:13164 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table def
+R13168:13172 Corelib.Init.Datatypes <> false constr
+R13257:13259 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13215:13221 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R13180:13183 Corelib.Init.Datatypes <> negb def
+R13185:13214 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_wired_in_lib def
+R13222:13225 Corelib.Init.Datatypes <> negb def
+R13227:13256 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_wired_in_eos def
+R13260:13263 Corelib.Init.Datatypes <> true constr
+R13283:13286 Corelib.Init.Logic <> conj constr
+R13332:13335 Corelib.Init.Logic <> conj constr
+R13365:13368 Corelib.Init.Logic <> conj constr
+R13419:13422 Corelib.Init.Logic <> conj constr
+R13466:13469 Corelib.Init.Logic <> conj constr
+R13507:13523 UMST.ChemConstants.CartridgeConstitutiveCompose <> wave100_not_wired thm
+R13471:13505 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table_false thm
+R13424:13453 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_proved_false thm
+R13370:13408 UMST.ChemConstants.CartridgeConstitutiveCompose <> unwired_close_without_production_wiring thm
+R13337:13356 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor_true thm
+R13288:13325 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_honest_conjunct_true thm
+R13283:13286 Corelib.Init.Logic <> conj constr
+R13332:13335 Corelib.Init.Logic <> conj constr
+R13365:13368 Corelib.Init.Logic <> conj constr
+R13419:13422 Corelib.Init.Logic <> conj constr
+R13466:13469 Corelib.Init.Logic <> conj constr
+R13507:13523 UMST.ChemConstants.CartridgeConstitutiveCompose <> wave100_not_wired thm
+R13471:13505 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_owns_periodic_table_false thm
+R13424:13453 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_proved_false thm
+R13370:13408 UMST.ChemConstants.CartridgeConstitutiveCompose <> unwired_close_without_production_wiring thm
+R13337:13356 UMST.ChemConstants.CartridgeConstitutiveCompose <> product_not_xor_true thm
+R13288:13325 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_compose_honest_conjunct_true thm
+def 13773:13811 <> cartridgeConstitutiveComposeRsAuthority
+R13815:13820 Stdlib.Strings.String <> string ind
+def 13902:13926 <> chemistryServiceAuthority
+R13930:13935 Stdlib.Strings.String <> string ind
+def 13987:14023 <> chemIntCrossCartridgeComposeAuthority
+R14027:14032 Stdlib.Strings.String <> string ind
+def 14113:14134 <> chemL0ServiceAuthority
+R14138:14143 Stdlib.Strings.String <> string ind
+def 14181:14214 <> cartridgeConstitutiveComposeCellId
+R14218:14223 Stdlib.Strings.String <> string ind
+def 14307:14342 <> cartridgeConstitutiveComposeNonClaim
+R14346:14351 Stdlib.Strings.String <> string ind
+prf 14764:14801 <> cartridge_constitutive_compose_cell_id
+R14841:14845 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14807:14840 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeConstitutiveComposeCellId def
+prf 14943:14972 <> cartridge_compose_cites_rs_row
+R15017:15020 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R14978:15016 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeConstitutiveComposeRsAuthority def
+prf 15058:15098 <> cartridge_compose_cites_chemistry_service
+R15129:15132 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15104:15128 UMST.ChemConstants.CartridgeConstitutiveCompose <> chemistryServiceAuthority def
+prf 15170:15206 <> cartridge_compose_cites_int_cross_row
+R15249:15253 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15212:15248 UMST.ChemConstants.CartridgeConstitutiveCompose <> chemIntCrossCartridgeComposeAuthority def
+prf 15348:15381 <> cartridge_compose_cites_l0_service
+R15409:15411 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15387:15408 UMST.ChemConstants.CartridgeConstitutiveCompose <> chemL0ServiceAuthority def
+prf 15463:15492 <> cartridge_compose_cites_marker
+R15522:15525 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15498:15521 UMST.ChemConstants.CartridgeConstitutiveCompose <> matter_fiber_dual_marker def
+def 15792:15835 <> cartridgeComposeSecondLawConservationFraming
+R15839:15844 Stdlib.Strings.String <> string ind
+prf 15938:15979 <> cartridge_compose_not_second_compose_axiom
+R16029:16034 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15985:16028 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeComposeSecondLawConservationFraming def
+prf 16092:16140 <> cartridge_compose_second_law_conservation_framing
+R16190:16193 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R16146:16189 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeComposeSecondLawConservationFraming def
+def 16462:16483 <> physicsGreenAuthorized
+R16495:16499 Corelib.Init.Logic <> False ind
+prf 16509:16558 <> cartridge_constitutive_compose_physics_green_false
+R16564:16565 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16566:16587 UMST.ChemConstants.CartridgeConstitutiveCompose <> physicsGreenAuthorized def
+prf 16627:16673 <> cartridge_constitutive_compose_modality_unwired
+R16722:16726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16679:16721 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridgeConstitutiveComposeModalityCurrent def
+R16727:16764 UMST.ChemConstants.CartridgeConstitutiveCompose <> cartridge_constitutive_compose_unwired constr

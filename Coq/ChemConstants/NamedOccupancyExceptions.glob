@@ -1,0 +1,266 @@
+DIGEST af8894eec5602a416e258da4f0fe9a1c
+FUMST.ChemConstants.NamedOccupancyExceptions
+R978:982 Stdlib.Arith.Arith <> <> lib
+R984:987 Stdlib.Lists.List <> <> lib
+R989:994 Stdlib.Strings.String <> <> lib
+ind 1251:1272 <> NamedOccupancyModality
+constr 1288:1310 <> named_occupancy_unwired
+constr 1316:1338 <> named_occupancy_assumed
+constr 1344:1365 <> named_occupancy_proved
+constr 1371:1395 <> named_occupancy_surrogate
+scheme 1251:1272 <> NamedOccupancyModality_rect
+scheme 1251:1272 <> NamedOccupancyModality_ind
+scheme 1251:1272 <> NamedOccupancyModality_rec
+scheme 1251:1272 <> NamedOccupancyModality_sind
+def 1410:1438 <> namedOccupancyModalityCurrent
+R1442:1463 UMST.ChemConstants.NamedOccupancyExceptions <> NamedOccupancyModality ind
+R1470:1492 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_unwired constr
+ind 1729:1742 <> NamedException
+constr 1758:1775 <> named_exception_la
+constr 1781:1798 <> named_exception_ce
+constr 1804:1821 <> named_exception_gd
+constr 1827:1844 <> named_exception_pt
+constr 1850:1867 <> named_exception_au
+scheme 1729:1742 <> NamedException_rect
+scheme 1729:1742 <> NamedException_ind
+scheme 1729:1742 <> NamedException_rec
+scheme 1729:1742 <> NamedException_sind
+def 1882:1897 <> NamedException_z
+R1905:1918 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 1900:1901 <> ex:5
+R1923:1925 Corelib.Init.Datatypes <> nat ind
+R1938:1939 UMST.ChemConstants.NamedOccupancyExceptions <> ex:5 var
+R1950:1967 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R1983:2000 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R2016:2033 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R2049:2066 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R2082:2099 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+def 2130:2150 <> NamedException_symbol
+R2158:2171 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 2153:2154 <> ex:7
+R2176:2181 Stdlib.Strings.String <> string ind
+R2194:2195 UMST.ChemConstants.NamedOccupancyExceptions <> ex:7 var
+R2206:2223 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R2237:2254 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R2268:2285 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R2299:2316 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R2330:2347 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+prf 2371:2390 <> named_exception_la_z
+R2431:2433 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2396:2411 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R2413:2430 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+prf 2474:2493 <> named_exception_ce_z
+R2534:2536 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2499:2514 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R2516:2533 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+prf 2577:2596 <> named_exception_gd_z
+R2637:2639 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2602:2617 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R2619:2636 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+prf 2680:2699 <> named_exception_pt_z
+R2740:2742 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2705:2720 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R2722:2739 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+prf 2783:2802 <> named_exception_au_z
+R2843:2845 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2808:2823 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R2825:2842 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+def 2977:3007 <> NamedException_observedNotation
+R3015:3028 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 3010:3011 <> ex:9
+R3033:3038 Stdlib.Strings.String <> string ind
+R3051:3052 UMST.ChemConstants.NamedOccupancyExceptions <> ex:9 var
+R3063:3080 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R3137:3154 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R3214:3231 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R3291:3308 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R3369:3386 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+def 3563:3594 <> NamedException_predictedNotation
+R3602:3615 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 3597:3598 <> ex:11
+R3620:3625 Stdlib.Strings.String <> string ind
+R3638:3639 UMST.ChemConstants.NamedOccupancyExceptions <> ex:11 var
+R3650:3667 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R3724:3741 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R3798:3815 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R3872:3889 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R3950:3967 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+def 4113:4139 <> NamedException_occupancyTag
+R4147:4160 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 4142:4143 <> ex:13
+R4165:4170 Stdlib.Strings.String <> string ind
+R4183:4184 UMST.ChemConstants.NamedOccupancyExceptions <> ex:13 var
+R4195:4212 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R4230:4247 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R4268:4285 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R4306:4323 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R4341:4358 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+rec 4609:4625 <> NamedExceptionRow
+proj 4661:4669 <> exception
+proj 4691:4698 <> modality
+R4673:4686 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+R4702:4723 UMST.ChemConstants.NamedOccupancyExceptions <> NamedOccupancyModality ind
+def 4740:4758 <> NamedExceptionRow_z
+R4767:4783 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow rec
+binder 4761:4763 <> row:18
+R4788:4790 Corelib.Init.Datatypes <> nat ind
+R4797:4812 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R4815:4823 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R4825:4827 UMST.ChemConstants.NamedOccupancyExceptions <> row:18 var
+def 4843:4866 <> NamedExceptionRow_symbol
+R4875:4891 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow rec
+binder 4869:4871 <> row:19
+R4896:4901 Stdlib.Strings.String <> string ind
+R4908:4928 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_symbol def
+R4931:4939 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R4941:4943 UMST.ChemConstants.NamedOccupancyExceptions <> row:19 var
+def 4959:4992 <> NamedExceptionRow_observedNotation
+R5001:5017 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow rec
+binder 4995:4997 <> row:20
+R5022:5027 Stdlib.Strings.String <> string ind
+R5034:5064 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R5067:5075 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R5077:5079 UMST.ChemConstants.NamedOccupancyExceptions <> row:20 var
+def 5095:5129 <> NamedExceptionRow_predictedNotation
+R5138:5154 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow rec
+binder 5132:5134 <> row:21
+R5159:5164 Stdlib.Strings.String <> string ind
+R5171:5202 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R5205:5213 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R5215:5217 UMST.ChemConstants.NamedOccupancyExceptions <> row:21 var
+def 5233:5262 <> NamedExceptionRow_occupancyTag
+R5271:5287 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow rec
+binder 5265:5267 <> row:22
+R5292:5297 Stdlib.Strings.String <> string ind
+R5304:5330 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_occupancyTag def
+R5333:5341 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R5343:5345 UMST.ChemConstants.NamedOccupancyExceptions <> row:22 var
+def 5361:5377 <> namedExceptionRow
+R5385:5398 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 5380:5381 <> ex:23
+R5403:5419 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow rec
+R5429:5437 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R5429:5437 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R5429:5437 UMST.ChemConstants.NamedOccupancyExceptions <> exception proj
+R5451:5458 UMST.ChemConstants.NamedOccupancyExceptions <> modality proj
+R5451:5458 UMST.ChemConstants.NamedOccupancyExceptions <> modality proj
+R5442:5443 UMST.ChemConstants.NamedOccupancyExceptions <> ex:23 var
+R5463:5491 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyModalityCurrent def
+prf 5504:5524 <> named_exception_row_z
+R5532:5545 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 5527:5528 <> ex:24
+R5594:5596 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5552:5570 UMST.ChemConstants.NamedOccupancyExceptions <> NamedExceptionRow_z def
+R5573:5589 UMST.ChemConstants.NamedOccupancyExceptions <> namedExceptionRow def
+R5591:5592 UMST.ChemConstants.NamedOccupancyExceptions <> ex:24 var
+R5597:5612 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_z def
+R5614:5615 UMST.ChemConstants.NamedOccupancyExceptions <> ex:24 var
+prf 5650:5685 <> named_exception_row_modality_unwired
+R5693:5706 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 5688:5689 <> ex:25
+R5744:5746 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5713:5720 UMST.ChemConstants.NamedOccupancyExceptions <> modality proj
+R5723:5739 UMST.ChemConstants.NamedOccupancyExceptions <> namedExceptionRow def
+R5741:5742 UMST.ChemConstants.NamedOccupancyExceptions <> ex:25 var
+R5747:5769 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_unwired constr
+def 6034:6051 <> namedExceptionList
+R6055:6058 Corelib.Init.Datatypes <> list ind
+R6060:6073 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+R6098:6103 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6080:6097 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R6122:6127 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6104:6121 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R6146:6151 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6128:6145 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R6170:6175 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6152:6169 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R6194:6199 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6176:6193 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+R6200:6202 Corelib.Init.Datatypes <> nil constr
+def 6217:6235 <> namedExceptionCount
+R6239:6241 Corelib.Init.Datatypes <> nat ind
+R6246:6256 Stdlib.Lists.List <> length abbrev
+R6258:6275 UMST.ChemConstants.NamedOccupancyExceptions <> namedExceptionList def
+prf 6285:6310 <> named_exception_count_five
+R6333:6335 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6314:6332 UMST.ChemConstants.NamedOccupancyExceptions <> namedExceptionCount def
+prf 6375:6401 <> named_exception_list_length
+R6437:6439 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6407:6417 Stdlib.Lists.List <> length abbrev
+R6419:6436 UMST.ChemConstants.NamedOccupancyExceptions <> namedExceptionList def
+prf 6479:6502 <> la_observed_ne_predicted
+R6558:6563 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6508:6538 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R6540:6557 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+R6564:6595 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R6597:6614 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_la constr
+prf 6650:6673 <> ce_observed_ne_predicted
+R6729:6734 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6679:6709 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R6711:6728 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+R6735:6766 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R6768:6785 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_ce constr
+prf 6821:6844 <> gd_observed_ne_predicted
+R6900:6905 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6850:6880 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R6882:6899 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+R6906:6937 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R6939:6956 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_gd constr
+prf 6992:7015 <> pt_observed_ne_predicted
+R7071:7076 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7021:7051 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R7053:7070 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+R7077:7108 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R7110:7127 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_pt constr
+prf 7163:7186 <> au_observed_ne_predicted
+R7242:7247 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7192:7222 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R7224:7241 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+R7248:7279 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R7281:7298 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_au constr
+prf 7334:7370 <> named_exception_is_madelung_exception
+R7378:7391 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 7373:7374 <> ex:26
+R7432:7437 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7398:7428 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R7430:7431 UMST.ChemConstants.NamedOccupancyExceptions <> ex:26 var
+R7438:7469 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R7471:7472 UMST.ChemConstants.NamedOccupancyExceptions <> ex:26 var
+def 7616:7651 <> namedExceptionApproximateNotIdentity
+R7659:7672 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 7654:7655 <> ex:27
+R7721:7726 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7687:7717 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_observedNotation def
+R7719:7720 UMST.ChemConstants.NamedOccupancyExceptions <> ex:27 var
+R7727:7758 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException_predictedNotation def
+R7760:7761 UMST.ChemConstants.NamedOccupancyExceptions <> ex:27 var
+prf 7771:7810 <> named_exception_approximate_not_identity
+R7818:7831 UMST.ChemConstants.NamedOccupancyExceptions <> NamedException ind
+binder 7813:7814 <> ex:28
+R7838:7873 UMST.ChemConstants.NamedOccupancyExceptions <> namedExceptionApproximateNotIdentity def
+R7875:7876 UMST.ChemConstants.NamedOccupancyExceptions <> ex:28 var
+R7894:7930 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_is_madelung_exception thm
+R7894:7930 UMST.ChemConstants.NamedOccupancyExceptions <> named_exception_is_madelung_exception thm
+def 8174:8204 <> namedOccupancyQlatticeAuthority
+R8208:8213 Stdlib.Strings.String <> string ind
+def 8266:8303 <> namedOccupancyMadelungWitnessAuthority
+R8307:8312 Stdlib.Strings.String <> string ind
+def 8380:8409 <> namedOccupancyExceptionsCellId
+R8413:8418 Stdlib.Strings.String <> string ind
+def 8485:8516 <> namedOccupancyExceptionsNonClaim
+R8520:8525 Stdlib.Strings.String <> string ind
+def 9050:9085 <> namedOccupancyPhysicsGreenAuthorized
+R9097:9101 Corelib.Init.Logic <> False ind
+prf 9111:9145 <> named_occupancy_physics_green_false
+R9151:9152 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R9153:9188 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyPhysicsGreenAuthorized def
+prf 9228:9259 <> named_occupancy_modality_unwired
+R9294:9296 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9265:9293 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyModalityCurrent def
+R9297:9319 UMST.ChemConstants.NamedOccupancyExceptions <> named_occupancy_unwired constr
+prf 9354:9385 <> named_occupancy_not_second_axiom
+R9429:9432 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9391:9428 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyMadelungWitnessAuthority def
+prf 9470:9499 <> named_occupancy_cites_qlattice
+R9536:9538 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9505:9535 UMST.ChemConstants.NamedOccupancyExceptions <> namedOccupancyQlatticeAuthority def

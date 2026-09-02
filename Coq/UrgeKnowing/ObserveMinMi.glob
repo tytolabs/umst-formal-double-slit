@@ -1,0 +1,374 @@
+DIGEST 5c7ed6bad1de1da5d56482e622605fd4
+FUrgeKnowing.ObserveMinMi
+R1202:1206 Stdlib.Reals.Reals <> <> lib
+R1208:1212 Stdlib.Reals.RIneq <> <> lib
+R1214:1216 Stdlib.micromega.Lra <> <> lib
+R1218:1222 Stdlib.setoid_ring.Field <> <> lib
+R1224:1229 Stdlib.Strings.String <> <> lib
+R1263:1284 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1286:1300 UMSTFormal.MeasurementCost <> <> lib
+ind 1574:1593 <> ObserveMinMiModality
+constr 1609:1630 <> observe_min_mi_unwired
+constr 1636:1657 <> observe_min_mi_assumed
+constr 1663:1683 <> observe_min_mi_proved
+constr 1689:1712 <> observe_min_mi_surrogate
+scheme 1574:1593 <> ObserveMinMiModality_rect
+scheme 1574:1593 <> ObserveMinMiModality_ind
+scheme 1574:1593 <> ObserveMinMiModality_rec
+scheme 1574:1593 <> ObserveMinMiModality_sind
+def 1727:1753 <> observeMinMiModalityCurrent
+R1757:1776 UrgeKnowing.ObserveMinMi <> ObserveMinMiModality ind
+R1783:1804 UrgeKnowing.ObserveMinMi <> observe_min_mi_unwired constr
+rec 2037:2046 <> LocalState
+proj 2062:2079 <> local_entropy_bits
+R2083:2083 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+rec 2096:2104 <> MeshState
+proj 2120:2136 <> mesh_entropy_bits
+R2140:2140 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+rec 2153:2166 <> LocalMeshState
+proj 2182:2197 <> local_mesh_local
+proj 2215:2229 <> local_mesh_mesh
+R2201:2210 UrgeKnowing.ObserveMinMi <> LocalState rec
+R2233:2241 UrgeKnowing.ObserveMinMi <> MeshState rec
+def 2258:2271 <> makeLocalState
+R2278:2278 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2274:2274 <> h:10
+R2283:2292 UrgeKnowing.ObserveMinMi <> LocalState rec
+R2302:2319 UrgeKnowing.ObserveMinMi <> local_entropy_bits proj
+R2302:2319 UrgeKnowing.ObserveMinMi <> local_entropy_bits proj
+R2302:2319 UrgeKnowing.ObserveMinMi <> local_entropy_bits proj
+R2324:2324 UrgeKnowing.ObserveMinMi <> h:10 var
+def 2342:2354 <> makeMeshState
+R2361:2361 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2357:2357 <> h:11
+R2366:2374 UrgeKnowing.ObserveMinMi <> MeshState rec
+R2384:2400 UrgeKnowing.ObserveMinMi <> mesh_entropy_bits proj
+R2384:2400 UrgeKnowing.ObserveMinMi <> mesh_entropy_bits proj
+R2384:2400 UrgeKnowing.ObserveMinMi <> mesh_entropy_bits proj
+R2405:2405 UrgeKnowing.ObserveMinMi <> h:11 var
+def 2423:2436 <> localMeshState
+R2456:2456 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2439:2445 <> h_local:12
+binder 2447:2452 <> h_mesh:13
+R2461:2474 UrgeKnowing.ObserveMinMi <> LocalMeshState rec
+R2484:2499 UrgeKnowing.ObserveMinMi <> local_mesh_local proj
+R2484:2499 UrgeKnowing.ObserveMinMi <> local_mesh_local proj
+R2484:2499 UrgeKnowing.ObserveMinMi <> local_mesh_local proj
+R2533:2547 UrgeKnowing.ObserveMinMi <> local_mesh_mesh proj
+R2533:2547 UrgeKnowing.ObserveMinMi <> local_mesh_mesh proj
+R2504:2517 UrgeKnowing.ObserveMinMi <> makeLocalState def
+R2519:2525 UrgeKnowing.ObserveMinMi <> h_local:12 var
+R2552:2564 UrgeKnowing.ObserveMinMi <> makeMeshState def
+R2566:2571 UrgeKnowing.ObserveMinMi <> h_mesh:13 var
+def 2813:2828 <> pairwise_mi_bits
+R2862:2862 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2831:2837 <> h_local:14
+binder 2839:2844 <> h_mesh:15
+binder 2846:2858 <> joint_entropy:16
+R2867:2867 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2890:2892 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'-'_x not
+R2881:2883 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'+'_x not
+R2874:2880 UrgeKnowing.ObserveMinMi <> h_local:14 var
+R2884:2889 UrgeKnowing.ObserveMinMi <> h_mesh:15 var
+R2893:2905 UrgeKnowing.ObserveMinMi <> joint_entropy:16 var
+def 2920:2937 <> mi_bits_consistent
+R2974:2974 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2940:2946 <> h_local:17
+binder 2948:2953 <> h_mesh:18
+binder 2955:2967 <> joint_entropy:19
+binder 2969:2970 <> mi:20
+R3039:3044 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2991:2993 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2989:2990 UrgeKnowing.ObserveMinMi <> mi:20 var
+R2994:3009 UrgeKnowing.ObserveMinMi <> pairwise_mi_bits def
+R3011:3017 UrgeKnowing.ObserveMinMi <> h_local:17 var
+R3019:3024 UrgeKnowing.ObserveMinMi <> h_mesh:18 var
+R3026:3038 UrgeKnowing.ObserveMinMi <> joint_entropy:19 var
+R3046:3049 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3050:3051 UrgeKnowing.ObserveMinMi <> mi:20 var
+def 3066:3083 <> observe_mi_bounded
+R3091:3091 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3086:3087 <> mi:21
+R3113:3116 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3107:3110 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3111:3112 UrgeKnowing.ObserveMinMi <> mi:21 var
+R3119:3122 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3117:3118 UrgeKnowing.ObserveMinMi <> mi:21 var
+def 3138:3153 <> observeMinMiBits
+R3160:3173 UrgeKnowing.ObserveMinMi <> LocalMeshState rec
+binder 3156:3156 <> s:22
+R3193:3193 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3177:3189 <> joint_entropy:23
+R3198:3198 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3205:3220 UrgeKnowing.ObserveMinMi <> pairwise_mi_bits def
+R3223:3240 UrgeKnowing.ObserveMinMi <> local_entropy_bits proj
+R3243:3258 UrgeKnowing.ObserveMinMi <> local_mesh_local proj
+R3260:3260 UrgeKnowing.ObserveMinMi <> s:22 var
+R3269:3285 UrgeKnowing.ObserveMinMi <> mesh_entropy_bits proj
+R3288:3302 UrgeKnowing.ObserveMinMi <> local_mesh_mesh proj
+R3304:3304 UrgeKnowing.ObserveMinMi <> s:22 var
+R3308:3320 UrgeKnowing.ObserveMinMi <> joint_entropy:23 var
+rec 3555:3574 <> MinimalMiObservation
+proj 3590:3605 <> mi_required_bits
+proj 3614:3629 <> mi_observed_bits
+R3609:3609 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3633:3633 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+def 3650:3671 <> minimal_mi_observation
+R3679:3679 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3674:3675 <> mi:27
+R3684:3703 UrgeKnowing.ObserveMinMi <> MinimalMiObservation rec
+R3713:3728 UrgeKnowing.ObserveMinMi <> mi_required_bits proj
+R3713:3728 UrgeKnowing.ObserveMinMi <> mi_required_bits proj
+R3713:3728 UrgeKnowing.ObserveMinMi <> mi_required_bits proj
+R3737:3752 UrgeKnowing.ObserveMinMi <> mi_observed_bits proj
+R3737:3752 UrgeKnowing.ObserveMinMi <> mi_observed_bits proj
+R3733:3734 UrgeKnowing.ObserveMinMi <> mi:27 var
+R3757:3758 UrgeKnowing.ObserveMinMi <> mi:27 var
+def 3776:3793 <> minimal_mi_matches
+R3802:3821 UrgeKnowing.ObserveMinMi <> MinimalMiObservation rec
+binder 3796:3798 <> obs:28
+R3856:3858 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3836:3851 UrgeKnowing.ObserveMinMi <> mi_required_bits proj
+R3853:3855 UrgeKnowing.ObserveMinMi <> obs:28 var
+R3859:3874 UrgeKnowing.ObserveMinMi <> mi_observed_bits proj
+R3876:3878 UrgeKnowing.ObserveMinMi <> obs:28 var
+prf 3888:3917 <> minimal_mi_observation_matches
+R3925:3925 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3920:3921 <> mi:29
+R3932:3949 UrgeKnowing.ObserveMinMi <> minimal_mi_matches def
+R3952:3973 UrgeKnowing.ObserveMinMi <> minimal_mi_observation def
+R3975:3976 UrgeKnowing.ObserveMinMi <> mi:29 var
+def 4241:4262 <> observeMinLandauerCost
+R4269:4269 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4265:4265 <> T:30
+R4277:4290 UrgeKnowing.ObserveMinMi <> LocalMeshState rec
+binder 4273:4273 <> s:31
+R4310:4310 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4294:4306 <> joint_entropy:32
+R4315:4315 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4322:4348 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R4350:4350 UrgeKnowing.ObserveMinMi <> T:30 var
+R4353:4368 UrgeKnowing.ObserveMinMi <> observeMinMiBits def
+R4370:4370 UrgeKnowing.ObserveMinMi <> s:31 var
+R4372:4384 UrgeKnowing.ObserveMinMi <> joint_entropy:32 var
+prf 4395:4428 <> measurementEnergyLowerBound_nonneg
+R4438:4438 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4431:4431 <> T:33
+binder 4433:4434 <> mi:34
+R4451:4454 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4446:4449 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4450:4450 UrgeKnowing.ObserveMinMi <> T:33 var
+R4462:4465 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4456:4459 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4460:4461 UrgeKnowing.ObserveMinMi <> mi:34 var
+R4467:4470 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4471:4497 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R4499:4499 UrgeKnowing.ObserveMinMi <> T:33 var
+R4501:4502 UrgeKnowing.ObserveMinMi <> mi:34 var
+R4538:4564 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R4567:4580 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4591:4602 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4591:4602 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4627:4638 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4649:4654 Stdlib.Reals.RIneq <> Rlt_le thm
+R4657:4663 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4627:4638 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4649:4654 Stdlib.Reals.RIneq <> Rlt_le thm
+R4657:4663 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4675:4686 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4696:4701 Stdlib.Reals.RIneq <> Rlt_le thm
+R4704:4712 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4675:4686 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4696:4701 Stdlib.Reals.RIneq <> Rlt_le thm
+R4704:4712 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 4737:4757 <> E_Landauer_bit_nonneg
+R4764:4764 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4760:4760 <> T:35
+R4777:4780 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4772:4775 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4776:4776 UrgeKnowing.ObserveMinMi <> T:35 var
+R4782:4785 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4786:4799 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4801:4801 UrgeKnowing.ObserveMinMi <> T:35 var
+R4833:4846 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R4857:4868 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4879:4884 Stdlib.Reals.RIneq <> Rlt_le thm
+R4887:4893 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4857:4868 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4879:4884 Stdlib.Reals.RIneq <> Rlt_le thm
+R4887:4893 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4905:4916 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4926:4931 Stdlib.Reals.RIneq <> Rlt_le thm
+R4934:4942 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4905:4916 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R4926:4931 Stdlib.Reals.RIneq <> Rlt_le thm
+R4934:4942 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+prf 4967:5007 <> measurementEnergyLowerBound_le_bit_energy
+R5017:5017 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5010:5010 <> T:36
+binder 5012:5013 <> mi:37
+R5030:5033 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5025:5028 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5029:5029 UrgeKnowing.ObserveMinMi <> T:36 var
+R5041:5044 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5035:5038 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5039:5040 UrgeKnowing.ObserveMinMi <> mi:37 var
+R5052:5057 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5047:5050 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5045:5046 UrgeKnowing.ObserveMinMi <> mi:37 var
+R5090:5093 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5058:5084 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5086:5086 UrgeKnowing.ObserveMinMi <> T:36 var
+R5088:5089 UrgeKnowing.ObserveMinMi <> mi:37 var
+R5094:5107 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5109:5109 UrgeKnowing.ObserveMinMi <> T:36 var
+R5149:5175 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5191:5199 Stdlib.Reals.Raxioms <> Rmult_1_l thm
+R5191:5199 Stdlib.Reals.Raxioms <> Rmult_1_l thm
+R5191:5199 Stdlib.Reals.Raxioms <> Rmult_1_l thm
+R5210:5226 Stdlib.Reals.RIneq <> Rmult_le_compat_r thm
+R5210:5226 Stdlib.Reals.RIneq <> Rmult_le_compat_r thm
+R5239:5259 UrgeKnowing.ObserveMinMi <> E_Landauer_bit_nonneg thm
+R5239:5259 UrgeKnowing.ObserveMinMi <> E_Landauer_bit_nonneg thm
+prf 5299:5328 <> observeMinLandauerCost_zero_mi
+R5335:5335 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5331:5331 <> T:38
+R5389:5391 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5342:5363 UrgeKnowing.ObserveMinMi <> observeMinLandauerCost def
+R5365:5365 UrgeKnowing.ObserveMinMi <> T:38 var
+R5368:5381 UrgeKnowing.ObserveMinMi <> localMeshState def
+R5411:5432 UrgeKnowing.ObserveMinMi <> observeMinLandauerCost def
+R5435:5450 UrgeKnowing.ObserveMinMi <> observeMinMiBits def
+R5453:5466 UrgeKnowing.ObserveMinMi <> localMeshState def
+R5473:5488 UrgeKnowing.ObserveMinMi <> pairwise_mi_bits def
+R5491:5517 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+prf 5547:5575 <> observeMinLandauerCost_nonneg
+R5582:5582 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5578:5578 <> T:39
+R5590:5603 UrgeKnowing.ObserveMinMi <> LocalMeshState rec
+binder 5586:5586 <> s:40
+R5615:5615 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5607:5611 <> joint:41
+R5628:5633 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5623:5626 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5627:5627 UrgeKnowing.ObserveMinMi <> T:39 var
+R5663:5668 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5635:5638 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5639:5654 UrgeKnowing.ObserveMinMi <> observeMinMiBits def
+R5656:5656 UrgeKnowing.ObserveMinMi <> s:40 var
+R5658:5662 UrgeKnowing.ObserveMinMi <> joint:41 var
+R5670:5673 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5674:5695 UrgeKnowing.ObserveMinMi <> observeMinLandauerCost def
+R5697:5697 UrgeKnowing.ObserveMinMi <> T:39 var
+R5699:5699 UrgeKnowing.ObserveMinMi <> s:40 var
+R5701:5705 UrgeKnowing.ObserveMinMi <> joint:41 var
+R5741:5762 UrgeKnowing.ObserveMinMi <> observeMinLandauerCost def
+R5773:5806 UrgeKnowing.ObserveMinMi <> measurementEnergyLowerBound_nonneg thm
+R5773:5806 UrgeKnowing.ObserveMinMi <> measurementEnergyLowerBound_nonneg thm
+prf 5833:5868 <> observeMinLandauerCost_le_bit_energy
+R5875:5875 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5871:5871 <> T:42
+R5883:5896 UrgeKnowing.ObserveMinMi <> LocalMeshState rec
+binder 5879:5879 <> s:43
+R5908:5908 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5900:5904 <> joint:44
+R5921:5926 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5916:5919 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5920:5920 UrgeKnowing.ObserveMinMi <> T:42 var
+R5972:5977 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5927:5944 UrgeKnowing.ObserveMinMi <> observe_mi_bounded def
+R5947:5962 UrgeKnowing.ObserveMinMi <> observeMinMiBits def
+R5964:5964 UrgeKnowing.ObserveMinMi <> s:43 var
+R5966:5970 UrgeKnowing.ObserveMinMi <> joint:44 var
+R6010:6013 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5978:5999 UrgeKnowing.ObserveMinMi <> observeMinLandauerCost def
+R6001:6001 UrgeKnowing.ObserveMinMi <> T:42 var
+R6003:6003 UrgeKnowing.ObserveMinMi <> s:43 var
+R6005:6009 UrgeKnowing.ObserveMinMi <> joint:44 var
+R6014:6027 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R6029:6029 UrgeKnowing.ObserveMinMi <> T:42 var
+R6065:6086 UrgeKnowing.ObserveMinMi <> observeMinLandauerCost def
+R6127:6167 UrgeKnowing.ObserveMinMi <> measurementEnergyLowerBound_le_bit_energy thm
+R6127:6167 UrgeKnowing.ObserveMinMi <> measurementEnergyLowerBound_le_bit_energy thm
+prf 6194:6226 <> observeMinMiBits_independent_zero
+R6271:6273 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6232:6247 UrgeKnowing.ObserveMinMi <> observeMinMiBits def
+R6250:6263 UrgeKnowing.ObserveMinMi <> localMeshState def
+R6293:6308 UrgeKnowing.ObserveMinMi <> observeMinMiBits def
+R6311:6324 UrgeKnowing.ObserveMinMi <> localMeshState def
+R6327:6342 UrgeKnowing.ObserveMinMi <> pairwise_mi_bits def
+ind 6598:6616 <> ObserveMinMiRefusal
+constr 6632:6661 <> refuse_mutual_information_zero
+constr 6667:6695 <> refuse_inconsistent_entropies
+constr 6701:6739 <> refuse_mesh_absent_when_paired_required
+scheme 6598:6616 <> ObserveMinMiRefusal_rect
+scheme 6598:6616 <> ObserveMinMiRefusal_ind
+scheme 6598:6616 <> ObserveMinMiRefusal_rec
+scheme 6598:6616 <> ObserveMinMiRefusal_sind
+def 6754:6783 <> observe_min_mi_paired_required
+R6790:6803 UrgeKnowing.ObserveMinMi <> LocalMeshState rec
+binder 6786:6786 <> s:47
+R6818:6824 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6832:6833 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6825:6827 <> h_l:48
+binder 6829:6831 <> h_m:49
+R6835:6837 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6834:6834 UrgeKnowing.ObserveMinMi <> s:47 var
+R6838:6851 UrgeKnowing.ObserveMinMi <> localMeshState def
+R6853:6855 UrgeKnowing.ObserveMinMi <> h_l:48 var
+R6857:6859 UrgeKnowing.ObserveMinMi <> h_m:49 var
+prf 6869:6896 <> observe_min_mi_paired_always
+R6909:6909 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 6899:6901 <> h_l:50
+binder 6903:6905 <> h_m:51
+R6916:6945 UrgeKnowing.ObserveMinMi <> observe_min_mi_paired_required def
+R6948:6961 UrgeKnowing.ObserveMinMi <> localMeshState def
+R6963:6965 UrgeKnowing.ObserveMinMi <> h_l:50 var
+R6967:6969 UrgeKnowing.ObserveMinMi <> h_m:51 var
+def 7261:7280 <> epistemicMIAuthority
+R7284:7289 Stdlib.Strings.String <> string ind
+def 7362:7385 <> measurementCostAuthority
+R7389:7394 Stdlib.Strings.String <> string ind
+def 7467:7486 <> landauerLawAuthority
+R7490:7495 Stdlib.Strings.String <> string ind
+def 7568:7593 <> physicalSecondLawAuthority
+R7597:7602 Stdlib.Strings.String <> string ind
+def 7654:7671 <> observeMinMiCellId
+R7675:7680 Stdlib.Strings.String <> string ind
+def 7735:7754 <> observeMinMiNonClaim
+R7758:7763 Stdlib.Strings.String <> string ind
+prf 8024:8045 <> observe_min_mi_cell_id
+R8069:8071 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8051:8068 UrgeKnowing.ObserveMinMi <> observeMinMiCellId def
+prf 8140:8172 <> observe_min_mi_cites_epistemic_mi
+R8198:8201 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8178:8197 UrgeKnowing.ObserveMinMi <> epistemicMIAuthority def
+prf 8239:8275 <> observe_min_mi_cites_measurement_cost
+R8305:8308 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8281:8304 UrgeKnowing.ObserveMinMi <> measurementCostAuthority def
+prf 8346:8385 <> observe_min_mi_cites_physical_second_law
+R8417:8419 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8391:8416 UrgeKnowing.ObserveMinMi <> physicalSecondLawAuthority def
+def 8712:8751 <> observeMinMiSecondLawConservationFraming
+R8755:8760 Stdlib.Strings.String <> string ind
+prf 8852:8891 <> observe_min_mi_not_second_landauer_axiom
+R8937:8942 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8897:8936 UrgeKnowing.ObserveMinMi <> observeMinMiSecondLawConservationFraming def
+prf 9001:9046 <> observe_min_mi_second_law_conservation_framing
+R9092:9095 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9052:9091 UrgeKnowing.ObserveMinMi <> observeMinMiSecondLawConservationFraming def
+def 9362:9383 <> physicsGreenAuthorized
+R9395:9399 Corelib.Init.Logic <> False ind
+prf 9409:9442 <> observe_min_mi_physics_green_false
+R9448:9449 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R9450:9471 UrgeKnowing.ObserveMinMi <> physicsGreenAuthorized def
+prf 9511:9541 <> observe_min_mi_modality_unwired
+R9574:9576 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9547:9573 UrgeKnowing.ObserveMinMi <> observeMinMiModalityCurrent def
+R9577:9598 UrgeKnowing.ObserveMinMi <> observe_min_mi_unwired constr
+def 9860:9890 <> actingCoalgebraFrugalMiRestated
+R9894:9899 Stdlib.Strings.String <> string ind
+prf 9951:9993 <> observe_min_mi_not_acting_coalgebra_restate
+R10019:10022 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9999:10018 UrgeKnowing.ObserveMinMi <> observeMinMiNonClaim def
+R10023:10053 UrgeKnowing.ObserveMinMi <> actingCoalgebraFrugalMiRestated def

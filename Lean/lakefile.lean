@@ -57,6 +57,9 @@ lean_lib «UMST.DoubleSlit» where
   srcDir := "."
 
 /-!
+  CHEM-NS-MVP-FORMAL-QUANTUM-DEFECT-CLEAR — SERIAL_ON_LAKEFILE quantum knowing fiber defect-clear wave.
+  Sole writer for `ChemGeometry` lake targets during this SERIAL close. Build: `lake build ChemGeometry`.
+  Honesty: measured census receipts; not physics GREEN.
   Knowing-fiber chemistry (`CHEM-FORMAL-Q-LEAN-CHEM`): Q-lattice electronic quantum numbers,
   SCALE ladder, EDGE-SURFACE sign convention.  `globs` auto-picks up future `Chem*.lean`;
   `ElementElectronic` stays an explicit root until renamed under `Chem*`.

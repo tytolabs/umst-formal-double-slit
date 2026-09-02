@@ -1,0 +1,138 @@
+DIGEST 9498301c5020d32da22bfd94fc139e47
+FUMST.ChemConstants.ScaleOccupancyZCommute
+R1345:1349 Stdlib.Arith.Arith <> <> lib
+R1351:1356 Stdlib.Strings.String <> <> lib
+ind 1613:1635 <> ScaleOccupancyZModality
+constr 1651:1675 <> scale_occupancy_z_unwired
+constr 1681:1705 <> scale_occupancy_z_assumed
+constr 1711:1734 <> scale_occupancy_z_proved
+constr 1740:1766 <> scale_occupancy_z_surrogate
+scheme 1613:1635 <> ScaleOccupancyZModality_rect
+scheme 1613:1635 <> ScaleOccupancyZModality_ind
+scheme 1613:1635 <> ScaleOccupancyZModality_rec
+scheme 1613:1635 <> ScaleOccupancyZModality_sind
+def 1781:1810 <> scaleOccupancyZModalityCurrent
+R1814:1836 UMST.ChemConstants.ScaleOccupancyZCommute <> ScaleOccupancyZModality ind
+R1843:1867 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_unwired constr
+def 2105:2110 <> liftQM
+R2117:2119 Corelib.Init.Datatypes <> nat ind
+binder 2113:2113 <> z:3
+R2124:2126 Corelib.Init.Datatypes <> nat ind
+R2131:2131 UMST.ChemConstants.ScaleOccupancyZCommute <> z:3 var
+def 2146:2151 <> liftMM
+R2158:2160 Corelib.Init.Datatypes <> nat ind
+binder 2154:2154 <> z:4
+R2165:2167 Corelib.Init.Datatypes <> nat ind
+R2172:2172 UMST.ChemConstants.ScaleOccupancyZCommute <> z:4 var
+def 2187:2194 <> coarseQM
+R2201:2203 Corelib.Init.Datatypes <> nat ind
+binder 2197:2197 <> z:5
+R2208:2210 Corelib.Init.Datatypes <> nat ind
+R2215:2215 UMST.ChemConstants.ScaleOccupancyZCommute <> z:5 var
+prf 2225:2239 <> liftQM_identity
+R2246:2248 Corelib.Init.Datatypes <> nat ind
+binder 2242:2242 <> z:6
+R2261:2263 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2253:2258 UMST.ChemConstants.ScaleOccupancyZCommute <> liftQM def
+R2260:2260 UMST.ChemConstants.ScaleOccupancyZCommute <> z:6 var
+R2264:2264 UMST.ChemConstants.ScaleOccupancyZCommute <> z:6 var
+prf 2299:2313 <> liftMM_identity
+R2320:2322 Corelib.Init.Datatypes <> nat ind
+binder 2316:2316 <> z:7
+R2335:2337 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2327:2332 UMST.ChemConstants.ScaleOccupancyZCommute <> liftMM def
+R2334:2334 UMST.ChemConstants.ScaleOccupancyZCommute <> z:7 var
+R2338:2338 UMST.ChemConstants.ScaleOccupancyZCommute <> z:7 var
+prf 2373:2389 <> coarseQM_identity
+R2396:2398 Corelib.Init.Datatypes <> nat ind
+binder 2392:2392 <> z:8
+R2413:2415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2403:2410 UMST.ChemConstants.ScaleOccupancyZCommute <> coarseQM def
+R2412:2412 UMST.ChemConstants.ScaleOccupancyZCommute <> z:8 var
+R2416:2416 UMST.ChemConstants.ScaleOccupancyZCommute <> z:8 var
+prf 2674:2698 <> scale_occupancy_z_commute
+R2713:2715 Corelib.Init.Datatypes <> nat ind
+binder 2709:2709 <> z:9
+R2737:2739 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2720:2725 UMST.ChemConstants.ScaleOccupancyZCommute <> liftMM def
+R2728:2733 UMST.ChemConstants.ScaleOccupancyZCommute <> liftQM def
+R2735:2735 UMST.ChemConstants.ScaleOccupancyZCommute <> z:9 var
+R2740:2747 UMST.ChemConstants.ScaleOccupancyZCommute <> coarseQM def
+R2749:2749 UMST.ChemConstants.ScaleOccupancyZCommute <> z:9 var
+def 3024:3027 <> Ds_z
+R3031:3033 Corelib.Init.Datatypes <> nat ind
+def 3059:3062 <> Pt_z
+R3066:3068 Corelib.Init.Datatypes <> nat ind
+def 3255:3258 <> Pu_z
+R3262:3264 Corelib.Init.Datatypes <> nat ind
+prf 3284:3290 <> ds_z_eq
+R3298:3300 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3294:3297 UMST.ChemConstants.ScaleOccupancyZCommute <> Ds_z def
+prf 3342:3348 <> pt_z_eq
+R3356:3358 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3352:3355 UMST.ChemConstants.ScaleOccupancyZCommute <> Pt_z def
+prf 3399:3405 <> pu_z_eq
+R3413:3415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3409:3412 UMST.ChemConstants.ScaleOccupancyZCommute <> Pu_z def
+prf 3458:3474 <> ds_not_copy_of_pt
+R3482:3485 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3478:3481 UMST.ChemConstants.ScaleOccupancyZCommute <> Ds_z def
+R3486:3489 UMST.ChemConstants.ScaleOccupancyZCommute <> Pt_z def
+R3508:3511 UMST.ChemConstants.ScaleOccupancyZCommute <> Ds_z def
+R3514:3517 UMST.ChemConstants.ScaleOccupancyZCommute <> Pt_z def
+prf 3548:3571 <> homolog_not_copy_witness
+R3579:3582 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R3575:3578 UMST.ChemConstants.ScaleOccupancyZCommute <> Ds_z def
+R3583:3586 UMST.ChemConstants.ScaleOccupancyZCommute <> Pt_z def
+R3602:3618 UMST.ChemConstants.ScaleOccupancyZCommute <> ds_not_copy_of_pt thm
+R3602:3618 UMST.ChemConstants.ScaleOccupancyZCommute <> ds_not_copy_of_pt thm
+prf 3633:3660 <> scale_occupancy_z_commute_ds
+R3686:3688 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3666:3671 UMST.ChemConstants.ScaleOccupancyZCommute <> liftMM def
+R3674:3679 UMST.ChemConstants.ScaleOccupancyZCommute <> liftQM def
+R3681:3684 UMST.ChemConstants.ScaleOccupancyZCommute <> Ds_z def
+R3689:3696 UMST.ChemConstants.ScaleOccupancyZCommute <> coarseQM def
+R3698:3701 UMST.ChemConstants.ScaleOccupancyZCommute <> Ds_z def
+R3717:3741 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_commute thm
+R3717:3741 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_commute thm
+prf 3756:3783 <> scale_occupancy_z_commute_pt
+R3809:3811 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3789:3794 UMST.ChemConstants.ScaleOccupancyZCommute <> liftMM def
+R3797:3802 UMST.ChemConstants.ScaleOccupancyZCommute <> liftQM def
+R3804:3807 UMST.ChemConstants.ScaleOccupancyZCommute <> Pt_z def
+R3812:3819 UMST.ChemConstants.ScaleOccupancyZCommute <> coarseQM def
+R3821:3824 UMST.ChemConstants.ScaleOccupancyZCommute <> Pt_z def
+R3840:3864 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_commute thm
+R3840:3864 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_commute thm
+prf 3879:3906 <> scale_occupancy_z_commute_pu
+R3932:3934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3912:3917 UMST.ChemConstants.ScaleOccupancyZCommute <> liftMM def
+R3920:3925 UMST.ChemConstants.ScaleOccupancyZCommute <> liftQM def
+R3927:3930 UMST.ChemConstants.ScaleOccupancyZCommute <> Pu_z def
+R3935:3942 UMST.ChemConstants.ScaleOccupancyZCommute <> coarseQM def
+R3944:3947 UMST.ChemConstants.ScaleOccupancyZCommute <> Pu_z def
+R3963:3987 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_commute thm
+R3963:3987 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_commute thm
+def 4231:4262 <> scaleOccupancyZConservationNamed
+R4266:4271 Stdlib.Strings.String <> string ind
+def 4351:4378 <> scaleOccupancyZCommuteCellId
+R4382:4387 Stdlib.Strings.String <> string ind
+def 4453:4482 <> scaleOccupancyZCommuteNonClaim
+R4486:4491 Stdlib.Strings.String <> string ind
+def 4889:4925 <> scaleOccupancyZPuNoExceptionAuthority
+R4929:4934 Stdlib.Strings.String <> string ind
+prf 5042:5074 <> scale_occupancy_z_commute_cell_id
+R5108:5112 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5080:5107 UMST.ChemConstants.ScaleOccupancyZCommute <> scaleOccupancyZCommuteCellId def
+prf 5192:5229 <> scale_occupancy_z_pu_no_exception_cite
+R5272:5277 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5235:5271 UMST.ChemConstants.ScaleOccupancyZCommute <> scaleOccupancyZPuNoExceptionAuthority def
+def 5544:5580 <> scaleOccupancyZPhysicsGreenAuthorized
+R5592:5596 Corelib.Init.Logic <> False ind
+prf 5606:5642 <> scale_occupancy_z_physics_green_false
+R5648:5649 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R5650:5686 UMST.ChemConstants.ScaleOccupancyZCommute <> scaleOccupancyZPhysicsGreenAuthorized def
+prf 5726:5759 <> scale_occupancy_z_modality_unwired
+R5795:5797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5765:5794 UMST.ChemConstants.ScaleOccupancyZCommute <> scaleOccupancyZModalityCurrent def
+R5798:5822 UMST.ChemConstants.ScaleOccupancyZCommute <> scale_occupancy_z_unwired constr

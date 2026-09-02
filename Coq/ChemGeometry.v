@@ -12,7 +12,7 @@
 (*  No meso / acting theorems. Modality Unwired; physics GREEN false.   *)
 (* ================================================================== *)
 
-From Coq Require Import ZArith Arith Lia Reals RIneq Lra.
+From Stdlib Require Import ZArith Arith Lia Reals RIneq Lra.
 
 Open Scope R_scope.
 

@@ -1,0 +1,1220 @@
+DIGEST fc47bba6ac3c9b4bf210bd3b3e3fe844
+FUMST.ChemConstants.ProcessingRefiningConservation
+R1299:1303 Stdlib.Arith.Arith <> <> lib
+R1305:1310 Stdlib.ZArith.ZArith <> <> lib
+R1312:1317 Stdlib.Strings.String <> <> lib
+R1319:1322 Stdlib.Bool.Bool <> <> lib
+R1324:1326 Stdlib.micromega.Lia <> <> lib
+R1328:1331 Stdlib.Lists.List <> <> lib
+R1341:1353 Stdlib.Lists.List ListNotations <> mod
+ind 1677:1714 <> ProcessingRefiningConservationModality
+constr 1730:1769 <> processing_refining_conservation_unwired
+constr 1775:1814 <> processing_refining_conservation_assumed
+constr 1820:1858 <> processing_refining_conservation_proved
+constr 1864:1905 <> processing_refining_conservation_surrogate
+scheme 1677:1714 <> ProcessingRefiningConservationModality_rect
+scheme 1677:1714 <> ProcessingRefiningConservationModality_ind
+scheme 1677:1714 <> ProcessingRefiningConservationModality_rec
+scheme 1677:1714 <> ProcessingRefiningConservationModality_sind
+def 1920:1964 <> processingRefiningConservationModalityCurrent
+R1970:2007 UMST.ChemConstants.ProcessingRefiningConservation <> ProcessingRefiningConservationModality ind
+R2014:2053 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+def 2068:2106 <> processing_refining_lattice_cardinality
+R2110:2112 Corelib.Init.Datatypes <> nat ind
+prf 2127:2173 <> processing_refining_lattice_cardinality_is_four
+R2218:2220 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2179:2217 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_lattice_cardinality def
+prf 2256:2298 <> processing_refining_lattice_not_118_squared
+R2370:2372 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2304:2307 Corelib.Init.Datatypes <> negb def
+R2310:2316 Stdlib.Arith.PeanoNat Nat eqb def
+R2318:2356 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_lattice_cardinality def
+R2362:2364 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2373:2376 Corelib.Init.Datatypes <> true constr
+R2395:2433 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_lattice_cardinality def
+def 2694:2718 <> pattern_class_cardinality
+R2722:2724 Corelib.Init.Datatypes <> nat ind
+prf 2740:2770 <> pattern_class_cardinality_is_25
+R2801:2803 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2776:2800 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_cardinality def
+prf 2840:2868 <> pattern_class_not_118_squared
+R2926:2928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2874:2877 Corelib.Init.Datatypes <> negb def
+R2880:2886 Stdlib.Arith.PeanoNat Nat eqb def
+R2888:2912 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_cardinality def
+R2918:2920 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2929:2932 Corelib.Init.Datatypes <> true constr
+R2951:2975 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_cardinality def
+def 3010:3034 <> pattern_class_index_valid
+R3041:3043 Corelib.Init.Datatypes <> nat ind
+binder 3037:3037 <> i:3
+R3048:3051 Corelib.Init.Datatypes <> bool ind
+R3058:3064 Stdlib.Arith.PeanoNat Nat ltb def
+R3066:3066 UMST.ChemConstants.ProcessingRefiningConservation <> i:3 var
+R3068:3092 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_cardinality def
+def 3184:3220 <> pattern_class_processing_refining_idx
+R3224:3226 Corelib.Init.Datatypes <> nat ind
+prf 3241:3282 <> pattern_class_processing_refining_idx_is_9
+R3325:3327 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3288:3324 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_idx def
+prf 3363:3399 <> processing_refining_class_index_valid
+R3468:3470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3405:3429 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_index_valid def
+R3431:3467 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_idx def
+R3471:3474 Corelib.Init.Datatypes <> true constr
+R3493:3517 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_index_valid def
+R3520:3556 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_idx def
+R3563:3587 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_cardinality def
+def 3622:3659 <> crossClassifierProcessingRefiningRowId
+R3663:3668 Stdlib.Strings.String <> string ind
+prf 3687:3732 <> cross_classifier_processing_refining_row_named
+R3776:3778 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3738:3775 UMST.ChemConstants.ProcessingRefiningConservation <> crossClassifierProcessingRefiningRowId def
+def 3823:3859 <> pattern_class_processing_refining_tag
+R3863:3868 Stdlib.Strings.String <> string ind
+def 3910:3951 <> north_star_class_9_processing_refining_tag
+R3955:3960 Stdlib.Strings.String <> string ind
+prf 4005:4050 <> pattern_class_processing_refining_tag_nonempty
+R4093:4096 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4056:4092 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_tag def
+prf 4134:4184 <> north_star_class_9_processing_refining_tag_nonempty
+R4232:4235 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4190:4231 UMST.ChemConstants.ProcessingRefiningConservation <> north_star_class_9_processing_refining_tag def
+def 4501:4523 <> iupac_table_cardinality
+R4527:4529 Corelib.Init.Datatypes <> nat ind
+prf 4546:4575 <> iupac_table_cardinality_is_118
+R4604:4606 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4581:4603 UMST.ChemConstants.ProcessingRefiningConservation <> iupac_table_cardinality def
+def 4649:4668 <> iron_atomic_number_z
+R4672:4674 Corelib.Init.Datatypes <> nat ind
+prf 4690:4715 <> iron_atomic_number_z_is_26
+R4741:4743 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4721:4740 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+def 4785:4796 <> iron_z_valid
+R4800:4803 Corelib.Init.Datatypes <> bool ind
+R4840:4845 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4810:4816 Stdlib.Arith.PeanoNat Nat ltb def
+R4820:4839 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+R4846:4852 Stdlib.Arith.PeanoNat Nat leb def
+R4854:4873 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+R4875:4897 UMST.ChemConstants.ProcessingRefiningConservation <> iupac_table_cardinality def
+prf 4907:4923 <> iron_z_valid_true
+R4939:4941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4927:4938 UMST.ChemConstants.ProcessingRefiningConservation <> iron_z_valid def
+R4942:4945 Corelib.Init.Datatypes <> true constr
+R4964:4975 UMST.ChemConstants.ProcessingRefiningConservation <> iron_z_valid def
+R4978:4997 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+R5000:5022 UMST.ChemConstants.ProcessingRefiningConservation <> iupac_table_cardinality def
+def 5057:5078 <> forbidden_z119_smuggle
+R5082:5084 Corelib.Init.Datatypes <> nat ind
+def 5106:5132 <> forbidden_z119_not_in_table
+R5136:5139 Corelib.Init.Datatypes <> bool ind
+R5146:5149 Corelib.Init.Datatypes <> negb def
+R5152:5158 Stdlib.Arith.PeanoNat Nat leb def
+R5160:5181 UMST.ChemConstants.ProcessingRefiningConservation <> forbidden_z119_smuggle def
+R5183:5205 UMST.ChemConstants.ProcessingRefiningConservation <> iupac_table_cardinality def
+prf 5216:5248 <> forbidden_z119_not_in_iupac_table
+R5281:5283 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5254:5280 UMST.ChemConstants.ProcessingRefiningConservation <> forbidden_z119_not_in_table def
+R5284:5287 Corelib.Init.Datatypes <> true constr
+R5306:5332 UMST.ChemConstants.ProcessingRefiningConservation <> forbidden_z119_not_in_table def
+R5335:5356 UMST.ChemConstants.ProcessingRefiningConservation <> forbidden_z119_smuggle def
+R5359:5381 UMST.ChemConstants.ProcessingRefiningConservation <> iupac_table_cardinality def
+def 5416:5445 <> processing_refining_factor_tag
+R5449:5454 Stdlib.Strings.String <> string ind
+def 5496:5525 <> dissipative_refine_channel_tag
+R5529:5534 Stdlib.Strings.String <> string ind
+def 5573:5599 <> second_law_gmin_channel_tag
+R5603:5608 Stdlib.Strings.String <> string ind
+prf 5647:5685 <> processing_refining_factor_tag_nonempty
+R5721:5724 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5691:5720 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_factor_tag def
+prf 5762:5800 <> dissipative_refine_channel_tag_nonempty
+R5836:5839 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5806:5835 UMST.ChemConstants.ProcessingRefiningConservation <> dissipative_refine_channel_tag def
+prf 5877:5912 <> second_law_gmin_channel_tag_nonempty
+R5945:5948 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5918:5944 UMST.ChemConstants.ProcessingRefiningConservation <> second_law_gmin_channel_tag def
+ind 6208:6223 <> prc_channel_slot
+constr 6239:6254 <> prc_slot_unwired
+constr 6260:6274 <> prc_slot_absent
+constr 6280:6295 <> prc_slot_present
+scheme 6208:6223 <> prc_channel_slot_rect
+scheme 6208:6223 <> prc_channel_slot_ind
+scheme 6208:6223 <> prc_channel_slot_rec
+scheme 6208:6223 <> prc_channel_slot_sind
+def 6310:6329 <> prc_channel_slot_beq
+R6340:6355 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_slot ind
+binder 6332:6333 <> s1:6
+binder 6335:6336 <> s2:7
+R6360:6363 Corelib.Init.Datatypes <> bool ind
+R6380:6381 UMST.ChemConstants.ProcessingRefiningConservation <> s2:7 var
+R6376:6377 UMST.ChemConstants.ProcessingRefiningConservation <> s1:6 var
+R6392:6407 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_unwired constr
+R6410:6425 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_unwired constr
+R6430:6433 Corelib.Init.Datatypes <> true constr
+R6439:6453 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_absent constr
+R6456:6470 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_absent constr
+R6475:6478 Corelib.Init.Datatypes <> true constr
+R6484:6499 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_present constr
+R6502:6517 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_present constr
+R6522:6525 Corelib.Init.Datatypes <> true constr
+R6539:6543 Corelib.Init.Datatypes <> false constr
+def 6564:6590 <> prc_channel_slot_is_present
+R6597:6612 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_slot ind
+binder 6593:6593 <> s:10
+R6617:6620 Corelib.Init.Datatypes <> bool ind
+R6633:6633 UMST.ChemConstants.ProcessingRefiningConservation <> s:10 var
+R6644:6659 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_present constr
+R6664:6667 Corelib.Init.Datatypes <> true constr
+R6678:6682 Corelib.Init.Datatypes <> false constr
+def 6703:6739 <> processingRefiningProductChannelCount
+R6743:6745 Corelib.Init.Datatypes <> nat ind
+prf 6760:6809 <> processing_refining_product_channel_count_is_three
+R6852:6854 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6815:6851 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningProductChannelCount def
+def 6977:7006 <> prc_channel_dissipative_refine
+R7010:7012 Corelib.Init.Datatypes <> nat ind
+def 7031:7057 <> prc_channel_second_law_gmin
+R7061:7063 Corelib.Init.Datatypes <> nat ind
+def 7082:7119 <> prc_channel_class9_processing_refining
+R7123:7125 Corelib.Init.Datatypes <> nat ind
+prf 7140:7178 <> prc_channel_dissipative_refine_idx_is_0
+R7214:7216 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7184:7213 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_dissipative_refine def
+prf 7252:7287 <> prc_channel_second_law_gmin_idx_is_1
+R7320:7322 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7293:7319 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_second_law_gmin def
+prf 7358:7404 <> prc_channel_class9_processing_refining_idx_is_2
+R7448:7450 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7410:7447 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_class9_processing_refining def
+def 7707:7724 <> prc_channel_bundle
+R7739:7742 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7736:7738 Corelib.Init.Datatypes <> nat ind
+R7743:7758 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_slot ind
+def 7773:7806 <> processingRefiningBundleAllUnwired
+R7810:7827 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+R7843:7858 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_unwired constr
+def 7873:7898 <> processingRefiningBundleAt
+R7905:7922 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 7901:7901 <> b:12
+R7932:7934 Corelib.Init.Datatypes <> nat ind
+binder 7926:7928 <> idx:13
+R7947:7962 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_slot ind
+binder 7940:7943 <> slot:14
+R7967:7984 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 7995:7995 <> i:15
+R8003:8009 Stdlib.Arith.PeanoNat Nat eqb def
+R8011:8011 UMST.ChemConstants.ProcessingRefiningConservation <> i:15 var
+R8013:8015 UMST.ChemConstants.ProcessingRefiningConservation <> idx:13 var
+R8032:8032 UMST.ChemConstants.ProcessingRefiningConservation <> b:12 var
+R8034:8034 UMST.ChemConstants.ProcessingRefiningConservation <> i:15 var
+R8022:8025 UMST.ChemConstants.ProcessingRefiningConservation <> slot:14 var
+def 8049:8083 <> processingRefiningBundleWithPresent
+R8092:8109 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 8088:8088 <> b:16
+R8119:8121 Corelib.Init.Datatypes <> nat ind
+binder 8113:8115 <> idx:17
+R8126:8143 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+R8150:8175 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleAt def
+R8177:8177 UMST.ChemConstants.ProcessingRefiningConservation <> b:16 var
+R8179:8181 UMST.ChemConstants.ProcessingRefiningConservation <> idx:17 var
+R8183:8198 UMST.ChemConstants.ProcessingRefiningConservation <> prc_slot_present constr
+def 8211:8233 <> count_prc_present_up_to
+R8240:8257 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 8236:8236 <> b:18
+R8269:8271 Corelib.Init.Datatypes <> nat ind
+binder 8261:8265 <> bound:19
+R8276:8278 Corelib.Init.Datatypes <> nat ind
+R8291:8295 UMST.ChemConstants.ProcessingRefiningConservation <> bound:19 var
+R8317:8317 Corelib.Init.Datatypes <> S constr
+R8352:8378 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_slot_is_present def
+R8381:8381 UMST.ChemConstants.ProcessingRefiningConservation <> b:18 var
+R8384:8387 Corelib.Init.Peano <> pred abbrev
+R8389:8393 UMST.ChemConstants.ProcessingRefiningConservation <> bound:19 var
+binder 8334:8336 <> add:22
+R8455:8457 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8428:8450 UMST.ChemConstants.ProcessingRefiningConservation <> count_prc_present_up_to:20 def
+R8452:8452 UMST.ChemConstants.ProcessingRefiningConservation <> b:18 var
+R8458:8460 UMST.ChemConstants.ProcessingRefiningConservation <> add:22 var
+def 8481:8516 <> processingRefiningBundlePresentCount
+R8523:8540 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 8519:8519 <> b:23
+R8545:8547 Corelib.Init.Datatypes <> nat ind
+R8554:8576 UMST.ChemConstants.ProcessingRefiningConservation <> count_prc_present_up_to def
+R8578:8578 UMST.ChemConstants.ProcessingRefiningConservation <> b:23 var
+R8580:8616 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningProductChannelCount def
+def 8631:8659 <> processingRefiningBundleHolds
+R8666:8683 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 8662:8662 <> b:24
+R8693:8695 Corelib.Init.Datatypes <> nat ind
+binder 8687:8689 <> idx:25
+R8700:8703 Corelib.Init.Datatypes <> bool ind
+R8710:8736 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_slot_is_present def
+R8739:8739 UMST.ChemConstants.ProcessingRefiningConservation <> b:24 var
+R8741:8743 UMST.ChemConstants.ProcessingRefiningConservation <> idx:25 var
+def 8759:8801 <> processingRefiningBundleIsConcurrentProduct
+R8808:8825 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 8804:8804 <> b:26
+R8830:8833 Corelib.Init.Datatypes <> bool ind
+R8840:8846 Stdlib.Arith.PeanoNat Nat leb def
+R8851:8886 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundlePresentCount def
+R8888:8888 UMST.ChemConstants.ProcessingRefiningConservation <> b:26 var
+def 8995:9023 <> processingRefiningFe26Witness
+R9027:9044 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+R9051:9085 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleWithPresent def
+R9092:9126 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleWithPresent def
+R9135:9169 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleWithPresent def
+R9171:9204 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleAllUnwired def
+R9214:9243 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_dissipative_refine def
+R9252:9278 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_second_law_gmin def
+R9285:9322 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_class9_processing_refining def
+def 9337:9366 <> processingRefiningEmptyWitness
+R9370:9387 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+R9394:9427 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleAllUnwired def
+def 9442:9472 <> processingRefiningSinglePresent
+R9476:9493 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+R9500:9534 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleWithPresent def
+R9536:9569 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleAllUnwired def
+R9575:9604 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_dissipative_refine def
+prf 9614:9647 <> dissipative_refine_channel_present
+R9747:9749 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9653:9681 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleHolds def
+R9683:9711 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R9717:9746 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_dissipative_refine def
+R9750:9753 Corelib.Init.Datatypes <> true constr
+prf 9788:9818 <> second_law_gmin_channel_present
+R9915:9917 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9824:9852 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleHolds def
+R9854:9882 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R9888:9914 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_second_law_gmin def
+R9918:9921 Corelib.Init.Datatypes <> true constr
+prf 9956:9997 <> class9_processing_refining_channel_present
+R10105:10107 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10003:10031 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleHolds def
+R10033:10061 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R10067:10104 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_class9_processing_refining def
+R10108:10111 Corelib.Init.Datatypes <> true constr
+prf 10146:10180 <> fe26_witness_present_count_is_three
+R10252:10254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10186:10221 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundlePresentCount def
+R10223:10251 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+prf 10290:10323 <> fe26_witness_is_concurrent_product
+R10402:10404 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10329:10371 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R10373:10401 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R10405:10408 Corelib.Init.Datatypes <> true constr
+R10427:10469 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R10482:10516 UMST.ChemConstants.ProcessingRefiningConservation <> fe26_witness_present_count_is_three thm
+R10482:10516 UMST.ChemConstants.ProcessingRefiningConservation <> fe26_witness_present_count_is_three thm
+R10482:10516 UMST.ChemConstants.ProcessingRefiningConservation <> fe26_witness_present_count_is_three thm
+prf 10546:10576 <> empty_bundle_present_count_zero
+R10649:10651 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10582:10617 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundlePresentCount def
+R10619:10648 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningEmptyWitness def
+prf 10687:10721 <> empty_bundle_not_concurrent_product
+R10801:10803 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10727:10769 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R10771:10800 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningEmptyWitness def
+R10804:10808 Corelib.Init.Datatypes <> false constr
+R10827:10869 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R10882:10912 UMST.ChemConstants.ProcessingRefiningConservation <> empty_bundle_present_count_zero thm
+R10882:10912 UMST.ChemConstants.ProcessingRefiningConservation <> empty_bundle_present_count_zero thm
+R10882:10912 UMST.ChemConstants.ProcessingRefiningConservation <> empty_bundle_present_count_zero thm
+prf 10942:10968 <> single_present_count_is_one
+R11042:11044 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10974:11009 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundlePresentCount def
+R11011:11041 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningSinglePresent def
+prf 11080:11116 <> single_present_not_concurrent_product
+R11197:11199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11122:11164 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R11166:11196 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningSinglePresent def
+R11200:11204 Corelib.Init.Datatypes <> false constr
+R11223:11265 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R11278:11304 UMST.ChemConstants.ProcessingRefiningConservation <> single_present_count_is_one thm
+R11278:11304 UMST.ChemConstants.ProcessingRefiningConservation <> single_present_count_is_one thm
+R11278:11304 UMST.ChemConstants.ProcessingRefiningConservation <> single_present_count_is_one thm
+ind 11563:11577 <> prc_xor_posture
+constr 11593:11609 <> prc_xor_exclusive
+constr 11615:11640 <> prc_xor_concurrent_product
+scheme 11563:11577 <> prc_xor_posture_rect
+scheme 11563:11577 <> prc_xor_posture_ind
+scheme 11563:11577 <> prc_xor_posture_rec
+scheme 11563:11577 <> prc_xor_posture_sind
+def 11655:11676 <> prcXorClassifierMarker
+R11680:11685 Stdlib.Strings.String <> string ind
+def 11750:11775 <> prcConcurrentProductMarker
+R11779:11784 Stdlib.Strings.String <> string ind
+prf 11839:11881 <> prc_xor_marker_ne_concurrent_product_marker
+R11909:11912 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R11887:11908 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierMarker def
+R11913:11938 UMST.ChemConstants.ProcessingRefiningConservation <> prcConcurrentProductMarker def
+def 11979:12006 <> prcXorClassifierIncompatible
+R12021:12024 Corelib.Init.Datatypes <> bool ind
+binder 12009:12017 <> claim_xor:29
+R12034:12051 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 12030:12030 <> b:30
+R12056:12059 Corelib.Init.Datatypes <> bool ind
+R12075:12078 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12066:12074 UMST.ChemConstants.ProcessingRefiningConservation <> claim_xor:29 var
+R12079:12121 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R12123:12123 UMST.ChemConstants.ProcessingRefiningConservation <> b:30 var
+prf 12133:12162 <> prc_xor_refuse_on_fe26_witness
+R12231:12233 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12168:12195 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierIncompatible def
+R12197:12200 Corelib.Init.Datatypes <> true constr
+R12202:12230 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R12234:12237 Corelib.Init.Datatypes <> true constr
+R12256:12283 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierIncompatible def
+prf 12336:12373 <> prc_xor_ok_on_concurrent_product_claim
+R12443:12445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12379:12406 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierIncompatible def
+R12408:12412 Corelib.Init.Datatypes <> false constr
+R12414:12442 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R12446:12450 Corelib.Init.Datatypes <> false constr
+def 12490:12505 <> prcProductNotXor
+R12509:12512 Corelib.Init.Datatypes <> bool ind
+R12592:12597 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12519:12561 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R12563:12591 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R12598:12625 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierIncompatible def
+R12627:12630 Corelib.Init.Datatypes <> true constr
+R12632:12660 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+prf 12670:12693 <> prc_product_not_xor_true
+R12713:12715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12697:12712 UMST.ChemConstants.ProcessingRefiningConservation <> prcProductNotXor def
+R12716:12719 Corelib.Init.Datatypes <> true constr
+R12738:12753 UMST.ChemConstants.ProcessingRefiningConservation <> prcProductNotXor def
+prf 12808:12833 <> concurrent_product_not_xor
+R12862:12867 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12855:12857 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12839:12854 UMST.ChemConstants.ProcessingRefiningConservation <> prcProductNotXor def
+R12858:12861 Corelib.Init.Datatypes <> true constr
+R12957:12962 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12950:12952 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12868:12874 Stdlib.Arith.PeanoNat Nat leb def
+R12879:12914 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundlePresentCount def
+R12920:12948 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R12953:12956 Corelib.Init.Datatypes <> true constr
+R12985:12988 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12963:12984 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierMarker def
+R12989:13014 UMST.ChemConstants.ProcessingRefiningConservation <> prcConcurrentProductMarker def
+R13043:13066 UMST.ChemConstants.ProcessingRefiningConservation <> prc_product_not_xor_true thm
+R13043:13066 UMST.ChemConstants.ProcessingRefiningConservation <> prc_product_not_xor_true thm
+R13094:13128 UMST.ChemConstants.ProcessingRefiningConservation <> fe26_witness_present_count_is_three thm
+R13094:13128 UMST.ChemConstants.ProcessingRefiningConservation <> fe26_witness_present_count_is_three thm
+R13094:13128 UMST.ChemConstants.ProcessingRefiningConservation <> fe26_witness_present_count_is_three thm
+R13162:13204 UMST.ChemConstants.ProcessingRefiningConservation <> prc_xor_marker_ne_concurrent_product_marker thm
+R13162:13204 UMST.ChemConstants.ProcessingRefiningConservation <> prc_xor_marker_ne_concurrent_product_marker thm
+ind 13442:13457 <> prc_bar_presence
+constr 13473:13486 <> prc_bar_absent
+constr 13492:13506 <> prc_bar_present
+scheme 13442:13457 <> prc_bar_presence_rect
+scheme 13442:13457 <> prc_bar_presence_ind
+scheme 13442:13457 <> prc_bar_presence_rec
+scheme 13442:13457 <> prc_bar_presence_sind
+rec 13517:13529 <> prc_claim_bar
+proj 13545:13566 <> prc_bar_presence_field
+proj 13590:13609 <> prc_bar_defect_total
+R13570:13585 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence ind
+R13613:13615 Corelib.Init.Datatypes <> nat ind
+def 13632:13663 <> processingRefiningClaimBarAbsent
+R13667:13679 UMST.ChemConstants.ProcessingRefiningConservation <> prc_claim_bar rec
+R13689:13710 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R13689:13710 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R13689:13710 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R13736:13755 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_defect_total proj
+R13736:13755 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_defect_total proj
+R13715:13728 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_absent constr
+def 13778:13813 <> processingRefiningClaimBarZeroDefect
+R13817:13829 UMST.ChemConstants.ProcessingRefiningConservation <> prc_claim_bar rec
+R13839:13860 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R13839:13860 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R13839:13860 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R13887:13906 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_defect_total proj
+R13887:13906 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_defect_total proj
+R13865:13879 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_present constr
+def 13929:13953 <> prc_claim_bar_zero_defect
+R13960:13972 UMST.ChemConstants.ProcessingRefiningConservation <> prc_claim_bar rec
+binder 13956:13956 <> b:36
+R13977:13980 Corelib.Init.Datatypes <> bool ind
+R13993:14014 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_presence_field proj
+R14016:14016 UMST.ChemConstants.ProcessingRefiningConservation <> b:36 var
+R14027:14040 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_absent constr
+R14045:14049 Corelib.Init.Datatypes <> false constr
+R14055:14069 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_present constr
+R14074:14080 Stdlib.Arith.PeanoNat Nat eqb def
+R14083:14102 UMST.ChemConstants.ProcessingRefiningConservation <> prc_bar_defect_total proj
+R14104:14104 UMST.ChemConstants.ProcessingRefiningConservation <> b:36 var
+prf 14123:14152 <> prc_claim_bar_zero_defect_true
+R14220:14222 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14158:14182 UMST.ChemConstants.ProcessingRefiningConservation <> prc_claim_bar_zero_defect def
+R14184:14219 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarZeroDefect def
+R14223:14226 Corelib.Init.Datatypes <> true constr
+prf 14261:14296 <> prc_claim_bar_absent_not_zero_defect
+R14360:14362 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14302:14326 UMST.ChemConstants.ProcessingRefiningConservation <> prc_claim_bar_zero_defect def
+R14328:14359 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R14363:14367 Corelib.Init.Datatypes <> false constr
+ind 14626:14649 <> prc_conservation_verdict
+constr 14665:14686 <> prc_verdict_unwired_ok
+constr 14692:14711 <> prc_verdict_named_ok
+constr 14717:14737 <> prc_verdict_design_ok
+constr 14743:14768 <> prc_verdict_trivial_refuse
+constr 14774:14795 <> prc_verdict_xor_refuse
+constr 14801:14831 <> prc_verdict_green_invent_refuse
+constr 14837:14873 <> prc_verdict_proved_without_bar_refuse
+constr 14879:14913 <> prc_verdict_production_wired_refuse
+constr 14919:14971 <> prc_verdict_parallel_processing_refining_axiom_refuse
+constr 14977:15013 <> prc_verdict_species_id_smuggle_refuse
+constr 15019:15053 <> prc_verdict_extra_element_id_refuse
+constr 15059:15094 <> prc_verdict_free_purification_refuse
+constr 15100:15130 <> prc_verdict_tp_float_pin_refuse
+scheme 14626:14649 <> prc_conservation_verdict_rect
+scheme 14626:14649 <> prc_conservation_verdict_ind
+scheme 14626:14649 <> prc_conservation_verdict_rec
+scheme 14626:14649 <> prc_conservation_verdict_sind
+def 15145:15171 <> prc_conservation_verdict_ok
+R15178:15201 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict ind
+binder 15174:15174 <> v:39
+R15206:15209 Corelib.Init.Datatypes <> bool ind
+R15222:15222 UMST.ChemConstants.ProcessingRefiningConservation <> v:39 var
+R15233:15254 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_unwired_ok constr
+R15259:15262 Corelib.Init.Datatypes <> true constr
+R15268:15287 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R15292:15295 Corelib.Init.Datatypes <> true constr
+R15301:15321 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_design_ok constr
+R15326:15329 Corelib.Init.Datatypes <> true constr
+R15340:15344 Corelib.Init.Datatypes <> false constr
+def 15365:15398 <> processingRefiningBundleNontrivial
+R15405:15422 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 15401:15401 <> b:41
+R15427:15430 Corelib.Init.Datatypes <> bool ind
+R15437:15443 Stdlib.Arith.PeanoNat Nat ltb def
+R15448:15483 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundlePresentCount def
+R15485:15485 UMST.ChemConstants.ProcessingRefiningConservation <> b:41 var
+def 15501:15535 <> evaluate_processing_refining_bundle
+R15544:15581 UMST.ChemConstants.ProcessingRefiningConservation <> ProcessingRefiningConservationModality ind
+binder 15540:15540 <> m:42
+R15591:15608 UMST.ChemConstants.ProcessingRefiningConservation <> prc_channel_bundle def
+binder 15587:15587 <> b:43
+R15620:15632 UMST.ChemConstants.ProcessingRefiningConservation <> prc_claim_bar rec
+binder 15614:15616 <> bar:44
+R15661:15664 Corelib.Init.Datatypes <> bool ind
+binder 15638:15657 <> claim_xor_classifier:45
+R15692:15695 Corelib.Init.Datatypes <> bool ind
+binder 15670:15688 <> claim_physics_green:46
+R15716:15719 Corelib.Init.Datatypes <> bool ind
+binder 15701:15712 <> claim_proved:47
+R15724:15747 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict ind
+R15757:15775 UMST.ChemConstants.ProcessingRefiningConservation <> claim_physics_green:46 var
+R15826:15837 UMST.ChemConstants.ProcessingRefiningConservation <> claim_proved:47 var
+R15904:15907 Corelib.Init.Datatypes <> negb def
+R15910:15943 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleNontrivial def
+R15945:15945 UMST.ChemConstants.ProcessingRefiningConservation <> b:43 var
+R16012:16039 UMST.ChemConstants.ProcessingRefiningConservation <> prcXorClassifierIncompatible def
+R16041:16060 UMST.ChemConstants.ProcessingRefiningConservation <> claim_xor_classifier:45 var
+R16062:16062 UMST.ChemConstants.ProcessingRefiningConservation <> b:43 var
+R16156:16156 UMST.ChemConstants.ProcessingRefiningConservation <> m:42 var
+R16184:16223 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R16254:16296 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R16298:16298 UMST.ChemConstants.ProcessingRefiningConservation <> b:43 var
+R16377:16397 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_design_ok constr
+R16328:16347 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R16420:16459 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_assumed constr
+R16482:16523 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_surrogate constr
+R16551:16571 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_design_ok constr
+R16551:16571 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_design_ok constr
+R16594:16632 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R16660:16696 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_proved_without_bar_refuse constr
+R16086:16107 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_xor_refuse constr
+R15965:15990 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_trivial_refuse constr
+R15851:15887 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_proved_without_bar_refuse constr
+R15784:15814 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_green_invent_refuse constr
+def 16734:16780 <> evaluate_processing_refining_conservation_close
+R16789:16826 UMST.ChemConstants.ProcessingRefiningConservation <> ProcessingRefiningConservationModality ind
+binder 16785:16785 <> m:49
+R16854:16857 Corelib.Init.Datatypes <> bool ind
+binder 16832:16850 <> claim_physics_green:50
+R16888:16891 Corelib.Init.Datatypes <> bool ind
+binder 16863:16884 <> claim_production_wired:51
+R16896:16919 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict ind
+R16929:16947 UMST.ChemConstants.ProcessingRefiningConservation <> claim_physics_green:50 var
+R16998:17019 UMST.ChemConstants.ProcessingRefiningConservation <> claim_production_wired:51 var
+R17081:17081 UMST.ChemConstants.ProcessingRefiningConservation <> m:49 var
+R17094:17133 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R17138:17159 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_unwired_ok constr
+R17167:17206 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_assumed constr
+R17214:17252 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R17260:17301 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_surrogate constr
+R17306:17325 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R17306:17325 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R17306:17325 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R17028:17062 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_production_wired_refuse constr
+R16956:16986 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_green_invent_refuse constr
+def 17348:17390 <> processing_refining_conservation_authorized
+R17417:17420 Corelib.Init.Datatypes <> bool ind
+binder 17395:17413 <> claim_physics_green:53
+R17451:17454 Corelib.Init.Datatypes <> bool ind
+binder 17426:17447 <> claim_production_wired:54
+R17459:17462 Corelib.Init.Datatypes <> bool ind
+R17475:17521 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R17533:17571 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R17573:17591 UMST.ChemConstants.ProcessingRefiningConservation <> claim_physics_green:53 var
+R17593:17614 UMST.ChemConstants.ProcessingRefiningConservation <> claim_production_wired:54 var
+R17625:17644 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R17649:17652 Corelib.Init.Datatypes <> true constr
+R17663:17667 Corelib.Init.Datatypes <> false constr
+ind 17908:17927 <> prc_conservation_law
+constr 17943:17959 <> prc_law_conserved
+constr 17965:17980 <> prc_law_named_ok
+constr 17986:18007 <> prc_law_trivial_refuse
+constr 18013:18039 <> prc_law_green_invent_refuse
+scheme 17908:17927 <> prc_conservation_law_rect
+scheme 17908:17927 <> prc_conservation_law_ind
+scheme 17908:17927 <> prc_conservation_law_rec
+scheme 17908:17927 <> prc_conservation_law_sind
+def 18054:18079 <> prc_conservation_law_count
+R18083:18085 Corelib.Init.Datatypes <> nat ind
+prf 18100:18133 <> prc_conservation_law_count_is_four
+R18165:18167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18139:18164 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_law_count def
+ind 18207:18234 <> prc_conservation_law_witness
+constr 18250:18269 <> prc_law_witness_open
+constr 18275:18296 <> prc_law_witness_proved
+scheme 18207:18234 <> prc_conservation_law_witness_rect
+scheme 18207:18234 <> prc_conservation_law_witness_ind
+scheme 18207:18234 <> prc_conservation_law_witness_rec
+scheme 18207:18234 <> prc_conservation_law_witness_sind
+def 18311:18347 <> evaluate_prc_conservation_law_witness
+R18358:18377 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_law ind
+binder 18352:18354 <> law:59
+R18387:18424 UMST.ChemConstants.ProcessingRefiningConservation <> ProcessingRefiningConservationModality ind
+binder 18383:18383 <> m:60
+R18431:18458 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_law_witness ind
+R18471:18471 UMST.ChemConstants.ProcessingRefiningConservation <> m:60 var
+R18482:18521 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R18527:18566 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_assumed constr
+R18572:18613 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_surrogate constr
+R18618:18637 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+R18618:18637 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+R18618:18637 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+R18643:18681 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R18686:18707 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_proved constr
+prf 18723:18763 <> all_prc_conservation_laws_open_at_unwired
+R18892:18897 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18869:18871 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18769:18805 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_prc_conservation_law_witness def
+R18807:18823 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_conserved constr
+R18829:18868 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R18872:18891 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+R19020:19025 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18997:18999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18898:18934 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_prc_conservation_law_witness def
+R18936:18951 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_named_ok constr
+R18957:18996 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R19000:19019 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+R19154:19159 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19131:19133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19026:19062 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_prc_conservation_law_witness def
+R19064:19085 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_trivial_refuse constr
+R19091:19130 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R19134:19153 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+R19270:19272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19160:19196 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_prc_conservation_law_witness def
+R19198:19224 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_green_invent_refuse constr
+R19230:19269 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R19273:19292 UMST.ChemConstants.ProcessingRefiningConservation <> prc_law_witness_open constr
+def 19572:19607 <> processingRefiningConservationProved
+R19611:19614 Corelib.Init.Datatypes <> bool ind
+R19619:19623 Corelib.Init.Datatypes <> false constr
+prf 19633:19677 <> processing_refining_conservation_proved_false
+R19719:19721 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19683:19718 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationProved def
+R19722:19726 Corelib.Init.Datatypes <> false constr
+def 19766:19788 <> not118SquaredGreenTable
+R19792:19795 Corelib.Init.Datatypes <> bool ind
+R19800:19803 Corelib.Init.Datatypes <> true constr
+prf 19813:19839 <> not_118_squared_green_table
+R19866:19868 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19843:19865 UMST.ChemConstants.ProcessingRefiningConservation <> not118SquaredGreenTable def
+R19869:19872 Corelib.Init.Datatypes <> true constr
+prf 20129:20167 <> unwired_close_without_production_wiring
+R20277:20281 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20173:20219 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R20225:20264 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R20266:20270 Corelib.Init.Datatypes <> false constr
+R20272:20276 Corelib.Init.Datatypes <> false constr
+R20282:20303 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_unwired_ok constr
+prf 20340:20391 <> unwired_modality_always_ok_without_production_wiring
+R20501:20505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20397:20443 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R20449:20488 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R20490:20494 Corelib.Init.Datatypes <> false constr
+R20496:20500 Corelib.Init.Datatypes <> false constr
+R20506:20527 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_unwired_ok constr
+R20543:20581 UMST.ChemConstants.ProcessingRefiningConservation <> unwired_close_without_production_wiring thm
+R20543:20581 UMST.ChemConstants.ProcessingRefiningConservation <> unwired_close_without_production_wiring thm
+prf 20596:20639 <> unwired_verdict_ok_without_production_wiring
+R20786:20790 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20645:20671 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R20678:20724 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R20733:20772 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R20774:20778 Corelib.Init.Datatypes <> false constr
+R20780:20784 Corelib.Init.Datatypes <> false constr
+R20791:20794 Corelib.Init.Datatypes <> true constr
+R20813:20839 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R20852:20890 UMST.ChemConstants.ProcessingRefiningConservation <> unwired_close_without_production_wiring thm
+R20852:20890 UMST.ChemConstants.ProcessingRefiningConservation <> unwired_close_without_production_wiring thm
+R20852:20890 UMST.ChemConstants.ProcessingRefiningConservation <> unwired_close_without_production_wiring thm
+prf 21144:21164 <> fe26_witness_named_ok
+R21339:21343 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21170:21204 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R21210:21249 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R21255:21283 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R21289:21320 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R21322:21326 Corelib.Init.Datatypes <> false constr
+R21328:21332 Corelib.Init.Datatypes <> false constr
+R21334:21338 Corelib.Init.Datatypes <> false constr
+R21344:21363 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+prf 21400:21442 <> named_fe26_processing_refining_conservation
+R21642:21647 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21617:21621 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21448:21482 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R21488:21527 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R21533:21561 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R21567:21598 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R21600:21604 Corelib.Init.Datatypes <> false constr
+R21606:21610 Corelib.Init.Datatypes <> false constr
+R21612:21616 Corelib.Init.Datatypes <> false constr
+R21622:21641 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R21728:21733 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21721:21723 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21648:21690 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningBundleIsConcurrentProduct def
+R21692:21720 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R21724:21727 Corelib.Init.Datatypes <> true constr
+R21759:21764 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R21754:21756 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21734:21753 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+R21802:21804 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21765:21801 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_idx def
+prf 21856:21873 <> prc_named_close_ok
+R21982:21986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21879:21925 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R21931:21969 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R21971:21975 Corelib.Init.Datatypes <> false constr
+R21977:21981 Corelib.Init.Datatypes <> false constr
+R21987:22006 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+prf 22043:22086 <> named_processing_refining_conservation_close
+R22220:22225 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22195:22199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22092:22138 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R22144:22182 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R22184:22188 Corelib.Init.Datatypes <> false constr
+R22190:22194 Corelib.Init.Datatypes <> false constr
+R22200:22219 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R22281:22283 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22226:22268 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_authorized def
+R22270:22274 Corelib.Init.Datatypes <> false constr
+R22276:22280 Corelib.Init.Datatypes <> false constr
+R22284:22287 Corelib.Init.Datatypes <> true constr
+R22316:22333 UMST.ChemConstants.ProcessingRefiningConservation <> prc_named_close_ok thm
+R22316:22333 UMST.ChemConstants.ProcessingRefiningConservation <> prc_named_close_ok thm
+R22347:22389 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_authorized def
+R22404:22421 UMST.ChemConstants.ProcessingRefiningConservation <> prc_named_close_ok thm
+R22404:22421 UMST.ChemConstants.ProcessingRefiningConservation <> prc_named_close_ok thm
+R22404:22421 UMST.ChemConstants.ProcessingRefiningConservation <> prc_named_close_ok thm
+prf 22671:22692 <> trivial_bundle_refused
+R22868:22872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22698:22732 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R22738:22777 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R22783:22812 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningEmptyWitness def
+R22818:22849 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R22851:22855 Corelib.Init.Datatypes <> false constr
+R22857:22861 Corelib.Init.Datatypes <> false constr
+R22863:22867 Corelib.Init.Datatypes <> false constr
+R22873:22898 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_trivial_refuse constr
+prf 22935:22966 <> trivial_empty_bundle_fail_closed
+R23173:23178 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23142:23146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22972:23006 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R23012:23051 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R23057:23086 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningEmptyWitness def
+R23092:23123 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R23125:23129 Corelib.Init.Datatypes <> false constr
+R23131:23135 Corelib.Init.Datatypes <> false constr
+R23137:23141 Corelib.Init.Datatypes <> false constr
+R23147:23172 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_trivial_refuse constr
+R23392:23396 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23179:23205 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R23212:23246 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R23255:23294 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R23303:23332 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningEmptyWitness def
+R23341:23372 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R23374:23378 Corelib.Init.Datatypes <> false constr
+R23380:23384 Corelib.Init.Datatypes <> false constr
+R23386:23390 Corelib.Init.Datatypes <> false constr
+R23397:23401 Corelib.Init.Datatypes <> false constr
+R23430:23451 UMST.ChemConstants.ProcessingRefiningConservation <> trivial_bundle_refused thm
+R23430:23451 UMST.ChemConstants.ProcessingRefiningConservation <> trivial_bundle_refused thm
+R23465:23491 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R23506:23527 UMST.ChemConstants.ProcessingRefiningConservation <> trivial_bundle_refused thm
+R23506:23527 UMST.ChemConstants.ProcessingRefiningConservation <> trivial_bundle_refused thm
+R23506:23527 UMST.ChemConstants.ProcessingRefiningConservation <> trivial_bundle_refused thm
+prf 23785:23806 <> xor_classifier_refused
+R23980:23984 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23812:23846 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R23852:23891 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R23897:23925 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R23931:23962 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R23964:23967 Corelib.Init.Datatypes <> true constr
+R23969:23973 Corelib.Init.Datatypes <> false constr
+R23975:23979 Corelib.Init.Datatypes <> false constr
+R23985:24006 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_xor_refuse constr
+prf 24043:24087 <> xor_mutually_exclusive_classifier_fail_closed
+R24288:24293 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24261:24265 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24093:24127 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R24133:24172 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R24178:24206 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R24212:24243 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R24245:24248 Corelib.Init.Datatypes <> true constr
+R24250:24254 Corelib.Init.Datatypes <> false constr
+R24256:24260 Corelib.Init.Datatypes <> false constr
+R24266:24287 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_xor_refuse constr
+R24505:24509 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24294:24320 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R24327:24361 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R24370:24409 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R24418:24446 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R24455:24486 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R24488:24491 Corelib.Init.Datatypes <> true constr
+R24493:24497 Corelib.Init.Datatypes <> false constr
+R24499:24503 Corelib.Init.Datatypes <> false constr
+R24510:24514 Corelib.Init.Datatypes <> false constr
+R24543:24564 UMST.ChemConstants.ProcessingRefiningConservation <> xor_classifier_refused thm
+R24543:24564 UMST.ChemConstants.ProcessingRefiningConservation <> xor_classifier_refused thm
+R24578:24604 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R24619:24640 UMST.ChemConstants.ProcessingRefiningConservation <> xor_classifier_refused thm
+R24619:24640 UMST.ChemConstants.ProcessingRefiningConservation <> xor_classifier_refused thm
+R24619:24640 UMST.ChemConstants.ProcessingRefiningConservation <> xor_classifier_refused thm
+prf 24896:24922 <> green_invent_refuse_unwired
+R25031:25035 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24928:24974 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R24980:25019 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R25021:25024 Corelib.Init.Datatypes <> true constr
+R25026:25030 Corelib.Init.Datatypes <> false constr
+R25036:25066 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_green_invent_refuse constr
+prf 25103:25128 <> green_invent_always_refuse
+R25274:25278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25134:25160 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R25167:25213 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R25222:25261 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R25263:25266 Corelib.Init.Datatypes <> true constr
+R25268:25272 Corelib.Init.Datatypes <> false constr
+R25279:25283 Corelib.Init.Datatypes <> false constr
+R25302:25328 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R25341:25367 UMST.ChemConstants.ProcessingRefiningConservation <> green_invent_refuse_unwired thm
+R25341:25367 UMST.ChemConstants.ProcessingRefiningConservation <> green_invent_refuse_unwired thm
+R25341:25367 UMST.ChemConstants.ProcessingRefiningConservation <> green_invent_refuse_unwired thm
+prf 25397:25426 <> green_invent_prc_bundle_refuse
+R25600:25604 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25432:25466 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R25472:25511 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R25517:25545 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R25551:25582 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R25584:25588 Corelib.Init.Datatypes <> false constr
+R25590:25593 Corelib.Init.Datatypes <> true constr
+R25595:25599 Corelib.Init.Datatypes <> false constr
+R25605:25635 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_green_invent_refuse constr
+prf 25888:25912 <> proved_without_bar_refuse
+R26086:26090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25918:25952 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R25958:25997 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R26003:26031 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R26037:26068 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R26070:26074 Corelib.Init.Datatypes <> false constr
+R26076:26080 Corelib.Init.Datatypes <> false constr
+R26082:26085 Corelib.Init.Datatypes <> true constr
+R26091:26127 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_proved_without_bar_refuse constr
+prf 26164:26193 <> proved_without_bar_fail_closed
+R26409:26414 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R26367:26371 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26199:26233 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R26239:26278 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R26284:26312 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R26318:26349 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R26351:26355 Corelib.Init.Datatypes <> false constr
+R26357:26361 Corelib.Init.Datatypes <> false constr
+R26363:26366 Corelib.Init.Datatypes <> true constr
+R26372:26408 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_proved_without_bar_refuse constr
+R26626:26630 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26415:26441 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R26448:26482 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R26491:26530 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R26539:26567 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R26576:26607 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R26609:26613 Corelib.Init.Datatypes <> false constr
+R26615:26619 Corelib.Init.Datatypes <> false constr
+R26621:26624 Corelib.Init.Datatypes <> true constr
+R26631:26635 Corelib.Init.Datatypes <> false constr
+R26664:26688 UMST.ChemConstants.ProcessingRefiningConservation <> proved_without_bar_refuse thm
+R26664:26688 UMST.ChemConstants.ProcessingRefiningConservation <> proved_without_bar_refuse thm
+R26702:26728 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R26743:26767 UMST.ChemConstants.ProcessingRefiningConservation <> proved_without_bar_refuse thm
+R26743:26767 UMST.ChemConstants.ProcessingRefiningConservation <> proved_without_bar_refuse thm
+R26743:26767 UMST.ChemConstants.ProcessingRefiningConservation <> proved_without_bar_refuse thm
+prf 27019:27041 <> production_wired_refuse
+R27149:27153 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27047:27093 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R27099:27137 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R27139:27143 Corelib.Init.Datatypes <> false constr
+R27145:27148 Corelib.Init.Datatypes <> true constr
+R27154:27188 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_production_wired_refuse constr
+prf 27225:27254 <> production_wired_claim_refused
+R27399:27403 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27260:27286 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R27293:27339 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R27348:27386 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R27388:27392 Corelib.Init.Datatypes <> false constr
+R27394:27397 Corelib.Init.Datatypes <> true constr
+R27404:27408 Corelib.Init.Datatypes <> false constr
+R27427:27453 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R27466:27488 UMST.ChemConstants.ProcessingRefiningConservation <> production_wired_refuse thm
+R27466:27488 UMST.ChemConstants.ProcessingRefiningConservation <> production_wired_refuse thm
+R27466:27488 UMST.ChemConstants.ProcessingRefiningConservation <> production_wired_refuse thm
+def 27752:27790 <> processingRefiningConservationAuthority
+R27794:27799 Stdlib.Strings.String <> string ind
+def 27873:27906 <> parallelProcessingRefiningAxiomTag
+R27910:27915 Stdlib.Strings.String <> string ind
+prf 27951:27991 <> parallel_processing_refining_axiom_refuse
+R28076:28081 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28036:28041 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27997:28035 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationAuthority def
+R28042:28075 UMST.ChemConstants.ProcessingRefiningConservation <> parallelProcessingRefiningAxiomTag def
+R28118:28120 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28082:28117 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationProved def
+R28121:28125 Corelib.Init.Datatypes <> false constr
+R28172:28216 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved_false thm
+R28172:28216 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved_false thm
+prf 28233:28277 <> parallel_processing_refining_axiom_not_minted
+R28380:28385 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28322:28326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28283:28321 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationAuthority def
+R28430:28435 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R28422:28424 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28386:28421 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationProved def
+R28425:28429 Corelib.Init.Datatypes <> false constr
+R28475:28478 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28436:28474 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationAuthority def
+R28479:28512 UMST.ChemConstants.ProcessingRefiningConservation <> parallelProcessingRefiningAxiomTag def
+def 28812:28834 <> speciesIdSmuggleFraming
+R28838:28843 Stdlib.Strings.String <> string ind
+def 28900:28936 <> processingRefiningConservationFraming
+R28940:28945 Stdlib.Strings.String <> string ind
+prf 29016:29040 <> species_id_smuggle_refuse
+R29112:29117 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29083:29088 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29046:29082 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R29089:29111 UMST.ChemConstants.ProcessingRefiningConservation <> speciesIdSmuggleFraming def
+R29143:29148 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29138:29140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29118:29137 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+R29186:29188 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29149:29185 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_idx def
+prf 29258:29298 <> dissipative_refine_not_species_id_smuggle
+R29370:29375 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29341:29346 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29304:29340 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R29347:29369 UMST.ChemConstants.ProcessingRefiningConservation <> speciesIdSmuggleFraming def
+R29401:29406 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29396:29398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29376:29395 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+R29448:29453 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29444:29446 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29407:29443 UMST.ChemConstants.ProcessingRefiningConservation <> pattern_class_processing_refining_idx def
+R29490:29492 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29454:29489 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationProved def
+R29493:29497 Corelib.Init.Datatypes <> false constr
+def 29797:29824 <> extraElementIdSmuggleFraming
+R29828:29833 Stdlib.Strings.String <> string ind
+prf 29890:29912 <> extra_element_id_refuse
+R29989:29994 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29955:29960 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29918:29954 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R29961:29988 UMST.ChemConstants.ProcessingRefiningConservation <> extraElementIdSmuggleFraming def
+R30022:30024 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29995:30021 UMST.ChemConstants.ProcessingRefiningConservation <> forbidden_z119_not_in_table def
+R30025:30028 Corelib.Init.Datatypes <> true constr
+prf 30096:30133 <> impurity_morphism_not_extra_element_id
+R30210:30215 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30176:30181 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30139:30175 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R30182:30209 UMST.ChemConstants.ProcessingRefiningConservation <> extraElementIdSmuggleFraming def
+R30244:30249 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30238:30240 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30216:30237 UMST.ChemConstants.ProcessingRefiningConservation <> forbidden_z119_smuggle def
+R30270:30272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30250:30269 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+def 30574:30596 <> freePurificationFraming
+R30600:30605 Stdlib.Strings.String <> string ind
+def 30677:30698 <> refineProcessAuthority
+R30702:30707 Stdlib.Strings.String <> string ind
+prf 30761:30784 <> free_purification_refuse
+R30856:30861 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30827:30832 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30790:30826 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R30833:30855 UMST.ChemConstants.ProcessingRefiningConservation <> freePurificationFraming def
+R30884:30887 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30862:30883 UMST.ChemConstants.ProcessingRefiningConservation <> refineProcessAuthority def
+prf 30958:30998 <> processing_refining_not_free_purification
+R31070:31075 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31041:31046 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31004:31040 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R31047:31069 UMST.ChemConstants.ProcessingRefiningConservation <> freePurificationFraming def
+R31141:31146 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31098:31102 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31076:31097 UMST.ChemConstants.ProcessingRefiningConservation <> refineProcessAuthority def
+R31183:31185 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31147:31182 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationProved def
+R31186:31190 Corelib.Init.Datatypes <> false constr
+def 31488:31504 <> tpFloatPinFraming
+R31508:31513 Stdlib.Strings.String <> string ind
+prf 31593:31611 <> tp_float_pin_refuse
+R31677:31682 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31654:31659 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31617:31653 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R31660:31676 UMST.ChemConstants.ProcessingRefiningConservation <> tpFloatPinFraming def
+R31713:31715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31683:31712 UMST.ChemConstants.ProcessingRefiningConservation <> dissipative_refine_channel_tag def
+prf 31803:31833 <> tp_graph_function_not_float_pin
+R31899:31904 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31876:31881 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31839:31875 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R31882:31898 UMST.ChemConstants.ProcessingRefiningConservation <> tpFloatPinFraming def
+R31960:31965 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31932:31934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31905:31931 UMST.ChemConstants.ProcessingRefiningConservation <> second_law_gmin_channel_tag def
+R31986:31988 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31966:31985 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+def 32280:32314 <> prc_conservation_coherence_scaffold
+R32318:32321 Corelib.Init.Datatypes <> bool ind
+R32621:32626 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R32468:32473 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R32328:32354 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R32361:32407 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R32416:32454 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R32456:32460 Corelib.Init.Datatypes <> false constr
+R32462:32466 Corelib.Init.Datatypes <> false constr
+R32474:32477 Corelib.Init.Datatypes <> negb def
+R32480:32506 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R32513:32559 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R32568:32607 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R32609:32612 Corelib.Init.Datatypes <> true constr
+R32614:32618 Corelib.Init.Datatypes <> false constr
+R32627:32630 Corelib.Init.Datatypes <> negb def
+R32633:32659 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_verdict_ok def
+R32666:32712 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R32721:32759 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R32761:32765 Corelib.Init.Datatypes <> false constr
+R32767:32770 Corelib.Init.Datatypes <> true constr
+prf 32782:32821 <> prc_conservation_coherence_scaffold_true
+R32862:32864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32827:32861 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_coherence_scaffold def
+R32865:32868 Corelib.Init.Datatypes <> true constr
+R32887:32921 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_coherence_scaffold def
+prf 32976:33018 <> prc_conservation_coherence_scaffold_theorem
+R33154:33159 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33127:33133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33024:33070 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R33076:33114 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R33116:33120 Corelib.Init.Datatypes <> false constr
+R33122:33126 Corelib.Init.Datatypes <> false constr
+R33134:33153 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R33301:33306 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33263:33269 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33160:33206 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R33212:33251 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R33253:33256 Corelib.Init.Datatypes <> true constr
+R33258:33262 Corelib.Init.Datatypes <> false constr
+R33270:33300 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_green_invent_refuse constr
+R33409:33415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33307:33353 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R33359:33397 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_proved constr
+R33399:33403 Corelib.Init.Datatypes <> false constr
+R33405:33408 Corelib.Init.Datatypes <> true constr
+R33416:33450 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_production_wired_refuse constr
+ind 33729:33740 <> formal_fiber
+constr 33756:33776 <> fiber_quantum_knowing
+constr 33782:33798 <> fiber_meso_acting
+scheme 33729:33740 <> formal_fiber_rect
+scheme 33729:33740 <> formal_fiber_ind
+scheme 33729:33740 <> formal_fiber_rec
+scheme 33729:33740 <> formal_fiber_sind
+def 33813:33837 <> prc_conservation_fiber_ok
+R33844:33855 UMST.ChemConstants.ProcessingRefiningConservation <> formal_fiber ind
+binder 33840:33840 <> f:64
+R33860:33863 Corelib.Init.Datatypes <> bool ind
+R33876:33876 UMST.ChemConstants.ProcessingRefiningConservation <> f:64 var
+R33887:33907 UMST.ChemConstants.ProcessingRefiningConservation <> fiber_quantum_knowing constr
+R33912:33915 Corelib.Init.Datatypes <> true constr
+R33921:33937 UMST.ChemConstants.ProcessingRefiningConservation <> fiber_meso_acting constr
+R33942:33946 Corelib.Init.Datatypes <> false constr
+def 33967:33999 <> prc_conservation_knowing_fiber_ok
+R34003:34006 Corelib.Init.Datatypes <> bool ind
+R34013:34037 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_fiber_ok def
+R34039:34059 UMST.ChemConstants.ProcessingRefiningConservation <> fiber_quantum_knowing constr
+def 34074:34104 <> prc_conservation_meso_acting_ok
+R34108:34111 Corelib.Init.Datatypes <> bool ind
+R34118:34142 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_fiber_ok def
+R34144:34160 UMST.ChemConstants.ProcessingRefiningConservation <> fiber_meso_acting constr
+prf 34170:34207 <> prc_conservation_knowing_fiber_ok_true
+R34246:34248 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34213:34245 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok def
+R34249:34252 Corelib.Init.Datatypes <> true constr
+prf 34287:34321 <> prc_conservation_meso_acting_not_ok
+R34358:34360 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34327:34357 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_ok def
+R34361:34365 Corelib.Init.Datatypes <> false constr
+prf 34402:34441 <> prc_conservation_routes_knowing_not_meso
+R34487:34492 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34480:34482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34447:34479 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok def
+R34483:34486 Corelib.Init.Datatypes <> true constr
+R34524:34526 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34493:34523 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_ok def
+R34527:34531 Corelib.Init.Datatypes <> false constr
+R34560:34597 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok_true thm
+R34560:34597 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok_true thm
+R34610:34644 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_not_ok thm
+R34610:34644 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_not_ok thm
+def 34664:34681 <> fiberNotMesoActing
+R34685:34688 Corelib.Init.Datatypes <> bool ind
+R34728:34733 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R34695:34727 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok def
+R34734:34737 Corelib.Init.Datatypes <> negb def
+R34739:34769 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_ok def
+prf 34779:34804 <> fiber_not_meso_acting_true
+R34826:34828 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34808:34825 UMST.ChemConstants.ProcessingRefiningConservation <> fiberNotMesoActing def
+R34829:34832 Corelib.Init.Datatypes <> true constr
+R34851:34868 UMST.ChemConstants.ProcessingRefiningConservation <> fiberNotMesoActing def
+R34871:34903 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok def
+R34910:34940 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_ok def
+prf 35198:35246 <> processing_refining_conservation_fixture_scaffold
+R35448:35453 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35421:35427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35252:35286 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R35292:35331 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R35337:35365 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R35371:35402 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R35404:35408 Corelib.Init.Datatypes <> false constr
+R35410:35414 Corelib.Init.Datatypes <> false constr
+R35416:35420 Corelib.Init.Datatypes <> false constr
+R35428:35447 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_named_ok constr
+R35657:35662 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35624:35630 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35454:35488 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R35494:35533 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R35539:35568 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningEmptyWitness def
+R35574:35605 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R35607:35611 Corelib.Init.Datatypes <> false constr
+R35613:35617 Corelib.Init.Datatypes <> false constr
+R35619:35623 Corelib.Init.Datatypes <> false constr
+R35631:35656 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_trivial_refuse constr
+R35860:35865 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35831:35837 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35663:35697 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R35703:35742 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R35748:35776 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R35782:35813 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R35815:35818 Corelib.Init.Datatypes <> true constr
+R35820:35824 Corelib.Init.Datatypes <> false constr
+R35826:35830 Corelib.Init.Datatypes <> false constr
+R35838:35859 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_xor_refuse constr
+R36078:36083 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36034:36040 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35866:35900 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_bundle def
+R35906:35945 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R35951:35979 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningFe26Witness def
+R35985:36016 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningClaimBarAbsent def
+R36018:36022 Corelib.Init.Datatypes <> false constr
+R36024:36028 Corelib.Init.Datatypes <> false constr
+R36030:36033 Corelib.Init.Datatypes <> true constr
+R36041:36077 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_proved_without_bar_refuse constr
+R36217:36222 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36188:36194 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36084:36130 UMST.ChemConstants.ProcessingRefiningConservation <> evaluate_processing_refining_conservation_close def
+R36136:36175 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr
+R36177:36181 Corelib.Init.Datatypes <> false constr
+R36183:36187 Corelib.Init.Datatypes <> false constr
+R36195:36216 UMST.ChemConstants.ProcessingRefiningConservation <> prc_verdict_unwired_ok constr
+R36263:36268 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36256:36258 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36223:36255 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_knowing_fiber_ok def
+R36259:36262 Corelib.Init.Datatypes <> true constr
+R36308:36313 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36300:36302 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36269:36299 UMST.ChemConstants.ProcessingRefiningConservation <> prc_conservation_meso_acting_ok def
+R36303:36307 Corelib.Init.Datatypes <> false constr
+R36358:36363 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36350:36352 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36314:36349 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationProved def
+R36353:36357 Corelib.Init.Datatypes <> false constr
+R36387:36392 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36380:36382 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36364:36379 UMST.ChemConstants.ProcessingRefiningConservation <> prcProductNotXor def
+R36383:36386 Corelib.Init.Datatypes <> true constr
+R36413:36415 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36393:36412 UMST.ChemConstants.ProcessingRefiningConservation <> iron_atomic_number_z def
+def 36697:36729 <> chemL0ProcessingRefiningAuthority
+R36733:36738 Stdlib.Strings.String <> string ind
+def 36802:36839 <> chemL0ProcessingRefiningTableAuthority
+R36843:36848 Stdlib.Strings.String <> string ind
+def 36922:36947 <> refiningGraphCutsAuthority
+R36951:36956 Stdlib.Strings.String <> string ind
+def 37020:37054 <> patternProductConservationAuthority
+R37058:37063 Stdlib.Strings.String <> string ind
+def 37161:37179 <> chemL0Graph02CellId
+R37183:37188 Stdlib.Strings.String <> string ind
+def 37225:37260 <> processingRefiningConservationCellId
+R37264:37269 Stdlib.Strings.String <> string ind
+def 37342:37379 <> processingRefiningConservationNonClaim
+R37383:37388 Stdlib.Strings.String <> string ind
+prf 38137:38176 <> processing_refining_conservation_cell_id
+R38218:38222 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38182:38217 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationCellId def
+prf 38309:38355 <> processing_refining_conservation_cites_l0_table
+R38399:38402 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38361:38398 UMST.ChemConstants.ProcessingRefiningConservation <> chemL0ProcessingRefiningTableAuthority def
+prf 38440:38486 <> processing_refining_conservation_authority_path
+R38531:38535 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R38492:38530 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationAuthority def
+prf 38623:38669 <> processing_refining_conservation_cites_l0_ore02
+R38708:38711 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38675:38707 UMST.ChemConstants.ProcessingRefiningConservation <> chemL0ProcessingRefiningAuthority def
+prf 38749:38793 <> processing_refining_conservation_cites_marker
+R38825:38828 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38799:38824 UMST.ChemConstants.ProcessingRefiningConservation <> prcConcurrentProductMarker def
+prf 38866:38919 <> processing_refining_conservation_cites_pattern_product
+R38960:38963 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R38925:38959 UMST.ChemConstants.ProcessingRefiningConservation <> patternProductConservationAuthority def
+prf 39001:39049 <> processing_refining_conservation_cites_ore02_cell
+R39074:39076 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39055:39073 UMST.ChemConstants.ProcessingRefiningConservation <> chemL0Graph02CellId def
+prf 39351:39384 <> processing_refining_not_26th_axiom
+R39427:39430 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39390:39426 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+R39431:39464 UMST.ChemConstants.ProcessingRefiningConservation <> parallelProcessingRefiningAxiomTag def
+prf 39500:39550 <> processing_refining_second_law_conservation_framing
+R39593:39596 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39556:39592 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationFraming def
+def 39863:39884 <> physicsGreenAuthorized
+R39896:39900 Corelib.Init.Logic <> False ind
+prf 39910:39961 <> processing_refining_conservation_physics_green_false
+R39967:39968 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R39969:39990 UMST.ChemConstants.ProcessingRefiningConservation <> physicsGreenAuthorized def
+prf 40030:40078 <> processing_refining_conservation_modality_unwired
+R40129:40133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40084:40128 UMST.ChemConstants.ProcessingRefiningConservation <> processingRefiningConservationModalityCurrent def
+R40134:40173 UMST.ChemConstants.ProcessingRefiningConservation <> processing_refining_conservation_unwired constr

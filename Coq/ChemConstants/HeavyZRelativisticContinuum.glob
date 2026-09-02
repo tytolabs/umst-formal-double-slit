@@ -1,0 +1,502 @@
+DIGEST 1a107ee6d4f0d7f6e19240152c29944b
+FUMST.ChemConstants.HeavyZRelativisticContinuum
+R1356:1360 Stdlib.Arith.Arith <> <> lib
+R1362:1367 Stdlib.Strings.String <> <> lib
+R1369:1372 Stdlib.Bool.Bool <> <> lib
+R1374:1376 Stdlib.micromega.Lia <> <> lib
+def 1411:1444 <> heavyzrelativisticcontinuumSurface
+R1448:1453 Stdlib.Strings.String <> string ind
+def 1514:1546 <> heavyZRelativisticContinuumMarker
+R1550:1555 Stdlib.Strings.String <> string ind
+prf 1624:1664 <> heavyzrelativisticcontinuum_surface_named
+R1704:1707 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1670:1703 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyzrelativisticcontinuumSurface def
+prf 1745:1787 <> heavy_z_relativistic_continuum_marker_named
+R1826:1829 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1793:1825 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumMarker def
+ind 2167:2201 <> HeavyZRelativisticContinuumModality
+constr 2217:2254 <> heavy_z_relativistic_continuum_unwired
+constr 2260:2297 <> heavy_z_relativistic_continuum_assumed
+constr 2303:2339 <> heavy_z_relativistic_continuum_proved
+constr 2345:2384 <> heavy_z_relativistic_continuum_surrogate
+scheme 2167:2201 <> HeavyZRelativisticContinuumModality_rect
+scheme 2167:2201 <> HeavyZRelativisticContinuumModality_ind
+scheme 2167:2201 <> HeavyZRelativisticContinuumModality_rec
+scheme 2167:2201 <> HeavyZRelativisticContinuumModality_sind
+def 2399:2440 <> heavyZRelativisticContinuumModalityCurrent
+R2446:2480 UMST.ChemConstants.HeavyZRelativisticContinuum <> HeavyZRelativisticContinuumModality ind
+R2487:2524 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+def 2539:2588 <> heavy_z_relativistic_continuum_lattice_cardinality
+R2592:2594 Corelib.Init.Datatypes <> nat ind
+prf 2609:2666 <> heavy_z_relativistic_continuum_lattice_cardinality_is_four
+R2722:2724 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2672:2721 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_lattice_cardinality def
+prf 2760:2813 <> heavy_z_relativistic_continuum_lattice_not_118_squared
+R2896:2900 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2819:2822 Corelib.Init.Datatypes <> negb def
+R2825:2831 Stdlib.Arith.PeanoNat Nat eqb def
+R2833:2882 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_lattice_cardinality def
+R2888:2890 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2901:2904 Corelib.Init.Datatypes <> true constr
+R2923:2972 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_lattice_cardinality def
+def 3231:3265 <> heavyZRelativisticContinuumChartTag
+R3269:3274 Stdlib.Strings.String <> string ind
+def 3339:3358 <> liveProcessGChartTag
+R3362:3367 Stdlib.Strings.String <> string ind
+def 3412:3426 <> gEngineLayerTag
+R3430:3435 Stdlib.Strings.String <> string ind
+prf 3462:3507 <> heavy_z_relativistic_continuum_chart_tag_named
+R3548:3550 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3513:3547 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+prf 3629:3658 <> live_process_g_chart_tag_named
+R3684:3686 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3664:3683 UMST.ChemConstants.HeavyZRelativisticContinuum <> liveProcessGChartTag def
+prf 3747:3770 <> g_engine_layer_tag_named
+R3791:3793 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3776:3790 UMST.ChemConstants.HeavyZRelativisticContinuum <> gEngineLayerTag def
+prf 3841:3874 <> heavy_z_chart_distinct_from_live_g
+R3961:3966 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3954:3956 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3880:3883 Corelib.Init.Datatypes <> negb def
+R3886:3895 Stdlib.Strings.String <> eqb def
+R3897:3931 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R3933:3952 UMST.ChemConstants.HeavyZRelativisticContinuum <> liveProcessGChartTag def
+R3957:3960 Corelib.Init.Datatypes <> true constr
+R4036:4038 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3967:3970 Corelib.Init.Datatypes <> negb def
+R3973:3982 Stdlib.Strings.String <> eqb def
+R3984:4018 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R4020:4034 UMST.ChemConstants.HeavyZRelativisticContinuum <> gEngineLayerTag def
+R4039:4042 Corelib.Init.Datatypes <> true constr
+def 4091:4129 <> heavyZChartRoutesNamedContinuumNotLiveG
+R4133:4136 Corelib.Init.Datatypes <> bool ind
+R4217:4222 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R4143:4146 Corelib.Init.Datatypes <> negb def
+R4149:4158 Stdlib.Strings.String <> eqb def
+R4160:4194 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R4196:4215 UMST.ChemConstants.HeavyZRelativisticContinuum <> liveProcessGChartTag def
+R4223:4226 Corelib.Init.Datatypes <> negb def
+R4229:4238 Stdlib.Strings.String <> eqb def
+R4240:4274 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R4276:4290 UMST.ChemConstants.HeavyZRelativisticContinuum <> gEngineLayerTag def
+prf 4301:4347 <> heavy_z_chart_routes_named_continuum_not_live_g
+R4392:4394 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4353:4391 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZChartRoutesNamedContinuumNotLiveG def
+R4395:4398 Corelib.Init.Datatypes <> true constr
+def 4438:4454 <> mintsLiveProcessG
+R4458:4461 Corelib.Init.Datatypes <> bool ind
+R4466:4470 Corelib.Init.Datatypes <> false constr
+prf 4480:4505 <> mints_live_process_g_false
+R4528:4530 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4511:4527 UMST.ChemConstants.HeavyZRelativisticContinuum <> mintsLiveProcessG def
+R4531:4535 Corelib.Init.Datatypes <> false constr
+def 4799:4824 <> patternClassContinuumIndex
+R4828:4830 Corelib.Init.Datatypes <> nat ind
+prf 4846:4880 <> pattern_class_continuum_index_is_23
+R4912:4914 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4886:4911 UMST.ChemConstants.HeavyZRelativisticContinuum <> patternClassContinuumIndex def
+def 4956:4981 <> patternClassAllotropeIndex
+R4985:4987 Corelib.Init.Datatypes <> nat ind
+def 5008:5033 <> patternClassCatalysisIndex
+R5037:5039 Corelib.Init.Datatypes <> nat ind
+def 5060:5097 <> heavyZContinuumConcurrentProductNotXor
+R5101:5104 Corelib.Init.Datatypes <> bool ind
+R5109:5112 Corelib.Init.Datatypes <> true constr
+prf 5122:5165 <> heavy_z_continuum_concurrent_product_not_xor
+R5209:5211 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5171:5208 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZContinuumConcurrentProductNotXor def
+R5212:5215 Corelib.Init.Datatypes <> true constr
+def 5255:5273 <> xorEnumBucketMarker
+R5277:5282 Stdlib.Strings.String <> string ind
+def 5337:5355 <> productFactorMarker
+R5359:5364 Stdlib.Strings.String <> string ind
+prf 5416:5450 <> xor_marker_ne_product_factor_marker
+R5475:5478 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5456:5474 UMST.ChemConstants.HeavyZRelativisticContinuum <> xorEnumBucketMarker def
+R5479:5497 UMST.ChemConstants.HeavyZRelativisticContinuum <> productFactorMarker def
+def 5762:5776 <> heavyZThreshold
+R5780:5782 Corelib.Init.Datatypes <> nat ind
+def 5803:5807 <> goldZ
+R5811:5813 Corelib.Init.Datatypes <> nat ind
+def 5833:5840 <> uraniumZ
+R5844:5846 Corelib.Init.Datatypes <> nat ind
+def 5866:5875 <> oganessonZ
+R5879:5881 Corelib.Init.Datatypes <> nat ind
+prf 5898:5920 <> heavy_z_threshold_is_79
+R5941:5943 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5926:5940 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZThreshold def
+prf 5984:5995 <> gold_z_is_79
+R6006:6008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6001:6005 UMST.ChemConstants.HeavyZRelativisticContinuum <> goldZ def
+prf 6049:6063 <> uranium_z_is_92
+R6077:6079 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6069:6076 UMST.ChemConstants.HeavyZRelativisticContinuum <> uraniumZ def
+prf 6120:6137 <> oganesson_z_is_118
+R6153:6155 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6143:6152 UMST.ChemConstants.HeavyZRelativisticContinuum <> oganessonZ def
+def 6202:6209 <> isHeavyZ
+R6216:6218 Corelib.Init.Datatypes <> nat ind
+binder 6212:6212 <> z:3
+R6223:6226 Corelib.Init.Datatypes <> bool ind
+R6233:6239 Stdlib.Arith.PeanoNat Nat leb def
+R6241:6255 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZThreshold def
+R6257:6257 UMST.ChemConstants.HeavyZRelativisticContinuum <> z:3 var
+prf 6267:6281 <> gold_is_heavy_z
+R6301:6303 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6287:6294 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R6296:6300 UMST.ChemConstants.HeavyZRelativisticContinuum <> goldZ def
+R6304:6307 Corelib.Init.Datatypes <> true constr
+R6326:6333 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R6336:6340 UMST.ChemConstants.HeavyZRelativisticContinuum <> goldZ def
+R6343:6357 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZThreshold def
+prf 6387:6404 <> uranium_is_heavy_z
+R6427:6429 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6410:6417 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R6419:6426 UMST.ChemConstants.HeavyZRelativisticContinuum <> uraniumZ def
+R6430:6433 Corelib.Init.Datatypes <> true constr
+R6452:6459 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R6462:6469 UMST.ChemConstants.HeavyZRelativisticContinuum <> uraniumZ def
+R6472:6486 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZThreshold def
+def 6521:6525 <> ironZ
+R6529:6531 Corelib.Init.Datatypes <> nat ind
+prf 6547:6562 <> iron_not_heavy_z
+R6582:6584 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6568:6575 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R6577:6581 UMST.ChemConstants.HeavyZRelativisticContinuum <> ironZ def
+R6585:6589 Corelib.Init.Datatypes <> false constr
+R6608:6615 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R6618:6622 UMST.ChemConstants.HeavyZRelativisticContinuum <> ironZ def
+R6625:6639 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZThreshold def
+def 6900:6905 <> xenonZ
+R6909:6911 Corelib.Init.Datatypes <> nat ind
+def 6932:6950 <> xeCopyTheaterMarker
+R6954:6959 Stdlib.Strings.String <> string ind
+prf 7034:7046 <> xenon_z_is_54
+R7058:7060 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7052:7057 UMST.ChemConstants.HeavyZRelativisticContinuum <> xenonZ def
+prf 7101:7121 <> xe_copy_theater_named
+R7146:7149 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7127:7145 UMST.ChemConstants.HeavyZRelativisticContinuum <> xeCopyTheaterMarker def
+prf 7187:7213 <> xenon_not_heavy_z_threshold
+R7234:7236 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7219:7226 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R7228:7233 UMST.ChemConstants.HeavyZRelativisticContinuum <> xenonZ def
+R7237:7241 Corelib.Init.Datatypes <> false constr
+R7260:7267 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R7270:7275 UMST.ChemConstants.HeavyZRelativisticContinuum <> xenonZ def
+R7278:7292 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZThreshold def
+def 7327:7345 <> heavyZChartIsXeCopy
+R7349:7352 Corelib.Init.Datatypes <> bool ind
+R7357:7361 Corelib.Init.Datatypes <> false constr
+prf 7371:7400 <> heavy_z_chart_is_xe_copy_false
+R7425:7427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7406:7424 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZChartIsXeCopy def
+R7428:7432 Corelib.Init.Datatypes <> false constr
+rec 7693:7730 <> heavy_z_relativistic_continuum_binding
+proj 7746:7757 <> hz_binding_z
+proj 7768:7787 <> hz_binding_chart_tag
+proj 7801:7824 <> hz_binding_pattern_class
+R7761:7763 Corelib.Init.Datatypes <> nat ind
+R7791:7796 Stdlib.Strings.String <> string ind
+R7828:7830 Corelib.Init.Datatypes <> nat ind
+def 7847:7865 <> sampleHeavyZBinding
+R7869:7906 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_binding rec
+R7916:7927 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_z proj
+R7916:7927 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_z proj
+R7916:7927 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_z proj
+R7944:7963 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_chart_tag proj
+R7944:7963 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_chart_tag proj
+R8010:8033 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_pattern_class proj
+R8010:8033 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_pattern_class proj
+R7932:7936 UMST.ChemConstants.HeavyZRelativisticContinuum <> goldZ def
+R7968:8002 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R8038:8063 UMST.ChemConstants.HeavyZRelativisticContinuum <> patternClassContinuumIndex def
+prf 8076:8109 <> sample_heavy_z_binding_chart_named
+R8208:8210 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8115:8124 Stdlib.Strings.String <> eqb def
+R8147:8166 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_chart_tag proj
+R8126:8144 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R8173:8207 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R8211:8214 Corelib.Init.Datatypes <> true constr
+prf 8249:8287 <> sample_heavy_z_binding_pattern_class_23
+R8339:8341 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8314:8337 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_pattern_class proj
+R8293:8311 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+def 8383:8427 <> heavy_z_binding_routes_named_chart_not_live_g
+R8436:8473 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_binding rec
+binder 8432:8432 <> b:8
+R8478:8481 Corelib.Init.Datatypes <> bool ind
+R8617:8622 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8587:8592 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8559:8564 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8488:8497 Stdlib.Strings.String <> eqb def
+R8502:8521 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_chart_tag proj
+R8499:8499 UMST.ChemConstants.HeavyZRelativisticContinuum <> b:8 var
+R8524:8558 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumChartTag def
+R8565:8568 Corelib.Init.Datatypes <> negb def
+R8570:8586 UMST.ChemConstants.HeavyZRelativisticContinuum <> mintsLiveProcessG def
+R8593:8596 Corelib.Init.Datatypes <> negb def
+R8598:8616 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZChartIsXeCopy def
+R8623:8630 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R8635:8646 UMST.ChemConstants.HeavyZRelativisticContinuum <> hz_binding_z proj
+R8632:8632 UMST.ChemConstants.HeavyZRelativisticContinuum <> b:8 var
+prf 8657:8708 <> heavy_z_binding_routes_named_chart_not_live_g_sample
+R8779:8781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8714:8758 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_binding_routes_named_chart_not_live_g def
+R8760:8778 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R8782:8785 Corelib.Init.Datatypes <> true constr
+prf 8822:8874 <> heavy_z_relativistic_continuum_named_chart_not_live_g
+R8926:8931 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8919:8921 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8880:8918 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZChartRoutesNamedContinuumNotLiveG def
+R8922:8925 Corelib.Init.Datatypes <> true constr
+R8957:8962 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8949:8951 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8932:8948 UMST.ChemConstants.HeavyZRelativisticContinuum <> mintsLiveProcessG def
+R8952:8956 Corelib.Init.Datatypes <> false constr
+R9035:9040 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9028:9030 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8963:9007 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_binding_routes_named_chart_not_live_g def
+R9009:9027 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R9031:9034 Corelib.Init.Datatypes <> true constr
+R9055:9057 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9041:9048 UMST.ChemConstants.HeavyZRelativisticContinuum <> isHeavyZ def
+R9050:9054 UMST.ChemConstants.HeavyZRelativisticContinuum <> goldZ def
+R9058:9061 Corelib.Init.Datatypes <> true constr
+def 9342:9374 <> heavyZRelativisticContinuumProved
+R9378:9381 Corelib.Init.Datatypes <> bool ind
+R9386:9390 Corelib.Init.Datatypes <> false constr
+def 9405:9421 <> wave100LibRsWired
+R9425:9428 Corelib.Init.Datatypes <> bool ind
+R9433:9437 Corelib.Init.Datatypes <> false constr
+def 9452:9468 <> wave100EosRsWired
+R9472:9475 Corelib.Init.Datatypes <> bool ind
+R9480:9484 Corelib.Init.Datatypes <> false constr
+def 9499:9513 <> productionWired
+R9517:9520 Corelib.Init.Datatypes <> bool ind
+R9525:9529 Corelib.Init.Datatypes <> false constr
+prf 9539:9581 <> heavy_z_relativistic_continuum_proved_false
+R9620:9622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9587:9619 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumProved def
+R9623:9627 Corelib.Init.Datatypes <> false constr
+prf 9662:9685 <> wave100_lib_rs_not_wired
+R9708:9710 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9691:9707 UMST.ChemConstants.HeavyZRelativisticContinuum <> wave100LibRsWired def
+R9711:9715 Corelib.Init.Datatypes <> false constr
+prf 9750:9773 <> wave100_eos_rs_not_wired
+R9796:9798 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9779:9795 UMST.ChemConstants.HeavyZRelativisticContinuum <> wave100EosRsWired def
+R9799:9803 Corelib.Init.Datatypes <> false constr
+prf 9838:9859 <> production_wired_false
+R9880:9882 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9865:9879 UMST.ChemConstants.HeavyZRelativisticContinuum <> productionWired def
+R9883:9887 Corelib.Init.Datatypes <> false constr
+ind 10151:10188 <> heavy_z_relativistic_continuum_verdict
+constr 10204:10221 <> verdict_unwired_ok
+constr 10227:10248 <> verdict_named_chart_ok
+constr 10254:10279 <> verdict_live_g_mint_refuse
+constr 10285:10314 <> verdict_xe_copy_theater_refuse
+constr 10320:10346 <> verdict_green_invent_refuse
+constr 10352:10382 <> verdict_production_wired_refuse
+scheme 10151:10188 <> heavy_z_relativistic_continuum_verdict_rect
+scheme 10151:10188 <> heavy_z_relativistic_continuum_verdict_ind
+scheme 10151:10188 <> heavy_z_relativistic_continuum_verdict_rec
+scheme 10151:10188 <> heavy_z_relativistic_continuum_verdict_sind
+def 10397:10414 <> heavy_z_verdict_ok
+R10421:10458 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_verdict ind
+binder 10417:10417 <> v:11
+R10463:10466 Corelib.Init.Datatypes <> bool ind
+R10479:10479 UMST.ChemConstants.HeavyZRelativisticContinuum <> v:11 var
+R10490:10507 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_unwired_ok constr
+R10512:10515 Corelib.Init.Datatypes <> true constr
+R10521:10542 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_named_chart_ok constr
+R10547:10550 Corelib.Init.Datatypes <> true constr
+R10561:10565 Corelib.Init.Datatypes <> false constr
+def 10586:10624 <> evaluate_heavy_z_relativistic_continuum
+R10633:10667 UMST.ChemConstants.HeavyZRelativisticContinuum <> HeavyZRelativisticContinuumModality ind
+binder 10629:10629 <> m:13
+R10677:10714 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_binding rec
+binder 10673:10673 <> b:14
+R10742:10745 Corelib.Init.Datatypes <> bool ind
+binder 10720:10738 <> claim_physics_green:15
+R10772:10775 Corelib.Init.Datatypes <> bool ind
+binder 10751:10768 <> claim_mints_live_g:16
+R10797:10800 Corelib.Init.Datatypes <> bool ind
+binder 10781:10793 <> claim_xe_copy:17
+R10831:10834 Corelib.Init.Datatypes <> bool ind
+binder 10806:10827 <> claim_production_wired:18
+R10839:10876 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_verdict ind
+R10886:10904 UMST.ChemConstants.HeavyZRelativisticContinuum <> claim_physics_green:15 var
+R10951:10972 UMST.ChemConstants.HeavyZRelativisticContinuum <> claim_production_wired:18 var
+R11023:11040 UMST.ChemConstants.HeavyZRelativisticContinuum <> claim_mints_live_g:16 var
+R11086:11098 UMST.ChemConstants.HeavyZRelativisticContinuum <> claim_xe_copy:17 var
+R11148:11192 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_binding_routes_named_chart_not_live_g def
+R11194:11194 UMST.ChemConstants.HeavyZRelativisticContinuum <> b:14 var
+R11336:11361 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_live_g_mint_refuse constr
+R11213:11213 UMST.ChemConstants.HeavyZRelativisticContinuum <> m:13 var
+R11226:11263 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R11268:11285 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_unwired_ok constr
+R11298:11319 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_named_chart_ok constr
+R11107:11136 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_xe_copy_theater_refuse constr
+R11049:11074 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_live_g_mint_refuse constr
+R10981:11011 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_production_wired_refuse constr
+R10913:10939 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_green_invent_refuse constr
+prf 11371:11388 <> heavy_z_unwired_ok
+R11524:11528 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11394:11432 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R11438:11475 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R11477:11495 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R11501:11505 Corelib.Init.Datatypes <> false constr
+R11507:11511 Corelib.Init.Datatypes <> false constr
+R11513:11517 Corelib.Init.Datatypes <> false constr
+R11519:11523 Corelib.Init.Datatypes <> false constr
+R11529:11546 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_unwired_ok constr
+prf 11581:11607 <> heavy_z_green_invent_refuse
+R11742:11746 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11613:11651 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R11657:11694 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R11696:11714 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R11720:11723 Corelib.Init.Datatypes <> true constr
+R11725:11729 Corelib.Init.Datatypes <> false constr
+R11731:11735 Corelib.Init.Datatypes <> false constr
+R11737:11741 Corelib.Init.Datatypes <> false constr
+R11747:11773 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_green_invent_refuse constr
+prf 11808:11833 <> heavy_z_live_g_mint_refuse
+R11968:11972 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11839:11877 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R11883:11920 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R11922:11940 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R11946:11950 Corelib.Init.Datatypes <> false constr
+R11952:11955 Corelib.Init.Datatypes <> true constr
+R11957:11961 Corelib.Init.Datatypes <> false constr
+R11963:11967 Corelib.Init.Datatypes <> false constr
+R11973:11998 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_live_g_mint_refuse constr
+prf 12033:12062 <> heavy_z_xe_copy_theater_refuse
+R12197:12201 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12068:12106 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R12112:12149 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R12151:12169 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R12175:12179 Corelib.Init.Datatypes <> false constr
+R12181:12185 Corelib.Init.Datatypes <> false constr
+R12187:12190 Corelib.Init.Datatypes <> true constr
+R12192:12196 Corelib.Init.Datatypes <> false constr
+R12202:12231 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_xe_copy_theater_refuse constr
+prf 12266:12296 <> heavy_z_production_wired_refuse
+R12431:12435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12302:12340 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R12346:12383 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R12385:12403 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R12409:12413 Corelib.Init.Datatypes <> false constr
+R12415:12419 Corelib.Init.Datatypes <> false constr
+R12421:12425 Corelib.Init.Datatypes <> false constr
+R12427:12430 Corelib.Init.Datatypes <> true constr
+R12436:12466 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_production_wired_refuse constr
+prf 12503:12545 <> heavy_z_relativistic_continuum_conservation
+R12704:12709 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12681:12685 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12551:12589 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R12595:12632 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R12634:12652 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R12658:12662 Corelib.Init.Datatypes <> false constr
+R12664:12668 Corelib.Init.Datatypes <> false constr
+R12670:12674 Corelib.Init.Datatypes <> false constr
+R12676:12680 Corelib.Init.Datatypes <> false constr
+R12686:12703 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_unwired_ok constr
+R12751:12756 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12743:12745 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12710:12742 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumProved def
+R12746:12750 Corelib.Init.Datatypes <> false constr
+R12782:12787 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12774:12776 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12757:12773 UMST.ChemConstants.HeavyZRelativisticContinuum <> wave100LibRsWired def
+R12777:12781 Corelib.Init.Datatypes <> false constr
+R12805:12807 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12788:12804 UMST.ChemConstants.HeavyZRelativisticContinuum <> wave100EosRsWired def
+R12808:12812 Corelib.Init.Datatypes <> false constr
+def 13092:13105 <> soleAxiomCount
+R13109:13111 Corelib.Init.Datatypes <> nat ind
+def 13131:13161 <> twentySixthAxiomCollisionMarker
+R13165:13170 Stdlib.Strings.String <> string ind
+def 13241:13277 <> heavyZRelativisticContinuumIsNewAxiom
+R13289:13293 Corelib.Init.Logic <> False ind
+prf 13303:13325 <> sole_axiom_count_is_one
+R13345:13347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13331:13344 UMST.ChemConstants.HeavyZRelativisticContinuum <> soleAxiomCount def
+prf 13383:13426 <> heavy_z_relativistic_continuum_not_new_axiom
+R13432:13433 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13434:13470 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumIsNewAxiom def
+prf 13510:13543 <> twenty_sixth_axiom_collision_named
+R13580:13583 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13549:13579 UMST.ChemConstants.HeavyZRelativisticContinuum <> twentySixthAxiomCollisionMarker def
+def 13626:13680 <> heavyZRelativisticContinuumSecondLawConservationFraming
+R13684:13689 Stdlib.Strings.String <> string ind
+prf 13786:13807 <> heavy_z_not_26th_axiom
+R13868:13871 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13813:13867 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumSecondLawConservationFraming def
+def 14149:14186 <> heavyZRelativisticContinuumRsAuthority
+R14190:14195 Stdlib.Strings.String <> string ind
+def 14277:14324 <> chemIntCrossHeavyZRelativisticContinuumAuthority
+R14328:14333 Stdlib.Strings.String <> string ind
+def 14414:14449 <> chemPhysicsChartIsomorphismAuthority
+R14453:14458 Stdlib.Strings.String <> string ind
+def 14557:14591 <> patternProductConservationAuthority
+R14595:14600 Stdlib.Strings.String <> string ind
+def 14698:14730 <> heavyZRelativisticContinuumCellId
+R14734:14739 Stdlib.Strings.String <> string ind
+def 14823:14857 <> heavyZRelativisticContinuumNonClaim
+R14861:14866 Stdlib.Strings.String <> string ind
+prf 15324:15361 <> heavy_z_relativistic_continuum_cell_id
+R15400:15404 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15367:15399 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumCellId def
+prf 15502:15521 <> heavy_z_cites_rs_row
+R15565:15568 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15527:15564 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumRsAuthority def
+prf 15606:15632 <> heavy_z_cites_int_cross_row
+R15686:15690 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15638:15685 UMST.ChemConstants.HeavyZRelativisticContinuum <> chemIntCrossHeavyZRelativisticContinuumAuthority def
+prf 15785:15815 <> heavy_z_cites_chart_isomorphism
+R15857:15860 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15821:15856 UMST.ChemConstants.HeavyZRelativisticContinuum <> chemPhysicsChartIsomorphismAuthority def
+prf 15898:15926 <> heavy_z_cites_pattern_product
+R15967:15970 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R15932:15966 UMST.ChemConstants.HeavyZRelativisticContinuum <> patternProductConservationAuthority def
+def 16239:16260 <> physicsGreenAuthorized
+R16272:16276 Corelib.Init.Logic <> False ind
+prf 16286:16335 <> heavy_z_relativistic_continuum_physics_green_false
+R16341:16342 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R16343:16364 UMST.ChemConstants.HeavyZRelativisticContinuum <> physicsGreenAuthorized def
+prf 16404:16450 <> heavy_z_relativistic_continuum_modality_unwired
+R16498:16502 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16456:16497 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumModalityCurrent def
+R16503:16540 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+prf 16802:16848 <> heavy_z_relativistic_continuum_fixture_scaffold
+R16900:16905 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16893:16895 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16854:16892 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZChartRoutesNamedContinuumNotLiveG def
+R16896:16899 Corelib.Init.Datatypes <> true constr
+R16931:16936 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R16923:16925 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16906:16922 UMST.ChemConstants.HeavyZRelativisticContinuum <> mintsLiveProcessG def
+R16926:16930 Corelib.Init.Datatypes <> false constr
+R17092:17097 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17067:17073 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16937:16975 UMST.ChemConstants.HeavyZRelativisticContinuum <> evaluate_heavy_z_relativistic_continuum def
+R16981:17018 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavy_z_relativistic_continuum_unwired constr
+R17020:17038 UMST.ChemConstants.HeavyZRelativisticContinuum <> sampleHeavyZBinding def
+R17044:17048 Corelib.Init.Datatypes <> false constr
+R17050:17054 Corelib.Init.Datatypes <> false constr
+R17056:17060 Corelib.Init.Datatypes <> false constr
+R17062:17066 Corelib.Init.Datatypes <> false constr
+R17074:17091 UMST.ChemConstants.HeavyZRelativisticContinuum <> verdict_unwired_ok constr
+R17139:17145 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17201:17201 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17131:17133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17098:17130 UMST.ChemConstants.HeavyZRelativisticContinuum <> heavyZRelativisticContinuumProved def
+R17134:17138 Corelib.Init.Datatypes <> false constr
+R17194:17196 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17168:17171 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R17146:17149 Corelib.Init.Datatypes <> negb def
+R17151:17167 UMST.ChemConstants.HeavyZRelativisticContinuum <> wave100LibRsWired def
+R17172:17175 Corelib.Init.Datatypes <> negb def
+R17177:17193 UMST.ChemConstants.HeavyZRelativisticContinuum <> wave100EosRsWired def
+R17197:17200 Corelib.Init.Datatypes <> true constr

@@ -1,0 +1,921 @@
+DIGEST 089467c52330babce2b1dcfdea6765a8
+FUMST.ChemConstants.PartialConservation
+R1201:1205 Stdlib.Arith.Arith <> <> lib
+R1207:1212 Stdlib.Strings.String <> <> lib
+R1214:1217 Stdlib.Bool.Bool <> <> lib
+R1219:1221 Stdlib.micromega.Lia <> <> lib
+R1223:1226 Stdlib.Lists.List <> <> lib
+R1236:1248 Stdlib.Lists.List ListNotations <> mod
+ind 1576:1602 <> PartialConservationModality
+constr 1618:1645 <> partial_conservation_unwired
+constr 1651:1678 <> partial_conservation_assumed
+constr 1684:1710 <> partial_conservation_proved
+constr 1716:1745 <> partial_conservation_surrogate
+scheme 1576:1602 <> PartialConservationModality_rect
+scheme 1576:1602 <> PartialConservationModality_ind
+scheme 1576:1602 <> PartialConservationModality_rec
+scheme 1576:1602 <> PartialConservationModality_sind
+def 1760:1793 <> partialConservationModalityCurrent
+R1797:1823 UMST.ChemConstants.PartialConservation <> PartialConservationModality ind
+R1830:1857 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+def 1872:1898 <> partial_lattice_cardinality
+R1902:1904 Corelib.Init.Datatypes <> nat ind
+prf 1919:1953 <> partial_lattice_cardinality_is_four
+R1986:1988 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1959:1985 UMST.ChemConstants.PartialConservation <> partial_lattice_cardinality def
+prf 2024:2054 <> partial_lattice_not_118_squared
+R2114:2116 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2060:2063 Corelib.Init.Datatypes <> negb def
+R2066:2072 Stdlib.Arith.PeanoNat Nat eqb def
+R2074:2100 UMST.ChemConstants.PartialConservation <> partial_lattice_cardinality def
+R2106:2108 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2117:2120 Corelib.Init.Datatypes <> true constr
+R2139:2165 UMST.ChemConstants.PartialConservation <> partial_lattice_cardinality def
+ind 2421:2430 <> element_id
+constr 2446:2451 <> elem_H
+constr 2457:2462 <> elem_O
+constr 2468:2474 <> elem_Ca
+constr 2480:2486 <> elem_Si
+scheme 2421:2430 <> element_id_rect
+scheme 2421:2430 <> element_id_ind
+scheme 2421:2430 <> element_id_rec
+scheme 2421:2430 <> element_id_sind
+rec 2497:2509 <> interact_step
+proj 2525:2537 <> interact_from
+proj 2555:2565 <> interact_to
+proj 2583:2594 <> interact_tag
+R2541:2550 UMST.ChemConstants.PartialConservation <> element_id ind
+R2569:2578 UMST.ChemConstants.PartialConservation <> element_id ind
+R2598:2600 Corelib.Init.Datatypes <> nat ind
+def 2617:2630 <> element_id_beq
+R2639:2648 UMST.ChemConstants.PartialConservation <> element_id ind
+binder 2633:2633 <> a:9
+binder 2635:2635 <> b:10
+R2653:2656 Corelib.Init.Datatypes <> bool ind
+R2672:2672 UMST.ChemConstants.PartialConservation <> b:10 var
+R2669:2669 UMST.ChemConstants.PartialConservation <> a:9 var
+R2683:2688 UMST.ChemConstants.PartialConservation <> elem_H constr
+R2691:2696 UMST.ChemConstants.PartialConservation <> elem_H constr
+R2700:2705 UMST.ChemConstants.PartialConservation <> elem_O constr
+R2708:2713 UMST.ChemConstants.PartialConservation <> elem_O constr
+R2717:2723 UMST.ChemConstants.PartialConservation <> elem_Ca constr
+R2726:2732 UMST.ChemConstants.PartialConservation <> elem_Ca constr
+R2736:2742 UMST.ChemConstants.PartialConservation <> elem_Si constr
+R2745:2751 UMST.ChemConstants.PartialConservation <> elem_Si constr
+R2756:2759 Corelib.Init.Datatypes <> true constr
+R2756:2759 Corelib.Init.Datatypes <> true constr
+R2756:2759 Corelib.Init.Datatypes <> true constr
+R2756:2759 Corelib.Init.Datatypes <> true constr
+R2773:2777 Corelib.Init.Datatypes <> false constr
+prf 2793:2811 <> element_id_beq_refl
+R2818:2827 UMST.ChemConstants.PartialConservation <> element_id ind
+binder 2814:2814 <> e:13
+R2850:2852 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2832:2845 UMST.ChemConstants.PartialConservation <> element_id_beq def
+R2847:2847 UMST.ChemConstants.PartialConservation <> e:13 var
+R2849:2849 UMST.ChemConstants.PartialConservation <> e:13 var
+R2853:2856 Corelib.Init.Datatypes <> true constr
+def 2908:2931 <> interact_pair_admissible
+R2947:2959 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 2934:2937 <> left:14
+binder 2939:2943 <> right:15
+R2964:2967 Corelib.Init.Datatypes <> bool ind
+R2974:2987 UMST.ChemConstants.PartialConservation <> element_id_beq def
+R2995:3005 UMST.ChemConstants.PartialConservation <> interact_to proj
+R2989:2992 UMST.ChemConstants.PartialConservation <> left:14 var
+R3015:3027 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3008:3012 UMST.ChemConstants.PartialConservation <> right:15 var
+def 3043:3065 <> interact_pair_forbidden
+R3081:3093 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 3068:3071 <> left:16
+binder 3073:3077 <> right:17
+R3098:3101 Corelib.Init.Datatypes <> bool ind
+R3108:3111 Corelib.Init.Datatypes <> negb def
+R3114:3137 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R3139:3142 UMST.ChemConstants.PartialConservation <> left:16 var
+R3144:3148 UMST.ChemConstants.PartialConservation <> right:17 var
+def 3164:3179 <> interact_compose
+R3195:3207 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 3182:3185 <> left:18
+binder 3187:3191 <> right:19
+R3212:3217 Corelib.Init.Datatypes <> option ind
+R3219:3231 UMST.ChemConstants.PartialConservation <> interact_step rec
+R3241:3264 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R3266:3269 UMST.ChemConstants.PartialConservation <> left:18 var
+R3271:3275 UMST.ChemConstants.PartialConservation <> right:19 var
+R3466:3469 Corelib.Init.Datatypes <> None constr
+R3286:3289 Corelib.Init.Datatypes <> Some constr
+R3294:3306 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3294:3306 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3294:3306 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3345:3355 UMST.ChemConstants.PartialConservation <> interact_to proj
+R3345:3355 UMST.ChemConstants.PartialConservation <> interact_to proj
+R3393:3404 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3393:3404 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3317:3329 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3311:3314 UMST.ChemConstants.PartialConservation <> left:18 var
+R3367:3377 UMST.ChemConstants.PartialConservation <> interact_to proj
+R3360:3364 UMST.ChemConstants.PartialConservation <> right:19 var
+R3451:3453 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3428:3430 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3415:3426 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3409:3412 UMST.ChemConstants.PartialConservation <> left:18 var
+R3438:3449 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3431:3435 UMST.ChemConstants.PartialConservation <> right:19 var
+prf 3479:3510 <> interact_compose_admissible_some
+R3526:3538 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 3513:3516 <> left:20
+binder 3518:3522 <> right:21
+R3583:3585 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3548:3571 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R3573:3576 UMST.ChemConstants.PartialConservation <> left:20 var
+R3578:3582 UMST.ChemConstants.PartialConservation <> right:21 var
+R3586:3589 Corelib.Init.Datatypes <> true constr
+binder 3544:3544 <> H:22
+R3623:3627 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3596:3611 UMST.ChemConstants.PartialConservation <> interact_compose def
+R3613:3616 UMST.ChemConstants.PartialConservation <> left:20 var
+R3618:3622 UMST.ChemConstants.PartialConservation <> right:21 var
+R3628:3631 Corelib.Init.Datatypes <> Some constr
+R3636:3648 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3636:3648 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3636:3648 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3685:3695 UMST.ChemConstants.PartialConservation <> interact_to proj
+R3685:3695 UMST.ChemConstants.PartialConservation <> interact_to proj
+R3731:3742 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3731:3742 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3659:3671 UMST.ChemConstants.PartialConservation <> interact_from proj
+R3653:3656 UMST.ChemConstants.PartialConservation <> left:20 var
+R3707:3717 UMST.ChemConstants.PartialConservation <> interact_to proj
+R3700:3704 UMST.ChemConstants.PartialConservation <> right:21 var
+R3789:3791 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3766:3768 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R3753:3764 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3747:3750 UMST.ChemConstants.PartialConservation <> left:20 var
+R3776:3787 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R3769:3773 UMST.ChemConstants.PartialConservation <> right:21 var
+R3814:3829 UMST.ChemConstants.PartialConservation <> interact_compose def
+prf 3868:3911 <> interact_pair_forbidden_means_not_admissible
+R3927:3939 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 3914:3917 <> left:23
+binder 3919:3923 <> right:24
+R3983:3985 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3949:3971 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden def
+R3973:3976 UMST.ChemConstants.PartialConservation <> left:23 var
+R3978:3982 UMST.ChemConstants.PartialConservation <> right:24 var
+R3986:3989 Corelib.Init.Datatypes <> true constr
+binder 3945:3945 <> H:25
+R4031:4033 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3996:4019 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R4021:4024 UMST.ChemConstants.PartialConservation <> left:23 var
+R4026:4030 UMST.ChemConstants.PartialConservation <> right:24 var
+R4034:4038 Corelib.Init.Datatypes <> false constr
+R4057:4079 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden def
+R4082:4105 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R4122:4145 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R4160:4173 UMST.ChemConstants.PartialConservation <> element_id_beq def
+R4181:4191 UMST.ChemConstants.PartialConservation <> interact_to proj
+R4201:4213 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4160:4173 UMST.ChemConstants.PartialConservation <> element_id_beq def
+R4181:4191 UMST.ChemConstants.PartialConservation <> interact_to proj
+R4201:4213 UMST.ChemConstants.PartialConservation <> interact_from proj
+prf 4294:4324 <> interact_compose_forbidden_none
+R4340:4352 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 4327:4330 <> left:26
+binder 4332:4336 <> right:27
+R4396:4398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4362:4384 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden def
+R4386:4389 UMST.ChemConstants.PartialConservation <> left:26 var
+R4391:4395 UMST.ChemConstants.PartialConservation <> right:27 var
+R4399:4402 Corelib.Init.Datatypes <> true constr
+binder 4358:4358 <> H:28
+R4436:4438 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4409:4424 UMST.ChemConstants.PartialConservation <> interact_compose def
+R4426:4429 UMST.ChemConstants.PartialConservation <> left:26 var
+R4431:4435 UMST.ChemConstants.PartialConservation <> right:27 var
+R4439:4442 Corelib.Init.Datatypes <> None constr
+R4461:4476 UMST.ChemConstants.PartialConservation <> interact_compose def
+R4490:4533 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden_means_not_admissible thm
+R4490:4533 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden_means_not_admissible thm
+R4490:4533 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden_means_not_admissible thm
+def 4808:4816 <> step_ca_o
+R4820:4832 UMST.ChemConstants.PartialConservation <> interact_step rec
+R4842:4854 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4842:4854 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4842:4854 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4868:4878 UMST.ChemConstants.PartialConservation <> interact_to proj
+R4868:4878 UMST.ChemConstants.PartialConservation <> interact_to proj
+R4891:4902 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R4891:4902 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R4859:4865 UMST.ChemConstants.PartialConservation <> elem_Ca constr
+R4883:4888 UMST.ChemConstants.PartialConservation <> elem_O constr
+def 4925:4932 <> step_o_h
+R4936:4948 UMST.ChemConstants.PartialConservation <> interact_step rec
+R4958:4970 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4958:4970 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4958:4970 UMST.ChemConstants.PartialConservation <> interact_from proj
+R4983:4993 UMST.ChemConstants.PartialConservation <> interact_to proj
+R4983:4993 UMST.ChemConstants.PartialConservation <> interact_to proj
+R5006:5017 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R5006:5017 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R4975:4980 UMST.ChemConstants.PartialConservation <> elem_O constr
+R4998:5003 UMST.ChemConstants.PartialConservation <> elem_H constr
+def 5040:5048 <> step_h_si
+R5052:5064 UMST.ChemConstants.PartialConservation <> interact_step rec
+R5074:5086 UMST.ChemConstants.PartialConservation <> interact_from proj
+R5074:5086 UMST.ChemConstants.PartialConservation <> interact_from proj
+R5074:5086 UMST.ChemConstants.PartialConservation <> interact_from proj
+R5099:5109 UMST.ChemConstants.PartialConservation <> interact_to proj
+R5099:5109 UMST.ChemConstants.PartialConservation <> interact_to proj
+R5123:5134 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R5123:5134 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R5091:5096 UMST.ChemConstants.PartialConservation <> elem_H constr
+R5114:5120 UMST.ChemConstants.PartialConservation <> elem_Si constr
+def 5157:5165 <> step_ca_h
+R5169:5181 UMST.ChemConstants.PartialConservation <> interact_step rec
+R5191:5203 UMST.ChemConstants.PartialConservation <> interact_from proj
+R5191:5203 UMST.ChemConstants.PartialConservation <> interact_from proj
+R5191:5203 UMST.ChemConstants.PartialConservation <> interact_from proj
+R5217:5227 UMST.ChemConstants.PartialConservation <> interact_to proj
+R5217:5227 UMST.ChemConstants.PartialConservation <> interact_to proj
+R5240:5251 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R5240:5251 UMST.ChemConstants.PartialConservation <> interact_tag proj
+R5208:5214 UMST.ChemConstants.PartialConservation <> elem_Ca constr
+R5232:5237 UMST.ChemConstants.PartialConservation <> elem_H constr
+prf 5269:5292 <> admissible_pair_ca_o_o_h
+R5341:5343 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5298:5321 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R5323:5331 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5333:5340 UMST.ChemConstants.PartialConservation <> step_o_h def
+R5344:5347 Corelib.Init.Datatypes <> true constr
+prf 5384:5418 <> partial_interact_admissible_pair_ok
+R5474:5479 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5467:5469 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5424:5447 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R5449:5457 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5459:5466 UMST.ChemConstants.PartialConservation <> step_o_h def
+R5470:5473 Corelib.Init.Datatypes <> true constr
+R5515:5520 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5480:5495 UMST.ChemConstants.PartialConservation <> interact_compose def
+R5497:5505 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5507:5514 UMST.ChemConstants.PartialConservation <> step_o_h def
+R5521:5524 Corelib.Init.Datatypes <> None constr
+R5553:5576 UMST.ChemConstants.PartialConservation <> admissible_pair_ca_o_o_h thm
+R5553:5576 UMST.ChemConstants.PartialConservation <> admissible_pair_ca_o_o_h thm
+R5609:5640 UMST.ChemConstants.PartialConservation <> interact_compose_admissible_some thm
+R5642:5650 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5652:5659 UMST.ChemConstants.PartialConservation <> step_o_h def
+R5661:5684 UMST.ChemConstants.PartialConservation <> admissible_pair_ca_o_o_h thm
+R5609:5640 UMST.ChemConstants.PartialConservation <> interact_compose_admissible_some thm
+R5642:5650 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5652:5659 UMST.ChemConstants.PartialConservation <> step_o_h def
+R5661:5684 UMST.ChemConstants.PartialConservation <> admissible_pair_ca_o_o_h thm
+R5609:5640 UMST.ChemConstants.PartialConservation <> interact_compose_admissible_some thm
+R5642:5650 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5652:5659 UMST.ChemConstants.PartialConservation <> step_o_h def
+R5661:5684 UMST.ChemConstants.PartialConservation <> admissible_pair_ca_o_o_h thm
+prf 5733:5756 <> forbidden_pair_ca_o_h_si
+R5805:5807 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5762:5784 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden def
+R5786:5794 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5796:5804 UMST.ChemConstants.PartialConservation <> step_h_si def
+R5808:5811 Corelib.Init.Datatypes <> true constr
+prf 5848:5885 <> partial_interact_forbidden_pair_refuse
+R5941:5946 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5934:5936 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5891:5913 UMST.ChemConstants.PartialConservation <> interact_pair_forbidden def
+R5915:5923 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5925:5933 UMST.ChemConstants.PartialConservation <> step_h_si def
+R5937:5940 Corelib.Init.Datatypes <> true constr
+R5983:5985 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5947:5962 UMST.ChemConstants.PartialConservation <> interact_compose def
+R5964:5972 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R5974:5982 UMST.ChemConstants.PartialConservation <> step_h_si def
+R5986:5989 Corelib.Init.Datatypes <> None constr
+R6018:6041 UMST.ChemConstants.PartialConservation <> forbidden_pair_ca_o_h_si thm
+R6018:6041 UMST.ChemConstants.PartialConservation <> forbidden_pair_ca_o_h_si thm
+R6055:6085 UMST.ChemConstants.PartialConservation <> interact_compose_forbidden_none thm
+R6087:6095 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R6097:6105 UMST.ChemConstants.PartialConservation <> step_h_si def
+R6055:6085 UMST.ChemConstants.PartialConservation <> interact_compose_forbidden_none thm
+R6087:6095 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R6097:6105 UMST.ChemConstants.PartialConservation <> step_h_si def
+R6119:6142 UMST.ChemConstants.PartialConservation <> forbidden_pair_ca_o_h_si thm
+R6119:6142 UMST.ChemConstants.PartialConservation <> forbidden_pair_ca_o_h_si thm
+ind 6387:6414 <> partial_conservation_verdict
+constr 6430:6447 <> verdict_unwired_ok
+constr 6453:6478 <> verdict_admissible_pair_ok
+constr 6484:6512 <> verdict_forbidden_pair_refuse
+constr 6518:6543 <> verdict_total_claim_refuse
+constr 6549:6575 <> verdict_green_invent_refuse
+scheme 6387:6414 <> partial_conservation_verdict_rect
+scheme 6387:6414 <> partial_conservation_verdict_ind
+scheme 6387:6414 <> partial_conservation_verdict_rec
+scheme 6387:6414 <> partial_conservation_verdict_sind
+def 6590:6620 <> partial_conservation_verdict_ok
+R6627:6654 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict ind
+binder 6623:6623 <> v:31
+R6659:6662 Corelib.Init.Datatypes <> bool ind
+R6675:6675 UMST.ChemConstants.PartialConservation <> v:31 var
+R6686:6703 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+R6708:6711 Corelib.Init.Datatypes <> true constr
+R6717:6742 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R6747:6750 Corelib.Init.Datatypes <> true constr
+R6761:6765 Corelib.Init.Datatypes <> false constr
+def 6786:6817 <> partial_conservation_verdict_beq
+R6830:6857 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict ind
+binder 6822:6823 <> v1:33
+binder 6825:6826 <> v2:34
+R6862:6865 Corelib.Init.Datatypes <> bool ind
+R6882:6883 UMST.ChemConstants.PartialConservation <> v2:34 var
+R6878:6879 UMST.ChemConstants.PartialConservation <> v1:33 var
+R6894:6911 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+R6914:6931 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+R6936:6939 Corelib.Init.Datatypes <> true constr
+R6945:6970 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R6973:6998 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R7003:7006 Corelib.Init.Datatypes <> true constr
+R7012:7040 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R7043:7071 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R7076:7079 Corelib.Init.Datatypes <> true constr
+R7085:7110 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R7113:7138 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R7143:7146 Corelib.Init.Datatypes <> true constr
+R7152:7178 UMST.ChemConstants.PartialConservation <> verdict_green_invent_refuse constr
+R7181:7207 UMST.ChemConstants.PartialConservation <> verdict_green_invent_refuse constr
+R7212:7215 Corelib.Init.Datatypes <> true constr
+R7229:7233 Corelib.Init.Datatypes <> false constr
+def 7254:7288 <> evaluate_partial_conservation_close
+R7297:7323 UMST.ChemConstants.PartialConservation <> PartialConservationModality ind
+binder 7293:7293 <> m:37
+R7342:7354 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 7329:7332 <> left:38
+binder 7334:7338 <> right:39
+R7383:7386 Corelib.Init.Datatypes <> bool ind
+binder 7360:7379 <> claim_total_morphism:40
+R7414:7417 Corelib.Init.Datatypes <> bool ind
+binder 7392:7410 <> claim_physics_green:41
+R7422:7449 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict ind
+R7459:7477 UMST.ChemConstants.PartialConservation <> claim_physics_green:41 var
+R7524:7543 UMST.ChemConstants.PartialConservation <> claim_total_morphism:40 var
+R7596:7596 UMST.ChemConstants.PartialConservation <> m:37 var
+R7609:7636 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R7641:7658 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+R7666:7693 UMST.ChemConstants.PartialConservation <> partial_conservation_assumed constr
+R7701:7727 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R7735:7764 UMST.ChemConstants.PartialConservation <> partial_conservation_surrogate constr
+R7780:7803 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R7805:7808 UMST.ChemConstants.PartialConservation <> left:38 var
+R7810:7814 UMST.ChemConstants.PartialConservation <> right:39 var
+R7869:7897 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R7829:7854 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R7780:7803 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R7805:7808 UMST.ChemConstants.PartialConservation <> left:38 var
+R7810:7814 UMST.ChemConstants.PartialConservation <> right:39 var
+R7869:7897 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R7829:7854 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R7780:7803 UMST.ChemConstants.PartialConservation <> interact_pair_admissible def
+R7805:7808 UMST.ChemConstants.PartialConservation <> left:38 var
+R7810:7814 UMST.ChemConstants.PartialConservation <> right:39 var
+R7869:7897 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R7829:7854 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R7552:7577 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R7486:7512 UMST.ChemConstants.PartialConservation <> verdict_green_invent_refuse constr
+def 7920:7946 <> partial_interact_authorized
+R7964:7976 UMST.ChemConstants.PartialConservation <> interact_step rec
+binder 7951:7954 <> left:43
+binder 7956:7960 <> right:44
+R8005:8008 Corelib.Init.Datatypes <> bool ind
+binder 7982:8001 <> claim_total_morphism:45
+R8036:8039 Corelib.Init.Datatypes <> bool ind
+binder 8014:8032 <> claim_physics_green:46
+R8044:8047 Corelib.Init.Datatypes <> bool ind
+R8060:8094 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R8106:8132 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R8134:8137 UMST.ChemConstants.PartialConservation <> left:43 var
+R8139:8143 UMST.ChemConstants.PartialConservation <> right:44 var
+R8145:8164 UMST.ChemConstants.PartialConservation <> claim_total_morphism:45 var
+R8166:8184 UMST.ChemConstants.PartialConservation <> claim_physics_green:46 var
+R8195:8220 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R8225:8228 Corelib.Init.Datatypes <> true constr
+R8239:8243 Corelib.Init.Datatypes <> false constr
+ind 8489:8512 <> partial_conservation_law
+constr 8528:8549 <> law_admissible_pair_ok
+constr 8555:8579 <> law_forbidden_pair_refuse
+constr 8585:8606 <> law_total_claim_refuse
+constr 8612:8634 <> law_green_invent_refuse
+scheme 8489:8512 <> partial_conservation_law_rect
+scheme 8489:8512 <> partial_conservation_law_ind
+scheme 8489:8512 <> partial_conservation_law_rec
+scheme 8489:8512 <> partial_conservation_law_sind
+def 8649:8678 <> partial_conservation_law_count
+R8682:8684 Corelib.Init.Datatypes <> nat ind
+prf 8699:8736 <> partial_conservation_law_count_is_four
+R8772:8774 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8742:8771 UMST.ChemConstants.PartialConservation <> partial_conservation_law_count def
+ind 8814:8845 <> partial_conservation_law_witness
+constr 8861:8876 <> law_witness_open
+constr 8882:8899 <> law_witness_proved
+scheme 8814:8845 <> partial_conservation_law_witness_rect
+scheme 8814:8845 <> partial_conservation_law_witness_ind
+scheme 8814:8845 <> partial_conservation_law_witness_rec
+scheme 8814:8845 <> partial_conservation_law_witness_sind
+def 8914:8954 <> evaluate_partial_conservation_law_witness
+R8965:8988 UMST.ChemConstants.PartialConservation <> partial_conservation_law ind
+binder 8959:8961 <> law:51
+R8996:9022 UMST.ChemConstants.PartialConservation <> PartialConservationModality ind
+binder 8992:8992 <> m:52
+R9029:9060 UMST.ChemConstants.PartialConservation <> partial_conservation_law_witness ind
+R9073:9073 UMST.ChemConstants.PartialConservation <> m:52 var
+R9084:9111 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R9117:9144 UMST.ChemConstants.PartialConservation <> partial_conservation_assumed constr
+R9150:9179 UMST.ChemConstants.PartialConservation <> partial_conservation_surrogate constr
+R9184:9199 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+R9184:9199 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+R9184:9199 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+R9205:9231 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R9236:9253 UMST.ChemConstants.PartialConservation <> law_witness_proved constr
+prf 9269:9313 <> all_partial_conservation_laws_open_at_unwired
+R9435:9440 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9416:9418 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9319:9359 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_law_witness def
+R9361:9382 UMST.ChemConstants.PartialConservation <> law_admissible_pair_ok constr
+R9388:9415 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R9419:9434 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+R9560:9565 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9541:9543 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9441:9481 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_law_witness def
+R9483:9507 UMST.ChemConstants.PartialConservation <> law_forbidden_pair_refuse constr
+R9513:9540 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R9544:9559 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+R9682:9687 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R9663:9665 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9566:9606 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_law_witness def
+R9608:9629 UMST.ChemConstants.PartialConservation <> law_total_claim_refuse constr
+R9635:9662 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R9666:9681 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+R9786:9788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9688:9728 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_law_witness def
+R9730:9752 UMST.ChemConstants.PartialConservation <> law_green_invent_refuse constr
+R9758:9785 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R9789:9804 UMST.ChemConstants.PartialConservation <> law_witness_open constr
+def 10084:10102 <> type05PartialProved
+R10106:10109 Corelib.Init.Datatypes <> bool ind
+R10114:10118 Corelib.Init.Datatypes <> false constr
+prf 10128:10154 <> type05_partial_proved_false
+R10177:10179 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10158:10176 UMST.ChemConstants.PartialConservation <> type05PartialProved def
+R10180:10184 Corelib.Init.Datatypes <> false constr
+def 10224:10246 <> not118SquaredGreenTable
+R10250:10253 Corelib.Init.Datatypes <> bool ind
+R10258:10261 Corelib.Init.Datatypes <> true constr
+prf 10271:10297 <> not_118_squared_green_table
+R10324:10326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10301:10323 UMST.ChemConstants.PartialConservation <> not118SquaredGreenTable def
+R10327:10330 Corelib.Init.Datatypes <> true constr
+prf 10587:10619 <> unwired_close_without_total_claim
+R10725:10729 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10625:10659 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R10665:10692 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R10694:10702 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R10704:10712 UMST.ChemConstants.PartialConservation <> step_h_si def
+R10714:10718 Corelib.Init.Datatypes <> false constr
+R10720:10724 Corelib.Init.Datatypes <> false constr
+R10730:10747 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+prf 10784:10829 <> unwired_modality_always_ok_without_total_claim
+R10935:10939 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10835:10869 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R10875:10902 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R10904:10912 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R10914:10922 UMST.ChemConstants.PartialConservation <> step_h_si def
+R10924:10928 Corelib.Init.Datatypes <> false constr
+R10930:10934 Corelib.Init.Datatypes <> false constr
+R10940:10957 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+R10973:11005 UMST.ChemConstants.PartialConservation <> unwired_close_without_total_claim thm
+R10973:11005 UMST.ChemConstants.PartialConservation <> unwired_close_without_total_claim thm
+prf 11020:11057 <> unwired_verdict_ok_without_total_claim
+R11204:11208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11063:11093 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R11100:11134 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R11143:11170 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R11172:11180 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R11182:11190 UMST.ChemConstants.PartialConservation <> step_h_si def
+R11192:11196 Corelib.Init.Datatypes <> false constr
+R11198:11202 Corelib.Init.Datatypes <> false constr
+R11209:11212 Corelib.Init.Datatypes <> true constr
+R11231:11261 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R11274:11306 UMST.ChemConstants.PartialConservation <> unwired_close_without_total_claim thm
+R11274:11306 UMST.ChemConstants.PartialConservation <> unwired_close_without_total_claim thm
+R11274:11306 UMST.ChemConstants.PartialConservation <> unwired_close_without_total_claim thm
+prf 11562:11585 <> admissible_pair_close_ok
+R11689:11693 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11591:11625 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R11631:11657 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R11659:11667 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R11669:11676 UMST.ChemConstants.PartialConservation <> step_o_h def
+R11678:11682 Corelib.Init.Datatypes <> false constr
+R11684:11688 Corelib.Init.Datatypes <> false constr
+R11694:11719 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+prf 11756:11800 <> partial_interact_admissible_pair_conservation
+R11935:11940 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R11904:11908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11806:11840 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R11846:11872 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R11874:11882 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R11884:11891 UMST.ChemConstants.PartialConservation <> step_o_h def
+R11893:11897 Corelib.Init.Datatypes <> false constr
+R11899:11903 Corelib.Init.Datatypes <> false constr
+R11909:11934 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R11999:12001 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11941:11967 UMST.ChemConstants.PartialConservation <> partial_interact_authorized def
+R11969:11977 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R11979:11986 UMST.ChemConstants.PartialConservation <> step_o_h def
+R11988:11992 Corelib.Init.Datatypes <> false constr
+R11994:11998 Corelib.Init.Datatypes <> false constr
+R12002:12005 Corelib.Init.Datatypes <> true constr
+R12034:12057 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+R12034:12057 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+R12071:12097 UMST.ChemConstants.PartialConservation <> partial_interact_authorized def
+R12112:12135 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+R12112:12135 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+R12112:12135 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+prf 12167:12192 <> admissible_pair_verdict_ok
+R12337:12341 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12198:12228 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R12235:12269 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R12278:12304 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R12306:12314 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R12316:12323 UMST.ChemConstants.PartialConservation <> step_o_h def
+R12325:12329 Corelib.Init.Datatypes <> false constr
+R12331:12335 Corelib.Init.Datatypes <> false constr
+R12342:12345 Corelib.Init.Datatypes <> true constr
+R12364:12394 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R12407:12430 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+R12407:12430 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+R12407:12430 UMST.ChemConstants.PartialConservation <> admissible_pair_close_ok thm
+prf 12460:12498 <> admissible_pair_still_not_physics_green
+R12652:12657 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R12643:12647 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12504:12534 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R12541:12575 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R12584:12610 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R12612:12620 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R12622:12629 UMST.ChemConstants.PartialConservation <> step_o_h def
+R12631:12635 Corelib.Init.Datatypes <> false constr
+R12637:12641 Corelib.Init.Datatypes <> false constr
+R12648:12651 Corelib.Init.Datatypes <> true constr
+R12677:12679 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12658:12676 UMST.ChemConstants.PartialConservation <> type05PartialProved def
+R12680:12684 Corelib.Init.Datatypes <> false constr
+R12713:12738 UMST.ChemConstants.PartialConservation <> admissible_pair_verdict_ok thm
+R12713:12738 UMST.ChemConstants.PartialConservation <> admissible_pair_verdict_ok thm
+R12751:12777 UMST.ChemConstants.PartialConservation <> type05_partial_proved_false thm
+R12751:12777 UMST.ChemConstants.PartialConservation <> type05_partial_proved_false thm
+prf 13016:13036 <> forbidden_pair_refuse
+R13141:13145 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13042:13076 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R13082:13108 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R13110:13118 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R13120:13128 UMST.ChemConstants.PartialConservation <> step_h_si def
+R13130:13134 Corelib.Init.Datatypes <> false constr
+R13136:13140 Corelib.Init.Datatypes <> false constr
+R13146:13174 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+prf 13211:13261 <> partial_interact_forbidden_pair_conservation_refuse
+R13400:13405 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13366:13370 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13267:13301 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R13307:13333 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R13335:13343 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R13345:13353 UMST.ChemConstants.PartialConservation <> step_h_si def
+R13355:13359 Corelib.Init.Datatypes <> false constr
+R13361:13365 Corelib.Init.Datatypes <> false constr
+R13371:13399 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R13465:13467 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13406:13432 UMST.ChemConstants.PartialConservation <> partial_interact_authorized def
+R13434:13442 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R13444:13452 UMST.ChemConstants.PartialConservation <> step_h_si def
+R13454:13458 Corelib.Init.Datatypes <> false constr
+R13460:13464 Corelib.Init.Datatypes <> false constr
+R13468:13472 Corelib.Init.Datatypes <> false constr
+R13501:13521 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+R13501:13521 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+R13535:13561 UMST.ChemConstants.PartialConservation <> partial_interact_authorized def
+R13576:13596 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+R13576:13596 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+R13576:13596 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+prf 13630:13650 <> forbidden_pair_not_ok
+R13796:13800 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13656:13686 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R13693:13727 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R13736:13762 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R13764:13772 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R13774:13782 UMST.ChemConstants.PartialConservation <> step_h_si def
+R13784:13788 Corelib.Init.Datatypes <> false constr
+R13790:13794 Corelib.Init.Datatypes <> false constr
+R13801:13805 Corelib.Init.Datatypes <> false constr
+R13824:13854 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R13867:13887 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+R13867:13887 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+R13867:13887 UMST.ChemConstants.PartialConservation <> forbidden_pair_refuse thm
+prf 14141:14158 <> total_claim_refuse
+R14261:14265 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14164:14198 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R14204:14230 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R14232:14240 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R14242:14249 UMST.ChemConstants.PartialConservation <> step_o_h def
+R14251:14254 Corelib.Init.Datatypes <> true constr
+R14256:14260 Corelib.Init.Datatypes <> false constr
+R14266:14291 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+prf 14328:14363 <> partial_interact_total_claim_refused
+R14497:14502 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14466:14470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14369:14403 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R14409:14435 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R14437:14445 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R14447:14454 UMST.ChemConstants.PartialConservation <> step_o_h def
+R14456:14459 Corelib.Init.Datatypes <> true constr
+R14461:14465 Corelib.Init.Datatypes <> false constr
+R14471:14496 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R14560:14562 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14503:14529 UMST.ChemConstants.PartialConservation <> partial_interact_authorized def
+R14531:14539 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R14541:14548 UMST.ChemConstants.PartialConservation <> step_o_h def
+R14550:14553 Corelib.Init.Datatypes <> true constr
+R14555:14559 Corelib.Init.Datatypes <> false constr
+R14563:14567 Corelib.Init.Datatypes <> false constr
+R14596:14613 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+R14596:14613 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+R14627:14653 UMST.ChemConstants.PartialConservation <> partial_interact_authorized def
+R14668:14685 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+R14668:14685 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+R14668:14685 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+prf 14719:14736 <> total_claim_not_ok
+R14880:14884 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14742:14772 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R14779:14813 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R14822:14848 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R14850:14858 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R14860:14867 UMST.ChemConstants.PartialConservation <> step_o_h def
+R14869:14872 Corelib.Init.Datatypes <> true constr
+R14874:14878 Corelib.Init.Datatypes <> false constr
+R14885:14889 Corelib.Init.Datatypes <> false constr
+R14908:14938 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R14951:14968 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+R14951:14968 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+R14951:14968 UMST.ChemConstants.PartialConservation <> total_claim_refuse thm
+prf 15222:15248 <> green_invent_refuse_unwired
+R15352:15356 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15254:15288 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R15294:15321 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R15323:15331 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R15333:15340 UMST.ChemConstants.PartialConservation <> step_o_h def
+R15342:15346 Corelib.Init.Datatypes <> false constr
+R15348:15351 Corelib.Init.Datatypes <> true constr
+R15357:15383 UMST.ChemConstants.PartialConservation <> verdict_green_invent_refuse constr
+prf 15420:15445 <> green_invent_always_refuse
+R15590:15594 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15451:15481 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R15488:15522 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R15531:15558 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R15560:15568 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R15570:15577 UMST.ChemConstants.PartialConservation <> step_o_h def
+R15579:15583 Corelib.Init.Datatypes <> false constr
+R15585:15588 Corelib.Init.Datatypes <> true constr
+R15595:15599 Corelib.Init.Datatypes <> false constr
+R15618:15648 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_ok def
+R15661:15687 UMST.ChemConstants.PartialConservation <> green_invent_refuse_unwired thm
+R15661:15687 UMST.ChemConstants.PartialConservation <> green_invent_refuse_unwired thm
+R15661:15687 UMST.ChemConstants.PartialConservation <> green_invent_refuse_unwired thm
+def 15948:15986 <> partial_conservation_coherence_scaffold
+R15990:15993 Corelib.Init.Datatypes <> bool ind
+R16528:16533 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16352:16357 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16171:16176 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16000:16031 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_beq def
+R16038:16072 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R16081:16107 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R16109:16117 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R16119:16126 UMST.ChemConstants.PartialConservation <> step_o_h def
+R16128:16132 Corelib.Init.Datatypes <> false constr
+R16134:16138 Corelib.Init.Datatypes <> false constr
+R16145:16170 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R16177:16208 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_beq def
+R16215:16249 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R16258:16284 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R16286:16294 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R16296:16304 UMST.ChemConstants.PartialConservation <> step_h_si def
+R16306:16310 Corelib.Init.Datatypes <> false constr
+R16312:16316 Corelib.Init.Datatypes <> false constr
+R16323:16351 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R16358:16389 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_beq def
+R16396:16430 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R16439:16465 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R16467:16475 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R16477:16484 UMST.ChemConstants.PartialConservation <> step_o_h def
+R16486:16489 Corelib.Init.Datatypes <> true constr
+R16491:16495 Corelib.Init.Datatypes <> false constr
+R16502:16527 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R16534:16565 UMST.ChemConstants.PartialConservation <> partial_conservation_verdict_beq def
+R16572:16606 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R16615:16642 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R16644:16652 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R16654:16661 UMST.ChemConstants.PartialConservation <> step_o_h def
+R16663:16667 Corelib.Init.Datatypes <> false constr
+R16669:16672 Corelib.Init.Datatypes <> true constr
+R16679:16705 UMST.ChemConstants.PartialConservation <> verdict_green_invent_refuse constr
+prf 16715:16758 <> partial_conservation_coherence_scaffold_true
+R16803:16805 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16764:16802 UMST.ChemConstants.PartialConservation <> partial_conservation_coherence_scaffold def
+R16806:16809 Corelib.Init.Datatypes <> true constr
+R16828:16866 UMST.ChemConstants.PartialConservation <> partial_conservation_coherence_scaffold def
+prf 16921:16967 <> partial_conservation_coherence_scaffold_theorem
+R17104:17109 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17071:17077 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16973:17007 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R17013:17039 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R17041:17049 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R17051:17058 UMST.ChemConstants.PartialConservation <> step_o_h def
+R17060:17064 Corelib.Init.Datatypes <> false constr
+R17066:17070 Corelib.Init.Datatypes <> false constr
+R17078:17103 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R17245:17250 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17209:17215 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17110:17144 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R17150:17176 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R17178:17186 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R17188:17196 UMST.ChemConstants.PartialConservation <> step_h_si def
+R17198:17202 Corelib.Init.Datatypes <> false constr
+R17204:17208 Corelib.Init.Datatypes <> false constr
+R17216:17244 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R17381:17386 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R17348:17354 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17251:17285 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R17291:17317 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R17319:17327 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R17329:17336 UMST.ChemConstants.PartialConservation <> step_o_h def
+R17338:17341 Corelib.Init.Datatypes <> true constr
+R17343:17347 Corelib.Init.Datatypes <> false constr
+R17355:17380 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R17485:17491 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17387:17421 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R17427:17454 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R17456:17464 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R17466:17473 UMST.ChemConstants.PartialConservation <> step_o_h def
+R17475:17479 Corelib.Init.Datatypes <> false constr
+R17481:17484 Corelib.Init.Datatypes <> true constr
+R17492:17518 UMST.ChemConstants.PartialConservation <> verdict_green_invent_refuse constr
+ind 17797:17808 <> formal_fiber
+constr 17824:17844 <> fiber_quantum_knowing
+constr 17850:17866 <> fiber_meso_acting
+scheme 17797:17808 <> formal_fiber_rect
+scheme 17797:17808 <> formal_fiber_ind
+scheme 17797:17808 <> formal_fiber_rec
+scheme 17797:17808 <> formal_fiber_sind
+ind 17880:17898 <> formal_claim_family
+constr 17914:17939 <> claim_partial_conservation
+scheme 17880:17898 <> formal_claim_family_rect
+scheme 17880:17898 <> formal_claim_family_ind
+scheme 17880:17898 <> formal_claim_family_rec
+scheme 17880:17898 <> formal_claim_family_sind
+def 17954:17982 <> partial_conservation_fiber_ok
+R17989:18000 UMST.ChemConstants.PartialConservation <> formal_fiber ind
+binder 17985:17985 <> f:58
+R18005:18008 Corelib.Init.Datatypes <> bool ind
+R18021:18021 UMST.ChemConstants.PartialConservation <> f:58 var
+R18032:18052 UMST.ChemConstants.PartialConservation <> fiber_quantum_knowing constr
+R18057:18060 Corelib.Init.Datatypes <> true constr
+R18066:18082 UMST.ChemConstants.PartialConservation <> fiber_meso_acting constr
+R18087:18091 Corelib.Init.Datatypes <> false constr
+def 18112:18148 <> partial_conservation_knowing_fiber_ok
+R18152:18155 Corelib.Init.Datatypes <> bool ind
+R18162:18190 UMST.ChemConstants.PartialConservation <> partial_conservation_fiber_ok def
+R18192:18212 UMST.ChemConstants.PartialConservation <> fiber_quantum_knowing constr
+def 18227:18261 <> partial_conservation_meso_acting_ok
+R18265:18268 Corelib.Init.Datatypes <> bool ind
+R18275:18303 UMST.ChemConstants.PartialConservation <> partial_conservation_fiber_ok def
+R18305:18321 UMST.ChemConstants.PartialConservation <> fiber_meso_acting constr
+prf 18331:18372 <> partial_conservation_knowing_fiber_ok_true
+R18415:18417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18378:18414 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok def
+R18418:18421 Corelib.Init.Datatypes <> true constr
+prf 18456:18494 <> partial_conservation_meso_acting_not_ok
+R18535:18537 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18500:18534 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_ok def
+R18538:18542 Corelib.Init.Datatypes <> false constr
+prf 18579:18622 <> partial_conservation_routes_knowing_not_meso
+R18672:18677 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R18665:18667 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18628:18664 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok def
+R18668:18671 Corelib.Init.Datatypes <> true constr
+R18713:18715 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18678:18712 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_ok def
+R18716:18720 Corelib.Init.Datatypes <> false constr
+R18749:18790 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok_true thm
+R18749:18790 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok_true thm
+R18803:18841 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_not_ok thm
+R18803:18841 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_not_ok thm
+def 18861:18878 <> fiberNotMesoActing
+R18882:18885 Corelib.Init.Datatypes <> bool ind
+R18929:18934 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R18892:18928 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok def
+R18935:18938 Corelib.Init.Datatypes <> negb def
+R18940:18974 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_ok def
+prf 18984:19009 <> fiber_not_meso_acting_true
+R19031:19033 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19013:19030 UMST.ChemConstants.PartialConservation <> fiberNotMesoActing def
+R19034:19037 Corelib.Init.Datatypes <> true constr
+R19056:19073 UMST.ChemConstants.PartialConservation <> fiberNotMesoActing def
+R19076:19112 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok def
+R19119:19153 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_ok def
+prf 19409:19445 <> partial_conservation_fixture_scaffold
+R19576:19581 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19551:19557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19451:19485 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R19491:19518 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr
+R19520:19528 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R19530:19538 UMST.ChemConstants.PartialConservation <> step_h_si def
+R19540:19544 Corelib.Init.Datatypes <> false constr
+R19546:19550 Corelib.Init.Datatypes <> false constr
+R19558:19575 UMST.ChemConstants.PartialConservation <> verdict_unwired_ok constr
+R19713:19718 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19680:19686 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19582:19616 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R19622:19648 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R19650:19658 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R19660:19667 UMST.ChemConstants.PartialConservation <> step_o_h def
+R19669:19673 Corelib.Init.Datatypes <> false constr
+R19675:19679 Corelib.Init.Datatypes <> false constr
+R19687:19712 UMST.ChemConstants.PartialConservation <> verdict_admissible_pair_ok constr
+R19854:19859 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19818:19824 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19719:19753 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R19759:19785 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R19787:19795 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R19797:19805 UMST.ChemConstants.PartialConservation <> step_h_si def
+R19807:19811 Corelib.Init.Datatypes <> false constr
+R19813:19817 Corelib.Init.Datatypes <> false constr
+R19825:19853 UMST.ChemConstants.PartialConservation <> verdict_forbidden_pair_refuse constr
+R19990:19995 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19957:19963 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19860:19894 UMST.ChemConstants.PartialConservation <> evaluate_partial_conservation_close def
+R19900:19926 UMST.ChemConstants.PartialConservation <> partial_conservation_proved constr
+R19928:19936 UMST.ChemConstants.PartialConservation <> step_ca_o def
+R19938:19945 UMST.ChemConstants.PartialConservation <> step_o_h def
+R19947:19950 Corelib.Init.Datatypes <> true constr
+R19952:19956 Corelib.Init.Datatypes <> false constr
+R19964:19989 UMST.ChemConstants.PartialConservation <> verdict_total_claim_refuse constr
+R20040:20045 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20033:20035 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19996:20032 UMST.ChemConstants.PartialConservation <> partial_conservation_knowing_fiber_ok def
+R20036:20039 Corelib.Init.Datatypes <> true constr
+R20089:20094 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20081:20083 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20046:20080 UMST.ChemConstants.PartialConservation <> partial_conservation_meso_acting_ok def
+R20084:20088 Corelib.Init.Datatypes <> false constr
+R20114:20116 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20095:20113 UMST.ChemConstants.PartialConservation <> type05PartialProved def
+R20117:20121 Corelib.Init.Datatypes <> false constr
+def 20403:20430 <> partialConservationAuthority
+R20434:20439 Stdlib.Strings.String <> string ind
+def 20500:20520 <> chemL0Type05Authority
+R20524:20529 Stdlib.Strings.String <> string ind
+def 20567:20600 <> chemIntProveType05PartialAuthority
+R20604:20609 Stdlib.Strings.String <> string ind
+def 20662:20685 <> kleisliInteractAuthority
+R20689:20694 Stdlib.Strings.String <> string ind
+def 20755:20779 <> partialConservationCellId
+R20783:20788 Stdlib.Strings.String <> string ind
+def 20849:20875 <> partialConservationNonClaim
+R20879:20884 Stdlib.Strings.String <> string ind
+prf 21255:21282 <> partial_conservation_cell_id
+R21313:21315 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21288:21312 UMST.ChemConstants.PartialConservation <> partialConservationCellId def
+prf 21390:21435 <> partial_conservation_cites_partial_interact_rs
+R21469:21472 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21441:21468 UMST.ChemConstants.PartialConservation <> partialConservationAuthority def
+prf 21510:21546 <> partial_conservation_cites_l0_type_05
+R21573:21575 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21552:21572 UMST.ChemConstants.PartialConservation <> chemL0Type05Authority def
+prf 21627:21678 <> partial_conservation_cites_int_prove_type_05_partial
+R21718:21721 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21684:21717 UMST.ChemConstants.PartialConservation <> chemIntProveType05PartialAuthority def
+prf 21759:21801 <> partial_conservation_cites_kleisli_interact
+R21831:21834 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R21807:21830 UMST.ChemConstants.PartialConservation <> kleisliInteractAuthority def
+def 22099:22133 <> partialSecondLawConservationFraming
+R22137:22142 Stdlib.Strings.String <> string ind
+prf 22226:22257 <> partial_not_second_partial_axiom
+R22298:22301 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R22263:22297 UMST.ChemConstants.PartialConservation <> partialSecondLawConservationFraming def
+prf 22359:22397 <> partial_second_law_conservation_framing
+R22438:22441 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R22403:22437 UMST.ChemConstants.PartialConservation <> partialSecondLawConservationFraming def
+def 22710:22731 <> physicsGreenAuthorized
+R22743:22747 Corelib.Init.Logic <> False ind
+prf 22757:22796 <> partial_conservation_physics_green_false
+R22802:22803 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R22804:22825 UMST.ChemConstants.PartialConservation <> physicsGreenAuthorized def
+prf 22865:22901 <> partial_conservation_modality_unwired
+R22941:22943 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22907:22940 UMST.ChemConstants.PartialConservation <> partialConservationModalityCurrent def
+R22944:22971 UMST.ChemConstants.PartialConservation <> partial_conservation_unwired constr

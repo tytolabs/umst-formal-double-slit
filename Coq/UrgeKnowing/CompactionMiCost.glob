@@ -1,0 +1,328 @@
+DIGEST bf33c7ae6ab53a8a80bb9b455d77f5ca
+FUrgeKnowing.CompactionMiCost
+R1131:1135 Stdlib.Reals.Reals <> <> lib
+R1137:1141 Stdlib.Reals.RIneq <> <> lib
+R1143:1145 Stdlib.micromega.Lra <> <> lib
+R1147:1151 Stdlib.setoid_ring.Field <> <> lib
+R1153:1156 Stdlib.Lists.List <> <> lib
+R1158:1162 Stdlib.Arith.Arith <> <> lib
+R1164:1169 Stdlib.Strings.String <> <> lib
+R1203:1224 UMSTFormal.LandauerEinsteinBridge <> <> lib
+R1226:1240 UMSTFormal.MeasurementCost <> <> lib
+R1250:1262 Stdlib.Lists.List ListNotations <> mod
+ind 1612:1635 <> CompactionMiCostModality
+constr 1651:1676 <> compaction_mi_cost_unwired
+constr 1682:1707 <> compaction_mi_cost_assumed
+constr 1713:1737 <> compaction_mi_cost_proved
+constr 1743:1770 <> compaction_mi_cost_surrogate
+scheme 1612:1635 <> CompactionMiCostModality_rect
+scheme 1612:1635 <> CompactionMiCostModality_ind
+scheme 1612:1635 <> CompactionMiCostModality_rec
+scheme 1612:1635 <> CompactionMiCostModality_sind
+def 1785:1815 <> compactionMiCostModalityCurrent
+R1819:1842 UrgeKnowing.CompactionMiCost <> CompactionMiCostModality ind
+R1849:1874 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_unwired constr
+ind 2110:2118 <> PathProbe
+constr 2134:2148 <> path_probe_null
+constr 2154:2174 <> path_probe_which_path
+scheme 2110:2118 <> PathProbe_rect
+scheme 2110:2118 <> PathProbe_ind
+scheme 2110:2118 <> PathProbe_rec
+scheme 2110:2118 <> PathProbe_sind
+def 2189:2205 <> isEpistemicMINull
+R2212:2220 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 2208:2208 <> p:5
+R2236:2238 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2235:2235 UrgeKnowing.CompactionMiCost <> p:5 var
+R2239:2253 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+def 2490:2504 <> epistemicMIBits
+R2511:2519 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 2507:2507 <> p:6
+R2533:2533 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2523:2529 <> mi_bits:7
+R2538:2538 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R2551:2551 UrgeKnowing.CompactionMiCost <> p:6 var
+R2562:2576 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R2587:2607 UrgeKnowing.CompactionMiCost <> path_probe_which_path constr
+R2612:2618 UrgeKnowing.CompactionMiCost <> mi_bits:7 var
+def 2639:2662 <> epistemicMI_step_bounded
+R2675:2675 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2665:2671 <> mi_bits:9
+R2702:2705 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R2691:2694 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2695:2701 UrgeKnowing.CompactionMiCost <> mi_bits:9 var
+R2713:2716 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R2706:2712 UrgeKnowing.CompactionMiCost <> mi_bits:9 var
+prf 2727:2742 <> epistemicMI_null
+R2755:2755 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2745:2751 <> mi_bits:10
+R2801:2803 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2762:2776 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R2778:2792 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R2794:2800 UrgeKnowing.CompactionMiCost <> mi_bits:10 var
+prf 2839:2858 <> epistemicMIBits_null
+R2871:2871 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 2861:2867 <> mi_bits:11
+R2917:2919 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2878:2892 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R2894:2908 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R2910:2916 UrgeKnowing.CompactionMiCost <> mi_bits:11 var
+R2937:2952 UrgeKnowing.CompactionMiCost <> epistemicMI_null thm
+R2937:2952 UrgeKnowing.CompactionMiCost <> epistemicMI_null thm
+prf 2976:3001 <> epistemicMIBits_which_path
+R3014:3014 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3004:3010 <> mi_bits:12
+R3066:3068 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3021:3035 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R3037:3057 UrgeKnowing.CompactionMiCost <> path_probe_which_path constr
+R3059:3065 UrgeKnowing.CompactionMiCost <> mi_bits:12 var
+R3069:3075 UrgeKnowing.CompactionMiCost <> mi_bits:12 var
+prf 3110:3131 <> epistemicMIBits_nonneg
+R3138:3146 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 3134:3134 <> p:13
+R3160:3160 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3150:3156 <> mi_bits:14
+R3179:3184 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3168:3171 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3172:3178 UrgeKnowing.CompactionMiCost <> mi_bits:14 var
+R3186:3189 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3190:3204 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R3206:3206 UrgeKnowing.CompactionMiCost <> p:13 var
+R3208:3214 UrgeKnowing.CompactionMiCost <> mi_bits:14 var
+prf 3295:3316 <> epistemicMIBits_le_one
+R3323:3331 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 3319:3319 <> p:15
+R3345:3345 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3335:3341 <> mi_bits:16
+R3384:3389 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3352:3375 UrgeKnowing.CompactionMiCost <> epistemicMI_step_bounded def
+R3377:3383 UrgeKnowing.CompactionMiCost <> mi_bits:16 var
+R3415:3418 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R3390:3404 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R3406:3406 UrgeKnowing.CompactionMiCost <> p:15 var
+R3408:3414 UrgeKnowing.CompactionMiCost <> mi_bits:16 var
+def 3752:3777 <> compactionPaysMIBitsVsNull
+R3784:3792 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 3780:3780 <> p:17
+R3806:3806 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3796:3802 <> mi_bits:18
+R3842:3845 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3821:3822 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R3823:3839 UrgeKnowing.CompactionMiCost <> isEpistemicMINull def
+R3841:3841 UrgeKnowing.CompactionMiCost <> p:17 var
+R3847:3849 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R3850:3864 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R3866:3866 UrgeKnowing.CompactionMiCost <> p:17 var
+R3868:3874 UrgeKnowing.CompactionMiCost <> mi_bits:18 var
+prf 3884:3920 <> compaction_pays_mi_vs_null_which_path
+R3933:3933 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 3923:3929 <> mi_bits:19
+R3951:3956 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3941:3943 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R3944:3950 UrgeKnowing.CompactionMiCost <> mi_bits:19 var
+R3957:3982 UrgeKnowing.CompactionMiCost <> compactionPaysMIBitsVsNull def
+R3984:4004 UrgeKnowing.CompactionMiCost <> path_probe_which_path constr
+R4006:4012 UrgeKnowing.CompactionMiCost <> mi_bits:19 var
+R4046:4071 UrgeKnowing.CompactionMiCost <> compactionPaysMIBitsVsNull def
+R4074:4090 UrgeKnowing.CompactionMiCost <> isEpistemicMINull def
+R4093:4107 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+prf 4173:4201 <> compaction_refuses_null_probe
+R4214:4214 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4204:4210 <> mi_bits:20
+R4221:4222 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R4223:4248 UrgeKnowing.CompactionMiCost <> compactionPaysMIBitsVsNull def
+R4250:4264 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R4266:4272 UrgeKnowing.CompactionMiCost <> mi_bits:20 var
+prf 4358:4386 <> compaction_null_probe_mi_zero
+R4399:4399 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4389:4395 <> mi_bits:21
+R4449:4454 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4445:4447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4406:4420 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R4422:4436 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R4438:4444 UrgeKnowing.CompactionMiCost <> mi_bits:21 var
+R4455:4456 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R4457:4482 UrgeKnowing.CompactionMiCost <> compactionPaysMIBitsVsNull def
+R4484:4498 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R4500:4506 UrgeKnowing.CompactionMiCost <> mi_bits:21 var
+prf 4832:4865 <> measurementEnergyLowerBound_nonneg
+R4875:4875 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 4868:4868 <> T:22
+binder 4870:4871 <> mi:23
+R4888:4891 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4883:4886 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4887:4887 UrgeKnowing.CompactionMiCost <> T:22 var
+R4899:4902 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4893:4896 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4897:4898 UrgeKnowing.CompactionMiCost <> mi:23 var
+R4904:4907 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R4908:4934 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R4936:4936 UrgeKnowing.CompactionMiCost <> T:22 var
+R4938:4939 UrgeKnowing.CompactionMiCost <> mi:23 var
+R4975:5001 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5004:5017 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
+R5028:5039 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5028:5039 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5064:5075 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5086:5091 Stdlib.Reals.RIneq <> Rlt_le thm
+R5094:5100 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R5064:5075 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5086:5091 Stdlib.Reals.RIneq <> Rlt_le thm
+R5094:5100 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R5112:5123 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5133:5138 Stdlib.Reals.RIneq <> Rlt_le thm
+R5141:5149 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R5112:5123 Stdlib.Reals.RIneq <> Rmult_le_pos thm
+R5133:5138 Stdlib.Reals.RIneq <> Rlt_le thm
+R5141:5149 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+def 5179:5200 <> compactionLandauerCost
+R5207:5215 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 5203:5203 <> p:24
+R5231:5231 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5219:5219 <> T:25
+binder 5221:5227 <> mi_bits:26
+R5236:5236 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R5243:5269 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+R5271:5271 UrgeKnowing.CompactionMiCost <> T:25 var
+R5274:5288 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R5290:5290 UrgeKnowing.CompactionMiCost <> p:24 var
+R5292:5298 UrgeKnowing.CompactionMiCost <> mi_bits:26 var
+prf 5309:5340 <> compactionLandauerCost_null_zero
+R5355:5355 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5343:5343 <> T:27
+binder 5345:5351 <> mi_bits:28
+R5410:5412 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5362:5383 UrgeKnowing.CompactionMiCost <> compactionLandauerCost def
+R5385:5399 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R5401:5401 UrgeKnowing.CompactionMiCost <> T:27 var
+R5403:5409 UrgeKnowing.CompactionMiCost <> mi_bits:28 var
+R5432:5453 UrgeKnowing.CompactionMiCost <> compactionLandauerCost def
+R5456:5470 UrgeKnowing.CompactionMiCost <> epistemicMIBits def
+R5473:5499 UMSTFormal.MeasurementCost <> measurementEnergyLowerBound def
+prf 5529:5565 <> compactionLandauerCost_null_all_temps
+R5578:5578 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5568:5574 <> mi_bits:29
+binder 5592:5592 <> T:30
+R5643:5645 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5595:5616 UrgeKnowing.CompactionMiCost <> compactionLandauerCost def
+R5618:5632 UrgeKnowing.CompactionMiCost <> path_probe_null constr
+R5634:5634 UrgeKnowing.CompactionMiCost <> T:30 var
+R5636:5642 UrgeKnowing.CompactionMiCost <> mi_bits:29 var
+R5674:5705 UrgeKnowing.CompactionMiCost <> compactionLandauerCost_null_zero thm
+R5674:5705 UrgeKnowing.CompactionMiCost <> compactionLandauerCost_null_zero thm
+prf 5720:5748 <> compactionLandauerCost_nonneg
+R5755:5763 UrgeKnowing.CompactionMiCost <> PathProbe ind
+binder 5751:5751 <> p:31
+R5779:5779 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+binder 5767:5767 <> T:32
+binder 5769:5775 <> mi_bits:33
+R5792:5797 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5787:5790 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5791:5791 UrgeKnowing.CompactionMiCost <> T:32 var
+R5810:5815 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5799:5802 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5803:5809 UrgeKnowing.CompactionMiCost <> mi_bits:33 var
+R5817:5820 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<='_x not
+R5821:5842 UrgeKnowing.CompactionMiCost <> compactionLandauerCost def
+R5844:5844 UrgeKnowing.CompactionMiCost <> p:31 var
+R5846:5846 UrgeKnowing.CompactionMiCost <> T:32 var
+R5848:5854 UrgeKnowing.CompactionMiCost <> mi_bits:33 var
+R5890:5911 UrgeKnowing.CompactionMiCost <> compactionLandauerCost def
+R5922:5955 UrgeKnowing.CompactionMiCost <> measurementEnergyLowerBound_nonneg thm
+R5922:5955 UrgeKnowing.CompactionMiCost <> measurementEnergyLowerBound_nonneg thm
+R5982:6003 UrgeKnowing.CompactionMiCost <> epistemicMIBits_nonneg thm
+R5982:6003 UrgeKnowing.CompactionMiCost <> epistemicMIBits_nonneg thm
+def 6259:6287 <> derivationWitnessRetainsChain
+R6298:6301 Corelib.Init.Datatypes <> list ind
+R6303:6308 Stdlib.Strings.String <> string ind
+binder 6290:6294 <> chain:34
+R6328:6331 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6323:6327 UrgeKnowing.CompactionMiCost <> chain:34 var
+R6332:6333 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 6348:6380 <> compactionDerivationWitnessAbsent
+R6391:6394 Corelib.Init.Datatypes <> list ind
+R6396:6401 Stdlib.Strings.String <> string ind
+binder 6383:6387 <> chain:35
+R6421:6423 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6416:6420 UrgeKnowing.CompactionMiCost <> chain:35 var
+R6424:6425 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+prf 6435:6469 <> derivation_witness_nonempty_retains
+R6475:6503 UrgeKnowing.CompactionMiCost <> derivationWitnessRetainsChain def
+R6505:6505 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R6514:6514 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+prf 6550:6591 <> compaction_derivation_witness_absent_empty
+R6597:6629 UrgeKnowing.CompactionMiCost <> compactionDerivationWitnessAbsent def
+R6631:6632 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 6896:6921 <> excitementComposeAuthority
+R6925:6930 Stdlib.Strings.String <> string ind
+def 6997:7024 <> excitementSelectSurrogateFor
+R7028:7033 Stdlib.Strings.String <> string ind
+prf 7073:7100 <> compaction_not_second_argmin
+R7134:7137 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7106:7133 UrgeKnowing.CompactionMiCost <> excitementSelectSurrogateFor def
+prf 7197:7235 <> compaction_compose_excitement_authority
+R7267:7270 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7241:7266 UrgeKnowing.CompactionMiCost <> excitementComposeAuthority def
+def 7539:7558 <> epistemicMIAuthority
+R7562:7567 Stdlib.Strings.String <> string ind
+def 7640:7663 <> epistemicMINullAuthority
+R7667:7672 Stdlib.Strings.String <> string ind
+def 7723:7750 <> epistemicMIBitsNullAuthority
+R7754:7759 Stdlib.Strings.String <> string ind
+def 7814:7839 <> physicalSecondLawAuthority
+R7843:7848 Stdlib.Strings.String <> string ind
+def 7900:7921 <> compactionMiCostCellId
+R7925:7930 Stdlib.Strings.String <> string ind
+def 7989:8012 <> compactionMiCostNonClaim
+R8016:8021 Stdlib.Strings.String <> string ind
+prf 8292:8317 <> compaction_mi_cost_cell_id
+R8345:8347 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8323:8344 UrgeKnowing.CompactionMiCost <> compactionMiCostCellId def
+prf 8420:8456 <> compaction_mi_cost_cites_epistemic_mi
+R8482:8485 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8462:8481 UrgeKnowing.CompactionMiCost <> epistemicMIAuthority def
+prf 8523:8564 <> compaction_mi_cost_cites_epistemic_mi_null
+R8594:8596 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8570:8593 UrgeKnowing.CompactionMiCost <> epistemicMINullAuthority def
+prf 8661:8707 <> compaction_mi_cost_cites_epistemic_mi_bits_null
+R8741:8743 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8713:8740 UrgeKnowing.CompactionMiCost <> epistemicMIBitsNullAuthority def
+prf 8812:8855 <> compaction_mi_cost_cites_physical_second_law
+R8887:8889 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8861:8886 UrgeKnowing.CompactionMiCost <> physicalSecondLawAuthority def
+def 9183:9220 <> compactionSecondLawConservationFraming
+R9224:9229 Stdlib.Strings.String <> string ind
+prf 9320:9355 <> compaction_not_second_landauer_axiom
+R9399:9404 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9361:9398 UrgeKnowing.CompactionMiCost <> compactionSecondLawConservationFraming def
+prf 9463:9504 <> compaction_second_law_conservation_framing
+R9548:9551 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9510:9547 UrgeKnowing.CompactionMiCost <> compactionSecondLawConservationFraming def
+def 9818:9839 <> physicsGreenAuthorized
+R9851:9855 Corelib.Init.Logic <> False ind
+prf 9865:9902 <> compaction_mi_cost_physics_green_false
+R9908:9909 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R9910:9931 UrgeKnowing.CompactionMiCost <> physicsGreenAuthorized def
+prf 9971:10005 <> compaction_mi_cost_modality_unwired
+R10042:10044 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10011:10041 UrgeKnowing.CompactionMiCost <> compactionMiCostModalityCurrent def
+R10045:10070 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_unwired constr
+def 10332:10350 <> mesoThermoGRestated
+R10354:10359 Stdlib.Strings.String <> string ind
+prf 10404:10445 <> compaction_mi_cost_not_meso_thermo_restate
+R10475:10478 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10451:10474 UrgeKnowing.CompactionMiCost <> compactionMiCostNonClaim def
+R10479:10497 UrgeKnowing.CompactionMiCost <> mesoThermoGRestated def
+def 10760:10789 <> compactionMiCostKnowingFiberOk
+R10863:10868 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10834:10836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10803:10833 UrgeKnowing.CompactionMiCost <> compactionMiCostModalityCurrent def
+R10837:10862 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_unwired constr
+R10869:10870 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10871:10892 UrgeKnowing.CompactionMiCost <> physicsGreenAuthorized def
+prf 10902:10936 <> compaction_mi_cost_knowing_fiber_ok
+R10942:10971 UrgeKnowing.CompactionMiCost <> compactionMiCostKnowingFiberOk def
+R11000:11034 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_modality_unwired thm
+R11000:11034 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_modality_unwired thm
+R11047:11084 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_physics_green_false thm
+R11047:11084 UrgeKnowing.CompactionMiCost <> compaction_mi_cost_physics_green_false thm

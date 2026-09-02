@@ -1,0 +1,428 @@
+DIGEST 6ff943ab13e15c8faf837a9a1433c8a2
+FUMST.ChemConstants.OreMonoidalConservation
+R1049:1053 Stdlib.Arith.Arith <> <> lib
+R1055:1060 Stdlib.Strings.String <> <> lib
+R1062:1065 Stdlib.Bool.Bool <> <> lib
+R1067:1069 Stdlib.micromega.Lia <> <> lib
+ind 1327:1357 <> OreMonoidalConservationModality
+constr 1373:1405 <> ore_monoidal_conservation_unwired
+constr 1411:1443 <> ore_monoidal_conservation_assumed
+constr 1449:1480 <> ore_monoidal_conservation_proved
+constr 1486:1520 <> ore_monoidal_conservation_surrogate
+scheme 1327:1357 <> OreMonoidalConservationModality_rect
+scheme 1327:1357 <> OreMonoidalConservationModality_ind
+scheme 1327:1357 <> OreMonoidalConservationModality_rec
+scheme 1327:1357 <> OreMonoidalConservationModality_sind
+def 1535:1572 <> oreMonoidalConservationModalityCurrent
+R1576:1606 UMST.ChemConstants.OreMonoidalConservation <> OreMonoidalConservationModality ind
+R1613:1645 UMST.ChemConstants.OreMonoidalConservation <> ore_monoidal_conservation_unwired constr
+ind 1883:1888 <> OreTag
+constr 1904:1919 <> ore_tag_hematite
+constr 1925:1939 <> ore_tag_bauxite
+constr 1945:1958 <> ore_tag_gangue
+constr 1964:1977 <> ore_tag_vacuum
+scheme 1883:1888 <> OreTag_rect
+scheme 1883:1888 <> OreTag_ind
+scheme 1883:1888 <> OreTag_rec
+scheme 1883:1888 <> OreTag_sind
+ind 1991:1997 <> OreTree
+constr 2013:2016 <> leaf
+constr 2042:2047 <> tensor
+R2026:2029 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2020:2025 UMST.ChemConstants.OreMonoidalConservation <> OreTag ind
+R2030:2036 UMST.ChemConstants.OreMonoidalConservation <> OreTree:5 ind
+R2058:2061 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2051:2057 UMST.ChemConstants.OreMonoidalConservation <> OreTree:5 ind
+R2069:2072 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2062:2068 UMST.ChemConstants.OreMonoidalConservation <> OreTree:5 ind
+R2073:2079 UMST.ChemConstants.OreMonoidalConservation <> OreTree:5 ind
+scheme 1991:1997 <> OreTree_rect
+scheme 1991:1997 <> OreTree_ind
+scheme 1991:1997 <> OreTree_rec
+scheme 1991:1997 <> OreTree_sind
+def 2175:2179 <> unitI
+R2183:2189 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R2194:2197 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R2199:2212 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_vacuum constr
+def 2227:2236 <> ore_tensor
+R2245:2251 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 2239:2239 <> a:7
+binder 2241:2241 <> b:8
+R2256:2262 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R2267:2272 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R2274:2274 UMST.ChemConstants.OreMonoidalConservation <> a:7 var
+R2276:2276 UMST.ChemConstants.OreMonoidalConservation <> b:8 var
+def 2291:2302 <> hematiteLeaf
+R2306:2312 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R2317:2320 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R2322:2337 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_hematite constr
+def 2351:2361 <> bauxiteLeaf
+R2365:2371 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R2376:2379 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R2381:2395 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_bauxite constr
+def 2409:2418 <> gangueLeaf
+R2422:2428 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R2433:2436 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R2438:2451 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_gangue constr
+def 2690:2707 <> monoidalLawsProved
+R2711:2714 Corelib.Init.Datatypes <> bool ind
+R2719:2723 Corelib.Init.Datatypes <> false constr
+prf 2733:2758 <> monoidal_laws_proved_false
+R2780:2782 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2762:2779 UMST.ChemConstants.OreMonoidalConservation <> monoidalLawsProved def
+R2783:2787 Corelib.Init.Datatypes <> false constr
+def 2827:2849 <> not118SquaredGreenTable
+R2853:2856 Corelib.Init.Datatypes <> bool ind
+R2861:2864 Corelib.Init.Datatypes <> true constr
+prf 2874:2900 <> not_118_squared_green_table
+R2927:2929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2904:2926 UMST.ChemConstants.OreMonoidalConservation <> not118SquaredGreenTable def
+R2930:2933 Corelib.Init.Datatypes <> true constr
+def 3197:3213 <> left_unit_product
+R3220:3226 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 3216:3216 <> t:9
+R3231:3237 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R3244:3253 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R3255:3259 UMST.ChemConstants.OreMonoidalConservation <> unitI def
+R3261:3261 UMST.ChemConstants.OreMonoidalConservation <> t:9 var
+def 3276:3293 <> right_unit_product
+R3300:3306 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 3296:3296 <> t:10
+R3311:3317 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R3324:3333 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R3335:3335 UMST.ChemConstants.OreMonoidalConservation <> t:10 var
+R3337:3341 UMST.ChemConstants.OreMonoidalConservation <> unitI def
+prf 3351:3381 <> left_unit_identity_conservation
+R3388:3394 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 3384:3384 <> t:11
+R3407:3423 UMST.ChemConstants.OreMonoidalConservation <> left_unit_product def
+R3425:3425 UMST.ChemConstants.OreMonoidalConservation <> t:11 var
+R3436:3441 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R3459:3462 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3451:3453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3454:3458 UMST.ChemConstants.OreMonoidalConservation <> unitI def
+R3464:3466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3467:3467 UMST.ChemConstants.OreMonoidalConservation <> t:11 var
+R3478:3482 Corelib.Init.Logic <> False ind
+prf 3539:3570 <> right_unit_identity_conservation
+R3577:3583 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 3573:3573 <> t:12
+R3596:3613 UMST.ChemConstants.OreMonoidalConservation <> right_unit_product def
+R3615:3615 UMST.ChemConstants.OreMonoidalConservation <> t:12 var
+R3626:3631 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R3645:3648 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3641:3643 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3644:3644 UMST.ChemConstants.OreMonoidalConservation <> t:12 var
+R3650:3652 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3653:3657 UMST.ChemConstants.OreMonoidalConservation <> unitI def
+R3668:3672 Corelib.Init.Logic <> False ind
+prf 3731:3752 <> left_unit_conservation
+R3769:3775 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 3765:3765 <> t:13
+R3788:3804 UMST.ChemConstants.OreMonoidalConservation <> left_unit_product def
+R3806:3806 UMST.ChemConstants.OreMonoidalConservation <> t:13 var
+R3819:3824 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R3842:3845 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3834:3836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3837:3841 UMST.ChemConstants.OreMonoidalConservation <> unitI def
+R3847:3849 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3850:3850 UMST.ChemConstants.OreMonoidalConservation <> t:13 var
+R3863:3867 Corelib.Init.Logic <> False ind
+R3903:3933 UMST.ChemConstants.OreMonoidalConservation <> left_unit_identity_conservation thm
+R3903:3933 UMST.ChemConstants.OreMonoidalConservation <> left_unit_identity_conservation thm
+prf 3950:3972 <> right_unit_conservation
+R3989:3995 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 3985:3985 <> t:14
+R4008:4025 UMST.ChemConstants.OreMonoidalConservation <> right_unit_product def
+R4027:4027 UMST.ChemConstants.OreMonoidalConservation <> t:14 var
+R4040:4045 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R4059:4062 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4055:4057 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4058:4058 UMST.ChemConstants.OreMonoidalConservation <> t:14 var
+R4064:4066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4067:4071 UMST.ChemConstants.OreMonoidalConservation <> unitI def
+R4084:4088 Corelib.Init.Logic <> False ind
+R4124:4155 UMST.ChemConstants.OreMonoidalConservation <> right_unit_identity_conservation thm
+R4124:4155 UMST.ChemConstants.OreMonoidalConservation <> right_unit_identity_conservation thm
+def 4401:4415 <> associator_left
+R4426:4432 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 4418:4418 <> a:15
+binder 4420:4420 <> b:16
+binder 4422:4422 <> c:17
+R4437:4443 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R4450:4459 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R4462:4471 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R4473:4473 UMST.ChemConstants.OreMonoidalConservation <> a:15 var
+R4475:4475 UMST.ChemConstants.OreMonoidalConservation <> b:16 var
+R4478:4478 UMST.ChemConstants.OreMonoidalConservation <> c:17 var
+def 4493:4508 <> associator_right
+R4519:4525 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 4511:4511 <> a:18
+binder 4513:4513 <> b:19
+binder 4515:4515 <> c:20
+R4530:4536 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R4543:4552 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R4554:4554 UMST.ChemConstants.OreMonoidalConservation <> a:18 var
+R4557:4566 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R4568:4568 UMST.ChemConstants.OreMonoidalConservation <> b:19 var
+R4570:4570 UMST.ChemConstants.OreMonoidalConservation <> c:20 var
+def 4586:4599 <> is_tensor_root
+R4606:4612 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 4602:4602 <> t:21
+R4617:4620 Corelib.Init.Datatypes <> bool ind
+R4633:4633 UMST.ChemConstants.OreMonoidalConservation <> t:21 var
+R4644:4649 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R4658:4661 Corelib.Init.Datatypes <> true constr
+R4672:4676 Corelib.Init.Datatypes <> false constr
+prf 4692:4716 <> associator_left_is_tensor
+R4727:4733 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 4719:4719 <> a:23
+binder 4721:4721 <> b:24
+binder 4723:4723 <> c:25
+R4778:4780 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4740:4753 UMST.ChemConstants.OreMonoidalConservation <> is_tensor_root def
+R4756:4770 UMST.ChemConstants.OreMonoidalConservation <> associator_left def
+R4772:4772 UMST.ChemConstants.OreMonoidalConservation <> a:23 var
+R4774:4774 UMST.ChemConstants.OreMonoidalConservation <> b:24 var
+R4776:4776 UMST.ChemConstants.OreMonoidalConservation <> c:25 var
+R4781:4784 Corelib.Init.Datatypes <> true constr
+prf 4819:4844 <> associator_right_is_tensor
+R4855:4861 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 4847:4847 <> a:26
+binder 4849:4849 <> b:27
+binder 4851:4851 <> c:28
+R4907:4909 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4868:4881 UMST.ChemConstants.OreMonoidalConservation <> is_tensor_root def
+R4884:4899 UMST.ChemConstants.OreMonoidalConservation <> associator_right def
+R4901:4901 UMST.ChemConstants.OreMonoidalConservation <> a:26 var
+R4903:4903 UMST.ChemConstants.OreMonoidalConservation <> b:27 var
+R4905:4905 UMST.ChemConstants.OreMonoidalConservation <> c:28 var
+R4910:4913 Corelib.Init.Datatypes <> true constr
+def 4951:4960 <> left_depth
+R4967:4973 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 4963:4963 <> t:29
+R4978:4980 Corelib.Init.Datatypes <> nat ind
+R4993:4993 UMST.ChemConstants.OreMonoidalConservation <> t:29 var
+R5004:5007 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R5020:5025 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R5034:5034 Corelib.Init.Datatypes <> S constr
+R5037:5046 UMST.ChemConstants.OreMonoidalConservation <> left_depth:30 def
+prf 5065:5085 <> left_depth_assoc_left
+R5096:5102 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 5088:5088 <> a:32
+binder 5090:5090 <> b:33
+binder 5092:5092 <> c:34
+R5143:5145 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5109:5118 UMST.ChemConstants.OreMonoidalConservation <> left_depth def
+R5121:5135 UMST.ChemConstants.OreMonoidalConservation <> associator_left def
+R5137:5137 UMST.ChemConstants.OreMonoidalConservation <> a:32 var
+R5139:5139 UMST.ChemConstants.OreMonoidalConservation <> b:33 var
+R5141:5141 UMST.ChemConstants.OreMonoidalConservation <> c:34 var
+R5146:5146 Corelib.Init.Datatypes <> S constr
+R5149:5149 Corelib.Init.Datatypes <> S constr
+R5152:5161 UMST.ChemConstants.OreMonoidalConservation <> left_depth def
+R5163:5163 UMST.ChemConstants.OreMonoidalConservation <> a:32 var
+prf 5200:5221 <> left_depth_assoc_right
+R5232:5238 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 5224:5224 <> a:35
+binder 5226:5226 <> b:36
+binder 5228:5228 <> c:37
+R5280:5282 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5245:5254 UMST.ChemConstants.OreMonoidalConservation <> left_depth def
+R5257:5272 UMST.ChemConstants.OreMonoidalConservation <> associator_right def
+R5274:5274 UMST.ChemConstants.OreMonoidalConservation <> a:35 var
+R5276:5276 UMST.ChemConstants.OreMonoidalConservation <> b:36 var
+R5278:5278 UMST.ChemConstants.OreMonoidalConservation <> c:37 var
+R5283:5283 Corelib.Init.Datatypes <> S constr
+R5286:5295 UMST.ChemConstants.OreMonoidalConservation <> left_depth def
+R5297:5297 UMST.ChemConstants.OreMonoidalConservation <> a:35 var
+prf 5347:5377 <> associator_bracketings_distinct
+R5397:5403 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 5389:5389 <> a:38
+binder 5391:5391 <> b:39
+binder 5393:5393 <> c:40
+R5430:5433 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5409:5423 UMST.ChemConstants.OreMonoidalConservation <> associator_left def
+R5425:5425 UMST.ChemConstants.OreMonoidalConservation <> a:38 var
+R5427:5427 UMST.ChemConstants.OreMonoidalConservation <> b:39 var
+R5429:5429 UMST.ChemConstants.OreMonoidalConservation <> c:40 var
+R5434:5449 UMST.ChemConstants.OreMonoidalConservation <> associator_right def
+R5451:5451 UMST.ChemConstants.OreMonoidalConservation <> a:38 var
+R5453:5453 UMST.ChemConstants.OreMonoidalConservation <> b:39 var
+R5455:5455 UMST.ChemConstants.OreMonoidalConservation <> c:40 var
+R5492:5498 Corelib.Init.Logic <> f_equal thm
+R5500:5509 UMST.ChemConstants.OreMonoidalConservation <> left_depth def
+R5492:5498 Corelib.Init.Logic <> f_equal thm
+R5500:5509 UMST.ChemConstants.OreMonoidalConservation <> left_depth def
+R5528:5548 UMST.ChemConstants.OreMonoidalConservation <> left_depth_assoc_left thm
+R5551:5572 UMST.ChemConstants.OreMonoidalConservation <> left_depth_assoc_right thm
+R5528:5548 UMST.ChemConstants.OreMonoidalConservation <> left_depth_assoc_left thm
+R5528:5548 UMST.ChemConstants.OreMonoidalConservation <> left_depth_assoc_left thm
+R5551:5572 UMST.ChemConstants.OreMonoidalConservation <> left_depth_assoc_right thm
+R5551:5572 UMST.ChemConstants.OreMonoidalConservation <> left_depth_assoc_right thm
+prf 5601:5623 <> associator_conservation
+R5634:5640 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 5626:5626 <> a:41
+binder 5628:5628 <> b:42
+binder 5630:5630 <> c:43
+R5692:5697 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5685:5687 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5647:5660 UMST.ChemConstants.OreMonoidalConservation <> is_tensor_root def
+R5663:5677 UMST.ChemConstants.OreMonoidalConservation <> associator_left def
+R5679:5679 UMST.ChemConstants.OreMonoidalConservation <> a:41 var
+R5681:5681 UMST.ChemConstants.OreMonoidalConservation <> b:42 var
+R5683:5683 UMST.ChemConstants.OreMonoidalConservation <> c:43 var
+R5688:5691 Corelib.Init.Datatypes <> true constr
+R5744:5749 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R5737:5739 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5698:5711 UMST.ChemConstants.OreMonoidalConservation <> is_tensor_root def
+R5714:5729 UMST.ChemConstants.OreMonoidalConservation <> associator_right def
+R5731:5731 UMST.ChemConstants.OreMonoidalConservation <> a:41 var
+R5733:5733 UMST.ChemConstants.OreMonoidalConservation <> b:42 var
+R5735:5735 UMST.ChemConstants.OreMonoidalConservation <> c:43 var
+R5740:5743 Corelib.Init.Datatypes <> true constr
+R5771:5774 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5750:5764 UMST.ChemConstants.OreMonoidalConservation <> associator_left def
+R5766:5766 UMST.ChemConstants.OreMonoidalConservation <> a:41 var
+R5768:5768 UMST.ChemConstants.OreMonoidalConservation <> b:42 var
+R5770:5770 UMST.ChemConstants.OreMonoidalConservation <> c:43 var
+R5775:5790 UMST.ChemConstants.OreMonoidalConservation <> associator_right def
+R5792:5792 UMST.ChemConstants.OreMonoidalConservation <> a:41 var
+R5794:5794 UMST.ChemConstants.OreMonoidalConservation <> b:42 var
+R5796:5796 UMST.ChemConstants.OreMonoidalConservation <> c:43 var
+R5825:5849 UMST.ChemConstants.OreMonoidalConservation <> associator_left_is_tensor thm
+R5825:5849 UMST.ChemConstants.OreMonoidalConservation <> associator_left_is_tensor thm
+R5875:5900 UMST.ChemConstants.OreMonoidalConservation <> associator_right_is_tensor thm
+R5875:5900 UMST.ChemConstants.OreMonoidalConservation <> associator_right_is_tensor thm
+R5915:5945 UMST.ChemConstants.OreMonoidalConservation <> associator_bracketings_distinct thm
+R5915:5945 UMST.ChemConstants.OreMonoidalConservation <> associator_bracketings_distinct thm
+def 6190:6200 <> ore_tag_eqb
+R6209:6214 UMST.ChemConstants.OreMonoidalConservation <> OreTag ind
+binder 6203:6203 <> x:44
+binder 6205:6205 <> y:45
+R6219:6222 Corelib.Init.Datatypes <> bool ind
+R6238:6238 UMST.ChemConstants.OreMonoidalConservation <> y:45 var
+R6235:6235 UMST.ChemConstants.OreMonoidalConservation <> x:44 var
+R6249:6264 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_hematite constr
+R6267:6282 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_hematite constr
+R6287:6290 Corelib.Init.Datatypes <> true constr
+R6296:6310 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_bauxite constr
+R6313:6327 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_bauxite constr
+R6332:6335 Corelib.Init.Datatypes <> true constr
+R6341:6354 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_gangue constr
+R6357:6370 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_gangue constr
+R6375:6378 Corelib.Init.Datatypes <> true constr
+R6384:6397 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_vacuum constr
+R6400:6413 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_vacuum constr
+R6418:6421 Corelib.Init.Datatypes <> true constr
+R6435:6439 Corelib.Init.Datatypes <> false constr
+def 6458:6476 <> constituent_present
+R6485:6490 UMST.ChemConstants.OreMonoidalConservation <> OreTag ind
+binder 6479:6481 <> tag:48
+R6498:6504 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 6494:6494 <> t:49
+R6509:6512 Corelib.Init.Datatypes <> bool ind
+R6525:6525 UMST.ChemConstants.OreMonoidalConservation <> t:49 var
+R6536:6539 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R6547:6557 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_eqb def
+R6562:6564 UMST.ChemConstants.OreMonoidalConservation <> tag:48 var
+R6570:6575 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R6593:6611 UMST.ChemConstants.OreMonoidalConservation <> constituent_present:50 def
+R6613:6615 UMST.ChemConstants.OreMonoidalConservation <> tag:48 var
+R6634:6652 UMST.ChemConstants.OreMonoidalConservation <> constituent_present:50 def
+R6654:6656 UMST.ChemConstants.OreMonoidalConservation <> tag:48 var
+R6624:6627 Corelib.Init.Datatypes <> true constr
+def 6677:6704 <> concurrent_constituent_count
+R6711:6717 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+binder 6707:6707 <> t:52
+R6722:6724 Corelib.Init.Datatypes <> nat ind
+R6737:6737 UMST.ChemConstants.OreMonoidalConservation <> t:52 var
+R6748:6751 UMST.ChemConstants.OreMonoidalConservation <> leaf constr
+R6787:6800 UMST.ChemConstants.OreMonoidalConservation <> ore_tag_vacuum constr
+R6836:6841 UMST.ChemConstants.OreMonoidalConservation <> tensor constr
+R6886:6888 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R6856:6883 UMST.ChemConstants.OreMonoidalConservation <> concurrent_constituent_count:53 def
+R6889:6916 UMST.ChemConstants.OreMonoidalConservation <> concurrent_constituent_count:53 def
+def 6939:6956 <> triple_ore_product
+R6960:6966 UMST.ChemConstants.OreMonoidalConservation <> OreTree ind
+R6973:6982 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R6985:6994 UMST.ChemConstants.OreMonoidalConservation <> ore_tensor def
+R6996:7007 UMST.ChemConstants.OreMonoidalConservation <> hematiteLeaf def
+R7009:7019 UMST.ChemConstants.OreMonoidalConservation <> bauxiteLeaf def
+R7022:7031 UMST.ChemConstants.OreMonoidalConservation <> gangueLeaf def
+def 7046:7058 <> productNotXor
+R7062:7065 Corelib.Init.Datatypes <> bool ind
+R7072:7078 Stdlib.Arith.PeanoNat Nat leb def
+R7083:7110 UMST.ChemConstants.OreMonoidalConservation <> concurrent_constituent_count def
+R7112:7129 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_product def
+prf 7140:7166 <> triple_ore_concurrent_count
+R7219:7221 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7172:7199 UMST.ChemConstants.OreMonoidalConservation <> concurrent_constituent_count def
+R7201:7218 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_product def
+prf 7257:7276 <> product_not_xor_true
+R7293:7295 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7280:7292 UMST.ChemConstants.OreMonoidalConservation <> productNotXor def
+R7296:7299 Corelib.Init.Datatypes <> true constr
+R7318:7330 UMST.ChemConstants.OreMonoidalConservation <> productNotXor def
+R7343:7369 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_concurrent_count thm
+R7343:7369 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_concurrent_count thm
+R7343:7369 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_concurrent_count thm
+prf 7401:7426 <> product_not_xor_concurrent
+R7452:7457 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7445:7447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7432:7444 UMST.ChemConstants.OreMonoidalConservation <> productNotXor def
+R7448:7451 Corelib.Init.Datatypes <> true constr
+R7505:7508 Corelib.Init.Peano <> ::nat_scope:x_'>='_x not
+R7458:7485 UMST.ChemConstants.OreMonoidalConservation <> concurrent_constituent_count def
+R7487:7504 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_product def
+R7538:7557 UMST.ChemConstants.OreMonoidalConservation <> product_not_xor_true thm
+R7538:7557 UMST.ChemConstants.OreMonoidalConservation <> product_not_xor_true thm
+R7572:7598 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_concurrent_count thm
+R7572:7598 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_concurrent_count thm
+R7572:7598 UMST.ChemConstants.OreMonoidalConservation <> triple_ore_concurrent_count thm
+R7611:7621 Stdlib.Arith.PeanoNat Nat le_refl thm
+R7611:7621 Stdlib.Arith.PeanoNat Nat le_refl thm
+def 7866:7892 <> oreMonoidalProductAuthority
+R7896:7901 Stdlib.Strings.String <> string ind
+def 7966:7987 <> oreAssemblageAuthority
+R7991:7996 Stdlib.Strings.String <> string ind
+def 8064:8083 <> chemL0Cat01Authority
+R8087:8092 Stdlib.Strings.String <> string ind
+def 8129:8162 <> chemIntProveCat01MonoidalAuthority
+R8166:8171 Stdlib.Strings.String <> string ind
+def 8224:8252 <> oreMonoidalConservationCellId
+R8256:8261 Stdlib.Strings.String <> string ind
+def 8327:8357 <> oreMonoidalConservationNonClaim
+R8361:8366 Stdlib.Strings.String <> string ind
+prf 8767:8799 <> ore_monoidal_conservation_cell_id
+R8834:8838 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8805:8833 UMST.ChemConstants.OreMonoidalConservation <> oreMonoidalConservationCellId def
+prf 8918:8946 <> ore_monoidal_cites_product_rs
+R8979:8984 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8952:8978 UMST.ChemConstants.OreMonoidalConservation <> oreMonoidalProductAuthority def
+prf 9022:9054 <> ore_monoidal_cites_ore_assemblage
+R9082:9087 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9060:9081 UMST.ChemConstants.OreMonoidalConservation <> oreAssemblageAuthority def
+prf 9125:9152 <> ore_monoidal_cites_l0_cat_01
+R9178:9180 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9158:9177 UMST.ChemConstants.OreMonoidalConservation <> chemL0Cat01Authority def
+prf 9231:9265 <> ore_monoidal_cites_int_prove_cat_01
+R9305:9310 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9271:9304 UMST.ChemConstants.OreMonoidalConservation <> chemIntProveCat01MonoidalAuthority def
+def 9575:9613 <> oreMonoidalSecondLawConservationFraming
+R9617:9622 Stdlib.Strings.String <> string ind
+prf 9712:9749 <> ore_monoidal_not_second_monoidal_axiom
+R9794:9799 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9755:9793 UMST.ChemConstants.OreMonoidalConservation <> oreMonoidalSecondLawConservationFraming def
+prf 9858:9901 <> ore_monoidal_second_law_conservation_framing
+R9946:9951 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9907:9945 UMST.ChemConstants.OreMonoidalConservation <> oreMonoidalSecondLawConservationFraming def
+def 10218:10239 <> physicsGreenAuthorized
+R10251:10255 Corelib.Init.Logic <> False ind
+prf 10265:10296 <> ore_monoidal_physics_green_false
+R10302:10303 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10304:10325 UMST.ChemConstants.OreMonoidalConservation <> physicsGreenAuthorized def
+prf 10365:10393 <> ore_monoidal_modality_unwired
+R10437:10439 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10399:10436 UMST.ChemConstants.OreMonoidalConservation <> oreMonoidalConservationModalityCurrent def
+R10440:10472 UMST.ChemConstants.OreMonoidalConservation <> ore_monoidal_conservation_unwired constr

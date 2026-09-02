@@ -1,0 +1,377 @@
+DIGEST b9886075103d84ed2889ae5e367e2447
+FUMST.ChemConstants.ActinideOccupancyExceptions
+R1055:1059 Stdlib.Arith.Arith <> <> lib
+R1061:1064 Stdlib.Lists.List <> <> lib
+R1066:1071 Stdlib.Strings.String <> <> lib
+ind 1328:1352 <> ActinideOccupancyModality
+constr 1368:1393 <> actinide_occupancy_unwired
+constr 1399:1424 <> actinide_occupancy_assumed
+constr 1430:1454 <> actinide_occupancy_proved
+constr 1460:1487 <> actinide_occupancy_surrogate
+scheme 1328:1352 <> ActinideOccupancyModality_rect
+scheme 1328:1352 <> ActinideOccupancyModality_ind
+scheme 1328:1352 <> ActinideOccupancyModality_rec
+scheme 1328:1352 <> ActinideOccupancyModality_sind
+def 1502:1533 <> actinideOccupancyModalityCurrent
+R1537:1561 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideOccupancyModality ind
+R1568:1593 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_unwired constr
+ind 1830:1846 <> ActinideException
+constr 1862:1882 <> actinide_exception_ac
+constr 1888:1908 <> actinide_exception_th
+constr 1914:1934 <> actinide_exception_pa
+constr 1940:1959 <> actinide_exception_u
+constr 1965:1985 <> actinide_exception_np
+constr 1991:2011 <> actinide_exception_cm
+constr 2017:2037 <> actinide_exception_lr
+scheme 1830:1846 <> ActinideException_rect
+scheme 1830:1846 <> ActinideException_ind
+scheme 1830:1846 <> ActinideException_rec
+scheme 1830:1846 <> ActinideException_sind
+def 2052:2070 <> ActinideException_z
+R2078:2094 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 2073:2074 <> ex:5
+R2099:2101 Corelib.Init.Datatypes <> nat ind
+R2114:2115 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:5 var
+R2126:2146 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R2162:2182 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R2198:2218 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R2234:2253 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R2269:2289 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R2305:2325 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R2341:2361 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+def 2393:2416 <> ActinideException_symbol
+R2424:2440 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 2419:2420 <> ex:7
+R2445:2450 Stdlib.Strings.String <> string ind
+R2463:2464 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:7 var
+R2475:2495 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R2509:2529 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R2543:2563 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R2577:2596 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R2609:2629 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R2643:2663 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R2677:2697 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+prf 2721:2743 <> actinide_exception_ac_z
+R2790:2792 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2749:2767 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R2769:2789 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+prf 2833:2855 <> actinide_exception_th_z
+R2902:2904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2861:2879 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R2881:2901 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+prf 2945:2967 <> actinide_exception_pa_z
+R3014:3016 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2973:2991 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R2993:3013 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+prf 3057:3078 <> actinide_exception_u_z
+R3124:3126 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3084:3102 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R3104:3123 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+prf 3167:3189 <> actinide_exception_np_z
+R3236:3238 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3195:3213 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R3215:3235 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+prf 3279:3301 <> actinide_exception_cm_z
+R3348:3350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3307:3325 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R3327:3347 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+prf 3391:3413 <> actinide_exception_lr_z
+R3460:3462 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3419:3437 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R3439:3459 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+def 3602:3635 <> ActinideException_observedNotation
+R3643:3659 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 3638:3639 <> ex:9
+R3664:3669 Stdlib.Strings.String <> string ind
+R3682:3683 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:9 var
+R3694:3714 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R3785:3805 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R3876:3896 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R3970:3989 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R4063:4083 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R4157:4177 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R4251:4271 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+def 4456:4490 <> ActinideException_predictedNotation
+R4498:4514 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 4493:4494 <> ex:11
+R4519:4524 Stdlib.Strings.String <> string ind
+R4537:4538 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:11 var
+R4549:4569 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R4640:4660 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R4731:4751 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R4822:4841 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R4912:4932 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R5003:5023 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R5094:5114 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+def 5274:5303 <> ActinideException_occupancyTag
+R5311:5327 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 5306:5307 <> ex:13
+R5332:5337 Stdlib.Strings.String <> string ind
+R5350:5351 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:13 var
+R5362:5382 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R5400:5420 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R5438:5458 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R5479:5498 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R5519:5539 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R5560:5580 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R5601:5621 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+rec 5877:5896 <> ActinideExceptionRow
+proj 5935:5943 <> exception
+proj 5968:5975 <> modality
+R5947:5963 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+R5979:6003 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideOccupancyModality ind
+def 6020:6041 <> ActinideExceptionRow_z
+R6050:6069 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow rec
+binder 6044:6046 <> row:18
+R6074:6076 Corelib.Init.Datatypes <> nat ind
+R6083:6101 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R6104:6112 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6114:6116 UMST.ChemConstants.ActinideOccupancyExceptions <> row:18 var
+def 6132:6158 <> ActinideExceptionRow_symbol
+R6167:6186 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow rec
+binder 6161:6163 <> row:19
+R6191:6196 Stdlib.Strings.String <> string ind
+R6203:6226 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_symbol def
+R6229:6237 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6239:6241 UMST.ChemConstants.ActinideOccupancyExceptions <> row:19 var
+def 6257:6293 <> ActinideExceptionRow_observedNotation
+R6302:6321 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow rec
+binder 6296:6298 <> row:20
+R6326:6331 Stdlib.Strings.String <> string ind
+R6338:6371 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R6374:6382 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6384:6386 UMST.ChemConstants.ActinideOccupancyExceptions <> row:20 var
+def 6402:6439 <> ActinideExceptionRow_predictedNotation
+R6448:6467 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow rec
+binder 6442:6444 <> row:21
+R6472:6477 Stdlib.Strings.String <> string ind
+R6484:6518 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R6521:6529 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6531:6533 UMST.ChemConstants.ActinideOccupancyExceptions <> row:21 var
+def 6549:6581 <> ActinideExceptionRow_occupancyTag
+R6590:6609 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow rec
+binder 6584:6586 <> row:22
+R6614:6619 Stdlib.Strings.String <> string ind
+R6626:6655 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_occupancyTag def
+R6658:6666 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6668:6670 UMST.ChemConstants.ActinideOccupancyExceptions <> row:22 var
+def 6686:6705 <> actinideExceptionRow
+R6713:6729 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 6708:6709 <> ex:23
+R6734:6753 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow rec
+R6763:6771 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6763:6771 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6763:6771 UMST.ChemConstants.ActinideOccupancyExceptions <> exception proj
+R6785:6792 UMST.ChemConstants.ActinideOccupancyExceptions <> modality proj
+R6785:6792 UMST.ChemConstants.ActinideOccupancyExceptions <> modality proj
+R6776:6777 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:23 var
+R6797:6828 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyModalityCurrent def
+prf 6841:6864 <> actinide_exception_row_z
+R6872:6888 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 6867:6868 <> ex:24
+R6943:6945 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6895:6916 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideExceptionRow_z def
+R6919:6938 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionRow def
+R6940:6941 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:24 var
+R6946:6964 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_z def
+R6966:6967 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:24 var
+prf 7002:7040 <> actinide_exception_row_modality_unwired
+R7048:7064 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 7043:7044 <> ex:25
+R7105:7107 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7071:7078 UMST.ChemConstants.ActinideOccupancyExceptions <> modality proj
+R7081:7100 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionRow def
+R7102:7103 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:25 var
+R7108:7133 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_unwired constr
+def 7398:7418 <> actinideExceptionList
+R7422:7425 Corelib.Init.Datatypes <> list ind
+R7427:7443 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+R7471:7476 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7450:7470 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R7498:7503 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7477:7497 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R7525:7530 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7504:7524 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R7551:7556 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7531:7550 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R7578:7583 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7557:7577 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R7605:7610 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7584:7604 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R7632:7637 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7611:7631 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+R7638:7640 Corelib.Init.Datatypes <> nil constr
+def 7655:7676 <> actinideExceptionCount
+R7680:7682 Corelib.Init.Datatypes <> nat ind
+R7687:7697 Stdlib.Lists.List <> length abbrev
+R7699:7719 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionList def
+prf 7729:7758 <> actinide_exception_count_seven
+R7784:7786 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7762:7783 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionCount def
+prf 7826:7855 <> actinide_exception_list_length
+R7894:7896 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7861:7871 Stdlib.Lists.List <> length abbrev
+R7873:7893 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionList def
+prf 7936:7959 <> ac_observed_ne_predicted
+R8021:8026 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7965:7998 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R8000:8020 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R8027:8061 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R8063:8083 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+prf 8119:8142 <> th_observed_ne_predicted
+R8204:8209 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8148:8181 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R8183:8203 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R8210:8244 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R8246:8266 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+prf 8302:8325 <> pa_observed_ne_predicted
+R8387:8392 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8331:8364 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R8366:8386 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R8393:8427 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R8429:8449 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+prf 8485:8507 <> u_observed_ne_predicted
+R8568:8573 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8513:8546 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R8548:8567 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R8574:8608 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R8610:8629 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+prf 8665:8688 <> np_observed_ne_predicted
+R8750:8755 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8694:8727 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R8729:8749 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R8756:8790 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R8792:8812 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+prf 8848:8871 <> cm_observed_ne_predicted
+R8933:8938 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R8877:8910 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R8912:8932 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R8939:8973 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R8975:8995 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+prf 9126:9164 <> lr_named_override_observed_eq_predicted
+R9226:9230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9170:9203 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R9205:9225 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+R9231:9265 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R9267:9287 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+prf 9322:9366 <> lr_named_override_in_observed_override_config
+R9428:9433 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9372:9405 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R9407:9427 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+def 9476:9511 <> actinideExceptionIsMadelungException
+R9519:9535 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 9514:9515 <> ex:26
+R9587:9592 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9550:9583 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R9585:9586 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:26 var
+R9593:9627 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R9629:9630 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:26 var
+prf 9640:9679 <> actinide_exception_is_madelung_exception
+R9687:9703 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 9682:9683 <> ex:27
+R9749:9754 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R9710:9745 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R9747:9748 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:27 var
+R9792:9797 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9755:9788 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_observedNotation def
+R9790:9791 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:27 var
+R9798:9832 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException_predictedNotation def
+R9834:9835 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:27 var
+prf 9876:9918 <> actinide_exception_ac_is_madelung_exception
+R9924:9959 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R9961:9981 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R9997:10020 UMST.ChemConstants.ActinideOccupancyExceptions <> ac_observed_ne_predicted thm
+R9997:10020 UMST.ChemConstants.ActinideOccupancyExceptions <> ac_observed_ne_predicted thm
+prf 10035:10077 <> actinide_exception_th_is_madelung_exception
+R10083:10118 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R10120:10140 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R10156:10179 UMST.ChemConstants.ActinideOccupancyExceptions <> th_observed_ne_predicted thm
+R10156:10179 UMST.ChemConstants.ActinideOccupancyExceptions <> th_observed_ne_predicted thm
+prf 10194:10236 <> actinide_exception_pa_is_madelung_exception
+R10242:10277 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R10279:10299 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R10315:10338 UMST.ChemConstants.ActinideOccupancyExceptions <> pa_observed_ne_predicted thm
+R10315:10338 UMST.ChemConstants.ActinideOccupancyExceptions <> pa_observed_ne_predicted thm
+prf 10353:10394 <> actinide_exception_u_is_madelung_exception
+R10400:10435 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R10437:10456 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R10472:10494 UMST.ChemConstants.ActinideOccupancyExceptions <> u_observed_ne_predicted thm
+R10472:10494 UMST.ChemConstants.ActinideOccupancyExceptions <> u_observed_ne_predicted thm
+prf 10509:10551 <> actinide_exception_np_is_madelung_exception
+R10557:10592 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R10594:10614 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R10630:10653 UMST.ChemConstants.ActinideOccupancyExceptions <> np_observed_ne_predicted thm
+R10630:10653 UMST.ChemConstants.ActinideOccupancyExceptions <> np_observed_ne_predicted thm
+prf 10668:10710 <> actinide_exception_cm_is_madelung_exception
+R10716:10751 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R10753:10773 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R10789:10812 UMST.ChemConstants.ActinideOccupancyExceptions <> cm_observed_ne_predicted thm
+R10789:10812 UMST.ChemConstants.ActinideOccupancyExceptions <> cm_observed_ne_predicted thm
+prf 10827:10870 <> actinide_exception_lr_not_madelung_exception
+R10876:10877 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R10878:10913 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R10915:10935 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_lr constr
+R10965:11000 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R11021:11059 UMST.ChemConstants.ActinideOccupancyExceptions <> lr_named_override_observed_eq_predicted thm
+R11021:11059 UMST.ChemConstants.ActinideOccupancyExceptions <> lr_named_override_observed_eq_predicted thm
+def 11189:11227 <> actinideExceptionApproximateNotIdentity
+R11235:11251 UMST.ChemConstants.ActinideOccupancyExceptions <> ActinideException ind
+binder 11230:11231 <> ex:28
+R11266:11301 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionIsMadelungException def
+R11303:11304 UMST.ChemConstants.ActinideOccupancyExceptions <> ex:28 var
+prf 11314:11359 <> actinide_exception_approximate_not_identity_ac
+R11365:11403 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionApproximateNotIdentity def
+R11405:11425 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac constr
+R11441:11483 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac_is_madelung_exception thm
+R11441:11483 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_ac_is_madelung_exception thm
+prf 11498:11543 <> actinide_exception_approximate_not_identity_th
+R11549:11587 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionApproximateNotIdentity def
+R11589:11609 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th constr
+R11625:11667 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th_is_madelung_exception thm
+R11625:11667 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_th_is_madelung_exception thm
+prf 11682:11727 <> actinide_exception_approximate_not_identity_pa
+R11733:11771 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionApproximateNotIdentity def
+R11773:11793 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa constr
+R11809:11851 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa_is_madelung_exception thm
+R11809:11851 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_pa_is_madelung_exception thm
+prf 11866:11910 <> actinide_exception_approximate_not_identity_u
+R11916:11954 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionApproximateNotIdentity def
+R11956:11975 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u constr
+R11991:12032 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u_is_madelung_exception thm
+R11991:12032 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_u_is_madelung_exception thm
+prf 12047:12092 <> actinide_exception_approximate_not_identity_np
+R12098:12136 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionApproximateNotIdentity def
+R12138:12158 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np constr
+R12174:12216 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np_is_madelung_exception thm
+R12174:12216 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_np_is_madelung_exception thm
+prf 12231:12276 <> actinide_exception_approximate_not_identity_cm
+R12282:12320 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideExceptionApproximateNotIdentity def
+R12322:12342 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm constr
+R12358:12400 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm_is_madelung_exception thm
+R12358:12400 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_exception_cm_is_madelung_exception thm
+def 12644:12677 <> actinideOccupancyQlatticeAuthority
+R12681:12686 Stdlib.Strings.String <> string ind
+def 12739:12779 <> actinideOccupancyMadelungWitnessAuthority
+R12783:12788 Stdlib.Strings.String <> string ind
+def 12856:12888 <> actinideOccupancyExceptionsCellId
+R12892:12897 Stdlib.Strings.String <> string ind
+def 12967:13001 <> actinideOccupancyExceptionsNonClaim
+R13005:13010 Stdlib.Strings.String <> string ind
+def 13619:13657 <> actinideOccupancyPhysicsGreenAuthorized
+R13669:13673 Corelib.Init.Logic <> False ind
+prf 13683:13720 <> actinide_occupancy_physics_green_false
+R13726:13727 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13728:13766 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyPhysicsGreenAuthorized def
+prf 13806:13840 <> actinide_occupancy_modality_unwired
+R13878:13880 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13846:13877 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyModalityCurrent def
+R13881:13906 UMST.ChemConstants.ActinideOccupancyExceptions <> actinide_occupancy_unwired constr
+prf 13941:13975 <> actinide_occupancy_not_second_axiom
+R14022:14025 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13981:14021 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyMadelungWitnessAuthority def
+prf 14063:14095 <> actinide_occupancy_cites_qlattice
+R14135:14137 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14101:14134 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyQlatticeAuthority def
+prf 14204:14240 <> actinide_occupancy_exceptions_cell_id
+R14279:14283 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14246:14278 UMST.ChemConstants.ActinideOccupancyExceptions <> actinideOccupancyExceptionsCellId def

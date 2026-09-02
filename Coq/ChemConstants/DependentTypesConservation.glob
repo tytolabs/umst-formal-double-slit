@@ -1,0 +1,499 @@
+DIGEST 771b42434d0dcab46d72431ca2eec004
+FUMST.ChemConstants.DependentTypesConservation
+R1199:1203 Stdlib.Arith.Arith <> <> lib
+R1205:1210 Stdlib.Strings.String <> <> lib
+R1212:1215 Stdlib.Bool.Bool <> <> lib
+R1217:1219 Stdlib.micromega.Lia <> <> lib
+ind 1478:1511 <> DependentTypesConservationModality
+constr 1527:1562 <> dependent_types_conservation_unwired
+constr 1568:1603 <> dependent_types_conservation_assumed
+constr 1609:1643 <> dependent_types_conservation_proved
+constr 1649:1686 <> dependent_types_conservation_surrogate
+scheme 1478:1511 <> DependentTypesConservationModality_rect
+scheme 1478:1511 <> DependentTypesConservationModality_ind
+scheme 1478:1511 <> DependentTypesConservationModality_rec
+scheme 1478:1511 <> DependentTypesConservationModality_sind
+def 1701:1741 <> dependentTypesConservationModalityCurrent
+R1745:1778 UMST.ChemConstants.DependentTypesConservation <> DependentTypesConservationModality ind
+R1785:1820 UMST.ChemConstants.DependentTypesConservation <> dependent_types_conservation_unwired constr
+ind 2056:2065 <> element_id
+constr 2081:2086 <> elem_H
+constr 2092:2097 <> elem_O
+constr 2103:2109 <> elem_Ca
+constr 2115:2121 <> elem_Si
+scheme 2056:2065 <> element_id_rect
+scheme 2056:2065 <> element_id_ind
+scheme 2056:2065 <> element_id_rec
+scheme 2056:2065 <> element_id_sind
+ind 2211:2220 <> species_id
+constr 2236:2254 <> species_portlandite
+constr 2260:2273 <> species_quartz
+constr 2279:2294 <> species_hematite
+scheme 2211:2220 <> species_id_rect
+scheme 2211:2220 <> species_id_ind
+scheme 2211:2220 <> species_id_rec
+scheme 2211:2220 <> species_id_sind
+def 2309:2319 <> speciesIsL1
+R2323:2326 Corelib.Init.Datatypes <> bool ind
+R2331:2334 Corelib.Init.Datatypes <> true constr
+prf 2344:2361 <> species_is_l1_true
+R2376:2378 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2365:2375 UMST.ChemConstants.DependentTypesConservation <> speciesIsL1 def
+R2379:2382 Corelib.Init.Datatypes <> true constr
+def 2422:2435 <> element_id_beq
+R2444:2453 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 2438:2438 <> a:7
+binder 2440:2440 <> b:8
+R2458:2461 Corelib.Init.Datatypes <> bool ind
+R2477:2477 UMST.ChemConstants.DependentTypesConservation <> b:8 var
+R2474:2474 UMST.ChemConstants.DependentTypesConservation <> a:7 var
+R2488:2493 UMST.ChemConstants.DependentTypesConservation <> elem_H constr
+R2496:2501 UMST.ChemConstants.DependentTypesConservation <> elem_H constr
+R2505:2510 UMST.ChemConstants.DependentTypesConservation <> elem_O constr
+R2513:2518 UMST.ChemConstants.DependentTypesConservation <> elem_O constr
+R2522:2528 UMST.ChemConstants.DependentTypesConservation <> elem_Ca constr
+R2531:2537 UMST.ChemConstants.DependentTypesConservation <> elem_Ca constr
+R2541:2547 UMST.ChemConstants.DependentTypesConservation <> elem_Si constr
+R2550:2556 UMST.ChemConstants.DependentTypesConservation <> elem_Si constr
+R2561:2564 Corelib.Init.Datatypes <> true constr
+R2561:2564 Corelib.Init.Datatypes <> true constr
+R2561:2564 Corelib.Init.Datatypes <> true constr
+R2561:2564 Corelib.Init.Datatypes <> true constr
+R2578:2582 Corelib.Init.Datatypes <> false constr
+prf 2598:2616 <> element_id_beq_refl
+R2623:2632 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 2619:2619 <> e:11
+R2655:2657 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2637:2650 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R2652:2652 UMST.ChemConstants.DependentTypesConservation <> e:11 var
+R2654:2654 UMST.ChemConstants.DependentTypesConservation <> e:11 var
+R2658:2661 Corelib.Init.Datatypes <> true constr
+def 2713:2726 <> species_id_beq
+R2735:2744 UMST.ChemConstants.DependentTypesConservation <> species_id ind
+binder 2729:2729 <> a:12
+binder 2731:2731 <> b:13
+R2749:2752 Corelib.Init.Datatypes <> bool ind
+R2768:2768 UMST.ChemConstants.DependentTypesConservation <> b:13 var
+R2765:2765 UMST.ChemConstants.DependentTypesConservation <> a:12 var
+R2779:2797 UMST.ChemConstants.DependentTypesConservation <> species_portlandite constr
+R2800:2818 UMST.ChemConstants.DependentTypesConservation <> species_portlandite constr
+R2823:2826 Corelib.Init.Datatypes <> true constr
+R2832:2845 UMST.ChemConstants.DependentTypesConservation <> species_quartz constr
+R2848:2861 UMST.ChemConstants.DependentTypesConservation <> species_quartz constr
+R2866:2869 Corelib.Init.Datatypes <> true constr
+R2875:2890 UMST.ChemConstants.DependentTypesConservation <> species_hematite constr
+R2893:2908 UMST.ChemConstants.DependentTypesConservation <> species_hematite constr
+R2913:2916 Corelib.Init.Datatypes <> true constr
+R2930:2934 Corelib.Init.Datatypes <> false constr
+prf 2950:2968 <> species_id_beq_refl
+R2975:2984 UMST.ChemConstants.DependentTypesConservation <> species_id ind
+binder 2971:2971 <> s:16
+R3007:3009 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2989:3002 UMST.ChemConstants.DependentTypesConservation <> species_id_beq def
+R3004:3004 UMST.ChemConstants.DependentTypesConservation <> s:16 var
+R3006:3006 UMST.ChemConstants.DependentTypesConservation <> s:16 var
+R3010:3013 Corelib.Init.Datatypes <> true constr
+prf 3141:3170 <> species_portlandite_not_quartz
+R3225:3227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3176:3189 UMST.ChemConstants.DependentTypesConservation <> species_id_beq def
+R3191:3209 UMST.ChemConstants.DependentTypesConservation <> species_portlandite constr
+R3211:3224 UMST.ChemConstants.DependentTypesConservation <> species_quartz constr
+R3228:3232 Corelib.Init.Datatypes <> false constr
+prf 3267:3282 <> element_h_not_ca
+R3317:3319 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3288:3301 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R3303:3308 UMST.ChemConstants.DependentTypesConservation <> elem_H constr
+R3310:3316 UMST.ChemConstants.DependentTypesConservation <> elem_Ca constr
+R3320:3324 Corelib.Init.Datatypes <> false constr
+prf 3359:3389 <> element_id_not_species_id_layer
+R3413:3418 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R3406:3408 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3395:3405 UMST.ChemConstants.DependentTypesConservation <> speciesIsL1 def
+R3409:3412 Corelib.Init.Datatypes <> true constr
+R3468:3470 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3419:3432 UMST.ChemConstants.DependentTypesConservation <> species_id_beq def
+R3434:3452 UMST.ChemConstants.DependentTypesConservation <> species_portlandite constr
+R3454:3467 UMST.ChemConstants.DependentTypesConservation <> species_quartz constr
+R3471:3475 Corelib.Init.Datatypes <> false constr
+R3501:3518 UMST.ChemConstants.DependentTypesConservation <> species_is_l1_true thm
+R3528:3557 UMST.ChemConstants.DependentTypesConservation <> species_portlandite_not_quartz thm
+R3501:3518 UMST.ChemConstants.DependentTypesConservation <> species_is_l1_true thm
+R3528:3557 UMST.ChemConstants.DependentTypesConservation <> species_portlandite_not_quartz thm
+ind 3799:3819 <> element_geometry_tier
+constr 3835:3848 <> tier_micro_sdf
+constr 3854:3864 <> tier_te_sdf
+constr 3870:3877 <> tier_sdf
+constr 3883:3891 <> tier_frep
+scheme 3799:3819 <> element_geometry_tier_rect
+scheme 3799:3819 <> element_geometry_tier_ind
+scheme 3799:3819 <> element_geometry_tier_rec
+scheme 3799:3819 <> element_geometry_tier_sind
+def 3906:3922 <> geometry_tier_beq
+R3931:3951 UMST.ChemConstants.DependentTypesConservation <> element_geometry_tier ind
+binder 3925:3925 <> a:19
+binder 3927:3927 <> b:20
+R3956:3959 Corelib.Init.Datatypes <> bool ind
+R3975:3975 UMST.ChemConstants.DependentTypesConservation <> b:20 var
+R3972:3972 UMST.ChemConstants.DependentTypesConservation <> a:19 var
+R3986:3999 UMST.ChemConstants.DependentTypesConservation <> tier_micro_sdf constr
+R4002:4015 UMST.ChemConstants.DependentTypesConservation <> tier_micro_sdf constr
+R4020:4023 Corelib.Init.Datatypes <> true constr
+R4029:4039 UMST.ChemConstants.DependentTypesConservation <> tier_te_sdf constr
+R4042:4052 UMST.ChemConstants.DependentTypesConservation <> tier_te_sdf constr
+R4057:4060 Corelib.Init.Datatypes <> true constr
+R4066:4073 UMST.ChemConstants.DependentTypesConservation <> tier_sdf constr
+R4076:4083 UMST.ChemConstants.DependentTypesConservation <> tier_sdf constr
+R4088:4091 Corelib.Init.Datatypes <> true constr
+R4097:4105 UMST.ChemConstants.DependentTypesConservation <> tier_frep constr
+R4108:4116 UMST.ChemConstants.DependentTypesConservation <> tier_frep constr
+R4121:4124 Corelib.Init.Datatypes <> true constr
+R4138:4142 Corelib.Init.Datatypes <> false constr
+prf 4158:4179 <> geometry_tier_beq_refl
+R4186:4206 UMST.ChemConstants.DependentTypesConservation <> element_geometry_tier ind
+binder 4182:4182 <> t:23
+R4234:4236 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4213:4229 UMST.ChemConstants.DependentTypesConservation <> geometry_tier_beq def
+R4231:4231 UMST.ChemConstants.DependentTypesConservation <> t:23 var
+R4233:4233 UMST.ChemConstants.DependentTypesConservation <> t:23 var
+R4237:4240 Corelib.Init.Datatypes <> true constr
+def 4292:4313 <> scaffold_geometry_tier
+R4317:4337 UMST.ChemConstants.DependentTypesConservation <> element_geometry_tier ind
+R4342:4355 UMST.ChemConstants.DependentTypesConservation <> tier_micro_sdf constr
+rec 4366:4385 <> element_geometry_for
+proj 4401:4416 <> geometry_element
+proj 4434:4446 <> geometry_tier
+R4420:4429 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+R4450:4470 UMST.ChemConstants.DependentTypesConservation <> element_geometry_tier ind
+rec 4483:4500 <> element_thermo_for
+proj 4516:4529 <> thermo_element
+proj 4547:4560 <> thermo_unwired
+R4533:4542 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+R4564:4567 Corelib.Init.Datatypes <> bool ind
+rec 4580:4603 <> element_dependent_bundle
+proj 4619:4633 <> bundle_geometry
+proj 4661:4673 <> bundle_thermo
+R4637:4656 UMST.ChemConstants.DependentTypesConservation <> element_geometry_for rec
+R4677:4694 UMST.ChemConstants.DependentTypesConservation <> element_thermo_for rec
+def 4711:4730 <> dependent_bundle_for
+R4737:4746 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 4733:4733 <> e:33
+R4751:4774 UMST.ChemConstants.DependentTypesConservation <> element_dependent_bundle rec
+R4784:4798 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry proj
+R4784:4798 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry proj
+R4784:4798 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry proj
+R4884:4896 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo proj
+R4884:4896 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo proj
+R4812:4827 UMST.ChemConstants.DependentTypesConservation <> geometry_element proj
+R4812:4827 UMST.ChemConstants.DependentTypesConservation <> geometry_element proj
+R4812:4827 UMST.ChemConstants.DependentTypesConservation <> geometry_element proj
+R4835:4847 UMST.ChemConstants.DependentTypesConservation <> geometry_tier proj
+R4835:4847 UMST.ChemConstants.DependentTypesConservation <> geometry_tier proj
+R4832:4832 UMST.ChemConstants.DependentTypesConservation <> e:33 var
+R4852:4873 UMST.ChemConstants.DependentTypesConservation <> scaffold_geometry_tier def
+R4910:4923 UMST.ChemConstants.DependentTypesConservation <> thermo_element proj
+R4910:4923 UMST.ChemConstants.DependentTypesConservation <> thermo_element proj
+R4910:4923 UMST.ChemConstants.DependentTypesConservation <> thermo_element proj
+R4931:4944 UMST.ChemConstants.DependentTypesConservation <> thermo_unwired proj
+R4931:4944 UMST.ChemConstants.DependentTypesConservation <> thermo_unwired proj
+R4928:4928 UMST.ChemConstants.DependentTypesConservation <> e:33 var
+R4949:4952 Corelib.Init.Datatypes <> true constr
+def 4973:4993 <> bundle_index_coherent
+R5000:5023 UMST.ChemConstants.DependentTypesConservation <> element_dependent_bundle rec
+binder 4996:4996 <> b:34
+R5028:5031 Corelib.Init.Datatypes <> bool ind
+R5038:5051 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R5074:5089 UMST.ChemConstants.DependentTypesConservation <> geometry_element proj
+R5056:5070 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry proj
+R5053:5053 UMST.ChemConstants.DependentTypesConservation <> b:34 var
+R5115:5128 UMST.ChemConstants.DependentTypesConservation <> thermo_element proj
+R5099:5111 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo proj
+R5096:5096 UMST.ChemConstants.DependentTypesConservation <> b:34 var
+def 5144:5164 <> bundle_geometry_index
+R5171:5194 UMST.ChemConstants.DependentTypesConservation <> element_dependent_bundle rec
+binder 5167:5167 <> b:35
+R5199:5208 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+R5236:5251 UMST.ChemConstants.DependentTypesConservation <> geometry_element proj
+R5218:5232 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry proj
+R5215:5215 UMST.ChemConstants.DependentTypesConservation <> b:35 var
+def 5267:5285 <> bundle_thermo_index
+R5292:5315 UMST.ChemConstants.DependentTypesConservation <> element_dependent_bundle rec
+binder 5288:5288 <> b:36
+R5320:5329 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+R5355:5368 UMST.ChemConstants.DependentTypesConservation <> thermo_element proj
+R5339:5351 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo proj
+R5336:5336 UMST.ChemConstants.DependentTypesConservation <> b:36 var
+def 5608:5622 <> type01DepProved
+R5626:5629 Corelib.Init.Datatypes <> bool ind
+R5634:5638 Corelib.Init.Datatypes <> false constr
+prf 5648:5670 <> type01_dep_proved_false
+R5689:5691 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5674:5688 UMST.ChemConstants.DependentTypesConservation <> type01DepProved def
+R5692:5696 Corelib.Init.Datatypes <> false constr
+def 5736:5758 <> not118SquaredGreenTable
+R5762:5765 Corelib.Init.Datatypes <> bool ind
+R5770:5773 Corelib.Init.Datatypes <> true constr
+prf 5783:5809 <> not_118_squared_green_table
+R5836:5838 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5813:5835 UMST.ChemConstants.DependentTypesConservation <> not118SquaredGreenTable def
+R5839:5842 Corelib.Init.Datatypes <> true constr
+def 6104:6135 <> dependent_bundle_index_conserved
+R6142:6151 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 6138:6138 <> e:37
+R6156:6159 Corelib.Init.Datatypes <> bool ind
+R6175:6194 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R6196:6196 UMST.ChemConstants.DependentTypesConservation <> e:37 var
+binder 6170:6170 <> b:38
+R6320:6325 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6274:6279 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6226:6231 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6203:6223 UMST.ChemConstants.DependentTypesConservation <> bundle_index_coherent def
+R6225:6225 UMST.ChemConstants.DependentTypesConservation <> b:38 var
+R6232:6245 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R6248:6268 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R6270:6270 UMST.ChemConstants.DependentTypesConservation <> b:38 var
+R6273:6273 UMST.ChemConstants.DependentTypesConservation <> e:37 var
+R6280:6293 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R6296:6314 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+R6316:6316 UMST.ChemConstants.DependentTypesConservation <> b:38 var
+R6319:6319 UMST.ChemConstants.DependentTypesConservation <> e:37 var
+R6326:6342 UMST.ChemConstants.DependentTypesConservation <> geometry_tier_beq def
+R6369:6381 UMST.ChemConstants.DependentTypesConservation <> geometry_tier proj
+R6351:6365 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry proj
+R6348:6348 UMST.ChemConstants.DependentTypesConservation <> b:38 var
+R6384:6405 UMST.ChemConstants.DependentTypesConservation <> scaffold_geometry_tier def
+prf 6415:6438 <> h_bundle_index_conserved
+R6483:6485 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6444:6475 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R6477:6482 UMST.ChemConstants.DependentTypesConservation <> elem_H constr
+R6486:6489 Corelib.Init.Datatypes <> true constr
+R6508:6539 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R6542:6561 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R6568:6588 UMST.ChemConstants.DependentTypesConservation <> bundle_index_coherent def
+R6591:6611 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R6614:6632 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+prf 6669:6693 <> ca_bundle_index_conserved
+R6739:6741 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6699:6730 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R6732:6738 UMST.ChemConstants.DependentTypesConservation <> elem_Ca constr
+R6742:6745 Corelib.Init.Datatypes <> true constr
+R6764:6795 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R6798:6817 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R6824:6844 UMST.ChemConstants.DependentTypesConservation <> bundle_index_coherent def
+R6847:6867 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R6870:6888 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+prf 6925:6950 <> bundle_index_conserved_all
+R6957:6966 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 6953:6953 <> e:39
+R7007:7009 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6973:7004 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R7006:7006 UMST.ChemConstants.DependentTypesConservation <> e:39 var
+R7010:7013 Corelib.Init.Datatypes <> true constr
+R7047:7070 UMST.ChemConstants.DependentTypesConservation <> h_bundle_index_conserved thm
+R7047:7070 UMST.ChemConstants.DependentTypesConservation <> h_bundle_index_conserved thm
+R7084:7115 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R7118:7137 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R7146:7166 UMST.ChemConstants.DependentTypesConservation <> bundle_index_coherent def
+R7169:7189 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R7192:7210 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+R7247:7271 UMST.ChemConstants.DependentTypesConservation <> ca_bundle_index_conserved thm
+R7247:7271 UMST.ChemConstants.DependentTypesConservation <> ca_bundle_index_conserved thm
+R7285:7316 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R7319:7338 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R7347:7367 UMST.ChemConstants.DependentTypesConservation <> bundle_index_coherent def
+R7370:7390 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R7393:7411 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+prf 7452:7487 <> indexed_bundle_identity_conservation
+R7504:7513 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 7500:7500 <> e:40
+R7554:7556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7520:7551 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R7553:7553 UMST.ChemConstants.DependentTypesConservation <> e:40 var
+R7557:7560 Corelib.Init.Datatypes <> true constr
+R7588:7613 UMST.ChemConstants.DependentTypesConservation <> bundle_index_conserved_all thm
+R7588:7613 UMST.ChemConstants.DependentTypesConservation <> bundle_index_conserved_all thm
+prf 7628:7659 <> bundle_roundtrip_preserves_index
+R7666:7675 UMST.ChemConstants.DependentTypesConservation <> element_id ind
+binder 7662:7662 <> e:41
+R7754:7759 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R7747:7749 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7682:7695 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R7698:7718 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R7721:7740 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R7742:7742 UMST.ChemConstants.DependentTypesConservation <> e:41 var
+R7746:7746 UMST.ChemConstants.DependentTypesConservation <> e:41 var
+R7750:7753 Corelib.Init.Datatypes <> true constr
+R7823:7825 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7760:7773 UMST.ChemConstants.DependentTypesConservation <> element_id_beq def
+R7776:7794 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+R7797:7816 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R7818:7818 UMST.ChemConstants.DependentTypesConservation <> e:41 var
+R7822:7822 UMST.ChemConstants.DependentTypesConservation <> e:41 var
+R7826:7829 Corelib.Init.Datatypes <> true constr
+R7859:7879 UMST.ChemConstants.DependentTypesConservation <> bundle_geometry_index def
+R7882:7901 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R7914:7932 UMST.ChemConstants.DependentTypesConservation <> element_id_beq_refl thm
+R7914:7932 UMST.ChemConstants.DependentTypesConservation <> element_id_beq_refl thm
+R7946:7964 UMST.ChemConstants.DependentTypesConservation <> bundle_thermo_index def
+R7967:7986 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_for def
+R7999:8017 UMST.ChemConstants.DependentTypesConservation <> element_id_beq_refl thm
+R7999:8017 UMST.ChemConstants.DependentTypesConservation <> element_id_beq_refl thm
+ind 8260:8271 <> formal_fiber
+constr 8287:8307 <> fiber_quantum_knowing
+constr 8313:8329 <> fiber_meso_acting
+scheme 8260:8271 <> formal_fiber_rect
+scheme 8260:8271 <> formal_fiber_ind
+scheme 8260:8271 <> formal_fiber_rec
+scheme 8260:8271 <> formal_fiber_sind
+ind 8343:8361 <> formal_claim_family
+constr 8377:8390 <> claim_geometry
+scheme 8343:8361 <> formal_claim_family_rect
+scheme 8343:8361 <> formal_claim_family_ind
+scheme 8343:8361 <> formal_claim_family_rec
+scheme 8343:8361 <> formal_claim_family_sind
+def 8405:8421 <> geometry_fiber_ok
+R8428:8439 UMST.ChemConstants.DependentTypesConservation <> formal_fiber ind
+binder 8424:8424 <> f:46
+R8444:8447 Corelib.Init.Datatypes <> bool ind
+R8460:8460 UMST.ChemConstants.DependentTypesConservation <> f:46 var
+R8471:8491 UMST.ChemConstants.DependentTypesConservation <> fiber_quantum_knowing constr
+R8496:8499 Corelib.Init.Datatypes <> true constr
+R8505:8521 UMST.ChemConstants.DependentTypesConservation <> fiber_meso_acting constr
+R8526:8530 Corelib.Init.Datatypes <> false constr
+def 8551:8575 <> geometry_knowing_fiber_ok
+R8579:8582 Corelib.Init.Datatypes <> bool ind
+R8589:8605 UMST.ChemConstants.DependentTypesConservation <> geometry_fiber_ok def
+R8607:8627 UMST.ChemConstants.DependentTypesConservation <> fiber_quantum_knowing constr
+def 8642:8664 <> geometry_meso_acting_ok
+R8668:8671 Corelib.Init.Datatypes <> bool ind
+R8678:8694 UMST.ChemConstants.DependentTypesConservation <> geometry_fiber_ok def
+R8696:8712 UMST.ChemConstants.DependentTypesConservation <> fiber_meso_acting constr
+prf 8722:8751 <> geometry_knowing_fiber_ok_true
+R8780:8782 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8755:8779 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok def
+R8783:8786 Corelib.Init.Datatypes <> true constr
+prf 8821:8847 <> geometry_meso_acting_not_ok
+R8874:8876 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8851:8873 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_ok def
+R8877:8881 Corelib.Init.Datatypes <> false constr
+prf 8918:8949 <> geometry_routes_knowing_not_meso
+R8987:8992 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R8980:8982 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8955:8979 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok def
+R8983:8986 Corelib.Init.Datatypes <> true constr
+R9016:9018 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8993:9015 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_ok def
+R9019:9023 Corelib.Init.Datatypes <> false constr
+R9049:9078 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok_true thm
+R9088:9114 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_not_ok thm
+R9049:9078 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok_true thm
+R9088:9114 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_not_ok thm
+def 9135:9152 <> fiberNotMesoActing
+R9156:9159 Corelib.Init.Datatypes <> bool ind
+R9191:9194 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9166:9190 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok def
+R9195:9198 Corelib.Init.Datatypes <> negb def
+R9200:9222 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_ok def
+prf 9232:9257 <> fiber_not_meso_acting_true
+R9279:9281 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9261:9278 UMST.ChemConstants.DependentTypesConservation <> fiberNotMesoActing def
+R9282:9285 Corelib.Init.Datatypes <> true constr
+R9304:9321 UMST.ChemConstants.DependentTypesConservation <> fiberNotMesoActing def
+R9324:9348 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok def
+R9351:9373 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_ok def
+def 9632:9663 <> geometry_row_not_species_indexed
+R9667:9670 Corelib.Init.Datatypes <> bool ind
+R9688:9693 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9677:9687 UMST.ChemConstants.DependentTypesConservation <> speciesIsL1 def
+R9694:9697 Corelib.Init.Datatypes <> negb def
+R9700:9713 UMST.ChemConstants.DependentTypesConservation <> species_id_beq def
+R9715:9733 UMST.ChemConstants.DependentTypesConservation <> species_portlandite constr
+R9735:9748 UMST.ChemConstants.DependentTypesConservation <> species_quartz constr
+prf 9759:9795 <> geometry_row_not_species_indexed_true
+R9833:9835 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9801:9832 UMST.ChemConstants.DependentTypesConservation <> geometry_row_not_species_indexed def
+R9836:9839 Corelib.Init.Datatypes <> true constr
+R9858:9889 UMST.ChemConstants.DependentTypesConservation <> geometry_row_not_species_indexed def
+R9892:9902 UMST.ChemConstants.DependentTypesConservation <> speciesIsL1 def
+R9905:9918 UMST.ChemConstants.DependentTypesConservation <> species_id_beq def
+prf 10174:10218 <> dependent_types_conservation_fixture_scaffold
+R10270:10275 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10263:10265 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10224:10255 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R10257:10262 UMST.ChemConstants.DependentTypesConservation <> elem_H constr
+R10266:10269 Corelib.Init.Datatypes <> true constr
+R10323:10328 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10316:10318 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10276:10307 UMST.ChemConstants.DependentTypesConservation <> dependent_bundle_index_conserved def
+R10309:10315 UMST.ChemConstants.DependentTypesConservation <> elem_Ca constr
+R10319:10322 Corelib.Init.Datatypes <> true constr
+R10361:10366 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10354:10356 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10329:10353 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok def
+R10357:10360 Corelib.Init.Datatypes <> true constr
+R10398:10403 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10390:10392 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10367:10389 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_ok def
+R10393:10397 Corelib.Init.Datatypes <> false constr
+R10422:10427 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R10415:10417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10404:10414 UMST.ChemConstants.DependentTypesConservation <> speciesIsL1 def
+R10418:10421 Corelib.Init.Datatypes <> true constr
+R10443:10445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10428:10442 UMST.ChemConstants.DependentTypesConservation <> type01DepProved def
+R10446:10450 Corelib.Init.Datatypes <> false constr
+R10479:10502 UMST.ChemConstants.DependentTypesConservation <> h_bundle_index_conserved thm
+R10479:10502 UMST.ChemConstants.DependentTypesConservation <> h_bundle_index_conserved thm
+R10528:10552 UMST.ChemConstants.DependentTypesConservation <> ca_bundle_index_conserved thm
+R10528:10552 UMST.ChemConstants.DependentTypesConservation <> ca_bundle_index_conserved thm
+R10582:10611 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok_true thm
+R10582:10611 UMST.ChemConstants.DependentTypesConservation <> geometry_knowing_fiber_ok_true thm
+R10646:10672 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_not_ok thm
+R10646:10672 UMST.ChemConstants.DependentTypesConservation <> geometry_meso_acting_not_ok thm
+R10700:10717 UMST.ChemConstants.DependentTypesConservation <> species_is_l1_true thm
+R10727:10749 UMST.ChemConstants.DependentTypesConservation <> type01_dep_proved_false thm
+R10700:10717 UMST.ChemConstants.DependentTypesConservation <> species_is_l1_true thm
+R10727:10749 UMST.ChemConstants.DependentTypesConservation <> type01_dep_proved_false thm
+def 10995:11029 <> elementGeometryThermoTypesAuthority
+R11033:11038 Stdlib.Strings.String <> string ind
+def 11112:11145 <> elementDependentTypesTestAuthority
+R11149:11154 Stdlib.Strings.String <> string ind
+def 11224:11244 <> chemL0Type01Authority
+R11248:11253 Stdlib.Strings.String <> string ind
+def 11291:11320 <> chemIntProveType01DepAuthority
+R11324:11329 Stdlib.Strings.String <> string ind
+def 11378:11409 <> dependentTypesConservationCellId
+R11413:11418 Stdlib.Strings.String <> string ind
+def 11487:11520 <> dependentTypesConservationNonClaim
+R11524:11529 Stdlib.Strings.String <> string ind
+prf 11961:11996 <> dependent_types_conservation_cell_id
+R12034:12038 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12002:12033 UMST.ChemConstants.DependentTypesConservation <> dependentTypesConservationCellId def
+prf 12121:12161 <> dependent_types_cites_element_geometry_rs
+R12202:12207 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12167:12201 UMST.ChemConstants.DependentTypesConservation <> elementGeometryThermoTypesAuthority def
+prf 12245:12288 <> dependent_types_cites_element_dependent_test
+R12328:12333 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12294:12327 UMST.ChemConstants.DependentTypesConservation <> elementDependentTypesTestAuthority def
+prf 12371:12402 <> dependent_types_cites_l0_type_01
+R12429:12431 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12408:12428 UMST.ChemConstants.DependentTypesConservation <> chemL0Type01Authority def
+prf 12483:12525 <> dependent_types_cites_int_prove_type_01_dep
+R12561:12566 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12531:12560 UMST.ChemConstants.DependentTypesConservation <> chemIntProveType01DepAuthority def
+def 12831:12872 <> dependentTypesSecondLawConservationFraming
+R12876:12881 Stdlib.Strings.String <> string ind
+prf 12981:13028 <> dependent_types_not_second_dependent_types_axiom
+R13076:13081 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13034:13075 UMST.ChemConstants.DependentTypesConservation <> dependentTypesSecondLawConservationFraming def
+prf 13147:13193 <> dependent_types_second_law_conservation_framing
+R13241:13246 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13199:13240 UMST.ChemConstants.DependentTypesConservation <> dependentTypesSecondLawConservationFraming def
+def 13515:13536 <> physicsGreenAuthorized
+R13548:13552 Corelib.Init.Logic <> False ind
+prf 13562:13596 <> dependent_types_physics_green_false
+R13602:13603 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R13604:13625 UMST.ChemConstants.DependentTypesConservation <> physicsGreenAuthorized def
+prf 13665:13696 <> dependent_types_modality_unwired
+R13743:13745 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13702:13742 UMST.ChemConstants.DependentTypesConservation <> dependentTypesConservationModalityCurrent def
+R13746:13781 UMST.ChemConstants.DependentTypesConservation <> dependent_types_conservation_unwired constr

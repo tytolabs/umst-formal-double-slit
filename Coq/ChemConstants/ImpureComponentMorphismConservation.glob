@@ -1,0 +1,1220 @@
+DIGEST 0633a028f2458cbd8f036e7724bd64f5
+FUMST.ChemConstants.ImpureComponentMorphismConservation
+R1350:1354 Stdlib.Arith.Arith <> <> lib
+R1356:1361 Stdlib.ZArith.ZArith <> <> lib
+R1363:1368 Stdlib.Strings.String <> <> lib
+R1370:1373 Stdlib.Bool.Bool <> <> lib
+R1375:1377 Stdlib.micromega.Lia <> <> lib
+R1379:1382 Stdlib.Lists.List <> <> lib
+R1392:1404 Stdlib.Lists.List ListNotations <> mod
+ind 1734:1776 <> ImpureComponentMorphismConservationModality
+constr 1792:1837 <> impure_component_morphism_conservation_unwired
+constr 1843:1888 <> impure_component_morphism_conservation_assumed
+constr 1894:1938 <> impure_component_morphism_conservation_proved
+constr 1944:1991 <> impure_component_morphism_conservation_surrogate
+scheme 1734:1776 <> ImpureComponentMorphismConservationModality_rect
+scheme 1734:1776 <> ImpureComponentMorphismConservationModality_ind
+scheme 1734:1776 <> ImpureComponentMorphismConservationModality_rec
+scheme 1734:1776 <> ImpureComponentMorphismConservationModality_sind
+def 2006:2055 <> impureComponentMorphismConservationModalityCurrent
+R2061:2103 UMST.ChemConstants.ImpureComponentMorphismConservation <> ImpureComponentMorphismConservationModality ind
+R2110:2155 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+def 2170:2214 <> impure_component_morphism_lattice_cardinality
+R2218:2220 Corelib.Init.Datatypes <> nat ind
+prf 2235:2287 <> impure_component_morphism_lattice_cardinality_is_four
+R2338:2340 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2293:2337 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_lattice_cardinality def
+prf 2376:2424 <> impure_component_morphism_lattice_not_118_squared
+R2502:2504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2430:2433 Corelib.Init.Datatypes <> negb def
+R2436:2442 Stdlib.Arith.PeanoNat Nat eqb def
+R2444:2488 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_lattice_cardinality def
+R2494:2496 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2505:2508 Corelib.Init.Datatypes <> true constr
+R2527:2571 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_lattice_cardinality def
+def 2832:2856 <> pattern_class_cardinality
+R2860:2862 Corelib.Init.Datatypes <> nat ind
+prf 2878:2908 <> pattern_class_cardinality_is_25
+R2939:2941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2914:2938 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_cardinality def
+prf 2978:3006 <> pattern_class_not_118_squared
+R3064:3066 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3012:3015 Corelib.Init.Datatypes <> negb def
+R3018:3024 Stdlib.Arith.PeanoNat Nat eqb def
+R3026:3050 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_cardinality def
+R3056:3058 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R3067:3070 Corelib.Init.Datatypes <> true constr
+R3089:3113 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_cardinality def
+def 3148:3172 <> pattern_class_index_valid
+R3179:3181 Corelib.Init.Datatypes <> nat ind
+binder 3175:3175 <> i:3
+R3186:3189 Corelib.Init.Datatypes <> bool ind
+R3196:3202 Stdlib.Arith.PeanoNat Nat ltb def
+R3204:3204 UMST.ChemConstants.ImpureComponentMorphismConservation <> i:3 var
+R3206:3230 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_cardinality def
+def 3328:3370 <> pattern_class_impure_component_morphism_idx
+R3374:3376 Corelib.Init.Datatypes <> nat ind
+prf 3391:3438 <> pattern_class_impure_component_morphism_idx_is_8
+R3487:3489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3444:3486 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_idx def
+prf 3525:3567 <> impure_component_morphism_class_index_valid
+R3642:3644 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3573:3597 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_index_valid def
+R3599:3641 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_idx def
+R3645:3648 Corelib.Init.Datatypes <> true constr
+R3667:3691 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_index_valid def
+R3694:3736 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_idx def
+R3743:3767 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_cardinality def
+def 3802:3844 <> crossClassifierImpureComponentMorphismRowId
+R3848:3853 Stdlib.Strings.String <> string ind
+prf 3872:3923 <> cross_classifier_impure_component_morphism_row_named
+R3972:3974 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3929:3971 UMST.ChemConstants.ImpureComponentMorphismConservation <> crossClassifierImpureComponentMorphismRowId def
+def 4019:4061 <> pattern_class_impure_component_morphism_tag
+R4065:4070 Stdlib.Strings.String <> string ind
+def 4118:4156 <> north_star_class_8_impure_component_tag
+R4160:4165 Stdlib.Strings.String <> string ind
+prf 4216:4267 <> pattern_class_impure_component_morphism_tag_nonempty
+R4316:4319 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4273:4315 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_tag def
+prf 4357:4404 <> north_star_class_8_impure_component_tag_nonempty
+R4449:4452 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R4410:4448 UMST.ChemConstants.ImpureComponentMorphismConservation <> north_star_class_8_impure_component_tag def
+def 4718:4740 <> iupac_table_cardinality
+R4744:4746 Corelib.Init.Datatypes <> nat ind
+prf 4763:4792 <> iupac_table_cardinality_is_118
+R4821:4823 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4798:4820 UMST.ChemConstants.ImpureComponentMorphismConservation <> iupac_table_cardinality def
+def 4866:4885 <> iron_atomic_number_z
+R4889:4891 Corelib.Init.Datatypes <> nat ind
+prf 4907:4932 <> iron_atomic_number_z_is_26
+R4958:4960 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4938:4957 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+def 5002:5013 <> iron_z_valid
+R5017:5020 Corelib.Init.Datatypes <> bool ind
+R5057:5062 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5027:5033 Stdlib.Arith.PeanoNat Nat ltb def
+R5037:5056 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+R5063:5069 Stdlib.Arith.PeanoNat Nat leb def
+R5071:5090 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+R5092:5114 UMST.ChemConstants.ImpureComponentMorphismConservation <> iupac_table_cardinality def
+prf 5124:5140 <> iron_z_valid_true
+R5156:5158 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5144:5155 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_z_valid def
+R5159:5162 Corelib.Init.Datatypes <> true constr
+R5181:5192 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_z_valid def
+R5195:5214 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+R5217:5239 UMST.ChemConstants.ImpureComponentMorphismConservation <> iupac_table_cardinality def
+def 5274:5295 <> forbidden_z119_smuggle
+R5299:5301 Corelib.Init.Datatypes <> nat ind
+def 5323:5349 <> forbidden_z119_not_in_table
+R5353:5356 Corelib.Init.Datatypes <> bool ind
+R5363:5366 Corelib.Init.Datatypes <> negb def
+R5369:5375 Stdlib.Arith.PeanoNat Nat leb def
+R5377:5398 UMST.ChemConstants.ImpureComponentMorphismConservation <> forbidden_z119_smuggle def
+R5400:5422 UMST.ChemConstants.ImpureComponentMorphismConservation <> iupac_table_cardinality def
+prf 5433:5465 <> forbidden_z119_not_in_iupac_table
+R5498:5500 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5471:5497 UMST.ChemConstants.ImpureComponentMorphismConservation <> forbidden_z119_not_in_table def
+R5501:5504 Corelib.Init.Datatypes <> true constr
+R5523:5549 UMST.ChemConstants.ImpureComponentMorphismConservation <> forbidden_z119_not_in_table def
+R5552:5573 UMST.ChemConstants.ImpureComponentMorphismConservation <> forbidden_z119_smuggle def
+R5576:5598 UMST.ChemConstants.ImpureComponentMorphismConservation <> iupac_table_cardinality def
+def 5633:5668 <> impure_component_morphism_factor_tag
+R5672:5677 Stdlib.Strings.String <> string ind
+def 5725:5760 <> ore_constituent_morphism_channel_tag
+R5764:5769 Stdlib.Strings.String <> string ind
+def 5814:5840 <> second_law_gmin_channel_tag
+R5844:5849 Stdlib.Strings.String <> string ind
+prf 5888:5932 <> impure_component_morphism_factor_tag_nonempty
+R5974:5977 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R5938:5973 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_factor_tag def
+prf 6015:6059 <> ore_constituent_morphism_channel_tag_nonempty
+R6101:6104 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6065:6100 UMST.ChemConstants.ImpureComponentMorphismConservation <> ore_constituent_morphism_channel_tag def
+prf 6142:6177 <> second_law_gmin_channel_tag_nonempty
+R6210:6213 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6183:6209 UMST.ChemConstants.ImpureComponentMorphismConservation <> second_law_gmin_channel_tag def
+ind 6479:6494 <> icm_channel_slot
+constr 6510:6525 <> icm_slot_unwired
+constr 6531:6545 <> icm_slot_absent
+constr 6551:6566 <> icm_slot_present
+scheme 6479:6494 <> icm_channel_slot_rect
+scheme 6479:6494 <> icm_channel_slot_ind
+scheme 6479:6494 <> icm_channel_slot_rec
+scheme 6479:6494 <> icm_channel_slot_sind
+def 6581:6600 <> icm_channel_slot_beq
+R6611:6626 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_slot ind
+binder 6603:6604 <> s1:6
+binder 6606:6607 <> s2:7
+R6631:6634 Corelib.Init.Datatypes <> bool ind
+R6651:6652 UMST.ChemConstants.ImpureComponentMorphismConservation <> s2:7 var
+R6647:6648 UMST.ChemConstants.ImpureComponentMorphismConservation <> s1:6 var
+R6663:6678 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_unwired constr
+R6681:6696 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_unwired constr
+R6701:6704 Corelib.Init.Datatypes <> true constr
+R6710:6724 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_absent constr
+R6727:6741 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_absent constr
+R6746:6749 Corelib.Init.Datatypes <> true constr
+R6755:6770 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_present constr
+R6773:6788 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_present constr
+R6793:6796 Corelib.Init.Datatypes <> true constr
+R6810:6814 Corelib.Init.Datatypes <> false constr
+def 6835:6861 <> icm_channel_slot_is_present
+R6868:6883 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_slot ind
+binder 6864:6864 <> s:10
+R6888:6891 Corelib.Init.Datatypes <> bool ind
+R6904:6904 UMST.ChemConstants.ImpureComponentMorphismConservation <> s:10 var
+R6915:6930 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_present constr
+R6935:6938 Corelib.Init.Datatypes <> true constr
+R6949:6953 Corelib.Init.Datatypes <> false constr
+def 6974:7015 <> impureComponentMorphismProductChannelCount
+R7019:7021 Corelib.Init.Datatypes <> nat ind
+prf 7036:7091 <> impure_component_morphism_product_channel_count_is_three
+R7139:7141 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7097:7138 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismProductChannelCount def
+def 7270:7305 <> icm_channel_ore_constituent_morphism
+R7309:7311 Corelib.Init.Datatypes <> nat ind
+def 7330:7356 <> icm_channel_second_law_gmin
+R7360:7362 Corelib.Init.Datatypes <> nat ind
+def 7381:7414 <> icm_channel_class8_impure_morphism
+R7418:7420 Corelib.Init.Datatypes <> nat ind
+prf 7435:7479 <> icm_channel_ore_constituent_morphism_idx_is_0
+R7521:7523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7485:7520 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_ore_constituent_morphism def
+prf 7559:7594 <> icm_channel_second_law_gmin_idx_is_1
+R7627:7629 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7600:7626 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_second_law_gmin def
+prf 7665:7707 <> icm_channel_class8_impure_morphism_idx_is_2
+R7747:7749 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7713:7746 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_class8_impure_morphism def
+def 8012:8029 <> icm_channel_bundle
+R8044:8047 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8041:8043 Corelib.Init.Datatypes <> nat ind
+R8048:8063 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_slot ind
+def 8078:8116 <> impureComponentMorphismBundleAllUnwired
+R8120:8137 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+R8153:8168 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_unwired constr
+def 8183:8213 <> impureComponentMorphismBundleAt
+R8220:8237 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 8216:8216 <> b:12
+R8247:8249 Corelib.Init.Datatypes <> nat ind
+binder 8241:8243 <> idx:13
+R8262:8277 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_slot ind
+binder 8255:8258 <> slot:14
+R8282:8299 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 8310:8310 <> i:15
+R8318:8324 Stdlib.Arith.PeanoNat Nat eqb def
+R8326:8326 UMST.ChemConstants.ImpureComponentMorphismConservation <> i:15 var
+R8328:8330 UMST.ChemConstants.ImpureComponentMorphismConservation <> idx:13 var
+R8347:8347 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:12 var
+R8349:8349 UMST.ChemConstants.ImpureComponentMorphismConservation <> i:15 var
+R8337:8340 UMST.ChemConstants.ImpureComponentMorphismConservation <> slot:14 var
+def 8364:8403 <> impureComponentMorphismBundleWithPresent
+R8412:8429 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 8408:8408 <> b:16
+R8439:8441 Corelib.Init.Datatypes <> nat ind
+binder 8433:8435 <> idx:17
+R8446:8463 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+R8470:8500 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleAt def
+R8502:8502 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:16 var
+R8504:8506 UMST.ChemConstants.ImpureComponentMorphismConservation <> idx:17 var
+R8508:8523 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_slot_present constr
+def 8536:8558 <> count_icm_present_up_to
+R8565:8582 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 8561:8561 <> b:18
+R8594:8596 Corelib.Init.Datatypes <> nat ind
+binder 8586:8590 <> bound:19
+R8601:8603 Corelib.Init.Datatypes <> nat ind
+R8616:8620 UMST.ChemConstants.ImpureComponentMorphismConservation <> bound:19 var
+R8642:8642 Corelib.Init.Datatypes <> S constr
+R8677:8703 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_slot_is_present def
+R8706:8706 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:18 var
+R8709:8712 Corelib.Init.Peano <> pred abbrev
+R8714:8718 UMST.ChemConstants.ImpureComponentMorphismConservation <> bound:19 var
+binder 8659:8661 <> add:22
+R8780:8782 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R8753:8775 UMST.ChemConstants.ImpureComponentMorphismConservation <> count_icm_present_up_to:20 def
+R8777:8777 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:18 var
+R8783:8785 UMST.ChemConstants.ImpureComponentMorphismConservation <> add:22 var
+def 8806:8846 <> impureComponentMorphismBundlePresentCount
+R8853:8870 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 8849:8849 <> b:23
+R8875:8877 Corelib.Init.Datatypes <> nat ind
+R8884:8906 UMST.ChemConstants.ImpureComponentMorphismConservation <> count_icm_present_up_to def
+R8908:8908 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:23 var
+R8910:8951 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismProductChannelCount def
+def 8966:8999 <> impureComponentMorphismBundleHolds
+R9006:9023 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 9002:9002 <> b:24
+R9033:9035 Corelib.Init.Datatypes <> nat ind
+binder 9027:9029 <> idx:25
+R9040:9043 Corelib.Init.Datatypes <> bool ind
+R9050:9076 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_slot_is_present def
+R9079:9079 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:24 var
+R9081:9083 UMST.ChemConstants.ImpureComponentMorphismConservation <> idx:25 var
+def 9099:9146 <> impureComponentMorphismBundleIsConcurrentProduct
+R9153:9170 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 9149:9149 <> b:26
+R9175:9178 Corelib.Init.Datatypes <> bool ind
+R9185:9191 Stdlib.Arith.PeanoNat Nat leb def
+R9196:9236 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundlePresentCount def
+R9238:9238 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:26 var
+def 9338:9371 <> impureComponentMorphismFe26Witness
+R9375:9392 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+R9399:9438 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleWithPresent def
+R9445:9484 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleWithPresent def
+R9493:9532 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleWithPresent def
+R9534:9572 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleAllUnwired def
+R9582:9617 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_ore_constituent_morphism def
+R9626:9652 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_second_law_gmin def
+R9659:9692 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_class8_impure_morphism def
+def 9707:9741 <> impureComponentMorphismEmptyWitness
+R9745:9762 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+R9769:9807 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleAllUnwired def
+def 9822:9857 <> impureComponentMorphismSinglePresent
+R9861:9878 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+R9885:9924 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleWithPresent def
+R9926:9964 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleAllUnwired def
+R9970:10005 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_ore_constituent_morphism def
+prf 10015:10054 <> ore_constituent_morphism_channel_present
+R10170:10172 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10060:10093 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleHolds def
+R10095:10128 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R10134:10169 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_ore_constituent_morphism def
+R10173:10176 Corelib.Init.Datatypes <> true constr
+prf 10211:10241 <> second_law_gmin_channel_present
+R10348:10350 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10247:10280 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleHolds def
+R10282:10315 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R10321:10347 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_second_law_gmin def
+R10351:10354 Corelib.Init.Datatypes <> true constr
+prf 10389:10426 <> class8_impure_morphism_channel_present
+R10540:10542 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10432:10465 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleHolds def
+R10467:10500 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R10506:10539 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_class8_impure_morphism def
+R10543:10546 Corelib.Init.Datatypes <> true constr
+prf 10581:10615 <> fe26_witness_present_count_is_three
+R10697:10699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10621:10661 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundlePresentCount def
+R10663:10696 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+prf 10735:10768 <> fe26_witness_is_concurrent_product
+R10857:10859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10774:10821 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R10823:10856 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R10860:10863 Corelib.Init.Datatypes <> true constr
+R10882:10929 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R10942:10976 UMST.ChemConstants.ImpureComponentMorphismConservation <> fe26_witness_present_count_is_three thm
+R10942:10976 UMST.ChemConstants.ImpureComponentMorphismConservation <> fe26_witness_present_count_is_three thm
+R10942:10976 UMST.ChemConstants.ImpureComponentMorphismConservation <> fe26_witness_present_count_is_three thm
+prf 11006:11036 <> empty_bundle_present_count_zero
+R11119:11121 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11042:11082 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundlePresentCount def
+R11084:11118 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismEmptyWitness def
+prf 11157:11191 <> empty_bundle_not_concurrent_product
+R11281:11283 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11197:11244 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R11246:11280 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismEmptyWitness def
+R11284:11288 Corelib.Init.Datatypes <> false constr
+R11307:11354 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R11367:11397 UMST.ChemConstants.ImpureComponentMorphismConservation <> empty_bundle_present_count_zero thm
+R11367:11397 UMST.ChemConstants.ImpureComponentMorphismConservation <> empty_bundle_present_count_zero thm
+R11367:11397 UMST.ChemConstants.ImpureComponentMorphismConservation <> empty_bundle_present_count_zero thm
+prf 11427:11453 <> single_present_count_is_one
+R11537:11539 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11459:11499 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundlePresentCount def
+R11501:11536 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismSinglePresent def
+prf 11575:11611 <> single_present_not_concurrent_product
+R11702:11704 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11617:11664 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R11666:11701 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismSinglePresent def
+R11705:11709 Corelib.Init.Datatypes <> false constr
+R11728:11775 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R11788:11814 UMST.ChemConstants.ImpureComponentMorphismConservation <> single_present_count_is_one thm
+R11788:11814 UMST.ChemConstants.ImpureComponentMorphismConservation <> single_present_count_is_one thm
+R11788:11814 UMST.ChemConstants.ImpureComponentMorphismConservation <> single_present_count_is_one thm
+ind 12073:12087 <> icm_xor_posture
+constr 12103:12119 <> icm_xor_exclusive
+constr 12125:12150 <> icm_xor_concurrent_product
+scheme 12073:12087 <> icm_xor_posture_rect
+scheme 12073:12087 <> icm_xor_posture_ind
+scheme 12073:12087 <> icm_xor_posture_rec
+scheme 12073:12087 <> icm_xor_posture_sind
+def 12165:12186 <> icmXorClassifierMarker
+R12190:12195 Stdlib.Strings.String <> string ind
+def 12257:12282 <> icmConcurrentProductMarker
+R12286:12291 Stdlib.Strings.String <> string ind
+prf 12343:12385 <> icm_xor_marker_ne_concurrent_product_marker
+R12413:12416 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12391:12412 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierMarker def
+R12417:12442 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmConcurrentProductMarker def
+def 12483:12510 <> icmXorClassifierIncompatible
+R12525:12528 Corelib.Init.Datatypes <> bool ind
+binder 12513:12521 <> claim_xor:29
+R12538:12555 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 12534:12534 <> b:30
+R12560:12563 Corelib.Init.Datatypes <> bool ind
+R12579:12582 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R12570:12578 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_xor:29 var
+R12583:12630 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R12632:12632 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:30 var
+prf 12642:12671 <> icm_xor_refuse_on_fe26_witness
+R12745:12747 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12677:12704 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierIncompatible def
+R12706:12709 Corelib.Init.Datatypes <> true constr
+R12711:12744 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R12748:12751 Corelib.Init.Datatypes <> true constr
+R12770:12797 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierIncompatible def
+prf 12850:12887 <> icm_xor_ok_on_concurrent_product_claim
+R12962:12964 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12893:12920 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierIncompatible def
+R12922:12926 Corelib.Init.Datatypes <> false constr
+R12928:12961 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R12965:12969 Corelib.Init.Datatypes <> false constr
+def 13009:13024 <> icmProductNotXor
+R13028:13031 Corelib.Init.Datatypes <> bool ind
+R13121:13126 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R13038:13085 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R13087:13120 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R13127:13154 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierIncompatible def
+R13156:13159 Corelib.Init.Datatypes <> true constr
+R13161:13194 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+prf 13204:13227 <> icm_product_not_xor_true
+R13247:13249 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13231:13246 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmProductNotXor def
+R13250:13253 Corelib.Init.Datatypes <> true constr
+R13272:13287 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmProductNotXor def
+prf 13342:13367 <> concurrent_product_not_xor
+R13396:13401 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13389:13391 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13373:13388 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmProductNotXor def
+R13392:13395 Corelib.Init.Datatypes <> true constr
+R13501:13506 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13494:13496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13402:13408 Stdlib.Arith.PeanoNat Nat leb def
+R13413:13453 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundlePresentCount def
+R13459:13492 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R13497:13500 Corelib.Init.Datatypes <> true constr
+R13529:13532 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R13507:13528 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierMarker def
+R13533:13558 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmConcurrentProductMarker def
+R13587:13610 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_product_not_xor_true thm
+R13587:13610 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_product_not_xor_true thm
+R13638:13672 UMST.ChemConstants.ImpureComponentMorphismConservation <> fe26_witness_present_count_is_three thm
+R13638:13672 UMST.ChemConstants.ImpureComponentMorphismConservation <> fe26_witness_present_count_is_three thm
+R13638:13672 UMST.ChemConstants.ImpureComponentMorphismConservation <> fe26_witness_present_count_is_three thm
+R13706:13748 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_xor_marker_ne_concurrent_product_marker thm
+R13706:13748 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_xor_marker_ne_concurrent_product_marker thm
+ind 13992:14007 <> icm_bar_presence
+constr 14023:14036 <> icm_bar_absent
+constr 14042:14056 <> icm_bar_present
+scheme 13992:14007 <> icm_bar_presence_rect
+scheme 13992:14007 <> icm_bar_presence_ind
+scheme 13992:14007 <> icm_bar_presence_rec
+scheme 13992:14007 <> icm_bar_presence_sind
+rec 14067:14079 <> icm_claim_bar
+proj 14095:14116 <> icm_bar_presence_field
+proj 14140:14159 <> icm_bar_defect_total
+R14120:14135 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence ind
+R14163:14165 Corelib.Init.Datatypes <> nat ind
+def 14182:14218 <> impureComponentMorphismClaimBarAbsent
+R14222:14234 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_claim_bar rec
+R14244:14265 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14244:14265 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14244:14265 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14291:14310 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_defect_total proj
+R14291:14310 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_defect_total proj
+R14270:14283 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_absent constr
+def 14333:14373 <> impureComponentMorphismClaimBarZeroDefect
+R14377:14389 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_claim_bar rec
+R14399:14420 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14399:14420 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14399:14420 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14447:14466 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_defect_total proj
+R14447:14466 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_defect_total proj
+R14425:14439 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_present constr
+def 14489:14513 <> icm_claim_bar_zero_defect
+R14520:14532 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_claim_bar rec
+binder 14516:14516 <> b:36
+R14537:14540 Corelib.Init.Datatypes <> bool ind
+R14553:14574 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_presence_field proj
+R14576:14576 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:36 var
+R14587:14600 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_absent constr
+R14605:14609 Corelib.Init.Datatypes <> false constr
+R14615:14629 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_present constr
+R14634:14640 Stdlib.Arith.PeanoNat Nat eqb def
+R14643:14662 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_bar_defect_total proj
+R14664:14664 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:36 var
+prf 14683:14712 <> icm_claim_bar_zero_defect_true
+R14785:14787 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14718:14742 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_claim_bar_zero_defect def
+R14744:14784 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarZeroDefect def
+R14788:14791 Corelib.Init.Datatypes <> true constr
+prf 14826:14861 <> icm_claim_bar_absent_not_zero_defect
+R14930:14932 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14867:14891 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_claim_bar_zero_defect def
+R14893:14929 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R14933:14937 Corelib.Init.Datatypes <> false constr
+ind 15202:15225 <> icm_conservation_verdict
+constr 15241:15262 <> icm_verdict_unwired_ok
+constr 15268:15287 <> icm_verdict_named_ok
+constr 15293:15313 <> icm_verdict_design_ok
+constr 15319:15344 <> icm_verdict_trivial_refuse
+constr 15350:15371 <> icm_verdict_xor_refuse
+constr 15377:15407 <> icm_verdict_green_invent_refuse
+constr 15413:15449 <> icm_verdict_proved_without_bar_refuse
+constr 15455:15489 <> icm_verdict_production_wired_refuse
+constr 15495:15543 <> icm_verdict_parallel_impure_morphism_axiom_refuse
+constr 15549:15585 <> icm_verdict_species_id_smuggle_refuse
+constr 15591:15625 <> icm_verdict_extra_element_id_refuse
+constr 15631:15666 <> icm_verdict_free_purification_refuse
+constr 15672:15702 <> icm_verdict_tp_float_pin_refuse
+scheme 15202:15225 <> icm_conservation_verdict_rect
+scheme 15202:15225 <> icm_conservation_verdict_ind
+scheme 15202:15225 <> icm_conservation_verdict_rec
+scheme 15202:15225 <> icm_conservation_verdict_sind
+def 15717:15743 <> icm_conservation_verdict_ok
+R15750:15773 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict ind
+binder 15746:15746 <> v:39
+R15778:15781 Corelib.Init.Datatypes <> bool ind
+R15794:15794 UMST.ChemConstants.ImpureComponentMorphismConservation <> v:39 var
+R15805:15826 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_unwired_ok constr
+R15831:15834 Corelib.Init.Datatypes <> true constr
+R15840:15859 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R15864:15867 Corelib.Init.Datatypes <> true constr
+R15873:15893 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_design_ok constr
+R15898:15901 Corelib.Init.Datatypes <> true constr
+R15912:15916 Corelib.Init.Datatypes <> false constr
+def 15937:15975 <> impureComponentMorphismBundleNontrivial
+R15982:15999 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 15978:15978 <> b:41
+R16004:16007 Corelib.Init.Datatypes <> bool ind
+R16014:16020 Stdlib.Arith.PeanoNat Nat ltb def
+R16025:16065 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundlePresentCount def
+R16067:16067 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:41 var
+def 16083:16123 <> evaluate_impure_component_morphism_bundle
+R16132:16174 UMST.ChemConstants.ImpureComponentMorphismConservation <> ImpureComponentMorphismConservationModality ind
+binder 16128:16128 <> m:42
+R16184:16201 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_channel_bundle def
+binder 16180:16180 <> b:43
+R16213:16225 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_claim_bar rec
+binder 16207:16209 <> bar:44
+R16254:16257 Corelib.Init.Datatypes <> bool ind
+binder 16231:16250 <> claim_xor_classifier:45
+R16285:16288 Corelib.Init.Datatypes <> bool ind
+binder 16263:16281 <> claim_physics_green:46
+R16309:16312 Corelib.Init.Datatypes <> bool ind
+binder 16294:16305 <> claim_proved:47
+R16317:16340 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict ind
+R16350:16368 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_physics_green:46 var
+R16419:16430 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_proved:47 var
+R16497:16500 Corelib.Init.Datatypes <> negb def
+R16503:16541 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleNontrivial def
+R16543:16543 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:43 var
+R16610:16637 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmXorClassifierIncompatible def
+R16639:16658 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_xor_classifier:45 var
+R16660:16660 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:43 var
+R16754:16754 UMST.ChemConstants.ImpureComponentMorphismConservation <> m:42 var
+R16782:16827 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R16858:16905 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R16907:16907 UMST.ChemConstants.ImpureComponentMorphismConservation <> b:43 var
+R16986:17006 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_design_ok constr
+R16937:16956 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R17029:17074 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_assumed constr
+R17097:17144 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_surrogate constr
+R17172:17192 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_design_ok constr
+R17172:17192 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_design_ok constr
+R17215:17259 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R17287:17323 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_proved_without_bar_refuse constr
+R16684:16705 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_xor_refuse constr
+R16563:16588 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_trivial_refuse constr
+R16444:16480 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_proved_without_bar_refuse constr
+R16377:16407 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_green_invent_refuse constr
+def 17361:17413 <> evaluate_impure_component_morphism_conservation_close
+R17422:17464 UMST.ChemConstants.ImpureComponentMorphismConservation <> ImpureComponentMorphismConservationModality ind
+binder 17418:17418 <> m:49
+R17492:17495 Corelib.Init.Datatypes <> bool ind
+binder 17470:17488 <> claim_physics_green:50
+R17526:17529 Corelib.Init.Datatypes <> bool ind
+binder 17501:17522 <> claim_production_wired:51
+R17534:17557 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict ind
+R17567:17585 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_physics_green:50 var
+R17636:17657 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_production_wired:51 var
+R17719:17719 UMST.ChemConstants.ImpureComponentMorphismConservation <> m:49 var
+R17732:17777 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R17782:17803 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_unwired_ok constr
+R17811:17856 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_assumed constr
+R17864:17908 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R17916:17963 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_surrogate constr
+R17968:17987 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R17968:17987 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R17968:17987 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R17666:17700 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_production_wired_refuse constr
+R17594:17624 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_green_invent_refuse constr
+def 18010:18058 <> impure_component_morphism_conservation_authorized
+R18085:18088 Corelib.Init.Datatypes <> bool ind
+binder 18063:18081 <> claim_physics_green:53
+R18119:18122 Corelib.Init.Datatypes <> bool ind
+binder 18094:18115 <> claim_production_wired:54
+R18127:18130 Corelib.Init.Datatypes <> bool ind
+R18143:18195 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R18207:18251 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R18253:18271 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_physics_green:53 var
+R18273:18294 UMST.ChemConstants.ImpureComponentMorphismConservation <> claim_production_wired:54 var
+R18305:18324 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R18329:18332 Corelib.Init.Datatypes <> true constr
+R18343:18347 Corelib.Init.Datatypes <> false constr
+ind 18594:18613 <> icm_conservation_law
+constr 18629:18645 <> icm_law_conserved
+constr 18651:18666 <> icm_law_named_ok
+constr 18672:18693 <> icm_law_trivial_refuse
+constr 18699:18725 <> icm_law_green_invent_refuse
+scheme 18594:18613 <> icm_conservation_law_rect
+scheme 18594:18613 <> icm_conservation_law_ind
+scheme 18594:18613 <> icm_conservation_law_rec
+scheme 18594:18613 <> icm_conservation_law_sind
+def 18740:18765 <> icm_conservation_law_count
+R18769:18771 Corelib.Init.Datatypes <> nat ind
+prf 18786:18819 <> icm_conservation_law_count_is_four
+R18851:18853 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18825:18850 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_law_count def
+ind 18893:18920 <> icm_conservation_law_witness
+constr 18936:18955 <> icm_law_witness_open
+constr 18961:18982 <> icm_law_witness_proved
+scheme 18893:18920 <> icm_conservation_law_witness_rect
+scheme 18893:18920 <> icm_conservation_law_witness_ind
+scheme 18893:18920 <> icm_conservation_law_witness_rec
+scheme 18893:18920 <> icm_conservation_law_witness_sind
+def 18997:19033 <> evaluate_icm_conservation_law_witness
+R19044:19063 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_law ind
+binder 19038:19040 <> law:59
+R19073:19115 UMST.ChemConstants.ImpureComponentMorphismConservation <> ImpureComponentMorphismConservationModality ind
+binder 19069:19069 <> m:60
+R19122:19149 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_law_witness ind
+R19162:19162 UMST.ChemConstants.ImpureComponentMorphismConservation <> m:60 var
+R19173:19218 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R19224:19269 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_assumed constr
+R19275:19322 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_surrogate constr
+R19327:19346 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+R19327:19346 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+R19327:19346 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+R19352:19396 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R19401:19422 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_proved constr
+prf 19438:19478 <> all_icm_conservation_laws_open_at_unwired
+R19613:19618 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19590:19592 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19484:19520 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_icm_conservation_law_witness def
+R19522:19538 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_conserved constr
+R19544:19589 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R19593:19612 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+R19747:19752 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19724:19726 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19619:19655 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_icm_conservation_law_witness def
+R19657:19672 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_named_ok constr
+R19678:19723 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R19727:19746 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+R19887:19892 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19864:19866 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19753:19789 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_icm_conservation_law_witness def
+R19791:19812 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_trivial_refuse constr
+R19818:19863 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R19867:19886 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+R20009:20011 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19893:19929 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_icm_conservation_law_witness def
+R19931:19957 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_green_invent_refuse constr
+R19963:20008 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R20012:20031 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_law_witness_open constr
+def 20311:20351 <> impureComponentMorphismConservationProved
+R20355:20358 Corelib.Init.Datatypes <> bool ind
+R20363:20367 Corelib.Init.Datatypes <> false constr
+prf 20377:20427 <> impure_component_morphism_conservation_proved_false
+R20474:20476 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20433:20473 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationProved def
+R20477:20481 Corelib.Init.Datatypes <> false constr
+def 20521:20543 <> not118SquaredGreenTable
+R20547:20550 Corelib.Init.Datatypes <> bool ind
+R20555:20558 Corelib.Init.Datatypes <> true constr
+prf 20568:20594 <> not_118_squared_green_table
+R20621:20623 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20598:20620 UMST.ChemConstants.ImpureComponentMorphismConservation <> not118SquaredGreenTable def
+R20624:20627 Corelib.Init.Datatypes <> true constr
+prf 20884:20922 <> unwired_close_without_production_wiring
+R21044:21048 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20928:20980 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R20986:21031 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R21033:21037 Corelib.Init.Datatypes <> false constr
+R21039:21043 Corelib.Init.Datatypes <> false constr
+R21049:21070 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_unwired_ok constr
+prf 21107:21158 <> unwired_modality_always_ok_without_production_wiring
+R21280:21284 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21164:21216 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R21222:21267 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R21269:21273 Corelib.Init.Datatypes <> false constr
+R21275:21279 Corelib.Init.Datatypes <> false constr
+R21285:21306 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_unwired_ok constr
+R21322:21360 UMST.ChemConstants.ImpureComponentMorphismConservation <> unwired_close_without_production_wiring thm
+R21322:21360 UMST.ChemConstants.ImpureComponentMorphismConservation <> unwired_close_without_production_wiring thm
+prf 21375:21418 <> unwired_verdict_ok_without_production_wiring
+R21577:21581 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21424:21450 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R21457:21509 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R21518:21563 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R21565:21569 Corelib.Init.Datatypes <> false constr
+R21571:21575 Corelib.Init.Datatypes <> false constr
+R21582:21585 Corelib.Init.Datatypes <> true constr
+R21604:21630 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R21643:21681 UMST.ChemConstants.ImpureComponentMorphismConservation <> unwired_close_without_production_wiring thm
+R21643:21681 UMST.ChemConstants.ImpureComponentMorphismConservation <> unwired_close_without_production_wiring thm
+R21643:21681 UMST.ChemConstants.ImpureComponentMorphismConservation <> unwired_close_without_production_wiring thm
+prf 21935:21955 <> fe26_witness_named_ok
+R22152:22156 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21961:22001 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R22007:22052 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R22058:22091 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R22097:22133 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R22135:22139 Corelib.Init.Datatypes <> false constr
+R22141:22145 Corelib.Init.Datatypes <> false constr
+R22147:22151 Corelib.Init.Datatypes <> false constr
+R22157:22176 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+prf 22213:22261 <> named_fe26_impure_component_morphism_conservation
+R22483:22488 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22458:22462 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22267:22307 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R22313:22358 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R22364:22397 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R22403:22439 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R22441:22445 Corelib.Init.Datatypes <> false constr
+R22447:22451 Corelib.Init.Datatypes <> false constr
+R22453:22457 Corelib.Init.Datatypes <> false constr
+R22463:22482 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R22579:22584 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22572:22574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22489:22536 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismBundleIsConcurrentProduct def
+R22538:22571 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R22575:22578 Corelib.Init.Datatypes <> true constr
+R22610:22615 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22605:22607 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22585:22604 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+R22659:22661 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22616:22658 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_idx def
+prf 22713:22730 <> icm_named_close_ok
+R22851:22855 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22736:22788 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R22794:22838 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R22840:22844 Corelib.Init.Datatypes <> false constr
+R22846:22850 Corelib.Init.Datatypes <> false constr
+R22856:22875 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+prf 22912:22961 <> named_impure_component_morphism_conservation_close
+R23107:23112 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23082:23086 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22967:23019 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R23025:23069 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R23071:23075 Corelib.Init.Datatypes <> false constr
+R23077:23081 Corelib.Init.Datatypes <> false constr
+R23087:23106 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R23174:23176 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23113:23161 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_authorized def
+R23163:23167 Corelib.Init.Datatypes <> false constr
+R23169:23173 Corelib.Init.Datatypes <> false constr
+R23177:23180 Corelib.Init.Datatypes <> true constr
+R23209:23226 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_named_close_ok thm
+R23209:23226 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_named_close_ok thm
+R23240:23288 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_authorized def
+R23303:23320 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_named_close_ok thm
+R23303:23320 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_named_close_ok thm
+R23303:23320 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_named_close_ok thm
+prf 23576:23597 <> trivial_bundle_refused
+R23795:23799 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23603:23643 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R23649:23694 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R23700:23734 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismEmptyWitness def
+R23740:23776 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R23778:23782 Corelib.Init.Datatypes <> false constr
+R23784:23788 Corelib.Init.Datatypes <> false constr
+R23790:23794 Corelib.Init.Datatypes <> false constr
+R23800:23825 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_trivial_refuse constr
+prf 23862:23893 <> trivial_empty_bundle_fail_closed
+R24122:24127 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24091:24095 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23899:23939 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R23945:23990 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R23996:24030 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismEmptyWitness def
+R24036:24072 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R24074:24078 Corelib.Init.Datatypes <> false constr
+R24080:24084 Corelib.Init.Datatypes <> false constr
+R24086:24090 Corelib.Init.Datatypes <> false constr
+R24096:24121 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_trivial_refuse constr
+R24363:24367 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24128:24154 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R24161:24201 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R24210:24255 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R24264:24298 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismEmptyWitness def
+R24307:24343 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R24345:24349 Corelib.Init.Datatypes <> false constr
+R24351:24355 Corelib.Init.Datatypes <> false constr
+R24357:24361 Corelib.Init.Datatypes <> false constr
+R24368:24372 Corelib.Init.Datatypes <> false constr
+R24401:24422 UMST.ChemConstants.ImpureComponentMorphismConservation <> trivial_bundle_refused thm
+R24401:24422 UMST.ChemConstants.ImpureComponentMorphismConservation <> trivial_bundle_refused thm
+R24436:24462 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R24477:24498 UMST.ChemConstants.ImpureComponentMorphismConservation <> trivial_bundle_refused thm
+R24477:24498 UMST.ChemConstants.ImpureComponentMorphismConservation <> trivial_bundle_refused thm
+R24477:24498 UMST.ChemConstants.ImpureComponentMorphismConservation <> trivial_bundle_refused thm
+prf 24756:24777 <> xor_classifier_refused
+R24973:24977 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24783:24823 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R24829:24874 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R24880:24913 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R24919:24955 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R24957:24960 Corelib.Init.Datatypes <> true constr
+R24962:24966 Corelib.Init.Datatypes <> false constr
+R24968:24972 Corelib.Init.Datatypes <> false constr
+R24978:24999 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_xor_refuse constr
+prf 25036:25080 <> xor_mutually_exclusive_classifier_fail_closed
+R25303:25308 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25276:25280 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25086:25126 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R25132:25177 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R25183:25216 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R25222:25258 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R25260:25263 Corelib.Init.Datatypes <> true constr
+R25265:25269 Corelib.Init.Datatypes <> false constr
+R25271:25275 Corelib.Init.Datatypes <> false constr
+R25281:25302 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_xor_refuse constr
+R25542:25546 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25309:25335 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R25342:25382 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R25391:25436 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R25445:25478 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R25487:25523 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R25525:25528 Corelib.Init.Datatypes <> true constr
+R25530:25534 Corelib.Init.Datatypes <> false constr
+R25536:25540 Corelib.Init.Datatypes <> false constr
+R25547:25551 Corelib.Init.Datatypes <> false constr
+R25580:25601 UMST.ChemConstants.ImpureComponentMorphismConservation <> xor_classifier_refused thm
+R25580:25601 UMST.ChemConstants.ImpureComponentMorphismConservation <> xor_classifier_refused thm
+R25615:25641 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R25656:25677 UMST.ChemConstants.ImpureComponentMorphismConservation <> xor_classifier_refused thm
+R25656:25677 UMST.ChemConstants.ImpureComponentMorphismConservation <> xor_classifier_refused thm
+R25656:25677 UMST.ChemConstants.ImpureComponentMorphismConservation <> xor_classifier_refused thm
+prf 25933:25959 <> green_invent_refuse_unwired
+R26080:26084 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25965:26017 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R26023:26068 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R26070:26073 Corelib.Init.Datatypes <> true constr
+R26075:26079 Corelib.Init.Datatypes <> false constr
+R26085:26115 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_green_invent_refuse constr
+prf 26152:26177 <> green_invent_always_refuse
+R26335:26339 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26183:26209 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R26216:26268 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R26277:26322 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R26324:26327 Corelib.Init.Datatypes <> true constr
+R26329:26333 Corelib.Init.Datatypes <> false constr
+R26340:26344 Corelib.Init.Datatypes <> false constr
+R26363:26389 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R26402:26428 UMST.ChemConstants.ImpureComponentMorphismConservation <> green_invent_refuse_unwired thm
+R26402:26428 UMST.ChemConstants.ImpureComponentMorphismConservation <> green_invent_refuse_unwired thm
+R26402:26428 UMST.ChemConstants.ImpureComponentMorphismConservation <> green_invent_refuse_unwired thm
+prf 26458:26487 <> green_invent_icm_bundle_refuse
+R26683:26687 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26493:26533 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R26539:26584 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R26590:26623 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R26629:26665 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R26667:26671 Corelib.Init.Datatypes <> false constr
+R26673:26676 Corelib.Init.Datatypes <> true constr
+R26678:26682 Corelib.Init.Datatypes <> false constr
+R26688:26718 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_green_invent_refuse constr
+prf 26977:27001 <> proved_without_bar_refuse
+R27197:27201 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27007:27047 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R27053:27098 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R27104:27137 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R27143:27179 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R27181:27185 Corelib.Init.Datatypes <> false constr
+R27187:27191 Corelib.Init.Datatypes <> false constr
+R27193:27196 Corelib.Init.Datatypes <> true constr
+R27202:27238 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_proved_without_bar_refuse constr
+prf 27275:27304 <> proved_without_bar_fail_closed
+R27542:27547 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R27500:27504 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27310:27350 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R27356:27401 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R27407:27440 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R27446:27482 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R27484:27488 Corelib.Init.Datatypes <> false constr
+R27490:27494 Corelib.Init.Datatypes <> false constr
+R27496:27499 Corelib.Init.Datatypes <> true constr
+R27505:27541 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_proved_without_bar_refuse constr
+R27781:27785 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27548:27574 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R27581:27621 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R27630:27675 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R27684:27717 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R27726:27762 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R27764:27768 Corelib.Init.Datatypes <> false constr
+R27770:27774 Corelib.Init.Datatypes <> false constr
+R27776:27779 Corelib.Init.Datatypes <> true constr
+R27786:27790 Corelib.Init.Datatypes <> false constr
+R27819:27843 UMST.ChemConstants.ImpureComponentMorphismConservation <> proved_without_bar_refuse thm
+R27819:27843 UMST.ChemConstants.ImpureComponentMorphismConservation <> proved_without_bar_refuse thm
+R27857:27883 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R27898:27922 UMST.ChemConstants.ImpureComponentMorphismConservation <> proved_without_bar_refuse thm
+R27898:27922 UMST.ChemConstants.ImpureComponentMorphismConservation <> proved_without_bar_refuse thm
+R27898:27922 UMST.ChemConstants.ImpureComponentMorphismConservation <> proved_without_bar_refuse thm
+prf 28180:28202 <> production_wired_refuse
+R28322:28326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28208:28260 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R28266:28310 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R28312:28316 Corelib.Init.Datatypes <> false constr
+R28318:28321 Corelib.Init.Datatypes <> true constr
+R28327:28361 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_production_wired_refuse constr
+prf 28398:28427 <> production_wired_claim_refused
+R28584:28588 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28433:28459 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R28466:28518 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R28527:28571 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R28573:28577 Corelib.Init.Datatypes <> false constr
+R28579:28582 Corelib.Init.Datatypes <> true constr
+R28589:28593 Corelib.Init.Datatypes <> false constr
+R28612:28638 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R28651:28673 UMST.ChemConstants.ImpureComponentMorphismConservation <> production_wired_refuse thm
+R28651:28673 UMST.ChemConstants.ImpureComponentMorphismConservation <> production_wired_refuse thm
+R28651:28673 UMST.ChemConstants.ImpureComponentMorphismConservation <> production_wired_refuse thm
+def 28933:28976 <> impureComponentMorphismConservationAuthority
+R28980:28985 Stdlib.Strings.String <> string ind
+def 29065:29094 <> parallelImpureMorphismAxiomTag
+R29098:29103 Stdlib.Strings.String <> string ind
+prf 29139:29175 <> parallel_impure_morphism_axiom_refuse
+R29261:29266 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29225:29230 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29181:29224 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationAuthority def
+R29231:29260 UMST.ChemConstants.ImpureComponentMorphismConservation <> parallelImpureMorphismAxiomTag def
+R29308:29310 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29267:29307 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationProved def
+R29311:29315 Corelib.Init.Datatypes <> false constr
+R29362:29412 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved_false thm
+R29362:29412 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved_false thm
+prf 29429:29469 <> parallel_impure_morphism_axiom_not_minted
+R29583:29588 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29519:29523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29475:29518 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationAuthority def
+R29638:29643 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R29630:29632 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R29589:29629 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationProved def
+R29633:29637 Corelib.Init.Datatypes <> false constr
+R29688:29691 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R29644:29687 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationAuthority def
+R29692:29721 UMST.ChemConstants.ImpureComponentMorphismConservation <> parallelImpureMorphismAxiomTag def
+def 30019:30041 <> speciesIdSmuggleFraming
+R30045:30050 Stdlib.Strings.String <> string ind
+def 30107:30148 <> impureComponentMorphismConservationFraming
+R30152:30157 Stdlib.Strings.String <> string ind
+prf 30234:30258 <> species_id_smuggle_refuse
+R30335:30340 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30306:30311 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30264:30305 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R30312:30334 UMST.ChemConstants.ImpureComponentMorphismConservation <> speciesIdSmuggleFraming def
+R30366:30371 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30361:30363 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30341:30360 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+R30415:30417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30372:30414 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_idx def
+prf 30487:30533 <> ore_constituent_morphism_not_species_id_smuggle
+R30610:30615 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30581:30586 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R30539:30580 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R30587:30609 UMST.ChemConstants.ImpureComponentMorphismConservation <> speciesIdSmuggleFraming def
+R30641:30646 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30636:30638 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30616:30635 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+R30694:30699 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30690:30692 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30647:30689 UMST.ChemConstants.ImpureComponentMorphismConservation <> pattern_class_impure_component_morphism_idx def
+R30741:30743 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R30700:30740 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationProved def
+R30744:30748 Corelib.Init.Datatypes <> false constr
+def 31046:31073 <> extraElementIdSmuggleFraming
+R31077:31082 Stdlib.Strings.String <> string ind
+prf 31139:31161 <> extra_element_id_refuse
+R31243:31248 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31209:31214 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31167:31208 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R31215:31242 UMST.ChemConstants.ImpureComponentMorphismConservation <> extraElementIdSmuggleFraming def
+R31276:31278 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31249:31275 UMST.ChemConstants.ImpureComponentMorphismConservation <> forbidden_z119_not_in_table def
+R31279:31282 Corelib.Init.Datatypes <> true constr
+prf 31350:31387 <> impurity_morphism_not_extra_element_id
+R31469:31474 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31435:31440 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R31393:31434 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R31441:31468 UMST.ChemConstants.ImpureComponentMorphismConservation <> extraElementIdSmuggleFraming def
+R31503:31508 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31497:31499 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31475:31496 UMST.ChemConstants.ImpureComponentMorphismConservation <> forbidden_z119_smuggle def
+R31529:31531 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R31509:31528 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+def 31830:31852 <> freePurificationFraming
+R31856:31861 Stdlib.Strings.String <> string ind
+def 31933:31961 <> impurePureAdjunctionAuthority
+R31965:31970 Stdlib.Strings.String <> string ind
+prf 32032:32055 <> free_purification_refuse
+R32132:32137 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32103:32108 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32061:32102 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R32109:32131 UMST.ChemConstants.ImpureComponentMorphismConservation <> freePurificationFraming def
+R32167:32170 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32138:32166 UMST.ChemConstants.ImpureComponentMorphismConservation <> impurePureAdjunctionAuthority def
+prf 32241:32277 <> impure_morphism_not_free_purification
+R32354:32359 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32325:32330 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32283:32324 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R32331:32353 UMST.ChemConstants.ImpureComponentMorphismConservation <> freePurificationFraming def
+R32440:32445 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32389:32393 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32360:32388 UMST.ChemConstants.ImpureComponentMorphismConservation <> impurePureAdjunctionAuthority def
+R32487:32489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32446:32486 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationProved def
+R32490:32494 Corelib.Init.Datatypes <> false constr
+def 32792:32808 <> tpFloatPinFraming
+R32812:32817 Stdlib.Strings.String <> string ind
+prf 32893:32911 <> tp_float_pin_refuse
+R32982:32987 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32959:32964 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R32917:32958 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R32965:32981 UMST.ChemConstants.ImpureComponentMorphismConservation <> tpFloatPinFraming def
+R33024:33026 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32988:33023 UMST.ChemConstants.ImpureComponentMorphismConservation <> ore_constituent_morphism_channel_tag def
+prf 33120:33150 <> tp_graph_function_not_float_pin
+R33221:33226 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33198:33203 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R33156:33197 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R33204:33220 UMST.ChemConstants.ImpureComponentMorphismConservation <> tpFloatPinFraming def
+R33282:33287 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R33254:33256 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33227:33253 UMST.ChemConstants.ImpureComponentMorphismConservation <> second_law_gmin_channel_tag def
+R33308:33310 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33288:33307 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+def 33608:33642 <> icm_conservation_coherence_scaffold
+R33646:33649 Corelib.Init.Datatypes <> bool ind
+R33973:33978 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R33808:33813 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R33656:33682 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R33689:33741 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R33750:33794 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R33796:33800 Corelib.Init.Datatypes <> false constr
+R33802:33806 Corelib.Init.Datatypes <> false constr
+R33814:33817 Corelib.Init.Datatypes <> negb def
+R33820:33846 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R33853:33905 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R33914:33959 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R33961:33964 Corelib.Init.Datatypes <> true constr
+R33966:33970 Corelib.Init.Datatypes <> false constr
+R33979:33982 Corelib.Init.Datatypes <> negb def
+R33985:34011 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_verdict_ok def
+R34018:34070 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R34079:34123 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R34125:34129 Corelib.Init.Datatypes <> false constr
+R34131:34134 Corelib.Init.Datatypes <> true constr
+prf 34146:34185 <> icm_conservation_coherence_scaffold_true
+R34226:34228 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34191:34225 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_coherence_scaffold def
+R34229:34232 Corelib.Init.Datatypes <> true constr
+R34251:34285 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_coherence_scaffold def
+prf 34340:34382 <> icm_conservation_coherence_scaffold_theorem
+R34530:34535 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34503:34509 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34388:34440 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R34446:34490 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R34492:34496 Corelib.Init.Datatypes <> false constr
+R34498:34502 Corelib.Init.Datatypes <> false constr
+R34510:34529 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R34689:34694 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R34651:34657 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34536:34588 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R34594:34639 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R34641:34644 Corelib.Init.Datatypes <> true constr
+R34646:34650 Corelib.Init.Datatypes <> false constr
+R34658:34688 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_green_invent_refuse constr
+R34809:34815 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34695:34747 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R34753:34797 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_proved constr
+R34799:34803 Corelib.Init.Datatypes <> false constr
+R34805:34808 Corelib.Init.Datatypes <> true constr
+R34816:34850 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_production_wired_refuse constr
+ind 35129:35140 <> formal_fiber
+constr 35156:35176 <> fiber_quantum_knowing
+constr 35182:35198 <> fiber_meso_acting
+scheme 35129:35140 <> formal_fiber_rect
+scheme 35129:35140 <> formal_fiber_ind
+scheme 35129:35140 <> formal_fiber_rec
+scheme 35129:35140 <> formal_fiber_sind
+def 35213:35237 <> icm_conservation_fiber_ok
+R35244:35255 UMST.ChemConstants.ImpureComponentMorphismConservation <> formal_fiber ind
+binder 35240:35240 <> f:64
+R35260:35263 Corelib.Init.Datatypes <> bool ind
+R35276:35276 UMST.ChemConstants.ImpureComponentMorphismConservation <> f:64 var
+R35287:35307 UMST.ChemConstants.ImpureComponentMorphismConservation <> fiber_quantum_knowing constr
+R35312:35315 Corelib.Init.Datatypes <> true constr
+R35321:35337 UMST.ChemConstants.ImpureComponentMorphismConservation <> fiber_meso_acting constr
+R35342:35346 Corelib.Init.Datatypes <> false constr
+def 35367:35399 <> icm_conservation_knowing_fiber_ok
+R35403:35406 Corelib.Init.Datatypes <> bool ind
+R35413:35437 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_fiber_ok def
+R35439:35459 UMST.ChemConstants.ImpureComponentMorphismConservation <> fiber_quantum_knowing constr
+def 35474:35504 <> icm_conservation_meso_acting_ok
+R35508:35511 Corelib.Init.Datatypes <> bool ind
+R35518:35542 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_fiber_ok def
+R35544:35560 UMST.ChemConstants.ImpureComponentMorphismConservation <> fiber_meso_acting constr
+prf 35570:35607 <> icm_conservation_knowing_fiber_ok_true
+R35646:35648 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35613:35645 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok def
+R35649:35652 Corelib.Init.Datatypes <> true constr
+prf 35687:35721 <> icm_conservation_meso_acting_not_ok
+R35758:35760 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35727:35757 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_ok def
+R35761:35765 Corelib.Init.Datatypes <> false constr
+prf 35802:35841 <> icm_conservation_routes_knowing_not_meso
+R35887:35892 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R35880:35882 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35847:35879 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok def
+R35883:35886 Corelib.Init.Datatypes <> true constr
+R35924:35926 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R35893:35923 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_ok def
+R35927:35931 Corelib.Init.Datatypes <> false constr
+R35960:35997 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok_true thm
+R35960:35997 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok_true thm
+R36010:36044 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_not_ok thm
+R36010:36044 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_not_ok thm
+def 36064:36081 <> fiberNotMesoActing
+R36085:36088 Corelib.Init.Datatypes <> bool ind
+R36128:36133 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R36095:36127 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok def
+R36134:36137 Corelib.Init.Datatypes <> negb def
+R36139:36169 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_ok def
+prf 36179:36204 <> fiber_not_meso_acting_true
+R36226:36228 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36208:36225 UMST.ChemConstants.ImpureComponentMorphismConservation <> fiberNotMesoActing def
+R36229:36232 Corelib.Init.Datatypes <> true constr
+R36251:36268 UMST.ChemConstants.ImpureComponentMorphismConservation <> fiberNotMesoActing def
+R36271:36303 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok def
+R36310:36340 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_ok def
+prf 36598:36652 <> impure_component_morphism_conservation_fixture_scaffold
+R36876:36881 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R36849:36855 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36658:36698 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R36704:36749 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R36755:36788 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R36794:36830 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R36832:36836 Corelib.Init.Datatypes <> false constr
+R36838:36842 Corelib.Init.Datatypes <> false constr
+R36844:36848 Corelib.Init.Datatypes <> false constr
+R36856:36875 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_named_ok constr
+R37107:37112 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37074:37080 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R36882:36922 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R36928:36973 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R36979:37013 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismEmptyWitness def
+R37019:37055 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R37057:37061 Corelib.Init.Datatypes <> false constr
+R37063:37067 Corelib.Init.Datatypes <> false constr
+R37069:37073 Corelib.Init.Datatypes <> false constr
+R37081:37106 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_trivial_refuse constr
+R37332:37337 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37303:37309 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37113:37153 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R37159:37204 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R37210:37243 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R37249:37285 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R37287:37290 Corelib.Init.Datatypes <> true constr
+R37292:37296 Corelib.Init.Datatypes <> false constr
+R37298:37302 Corelib.Init.Datatypes <> false constr
+R37310:37331 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_xor_refuse constr
+R37572:37577 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37528:37534 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37338:37378 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_bundle def
+R37384:37429 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R37435:37468 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismFe26Witness def
+R37474:37510 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismClaimBarAbsent def
+R37512:37516 Corelib.Init.Datatypes <> false constr
+R37518:37522 Corelib.Init.Datatypes <> false constr
+R37524:37527 Corelib.Init.Datatypes <> true constr
+R37535:37571 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_proved_without_bar_refuse constr
+R37723:37728 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37694:37700 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37578:37630 UMST.ChemConstants.ImpureComponentMorphismConservation <> evaluate_impure_component_morphism_conservation_close def
+R37636:37681 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr
+R37683:37687 Corelib.Init.Datatypes <> false constr
+R37689:37693 Corelib.Init.Datatypes <> false constr
+R37701:37722 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_verdict_unwired_ok constr
+R37769:37774 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37762:37764 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37729:37761 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_knowing_fiber_ok def
+R37765:37768 Corelib.Init.Datatypes <> true constr
+R37814:37819 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37806:37808 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37775:37805 UMST.ChemConstants.ImpureComponentMorphismConservation <> icm_conservation_meso_acting_ok def
+R37809:37813 Corelib.Init.Datatypes <> false constr
+R37869:37874 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37861:37863 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37820:37860 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationProved def
+R37864:37868 Corelib.Init.Datatypes <> false constr
+R37898:37903 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R37891:37893 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37875:37890 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmProductNotXor def
+R37894:37897 Corelib.Init.Datatypes <> true constr
+R37924:37926 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R37904:37923 UMST.ChemConstants.ImpureComponentMorphismConservation <> iron_atomic_number_z def
+def 38208:38245 <> chemL0ImpureComponentMorphismAuthority
+R38249:38254 Stdlib.Strings.String <> string ind
+def 38324:38366 <> chemL0ImpureComponentMorphismTableAuthority
+R38370:38375 Stdlib.Strings.String <> string ind
+def 38455:38476 <> oreAssemblageAuthority
+R38480:38485 Stdlib.Strings.String <> string ind
+def 38544:38578 <> patternProductConservationAuthority
+R38582:38587 Stdlib.Strings.String <> string ind
+def 38685:38701 <> chemL0Ore02CellId
+R38705:38710 Stdlib.Strings.String <> string ind
+def 38745:38785 <> impureComponentMorphismConservationCellId
+R38789:38794 Stdlib.Strings.String <> string ind
+def 38873:38915 <> impureComponentMorphismConservationNonClaim
+R38919:38924 Stdlib.Strings.String <> string ind
+prf 39703:39748 <> impure_component_morphism_conservation_cell_id
+R39795:39799 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R39754:39794 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationCellId def
+prf 39892:39944 <> impure_component_morphism_conservation_cites_l0_table
+R39993:39996 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R39950:39992 UMST.ChemConstants.ImpureComponentMorphismConservation <> chemL0ImpureComponentMorphismTableAuthority def
+prf 40034:40086 <> impure_component_morphism_conservation_authority_path
+R40136:40140 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40092:40135 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationAuthority def
+prf 40234:40286 <> impure_component_morphism_conservation_cites_l0_ore02
+R40330:40333 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R40292:40329 UMST.ChemConstants.ImpureComponentMorphismConservation <> chemL0ImpureComponentMorphismAuthority def
+prf 40371:40421 <> impure_component_morphism_conservation_cites_marker
+R40453:40456 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R40427:40452 UMST.ChemConstants.ImpureComponentMorphismConservation <> icmConcurrentProductMarker def
+prf 40494:40553 <> impure_component_morphism_conservation_cites_pattern_product
+R40594:40597 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R40559:40593 UMST.ChemConstants.ImpureComponentMorphismConservation <> patternProductConservationAuthority def
+prf 40635:40689 <> impure_component_morphism_conservation_cites_ore02_cell
+R40712:40714 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R40695:40711 UMST.ChemConstants.ImpureComponentMorphismConservation <> chemL0Ore02CellId def
+prf 40987:41026 <> impure_component_morphism_not_26th_axiom
+R41074:41077 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R41032:41073 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+R41078:41107 UMST.ChemConstants.ImpureComponentMorphismConservation <> parallelImpureMorphismAxiomTag def
+prf 41143:41199 <> impure_component_morphism_second_law_conservation_framing
+R41247:41250 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R41205:41246 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationFraming def
+def 41517:41538 <> physicsGreenAuthorized
+R41550:41554 Corelib.Init.Logic <> False ind
+prf 41564:41621 <> impure_component_morphism_conservation_physics_green_false
+R41627:41628 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R41629:41650 UMST.ChemConstants.ImpureComponentMorphismConservation <> physicsGreenAuthorized def
+prf 41690:41744 <> impure_component_morphism_conservation_modality_unwired
+R41800:41804 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R41750:41799 UMST.ChemConstants.ImpureComponentMorphismConservation <> impureComponentMorphismConservationModalityCurrent def
+R41805:41850 UMST.ChemConstants.ImpureComponentMorphismConservation <> impure_component_morphism_conservation_unwired constr

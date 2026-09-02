@@ -1,0 +1,997 @@
+DIGEST b8d4e6fba2a760064e90f80c05adc268
+FUMST.ChemConstants.CartridgeOreConsultMonoid
+R1199:1203 Stdlib.Arith.Arith <> <> lib
+R1205:1210 Stdlib.ZArith.ZArith <> <> lib
+R1212:1217 Stdlib.Strings.String <> <> lib
+R1219:1222 Stdlib.Bool.Bool <> <> lib
+R1224:1226 Stdlib.micromega.Lia <> <> lib
+R1228:1231 Stdlib.Lists.List <> <> lib
+R1241:1253 Stdlib.Lists.List ListNotations <> mod
+def 1288:1319 <> cartridgeoreconsultmonoidSurface
+R1323:1328 Stdlib.Strings.String <> string ind
+prf 1382:1420 <> cartridgeoreconsultmonoid_surface_named
+R1458:1461 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1426:1457 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeoreconsultmonoidSurface def
+ind 1800:1832 <> CartridgeOreConsultMonoidModality
+constr 1848:1883 <> cartridge_ore_consult_monoid_unwired
+constr 1889:1924 <> cartridge_ore_consult_monoid_assumed
+constr 1930:1964 <> cartridge_ore_consult_monoid_proved
+constr 1970:2007 <> cartridge_ore_consult_monoid_surrogate
+scheme 1800:1832 <> CartridgeOreConsultMonoidModality_rect
+scheme 1800:1832 <> CartridgeOreConsultMonoidModality_ind
+scheme 1800:1832 <> CartridgeOreConsultMonoidModality_rec
+scheme 1800:1832 <> CartridgeOreConsultMonoidModality_sind
+def 2022:2061 <> cartridgeOreConsultMonoidModalityCurrent
+R2067:2099 UMST.ChemConstants.CartridgeOreConsultMonoid <> CartridgeOreConsultMonoidModality ind
+R2106:2141 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+def 2156:2205 <> cartridge_ore_consult_modality_lattice_cardinality
+R2209:2211 Corelib.Init.Datatypes <> nat ind
+prf 2226:2283 <> cartridge_ore_consult_modality_lattice_cardinality_is_four
+R2339:2341 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2289:2338 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_modality_lattice_cardinality def
+prf 2377:2430 <> cartridge_ore_consult_modality_lattice_not_118_squared
+R2513:2517 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2436:2439 Corelib.Init.Datatypes <> negb def
+R2442:2448 Stdlib.Arith.PeanoNat Nat eqb def
+R2450:2499 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_modality_lattice_cardinality def
+R2505:2507 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2518:2521 Corelib.Init.Datatypes <> true constr
+R2540:2589 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_modality_lattice_cardinality def
+def 2848:2870 <> iupac_table_cardinality
+R2874:2876 Corelib.Init.Datatypes <> nat ind
+prf 2893:2922 <> iupac_table_cardinality_is_118
+R2951:2953 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2928:2950 UMST.ChemConstants.CartridgeOreConsultMonoid <> iupac_table_cardinality def
+def 2996:3013 <> ore_factor_z_valid
+R3020:3022 Corelib.Init.Datatypes <> nat ind
+binder 3016:3016 <> z:3
+R3027:3030 Corelib.Init.Datatypes <> bool ind
+R3048:3051 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R3037:3043 Stdlib.Arith.PeanoNat Nat ltb def
+R3047:3047 UMST.ChemConstants.CartridgeOreConsultMonoid <> z:3 var
+R3052:3058 Stdlib.Arith.PeanoNat Nat leb def
+R3060:3060 UMST.ChemConstants.CartridgeOreConsultMonoid <> z:3 var
+R3062:3084 UMST.ChemConstants.CartridgeOreConsultMonoid <> iupac_table_cardinality def
+def 3170:3181 <> csh_ore_z_ca
+R3185:3187 Corelib.Init.Datatypes <> nat ind
+def 3207:3218 <> csh_ore_z_si
+R3222:3224 Corelib.Init.Datatypes <> nat ind
+def 3244:3254 <> csh_ore_z_o
+R3258:3260 Corelib.Init.Datatypes <> nat ind
+def 3279:3289 <> csh_ore_z_h
+R3293:3295 Corelib.Init.Datatypes <> nat ind
+prf 3310:3327 <> csh_ore_z_ca_is_20
+R3343:3345 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3331:3342 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_ca def
+prf 3382:3399 <> csh_ore_z_si_is_14
+R3415:3417 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3403:3414 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_si def
+prf 3454:3469 <> csh_ore_z_o_is_8
+R3484:3486 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3473:3483 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_o def
+prf 3522:3537 <> csh_ore_z_h_is_1
+R3552:3554 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3541:3551 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_h def
+def 3674:3686 <> pore_ore_z_na
+R3690:3692 Corelib.Init.Datatypes <> nat ind
+def 3712:3724 <> pore_ore_z_cl
+R3728:3730 Corelib.Init.Datatypes <> nat ind
+def 3750:3761 <> pore_ore_z_o
+R3765:3767 Corelib.Init.Datatypes <> nat ind
+def 3786:3797 <> pore_ore_z_h
+R3801:3803 Corelib.Init.Datatypes <> nat ind
+prf 3818:3836 <> pore_ore_z_na_is_11
+R3853:3855 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3840:3852 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_na def
+prf 3892:3910 <> pore_ore_z_cl_is_17
+R3927:3929 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3914:3926 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_cl def
+prf 3966:3982 <> pore_ore_z_o_is_8
+R3998:4000 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3986:3997 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_o def
+prf 4036:4052 <> pore_ore_z_h_is_1
+R4068:4070 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4056:4067 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_h def
+prf 4106:4128 <> csh_ore_z_factors_valid
+R4172:4177 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4165:4167 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4134:4151 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4153:4164 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_ca def
+R4168:4171 Corelib.Init.Datatypes <> true constr
+R4216:4221 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4209:4211 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4178:4195 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4197:4208 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_si def
+R4212:4215 Corelib.Init.Datatypes <> true constr
+R4259:4264 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4252:4254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4222:4239 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4241:4251 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_o def
+R4255:4258 Corelib.Init.Datatypes <> true constr
+R4295:4297 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4265:4282 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4284:4294 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_h def
+R4298:4301 Corelib.Init.Datatypes <> true constr
+R4336:4353 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4356:4378 UMST.ChemConstants.CartridgeOreConsultMonoid <> iupac_table_cardinality def
+prf 4406:4429 <> pore_ore_z_factors_valid
+R4474:4479 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4467:4469 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4435:4452 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4454:4466 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_na def
+R4470:4473 Corelib.Init.Datatypes <> true constr
+R4519:4524 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4512:4514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4480:4497 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4499:4511 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_cl def
+R4515:4518 Corelib.Init.Datatypes <> true constr
+R4563:4568 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R4556:4558 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4525:4542 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4544:4555 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_o def
+R4559:4562 Corelib.Init.Datatypes <> true constr
+R4600:4602 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4569:4586 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4588:4599 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_h def
+R4603:4606 Corelib.Init.Datatypes <> true constr
+R4641:4658 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R4661:4683 UMST.ChemConstants.CartridgeOreConsultMonoid <> iupac_table_cardinality def
+ind 4939:4954 <> ore_consult_slot
+constr 4970:4981 <> ore_slot_csh
+constr 4987:4999 <> ore_slot_pore
+constr 5005:5025 <> ore_slot_unauthorized
+scheme 4939:4954 <> ore_consult_slot_rect
+scheme 4939:4954 <> ore_consult_slot_ind
+scheme 4939:4954 <> ore_consult_slot_rec
+scheme 4939:4954 <> ore_consult_slot_sind
+def 5040:5059 <> ore_consult_slot_beq
+R5070:5085 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot ind
+binder 5062:5063 <> s1:6
+binder 5065:5066 <> s2:7
+R5090:5093 Corelib.Init.Datatypes <> bool ind
+R5110:5111 UMST.ChemConstants.CartridgeOreConsultMonoid <> s2:7 var
+R5106:5107 UMST.ChemConstants.CartridgeOreConsultMonoid <> s1:6 var
+R5122:5133 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_csh constr
+R5136:5147 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_csh constr
+R5152:5155 Corelib.Init.Datatypes <> true constr
+R5161:5173 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_pore constr
+R5176:5188 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_pore constr
+R5193:5196 Corelib.Init.Datatypes <> true constr
+R5202:5222 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_unauthorized constr
+R5225:5245 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_unauthorized constr
+R5250:5253 Corelib.Init.Datatypes <> true constr
+R5267:5271 Corelib.Init.Datatypes <> false constr
+rec 5288:5306 <> ore_consult_binding
+proj 5322:5341 <> ore_consult_slot_tag
+proj 5365:5388 <> ore_consult_factor_count
+R5345:5360 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot ind
+R5392:5394 Corelib.Init.Datatypes <> nat ind
+def 5411:5430 <> oreConsultBindingCsh
+R5434:5452 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding rec
+R5462:5481 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5462:5481 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5462:5481 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5505:5528 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R5505:5528 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R5486:5497 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_csh constr
+def 5551:5571 <> oreConsultBindingPore
+R5575:5593 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding rec
+R5603:5622 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5603:5622 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5603:5622 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5647:5670 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R5647:5670 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R5627:5639 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_pore constr
+def 5693:5718 <> ore_consult_binding_honest
+R5725:5743 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding rec
+binder 5721:5721 <> b:13
+R5748:5751 Corelib.Init.Datatypes <> bool ind
+R5796:5801 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5758:5764 Stdlib.Arith.PeanoNat Nat eqb def
+R5767:5790 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R5792:5792 UMST.ChemConstants.CartridgeOreConsultMonoid <> b:13 var
+R5802:5805 Corelib.Init.Datatypes <> negb def
+R5808:5827 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_beq def
+R5830:5849 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_slot_tag proj
+R5851:5851 UMST.ChemConstants.CartridgeOreConsultMonoid <> b:13 var
+R5854:5874 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_slot_unauthorized constr
+prf 5885:5914 <> csh_ore_consult_binding_honest
+R5967:5969 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5920:5945 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding_honest def
+R5947:5966 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingCsh def
+R5970:5973 Corelib.Init.Datatypes <> true constr
+prf 6008:6038 <> pore_ore_consult_binding_honest
+R6092:6094 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6044:6069 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding_honest def
+R6071:6091 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingPore def
+R6095:6098 Corelib.Init.Datatypes <> true constr
+def 6216:6232 <> csh_is_element_id
+R6236:6239 Corelib.Init.Datatypes <> bool ind
+R6244:6248 Corelib.Init.Datatypes <> false constr
+def 6263:6289 <> pore_solution_is_element_id
+R6293:6296 Corelib.Init.Datatypes <> bool ind
+R6301:6305 Corelib.Init.Datatypes <> false constr
+prf 6315:6335 <> csh_is_not_element_id
+R6356:6358 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6339:6355 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_is_element_id def
+R6359:6363 Corelib.Init.Datatypes <> false constr
+prf 6398:6428 <> pore_solution_is_not_element_id
+R6459:6461 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6432:6458 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_solution_is_element_id def
+R6462:6466 Corelib.Init.Datatypes <> false constr
+def 6506:6530 <> element_id_smuggle_marker
+R6534:6539 Stdlib.Strings.String <> string ind
+def 6591:6608 <> ore_consult_marker
+R6612:6617 Stdlib.Strings.String <> string ind
+prf 6674:6713 <> element_id_smuggle_marker_ne_ore_consult
+R6744:6747 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R6719:6743 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_marker def
+R6748:6765 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_marker def
+ind 6805:6825 <> element_id_claim_kind
+constr 6841:6862 <> element_id_ore_consult
+constr 6868:6893 <> element_id_smuggle_theater
+scheme 6805:6825 <> element_id_claim_kind_rect
+scheme 6805:6825 <> element_id_claim_kind_ind
+scheme 6805:6825 <> element_id_claim_kind_rec
+scheme 6805:6825 <> element_id_claim_kind_sind
+def 6908:6925 <> element_id_smuggle
+R6932:6952 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_claim_kind ind
+binder 6928:6928 <> k:16
+R6957:6960 Corelib.Init.Datatypes <> bool ind
+R6973:6973 UMST.ChemConstants.CartridgeOreConsultMonoid <> k:16 var
+R6984:7009 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_theater constr
+R7014:7017 Corelib.Init.Datatypes <> true constr
+R7023:7044 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_ore_consult constr
+R7049:7053 Corelib.Init.Datatypes <> false constr
+def 7074:7097 <> elementIdClaimOreConsult
+R7101:7121 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_claim_kind ind
+R7128:7149 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_ore_consult constr
+def 7164:7184 <> elementIdClaimSmuggle
+R7188:7208 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_claim_kind ind
+R7215:7240 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_theater constr
+prf 7250:7283 <> ore_consult_not_element_id_smuggle
+R7332:7334 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7289:7306 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle def
+R7308:7331 UMST.ChemConstants.CartridgeOreConsultMonoid <> elementIdClaimOreConsult def
+R7335:7339 Corelib.Init.Datatypes <> false constr
+prf 7374:7407 <> element_id_smuggle_theater_refused
+R7453:7455 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7413:7430 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle def
+R7432:7452 UMST.ChemConstants.CartridgeOreConsultMonoid <> elementIdClaimSmuggle def
+R7456:7459 Corelib.Init.Datatypes <> true constr
+def 7723:7740 <> ore_factors_in_bar
+R7744:7747 Corelib.Init.Datatypes <> bool ind
+R8007:8012 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7970:7975 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7932:7937 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7894:7899 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7858:7863 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7822:7827 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7785:7790 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7754:7771 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7773:7784 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_ca def
+R7791:7808 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7810:7821 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_si def
+R7828:7845 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7847:7857 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_o def
+R7864:7881 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7883:7893 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_ore_z_h def
+R7900:7917 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7919:7931 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_na def
+R7938:7955 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7957:7969 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_cl def
+R7976:7993 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R7995:8006 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_o def
+R8013:8030 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factor_z_valid def
+R8032:8043 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_ore_z_h def
+prf 8053:8075 <> ore_factors_in_bar_true
+R8097:8099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8079:8096 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factors_in_bar def
+R8100:8103 Corelib.Init.Datatypes <> true constr
+R8122:8139 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factors_in_bar def
+def 8197:8233 <> cartridge_ore_consult_honest_conjunct
+R8237:8240 Corelib.Init.Datatypes <> bool ind
+R8307:8312 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8269:8274 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8247:8250 Corelib.Init.Datatypes <> negb def
+R8252:8268 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_is_element_id def
+R8275:8278 Corelib.Init.Datatypes <> negb def
+R8280:8306 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_solution_is_element_id def
+R8313:8330 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factors_in_bar def
+prf 8340:8381 <> cartridge_ore_consult_honest_conjunct_true
+R8424:8426 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8387:8423 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_honest_conjunct def
+R8427:8430 Corelib.Init.Datatypes <> true constr
+R8449:8485 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_honest_conjunct def
+rec 8763:8788 <> ore_consult_monoid_product
+proj 8804:8819 <> product_csh_slot
+proj 8846:8862 <> product_pore_slot
+R8823:8841 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding rec
+R8866:8884 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding rec
+def 8901:8923 <> oreConsultMonoidProduct
+R8927:8952 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_monoid_product rec
+R8962:8977 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_csh_slot proj
+R8962:8977 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_csh_slot proj
+R8962:8977 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_csh_slot proj
+R9009:9025 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_pore_slot proj
+R9009:9025 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_pore_slot proj
+R8982:9001 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingCsh def
+R9030:9050 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingPore def
+def 9068:9099 <> ore_consult_product_factor_count
+R9108:9133 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_monoid_product rec
+binder 9104:9104 <> p:21
+R9138:9140 Corelib.Init.Datatypes <> nat ind
+R9192:9196 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R9147:9170 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R9173:9188 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_csh_slot proj
+R9190:9190 UMST.ChemConstants.CartridgeOreConsultMonoid <> p:21 var
+R9197:9220 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_factor_count proj
+R9223:9239 UMST.ChemConstants.CartridgeOreConsultMonoid <> product_pore_slot proj
+R9241:9241 UMST.ChemConstants.CartridgeOreConsultMonoid <> p:21 var
+prf 9252:9289 <> ore_consult_product_factor_count_eight
+R9351:9353 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9295:9326 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_factor_count def
+R9328:9350 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultMonoidProduct def
+def 9394:9426 <> ore_consult_product_is_concurrent
+R9435:9460 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_monoid_product rec
+binder 9431:9431 <> p:22
+R9465:9468 Corelib.Init.Datatypes <> bool ind
+R9475:9481 Stdlib.Arith.PeanoNat Nat leb def
+R9486:9517 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_factor_count def
+R9519:9519 UMST.ChemConstants.CartridgeOreConsultMonoid <> p:22 var
+prf 9530:9567 <> ore_consult_product_is_concurrent_true
+R9630:9632 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9573:9605 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_is_concurrent def
+R9607:9629 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultMonoidProduct def
+R9633:9636 Corelib.Init.Datatypes <> true constr
+R9655:9687 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_is_concurrent def
+R9700:9737 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_factor_count_eight thm
+R9700:9737 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_factor_count_eight thm
+R9700:9737 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_factor_count_eight thm
+def 9772:9784 <> xorEnumMarker
+R9788:9793 Stdlib.Strings.String <> string ind
+def 9845:9863 <> productFactorMarker
+R9867:9872 Stdlib.Strings.String <> string ind
+prf 9929:9963 <> xor_marker_ne_product_factor_marker
+R9982:9985 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9969:9981 UMST.ChemConstants.CartridgeOreConsultMonoid <> xorEnumMarker def
+R9986:10004 UMST.ChemConstants.CartridgeOreConsultMonoid <> productFactorMarker def
+def 10267:10294 <> fourthScienceCollisionMarker
+R10298:10303 Stdlib.Strings.String <> string ind
+def 10398:10428 <> twentySixthAxiomCollisionMarker
+R10432:10437 Stdlib.Strings.String <> string ind
+prf 10517:10546 <> fourth_science_collision_named
+R10580:10583 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10552:10579 UMST.ChemConstants.CartridgeOreConsultMonoid <> fourthScienceCollisionMarker def
+prf 10621:10654 <> twenty_sixth_axiom_collision_named
+R10691:10694 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R10660:10690 UMST.ChemConstants.CartridgeOreConsultMonoid <> twentySixthAxiomCollisionMarker def
+ind 10962:10985 <> ore_consult_bar_presence
+constr 11001:11022 <> ore_consult_bar_absent
+constr 11028:11050 <> ore_consult_bar_present
+scheme 10962:10985 <> ore_consult_bar_presence_rect
+scheme 10962:10985 <> ore_consult_bar_presence_ind
+scheme 10962:10985 <> ore_consult_bar_presence_rec
+scheme 10962:10985 <> ore_consult_bar_presence_sind
+rec 11061:11081 <> ore_consult_claim_bar
+proj 11097:11124 <> ore_consult_bar_presence_tag
+proj 11156:11183 <> ore_consult_bar_defect_total
+R11128:11151 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_presence ind
+R11187:11189 Corelib.Init.Datatypes <> nat ind
+def 11206:11229 <> oreConsultClaimBarAbsent
+R11233:11253 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_claim_bar rec
+R11263:11290 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_presence_tag proj
+R11263:11290 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_presence_tag proj
+R11263:11290 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_presence_tag proj
+R11324:11351 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_defect_total proj
+R11324:11351 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_defect_total proj
+R11295:11316 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_bar_absent constr
+ind 11597:11625 <> cartridge_ore_consult_verdict
+constr 11641:11658 <> verdict_unwired_ok
+constr 11664:11691 <> verdict_ore_consult_named_ok
+constr 11697:11720 <> verdict_trivial_z_refuse
+constr 11726:11758 <> verdict_element_id_smuggle_refuse
+constr 11764:11786 <> verdict_xor_enum_refuse
+constr 11792:11820 <> verdict_fourth_science_refuse
+constr 11826:11858 <> verdict_twenty_sixth_axiom_refuse
+constr 11864:11890 <> verdict_green_invent_refuse
+constr 11896:11928 <> verdict_proved_without_bar_refuse
+constr 11934:11964 <> verdict_production_wired_refuse
+scheme 11597:11625 <> cartridge_ore_consult_verdict_rect
+scheme 11597:11625 <> cartridge_ore_consult_verdict_ind
+scheme 11597:11625 <> cartridge_ore_consult_verdict_rec
+scheme 11597:11625 <> cartridge_ore_consult_verdict_sind
+def 11979:12010 <> cartridge_ore_consult_verdict_ok
+R12019:12047 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict ind
+binder 12015:12015 <> v:30
+R12052:12055 Corelib.Init.Datatypes <> bool ind
+R12068:12068 UMST.ChemConstants.CartridgeOreConsultMonoid <> v:30 var
+R12079:12096 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+R12101:12104 Corelib.Init.Datatypes <> true constr
+R12110:12137 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R12142:12145 Corelib.Init.Datatypes <> true constr
+R12156:12160 Corelib.Init.Datatypes <> false constr
+rec 12177:12207 <> cartridge_ore_consult_incidence
+proj 12223:12245 <> ore_consult_inc_binding
+proj 12272:12302 <> ore_consult_inc_element_id_kind
+proj 12331:12351 <> ore_consult_inc_level
+R12249:12267 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding rec
+R12306:12326 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_claim_kind ind
+R12355:12357 Corelib.Init.Datatypes <> nat ind
+def 12374:12411 <> cartridgeOreConsultIncidenceNontrivial
+R12420:12450 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_incidence rec
+binder 12416:12416 <> h:36
+R12455:12458 Corelib.Init.Datatypes <> bool ind
+R12465:12471 Stdlib.Arith.PeanoNat Nat ltb def
+R12476:12496 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R12498:12498 UMST.ChemConstants.CartridgeOreConsultMonoid <> h:36 var
+def 12514:12546 <> cartridgeOreConsultIncidenceCshL1
+R12550:12580 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_incidence rec
+R12590:12612 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R12590:12612 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R12590:12612 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R12644:12674 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R12644:12674 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R12708:12728 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R12708:12728 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R12617:12636 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingCsh def
+R12679:12700 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_ore_consult constr
+def 12751:12784 <> cartridgeOreConsultIncidencePoreL1
+R12788:12818 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_incidence rec
+R12828:12850 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R12828:12850 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R12828:12850 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R12883:12913 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R12883:12913 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R12947:12967 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R12947:12967 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R12855:12875 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingPore def
+R12918:12939 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_ore_consult constr
+def 12990:13024 <> cartridgeOreConsultIncidenceTrivial
+R13028:13058 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_incidence rec
+R13068:13090 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R13068:13090 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R13068:13090 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R13122:13152 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R13122:13152 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R13186:13206 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R13186:13206 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R13095:13114 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingCsh def
+R13157:13178 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_ore_consult constr
+def 13229:13263 <> cartridgeOreConsultIncidenceSmuggle
+R13267:13297 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_incidence rec
+R13307:13329 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R13307:13329 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R13307:13329 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R13361:13391 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R13361:13391 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R13429:13449 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R13429:13449 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_level proj
+R13334:13353 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultBindingCsh def
+R13396:13421 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_theater constr
+def 13472:13511 <> evaluate_cartridge_ore_consult_incidence
+R13520:13552 UMST.ChemConstants.CartridgeOreConsultMonoid <> CartridgeOreConsultMonoidModality ind
+binder 13516:13516 <> m:37
+R13562:13592 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_incidence rec
+binder 13558:13558 <> h:38
+R13602:13622 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_claim_bar rec
+binder 13598:13598 <> b:39
+R13650:13653 Corelib.Init.Datatypes <> bool ind
+binder 13628:13646 <> claim_physics_green:40
+R13674:13677 Corelib.Init.Datatypes <> bool ind
+binder 13659:13670 <> claim_proved:41
+R13700:13703 Corelib.Init.Datatypes <> bool ind
+binder 13683:13696 <> claim_xor_enum:42
+R13732:13735 Corelib.Init.Datatypes <> bool ind
+binder 13709:13728 <> claim_fourth_science:43
+R13768:13771 Corelib.Init.Datatypes <> bool ind
+binder 13741:13764 <> claim_twenty_sixth_axiom:44
+R13776:13804 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict ind
+R13814:13832 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_physics_green:40 var
+R13879:13890 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_proved:41 var
+R13953:13972 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_fourth_science:43 var
+R14041:14064 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_twenty_sixth_axiom:44 var
+R14147:14164 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle def
+R14167:14197 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_element_id_kind proj
+R14199:14199 UMST.ChemConstants.CartridgeOreConsultMonoid <> h:38 var
+R14293:14306 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_xor_enum:42 var
+R14399:14402 Corelib.Init.Datatypes <> negb def
+R14405:14442 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceNontrivial def
+R14444:14444 UMST.ChemConstants.CartridgeOreConsultMonoid <> h:38 var
+R14549:14552 Corelib.Init.Datatypes <> negb def
+R14555:14580 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_binding_honest def
+R14631:14653 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_inc_binding proj
+R14655:14655 UMST.ChemConstants.CartridgeOreConsultMonoid <> h:38 var
+R14812:14812 UMST.ChemConstants.CartridgeOreConsultMonoid <> m:37 var
+R14860:14895 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R14943:14970 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R15013:15048 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_assumed constr
+R15091:15128 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_surrogate constr
+R15176:15193 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+R15176:15193 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+R15236:15270 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_proved constr
+R15318:15350 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_proved_without_bar_refuse constr
+R14701:14723 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_xor_enum_refuse constr
+R14484:14507 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_trivial_z_refuse constr
+R14340:14362 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_xor_enum_refuse constr
+R14229:14261 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_element_id_smuggle_refuse constr
+R14088:14120 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_twenty_sixth_axiom_refuse constr
+R13991:14019 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_fourth_science_refuse constr
+R13904:13936 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_proved_without_bar_refuse constr
+R13841:13867 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_green_invent_refuse constr
+def 15408:15443 <> evaluate_cartridge_ore_consult_close
+R15452:15484 UMST.ChemConstants.CartridgeOreConsultMonoid <> CartridgeOreConsultMonoidModality ind
+binder 15448:15448 <> m:46
+R15512:15515 Corelib.Init.Datatypes <> bool ind
+binder 15490:15508 <> claim_physics_green:47
+R15546:15549 Corelib.Init.Datatypes <> bool ind
+binder 15521:15542 <> claim_production_wired:48
+R15554:15582 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict ind
+R15592:15610 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_physics_green:47 var
+R15657:15678 UMST.ChemConstants.CartridgeOreConsultMonoid <> claim_production_wired:48 var
+R15736:15736 UMST.ChemConstants.CartridgeOreConsultMonoid <> m:46 var
+R15749:15784 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R15789:15806 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+R15814:15849 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_assumed constr
+R15857:15891 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_proved constr
+R15899:15936 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_surrogate constr
+R15941:15968 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R15941:15968 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R15941:15968 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R15687:15717 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_production_wired_refuse constr
+R15619:15645 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_green_invent_refuse constr
+def 16215:16248 <> cartridge_ore_consult_wired_in_lib
+R16252:16255 Corelib.Init.Datatypes <> bool ind
+R16260:16264 Corelib.Init.Datatypes <> false constr
+def 16279:16312 <> cartridge_ore_consult_wired_in_eos
+R16316:16319 Corelib.Init.Datatypes <> bool ind
+R16324:16328 Corelib.Init.Datatypes <> false constr
+prf 16338:16372 <> cartridge_ore_consult_not_wired_lib
+R16412:16414 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16378:16411 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_wired_in_lib def
+R16415:16419 Corelib.Init.Datatypes <> false constr
+prf 16454:16488 <> cartridge_ore_consult_not_wired_eos
+R16528:16530 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16494:16527 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_wired_in_eos def
+R16531:16535 Corelib.Init.Datatypes <> false constr
+prf 16570:16586 <> wave100_not_wired
+R16676:16678 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16631:16636 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16592:16595 Corelib.Init.Datatypes <> negb def
+R16597:16630 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_wired_in_lib def
+R16637:16640 Corelib.Init.Datatypes <> negb def
+R16642:16675 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_wired_in_eos def
+R16679:16682 Corelib.Init.Datatypes <> true constr
+def 16948:16978 <> cartridgeOreConsultMonoidProved
+R16982:16985 Corelib.Init.Datatypes <> bool ind
+R16990:16994 Corelib.Init.Datatypes <> false constr
+prf 17004:17044 <> cartridge_ore_consult_monoid_proved_false
+R17081:17083 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17050:17080 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultMonoidProved def
+R17084:17088 Corelib.Init.Datatypes <> false constr
+def 17128:17150 <> not118SquaredGreenTable
+R17154:17157 Corelib.Init.Datatypes <> bool ind
+R17162:17165 Corelib.Init.Datatypes <> true constr
+prf 17175:17201 <> not_118_squared_green_table
+R17228:17230 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17205:17227 UMST.ChemConstants.CartridgeOreConsultMonoid <> not118SquaredGreenTable def
+R17231:17234 Corelib.Init.Datatypes <> true constr
+def 17274:17298 <> notFourthChemistryScience
+R17302:17305 Corelib.Init.Datatypes <> bool ind
+R17310:17313 Corelib.Init.Datatypes <> true constr
+prf 17323:17350 <> not_fourth_chemistry_science
+R17379:17381 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17354:17378 UMST.ChemConstants.CartridgeOreConsultMonoid <> notFourthChemistryScience def
+R17382:17385 Corelib.Init.Datatypes <> true constr
+def 17425:17443 <> notTwentySixthAxiom
+R17447:17450 Corelib.Init.Datatypes <> bool ind
+R17455:17458 Corelib.Init.Datatypes <> true constr
+prf 17468:17489 <> not_twenty_sixth_axiom
+R17512:17514 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17493:17511 UMST.ChemConstants.CartridgeOreConsultMonoid <> notTwentySixthAxiom def
+R17515:17518 Corelib.Init.Datatypes <> true constr
+def 17558:17573 <> sole_axiom_count
+R17577:17579 Corelib.Init.Datatypes <> nat ind
+prf 17594:17616 <> sole_axiom_count_is_one
+R17636:17638 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17620:17635 UMST.ChemConstants.CartridgeOreConsultMonoid <> sole_axiom_count def
+prf 17896:17934 <> unwired_close_without_production_wiring
+R18029:18033 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17940:17975 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_close def
+R17981:18016 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R18018:18022 Corelib.Init.Datatypes <> false constr
+R18024:18028 Corelib.Init.Datatypes <> false constr
+R18034:18051 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+prf 18088:18139 <> unwired_modality_always_ok_without_production_wiring
+R18234:18238 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18145:18180 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_close def
+R18186:18221 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R18223:18227 Corelib.Init.Datatypes <> false constr
+R18229:18233 Corelib.Init.Datatypes <> false constr
+R18239:18256 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+R18272:18310 UMST.ChemConstants.CartridgeOreConsultMonoid <> unwired_close_without_production_wiring thm
+R18272:18310 UMST.ChemConstants.CartridgeOreConsultMonoid <> unwired_close_without_production_wiring thm
+prf 18325:18348 <> csh_ore_consult_named_ok
+R18528:18532 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18354:18393 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R18399:18434 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R18436:18468 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceCshL1 def
+R18474:18497 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R18499:18503 Corelib.Init.Datatypes <> false constr
+R18505:18509 Corelib.Init.Datatypes <> false constr
+R18511:18515 Corelib.Init.Datatypes <> false constr
+R18517:18521 Corelib.Init.Datatypes <> false constr
+R18523:18527 Corelib.Init.Datatypes <> false constr
+R18533:18560 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+prf 18595:18619 <> pore_ore_consult_named_ok
+R18800:18804 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18625:18664 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R18670:18705 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R18707:18740 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidencePoreL1 def
+R18746:18769 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R18771:18775 Corelib.Init.Datatypes <> false constr
+R18777:18781 Corelib.Init.Datatypes <> false constr
+R18783:18787 Corelib.Init.Datatypes <> false constr
+R18789:18793 Corelib.Init.Datatypes <> false constr
+R18795:18799 Corelib.Init.Datatypes <> false constr
+R18805:18832 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+prf 18869:18902 <> named_cartridge_ore_consult_monoid
+R19115:19120 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19082:19086 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R18908:18947 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R18953:18988 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R18990:19022 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceCshL1 def
+R19028:19051 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R19053:19057 Corelib.Init.Datatypes <> false constr
+R19059:19063 Corelib.Init.Datatypes <> false constr
+R19065:19069 Corelib.Init.Datatypes <> false constr
+R19071:19075 Corelib.Init.Datatypes <> false constr
+R19077:19081 Corelib.Init.Datatypes <> false constr
+R19087:19114 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R19329:19334 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19296:19300 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19121:19160 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R19166:19201 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R19203:19236 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidencePoreL1 def
+R19242:19265 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R19267:19271 Corelib.Init.Datatypes <> false constr
+R19273:19277 Corelib.Init.Datatypes <> false constr
+R19279:19283 Corelib.Init.Datatypes <> false constr
+R19285:19289 Corelib.Init.Datatypes <> false constr
+R19291:19295 Corelib.Init.Datatypes <> false constr
+R19301:19328 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R19360:19365 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19352:19354 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19335:19351 UMST.ChemConstants.CartridgeOreConsultMonoid <> csh_is_element_id def
+R19355:19359 Corelib.Init.Datatypes <> false constr
+R19401:19406 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19393:19395 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19366:19392 UMST.ChemConstants.CartridgeOreConsultMonoid <> pore_solution_is_element_id def
+R19396:19400 Corelib.Init.Datatypes <> false constr
+R19432:19437 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R19425:19427 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19407:19424 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_factors_in_bar def
+R19428:19431 Corelib.Init.Datatypes <> true constr
+R19495:19497 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19438:19470 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_product_is_concurrent def
+R19472:19494 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultMonoidProduct def
+R19498:19501 Corelib.Init.Datatypes <> true constr
+prf 19552:19568 <> trivial_z_refused
+R19750:19754 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19574:19613 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R19619:19654 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R19656:19690 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceTrivial def
+R19696:19719 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R19721:19725 Corelib.Init.Datatypes <> false constr
+R19727:19731 Corelib.Init.Datatypes <> false constr
+R19733:19737 Corelib.Init.Datatypes <> false constr
+R19739:19743 Corelib.Init.Datatypes <> false constr
+R19745:19749 Corelib.Init.Datatypes <> false constr
+R19755:19778 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_trivial_z_refuse constr
+prf 19815:19835 <> trivial_z_fail_closed
+R20046:20051 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20017:20021 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R19841:19880 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R19886:19921 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R19923:19957 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceTrivial def
+R19963:19986 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R19988:19992 Corelib.Init.Datatypes <> false constr
+R19994:19998 Corelib.Init.Datatypes <> false constr
+R20000:20004 Corelib.Init.Datatypes <> false constr
+R20006:20010 Corelib.Init.Datatypes <> false constr
+R20012:20016 Corelib.Init.Datatypes <> false constr
+R20022:20045 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_trivial_z_refuse constr
+R20273:20277 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20052:20083 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict_ok def
+R20090:20129 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R20138:20173 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R20175:20209 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceTrivial def
+R20218:20241 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R20243:20247 Corelib.Init.Datatypes <> false constr
+R20249:20253 Corelib.Init.Datatypes <> false constr
+R20255:20259 Corelib.Init.Datatypes <> false constr
+R20261:20265 Corelib.Init.Datatypes <> false constr
+R20267:20271 Corelib.Init.Datatypes <> false constr
+R20278:20282 Corelib.Init.Datatypes <> false constr
+R20311:20327 UMST.ChemConstants.CartridgeOreConsultMonoid <> trivial_z_refused thm
+R20311:20327 UMST.ChemConstants.CartridgeOreConsultMonoid <> trivial_z_refused thm
+R20341:20372 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict_ok def
+R20387:20403 UMST.ChemConstants.CartridgeOreConsultMonoid <> trivial_z_refused thm
+R20387:20403 UMST.ChemConstants.CartridgeOreConsultMonoid <> trivial_z_refused thm
+R20387:20403 UMST.ChemConstants.CartridgeOreConsultMonoid <> trivial_z_refused thm
+prf 20435:20460 <> element_id_smuggle_refused
+R20642:20646 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20466:20505 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R20511:20546 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R20548:20582 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceSmuggle def
+R20588:20611 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R20613:20617 Corelib.Init.Datatypes <> false constr
+R20619:20623 Corelib.Init.Datatypes <> false constr
+R20625:20629 Corelib.Init.Datatypes <> false constr
+R20631:20635 Corelib.Init.Datatypes <> false constr
+R20637:20641 Corelib.Init.Datatypes <> false constr
+R20647:20679 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_element_id_smuggle_refuse constr
+prf 20716:20745 <> element_id_smuggle_fail_closed
+R20965:20970 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R20927:20931 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20751:20790 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R20796:20831 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R20833:20867 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceSmuggle def
+R20873:20896 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R20898:20902 Corelib.Init.Datatypes <> false constr
+R20904:20908 Corelib.Init.Datatypes <> false constr
+R20910:20914 Corelib.Init.Datatypes <> false constr
+R20916:20920 Corelib.Init.Datatypes <> false constr
+R20922:20926 Corelib.Init.Datatypes <> false constr
+R20932:20964 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_element_id_smuggle_refuse constr
+R21192:21196 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R20971:21002 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict_ok def
+R21009:21048 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R21057:21092 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R21094:21128 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceSmuggle def
+R21137:21160 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R21162:21166 Corelib.Init.Datatypes <> false constr
+R21168:21172 Corelib.Init.Datatypes <> false constr
+R21174:21178 Corelib.Init.Datatypes <> false constr
+R21180:21184 Corelib.Init.Datatypes <> false constr
+R21186:21190 Corelib.Init.Datatypes <> false constr
+R21197:21201 Corelib.Init.Datatypes <> false constr
+R21230:21255 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_refused thm
+R21230:21255 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_refused thm
+R21269:21300 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict_ok def
+R21315:21340 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_refused thm
+R21315:21340 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_refused thm
+R21315:21340 UMST.ChemConstants.CartridgeOreConsultMonoid <> element_id_smuggle_refused thm
+prf 21372:21398 <> green_invent_refuse_unwired
+R21492:21496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21404:21439 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_close def
+R21445:21480 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R21482:21485 Corelib.Init.Datatypes <> true constr
+R21487:21491 Corelib.Init.Datatypes <> false constr
+R21497:21523 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_green_invent_refuse constr
+prf 21560:21585 <> green_invent_always_refuse
+R21721:21725 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21591:21622 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict_ok def
+R21629:21664 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_close def
+R21673:21708 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R21710:21713 Corelib.Init.Datatypes <> true constr
+R21715:21719 Corelib.Init.Datatypes <> false constr
+R21726:21730 Corelib.Init.Datatypes <> false constr
+R21749:21780 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_verdict_ok def
+R21793:21819 UMST.ChemConstants.CartridgeOreConsultMonoid <> green_invent_refuse_unwired thm
+R21793:21819 UMST.ChemConstants.CartridgeOreConsultMonoid <> green_invent_refuse_unwired thm
+R21793:21819 UMST.ChemConstants.CartridgeOreConsultMonoid <> green_invent_refuse_unwired thm
+prf 21849:21873 <> proved_without_bar_refuse
+R22052:22056 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R21879:21918 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R21924:21959 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R21961:21993 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceCshL1 def
+R21999:22022 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R22024:22028 Corelib.Init.Datatypes <> false constr
+R22030:22033 Corelib.Init.Datatypes <> true constr
+R22035:22039 Corelib.Init.Datatypes <> false constr
+R22041:22045 Corelib.Init.Datatypes <> false constr
+R22047:22051 Corelib.Init.Datatypes <> false constr
+R22057:22089 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_proved_without_bar_refuse constr
+prf 22124:22146 <> production_wired_refuse
+R22239:22243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R22152:22187 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_close def
+R22193:22227 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_proved constr
+R22229:22233 Corelib.Init.Datatypes <> false constr
+R22235:22238 Corelib.Init.Datatypes <> true constr
+R22244:22274 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_production_wired_refuse constr
+ind 22539:22550 <> formal_fiber
+constr 22566:22586 <> fiber_quantum_knowing
+constr 22592:22608 <> fiber_meso_acting
+scheme 22539:22550 <> formal_fiber_rect
+scheme 22539:22550 <> formal_fiber_ind
+scheme 22539:22550 <> formal_fiber_rec
+scheme 22539:22550 <> formal_fiber_sind
+def 22623:22652 <> cartridge_ore_consult_fiber_ok
+R22659:22670 UMST.ChemConstants.CartridgeOreConsultMonoid <> formal_fiber ind
+binder 22655:22655 <> f:52
+R22675:22678 Corelib.Init.Datatypes <> bool ind
+R22691:22691 UMST.ChemConstants.CartridgeOreConsultMonoid <> f:52 var
+R22702:22722 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_quantum_knowing constr
+R22727:22730 Corelib.Init.Datatypes <> true constr
+R22736:22752 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_meso_acting constr
+R22757:22761 Corelib.Init.Datatypes <> false constr
+def 22782:22824 <> cartridgeOreConsultDoesNotMintFourthScience
+R22828:22831 Corelib.Init.Datatypes <> bool ind
+R22838:22862 UMST.ChemConstants.CartridgeOreConsultMonoid <> notFourthChemistryScience def
+def 22877:22913 <> cartridgeOreConsultDoesNotClaimProved
+R22917:22920 Corelib.Init.Datatypes <> bool ind
+R22927:22930 Corelib.Init.Datatypes <> negb def
+R22932:22962 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultMonoidProved def
+prf 22972:23009 <> cartridge_ore_consult_knowing_fiber_ok
+R23067:23069 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23015:23044 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_fiber_ok def
+R23046:23066 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_quantum_knowing constr
+R23070:23073 Corelib.Init.Datatypes <> true constr
+prf 23108:23153 <> cartridge_ore_consult_meso_acting_fiber_not_ok
+R23207:23209 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23159:23188 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_fiber_ok def
+R23190:23206 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_meso_acting constr
+R23210:23214 Corelib.Init.Datatypes <> false constr
+prf 23251:23295 <> cartridge_ore_consult_routes_knowing_not_meso
+R23360:23365 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23353:23355 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23301:23330 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_fiber_ok def
+R23332:23352 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_quantum_knowing constr
+R23356:23359 Corelib.Init.Datatypes <> true constr
+R23422:23427 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23414:23416 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23366:23395 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_fiber_ok def
+R23397:23413 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_meso_acting constr
+R23417:23421 Corelib.Init.Datatypes <> false constr
+R23478:23483 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23471:23473 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23428:23470 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultDoesNotMintFourthScience def
+R23474:23477 Corelib.Init.Datatypes <> true constr
+R23528:23533 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23521:23523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23484:23520 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultDoesNotClaimProved def
+R23524:23527 Corelib.Init.Datatypes <> true constr
+R23553:23555 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23534:23552 UMST.ChemConstants.CartridgeOreConsultMonoid <> notTwentySixthAxiom def
+R23556:23559 Corelib.Init.Datatypes <> true constr
+prf 23838:23882 <> cartridge_ore_consult_monoid_fixture_scaffold
+R24097:24102 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24062:24068 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R23888:23927 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R23933:23968 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R23970:24002 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceCshL1 def
+R24008:24031 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R24033:24037 Corelib.Init.Datatypes <> false constr
+R24039:24043 Corelib.Init.Datatypes <> false constr
+R24045:24049 Corelib.Init.Datatypes <> false constr
+R24051:24055 Corelib.Init.Datatypes <> false constr
+R24057:24061 Corelib.Init.Datatypes <> false constr
+R24069:24096 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R24313:24318 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24278:24284 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24103:24142 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R24148:24183 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R24185:24218 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidencePoreL1 def
+R24224:24247 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R24249:24253 Corelib.Init.Datatypes <> false constr
+R24255:24259 Corelib.Init.Datatypes <> false constr
+R24261:24265 Corelib.Init.Datatypes <> false constr
+R24267:24271 Corelib.Init.Datatypes <> false constr
+R24273:24277 Corelib.Init.Datatypes <> false constr
+R24285:24312 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_ore_consult_named_ok constr
+R24526:24531 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24495:24501 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24319:24358 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R24364:24399 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R24401:24435 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceTrivial def
+R24441:24464 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R24466:24470 Corelib.Init.Datatypes <> false constr
+R24472:24476 Corelib.Init.Datatypes <> false constr
+R24478:24482 Corelib.Init.Datatypes <> false constr
+R24484:24488 Corelib.Init.Datatypes <> false constr
+R24490:24494 Corelib.Init.Datatypes <> false constr
+R24502:24525 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_trivial_z_refuse constr
+R24748:24753 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24708:24714 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24532:24571 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R24577:24612 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R24614:24648 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceSmuggle def
+R24654:24677 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R24679:24683 Corelib.Init.Datatypes <> false constr
+R24685:24689 Corelib.Init.Datatypes <> false constr
+R24691:24695 Corelib.Init.Datatypes <> false constr
+R24697:24701 Corelib.Init.Datatypes <> false constr
+R24703:24707 Corelib.Init.Datatypes <> false constr
+R24715:24747 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_element_id_smuggle_refuse constr
+R24967:24972 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R24927:24933 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24754:24793 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_incidence def
+R24799:24834 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R24836:24868 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultIncidenceCshL1 def
+R24874:24897 UMST.ChemConstants.CartridgeOreConsultMonoid <> oreConsultClaimBarAbsent def
+R24899:24903 Corelib.Init.Datatypes <> false constr
+R24905:24908 Corelib.Init.Datatypes <> true constr
+R24910:24914 Corelib.Init.Datatypes <> false constr
+R24916:24920 Corelib.Init.Datatypes <> false constr
+R24922:24926 Corelib.Init.Datatypes <> false constr
+R24934:24966 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_proved_without_bar_refuse constr
+R25087:25092 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25062:25068 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R24973:25008 UMST.ChemConstants.CartridgeOreConsultMonoid <> evaluate_cartridge_ore_consult_close def
+R25014:25049 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
+R25051:25055 Corelib.Init.Datatypes <> false constr
+R25057:25061 Corelib.Init.Datatypes <> false constr
+R25069:25086 UMST.ChemConstants.CartridgeOreConsultMonoid <> verdict_unwired_ok constr
+R25152:25157 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25145:25147 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25093:25122 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_fiber_ok def
+R25124:25144 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_quantum_knowing constr
+R25148:25151 Corelib.Init.Datatypes <> true constr
+R25214:25219 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25206:25208 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25158:25187 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_fiber_ok def
+R25189:25205 UMST.ChemConstants.CartridgeOreConsultMonoid <> fiber_meso_acting constr
+R25209:25213 Corelib.Init.Datatypes <> false constr
+R25259:25264 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25251:25253 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25220:25250 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultMonoidProved def
+R25254:25258 Corelib.Init.Datatypes <> false constr
+R25309:25314 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25302:25304 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25265:25301 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_honest_conjunct def
+R25305:25308 Corelib.Init.Datatypes <> true constr
+R25315:25315 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25408:25414 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R25401:25403 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R25355:25361 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R25316:25319 Corelib.Init.Datatypes <> negb def
+R25321:25354 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_wired_in_lib def
+R25362:25365 Corelib.Init.Datatypes <> negb def
+R25367:25400 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_wired_in_eos def
+R25404:25407 Corelib.Init.Datatypes <> true constr
+R25428:25431 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R25415:25427 UMST.ChemConstants.CartridgeOreConsultMonoid <> xorEnumMarker def
+R25432:25450 UMST.ChemConstants.CartridgeOreConsultMonoid <> productFactorMarker def
+R25508:25542 UMST.ChemConstants.CartridgeOreConsultMonoid <> xor_marker_ne_product_factor_marker thm
+R25508:25542 UMST.ChemConstants.CartridgeOreConsultMonoid <> xor_marker_ne_product_factor_marker thm
+def 25786:25821 <> cartridgeOreConsultMonoidRsAuthority
+R25825:25830 Stdlib.Strings.String <> string ind
+def 25910:25949 <> chemIntCrossCartridgeOreConsultAuthority
+R25953:25958 Stdlib.Strings.String <> string ind
+def 26037:26067 <> cartridgeOreConsultMonoidCellId
+R26071:26076 Stdlib.Strings.String <> string ind
+def 26158:26190 <> cartridgeOreConsultMonoidNonClaim
+R26194:26199 Stdlib.Strings.String <> string ind
+prf 26721:26756 <> cartridge_ore_consult_monoid_cell_id
+R26793:26797 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R26762:26792 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultMonoidCellId def
+prf 26893:26926 <> cartridge_ore_consult_cites_rs_row
+R26968:26971 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R26932:26967 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultMonoidRsAuthority def
+prf 27009:27049 <> cartridge_ore_consult_cites_int_cross_row
+R27095:27099 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R27055:27094 UMST.ChemConstants.CartridgeOreConsultMonoid <> chemIntCrossCartridgeOreConsultAuthority def
+prf 27192:27225 <> cartridge_ore_consult_cites_marker
+R27249:27252 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27231:27248 UMST.ChemConstants.CartridgeOreConsultMonoid <> ore_consult_marker def
+def 27517:27563 <> cartridgeOreConsultSecondLawConservationFraming
+R27567:27572 Stdlib.Strings.String <> string ind
+prf 27667:27718 <> cartridge_ore_consult_not_twenty_sixth_axiom_framing
+R27771:27776 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27724:27770 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultSecondLawConservationFraming def
+prf 27842:27887 <> cartridge_ore_consult_not_fourth_science_axiom
+R27940:27945 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R27893:27939 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultSecondLawConservationFraming def
+prf 28013:28065 <> cartridge_ore_consult_second_law_conservation_framing
+R28118:28121 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R28071:28117 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultSecondLawConservationFraming def
+def 28390:28411 <> physicsGreenAuthorized
+R28423:28427 Corelib.Init.Logic <> False ind
+prf 28437:28484 <> cartridge_ore_consult_monoid_physics_green_false
+R28490:28491 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R28492:28513 UMST.ChemConstants.CartridgeOreConsultMonoid <> physicsGreenAuthorized def
+prf 28553:28597 <> cartridge_ore_consult_monoid_modality_unwired
+R28643:28647 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R28603:28642 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridgeOreConsultMonoidModalityCurrent def
+R28648:28683 UMST.ChemConstants.CartridgeOreConsultMonoid <> cartridge_ore_consult_monoid_unwired constr
