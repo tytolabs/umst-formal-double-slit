@@ -66,7 +66,9 @@ The repository is **MIT** (`LICENSE`). New **first-party** sources should carry:
   -- Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Studio TYTO
   ```
 
-From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the above to **`Lean/**/*.lean`** (skips **`.lake`**), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`** (skips **`dist-newstyle`**, **`dist`**, **`.stack-work`**), **`Coq/**/*.v`**, **`Agda/**/*.agda`**, **`Docs/*.tex`**, and **repo-wide `*.md`** (skips **`.pytest_cache`**, etc.). **Do not** retarget it at vendored trees.
+From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the above to **`Lean/**/*.lean`** (skips **`.lake`**), **`sim/**/*.py`**, **`scripts/**/*.py`**, **`Haskell/**/*.hs`** (skips **`dist-newstyle`**, **`dist`**, **`.stack-work`**), **`Coq/**/*.v`**, **`Agda/**/*.agda`**, **`Docs/*.tex`** (non-recursive — `Docs/Preprint/` is not covered), and **repo-wide `*.md`** (skips **`.pytest_cache`**, etc.). **Do not** retarget it at vendored trees.
+
+Survey of kinds, outliers, and remnants (including adder false-skips): **`Docs/SPDX_HEADER_MAP.md`**.
 
 ## Lean
 
