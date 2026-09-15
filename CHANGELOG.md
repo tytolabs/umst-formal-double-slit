@@ -9,6 +9,10 @@ All notable changes to this **standalone repository** are listed here. The upstr
 
 ## [Unreleased]
 
+### Documentation (SPDX header survey)
+
+- **`Docs/SPDX_HEADER_MAP.md`** — inventory of SPDX / copyright kinds, outliers, and remnants (Composer 2.5 UMST-orch scan + mechanical count). Planning only: does not retarget headers. Headline: one canonical MIT + Studio TYTO string on ~171 files; unique REUSE remnant on **`README.md`** (`SPDX-FileCopyrightText`, swapped author order, empty `<!-- -->` from `2a90c8b`); `add_spdx_headers.py` coverage holes (`tools/`, `data/`, non-recursive `Docs/*.tex`, snippet false-skip on `CONTRIBUTING.md`).
+
 ### Documentation (2026-05-30 — §14bis.x-DOC-COUNTS)
 
 - **Lean metrics** — `python3 scripts/lean_declaration_stats.py`: **59** roots, **540**/**34**/**574** (roots-only); **549**/**35**/**584** (all `Lean/*.lean`). **KRON-1** `KroneckerEigen` (+3 roots-only theorems). `PROOF-STATUS.md`, `FORMAL_FOUNDATIONS.md`, `README.md` aligned.

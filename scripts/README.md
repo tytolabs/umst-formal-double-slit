@@ -8,7 +8,7 @@ Copyright (c) 2026 Santhosh Shyamsundar, Santosh Prabhu Shenbagamoorthy — Stud
 | Script | Usage |
 |--------|--------|
 | `lean_decl_stats.py` | Heuristic counts of `theorem` / `lemma` / `def` / … in `Lean/**/*.lean` (skips `.lake`). |
-| `add_spdx_headers.py` | Idempotently prepends MIT `SPDX-License-Identifier` + copyright to `Lean/**/*.lean`, `sim/**/*.py`, `scripts/**/*.py`, `Haskell/**/*.hs`, `Coq/**/*.v`, `Agda/**/*.agda`, `Docs/*.tex`, repo `*.md` (skips `.lake`, `dist-newstyle`, `.pytest_cache`, …). |
+| `add_spdx_headers.py` | Idempotently prepends MIT `SPDX-License-Identifier` + copyright to `Lean/**/*.lean`, `sim/**/*.py`, `scripts/**/*.py`, `Haskell/**/*.hs`, `Coq/**/*.v`, `Agda/**/*.agda`, `Docs/*.tex` (not `Docs/Preprint/`), repo `*.md` (skips `.lake`, `dist-newstyle`, `.pytest_cache`, …). Kind/outlier map: [`Docs/SPDX_HEADER_MAP.md`](../Docs/SPDX_HEADER_MAP.md). |
 | `formal_check.sh` | Runs **`make formal-check`** (Coq + Agda) from repo root; same as CI **`.github/workflows/formal.yml`**. |
 
 From repo root:
