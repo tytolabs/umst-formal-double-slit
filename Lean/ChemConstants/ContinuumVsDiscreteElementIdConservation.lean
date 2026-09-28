@@ -487,7 +487,7 @@ def cvdiecLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem cvdiec_lattice_scaffold_true :
-    cvdiecLatticeScaffold = true := by native_decide
+    cvdiecLatticeScaffold = true := by decide
 
 inductive ContinuumVsDiscreteElementIdConservationFiber where
   | quantumKnowing | mesoActing
@@ -590,7 +590,7 @@ def continuumVsDiscreteElementIdConservationHonest : Bool :=
     cvdiecLatticeScaffold
 
 theorem cvdiec_conservation_honest_true :
-    continuumVsDiscreteElementIdConservationHonest = true := by native_decide
+    continuumVsDiscreteElementIdConservationHonest = true := by decide
 
 def continuumVsDiscreteElementIdConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -608,7 +608,7 @@ def continuumVsDiscreteElementIdConservationAxiom : Bool :=
       "second_law_conservation_continuum_vs_discrete_two_presentations_one_object_one_axiom")
 
 theorem cvdiec_conservation_axiom :
-    continuumVsDiscreteElementIdConservationAxiom = true := by native_decide
+    continuumVsDiscreteElementIdConservationAxiom = true := by decide
 
 theorem cvdiec_conservation_modality_unwired :
     continuumVsDiscreteElementIdConservationModalityCurrent = .unwired := rfl

@@ -190,16 +190,16 @@ theorem meet_join_identity_conserved :
     meetJoinIdentityConserved = true := rfl
 
 theorem monotone_chain_reaches_fixed_point :
-    monotoneChainReachesFixedPoint = true := by native_decide
+    monotoneChainReachesFixedPoint = true := by decide
 
 theorem least_fixed_point_reaches_top :
-    leastFixedPointReachesTop = true := by native_decide
+    leastFixedPointReachesTop = true := by decide
 
 theorem greatest_fixed_point_is_top :
     greatestFixedPointIsTop = true := rfl
 
 theorem budget_exhaust_refuses :
-    budgetExhaustRefuses = true := by native_decide
+    budgetExhaustRefuses = true := by decide
 
 theorem unwired_verdict_ok :
     fixpointConservationVerdictOk (evaluateFixpointConservation .unwired false) = true := rfl

@@ -552,7 +552,7 @@ def ogRelativisticLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem og_relativistic_lattice_scaffold_true :
-    ogRelativisticLatticeScaffold = true := by native_decide
+    ogRelativisticLatticeScaffold = true := by decide
 
 inductive OgRelativisticConservationFiber where
   | quantumKnowing | mesoActing
@@ -663,7 +663,7 @@ def ogRelativisticConservationHonest : Bool :=
     ogRelativisticLatticeScaffold
 
 theorem og_relativistic_conservation_honest_true :
-    ogRelativisticConservationHonest = true := by native_decide
+    ogRelativisticConservationHonest = true := by decide
 
 def ogRelativisticConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -679,7 +679,7 @@ def ogRelativisticConservationAxiom : Bool :=
       "second_law_conservation_og_relativistic_z_one_axiom")
 
 theorem og_relativistic_conservation_axiom :
-    ogRelativisticConservationAxiom = true := by native_decide
+    ogRelativisticConservationAxiom = true := by decide
 
 theorem og_relativistic_conservation_modality_unwired :
     ogRelativisticConservationModalityCurrent = .unwired := rfl

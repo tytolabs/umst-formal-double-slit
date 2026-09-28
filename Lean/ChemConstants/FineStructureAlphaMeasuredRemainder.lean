@@ -233,7 +233,7 @@ def alphaDeferredCompositionOnSecondLaw : Bool :=
   codataAlphaCitationNamed
 
 theorem alpha_deferred_composition_on_second_law_true :
-    alphaDeferredCompositionOnSecondLaw = true := by native_decide
+    alphaDeferredCompositionOnSecondLaw = true := by decide
 
 def fineStructureAlphaMeasuredRemainderConjunct : Bool :=
   soleAxiomCount != 26 &&
@@ -243,7 +243,7 @@ def fineStructureAlphaMeasuredRemainderConjunct : Bool :=
   !alphaIsImpossibilityRest
 
 theorem fine_structure_alpha_measured_remainder_conjunct_true :
-    fineStructureAlphaMeasuredRemainderConjunct = true := by native_decide
+    fineStructureAlphaMeasuredRemainderConjunct = true := by decide
 
 /-- Forbidden SI mint names — k, R, ε₀. -/
 def forbiddenSiMintK : String := "k"
@@ -357,7 +357,7 @@ def fineStructureAlphaMeasuredRemainderHonestConjunct : Bool :=
   notTwentySixthAxiom
 
 theorem fine_structure_alpha_measured_remainder_honest_conjunct_true :
-    fineStructureAlphaMeasuredRemainderHonestConjunct = true := by native_decide
+    fineStructureAlphaMeasuredRemainderHonestConjunct = true := by decide
 
 /-- Verdict for fine-structure α measured remainder close (fail-closed). -/
 inductive FineStructureAlphaMeasuredRemainderVerdict where
@@ -478,7 +478,7 @@ def fineStructureAlphaMeasuredRemainderScaffold : Bool :=
     siMintRefused
 
 theorem fine_structure_alpha_measured_remainder_scaffold_true :
-    fineStructureAlphaMeasuredRemainderScaffold = true := by native_decide
+    fineStructureAlphaMeasuredRemainderScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -553,7 +553,7 @@ def fineStructureAlphaMeasuredRemainderHonest : Bool :=
     fineStructureAlphaMeasuredRemainderScaffold
 
 theorem fine_structure_alpha_measured_remainder_honest_true :
-    fineStructureAlphaMeasuredRemainderHonest = true := by native_decide
+    fineStructureAlphaMeasuredRemainderHonest = true := by decide
 
 def fineStructureAlphaMeasuredRemainderFraming : String :=
   "second_law_conservation_fine_structure_alpha_measured_remainder_one_axiom_not_26th_axiom"
@@ -589,7 +589,7 @@ def fineStructureAlphaMeasuredRemainderAxiom : Bool :=
       "second_law_conservation_fine_structure_alpha_measured_remainder_one_axiom_not_26th_axiom")
 
 theorem fine_structure_alpha_measured_remainder_axiom :
-    fineStructureAlphaMeasuredRemainderAxiom = true := by native_decide
+    fineStructureAlphaMeasuredRemainderAxiom = true := by decide
 
 theorem unwired_close_without_claims :
     evaluateFineStructureAlphaMeasuredRemainderClose .unwired false false false false false false =

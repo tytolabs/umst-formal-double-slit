@@ -45,28 +45,28 @@ def dBlockOccupancyExceptionZSet : List Nat :=
   dBlockExceptionList.map fun ex => ex.z
 
 theorem named_occupancy_exception_z_set_five :
-    namedOccupancyExceptionZSet.length = 5 := by native_decide
+    namedOccupancyExceptionZSet.length = 5 := by decide
 
 theorem actinide_occupancy_exception_z_set_seven :
-    actinideOccupancyExceptionZSet.length = 7 := by native_decide
+    actinideOccupancyExceptionZSet.length = 7 := by decide
 
 theorem d_block_occupancy_exception_z_set_eight :
-    dBlockOccupancyExceptionZSet.length = 8 := by native_decide
+    dBlockOccupancyExceptionZSet.length = 8 := by decide
 
 /-- Named vs actinide Z pins never coincide (finite pairwise disjoint). -/
 theorem named_actinide_exception_z_disjoint (n : NamedException) (a : ActinideException) :
     n.z ≠ a.z := by
-  cases n <;> cases a <;> native_decide
+  cases n <;> cases a <;> decide
 
 /-- Named vs d-block Z pins never coincide (finite pairwise disjoint). -/
 theorem named_d_block_exception_z_disjoint (n : NamedException) (d : DBlockException) :
     n.z ≠ d.z := by
-  cases n <;> cases d <;> native_decide
+  cases n <;> cases d <;> decide
 
 /-- Actinide vs d-block Z pins never coincide (finite pairwise disjoint). -/
 theorem actinide_d_block_exception_z_disjoint (a : ActinideException) (d : DBlockException) :
     a.z ≠ d.z := by
-  cases a <;> cases d <;> native_decide
+  cases a <;> cases d <;> decide
 
 /-- All three occupancy exception Z-sets are pairwise disjoint at the pin level. -/
 theorem occupancy_exception_z_sets_pairwise_disjoint :
@@ -77,13 +77,13 @@ theorem occupancy_exception_z_sets_pairwise_disjoint :
     actinide_d_block_exception_z_disjoint⟩
 
 theorem z94_not_named_exception_z (ex : NamedException) : ex.z ≠ 94 := by
-  cases ex <;> native_decide
+  cases ex <;> decide
 
 theorem z94_not_actinide_exception_z (ex : ActinideException) : ex.z ≠ 94 := by
-  cases ex <;> native_decide
+  cases ex <;> decide
 
 theorem z94_not_d_block_exception_z (ex : DBlockException) : ex.z ≠ 94 := by
-  cases ex <;> native_decide
+  cases ex <;> decide
 
 /-- Z = 94 (Pu) is in no occupancy exception override set — Pu has no qlattice override. -/
 theorem z94_not_in_any_occupancy_exception_set :
@@ -97,7 +97,7 @@ theorem z103_in_actinide_occupancy_exception_set :
   ⟨.Lr, actinide_exception_lr_z⟩
 
 theorem z103_not_named_exception_z (ex : NamedException) : ex.z ≠ 103 := by
-  cases ex <;> native_decide
+  cases ex <;> decide
 
 /-- Z = 103 (Lr) is in actinide set, not in named set. -/
 theorem z103_in_actinide_not_named :

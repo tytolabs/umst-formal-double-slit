@@ -597,7 +597,7 @@ def paExceptionContinuumLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem pa_exception_continuum_lattice_scaffold_true :
-    paExceptionContinuumLatticeScaffold = true := by native_decide
+    paExceptionContinuumLatticeScaffold = true := by decide
 
 inductive PaExceptionContinuumFiber where
   | quantumKnowing | mesoActing
@@ -700,7 +700,7 @@ def paExceptionContinuumHonest : Bool :=
     paExceptionContinuumLatticeScaffold
 
 theorem pa_exception_continuum_honest_true :
-    paExceptionContinuumHonest = true := by native_decide
+    paExceptionContinuumHonest = true := by decide
 
 def paExceptionContinuumAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -716,7 +716,7 @@ def paExceptionContinuumAxiom : Bool :=
       "second_law_conservation_pa_exception_continuum_occupancy_engine_sort_one_axiom")
 
 theorem pa_exception_continuum_axiom :
-    paExceptionContinuumAxiom = true := by native_decide
+    paExceptionContinuumAxiom = true := by decide
 
 theorem pa_exception_continuum_modality_unwired :
     paExceptionContinuumModalityCurrent = .unwired := rfl

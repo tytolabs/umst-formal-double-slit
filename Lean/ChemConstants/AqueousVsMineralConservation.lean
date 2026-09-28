@@ -487,7 +487,7 @@ def aqueousVsMineralLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem aqueous_vs_mineral_lattice_scaffold_true :
-    aqueousVsMineralLatticeScaffold = true := by native_decide
+    aqueousVsMineralLatticeScaffold = true := by decide
 
 inductive AqueousVsMineralConservationFiber where
   | quantumKnowing | mesoActing
@@ -587,7 +587,7 @@ def aqueousVsMineralConservationHonest : Bool :=
     aqueousVsMineralLatticeScaffold
 
 theorem aqueous_vs_mineral_conservation_honest_true :
-    aqueousVsMineralConservationHonest = true := by native_decide
+    aqueousVsMineralConservationHonest = true := by decide
 
 def aqueousVsMineralConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -605,7 +605,7 @@ def aqueousVsMineralConservationAxiom : Bool :=
       "second_law_conservation_aqueous_vs_mineral_env_restriction_one_axiom")
 
 theorem aqueous_vs_mineral_conservation_axiom :
-    aqueousVsMineralConservationAxiom = true := by native_decide
+    aqueousVsMineralConservationAxiom = true := by decide
 
 theorem aqueous_vs_mineral_conservation_modality_unwired :
     aqueousVsMineralConservationModalityCurrent = .unwired := rfl

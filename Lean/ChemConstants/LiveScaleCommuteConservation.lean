@@ -691,7 +691,7 @@ def liveScaleCommuteConservationHonest : Bool :=
     fiberNotMesoActing
 
 theorem live_scale_commute_conservation_honest_true :
-    liveScaleCommuteConservationHonest = true := by native_decide
+    liveScaleCommuteConservationHonest = true := by decide
 
 def liveScaleCommuteConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -705,7 +705,7 @@ def liveScaleCommuteConservationAxiom : Bool :=
       "second_law_conservation_scale_one_axiom_not_second_scale_axiom")
 
 theorem live_scale_commute_conservation_axiom :
-    liveScaleCommuteConservationAxiom = true := by native_decide
+    liveScaleCommuteConservationAxiom = true := by decide
 
 theorem live_scale_commute_conservation_honest_bundle :
     liveScaleCommuteConservationProved = false ∧

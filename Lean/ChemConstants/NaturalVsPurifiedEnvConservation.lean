@@ -587,7 +587,7 @@ def naturalVsPurifiedEnvLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem natural_vs_purified_env_lattice_scaffold_true :
-    naturalVsPurifiedEnvLatticeScaffold = true := by native_decide
+    naturalVsPurifiedEnvLatticeScaffold = true := by decide
 
 inductive NaturalVsPurifiedEnvConservationFiber where
   | quantumKnowing | mesoActing
@@ -702,7 +702,7 @@ def naturalVsPurifiedEnvConservationHonest : Bool :=
     naturalVsPurifiedEnvLatticeScaffold
 
 theorem natural_vs_purified_env_conservation_honest_true :
-    naturalVsPurifiedEnvConservationHonest = true := by native_decide
+    naturalVsPurifiedEnvConservationHonest = true := by decide
 
 def naturalVsPurifiedEnvConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -720,7 +720,7 @@ def naturalVsPurifiedEnvConservationAxiom : Bool :=
       "second_law_conservation_natural_vs_purified_env_env_section_restriction_one_axiom")
 
 theorem natural_vs_purified_env_conservation_axiom :
-    naturalVsPurifiedEnvConservationAxiom = true := by native_decide
+    naturalVsPurifiedEnvConservationAxiom = true := by decide
 
 theorem natural_vs_purified_env_conservation_modality_unwired :
     naturalVsPurifiedEnvConservationModalityCurrent = .unwired := rfl

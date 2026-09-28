@@ -47,16 +47,16 @@ def destroyedDistinctionBitsFromN (n : ℕ) : Option ℕ :=
   | n + 2 => some (Nat.log2 (n + 2))
 
 @[simp] theorem destroyed_distinction_bits_four :
-    destroyedDistinctionBitsFromN 4 = some 2 := by native_decide
+    destroyedDistinctionBitsFromN 4 = some 2 := by decide
 
 @[simp] theorem destroyed_distinction_bits_two :
-    destroyedDistinctionBitsFromN 2 = some 1 := by native_decide
+    destroyedDistinctionBitsFromN 2 = some 1 := by decide
 
 @[simp] theorem destroyed_distinction_bits_one :
-    destroyedDistinctionBitsFromN 1 = none := by native_decide
+    destroyedDistinctionBitsFromN 1 = none := by decide
 
 @[simp] theorem destroyed_distinction_bits_zero :
-    destroyedDistinctionBitsFromN 0 = none := by native_decide
+    destroyedDistinctionBitsFromN 0 = none := by decide
 
 lemma landauerBitEnergy_nonneg_local {T : ℝ} (hT : 0 ≤ T) : 0 ≤ landauerBitEnergy T := by
   unfold landauerBitEnergy
@@ -166,19 +166,19 @@ def fixtureInadmissibleInventedBits : CompressionCandidate :=
     evidenceTagged := true }
 
 theorem fixture_admissible_two_bit_accepts :
-    evaluateCompression fixtureAdmissibleTwoBitCollapse = .accept := by native_decide
+    evaluateCompression fixtureAdmissibleTwoBitCollapse = .accept := by decide
 
 theorem fixture_laptop_heat_refuses :
-    admitCompressionCandidate fixtureInadmissibleLaptopHeat = some .laptopHeatTheater := by native_decide
+    admitCompressionCandidate fixtureInadmissibleLaptopHeat = some .laptopHeatTheater := by decide
 
 theorem fixture_invented_bits_refuses :
-    admitCompressionCandidate fixtureInadmissibleInventedBits = some .inventedDistinctionBits := by native_decide
+    admitCompressionCandidate fixtureInadmissibleInventedBits = some .inventedDistinctionBits := by decide
 
 theorem landauer_n_to_1_laptop_heat_positive_refuse :
-    admitCompressionCandidate fixtureInadmissibleLaptopHeat = some .laptopHeatTheater := by native_decide
+    admitCompressionCandidate fixtureInadmissibleLaptopHeat = some .laptopHeatTheater := by decide
 
 theorem landauer_n_to_1_invented_bits_positive_refuse :
-    admitCompressionCandidate fixtureInadmissibleInventedBits = some .inventedDistinctionBits := by native_decide
+    admitCompressionCandidate fixtureInadmissibleInventedBits = some .inventedDistinctionBits := by decide
 
 theorem landauer_compression_cost_admissible_two_bits :
     landauerCompressionCost fixtureAdmissibleTwoBitCollapse.claimedDestroyedBits = 2 := rfl

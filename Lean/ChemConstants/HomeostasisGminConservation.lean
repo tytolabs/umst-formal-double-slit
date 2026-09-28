@@ -481,7 +481,7 @@ def homeostasisGminLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem homeostasis_gmin_lattice_scaffold_true :
-    homeostasisGminLatticeScaffold = true := by native_decide
+    homeostasisGminLatticeScaffold = true := by decide
 
 inductive HomeostasisGminConservationFiber where
   | quantumKnowing | mesoActing
@@ -584,7 +584,7 @@ def homeostasisGminConservationHonest : Bool :=
     homeostasisGminLatticeScaffold
 
 theorem homeostasis_gmin_conservation_honest_true :
-    homeostasisGminConservationHonest = true := by native_decide
+    homeostasisGminConservationHonest = true := by decide
 
 def homeostasisGminConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -602,7 +602,7 @@ def homeostasisGminConservationAxiom : Bool :=
       "second_law_conservation_homeostasis_gmin_g_min_one_axiom")
 
 theorem homeostasis_gmin_conservation_axiom :
-    homeostasisGminConservationAxiom = true := by native_decide
+    homeostasisGminConservationAxiom = true := by decide
 
 theorem homeostasis_gmin_conservation_modality_unwired :
     homeostasisGminConservationModalityCurrent = .unwired := rfl

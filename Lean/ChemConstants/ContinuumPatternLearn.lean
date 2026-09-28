@@ -430,7 +430,7 @@ def continuumPatternLearnHonestConjunct : Bool :=
   notTwentySixthAxiom
 
 theorem continuum_pattern_learn_honest_conjunct_true :
-    continuumPatternLearnHonestConjunct = true := by native_decide
+    continuumPatternLearnHonestConjunct = true := by decide
 
 /-- Verdict for continuum pattern-learn close (fail-closed). -/
 inductive ContinuumPatternLearnVerdict where
@@ -528,7 +528,7 @@ def continuumPatternLearnScaffold : Bool :=
     continuumPatternLearnChartHopCount == 8
 
 theorem continuum_pattern_learn_scaffold_true :
-    continuumPatternLearnScaffold = true := by native_decide
+    continuumPatternLearnScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -608,7 +608,7 @@ def continuumPatternLearnHonest : Bool :=
     continuumPatternLearnScaffold
 
 theorem continuum_pattern_learn_honest_true :
-    continuumPatternLearnHonest = true := by native_decide
+    continuumPatternLearnHonest = true := by decide
 
 def continuumPatternLearnFraming : String :=
   "second_law_conservation_continuum_pattern_learn_one_axiom_not_26th_axiom"
@@ -643,7 +643,7 @@ def continuumPatternLearnAxiom : Bool :=
       "second_law_conservation_continuum_pattern_learn_one_axiom_not_26th_axiom")
 
 theorem continuum_pattern_learn_axiom :
-    continuumPatternLearnAxiom = true := by native_decide
+    continuumPatternLearnAxiom = true := by decide
 
 theorem unwired_close_without_claims :
     evaluateContinuumPatternLearnClose .unwired false false false false = .unwiredOk := rfl

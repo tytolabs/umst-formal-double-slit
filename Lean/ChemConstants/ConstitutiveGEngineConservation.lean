@@ -516,7 +516,7 @@ def gEngineLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem g_engine_lattice_scaffold_true :
-    gEngineLatticeScaffold = true := by native_decide
+    gEngineLatticeScaffold = true := by decide
 
 inductive GEngineConservationFiber where
   | quantumKnowing | mesoActing
@@ -620,7 +620,7 @@ def gEngineConservationHonest : Bool :=
     gEngineLatticeScaffold
 
 theorem g_engine_conservation_honest_true :
-    gEngineConservationHonest = true := by native_decide
+    gEngineConservationHonest = true := by decide
 
 def gEngineConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -638,7 +638,7 @@ def gEngineConservationAxiom : Bool :=
       "second_law_conservation_g_engine_sort_restriction_one_axiom")
 
 theorem g_engine_conservation_axiom :
-    gEngineConservationAxiom = true := by native_decide
+    gEngineConservationAxiom = true := by decide
 
 theorem g_engine_conservation_modality_unwired :
     gEngineConservationModalityCurrent = .unwired := rfl

@@ -623,7 +623,7 @@ def liveEco02ConsumeLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem live_eco02_consume_lattice_scaffold_true :
-    liveEco02ConsumeLatticeScaffold = true := by native_decide
+    liveEco02ConsumeLatticeScaffold = true := by decide
 
 inductive LiveEco02ConsumeConservationFiber where
   | quantumKnowing | mesoActing
@@ -741,7 +741,7 @@ def liveEco02ConsumeConservationHonest : Bool :=
     liveEco02ConsumeLatticeScaffold
 
 theorem live_eco02_consume_conservation_honest_true :
-    liveEco02ConsumeConservationHonest = true := by native_decide
+    liveEco02ConsumeConservationHonest = true := by decide
 
 def liveEco02ConsumeConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -759,7 +759,7 @@ def liveEco02ConsumeConservationAxiom : Bool :=
       "second_law_conservation_live_eco02_consume_graph_liquid_ppo_mi_observation_one_axiom")
 
 theorem live_eco02_consume_conservation_axiom :
-    liveEco02ConsumeConservationAxiom = true := by native_decide
+    liveEco02ConsumeConservationAxiom = true := by decide
 
 theorem live_eco02_consume_conservation_modality_unwired :
     liveEco02ConsumeConservationModalityCurrent = .unwired := rfl

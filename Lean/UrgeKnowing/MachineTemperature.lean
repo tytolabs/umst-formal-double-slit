@@ -382,7 +382,7 @@ theorem m3_accepts : evaluateMachineTemperature fixtureM3Accept = Sum.inl
         { kelvinMilli := 310000, nodeId := "node-m3-rapl", source := .repositoryInMachine }
       landauerFloorMilliJoule := landauerFloorMilliJoule 310000 64
       availableEnergyMilliJoule := 50000000 } := by
-  native_decide
+  decide
 
 theorem wall_clock_refused :
     evaluateMachineTemperature fixtureWallClockRefuse = Sum.inr .wallClockAsTemperature :=
@@ -397,7 +397,7 @@ theorem thinkpad_cross_node_refused :
     evaluateMachineTemperature fixtureThinkpadCrossNodeRefuse =
       Sum.inr (.crossNodeEnergyWitnessMismatch "node-thinkpad"
         (landauerFloorMilliJoule 320000 64) 1) := by
-  native_decide
+  decide
 
 -- ================================================================
 -- SECTION 7: Machine temperature composes Excitement.select (no second argmin)

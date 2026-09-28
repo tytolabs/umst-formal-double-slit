@@ -375,7 +375,7 @@ theorem persist_index_deterministic (ucrs grid : Nat) :
 theorem occupancy_index_cell_distinct :
     (occupancyHilbertIndex "CELL-B" ["write/a.rs", "write/b.rs"]).occupancy_raw ≠
       (occupancyHilbertIndex "CELL-C" ["write/a.rs", "write/b.rs"]).occupancy_raw := by
-  native_decide
+  decide
 
 -- ================================================================
 -- SECTION 6: Two Hilberts composes Excitement.select (no second argmin)

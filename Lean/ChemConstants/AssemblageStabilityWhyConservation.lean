@@ -466,7 +466,7 @@ def assemblageStabilityWhyLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem assemblage_stability_why_lattice_scaffold_true :
-    assemblageStabilityWhyLatticeScaffold = true := by native_decide
+    assemblageStabilityWhyLatticeScaffold = true := by decide
 
 inductive AssemblageStabilityWhyConservationFiber where
   | quantumKnowing | mesoActing
@@ -563,7 +563,7 @@ def assemblageStabilityWhyConservationHonest : Bool :=
     assemblageStabilityWhyLatticeScaffold
 
 theorem assemblage_stability_why_conservation_honest_true :
-    assemblageStabilityWhyConservationHonest = true := by native_decide
+    assemblageStabilityWhyConservationHonest = true := by decide
 
 def assemblageStabilityWhyConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -581,7 +581,7 @@ def assemblageStabilityWhyConservationAxiom : Bool :=
       "second_law_conservation_assemblage_stability_why_one_axiom")
 
 theorem assemblage_stability_why_conservation_axiom :
-    assemblageStabilityWhyConservationAxiom = true := by native_decide
+    assemblageStabilityWhyConservationAxiom = true := by decide
 
 theorem assemblage_stability_why_conservation_modality_unwired :
     assemblageStabilityWhyConservationModalityCurrent = .unwired := rfl

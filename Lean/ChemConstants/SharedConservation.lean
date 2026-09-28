@@ -551,7 +551,7 @@ def sharedLatticeScaffold : Bool :=
     xorMutuallyExclusiveRefuse &&
     wave100NotWired
 
-theorem shared_lattice_scaffold_true : sharedLatticeScaffold = true := by native_decide
+theorem shared_lattice_scaffold_true : sharedLatticeScaffold = true := by decide
 
 def sharedConservationPhysicsGreenAuthorized : Prop := False
 
@@ -610,7 +610,7 @@ def sharedConservationHonest : Bool :=
     p.intAuthorityCited &&
     sharedLatticeScaffold
 
-theorem shared_conservation_honest_true : sharedConservationHonest = true := by native_decide
+theorem shared_conservation_honest_true : sharedConservationHonest = true := by decide
 
 def sharedConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -629,7 +629,7 @@ def sharedConservationAxiom : Bool :=
     decide (sharedSecondLawConservationFraming =
       "second_law_conservation_shared_one_axiom_not_second_shared_axiom")
 
-theorem shared_conservation_axiom : sharedConservationAxiom = true := by native_decide
+theorem shared_conservation_axiom : sharedConservationAxiom = true := by decide
 
 theorem shared_conservation_modality_unwired :
     sharedConservationModalityCurrent = .unwired := rfl

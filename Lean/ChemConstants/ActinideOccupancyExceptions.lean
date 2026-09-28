@@ -145,32 +145,32 @@ def actinideExceptionCount : Nat := actinideExceptionList.length
 theorem actinide_exception_count_seven : actinideExceptionCount = 7 := rfl
 
 theorem actinide_exception_list_length :
-    actinideExceptionList.length = 7 := by native_decide
+    actinideExceptionList.length = 7 := by decide
 
 theorem ac_observed_ne_predicted :
-    ActinideException.observedNotation .Ac ≠ ActinideException.predictedNotation .Ac := by native_decide
+    ActinideException.observedNotation .Ac ≠ ActinideException.predictedNotation .Ac := by decide
 
 theorem th_observed_ne_predicted :
-    ActinideException.observedNotation .Th ≠ ActinideException.predictedNotation .Th := by native_decide
+    ActinideException.observedNotation .Th ≠ ActinideException.predictedNotation .Th := by decide
 
 theorem pa_observed_ne_predicted :
-    ActinideException.observedNotation .Pa ≠ ActinideException.predictedNotation .Pa := by native_decide
+    ActinideException.observedNotation .Pa ≠ ActinideException.predictedNotation .Pa := by decide
 
 theorem u_observed_ne_predicted :
-    ActinideException.observedNotation .U ≠ ActinideException.predictedNotation .U := by native_decide
+    ActinideException.observedNotation .U ≠ ActinideException.predictedNotation .U := by decide
 
 theorem np_observed_ne_predicted :
-    ActinideException.observedNotation .Np ≠ ActinideException.predictedNotation .Np := by native_decide
+    ActinideException.observedNotation .Np ≠ ActinideException.predictedNotation .Np := by decide
 
 theorem cm_observed_ne_predicted :
-    ActinideException.observedNotation .Cm ≠ ActinideException.predictedNotation .Cm := by native_decide
+    ActinideException.observedNotation .Cm ≠ ActinideException.predictedNotation .Cm := by decide
 
 /-- Lr: named qlattice override in `observed_override_config`; Madelung walk agrees (honest). -/
 theorem lr_named_override_observed_eq_predicted :
     ActinideException.observedNotation .Lr = ActinideException.predictedNotation .Lr := rfl
 
 theorem lr_named_override_in_observed_override_config :
-    ActinideException.observedNotation .Lr ≠ "" := by native_decide
+    ActinideException.observedNotation .Lr ≠ "" := by decide
 
 def actinideExceptionIsMadelungException (ex : ActinideException) : Prop :=
   ex.observedNotation ≠ ex.predictedNotation
@@ -256,7 +256,7 @@ theorem actinide_occupancy_modality_unwired :
     actinideOccupancyModalityCurrent = .unwired := rfl
 
 theorem actinide_occupancy_not_second_axiom :
-    actinideOccupancyMadelungWitnessAuthority ≠ "" := by native_decide
+    actinideOccupancyMadelungWitnessAuthority ≠ "" := by decide
 
 theorem actinide_occupancy_cites_qlattice :
     actinideOccupancyQlatticeAuthority = "umst/umst-chem/src/qlattice.rs" := rfl

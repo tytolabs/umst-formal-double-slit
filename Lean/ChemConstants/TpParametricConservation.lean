@@ -543,7 +543,7 @@ def tpParametricLatticeScaffold : Bool :=
     tpParametricConservationCoherenceScaffold
 
 theorem tp_parametric_lattice_scaffold_true :
-    tpParametricLatticeScaffold = true := by native_decide
+    tpParametricLatticeScaffold = true := by decide
 
 inductive TpParametricConservationFiber where
   | quantumKnowing | mesoActing
@@ -647,7 +647,7 @@ def tpParametricConservationHonest : Bool :=
     tpParametricLatticeScaffold
 
 theorem tp_parametric_conservation_honest_true :
-    tpParametricConservationHonest = true := by native_decide
+    tpParametricConservationHonest = true := by decide
 
 def tpParametricConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -663,7 +663,7 @@ def tpParametricConservationAxiom : Bool :=
       "second_law_conservation_tp_parametric_graph_restriction_one_axiom")
 
 theorem tp_parametric_conservation_axiom :
-    tpParametricConservationAxiom = true := by native_decide
+    tpParametricConservationAxiom = true := by decide
 
 theorem tp_parametric_conservation_modality_unwired :
     tpParametricConservationModalityCurrent = .unwired := rfl

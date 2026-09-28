@@ -477,7 +477,7 @@ def impureComponentMorphismLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem impure_component_morphism_lattice_scaffold_true :
-    impureComponentMorphismLatticeScaffold = true := by native_decide
+    impureComponentMorphismLatticeScaffold = true := by decide
 
 inductive ImpureComponentMorphismConservationFiber where
   | quantumKnowing | mesoActing
@@ -577,7 +577,7 @@ def impureComponentMorphismConservationHonest : Bool :=
     impureComponentMorphismLatticeScaffold
 
 theorem impure_component_morphism_conservation_honest_true :
-    impureComponentMorphismConservationHonest = true := by native_decide
+    impureComponentMorphismConservationHonest = true := by decide
 
 def impureComponentMorphismConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -595,7 +595,7 @@ def impureComponentMorphismConservationAxiom : Bool :=
       "second_law_conservation_impure_component_morphism_one_axiom")
 
 theorem impure_component_morphism_conservation_axiom :
-    impureComponentMorphismConservationAxiom = true := by native_decide
+    impureComponentMorphismConservationAxiom = true := by decide
 
 theorem impure_component_morphism_conservation_modality_unwired :
     impureComponentMorphismConservationModalityCurrent = .unwired := rfl

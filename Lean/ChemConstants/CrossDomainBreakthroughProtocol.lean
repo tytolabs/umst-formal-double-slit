@@ -416,7 +416,7 @@ def crossDomainBreakthroughProtocolScaffold : Bool :=
     wave100NotWired
 
 theorem cross_domain_breakthrough_protocol_scaffold_true :
-    crossDomainBreakthroughProtocolScaffold = true := by native_decide
+    crossDomainBreakthroughProtocolScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -472,7 +472,7 @@ def crossDomainBreakthroughProtocolHonest : Bool :=
     crossDomainBreakthroughProtocolScaffold
 
 theorem cross_domain_breakthrough_protocol_honest_true :
-    crossDomainBreakthroughProtocolHonest = true := by native_decide
+    crossDomainBreakthroughProtocolHonest = true := by decide
 
 def crossDomainBreakthroughProtocolFraming : String :=
   "second_law_conservation_cross_domain_breakthrough_protocol_one_axiom_not_26th_axiom"
@@ -527,7 +527,7 @@ def crossDomainBreakthroughProtocolAxiom : Bool :=
     decide (crossDomainBreakthroughProtocolFraming =
       "second_law_conservation_cross_domain_breakthrough_protocol_one_axiom_not_26th_axiom")
 
-theorem cross_domain_breakthrough_protocol_axiom : crossDomainBreakthroughProtocolAxiom = true := by native_decide
+theorem cross_domain_breakthrough_protocol_axiom : crossDomainBreakthroughProtocolAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateCrossDomainBreakthroughProtocolClose .unwired false false = .unwiredOk := rfl

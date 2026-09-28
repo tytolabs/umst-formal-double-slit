@@ -364,7 +364,7 @@ def occurrenceFamilyPatternScaffold : Bool :=
     ironOutlierIsConcurrentProduct &&
     wave100NotWired
 
-theorem occurrence_family_pattern_scaffold_true : occurrenceFamilyPatternScaffold = true := by native_decide
+theorem occurrence_family_pattern_scaffold_true : occurrenceFamilyPatternScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -413,7 +413,7 @@ def occurrenceFamilyPatternHonest : Bool :=
     p.notProved &&
     occurrenceFamilyPatternScaffold
 
-theorem occurrence_family_pattern_honest_true : occurrenceFamilyPatternHonest = true := by native_decide
+theorem occurrence_family_pattern_honest_true : occurrenceFamilyPatternHonest = true := by decide
 
 def occurrenceFamilyPatternFraming : String :=
   "second_law_conservation_occurrence_family_pattern_one_axiom_not_26th_axiom"
@@ -456,7 +456,7 @@ def occurrenceFamilyPatternAxiom : Bool :=
     decide (occurrenceFamilyPatternFraming =
       "second_law_conservation_occurrence_family_pattern_one_axiom_not_26th_axiom")
 
-theorem occurrence_family_pattern_axiom : occurrenceFamilyPatternAxiom = true := by native_decide
+theorem occurrence_family_pattern_axiom : occurrenceFamilyPatternAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateOccurrenceFamilyClose .unwired false false = .unwiredOk := rfl

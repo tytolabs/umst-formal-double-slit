@@ -574,7 +574,7 @@ def catalysisLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem catalysis_lattice_scaffold_true :
-    catalysisLatticeScaffold = true := by native_decide
+    catalysisLatticeScaffold = true := by decide
 
 inductive CatalysisConservationFiber where
   | quantumKnowing | mesoActing
@@ -689,7 +689,7 @@ def catalysisConservationHonest : Bool :=
     catalysisLatticeScaffold
 
 theorem catalysis_conservation_honest_true :
-    catalysisConservationHonest = true := by native_decide
+    catalysisConservationHonest = true := by decide
 
 def catalysisConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -707,7 +707,7 @@ def catalysisConservationAxiom : Bool :=
       "second_law_conservation_catalysis_interact_restriction_one_axiom")
 
 theorem catalysis_conservation_axiom :
-    catalysisConservationAxiom = true := by native_decide
+    catalysisConservationAxiom = true := by decide
 
 theorem catalysis_conservation_modality_unwired :
     catalysisConservationModalityCurrent = .unwired := rfl

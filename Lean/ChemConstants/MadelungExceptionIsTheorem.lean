@@ -512,7 +512,7 @@ def madelungExceptionIsTheoremScaffold : Bool :=
     wave100NotWired
 
 theorem madelung_exception_is_theorem_scaffold_true :
-    madelungExceptionIsTheoremScaffold = true := by native_decide
+    madelungExceptionIsTheoremScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -567,7 +567,7 @@ def madelungExceptionIsTheoremHonest : Bool :=
     p.folkloreRefused &&
     madelungExceptionIsTheoremScaffold
 
-theorem madelung_exception_is_theorem_honest_true : madelungExceptionIsTheoremHonest = true := by native_decide
+theorem madelung_exception_is_theorem_honest_true : madelungExceptionIsTheoremHonest = true := by decide
 
 def madelungExceptionIsTheoremFraming : String :=
   "second_law_conservation_madelung_exception_is_theorem_one_axiom_not_26th_axiom"
@@ -614,7 +614,7 @@ def madelungExceptionIsTheoremAxiom : Bool :=
     decide (madelungExceptionIsTheoremFraming =
       "second_law_conservation_madelung_exception_is_theorem_one_axiom_not_26th_axiom")
 
-theorem madelung_exception_is_theorem_axiom : madelungExceptionIsTheoremAxiom = true := by native_decide
+theorem madelung_exception_is_theorem_axiom : madelungExceptionIsTheoremAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateMadelungExceptionIsTheoremClose .unwired false false = .unwiredOk := rfl

@@ -621,7 +621,7 @@ def cmExceptionContinuumLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem cm_exception_continuum_lattice_scaffold_true :
-    cmExceptionContinuumLatticeScaffold = true := by native_decide
+    cmExceptionContinuumLatticeScaffold = true := by decide
 
 inductive CmExceptionContinuumFiber where
   | quantumKnowing | mesoActing
@@ -726,7 +726,7 @@ def cmExceptionContinuumHonest : Bool :=
     cmExceptionContinuumLatticeScaffold
 
 theorem cm_exception_continuum_honest_true :
-    cmExceptionContinuumHonest = true := by native_decide
+    cmExceptionContinuumHonest = true := by decide
 
 def cmExceptionContinuumAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -742,7 +742,7 @@ def cmExceptionContinuumAxiom : Bool :=
       "second_law_conservation_cm_exception_continuum_occupancy_engine_sort_one_axiom")
 
 theorem cm_exception_continuum_axiom :
-    cmExceptionContinuumAxiom = true := by native_decide
+    cmExceptionContinuumAxiom = true := by decide
 
 theorem cm_exception_continuum_modality_unwired :
     cmExceptionContinuumModalityCurrent = .unwired := rfl

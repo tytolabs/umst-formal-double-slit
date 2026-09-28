@@ -484,7 +484,7 @@ def metastableVsEquilibriumLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem metastable_vs_equilibrium_lattice_scaffold_true :
-    metastableVsEquilibriumLatticeScaffold = true := by native_decide
+    metastableVsEquilibriumLatticeScaffold = true := by decide
 
 inductive MetastableVsEquilibriumConservationFiber where
   | quantumKnowing | mesoActing
@@ -587,7 +587,7 @@ def metastableVsEquilibriumConservationHonest : Bool :=
     metastableVsEquilibriumLatticeScaffold
 
 theorem metastable_vs_equilibrium_conservation_honest_true :
-    metastableVsEquilibriumConservationHonest = true := by native_decide
+    metastableVsEquilibriumConservationHonest = true := by decide
 
 def metastableVsEquilibriumConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -605,7 +605,7 @@ def metastableVsEquilibriumConservationAxiom : Bool :=
       "second_law_conservation_metastable_vs_equilibrium_one_axiom")
 
 theorem metastable_vs_equilibrium_conservation_axiom :
-    metastableVsEquilibriumConservationAxiom = true := by native_decide
+    metastableVsEquilibriumConservationAxiom = true := by decide
 
 theorem metastable_vs_equilibrium_conservation_modality_unwired :
     metastableVsEquilibriumConservationModalityCurrent = .unwired := rfl

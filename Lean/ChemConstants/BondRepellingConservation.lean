@@ -665,7 +665,7 @@ def bondRepellingLatticeScaffold : Bool :=
     exchangeRepulsionAxiomRefuse &&
     wave100NotWired
 
-theorem bond_repelling_lattice_scaffold_true : bondRepellingLatticeScaffold = true := by native_decide
+theorem bond_repelling_lattice_scaffold_true : bondRepellingLatticeScaffold = true := by decide
 
 def bondRepellingConservationPhysicsGreenAuthorized : Prop := False
 
@@ -739,7 +739,7 @@ def bondRepellingConservationHonest : Bool :=
     p.intAuthorityCited &&
     bondRepellingLatticeScaffold
 
-theorem bond_repelling_conservation_honest_true : bondRepellingConservationHonest = true := by native_decide
+theorem bond_repelling_conservation_honest_true : bondRepellingConservationHonest = true := by decide
 
 def bondRepellingConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -756,7 +756,7 @@ def bondRepellingConservationAxiom : Bool :=
     decide (bondRepellingConservationFraming =
       "second_law_conservation_bond_repelling_one_axiom")
 
-theorem bond_repelling_conservation_axiom : bondRepellingConservationAxiom = true := by native_decide
+theorem bond_repelling_conservation_axiom : bondRepellingConservationAxiom = true := by decide
 
 theorem bond_repelling_conservation_modality_unwired :
     bondRepellingConservationModalityCurrent = .unwired := rfl

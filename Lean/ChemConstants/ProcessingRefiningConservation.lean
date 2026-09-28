@@ -468,7 +468,7 @@ def processingRefiningLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem processing_refining_lattice_scaffold_true :
-    processingRefiningLatticeScaffold = true := by native_decide
+    processingRefiningLatticeScaffold = true := by decide
 
 inductive ProcessingRefiningConservationFiber where
   | quantumKnowing | mesoActing
@@ -568,7 +568,7 @@ def processingRefiningConservationHonest : Bool :=
     processingRefiningLatticeScaffold
 
 theorem processing_refining_conservation_honest_true :
-    processingRefiningConservationHonest = true := by native_decide
+    processingRefiningConservationHonest = true := by decide
 
 def processingRefiningConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -586,7 +586,7 @@ def processingRefiningConservationAxiom : Bool :=
       "second_law_conservation_processing_refining_one_axiom")
 
 theorem processing_refining_conservation_axiom :
-    processingRefiningConservationAxiom = true := by native_decide
+    processingRefiningConservationAxiom = true := by decide
 
 theorem processing_refining_conservation_modality_unwired :
     processingRefiningConservationModalityCurrent = .unwired := rfl

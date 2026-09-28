@@ -375,7 +375,7 @@ theorem persist_vs_occupancy_positive_refuse_honest : persistVsOccupancyPositive
 theorem occupancy_index_cell_distinct :
     (occupancyHilbertIndex "CELL-B" ["write/a.rs", "write/b.rs"]).occupancy_raw ≠
       (occupancyHilbertIndex "CELL-C" ["write/a.rs", "write/b.rs"]).occupancy_raw := by
-  native_decide
+  decide
 
 -- ================================================================
 -- SECTION 6: Persist-vs-occupancy composes Excitement.select (no second argmin)

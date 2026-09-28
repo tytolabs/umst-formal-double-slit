@@ -451,7 +451,7 @@ def heavyZRelativisticContinuumScaffold : Bool :=
     wave100NotWired
 
 theorem heavy_z_relativistic_continuum_scaffold_true :
-    heavyZRelativisticContinuumScaffold = true := by native_decide
+    heavyZRelativisticContinuumScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -507,7 +507,7 @@ def heavyZRelativisticContinuumHonest : Bool :=
     heavyZRelativisticContinuumScaffold
 
 theorem heavy_z_relativistic_continuum_honest_true :
-    heavyZRelativisticContinuumHonest = true := by native_decide
+    heavyZRelativisticContinuumHonest = true := by decide
 
 def heavyZRelativisticContinuumFraming : String :=
   "second_law_conservation_heavy_z_relativistic_continuum_one_axiom_not_26th_axiom"
@@ -554,7 +554,7 @@ def heavyZRelativisticContinuumAxiom : Bool :=
     decide (heavyZRelativisticContinuumFraming =
       "second_law_conservation_heavy_z_relativistic_continuum_one_axiom_not_26th_axiom")
 
-theorem heavy_z_relativistic_continuum_axiom : heavyZRelativisticContinuumAxiom = true := by native_decide
+theorem heavy_z_relativistic_continuum_axiom : heavyZRelativisticContinuumAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateHeavyZRelativisticContinuumClose .unwired false false = .unwiredOk := rfl

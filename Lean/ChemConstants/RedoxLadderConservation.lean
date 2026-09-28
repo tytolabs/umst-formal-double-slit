@@ -482,7 +482,7 @@ def redoxLadderLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem redox_ladder_lattice_scaffold_true :
-    redoxLadderLatticeScaffold = true := by native_decide
+    redoxLadderLatticeScaffold = true := by decide
 
 inductive RedoxLadderConservationFiber where
   | quantumKnowing | mesoActing
@@ -582,7 +582,7 @@ def redoxLadderConservationHonest : Bool :=
     redoxLadderLatticeScaffold
 
 theorem redox_ladder_conservation_honest_true :
-    redoxLadderConservationHonest = true := by native_decide
+    redoxLadderConservationHonest = true := by decide
 
 def redoxLadderConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -600,7 +600,7 @@ def redoxLadderConservationAxiom : Bool :=
       "second_law_conservation_redox_ladder_equilibrium_pourbaix_one_axiom")
 
 theorem redox_ladder_conservation_axiom :
-    redoxLadderConservationAxiom = true := by native_decide
+    redoxLadderConservationAxiom = true := by decide
 
 theorem redox_ladder_conservation_modality_unwired :
     redoxLadderConservationModalityCurrent = .unwired := rfl

@@ -473,7 +473,7 @@ def contaminationReverseRefineLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem contamination_reverse_refine_lattice_scaffold_true :
-    contaminationReverseRefineLatticeScaffold = true := by native_decide
+    contaminationReverseRefineLatticeScaffold = true := by decide
 
 inductive ContaminationReverseRefineConservationFiber where
   | quantumKnowing | mesoActing
@@ -573,7 +573,7 @@ def contaminationReverseRefineConservationHonest : Bool :=
     contaminationReverseRefineLatticeScaffold
 
 theorem contamination_reverse_refine_conservation_honest_true :
-    contaminationReverseRefineConservationHonest = true := by native_decide
+    contaminationReverseRefineConservationHonest = true := by decide
 
 def contaminationReverseRefineConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -591,7 +591,7 @@ def contaminationReverseRefineConservationAxiom : Bool :=
       "second_law_conservation_contamination_reverse_refine_reverse_of_refine_one_axiom")
 
 theorem contamination_reverse_refine_conservation_axiom :
-    contaminationReverseRefineConservationAxiom = true := by native_decide
+    contaminationReverseRefineConservationAxiom = true := by decide
 
 theorem contamination_reverse_refine_conservation_modality_unwired :
     contaminationReverseRefineConservationModalityCurrent = .unwired := rfl

@@ -600,7 +600,7 @@ def livePatternBundleLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem live_pattern_bundle_lattice_scaffold_true :
-    livePatternBundleLatticeScaffold = true := by native_decide
+    livePatternBundleLatticeScaffold = true := by decide
 
 inductive LivePatternBundleConservationFiber where
   | quantumKnowing | mesoActing
@@ -716,7 +716,7 @@ def livePatternBundleConservationHonest : Bool :=
     livePatternBundleLatticeScaffold
 
 theorem live_pattern_bundle_conservation_honest_true :
-    livePatternBundleConservationHonest = true := by native_decide
+    livePatternBundleConservationHonest = true := by decide
 
 def livePatternBundleConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -734,7 +734,7 @@ def livePatternBundleConservationAxiom : Bool :=
       "second_law_conservation_live_pattern_bundle_concurrent_pi_c_one_axiom")
 
 theorem live_pattern_bundle_conservation_axiom :
-    livePatternBundleConservationAxiom = true := by native_decide
+    livePatternBundleConservationAxiom = true := by decide
 
 theorem live_pattern_bundle_conservation_modality_unwired :
     livePatternBundleConservationModalityCurrent = .unwired := rfl

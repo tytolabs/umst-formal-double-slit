@@ -524,7 +524,7 @@ def vacuumInertLimitLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem vacuum_inert_limit_lattice_scaffold_true :
-    vacuumInertLimitLatticeScaffold = true := by native_decide
+    vacuumInertLimitLatticeScaffold = true := by decide
 
 inductive VacuumInertLimitConservationFiber where
   | quantumKnowing | mesoActing
@@ -630,7 +630,7 @@ def vacuumInertLimitConservationHonest : Bool :=
     vacuumInertLimitLatticeScaffold
 
 theorem vacuum_inert_limit_conservation_honest_true :
-    vacuumInertLimitConservationHonest = true := by native_decide
+    vacuumInertLimitConservationHonest = true := by decide
 
 def vacuumInertLimitConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -648,7 +648,7 @@ def vacuumInertLimitConservationAxiom : Bool :=
       "second_law_conservation_vacuum_inert_limit_env_section_one_axiom")
 
 theorem vacuum_inert_limit_conservation_axiom :
-    vacuumInertLimitConservationAxiom = true := by native_decide
+    vacuumInertLimitConservationAxiom = true := by decide
 
 theorem vacuum_inert_limit_conservation_modality_unwired :
     vacuumInertLimitConservationModalityCurrent = .unwired := rfl

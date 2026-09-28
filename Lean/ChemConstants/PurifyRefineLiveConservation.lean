@@ -588,7 +588,7 @@ def purifyRefineLiveLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem purify_refine_live_lattice_scaffold_true :
-    purifyRefineLiveLatticeScaffold = true := by native_decide
+    purifyRefineLiveLatticeScaffold = true := by decide
 
 inductive PurifyRefineLiveConservationFiber where
   | quantumKnowing | mesoActing
@@ -703,7 +703,7 @@ def purifyRefineLiveConservationHonest : Bool :=
     purifyRefineLiveLatticeScaffold
 
 theorem purify_refine_live_conservation_honest_true :
-    purifyRefineLiveConservationHonest = true := by native_decide
+    purifyRefineLiveConservationHonest = true := by decide
 
 def purifyRefineLiveConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -721,7 +721,7 @@ def purifyRefineLiveConservationAxiom : Bool :=
       "second_law_conservation_purify_refine_live_dissipative_adjunction_cost_one_axiom")
 
 theorem purify_refine_live_conservation_axiom :
-    purifyRefineLiveConservationAxiom = true := by native_decide
+    purifyRefineLiveConservationAxiom = true := by decide
 
 theorem purify_refine_live_conservation_modality_unwired :
     purifyRefineLiveConservationModalityCurrent = .unwired := rfl

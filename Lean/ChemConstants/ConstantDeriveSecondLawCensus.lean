@@ -333,7 +333,7 @@ def constantDeriveSecondLawCensusHonestConjunct : Bool :=
   notTwentySixthAxiom
 
 theorem constant_derive_second_law_census_honest_conjunct_true :
-    constantDeriveSecondLawCensusHonestConjunct = true := by native_decide
+    constantDeriveSecondLawCensusHonestConjunct = true := by decide
 
 /-- Verdict for constant-derive second-law census close (fail-closed). -/
 inductive ConstantDeriveSecondLawCensusVerdict where
@@ -489,7 +489,7 @@ def constantDeriveSecondLawCensusScaffold : Bool :=
     siMintRefused
 
 theorem constant_derive_second_law_census_scaffold_true :
-    constantDeriveSecondLawCensusScaffold = true := by native_decide
+    constantDeriveSecondLawCensusScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -569,7 +569,7 @@ def constantDeriveSecondLawCensusHonest : Bool :=
     constantDeriveSecondLawCensusScaffold
 
 theorem constant_derive_second_law_census_honest_true :
-    constantDeriveSecondLawCensusHonest = true := by native_decide
+    constantDeriveSecondLawCensusHonest = true := by decide
 
 def constantDeriveSecondLawCensusFraming : String :=
   "second_law_conservation_constant_derive_second_law_census_one_axiom_not_26th_axiom"
@@ -614,7 +614,7 @@ def constantDeriveSecondLawCensusAxiom : Bool :=
       "second_law_conservation_constant_derive_second_law_census_one_axiom_not_26th_axiom")
 
 theorem constant_derive_second_law_census_axiom :
-    constantDeriveSecondLawCensusAxiom = true := by native_decide
+    constantDeriveSecondLawCensusAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateConstantDeriveSecondLawCensusClose .unwired false false = .unwiredOk := rfl

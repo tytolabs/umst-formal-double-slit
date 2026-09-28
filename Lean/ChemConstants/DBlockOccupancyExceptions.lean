@@ -138,38 +138,38 @@ def dBlockExceptionCount : Nat := dBlockExceptionList.length
 theorem d_block_exception_count_eight : dBlockExceptionCount = 8 := rfl
 
 theorem d_block_exception_list_length :
-    dBlockExceptionList.length = 8 := by native_decide
+    dBlockExceptionList.length = 8 := by decide
 
 theorem cr_observed_ne_predicted :
-    DBlockException.observedNotation .Cr ≠ DBlockException.predictedNotation .Cr := by native_decide
+    DBlockException.observedNotation .Cr ≠ DBlockException.predictedNotation .Cr := by decide
 
 theorem cu_observed_ne_predicted :
-    DBlockException.observedNotation .Cu ≠ DBlockException.predictedNotation .Cu := by native_decide
+    DBlockException.observedNotation .Cu ≠ DBlockException.predictedNotation .Cu := by decide
 
 theorem nb_observed_ne_predicted :
-    DBlockException.observedNotation .Nb ≠ DBlockException.predictedNotation .Nb := by native_decide
+    DBlockException.observedNotation .Nb ≠ DBlockException.predictedNotation .Nb := by decide
 
 theorem mo_observed_ne_predicted :
-    DBlockException.observedNotation .Mo ≠ DBlockException.predictedNotation .Mo := by native_decide
+    DBlockException.observedNotation .Mo ≠ DBlockException.predictedNotation .Mo := by decide
 
 theorem ru_observed_ne_predicted :
-    DBlockException.observedNotation .Ru ≠ DBlockException.predictedNotation .Ru := by native_decide
+    DBlockException.observedNotation .Ru ≠ DBlockException.predictedNotation .Ru := by decide
 
 theorem rh_observed_ne_predicted :
-    DBlockException.observedNotation .Rh ≠ DBlockException.predictedNotation .Rh := by native_decide
+    DBlockException.observedNotation .Rh ≠ DBlockException.predictedNotation .Rh := by decide
 
 theorem pd_observed_ne_predicted :
-    DBlockException.observedNotation .Pd ≠ DBlockException.predictedNotation .Pd := by native_decide
+    DBlockException.observedNotation .Pd ≠ DBlockException.predictedNotation .Pd := by decide
 
 theorem ag_observed_ne_predicted :
-    DBlockException.observedNotation .Ag ≠ DBlockException.predictedNotation .Ag := by native_decide
+    DBlockException.observedNotation .Ag ≠ DBlockException.predictedNotation .Ag := by decide
 
 def dBlockExceptionIsMadelungException (ex : DBlockException) : Prop :=
   ex.observedNotation ≠ ex.predictedNotation
 
 theorem d_block_exception_is_madelung_exception (ex : DBlockException) :
     ex.observedNotation ≠ ex.predictedNotation := by
-  cases ex <;> native_decide
+  cases ex <;> decide
 
 /-- Approximate-not-identity: predicted and observed notations differ at same Z pin. -/
 def dBlockExceptionApproximateNotIdentity (ex : DBlockException) : Prop :=
@@ -205,7 +205,7 @@ theorem d_block_occupancy_modality_unwired :
     dBlockOccupancyModalityCurrent = .unwired := rfl
 
 theorem d_block_occupancy_not_second_axiom :
-    dBlockOccupancyMadelungWitnessAuthority ≠ "" := by native_decide
+    dBlockOccupancyMadelungWitnessAuthority ≠ "" := by decide
 
 theorem d_block_occupancy_cites_qlattice :
     dBlockOccupancyQlatticeAuthority = "umst/umst-chem/src/qlattice.rs" := rfl

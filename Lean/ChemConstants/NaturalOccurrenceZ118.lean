@@ -88,17 +88,17 @@ def occurrenceBits (z : Nat) : Option Nat :=
   else if z > iupacTableCardinality then none
   else occurrenceProductTable[z - 1]?
 
-theorem occurrence_table_length_118 : occurrenceProductTable.length = 118 := by native_decide
+theorem occurrence_table_length_118 : occurrenceProductTable.length = 118 := by decide
 
 def everyZClassified : Bool :=
   occurrenceProductTable.all (· ≠ 0)
 
-theorem every_z_classified_true : everyZClassified = true := by native_decide
+theorem every_z_classified_true : everyZClassified = true := by decide
 
 def tableCoversZ118 : Bool :=
   occurrenceProductTable.length == iupacTableCardinality
 
-theorem table_covers_z118_true : tableCoversZ118 = true := by native_decide
+theorem table_covers_z118_true : tableCoversZ118 = true := by decide
 
 /-- Witness Z pins — He Z=2, Fe Z=26, Au Z=79, Tc Z=43. -/
 def heliumZ : Nat := 2
@@ -199,7 +199,7 @@ def naturalOccurrenceHonestConjunct : Bool :=
     ironIsOccurrenceProduct &&
     everyZClassified
 
-theorem natural_occurrence_honest_conjunct_true : naturalOccurrenceHonestConjunct = true := by native_decide
+theorem natural_occurrence_honest_conjunct_true : naturalOccurrenceHonestConjunct = true := by decide
 
 /-- Verdict for natural occurrence Z118 close (fail-closed). -/
 inductive NaturalOccurrenceZ118Verdict where
@@ -358,7 +358,7 @@ def naturalOccurrenceZ118Scaffold : Bool :=
     productionWiredNaturalOccurrenceRefuse &&
     wave100NotWired
 
-theorem natural_occurrence_z118_scaffold_true : naturalOccurrenceZ118Scaffold = true := by native_decide
+theorem natural_occurrence_z118_scaffold_true : naturalOccurrenceZ118Scaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -407,7 +407,7 @@ def naturalOccurrenceZ118Honest : Bool :=
     p.notProved &&
     naturalOccurrenceZ118Scaffold
 
-theorem natural_occurrence_z118_honest_true : naturalOccurrenceZ118Honest = true := by native_decide
+theorem natural_occurrence_z118_honest_true : naturalOccurrenceZ118Honest = true := by decide
 
 def naturalOccurrenceZ118Framing : String :=
   "second_law_conservation_natural_occurrence_z118_one_axiom_not_26th_axiom"
@@ -450,7 +450,7 @@ def naturalOccurrenceZ118Axiom : Bool :=
     decide (naturalOccurrenceZ118Framing =
       "second_law_conservation_natural_occurrence_z118_one_axiom_not_26th_axiom")
 
-theorem natural_occurrence_z118_axiom : naturalOccurrenceZ118Axiom = true := by native_decide
+theorem natural_occurrence_z118_axiom : naturalOccurrenceZ118Axiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateNaturalOccurrenceClose .unwired false false = .unwiredOk := rfl

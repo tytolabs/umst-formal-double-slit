@@ -488,7 +488,7 @@ def assayMeasurementLandauerLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem assay_measurement_landauer_lattice_scaffold_true :
-    assayMeasurementLandauerLatticeScaffold = true := by native_decide
+    assayMeasurementLandauerLatticeScaffold = true := by decide
 
 inductive AssayMeasurementLandauerConservationFiber where
   | quantumKnowing | mesoActing
@@ -592,7 +592,7 @@ def assayMeasurementLandauerConservationHonest : Bool :=
     assayMeasurementLandauerLatticeScaffold
 
 theorem assay_measurement_landauer_conservation_honest_true :
-    assayMeasurementLandauerConservationHonest = true := by native_decide
+    assayMeasurementLandauerConservationHonest = true := by decide
 
 def assayMeasurementLandauerConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -610,7 +610,7 @@ def assayMeasurementLandauerConservationAxiom : Bool :=
     decide (assayReadoutMorphismLandauerPin ≠ parallelAssayMeasurementLandauerAxiomTag)
 
 theorem assay_measurement_landauer_conservation_axiom :
-    assayMeasurementLandauerConservationAxiom = true := by native_decide
+    assayMeasurementLandauerConservationAxiom = true := by decide
 
 theorem assay_measurement_landauer_conservation_modality_unwired :
     assayMeasurementLandauerConservationModalityCurrent = .unwired := rfl

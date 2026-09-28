@@ -522,7 +522,7 @@ def polymorphismLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem polymorphism_lattice_scaffold_true :
-    polymorphismLatticeScaffold = true := by native_decide
+    polymorphismLatticeScaffold = true := by decide
 
 inductive PolymorphismConservationFiber where
   | quantumKnowing | mesoActing
@@ -626,7 +626,7 @@ def polymorphismConservationHonest : Bool :=
     polymorphismLatticeScaffold
 
 theorem polymorphism_conservation_honest_true :
-    polymorphismConservationHonest = true := by native_decide
+    polymorphismConservationHonest = true := by decide
 
 def polymorphismConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -644,7 +644,7 @@ def polymorphismConservationAxiom : Bool :=
       "second_law_conservation_polymorphism_stoichiometry_invariant_one_axiom")
 
 theorem polymorphism_conservation_axiom :
-    polymorphismConservationAxiom = true := by native_decide
+    polymorphismConservationAxiom = true := by decide
 
 theorem polymorphism_conservation_modality_unwired :
     polymorphismConservationModalityCurrent = .unwired := rfl

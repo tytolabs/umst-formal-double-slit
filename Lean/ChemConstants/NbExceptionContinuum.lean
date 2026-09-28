@@ -529,7 +529,7 @@ theorem nb_occupancy_engine_sort_not_homolog_copy :
     nbObservedOccupancyTag ≠ taHomologObservedOccupancyTag ∧
     niobiumAtomicNumberZ = 41 ∧
     tantalumHomologZ = 73 := by
-  constructor <;> native_decide
+  constructor <;> decide
 
 def nbExceptionLatticeScaffold : Bool :=
   unwiredDesignOk &&
@@ -548,7 +548,7 @@ def nbExceptionLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem nb_exception_lattice_scaffold_true :
-    nbExceptionLatticeScaffold = true := by native_decide
+    nbExceptionLatticeScaffold = true := by decide
 
 inductive NbExceptionContinuumFiber where
   | quantumKnowing | mesoActing
@@ -653,7 +653,7 @@ def nbExceptionContinuumHonest : Bool :=
     nbExceptionLatticeScaffold
 
 theorem nb_exception_continuum_honest_true :
-    nbExceptionContinuumHonest = true := by native_decide
+    nbExceptionContinuumHonest = true := by decide
 
 def nbExceptionContinuumAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -671,7 +671,7 @@ def nbExceptionContinuumAxiom : Bool :=
       "second_law_conservation_occupancy_engine_sort_nb_z41_one_axiom")
 
 theorem nb_exception_continuum_axiom :
-    nbExceptionContinuumAxiom = true := by native_decide
+    nbExceptionContinuumAxiom = true := by decide
 
 theorem nb_exception_continuum_modality_unwired :
     nbExceptionContinuumModalityCurrent = .unwired := rfl

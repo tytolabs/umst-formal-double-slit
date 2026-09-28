@@ -117,26 +117,26 @@ def namedExceptionCount : Nat := namedExceptionList.length
 theorem named_exception_count_five : namedExceptionCount = 5 := rfl
 
 theorem named_exception_list_length :
-    namedExceptionList.length = 5 := by native_decide
+    namedExceptionList.length = 5 := by decide
 
 theorem la_observed_ne_predicted :
-    NamedException.observedNotation .La ≠ NamedException.predictedNotation .La := by native_decide
+    NamedException.observedNotation .La ≠ NamedException.predictedNotation .La := by decide
 
 theorem ce_observed_ne_predicted :
-    NamedException.observedNotation .Ce ≠ NamedException.predictedNotation .Ce := by native_decide
+    NamedException.observedNotation .Ce ≠ NamedException.predictedNotation .Ce := by decide
 
 theorem gd_observed_ne_predicted :
-    NamedException.observedNotation .Gd ≠ NamedException.predictedNotation .Gd := by native_decide
+    NamedException.observedNotation .Gd ≠ NamedException.predictedNotation .Gd := by decide
 
 theorem pt_observed_ne_predicted :
-    NamedException.observedNotation .Pt ≠ NamedException.predictedNotation .Pt := by native_decide
+    NamedException.observedNotation .Pt ≠ NamedException.predictedNotation .Pt := by decide
 
 theorem au_observed_ne_predicted :
-    NamedException.observedNotation .Au ≠ NamedException.predictedNotation .Au := by native_decide
+    NamedException.observedNotation .Au ≠ NamedException.predictedNotation .Au := by decide
 
 theorem named_exception_is_madelung_exception (ex : NamedException) :
     ex.observedNotation ≠ ex.predictedNotation := by
-  cases ex <;> native_decide
+  cases ex <;> decide
 
 /-- Approximate-not-identity: predicted and observed notations differ at same Z pin. -/
 def namedExceptionApproximateNotIdentity (ex : NamedException) : Prop :=
@@ -171,7 +171,7 @@ theorem named_occupancy_modality_unwired :
     namedOccupancyModalityCurrent = .unwired := rfl
 
 theorem named_occupancy_not_second_axiom :
-    namedOccupancyMadelungWitnessAuthority ≠ "" := by native_decide
+    namedOccupancyMadelungWitnessAuthority ≠ "" := by decide
 
 theorem named_occupancy_cites_qlattice :
     namedOccupancyQlatticeAuthority = "umst/umst-chem/src/qlattice.rs" := rfl

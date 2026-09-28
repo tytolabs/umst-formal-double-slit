@@ -384,7 +384,7 @@ def liveDensityRhoLatticeScaffold : Bool :=
     provedWithoutBarRefused && productionWiredRefused && wave100LibRsRefused && indirectNeDirectLadder
 
 theorem live_density_rho_lattice_scaffold_true :
-    liveDensityRhoLatticeScaffold = true := by native_decide
+    liveDensityRhoLatticeScaffold = true := by decide
 
 inductive LiveDensityRhoConservationFiber where | quantumKnowing | mesoActing deriving DecidableEq, Repr
 
@@ -446,7 +446,7 @@ def liveDensityRhoConservationHonest : Bool :=
     p.densityLadderCited && liveDensityRhoLatticeScaffold
 
 theorem live_density_rho_conservation_honest_true :
-    liveDensityRhoConservationHonest = true := by native_decide
+    liveDensityRhoConservationHonest = true := by decide
 
 def liveDensityRhoConservationAxiom : Bool :=
   not118SquaredGreenTable && liveDensityRhoLatticeScaffold && liveDensityRhoConservationHonest &&
@@ -454,7 +454,7 @@ def liveDensityRhoConservationAxiom : Bool :=
     decide (liveDensityRhoSecondLawConservationFraming ≠ "second_density_axiom")
 
 theorem live_density_rho_conservation_axiom :
-    liveDensityRhoConservationAxiom = true := by native_decide
+    liveDensityRhoConservationAxiom = true := by decide
 
 theorem live_density_rho_conservation_modality_unwired :
     liveDensityRhoConservationModalityCurrent = .unwired := rfl

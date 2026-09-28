@@ -386,7 +386,7 @@ def occupancyEngineSortScaffold : Bool :=
     productionWiredOccupancyEngineSortRefuse &&
     wave100NotWired
 
-theorem occupancy_engine_sort_scaffold_true : occupancyEngineSortScaffold = true := by native_decide
+theorem occupancy_engine_sort_scaffold_true : occupancyEngineSortScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -435,7 +435,7 @@ def occupancyEngineSortHonest : Bool :=
     p.notProved &&
     occupancyEngineSortScaffold
 
-theorem occupancy_engine_sort_honest_true : occupancyEngineSortHonest = true := by native_decide
+theorem occupancy_engine_sort_honest_true : occupancyEngineSortHonest = true := by decide
 
 def occupancyEngineSortFraming : String :=
   "second_law_conservation_occupancy_engine_sort_one_axiom_not_26th_axiom"
@@ -484,7 +484,7 @@ def occupancyEngineSortAxiom : Bool :=
     decide (occupancyEngineSortFraming =
       "second_law_conservation_occupancy_engine_sort_one_axiom_not_26th_axiom")
 
-theorem occupancy_engine_sort_axiom : occupancyEngineSortAxiom = true := by native_decide
+theorem occupancy_engine_sort_axiom : occupancyEngineSortAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateOccupancyEngineSortClose .unwired false false = .unwiredOk := rfl

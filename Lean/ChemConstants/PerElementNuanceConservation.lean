@@ -681,7 +681,7 @@ def perElementNuanceLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem per_element_nuance_lattice_scaffold_true :
-    perElementNuanceLatticeScaffold = true := by native_decide
+    perElementNuanceLatticeScaffold = true := by decide
 
 def perElementNuanceConservationPhysicsGreenAuthorized : Prop := False
 
@@ -751,7 +751,7 @@ def perElementNuanceConservationHonest : Bool :=
     perElementNuanceLatticeScaffold
 
 theorem per_element_nuance_conservation_honest_true :
-    perElementNuanceConservationHonest = true := by native_decide
+    perElementNuanceConservationHonest = true := by decide
 
 def perElementNuanceConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -770,7 +770,7 @@ def perElementNuanceConservationAxiom : Bool :=
       "second_law_conservation_per_element_nuance_one_axiom_not_26th_axiom_not_homolog_copy")
 
 theorem per_element_nuance_conservation_axiom :
-    perElementNuanceConservationAxiom = true := by native_decide
+    perElementNuanceConservationAxiom = true := by decide
 
 theorem per_element_nuance_conservation_modality_unwired :
     perElementNuanceConservationModalityCurrent = .unwired := rfl

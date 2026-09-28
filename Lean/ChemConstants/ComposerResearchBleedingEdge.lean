@@ -386,7 +386,7 @@ def composerResearchBleedingEdgeScaffold : Bool :=
     siMintRefused
 
 theorem composer_research_bleeding_edge_scaffold_true :
-    composerResearchBleedingEdgeScaffold = true := by native_decide
+    composerResearchBleedingEdgeScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -442,7 +442,7 @@ def composerResearchBleedingEdgeHonest : Bool :=
     composerResearchBleedingEdgeScaffold
 
 theorem composer_research_bleeding_edge_honest_true :
-    composerResearchBleedingEdgeHonest = true := by native_decide
+    composerResearchBleedingEdgeHonest = true := by decide
 
 def composerResearchBleedingEdgeFraming : String :=
   "second_law_conservation_composer_research_bleeding_edge_one_axiom_not_26th_axiom"
@@ -509,7 +509,7 @@ def composerResearchBleedingEdgeAxiom : Bool :=
     decide (composerResearchBleedingEdgeFraming =
       "second_law_conservation_composer_research_bleeding_edge_one_axiom_not_26th_axiom")
 
-theorem composer_research_bleeding_edge_axiom : composerResearchBleedingEdgeAxiom = true := by native_decide
+theorem composer_research_bleeding_edge_axiom : composerResearchBleedingEdgeAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateComposerResearchBleedingEdgeClose .unwired false false = .unwiredOk := rfl

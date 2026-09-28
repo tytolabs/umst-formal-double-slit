@@ -1,0 +1,11 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:./././../../umst-formal/Lean/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH= /Users/santhoshshyamsundar/.elan/toolchains/leanprover--lean4---v4.14.0/bin/lean ././././MeasurementChannel.lean -R ./././. -o ././.lake/build/lib/MeasurementChannel.olean -i ././.lake/build/lib/MeasurementChannel.ilean -c ././.lake/build/ir/MeasurementChannel.c --json",
+   "level": "trace"},
+  {"message":
+   "././././MeasurementChannel.lean:89:0: automatically included section variable(s) unused in theorem 'UMST.Quantum.KrausChannel.posSemidef_finset_sum':\n  [Fintype ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] in theorem ...\nnote: this linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "././././MeasurementChannel.lean:111:0: automatically included section variable(s) unused in theorem 'UMST.Quantum.KrausChannel.trace_mul_sum':\n  [Fintype ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] in theorem ...\nnote: this linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"}],
+ "depHash": "7673879876485301343"}

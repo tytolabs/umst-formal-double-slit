@@ -488,7 +488,7 @@ def inbLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem inb_lattice_scaffold_true :
-    inbLatticeScaffold = true := by native_decide
+    inbLatticeScaffold = true := by decide
 
 inductive IsotopeNuclearBoundaryConservationFiber where
   | quantumKnowing | mesoActing
@@ -591,7 +591,7 @@ def isotopeNuclearBoundaryConservationHonest : Bool :=
     inbLatticeScaffold
 
 theorem isotope_nuclear_boundary_conservation_honest_true :
-    isotopeNuclearBoundaryConservationHonest = true := by native_decide
+    isotopeNuclearBoundaryConservationHonest = true := by decide
 
 def isotopeNuclearBoundaryConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -609,7 +609,7 @@ def isotopeNuclearBoundaryConservationAxiom : Bool :=
       "second_law_conservation_isotope_one_axiom")
 
 theorem isotope_nuclear_boundary_conservation_axiom :
-    isotopeNuclearBoundaryConservationAxiom = true := by native_decide
+    isotopeNuclearBoundaryConservationAxiom = true := by decide
 
 theorem isotope_nuclear_boundary_conservation_modality_unwired :
     isotopeNuclearBoundaryConservationModalityCurrent = .unwired := rfl

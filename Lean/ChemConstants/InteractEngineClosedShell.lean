@@ -380,7 +380,7 @@ def interactEngineClosedShellScaffold : Bool :=
     productionWiredInteractEngineClosedShellRefuse &&
     wave100NotWired
 
-theorem interact_engine_closed_shell_scaffold_true : interactEngineClosedShellScaffold = true := by native_decide
+theorem interact_engine_closed_shell_scaffold_true : interactEngineClosedShellScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -435,7 +435,7 @@ def interactEngineClosedShellHonest : Bool :=
     p.structureBlockingKindPinned &&
     interactEngineClosedShellScaffold
 
-theorem interact_engine_closed_shell_honest_true : interactEngineClosedShellHonest = true := by native_decide
+theorem interact_engine_closed_shell_honest_true : interactEngineClosedShellHonest = true := by decide
 
 def interactEngineClosedShellFraming : String :=
   "second_law_conservation_interact_engine_closed_shell_one_axiom_not_26th_axiom"
@@ -480,7 +480,7 @@ def interactEngineClosedShellAxiom : Bool :=
     decide (interactEngineClosedShellFraming =
       "second_law_conservation_interact_engine_closed_shell_one_axiom_not_26th_axiom")
 
-theorem interact_engine_closed_shell_axiom : interactEngineClosedShellAxiom = true := by native_decide
+theorem interact_engine_closed_shell_axiom : interactEngineClosedShellAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateInteractEngineClosedShellClose .unwired false false = .unwiredOk := rfl

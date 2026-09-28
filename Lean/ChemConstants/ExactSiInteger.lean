@@ -84,12 +84,12 @@ theorem n_a_mantissa_value : nAPerMol.mantissa = 602214076 := rfl
 
 theorem n_a_decimal_exp_value : nAPerMol.decimalExp = 15 := rfl
 
-theorem r_mantissa_value : rJPerMolK.mantissa = 831446261815324 := by native_decide
+theorem r_mantissa_value : rJPerMolK.mantissa = 831446261815324 := by decide
 
-theorem r_decimal_exp_value : rJPerMolK.decimalExp = -14 := by native_decide
+theorem r_decimal_exp_value : rJPerMolK.decimalExp = -14 := by decide
 
 theorem r_mantissa_matches_explicit_product :
-    rJPerMolK.mantissa = 602214076 * 1380649 := by native_decide
+    rJPerMolK.mantissa = 602214076 * 1380649 := by decide
 
 /-- Rational **k** view matching `LandauerEinsteinBridge.kBoltzmannSI`. -/
 noncomputable def kBoltzmannRational : ℝ :=
@@ -145,6 +145,6 @@ theorem exact_si_integer_k_matches_chem_mantissa :
   constructor <;> rfl
 
 theorem exact_si_integer_r_rejects_theater_product :
-    ExactSi.rJPerMolK.mantissa ≠ 831446 := by native_decide
+    ExactSi.rJPerMolK.mantissa ≠ 831446 := by decide
 
 end UMST.Chem

@@ -473,7 +473,7 @@ def structureBlockingInertnessLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem structure_blocking_inertness_lattice_scaffold_true :
-    structureBlockingInertnessLatticeScaffold = true := by native_decide
+    structureBlockingInertnessLatticeScaffold = true := by decide
 
 /-- Quantum / knowing formal fiber root (structure witness — not meso acting). -/
 inductive StructureBlockingConservationFiber where
@@ -576,7 +576,7 @@ def structureBlockingInertnessConservationHonest : Bool :=
     structureBlockingInertnessLatticeScaffold
 
 theorem structure_blocking_inertness_conservation_honest_true :
-    structureBlockingInertnessConservationHonest = true := by native_decide
+    structureBlockingInertnessConservationHonest = true := by decide
 
 /-- **One** design axiom: second law + **conservation** (structure witness — not meso import). -/
 def structureBlockingInertnessConservationAxiom : Bool :=
@@ -595,7 +595,7 @@ def structureBlockingInertnessConservationAxiom : Bool :=
       "second_law_conservation_structure_blocking_inertness_one_axiom")
 
 theorem structure_blocking_inertness_conservation_axiom :
-    structureBlockingInertnessConservationAxiom = true := by native_decide
+    structureBlockingInertnessConservationAxiom = true := by decide
 
 theorem structure_blocking_inertness_conservation_modality_unwired :
     structureBlockingInertnessConservationModalityCurrent = .unwired := rfl

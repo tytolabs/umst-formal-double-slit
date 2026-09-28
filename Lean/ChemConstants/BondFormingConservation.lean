@@ -657,7 +657,7 @@ def bondFormingLatticeScaffold : Bool :=
     bondOrderAxiomRefuse &&
     wave100NotWired
 
-theorem bond_forming_lattice_scaffold_true : bondFormingLatticeScaffold = true := by native_decide
+theorem bond_forming_lattice_scaffold_true : bondFormingLatticeScaffold = true := by decide
 
 def bondFormingConservationPhysicsGreenAuthorized : Prop := False
 
@@ -731,7 +731,7 @@ def bondFormingConservationHonest : Bool :=
     p.intAuthorityCited &&
     bondFormingLatticeScaffold
 
-theorem bond_forming_conservation_honest_true : bondFormingConservationHonest = true := by native_decide
+theorem bond_forming_conservation_honest_true : bondFormingConservationHonest = true := by decide
 
 def bondFormingConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -748,7 +748,7 @@ def bondFormingConservationAxiom : Bool :=
     decide (bondFormingConservationFraming =
       "second_law_conservation_bond_forming_one_axiom")
 
-theorem bond_forming_conservation_axiom : bondFormingConservationAxiom = true := by native_decide
+theorem bond_forming_conservation_axiom : bondFormingConservationAxiom = true := by decide
 
 theorem bond_forming_conservation_modality_unwired :
     bondFormingConservationModalityCurrent = .unwired := rfl

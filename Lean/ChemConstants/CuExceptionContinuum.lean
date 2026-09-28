@@ -497,7 +497,7 @@ def cuExceptionContinuumLatticeScaffold : Bool :=
     agCuHomologNotCopy
 
 theorem cu_exception_continuum_lattice_scaffold_true :
-    cuExceptionContinuumLatticeScaffold = true := by native_decide
+    cuExceptionContinuumLatticeScaffold = true := by decide
 
 inductive CuExceptionContinuumConservationFiber where
   | quantumKnowing | mesoActing
@@ -600,7 +600,7 @@ def cuExceptionContinuumHonest : Bool :=
     cuExceptionContinuumLatticeScaffold
 
 theorem cu_exception_continuum_honest_true :
-    cuExceptionContinuumHonest = true := by native_decide
+    cuExceptionContinuumHonest = true := by decide
 
 def cuExceptionContinuumAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -616,7 +616,7 @@ def cuExceptionContinuumAxiom : Bool :=
       "second_law_conservation_cu_exception_continuum_occupancy_engine_sort_one_axiom")
 
 theorem cu_exception_continuum_axiom :
-    cuExceptionContinuumAxiom = true := by native_decide
+    cuExceptionContinuumAxiom = true := by decide
 
 theorem cu_exception_continuum_modality_unwired :
     cuExceptionContinuumModalityCurrent = .unwired := rfl

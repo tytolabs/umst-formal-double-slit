@@ -514,7 +514,7 @@ def liveRemainderRowLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem live_remainder_row_lattice_scaffold_true :
-    liveRemainderRowLatticeScaffold = true := by native_decide
+    liveRemainderRowLatticeScaffold = true := by decide
 
 inductive LiveRemainderRowConservationFiber where
   | quantumKnowing | mesoActing
@@ -621,7 +621,7 @@ def liveRemainderRowConservationHonest : Bool :=
     liveRemainderRowLatticeScaffold
 
 theorem live_remainder_row_conservation_honest_true :
-    liveRemainderRowConservationHonest = true := by native_decide
+    liveRemainderRowConservationHonest = true := by decide
 
 def liveRemainderRowConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -640,7 +640,7 @@ def liveRemainderRowConservationAxiom : Bool :=
       "second_law_conservation_live_remainder_row_theorem_one_axiom")
 
 theorem live_remainder_row_conservation_axiom :
-    liveRemainderRowConservationAxiom = true := by native_decide
+    liveRemainderRowConservationAxiom = true := by decide
 
 theorem live_remainder_row_conservation_modality_unwired :
     liveRemainderRowConservationModalityCurrent = .unwired := rfl

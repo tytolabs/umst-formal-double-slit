@@ -491,7 +491,7 @@ def liveGTpxLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem live_gtpx_lattice_scaffold_true :
-    liveGTpxLatticeScaffold = true := by native_decide
+    liveGTpxLatticeScaffold = true := by decide
 
 inductive LiveGTpxConservationFiber where
   | quantumKnowing | mesoActing
@@ -597,7 +597,7 @@ def liveGTpxConservationHonest : Bool :=
     liveGTpxLatticeScaffold
 
 theorem live_gtpx_conservation_honest_true :
-    liveGTpxConservationHonest = true := by native_decide
+    liveGTpxConservationHonest = true := by decide
 
 def liveGTpxConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -615,7 +615,7 @@ def liveGTpxConservationAxiom : Bool :=
       "second_law_conservation_live_gtpx_g_type_only_one_axiom")
 
 theorem live_gtpx_conservation_axiom :
-    liveGTpxConservationAxiom = true := by native_decide
+    liveGTpxConservationAxiom = true := by decide
 
 theorem live_gtpx_conservation_modality_unwired :
     liveGTpxConservationModalityCurrent = .unwired := rfl

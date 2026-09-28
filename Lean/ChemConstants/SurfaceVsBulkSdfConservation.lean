@@ -488,7 +488,7 @@ def surfaceVsBulkSdfLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem surface_vs_bulk_sdf_lattice_scaffold_true :
-    surfaceVsBulkSdfLatticeScaffold = true := by native_decide
+    surfaceVsBulkSdfLatticeScaffold = true := by decide
 
 inductive SurfaceVsBulkSdfConservationFiber where
   | quantumKnowing | mesoActing
@@ -594,7 +594,7 @@ def surfaceVsBulkSdfConservationHonest : Bool :=
     surfaceVsBulkSdfLatticeScaffold
 
 theorem surface_vs_bulk_sdf_conservation_honest_true :
-    surfaceVsBulkSdfConservationHonest = true := by native_decide
+    surfaceVsBulkSdfConservationHonest = true := by decide
 
 def surfaceVsBulkSdfConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -612,7 +612,7 @@ def surfaceVsBulkSdfConservationAxiom : Bool :=
       "second_law_conservation_surface_vs_bulk_sdf_geometry_slice_one_axiom")
 
 theorem surface_vs_bulk_sdf_conservation_axiom :
-    surfaceVsBulkSdfConservationAxiom = true := by native_decide
+    surfaceVsBulkSdfConservationAxiom = true := by decide
 
 theorem surface_vs_bulk_sdf_conservation_modality_unwired :
     surfaceVsBulkSdfConservationModalityCurrent = .unwired := rfl

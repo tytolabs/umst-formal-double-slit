@@ -470,7 +470,7 @@ def otherNamedNuanceLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem other_named_nuance_lattice_scaffold_true :
-    otherNamedNuanceLatticeScaffold = true := by native_decide
+    otherNamedNuanceLatticeScaffold = true := by decide
 
 inductive OtherNamedNuanceConservationFiber where
   | quantumKnowing | mesoActing
@@ -570,7 +570,7 @@ def otherNamedNuanceConservationHonest : Bool :=
     otherNamedNuanceLatticeScaffold
 
 theorem other_named_nuance_conservation_honest_true :
-    otherNamedNuanceConservationHonest = true := by native_decide
+    otherNamedNuanceConservationHonest = true := by decide
 
 def otherNamedNuanceConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -588,7 +588,7 @@ def otherNamedNuanceConservationAxiom : Bool :=
       "second_law_conservation_other_named_nuance_no_new_law_one_axiom")
 
 theorem other_named_nuance_conservation_axiom :
-    otherNamedNuanceConservationAxiom = true := by native_decide
+    otherNamedNuanceConservationAxiom = true := by decide
 
 theorem other_named_nuance_conservation_modality_unwired :
     otherNamedNuanceConservationModalityCurrent = .unwired := rfl

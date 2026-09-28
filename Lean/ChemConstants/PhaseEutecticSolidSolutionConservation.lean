@@ -495,7 +495,7 @@ def phaseEutecticSolidSolutionLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem phase_eutectic_solid_solution_lattice_scaffold_true :
-    phaseEutecticSolidSolutionLatticeScaffold = true := by native_decide
+    phaseEutecticSolidSolutionLatticeScaffold = true := by decide
 
 inductive PhaseEutecticSolidSolutionConservationFiber where
   | quantumKnowing | mesoActing
@@ -598,7 +598,7 @@ def phaseEutecticSolidSolutionConservationHonest : Bool :=
     phaseEutecticSolidSolutionLatticeScaffold
 
 theorem phase_eutectic_solid_solution_conservation_honest_true :
-    phaseEutecticSolidSolutionConservationHonest = true := by native_decide
+    phaseEutecticSolidSolutionConservationHonest = true := by decide
 
 def phaseEutecticSolidSolutionConservationAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -616,7 +616,7 @@ def phaseEutecticSolidSolutionConservationAxiom : Bool :=
       "second_law_conservation_phase_eutectic_solid_solution_one_axiom")
 
 theorem phase_eutectic_solid_solution_conservation_axiom :
-    phaseEutecticSolidSolutionConservationAxiom = true := by native_decide
+    phaseEutecticSolidSolutionConservationAxiom = true := by decide
 
 theorem phase_eutectic_solid_solution_conservation_modality_unwired :
     phaseEutecticSolidSolutionConservationModalityCurrent = .unwired := rfl

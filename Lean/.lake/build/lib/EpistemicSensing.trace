@@ -1,0 +1,20 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:./././../../umst-formal/Lean/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH= /Users/santhoshshyamsundar/.elan/toolchains/leanprover--lean4---v4.14.0/bin/lean ././././EpistemicSensing.lean -R ./././. -o ././.lake/build/lib/EpistemicSensing.olean -i ././.lake/build/lib/EpistemicSensing.ilean -c ././.lake/build/ir/EpistemicSensing.c --json",
+   "level": "trace"},
+  {"message":
+   "././././EpistemicSensing.lean:72:4: try 'simp' instead of 'simpa'\nnote: this linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "././././EpistemicSensing.lean:77:2: try 'simp' instead of 'simpa'\nnote: this linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "././././EpistemicSensing.lean:93:2: try 'simp' instead of 'simpa'\nnote: this linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "././././EpistemicSensing.lean:133:2: try 'simp' instead of 'simpa'\nnote: this linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "././././EpistemicSensing.lean:144:6: try 'simp' instead of 'simpa'\nnote: this linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"}],
+ "depHash": "11667831930736942243"}

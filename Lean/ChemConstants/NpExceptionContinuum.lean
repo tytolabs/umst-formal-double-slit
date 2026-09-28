@@ -530,7 +530,7 @@ def npExceptionContinuumLatticeScaffold : Bool :=
     wave100NotWired
 
 theorem np_exception_continuum_lattice_scaffold_true :
-    npExceptionContinuumLatticeScaffold = true := by native_decide
+    npExceptionContinuumLatticeScaffold = true := by decide
 
 inductive NpExceptionContinuumFiber where
   | quantumKnowing | mesoActing
@@ -630,7 +630,7 @@ def npExceptionContinuumHonest : Bool :=
     npExceptionContinuumLatticeScaffold
 
 theorem np_exception_continuum_honest_true :
-    npExceptionContinuumHonest = true := by native_decide
+    npExceptionContinuumHonest = true := by decide
 
 def npExceptionContinuumAxiom : Bool :=
   not118SquaredGreenTable &&
@@ -647,7 +647,7 @@ def npExceptionContinuumAxiom : Bool :=
       "second_law_conservation_np_exception_continuum_one_axiom")
 
 theorem np_exception_continuum_axiom :
-    npExceptionContinuumAxiom = true := by native_decide
+    npExceptionContinuumAxiom = true := by decide
 
 theorem np_exception_continuum_modality_unwired :
     npExceptionContinuumModalityCurrent = .unwired := rfl

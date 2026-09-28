@@ -340,7 +340,7 @@ def outlierIsTheoremScaffold : Bool :=
     productionWiredOutlierIsTheoremRefuse &&
     wave100NotWired
 
-theorem outlier_is_theorem_scaffold_true : outlierIsTheoremScaffold = true := by native_decide
+theorem outlier_is_theorem_scaffold_true : outlierIsTheoremScaffold = true := by decide
 
 inductive FormalFiber where
   | quantumKnowing | mesoActing
@@ -395,7 +395,7 @@ def outlierIsTheoremHonest : Bool :=
     p.folkloreRefused &&
     outlierIsTheoremScaffold
 
-theorem outlier_is_theorem_honest_true : outlierIsTheoremHonest = true := by native_decide
+theorem outlier_is_theorem_honest_true : outlierIsTheoremHonest = true := by decide
 
 def outlierIsTheoremFraming : String :=
   "second_law_conservation_outlier_is_theorem_one_axiom_not_26th_axiom"
@@ -445,7 +445,7 @@ def outlierIsTheoremAxiom : Bool :=
     decide (outlierIsTheoremFraming =
       "second_law_conservation_outlier_is_theorem_one_axiom_not_26th_axiom")
 
-theorem outlier_is_theorem_axiom : outlierIsTheoremAxiom = true := by native_decide
+theorem outlier_is_theorem_axiom : outlierIsTheoremAxiom = true := by decide
 
 theorem unwired_close_without_production_wiring :
     evaluateOutlierIsTheoremClose .unwired false false = .unwiredOk := rfl
