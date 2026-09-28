@@ -1,6 +1,15 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 /-
+  GateCompat — knowing-fibre device rail (P0-11b).
+
+  No `DensityMatrix → RealThermodynamicState` carrier maps. Born weights and Landauer
+  knowing cost live in `KnowingDeviceLedgerEntry` (device rail scalars). Acting
+  `RealThermodynamicState` / `ConcreteState` hydration stays on the acting fibre only.
+
+  `DualLedger` (acting meso, `umst-formal`) reads compute/material rails in ℚ; the
+  knowing entry here is the epistemic cost record consumed by that story, not a functor
+  into acting state.
 -/
 
 import Core.Gate
@@ -12,14 +21,6 @@ import LandauerBound
 import EpistemicSensing
 import GeneralVisibility
 
-/-!
-# GateCompat — epistemic quantum states on upstream `ThermodynamicSystem ℝ`
-
-After umst-formal Core generalization (`K`-indexed `ThermodynamicSystem`), this module consumes
-`UMST.Real.RealThermodynamicState` and `UMST.Real.RealAdmissible` (= `CoreAdmissible ℝ` by `rfl`)
-instead of a local scaffold. `DensityMatrix` registers a temperature-calibrated instance below.
--/
-
 namespace UMST.DoubleSlit
 
 open UMST.Core UMST.Real UMST.Quantum
@@ -28,46 +29,28 @@ section CalibratedTemperature
 
 variable (T : ℝ)
 
+/-- Knowing-fibre **device rail** scalars (not an acting `ThermodynamicState` carrier). -/
+structure KnowingDeviceLedgerEntry where
+  bornPath0 : ℝ
+  knowingCost : ℝ
+
+/-- Ledger entry from a qubit density matrix at temperature `T`. -/
+noncomputable def knowingDeviceLedgerEntry (ρ : DensityMatrix hnQubit) : KnowingDeviceLedgerEntry where
+  bornPath0 := pathWeight ρ 0
+  knowingCost := landauerCostDiagonal ρ T
+
+@[simp]
+theorem knowingDeviceLedgerEntry_whichPath (ρ : DensityMatrix hnQubit) :
+    knowingDeviceLedgerEntry T (KrausChannel.whichPathChannel.apply hnQubit ρ) =
+      knowingDeviceLedgerEntry T ρ := by
+  simp [knowingDeviceLedgerEntry, pathWeight_whichPath_apply,
+    landauerCostDiagonal_whichPathInvariant]
+
 /-- `DensityMatrix` at bath temperature `T`: Born weight + negative Landauer free energy. -/
 noncomputable instance densityMatrixThermoSystem :
     ThermodynamicSystem ℝ (DensityMatrix hnQubit) where
   density ρ    := pathWeight ρ 0
   freeEnergy ρ := -landauerCostDiagonal ρ T
-
-/-- Minimal ℝ scaffold from computational-basis path weights. -/
-noncomputable def thermoFromQubitPath (ρ : DensityMatrix hnQubit) : RealThermodynamicState where
-  density := pathWeight ρ 0
-  freeEnergy := pathWeight ρ 1
-
-@[simp]
-theorem thermoFromQubitPath_whichPath (ρ : DensityMatrix hnQubit) :
-    thermoFromQubitPath (KrausChannel.whichPathChannel.apply hnQubit ρ) = thermoFromQubitPath ρ := by
-  simp [thermoFromQubitPath, pathWeight_whichPath_apply]
-
-theorem admissible_thermoFromQubitPath_whichPath (ρ : DensityMatrix hnQubit) :
-    RealAdmissible (thermoFromQubitPath ρ)
-      (thermoFromQubitPath (KrausChannel.whichPathChannel.apply hnQubit ρ)) := by
-  rw [thermoFromQubitPath_whichPath]
-  exact realAdmissibleRefl _
-
-/-! ## Thermodynamic calibration: `freeEnergy = -T · S(ρ)` (Gap 10) -/
-
-/-- Calibrated ℝ scaffold: `freeEnergy = -landauerCostDiagonal ρ T`. -/
-noncomputable def thermoCalibratedScaffold (ρ : DensityMatrix hnQubit) : RealThermodynamicState where
-  density := pathWeight ρ 0
-  freeEnergy := -landauerCostDiagonal ρ T
-
-@[simp]
-theorem thermoCalibratedScaffold_whichPath (ρ : DensityMatrix hnQubit) :
-    thermoCalibratedScaffold T (KrausChannel.whichPathChannel.apply hnQubit ρ) =
-      thermoCalibratedScaffold T ρ := by
-  simp [thermoCalibratedScaffold, pathWeight_whichPath_apply]
-
-theorem admissible_thermoCalibratedScaffold_whichPath (ρ : DensityMatrix hnQubit) :
-    RealAdmissible (thermoCalibratedScaffold T ρ)
-      (thermoCalibratedScaffold T (KrausChannel.whichPathChannel.apply hnQubit ρ)) := by
-  rw [thermoCalibratedScaffold_whichPath]
-  exact realAdmissibleRefl _
 
 theorem admissible_densityMatrix_whichPath (ρ : DensityMatrix hnQubit) :
     CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
@@ -78,33 +61,42 @@ theorem admissible_densityMatrix_whichPath (ρ : DensityMatrix hnQubit) :
     exact zero_le (δMass (K := ℝ))
   · simp only [ThermodynamicSystem.freeEnergy, landauerCostDiagonal_whichPathInvariant, le_refl]
 
-/-- The calibrated free energy is nonpositive for `T ≥ 0`. -/
+/-- Alias retained for importers (no `thermoFromQubitPath` carrier). -/
+theorem admissible_thermoFromQubitPath_whichPath (ρ : DensityMatrix hnQubit) :
+    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
+  admissible_densityMatrix_whichPath ρ
+
+theorem admissible_thermoCalibratedScaffold_whichPath (ρ : DensityMatrix hnQubit) :
+    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
+  admissible_densityMatrix_whichPath ρ
+
+theorem admissible_thermoCalibratedPhys_whichPath (ρ : DensityMatrix hnQubit) :
+    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
+  admissible_densityMatrix_whichPath ρ
+
+/-- Calibrated knowing cost is nonpositive for `T ≥ 0`. -/
 theorem thermoCalibratedScaffold_freeEnergy_nonpos (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
-    (thermoCalibratedScaffold T ρ).freeEnergy ≤ 0 := by
-  simp only [thermoCalibratedScaffold]
+    (ThermodynamicSystem.freeEnergy (densityMatrixThermoSystem T) ρ) ≤ 0 := by
+  simp only [densityMatrixThermoSystem, ThermodynamicSystem.freeEnergy]
   linarith [landauerCostDiagonal_nonneg ρ T hT]
 
-/-- `|freeEnergy| ≤ landauerBitEnergy T` — bounded by the one-bit Landauer scale. -/
+/-- `|knowingCost| ≤ landauerBitEnergy T` on the device rail. -/
 theorem thermoCalibratedScaffold_freeEnergy_bounded (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
-    |(thermoCalibratedScaffold T ρ).freeEnergy| ≤ landauerBitEnergy T := by
-  simp only [thermoCalibratedScaffold]
+    |(ThermodynamicSystem.freeEnergy (densityMatrixThermoSystem T) ρ)| ≤ landauerBitEnergy T := by
+  simp only [densityMatrixThermoSystem, ThermodynamicSystem.freeEnergy]
   rw [abs_neg, abs_of_nonneg (landauerCostDiagonal_nonneg ρ T hT)]
   exact landauerCostDiagonal_le_landauerBitEnergy ρ T hT
 
-/-! ## General Dimension `Fin n` Extensions (Gaps 2 & 10) -/
+theorem knowingDeviceLedgerEntry_cost_nonpos (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+    (knowingDeviceLedgerEntry T ρ).knowingCost ≥ 0 :=
+  landauerCostDiagonal_nonneg ρ T hT
 
-/-- Full N-dimensional calibrated gate state. -/
-noncomputable def thermoCalibratedPhys_n {n : ℕ} (hn : 0 < n) (_P : QuantumProbe)
-    (ρ : DensityMatrix hn) : RealThermodynamicState where
-  density := (ρ.carrier ⟨0, hn⟩ ⟨0, hn⟩).re
-  freeEnergy := -landauerCostDiagonal_n hn ρ T
-
-theorem admissible_thermoCalibratedPhys_whichPath (ρ : DensityMatrix hnQubit) :
-    RealAdmissible (thermoCalibratedScaffold T ρ)
-      (thermoCalibratedScaffold T (KrausChannel.whichPathChannel.apply hnQubit ρ)) := by
-  constructor
-  · simp [thermoCalibratedScaffold, pathWeight_whichPath_apply]
-  · simp [thermoCalibratedScaffold, landauerCostDiagonal_whichPathInvariant, le_refl]
+theorem knowingDeviceLedgerEntry_cost_bounded (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+    (knowingDeviceLedgerEntry T ρ).knowingCost ≤ landauerBitEnergy T :=
+  landauerCostDiagonal_le_landauerBitEnergy ρ T hT
 
 end CalibratedTemperature
 

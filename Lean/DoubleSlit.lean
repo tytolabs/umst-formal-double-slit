@@ -38,8 +38,8 @@ open UMST.Core UMST.Quantum
 /-- Combined gate narrative: admissible thermo update + Landauer invariance + one-bit cap. -/
 theorem measurementUpdateWhichPath_gateEnforcement (ρ : DensityMatrix hnQubit) (T : ℝ)
     (hT : 0 ≤ T) :
-    Admissible (thermoFromQubitPath ρ)
-      (thermoFromQubitPath (KrausChannel.whichPathChannel.apply hnQubit ρ)) ∧
+    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+      (KrausChannel.whichPathChannel.apply hnQubit ρ) ∧
     landauerCostDiagonal ρ T =
       landauerCostDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) T ∧
     landauerCostDiagonal ρ T ≤ landauerBitEnergy T :=

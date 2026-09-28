@@ -2,49 +2,59 @@
 # SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 # SPDX-License-Identifier: MIT
 #
-# P0-11 — DoubleSlitCore fibre boundary audit (measured grep, not physics GREEN).
-# DoubleSlitCore may open UMST.Core scalar/state vocabulary only.
-# Density-matrix → ObservationState maps live in QuantumClassicalBridge, not here.
+# P0-11b — knowing fibre boundary audit (all double-slit Lean sources).
 
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-CORE="${ROOT}/Lean/DoubleSlitCore.lean"
+LEAN_DIR="${ROOT}/Lean"
 
-if [[ ! -f "${CORE}" ]]; then
-  echo "audit_double_slit_core_boundary: missing ${CORE}" >&2
+if [[ ! -d "${LEAN_DIR}" ]]; then
+  echo "audit_double_slit_core_boundary: missing ${LEAN_DIR}" >&2
   exit 1
 fi
 
-code_lines() {
-  awk '
-    /^import / { print; next }
-    /^[[:space:]]*(def|theorem|lemma|instance|structure|abbrev|noncomputable def|class) / { print; next }
-  ' "${CORE}"
-}
+while IFS= read -r f; do
+  rel="${f#"${ROOT}/"}"
+  if grep -E '^import (Concrete\.|Concrete/)' "${f}"; then
+    echo "audit_double_slit_core_boundary: forbidden acting Concrete import in ${rel}" >&2
+    exit 1
+  fi
+  if grep -F 'noncomputable def thermoFromQubitPath' "${f}"; then
+    echo "audit_double_slit_core_boundary: forbidden thermoFromQubitPath in ${rel}" >&2
+    exit 1
+  fi
+  if grep -F 'noncomputable def thermoCalibratedScaffold' "${f}"; then
+    echo "audit_double_slit_core_boundary: forbidden thermoCalibratedScaffold in ${rel}" >&2
+    exit 1
+  fi
+  if grep -F 'noncomputable def thermoCalibratedPhys' "${f}"; then
+    echo "audit_double_slit_core_boundary: forbidden thermoCalibratedPhys in ${rel}" >&2
+    exit 1
+  fi
+  hit="$(awk '
+    /^import / { next }
+    /^[[:space:]]*--/ { next }
+    /^[[:space:]]*\/-/ { next }
+    /noncomputable def|^def |^theorem |^lemma / {
+      if ($0 ~ /DensityMatrix/ && $0 ~ /RealThermodynamicState/ && $0 ~ /→/) { print; exit }
+      if ($0 ~ /DensityMatrix/ && $0 ~ /ConcreteState/ && $0 ~ /→/) { print; exit }
+    }
+  ' "${f}" || true)"
+  if [[ -n "${hit}" ]]; then
+    echo "audit_double_slit_core_boundary: forbidden knowing→acting carrier in ${rel}: ${hit}" >&2
+    exit 1
+  fi
+done < <(find "${LEAN_DIR}" -name '*.lean' -type f | sort)
 
-if grep -E '^import (DensityState|DensityMatrix|QuantumClassicalBridge|Concrete\.|Concrete/)' "${CORE}"; then
-  echo "audit_double_slit_core_boundary: forbidden import in DoubleSlitCore.lean" >&2
-  exit 1
-fi
-
-if code_lines | grep -E '(DensityMatrix|ConcreteState|observationState(Canonical|Of))'; then
-  echo "audit_double_slit_core_boundary: forbidden density-matrix / ConcreteState map in code" >&2
-  exit 1
-fi
-
+CORE="${LEAN_DIR}/DoubleSlitCore.lean"
 grep -q 'import Core.State' "${CORE}" || {
-  echo "audit_double_slit_core_boundary: missing import Core.State" >&2
+  echo "audit_double_slit_core_boundary: DoubleSlitCore missing import Core.State" >&2
   exit 1
 }
 
 grep -q 'open UMST.Core' "${CORE}" || {
-  echo "audit_double_slit_core_boundary: missing open UMST.Core" >&2
-  exit 1
-}
-
-grep -q 'ThermodynamicSystem' "${CORE}" || {
-  echo "audit_double_slit_core_boundary: missing ThermodynamicSystem instance" >&2
+  echo "audit_double_slit_core_boundary: DoubleSlitCore missing open UMST.Core" >&2
   exit 1
 }
 

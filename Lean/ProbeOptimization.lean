@@ -72,9 +72,9 @@ theorem argmaxUtilityProbeIndexAt_spec {ι : Type*} [Fintype ι] [DecidableEq ι
     IsOptimalProbeIndexAt family ρ T hT λ (argmaxUtilityProbeIndexAt family ρ T hT λ) :=
   Classical.choose_spec (exists_optimalProbeIndexAt family ρ T hT λ)
 
-/-- Probe-induced transition is thermodynamically admissible under `thermoFromQubitPath`. -/
+/-- Probe-induced transition is admissible on the knowing `DensityMatrix` thermo system. -/
 def ProbeSelectionAdmissible (P : QuantumProbe) (ρ : DensityMatrix hnQubit) : Prop :=
-  Admissible (thermoFromQubitPath ρ) (thermoFromQubitPath (P.apply ρ))
+  CoreAdmissible ℝ (DensityMatrix hnQubit) ρ (P.apply ρ)
 
 theorem ProbeSelectionAdmissible_nullProbe (ρ : DensityMatrix hnQubit) :
     ProbeSelectionAdmissible nullProbe ρ := by
