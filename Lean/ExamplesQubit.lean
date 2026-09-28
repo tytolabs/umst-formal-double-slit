@@ -4,6 +4,7 @@
 -/
 
 import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Analysis.SpecialFunctions.BinaryEntropy
 import ProbeOptimization
 
 /-!
