@@ -275,14 +275,14 @@ theorem rhoZero_exists_constrainedOptimal_nullWhichFamily
     ∃ i, IsConstrainedOptimalAt nullWhichFamily rhoZero T hT λ i := by
   apply exists_constrainedOptimalAt
   refine ⟨0, ?_⟩
-  simp [AdmissibleProbeIndices, ProbeSelectionAdmissible_nullProbe]
+  simp [AdmissibleProbeIndices, ProbeSelectionAdmissible_nullProbe T]
 
 theorem rhoOne_exists_constrainedOptimal_nullWhichFamily
     (T : ℝ) (hT : 0 < T) (λ : ℝ) :
     ∃ i, IsConstrainedOptimalAt nullWhichFamily rhoOne T hT λ i := by
   apply exists_constrainedOptimalAt
   refine ⟨1, ?_⟩
-  simp [AdmissibleProbeIndices, ProbeSelectionAdmissible_whichPathProbe]
+  simp [AdmissibleProbeIndices, ProbeSelectionAdmissible_whichPathProbe T]
 
 theorem rhoPlus_epistemicMI_whichPath : EpistemicMI PathProbe.whichPath rhoPlus = Real.log 2 := by
   rw [epistemicMI_whichPath, whichPathMI, rhoPlus_vonNeumannDiagonal_eq_log_two]

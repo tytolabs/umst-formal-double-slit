@@ -25,9 +25,10 @@ namespace UMST.DoubleSlit
 
 open UMST.Core UMST.Real UMST.Quantum
 
-section CalibratedTemperature
-
-variable (T : ℝ)
+/-- `DensityMatrix` at bath temperature `T`: Born weight + negative Landauer free energy. -/
+noncomputable def densityMatrixThermoSystem (T : ℝ) : ThermodynamicSystem ℝ (DensityMatrix hnQubit) where
+  density ρ    := pathWeight ρ 0
+  freeEnergy ρ := -landauerCostDiagonal ρ T
 
 /-- Knowing-fibre **device rail** scalars (not an acting `ThermodynamicState` carrier). -/
 structure KnowingDeviceLedgerEntry where
@@ -35,69 +36,66 @@ structure KnowingDeviceLedgerEntry where
   knowingCost : ℝ
 
 /-- Ledger entry from a qubit density matrix at temperature `T`. -/
-noncomputable def knowingDeviceLedgerEntry (ρ : DensityMatrix hnQubit) : KnowingDeviceLedgerEntry where
+noncomputable def knowingDeviceLedgerEntry (T : ℝ) (ρ : DensityMatrix hnQubit) : KnowingDeviceLedgerEntry where
   bornPath0 := pathWeight ρ 0
   knowingCost := landauerCostDiagonal ρ T
 
 @[simp]
-theorem knowingDeviceLedgerEntry_whichPath (ρ : DensityMatrix hnQubit) :
+theorem knowingDeviceLedgerEntry_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
     knowingDeviceLedgerEntry T (KrausChannel.whichPathChannel.apply hnQubit ρ) =
       knowingDeviceLedgerEntry T ρ := by
   simp [knowingDeviceLedgerEntry, pathWeight_whichPath_apply,
     landauerCostDiagonal_whichPathInvariant]
 
-/-- `DensityMatrix` at bath temperature `T`: Born weight + negative Landauer free energy. -/
-noncomputable instance densityMatrixThermoSystem :
-    ThermodynamicSystem ℝ (DensityMatrix hnQubit) where
-  density ρ    := pathWeight ρ 0
-  freeEnergy ρ := -landauerCostDiagonal ρ T
-
-theorem admissible_densityMatrix_whichPath (ρ : DensityMatrix hnQubit) :
-    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
-      (KrausChannel.whichPathChannel.apply hnQubit ρ) := by
-  refine ⟨?mass, ?dissip⟩
-  · simp only [ThermodynamicSystem.density, pathWeight_whichPath_apply, sub_self, abs_zero,
-      UMST.Core.δMass_real_def]
-    exact zero_le (δMass (K := ℝ))
-  · simp only [ThermodynamicSystem.freeEnergy, landauerCostDiagonal_whichPathInvariant, le_refl]
+theorem admissible_densityMatrix_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
+    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
+      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
+  @CoreAdmissible.mk ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
+    (KrausChannel.whichPathChannel.apply hnQubit ρ)
+    (by
+      change |pathWeight (KrausChannel.whichPathChannel.apply hnQubit ρ) 0 - pathWeight ρ 0| ≤
+          (δMass (K := ℝ) : ℝ)
+      simp [pathWeight_whichPath_apply, UMST.Core.δMass_real_def])
+    (by
+      change -landauerCostDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) T ≤
+          -landauerCostDiagonal ρ T
+      linarith [landauerCostDiagonal_whichPathInvariant ρ T])
 
 /-- Alias retained for importers (no `thermoFromQubitPath` carrier). -/
-theorem admissible_thermoFromQubitPath_whichPath (ρ : DensityMatrix hnQubit) :
-    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+theorem admissible_thermoFromQubitPath_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
+    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
       (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
-  admissible_densityMatrix_whichPath ρ
+  admissible_densityMatrix_whichPath T ρ
 
-theorem admissible_thermoCalibratedScaffold_whichPath (ρ : DensityMatrix hnQubit) :
-    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+theorem admissible_thermoCalibratedScaffold_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
+    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
       (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
-  admissible_densityMatrix_whichPath ρ
+  admissible_densityMatrix_whichPath T ρ
 
-theorem admissible_thermoCalibratedPhys_whichPath (ρ : DensityMatrix hnQubit) :
-    CoreAdmissible ℝ (DensityMatrix hnQubit) ρ
+theorem admissible_thermoCalibratedPhys_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
+    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
       (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
-  admissible_densityMatrix_whichPath ρ
+  admissible_densityMatrix_whichPath T ρ
 
 /-- Calibrated knowing cost is nonpositive for `T ≥ 0`. -/
-theorem thermoCalibratedScaffold_freeEnergy_nonpos (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
-    (ThermodynamicSystem.freeEnergy (densityMatrixThermoSystem T) ρ) ≤ 0 := by
+theorem thermoCalibratedScaffold_freeEnergy_nonpos (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+    (densityMatrixThermoSystem T).freeEnergy ρ ≤ 0 := by
   simp only [densityMatrixThermoSystem, ThermodynamicSystem.freeEnergy]
   linarith [landauerCostDiagonal_nonneg ρ T hT]
 
 /-- `|knowingCost| ≤ landauerBitEnergy T` on the device rail. -/
-theorem thermoCalibratedScaffold_freeEnergy_bounded (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
-    |(ThermodynamicSystem.freeEnergy (densityMatrixThermoSystem T) ρ)| ≤ landauerBitEnergy T := by
+theorem thermoCalibratedScaffold_freeEnergy_bounded (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+    |(densityMatrixThermoSystem T).freeEnergy ρ| ≤ landauerBitEnergy T := by
   simp only [densityMatrixThermoSystem, ThermodynamicSystem.freeEnergy]
   rw [abs_neg, abs_of_nonneg (landauerCostDiagonal_nonneg ρ T hT)]
   exact landauerCostDiagonal_le_landauerBitEnergy ρ T hT
 
-theorem knowingDeviceLedgerEntry_cost_nonpos (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+theorem knowingDeviceLedgerEntry_cost_nonpos (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
     (knowingDeviceLedgerEntry T ρ).knowingCost ≥ 0 :=
   landauerCostDiagonal_nonneg ρ T hT
 
-theorem knowingDeviceLedgerEntry_cost_bounded (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+theorem knowingDeviceLedgerEntry_cost_bounded (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
     (knowingDeviceLedgerEntry T ρ).knowingCost ≤ landauerBitEnergy T :=
   landauerCostDiagonal_le_landauerBitEnergy ρ T hT
-
-end CalibratedTemperature
 
 end UMST.DoubleSlit
