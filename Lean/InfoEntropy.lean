@@ -28,19 +28,18 @@ particular it equals **`shannonBinary (pathWeight ρ 0)`** because `pathWeight �
 
 namespace UMST.Quantum
 
-open Real
 open scoped BigOperators
 
 /-- Binary Shannon entropy `H₂(p) = -p log p - (1-p) log(1-p)` with `0 log 0 = 0`. -/
 noncomputable def shannonBinary (p : ℝ) : ℝ :=
-  negMulLog p + negMulLog (1 - p)
+  Real.negMulLog p + Real.negMulLog (1 - p)
 
-theorem shannonBinary_eq_binEntropy (p : ℝ) : shannonBinary p = binEntropy p := by
-  rw [shannonBinary, ← binEntropy_eq_negMulLog_add_negMulLog_one_sub p]
+theorem shannonBinary_eq_binEntropy (p : ℝ) : shannonBinary p = Real.binEntropy p := by
+  rw [shannonBinary, ← Real.binEntropy_eq_negMulLog_add_negMulLog_one_sub p]
 
-theorem shannonBinary_le_log_two (p : ℝ) : shannonBinary p ≤ log 2 := by
+theorem shannonBinary_le_log_two (p : ℝ) : shannonBinary p ≤ Real.log 2 := by
   rw [shannonBinary_eq_binEntropy]
-  exact binEntropy_le_log_two
+  simpa using Real.binEntropy_le_log_two (p := p)
 
 theorem shannonBinary_symm (p : ℝ) : shannonBinary p = shannonBinary (1 - p) := by
   unfold shannonBinary
@@ -73,18 +72,18 @@ theorem vonNeumannDiagonal_nonneg (ρ : DensityMatrix hnQubit) : 0 ≤ vonNeuman
   have hle := pathWeight_le_one ρ 0
   have h1 : 0 ≤ 1 - pathWeight ρ 0 := by linarith [pathWeight_sum ρ, pathWeight_nonneg' ρ 1]
   have h1le : 1 - pathWeight ρ 0 ≤ 1 := by linarith [pathWeight_nonneg' ρ 0]
-  exact add_nonneg (negMulLog_nonneg h0 hle) (negMulLog_nonneg h1 h1le)
+  exact add_nonneg (Real.negMulLog_nonneg h0 hle) (Real.negMulLog_nonneg h1 h1le)
 
 /-- General diagonal von Neumann entropy (nats) for arbitrary dimension n -/
 noncomputable def vonNeumannDiagonal_n {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix hn) : ℝ :=
-  ∑ i : Fin n, negMulLog (ρ.carrier i i).re
+  ∑ i : Fin n, Real.negMulLog (ρ.carrier i i).re
 
 theorem vonNeumannDiagonal_n_nonneg {n : ℕ} {hn : 0 < n} (ρ : DensityMatrix hn) : 0 ≤ vonNeumannDiagonal_n ρ := by
   apply Finset.sum_nonneg
   intro i _
   have h0 : 0 ≤ (ρ.carrier i i).re := DensityMat.diag_re_nonneg_n ρ i
   have h1 : (ρ.carrier i i).re ≤ 1 := DensityMat.diag_re_le_one_n ρ i
-  exact negMulLog_nonneg h0 h1
+  exact Real.negMulLog_nonneg h0 h1
 
 /-- On a qubit, the `Fin 2` diagonal sum agrees with the binary Shannon functional on `pathWeight`. -/
 theorem vonNeumannDiagonal_n_eq_vonNeumannDiagonal (ρ : DensityMatrix hnQubit) :
@@ -96,7 +95,7 @@ theorem vonNeumannDiagonal_n_eq_vonNeumannDiagonal (ρ : DensityMatrix hnQubit) 
   unfold vonNeumannDiagonal vonNeumannDiagonal_n shannonBinary
   rw [Fin.sum_univ_two, hdiag1, pathWeight]
 
-theorem vonNeumannDiagonal_le_log_two (ρ : DensityMatrix hnQubit) : vonNeumannDiagonal ρ ≤ log 2 := by
+theorem vonNeumannDiagonal_le_log_two (ρ : DensityMatrix hnQubit) : vonNeumannDiagonal ρ ≤ Real.log 2 := by
   unfold vonNeumannDiagonal
   exact shannonBinary_le_log_two _
 
@@ -124,7 +123,7 @@ theorem quantumMutualInfo_diagonal_nonneg (ρ : DensityMatrix hnQubit) :
 
 /-- Quantum MI for path measurement is bounded by log 2 (1 bit in nats). -/
 theorem quantumMutualInfo_diagonal_le_log_two (ρ : DensityMatrix hnQubit) :
-    quantumMutualInfo_diagonal ρ ≤ log 2 :=
+    quantumMutualInfo_diagonal ρ ≤ Real.log 2 :=
   vonNeumannDiagonal_le_log_two ρ
 
 /-- Measurement-invariant: `MI_diag(E(ρ)) = MI_diag(ρ)` for the which-path channel. -/

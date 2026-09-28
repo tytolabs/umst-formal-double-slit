@@ -7,15 +7,15 @@ import EpistemicMI
 import LandauerBound
 
 /-!
-# MeasurementCost — physical energy lower bound for quantum path measurement
+# MeasurementCost — probe-indexed dissipation scale (knowing-fibre instance layer)
 
-Formal statement of the **measurement cost principle** in the double-slit context:
+Thermodynamic content is **`UMST.ProcessFamily.SecondLaw`** on `measureFeedback` / `erase`
+instances (`KnowingFibreInstance.lean`, P0-10) — not a standalone Landauer law in double-slit.
 
-- Any readout that acquires `epistemicMIBits p ρ` bits of which-path information
-  requires at minimum `epistemicLandauerCost p ρ T` joules of dissipated work at
-  temperature `T` (Landauer's principle applied to the acquired information).
+This module keeps the **operational alias** `measurementCost = epistemicLandauerCost` for
+cross-lang sync. Consequences under typed `SecondLaw` hypotheses are proved there.
 
-Key results:
+Key algebraic properties (unchanged API):
 1. The cost is **nonneg** for `T ≥ 0`.
 2. **Null probe** → cost = 0 (zero information, zero mandatory dissipation).
 3. **Which-path probe** → cost equals `landauerCostDiagonal ρ T`, bounded by

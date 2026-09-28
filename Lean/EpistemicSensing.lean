@@ -214,7 +214,7 @@ theorem LandauerCostFromProbeStrength_le_landauerBitEnergy (P : QuantumProbe)
     LandauerCostFromProbeStrength P ρ T ≤ landauerBitEnergy T := by
   unfold LandauerCostFromProbeStrength infoEnergyLowerBound
   simpa [mul_assoc, mul_one] using
-    mul_le_mul_of_nonneg_left (ProbeStrength_le_one P ρ) (landauerBitEnergy_nonneg hT)
+    mul_le_mul_of_nonneg_left (ProbeStrength_le_one P ρ) (landauerBitEnergy_nonneg T hT)
 
 theorem LandauerCostFromProbeStrength_nullProbe (ρ : DensityMatrix hnQubit) (T : ℝ) :
     LandauerCostFromProbeStrength nullProbe ρ T = 0 := by
@@ -224,7 +224,7 @@ theorem LandauerCostFromProbeStrength_mono (P Q : QuantumProbe) (ρ : DensityMat
     (T : ℝ) (hT : 0 ≤ T) (hPQ : ProbeStrength Q ρ ≤ ProbeStrength P ρ) :
     LandauerCostFromProbeStrength Q ρ T ≤ LandauerCostFromProbeStrength P ρ T := by
   unfold LandauerCostFromProbeStrength infoEnergyLowerBound
-  exact mul_le_mul_of_nonneg_left hPQ (landauerBitEnergy_nonneg hT)
+  exact mul_le_mul_of_nonneg_left hPQ (landauerBitEnergy_nonneg T hT)
 
 /-- Bridge to existing `MeasurementUpdate` instance: which-path update is info-monotone. -/
 theorem measurementUpdateWhichPath_info_monotone (ρ : DensityMatrix hnQubit) :

@@ -57,7 +57,7 @@ theorem infoEnergyLowerBound_monotone_bits (b₁ b₂ T : ℝ) (_hb₁ : 0 ≤ b
     (hT : 0 ≤ T) :
     infoEnergyLowerBound b₁ T ≤ infoEnergyLowerBound b₂ T := by
   unfold infoEnergyLowerBound
-  exact mul_le_mul_of_nonneg_left hle (landauerBitEnergy_nonneg hT)
+  exact mul_le_mul_of_nonneg_left hle (landauerBitEnergy_nonneg T hT)
 
 /-- **Deception / stronger extraction:** if an observer realizes **at least** as many epistemic
 bit-equivalents as another configuration, the Landauer lower bound is no smaller. -/

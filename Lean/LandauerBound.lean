@@ -38,14 +38,14 @@ working in tight conjunction with the classical Englert quantum limit `V² + I²
 
 namespace UMST.DoubleSlit
 
-open UMST.Core UMST.Quantum Real
+open UMST.Core UMST.Quantum
 
-lemma log_two_pos : 0 < log 2 :=
-  log_pos (by norm_num : (1 : ℝ) < 2)
+lemma log_two_pos : 0 < Real.log 2 :=
+  Real.log_pos (by norm_num : (1 : ℝ) < 2)
 
 /-- Diagonal path entropy (nats) expressed in Landauer **bit-equivalents** (`/ log 2`). -/
 noncomputable def pathEntropyBits (ρ : DensityMatrix hnQubit) : ℝ :=
-  vonNeumannDiagonal ρ / log 2
+  vonNeumannDiagonal ρ / Real.log 2
 
 theorem pathEntropyBits_nonneg (ρ : DensityMatrix hnQubit) : 0 ≤ pathEntropyBits ρ :=
   div_nonneg (vonNeumannDiagonal_nonneg ρ) (le_of_lt log_two_pos)
@@ -59,7 +59,7 @@ theorem pathEntropyBits_le_one (ρ : DensityMatrix hnQubit) : pathEntropyBits ρ
 
 /-- Diagonal entropy on `Fin n`, in **Landauer bit-equivalents** (`/ log 2`). At most `logb 2 n`. -/
 noncomputable def pathEntropyBits_n {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) : ℝ :=
-  vonNeumannDiagonal_n ρ / log 2
+  vonNeumannDiagonal_n ρ / Real.log 2
 
 theorem pathEntropyBits_n_nonneg {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) :
     0 ≤ pathEntropyBits_n hn ρ := by
@@ -67,9 +67,9 @@ theorem pathEntropyBits_n_nonneg {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) 
   exact div_nonneg (vonNeumannDiagonal_n_nonneg ρ) (le_of_lt log_two_pos)
 
 theorem pathEntropyBits_n_le_logb_two {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) :
-    pathEntropyBits_n hn ρ ≤ logb 2 (n : ℝ) := by
+    pathEntropyBits_n hn ρ ≤ Real.logb 2 (n : ℝ) := by
   unfold pathEntropyBits_n
-  simpa [log_div_log] using div_le_div_of_nonneg_right (vonNeumannDiagonal_n_le_log_n ρ) (le_of_lt log_two_pos)
+  simpa [Real.log_div_log] using div_le_div_of_nonneg_right (vonNeumannDiagonal_n_le_log_n ρ) (le_of_lt log_two_pos)
 
 /-- SI joules from general diagonal entropy at temperature `T`. -/
 noncomputable def landauerCostDiagonal_n {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) (T : ℝ) : ℝ :=
@@ -82,9 +82,9 @@ theorem landauerCostDiagonal_n_nonneg {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix
 
 theorem landauerCostDiagonal_n_le_logb_landauerBitEnergy {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn)
     (T : ℝ) (hT : 0 ≤ T) :
-    landauerCostDiagonal_n hn ρ T ≤ landauerBitEnergy T * logb 2 (n : ℝ) := by
+    landauerCostDiagonal_n hn ρ T ≤ landauerBitEnergy T * Real.logb 2 (n : ℝ) := by
   unfold landauerCostDiagonal_n infoEnergyLowerBound
-  exact mul_le_mul_of_nonneg_left (pathEntropyBits_n_le_logb_two hn ρ) (landauerBitEnergy_nonneg hT)
+  exact mul_le_mul_of_nonneg_left (pathEntropyBits_n_le_logb_two hn ρ) (landauerBitEnergy_nonneg T hT)
 
 theorem pathEntropyBits_n_qubit_eq (ρ : DensityMatrix hnQubit) :
     pathEntropyBits_n hnQubit ρ = pathEntropyBits ρ := by
@@ -104,7 +104,7 @@ theorem landauerCostDiagonal_le_landauerBitEnergy (ρ : DensityMatrix hnQubit) (
     landauerCostDiagonal ρ T ≤ landauerBitEnergy T := by
   unfold landauerCostDiagonal infoEnergyLowerBound
   simpa [mul_assoc, mul_one] using
-    mul_le_mul_of_nonneg_left (pathEntropyBits_le_one ρ) (landauerBitEnergy_nonneg hT)
+    mul_le_mul_of_nonneg_left (pathEntropyBits_le_one ρ) (landauerBitEnergy_nonneg T hT)
 
 @[simp]
 theorem landauerCostDiagonal_whichPathInvariant (ρ : DensityMatrix hnQubit) (T : ℝ) :
@@ -158,7 +158,7 @@ For an n-level system, normalized by the maximum entropy `logb 2 n`:
 `residualCoherenceCapacity_n ρ = 1 - pathEntropyBits_n / logb 2 n`.
 Ranges in [0, 1]: 0 = maximum information extracted, 1 = no extraction. -/
 noncomputable def residualCoherenceCapacity_n {n : ℕ} (hn : 0 < n) (ρ : DensityMatrix hn) : ℝ :=
-  if _ : (1 : ℕ) < n then 1 - pathEntropyBits_n hn ρ / logb 2 n
+  if _ : (1 : ℕ) < n then 1 - pathEntropyBits_n hn ρ / Real.logb 2 n
   else 1 - pathEntropyBits_n hn ρ  -- n=1: degenerate case, logb 2 1 = 0
 
 theorem residualCoherenceCapacity_n_nonneg {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
@@ -166,10 +166,10 @@ theorem residualCoherenceCapacity_n_nonneg {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
     0 ≤ residualCoherenceCapacity_n hn ρ := by
   unfold residualCoherenceCapacity_n
   simp [hn1]
-  have hlog : 0 < logb 2 n := by
+  have hlog : 0 < Real.logb 2 n := by
     apply Real.logb_pos (by norm_num : (1 : ℝ) < 2)
     exact_mod_cast hn1
-  have hle : pathEntropyBits_n hn ρ / logb 2 (n : ℝ) ≤ 1 := by
+  have hle : pathEntropyBits_n hn ρ / Real.logb 2 (n : ℝ) ≤ 1 := by
     simpa [div_self (ne_of_gt hlog)] using
       div_le_div_of_nonneg_right (pathEntropyBits_n_le_logb_two hn ρ) (le_of_lt hlog)
   linarith [hle]
@@ -179,7 +179,7 @@ theorem residualCoherenceCapacity_n_le_one {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
     residualCoherenceCapacity_n hn ρ ≤ 1 := by
   unfold residualCoherenceCapacity_n
   simp [hn1]
-  have hlog : 0 < logb 2 n := by
+  have hlog : 0 < Real.logb 2 n := by
     apply Real.logb_pos (by norm_num : (1 : ℝ) < 2)
     exact_mod_cast hn1
   linarith [div_nonneg (pathEntropyBits_n_nonneg hn ρ) (le_of_lt hlog)]
@@ -195,8 +195,8 @@ theorem residualCoherenceCapacity_n_qubit_eq (ρ : DensityMatrix hnQubit) :
     residualCoherenceCapacity_n hnQubit ρ = residualCoherenceCapacity ρ := by
   unfold residualCoherenceCapacity_n residualCoherenceCapacity
   simp only [show (1 : ℕ) < 2 from by norm_num]
-  have hone : logb 2 (2 : ℝ) = 1 := by
-    simp [logb]
+  have hone : Real.logb 2 (2 : ℝ) = 1 := by
+    simp [Real.logb]
     field_simp [ne_of_gt log_two_pos]
   simp [pathEntropyBits_n_qubit_eq ρ, hone]
 

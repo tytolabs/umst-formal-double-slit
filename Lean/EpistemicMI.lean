@@ -101,7 +101,7 @@ theorem epistemicLandauerCost_le_landauerBitEnergy (p : PathProbe) (ρ : Density
     (T : ℝ) (hT : 0 ≤ T) : epistemicLandauerCost p ρ T ≤ landauerBitEnergy T := by
   unfold epistemicLandauerCost infoEnergyLowerBound
   simpa [mul_assoc, mul_one] using
-    mul_le_mul_of_nonneg_left (epistemicMIBits_le_one p ρ) (landauerBitEnergy_nonneg hT)
+    mul_le_mul_of_nonneg_left (epistemicMIBits_le_one p ρ) (landauerBitEnergy_nonneg T hT)
 
 @[simp]
 theorem epistemicLandauerCost_null (ρ : DensityMatrix hnQubit) (T : ℝ) :

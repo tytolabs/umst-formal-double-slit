@@ -52,7 +52,7 @@ noncomputable def acquirableInfo (T E : ℝ) : ℝ :=
 theorem requiredEnergy_mono (T : ℝ) (hT : 0 ≤ T) {I₁ I₂ : ℝ} (h : I₁ ≤ I₂) :
     requiredEnergy T I₁ ≤ requiredEnergy T I₂ := by
   unfold requiredEnergy
-  exact mul_le_mul_of_nonneg_right h (landauerBitEnergy_nonneg hT)
+  exact mul_le_mul_of_nonneg_right h (landauerBitEnergy_nonneg T hT)
 
 /-- The acquirable info is monotone with respect to energy budget. -/
 theorem acquirableInfo_mono (T : ℝ) (hT : 0 < T) {E₁ E₂ : ℝ} (h : E₁ ≤ E₂) :
