@@ -178,7 +178,7 @@ theorem pureCarrier_posSemidef (ψ : ℂⁿ) : (pureCarrier ψ).PosSemidef := by
 
 theorem pureCarrier_trace (ψ : ℂⁿ) :
     Matrix.trace (pureCarrier ψ) = dotProduct ψ (star ψ) := by
-  simpa [pureCarrier] using trace_col_mul_row (ι := Unit) ψ (star ψ)
+  simp [pureCarrier, trace_col_mul_row (ι := Unit) ψ (star ψ)]
 
 /-- Pure state from a vector normalized in the `dotProduct ψ (star ψ) = 1` convention. -/
 noncomputable def pureDensity (ψ : ℂⁿ) (hψ : dotProduct ψ (star ψ) = 1) : DensityMatCore hn where
