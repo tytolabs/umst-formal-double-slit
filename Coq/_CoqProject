@@ -6,6 +6,7 @@ VonNeumannEntropySpec.v
 MeasurementCost.v
 InfoTheory.v
 Gate.v
+MirrorScope/Assumptions.v
 Extraction.v
 Constitutional.v
 ChemGeometry.v
