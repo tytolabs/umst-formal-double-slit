@@ -86,6 +86,7 @@ theorem PosSemidef.add {A B : Matrix (Fin n) (Fin n) ℂ} (hA : A.PosSemidef) (h
   simp only [add_mulVec, dotProduct_add]
   exact add_nonneg h1 h2
 
+omit [Fintype ι] in
 theorem posSemidef_finset_sum (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n) ℂ)
     (hf : ∀ i ∈ s, (f i).PosSemidef) : (∑ i ∈ s, f i).PosSemidef := by
   classical
@@ -108,6 +109,7 @@ theorem map_posSemidef (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : ρ.PosSemidef) :
   dsimp [KrausChannel.map]
   refine posSemidef_sum _ fun i => posSemidef_map_term κ ρ hρ i
 
+omit [Fintype ι] in
 theorem trace_mul_sum (ρ : Matrix (Fin n) (Fin n) ℂ) (f : ι → Matrix (Fin n) (Fin n) ℂ)
     (s : Finset ι) :
     (∑ i ∈ s, Matrix.trace (ρ * f i)) = Matrix.trace (ρ * ∑ i ∈ s, f i) := by
