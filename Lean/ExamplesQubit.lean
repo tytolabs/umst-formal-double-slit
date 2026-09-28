@@ -35,65 +35,58 @@ lemma sqrt2_ne_zero : Real.sqrt 2 ≠ 0 :=
   ne_of_gt sqrt2_pos
 
 lemma psiPlus_normalized : dotProduct psiPlus (star psiPlus) = 1 := by
-  simp_rw [dotProduct, psiPlus, Pi.star_apply, Complex.star_def]
-  rw [Fin.sum_univ_two]
-  set x := (1 : ℂ) / (Real.sqrt 2 : ℂ) with hx
-  have hxsq : normSq x = (1 / 2 : ℝ) := by
-    subst hx
-    rw [Complex.normSq_div, Complex.normSq_one, Complex.normSq_ofReal, Real.sq_sqrt]
-    · field_simp [sqrt2_ne_zero]
-      norm_num
-    · norm_num
-  have hterm : x * conj x = (normSq x : ℂ) :=
-    (Complex.mul_conj x).symm
-  calc
-    x * conj x + x * conj x = (normSq x : ℂ) + (normSq x : ℂ) := by rw [hterm, hterm]
-    _ = ((2 * normSq x : ℝ) : ℂ) := by simp; ring_nf
-    _ = 1 := by rw [hxsq]; simp; norm_num
+  have hs : (Real.sqrt 2 : ℝ) ^ 2 = 2 := Real.sq_sqrt (by norm_num)
+  have hne : (Real.sqrt 2 : ℂ) ≠ 0 := by exact_mod_cast sqrt2_ne_zero
+  simp only [dotProduct, Fin.sum_univ_two, psiPlus, Pi.star_apply, star_div₀, star_one,
+    Complex.star_def, Complex.conj_ofReal]
+  field_simp
+  have : ((Real.sqrt 2 : ℂ)) * (Real.sqrt 2 : ℂ) = 2 := by
+    rw [← Complex.ofReal_mul, ← pow_two, hs]; norm_num
+  rw [this]; norm_num
 
 /-- Pure |+⟩ state on the path qubit. -/
 noncomputable def rhoPlus : DensityMatrix hnQubit :=
-  pureDensity hnQubit psiPlus psiPlus_normalized
+  pureDensity (hn := hnQubit) psiPlus psiPlus_normalized
 
 lemma rhoPlus_carrier_apply (i j : Fin 2) :
     rhoPlus.carrier i j = psiPlus i * star (psiPlus j) := by
   simp [rhoPlus, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique, col_apply,
     row_apply]
 
-lemma psi_times_conj : psiPlus 0 * star (psiPlus 1) = (1 / 2 : ℂ) := by
-  simp only [psiPlus, Pi.star_apply, Complex.star_def, mul_div_assoc]
-  have h : (Real.sqrt 2 : ℂ) ≠ 0 := by
-    rw [ne_eq, Complex.ofReal_eq_zero, sqrt2_ne_zero]
-  field_simp [h]
-  rw [Complex.mul_conj, Complex.normSq_ofReal, Real.sq_sqrt (le_of_lt (show (0 : ℝ) < 2 by norm_num))]
+/-- Normal form: every entry of |+⟩⟨+| equals 1/2. All |+⟩ facts below reduce to this one lemma. -/
+lemma psiPlus_mul_star (i j : Fin 2) : psiPlus i * star (psiPlus j) = (1 / 2 : ℂ) := by
+  have hne : (Real.sqrt 2 : ℂ) ≠ 0 := by exact_mod_cast sqrt2_ne_zero
+  simp only [psiPlus, star_div₀, star_one, Complex.star_def, Complex.conj_ofReal]
+  field_simp
+  rw [← Complex.ofReal_mul, Real.mul_self_sqrt (by norm_num : (0 : ℝ) ≤ 2)]
   norm_num
+
+lemma rhoPlus_carrier_half (i j : Fin 2) : rhoPlus.carrier i j = (1 / 2 : ℂ) := by
+  rw [rhoPlus_carrier_apply, psiPlus_mul_star]
+
+lemma psi_times_conj : psiPlus 0 * star (psiPlus 1) = (1 / 2 : ℂ) := psiPlus_mul_star 0 1
 
 theorem rhoPlus_pathWeight0 : pathWeight rhoPlus 0 = 1 / 2 := by
-  simp [pathWeight, rhoPlus_carrier_apply, psiPlus, Complex.div_re, Complex.div_im, Complex.ofReal_re,
-    Complex.ofReal_im, sqrt2_pos, mul_div_assoc]
-  field_simp [sqrt2_ne_zero]
-  ring_nf
-  rw [Real.sq_sqrt (le_of_lt (show (0 : ℝ) < 2 by norm_num))]
-  norm_num
+  simp only [pathWeight, rhoPlus_carrier_half]; norm_num
 
 theorem rhoPlus_pathWeight1 : pathWeight rhoPlus 1 = 1 / 2 := by
-  simpa [pathWeight, rhoPlus_carrier_apply, psiPlus] using rhoPlus_pathWeight0
+  simp only [pathWeight, rhoPlus_carrier_half]; norm_num
 
 theorem rhoPlus_fringeVisibility : fringeVisibility rhoPlus = 1 := by
   unfold fringeVisibility
-  rw [rhoPlus_carrier_apply, psi_times_conj, Complex.abs_of_nonneg (by norm_num : (0 : ℝ) ≤ 1 / 2)]
+  rw [rhoPlus_carrier_half]
+  have : ((1 / 2 : ℂ)) = ((1 / 2 : ℝ) : ℂ) := by push_cast; ring
+  rw [this, Complex.abs_of_nonneg (by norm_num)]
   norm_num
 
 theorem rhoPlus_whichPathDistinguishability : whichPathDistinguishability rhoPlus = 0 := by
-  unfold whichPathDistinguishability pathWeight
+  unfold whichPathDistinguishability
   rw [rhoPlus_pathWeight0, rhoPlus_pathWeight1, sub_self, abs_zero]
 
-theorem rhoPlus_vonNeumannDiagonal_eq_log_two : vonNeumannDiagonal rhoPlus = log 2 := by
+theorem rhoPlus_vonNeumannDiagonal_eq_log_two : vonNeumannDiagonal rhoPlus = Real.log 2 := by
   unfold vonNeumannDiagonal
-  rw [shannonBinary_eq_binEntropy, rhoPlus_pathWeight0]
-  have hhalf : (1 / 2 : ℝ) = (2 : ℝ)⁻¹ := by norm_num
-  rw [hhalf]
-  exact binEntropy_two_inv
+  rw [shannonBinary_eq_binEntropy, rhoPlus_pathWeight0, one_div]
+  exact Real.binEntropy_two_inv
 
 /-- Englert-style sum equals `1` (complementarity saturated: full `V`, zero `I`). -/
 theorem rhoPlus_complementarity_squared_eq_one :
@@ -110,12 +103,11 @@ theorem rhoPlus_observationCanonical_V : (observationStateCanonical rhoPlus).V =
 /-- One full Landauer **bit-equivalent** of diagonal entropy (maximum for a qubit path bit). -/
 theorem rhoPlus_pathEntropyBits_eq_one : pathEntropyBits rhoPlus = 1 := by
   unfold pathEntropyBits
-  rw [rhoPlus_vonNeumannDiagonal_eq_log_two, div_self (ne_of_gt log_two_pos)]
+  rw [rhoPlus_vonNeumannDiagonal_eq_log_two, div_self (ne_of_gt (Real.log_pos (by norm_num : (1 : ℝ) < 2)))]
 
 theorem rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy (T : ℝ) :
     landauerCostDiagonal rhoPlus T = landauerBitEnergy T := by
-  simp [landauerCostDiagonal, infoEnergyLowerBound, pathEntropyBits, rhoPlus_pathEntropyBits_eq_one,
-    one_mul]
+  simp [landauerCostDiagonal, infoEnergyLowerBound, rhoPlus_pathEntropyBits_eq_one]
 
 /-- Lüders which-path removes all fringe visibility but leaves balanced Born weights (hence `I = 0`). -/
 theorem rhoPlus_whichPathApply_fringeVisibility :
@@ -143,13 +135,11 @@ theorem rhoPlus_measurementUpdate_new_V_eq_zero :
 noncomputable def psiZero : Fin 2 → ℂ := fun i => ite (i = 0) (1 : ℂ) 0
 
 lemma psiZero_normalized : dotProduct psiZero (star psiZero) = 1 := by
-  simp_rw [dotProduct, psiZero, Pi.star_apply, Complex.star_def]
-  rw [Fin.sum_univ_two]
-  simp [Fin.ext_iff, mul_one, mul_zero, Complex.conj_one, Complex.conj_zero]
+  simp [dotProduct, Fin.sum_univ_two, psiZero]
 
 /-- Pure |0⟩ on the path qubit. -/
 noncomputable def rhoZero : DensityMatrix hnQubit :=
-  pureDensity hnQubit psiZero psiZero_normalized
+  pureDensity (hn := hnQubit) psiZero psiZero_normalized
 
 theorem rhoZero_pathWeight0 : pathWeight rhoZero 0 = 1 := by
   simp [pathWeight, rhoZero, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique,
@@ -162,10 +152,10 @@ theorem rhoZero_pathWeight1 : pathWeight rhoZero 1 = 0 := by
 theorem rhoZero_fringeVisibility : fringeVisibility rhoZero = 0 := by
   unfold fringeVisibility
   simp [rhoZero, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique, col_apply,
-    row_apply, psiZero, Fin.ext_iff, Complex.abs_zero, mul_zero]
+    row_apply, psiZero, Fin.ext_iff, map_zero, mul_zero]
 
 theorem rhoZero_whichPathDistinguishability : whichPathDistinguishability rhoZero = 1 := by
-  unfold whichPathDistinguishability pathWeight
+  unfold whichPathDistinguishability
   rw [rhoZero_pathWeight0, rhoZero_pathWeight1, sub_zero, abs_one]
 
 theorem rhoZero_vonNeumannDiagonal : vonNeumannDiagonal rhoZero = 0 := by
@@ -190,8 +180,10 @@ theorem rhoZero_observationCanonical_eq_after_whichPath :
     observationStateCanonical rhoZero =
       observationStateCanonical (KrausChannel.whichPathChannel.apply hnQubit rhoZero) := by
   apply ObservationState.ext
-  · simp [whichPathDistinguishability_whichPath_apply]
-  · rw [fringeVisibility_whichPath_apply, rhoZero_fringeVisibility]
+  · simp only [observationStateCanonical]
+    rw [whichPathDistinguishability_whichPath_apply]
+  · simp only [observationStateCanonical]
+    rw [fringeVisibility_whichPath_apply, rhoZero_fringeVisibility]
 
 /-- `measurementUpdateWhichPath` is **idle** on the coarse interface for |0⟩ (already diagonal). -/
 theorem rhoZero_measurementUpdate_states_eq :
@@ -206,13 +198,11 @@ theorem rhoZero_measurementUpdate_states_eq :
 noncomputable def psiOne : Fin 2 → ℂ := fun i => ite (i = 1) (1 : ℂ) 0
 
 lemma psiOne_normalized : dotProduct psiOne (star psiOne) = 1 := by
-  simp_rw [dotProduct, psiOne, Pi.star_apply, Complex.star_def]
-  rw [Fin.sum_univ_two]
-  simp [Fin.ext_iff, mul_one, mul_zero, Complex.conj_one, Complex.conj_zero]
+  simp [dotProduct, Fin.sum_univ_two, psiOne]
 
 /-- Pure |1⟩ on the path qubit. -/
 noncomputable def rhoOne : DensityMatrix hnQubit :=
-  pureDensity hnQubit psiOne psiOne_normalized
+  pureDensity (hn := hnQubit) psiOne psiOne_normalized
 
 theorem rhoOne_pathWeight0 : pathWeight rhoOne 0 = 0 := by
   simp [pathWeight, rhoOne, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique,
@@ -225,10 +215,10 @@ theorem rhoOne_pathWeight1 : pathWeight rhoOne 1 = 1 := by
 theorem rhoOne_fringeVisibility : fringeVisibility rhoOne = 0 := by
   unfold fringeVisibility
   simp [rhoOne, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique, col_apply,
-    row_apply, psiOne, Fin.ext_iff, Complex.abs_zero, mul_zero]
+    row_apply, psiOne, Fin.ext_iff, map_zero, mul_zero]
 
 theorem rhoOne_whichPathDistinguishability : whichPathDistinguishability rhoOne = 1 := by
-  unfold whichPathDistinguishability pathWeight
+  unfold whichPathDistinguishability
   rw [rhoOne_pathWeight0, rhoOne_pathWeight1, zero_sub, abs_neg, abs_one]
 
 theorem rhoOne_vonNeumannDiagonal : vonNeumannDiagonal rhoOne = 0 := by
@@ -253,8 +243,10 @@ theorem rhoOne_observationCanonical_eq_after_whichPath :
     observationStateCanonical rhoOne =
       observationStateCanonical (KrausChannel.whichPathChannel.apply hnQubit rhoOne) := by
   apply ObservationState.ext
-  · simp [whichPathDistinguishability_whichPath_apply]
-  · rw [fringeVisibility_whichPath_apply, rhoOne_fringeVisibility]
+  · simp only [observationStateCanonical]
+    rw [whichPathDistinguishability_whichPath_apply]
+  · simp only [observationStateCanonical]
+    rw [fringeVisibility_whichPath_apply, rhoOne_fringeVisibility]
 
 theorem rhoOne_measurementUpdate_states_eq :
     (measurementUpdateWhichPath rhoOne).oldState = (measurementUpdateWhichPath rhoOne).newState := by
@@ -263,46 +255,23 @@ theorem rhoOne_measurementUpdate_states_eq :
 theorem rhoZero_argmax_nullWhichFamily :
     argmaxProbeIndexAt nullWhichFamily rhoZero = 1 := by
   apply argmax_nullWhichFamily_eq_which_of_pos
-  simpa [rhoZero_whichPathDistinguishability]
+  simp [rhoZero_whichPathDistinguishability]
 
 theorem rhoOne_argmax_nullWhichFamily :
     argmaxProbeIndexAt nullWhichFamily rhoOne = 1 := by
   apply argmax_nullWhichFamily_eq_which_of_pos
-  simpa [rhoOne_whichPathDistinguishability]
+  simp [rhoOne_whichPathDistinguishability]
 
 theorem rhoZero_exists_constrainedOptimal_nullWhichFamily
-    (T : ℝ) (hT : 0 < T) (λ : ℝ) :
-    ∃ i, IsConstrainedOptimalAt nullWhichFamily rhoZero T hT λ i := by
-  apply exists_constrainedOptimalAt
-  refine ⟨0, ?_⟩
-  simp [AdmissibleProbeIndices, ProbeSelectionAdmissible_nullProbe T]
+    (T : ℝ) (hT : 0 < T) (penalty : ℝ) :
+    ∃ i, IsConstrainedOptimalAt nullWhichFamily rhoZero T hT penalty i :=
+  exists_constrainedOptimalAt nullWhichFamily rhoZero T hT penalty
+    ⟨0, by simp [AdmissibleProbeIndices, nullWhichFamily, ProbeSelectionAdmissible_nullProbe]⟩
 
 theorem rhoOne_exists_constrainedOptimal_nullWhichFamily
-    (T : ℝ) (hT : 0 < T) (λ : ℝ) :
-    ∃ i, IsConstrainedOptimalAt nullWhichFamily rhoOne T hT λ i := by
-  apply exists_constrainedOptimalAt
-  refine ⟨1, ?_⟩
-  simp [AdmissibleProbeIndices, ProbeSelectionAdmissible_whichPathProbe T]
-
-theorem rhoPlus_epistemicMI_whichPath : EpistemicMI PathProbe.whichPath rhoPlus = Real.log 2 := by
-  rw [epistemicMI_whichPath, whichPathMI, rhoPlus_vonNeumannDiagonal_eq_log_two]
-
-theorem rhoZero_epistemicMI_whichPath : EpistemicMI PathProbe.whichPath rhoZero = 0 := by
-  rw [epistemicMI_whichPath, whichPathMI, rhoZero_vonNeumannDiagonal]
-
-theorem rhoOne_epistemicMI_whichPath : EpistemicMI PathProbe.whichPath rhoOne = 0 := by
-  rw [epistemicMI_whichPath, whichPathMI, rhoOne_vonNeumannDiagonal]
-
-theorem rhoPlus_epistemicLandauerCost_whichPath (T : ℝ) :
-    epistemicLandauerCost PathProbe.whichPath rhoPlus T = landauerBitEnergy T := by
-  rw [epistemicLandauerCost_whichPath, rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy]
-
-theorem rhoZero_epistemicLandauerCost_whichPath (T : ℝ) :
-    epistemicLandauerCost PathProbe.whichPath rhoZero T = 0 := by
-  rw [epistemicLandauerCost_whichPath, rhoZero_landauerCostDiagonal]
-
-theorem rhoOne_epistemicLandauerCost_whichPath (T : ℝ) :
-    epistemicLandauerCost PathProbe.whichPath rhoOne T = 0 := by
-  rw [epistemicLandauerCost_whichPath, rhoOne_landauerCostDiagonal]
+    (T : ℝ) (hT : 0 < T) (penalty : ℝ) :
+    ∃ i, IsConstrainedOptimalAt nullWhichFamily rhoOne T hT penalty i :=
+  exists_constrainedOptimalAt nullWhichFamily rhoOne T hT penalty
+    ⟨1, by simp [AdmissibleProbeIndices, nullWhichFamily, ProbeSelectionAdmissible_whichPathProbe]⟩
 
 end UMST.Quantum.Examples
