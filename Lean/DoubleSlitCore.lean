@@ -27,7 +27,9 @@ Physical mapping (registered as `ThermodynamicSystem ℝ ObservationState`):
 - **`density`**: path distinguishability `I` (coarse proxy for trace / which-path weight).
 - **`freeEnergy`**: negative complementarity slack `-(I² + V²)` (Helmholtz-style potential).
 
-Continuous quantum states (`DensityMatrix`) use temperature-calibrated instances in `GateCompat.lean`.
+**Fibre boundary (P0-11):** this module opens `UMST.Core` / `UMST.Real` shared scalar vocabulary only.
+No `DensityMatrix` carrier and no map into acting `ConcreteState` — those live in
+`QuantumClassicalBridge.lean` / `GateCompat.lean` on the knowing side.
 -/
 
 namespace UMST.DoubleSlit
