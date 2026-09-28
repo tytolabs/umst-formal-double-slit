@@ -2,8 +2,8 @@
 (* SPDX-License-Identifier: MIT *)
 
 (* P0-13 mirror scoping witness: physical laws as Section hypotheses, not global Axioms.
-   Global inventory (14 Axiom + 3 Parameter) remains in Gate.v / VonNeumannEntropySpec.v /
-   LandauerEinsteinBridge.v until FORMAL-COQ-GATE-AXIOM-SCOPE lands. *)
+   Global inventory (11 Axiom + 0 Parameter after P0-13b SI discharge) remains in
+   Gate.v / VonNeumannEntropySpec.v until full gate/entropy mirror scope lands. *)
 
 From Coq Require Import QArith.
 From Coq Require Import Qfield.

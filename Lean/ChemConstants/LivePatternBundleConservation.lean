@@ -124,7 +124,7 @@ def livePatternBundleZValid (z : Nat) : Bool :=
 def everyZInIupacTable : Bool :=
   (List.range iupacTableCardinality).all fun i => livePatternBundleZValid (i + 1)
 
-theorem every_z_in_iupac_table_true : everyZInIupacTable = true := by native_decide
+theorem every_z_in_iupac_table_true : everyZInIupacTable = true := by decide
 
 /-- Carbon Z=6 — host assemblage witness element pin. -/
 def carbonAtomicNumberZ : Nat := 6

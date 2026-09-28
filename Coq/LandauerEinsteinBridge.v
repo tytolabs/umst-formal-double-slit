@@ -24,34 +24,57 @@
 (*    numeric brackets at T = 300 K (tight bracket from Mathlib         *)
 (*    [log_two_near_10]).                                               *)
 (*                                                                      *)
-(*  **Coq [ln2] vs Lean [Real.log 2].**  Here [ln2] is a Parameter with *)
-(*  only [ln2_pos], avoiding the full real logarithm development in     *)
-(*  Coq.  For cross-tool consistency, read [ln2] as the standard real    *)
-(*  ln(2); Lean supplies a machine-checked numeric certificate.         *)
-(*                                                                      *)
-(*  SI values are **parameters + positivity axioms**; [ln2] is a         *)
-(*  positive parameter intended to denote ln(2).                        *)
+(*  **Coq [ln2] vs Lean [Real.log 2].**  P0-13b: [ln2] := ln 2; k_B and c *)
+(*  are rational literals via Q2R (see definitions below).                *)
 (* ================================================================== *)
 
 From Coq Require Import Reals Lra Field.
+From Coq Require Import Rpower.
+From Coq Require Import QArith Qreals.
+From Coq Require Import ZArith.
 
 Open Scope R_scope.
 
-(* ------------------------------------------------------------------ *)
-(*  SI-scale parameters                                                *)
-(* ------------------------------------------------------------------ *)
+(* P0-13b: SI scale as Definitions + proved positivity (no Parameter/Axiom). *)
 
-(** Boltzmann constant k_B (J/K).  SI exact value 1.380649×10⁻²³. *)
-Parameter kB_SI : R.
-Axiom kB_SI_pos : 0 < kB_SI.
+Definition kB_SI : R :=
+  Q2R (inject_Z 1380649 / inject_Z (Z.pow 10 29)).
 
-(** Speed of light c (m/s).  SI exact: 299792458. *)
-Parameter c_SI : R.
-Axiom c_SI_pos : 0 < c_SI.
+Definition c_SI : R := Q2R (inject_Z 299792458).
 
-(** Positive real for ln(2) (dimensionless). *)
-Parameter ln2 : R.
-Axiom ln2_pos : 0 < ln2.
+Definition ln2 : R := ln 2.
+
+Lemma inj_Q2R_zero : 0%R = Q2R 0%Q.
+Proof.
+  symmetry.
+  unfold Q2R.
+  simpl.
+  field.
+Qed.
+
+Lemma kB_SI_pos : 0 < kB_SI.
+Proof.
+  unfold kB_SI.
+  rewrite inj_Q2R_zero.
+  apply Qlt_Rlt.
+  unfold Qlt; simpl; repeat (split; auto with zarith).
+Qed.
+
+Lemma c_SI_pos : 0 < c_SI.
+Proof.
+  unfold c_SI.
+  rewrite inj_Q2R_zero.
+  apply Qlt_Rlt.
+  unfold Qlt; simpl; repeat (split; auto with zarith).
+Qed.
+
+Lemma ln2_pos : 0 < ln2.
+Proof.
+  unfold ln2.
+  apply Rlt_trans with (r2 := /2).
+  - lra.
+  - apply ln_lt_2.
+Qed.
 
 (* ------------------------------------------------------------------ *)
 (*  Definitions and proved lemmas                                      *)

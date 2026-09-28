@@ -196,20 +196,19 @@ gate old new with (density new - density old) ℚ.≤? δ-mass
 -- lime, and pozzolanic binders.  They are the formal expression of the field
 -- observations that motivated the UMST project.
 
-postulate
-  -- Physical axiom (Clausius-Duhem / Helmholtz):
-  -- Free energy is antitone in hydration degree.
-  -- Concrete witness: Helmholtz.ψ-antitone-helmholtz for ψ = -Q_hyd · α.
-  ψ-antitone : ∀ (s₁ s₂ : ThermodynamicState) →
-    hydration s₁ ≤ hydration s₂ →
-    free-energy s₂ ≤ free-energy s₁
+-- P0-13b: bundle physical laws (mirror of MirrorScope.GatePhysicalModel.PhysicalLaws).
+record GatePhysicalLaws : Set where
+  field
+    ψ-antitone : ∀ (s₁ s₂ : ThermodynamicState) →
+      hydration s₁ ≤ hydration s₂ →
+      free-energy s₂ ≤ free-energy s₁
+    fc-monotone : ∀ (s₁ s₂ : ThermodynamicState) →
+      hydration s₁ ≤ hydration s₂ →
+      strength s₁ ≤ strength s₂
 
-  -- Physical axiom (Powers gel-space ratio model):
-  -- Compressive strength is monotone in hydration degree at fixed w/c.
-  -- Validated empirically; formal proof via Powers formula: fc = S·x³, x ↑ with α.
-  fc-monotone : ∀ (s₁ s₂ : ThermodynamicState) →
-    hydration s₁ ≤ hydration s₂ →
-    strength s₁ ≤ strength s₂
+postulate gate-physical-laws : GatePhysicalLaws
+
+open GatePhysicalLaws gate-physical-laws public
 
 forward-hydration-admissible :
   ∀ (old new : ThermodynamicState) →
