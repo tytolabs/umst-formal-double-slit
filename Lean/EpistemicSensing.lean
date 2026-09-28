@@ -69,13 +69,12 @@ theorem whichPathProbe_isMax_on_singleton (ρ : DensityMatrix hnQubit) :
   constructor
   · simp
   · intro Q hQ
-    simpa [Set.mem_singleton_iff.mp hQ]
+    simp [Set.mem_singleton_iff.mp hQ]
 
 /-- Probe strength is invariant under applying `whichPathProbe` itself. -/
 theorem whichPathProbe_strength_invariant (ρ : DensityMatrix hnQubit) :
     ProbeStrength whichPathProbe (whichPathProbe.apply ρ) = ProbeStrength whichPathProbe ρ := by
-  simpa [whichPathProbe_apply, whichPathProbe_strength] using
-    whichPathDistinguishability_whichPath_apply ρ
+  simp [whichPathProbe_apply, whichPathProbe_strength, whichPathDistinguishability_whichPath_apply ρ]
 
 /-- MI surrogate attached to which-path probing: diagonal path entropy (nats). -/
 noncomputable def whichPathMI (ρ : DensityMatrix hnQubit) : ℝ :=
@@ -90,7 +89,7 @@ theorem whichPathMI_le_log_two (ρ : DensityMatrix hnQubit) : whichPathMI ρ ≤
 @[simp]
 theorem whichPathMI_whichPath_apply (ρ : DensityMatrix hnQubit) :
     whichPathMI (whichPathProbe.apply ρ) = whichPathMI ρ := by
-  simpa [whichPathMI, whichPathProbe_apply] using vonNeumannDiagonal_whichPath_apply ρ
+  simp [whichPathMI, whichPathProbe_apply, vonNeumannDiagonal_whichPath_apply ρ]
 
 /-- Null probe: identity channel with zero epistemic strength extraction. -/
 noncomputable def nullProbe : QuantumProbe where
@@ -130,7 +129,7 @@ theorem interference_preserved_nullProbe (ρ : DensityMatrix hnQubit) :
 /-- Which-path probe collapses fringes (`V = 0`). -/
 theorem collapse_on_whichPathProbe (ρ : DensityMatrix hnQubit) :
     fringeVisibility (whichPathProbe.apply ρ) = 0 := by
-  simpa [whichPathProbe_apply] using fringeVisibility_whichPath_apply ρ
+  simp [whichPathProbe_apply, fringeVisibility_whichPath_apply ρ]
 
 /-- `whichPathProbe` is maximal on the two-probe set `{nullProbe, whichPathProbe}`. -/
 theorem whichPathProbe_isMax_on_null_pair (ρ : DensityMatrix hnQubit) :
@@ -141,7 +140,7 @@ theorem whichPathProbe_isMax_on_null_pair (ρ : DensityMatrix hnQubit) :
     rcases Set.mem_insert_iff.mp hQ with h | h
     · subst h
       simp [nullProbe_strength, whichPathProbe_strength, whichPathDistinguishability_nonneg]
-    · simpa [Set.mem_singleton_iff.mp h]
+    · simp [Set.mem_singleton_iff.mp h]
 
 /-- Maximal probe index in a finite probe family at state `ρ`. -/
 def IsMaxProbeIndexAt {ι : Type*} (family : ι → QuantumProbe) (ρ : DensityMatrix hnQubit)
