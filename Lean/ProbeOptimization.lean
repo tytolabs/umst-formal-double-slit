@@ -30,7 +30,7 @@ theorem landauerBitEnergy_pos {T : ℝ} (hT : 0 < T) : 0 < landauerBitEnergy T :
 
 /-- Cost-penalized utility (dimensionless): strength minus `λ`-weighted normalized Landauer hook. -/
 noncomputable def ProbeUtility (P : QuantumProbe) (ρ : DensityMatrix hnQubit)
-    (T : ℝ) (hT : 0 < T) (penalty : ℝ) : ℝ :=
+    (T : ℝ) (_hT : 0 < T) (penalty : ℝ) : ℝ :=
   ProbeStrength P ρ - penalty * (LandauerCostFromProbeStrength P ρ T / landauerBitEnergy T)
 
 theorem ProbeUtility_le_strength (P : QuantumProbe) (ρ : DensityMatrix hnQubit)
