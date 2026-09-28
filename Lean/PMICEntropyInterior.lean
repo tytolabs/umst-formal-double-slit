@@ -47,8 +47,7 @@ private lemma log_one_add_sub_half_pos {v : ℝ} (hv0 : 0 < v) (hv1 : v ≤ 1) :
       refine ContinuousOn.sub ?_ ?_
       · refine ContinuousOn.comp continuousOn_log ?_
         · exact continuousOn_id.const_add (1 : ℝ) |>.mono (fun _ hx => by linarith [hx.1])
-      · exact continuousOn_id.div continuousOn_const continuousOn_id fun _ _ => by
-          simp
+      · refine continuousOn_id.div continuousOn_const (fun _ _ => by norm_num)
     · intro x hx
       simp only [f, interior_Icc, mem_Ioo] at hx ⊢
       have hxp : 0 < 1 + x := by linarith
@@ -160,7 +159,6 @@ lemma quad_log_lt_of_lt_half {x : ℝ} (hx0 : 0 < x) (hx1 : x < 1 / 2) :
   have h1pu : 1 + u = x⁻¹ := by
     rw [hu_def]
     field_simp [hx_ne]
-    ring
   have hlog1pu : log (1 + u) = -log x := by rw [h1pu, log_inv x]
   have hlogu : log u = log (1 - x) - log x := by
     rw [hu_def, log_div h1mx_pos.ne.symm hx_ne]
@@ -204,7 +202,7 @@ lemma deriv_binEntropyOverQuad_neg {y : ℝ} (hy0 : 0 < y) (hy1 : y < 1 / 2) :
       DifferentiableAt ℝ binEntropy y := differentiableAt_binEntropy hy_ne hy_ne_one
   have hdiff_den : DifferentiableAt ℝ (fun t : ℝ => t * (1 - t)) y := by fun_prop (disch := nlinarith)
   have hN : deriv binEntropy y = log ((1 - y) / y) := by
-    rw [deriv_binEntropy y, log_sub_log, log_div h1my.ne.symm hy_ne]
+    rw [deriv_binEntropy y, log_div h1my.ne.symm hy_ne]
   have hD : deriv (fun t : ℝ => t * (1 - t)) y = 1 - 2 * y := by simp [deriv_sub, deriv_mul, deriv_id'']
   have hW :
       log ((1 - y) / y) * (y * (1 - y)) - binEntropy y * (1 - 2 * y) =
@@ -215,7 +213,7 @@ lemma deriv_binEntropyOverQuad_neg {y : ℝ} (hy0 : 0 < y) (hy1 : y < 1 / 2) :
     ring_nf
   have hWneg : log ((1 - y) / y) * (y * (1 - y)) - binEntropy y * (1 - 2 * y) < 0 := by
     rw [hW]
-    linarith [quad_log_lt_of_lt_half hy0 hy1]
+    exact quad_log_lt_of_lt_half hy0 hy1
   have hderiv :
       deriv binEntropyOverQuad y =
         (log ((1 - y) / y) * (y * (1 - y)) - binEntropy y * (1 - 2 * y)) / (y * (1 - y)) ^ 2 := by
@@ -226,7 +224,7 @@ lemma deriv_binEntropyOverQuad_neg {y : ℝ} (hy0 : 0 < y) (hy1 : y < 1 / 2) :
     · simpa using hden0
   rw [hderiv]
   apply div_neg_of_neg_of_pos hWneg
-  exact pow_pos (mul_pos hy0 h1my) 2
+  exact sq_pos_of_ne_zero (pow_ne_zero 2 hden0)
 
 lemma four_mul_x_one_sub_x_mul_log_two_interior {x : ℝ} (hx0 : 0 < x) (hx1 : x < 1 / 2) :
     4 * x * (1 - x) * log 2 ≤ binEntropy x := by
