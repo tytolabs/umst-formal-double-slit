@@ -145,13 +145,13 @@ affineConservationClosed row =
 record DissipativeWitness : Set where
   constructor mkDissipativeWitness
   field
-    slack bathTempScaffold dissipatedWorkScaffold : ℕ
+    slack bathTempKelvinWitness dissipatedWorkMicrojouleWitness : ℕ
 
 dissipativeWitnessOk : DissipativeWitness → Bool
 dissipativeWitnessOk w =
   does
-    ( DissipativeWitness.slack w * DissipativeWitness.bathTempScaffold w
-      ℕ-Props.≤? DissipativeWitness.dissipatedWorkScaffold w
+    ( DissipativeWitness.slack w * DissipativeWitness.bathTempKelvinWitness w
+      ℕ-Props.≤? DissipativeWitness.dissipatedWorkMicrojouleWitness w
     )
 
 affineWeakeningAdmitted : AffineSlackRow → Maybe DissipativeWitness → Bool

@@ -137,7 +137,8 @@ stateFor Earth      = mkState (ℚ.normalize 1500 1) 0ℚ 0ℚ 0ℚ
 -- gate's decision depends only on the state values, not the material
 -- label.
 
-postulate
+record NaturalityDynamics : Set where
+  field
   -- G is any function from MaterialClass to ThermodynamicState.
   -- We leave it abstract because naturality must hold for ALL such G,
   -- not just a specific one.  This universality is the whole point:

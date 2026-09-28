@@ -87,7 +87,7 @@ reverse-contaminate-no-forward-cost = refl
 record ChemStampLandauerWitness : Set where
   constructor mkChemStampLandauerWitness
   field
-    dissipationMicrojoules landauerScaffold : ℕ
+    dissipationMicrojoules landauerWitnessMicrojoules : ℕ
 
 chemStampLandauerWitnessZero : ChemStampLandauerWitness
 chemStampLandauerWitnessZero = mkChemStampLandauerWitness zero zero
@@ -102,7 +102,7 @@ witnessDissipationPositive (suc _) = true
 chemStampLandauerWitnessPositiveOk : ChemStampLandauerWitness → Bool
 chemStampLandauerWitnessPositiveOk w =
   witnessDissipationPositive (ChemStampLandauerWitness.dissipationMicrojoules w)
-  ∧ witnessDissipationPositive (ChemStampLandauerWitness.landauerScaffold w)
+  ∧ witnessDissipationPositive (ChemStampLandauerWitness.landauerWitnessMicrojoules w)
 
 chem-stamp-landauer-zero-not-positive :
   chemStampLandauerWitnessPositiveOk chemStampLandauerWitnessZero ≡ false

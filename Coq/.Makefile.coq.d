@@ -12,6 +12,12 @@ InfoTheory.vo InfoTheory.glob InfoTheory.v.beautified InfoTheory.required_vo: In
 InfoTheory.vos InfoTheory.vok InfoTheory.required_vos: InfoTheory.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
 Gate.vo Gate.glob Gate.v.beautified Gate.required_vo: Gate.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
 Gate.vos Gate.vok Gate.required_vos: Gate.v /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MirrorScope/GatePhysicalModel.vo MirrorScope/GatePhysicalModel.glob MirrorScope/GatePhysicalModel.v.beautified MirrorScope/GatePhysicalModel.required_vo: MirrorScope/GatePhysicalModel.v Gate.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MirrorScope/GatePhysicalModel.vos MirrorScope/GatePhysicalModel.vok MirrorScope/GatePhysicalModel.required_vos: MirrorScope/GatePhysicalModel.v Gate.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MirrorScope/VonNeumannEntropyModel.vo MirrorScope/VonNeumannEntropyModel.glob MirrorScope/VonNeumannEntropyModel.v.beautified MirrorScope/VonNeumannEntropyModel.required_vo: MirrorScope/VonNeumannEntropyModel.v DensityStateSpec.vo VonNeumannEntropySpec.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MirrorScope/VonNeumannEntropyModel.vos MirrorScope/VonNeumannEntropyModel.vok MirrorScope/VonNeumannEntropyModel.required_vos: MirrorScope/VonNeumannEntropyModel.v DensityStateSpec.vos VonNeumannEntropySpec.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MirrorScope/Assumptions.vo MirrorScope/Assumptions.glob MirrorScope/Assumptions.v.beautified MirrorScope/Assumptions.required_vo: MirrorScope/Assumptions.v MirrorScope/GatePhysicalModel.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
+MirrorScope/Assumptions.vos MirrorScope/Assumptions.vok MirrorScope/Assumptions.required_vos: MirrorScope/Assumptions.v MirrorScope/GatePhysicalModel.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
 Extraction.vo Extraction.glob Extraction.v.beautified Extraction.required_vo: Extraction.v Gate.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
 Extraction.vos Extraction.vok Extraction.required_vos: Extraction.v Gate.vos /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker
 Constitutional.vo Constitutional.glob Constitutional.v.beautified Constitutional.required_vo: Constitutional.v Gate.vo /opt/homebrew/lib/ocaml/rocq-runtime/rocqworker

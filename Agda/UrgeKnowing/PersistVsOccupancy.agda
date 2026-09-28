@@ -16,7 +16,11 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.PersistVsOccupancy where
+module UrgeKnowing.PersistVsOccupancy
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
+
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
 
 open import Agda.Builtin.Unit using (tt; ⊤)
 open import Data.Bool using (Bool; false; true)
@@ -165,27 +169,6 @@ composeSurrogateFor = "UMST.Excitement.select"
 persistNotOccupancyCopyCollision : String
 persistNotOccupancyCopyCollision =
   "persist Hilbert xy2d(ucrs_seq, grid_hash) ≠ occupancy Hilbert FNV(cell_id, write_set) — homolog ≠ copy"
-
-------------------------------------------------------------------------
--- Sole Landauer postulate — mirrors LandauerLaw.physicalSecondLaw
-------------------------------------------------------------------------
-
-record HeatBath : Set where
-  field
-    temperature : ℕ
-
-record ErasureProcess : Set where
-  field
-    bath : HeatBath
-    dissipatedEntropy : ℕ
-
-PhysicalSecondLaw : ErasureProcess → ℕ → Set
-PhysicalSecondLaw proc entropyDecrease =
-  entropyDecrease ≤ ErasureProcess.dissipatedEntropy proc
-
-postulate
-  physicalSecondLaw : ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →
-    PhysicalSecondLaw proc entropyDecrease
 
 landauerBound :
   ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →

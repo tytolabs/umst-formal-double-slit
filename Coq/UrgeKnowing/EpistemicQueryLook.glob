@@ -27,16 +27,16 @@ R1474:1485 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R1474:1485 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R1510:1521 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R1532:1537 Stdlib.Reals.RIneq <> Rlt_le thm
-R1540:1546 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R1540:1546 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R1510:1521 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R1532:1537 Stdlib.Reals.RIneq <> Rlt_le thm
-R1540:1546 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R1540:1546 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R1558:1569 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R1579:1584 Stdlib.Reals.RIneq <> Rlt_le thm
-R1587:1595 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R1587:1595 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R1558:1569 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R1579:1584 Stdlib.Reals.RIneq <> Rlt_le thm
-R1587:1595 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R1587:1595 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 ind 1921:1946 <> EpistemicQueryLookModality
 constr 1962:1989 <> epistemic_query_look_unwired
 constr 1995:2022 <> epistemic_query_look_assumed
@@ -241,11 +241,11 @@ R6499:6515 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
 R6541:6557 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
 R6541:6557 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
 R6570:6586 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
-R6596:6604 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R6596:6604 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R6570:6586 Stdlib.Reals.RIneq <> Rmult_lt_0_compat thm
-R6596:6604 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
-R6628:6634 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
-R6628:6634 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R6596:6604 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
+R6628:6634 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
+R6628:6634 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 def 6878:6897 <> metaExcitementModule
 R6901:6906 Stdlib.Strings.String <> string ind
 def 6973:6991 <> composeSurrogateFor

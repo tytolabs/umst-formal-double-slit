@@ -12,9 +12,13 @@
 -- Not ChemConstants. Modality Unwired; physics GREEN false.
 ------------------------------------------------------------------------
 
-{-# OPTIONS --without-K #-}
+{-# OPTIONS --without-K --safe #-}
 
-module UrgeKnowing.LandauerHistoryLook where
+module UrgeKnowing.LandauerHistoryLook
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
+
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
 
 open import Data.Bool using (Bool; false)
 open import Data.Empty using (⊥)
@@ -87,27 +91,6 @@ history-look-cost-nonneg k p = epistemic-mi-bits-nonneg p
 history-look-cost-le-one :
   ∀ (k : ℕ) (p : PathProbe) → landauerHistoryLookCost k p ≤ suc zero
 history-look-cost-le-one k p = epistemic-mi-bits-le-one p
-
-------------------------------------------------------------------------
--- Sole Landauer postulate — mirrors LandauerLaw.physicalSecondLaw
-------------------------------------------------------------------------
-
-record HeatBath : Set where
-  field
-    temperature : ℕ
-
-record ErasureProcess : Set where
-  field
-    bath : HeatBath
-    dissipatedEntropy : ℕ
-
-PhysicalSecondLaw : ErasureProcess → ℕ → Set
-PhysicalSecondLaw proc entropyDecrease =
-  entropyDecrease ≤ ErasureProcess.dissipatedEntropy proc
-
-postulate
-  physicalSecondLaw : ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →
-    PhysicalSecondLaw proc entropyDecrease
 
 landauerBound :
   ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →

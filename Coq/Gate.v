@@ -203,54 +203,7 @@ Proof.
   intros -> -> -> -> ->. reflexivity.
 Qed.
 
-(* ================================================================== *)
-(*  SECTION 7: Physical Model Axioms                                    *)
-(* ================================================================== *)
-
-(** These axioms encode constitutive relationships from cement
-    chemistry and continuum mechanics.  They are NOT arbitrary
-    assumptions — they follow from the underlying physics:
-
-    - The Helmholtz model ψ(α) = −Q_hyd · α is exothermic, so
-      advancing hydration (α ↑) decreases free energy (ψ ↓).
-    - The Powers model fc = S · x³ (gel-space ratio) is monotone
-      in hydration degree at fixed water/cement ratio.
-
-    In the Agda layer these appear as [postulate]; here they serve
-    the same role.  A fully constructive proof would require
-    embedding the arithmetic of each specific constitutive law.
-
-    These axioms are consistent — they do not introduce logical
-    paradoxes.  They assert physical properties that are well-
-    established in the cement science literature and corroborated
-    by field observation (see Docs/Architecture-Invariants.md). *)
-
-(** Axiom (Helmholtz Model):  Free energy is antitone in hydration.
-    If α₁ ≤ α₂ then ψ(α₂) ≤ ψ(α₁).
-
-    Physically: advancing hydration releases heat, lowering the
-    Helmholtz free energy.  This is the essence of the second law
-    applied to cement hydration — the reaction proceeds because it
-    is thermodynamically favourable (free energy decreasing). *)
-
-Axiom psi_antitone : forall s1 s2 : ThermodynamicState,
-  hydration s1 <= hydration s2 ->
-  free_energy s2 <= free_energy s1.
-
-(** Axiom (Powers Model):  Strength is monotone in hydration.
-    If α₁ ≤ α₂ then fc(α₁) ≤ fc(α₂).
-
-    Physically: continued hydration fills gel pores with C-S-H gel,
-    increasing the gel-space ratio x, and since fc = S · x³ (where
-    S ≈ 234 MPa for Portland cement), strength grows monotonically.
-
-    This holds for undamaged material at fixed w/c.  Damage mechanics
-    (cracking, sulfate attack, etc.) would require extending the
-    model, but that is outside the scope of the UMST gate. *)
-
-Axiom fc_monotone : forall s1 s2 : ThermodynamicState,
-  hydration s1 <= hydration s2 ->
-  strength s1 <= strength s2.
+(* SECTION 7: constitutive laws — MirrorScope.GatePhysicalModel.PhysicalLaws *)
 
 (* ================================================================== *)
 (*  SECTION 8: Helmholtz Antitone Lemma (Concrete Model)                *)
@@ -334,116 +287,7 @@ Proof.
   ring.
 Qed.
 
-(* ================================================================== *)
-(*  SECTION 9: Theorem — Clausius-Duhem Forward                         *)
-(* ================================================================== *)
-
-(** Theorem (Clausius-Duhem Forward):
-    If hydration advances (α₂ ≥ α₁) and the Helmholtz model holds
-    (free energy is antitone in α), then dissipation is non-negative.
-
-    In our formulation, non-negative dissipation is equivalent to
-    ψ_new ≤ ψ_old (since ρ > 0 and dt > 0 cancel out).
-
-    Mathematical derivation:
-      ψ(α) = −Q_hyd · α,   Q_hyd = 450 > 0
-      α_new ≥ α_old
-      ⟹  ψ_new = −Q · α_new ≤ −Q · α_old = ψ_old
-      ⟹  D_int = −ρ · (ψ_new − ψ_old) / dt
-                = ρ · (ψ_old − ψ_new) / dt ≥ 0          □
-
-    This theorem says: the second law of thermodynamics is never
-    violated by forward hydration under the Helmholtz model. *)
-
-Theorem clausius_duhem_forward :
-  forall s1 s2 : ThermodynamicState,
-  hydration s1 <= hydration s2 ->
-  free_energy s2 <= free_energy s1.
-Proof.
-  intros s1 s2 Hhyd.
-  exact (psi_antitone s1 s2 Hhyd).
-Qed.
-
-(* ================================================================== *)
-(*  SECTION 10: Theorem — Strength Monotonicity (Powers Model)          *)
-(* ================================================================== *)
-
-(** Theorem (Strength Monotone — Powers):
-    If hydration advances (α₂ ≥ α₁), then compressive strength
-    cannot decrease: fc₂ ≥ fc₁.
-
-    This follows from the Powers gel-space ratio model:
-
-        fc = S · x³
-
-    where x = gel-space ratio = (0.68 · α) / (0.32 · α + w/c).
-    At fixed w/c ratio, x is monotone increasing in α (more
-    hydration → more gel → higher gel-space ratio).  Since x³ is
-    monotone increasing for x ≥ 0, fc is monotone in α.
-
-    Field corroboration: cube tests on lime-stabilised earth and RAC
-    mixes consistently showed monotone strength gain during curing.
-    Strength reversals were observed only under damage conditions
-    (freeze-thaw cycling, sulfate attack), which the UMST gate handles
-    separately via material-class-specific activation checks. *)
-
-Theorem strength_monotone_powers :
-  forall s1 s2 : ThermodynamicState,
-  hydration s1 <= hydration s2 ->
-  strength s1 <= strength s2.
-Proof.
-  intros s1 s2 Hhyd.
-  exact (fc_monotone s1 s2 Hhyd).
-Qed.
-
-(* ================================================================== *)
-(*  SECTION 11: Main Safety Theorem — Forward Hydration Admissible      *)
-(* ================================================================== *)
-
-(** Theorem 1 (Categorical Safety — Forward Hydration is Admissible):
-
-    If hydration advances (α_new ≥ α_old) and density is conserved
-    (|ρ_new − ρ_old| < δ), then the state transition is admissible.
-
-    This is the CORE SAFETY THEOREM.  It says that the physical
-    process of cement hydration — as modelled by the Powers /
-    Clausius-Duhem framework — can NEVER be rejected by the gate.
-
-    The gate rejects only unphysical transitions:
-      • Reverse hydration  (α decreasing — violates chemistry)
-      • Spontaneous strength loss  (fc decreasing — violates Powers)
-      • Mass violations  (density jumping — violates conservation)
-      • Dissipation-violating paths  (ψ increasing — violates 2nd law)
-
-    Proof structure:
-      Given α_new ≥ α_old and |ρ_new − ρ_old| < δ:
-        1. Mass conservation holds by hypothesis
-        2. ψ_new ≤ ψ_old by [psi_antitone] (Clausius-Duhem)
-        3. α_new ≥ α_old by hypothesis (hydration irreversibility)
-        4. fc_new ≥ fc_old by [fc_monotone] (Powers model)
-      All four invariants hold, so [admissible old new_].            □ *)
-
-Theorem forward_hydration_admissible :
-  forall old new_ : ThermodynamicState,
-  hydration old <= hydration new_ ->
-  density new_ - density old <= delta_mass ->
-  density old - density new_ <= delta_mass ->
-  admissible old new_.
-Proof.
-  intros old new_ Hhyd Hmc1 Hmc2.
-  unfold admissible.
-  refine (conj _ (conj _ (conj _ (conj _ _)))).
-  - (* Inv 1a: mass conservation, upper bound *)
-    exact Hmc1.
-  - (* Inv 1b: mass conservation, lower bound *)
-    exact Hmc2.
-  - (* Inv 2: Clausius-Duhem dissipation *)
-    exact (psi_antitone old new_ Hhyd).
-  - (* Inv 3: hydration irreversibility *)
-    exact Hhyd.
-  - (* Inv 4: strength monotonicity *)
-    exact (fc_monotone old new_ Hhyd).
-Qed.
+(* SECTIONS 9–11 + gate_accepts_forward_hydration: MirrorScope.GatePhysicalModel *)
 
 (* ================================================================== *)
 (*  SECTION 12: Gate Correctness — Soundness + Completeness             *)
@@ -511,22 +355,6 @@ Corollary gate_check_complete :
 Proof.
   intros old new_.
   apply (proj2 (gate_check_correct old new_)).
-Qed.
-
-(** Corollary: forward hydration always passes the gate.
-    Combines [forward_hydration_admissible] with [gate_check_complete]
-    to show the boolean function returns [true] for physical transitions. *)
-
-Corollary gate_accepts_forward_hydration :
-  forall old new_ : ThermodynamicState,
-  hydration old <= hydration new_ ->
-  density new_ - density old <= delta_mass ->
-  density old - density new_ <= delta_mass ->
-  gate_check old new_ = true.
-Proof.
-  intros old new_ Hhyd Hmc1 Hmc2.
-  apply gate_check_complete.
-  exact (forward_hydration_admissible old new_ Hhyd Hmc1 Hmc2).
 Qed.
 
 (* ================================================================== *)

@@ -15,7 +15,11 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.TwoHilberts where
+module UrgeKnowing.TwoHilberts
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
+
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
 
 open import Data.Bool using (Bool; false; true)
 open import Data.Empty using (⊥)
@@ -184,27 +188,6 @@ homolog-not-copy w eq = persist-ne-occupancy-role eq
 homolog-not-copy-refused :
   ∀ (w : HilbertHomologWitness) → HilbertFuseRefused
 homolog-not-copy-refused w = homolog-is-not-copy
-
-------------------------------------------------------------------------
--- Sole Landauer postulate — mirrors LandauerHistoryLook.physicalSecondLaw
-------------------------------------------------------------------------
-
-record HeatBath : Set where
-  field
-    temperature : ℕ
-
-record ErasureProcess : Set where
-  field
-    bath : HeatBath
-    dissipatedEntropy : ℕ
-
-PhysicalSecondLaw : ErasureProcess → ℕ → Set
-PhysicalSecondLaw proc entropyDecrease =
-  entropyDecrease ≤ ErasureProcess.dissipatedEntropy proc
-
-postulate
-  physicalSecondLaw : ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →
-    PhysicalSecondLaw proc entropyDecrease
 
 landauerBound :
   ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →

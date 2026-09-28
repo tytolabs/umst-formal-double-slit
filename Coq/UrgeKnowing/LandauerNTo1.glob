@@ -73,16 +73,16 @@ R3199:3210 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3199:3210 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3235:3246 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3257:3262 Stdlib.Reals.RIneq <> Rlt_le thm
-R3265:3271 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3265:3271 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3235:3246 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3257:3262 Stdlib.Reals.RIneq <> Rlt_le thm
-R3265:3271 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3265:3271 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3283:3294 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3304:3309 Stdlib.Reals.RIneq <> Rlt_le thm
-R3312:3320 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3312:3320 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R3283:3294 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3304:3309 Stdlib.Reals.RIneq <> Rlt_le thm
-R3312:3320 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3312:3320 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 prf 3345:3365 <> E_Landauer_bit_nonneg
 R3372:3372 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
 binder 3368:3368 <> T:7
@@ -95,16 +95,16 @@ R3409:3409 UrgeKnowing.LandauerNTo1 <> T:7 var
 R3441:3454 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
 R3465:3476 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3487:3492 Stdlib.Reals.RIneq <> Rlt_le thm
-R3495:3501 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3495:3501 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3465:3476 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3487:3492 Stdlib.Reals.RIneq <> Rlt_le thm
-R3495:3501 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3495:3501 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3513:3524 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3534:3539 Stdlib.Reals.RIneq <> Rlt_le thm
-R3542:3550 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3542:3550 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R3513:3524 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3534:3539 Stdlib.Reals.RIneq <> Rlt_le thm
-R3542:3550 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3542:3550 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 def 3580:3613 <> landauer_floor_from_destroyed_bits
 R3620:3620 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
 binder 3616:3616 <> T:8
@@ -130,16 +130,16 @@ R3908:3919 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3908:3919 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3948:3959 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3970:3975 Stdlib.Reals.RIneq <> Rlt_le thm
-R3978:3984 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3978:3984 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3948:3959 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3970:3975 Stdlib.Reals.RIneq <> Rlt_le thm
-R3978:3984 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3978:3984 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3998:4009 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R4019:4024 Stdlib.Reals.RIneq <> Rlt_le thm
-R4027:4035 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4027:4035 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R3998:4009 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R4019:4024 Stdlib.Reals.RIneq <> Rlt_le thm
-R4027:4035 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4027:4035 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 prf 4060:4095 <> landauer_floor_two_bit_le_bit_energy
 R4102:4102 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
 binder 4098:4098 <> T:11

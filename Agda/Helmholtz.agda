@@ -114,8 +114,9 @@ helmholtz α = - (Q-hyd * α)
 --         = neg-antimono-≤ step1
 -- Identical fact FULLY PROVED in Coq/Gate.v via `nia`.
 
-postulate
-  helmholtz-antitone : ∀ (α₁ α₂ : ℚ) → α₁ ≤ α₂ → helmholtz α₂ ≤ helmholtz α₁
+record HelmholtzOrderedField : Set where
+  field
+    helmholtz-antitone : ∀ (α₁ α₂ : ℚ) → α₁ ≤ α₂ → helmholtz α₂ ≤ helmholtz α₁
 
 ------------------------------------------------------------------------
 -- 4. HelmholtzState: States Satisfying the Model
@@ -143,23 +144,21 @@ HelmholtzState s = free-energy s ≡ helmholtz (hydration s)
 -- releases heat, lowering the Helmholtz free energy.  The gate's Clausius-
 -- Duhem check captures exactly this: D_int = -ρ · ψ̇ ≥ 0.
 
-ψ-antitone-helmholtz :
-  ∀ (s₁ s₂ : ThermodynamicState) →
-  HelmholtzState s₁ →    -- free-energy s₁ = helmholtz (hydration s₁)
-  HelmholtzState s₂ →    -- free-energy s₂ = helmholtz (hydration s₂)
-  hydration s₁ ≤ hydration s₂ →
-  free-energy s₂ ≤ free-energy s₁
-ψ-antitone-helmholtz s₁ s₂ h₁ h₂ α-adv =
-  -- Rewrite using the Helmholtz model equations, apply antitone lemma.
-  --   free-energy s₂
-  --       ≡ helmholtz (hydration s₂)       (by h₂)
-  --       ≤ helmholtz (hydration s₁)       (by helmholtz-antitone + α-adv)
-  --       ≡ free-energy s₁                 (by sym h₁)
-  ℚ-Props.≤-trans
-    (ℚ-Props.≤-trans
-      (ℚ-Props.≤-reflexive h₂)
-      (helmholtz-antitone (hydration s₁) (hydration s₂) α-adv))
-    (ℚ-Props.≤-reflexive (≡-sym h₁))
+module WithOrderedField (H : HelmholtzOrderedField) where
+  open HelmholtzOrderedField H using (helmholtz-antitone)
+
+  ψ-antitone-helmholtz :
+    ∀ (s₁ s₂ : ThermodynamicState) →
+    HelmholtzState s₁ →
+    HelmholtzState s₂ →
+    hydration s₁ ≤ hydration s₂ →
+    free-energy s₂ ≤ free-energy s₁
+  ψ-antitone-helmholtz s₁ s₂ h₁ h₂ α-adv =
+    ℚ-Props.≤-trans
+      (ℚ-Props.≤-trans
+        (ℚ-Props.≤-reflexive h₂)
+        (helmholtz-antitone (hydration s₁) (hydration s₂) α-adv))
+      (ℚ-Props.≤-reflexive (≡-sym h₁))
 
 ------------------------------------------------------------------------
 -- 6. Linearity and Gradient Theorem (SDF Interpretation)
@@ -175,9 +174,10 @@ HelmholtzState s = free-energy s ≡ helmholtz (hydration s)
 -- Marked postulate pending exact stdlib lemma names; proved in Coq
 -- via `ring` (helmholtz_additive in Coq/Gate.v, Section 8b).
 
-postulate
-  helmholtz-linear : ∀ (α₁ α₂ : ℚ) →
-    helmholtz (α₁ + α₂) ≡ helmholtz α₁ + helmholtz α₂
+record HelmholtzLinearity : Set where
+  field
+    helmholtz-linear : ∀ (α₁ α₂ : ℚ) →
+      helmholtz (α₁ + α₂) ≡ helmholtz α₁ + helmholtz α₂
 
 -- Discrete gradient of ψ at any point is the constant −Q_hyd · ε:
 --
@@ -200,9 +200,10 @@ postulate
 --                    = −(Q_hyd · ε)               (by definition)
 -- Proved in Coq via `ring` (helmholtz_gradient in Coq/Gate.v, Section 8b).
 
-postulate
-  helmholtz-gradient-const : ∀ (α ε : ℚ) →
-    helmholtz (α + ε) - helmholtz α ≡ -(Q-hyd * ε)
+record HelmholtzGradient : Set where
+  field
+    helmholtz-gradient-const : ∀ (α ε : ℚ) →
+      helmholtz (α + ε) - helmholtz α ≡ -(Q-hyd * ε)
 
 ------------------------------------------------------------------------
 -- 7. Commentary: Why Gate.agda Keeps Its Postulates

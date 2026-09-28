@@ -50,7 +50,8 @@ record EigenvalueSpec (n : ℕ) : Set where
   field
     eigenvalues : List ℚ    -- length n list of eigenvalues (ℚ proxy)
 
-postulate
+record EigenvalueProps : Set where
+  field
   -- | Eigenvalues are non-negative.
   --   Lean: density_eigenvalues_nonneg
   eigenvalues-nonneg : ∀ {n : ℕ} (spec : EigenvalueSpec n) →
@@ -76,18 +77,20 @@ postulate
 
 -- | Abstract entropy value carrier (postulated real number).
 --   Agda stdlib lacks a convenient ℝ; we use a postulated type.
-postulate
-  ℝ : Set
-  ℝ-zero : ℝ
-  ℝ-log-n : ℕ → ℝ     -- log(n) in nats
-  _ℝ≤_ : ℝ → ℝ → Set
-  _ℝ≥_ : ℝ → ℝ → Set
+record RealEntropyCarrier : Set where
+  field
+    ℝ : Set
+    ℝ-zero : ℝ
+    ℝ-log-n : ℕ → ℝ
+    _ℝ≤_ : ℝ → ℝ → Set
+    _ℝ≥_ : ℝ → ℝ → Set
 
 ------------------------------------------------------------------------
 -- 3. Von Neumann entropy: key theorems (postulated)
 ------------------------------------------------------------------------
 
-postulate
+record VonNeumannEntropyProps : Set where
+  field
   -- | Von Neumann entropy function.
   --   Lean: vonNeumannEntropy (ρ : DensityMatrix hn) : ℝ :=
   --         ∑ i, negMulLog (ρ.isHermitian.eigenvalues i)
@@ -141,8 +144,9 @@ postulate
 
 -- | Binary Shannon entropy H₂(p) = -p log p - (1-p) log(1-p).
 --   Lean: shannonBinary p = negMulLog p + negMulLog (1 - p)
-postulate
-  shannonBinary : ℚ → ℝ
+record ShannonBinaryProps : Set where
+  field
+    shannonBinary : ℚ → ℝ
 
   -- | H₂(p) ≤ log 2.
   --   Lean: shannonBinary_le_log_two
@@ -162,7 +166,8 @@ postulate
 -- 5. Measurement increases entropy (DPI consequence)
 ------------------------------------------------------------------------
 
-postulate
+record MeasurementEntropyProps : Set where
+  field
   -- | Which-path measurement increases entropy:
   --   S(dephased ρ) ≥ S(ρ).
   --   Lean: whichPath_increases_entropy

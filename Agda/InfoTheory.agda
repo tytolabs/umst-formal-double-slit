@@ -77,16 +77,15 @@ productJoint-first-row-length p ps q = mapMulRow-length p q
 
 open import Data.List.Relation.Binary.Pointwise.Base using (Pointwise)
 
-postulate
-  jointMassProduct :
-    ∀ (p q : List ℚ) → sumFlat (productJoint p q) ≡ sumList p * sumList q
-
-  marginalFirstProduct :
-    ∀ (p q : List ℚ) →
-    Pointwise _≡_ (marginalFirst (productJoint p q))
-      (map (λ pi → pi * sumList q) p)
-
-  marginalSecondProduct :
-    ∀ (ph : ℚ) (pt q : List ℚ) →
-    Pointwise _≡_ (marginalSecond (productJoint (ph ∷ pt) q))
-      (map (λ qk → sumList (ph ∷ pt) * qk) q)
+record ProductMassProps : Set where
+  field
+    jointMassProduct :
+      ∀ (p q : List ℚ) → sumFlat (productJoint p q) ≡ sumList p * sumList q
+    marginalFirstProduct :
+      ∀ (p q : List ℚ) →
+      Pointwise _≡_ (marginalFirst (productJoint p q))
+        (map (λ pi → pi * sumList q) p)
+    marginalSecondProduct :
+      ∀ (ph : ℚ) (pt q : List ℚ) →
+      Pointwise _≡_ (marginalSecond (productJoint (ph ∷ pt) q))
+        (map (λ qk → sumList (ph ∷ pt) * qk) q)

@@ -15,7 +15,11 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.MeasurementCostSync where
+module UrgeKnowing.MeasurementCostSync
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
+
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
 
 open import Data.Bool using (Bool; false)
 open import Data.Empty using (⊥)
@@ -116,27 +120,6 @@ sync-look-cost-le-one p = epistemic-mi-bits-le-one p
 sync-look-mi-equals-epistemic :
   ∀ (p : PathProbe) → syncLookMIBits p ≡ epistemicMIBits p
 sync-look-mi-equals-epistemic p = refl
-
-------------------------------------------------------------------------
--- Sole Landauer postulate — mirrors LandauerLaw.physicalSecondLaw
-------------------------------------------------------------------------
-
-record HeatBath : Set where
-  field
-    temperature : ℕ
-
-record ErasureProcess : Set where
-  field
-    bath : HeatBath
-    dissipatedEntropy : ℕ
-
-PhysicalSecondLaw : ErasureProcess → ℕ → Set
-PhysicalSecondLaw proc entropyDecrease =
-  entropyDecrease ≤ ErasureProcess.dissipatedEntropy proc
-
-postulate
-  physicalSecondLaw : ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →
-    PhysicalSecondLaw proc entropyDecrease
 
 landauerBound :
   ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →

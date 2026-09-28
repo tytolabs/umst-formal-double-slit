@@ -52,8 +52,8 @@ not118SquaredGreenTable = true
 vacuumInertLimitSecondLawConservationFramed = true
 vacuumInertLimitNotXor = true
 
-envSectionScaffoldTyped notParallelVacuumInertLimitAxiomMinted residualPo2NamedOrAbsentNotForked : Bool
-envSectionScaffoldTyped = true
+envSectionWitnessTyped notParallelVacuumInertLimitAxiomMinted residualPo2NamedOrAbsentNotForked : Bool
+envSectionWitnessTyped = true
 notParallelVacuumInertLimitAxiomMinted = true
 residualPo2NamedOrAbsentNotForked = true
 
@@ -149,12 +149,12 @@ vacuumInertLimitBundleIsConcurrentProduct w =
 -- Named vacuum/inert channel indices — interact restriction (1), residual pO₂ Named or Absent (2), class 22 vacuum_inert_limit (3)
 ------------------------------------------------------------------------
 
-envSectionScaffoldChannelIndex residualPo2NamedOrAbsentChannelIndex class22VacuumInertLimitChannelIndex : ℕ
-envSectionScaffoldChannelIndex = 1
+envSectionWitnessChannelIndex residualPo2NamedOrAbsentChannelIndex class22VacuumInertLimitChannelIndex : ℕ
+envSectionWitnessChannelIndex = 1
 residualPo2NamedOrAbsentChannelIndex = 2
 class22VacuumInertLimitChannelIndex = 3
 
-env-section-scaffold-index-one : envSectionScaffoldChannelIndex ≡ 1
+env-section-scaffold-index-one : envSectionWitnessChannelIndex ≡ 1
 env-section-scaffold-index-one = refl
 
 residual-po2-named-or-absent-index-two : residualPo2NamedOrAbsentChannelIndex ≡ 2
@@ -171,7 +171,7 @@ vacuumInertLimitNuanceBundle : VacuumInertLimitBundle
 vacuumInertLimitNuanceBundle =
   withPresent
     (withPresent
-      (withPresent vacuumInertLimitBundleUnwired envSectionScaffoldChannelIndex)
+      (withPresent vacuumInertLimitBundleUnwired envSectionWitnessChannelIndex) -- typed_absence FORMAL-MIRROR-SCOPING-13B
       residualPo2NamedOrAbsentChannelIndex)
     class22VacuumInertLimitChannelIndex
 
@@ -180,7 +180,7 @@ vacuumInertLimitNuanceWitness =
   mkVacuumInertLimitBundleWitness vacuumInertLimitNuanceBundle 3
 
 vacuum-inert-limit-nuance-env-section-scaffold-present :
-  isSlotPresent (VacuumInertLimitBundle.slot vacuumInertLimitNuanceBundle envSectionScaffoldChannelIndex) ≡ true
+  isSlotPresent (VacuumInertLimitBundle.slot vacuumInertLimitNuanceBundle envSectionWitnessChannelIndex) ≡ true
 vacuum-inert-limit-nuance-env-section-scaffold-present = refl
 
 vacuum-inert-limit-nuance-residual-po2-named-or-absent-present :
@@ -199,7 +199,7 @@ vacuum-inert-limit-nuance-concurrent-product :
 vacuum-inert-limit-nuance-concurrent-product = refl
 
 vacuum-inert-limit-nuance-three-factors-concurrent :
-  isSlotPresent (VacuumInertLimitBundle.slot vacuumInertLimitNuanceBundle envSectionScaffoldChannelIndex) ≡ true
+  isSlotPresent (VacuumInertLimitBundle.slot vacuumInertLimitNuanceBundle envSectionWitnessChannelIndex) ≡ true
   × isSlotPresent (VacuumInertLimitBundle.slot vacuumInertLimitNuanceBundle residualPo2NamedOrAbsentChannelIndex) ≡ true
   × isSlotPresent (VacuumInertLimitBundle.slot vacuumInertLimitNuanceBundle class22VacuumInertLimitChannelIndex) ≡ true
   × VacuumInertLimitBundleWitness.present-count vacuumInertLimitNuanceWitness ≡ 3
@@ -234,7 +234,7 @@ xor-refuse-not-product-ok : evaluateXorRefuse unwiredWitness 0 1 ≡ xor-product
 xor-refuse-not-product-ok = refl
 
 vacuum-inert-limit-nuance-xor-product-ok :
-  evaluateXorRefuse vacuumInertLimitNuanceWitness envSectionScaffoldChannelIndex residualPo2NamedOrAbsentChannelIndex ≡ xor-product-ok
+  evaluateXorRefuse vacuumInertLimitNuanceWitness envSectionWitnessChannelIndex residualPo2NamedOrAbsentChannelIndex ≡ xor-product-ok
 vacuum-inert-limit-nuance-xor-product-ok = refl
 
 vacuum-inert-limit-not-xor : vacuumInertLimitNotXor ≡ true
@@ -258,8 +258,8 @@ productConcurrentOp xorMutuallyExclusiveOp :
 productConcurrentOp = product-concurrent
 xorMutuallyExclusiveOp = xor-mutually-exclusive
 
-envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf class22VacuumInertLimitLeaf : ClassifierVacuumInertLimitStep
-envSectionScaffoldLeaf = slot-leaf envSectionScaffoldChannelIndex
+envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf class22VacuumInertLimitLeaf : ClassifierVacuumInertLimitStep
+envSectionWitnessLeaf = slot-leaf envSectionWitnessChannelIndex
 residualPo2NamedOrAbsentLeaf = slot-leaf residualPo2NamedOrAbsentChannelIndex
 class22VacuumInertLimitLeaf = slot-leaf class22VacuumInertLimitChannelIndex
 
@@ -304,7 +304,7 @@ concurrent-pi-c-identity-conserved-at-vacuum-inert-limit =
 namedVacuumInertLimitNuanceProduct : ClassifierVacuumInertLimitStep
 namedVacuumInertLimitNuanceProduct =
   productConcurrentOp
-    (productConcurrentOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf)
+    (productConcurrentOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf)
     class22VacuumInertLimitLeaf
 
 named-vacuum-inert-limit-nuance-product-concurrent :
@@ -329,7 +329,7 @@ isVacuumInertLimitPreserving (xor-mutually-exclusive _ _) = false
 isVacuumInertLimitAdmissible : ClassifierVacuumInertLimitStep → Bool
 isVacuumInertLimitAdmissible step = isVacuumInertLimitPreserving step
 
-env-section-scaffold-leaf-admissible : isVacuumInertLimitAdmissible envSectionScaffoldLeaf ≡ true
+env-section-scaffold-leaf-admissible : isVacuumInertLimitAdmissible envSectionWitnessLeaf ≡ true
 env-section-scaffold-leaf-admissible = refl
 
 residual-po2-named-or-absent-leaf-admissible : isVacuumInertLimitAdmissible residualPo2NamedOrAbsentLeaf ≡ true
@@ -342,7 +342,7 @@ named-vacuum-inert-limit-nuance-admissible : isVacuumInertLimitAdmissible namedV
 named-vacuum-inert-limit-nuance-admissible = refl
 
 xor-mutually-exclusive-refuse :
-  isVacuumInertLimitAdmissible (xorMutuallyExclusiveOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf) ≡ false
+  isVacuumInertLimitAdmissible (xorMutuallyExclusiveOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf) ≡ false
 xor-mutually-exclusive-refuse = refl
 
 xor-mutually-exclusive-class22-vacuum-inert-limit-refuse :
@@ -487,7 +487,7 @@ total-claim-⊥-when-witness-absent ()
 xor-mutually-exclusive-refuse-verdict :
   evaluateVacuumInertLimitConservationClose
     vacuum-inert-limit-conservation-proved
-    (xorMutuallyExclusiveOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf)
+    (xorMutuallyExclusiveOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf)
     vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness false ≡
   verdict-xor-mutually-exclusive-refuse
 xor-mutually-exclusive-refuse-verdict = refl
@@ -496,7 +496,7 @@ xor-mutually-exclusive-refuse-not-ok :
   vacuumInertLimitConservationVerdictOk
     (evaluateVacuumInertLimitConservationClose
        vacuum-inert-limit-conservation-proved
-       (xorMutuallyExclusiveOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf)
+       (xorMutuallyExclusiveOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf)
        vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness false)
     ≡ false
 xor-mutually-exclusive-refuse-not-ok = refl
@@ -505,7 +505,7 @@ XorMutuallyExclusiveWhenConcurrent : Set
 XorMutuallyExclusiveWhenConcurrent =
   evaluateVacuumInertLimitConservationClose
     vacuum-inert-limit-conservation-proved
-    (xorMutuallyExclusiveOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf)
+    (xorMutuallyExclusiveOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf)
     vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness false ≡
   verdict-concurrent-product-ok
 
@@ -622,7 +622,7 @@ vacuum-inert-limit-second-law-conservation-framed = refl
 vacuum-inert-limit-not-xor-pin : vacuumInertLimitNotXor ≡ true
 vacuum-inert-limit-not-xor-pin = vacuum-inert-limit-not-xor
 
-env-section-scaffold-typed-pin : envSectionScaffoldTyped ≡ true
+env-section-scaffold-typed-pin : envSectionWitnessTyped ≡ true
 env-section-scaffold-typed-pin = refl
 
 not-parallel-vacuum-inert-limit-axiom-minted-pin : notParallelVacuumInertLimitAxiomMinted ≡ true
@@ -643,7 +643,7 @@ vacuumInertLimitConservationAxiom :
   × (vacuumInertLimitNotXor ≡ true)
   × (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-unwired namedVacuumInertLimitNuanceProduct vacuumInertLimitWitnessAbsent vacuumInertLimitNuanceWitness false ≡ verdict-unwired-ok)
   × (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-proved namedVacuumInertLimitNuanceProduct vacuumInertLimitWitnessAbsent vacuumInertLimitNuanceWitness false ≡ verdict-total-claim-refuse)
-  × (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-proved (xorMutuallyExclusiveOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf) vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness false ≡ verdict-xor-mutually-exclusive-refuse)
+  × (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-proved (xorMutuallyExclusiveOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf) vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness false ≡ verdict-xor-mutually-exclusive-refuse)
   × (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-proved namedVacuumInertLimitNuanceProduct vacuumInertLimitWitnessPresentZeroGap unwiredWitness false ≡ verdict-vacuum-inert-limit-admissible-ok)
   × (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-proved namedVacuumInertLimitNuanceProduct vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness false ≡ verdict-concurrent-product-ok)
   × (vacuumInertLimitConservationFiberOk fiber-quantum-knowing ≡ true)
@@ -651,7 +651,7 @@ vacuumInertLimitConservationAxiom :
   × (vacuumInertLimitConservationVerdictOk (evaluateVacuumInertLimitConservationClose vacuum-inert-limit-conservation-unwired namedVacuumInertLimitNuanceProduct vacuumInertLimitWitnessPresentZeroGap vacuumInertLimitNuanceWitness true) ≡ false)
   × (∀ a → isProductConcurrent (productConcurrentOp vacuumInertLimitIdentity a) ≡ true)
   × (∀ a → isProductConcurrent (productConcurrentOp a vacuumInertLimitIdentity) ≡ true)
-  × (isVacuumInertLimitAdmissible (xorMutuallyExclusiveOp envSectionScaffoldLeaf residualPo2NamedOrAbsentLeaf) ≡ false)
+  × (isVacuumInertLimitAdmissible (xorMutuallyExclusiveOp envSectionWitnessLeaf residualPo2NamedOrAbsentLeaf) ≡ false)
   × (patternClassCardinality ≡ 25)
   × (vacuumInertLimitClassIndex ≡ 22)
   × (VacuumInertLimitBundleWitness.present-count vacuumInertLimitNuanceWitness ≡ 3)

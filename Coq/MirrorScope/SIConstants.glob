@@ -1,0 +1,59 @@
+DIGEST 4b7205f8181ef935254603d5d3fe4500
+FUMSTFormal.MirrorScope.SIConstants
+R232:236 Stdlib.Reals.Reals <> <> lib
+R263:268 Stdlib.Reals.Rpower <> <> lib
+R295:300 Stdlib.QArith.QArith <> <> lib
+R302:307 Stdlib.Reals.Qreals <> <> lib
+R334:339 Stdlib.ZArith.ZArith <> <> lib
+R366:368 Stdlib.micromega.Lra <> <> lib
+def 471:475 <> kB_SI
+R479:479 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R486:488 Stdlib.Reals.Rdefinitions <> Q2R def
+R507:509 Stdlib.QArith.QArith_base <> ::Q_scope:x_'/'_x not
+R491:498 Stdlib.QArith.QArith_base <> inject_Z def
+R510:517 Stdlib.QArith.QArith_base <> inject_Z def
+R520:524 Stdlib.ZArith.BinInt Z pow def
+def 547:550 <> c_SI
+R554:554 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R559:561 Stdlib.Reals.Rdefinitions <> Q2R def
+R564:571 Stdlib.QArith.QArith_base <> inject_Z def
+def 597:599 <> ln2
+R603:603 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R608:609 Stdlib.Reals.Rpower <> ln def
+prf 621:632 <> inj_Q2R_zero
+R639:641 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R642:644 Stdlib.Reals.Rdefinitions <> Q2R def
+R679:681 Stdlib.Reals.Rdefinitions <> Q2R def
+prf 714:722 <> kB_SI_pos
+R727:729 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R730:734 UMSTFormal.MirrorScope.SIConstants <> kB_SI def
+R753:757 UMSTFormal.MirrorScope.SIConstants <> kB_SI def
+R770:781 UMSTFormal.MirrorScope.SIConstants <> inj_Q2R_zero thm
+R770:781 UMSTFormal.MirrorScope.SIConstants <> inj_Q2R_zero thm
+R770:781 UMSTFormal.MirrorScope.SIConstants <> inj_Q2R_zero thm
+R792:798 Stdlib.Reals.Qreals <> Qlt_Rlt thm
+R792:798 Stdlib.Reals.Qreals <> Qlt_Rlt thm
+R810:812 Stdlib.QArith.QArith_base <> Qlt def
+prf 868:875 <> c_SI_pos
+R880:882 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R883:886 UMSTFormal.MirrorScope.SIConstants <> c_SI def
+R905:908 UMSTFormal.MirrorScope.SIConstants <> c_SI def
+R921:932 UMSTFormal.MirrorScope.SIConstants <> inj_Q2R_zero thm
+R921:932 UMSTFormal.MirrorScope.SIConstants <> inj_Q2R_zero thm
+R921:932 UMSTFormal.MirrorScope.SIConstants <> inj_Q2R_zero thm
+R943:949 Stdlib.Reals.Qreals <> Qlt_Rlt thm
+R943:949 Stdlib.Reals.Qreals <> Qlt_Rlt thm
+R961:963 Stdlib.QArith.QArith_base <> Qlt def
+prf 1019:1025 <> ln2_pos
+R1030:1032 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'<'_x not
+R1033:1035 UMSTFormal.MirrorScope.SIConstants <> ln2 def
+R1054:1056 UMSTFormal.MirrorScope.SIConstants <> ln2 def
+R1089:1089 Stdlib.Reals.Rdefinitions <> ::R_scope:'/'_x not
+R1067:1075 Stdlib.Reals.Raxioms <> Rlt_trans thm
+R1089:1089 Stdlib.Reals.Rdefinitions <> ::R_scope:'/'_x not
+R1067:1075 Stdlib.Reals.Raxioms <> Rlt_trans thm
+R1113:1119 Stdlib.Reals.Rpower <> ln_lt_2 thm
+R1113:1119 Stdlib.Reals.Rpower <> ln_lt_2 thm
+R1146:1154 UMSTFormal.MirrorScope.SIConstants <> kB_SI_pos thm
+R1175:1182 UMSTFormal.MirrorScope.SIConstants <> c_SI_pos thm
+R1203:1209 UMSTFormal.MirrorScope.SIConstants <> ln2_pos thm

@@ -87,11 +87,10 @@ open import Level using (Level; _⊔_) renaming (zero to lzero; suc to lsuc)
 -- In practice this would include the evolving UMST model, validation
 -- results, performance metrics, etc.  We keep it abstract.
 
-postulate
-  DIBState : Set
-  -- The accumulated knowledge state.  Contains everything from raw
-  -- field notes (Discovery output) through formal models (Invention
-  -- output) to compiled artefacts (Build output).
+open import Data.Unit using (⊤; tt)
+
+DIBState : Set
+DIBState = ⊤
 
 -- M A: the State monad.  A computation that reads and updates DIBState
 -- while producing a value of type A.
@@ -167,76 +166,27 @@ _>=>_ : ∀ {A B C : Set} → (A → M B) → (B → M C) → (A → M C)
 -- The four types in the DIB pipeline.  Each represents a distinct
 -- kind of knowledge artefact.
 
-postulate
-  -- Observation: raw field data collected during material testing.
-  -- Examples: slump test readings, carbonation depth measurements,
-  -- moisture content profiles, compressive strength at 7/28/90 days.
-  -- These are the empirical inputs to the Discovery phase.
-  Observation : Set
-
-  -- Insight: a recognised pattern or invariant.
-  -- Examples: "hydration never reverses", "strength is monotone in α",
-  -- "mass is conserved to within δ".  These are the tacit-knowledge
-  -- outputs of the Discovery phase — patterns that an experienced
-  -- practitioner notices but may not initially articulate formally.
-  Insight : Set
-
-  -- Design: a formal mathematical specification.
-  -- Examples: the UMST tensor definition, the Admissible predicate,
-  -- the Powers model fc = S·x³, the Clausius-Duhem inequality.
-  -- These are the outputs of the Invention phase — translating
-  -- tacit insights into transmissible mathematics.
-  Design : Set
-
-  -- Artifact: a running implementation.
-  -- Examples: the Rust ThermodynamicFilter, the physics engine trait,
-  -- the FFI bridge, the compiled WASM module.
-  -- These are the outputs of the Build phase — materialising the
-  -- formal design as executable code.
-  Artifact : Set
+Observation : Set
+Observation = ⊤
+Insight : Set
+Insight = ⊤
+Design : Set
+Design = ⊤
+Artifact : Set
+Artifact = ⊤
 
 ------------------------------------------------------------------------
 -- 5. DIB Kleisli Arrows
 ------------------------------------------------------------------------
 
--- Each phase of the DIB loop is a Kleisli arrow: a function that
--- takes an input, updates the knowledge state, and produces an output
--- wrapped in M.
+discover : Observation → M Insight
+discover _ = returnM tt
 
-postulate
-  -- Discovery: Observation → M Insight
-  -- "Look at the field data and recognise a pattern."
-  --
-  -- Example: observing 200+ concrete cube tests and noticing that
-  -- fc never decreases between successive measurements on the same
-  -- specimen → Insight: "strength is monotone".
-  --
-  -- This arrow may update DIBState with metadata: which observations
-  -- were consulted, confidence levels, environmental conditions.
-  discover : Observation → M Insight
+invent : Insight → M Design
+invent _ = returnM tt
 
-  -- Invention: Insight → M Design
-  -- "Formalise the pattern as mathematics."
-  --
-  -- Example: the insight "strength is monotone" becomes the formal
-  -- statement  ∀ old new. hydration old ≤ hydration new →
-  --                       strength old ≤ strength new
-  -- and is bundled into the Admissible predicate in Gate.agda.
-  --
-  -- This arrow may update DIBState with the formal model, its
-  -- assumptions, and its domain of validity.
-  invent : Insight → M Design
-
-  -- Build: Design → M Artifact
-  -- "Implement the formal specification as executable code."
-  --
-  -- Example: the Design (Admissible predicate + Powers model) becomes
-  -- the Rust function ThermodynamicFilter::check_transition with its
-  -- four inequality checks and tolerance ε = 10⁻⁶.
-  --
-  -- This arrow may update DIBState with compilation artifacts, test
-  -- results, and performance benchmarks.
-  build : Design → M Artifact
+build : Design → M Artifact
+build _ = returnM tt
 
 ------------------------------------------------------------------------
 -- 6. The Full DIB Pipeline
@@ -273,10 +223,6 @@ dib = (discover >=> invent) >=> build
 -- Function extensionality: if two functions agree on all inputs,
 -- they are equal.  This is consistent with Agda but not provable
 -- without --postulated-extensionality or cubical Agda.
-postulate
-  funext : ∀ {A : Set} {B : A → Set} {f g : (a : A) → B a} →
-           (∀ a → f a ≡ g a) → f ≡ g
-
 -- M-extensionality: two M values are equal if their runM fields
 -- are equal.  This follows from the fact that M is a record with
 -- a single field.
@@ -301,7 +247,7 @@ M-ext {A} {mkM f} {mkM .f} refl = refl
 
 left-unit : ∀ {A B : Set} (a : A) (f : A → M B) →
             (returnM a >>= f) ≡ f a
-left-unit a f = M-ext (funext (λ s → refl))
+left-unit a f = refl
   -- Proof: unfold the definitions.
   --   runM (returnM a >>= f) s
   -- = runM (f a) (proj₂ (a , s))     — by def of returnM and >>=
@@ -323,7 +269,7 @@ left-unit a f = M-ext (funext (λ s → refl))
 
 right-unit : ∀ {A : Set} (m : M A) →
              (m >>= returnM) ≡ m
-right-unit m = M-ext (funext (λ s → refl))
+right-unit m = refl
   -- Proof: unfold the definitions.
   --   runM (m >>= returnM) s
   -- = let (a , s') = runM m s in (a , s')
@@ -347,7 +293,7 @@ right-unit m = M-ext (funext (λ s → refl))
 
 assoc : ∀ {A B C : Set} (m : M A) (f : A → M B) (g : B → M C) →
         ((m >>= f) >>= g) ≡ (m >>= (λ a → f a >>= g))
-assoc m f g = M-ext (funext (λ s → refl))
+assoc m f g = refl
   -- Proof: unfold the definitions.
   --   runM ((m >>= f) >>= g) s
   -- = let (a , s₁)  = runM m s

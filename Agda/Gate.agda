@@ -30,6 +30,8 @@
 --   gate                ↔  ThermodynamicFilter::check_transition
 ------------------------------------------------------------------------
 
+{-# OPTIONS --without-K --safe #-}
+
 module Gate where
 
 open import Data.Nat as Nat using (ℕ)
@@ -153,106 +155,7 @@ gate old new with (density new - density old) ℚ.≤? δ-mass
 ... | _       | _       | _        | _       | no ¬str =
       no (λ adm → ¬str (strength-monotone adm))
 
-------------------------------------------------------------------------
--- 5. Theorem 1: Forward Hydration is Admissible
-------------------------------------------------------------------------
-
--- Theorem 1 (Categorical Safety):
--- If hydration advances (α_new ≥ α_old), density is preserved, and
--- the Helmholtz free energy model ψ(α) = −Q_hyd · α holds, then the
--- transition is admissible.
---
--- This is the core safety theorem.  It says that the physical process
--- of cement hydration — as modelled by the Powers/Clausius-Duhem
--- framework — can never be rejected by the gate.  The gate only
--- rejects unphysical transitions (reverse hydration, spontaneous
--- strength loss, mass violations).
---
--- Proof sketch:
---   Given α_new ≥ α_old and ψ = −Q · α:
---     ψ_new = −Q · α_new ≤ −Q · α_old = ψ_old   (since Q > 0, α↑ ⟹ ψ↓)
---     D_int = −ρ · ψ̇ = ρ · Q · α̇ ≥ 0            (ρ, Q, α̇ all ≥ 0)
---     fc = S · x³ where x = f(α, w/c) is monotone in α
---   So all four invariants hold.
-
--- These two postulates are PHYSICAL MODEL AXIOMS, not mathematical gaps.
--- They represent well-established thermodynamic laws applied to the UMST domain:
---
---   ψ-antitone  ←→  Helmholtz model: ψ(α) = -Q_hyd · α is antitone in α.
---                   Proved arithmetically in Coq/Gate.v (helmholtz_antitone, via nia)
---                   and for concrete states in Agda/Helmholtz.agda
---                   (ψ-antitone-helmholtz, conditioned on HelmholtzState hypothesis).
---                   The unconditional postulate here covers any free-energy model
---                   satisfying the Clausius-Duhem inequality — it is an interface
---                   specification, not an unproved conjecture.
---
---   fc-monotone ←→  Powers gel-space ratio model: fc = S · x³ where
---                   x = 0.68·α / (0.32·α + w/c) is monotone increasing in α.
---                   This is empirically validated over decades of cement science
---                   and corroborated by field observation.  A formal proof requires
---                   the full Powers formula, reserved for Helmholtz.agda extensions.
---
--- Both axioms are consistent with all known physical models for Portland cement,
--- lime, and pozzolanic binders.  They are the formal expression of the field
--- observations that motivated the UMST project.
-
--- P0-13b: bundle physical laws (mirror of MirrorScope.GatePhysicalModel.PhysicalLaws).
-record GatePhysicalLaws : Set where
-  field
-    ψ-antitone : ∀ (s₁ s₂ : ThermodynamicState) →
-      hydration s₁ ≤ hydration s₂ →
-      free-energy s₂ ≤ free-energy s₁
-    fc-monotone : ∀ (s₁ s₂ : ThermodynamicState) →
-      hydration s₁ ≤ hydration s₂ →
-      strength s₁ ≤ strength s₂
-
-postulate gate-physical-laws : GatePhysicalLaws
-
-open GatePhysicalLaws gate-physical-laws public
-
-forward-hydration-admissible :
-  ∀ (old new : ThermodynamicState) →
-  hydration old ≤ hydration new →
-  (density new - density old ≤ δ-mass) →
-  (density old - density new ≤ δ-mass) →
-  Admissible old new
-forward-hydration-admissible old new α-adv mc₁ mc₂ =
-  mkAdmissible
-    (mc₁ , mc₂)
-    (ψ-antitone old new α-adv)
-    α-adv
-    (fc-monotone old new α-adv)
-
-------------------------------------------------------------------------
--- 6. Corollary: The Gate Accepts Forward Hydration
-------------------------------------------------------------------------
-
--- A direct consequence: if the hypotheses of Theorem 1 hold, then
--- `gate old new` returns `yes _`.
-
-gate-accepts-forward :
-  ∀ (old new : ThermodynamicState) →
-  hydration old ≤ hydration new →
-  (density new - density old ≤ δ-mass) →
-  (density old - density new ≤ δ-mass) →
-  ∃[ prf ] (gate old new ≡ yes prf)
--- Pattern-match on the five ≤? decisions that `gate` itself scrutinises.
--- After the match, `gate old new` reduces definitionally in each branch,
--- allowing direct witnesses (refl) or contradictions (⊥-elim).
-gate-accepts-forward old new α-adv mc₁ mc₂
-  with (density new - density old) ℚ.≤? δ-mass
-     | (density old - density new) ℚ.≤? δ-mass
-     | free-energy new ℚ.≤? free-energy old
-     | hydration old ℚ.≤? hydration new
-     | strength old ℚ.≤? strength new
--- All five decisions are yes: gate reduces to yes(mkAdmissible …), refl closes.
-... | yes _  | yes _  | yes _  | yes _  | yes _  = _ , refl
--- No branches: each contradicts the corresponding supplied hypothesis.
-... | no ¬p  | _      | _      | _      | _      = ⊥-elim (¬p mc₁)
-... | _      | no ¬p  | _      | _      | _      = ⊥-elim (¬p mc₂)
-... | _      | _      | no ¬p  | _      | _      = ⊥-elim (¬p (ψ-antitone old new α-adv))
-... | _      | _      | _      | no ¬p  | _      = ⊥-elim (¬p α-adv)
-... | _      | _      | _      | _      | no ¬p  = ⊥-elim (¬p (fc-monotone old new α-adv))
+-- §5–6 forward-hydration theorems: MirrorScope.GatePhysicalModel (module parameter).
 
 ------------------------------------------------------------------------
 -- 7. CSG Decomposition (SDF / FRep Interpretation)

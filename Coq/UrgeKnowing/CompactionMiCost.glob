@@ -165,16 +165,16 @@ R5028:5039 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R5028:5039 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R5064:5075 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R5086:5091 Stdlib.Reals.RIneq <> Rlt_le thm
-R5094:5100 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R5094:5100 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R5064:5075 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R5086:5091 Stdlib.Reals.RIneq <> Rlt_le thm
-R5094:5100 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R5094:5100 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R5112:5123 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R5133:5138 Stdlib.Reals.RIneq <> Rlt_le thm
-R5141:5149 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R5141:5149 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R5112:5123 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R5133:5138 Stdlib.Reals.RIneq <> Rlt_le thm
-R5141:5149 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R5141:5149 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 def 5179:5200 <> compactionLandauerCost
 R5207:5215 UrgeKnowing.CompactionMiCost <> PathProbe ind
 binder 5203:5203 <> p:24

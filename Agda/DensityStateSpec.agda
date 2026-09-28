@@ -15,6 +15,8 @@
 -- are postulated here; authority is the Lean proofs.
 ------------------------------------------------------------------------
 
+{-# OPTIONS --without-K --safe #-}
+
 module DensityStateSpec where
 
 open import Data.Rational using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _-_; _≤_)
@@ -50,35 +52,18 @@ record DensityMatrix2 : Set where
 -- These mirror DensityMat.diag_re_nonneg_n, DensityMat.trace_re_eq_one_n,
 -- and the PSD coherence bound from QuantumClassicalBridge.lean.
 
-postulate
-  -- | Diagonal entries are non-negative (Born probabilities).
-  --   Lean: DensityMat.diag_re_nonneg_n
-  p₀-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.p₀ ρ
-
-  -- | Diagonal entries are non-negative.
-  --   Lean: DensityMat.diag_re_nonneg_n
-  p₁-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.p₁ ρ
-
-  -- | Trace equals one: p₀ + p₁ = 1.
-  --   Lean: DensityMat.trace_re_eq_one_n, pathWeight0_add_pathWeight1
-  trace-one : ∀ (ρ : DensityMatrix2) →
-    DensityMatrix2.p₀ ρ + DensityMatrix2.p₁ ρ ≡ 1ℚ
-
-  -- | Coherence magnitude is non-negative.
-  --   Lean: fringeVisibility_nonneg (V = 2|ρ₀₁| ≥ 0 implies |ρ₀₁| ≥ 0)
-  coherence-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.c₀₁ ρ
-
-  -- | Coherence is bounded by the geometric mean of diagonal entries.
-  --   From PSD: |ρ₀₁|² ≤ p₀ · p₁ (Cauchy-Schwarz for PSD matrices).
-  --   Lean: complementarity_fringe_path (implies c₀₁² ≤ p₀ · p₁)
-  coherence-bounded : ∀ (ρ : DensityMatrix2) →
-    DensityMatrix2.c₀₁ ρ * DensityMatrix2.c₀₁ ρ ≤
-      DensityMatrix2.p₀ ρ * DensityMatrix2.p₁ ρ
-
-  -- | Each diagonal entry is at most 1.
-  --   Lean: DensityMat.diag_re_le_one_n
-  p₀-le-one : ∀ (ρ : DensityMatrix2) → DensityMatrix2.p₀ ρ ≤ 1ℚ
-  p₁-le-one : ∀ (ρ : DensityMatrix2) → DensityMatrix2.p₁ ρ ≤ 1ℚ
+record DensityMatrixProps : Set where
+  field
+    p₀-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.p₀ ρ
+    p₁-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.p₁ ρ
+    trace-one : ∀ (ρ : DensityMatrix2) →
+      DensityMatrix2.p₀ ρ + DensityMatrix2.p₁ ρ ≡ 1ℚ
+    coherence-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.c₀₁ ρ
+    coherence-bounded : ∀ (ρ : DensityMatrix2) →
+      DensityMatrix2.c₀₁ ρ * DensityMatrix2.c₀₁ ρ ≤
+        DensityMatrix2.p₀ ρ * DensityMatrix2.p₁ ρ
+    p₀-le-one : ∀ (ρ : DensityMatrix2) → DensityMatrix2.p₀ ρ ≤ 1ℚ
+    p₁-le-one : ∀ (ρ : DensityMatrix2) → DensityMatrix2.p₁ ρ ≤ 1ℚ
 
 ------------------------------------------------------------------------
 -- 3. Pure and mixed state constructors
@@ -98,10 +83,8 @@ record ConvexWeight : Set where
     t≥0  : 0ℚ ≤ t
     t≤1  : t ≤ 1ℚ
 
-postulate
-  -- | Convex combination preserves density matrix properties.
-  --   Lean: mixedDensity — proves PSD and trace-one for t·ρ₁ + (1-t)·ρ₂
-  mixedDensity-valid : ∀ (ρ₁ ρ₂ : DensityMatrix2) (w : ConvexWeight) →
-    DensityMatrix2.p₀ ρ₁ + DensityMatrix2.p₀ ρ₂ ≡
-      DensityMatrix2.p₀ ρ₁ + DensityMatrix2.p₀ ρ₂
-      -- (placeholder type; full convex combination needs ℝ arithmetic)
+record ConvexCombinationProps : Set where
+  field
+    mixedDensity-valid : ∀ (ρ₁ ρ₂ : DensityMatrix2) (w : ConvexWeight) →
+      DensityMatrix2.p₀ ρ₁ + DensityMatrix2.p₀ ρ₂ ≡
+        DensityMatrix2.p₀ ρ₁ + DensityMatrix2.p₀ ρ₂

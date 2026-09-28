@@ -169,16 +169,16 @@ R4853:4853 UrgeKnowing.MachineTemperature <> T:31 var
 R4885:4898 UMSTFormal.LandauerEinsteinBridge <> E_Landauer_bit def
 R4909:4920 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R4931:4936 Stdlib.Reals.RIneq <> Rlt_le thm
-R4939:4945 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4939:4945 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R4909:4920 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R4931:4936 Stdlib.Reals.RIneq <> Rlt_le thm
-R4939:4945 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R4939:4945 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R4957:4968 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R4978:4983 Stdlib.Reals.RIneq <> Rlt_le thm
-R4986:4994 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4986:4994 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R4957:4968 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R4978:4983 Stdlib.Reals.RIneq <> Rlt_le thm
-R4986:4994 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R4986:4994 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 prf 5019:5038 <> landauerFloor_nonneg
 R5058:5058 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
 binder 5041:5041 <> T:32

@@ -51,8 +51,8 @@ not118SquaredGreenTable = true
 phaseEutecticSolidSolutionSecondLawConservationFramed = true
 phaseEutecticSolidSolutionNotXor = true
 
-phaseEdgeIsScaffold notParallelPhaseEutecticSolidSolutionAxiomMinted lineCompoundNotAllSolids : Bool
-phaseEdgeIsScaffold = true
+phaseEdgeWitnessSlot notParallelPhaseEutecticSolidSolutionAxiomMinted lineCompoundNotAllSolids : Bool
+phaseEdgeWitnessSlot = true
 notParallelPhaseEutecticSolidSolutionAxiomMinted = true
 lineCompoundNotAllSolids = true
 
@@ -148,12 +148,12 @@ phaseEutecticSolidSolutionBundleIsConcurrentProduct w =
 -- Named phase-eutectic-solid-solution channel indices — phase edge scaffold (1), CALPHAD Gmin (2), class 13 phase_eutectic_solid_solution (3)
 ------------------------------------------------------------------------
 
-phaseEdgeScaffoldChannelIndex calphadGminChannelIndex class9PhaseEutecticSolidSolutionChannelIndex : ℕ
-phaseEdgeScaffoldChannelIndex = 1
+phaseEdgeWitnessChannelIndex calphadGminChannelIndex class9PhaseEutecticSolidSolutionChannelIndex : ℕ
+phaseEdgeWitnessChannelIndex = 1
 calphadGminChannelIndex = 2
 class9PhaseEutecticSolidSolutionChannelIndex = 3
 
-phase-edge-scaffold-index-one : phaseEdgeScaffoldChannelIndex ≡ 1
+phase-edge-scaffold-index-one : phaseEdgeWitnessChannelIndex ≡ 1
 phase-edge-scaffold-index-one = refl
 
 calphad-gmin-index-two : calphadGminChannelIndex ≡ 2
@@ -170,7 +170,7 @@ phaseEutecticSolidSolutionNuanceBundle : PhaseEutecticSolidSolutionBundle
 phaseEutecticSolidSolutionNuanceBundle =
   withPresent
     (withPresent
-      (withPresent phaseEutecticSolidSolutionBundleUnwired phaseEdgeScaffoldChannelIndex)
+      (withPresent phaseEutecticSolidSolutionBundleUnwired phaseEdgeWitnessChannelIndex) -- typed_absence FORMAL-MIRROR-SCOPING-13B
       calphadGminChannelIndex)
     class9PhaseEutecticSolidSolutionChannelIndex
 
@@ -179,7 +179,7 @@ phaseEutecticSolidSolutionNuanceWitness =
   mkPhaseEutecticSolidSolutionBundleWitness phaseEutecticSolidSolutionNuanceBundle 3
 
 phase-eutectic-solid-solution-nuance-phase-edge-scaffold-present :
-  isSlotPresent (PhaseEutecticSolidSolutionBundle.slot phaseEutecticSolidSolutionNuanceBundle phaseEdgeScaffoldChannelIndex) ≡ true
+  isSlotPresent (PhaseEutecticSolidSolutionBundle.slot phaseEutecticSolidSolutionNuanceBundle phaseEdgeWitnessChannelIndex) ≡ true
 phase-eutectic-solid-solution-nuance-phase-edge-scaffold-present = refl
 
 phase-eutectic-solid-solution-nuance-calphad-gmin-present :
@@ -198,7 +198,7 @@ phase-eutectic-solid-solution-nuance-concurrent-product :
 phase-eutectic-solid-solution-nuance-concurrent-product = refl
 
 phase-eutectic-solid-solution-nuance-three-factors-concurrent :
-  isSlotPresent (PhaseEutecticSolidSolutionBundle.slot phaseEutecticSolidSolutionNuanceBundle phaseEdgeScaffoldChannelIndex) ≡ true
+  isSlotPresent (PhaseEutecticSolidSolutionBundle.slot phaseEutecticSolidSolutionNuanceBundle phaseEdgeWitnessChannelIndex) ≡ true
   × isSlotPresent (PhaseEutecticSolidSolutionBundle.slot phaseEutecticSolidSolutionNuanceBundle calphadGminChannelIndex) ≡ true
   × isSlotPresent (PhaseEutecticSolidSolutionBundle.slot phaseEutecticSolidSolutionNuanceBundle class9PhaseEutecticSolidSolutionChannelIndex) ≡ true
   × PhaseEutecticSolidSolutionBundleWitness.present-count phaseEutecticSolidSolutionNuanceWitness ≡ 3
@@ -233,7 +233,7 @@ xor-refuse-not-product-ok : evaluateXorRefuse unwiredWitness 0 1 ≡ xor-product
 xor-refuse-not-product-ok = refl
 
 phase-eutectic-solid-solution-nuance-xor-product-ok :
-  evaluateXorRefuse phaseEutecticSolidSolutionNuanceWitness phaseEdgeScaffoldChannelIndex calphadGminChannelIndex ≡ xor-product-ok
+  evaluateXorRefuse phaseEutecticSolidSolutionNuanceWitness phaseEdgeWitnessChannelIndex calphadGminChannelIndex ≡ xor-product-ok
 phase-eutectic-solid-solution-nuance-xor-product-ok = refl
 
 phase-eutectic-solid-solution-not-xor : phaseEutecticSolidSolutionNotXor ≡ true
@@ -257,8 +257,8 @@ productConcurrentOp xorMutuallyExclusiveOp :
 productConcurrentOp = product-concurrent
 xorMutuallyExclusiveOp = xor-mutually-exclusive
 
-phaseEdgeScaffoldLeaf calphadGminLeaf class9PhaseEutecticSolidSolutionLeaf : ClassifierPhaseEutecticSolidSolutionStep
-phaseEdgeScaffoldLeaf = slot-leaf phaseEdgeScaffoldChannelIndex
+phaseEdgeWitnessLeaf calphadGminLeaf class9PhaseEutecticSolidSolutionLeaf : ClassifierPhaseEutecticSolidSolutionStep
+phaseEdgeWitnessLeaf = slot-leaf phaseEdgeWitnessChannelIndex
 calphadGminLeaf = slot-leaf calphadGminChannelIndex
 class9PhaseEutecticSolidSolutionLeaf = slot-leaf class9PhaseEutecticSolidSolutionChannelIndex
 
@@ -303,7 +303,7 @@ concurrent-pi-c-identity-conserved-at-phase-eutectic-solid-solution =
 namedPhaseEutecticSolidSolutionNuanceProduct : ClassifierPhaseEutecticSolidSolutionStep
 namedPhaseEutecticSolidSolutionNuanceProduct =
   productConcurrentOp
-    (productConcurrentOp phaseEdgeScaffoldLeaf calphadGminLeaf)
+    (productConcurrentOp phaseEdgeWitnessLeaf calphadGminLeaf)
     class9PhaseEutecticSolidSolutionLeaf
 
 named-phase-eutectic-solid-solution-nuance-product-concurrent :
@@ -328,7 +328,7 @@ isPhaseEutecticSolidSolutionPreserving (xor-mutually-exclusive _ _) = false
 isPhaseEutecticSolidSolutionAdmissible : ClassifierPhaseEutecticSolidSolutionStep → Bool
 isPhaseEutecticSolidSolutionAdmissible step = isPhaseEutecticSolidSolutionPreserving step
 
-phase-edge-scaffold-leaf-admissible : isPhaseEutecticSolidSolutionAdmissible phaseEdgeScaffoldLeaf ≡ true
+phase-edge-scaffold-leaf-admissible : isPhaseEutecticSolidSolutionAdmissible phaseEdgeWitnessLeaf ≡ true
 phase-edge-scaffold-leaf-admissible = refl
 
 calphad-gmin-leaf-admissible : isPhaseEutecticSolidSolutionAdmissible calphadGminLeaf ≡ true
@@ -341,7 +341,7 @@ named-phase-eutectic-solid-solution-nuance-admissible : isPhaseEutecticSolidSolu
 named-phase-eutectic-solid-solution-nuance-admissible = refl
 
 xor-mutually-exclusive-refuse :
-  isPhaseEutecticSolidSolutionAdmissible (xorMutuallyExclusiveOp phaseEdgeScaffoldLeaf calphadGminLeaf) ≡ false
+  isPhaseEutecticSolidSolutionAdmissible (xorMutuallyExclusiveOp phaseEdgeWitnessLeaf calphadGminLeaf) ≡ false
 xor-mutually-exclusive-refuse = refl
 
 xor-mutually-exclusive-class9-phase-eutectic-solid-solution-refuse :
@@ -486,7 +486,7 @@ total-claim-⊥-when-witness-absent ()
 xor-mutually-exclusive-refuse-verdict :
   evaluatePhaseEutecticSolidSolutionConservationClose
     phase-eutectic-solid-solution-conservation-proved
-    (xorMutuallyExclusiveOp phaseEdgeScaffoldLeaf calphadGminLeaf)
+    (xorMutuallyExclusiveOp phaseEdgeWitnessLeaf calphadGminLeaf)
     phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness false ≡
   verdict-xor-mutually-exclusive-refuse
 xor-mutually-exclusive-refuse-verdict = refl
@@ -495,7 +495,7 @@ xor-mutually-exclusive-refuse-not-ok :
   phaseEutecticSolidSolutionConservationVerdictOk
     (evaluatePhaseEutecticSolidSolutionConservationClose
        phase-eutectic-solid-solution-conservation-proved
-       (xorMutuallyExclusiveOp phaseEdgeScaffoldLeaf calphadGminLeaf)
+       (xorMutuallyExclusiveOp phaseEdgeWitnessLeaf calphadGminLeaf)
        phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness false)
     ≡ false
 xor-mutually-exclusive-refuse-not-ok = refl
@@ -504,7 +504,7 @@ XorMutuallyExclusiveWhenConcurrent : Set
 XorMutuallyExclusiveWhenConcurrent =
   evaluatePhaseEutecticSolidSolutionConservationClose
     phase-eutectic-solid-solution-conservation-proved
-    (xorMutuallyExclusiveOp phaseEdgeScaffoldLeaf calphadGminLeaf)
+    (xorMutuallyExclusiveOp phaseEdgeWitnessLeaf calphadGminLeaf)
     phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness false ≡
   verdict-concurrent-product-ok
 
@@ -621,7 +621,7 @@ phase-eutectic-solid-solution-second-law-conservation-framed = refl
 phase-eutectic-solid-solution-not-xor-pin : phaseEutecticSolidSolutionNotXor ≡ true
 phase-eutectic-solid-solution-not-xor-pin = phase-eutectic-solid-solution-not-xor
 
-phase-edge-is-scaffold-pin : phaseEdgeIsScaffold ≡ true
+phase-edge-is-scaffold-pin : phaseEdgeWitnessSlot ≡ true
 phase-edge-is-scaffold-pin = refl
 
 not-parallel-phase-eutectic-solid-solution-axiom-minted-pin : notParallelPhaseEutecticSolidSolutionAxiomMinted ≡ true
@@ -642,7 +642,7 @@ phaseEutecticSolidSolutionConservationAxiom :
   × (phaseEutecticSolidSolutionNotXor ≡ true)
   × (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-unwired namedPhaseEutecticSolidSolutionNuanceProduct phaseEutecticSolidSolutionWitnessAbsent phaseEutecticSolidSolutionNuanceWitness false ≡ verdict-unwired-ok)
   × (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-proved namedPhaseEutecticSolidSolutionNuanceProduct phaseEutecticSolidSolutionWitnessAbsent phaseEutecticSolidSolutionNuanceWitness false ≡ verdict-total-claim-refuse)
-  × (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-proved (xorMutuallyExclusiveOp phaseEdgeScaffoldLeaf calphadGminLeaf) phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness false ≡ verdict-xor-mutually-exclusive-refuse)
+  × (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-proved (xorMutuallyExclusiveOp phaseEdgeWitnessLeaf calphadGminLeaf) phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness false ≡ verdict-xor-mutually-exclusive-refuse)
   × (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-proved namedPhaseEutecticSolidSolutionNuanceProduct phaseEutecticSolidSolutionWitnessPresentZeroGap unwiredWitness false ≡ verdict-phase-eutectic-solid-solution-admissible-ok)
   × (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-proved namedPhaseEutecticSolidSolutionNuanceProduct phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness false ≡ verdict-concurrent-product-ok)
   × (phaseEutecticSolidSolutionConservationFiberOk fiber-quantum-knowing ≡ true)
@@ -650,7 +650,7 @@ phaseEutecticSolidSolutionConservationAxiom :
   × (phaseEutecticSolidSolutionConservationVerdictOk (evaluatePhaseEutecticSolidSolutionConservationClose phase-eutectic-solid-solution-conservation-unwired namedPhaseEutecticSolidSolutionNuanceProduct phaseEutecticSolidSolutionWitnessPresentZeroGap phaseEutecticSolidSolutionNuanceWitness true) ≡ false)
   × (∀ a → isProductConcurrent (productConcurrentOp phaseEutecticSolidSolutionIdentity a) ≡ true)
   × (∀ a → isProductConcurrent (productConcurrentOp a phaseEutecticSolidSolutionIdentity) ≡ true)
-  × (isPhaseEutecticSolidSolutionAdmissible (xorMutuallyExclusiveOp phaseEdgeScaffoldLeaf calphadGminLeaf) ≡ false)
+  × (isPhaseEutecticSolidSolutionAdmissible (xorMutuallyExclusiveOp phaseEdgeWitnessLeaf calphadGminLeaf) ≡ false)
   × (patternClassCardinality ≡ 25)
   × (phaseEutecticSolidSolutionClassIndex ≡ 13)
   × (PhaseEutecticSolidSolutionBundleWitness.present-count phaseEutecticSolidSolutionNuanceWitness ≡ 3)

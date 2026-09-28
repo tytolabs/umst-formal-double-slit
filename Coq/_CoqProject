@@ -6,6 +6,8 @@ VonNeumannEntropySpec.v
 MeasurementCost.v
 InfoTheory.v
 Gate.v
+MirrorScope/GatePhysicalModel.v
+MirrorScope/VonNeumannEntropyModel.v
 MirrorScope/Assumptions.v
 Extraction.v
 Constitutional.v

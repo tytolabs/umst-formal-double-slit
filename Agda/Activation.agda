@@ -440,7 +440,8 @@ activation-decidable M e with activation M e
 -- We express this as a postulate because the full proof requires
 -- formalising each engine's output as a ThermodynamicState transformer.
 
-postulate
+record EngineDynamics : Set where
+  field
   -- Each engine, when active for material M, produces a state
   -- transition that is well-formed (all four fields are defined).
   -- The gate then checks admissibility.

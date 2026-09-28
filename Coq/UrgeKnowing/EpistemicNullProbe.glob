@@ -49,7 +49,7 @@ R2303:2305 Stdlib.Reals.Rdefinitions <> ::R_scope:x_'/'_x not
 R2286:2296 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
 R2298:2298 UrgeKnowing.EpistemicNullProbe <> p:8 var
 R2300:2302 UrgeKnowing.EpistemicNullProbe <> rho:9 var
-R2306:2308 UMSTFormal.LandauerEinsteinBridge <> ln2 defax
+R2306:2308 UMSTFormal.LandauerEinsteinBridge <> ln2 def
 def 2323:2343 <> epistemicLandauerCost
 R2350:2358 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
 binder 2346:2346 <> p:10
@@ -81,8 +81,8 @@ R2906:2920 UrgeKnowing.EpistemicNullProbe <> epistemicMIBits def
 R2923:2933 UrgeKnowing.EpistemicNullProbe <> EpistemicMI def
 R2962:2971 Stdlib.Reals.RIneq <> Rgt_not_eq thm
 R2962:2971 Stdlib.Reals.RIneq <> Rgt_not_eq thm
-R2982:2988 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
-R2982:2988 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R2982:2988 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
+R2982:2988 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 prf 3003:3028 <> epistemicLandauerCost_null
 R3037:3050 UMSTFormal.DensityStateSpec <> DensityMatrix2 rec
 binder 3031:3033 <> rho:15
@@ -119,16 +119,16 @@ R3424:3435 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3424:3435 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3460:3471 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3482:3487 Stdlib.Reals.RIneq <> Rlt_le thm
-R3490:3496 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3490:3496 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3460:3471 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3482:3487 Stdlib.Reals.RIneq <> Rlt_le thm
-R3490:3496 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3490:3496 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3508:3519 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3529:3534 Stdlib.Reals.RIneq <> Rlt_le thm
-R3537:3545 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3537:3545 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 R3508:3519 Stdlib.Reals.RIneq <> Rmult_le_pos thm
 R3529:3534 Stdlib.Reals.RIneq <> Rlt_le thm
-R3537:3545 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos prfax
+R3537:3545 UMSTFormal.LandauerEinsteinBridge <> kB_SI_pos thm
 prf 3570:3587 <> epistemicMI_nonneg
 R3594:3602 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
 binder 3590:3590 <> p:19
@@ -156,10 +156,10 @@ R3908:3925 UrgeKnowing.EpistemicNullProbe <> epistemicMI_nonneg thm
 R3908:3925 UrgeKnowing.EpistemicNullProbe <> epistemicMI_nonneg thm
 R3938:3943 Stdlib.Reals.RIneq <> Rlt_le thm
 R3946:3961 Stdlib.Reals.RIneq <> Rinv_0_lt_compat thm
-R3964:3970 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3964:3970 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 R3938:3943 Stdlib.Reals.RIneq <> Rlt_le thm
 R3946:3961 Stdlib.Reals.RIneq <> Rinv_0_lt_compat thm
-R3964:3970 UMSTFormal.LandauerEinsteinBridge <> ln2_pos prfax
+R3964:3970 UMSTFormal.LandauerEinsteinBridge <> ln2_pos thm
 prf 3985:4012 <> epistemicLandauerCost_nonneg
 R4019:4027 UrgeKnowing.EpistemicNullProbe <> PathProbe ind
 binder 4015:4015 <> p:23

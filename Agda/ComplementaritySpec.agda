@@ -24,6 +24,8 @@
 -- Lean proof `complementarity_fringe_path` in QuantumClassicalBridge.lean.
 ------------------------------------------------------------------------
 
+{-# OPTIONS --without-K --safe #-}
+
 module ComplementaritySpec where
 
 open import DensityStateSpec
@@ -75,7 +77,8 @@ record Complementary : Set where
 -- 3. Englert complementarity (postulated; authority: Lean proofs)
 ------------------------------------------------------------------------
 
-postulate
+record ComplementarityProps : Set where
+  field
   -- | The Englert inequality: V² + I² ≤ 1 for any qubit density matrix.
   --   Lean: complementarity_fringe_path (ρ : DensityMatrix hnQubit) :
   --         fringeVisibility ρ ^ 2 + whichPathDistinguishability ρ ^ 2 ≤ 1

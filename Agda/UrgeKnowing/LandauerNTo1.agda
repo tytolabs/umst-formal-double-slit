@@ -15,7 +15,11 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.LandauerNTo1 where
+module UrgeKnowing.LandauerNTo1
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
+
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
 
 open import Data.Bool using (Bool; false; true)
 open import Data.Empty using (⊥)
@@ -228,30 +232,9 @@ landauer-compression-cost-admissible-two-bits :
   landauerCompressionCost fixtureAdmissibleTwoBitCollapse ≡ suc (suc zero)
 landauer-compression-cost-admissible-two-bits = refl
 
-landauerFloorScaffoldNamed : String
-landauerFloorScaffoldNamed =
+landauerFloorNamed : String
+landauerFloorNamed =
   "landauerFloorJoules: kT ln2 per bit floor scaffold — not measured laptop heat"
-
-------------------------------------------------------------------------
--- Sole Landauer postulate — mirrors LandauerLaw.physicalSecondLaw
-------------------------------------------------------------------------
-
-record HeatBath : Set where
-  field
-    temperature : ℕ
-
-record ErasureProcess : Set where
-  field
-    bath : HeatBath
-    dissipatedEntropy : ℕ
-
-PhysicalSecondLaw : ErasureProcess → ℕ → Set
-PhysicalSecondLaw proc entropyDecrease =
-  entropyDecrease ≤ ErasureProcess.dissipatedEntropy proc
-
-postulate
-  physicalSecondLaw : ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →
-    PhysicalSecondLaw proc entropyDecrease
 
 landauerBound :
   ∀ (proc : ErasureProcess) (entropyDecrease : ℕ) →
