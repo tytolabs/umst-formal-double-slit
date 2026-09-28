@@ -12,8 +12,9 @@ package «umst-formal-double-slit» where
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.14.0"
 
-require «umst-formal» from git
-  "https://github.com/tytolabs/umst-formal" @ "690fbe6" / "Lean"
+require «umst-formal» from "../../umst-formal/Lean"
+-- Manifest rev pins P0-1 (`1bdd9ce`); remote git URL when not in monorepo:
+--   "https://github.com/tytolabs/umst-formal" @ "1bdd9ce" / "Lean"
 
 /-!
   Self-contained quantum / measurement extension. Build:
@@ -34,8 +35,8 @@ require «umst-formal» from git
   **`tools/lean_export/export_catalog.py`** — a different JSON shape for tooling that needs
   coarse import edges and per-file content hashes.
 -/
--- LandauerLaw is supplied by the umst-formal dependency: the sole physical axiom
--- physicalSecondLaw is declared once, there, and imported here rather than vendored.
+-- LandauerLaw / LandauerExtension / LandauerEinsteinBridge come from the umst-formal
+-- dependency @1bdd9ce (P0-1): wire `physicalSecondLaw` = `SecondLaw` predicate, zero local copies.
 lean_lib «UMST.DoubleSlit» where
   roots := #[`DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
     `InfoEntropy, `KroneckerEigen, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
@@ -48,9 +49,8 @@ lean_lib «UMST.DoubleSlit» where
     `PMICEntropyInterior, `Complementarity, `PMICVisibility,
     `VonNeumannEntropy, `QuantumMutualInfo, `KleinInequality, `DataProcessingInequality,
     `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ErasureChannel, `MeasurementCost,
-    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `FormalFoundations, `SimLeanBridge,
-    -- integrated from upstream framework (ℚ thermo gate + activation + Landauer T_LandauerLaw stack)
-    `LandauerExtension, `LandauerEinsteinBridge,
+    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `DoubleSlitFormalWitness, `SimLeanBridge,
+    -- LandauerExtension / LandauerEinsteinBridge / LandauerLaw: imported from umst-formal (not local roots)
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
     `PhysicsConstrainedAI, `InformationCostIdentity]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)

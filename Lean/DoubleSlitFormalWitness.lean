@@ -11,10 +11,11 @@ open Matrix
 open UMST.Quantum
 
 /-!
-# Formal foundations (double-slit extension)
+# Double-slit formal witness (knowing fiber)
 
 Witness module: records that the dephasing diagonal limit is a **theorem** (not an axiom) and
-points to the single thermodynamic axiom in this tree.  Build with `lake build FormalFoundations`.
+points to the single thermodynamic law imported from `umst-formal` (`LandauerLaw.SecondLaw` /
+wire `physicalSecondLaw`).  Build with `lake build DoubleSlitFormalWitness`.
 -/
 
 /-- Analytic limit for `dephasingSolution` off-diagonals (formerly axiomatized). -/
@@ -22,6 +23,5 @@ example (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
     Tendsto (fun t => (dephasingSolution ρ t) a b) atTop (nhds (0 : ℂ)) :=
   dephasingSolution_tendsto_diagonal ρ a b hab
 
-/-- Same constitutional axiom as `umst-formal` (`LandauerLaw`); quantum layer adds no further
-    `axiom`s (dephasing limit and visibility bounds are theorems). -/
+/-- Quantum layer adds no Lean `axiom`s; second law is the imported `umst-formal` predicate. -/
 theorem umst_double_slit_formal_complete : True := trivial

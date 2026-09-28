@@ -6,6 +6,17 @@
 import Mathlib
 import Core.State
 import Real.State
+import LandauerEinsteinBridge
+
+open Real
+
+lemma landauerBitEnergy_nonneg (T : ℝ) (hT : 0 ≤ T) : 0 ≤ landauerBitEnergy T := by
+  unfold landauerBitEnergy
+  have hk : 0 ≤ kBoltzmannSI := le_of_lt kBoltzmannSI_pos
+  have hl : 0 ≤ log 2 := by
+    have : 0 < log 2 := by positivity
+    exact this.le
+  exact mul_nonneg (mul_nonneg hk hT) hl
 
 /-!
 DoubleSlitCore
@@ -59,20 +70,21 @@ structure MeasurementUpdate where
 noncomputable def infoEnergyLowerBound (bits T : ℝ) : ℝ :=
   landauerBitEnergy T * bits
 
-/-- Mass-equivalent from `E = m c^2` using core `cSI`. -/
+/-- Mass-equivalent from `E = m c^2` (SI). -/
 noncomputable def infoMassEquivalent (bits T : ℝ) : ℝ :=
-  massEquivalentOfEnergy (infoEnergyLowerBound bits T)
+  infoEnergyLowerBound bits T / speedOfLightSI ^ 2
 
 theorem infoEnergyLowerBound_nonneg
     (bits T : ℝ) (hbits : 0 ≤ bits) (hT : 0 ≤ T) :
     0 ≤ infoEnergyLowerBound bits T := by
   unfold infoEnergyLowerBound
-  exact mul_nonneg (landauerBitEnergy_nonneg hT) hbits
+  exact mul_nonneg (landauerBitEnergy_nonneg T hT) hbits
 
 theorem infoMassEquivalent_nonneg
     (bits T : ℝ) (hbits : 0 ≤ bits) (hT : 0 ≤ T) :
     0 ≤ infoMassEquivalent bits T := by
-  unfold infoMassEquivalent
-  exact massEquivalentOfEnergy_nonneg (infoEnergyLowerBound_nonneg bits T hbits hT)
+  unfold infoMassEquivalent infoEnergyLowerBound
+  apply div_nonneg (infoEnergyLowerBound_nonneg bits T hbits hT)
+  exact sq_nonneg speedOfLightSI
 
 end UMST.DoubleSlit

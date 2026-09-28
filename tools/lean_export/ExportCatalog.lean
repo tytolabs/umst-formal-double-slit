@@ -30,7 +30,7 @@ def pinnedRootNames : Array String := #[
   "PMICEntropyInterior", "Complementarity", "PMICVisibility",
   "VonNeumannEntropy", "QuantumMutualInfo", "KleinInequality", "DataProcessingInequality",
   "DoubleSlit", "ProbeOptimization", "ExamplesQubit", "ErasureChannel", "MeasurementCost",
-  "EpistemicGalois", "SchrodingerDynamics", "LindbladDynamics", "LindbladStreamD", "FormalFoundations", "SimLeanBridge",
+  "EpistemicGalois", "SchrodingerDynamics", "LindbladDynamics", "LindbladStreamD", "DoubleSlitFormalWitness", "SimLeanBridge",
   "LandauerLaw", "LandauerExtension", "LandauerEinsteinBridge",
   "Gate", "Naturality", "Activation", "FiberedActivation", "MonoidalState",
   "GeneralResidualCoherence", "WhichPathMeasurementUpdate", "GeneralVisibility",

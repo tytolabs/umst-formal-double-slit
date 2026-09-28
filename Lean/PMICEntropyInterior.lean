@@ -47,7 +47,7 @@ private lemma log_one_add_sub_half_pos {v : ℝ} (hv0 : 0 < v) (hv1 : v ≤ 1) :
       refine ContinuousOn.sub ?_ ?_
       · refine ContinuousOn.comp continuousOn_log ?_
         · exact continuousOn_id.const_add (1 : ℝ) |>.mono (fun _ hx => by linarith [hx.1])
-      · exact continuous_ofReal.continuousOn.div continuousOn_const continuousOn_id fun _ _ => by
+      · exact continuousOn_id.div continuousOn_const continuousOn_id fun _ _ => by
           simp
     · intro x hx
       simp only [f, interior_Icc, mem_Ioo] at hx ⊢
@@ -104,10 +104,10 @@ lemma deriv_entropyBoundK_pos {u : ℝ} (hu : 1 < u) : 0 < deriv entropyBoundK u
   have hscale : 1 < (2 / v) * log (1 + v) := (one_lt_div hv0).mpr hmain
   linarith [hscale]
 
-lemma differentiableOn_entropyBoundK_Ioo {a b : ℝ} (hab : a < b) (ha : 1 < a) :
-    DifferentiableOn ℝ entropyBoundK (Ioo a b) := by
+lemma differentiableOn_entropyBoundK_Ioo_one {u : ℝ} (hu : 1 < u) :
+    DifferentiableOn ℝ entropyBoundK (Ioo 1 u) := by
   intro y hy
-  have hy1 : 1 < y := lt_trans ha hy.1
+  have hy1 : 1 < y := hy.1
   have hy0 : 0 < y := by linarith
   have hy_ne : y ≠ 0 := ne_of_gt hy0
   have h1py : 0 < 1 + y := by linarith
@@ -135,7 +135,7 @@ lemma entropyBoundK_pos {u : ℝ} (hu : 1 < u) : 0 < entropyBoundK u := by
   have hcont : ContinuousOn entropyBoundK (Icc 1 u) :=
     continuousOn_entropyBoundK_Ici_one.mono Icc_subset_Ici_self
   have hdiff : DifferentiableOn ℝ entropyBoundK (Ioo 1 u) :=
-    differentiableOn_entropyBoundK_Ioo hab (by rfl)
+    differentiableOn_entropyBoundK_Ioo_one hab
   rcases exists_deriv_eq_slope entropyBoundK hab hcont hdiff with ⟨c, hc, hc_slope⟩
   have hc1 : 1 < c := hc.1
   have hcpu : c < u := hc.2
@@ -161,7 +161,7 @@ lemma quad_log_lt_of_lt_half {x : ℝ} (hx0 : 0 < x) (hx1 : x < 1 / 2) :
     rw [hu_def]
     field_simp [hx_ne]
     ring
-  have hlog1pu : log (1 + u) = -log x := by rw [h1pu, log_inv hx_ne]
+  have hlog1pu : log (1 + u) = -log x := by rw [h1pu, log_inv x]
   have hlogu : log u = log (1 - x) - log x := by
     rw [hu_def, log_div h1mx_pos.ne.symm hx_ne]
   -- expand `entropyBoundK u > 0` to `log x > u² * log (1-x)` then multiply by `x²`
@@ -215,7 +215,7 @@ lemma deriv_binEntropyOverQuad_neg {y : ℝ} (hy0 : 0 < y) (hy1 : y < 1 / 2) :
     ring_nf
   have hWneg : log ((1 - y) / y) * (y * (1 - y)) - binEntropy y * (1 - 2 * y) < 0 := by
     rw [hW]
-    exact quad_log_lt_of_lt_half hy0 hy1
+    linarith [quad_log_lt_of_lt_half hy0 hy1]
   have hderiv :
       deriv binEntropyOverQuad y =
         (log ((1 - y) / y) * (y * (1 - y)) - binEntropy y * (1 - 2 * y)) / (y * (1 - y)) ^ 2 := by
@@ -226,7 +226,7 @@ lemma deriv_binEntropyOverQuad_neg {y : ℝ} (hy0 : 0 < y) (hy1 : y < 1 / 2) :
     · simpa using hden0
   rw [hderiv]
   apply div_neg_of_neg_of_pos hWneg
-  exact sq_pos_of_ne_zero (pow_ne_zero 2 hden0)
+  exact pow_pos (mul_pos hy0 h1my) 2
 
 lemma four_mul_x_one_sub_x_mul_log_two_interior {x : ℝ} (hx0 : 0 < x) (hx1 : x < 1 / 2) :
     4 * x * (1 - x) * log 2 ≤ binEntropy x := by
@@ -240,23 +240,23 @@ lemma four_mul_x_one_sub_x_mul_log_two_interior {x : ℝ} (hx0 : 0 < x) (hx1 : x
     · intro t ht
       have ht0 : 0 < t := lt_of_lt_of_le hx0 ht.1
       have ht1 : t < 1 := by nlinarith [ht.2]
-      exact mul_ne_zero ht0.ne' (sub_ne_zero.mpr (ne_of_gt (by nlinarith : 0 < 1 - t)))
+      exact mul_ne_zero ht0.ne' (sub_ne_zero.mpr (Ne.symm (ne_of_lt ht1)))
   have hmono :=
     strictAntiOn_of_deriv_neg (convex_Icc x (1 / 2 : ℝ)) hcont fun y hy => by
       simp only [interior_Icc, mem_Ioo] at hy
-      exact deriv_binEntropyOverQuad_neg hy.1 hy.2
+      exact deriv_binEntropyOverQuad_neg (lt_trans hx0 hy.1) hy.2
   have hxIcc : x ∈ Icc x (1 / 2 : ℝ) := ⟨le_rfl, le_of_lt hx1⟩
   have hmIcc : (1 / 2 : ℝ) ∈ Icc x (1 / 2 : ℝ) := ⟨le_of_lt hx1, le_rfl⟩
   have hcmp : binEntropyOverQuad (1 / 2 : ℝ) < binEntropyOverQuad x :=
     (StrictAntiOn.lt_iff_lt hmono hmIcc hxIcc).mpr hx1
   rw [binEntropyOverQuad_half] at hcmp
   have hpos : 0 < x * (1 - x) := mul_pos hx0 (by nlinarith : 0 < 1 - x)
-  have hlt := mul_lt_mul_of_pos_right hcmp hpos
-  have hsimp : binEntropy x / (x * (1 - x)) * (x * (1 - x)) = binEntropy x := by field_simp [hpos.ne']
-  rw [← hsimp] at hlt
+  have hlt : 4 * log 2 * (x * (1 - x)) < binEntropy x := by
+    have := mul_lt_mul_of_pos_right hcmp hpos
+    dsimp [binEntropyOverQuad] at this
+    simpa [div_mul, hpos.ne'] using this
   have hlt' : 4 * x * (1 - x) * log 2 < binEntropy x := by
-    convert hlt using 1
-    ring
+    simpa [mul_comm, mul_left_comm, mul_assoc] using hlt
   exact le_of_lt hlt'
 
 end
