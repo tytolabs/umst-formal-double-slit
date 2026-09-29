@@ -20,8 +20,9 @@
 --   V = 2|ρ₀₁|              (off-diagonal coherence)
 --   I = |p₀ - p₁|           (which-path information)
 --
--- This Agda module postulates the key properties; authority is the
--- Lean proof `complementarity_fringe_path` in QuantumClassicalBridge.lean.
+-- Key properties are bundled in [ComplementarityProps]; a concrete
+-- instance from [DensityMatrixProps] lives in
+-- MirrorScope.ComplementarityModel (P0-13b).
 ------------------------------------------------------------------------
 
 {-# OPTIONS --without-K #-}
@@ -74,22 +75,23 @@ record Complementary : Set where
     hComp : V * V + I * I ≤ 1ℚ   -- Englert: V² + I² ≤ 1
 
 ------------------------------------------------------------------------
--- 3. Englert complementarity (postulated; authority: Lean proofs)
+-- 3. Englert complementarity (scoped assumptions; authority: Lean proofs)
 ------------------------------------------------------------------------
 
-postulate
-  englert-complementarity : ∀ (ρ : DensityMatrix2) →
-    visibility² ρ + distinguishability² ρ ≤ 1ℚ
-  fringeVisibility-nonneg : ∀ (ρ : DensityMatrix2) →
-    0ℚ ≤ fringeVisibility ρ
-  fringeVisibility-le-one : ∀ (ρ : DensityMatrix2) →
-    fringeVisibility ρ ≤ 1ℚ
-  distinguishability²-nonneg : ∀ (ρ : DensityMatrix2) →
-    0ℚ ≤ distinguishability² ρ
-  fringeVisibility-after-measurement-zero : ∀ (ρ : DensityMatrix2) →
-    fringeVisibility (mkDensityMatrix2
-      (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡ 0ℚ
-  distinguishability²-measurement-invariant : ∀ (ρ : DensityMatrix2) →
-    distinguishability² (mkDensityMatrix2
-      (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡
-    distinguishability² ρ
+record ComplementarityProps : Set where
+  field
+    englert-complementarity : ∀ (ρ : DensityMatrix2) →
+      visibility² ρ + distinguishability² ρ ≤ 1ℚ
+    fringeVisibility-nonneg : ∀ (ρ : DensityMatrix2) →
+      0ℚ ≤ fringeVisibility ρ
+    fringeVisibility-le-one : ∀ (ρ : DensityMatrix2) →
+      fringeVisibility ρ ≤ 1ℚ
+    distinguishability²-nonneg : ∀ (ρ : DensityMatrix2) →
+      0ℚ ≤ distinguishability² ρ
+    fringeVisibility-after-measurement-zero : ∀ (ρ : DensityMatrix2) →
+      fringeVisibility (mkDensityMatrix2
+        (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡ 0ℚ
+    distinguishability²-measurement-invariant : ∀ (ρ : DensityMatrix2) →
+      distinguishability² (mkDensityMatrix2
+        (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡
+      distinguishability² ρ

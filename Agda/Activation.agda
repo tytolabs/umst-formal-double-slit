@@ -437,15 +437,15 @@ activation-decidable M e with activation M e
 -- relationship: every activated engine must produce state transitions
 -- that the gate can evaluate.
 --
--- We express this as a postulate because the full proof requires
--- formalising each engine's output as a ThermodynamicState transformer.
+-- Engine dynamics are a scoped assumption (P0-13b); see
+-- MirrorScope.ActivationDynamics.
 
-postulate
-  engine-produces-state :
-    ∀ (M : MaterialClass) (e : Engine) →
-    e ∈ₑ activation M →
-    (ThermodynamicState → ThermodynamicState)
-  -- The gate can then be applied: gate old (engine-produces-state M e p old).
+record ActivationEngineDynamics : Set where
+  field
+    engine-produces-state :
+      ∀ (M : MaterialClass) (e : Engine) →
+      e ∈ₑ activation M →
+      (ThermodynamicState → ThermodynamicState)
 
 ------------------------------------------------------------------------
 -- 13. Sheaf-Theoretic Commentary (Extended)
