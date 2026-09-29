@@ -12,9 +12,9 @@ package «umst-formal-double-slit» where
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.14.0"
 
-require «umst-formal» from "../../umst-formal/Lean"
--- Manifest rev pins P0-1 (`1bdd9ce`); remote git URL when not in monorepo:
---   "https://github.com/tytolabs/umst-formal" @ "1bdd9ce" / "Lean"
+-- W-62: public CI checks out one repo; monorepo dev may override via `lakefile.lean.local` (untracked).
+require «umst-formal» from git
+  "https://github.com/tytolabs/umst-formal.git" @ "49e75238bfd1ee3b3b44c1297d80ed916b96a100" / "Lean"
 
 /-!
   Self-contained quantum / measurement extension. Build:
