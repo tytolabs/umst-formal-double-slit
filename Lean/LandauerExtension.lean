@@ -1,9 +1,6 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 /-
--/
-
-/-
   UMST-Formal: LandauerExtension.lean
 
   Extension of T_LandauerLaw with:
@@ -33,9 +30,9 @@ namespace UMST.LandauerExtension
     If two baths have temperatures T₂ = a · T₁ (a > 0), then the lower bound
     at T₂ is a times the lower bound at T₁. -/
 theorem landauerBound_temp_scaling (proc₁ proc₂ : ErasureProcess)
-    (a : ℝ) (ha : 0 < a)
+    (a : ℝ) (_ha : 0 < a)
     (htemp : proc₂.bath.bathTemp.val = a * proc₁.bath.bathTemp.val)
-    (hSL₁ : physicalSecondLawUniformBinary proc₁)
+    (_hSL₁ : physicalSecondLawUniformBinary proc₁)
     (hSL₂ : physicalSecondLawUniformBinary proc₂) :
     proc₂.work ≥ a * (proc₁.bath.bathTemp.val * log 2) := by
   have hW₂ := landauerBound proc₂ hSL₂
@@ -60,6 +57,7 @@ theorem landauerBound_nBit (n : ℕ) (T : ℝ) (hT : 0 < T)
     (hbath : ∀ i, (procs i).bath.bathTemp.val = T)
     (hSL : ∀ i, physicalSecondLawUniformBinary (procs i)) :
     (∑ i, (procs i).work) ≥ n * (T * log 2) := by
+  have _ := hT
   induction n with
   | zero => simp
   | succ k ih =>
