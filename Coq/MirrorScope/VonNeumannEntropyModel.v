@@ -3,7 +3,7 @@
 
 (* P0-13b: Shannon / spectral entropy assumptions as Records (no global Axiom). *)
 
-From Coq Require Import Reals Lra RIneq Rpower.
+From Stdlib Require Import Reals Lra RIneq Rpower.
 From UMSTFormal Require Import DensityStateSpec VonNeumannEntropySpec.
 
 Open Scope R_scope.

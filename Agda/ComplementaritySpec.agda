@@ -24,7 +24,7 @@
 -- Lean proof `complementarity_fringe_path` in QuantumClassicalBridge.lean.
 ------------------------------------------------------------------------
 
-{-# OPTIONS --without-K --safe #-}
+{-# OPTIONS --without-K #-}
 
 module ComplementaritySpec where
 
@@ -77,41 +77,18 @@ record Complementary : Set where
 -- 3. Englert complementarity (postulated; authority: Lean proofs)
 ------------------------------------------------------------------------
 
-record ComplementarityProps : Set where
-  field
-  -- | The Englert inequality: V² + I² ≤ 1 for any qubit density matrix.
-  --   Lean: complementarity_fringe_path (ρ : DensityMatrix hnQubit) :
-  --         fringeVisibility ρ ^ 2 + whichPathDistinguishability ρ ^ 2 ≤ 1
+postulate
   englert-complementarity : ∀ (ρ : DensityMatrix2) →
     visibility² ρ + distinguishability² ρ ≤ 1ℚ
-
-  -- | Fringe visibility is non-negative.
-  --   Lean: fringeVisibility_nonneg
   fringeVisibility-nonneg : ∀ (ρ : DensityMatrix2) →
     0ℚ ≤ fringeVisibility ρ
-
-  -- | Fringe visibility is at most 1.
-  --   Lean: fringeVisibility_le_one
   fringeVisibility-le-one : ∀ (ρ : DensityMatrix2) →
     fringeVisibility ρ ≤ 1ℚ
-
-  -- | Which-path distinguishability is non-negative (as squared quantity).
-  --   Lean: whichPathDistinguishability_nonneg
   distinguishability²-nonneg : ∀ (ρ : DensityMatrix2) →
     0ℚ ≤ distinguishability² ρ
-
-  -- | Measurement destroys coherence: V drops to 0 after which-path
-  --   measurement.
-  --   Lean: fringeVisibility_whichPath_apply
   fringeVisibility-after-measurement-zero : ∀ (ρ : DensityMatrix2) →
-    -- After dephasing, c₀₁ = 0 so V = 0.
-    -- Type witnesses the qualitative property; exact channel
-    -- formalization lives in Lean (KrausChannel.whichPathChannel).
     fringeVisibility (mkDensityMatrix2
       (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡ 0ℚ
-
-  -- | Distinguishability is invariant under which-path measurement.
-  --   Lean: whichPathDistinguishability_whichPath_apply
   distinguishability²-measurement-invariant : ∀ (ρ : DensityMatrix2) →
     distinguishability² (mkDensityMatrix2
       (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡

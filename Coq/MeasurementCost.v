@@ -10,7 +10,7 @@
 (*  Landauer's principle.                                               *)
 (* ================================================================== *)
 
-From Coq Require Import Reals Lra Field.
+From Stdlib Require Import Reals Lra Field.
 From UMSTFormal Require Import LandauerEinsteinBridge.
 
 Open Scope R_scope.

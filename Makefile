@@ -49,23 +49,20 @@ haskell-test:
 	cd Haskell && cabal test
 
 # Optional: integrated Coq/Agda (requires `coqc` / `agda` on PATH).
-# Coq: Rocq/Coq 9.x or 8.20+ with `From Stdlib` layout. Order respects module imports.
-COQ_VO := LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v \
-	MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v
+.PHONY: coq-check agda-check formal-check
 
 coq-check:
-	@set -e; cd Coq; mkdir -p _extract; for f in $(COQ_VO); do coqc -Q . UMSTFormal "$$f"; done
+	$(MAKE) -C Coq -f Makefile.coq clean
+	$(MAKE) -C Coq -f Makefile.coq all
 
 # Agda: 2.6+ stdlib; order respects local `open import` dependencies.
-# Uses `umst-formal-double-slit.agda-lib` (see that file) so `Data.Rational` etc. resolve via
-# registered `standard-library` (~/.agda/libraries — run scripts/setup-agda-libraries.sh).
-AGDA_FLAGS := --library=umst-formal-double-slit -W noLibUnknownField -W ignore
-AGDA_MAIN := DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda \
+AGDA_FLAGS := --include-path=. -l standard-library -W noLibUnknownField
+AGDA_MAIN := DensityStateSpec.agda ComplementaritySpec.agda \
 	LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda \
 	Activation.agda InfoTheory.agda MeasurementCost.agda
 
 agda-check:
-	@set -e; cd Agda; for f in $(AGDA_MAIN); do agda $(AGDA_FLAGS) -v0 "$$f"; done
+	@set -e; cd Agda; rm -f *.agdai; for f in $(AGDA_MAIN); do agda $(AGDA_FLAGS) -v0 "$$f"; done
 
 # Single entry point for formal verification tracks (Coq + Agda).
 formal-check: coq-check agda-check

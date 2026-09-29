@@ -17,7 +17,7 @@
 (*  Landauer axiom.                                                     *)
 (* ================================================================== *)
 
-From Coq Require Import Reals RIneq Lra Field Arith PeanoNat String Bool.
+From Stdlib Require Import Reals RIneq Lra Field Arith PeanoNat String Bool.
 From UMSTFormal Require Import LandauerEinsteinBridge MeasurementCost.
 
 Open Scope R_scope.

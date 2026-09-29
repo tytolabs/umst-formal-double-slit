@@ -15,7 +15,7 @@
 (*  LandauerLaw.physicalSecondLaw only.                                  *)
 (* ================================================================== *)
 
-From Coq Require Import String Arith List Bool.
+From Stdlib Require Import String Arith List Bool.
 Import ListNotations.
 Open Scope string.
 

@@ -1,4 +1,6 @@
 -Q . UMSTFormal
+-arg "-w"
+-arg "-abstract-large-number"
 LandauerEinsteinBridge.v
 DensityStateSpec.v
 ComplementaritySpec.v
@@ -12,7 +14,7 @@ MirrorScope/Assumptions.v
 Extraction.v
 Constitutional.v
 ChemGeometry.v
--Q UrgeKnowing UrgeKnowing
+-Q UrgeKnowing UMSTFormal.UrgeKnowing
 UrgeKnowing/CompactionMiCost.v
 UrgeKnowing/EpistemicNullProbe.v
 UrgeKnowing/EpistemicQueryLook.v

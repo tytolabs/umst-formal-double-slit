@@ -15,7 +15,7 @@
 (*  sole axiom framing cites LandauerLaw.physicalSecondLaw only.         *)
 (* ================================================================== *)
 
-From Coq Require Import Reals RIneq Lra Field String.
+From Stdlib Require Import Reals RIneq Lra Field String.
 From UMSTFormal Require Import LandauerEinsteinBridge MeasurementCost.
 Open Scope R_scope.
 Open Scope string.

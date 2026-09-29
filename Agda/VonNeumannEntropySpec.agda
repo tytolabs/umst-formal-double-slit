@@ -51,6 +51,7 @@ record EigenvalueSpec (n : ℕ) : Set where
     eigenvalues : List ℚ    -- length n list of eigenvalues (ℚ proxy)
 
 record EigenvalueProps : Set where
+  constructor mkEigenvalueProps
   field
   -- | Eigenvalues are non-negative.
   --   Lean: density_eigenvalues_nonneg
@@ -78,6 +79,7 @@ record EigenvalueProps : Set where
 -- | Abstract entropy value carrier (postulated real number).
 --   Agda stdlib lacks a convenient ℝ; we use a postulated type.
 record RealEntropyCarrier : Set where
+  constructor mkRealEntropyCarrier
   field
     ℝ : Set
     ℝ-zero : ℝ
@@ -85,11 +87,15 @@ record RealEntropyCarrier : Set where
     _ℝ≤_ : ℝ → ℝ → Set
     _ℝ≥_ : ℝ → ℝ → Set
 
+postulate entropy-carrier : RealEntropyCarrier
+open RealEntropyCarrier entropy-carrier public
+
 ------------------------------------------------------------------------
 -- 3. Von Neumann entropy: key theorems (postulated)
 ------------------------------------------------------------------------
 
 record VonNeumannEntropyProps : Set where
+  constructor mkVonNeumannEntropyProps
   field
   -- | Von Neumann entropy function.
   --   Lean: vonNeumannEntropy (ρ : DensityMatrix hn) : ℝ :=
@@ -145,6 +151,7 @@ record VonNeumannEntropyProps : Set where
 -- | Binary Shannon entropy H₂(p) = -p log p - (1-p) log(1-p).
 --   Lean: shannonBinary p = negMulLog p + negMulLog (1 - p)
 record ShannonBinaryProps : Set where
+  constructor mkShannonBinaryProps
   field
     shannonBinary : ℚ → ℝ
 
@@ -167,6 +174,7 @@ record ShannonBinaryProps : Set where
 ------------------------------------------------------------------------
 
 record MeasurementEntropyProps : Set where
+  constructor mkMeasurementEntropyProps
   field
   -- | Which-path measurement increases entropy:
   --   S(dephased ρ) ≥ S(ρ).

@@ -16,7 +16,7 @@
 (*  axiom.                                                              *)
 (* ================================================================== *)
 
-From Coq Require Import Reals RIneq Lra Field String.
+From Stdlib Require Import Reals RIneq Lra Field String.
 From UMSTFormal Require Import LandauerEinsteinBridge MeasurementCost.
 
 Open Scope R_scope.

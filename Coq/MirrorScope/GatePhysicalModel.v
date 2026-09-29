@@ -3,7 +3,7 @@
 
 (* P0-13b: constitutive laws as a Record (mirror Agda MirrorScope.GatePhysicalModel). *)
 
-From Coq Require Import QArith.
+From Stdlib Require Import QArith.
 From UMSTFormal Require Import Gate.
 
 Open Scope Q_scope.

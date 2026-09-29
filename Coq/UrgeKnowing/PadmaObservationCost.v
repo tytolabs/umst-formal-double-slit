@@ -6,7 +6,7 @@
 (*  Cell: PADMA-FORMAL-KNOW-COQ-OBS-COST                                 *)
 (* ================================================================== *)
 
-From Coq Require Import Bool.
+From Stdlib Require Import Bool.
 
 Module PadmaObservationCost.
 

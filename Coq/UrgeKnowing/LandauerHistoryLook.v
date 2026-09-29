@@ -16,7 +16,7 @@
 (*  conservation framing — Landauer history look is not a second axiom.  *)
 (* ================================================================== *)
 
-From Coq Require Import Reals RIneq Lra Field List Arith String.
+From Stdlib Require Import Reals RIneq Lra Field List Arith String.
 From UMSTFormal Require Import LandauerEinsteinBridge MeasurementCost.
 Import ListNotations.
 

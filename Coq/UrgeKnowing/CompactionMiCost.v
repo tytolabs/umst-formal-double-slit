@@ -15,7 +15,7 @@
 (*  physicalSecondLaw framing cited as authority string only.             *)
 (* ================================================================== *)
 
-From Coq Require Import Reals RIneq Lra Field List Arith String.
+From Stdlib Require Import Reals RIneq Lra Field List Arith String.
 From UMSTFormal Require Import LandauerEinsteinBridge MeasurementCost.
 Import ListNotations.
 

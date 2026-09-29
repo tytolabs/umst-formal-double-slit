@@ -14,7 +14,7 @@
 (*  LandauerLaw.physicalSecondLaw (framing only).                        *)
 (* ================================================================== *)
 
-From Coq Require Import Arith Lia List String Ascii.
+From Stdlib Require Import Arith Lia List String Ascii.
 Import ListNotations.
 
 Open Scope string.
@@ -103,7 +103,7 @@ Definition persistHilbertIndex (ucrs grid : nat) : PersistHilbert :=
   let (x, y) := persistHilbertCoords ucrs grid bits in
   {| persist_raw := persistCurveIndex x y bits |}.
 
-Fixpoint occupancy_hash_byte (h : nat) (b : nat) : nat :=
+Definition occupancy_hash_byte (h : nat) (b : nat) : nat :=
   (h * 31 + b) mod 65536.
 
 Fixpoint occupancy_hash_string (h : nat) (s : string) : nat :=
