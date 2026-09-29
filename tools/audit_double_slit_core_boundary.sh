@@ -45,7 +45,7 @@ while IFS= read -r f; do
     echo "audit_double_slit_core_boundary: forbidden knowing→acting carrier in ${rel}: ${hit}" >&2
     exit 1
   fi
-done < <(find "${LEAN_DIR}" -name '*.lean' -type f | sort)
+done < <(find "${LEAN_DIR}" -path '*/.lake' -prune -o -name '*.lean' -type f -print | sort)
 
 CORE="${LEAN_DIR}/DoubleSlitCore.lean"
 grep -q 'import Core.State' "${CORE}" || {
