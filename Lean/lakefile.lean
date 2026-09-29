@@ -53,7 +53,7 @@ lean_lib «UMST.DoubleSlit» where
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `DoubleSlitFormalWitness, `SimLeanBridge,
     -- LandauerExtension / LandauerEinsteinBridge / LandauerLaw: imported from umst-formal (not local roots)
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
-    `PhysicsConstrainedAI, `InformationCostIdentity, `OneInequalitySecondLaw]
+    `PhysicsConstrainedAI, `InformationCostIdentity, `OneInequalitySecondLaw, `ConvexPhiDissipation]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)
   srcDir := "."
 
