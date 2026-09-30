@@ -10,7 +10,7 @@
   and cross-lang `LandauerNTo1` — not meso thermo G(T,P,x) restated.
 
   N→1 recovery composes `UMST.Excitement.select` — no second argmin.
-  Sole physics axiom remains `LandauerLaw.physicalSecondLaw` (imported, not re-declared).
+  Sole physical law: the `SecondLaw` predicate; `LandauerLaw.physicalSecondLaw` is its erase instance (imported, not re-declared; no project `axiom`).
   Adds **zero** Lean `axiom` declarations. Zero sorry.
 -/
 

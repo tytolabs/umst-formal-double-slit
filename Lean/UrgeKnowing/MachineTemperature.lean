@@ -10,7 +10,7 @@
   `machine_temperature` — not meso thermo G(T,P,x) restated.
 
   Machine-temperature recovery composes `UMST.Excitement.select` — no second argmin.
-  Sole physics axiom remains `LandauerLaw.physicalSecondLaw` (imported, not re-declared).
+  Sole physical law: the `SecondLaw` predicate; `LandauerLaw.physicalSecondLaw` is its erase instance (imported, not re-declared; no project `axiom`).
   Adds **zero** Lean `axiom` declarations. Zero sorry.
 
   Vendored `UMST.Excitement` + `UMST.Urge.ExcitementImport` inline below: pinned

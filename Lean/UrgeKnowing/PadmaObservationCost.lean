@@ -6,7 +6,7 @@
   Knowing-fiber: observation / read-tax cost for Padma membrane looks.
   Not meso Economic predicates. Not acting coalgebra. Not physics GREEN.
 
-  Sole physics axiom remains `LandauerLaw.physicalSecondLaw` (imported, not re-declared).
+  Sole physical law: the `SecondLaw` predicate; `LandauerLaw.physicalSecondLaw` is its erase instance (imported, not re-declared; no project `axiom`).
   Zero sorry. Zero new axiom.
 
   Cell: PADMA-FORMAL-KNOW-LEAN-OBS-COST

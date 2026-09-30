@@ -95,7 +95,7 @@ data CrossDomainBreakthroughProtocolModality
 crossDomainBreakthroughProtocolModalityCurrent :: CrossDomainBreakthroughProtocolModality
 crossDomainBreakthroughProtocolModalityCurrent = CrossDomainBreakthroughProtocolUnwired
 
--- | One presentation fiber from the sole axiom (not XOR worlds).
+-- | One presentation fiber from the sole physical law (not XOR worlds).
 data BreakthroughFiber
   = ChemistryFiber
   | PhysicsFiber

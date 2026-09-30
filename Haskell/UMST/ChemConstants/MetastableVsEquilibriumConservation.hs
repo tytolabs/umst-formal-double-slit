@@ -637,7 +637,7 @@ patternProductConservationAuthority :: String
 patternProductConservationAuthority =
   "umst/umst-formal-double-slit/Haskell/UMST/ChemConstants/PatternProductConservation.hs"
 
--- | L0 edge metastable/equilibrium morphism authority (single axiom — no parallel law).
+-- | L0 edge metastable/equilibrium morphism authority (single law — no parallel law).
 edgeMetastableAuthority :: String
 edgeMetastableAuthority = "umst/umst-chem/src/metastable_equilibrium.rs"
 

@@ -9,7 +9,7 @@
   `ObserveMinMi` — not meso thermo G(T,P,x) restated, not acting-coalgebra frugal MI.
 
   Observe-min-MI recovery composes `UMST.Excitement.select` — no second argmin (import pin).
-  Sole physics axiom remains `LandauerLaw.physicalSecondLaw` (imported, not re-declared).
+  Sole physical law: the `SecondLaw` predicate; `LandauerLaw.physicalSecondLaw` is its erase instance (imported, not re-declared; no project `axiom`).
   Adds **zero** Lean `axiom` declarations. Zero sorry.
 -/
 

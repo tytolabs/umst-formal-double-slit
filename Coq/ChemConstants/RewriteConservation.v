@@ -48,7 +48,7 @@ Proof.
 Qed.
 
 (* ------------------------------------------------------------------ *)
-(*  ThermoInvariant — mass / energy / entropy under single axiom         *)
+(*  ThermoInvariant — mass / energy / entropy under the single law         *)
 (* ------------------------------------------------------------------ *)
 
 Inductive thermo_invariant : Type :=
