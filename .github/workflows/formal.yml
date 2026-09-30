@@ -73,10 +73,13 @@ jobs:
           cd Coq
           # `Extraction.v` writes OCaml under `_extract/` — must exist (see root `Makefile` `coq-check`).
           mkdir -p _extract
-          for f in LandauerEinsteinBridge.v DensityStateSpec.v ComplementaritySpec.v VonNeumannEntropySpec.v MeasurementCost.v InfoTheory.v Gate.v Extraction.v Constitutional.v; do
-            echo "==> Compiling $f"
-            rocq compile -Q . UMSTFormal "$f"
-          done
+          # Every tracked .v, under the logical mappings of _CoqProject (a hand-picked list let 122 files go unchecked).
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          grep -E '^-' _CoqProject > _CoqProject.all
+          git -C .. ls-files 'Coq/*.v' 'Coq/**/*.v' | sed 's#^Coq/##' | sort -u >> _CoqProject.all
+          echo "$(grep -c '\.v$' _CoqProject.all) Coq files"
+          rocq makefile -f _CoqProject.all -o Makefile.all
+          make -f Makefile.all -j2
 
   agda:
     runs-on: ubuntu-24.04
@@ -106,7 +109,11 @@ jobs:
         run: |
           set -e
           cd Agda
-          for f in DensityStateSpec.agda ComplementaritySpec.agda VonNeumannEntropySpec.agda LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda Activation.agda InfoTheory.agda MeasurementCost.agda; do
+          # Every tracked .agda (a hand-picked list let 124 files go unchecked).
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          files=$(git -C .. ls-files 'Agda/*.agda' 'Agda/**/*.agda' | sed 's#^Agda/##' | sort -u)
+          echo "$(echo "$files" | wc -l) Agda files"
+          for f in $files; do
             echo "==> Checking $f"
             agda "$f"
           done

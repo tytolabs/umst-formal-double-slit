@@ -16,6 +16,8 @@
 
 {-# OPTIONS --without-K #-}
 
+import MirrorScope.LandauerSecondLaw
+
 module UrgeKnowing.PersistVsOccupancy
   (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 

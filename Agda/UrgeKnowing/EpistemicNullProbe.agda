@@ -15,7 +15,10 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.EpistemicNullProbe where
+import MirrorScope.LandauerSecondLaw
+
+module UrgeKnowing.EpistemicNullProbe
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 
 open import Data.Bool using (Bool; false)
 open import Data.Empty using (⊥)
@@ -26,12 +29,21 @@ open import Data.String using (String)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
 open import Relation.Nullary using (¬_)
 
-open import UrgeKnowing.LandauerHistoryLook
-  using (PathProbe; null; whichPath; epistemicMIBits
-       ; epistemic-mi-null-zero; epistemic-mi-bits-nonneg; epistemic-mi-bits-le-one
-       ; HeatBath; ErasureProcess; PhysicalSecondLaw; physicalSecondLaw; landauerBound
-       ; productionWired; landauerProductionWired
-       ; production-not-wired; landauer-not-production-wired)
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
+open import UrgeKnowing.LandauerHistoryLook Φ
+  using (PathProbe
+       ; null
+       ; whichPath
+       ; epistemicMIBits
+       ; epistemic-mi-null-zero
+       ; epistemic-mi-bits-nonneg
+       ; epistemic-mi-bits-le-one
+       ; landauerBound
+       ; productionWired
+       ; landauerProductionWired
+       ; production-not-wired
+       ; landauer-not-production-wired)
 
 ------------------------------------------------------------------------
 -- Modality + null-probe pins (knowing fiber — Unwired)

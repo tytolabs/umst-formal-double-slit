@@ -50,3 +50,12 @@ jobs:
           set -e
           cabal update
           cabal test
+
+      # The cabal package lists 30 modules; the four-language mirrors under Haskell/UMST/ and the root/legacy files
+      # are not in it, so without this step 112 tracked .hs files would pass CI unchecked.
+      - name: Typecheck every tracked .hs outside the cabal package
+        run: |
+          set -e
+          files=$(git ls-files '*.hs' | grep -v -E '^(src|app|test)/')
+          echo "$(echo "$files" | wc -l) files"
+          cabal exec -- ghc --make -fno-code -i. -isrc -outputdir /tmp/ghc-typecheck $files

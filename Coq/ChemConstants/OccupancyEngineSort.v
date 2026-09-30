@@ -13,10 +13,10 @@
 (*  physics_green = False. Zero Admitted. Not wired lib/eos.           *)
 (* ================================================================== *)
 
-Require Import UMST.ChemConstants.NamedOccupancyExceptions.
-Require Import UMST.ChemConstants.ActinideOccupancyExceptions.
-Require Import UMST.ChemConstants.DBlockOccupancyExceptions.
-Require Import UMST.ChemConstants.OccupancyExceptionSetsDisjoint.
+Require Import UMSTFormal.ChemConstants.NamedOccupancyExceptions.
+Require Import UMSTFormal.ChemConstants.ActinideOccupancyExceptions.
+Require Import UMSTFormal.ChemConstants.DBlockOccupancyExceptions.
+Require Import UMSTFormal.ChemConstants.OccupancyExceptionSetsDisjoint.
 From Stdlib Require Import Arith List Bool String Lia.
 
 Open Scope string.

@@ -12,9 +12,9 @@
 (*  Modality Unwired. physics_green = False. Zero Admitted.             *)
 (* ================================================================== *)
 
-Require Import UMST.ChemConstants.NamedOccupancyExceptions.
-Require Import UMST.ChemConstants.ActinideOccupancyExceptions.
-Require Import UMST.ChemConstants.DBlockOccupancyExceptions.
+Require Import UMSTFormal.ChemConstants.NamedOccupancyExceptions.
+Require Import UMSTFormal.ChemConstants.ActinideOccupancyExceptions.
+Require Import UMSTFormal.ChemConstants.DBlockOccupancyExceptions.
 From Stdlib Require Import Arith List Lia String.
 
 Open Scope string.

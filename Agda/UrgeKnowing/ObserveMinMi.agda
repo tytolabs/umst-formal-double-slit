@@ -14,7 +14,10 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.ObserveMinMi where
+import MirrorScope.LandauerSecondLaw
+
+module UrgeKnowing.ObserveMinMi
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 
 open import Data.Bool using (false)
 open import Data.Empty using (⊥)
@@ -26,10 +29,14 @@ open import Data.Unit using (⊤)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
 open import Relation.Nullary using (¬_)
 
-open import UrgeKnowing.LandauerHistoryLook
-  using (HeatBath; ErasureProcess; PhysicalSecondLaw; physicalSecondLaw; landauerBound
-       ; productionWired; landauerProductionWired
-       ; production-not-wired; landauer-not-production-wired)
+open import MirrorScope.LandauerSecondLaw as L using (HeatBath; ErasureProcess; PhysicalSecondLaw)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
+open import UrgeKnowing.LandauerHistoryLook Φ
+  using (landauerBound
+       ; productionWired
+       ; landauerProductionWired
+       ; production-not-wired
+       ; landauer-not-production-wired)
 
 ------------------------------------------------------------------------
 -- Modality + observe-min-MI pins (knowing fiber — Unwired)

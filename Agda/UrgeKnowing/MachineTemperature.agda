@@ -15,7 +15,10 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.MachineTemperature where
+import MirrorScope.LandauerSecondLaw
+
+module UrgeKnowing.MachineTemperature
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 
 open import Data.Bool using (Bool; false; true)
 open import Data.Empty using (⊥)
@@ -28,9 +31,12 @@ open import Data.Sum using (_⊎_; inj₁; inj₂)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
 open import Relation.Nullary using (yes; no; ¬_)
 
-open import UrgeKnowing.LandauerHistoryLook
-  using ( physicalSecondLaw; PhysicalSecondLaw; ErasureProcess
-        ; HeatBath; landauerBound; productionWired; landauerProductionWired )
+open import MirrorScope.LandauerSecondLaw as L using (PhysicalSecondLaw; ErasureProcess; HeatBath)
+open L.LandauerPhysics Φ using (physicalSecondLaw)
+open import UrgeKnowing.LandauerHistoryLook Φ
+  using (landauerBound
+       ; productionWired
+       ; landauerProductionWired)
 
 ------------------------------------------------------------------------
 -- Modality + machine-temperature pins (knowing fiber — Unwired)

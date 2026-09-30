@@ -14,6 +14,8 @@
 
 {-# OPTIONS --without-K --safe #-}
 
+import MirrorScope.LandauerSecondLaw
+
 module UrgeKnowing.LandauerHistoryLook
   (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 

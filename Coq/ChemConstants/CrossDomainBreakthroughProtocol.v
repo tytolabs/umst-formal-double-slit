@@ -14,7 +14,7 @@
 (*  physics_green = False. Zero Admitted. Not wired lib/eos.           *)
 (* ================================================================== *)
 
-Require Import UMST.ChemConstants.ChemPhysicsChartIsomorphism.
+Require Import UMSTFormal.ChemConstants.ChemPhysicsChartIsomorphism.
 From Stdlib Require Import Arith List Bool String Lia.
 
 Open Scope string.

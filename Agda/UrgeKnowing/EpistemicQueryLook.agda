@@ -15,7 +15,10 @@
 
 {-# OPTIONS --without-K #-}
 
-module UrgeKnowing.EpistemicQueryLook where
+import MirrorScope.LandauerSecondLaw
+
+module UrgeKnowing.EpistemicQueryLook
+  (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 
 open import Data.Bool using (Bool; false)
 open import Data.Empty using (⊥)
@@ -27,10 +30,13 @@ open import Data.String using (String)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl)
 open import Relation.Nullary using (¬_)
 
-open import UrgeKnowing.LandauerHistoryLook
-  using (PathProbe; epistemicMIBits
-  ; ErasureProcess; PhysicalSecondLaw; landauerBound
-  ; productionWired; landauerProductionWired)
+open import MirrorScope.LandauerSecondLaw as L using (ErasureProcess; PhysicalSecondLaw)
+open import UrgeKnowing.LandauerHistoryLook Φ
+  using (PathProbe
+       ; epistemicMIBits
+       ; landauerBound
+       ; productionWired
+       ; landauerProductionWired)
 
 ------------------------------------------------------------------------
 -- Modality + epistemic query look pins (knowing fiber — Unwired)

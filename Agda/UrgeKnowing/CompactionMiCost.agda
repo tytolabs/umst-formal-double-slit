@@ -15,6 +15,8 @@
 
 {-# OPTIONS --without-K #-}
 
+import MirrorScope.LandauerSecondLaw
+
 module UrgeKnowing.CompactionMiCost
   (Φ : MirrorScope.LandauerSecondLaw.LandauerPhysics) where
 

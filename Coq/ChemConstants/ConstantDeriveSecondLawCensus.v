@@ -13,7 +13,7 @@
 (*  lib/eos. Sole axiom: second law + conservation — not 26th axiom.   *)
 (* ================================================================== *)
 
-Require Import UMST.ChemConstants.EngineRefusesNewSi.
+Require Import UMSTFormal.ChemConstants.EngineRefusesNewSi.
 From Stdlib Require Import Arith String Bool Lia.
 
 Open Scope string.
