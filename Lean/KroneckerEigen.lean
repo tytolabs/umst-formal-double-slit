@@ -25,7 +25,7 @@ indexing.
 
 namespace UMST.Quantum
 
-open Matrix Complex Real
+open Matrix Complex _root_.Real
 open scoped Kronecker BigOperators ComplexOrder
 
 variable {na nb : ℕ}

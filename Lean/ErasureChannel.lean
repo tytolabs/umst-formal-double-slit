@@ -144,7 +144,7 @@ end Output
 
 section Entropy
 
-open UMST.DoubleSlit Real
+open UMST.DoubleSlit _root_.Real
 
 /-- Diagonal entry of the reset output at index 0 is 1. -/
 theorem resetOutputState_diag_0 : (resetOutputState.carrier 0 0).re = 1 := by

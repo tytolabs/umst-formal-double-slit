@@ -20,7 +20,7 @@ Proof via `convexOn_mul_log` (Mathlib) and `ConvexOn.map_sum_le` (Jensen).
 
 set_option maxHeartbeats 1200000
 
-open Real Finset
+open _root_.Real Finset
 
 namespace UMST.Quantum.LogSum
 

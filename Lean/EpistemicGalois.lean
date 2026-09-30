@@ -28,7 +28,7 @@ epistemic (observational) requirements with physical (thermodynamic) resources.
 
 namespace UMST.DoubleSlit
 
-open Real UMST.Quantum
+open _root_.Real UMST.Quantum
 
 -- ============================================================
 -- Section 1: The Landauer Adjoints

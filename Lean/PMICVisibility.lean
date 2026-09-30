@@ -29,7 +29,7 @@ Proof chain (qubit path bit, `p = pathWeight ρ 0`):
 
 namespace UMST.DoubleSlit
 
-open UMST.Quantum Real
+open UMST.Quantum _root_.Real
 
 lemma log_two_pos' : 0 < log 2 :=
   log_pos (by norm_num : (1 : ℝ) < 2)

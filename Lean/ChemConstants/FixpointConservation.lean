@@ -85,19 +85,20 @@ inductive FixedPointChainVerdict where
 def fixedPointChainVerdictOk (v : FixedPointChainVerdict) : Bool :=
   match v with | .reached => true | _ => false
 
-/-- Iterate ascending refinement until fixed point or budget exhaustion (recursive). -/
-def reachAscendingFixedPoint (initial top remaining : Nat) : Nat × FixedPointChainVerdict :=
-  if remaining = 0 then
+/-- Iterate ascending refinement until fixed point or budget exhaustion. Structural recursion on the budget, so
+the chain is a fold the kernel evaluates (each step spends one unit; the budget is the certificate of termination). -/
+def reachAscendingFixedPoint (initial top : Nat) : Nat → Nat × FixedPointChainVerdict
+  | 0 =>
     if ascendingRefinementStep initial top = initial then
       (initial, .reached)
     else
       (initial, .budgetExhaustedRefuse)
-  else
+  | remaining + 1 =>
     let next := ascendingRefinementStep initial top
     if next = initial then
       (initial, .reached)
     else
-      reachAscendingFixedPoint next top (remaining - 1)
+      reachAscendingFixedPoint next top remaining
 
 /-- Kind of lattice fixed point sought (design enum). -/
 inductive LatticeFixedPointKind where

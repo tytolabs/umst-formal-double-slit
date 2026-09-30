@@ -16,7 +16,7 @@
 import LandauerEinsteinBridge
 import LandauerLaw
 
-open Real UMST.LandauerLaw
+open _root_.Real UMST.LandauerLaw
 
 namespace UrgeKnowing.ObserveMinMi
 

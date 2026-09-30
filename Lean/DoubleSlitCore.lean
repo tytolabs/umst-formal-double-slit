@@ -8,7 +8,7 @@ import Core.State
 import Real.State
 import LandauerEinsteinBridge
 
-open Real
+open _root_.Real
 
 lemma landauerBitEnergy_nonneg (T : ℝ) (hT : 0 ≤ T) : 0 ≤ landauerBitEnergy T := by
   unfold landauerBitEnergy

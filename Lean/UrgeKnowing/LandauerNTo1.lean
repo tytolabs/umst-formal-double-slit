@@ -17,7 +17,7 @@
 import LandauerEinsteinBridge
 import LandauerLaw
 
-open Real UMST.LandauerLaw
+open _root_.Real UMST.LandauerLaw
 
 namespace UrgeKnowing.LandauerNTo1
 
@@ -40,11 +40,38 @@ def landauerProductionWired : Bool := false
 -- SECTION 2: Destroyed distinction bits + Landauer floor scaffold
 -- ================================================================
 
+/-- Fuel-bounded binary logarithm: structural recursion on the fuel, so the kernel evaluates it (`Nat.log2` is
+well-founded recursion, which `decide` cannot unfold). -/
+def log2Fuel : ℕ → ℕ → ℕ
+  | 0, _ => 0
+  | fuel + 1, n => if 2 ≤ n then log2Fuel fuel (n / 2) + 1 else 0
+
+/-- With fuel at least `n`, the fuel-bounded logarithm is `Nat.log2 n`. -/
+theorem log2Fuel_eq_log2 : ∀ (fuel n : ℕ), n ≤ fuel → log2Fuel fuel n = Nat.log2 n
+  | 0, n, h => by
+    have : n = 0 := Nat.le_zero.mp h
+    subst this; simp [log2Fuel, Nat.log2]
+  | fuel + 1, n, h => by
+    rw [log2Fuel]; unfold Nat.log2
+    split
+    · rw [log2Fuel_eq_log2 fuel (n / 2) (by omega)]
+    · rfl
+
+/-- Kernel-computable `Nat.log2`. -/
+def log2K (n : ℕ) : ℕ := log2Fuel n n
+
+theorem log2K_eq_log2 (n : ℕ) : log2K n = Nat.log2 n := log2Fuel_eq_log2 n n le_rfl
+
 /-- Destroyed distinction bits for N distinguishable states collapsing to 1. -/
 def destroyedDistinctionBitsFromN (n : ℕ) : Option ℕ :=
   match n with
   | 0 | 1 => none
-  | n + 2 => some (Nat.log2 (n + 2))
+  | n + 2 => some (log2K (n + 2))
+
+/-- The count is `⌊log₂ N⌋` for every `N ≥ 2`. -/
+theorem destroyedDistinctionBitsFromN_eq_log2 (n : ℕ) :
+    destroyedDistinctionBitsFromN (n + 2) = some (Nat.log2 (n + 2)) := by
+  simp [destroyedDistinctionBitsFromN, log2K_eq_log2]
 
 @[simp] theorem destroyed_distinction_bits_four :
     destroyedDistinctionBitsFromN 4 = some 2 := by decide

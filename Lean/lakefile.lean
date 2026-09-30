@@ -14,7 +14,7 @@ require mathlib from git
 
 -- W-62: public CI checks out one repo; monorepo dev may override via `lakefile.lean.local` (untracked).
 require «umst-formal» from git
-  "https://github.com/tytolabs/umst-formal.git" @ "cadc18bd6c2ae3b488f3a5f78206a74ca783c46e" / "Lean"
+  "https://github.com/tytolabs/umst-formal.git" @ "49e75238bfd1ee3b3b44c1297d80ed916b96a100" / "Lean"
 
 /-!
   Self-contained quantum / measurement extension. Build:

@@ -26,7 +26,7 @@ implies `binEntropy x / (x * (1-x)) > 4 * log 2`.
 
 open scoped Topology
 
-open Real Set
+open _root_.Real Set
 
 namespace UMST.DoubleSlit
 

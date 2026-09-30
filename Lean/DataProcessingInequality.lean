@@ -56,7 +56,7 @@ thermodynamic arrow is manifest: once you learn which path, you pay in entropy.
 
 namespace UMST.Quantum
 
-open Complex Real Matrix Set
+open Complex _root_.Real Matrix Set
 open scoped BigOperators ComplexOrder
 
 variable {n : ℕ} {hn : 0 < n}

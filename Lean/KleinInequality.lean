@@ -36,7 +36,7 @@ set_option maxHeartbeats 800000
 
 namespace UMST.Quantum
 
-open Real Finset Complex Matrix Set
+open _root_.Real Finset Matrix Set
 open scoped BigOperators
 
 variable {n : ℕ} {hn : 0 < n}
@@ -132,10 +132,10 @@ and the unitary overlap matrix `T = U†V`, define:
 
 This equals `Tr(ρ(log ρ - log σ))` when ρ = U diag(λ) U† and σ = V diag(μ) V†. -/
 noncomputable def spectralRelativeEntropy
-    (λ_eig μ_eig : Fin n → ℝ)
+    (lam_eig μ_eig : Fin n → ℝ)
     (T : Matrix (Fin n) (Fin n) ℂ) : ℝ :=
-  (∑ i, λ_eig i * log (λ_eig i)) -
-  (∑ i, λ_eig i * (∑ j, (Complex.normSq (T i j) : ℝ) * log (μ_eig j)))
+  (∑ i, lam_eig i * log (lam_eig i)) -
+  (∑ i, lam_eig i * (∑ j, (Complex.normSq (T i j) : ℝ) * log (μ_eig j)))
 
 /-- **Klein's inequality (spectral form):** The spectral relative entropy is non-negative
 when `λ` and `μ` are strictly positive probability vectors and `T` is unitary.
@@ -144,12 +144,12 @@ Proof: row-wise Jensen on concave `log` gives `∑ⱼ |Tᵢⱼ|² log μⱼ ≤ 
 `cᵢ = ∑ⱼ |Tᵢⱼ|² μⱼ`. Column unitarity yields `∑ᵢ cᵢ = ∑ⱼ μⱼ = 1`. Hence
 `S_spec ≥ ∑ᵢ λᵢ log(λᵢ/cᵢ) ≥ 0` by `gibbs_inequality`. -/
 theorem spectralRelativeEntropy_nonneg
-    (λ_eig μ_eig : Fin n → ℝ)
-    (hλ_pos : ∀ i, 0 < λ_eig i) (hμ_pos : ∀ i, 0 < μ_eig i)
-    (hλ_sum : ∑ i, λ_eig i = 1) (hμ_sum : ∑ i, μ_eig i = 1)
+    (lam_eig μ_eig : Fin n → ℝ)
+    (hlam_pos : ∀ i, 0 < lam_eig i) (hμ_pos : ∀ i, 0 < μ_eig i)
+    (hlam_sum : ∑ i, lam_eig i = 1) (hμ_sum : ∑ i, μ_eig i = 1)
     (T : Matrix (Fin n) (Fin n) ℂ)
     (hT_unitary : T ∈ Matrix.unitaryGroup (Fin n) ℂ) :
-    spectralRelativeEntropy λ_eig μ_eig T ≥ 0 := by
+    spectralRelativeEntropy lam_eig μ_eig T ≥ 0 := by
   classical
   let c : Fin n → ℝ := fun i => ∑ j, (Complex.normSq (T i j) : ℝ) * μ_eig j
   have hc_pos : ∀ i, 0 < c i := by
@@ -184,21 +184,21 @@ theorem spectralRelativeEntropy_nonneg
         (𝕜 := ℝ) (E := ℝ) (β := ℝ) (s := Ioi (0 : ℝ)) (f := log) (ι := Fin n) (t := univ)
         (w := w) (p := μ_eig) hw0 hw1 hmem
     simpa [w, c, Finset.sum_univ_eq_sum, smul_eq_mul] using hJ
-  set A : ℝ := ∑ i, λ_eig i * log (λ_eig i)
-  set B : ℝ := ∑ i, λ_eig i * (∑ j, (Complex.normSq (T i j) : ℝ) * log (μ_eig j))
-  set Csum : ℝ := ∑ i, λ_eig i * log (c i)
+  set A : ℝ := ∑ i, lam_eig i * log (lam_eig i)
+  set B : ℝ := ∑ i, lam_eig i * (∑ j, (Complex.normSq (T i j) : ℝ) * log (μ_eig j))
+  set Csum : ℝ := ∑ i, lam_eig i * log (c i)
   have hubound : B ≤ Csum := by
     dsimp [B, Csum]
     refine Finset.sum_le_sum fun i _ => ?_
-    exact mul_le_mul_of_nonneg_left (hJensen i) (le_of_lt (hλ_pos i))
-  have hAC : A - Csum = ∑ i, λ_eig i * log (λ_eig i / c i) := by
+    exact mul_le_mul_of_nonneg_left (hJensen i) (le_of_lt (hlam_pos i))
+  have hAC : A - Csum = ∑ i, lam_eig i * log (lam_eig i / c i) := by
     rw [← Finset.sum_sub_distrib]
     refine Finset.sum_congr rfl fun i _ => ?_
-    rw [← log_div (hλ_pos i).ne' (hc_pos i).ne', mul_sub]
+    rw [← log_div (hlam_pos i).ne' (hc_pos i).ne', mul_sub]
   have hKl : 0 ≤ A - Csum := by
     rw [hAC]
-    exact gibbs_inequality λ_eig c (fun i => le_of_lt (hλ_pos i))
-      (fun i => hc_pos i) hλ_sum hcsum
+    exact gibbs_inequality lam_eig c (fun i => le_of_lt (hlam_pos i))
+      (fun i => hc_pos i) hlam_sum hcsum
   have hEnt : A - Csum ≤ A - B := sub_le_sub le_rfl hubound
   unfold spectralRelativeEntropy
   exact le_trans hKl hEnt

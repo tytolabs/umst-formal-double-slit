@@ -29,7 +29,7 @@ partial trace.
 
 namespace UMST.Quantum
 
-open Real
+open _root_.Real
 
 variable {na nb : ℕ} (ha : 0 < na) (hb : 0 < nb)
 

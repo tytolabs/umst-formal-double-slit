@@ -12,151 +12,26 @@
   Sole physical law: the `SecondLaw` predicate; `LandauerLaw.physicalSecondLaw` is its erase instance (imported, not re-declared; no project `axiom`).
   Adds **zero** Lean `axiom` declarations. Zero sorry.
 
-  Vendored `UMST.Excitement` + `UMST.Urge.ExcitementImport` inline below: pinned
-  `umst-formal` @690fbe6 lacks those modules; per-cell build cannot edit lakefile.
+  `UMST.Excitement` and `UMST.Urge.ExcitementImport` are imported from umst-formal (single source).
 -/
 
 import Core.State
 import DualLedger
 import LandauerLaw
 import Mathlib.Data.Rat.Defs
+import Excitement
+import Urge.ExcitementImport
+import UrgeKnowing.TwoHilberts
 
 open UMST UMST.Core UMST.LandauerLaw
-
-namespace UMST.Core
-
-class JointThermo (K : outParam Type) [LinearOrderedField K] [ThermodynamicScalar K] (S : Type) where
-  internalEnergy : S → K
-  entropy        : S → K
-  mutualInfo     : S → K
-  temperature    : S → K
-  temperature_pos : ∀ s, 0 < temperature s
-
-end UMST.Core
-
-namespace UMST.Excitement
-
-open UMST UMST.Core
-
-def kB {K : Type} [LinearOrderedField K] [ThermodynamicScalar K] : K := 1
-
-def jointFreeEnergy {K : Type} [LinearOrderedField K] [ThermodynamicScalar K] {S : Type}
-    [JointThermo K S] (s : S) : K :=
-  JointThermo.internalEnergy s
-    - JointThermo.temperature s * JointThermo.entropy s
-    - kB * JointThermo.temperature s * JointThermo.mutualInfo s
-
-inductive Residue where
-  | noCandidates
-  | allInadmissible
-  | allExcludedByCBF
-  | allExcludedByDEC
-  | untaggedConstant
-  | noStrictImprovement
-  deriving DecidableEq, Repr
-
-structure Cand {K : Type} {S : Type} [LinearOrderedField K] [ThermodynamicScalar K]
-    [ThermodynamicSystem K S] [AdmissibleSystem K S] (src : S) where
-  id                : Nat
-  tgt               : S
-  step              : Admissible src tgt
-  cbfSafe           : Prop
-  cbfSafe_holds     : cbfSafe
-  decConserving     : Prop
-  decConserving_holds : decConserving
-  ledger            : DualLedger
-  evidenceTagged    : Bool
-
-def globalFreeEnergyCand {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] {src : S} (c : Cand (K := ℚ) src) : ℚ :=
-  jointFreeEnergy c.tgt + DualLedger.total c.ledger
-
-def candEnergy {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] {src : S} (c : Cand (K := ℚ) src) : ℚ :=
-  globalFreeEnergyCand (src := src) c
-
-def pickMin {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] {src : S} (acc : Option (Cand (K := ℚ) src))
-    (c : Cand (K := ℚ) src) : Option (Cand (K := ℚ) src) :=
-  match acc with
-  | none => some c
-  | some b =>
-      let fc := candEnergy (src := src) c
-      let fb := candEnergy (src := src) b
-      if fc < fb then some c
-      else if fb < fc then some b
-      else if c.id < b.id then some c else some b
-
-def select {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S] [JointThermo ℚ S]
-    (src : S) (cands : List (Cand (K := ℚ) src)) : Cand (K := ℚ) src ⊕ Residue :=
-  if cands.isEmpty then Sum.inr Residue.noCandidates
-  else
-    let tagged := cands.filter (fun c => c.evidenceTagged)
-    if tagged.isEmpty then
-      if cands.any (fun c => !c.evidenceTagged) then Sum.inr Residue.allInadmissible
-      else Sum.inr Residue.untaggedConstant
-    else
-      match tagged.foldl pickMin none with
-      | none => Sum.inr Residue.allInadmissible
-      | some c =>
-          if candEnergy (src := src) c < jointFreeEnergy src then Sum.inl c
-          else Sum.inr Residue.noStrictImprovement
-
-end UMST.Excitement
-
-namespace UMST.Urge.ExcitementImport
-
-open UMST.Excitement
-
-structure HistoryRecoveryCtx (S : Type) [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] where
-  prior       : S
-  successors  : List (Cand (K := ℚ) prior)
-
-noncomputable def urgeRecovery {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) : Cand (K := ℚ) ctx.prior ⊕ Residue :=
-  select ctx.prior ctx.successors
-
-noncomputable def urgeRecoverySelect {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (prior : S) (successors : List (Cand (K := ℚ) prior)) :
-    Cand (K := ℚ) prior ⊕ Residue :=
-  select prior successors
-
-theorem urgeRecovery_eq_select {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) :
-    urgeRecovery ctx = select ctx.prior ctx.successors :=
-  rfl
-
-theorem urgeRecoverySelect_eq_select {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (prior : S) (successors : List (Cand (K := ℚ) prior)) :
-    urgeRecoverySelect prior successors = select prior successors :=
-  rfl
-
-theorem urgeRecovery_empty {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (prior : S) :
-    urgeRecoverySelect prior [] = Sum.inr Residue.noCandidates := by
-  rfl
-
-def urgePhysicsGreen : Bool := false
-
-theorem urgePhysicsGreenFalse : urgePhysicsGreen = false := rfl
-
-def excitementImportProductionWired : Bool := false
-
-theorem excitementImportProductionWiredFalse : excitementImportProductionWired = false := rfl
-
-theorem excitementImportModuleWitness : True := trivial
-
-theorem urgeRecovery_noLocalArgmin {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) :
-    urgeRecovery ctx = select ctx.prior ctx.successors :=
-  rfl
-
-end UMST.Urge.ExcitementImport
 
 namespace UrgeKnowing.PersistVsOccupancy
 
 open UMST UMST.Core UMST.LandauerLaw UMST.Excitement UMST.Urge.ExcitementImport
+
+-- The persist and occupancy Hilbert indices live in `TwoHilberts` (single source); this module adds the
+-- persist-versus-occupancy fiber morphism over them.
+open UrgeKnowing.TwoHilberts (hashString hashPaths occupancyHilbertIndex occupancy_index_cell_distinct HilbertRole OccupancyHilbert PersistHilbert composeSurrogateFor hashByte hilbertRoleEqb occupancyHilbertAuthority occupancyHilbertRole occupancyHilbertRoleOf occupancy_hilbert_role_pin persistCurveIndex persistHilbertAuthority persistHilbertBits persistHilbertCoords persistHilbertIndex persistHilbertRole persistHilbertRoleOf persistNotOccupancyCopyCollision persist_hilbert_authority_ne_occupancy persist_hilbert_role_pin persist_ne_occupancy_role physicalSecondLawAuthority physicsGreenAuthorized productionWired production_wired_false)
 
 -- ================================================================
 -- SECTION 1: Modality + knowing-fiber pins (Unwired)
@@ -168,44 +43,11 @@ inductive PersistVsOccupancyModality where
 
 def persistVsOccupancyModalityCurrent : PersistVsOccupancyModality := .unwired
 
-def productionWired : Bool := false
-
 def persistProductionWired : Bool := false
 
 -- ================================================================
 -- SECTION 2: Hilbert roles — persist acting vs occupancy knowing
 -- ================================================================
-
-inductive HilbertRole where
-  | persistActing | occupancyKnowing
-  deriving DecidableEq, Repr
-
-def persistHilbertRole : HilbertRole := .persistActing
-
-def occupancyHilbertRole : HilbertRole := .occupancyKnowing
-
-theorem persist_ne_occupancy_role : persistHilbertRole ≠ occupancyHilbertRole := by
-  decide
-
-structure PersistHilbert where
-  persist_raw : Nat
-  deriving DecidableEq, Repr
-
-structure OccupancyHilbert where
-  occupancy_raw : Nat
-  deriving DecidableEq, Repr
-
-def persistHilbertRoleOf (_ : PersistHilbert) : HilbertRole := .persistActing
-
-def occupancyHilbertRoleOf (_ : OccupancyHilbert) : HilbertRole := .occupancyKnowing
-
-theorem persist_hilbert_role_pin (p : PersistHilbert) :
-    persistHilbertRoleOf p = .persistActing :=
-  rfl
-
-theorem occupancy_hilbert_role_pin (o : OccupancyHilbert) :
-    occupancyHilbertRoleOf o = .occupancyKnowing :=
-  rfl
 
 -- ================================================================
 -- SECTION 3: Typed positive fuse refusal — not only ¬ physics GREEN
@@ -254,41 +96,6 @@ theorem refuse_second_argmin_positive :
 -- ================================================================
 -- SECTION 4: Persist vs occupancy geometric index surrogates
 -- ================================================================
-
-def persistHilbertBits : Nat := 8
-
-def persistHilbertCoords (ucrs grid bits : Nat) : Nat × Nat :=
-  let side := 1 <<< bits
-  let mask := side - 1
-  let x := ucrs % (mask + 1)
-  let y := grid % (mask + 1)
-  (x, y)
-
-def persistCurveIndex (x y bits : Nat) : Nat :=
-  let side := 1 <<< bits
-  (x % side) + (y % side) * side
-
-def persistHilbertIndex (ucrs grid : Nat) : PersistHilbert :=
-  let bits := persistHilbertBits
-  let (x, y) := persistHilbertCoords ucrs grid bits
-  { persist_raw := persistCurveIndex x y bits }
-
-def hashByte (h b : Nat) : Nat := (h * 31 + b) % 65536
-
-def hashString (h : Nat) (s : String) : Nat :=
-  s.foldl (fun h' c => hashByte h' (Char.toNat c)) h
-
-def hashPaths (h : Nat) (paths : List String) : Nat :=
-  paths.foldl (fun h' p => hashByte (hashString h' p) 0) h
-
-def occupancyHilbertIndex (cell_id : String) (write_set : List String) : OccupancyHilbert :=
-  { occupancy_raw := hashPaths (hashString 5381 cell_id) write_set }
-
-def hilbertRoleEqb (r1 r2 : HilbertRole) : Bool :=
-  match r1, r2 with
-  | .persistActing, .persistActing => true
-  | .occupancyKnowing, .occupancyKnowing => true
-  | _, _ => false
 
 -- ================================================================
 -- SECTION 5: Homolog witness — homolog ≠ copy across fibers
@@ -372,11 +179,6 @@ theorem persist_vs_occupancy_positive_refuse_honest : persistVsOccupancyPositive
   · rfl
   · exact refuse_second_argmin_positive
 
-theorem occupancy_index_cell_distinct :
-    (occupancyHilbertIndex "CELL-B" ["write/a.rs", "write/b.rs"]).occupancy_raw ≠
-      (occupancyHilbertIndex "CELL-C" ["write/a.rs", "write/b.rs"]).occupancy_raw := by
-  decide
-
 -- ================================================================
 -- SECTION 6: Persist-vs-occupancy composes Excitement.select (no second argmin)
 -- ================================================================
@@ -402,8 +204,6 @@ noncomputable def urgePersistVsOccupancySelect {S : Type} [ThermodynamicSystem �
     (successors : List (Cand (K := ℚ) prior)) :
     Cand (K := ℚ) prior ⊕ Residue :=
   urgeRecoverySelect prior successors
-
-def composeSurrogateFor : String := "UMST.Excitement.select"
 
 def metaExcitementModule : String :=
   "umst-meta/crates/umst-meta/src/excitement.rs"
@@ -454,18 +254,6 @@ theorem persistVsOccupancySelect_empty {S : Type} [ThermodynamicSystem ℚ S]
 -- SECTION 7: Authority cites + physics GREEN fence
 -- ================================================================
 
-def persistHilbertAuthority : String :=
-  "umst/egoff/egoff/src/memory/hilbert_layout.rs"
-
-def occupancyHilbertAuthority : String :=
-  "umst/umst-meta/crates/umst-adk/src/hilbert_allocate.rs"
-
-def physicalSecondLawAuthority : String :=
-  "LandauerLaw.physicalSecondLaw"
-
-def persistNotOccupancyCopyCollision : String :=
-  "persist Hilbert xy2d(ucrs_seq, grid_hash) ne occupancy Hilbert FNV(cell_id, write_set) homolog not copy"
-
 def persistVsOccupancyCellId : String :=
   "URGE-FORMAL-Q-LEAN-PERSIST-VS-OCCUPANCY"
 
@@ -486,8 +274,6 @@ theorem persist_vs_occupancy_modality_unwired :
     persistVsOccupancyModalityCurrent = .unwired :=
   rfl
 
-theorem production_wired_false : productionWired = false := rfl
-
 theorem persist_production_wired_false : persistProductionWired = false := rfl
 
 theorem persist_vs_occupancy_cites_persist_hilbert :
@@ -505,12 +291,6 @@ theorem persist_vs_occupancy_cites_physical_second_law :
 theorem persist_vs_occupancy_not_second_landauer_axiom :
     persistVsOccupancySecondLawConservationFraming ≠ "landauer_second_axiom" :=
   by decide
-
-theorem persist_hilbert_authority_ne_occupancy :
-    persistHilbertAuthority ≠ occupancyHilbertAuthority := by
-  decide
-
-def physicsGreenAuthorized : Prop := False
 
 theorem persist_vs_occupancy_physics_green_false : ¬ physicsGreenAuthorized :=
   id

@@ -52,7 +52,7 @@ where `λᵢ` are the eigenvalues of ρ.  Since ρ is PSD with trace 1, all `λ�
 
 namespace UMST.Quantum
 
-open Real Matrix Polynomial
+open _root_.Real Matrix Polynomial  -- `_root_`: umst-formal declares `UMST.Real`, which `open Real` would pick inside `UMST.*`
 open scoped BigOperators ComplexOrder
 
 variable {n : ℕ} {hn : 0 < n}
@@ -451,7 +451,7 @@ end Matrix.IsHermitian
 
 namespace UMST.Quantum
 
-open Real Matrix Polynomial
+open _root_.Real Matrix Polynomial  -- `_root_`: umst-formal declares `UMST.Real`, which `open Real` would pick inside `UMST.*`
 open scoped BigOperators ComplexOrder
 
 variable {n : ℕ} {hn : 0 < n}

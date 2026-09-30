@@ -13,8 +13,7 @@
   Sole physical law: the `SecondLaw` predicate; `LandauerLaw.physicalSecondLaw` is its erase instance (imported, not re-declared; no project `axiom`).
   Adds **zero** Lean `axiom` declarations. Zero sorry.
 
-  Vendored `UMST.Excitement` + `UMST.Urge.ExcitementImport` inline below: pinned
-  `umst-formal` @690fbe6 lacks those modules; per-cell build cannot edit lakefile.
+  `UMST.Excitement` and `UMST.Urge.ExcitementImport` are imported from umst-formal (single source).
   `landauerBound` from `LandauerLaw` only — avoids `LandauerBound` → `DoubleSlitCore` chain.
 -/
 
@@ -22,176 +21,16 @@ import Core.State
 import DualLedger
 import LandauerLaw
 import Mathlib.Data.Rat.Defs
+import Excitement
+import Urge.ExcitementImport
 
 open UMST UMST.Core UMST.LandauerLaw
 
 
 
-namespace UMST.Core
-
-/-- Joint thermodynamic fields for Excitement's free-energy functional (vendored: absent @690fbe6). -/
-class JointThermo (K : outParam Type) [LinearOrderedField K] [ThermodynamicScalar K] (S : Type) where
-  internalEnergy : S → K
-  entropy        : S → K
-  mutualInfo     : S → K
-  temperature    : S → K
-  temperature_pos : ∀ s, 0 < temperature s
-
-end UMST.Core
-
-namespace UMST.Excitement
-
-open UMST UMST.Core
-
-def kB {K : Type} [LinearOrderedField K] [ThermodynamicScalar K] : K := 1
-
-def jointFreeEnergy {K : Type} [LinearOrderedField K] [ThermodynamicScalar K] {S : Type}
-    [JointThermo K S] (s : S) : K :=
-  JointThermo.internalEnergy s
-    - JointThermo.temperature s * JointThermo.entropy s
-    - kB * JointThermo.temperature s * JointThermo.mutualInfo s
-
-inductive Residue where
-  | noCandidates
-  | allInadmissible
-  | allExcludedByCBF
-  | allExcludedByDEC
-  | untaggedConstant
-  | noStrictImprovement
-  deriving DecidableEq, Repr
-
-structure Cand {K : Type} {S : Type} [LinearOrderedField K] [ThermodynamicScalar K]
-    [ThermodynamicSystem K S] [AdmissibleSystem K S] (src : S) where
-  id                : Nat
-  tgt               : S
-  step              : Admissible src tgt
-  cbfSafe           : Prop
-  cbfSafe_holds     : cbfSafe
-  decConserving     : Prop
-  decConserving_holds : decConserving
-  ledger            : DualLedger
-  evidenceTagged    : Bool
-
-def globalFreeEnergyCand {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] {src : S} (c : Cand (K := ℚ) src) : ℚ :=
-  jointFreeEnergy c.tgt + DualLedger.total c.ledger
-
-def candEnergy {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] {src : S} (c : Cand (K := ℚ) src) : ℚ :=
-  globalFreeEnergyCand (src := src) c
-
-def pickMin {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] {src : S} (acc : Option (Cand (K := ℚ) src))
-    (c : Cand (K := ℚ) src) : Option (Cand (K := ℚ) src) :=
-  match acc with
-  | none => some c
-  | some b =>
-      let fc := candEnergy (src := src) c
-      let fb := candEnergy (src := src) b
-      if fc < fb then some c
-      else if fb < fc then some b
-      else if c.id < b.id then some c else some b
-
-def select {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S] [JointThermo ℚ S]
-    (src : S) (cands : List (Cand (K := ℚ) src)) : Cand (K := ℚ) src ⊕ Residue :=
-  if cands.isEmpty then Sum.inr Residue.noCandidates
-  else
-    let tagged := cands.filter (fun c => c.evidenceTagged)
-    if tagged.isEmpty then
-      if cands.any (fun c => !c.evidenceTagged) then Sum.inr Residue.allInadmissible
-      else Sum.inr Residue.untaggedConstant
-    else
-      match tagged.foldl pickMin none with
-      | none => Sum.inr Residue.allInadmissible
-      | some c =>
-          if candEnergy (src := src) c < jointFreeEnergy src then Sum.inl c
-          else Sum.inr Residue.noStrictImprovement
-
-end UMST.Excitement
-
-namespace UMST.Urge.ExcitementImport
-
-open UMST.Excitement
-
--- ================================================================
--- SECTION 1: History recovery carrier (typed successor list)
--- ================================================================
-
-/-- Context for Urge history recovery: prior head + admissible successor candidates. -/
-structure HistoryRecoveryCtx (S : Type) [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] where
-  prior       : S
-  successors  : List (Cand (K := ℚ) prior)
-
--- ================================================================
--- SECTION 2: Recovery **is** Excitement.select (no local argmin)
--- ================================================================
-
-/-- Urge history recovery composes `UMST.Excitement.select` — not a second argmin. -/
-noncomputable def urgeRecovery {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) : Cand (K := ℚ) ctx.prior ⊕ Residue :=
-  select ctx.prior ctx.successors
-
-/-- Alias on bare `(prior, successors)` — same selector, no re-derivation. -/
-noncomputable def urgeRecoverySelect {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (prior : S) (successors : List (Cand (K := ℚ) prior)) :
-    Cand (K := ℚ) prior ⊕ Residue :=
-  select prior successors
-
-/-- Definitional witness: recovery API is `Excitement.select`. -/
-theorem urgeRecovery_eq_select {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) :
-    urgeRecovery ctx = select ctx.prior ctx.successors :=
-  rfl
-
-theorem urgeRecoverySelect_eq_select {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (prior : S) (successors : List (Cand (K := ℚ) prior)) :
-    urgeRecoverySelect prior successors = select prior successors :=
-  rfl
-
-/-- Recovery and bare select agree on identical inputs. -/
-theorem urgeRecovery_eq_urgeRecoverySelect {S : Type} [ThermodynamicSystem ℚ S]
-    [AdmissibleSystem ℚ S] [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) :
-    urgeRecovery ctx = urgeRecoverySelect ctx.prior ctx.successors :=
-  rfl
-
--- ================================================================
--- SECTION 3: Imported selector properties (no local re-proof of argmin)
--- ================================================================
-
-/-- Empty successor list → `Residue.noCandidates` via imported `select`. -/
-theorem urgeRecovery_empty {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (prior : S) :
-    urgeRecoverySelect prior [] = Sum.inr Residue.noCandidates := by
-  rfl
-
--- ================================================================
--- SECTION 4: Axiom discipline + honesty flags
--- ================================================================
-
-/-- Physics GREEN unauthorized on this scaffold. -/
-def urgePhysicsGreen : Bool := false
-
-theorem urgePhysicsGreenFalse : urgePhysicsGreen = false := rfl
-
-/-- Production wiring stays open (meso import only). -/
-def excitementImportProductionWired : Bool := false
-
-theorem excitementImportProductionWiredFalse : excitementImportProductionWired = false := rfl
-
-/-- Catalog witness: meso Urge ExcitementImport module present. -/
-theorem excitementImportModuleWitness : True := trivial
-
-/-- Recovery selector re-uses `jointFreeEnergy` / `pickMin` from Excitement — no Urge-local argmin. -/
-theorem urgeRecovery_noLocalArgmin {S : Type} [ThermodynamicSystem ℚ S] [AdmissibleSystem ℚ S]
-    [JointThermo ℚ S] (ctx : HistoryRecoveryCtx S) :
-    urgeRecovery ctx = select ctx.prior ctx.successors :=
-  rfl
-end UMST.Urge.ExcitementImport
-
 namespace UrgeKnowing.MachineTemperature
 
-open Real Finset UMST.LandauerLaw UMST.Excitement UMST.Urge.ExcitementImport
+open _root_.Real Finset UMST.LandauerLaw UMST.Excitement UMST.Urge.ExcitementImport
 
 -- ================================================================
 -- SECTION 1: Modality + knowing-fiber pins (Unwired)
@@ -312,7 +151,7 @@ def refuseAbstractDagScalarAsTemperature : MachineTemperatureRefusal :=
 def refuseSecondArgminSelector : MachineTemperatureRefusal := .secondArgmin
 
 -- ================================================================
--- SECTION 5: Landauer tie-in — machine T on HeatBath, sole axiom only
+-- SECTION 5: Landauer tie-in — machine T on HeatBath, under the SecondLaw predicate only
 -- ================================================================
 
 theorem machineTemperatureLandauerBound (proc : ErasureProcess)
@@ -320,9 +159,12 @@ theorem machineTemperatureLandauerBound (proc : ErasureProcess)
     proc.bath.bathTemp.val * log 2 ≤ proc.work :=
   landauerBound proc hSL
 
-theorem machineTemperaturePhysicalSecondLaw (proc : ErasureProcess) :
-    physicalSecondLawUniformBinary proc :=
-  physicalSecondLaw_uniform_binary proc
+/-- The second law is a predicate on a process, not a fact about every process (a zero-work erasure violates it).
+At every machine temperature the Landauer-tight erasure satisfies it, so the hypothesis of
+`machineTemperatureLandauerBound` is satisfiable. -/
+theorem machineTemperaturePhysicalSecondLaw (T : ℝ) (hT : 0 < T) :
+    physicalSecondLawUniformBinary (landauerTightErasure T hT) :=
+  SecondLaw_landauerTight T hT
 
 theorem machine_temperature_not_wall_clock :
     (TemperatureSource.repositoryInMachine = TemperatureSource.wallClockTheater) → False := by

@@ -26,7 +26,7 @@ Key algebraic properties (unchanged API):
 
 namespace UMST.DoubleSlit
 
-open UMST.Core UMST.Quantum Real
+open UMST.Core UMST.Quantum _root_.Real
 
 -- ============================================================
 -- Re-export / abbreviation for cross-lang documentation

@@ -23,7 +23,7 @@ namespace UMST.Quantum.Examples
 
 open scoped BigOperators
 
-open Matrix Real Complex UMST.DoubleSlit UMST.Quantum
+open Matrix _root_.Real Complex UMST.DoubleSlit UMST.Quantum
 
 /-- Computational-basis amplitudes for |+⟩ = (|0⟩ + |1⟩) / √2. -/
 noncomputable def psiPlus : Fin 2 → ℂ :=

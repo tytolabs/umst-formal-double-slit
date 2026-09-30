@@ -29,7 +29,7 @@ Thermodynamic cost `Q` is bounded below by `infoEnergyLowerBound` in joules.
 
 namespace UMST.AgentDynamics
 
-open UMST.Core UMST.Quantum UMST.DoubleSlit Real
+open UMST.Core UMST.Quantum UMST.DoubleSlit _root_.Real
 
 /-- Dimensionless residual from extracted MI in **Landauer bit-equivalents** (`MI_nats / ln 2`). -/
 noncomputable def residualCoherenceFromMIBits (miBits : ℝ) : ℝ :=
