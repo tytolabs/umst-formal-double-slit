@@ -106,10 +106,11 @@ Extracting which-path information from a quantum system destroys interference pr
 **The gate idea.** Extracting which-path information pays at the Landauer floor (`k_B T ln 2` per bit) and destroys a proportional fraction of interference (Englert `V² + I² ≤ 1`). Observation is continuous payment, not a binary switch — structural thermodynamic accounting, not metaphor.
 
 <!-- readme:status -->
-[![Figure 1: CI Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
-[![Figure 2: CI Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
-[![Figure 3: CI Formal Coq Agda](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
-[![Figure 4: License MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
+[![Figure 1: CI](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/ci.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/ci.yml)
+[![Figure 2: CI Lean](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/lean.yml)
+[![Figure 3: CI Haskell](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/haskell.yml)
+[![Figure 4: CI Formal Coq Agda](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml/badge.svg)](https://github.com/tytolabs/umst-formal-double-slit/actions/workflows/formal.yml)
+[![Figure 5: License MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 <!-- /readme:status -->
 
 </div>

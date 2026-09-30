@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+# SPDX-License-Identifier: MIT
+# CI: every workflow on every push to the default branch, one status (the README "CI" badge, as in umst-formal).
+name: CI
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  hygiene:
+    uses: ./.github/workflows/hygiene.yml
+  lean:
+    uses: ./.github/workflows/lean.yml
+  haskell:
+    uses: ./.github/workflows/haskell.yml
+  formal:
+    uses: ./.github/workflows/formal.yml

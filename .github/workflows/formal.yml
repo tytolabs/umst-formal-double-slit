@@ -10,6 +10,7 @@
 #       and chmod the stdlib dir so Agda can write .agdai interface caches.
 name: Formal (Coq + Agda)
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches: [main, master, docs/reorganize-readme]
@@ -28,7 +29,8 @@ on:
       - ".github/workflows/formal.yml"
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # suffix keeps runs called from CI (ci.yml) from sharing, and cancelling, one group
+  group: ${{ github.workflow }}-formal-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

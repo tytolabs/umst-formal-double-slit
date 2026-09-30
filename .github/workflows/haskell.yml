@@ -3,6 +3,7 @@
 # Haskell QuickCheck mirror — see Haskell/README.md
 name: Haskell
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches: [main, master, docs/reorganize-readme]
@@ -15,7 +16,8 @@ on:
       - ".github/workflows/haskell.yml"
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # suffix keeps runs called from CI (ci.yml) from sharing, and cancelling, one group
+  group: ${{ github.workflow }}-haskell-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

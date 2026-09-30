@@ -3,6 +3,7 @@
 # CI: Lake + Mathlib (cache when available). See Lean/VERIFY.md.
 name: Lean
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches: [main, master, docs/reorganize-readme]
@@ -21,7 +22,8 @@ on:
       - ".github/workflows/lean.yml"
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # suffix keeps runs called from CI (ci.yml) from sharing, and cancelling, one group
+  group: ${{ github.workflow }}-lean-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

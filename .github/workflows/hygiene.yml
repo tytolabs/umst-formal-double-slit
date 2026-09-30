@@ -3,6 +3,7 @@
 # Repository hygiene on every push: no tracked build artefacts, and the formal gaps inventory matches the sources.
 name: Hygiene
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches: [main, master]
