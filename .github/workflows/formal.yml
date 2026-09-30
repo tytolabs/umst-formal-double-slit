@@ -48,6 +48,8 @@ jobs:
       - name: coq-check (all Coq/ modules)
         run: |
           set -e
+          ulimit -s unlimited
+          export OCAMLRUNPARAM=s
           # Find the rocq binary — could be under /home/coq or /home/rocq
           ROCQ_BIN=""
           for d in /home/coq/.opam/*/bin /home/rocq/.opam/*/bin; do

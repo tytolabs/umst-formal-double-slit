@@ -18,9 +18,9 @@
 
 module AllotropeGeometry where
 
-open import Data.Nat.Base using (z<s)
 open import Data.Nat as ℕ using (ℕ; zero; suc; _+_; _≤_)
 open import Data.Nat.Properties using (≤-refl; 0<1+n)
+open import Data.Fin using (Fin; zero; toℕ)
 open import Data.Integer as ℤ using (ℤ; ∣_∣)
 open import Data.Bool using (Bool; true; false; if_then_else_)
 open import Data.Rational as ℚ using (ℚ; 0ℚ)
@@ -30,7 +30,6 @@ open import Data.Product using (_×_; _,_)
 open import Data.Empty using (⊥; ⊥-elim)
 open import Relation.Binary.PropositionalEquality using (_≡_; _≢_; refl; sym; cong; subst)
 open import Relation.Nullary using (Dec; yes; no; ¬_)
-open import Relation.Nullary.Decidable using (does)
 
 ------------------------------------------------------------------------
 -- Q-lattice cell (knowing primary discrete identity — Lean mirror)
@@ -42,27 +41,25 @@ data SpinProjection : Set where
 record QLatticeCell : Set where
   constructor mkQLatticeCell
   field
-    nQ    : ℕ
-    hnQ   : ℕ.zero ℕ.< nQ
-    ell   : ℕ
-    hell  : ell ℕ.< nQ
+    n-k   : ℕ
+    ell   : Fin (suc n-k)
     mEll  : ℤ
-    hmEll : ∣ mEll ∣ ≤ ell
+    hmEll : ∣ mEll ∣ ≤ toℕ ell
     spin  : SpinProjection
 
+principalQN : QLatticeCell → ℕ
+principalQN q = suc (QLatticeCell.n-k q)
+
 madelungPriority : QLatticeCell → ℕ
-madelungPriority q = QLatticeCell.nQ q ℕ.+ QLatticeCell.ell q
+madelungPriority q = principalQN q ℕ.+ toℕ (QLatticeCell.ell q)
 
 madelungPriority-pos : ∀ q → ℕ.zero ℕ.< madelungPriority q
-madelungPriority-pos q with QLatticeCell.hnQ q
-... | z<s = z<s
+madelungPriority-pos q = 0<1+n
 
 hydrogen1s : QLatticeCell
 hydrogen1s = record
-  { nQ = suc zero
-  ; hnQ = 0<1+n
+  { n-k = zero
   ; ell = zero
-  ; hell = 0<1+n
   ; mEll = ℤ.+ zero
   ; hmEll = ≤-refl
   ; spin = spin-down
