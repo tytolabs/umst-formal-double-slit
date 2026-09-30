@@ -1,0 +1,24 @@
+{
+  "schema": "formal_gaps_v1",
+  "project": "umst-formal-double-slit",
+  "generated_at": "2026-09-30T05:45:06Z",
+  "physics_green": false,
+  "census": {
+    "coq_axioms": 0,
+    "coq_parameters": 0,
+    "agda_postulate_blocks": 0,
+    "lean_native_decide_sites": 0
+  },
+  "coq": {
+    "axiom_count": 0,
+    "parameter_count": 0,
+    "axioms": [],
+    "parameters": []
+  },
+  "agda": {
+    "postulate_block_count": 0,
+    "blocks": []
+  },
+  "lean_native_decide": [],
+  "non_claim": "Inventory only \u2014 listed gaps remain trust extensions until replaced; physics_green false"
+}

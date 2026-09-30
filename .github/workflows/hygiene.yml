@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
+# SPDX-License-Identifier: MIT
+# Repository hygiene on every push: no tracked build artefacts, and the formal gaps inventory matches the sources.
+name: Hygiene
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # v4
+      - name: No ignored build artefacts are tracked
+        # A committed build product (.olean, .agdai, .vo, .lake packages) is loaded instead of rebuilt and
+        # breaks CI when it was compiled with another toolchain.
+        run: |
+          set -euo pipefail
+          bad=$(git ls-files -ci --exclude-standard)
+          if [ -n "$bad" ]; then
+            echo "FAIL: files matched by .gitignore are tracked:"
+            echo "$bad" | head -50
+            exit 1
+          fi
+          echo "OK: no tracked build artefacts"
+      - name: Formal gaps inventory matches the sources (P0-7)
+        # Fails on any Coq Axiom/Parameter, Agda postulate block or Lean native_decide site that the committed
+        # FORMAL_GAPS.json does not list; regenerate with `python3 scripts/formal_gaps.py --emit FORMAL_GAPS.json`.
+        run: python3 scripts/formal_gaps.py --check FORMAL_GAPS.json
