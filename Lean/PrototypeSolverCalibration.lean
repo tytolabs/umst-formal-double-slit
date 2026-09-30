@@ -21,7 +21,7 @@ open UMST.Core UMST.Quantum
 
 /-- Concrete prototype calibration:
 step size `1/100`, order `2`, and unit MI/cost error coefficients. -/
-def prototypeCalibration : SolverCalibration where
+noncomputable def prototypeCalibration : SolverCalibration where
   stepSize := (1 : ℝ) / 100
   order := 2
   cMI := 1
@@ -44,13 +44,11 @@ theorem prototypeCalibration_epsMIAgg (n : ℕ) :
     prototypeCalibration.epsMIAgg n = (n : ℝ) * ((1 : ℝ) / 10000) := by
   unfold SolverCalibration.epsMIAgg
   rw [prototypeCalibration_epsMIStep]
-  ring
 
 theorem prototypeCalibration_epsCostAgg (n : ℕ) :
     prototypeCalibration.epsCostAgg n = (n : ℝ) * ((1 : ℝ) / 10000) := by
   unfold SolverCalibration.epsCostAgg
   rw [prototypeCalibration_epsCostStep]
-  ring
 
 theorem prototypeCalibration_utility_diff_le {n : ℕ} {T : ℝ}
     (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)

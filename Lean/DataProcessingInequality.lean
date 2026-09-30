@@ -78,11 +78,11 @@ private lemma qubit_max_eq_sqrt {p q : ℝ} (hpq : p + q = 1) :
   rw [hsq, sqrt_sq_eq_abs]
   cases le_total p q with
   | inl hpq' =>
-    rw [max_eq_right hpq', abs_of_nonpos (sub_nonpos.mpr hpq')]
-    ring_nf
+    rw [max_eq_right hpq', _root_.abs_of_nonpos (sub_nonpos.mpr hpq')]
+    linarith
   | inr hpq' =>
-    rw [max_eq_left hpq', abs_of_nonneg (sub_nonneg.mpr hpq')]
-    ring_nf
+    rw [max_eq_left hpq', _root_.abs_of_nonneg (sub_nonneg.mpr hpq')]
+    linarith
 
 private lemma vonNeumannDiagonal_eq_binEntropy_max_path (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal ρ = binEntropy (max (pathWeight ρ 0) (pathWeight ρ 1)) := by
@@ -102,10 +102,13 @@ private lemma vonNeumannEntropy_eq_binEntropy_max_eigen (ρ : DensityMatrix hnQu
   set l1 := (DensityMat.isHermitian ρ).eigenvalues 1
   have hl_sum : l0 + l1 = 1 := by simpa [Fin.sum_univ_two] using density_eigenvalues_sum_eq_one_real ρ
   unfold vonNeumannEntropy
-  rw [Fin.sum_univ_two, ← binEntropy_eq_negMulLog_add_negMulLog_one_sub]
+  rw [Fin.sum_univ_two]
+  change negMulLog l0 + negMulLog l1 = _
+  have hl1 : l1 = 1 - l0 := by linarith
   by_cases h : l0 ≤ l1
-  · rw [max_eq_right h, ← binEntropy_one_sub l1, show 1 - l1 = l0 by linarith]
-  · rw [max_eq_left (le_of_lt (lt_of_not_ge h))]
+  · rw [max_eq_right h, hl1, binEntropy_eq_negMulLog_add_negMulLog_one_sub, sub_sub_cancel]
+    ring
+  · rw [max_eq_left (le_of_lt (lt_of_not_ge h)), hl1, binEntropy_eq_negMulLog_add_negMulLog_one_sub]
 
 /-- **Schur concavity for qubits:** The diagonal (Shannon) entropy of a 2×2 density matrix
 is at least its von Neumann (spectral) entropy.
@@ -132,13 +135,13 @@ theorem vonNeumannDiagonal_ge_vonNeumannEntropy (ρ : DensityMatrix hnQubit) :
   have hprod_le : l0 * l1 ≤ p0 * p1 := by
     have hprod_det : (l0 * l1 : ℂ) = A.det := by
       rw [hρ.det_eq_prod_eigenvalues, Fin.prod_univ_two]
+      rfl
     have hdet2 : A.det = A 0 0 * A 1 1 - A 0 1 * A 1 0 := Matrix.det_fin_two A
     have h01 : A 1 0 = star (A 0 1) := by rw [← Matrix.conjTranspose_apply, hρ.eq]
-    have hp0c : (p0 : ℂ) = A 0 0 := (IsHermitian.coe_re_apply_self hρ 0).symm
-    have hp1c : (p1 : ℂ) = A 1 1 := (IsHermitian.coe_re_apply_self hρ 1).symm
+    have hp0c : (p0 : ℂ) = A 0 0 := IsHermitian.coe_re_apply_self hρ 0
+    have hp1c : (p1 : ℂ) = A 1 1 := IsHermitian.coe_re_apply_self hρ 1
     have hdet3 : A.det = (p0 * p1 : ℂ) - (normSq (A 0 1) : ℂ) := by
-      rw [hdet2, h01, ← hp0c, ← hp1c, Complex.mul_conj]
-      simp only [sub_eq_add_neg, add_assoc, add_left_comm, add_comm]
+      rw [hdet2, h01, ← hp0c, ← hp1c, Complex.star_def, Complex.mul_conj]
     have hl1R : l0 * l1 = (A.det).re := by
       have hre := congrArg Complex.re hprod_det
       simpa [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im] using hre
@@ -176,7 +179,7 @@ A channel `E` is **unital** if `E(I) = I`. For unital CPTP maps, entropy is non-
 The which-path channel is unital: `P₀ I P₀ + P₁ I P₁ = P₀ + P₁ = I`. -/
 
 /-- A Kraus channel is **unital** if it maps the identity to the identity. -/
-def KrausChannel.IsUnital (κ : KrausChannel n ι) : Prop :=
+def KrausChannel.IsUnital {ι : Type*} [Fintype ι] [DecidableEq ι] (κ : KrausChannel n ι) : Prop :=
   κ.map (1 : Matrix (Fin n) (Fin n) ℂ) = 1
 
 /-- The **identity Kraus channel** (`KrausChannel.identity`) is unital. -/
@@ -188,17 +191,17 @@ theorem KrausChannel.identity_isUnital (n : ℕ) : (KrausChannel.identity n).IsU
 theorem vonNeumannEntropy_identity_apply (ρ : DensityMatrix hn) :
     vonNeumannEntropy ((KrausChannel.identity n).apply hn ρ) = vonNeumannEntropy ρ := by
   refine congr_arg vonNeumannEntropy (DensityMat.ext ?_)
-  simp [KrausChannel.apply, KrausChannel.identity_map]
+  show (KrausChannel.identity n).map ρ.carrier = ρ.carrier
+  exact KrausChannel.identity_map n ρ.carrier
 
 /-- **Tier 2** holds trivially for the identity channel: `S(ρ) ≥ S(ρ)` (in fact equality). -/
 theorem vonNeumannEntropy_nondecreasing_unital_identity (ρ : DensityMatrix hn) :
     vonNeumannEntropy ((KrausChannel.identity n).apply hn ρ) ≥ vonNeumannEntropy ρ := by
   rw [vonNeumannEntropy_identity_apply]
-  exact le_rfl
 
 /-- The which-path channel is unital: projectors sum to identity. -/
 theorem whichPathChannel_isUnital : KrausChannel.whichPathChannel.IsUnital := by
-  unfold KrausChannel.IsUnital KrausChannel.map
+  unfold KrausChannel.IsUnital
   rw [KrausChannel.whichPath_map_eq_diagonal]
   ext i j
   simp [diagonal_apply, one_apply]
@@ -211,14 +214,15 @@ theorem densityMatrix_diag_entry_eq_ofReal_re {m : ℕ} {hm : 0 < m} (ρ : Densi
   rw [Complex.ext_iff]
   have him : (ρ.carrier i i).im = 0 := by
     rw [← Complex.conj_eq_iff_im, ← Complex.star_def]
-    exact (ρ.psd.isHermitian.apply i i).symm
+    exact ρ.psd.isHermitian.apply i i
   simp [him]
 
 /-- After Lüders which-path, the carrier is the diagonal of Born weights as complex scalars. -/
 theorem whichPath_apply_carrier_eq_diagonal_pathWeight (ρ : DensityMatrix hnQubit) :
     (KrausChannel.whichPathChannel.apply hnQubit ρ).carrier =
       diagonal (fun i : Fin 2 => (pathWeight ρ i : ℂ)) := by
-  rw [KrausChannel.apply, KrausChannel.whichPath_map_eq_diagonal]
+  show KrausChannel.whichPathChannel.map ρ.carrier = _
+  rw [KrausChannel.whichPath_map_eq_diagonal]
   refine congrArg diagonal (funext fun i => ?_)
   rw [densityMatrix_diag_entry_eq_ofReal_re ρ i, pathWeight]
 
@@ -232,7 +236,7 @@ theorem vonNeumannEntropy_whichPath_apply_eq_vonNeumannDiagonal (ρ : DensityMat
   rw [hdiag, vonNeumannDiagonal, shannonBinary]
   rw [Fin.sum_univ_two]
   have hp1 : pathWeight ρ 1 = 1 - pathWeight ρ 0 := by linarith [pathWeight_sum ρ]
-  simpa [hp1]
+  simp [hp1]
 
 /-- **Algebraic unital DPI (qubit path channel):** the computational-basis Lüders channel is
 unital (`whichPathChannel_isUnital`) and **does not decrease** von Neumann entropy.
@@ -300,7 +304,8 @@ theorem KrausChannel.unitaryChannel_isUnital (U : Matrix (Fin n) (Fin n) ℂ) (h
 theorem unitaryChannel_apply_carrier (U : Matrix (Fin n) (Fin n) ℂ) (hU : Uᴴ * U = 1)
     (ρ : DensityMatrix hn) :
     ((unitaryChannel U hU).apply hn ρ).carrier = U * ρ.carrier * Uᴴ := by
-  simp [KrausChannel.apply, unitaryChannel_map]
+  show (unitaryChannel U hU).map ρ.carrier = _
+  exact unitaryChannel_map U hU ρ.carrier
 
 private theorem unitaryChannel_apply_eq_unitaryConj (U : Matrix (Fin n) (Fin n) ℂ) (hU : Uᴴ * U = 1)
     (ρ : DensityMatrix hn) :
@@ -319,6 +324,5 @@ theorem vonNeumannEntropy_nondecreasing_unital_CPTP_n (ρ : DensityMatrix hn)
     vonNeumannEntropy ((unitaryChannel U hU).apply hn ρ) ≥ vonNeumannEntropy ρ := by
   rw [unitaryChannel_apply_eq_unitaryConj U hU ρ,
     vonNeumannEntropy_unitarily_invariant ρ ⟨U, Matrix.mem_unitaryGroup_iff'.mpr hU⟩]
-  exact le_rfl
 
 end UMST.Quantum

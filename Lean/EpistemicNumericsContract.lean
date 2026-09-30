@@ -21,6 +21,7 @@ open scoped BigOperators
 open UMST.Core UMST.Quantum
 
 /-- Runtime-observable numeric summary of an `n`-step rollout at temperature `T`. -/
+@[ext]
 structure NumericTraceRecord (n : ℕ) (T : ℝ) where
   aggregateMI : ℝ
   aggregateCost : ℝ

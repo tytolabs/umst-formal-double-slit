@@ -56,8 +56,8 @@ structure TraceEpsilonCertificate (n : ℕ) (T : ℝ) (π : ProbePolicy)
     (ρ0 : DensityMatrix hnQubit) where
   telemetry : RuntimeTelemetrySchema n T
 
-/-- Constructor helper for trace-derived certificates. -/
-def TraceEpsilonCertificate.mk {n : ℕ} {T : ℝ}
+/-- Certificate from a telemetry schema (the structure's own constructor is `TraceEpsilonCertificate.mk`). -/
+def TraceEpsilonCertificate.ofTelemetry {n : ℕ} {T : ℝ}
     (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit) :
     TraceEpsilonCertificate n T π ρ0 where
   telemetry := τ

@@ -51,16 +51,13 @@ lemma four_mul_x_one_sub_x_mul_log_two_le_binEntropy (x : ℝ) (hx0 : 0 ≤ x) (
       have hmid : binEntropy (1 / 2 : ℝ) = log 2 := by
         rw [← inv_eq_one_div (2 : ℝ), binEntropy_two_inv]
       rw [hq, hmid]
-      exact le_rfl
     · have hlt : x < (1 / 2 : ℝ) := lt_of_le_of_ne h h12
-      exact four_mul_x_one_sub_x_mul_log_two_interior x hx0' hlt
-  · -- `1/2 < x < 1`: reduce by symmetry `binEntropy x = binEntropy (1-x)`.
+      exact four_mul_x_one_sub_x_mul_log_two_interior hx0' hlt
+  · -- `1/2 < x < 1`: by symmetry `binEntropy x = binEntropy (1-x)` with `1 - x ∈ (0, 1/2)`.
     rw [← binEntropy_one_sub x]
     have hs : 4 * x * (1 - x) * log 2 = 4 * (1 - x) * (1 - (1 - x)) * log 2 := by ring
     rw [hs]
-    refine four_mul_x_one_sub_x_mul_log_two_le_binEntropy (1 - x) ?_ ?_
-    · nlinarith
-    · nlinarith
+    exact four_mul_x_one_sub_x_mul_log_two_interior (by linarith) (by push_neg at h; linarith)
 
 /-- In **bit units**, the symmetric quadratic `4 x (1-x)` is bounded by Shannon entropy
 `shannonBinary x / log 2` on `x ∈ [0,1]`. -/
@@ -80,7 +77,7 @@ theorem visibility_sq_le_coherence_capacity (ρ : DensityMatrix hnQubit) :
   have hVsq : fringeVisibility ρ ^ 2 ≤ 4 * pathWeight ρ 0 * (1 - pathWeight ρ 0) := by
     rw [← hp1]
     unfold fringeVisibility
-    rw [mul_pow, sq (2 : ℝ), ← Complex.sq_abs]
+    rw [mul_pow, Complex.sq_abs]
     nlinarith [normSq_coherence_le_product ρ]
   have hbits : fringeVisibility ρ ^ 2 ≤ pathEntropyBits ρ :=
     le_trans hVsq (quadratic_le_entropy_bits (pathWeight ρ 0) hp0 hp0le)

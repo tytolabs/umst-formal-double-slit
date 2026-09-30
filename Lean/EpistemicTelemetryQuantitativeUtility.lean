@@ -49,28 +49,33 @@ theorem numericApprox_utility_diff_le {n : ℕ} {T : ℝ} (τ : NumericTraceReco
   have hdMI : |dMI| ≤ εMI := by simpa [dMI] using hMI
   have hdCost : |dCost| ≤ εCost := by simpa [dCost] using hCost
   have hsplit : |dMI - lam * (dCost / landauerBitEnergy T)| ≤
-      |dMI| + |lam * (dCost / landauerBitEnergy T)| := abs_sub_le _ _ _
+      |dMI| + |lam * (dCost / landauerBitEnergy T)| := by
+    simpa using abs_sub_le dMI 0 (lam * (dCost / landauerBitEnergy T))
   have hcostTerm :
       |lam * (dCost / landauerBitEnergy T)| ≤ |lam| * εCost / landauerBitEnergy T := by
-    rw [abs_mul, abs_div, abs_of_pos (landauerBitEnergy_pos hT)]
+    rw [abs_mul, abs_div, abs_of_pos (landauerBitEnergy_pos hT), ← mul_div_assoc]
     exact div_le_div_of_nonneg_right
       (mul_le_mul_of_nonneg_left hdCost (abs_nonneg lam))
-      (landauerBitEnergy_pos hT)
+      (landauerBitEnergy_pos hT).le
   have hsum : |dMI| + |lam * (dCost / landauerBitEnergy T)| ≤
       εMI + |lam| * εCost / landauerBitEnergy T :=
     add_le_add hdMI hcostTerm
   have hfinal : |dMI - lam * (dCost / landauerBitEnergy T)| ≤
       εMI + |lam| * εCost / landauerBitEnergy T :=
     le_trans hsplit hsum
-  simpa [dMI, dCost, sub_eq_add_neg, add_assoc, add_left_comm, add_comm, mul_add, add_mul] using hfinal
+  rw [show (τ.aggregateMI - lam * (τ.aggregateCost / landauerBitEnergy T)) -
+      (cumulativeEpistemicMI π n ρ0 - lam * (cumulativeEpistemicLandauerCost π n ρ0 T / landauerBitEnergy T)) =
+      dMI - lam * (dCost / landauerBitEnergy T) by simp only [dMI, dCost]; ring]
+  exact hfinal
 
-theorem telemetryApprox_zero_utility_diff_zero {n : ℕ} {T : ℝ}
-    (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (lam : ℝ) :
-    |traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+/-- The rollout's own telemetry reproduces the policy utility exactly (zero approximation error).
+Stated for `RuntimeTelemetrySchema.ofRollout`: an arbitrary telemetry record carries no such guarantee. -/
+theorem telemetryApprox_zero_utility_diff_zero (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
+    (T : ℝ) (hT : 0 < T) (lam : ℝ) :
+    |traceRecordPolicyUtility
+        ((RuntimeTelemetrySchema.ofRollout π n ρ0 T).toPerStepNumericRecord.toNumericTraceRecord) hT lam
       - policyUtility π n ρ0 T hT lam| = 0 := by
-  have hEq := telemetryApprox_zero_policyUtility_eq τ π ρ0 hT lam
-    (telemetryApprox_ofRollout_zero π n ρ0 T)
-  simp [hEq]
+  rw [telemetryApprox_zero_policyUtility_eq _ π ρ0 hT lam (telemetryApprox_ofRollout_zero π n ρ0 T)]
+  simp
 
 end UMST.DoubleSlit

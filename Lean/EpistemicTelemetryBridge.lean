@@ -149,7 +149,7 @@ theorem ofRollout_schemaConsistent (π : ProbePolicy) (n : ℕ)
   intro k hk
   constructor <;> rfl
 
-theorem ofRollout_aggregateConsistent (π : ProbePolicy) (n : ℕ)
+theorem RuntimeTelemetryAggregate.ofRollout_aggregateConsistent (π : ProbePolicy) (n : ℕ)
     (ρ0 : DensityMatrix hnQubit) (T : ℝ) :
     RuntimeTelemetryAggregateConsistent (RuntimeTelemetryAggregate.ofRollout π n ρ0 T) π ρ0 := by
   constructor <;> rfl
