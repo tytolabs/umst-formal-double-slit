@@ -12,6 +12,7 @@
 -- Mirrors `Lean/ChemGeometry.lean` + `QLatticeCell` from `ElementElectronic.lean`.
 -- Pairs `umst-chem` scaffolds CHEM-L0-SCALE-01 and CHEM-L0-EDGE-SURFACE.
 -- No meso acting theorems. `physics_green` stays false.
+-- STEER_20261001T0359 steer_wave_seq=24 — B_public pool hygiene pin (Fin QLatticeCell; Ubuntu stdlib).
 ------------------------------------------------------------------------
 
 {-# OPTIONS --without-K --safe #-}
