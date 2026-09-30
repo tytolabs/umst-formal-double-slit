@@ -78,7 +78,10 @@ noncomputable def epistemicMIBits (p : PathProbe) (ρ : DensityMatrix hnQubit) :
 
 theorem epistemicMI_nonneg (p : PathProbe) (ρ : DensityMatrix hnQubit) :
     0 ≤ EpistemicMI p ρ := by
-  cases p <;> simp [EpistemicMI] <;> exact le_of_lt (log_pos (by norm_num : (1 : ℝ) < 2))
+  cases p
+  · simp [EpistemicMI]
+  · simp [EpistemicMI]
+    exact le_of_lt (log_pos (by norm_num : (1 : ℝ) < 2))
 
 theorem epistemicMI_le_log_two (p : PathProbe) (ρ : DensityMatrix hnQubit) :
     EpistemicMI p ρ ≤ log 2 := by

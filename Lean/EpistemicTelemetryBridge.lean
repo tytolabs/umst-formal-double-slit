@@ -71,7 +71,7 @@ def RuntimeTelemetrySchema.toEmittedTraceSchema {n : ℕ} {T : ℝ}
 
 /-- Optional numeric well-formedness constraints for telemetry over the first `n` steps. -/
 def RuntimeTelemetrySchemaWellFormed {n : ℕ} {T : ℝ} (τ : RuntimeTelemetrySchema n T)
-    (hT : 0 ≤ T) : Prop :=
+    (_hT : 0 ≤ T) : Prop :=
   ∀ k, k < n →
     0 ≤ (τ.step k).trajMI ∧
       (τ.step k).trajMI ≤ Real.log 2 ∧

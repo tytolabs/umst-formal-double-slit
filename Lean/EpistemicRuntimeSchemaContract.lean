@@ -33,7 +33,7 @@ structure EmittedTraceSchema (n : ℕ) (T : ℝ) where
   step : ℕ → EmittedStepRecord
 
 /-- Numeric sanity checks for emitted records over the first `n` steps. -/
-def EmittedTraceWellFormed {n : ℕ} {T : ℝ} (τ : EmittedTraceSchema n T) (hT : 0 ≤ T) : Prop :=
+def EmittedTraceWellFormed {n : ℕ} {T : ℝ} (τ : EmittedTraceSchema n T) (_hT : 0 ≤ T) : Prop :=
   ∀ k, k < n →
     0 ≤ (τ.step k).stepMI ∧
       (τ.step k).stepMI ≤ Real.log 2 ∧

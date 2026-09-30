@@ -61,7 +61,7 @@ inductive TemperatureSource where
   deriving DecidableEq, Repr
 
 /-- Machine temperature T — coupled repository-in-machine, not wall clock. -/
-structure MachineTemperature where
+structure MachineTemperatureReading where
   kelvinMilli : ℕ
   nodeId : String
   source : TemperatureSource
@@ -78,7 +78,7 @@ structure MachineTemperatureCandidate where
 
 /-- Typed witness — repository-in-machine T with energy floor satisfied. -/
 structure MachineTemperatureWitness where
-  temperature : MachineTemperature
+  temperature : MachineTemperatureReading
   landauerFloorMilliJoule : ℕ
   availableEnergyMilliJoule : ℕ
   deriving DecidableEq, Repr

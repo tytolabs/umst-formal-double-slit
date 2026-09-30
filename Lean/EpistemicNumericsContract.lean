@@ -47,7 +47,7 @@ def NumericTraceFullyConsistent (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatri
 
 /-- Utility computed directly from numeric record aggregates. -/
 noncomputable def traceRecordPolicyUtility {n : ℕ} {T : ℝ} (τ : NumericTraceRecord n T)
-    (hT : 0 < T) (lam : ℝ) : ℝ :=
+    (_hT : 0 < T) (lam : ℝ) : ℝ :=
   τ.aggregateMI - lam * (τ.aggregateCost / landauerBitEnergy T)
 
 @[simp]

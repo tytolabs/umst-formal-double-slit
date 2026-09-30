@@ -84,12 +84,16 @@ theorem epistemicMIBits_null (ρ : DensityMatrix hnQubit) :
 theorem epistemicMIBits_nonneg (p : PathProbe) (ρ : DensityMatrix hnQubit) :
     0 ≤ epistemicMIBits p ρ := by
   unfold epistemicMIBits EpistemicMI
-  cases p <;> simp <;> norm_num
+  cases p
+  · simp
+  · simp; norm_num
 
 theorem epistemicMIBits_le_one (p : PathProbe) (ρ : DensityMatrix hnQubit) :
     epistemicMIBits p ρ ≤ 1 := by
   unfold epistemicMIBits EpistemicMI
-  cases p <;> simp <;> norm_num
+  cases p
+  · simp
+  · simp; norm_num
 
 /-- Minimum thermodynamic work for probe `p` on state `ρ` at temperature `T`. -/
 noncomputable def measurementCost (p : PathProbe) (ρ : DensityMatrix hnQubit) (T : ℝ) : ℝ :=
@@ -171,13 +175,13 @@ theorem compaction_pays_mi_vs_null_whichPath (ρ : DensityMatrix hnQubit)
 theorem compaction_refuses_null_probe (ρ : DensityMatrix hnQubit) :
     ¬ compactionPaysMIBitsVsNull PathProbe.null ρ := by
   rintro ⟨_, hpos⟩
-  simpa [compaction_null_probe_mi_zero] using hpos
+  simp [compaction_null_probe_mi_zero] at hpos
 
 theorem compaction_null_probe_mi_zero_refuses (ρ : DensityMatrix hnQubit)
     (heq : epistemicMIBits PathProbe.null ρ = 0) :
     ¬ compactionPaysMIBitsVsNull PathProbe.null ρ := by
   rintro ⟨_, hpos⟩
-  simpa [heq] using hpos
+  simp [heq] at hpos
 
 theorem compactionMIBits_nonneg (p : PathProbe) (ρ : DensityMatrix hnQubit) :
     0 ≤ epistemicMIBits p ρ :=
@@ -252,7 +256,7 @@ inductive CompactionMiCostOutcome where
 
 /-- Evaluate compaction MI cost — probe payment + derivation witness gate. -/
 noncomputable def evaluateCompactionMiCost {n : ℕ} (attempt : CompactionMiAttempt n) : CompactionMiCostOutcome :=
-  if h : attempt.probe = PathProbe.null then
+  if attempt.probe = PathProbe.null then
     .refused .epistemicMiNullCompaction
   else if attempt.witness.chain.isEmpty then
     .refused .derivationWitnessAbsent

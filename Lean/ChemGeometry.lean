@@ -56,7 +56,7 @@ inductive EdgeSurfaceRegime where
 
 /-- Classify a scalar SDF sample under the bulk-negative / surface-positive convention. -/
 noncomputable def classifyEdgeSurface (sdf : ℝ) : EdgeSurfaceRegime :=
-  if h : sdf < 0 then EdgeSurfaceRegime.bulk
+  if sdf < 0 then EdgeSurfaceRegime.bulk
   else if sdf = 0 then EdgeSurfaceRegime.interface
   else EdgeSurfaceRegime.surface
 

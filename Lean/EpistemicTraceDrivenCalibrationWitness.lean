@@ -39,7 +39,7 @@ theorem traceCalibrationWitnessAt_utility_diff_le {n : ℕ} {T : ℝ}
 /-- The witness-at bound is itself nonnegative by construction of calibration epsilons. -/
 theorem traceCalibrationWitnessAt_bound_nonneg {n : ℕ} {T : ℝ}
     (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit) (cal : SolverCalibration)
-    (w : TraceCalibrationWitnessAt n T π ρ0 cal) (hT : 0 < T) (lam : ℝ) :
+    (_w : TraceCalibrationWitnessAt n T π ρ0 cal) (hT : 0 < T) (lam : ℝ) :
     0 ≤ utilityApproxBound (cal.epsMIAgg n) (cal.epsCostAgg n) T hT lam :=
   solverCalibration_utilityBound_nonneg cal hT lam
 

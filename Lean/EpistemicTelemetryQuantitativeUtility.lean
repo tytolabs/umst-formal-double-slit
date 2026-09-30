@@ -20,7 +20,7 @@ open scoped BigOperators
 open UMST.Core UMST.Quantum
 
 /-- Utility error bound induced by MI/cost aggregate approximation errors. -/
-noncomputable def utilityApproxBound (εMI εCost : ℝ) (T : ℝ) (hT : 0 < T) (lam : ℝ) : ℝ :=
+noncomputable def utilityApproxBound (εMI εCost : ℝ) (T : ℝ) (_hT : 0 < T) (lam : ℝ) : ℝ :=
   εMI + |lam| * εCost / landauerBitEnergy T
 
 theorem utilityApproxBound_nonneg (εMI εCost : ℝ) (T : ℝ) (hT : 0 < T) (lam : ℝ)

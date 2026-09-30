@@ -105,14 +105,14 @@ inductive FormalFiber where
   deriving DecidableEq, Repr
 
 /-- Epistemic query look carrier on the knowing fiber. -/
-structure EpistemicQueryLook where
+structure QueryLook where
   lookClass : QueryLookClass
   lookFiber : FormalFiber
 
-def verificationCostLook (bits : ℝ) : EpistemicQueryLook :=
+def verificationCostLook (bits : ℝ) : QueryLook :=
   { lookClass := .verificationCost bits, lookFiber := .quantumKnowing }
 
-def coordinationTheaterLook : EpistemicQueryLook :=
+def coordinationTheaterLook : QueryLook :=
   { lookClass := .coordinationTheater, lookFiber := .quantumKnowing }
 
 def queryLookClassIsVerificationCost : QueryLookClass → Bool
@@ -124,13 +124,13 @@ def queryLookClassIsCoordinationTheater : QueryLookClass → Bool
   | .coordinationTheater => true
 
 /-- Verification bits for query look — zero for coordination theater. -/
-noncomputable def queryLookVerificationBits (look : EpistemicQueryLook) : ℝ :=
+noncomputable def queryLookVerificationBits (look : QueryLook) : ℝ :=
   match look.lookClass with
   | .verificationCost bits => bits
   | .coordinationTheater => 0
 
 /-- Landauer lower bound at verification bits and temperature `T`. -/
-noncomputable def queryLookLandauerCost (T : ℝ) (look : EpistemicQueryLook) : ℝ :=
+noncomputable def queryLookLandauerCost (T : ℝ) (look : QueryLook) : ℝ :=
   infoEnergyLowerBound (queryLookVerificationBits look) T
 
 theorem queryLookVerificationBits_verificationCost (bits : ℝ) :
@@ -139,12 +139,12 @@ theorem queryLookVerificationBits_verificationCost (bits : ℝ) :
 theorem queryLookVerificationBits_coordinationTheater :
     queryLookVerificationBits coordinationTheaterLook = 0 := rfl
 
-theorem queryLookLandauerCost_eq_infoEnergy (T : ℝ) (look : EpistemicQueryLook) :
+theorem queryLookLandauerCost_eq_infoEnergy (T : ℝ) (look : QueryLook) :
     queryLookLandauerCost T look =
       infoEnergyLowerBound (queryLookVerificationBits look) T :=
   rfl
 
-theorem queryLookLandauerCost_nonneg (T : ℝ) (look : EpistemicQueryLook) (hT : 0 ≤ T)
+theorem queryLookLandauerCost_nonneg (T : ℝ) (look : QueryLook) (hT : 0 ≤ T)
     (hbits : 0 ≤ queryLookVerificationBits look) :
     0 ≤ queryLookLandauerCost T look := by
   unfold queryLookLandauerCost
@@ -155,7 +155,7 @@ theorem queryLookLandauerCost_admitted_nonneg (T : ℝ) (bits : ℝ) (hT : 0 ≤
   simpa [queryLookVerificationBits_verificationCost] using
     queryLookLandauerCost_nonneg T (verificationCostLook bits) hT (le_of_lt h)
 
-theorem queryLookLandauerCost_le_bitEnergy (T : ℝ) (look : EpistemicQueryLook)
+theorem queryLookLandauerCost_le_bitEnergy (T : ℝ) (look : QueryLook)
     (hT : 0 ≤ T) (hbits : queryLookVerificationBits look ≤ 1) :
     queryLookLandauerCost T look ≤ landauerBitEnergy T := by
   unfold queryLookLandauerCost infoEnergyLowerBound
@@ -177,7 +177,7 @@ inductive EpistemicQueryLookOutcome where
   | admitted (bits : ℝ)
   | refused (reason : EpistemicQueryLookRefusal)
 
-noncomputable def admitEpistemicQueryLook (look : EpistemicQueryLook) : EpistemicQueryLookOutcome :=
+noncomputable def admitEpistemicQueryLook (look : QueryLook) : EpistemicQueryLookOutcome :=
   match look.lookFiber, look.lookClass with
   | .quantumKnowing, .coordinationTheater => .refused .coordinationTheaterRefused
   | .mesoActing, _ => .refused .mesoFiberMisroute

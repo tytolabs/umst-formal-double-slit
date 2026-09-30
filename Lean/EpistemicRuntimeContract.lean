@@ -60,7 +60,7 @@ theorem rollout_satisfies_traceCoherent (π : ProbePolicy) (n : ℕ) (ρ0 : Dens
   constructor
   · rfl
   · intro k hk
-    simpa using (traceStateAt_succ π ρ0 k)
+    simp
 
 theorem rollout_satisfies_traceContractMI (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit) :
     RuntimeTraceContractMI π n ρ0 :=
@@ -88,12 +88,12 @@ theorem constrainedOptimal_traceUtilityDominates {ι : Type*} [Fintype ι] [Deci
   hopt.2 j hadm
 
 theorem traceStep_MI_le_log_two (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
-    (k : ℕ) (hk : k < n) :
+    (k : ℕ) (_hk : k < n) :
     EpistemicMI (π k) (traceStateAt π ρ0 k) ≤ Real.log 2 :=
   epistemicMI_le_log_two (π k) (traceStateAt π ρ0 k)
 
 theorem traceStep_landauer_le_bitEnergy (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
-    (T : ℝ) (hT : 0 ≤ T) (k : ℕ) (hk : k < n) :
+    (T : ℝ) (hT : 0 ≤ T) (k : ℕ) (_hk : k < n) :
     epistemicLandauerCost (π k) (traceStateAt π ρ0 k) T ≤ landauerBitEnergy T :=
   epistemicLandauerCost_le_landauerBitEnergy (π k) (traceStateAt π ρ0 k) T hT
 

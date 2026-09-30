@@ -192,7 +192,7 @@ theorem homolog_roles_distinct (w : HilbertHomologWitness) :
     persistHilbertRoleOf w.homolog_persist ≠ occupancyHilbertRoleOf w.homolog_occupancy := by
   cases w with
   | mk p o _ =>
-    simpa [persist_hilbert_role_pin, occupancy_hilbert_role_pin] using persist_ne_occupancy_role
+    simp [persist_hilbert_role_pin, occupancy_hilbert_role_pin]
 
 def twoHilbertsPositiveRefuseHonest : Prop :=
   (∀ p : PersistHilbert,

@@ -110,7 +110,7 @@ theorem observe_min_mi_correlated_one :
 
 theorem observe_min_mi_correlated_positive :
     0 < observeMinMiBits correlatedLocalMesh 1 := by
-  simpa [observe_min_mi_correlated_one] using zero_lt_one
+  simp [observe_min_mi_correlated_one]
 
 -- ================================================================
 -- SECTION 4: Landauer hook — observe local+mesh at minimal MI (accounted)
