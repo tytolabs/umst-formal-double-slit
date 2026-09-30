@@ -7,19 +7,23 @@ Haskell/dist-newstyle/
 *.py[cod]
 .Python
 
-# Coq build artifacts (vendored `Coq/`)
-Coq/*.glob
-Coq/.*.aux
-Coq/*.vo
-Coq/*.vok
-Coq/*.vos
+# Coq build artifacts (every directory under `Coq/`; the top-level-only patterns let 413 subdirectory artefacts in)
+Coq/**/*.glob
+Coq/**/.*.aux
+Coq/**/*.vo
+Coq/**/*.vok
+Coq/**/*.vos
 Coq/_extract/
 Coq/gate_extracted.ml
 Coq/gate_extracted.mli
 
 # Agda (vendored `Agda/`)
 Agda/_build/
-Agda/*.agdai
+Agda/**/*.agdai
+
+# Haskell compiler outputs outside dist-newstyle
+Haskell/**/*.hi
+Haskell/**/*.o
 
 # Lean build artifacts
 Lean/.lake/
@@ -27,12 +31,12 @@ Lean/.csdp.cache
 Lean/.nra.cache
 
 # LaTeX build artifacts
-Docs/*.aux
-Docs/*.log
-Docs/*.out
-Docs/*.synctex.gz
-Docs/*.fls
-Docs/*.fdb_latexmk
+Docs/**/*.aux
+Docs/**/*.log
+Docs/**/*.out
+Docs/**/*.synctex.gz
+Docs/**/*.fls
+Docs/**/*.fdb_latexmk
 
 # OS / editor
 .DS_Store

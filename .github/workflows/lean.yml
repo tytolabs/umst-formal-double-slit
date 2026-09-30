@@ -41,18 +41,32 @@ jobs:
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
+      # Cache dependencies only (mathlib, umst-formal, …), keyed on the exact pins. The project's own proofs are never
+      # restored from a cache: every run recompiles them, so a green run means every module checks now.
       - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
-          path: Lean/.lake
-          key: lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json', 'Lean/lakefile.lean') }}-${{ github.sha }}
-          restore-keys: |
-            lake-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json', 'Lean/lakefile.lean') }}-
+          path: Lean/.lake/packages
+          key: lake-packages-${{ runner.os }}-${{ hashFiles('Lean/lean-toolchain', 'Lean/lake-manifest.json') }}
 
-      - name: Mathlib cache + build
+      - name: Every tracked Lean file is compiled by a default target (or listed with a reason)
+        working-directory: ${{ github.workspace }}
+        run: python3 scripts/check_lean_ci_closure.py
+
+      - name: Mathlib cache + build every library (zero errors, warnings, sorry; manifest current)
         run: |
-          set -e
+          set -eo pipefail
           lake exe cache get || true
-          lake build
+          lake build 2>&1 | tee lake-build.log
+          if grep -q "manifest out of date" lake-build.log; then
+            echo "FAIL: lakefile and lake-manifest.json disagree on a dependency revision"; exit 1
+          fi
+          project=$(grep -E "^(warning|error): " lake-build.log | grep -v "\.lake/packages" | grep -v "has local changes" || true)
+          if [ -n "$project" ]; then
+            echo "FAIL: project diagnostics (zero warnings is the bar):"; echo "$project"; exit 1
+          fi
+          if grep -q "declaration uses 'sorry'" lake-build.log; then
+            echo "FAIL: sorry in a project module"; exit 1
+          fi
 
       - name: Install Optional Sim Dependencies
         working-directory: ${{ github.workspace }}

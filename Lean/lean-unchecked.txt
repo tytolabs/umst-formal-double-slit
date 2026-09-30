@@ -1,0 +1,8 @@
+# Tracked Lean files that no CI target compiles, each with its reason. scripts/check_lean_ci_closure.py fails on
+# any other unchecked file and on stale entries, so this list only shrinks. Nothing here is a project claim.
+Lean/Test3.lean          # scratch: Complex literal equality experiment (two examples)
+Lean/Test4.lean          # scratch: #check probes of Fintype.sum_prod_type
+Lean/TestMixed.lean      # scratch: early PosSemidef/DensityMatrix draft; the carrier lives in DensityState
+Lean/TestEntropy.lean    # superseded draft of QuantumClassicalBridge.diag_nonneg_complex and InfoEntropy.vonNeumannDiagonal_n; does not compile
+Lean/TestFixes.lean      # scratch: trace and Pi.single experiments (imports all of Mathlib); does not compile
+Lean/test_tensor_eigen.lean  # scratch: Kronecker unitary draft (KroneckerEigen is the checked module); does not compile

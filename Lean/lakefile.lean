@@ -37,6 +37,7 @@ require «umst-formal» from git
 -/
 -- LandauerLaw / LandauerExtension / LandauerEinsteinBridge come from the umst-formal
 -- dependency @1bdd9ce (P0-1): wire `physicalSecondLaw` = `SecondLaw` predicate, zero local copies.
+@[default_target]
 lean_lib «UMST.DoubleSlit» where
   roots := #[`DensityState, `TensorPartialTrace, `MeasurementChannel, `DoubleSlitCore, `QuantumClassicalBridge,
     `InfoEntropy, `KroneckerEigen, `GeneralDimension, `LandauerBound, `EpistemicSensing, `EpistemicMI, `EpistemicDynamics,
@@ -53,7 +54,7 @@ lean_lib «UMST.DoubleSlit» where
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `DoubleSlitFormalWitness, `SimLeanBridge,
     -- LandauerExtension / LandauerEinsteinBridge / LandauerLaw: imported from umst-formal (not local roots)
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
-    `PhysicsConstrainedAI, `InformationCostIdentity]
+    `PhysicsConstrainedAI, `InformationCostIdentity, `LogSum, `MatrixLog, `FlashMoERuntimeScaffold]
     -- Optional / future: `MatrixLog, `LogSum (not in roots)
   srcDir := "."
 
@@ -67,8 +68,10 @@ lean_lib «UMST.DoubleSlit» where
 
   Build: `lake build ChemGeometry`
 -/
+@[default_target]
 lean_lib ChemGeometry where
-  roots := #[`ElementElectronic, `ChemGeometry]
+  roots := #[`ElementElectronic, `ChemGeometry, `AllotropeGeometry, `IsotopeBoundary, `ScaleCommute,
+    `SurfaceBulkSdf]
   -- `Chem.+` glob activates when `Chem/` subtree exists (future geometry modules).
   srcDir := "."
 
@@ -525,6 +528,7 @@ lean_lib ChemGeometry where
 
   Build: `lake build ChemConstants.BondRepellingConservation`
 -/
+@[default_target]
 lean_lib ChemConstants where
   roots := #[`ChemConstants.ExactSiInteger, `ChemConstants.NamedOccupancyExceptions,
     `ChemConstants.ActinideOccupancyExceptions, `ChemConstants.DBlockOccupancyExceptions,
@@ -613,7 +617,9 @@ lean_lib ChemConstants where
     `ChemConstants.PerElementNuanceConservation,
     `ChemConstants.SharedConservation,
     `ChemConstants.BondFormingConservation,
-    `ChemConstants.BondRepellingConservation]
+    `ChemConstants.BondRepellingConservation, `ChemConstants.ConstantsScaleSheaf, `ChemConstants.EnvironmentSampleSections,
+    `ChemConstants.EnvironmentScaleCommute, `ChemConstants.TemperatureScaleCommute,
+    `ChemConstants.EgoffHarnessAdversarial]
   srcDir := "."
 
 /-!
@@ -622,6 +628,7 @@ lean_lib ChemConstants where
 
   Build: `lake build UrgeKnowing`
 -/
+@[default_target]
 lean_lib UrgeKnowing where
   globs := #[`UrgeKnowing.+]
   srcDir := "."

@@ -3,7 +3,7 @@
 /-
 -/
 
-import Gate
+import Compat.Gate
 
 /-!
 # Flash-MoE 31B IT — formal runtime scaffold (Phases 2–3)
