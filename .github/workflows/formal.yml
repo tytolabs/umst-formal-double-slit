@@ -2,12 +2,11 @@
 # SPDX-License-Identifier: MIT
 # Coq/Rocq + Agda formal verification CI.
 #
-# Coq: the `rocq/rocq-prover:9.0` image's ENTRYPOINT is `opam exec --`,
+# Coq: the `rocq/rocq-prover:9.1` image's (same pin as umst-formal) ENTRYPOINT is `opam exec --`,
 #       which fails under `--user root`. We clear the entrypoint and
 #       dynamically find the opam bin directory to get `rocq compile`.
-# Agda: the Ubuntu `agda-stdlib` package installs source at /usr/share/agda-stdlib/
-#       but does not register it with Agda. We create ~/.agda/libraries + defaults
-#       and chmod the stdlib dir so Agda can write .agdai interface caches.
+# Agda: pinned to Agda 2.8.0 (official Linux release binary) and standard-library 2.3, the versions the
+#       proofs are developed against; Ubuntu's apt Agda (2.6.3) rejects modules that 2.8 accepts.
 name: Formal (Coq + Agda)
 on:
   workflow_call:
@@ -37,7 +36,7 @@ jobs:
   coq:
     runs-on: ubuntu-latest
     container:
-      image: rocq/rocq-prover:9.0
+      image: rocq/rocq-prover:9.1
       options: --user root --entrypoint ""
     steps:
       - name: Install git
@@ -87,26 +86,21 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4 # v4
-      - name: Install Agda + stdlib
+      - name: Install Agda 2.8.0 + standard-library 2.3 (pinned)
         run: |
           set -e
-          sudo apt-get update
-          sudo apt-get install -y agda agda-stdlib
-          agda --version
-      - name: Register stdlib and fix permissions
-        run: |
-          set -e
-          STDLIB_DIR="/usr/share/agda-stdlib"
-          # Create .agda-lib manifest if missing
-          if [ ! -f "$STDLIB_DIR/standard-library.agda-lib" ]; then
-            printf "name: standard-library\ninclude: .\n" | sudo tee "$STDLIB_DIR/standard-library.agda-lib"
-          fi
-          # Register with Agda
+          mkdir -p "$HOME/agda-bin" "$HOME/agda-libs"
+          curl -fsSL -o /tmp/agda.tar.xz https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-linux.tar.xz
+          tar -xJf /tmp/agda.tar.xz -C "$HOME/agda-bin"
+          AGDA=$(find "$HOME/agda-bin" -type f -name agda -perm -u+x | head -1)
+          test -n "$AGDA"
+          echo "$(dirname "$AGDA")" >> "$GITHUB_PATH"
+          curl -fsSL -o /tmp/stdlib.tar.gz https://github.com/agda/agda-stdlib/archive/refs/tags/v2.3.tar.gz
+          tar -xzf /tmp/stdlib.tar.gz -C "$HOME/agda-libs"
           mkdir -p ~/.agda
-          echo "$STDLIB_DIR/standard-library.agda-lib" > ~/.agda/libraries
+          echo "$HOME/agda-libs/agda-stdlib-2.3/standard-library.agda-lib" > ~/.agda/libraries
           echo "standard-library" > ~/.agda/defaults
-          # Make stdlib writable for .agdai interface cache
-          sudo chmod -R a+w "$STDLIB_DIR"
+          "$AGDA" --version
       - name: agda-check (all Agda/ modules)
         run: |
           set -e
