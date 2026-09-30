@@ -58,39 +58,19 @@ theorem gibbs_inequality
     (hp_nn : ∀ i, 0 ≤ p i) (hq_pos : ∀ i, 0 < q i)
     (hp_sum : ∑ i, p i = 1) (hq_sum : ∑ i, q i = 1) :
     ∑ i, p i * log (p i / q i) ≥ 0 := by
-  -- Let f(x) = x * log x, which is convex on [0,∞) (convexOn_mul_log)
-  -- Let rᵢ = pᵢ / qᵢ ≥ 0
-  -- Jensen with weights qᵢ and points rᵢ:
-  --   f(∑ qᵢ • rᵢ) ≤ ∑ qᵢ • f(rᵢ)
-  --   f(∑ pᵢ)       ≤ ∑ qᵢ • f(pᵢ/qᵢ)
-  --   f(1)           ≤ ∑ qᵢ • ((pᵢ/qᵢ) * log(pᵢ/qᵢ))
-  --   0              ≤ ∑ pᵢ * log(pᵢ/qᵢ)
-  have hconv : ConvexOn ℝ (Set.Ici (0 : ℝ)) (fun x => x * log x) :=
-    convexOn_mul_log
-  let r : Fin n → ℝ := fun i => p i / q i
-  have hq_nn : ∀ i ∈ (Finset.univ : Finset (Fin n)), (0 : ℝ) ≤ q i :=
-    fun i _ => le_of_lt (hq_pos i)
-  have hr_mem : ∀ i ∈ (Finset.univ : Finset (Fin n)), r i ∈ Set.Ici (0 : ℝ) :=
-    fun i _ => Set.mem_Ici.mpr (div_nonneg (hp_nn i) (le_of_lt (hq_pos i)))
-  have hJ := hconv.map_sum_le hq_nn (by simp [hq_sum]) hr_mem
-  -- LHS of Jensen: f(∑ qᵢ • rᵢ) = f(∑ pᵢ) = f(1) = 1 * log 1 = 0
-  have h_lhs_eq : ∑ i : Fin n, q i • r i = 1 := by
-    simp only [r, smul_eq_mul]
-    conv_lhs => ext i; rw [mul_div_cancel₀ _ (ne_of_gt (hq_pos i))]
-    exact hp_sum
-  -- RHS of Jensen: ∑ qᵢ • f(rᵢ) = ∑ pᵢ * log(pᵢ/qᵢ)
-  have h_rhs_eq : ∑ i : Fin n, q i • (fun x => x * log x) (r i) =
-      ∑ i : Fin n, p i * log (p i / q i) := by
-    refine Finset.sum_congr rfl fun i _ => ?_
-    simp only [r, smul_eq_mul]
-    have hqi : q i ≠ 0 := ne_of_gt (hq_pos i)
-    field_simp [hqi]
-    ring
-  rw [show ∑ i ∈ univ, q i • r i = ∑ i : Fin n, q i • r i from rfl,
-      show ∑ i ∈ univ, q i • (fun x => x * log x) (r i) =
-        ∑ i : Fin n, q i • (fun x => x * log x) (r i) from rfl,
-      h_lhs_eq, h_rhs_eq] at hJ
-  simp only [one_mul, log_one] at hJ
+  -- Jensen for the convex f(x) = x log x on [0, ∞), weights qᵢ, points rᵢ = pᵢ / qᵢ:
+  -- f(∑ qᵢ rᵢ) ≤ ∑ qᵢ f(rᵢ), with ∑ qᵢ rᵢ = ∑ pᵢ = 1 and qᵢ f(rᵢ) = pᵢ log(pᵢ / qᵢ).
+  have hJ := (convexOn_mul_log).map_sum_le (t := Finset.univ) (w := q) (p := fun i => p i / q i)
+    (fun i _ => (hq_pos i).le) (by simpa using hq_sum)
+    (fun i _ => Set.mem_Ici.mpr (div_nonneg (hp_nn i) (hq_pos i).le))
+  have hlhs : ∑ i, q i • (p i / q i) = 1 := by
+    rw [← hp_sum]
+    exact Finset.sum_congr rfl fun i _ => by
+      rw [smul_eq_mul, mul_div_cancel₀ _ (hq_pos i).ne']
+  have hrhs : ∑ i, q i • ((p i / q i) * log (p i / q i)) = ∑ i, p i * log (p i / q i) :=
+    Finset.sum_congr rfl fun i _ => by
+      rw [smul_eq_mul, ← mul_assoc, mul_div_cancel₀ _ (hq_pos i).ne']
+  simp only [hlhs, hrhs, one_mul, log_one] at hJ
   linarith
 
 /-! ### Unitary row/column squared-modulus sums -/
@@ -107,8 +87,7 @@ private lemma unitary_row_normSq_sum (T : Matrix (Fin n) (Fin n) ℂ)
     ∑ j : Fin n, (Complex.normSq (T i j) : ℝ) = 1 := by
   have hdiag := unitary_row_diagonal_mul_star T hT i
   simp_rw [Complex.star_def, Complex.mul_conj] at hdiag
-  rw [← Complex.ofReal_inj, ← Complex.ofReal_sum] at hdiag
-  simpa using hdiag
+  exact_mod_cast hdiag
 
 private lemma unitary_col_diagonal_star_mul (T : Matrix (Fin n) (Fin n) ℂ)
     (hT : T ∈ Matrix.unitaryGroup (Fin n) ℂ) (j : Fin n) :
@@ -122,8 +101,7 @@ private lemma unitary_col_normSq_sum (T : Matrix (Fin n) (Fin n) ℂ)
     ∑ i : Fin n, (Complex.normSq (T i j) : ℝ) = 1 := by
   have hdiag := unitary_col_diagonal_star_mul T hT j
   simp_rw [Complex.star_def, ← Complex.normSq_eq_conj_mul_self] at hdiag
-  rw [← Complex.ofReal_inj, ← Complex.ofReal_sum] at hdiag
-  simpa using hdiag
+  exact_mod_cast hdiag
 
 /-- The spectral relative entropy: given eigenvalues `λ` of ρ and `μ` of σ,
 and the unitary overlap matrix `T = U†V`, define:
@@ -161,29 +139,27 @@ theorem spectralRelativeEntropy_nonneg
       have hz : ∀ j, (Complex.normSq (T i j) : ℝ) = 0 := fun j =>
         le_antisymm (h' j) (Complex.normSq_nonneg _)
       have hrow := unitary_row_normSq_sum T hT_unitary i
-      simp_rw [hz] at hrow
-      linarith
-    refine Finset.sum_pos ?_ ?_
-    · exact ⟨j, Finset.mem_univ j, mul_pos hj (hμ_pos j)⟩
-    · intro j _; exact mul_nonneg (Complex.normSq_nonneg _) (le_of_lt (hμ_pos j))
+      simp [hz] at hrow
+    exact Finset.sum_pos' (fun j _ => mul_nonneg (Complex.normSq_nonneg _) (hμ_pos j).le)
+      ⟨j, Finset.mem_univ j, mul_pos hj (hμ_pos j)⟩
   have hcsum : ∑ i, c i = 1 := by
     dsimp [c]
     rw [Finset.sum_comm]
-    simp_rw [mul_comm (μ_eig _), ← Finset.mul_sum]
-    simp only [unitary_col_normSq_sum T hT_unitary, mul_one, hμ_sum]
+    simp_rw [← Finset.sum_mul, unitary_col_normSq_sum T hT_unitary, one_mul]
+    exact hμ_sum
   have hJensen (i : Fin n) :
       (∑ j : Fin n, (Complex.normSq (T i j) : ℝ) * log (μ_eig j)) ≤ log (c i) := by
     let w : Fin n → ℝ := fun j => (Complex.normSq (T i j) : ℝ)
     have hw0 : ∀ j ∈ (univ : Finset (Fin n)), 0 ≤ w j := fun j _ => Complex.normSq_nonneg _
     have hw1 : ∑ j ∈ (univ : Finset (Fin n)), w j = 1 := by
-      simpa [w, Finset.sum_univ_eq_sum] using unitary_row_normSq_sum T hT_unitary i
+      simpa [w] using unitary_row_normSq_sum T hT_unitary i
     have hmem : ∀ j ∈ (univ : Finset (Fin n)), μ_eig j ∈ Ioi (0 : ℝ) := fun j _ =>
       mem_Ioi.mpr (hμ_pos j)
     have hJ :=
       strictConcaveOn_log_Ioi.concaveOn.le_map_sum
         (𝕜 := ℝ) (E := ℝ) (β := ℝ) (s := Ioi (0 : ℝ)) (f := log) (ι := Fin n) (t := univ)
         (w := w) (p := μ_eig) hw0 hw1 hmem
-    simpa [w, c, Finset.sum_univ_eq_sum, smul_eq_mul] using hJ
+    simpa [w, c, smul_eq_mul] using hJ
   set A : ℝ := ∑ i, lam_eig i * log (lam_eig i)
   set B : ℝ := ∑ i, lam_eig i * (∑ j, (Complex.normSq (T i j) : ℝ) * log (μ_eig j))
   set Csum : ℝ := ∑ i, lam_eig i * log (c i)
@@ -194,7 +170,7 @@ theorem spectralRelativeEntropy_nonneg
   have hAC : A - Csum = ∑ i, lam_eig i * log (lam_eig i / c i) := by
     rw [← Finset.sum_sub_distrib]
     refine Finset.sum_congr rfl fun i _ => ?_
-    rw [← log_div (hlam_pos i).ne' (hc_pos i).ne', mul_sub]
+    rw [log_div (hlam_pos i).ne' (hc_pos i).ne', mul_sub]
   have hKl : 0 ≤ A - Csum := by
     rw [hAC]
     exact gibbs_inequality lam_eig c (fun i => le_of_lt (hlam_pos i))

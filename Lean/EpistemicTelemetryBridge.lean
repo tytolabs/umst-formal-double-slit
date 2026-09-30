@@ -117,17 +117,17 @@ theorem telemetryAggregateConsistent_toNumericTraceConsistent {n : ℕ} {T : ℝ
 
 theorem telemetrySchemaConsistent_policyUtility_eq {n : ℕ} {T : ℝ}
     (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ) (h : RuntimeTelemetrySchemaConsistent τ π ρ0) :
-    traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      = policyUtility π n ρ0 T hT λ :=
-  perStepRecordPolicyUtility_eq_policyUtility _ _ _ hT λ
+    (hT : 0 < T) (lam : ℝ) (h : RuntimeTelemetrySchemaConsistent τ π ρ0) :
+    traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      = policyUtility π n ρ0 T hT lam :=
+  perStepRecordPolicyUtility_eq_policyUtility _ _ _ hT lam
     (telemetrySchemaConsistent_toAggregateConsistent τ π ρ0 h)
 
 theorem telemetryAggregateConsistent_policyUtility_eq {n : ℕ} {T : ℝ}
     (τ : RuntimeTelemetryAggregate n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ) (h : RuntimeTelemetryAggregateConsistent τ π ρ0) :
-    traceRecordPolicyUtility τ.toNumericTraceRecord hT λ = policyUtility π n ρ0 T hT λ :=
-  traceRecordPolicyUtility_eq_policyUtility π ρ0 hT λ τ.toNumericTraceRecord h
+    (hT : 0 < T) (lam : ℝ) (h : RuntimeTelemetryAggregateConsistent τ π ρ0) :
+    traceRecordPolicyUtility τ.toNumericTraceRecord hT lam = policyUtility π n ρ0 T hT lam :=
+  traceRecordPolicyUtility_eq_policyUtility π ρ0 hT lam τ.toNumericTraceRecord h
 
 /-- Canonical per-step telemetry payload extracted from abstract rollout semantics. -/
 noncomputable def RuntimeTelemetrySchema.ofRollout (π : ProbePolicy) (n : ℕ)

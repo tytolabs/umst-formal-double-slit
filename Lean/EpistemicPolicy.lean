@@ -22,7 +22,7 @@ abbrev ProbePolicy := ℕ → PathProbe
 
 /-- Cost-penalized utility of a policy over horizon `n`. -/
 noncomputable def policyUtility (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
-    (T : ℝ) (hT : 0 < T) (lam : ℝ) : ℝ :=
+    (T : ℝ) (_hT : 0 < T) (lam : ℝ) : ℝ :=
   cumulativeEpistemicMI π n ρ0
     - lam * (cumulativeEpistemicLandauerCost π n ρ0 T / landauerBitEnergy T)
 
@@ -64,42 +64,44 @@ theorem argmaxPolicyIndexAt_spec {ι : Type*} [Fintype ι] [DecidableEq ι] [Non
     IsOptimalPolicyIndexAt family n ρ0 T hT lam (argmaxPolicyIndexAt family n ρ0 T hT lam) :=
   Classical.choose_spec (exists_optimalPolicyIndexAt family n ρ0 T hT lam)
 
-/-- Stepwise admissibility of a policy along the first `n` rollout states. -/
-def PolicyAdmissible (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit) : Prop :=
-  ∀ k, k < n → ProbeSelectionAdmissible ((PathProbe.toQuantumProbe (π k))) (rollout π k ρ0)
+/-- Stepwise admissibility of a policy along the first `n` rollout states: each step passes the
+thermodynamic gate at bath temperature `T`. -/
+def PolicyAdmissible (T : ℝ) (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit) : Prop :=
+  ∀ k, k < n → ProbeSelectionAdmissible T (PathProbe.toQuantumProbe (π k)) (rollout π k ρ0)
 
-theorem policyAdmissible_nullPolicy (n : ℕ) (ρ0 : DensityMatrix hnQubit) :
-    PolicyAdmissible nullPolicy n ρ0 := by
-  intro k hk
+theorem policyAdmissible_nullPolicy (T : ℝ) (n : ℕ) (ρ0 : DensityMatrix hnQubit) :
+    PolicyAdmissible T nullPolicy n ρ0 := by
+  intro k _
   simpa [nullPolicy, rollout_nullPolicy, PathProbe.toQuantumProbe] using
-    (ProbeSelectionAdmissible_nullProbe (rollout nullPolicy k ρ0))
+    (ProbeSelectionAdmissible_nullProbe T (rollout nullPolicy k ρ0))
 
-theorem policyAdmissible_whichPathPolicy (n : ℕ) (ρ0 : DensityMatrix hnQubit) :
-    PolicyAdmissible whichPathPolicy n ρ0 := by
-  intro k hk
+theorem policyAdmissible_whichPathPolicy (T : ℝ) (n : ℕ) (ρ0 : DensityMatrix hnQubit) :
+    PolicyAdmissible T whichPathPolicy n ρ0 := by
+  intro k _
   simpa [whichPathPolicy, PathProbe.toQuantumProbe] using
-    (ProbeSelectionAdmissible_whichPathProbe (rollout whichPathPolicy k ρ0))
+    (ProbeSelectionAdmissible_whichPathProbe T (rollout whichPathPolicy k ρ0))
 
 /-- Admissible indices in a finite policy family at fixed horizon/state. -/
-def AdmissiblePolicyIndices {ι : Type*} [Fintype ι] (family : ι → ProbePolicy)
-    (n : ℕ) (ρ0 : DensityMatrix hnQubit) : Finset ι :=
-  Finset.univ.filter (fun i => PolicyAdmissible (family i) n ρ0)
+noncomputable def AdmissiblePolicyIndices {ι : Type*} [Fintype ι] (family : ι → ProbePolicy)
+    (T : ℝ) (n : ℕ) (ρ0 : DensityMatrix hnQubit) : Finset ι := by
+  classical
+  exact Finset.univ.filter (fun i => PolicyAdmissible T (family i) n ρ0)
 
 /-- Constrained optimality among admissible policy indices. -/
 def IsConstrainedOptimalPolicyAt {ι : Type*} [Fintype ι] [DecidableEq ι]
     (family : ι → ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
     (T : ℝ) (hT : 0 < T) (lam : ℝ) (i : ι) : Prop :=
-  i ∈ AdmissiblePolicyIndices family n ρ0 ∧
-  ∀ j ∈ AdmissiblePolicyIndices family n ρ0,
+  i ∈ AdmissiblePolicyIndices family T n ρ0 ∧
+  ∀ j ∈ AdmissiblePolicyIndices family T n ρ0,
     policyUtility (family j) n ρ0 T hT lam ≤ policyUtility (family i) n ρ0 T hT lam
 
 theorem exists_constrainedOptimalPolicyAt {ι : Type*} [Fintype ι] [DecidableEq ι]
     (family : ι → ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
     (T : ℝ) (hT : 0 < T) (lam : ℝ)
-    (hne : (AdmissiblePolicyIndices family n ρ0).Nonempty) :
+    (hne : (AdmissiblePolicyIndices family T n ρ0).Nonempty) :
     ∃ i, IsConstrainedOptimalPolicyAt family n ρ0 T hT lam i := by
   obtain ⟨i, hi, hmax⟩ :=
-    (AdmissiblePolicyIndices family n ρ0).exists_max_image
+    (AdmissiblePolicyIndices family T n ρ0).exists_max_image
       (fun j => policyUtility (family j) n ρ0 T hT lam) hne
   refine ⟨i, hi, ?_⟩
   intro j hj
@@ -115,6 +117,7 @@ theorem exists_constrainedOptimal_basicPolicyFamily (n : ℕ) (ρ0 : DensityMatr
     ∃ i, IsConstrainedOptimalPolicyAt basicPolicyFamily n ρ0 T hT lam i := by
   apply exists_constrainedOptimalPolicyAt
   refine ⟨0, ?_⟩
-  simp [AdmissiblePolicyIndices, basicPolicyFamily, policyAdmissible_nullPolicy]
+  classical
+  simp [AdmissiblePolicyIndices, basicPolicyFamily, policyAdmissible_nullPolicy T]
 
 end UMST.DoubleSlit

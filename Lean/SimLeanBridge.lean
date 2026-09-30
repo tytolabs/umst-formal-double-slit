@@ -36,11 +36,13 @@ open Matrix
 
 namespace UMST.SimBridge
 
+open UMST.Quantum
+
 variable {n : ℕ} (hn : 0 < n)
 
 /-- A simulation output that claims to yield a valid density matrix. The simulation provides
 a raw `n × n` complex matrix along with witnesses that it is PSD and has trace 1. -/
-structure SimDensityContract where
+structure SimDensityContract (hn : 0 < n) where
   /-- Raw matrix output from simulation. -/
   rawMatrix : Matrix (Fin n) (Fin n) ℂ
   /-- Witness: the matrix is positive semidefinite. -/

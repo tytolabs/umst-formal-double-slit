@@ -101,7 +101,9 @@ theorem acquirableInfo_requiredEnergy (T I : ℝ) (hT : 0 < T) :
 theorem probe_budget_iff_info_bound (p : PathProbe) (ρ : DensityMatrix hnQubit) 
     (T E : ℝ) (hT : 0 < T) :
     measurementCost p ρ T ≤ E ↔ epistemicMIBits p ρ ≤ acquirableInfo T E := by
-  have h_cost : measurementCost p ρ T = requiredEnergy T (epistemicMIBits p ρ) := rfl
+  have h_cost : measurementCost p ρ T = requiredEnergy T (epistemicMIBits p ρ) := by
+    unfold measurementCost epistemicLandauerCost infoEnergyLowerBound requiredEnergy
+    ring
   rw [h_cost]
   exact landauer_galois_connection T hT (epistemicMIBits p ρ) E
 

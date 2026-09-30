@@ -70,10 +70,10 @@ theorem numericApprox_zero_implies_exact {n : ℕ} {T : ℝ}
 
 theorem telemetryApprox_zero_policyUtility_eq {n : ℕ} {T : ℝ}
     (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ) (h : RuntimeTelemetrySchemaApproxConsistent 0 0 τ π ρ0) :
-    traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      = policyUtility π n ρ0 T hT λ :=
-  telemetrySchemaConsistent_policyUtility_eq τ π ρ0 hT λ
+    (hT : 0 < T) (lam : ℝ) (h : RuntimeTelemetrySchemaApproxConsistent 0 0 τ π ρ0) :
+    traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      = policyUtility π n ρ0 T hT lam :=
+  telemetrySchemaConsistent_policyUtility_eq τ π ρ0 hT lam
     (telemetryApprox_zero_implies_exact τ π ρ0 h)
 
 theorem telemetryApprox_ofRollout_zero (π : ProbePolicy) (n : ℕ)

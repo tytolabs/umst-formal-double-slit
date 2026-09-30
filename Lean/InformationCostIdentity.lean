@@ -41,10 +41,6 @@ theorem residualCoherence_eq_one_minus_epistemic_bits (ρ : DensityMatrix hnQubi
   unfold residualCoherenceFromMIBits residualCoherenceCapacity
   rw [epistemicMIBits_whichPath]
 
-lemma landauerBitEnergy_pos {T : ℝ} (hT : 0 < T) : 0 < landauerBitEnergy T := by
-  unfold landauerBitEnergy
-  exact mul_pos (mul_pos kB_pos hT) (log_pos (by norm_num : (1 : ℝ) < 2))
-
 /-- Energy lower bound (joules) equals `MI_bit · k_B T ln 2` on this hook. -/
 theorem epistemic_landauer_as_bit_times_scale (ρ : DensityMatrix hnQubit) (T : ℝ) :
     epistemicLandauerCost PathProbe.whichPath ρ T =

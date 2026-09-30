@@ -22,7 +22,7 @@ open scoped BigOperators
 open UMST.Core UMST.Quantum
 
 /-- State at step `k` of the rollout trace (canonical runtime observation). -/
-abbrev traceStateAt (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit) (k : ℕ) :
+noncomputable abbrev traceStateAt (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit) (k : ℕ) :
     DensityMatrix hnQubit :=
   rollout π k ρ0
 
@@ -72,19 +72,19 @@ theorem rollout_satisfies_traceContractLandauer (π : ProbePolicy) (n : ℕ)
   rfl
 
 /-- Policy admissibility is exactly stepwise admissibility along the rollout trace. -/
-theorem policyAdmissible_iff_traceStepsAdmissible (π : ProbePolicy) (n : ℕ)
+theorem policyAdmissible_iff_traceStepsAdmissible (T : ℝ) (π : ProbePolicy) (n : ℕ)
     (ρ0 : DensityMatrix hnQubit) :
-    PolicyAdmissible π n ρ0 ↔
-      ∀ k, k < n → ProbeSelectionAdmissible (PathProbe.toQuantumProbe (π k)) (traceStateAt π ρ0 k) :=
+    PolicyAdmissible T π n ρ0 ↔
+      ∀ k, k < n → ProbeSelectionAdmissible T (PathProbe.toQuantumProbe (π k)) (traceStateAt π ρ0 k) :=
   Iff.rfl
 
 /-- Constrained-optimal policy index dominates every admissible competitor in utility. -/
 theorem constrainedOptimal_traceUtilityDominates {ι : Type*} [Fintype ι] [DecidableEq ι]
     (family : ι → ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)
-    (T : ℝ) (hT : 0 < T) (λ : ℝ) (i : ι)
-    (hopt : IsConstrainedOptimalPolicyAt family n ρ0 T hT λ i)
-    (j : ι) (hadm : j ∈ AdmissiblePolicyIndices family n ρ0) :
-    policyUtility (family j) n ρ0 T hT λ ≤ policyUtility (family i) n ρ0 T hT λ :=
+    (T : ℝ) (hT : 0 < T) (lam : ℝ) (i : ι)
+    (hopt : IsConstrainedOptimalPolicyAt family n ρ0 T hT lam i)
+    (j : ι) (hadm : j ∈ AdmissiblePolicyIndices family T n ρ0) :
+    policyUtility (family j) n ρ0 T hT lam ≤ policyUtility (family i) n ρ0 T hT lam :=
   hopt.2 j hadm
 
 theorem traceStep_MI_le_log_two (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatrix hnQubit)

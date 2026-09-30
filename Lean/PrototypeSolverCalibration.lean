@@ -54,36 +54,36 @@ theorem prototypeCalibration_epsCostAgg (n : ℕ) :
 
 theorem prototypeCalibration_utility_diff_le {n : ℕ} {T : ℝ}
     (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ)
+    (hT : 0 < T) (lam : ℝ)
     (h : SolverCalibrationAggregateAssumption prototypeCalibration τ π ρ0) :
-    |traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      - policyUtility π n ρ0 T hT λ|
+    |traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      - policyUtility π n ρ0 T hT lam|
       ≤ utilityApproxBound
-          (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT λ :=
-  solverCalibration_utility_diff_le prototypeCalibration τ π ρ0 hT λ h
+          (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT lam :=
+  solverCalibration_utility_diff_le prototypeCalibration τ π ρ0 hT lam h
 
 theorem prototypeCalibration_utilityBound_nonneg {n : ℕ} {T : ℝ}
-    (hT : 0 < T) (λ : ℝ) :
+    (hT : 0 < T) (lam : ℝ) :
     0 ≤ utilityApproxBound
-        (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT λ :=
-  solverCalibration_utilityBound_nonneg prototypeCalibration hT λ
+        (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT lam :=
+  solverCalibration_utilityBound_nonneg prototypeCalibration hT lam
 
 theorem prototypeWitness_utility_diff_le {n : ℕ} {T : ℝ}
     (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
     (w : TraceCalibrationWitnessAt n T π ρ0 prototypeCalibration)
-    (hT : 0 < T) (λ : ℝ) :
-    |traceRecordPolicyUtility (w.telemetry.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      - policyUtility π n ρ0 T hT λ|
+    (hT : 0 < T) (lam : ℝ) :
+    |traceRecordPolicyUtility (w.telemetry.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      - policyUtility π n ρ0 T hT lam|
       ≤ utilityApproxBound
-          (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT λ :=
-  traceCalibrationWitnessAt_utility_diff_le π ρ0 prototypeCalibration w hT λ
+          (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT lam :=
+  traceCalibrationWitnessAt_utility_diff_le π ρ0 prototypeCalibration w hT lam
 
 theorem prototypeWitness_bound_nonneg {n : ℕ} {T : ℝ}
     (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
     (w : TraceCalibrationWitnessAt n T π ρ0 prototypeCalibration)
-    (hT : 0 < T) (λ : ℝ) :
+    (hT : 0 < T) (lam : ℝ) :
     0 ≤ utilityApproxBound
-        (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT λ :=
-  traceCalibrationWitnessAt_bound_nonneg π ρ0 prototypeCalibration w hT λ
+        (prototypeCalibration.epsMIAgg n) (prototypeCalibration.epsCostAgg n) T hT lam :=
+  traceCalibrationWitnessAt_bound_nonneg π ρ0 prototypeCalibration w hT lam
 
 end UMST.DoubleSlit

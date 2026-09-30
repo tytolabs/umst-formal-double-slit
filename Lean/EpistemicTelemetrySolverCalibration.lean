@@ -79,16 +79,16 @@ def SolverCalibrationAggregateAssumption {n : ℕ} {T : ℝ} (cal : SolverCalibr
 
 theorem solverCalibration_utility_diff_le {n : ℕ} {T : ℝ}
     (cal : SolverCalibration) (τ : RuntimeTelemetrySchema n T) (π : ProbePolicy)
-    (ρ0 : DensityMatrix hnQubit) (hT : 0 < T) (λ : ℝ)
+    (ρ0 : DensityMatrix hnQubit) (hT : 0 < T) (lam : ℝ)
     (h : SolverCalibrationAggregateAssumption cal τ π ρ0) :
-    |traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      - policyUtility π n ρ0 T hT λ|
-      ≤ utilityApproxBound (cal.epsMIAgg n) (cal.epsCostAgg n) T hT λ := by
-  exact numericApprox_utility_diff_le _ _ _ hT λ _ _ h
+    |traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      - policyUtility π n ρ0 T hT lam|
+      ≤ utilityApproxBound (cal.epsMIAgg n) (cal.epsCostAgg n) T hT lam := by
+  exact numericApprox_utility_diff_le _ _ _ hT lam _ _ h
 
 theorem solverCalibration_utilityBound_nonneg {n : ℕ} {T : ℝ}
-    (cal : SolverCalibration) (hT : 0 < T) (λ : ℝ) :
-    0 ≤ utilityApproxBound (cal.epsMIAgg n) (cal.epsCostAgg n) T hT λ :=
-  utilityApproxBound_nonneg _ _ _ hT λ (cal.epsMIAgg_nonneg n) (cal.epsCostAgg_nonneg n)
+    (cal : SolverCalibration) (hT : 0 < T) (lam : ℝ) :
+    0 ≤ utilityApproxBound (cal.epsMIAgg n) (cal.epsCostAgg n) T hT lam :=
+  utilityApproxBound_nonneg _ _ _ hT lam (cal.epsMIAgg_nonneg n) (cal.epsCostAgg_nonneg n)
 
 end UMST.DoubleSlit

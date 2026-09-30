@@ -63,24 +63,24 @@ def TraceEpsilonCertificate.mk {n : ℕ} {T : ℝ}
   telemetry := τ
 
 theorem traceEpsilonCertificate_utility_diff_le {n : ℕ} {T : ℝ}
-    (c : TraceEpsilonCertificate n T π ρ0) (hT : 0 < T) (λ : ℝ) :
-    |traceRecordPolicyUtility (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      - policyUtility π n ρ0 T hT λ|
+    (c : TraceEpsilonCertificate n T π ρ0) (hT : 0 < T) (lam : ℝ) :
+    |traceRecordPolicyUtility (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      - policyUtility π n ρ0 T hT lam|
       ≤ utilityApproxBound
           (traceResidualMI (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
           (traceResidualCost (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
-          T hT λ :=
-  numericApprox_utility_diff_le _ _ _ hT λ _ _
+          T hT lam :=
+  numericApprox_utility_diff_le _ _ _ hT lam _ _
     (traceResidual_numericApproxConsistent
       (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
 
 theorem traceEpsilonCertificate_bound_nonneg {n : ℕ} {T : ℝ}
-    (c : TraceEpsilonCertificate n T π ρ0) (hT : 0 < T) (λ : ℝ) :
+    (c : TraceEpsilonCertificate n T π ρ0) (hT : 0 < T) (lam : ℝ) :
     0 ≤ utilityApproxBound
         (traceResidualMI (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
         (traceResidualCost (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
-        T hT λ :=
-  utilityApproxBound_nonneg _ _ _ hT λ
+        T hT lam :=
+  utilityApproxBound_nonneg _ _ _ hT lam
     (traceResidualMI_nonneg (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
     (traceResidualCost_nonneg (c.telemetry.toPerStepNumericRecord.toNumericTraceRecord) π ρ0)
 

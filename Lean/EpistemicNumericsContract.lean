@@ -46,8 +46,8 @@ def NumericTraceFullyConsistent (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMatri
 
 /-- Utility computed directly from numeric record aggregates. -/
 noncomputable def traceRecordPolicyUtility {n : ℕ} {T : ℝ} (τ : NumericTraceRecord n T)
-    (hT : 0 < T) (λ : ℝ) : ℝ :=
-  τ.aggregateMI - λ * (τ.aggregateCost / landauerBitEnergy T)
+    (hT : 0 < T) (lam : ℝ) : ℝ :=
+  τ.aggregateMI - lam * (τ.aggregateCost / landauerBitEnergy T)
 
 @[simp]
 theorem NumericTraceRecord.ofRollout_aggregateMI (π : ProbePolicy) (n : ℕ)
@@ -72,9 +72,9 @@ theorem ofRollout_fullyConsistent (π : ProbePolicy) (n : ℕ) (ρ0 : DensityMat
     rollout_satisfies_traceContractLandauer π n ρ0 T, ofRollout_consistent π n ρ0 T⟩
 
 theorem traceRecordPolicyUtility_eq_policyUtility {n : ℕ} {T : ℝ} (π : ProbePolicy)
-    (ρ0 : DensityMatrix hnQubit) (hT : 0 < T) (λ : ℝ) (τ : NumericTraceRecord n T)
+    (ρ0 : DensityMatrix hnQubit) (hT : 0 < T) (lam : ℝ) (τ : NumericTraceRecord n T)
     (h : NumericTraceConsistent τ π ρ0) :
-    traceRecordPolicyUtility τ hT λ = policyUtility π n ρ0 T hT λ := by
+    traceRecordPolicyUtility τ hT lam = policyUtility π n ρ0 T hT lam := by
   unfold traceRecordPolicyUtility policyUtility
   rw [h.1, h.2]
 
@@ -106,13 +106,13 @@ theorem traceRecord_aggregateCost_le {n : ℕ} {T : ℝ} (τ : NumericTraceRecor
 
 theorem traceRecordPolicyUtility_le_aggregateMI {n : ℕ} {T : ℝ}
     (τ : NumericTraceRecord n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ) (hλ : 0 ≤ λ) (h : NumericTraceConsistent τ π ρ0) :
-    traceRecordPolicyUtility τ hT λ ≤ τ.aggregateMI := by
+    (hT : 0 < T) (lam : ℝ) (hlam : 0 ≤ lam) (h : NumericTraceConsistent τ π ρ0) :
+    traceRecordPolicyUtility τ hT lam ≤ τ.aggregateMI := by
   unfold traceRecordPolicyUtility
   have hcost : 0 ≤ τ.aggregateCost :=
     traceRecord_aggregateCost_nonneg τ π ρ0 h (le_of_lt hT)
-  have hnonneg : 0 ≤ λ * (τ.aggregateCost / landauerBitEnergy T) :=
-    mul_nonneg hλ (div_nonneg hcost (le_of_lt (landauerBitEnergy_pos hT)))
+  have hnonneg : 0 ≤ lam * (τ.aggregateCost / landauerBitEnergy T) :=
+    mul_nonneg hlam (div_nonneg hcost (le_of_lt (landauerBitEnergy_pos hT)))
   linarith
 
 end UMST.DoubleSlit

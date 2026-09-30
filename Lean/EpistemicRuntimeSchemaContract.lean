@@ -90,10 +90,10 @@ theorem emittedRolloutConsistent_toNumericTraceConsistent {n : ℕ} {T : ℝ}
 
 theorem emittedRolloutConsistent_policyUtility_eq {n : ℕ} {T : ℝ}
     (τ : EmittedTraceSchema n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ) (h : EmittedTraceRolloutConsistent τ π ρ0) :
-    traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      = policyUtility π n ρ0 T hT λ :=
-  perStepRecordPolicyUtility_eq_policyUtility _ _ _ hT λ
+    (hT : 0 < T) (lam : ℝ) (h : EmittedTraceRolloutConsistent τ π ρ0) :
+    traceRecordPolicyUtility (τ.toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      = policyUtility π n ρ0 T hT lam :=
+  perStepRecordPolicyUtility_eq_policyUtility _ _ _ hT lam
     (emittedRolloutConsistent_toAggregateConsistent τ π ρ0 h)
 
 theorem ofRollout_rolloutConsistent (π : ProbePolicy) (n : ℕ)
@@ -126,11 +126,11 @@ theorem ofRollout_numericTraceConsistent (π : ProbePolicy) (n : ℕ)
     (ofRollout_rolloutConsistent π n ρ0 T)
 
 theorem ofRollout_policyUtility_eq (π : ProbePolicy) (n : ℕ)
-    (ρ0 : DensityMatrix hnQubit) (T : ℝ) (hT : 0 < T) (λ : ℝ) :
+    (ρ0 : DensityMatrix hnQubit) (T : ℝ) (hT : 0 < T) (lam : ℝ) :
     traceRecordPolicyUtility
-        ((EmittedTraceSchema.ofRollout π n ρ0 T).toPerStepNumericRecord.toNumericTraceRecord) hT λ
-      = policyUtility π n ρ0 T hT λ :=
-  emittedRolloutConsistent_policyUtility_eq _ _ _ hT λ
+        ((EmittedTraceSchema.ofRollout π n ρ0 T).toPerStepNumericRecord.toNumericTraceRecord) hT lam
+      = policyUtility π n ρ0 T hT lam :=
+  emittedRolloutConsistent_policyUtility_eq _ _ _ hT lam
     (ofRollout_rolloutConsistent π n ρ0 T)
 
 end UMST.DoubleSlit

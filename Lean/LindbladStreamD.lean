@@ -37,8 +37,7 @@ theorem streamD_limit_to_Lueders_states (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b :
   by_cases hab : a = b
   · subst hab
     simp [streamD_sampling, dephasingSolution]
-    exact tendsto_const_nhds
-  · simp [streamD_sampling, dephasingSolution, hab]
+  · simp only [streamD_sampling, hab, if_false]
     exact (dephasingSolution_tendsto_diagonal ρ a b hab).comp tendsto_natCast_atTop_atTop
 
 end UMST.Quantum

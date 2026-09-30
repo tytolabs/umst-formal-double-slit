@@ -119,8 +119,8 @@ theorem toNumericTraceRecord_consistent {n : ℕ} {T : ℝ} (τ : PerStepNumeric
 
 theorem perStepRecordPolicyUtility_eq_policyUtility {n : ℕ} {T : ℝ}
     (τ : PerStepNumericRecord n T) (π : ProbePolicy) (ρ0 : DensityMatrix hnQubit)
-    (hT : 0 < T) (λ : ℝ) (h : PerStepAggregateConsistent τ π ρ0) :
-    traceRecordPolicyUtility τ.toNumericTraceRecord hT λ = policyUtility π n ρ0 T hT λ :=
-  traceRecordPolicyUtility_eq_policyUtility π ρ0 hT λ τ.toNumericTraceRecord h
+    (hT : 0 < T) (lam : ℝ) (h : PerStepAggregateConsistent τ π ρ0) :
+    traceRecordPolicyUtility τ.toNumericTraceRecord hT lam = policyUtility π n ρ0 T hT lam :=
+  traceRecordPolicyUtility_eq_policyUtility π ρ0 hT lam τ.toNumericTraceRecord h
 
 end UMST.DoubleSlit

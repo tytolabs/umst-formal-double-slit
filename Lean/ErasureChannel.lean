@@ -45,12 +45,12 @@ noncomputable def resetK1 : Matrix (Fin 2) (Fin 2) ℂ :=
 theorem resetK0_conjTranspose :
     resetK0ᴴ = Matrix.of !![1, 0; 0, 0] := by
   ext a b
-  fin_cases a <;> fin_cases b <;> simp [resetK0, conjTranspose_apply, Matrix.of_apply, star]
+  fin_cases a <;> fin_cases b <;> simp [resetK0, conjTranspose_apply, Matrix.of_apply]
 
 theorem resetK1_conjTranspose :
     resetK1ᴴ = Matrix.of !![0, 0; 1, 0] := by
   ext a b
-  fin_cases a <;> fin_cases b <;> simp [resetK1, conjTranspose_apply, Matrix.of_apply, star]
+  fin_cases a <;> fin_cases b <;> simp [resetK1, conjTranspose_apply, Matrix.of_apply]
 
 theorem resetK0_conj_mul :
     resetK0ᴴ * resetK0 = Matrix.of !![1, 0; 0, 0] := by
@@ -95,7 +95,7 @@ theorem resetChannel_map_entry (a b : Fin 2) :
   simp only [KrausChannel.map, resetChannel, Fin.sum_univ_two, Matrix.add_apply]
   fin_cases a <;> fin_cases b <;>
     simp [resetK0, resetK1, Matrix.mul_apply, Matrix.of_apply, conjTranspose_apply,
-      Fin.sum_univ_two, star]
+      Fin.sum_univ_two]
 
 /-- The |0⟩ pure state carrier matrix `|0⟩⟨0|`. -/
 noncomputable def rhoZeroCarrier : Matrix (Fin 2) (Fin 2) ℂ :=
