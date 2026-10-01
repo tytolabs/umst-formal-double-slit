@@ -1,0 +1,40 @@
+{
+ "schema": "retirement_ledger_v1",
+ "date": "2026-10-02",
+ "archive_tag": "archive/haskell-mirrors-2026-10-02",
+ "reason": "copies of umst-formal's Haskell modules that no double-slit cabal component builds; the identical src/LandauerExtension.hs and src/MonoidalState.hs the library uses stay, held byte-identical with umst-formal by its shared-file check",
+ "removed": [
+  {
+   "path": "Haskell/FFI.hs",
+   "note": "binds umst_filter_new, umst_filter_free, umst_hydration_degree, umst_strength_powers and umst_thermo_state_from_mix_ptr, which the Rust bridge no longer exports (umst-formal ABI 9, 2dd37d8); umst-formal's FFI.hs is the binding"
+  },
+  {
+   "path": "Haskell/UMST.hs",
+   "note": "copy of umst-formal Haskell/UMST.hs; no declaration unique to it"
+  },
+  {
+   "path": "Haskell/SDFGate.hs",
+   "note": "copy of umst-formal Haskell/SDFGate.hs; no declaration unique to it"
+  },
+  {
+   "path": "Haskell/InfoTheory.hs",
+   "note": "byte-identical to umst-formal Haskell/InfoTheory.hs"
+  },
+  {
+   "path": "Haskell/KleisliDIB.hs",
+   "note": "byte-identical to umst-formal Haskell/KleisliDIB.hs"
+  },
+  {
+   "path": "Haskell/legacy/LandauerExtension.hs",
+   "note": "byte-identical to umst-formal Haskell/LandauerExtension.hs"
+  },
+  {
+   "path": "Haskell/legacy/MeasurementCost.hs",
+   "note": "byte-identical to umst-formal Haskell/MeasurementCost.hs (double-slit's knowing-fibre MeasurementCost is src/MeasurementCost.hs, kept)"
+  },
+  {
+   "path": "Haskell/legacy/MonoidalState.hs",
+   "note": "byte-identical to umst-formal Haskell/MonoidalState.hs"
+  }
+ ]
+}

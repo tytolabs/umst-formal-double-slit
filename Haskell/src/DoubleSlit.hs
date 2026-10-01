@@ -2,14 +2,16 @@
 -- SPDX-License-Identifier: MIT
 module DoubleSlit where
 
+import qualified UMST.Constants.SI as SI
+
 import Data.Complex
 import DensityState
 
 kB :: Double
-kB = 1.380649e-23
+kB = fromRational SI.boltzmann
 
 ln2 :: Double
-ln2 = 0.69314718056
+ln2 = log 2
 
 pathWeight :: Matrix2x2 -> Int -> Double
 pathWeight ((a, _), (_, _)) 0 = realPart a

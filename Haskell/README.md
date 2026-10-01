@@ -23,7 +23,7 @@ GHC / `base` bounds are set in `umst-formal-double-slit.cabal` (currently **GHC 
 
 ## Legacy mirrors
 
-Older root-level copies of `LandauerExtension` / `MeasurementCost` / `MonoidalState` live under **`legacy/`**. They are **not** built; **`src/`** is canonical. (Cabal invokes GHC with `-i` for the package directory, so duplicate module basenames in `Haskell/` used to shadow `src/` and break the build.)
+**`src/`** holds the package's modules. `LandauerExtension`, `MonoidalState` and the `LandauerEinsteinSanity` test are byte-identical with umst-formal's (its `scripts/check_shared_lean_drift.sh` fails on any difference); `MeasurementCost` here is the knowing fibre's own (which-path measurement cost). Copies of other umst-formal Haskell modules were retired on 2026-10-02 (`retirements/haskell-mirrors.json`, tag `archive/haskell-mirrors-2026-10-02`).
 
 ## Scope
 
