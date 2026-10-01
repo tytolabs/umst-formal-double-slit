@@ -12,6 +12,7 @@ import EpistemicGalois
 import qualified LandauerExtension as LE
 import MonoidalState
 import qualified UMST.Constants.SI as SI
+import qualified UMST.Chem.GroundStates as GS
 import System.Exit (exitFailure)
 
 -- | Generator for random valid 2x2 pure-state Density Matrices
@@ -207,7 +208,9 @@ main = do
 
   putStrLn "\n--- Constants: exact SI values, derived constants, CODATA cross-checks ---"
   rs <- mapM (\(name, ok) -> quickCheckResult (once (counterexample name ok))) SI.derivations
+  putStrLn "\n--- Ground states: Madelung laws and the cited exceptions (NIST ASD) ---"
+  gs <- mapM (\(name, ok) -> quickCheckResult (once (counterexample name ok))) GS.checks
 
-  if all isSuccess ([r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14] ++ rs)
+  if all isSuccess ([r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14] ++ rs ++ gs)
     then putStrLn "All properties passed!"
     else exitFailure

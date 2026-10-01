@@ -1,0 +1,529 @@
+{
+ "schema": "umst_ground_states_v1",
+ "rule": "Neutral-atom ground-state electron configurations, cited from the NIST Atomic Spectra Database (ASD), ground states and ionization energies; scripts/gen_ground_states.py expands each into full subshell occupancies (noble-gas core, then the period's omitted subshells filled completely in Madelung order until the electron count equals Z; a partial fill is an error) and generates every language's module.",
+ "source": {
+  "database": "NIST Atomic Spectra Database, Ground States and Ionization Energies",
+  "query": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=H-Lr&units=1&format=2&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&conf_out=on&submit=Retrieve+Data",
+  "retrieved": "2026-10-01",
+  "sha256_of_response": "575a610cc8dd81eaf1554391f2324c8170a95f962b561bf167f41776263532ea",
+  "neutral_atoms": 103,
+  "citation": "Kramida, A., Ralchenko, Yu., Reader, J., and NIST ASD Team, NIST Atomic Spectra Database, National Institute of Standards and Technology, Gaithersburg, MD"
+ },
+ "atoms": [
+  {
+   "z": 1,
+   "symbol": "H",
+   "nist_configuration": "1s"
+  },
+  {
+   "z": 2,
+   "symbol": "He",
+   "nist_configuration": "1s2"
+  },
+  {
+   "z": 3,
+   "symbol": "Li",
+   "nist_configuration": "1s2.2s"
+  },
+  {
+   "z": 4,
+   "symbol": "Be",
+   "nist_configuration": "1s2.2s2"
+  },
+  {
+   "z": 5,
+   "symbol": "B",
+   "nist_configuration": "2s2.2p"
+  },
+  {
+   "z": 6,
+   "symbol": "C",
+   "nist_configuration": "2s2.2p2"
+  },
+  {
+   "z": 7,
+   "symbol": "N",
+   "nist_configuration": "2s2.2p3"
+  },
+  {
+   "z": 8,
+   "symbol": "O",
+   "nist_configuration": "2s2.2p4"
+  },
+  {
+   "z": 9,
+   "symbol": "F",
+   "nist_configuration": "2s2.2p5"
+  },
+  {
+   "z": 10,
+   "symbol": "Ne",
+   "nist_configuration": "2s2.2p6"
+  },
+  {
+   "z": 11,
+   "symbol": "Na",
+   "nist_configuration": "2p6.3s"
+  },
+  {
+   "z": 12,
+   "symbol": "Mg",
+   "nist_configuration": "2p6.3s2"
+  },
+  {
+   "z": 13,
+   "symbol": "Al",
+   "nist_configuration": "3s2.3p"
+  },
+  {
+   "z": 14,
+   "symbol": "Si",
+   "nist_configuration": "3s2.3p2"
+  },
+  {
+   "z": 15,
+   "symbol": "P",
+   "nist_configuration": "3s2.3p3"
+  },
+  {
+   "z": 16,
+   "symbol": "S",
+   "nist_configuration": "3s2.3p4"
+  },
+  {
+   "z": 17,
+   "symbol": "Cl",
+   "nist_configuration": "3s2.3p5"
+  },
+  {
+   "z": 18,
+   "symbol": "Ar",
+   "nist_configuration": "3s2.3p6"
+  },
+  {
+   "z": 19,
+   "symbol": "K",
+   "nist_configuration": "3p6.4s"
+  },
+  {
+   "z": 20,
+   "symbol": "Ca",
+   "nist_configuration": "3p6.4s2"
+  },
+  {
+   "z": 21,
+   "symbol": "Sc",
+   "nist_configuration": "3d.4s2"
+  },
+  {
+   "z": 22,
+   "symbol": "Ti",
+   "nist_configuration": "3d2.4s2"
+  },
+  {
+   "z": 23,
+   "symbol": "V",
+   "nist_configuration": "3d3.4s2"
+  },
+  {
+   "z": 24,
+   "symbol": "Cr",
+   "nist_configuration": "3d5.(6S).4s"
+  },
+  {
+   "z": 25,
+   "symbol": "Mn",
+   "nist_configuration": "3d5.4s2"
+  },
+  {
+   "z": 26,
+   "symbol": "Fe",
+   "nist_configuration": "3d6.4s2"
+  },
+  {
+   "z": 27,
+   "symbol": "Co",
+   "nist_configuration": "3p6.3d7.4s2"
+  },
+  {
+   "z": 28,
+   "symbol": "Ni",
+   "nist_configuration": "3d8.(3F).4s2"
+  },
+  {
+   "z": 29,
+   "symbol": "Cu",
+   "nist_configuration": "3d10.4s"
+  },
+  {
+   "z": 30,
+   "symbol": "Zn",
+   "nist_configuration": "3d10.4s2"
+  },
+  {
+   "z": 31,
+   "symbol": "Ga",
+   "nist_configuration": "3d10.4s2.4p"
+  },
+  {
+   "z": 32,
+   "symbol": "Ge",
+   "nist_configuration": "4s2.4p2"
+  },
+  {
+   "z": 33,
+   "symbol": "As",
+   "nist_configuration": "4s2.4p3"
+  },
+  {
+   "z": 34,
+   "symbol": "Se",
+   "nist_configuration": "4s2.4p4"
+  },
+  {
+   "z": 35,
+   "symbol": "Br",
+   "nist_configuration": "4s2.4p5"
+  },
+  {
+   "z": 36,
+   "symbol": "Kr",
+   "nist_configuration": "4s2.4p6"
+  },
+  {
+   "z": 37,
+   "symbol": "Rb",
+   "nist_configuration": "4p6.5s"
+  },
+  {
+   "z": 38,
+   "symbol": "Sr",
+   "nist_configuration": "5s2"
+  },
+  {
+   "z": 39,
+   "symbol": "Y",
+   "nist_configuration": "4d.5s2"
+  },
+  {
+   "z": 40,
+   "symbol": "Zr",
+   "nist_configuration": "4d2.5s2"
+  },
+  {
+   "z": 41,
+   "symbol": "Nb",
+   "nist_configuration": "4d4.(5D).5s"
+  },
+  {
+   "z": 42,
+   "symbol": "Mo",
+   "nist_configuration": "4d5.(6S).5s"
+  },
+  {
+   "z": 43,
+   "symbol": "Tc",
+   "nist_configuration": "4d5.5s2"
+  },
+  {
+   "z": 44,
+   "symbol": "Ru",
+   "nist_configuration": "4d7.(4F).5s"
+  },
+  {
+   "z": 45,
+   "symbol": "Rh",
+   "nist_configuration": "4d8.(3F).5s"
+  },
+  {
+   "z": 46,
+   "symbol": "Pd",
+   "nist_configuration": "4d10"
+  },
+  {
+   "z": 47,
+   "symbol": "Ag",
+   "nist_configuration": "4d10.5s"
+  },
+  {
+   "z": 48,
+   "symbol": "Cd",
+   "nist_configuration": "4d10.5s2"
+  },
+  {
+   "z": 49,
+   "symbol": "In",
+   "nist_configuration": "5s2.5p"
+  },
+  {
+   "z": 50,
+   "symbol": "Sn",
+   "nist_configuration": "5s2.5p2"
+  },
+  {
+   "z": 51,
+   "symbol": "Sb",
+   "nist_configuration": "5p3"
+  },
+  {
+   "z": 52,
+   "symbol": "Te",
+   "nist_configuration": "5p4"
+  },
+  {
+   "z": 53,
+   "symbol": "I",
+   "nist_configuration": "5s2.5p5"
+  },
+  {
+   "z": 54,
+   "symbol": "Xe",
+   "nist_configuration": "5p6"
+  },
+  {
+   "z": 55,
+   "symbol": "Cs",
+   "nist_configuration": "5p6.6s"
+  },
+  {
+   "z": 56,
+   "symbol": "Ba",
+   "nist_configuration": "6s2"
+  },
+  {
+   "z": 57,
+   "symbol": "La",
+   "nist_configuration": "5d.6s2"
+  },
+  {
+   "z": 58,
+   "symbol": "Ce",
+   "nist_configuration": "4f.5d.6s2"
+  },
+  {
+   "z": 59,
+   "symbol": "Pr",
+   "nist_configuration": "4f3.6s2"
+  },
+  {
+   "z": 60,
+   "symbol": "Nd",
+   "nist_configuration": "4f4.6s2"
+  },
+  {
+   "z": 61,
+   "symbol": "Pm",
+   "nist_configuration": "4f5.6s2"
+  },
+  {
+   "z": 62,
+   "symbol": "Sm",
+   "nist_configuration": "4f6.6s2"
+  },
+  {
+   "z": 63,
+   "symbol": "Eu",
+   "nist_configuration": "4f7.6s2"
+  },
+  {
+   "z": 64,
+   "symbol": "Gd",
+   "nist_configuration": "4f7.(8S*).5d.6s2"
+  },
+  {
+   "z": 65,
+   "symbol": "Tb",
+   "nist_configuration": "4f9.6s2"
+  },
+  {
+   "z": 66,
+   "symbol": "Dy",
+   "nist_configuration": "4f10.6s2"
+  },
+  {
+   "z": 67,
+   "symbol": "Ho",
+   "nist_configuration": "4f11.6s2"
+  },
+  {
+   "z": 68,
+   "symbol": "Er",
+   "nist_configuration": "4f12.6s2"
+  },
+  {
+   "z": 69,
+   "symbol": "Tm",
+   "nist_configuration": "4f13.(2F*).6s2"
+  },
+  {
+   "z": 70,
+   "symbol": "Yb",
+   "nist_configuration": "4f14.6s2"
+  },
+  {
+   "z": 71,
+   "symbol": "Lu",
+   "nist_configuration": "5d.6s2"
+  },
+  {
+   "z": 72,
+   "symbol": "Hf",
+   "nist_configuration": "5d2.6s2"
+  },
+  {
+   "z": 73,
+   "symbol": "Ta",
+   "nist_configuration": "5d3.6s2"
+  },
+  {
+   "z": 74,
+   "symbol": "W",
+   "nist_configuration": "5d4.6s2"
+  },
+  {
+   "z": 75,
+   "symbol": "Re",
+   "nist_configuration": "5d5.6s2"
+  },
+  {
+   "z": 76,
+   "symbol": "Os",
+   "nist_configuration": "5d6.6s2"
+  },
+  {
+   "z": 77,
+   "symbol": "Ir",
+   "nist_configuration": "5d7.6s2"
+  },
+  {
+   "z": 78,
+   "symbol": "Pt",
+   "nist_configuration": "5d9.6s"
+  },
+  {
+   "z": 79,
+   "symbol": "Au",
+   "nist_configuration": "5d10.6s"
+  },
+  {
+   "z": 80,
+   "symbol": "Hg",
+   "nist_configuration": "5d10.6s2"
+  },
+  {
+   "z": 81,
+   "symbol": "Tl",
+   "nist_configuration": "6s2.6p"
+  },
+  {
+   "z": 82,
+   "symbol": "Pb",
+   "nist_configuration": "6s2.6p2"
+  },
+  {
+   "z": 83,
+   "symbol": "Bi",
+   "nist_configuration": "6p3"
+  },
+  {
+   "z": 84,
+   "symbol": "Po",
+   "nist_configuration": "6p4"
+  },
+  {
+   "z": 85,
+   "symbol": "At",
+   "nist_configuration": "6p5"
+  },
+  {
+   "z": 86,
+   "symbol": "Rn",
+   "nist_configuration": "6p6"
+  },
+  {
+   "z": 87,
+   "symbol": "Fr",
+   "nist_configuration": "7s"
+  },
+  {
+   "z": 88,
+   "symbol": "Ra",
+   "nist_configuration": "7s2"
+  },
+  {
+   "z": 89,
+   "symbol": "Ac",
+   "nist_configuration": "6d.7s2"
+  },
+  {
+   "z": 90,
+   "symbol": "Th",
+   "nist_configuration": "6d2.7s2"
+  },
+  {
+   "z": 91,
+   "symbol": "Pa",
+   "nist_configuration": "5f2.6d.7s2"
+  },
+  {
+   "z": 92,
+   "symbol": "U",
+   "nist_configuration": "5f3.6d.7s2"
+  },
+  {
+   "z": 93,
+   "symbol": "Np",
+   "nist_configuration": "5f4.6d.7s2"
+  },
+  {
+   "z": 94,
+   "symbol": "Pu",
+   "nist_configuration": "5f6.7s2"
+  },
+  {
+   "z": 95,
+   "symbol": "Am",
+   "nist_configuration": "5f7.7s2"
+  },
+  {
+   "z": 96,
+   "symbol": "Cm",
+   "nist_configuration": "5f7.6d.7s2"
+  },
+  {
+   "z": 97,
+   "symbol": "Bk",
+   "nist_configuration": "5f9.7s2"
+  },
+  {
+   "z": 98,
+   "symbol": "Cf",
+   "nist_configuration": "5f10.7s2"
+  },
+  {
+   "z": 99,
+   "symbol": "Es",
+   "nist_configuration": "5f11.7s2"
+  },
+  {
+   "z": 100,
+   "symbol": "Fm",
+   "nist_configuration": "5f12.7s2"
+  },
+  {
+   "z": 101,
+   "symbol": "Md",
+   "nist_configuration": "5f13.7s2"
+  },
+  {
+   "z": 102,
+   "symbol": "No",
+   "nist_configuration": "7s2"
+  },
+  {
+   "z": 103,
+   "symbol": "Lr",
+   "nist_configuration": "7s2.7p"
+  }
+ ]
+}
