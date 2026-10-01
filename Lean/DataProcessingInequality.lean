@@ -28,7 +28,7 @@ operations. For a CPTP (completely positive, trace-preserving) map `E`:
 
 This file proves:
 
-1. **Tier 1 — Diagonal DPI** (`vonNeumannDiagonal_whichPath_invariant`):
+1. **Tier 1 — Diagonal DPI** (`vonNeumannDiagonal_whichPath_apply`):
    The diagonal (Shannon) entropy is exactly preserved by the which-path channel.
    This is a direct consequence of `vonNeumannDiagonal_whichPath_apply` in `InfoEntropy.lean`.
 
@@ -62,12 +62,6 @@ open scoped BigOperators ComplexOrder
 variable {n : ℕ} {hn : 0 < n}
 
 /-! ### Tier 1: Diagonal entropy is invariant under which-path measurement -/
-
-/-- The diagonal (Shannon) entropy is exactly preserved by the which-path channel.
-This is a restatement of `vonNeumannDiagonal_whichPath_apply` from `InfoEntropy.lean`. -/
-theorem vonNeumannDiagonal_whichPath_invariant (ρ : DensityMatrix hnQubit) :
-    vonNeumannDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) = vonNeumannDiagonal ρ :=
-  vonNeumannDiagonal_whichPath_apply ρ
 
 /-! ### Tier 1b: Diagonal entropy ≥ spectral entropy (measurement increases entropy) -/
 
@@ -261,7 +255,7 @@ theorem whichPath_increases_entropy (ρ : DensityMatrix hnQubit) :
     vonNeumannDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) ≥ vonNeumannEntropy ρ := by
   -- vonNeumannDiagonal(E(ρ)) = vonNeumannDiagonal(ρ)  [by whichPath invariance]
   --                          ≥ vonNeumannEntropy(ρ)    [by Schur concavity]
-  rw [vonNeumannDiagonal_whichPath_invariant]
+  rw [vonNeumannDiagonal_whichPath_apply]
   exact vonNeumannDiagonal_ge_vonNeumannEntropy ρ
 
 /-- The entropy increase from measurement is bounded by the off-diagonal coherence:

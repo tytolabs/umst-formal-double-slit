@@ -6,22 +6,66 @@
   Ground-state electron configurations of the neutral atoms Z = 1 … 103, cited from the NIST Atomic Spectra
   Database (2026-10-01; SHA-256 of the response 575a610cc8dd81eaf1554391f2324c8170a95f962b561bf167f41776263532ea), and the Madelung
   (n + ℓ, then n) prediction, computed. A configuration is a list of (n, ℓ, occupancy) in Madelung order.
-  `madelungRank` composes with `ElementElectronic.madelungPriority` (`madelungRank_priority`).
+  The capacity of a subshell is derived from its one-electron states.
 -/
-
-import ElementElectronic
 
 namespace UMST.Chem.GroundStates
 
-/-- Electrons a subshell (n, ℓ) holds when full: 2(2ℓ + 1). -/
+/-- Electrons a subshell (n, ℓ) holds when full: 2(2ℓ + 1), the number of its states (`capacity_eq_length`). -/
 def capacity (s : Nat × Nat)  : Nat := 2 * (2 * s.2 + 1)
+
+/-- The one-electron states of a subshell with azimuthal number ℓ: the magnetic number m_ℓ = j − ℓ with
+    j < 2ℓ + 1, and the spin projection (down or up). -/
+def states (l : Nat) : List (Nat × Bool) :=
+  ((List.range (2 * l + 1)).map fun j => (j, false)) ++ ((List.range (2 * l + 1)).map fun j => (j, true))
+
+/-- A pair is a state exactly when −ℓ ≤ m_ℓ ≤ ℓ. -/
+theorem mem_states (l j : Nat) (s : Bool) : (j, s) ∈ states l ↔ j < 2 * l + 1 := by
+  simp only [states, List.mem_append, List.mem_map, List.mem_range, Prod.mk.injEq]
+  cases s <;> constructor <;> intro h
+  all_goals first
+    | (rcases h with ⟨i, hi, rfl, _⟩ | ⟨i, hi, rfl, _⟩ <;> first | exact hi | simp_all)
+    | exact Or.inl ⟨j, h, rfl, rfl⟩
+    | exact Or.inr ⟨j, h, rfl, rfl⟩
+
+/-- No state is listed twice. -/
+theorem states_nodup (l : Nat) : (states l).Nodup := by
+  unfold states List.Nodup
+  rw [List.pairwise_append]
+  refine ⟨(List.nodup_range _).map _ (fun a b h e => h (by simp at e; omega)),
+          (List.nodup_range _).map _ (fun a b h e => h (by simp at e; omega)), ?_⟩
+  intro a ha b hb hab
+  simp only [List.mem_map] at ha hb
+  obtain ⟨i, _, rfl⟩ := ha
+  obtain ⟨j, _, rfl⟩ := hb
+  simp at hab
+
+/-- The capacity of a subshell is the number of its states. -/
+theorem capacity_eq_length (n l : Nat) : capacity (n, l) = (states l).length := by
+  simp [states, capacity]; omega
+
+/-- Electrons shell n holds when full: the capacities of its subshells ℓ < n. -/
+def shellCapacity (n : Nat) : Nat := ((List.range n).map fun l => capacity (n, l)).foldr (· + ·) 0
+
+theorem foldr_add_shift (xs : List Nat) (c : Nat) : xs.foldr (· + ·) c = xs.foldr (· + ·) 0 + c := by
+  induction xs with
+  | nil => simp
+  | cons x xs ih => simp only [List.foldr_cons, ih]; omega
+
+/-- Shell n holds 2n² electrons. -/
+theorem shellCapacity_eq (n : Nat) : shellCapacity n = 2 * (n * n) := by
+  unfold shellCapacity
+  induction n with
+  | zero => rfl
+  | succ k ih =>
+    rw [List.range_succ, List.map_append, List.foldr_append, foldr_add_shift]
+    simp only [capacity, List.map_cons, List.map_nil, List.foldr_cons, List.foldr_nil] at ih ⊢
+    have e : (k + 1) * (k + 1) = k * k + 2 * k + 1 := by
+      simp only [Nat.add_mul, Nat.mul_add, Nat.mul_one, Nat.one_mul]; omega
+    rw [ih, e]; omega
 
 /-- Madelung rank: subshells fill by n + ℓ, then by n (n ≤ 7 < 8). -/
 def madelungRank (s : Nat × Nat)  : Nat := (s.1 + s.2) * 8 + s.1
-
-/-- The rank is the cell's Madelung priority, refined by n. -/
-theorem madelungRank_priority (q : UMST.Chem.QLatticeCell) :
-    madelungRank (q.nQ, q.ell) = UMST.Chem.madelungPriority q * 8 + q.nQ := rfl
 
 /-- Subshells 1s … 7p in Madelung order. -/
 def madelungOrder : List (Nat × Nat) :=

@@ -8,35 +8,7 @@ SPDX-License-Identifier: MIT
 `artifacts/catalog.json` and `artifacts/catalog.lock.json` used by CI, `verify_umst_stack.sh`,
 and **umst-manifold** digest pins. See `artifacts/README.md` (Lake vs Python).
 
-## Catalog JSON (`export_catalog`)
-
-Emits a **machine-readable** index of the default Lake `roots` for `lean_lib «UMST.DoubleSlit»` (see `Lean/lakefile.lean`). Output path: **`artifacts/catalog.json`** at the repository root (directory is created if missing).
-
-### Run
-
-From the **Lean package** directory (same as CI):
-
-```bash
-cd Lean
-lake exe export_catalog
-```
-
-From the **repository root** without changing your shell directory:
-
-```bash
-(cd Lean && lake exe export_catalog)
-```
-
-If the native binary fails to launch on your host (rare macOS `dyld` loader issues with some
-toolchain builds), build the module and run the same `main` via the Lean evaluator:
-
-```bash
-cd Lean
-lake build ExportCatalog
-lake env lean ../tools/lean_export/ExportCatalogSmoke.lean
-```
-
-### Related: Python `export_catalog.py` (canonical)
+## Python `export_catalog.py`
 
 `make lean-catalog-export` invokes **`export_catalog.py`** for the **full** catalog and lock.
 Use **`--roots-only`** on the same script (writes `artifacts/catalog-roots.json` by default)

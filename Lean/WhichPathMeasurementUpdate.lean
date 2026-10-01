@@ -3,7 +3,7 @@
 /-
 -/
 
-import Complementarity
+import QuantumClassicalBridge
 import LandauerBound
 
 /-!
@@ -13,7 +13,7 @@ This module is split out of `DoubleSlit.lean` so `EpistemicSensing` can import i
 pulling in `GateCompat` (avoids an import cycle `GateCompat → EpistemicSensing → … → GateCompat`).
 
 **Main entry points:** `measurementUpdateWhichPath`, fringe/channel biconditionals, Landauer
-lemmas along the update, and `interference_preserved_identity` / `collapse_fringe_on_whichPath`.
+lemmas along the update, and `interference_preserved_identity`.
 -/
 
 namespace UMST.DoubleSlit
@@ -61,11 +61,6 @@ theorem interference_preserved_identity (ρ : DensityMatrix hnQubit) :
     fringeVisibility ((KrausChannel.identity 2).apply hnQubit ρ) = fringeVisibility ρ := by
   congr 1
   exact DensityMat.ext (KrausChannel.identity_map 2 ρ.carrier)
-
-/-- Which-path measurement collapses fringe visibility. -/
-theorem collapse_fringe_on_whichPath (ρ : DensityMatrix hnQubit) :
-    fringeVisibility (KrausChannel.whichPathChannel.apply hnQubit ρ) = 0 :=
-  fringeVisibility_whichPath_apply ρ
 
 /-- A channel collapses all fringes iff it zeros the `(0,1)` off-diagonal for every density matrix. -/
 theorem collapse_all_fringes_iff_zeros_offdiag {ι : Type*} [Fintype ι] [DecidableEq ι]

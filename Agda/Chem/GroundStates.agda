@@ -9,10 +9,23 @@
 module Chem.GroundStates where
 
 open import Data.Bool using (Bool; true; false; _∧_; not)
-open import Data.List using (List; []; _∷_; map; filterᵇ; upTo; foldr)
-open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _⊓_; _≡ᵇ_; _<ᵇ_; _≤ᵇ_)
+open import Data.Empty using (⊥)
+open import Data.List using (List; []; _∷_; map; filterᵇ; upTo; foldr; _++_; length; [_])
+open import Data.List.Properties using (length-++; length-map; length-upTo; upTo-∷ʳ; map-++)
+open import Data.List.Membership.Propositional using (_∈_)
+open import Data.List.Membership.Propositional.Properties
+  using (∈-++⁺ˡ; ∈-++⁺ʳ; ∈-++⁻; ∈-map⁺; ∈-map⁻; ∈-upTo⁺; ∈-upTo⁻)
+open import Data.List.Relation.Unary.Unique.Propositional using (Unique)
+import Data.List.Relation.Unary.Unique.Propositional.Properties as Unique
+open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _⊓_; _≡ᵇ_; _<ᵇ_; _≤ᵇ_; _<_)
+open import Data.Nat.ListAction using (sum)
+open import Data.Nat.ListAction.Properties using (sum-++)
+open import Data.Nat.Properties using (+-identityʳ)
+open import Data.Nat.Tactic.RingSolver using (solve-∀)
 open import Data.Product using (_×_; _,_; proj₁; proj₂)
-open import Relation.Binary.PropositionalEquality using (_≡_; refl)
+open import Data.Sum using (inj₁; inj₂)
+open import Function using (_∘_)
+open import Relation.Binary.PropositionalEquality using (_≡_; refl; sym; trans; cong; cong₂)
 
 allᵇ : {A : Set} → (A → Bool) → List A → Bool
 allᵇ p = foldr (λ x acc → p x ∧ acc) true
@@ -25,6 +38,53 @@ Occupancy = ℕ × ℕ × ℕ
 
 capacity : Subshell → ℕ
 capacity (_ , l) = 2 * (2 * l + 1)
+
+-- The one-electron states of a subshell: m_ℓ = j ∸ ℓ with j < 2ℓ + 1, spin down or up.
+State : Set
+State = ℕ × Bool
+
+states : ℕ → List State
+states l = map (λ j → j , false) (upTo (2 * l + 1)) ++ map (λ j → j , true) (upTo (2 * l + 1))
+
+∈-states⁺ : ∀ {l j} s → j < 2 * l + 1 → (j , s) ∈ states l
+∈-states⁺ false h = ∈-++⁺ˡ (∈-map⁺ (λ j → j , false) (∈-upTo⁺ h))
+∈-states⁺ {l} true h = ∈-++⁺ʳ (map (λ j → j , false) (upTo (2 * l + 1))) (∈-map⁺ (λ j → j , true) (∈-upTo⁺ h))
+
+∈-states⁻ : ∀ {l j s} → (j , s) ∈ states l → j < 2 * l + 1
+∈-states⁻ {l} p with ∈-++⁻ (map (λ j → j , false) (upTo (2 * l + 1))) p
+... | inj₁ q with ∈-map⁻ (λ j → j , false) q
+...   | _ , x∈ , refl = ∈-upTo⁻ x∈
+∈-states⁻ {l} p | inj₂ q with ∈-map⁻ (λ j → j , true) q
+...   | _ , x∈ , refl = ∈-upTo⁻ x∈
+
+states-unique : ∀ l → Unique (states l)
+states-unique l = Unique.++⁺ (Unique.map⁺ (cong proj₁) (Unique.upTo⁺ _)) (Unique.map⁺ (cong proj₁) (Unique.upTo⁺ _))
+  disjoint
+  where
+  disjoint : ∀ {v} → (v ∈ map (λ j → j , false) (upTo (2 * l + 1)) × v ∈ map (λ j → j , true) (upTo (2 * l + 1))) → ⊥
+  disjoint (p , q) with ∈-map⁻ (λ j → j , false) p | ∈-map⁻ (λ j → j , true) q
+  ... | _ , _ , refl | _ , _ , ()
+
+capacity-states : ∀ n l → capacity (n , l) ≡ length (states l)
+capacity-states n l = sym (trans (length-++ (map (λ j → j , false) (upTo k)))
+  (trans (cong₂ _+_ (trans (length-map _ (upTo k)) (length-upTo k)) (trans (length-map _ (upTo k)) (length-upTo k)))
+         (cong (k +_) (sym (+-identityʳ k)))))
+  where k = 2 * l + 1
+
+shellCapacity : ℕ → ℕ
+shellCapacity n = sum (map (λ l → capacity (n , l)) (upTo n))
+
+shell-step : ∀ n → 2 * (n * n) + (2 * (2 * n + 1) + 0) ≡ 2 * (suc n * suc n)
+shell-step = solve-∀
+
+shell-capacity : ∀ n → shellCapacity n ≡ 2 * (n * n)
+shell-capacity zero = refl
+shell-capacity (suc n) =
+  trans (cong (sum ∘ map c) (sym (upTo-∷ʳ n)))
+  (trans (cong sum (map-++ c (upTo n) [ n ]))
+  (trans (sum-++ (map c (upTo n)) [ c n ])
+  (trans (cong (_+ (c n + 0)) (shell-capacity n)) (shell-step n))))
+  where c = λ l → capacity (n , l)
 
 madelungRank : Subshell → ℕ
 madelungRank (n , l) = (n + l) * 8 + n

@@ -3,7 +3,7 @@
 /-
 -/
 
-import Complementarity
+import QuantumClassicalBridge
 import GateCompat
 import LandauerBound
 import TensorPartialTrace
@@ -19,32 +19,19 @@ and **gate compatibility** layers all compile together.
 source of truth).
 
 Main entry points:
-* `UMST.DoubleSlit.complementarityEnglert`
+* `UMST.Quantum.complementarity_fringe_path`
 * `UMST.DoubleSlit.landauerCostDiagonal_nonneg`, `landauerCostDiagonal_whichPathInvariant`
-* `UMST.DoubleSlit.admissible_thermoFromQubitPath_whichPath`
+* `UMST.DoubleSlit.admissible_densityMatrix_whichPath`
 * `UMST.DoubleSlit.measurementUpdateWhichPath`, `measurementUpdateWhichPath_new_V`
 * `UMST.DoubleSlit.measurementUpdateWhichPath_landauer_eq`
 * `UMST.DoubleSlit.measurementUpdateWhichPath_landauer_le_landauerBitEnergy`
 * `UMST.DoubleSlit.interference_preserved_identity`
-* `UMST.DoubleSlit.collapse_fringe_on_whichPath`
-* `UMST.DoubleSlit.measurementUpdateWhichPath_gateEnforcement`
+* `UMST.Quantum.fringeVisibility_whichPath_apply`
 * `UMST.DoubleSlit.principle_of_maximal_information_collapse`
 -/
 
 namespace UMST.DoubleSlit
 
 open UMST.Core UMST.Quantum
-
-/-- Combined gate narrative: admissible thermo update + Landauer invariance + one-bit cap. -/
-theorem measurementUpdateWhichPath_gateEnforcement (ρ : DensityMatrix hnQubit) (T : ℝ)
-    (hT : 0 ≤ T) :
-    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
-      (KrausChannel.whichPathChannel.apply hnQubit ρ) ∧
-    landauerCostDiagonal ρ T =
-      landauerCostDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) T ∧
-    landauerCostDiagonal ρ T ≤ landauerBitEnergy T :=
-  ⟨admissible_thermoFromQubitPath_whichPath T ρ,
-    (landauerCostDiagonal_whichPathInvariant ρ T).symm,
-    landauerCostDiagonal_le_landauerBitEnergy ρ T hT⟩
 
 end UMST.DoubleSlit

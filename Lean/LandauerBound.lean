@@ -127,19 +127,10 @@ This is the thermodynamic bound enforced by the UMST gate on top of `V² + I² �
 noncomputable def residualCoherenceCapacity (ρ : DensityMatrix hnQubit) : ℝ :=
   1 - pathEntropyBits ρ
 
-theorem residualCoherenceCapacity_nonneg (ρ : DensityMatrix hnQubit) :
-    0 ≤ residualCoherenceCapacity ρ := by
-  unfold residualCoherenceCapacity
-  linarith [pathEntropyBits_le_one ρ]
-
-theorem residualCoherenceCapacity_le_one (ρ : DensityMatrix hnQubit) :
-    residualCoherenceCapacity ρ ≤ 1 := by
-  unfold residualCoherenceCapacity
-  linarith [pathEntropyBits_nonneg ρ]
-
 theorem principle_of_maximal_information_collapse (ρ : DensityMatrix hnQubit) :
-    0 ≤ residualCoherenceCapacity ρ ∧ residualCoherenceCapacity ρ ≤ 1 :=
-  ⟨residualCoherenceCapacity_nonneg ρ, residualCoherenceCapacity_le_one ρ⟩
+    0 ≤ residualCoherenceCapacity ρ ∧ residualCoherenceCapacity ρ ≤ 1 := by
+  unfold residualCoherenceCapacity
+  constructor <;> linarith [pathEntropyBits_le_one ρ, pathEntropyBits_nonneg ρ]
 
 /-- When path entropy is maximal (1 bit), residual coherence collapses to zero. -/
 theorem maximal_extraction_collapses_coherence (ρ : DensityMatrix hnQubit)
@@ -161,34 +152,19 @@ noncomputable def residualCoherenceCapacity_n {n : ℕ} (hn : 0 < n) (ρ : Densi
   if _ : (1 : ℕ) < n then 1 - pathEntropyBits_n hn ρ / Real.logb 2 n
   else 1 - pathEntropyBits_n hn ρ  -- n=1: degenerate case, logb 2 1 = 0
 
-theorem residualCoherenceCapacity_n_nonneg {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
+/-- **General PMIC:** for any `n ≥ 2`, residual coherence stays in `[0, 1]`. -/
+theorem principle_of_maximal_information_collapse_n {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
     (ρ : DensityMatrix hn) :
-    0 ≤ residualCoherenceCapacity_n hn ρ := by
-  unfold residualCoherenceCapacity_n
-  simp [hn1]
+    0 ≤ residualCoherenceCapacity_n hn ρ ∧ residualCoherenceCapacity_n hn ρ ≤ 1 := by
   have hlog : 0 < Real.logb 2 n := by
     apply Real.logb_pos (by norm_num : (1 : ℝ) < 2)
     exact_mod_cast hn1
   have hle : pathEntropyBits_n hn ρ / Real.logb 2 (n : ℝ) ≤ 1 := by
     simpa [div_self (ne_of_gt hlog)] using
       div_le_div_of_nonneg_right (pathEntropyBits_n_le_logb_two hn ρ) (le_of_lt hlog)
-  linarith [hle]
-
-theorem residualCoherenceCapacity_n_le_one {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
-    (ρ : DensityMatrix hn) :
-    residualCoherenceCapacity_n hn ρ ≤ 1 := by
-  unfold residualCoherenceCapacity_n
-  simp [hn1]
-  have hlog : 0 < Real.logb 2 n := by
-    apply Real.logb_pos (by norm_num : (1 : ℝ) < 2)
-    exact_mod_cast hn1
-  linarith [div_nonneg (pathEntropyBits_n_nonneg hn ρ) (le_of_lt hlog)]
-
-/-- **General PMIC:** for any `n ≥ 2`, residual coherence stays in `[0, 1]`. -/
-theorem principle_of_maximal_information_collapse_n {n : ℕ} (hn : 0 < n) (hn1 : 1 < n)
-    (ρ : DensityMatrix hn) :
-    0 ≤ residualCoherenceCapacity_n hn ρ ∧ residualCoherenceCapacity_n hn ρ ≤ 1 :=
-  ⟨residualCoherenceCapacity_n_nonneg hn hn1 ρ, residualCoherenceCapacity_n_le_one hn hn1 ρ⟩
+  have hge := div_nonneg (pathEntropyBits_n_nonneg hn ρ) (le_of_lt hlog)
+  rw [residualCoherenceCapacity_n, dif_pos hn1]
+  constructor <;> linarith
 
 /-- For qubits, `residualCoherenceCapacity_n` reduces to `residualCoherenceCapacity`. -/
 theorem residualCoherenceCapacity_n_qubit_eq (ρ : DensityMatrix hnQubit) :

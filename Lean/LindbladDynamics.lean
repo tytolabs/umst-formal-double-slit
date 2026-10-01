@@ -180,11 +180,6 @@ theorem dephasingSolution_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a 
   · have hexp := Filter.Tendsto.ofReal Real.tendsto_exp_neg_atTop_nhds_zero
     simpa [zero_mul] using Filter.Tendsto.mul hexp tendsto_const_nhds
 
-/-- Alias: off-diagonal dephasing solution tends to `0` as `t → ∞`. -/
-theorem dephasing_tendsto_diagonal (ρ : Matrix (Fin 2) (Fin 2) ℂ) (a b : Fin 2) (hab : a ≠ b) :
-    Tendsto (fun t => (dephasingSolution ρ t) a b) atTop (nhds (0 : ℂ)) :=
-  dephasingSolution_tendsto_diagonal ρ a b hab
-
 end DephasingQubit
 
 end UMST.Quantum

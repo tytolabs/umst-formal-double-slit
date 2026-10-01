@@ -7,10 +7,19 @@
 -- proves, and the test suite runs them.
 module UMST.Chem.GroundStates where
 
+import Data.List (nub, sort)
+
 type Occupancy = (Int, Int, Int)
 
 capacity :: (Int, Int) -> Int
 capacity (_, l) = 2 * (2 * l + 1)
+
+-- | The one-electron states of a subshell: m_l = j - l with j < 2l + 1, spin down or up.
+states :: Int -> [(Int, Bool)]
+states l = [(j, False) | j <- [0 .. 2 * l]] ++ [(j, True) | j <- [0 .. 2 * l]]
+
+shellCapacity :: Int -> Int
+shellCapacity n = sum [capacity (n, l) | l <- [0 .. n - 1]]
 
 madelungRank :: (Int, Int) -> Int
 madelungRank (n, l) = (n + l) * 8 + n
@@ -144,7 +153,11 @@ observed =
 -- | Each statement the proof languages prove, as a checked value.
 checks :: [(String, Bool)]
 checks =
-  [ ("madelung order sorted", and (zipWith (\a b -> madelungRank a < madelungRank b) madelungOrder (drop 1 madelungOrder)))
+  [ ("states are the pairs with j < 2l + 1", all (\l -> sort (states l) == [(j, s) | j <- [0 .. 2 * l], s <- [False, True]]) [0 .. 20])
+  , ("states without repetition", all (\l -> nub (states l) == states l) [0 .. 20])
+  , ("capacity is the number of states", and [capacity (n, l) == length (states l) | n <- [1 .. 8], l <- [0 .. 20]])
+  , ("shell n holds 2n^2", all (\n -> shellCapacity n == 2 * n * n) [0 .. 40])
+  , ("madelung order sorted", and (zipWith (\a b -> madelungRank a < madelungRank b) madelungOrder (drop 1 madelungOrder)))
   , ("madelung electrons", all (\z -> electrons (madelung z) == z) [0 .. 118])
   , ("madelung within capacity", all (withinCapacity . madelung) [0 .. 118])
   , ("observed electrons", all (\(z, c) -> electrons c == z) observed)

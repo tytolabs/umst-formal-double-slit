@@ -5,10 +5,47 @@
 (* (2026-10-01; SHA-256 575a610cc8dd81eaf1554391f2324c81…), the Madelung prediction computed;       *)
 (* twin of Lean/Chem/GroundStates.lean. Zero Axiom, Parameter or Admitted.                              *)
 
-From Stdlib Require Import List Arith Lia Bool.
+From Stdlib Require Import List Arith Lia Bool FinFun.
 Import ListNotations.
 
 Definition capacity (s : nat * nat) : nat := 2 * (2 * snd s + 1).
+
+(* The one-electron states of a subshell: m_l = j - l with j < 2l + 1, spin down or up. *)
+Definition states (l : nat) : list (nat * bool) :=
+  map (fun j => (j, false)) (seq 0 (2 * l + 1)) ++ map (fun j => (j, true)) (seq 0 (2 * l + 1)).
+
+Lemma in_states (l j : nat) (s : bool) : In (j, s) (states l) <-> j < 2 * l + 1.
+Proof.
+  unfold states. rewrite in_app_iff, !in_map_iff. split.
+  - intros [[x [Hx Hin]] | [x [Hx Hin]]]; inversion Hx; subst; apply in_seq in Hin; lia.
+  - intro H. destruct s.
+    + right. exists j. split; [reflexivity | apply in_seq; lia].
+    + left. exists j. split; [reflexivity | apply in_seq; lia].
+Qed.
+
+Lemma states_nodup (l : nat) : NoDup (states l).
+Proof.
+  unfold states. apply NoDup_app.
+  - apply Injective_map_NoDup; [intros a b H; now inversion H | apply seq_NoDup].
+  - apply Injective_map_NoDup; [intros a b H; now inversion H | apply seq_NoDup].
+  - intros x Hx Hy. apply in_map_iff in Hx as [a [Ha _]]. apply in_map_iff in Hy as [b [Hb _]].
+    subst. discriminate.
+Qed.
+
+Lemma capacity_eq_length (n l : nat) : capacity (n, l) = length (states l).
+Proof. unfold capacity, states. simpl. rewrite length_app, !length_map, length_seq. lia. Qed.
+
+Definition shellCapacity (n : nat) : nat := fold_right Nat.add 0 (map (fun l => capacity (n, l)) (seq 0 n)).
+
+Lemma fold_add_shift (xs : list nat) (c : nat) : fold_right Nat.add c xs = fold_right Nat.add 0 xs + c.
+Proof. induction xs as [| x xs IH]; simpl; [reflexivity | rewrite IH; lia]. Qed.
+
+Lemma shellCapacity_eq (n : nat) : shellCapacity n = 2 * (n * n).
+Proof.
+  unfold shellCapacity, capacity. simpl. induction n as [| k IH]; [reflexivity |].
+  rewrite seq_S, map_app, fold_right_app, fold_add_shift. simpl. rewrite IH. lia.
+Qed.
+
 Definition madelungRank (s : nat * nat) : nat := (fst s + snd s) * 8 + fst s.
 
 Definition madelungOrder : list (nat * nat) :=

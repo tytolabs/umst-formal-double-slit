@@ -61,7 +61,6 @@ library
     exposed-modules:
         UMST.Constants.SI,
         UMST.Chem.GroundStates,
-        ChemGeometry,
         DensityState,
         MeasurementChannel,
         DoubleSlit,
@@ -69,18 +68,7 @@ library
         EpistemicGalois,
         LandauerExtension,
         MonoidalState,
-        TelemetryParser,
-        UrgeKnowing.LandauerHistoryLook,
-        UrgeKnowing.EpistemicNullProbe,
-        UrgeKnowing.CompactionMiCost,
-        UrgeKnowing.ObserveMinMi,
-        UrgeKnowing.PadmaObservationCost,
-        UrgeKnowing.MachineTemperature,
-        UrgeKnowing.MeasurementCostSync,
-        UrgeKnowing.TwoHilberts,
-        UrgeKnowing.PersistVsOccupancy,
-        UrgeKnowing.LandauerNTo1,
-        UrgeKnowing.EpistemicQueryLook
+        TelemetryParser
 
     -- Modules included in this library but not exported.
     -- other-modules:

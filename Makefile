@@ -52,17 +52,13 @@ haskell-test:
 .PHONY: coq-check agda-check formal-check
 
 coq-check:
+	cd Coq && rocq makefile -f _CoqProject -o Makefile.coq
 	$(MAKE) -C Coq -f Makefile.coq clean
 	$(MAKE) -C Coq -f Makefile.coq all
 
-# Agda: 2.6+ stdlib; order respects local `open import` dependencies.
-AGDA_FLAGS := --include-path=. -l standard-library -W noLibUnknownField
-AGDA_MAIN := DensityStateSpec.agda ComplementaritySpec.agda \
-	LandauerEinsteinTrace.agda Gate.agda Helmholtz.agda DIB-Kleisli.agda Naturality.agda \
-	Activation.agda InfoTheory.agda MeasurementCost.agda
-
+# Agda: every tracked module, as in .github/workflows/formal.yml (a hand-picked list leaves files unchecked).
 agda-check:
-	@set -e; cd Agda; rm -f *.agdai; for f in $(AGDA_MAIN); do agda $(AGDA_FLAGS) -v0 "$$f"; done
+	@set -e; cd Agda; for f in $$(git ls-files '*.agda' '**/*.agda' | sort -u); do agda --warning=error "$$f"; done
 
 # Single entry point for formal verification tracks (Coq + Agda).
 formal-check: coq-check agda-check

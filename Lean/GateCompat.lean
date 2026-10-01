@@ -61,36 +61,20 @@ theorem admissible_densityMatrix_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit
           -landauerCostDiagonal ρ T
       linarith [landauerCostDiagonal_whichPathInvariant ρ T])
 
-/-- Alias retained for importers (no `thermoFromQubitPath` carrier). -/
-theorem admissible_thermoFromQubitPath_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
-    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
-      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
-  admissible_densityMatrix_whichPath T ρ
-
-theorem admissible_thermoCalibratedScaffold_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
-    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
-      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
-  admissible_densityMatrix_whichPath T ρ
-
-theorem admissible_thermoCalibratedPhys_whichPath (T : ℝ) (ρ : DensityMatrix hnQubit) :
-    @CoreAdmissible ℝ _ _ (DensityMatrix hnQubit) (densityMatrixThermoSystem T) ρ
-      (KrausChannel.whichPathChannel.apply hnQubit ρ) :=
-  admissible_densityMatrix_whichPath T ρ
-
-/-- Calibrated knowing cost is nonpositive for `T ≥ 0`. -/
-theorem thermoCalibratedScaffold_freeEnergy_nonpos (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+/-- The free energy of a state is minus its knowing cost, so it is nonpositive for `T ≥ 0`. -/
+theorem densityMatrixThermo_freeEnergy_nonpos (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
     (densityMatrixThermoSystem T).freeEnergy ρ ≤ 0 := by
   simp only [densityMatrixThermoSystem, ThermodynamicSystem.freeEnergy]
   linarith [landauerCostDiagonal_nonneg ρ T hT]
 
 /-- `|knowingCost| ≤ landauerBitEnergy T` on the device rail. -/
-theorem thermoCalibratedScaffold_freeEnergy_bounded (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+theorem densityMatrixThermo_freeEnergy_bounded (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
     |(densityMatrixThermoSystem T).freeEnergy ρ| ≤ landauerBitEnergy T := by
   simp only [densityMatrixThermoSystem, ThermodynamicSystem.freeEnergy]
   rw [abs_neg, abs_of_nonneg (landauerCostDiagonal_nonneg ρ T hT)]
   exact landauerCostDiagonal_le_landauerBitEnergy ρ T hT
 
-theorem knowingDeviceLedgerEntry_cost_nonpos (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
+theorem knowingDeviceLedgerEntry_cost_nonneg (T : ℝ) (ρ : DensityMatrix hnQubit) (hT : 0 ≤ T) :
     (knowingDeviceLedgerEntry T ρ).knowingCost ≥ 0 :=
   landauerCostDiagonal_nonneg ρ T hT
 

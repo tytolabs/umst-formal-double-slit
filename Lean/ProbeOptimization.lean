@@ -87,7 +87,7 @@ theorem ProbeSelectionAdmissible_nullProbe (T : ℝ) (ρ : DensityMatrix hnQubit
 theorem ProbeSelectionAdmissible_whichPathProbe (T : ℝ) (ρ : DensityMatrix hnQubit) :
     ProbeSelectionAdmissible T whichPathProbe ρ := by
   unfold ProbeSelectionAdmissible
-  simpa [whichPathProbe_apply] using admissible_thermoFromQubitPath_whichPath T ρ
+  simpa [whichPathProbe_apply] using admissible_densityMatrix_whichPath T ρ
 
 /-- Admissible indices in a finite probe family. -/
 noncomputable def AdmissibleProbeIndices {ι : Type*} [Fintype ι] (family : ι → QuantumProbe)

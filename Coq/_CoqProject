@@ -15,15 +15,3 @@ MirrorScope/VonNeumannEntropyModel.v
 MirrorScope/Assumptions.v
 Extraction.v
 Constitutional.v
-ChemGeometry.v
--Q UrgeKnowing UMSTFormal.UrgeKnowing
-UrgeKnowing/CompactionMiCost.v
-UrgeKnowing/EpistemicNullProbe.v
-UrgeKnowing/EpistemicQueryLook.v
-UrgeKnowing/LandauerHistoryLook.v
-UrgeKnowing/LandauerNTo1.v
-UrgeKnowing/MachineTemperature.v
-UrgeKnowing/MeasurementCostSync.v
-UrgeKnowing/ObserveMinMi.v
-UrgeKnowing/PersistVsOccupancy.v
-UrgeKnowing/TwoHilberts.v

@@ -1,12 +1,17 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 /-
-  UMST-Formal-Double-Slit: KnowingFibreInstance.lean (P0-10)
+  UMST-Formal-Double-Slit: KnowingFibreInstance.lean
 
-  Knowing-fibre **instances** of `UMST.ProcessFamily.SecondLaw` — not a new physical law here.
-  `MeasurementCost`, `ErasureChannel`, epistemic MI, and diagonal data-processing facts are
-  restated as consequences of `measureFeedback` / `erase` hypotheses imported from `umst-formal`
-  (`Process.lean`, P0-8). No standalone Landauer bound is introduced in double-slit.
+  The knowing fibre's processes are instances of the one predicate `UMST.ProcessFamily.SecondLaw` of umst-formal
+  (`Process.lean`); this module adds no law of its own.
+
+  * Erasure of the path qubit: the Born prior's Shannon entropy is the diagonal von Neumann entropy, the erase
+    process at work `T · S` satisfies the second law with equality (`pathBornErase_processFamily`), and the
+    diagonal Landauer cost is `k_B` times that work (`landauerCostDiagonal_eq_kB_eraseWork`).
+  * Measurement with feedback: the probe's readout cost is `k_B T` times its epistemic mutual information
+    (`measurementCost_eq_kBT_epistemicMI`); the second law holds exactly when the cost is at most that bound
+    (`measureFeedback_admissible_iff`), and the null probe is an instance (`measureFeedback_null_instance`).
 -/
 
 import Process
@@ -19,11 +24,6 @@ open UMST.LandauerLaw UMST.InfoTheory UMST.InfoTheory.JointDist
 open UMST.Quantum UMST.DoubleSlit
 
 namespace UMST.DoubleSlit.KnowingFibreInstance
-
-/-- Process-family pin: sole thermodynamic law lives in `umst-formal`; double-slit adds instances only. -/
-def processFamilyPin : String := "UMST.ProcessFamily.SecondLaw"
-
-theorem processFamilyPin_eq : processFamilyPin = "UMST.ProcessFamily.SecondLaw" := rfl
 
 /-- Born weights of the path qubit as a `ProbDist 2` (prior for erase instances). -/
 noncomputable def pathBornDist (ρ : DensityMatrix hnQubit) : ProbDist 2 where
@@ -122,33 +122,5 @@ theorem measureFeedback_null_instance (ρ : DensityMatrix hnQubit) (T : ℝ) (hT
   dsimp [UMST.ProcessFamily.SecondLaw, epistemicMeasureFeedback]
   rw [mutualInformation_product_zero uniformBinary uniformBinary]
   simp [measurementCost_null, epistemicMI_null, neg_zero, zero_add]
-
-theorem measurementCost_nonneg_from_measureFeedback (p : PathProbe) (ρ : DensityMatrix hnQubit)
-    (T : ℝ) (hT : 0 ≤ T) :
-    0 ≤ measurementCost p ρ T :=
-  measurementCost_nonneg p ρ T hT
-
-theorem measurementCost_null_from_measureFeedback (ρ : DensityMatrix hnQubit) (T : ℝ) :
-    measurementCost PathProbe.null ρ T = 0 :=
-  measurementCost_null ρ T
-
-theorem measurementCost_le_landauerBitEnergy_from_measureFeedback (p : PathProbe)
-    (ρ : DensityMatrix hnQubit) (T : ℝ) (hT : 0 ≤ T) :
-    measurementCost p ρ T ≤ landauerBitEnergy T :=
-  measurementCost_le_landauerBitEnergy p ρ T hT
-
-/-- Diagonal data-processing (MI invariance) composes with measure-feedback alignment; not a Landauer law. -/
-theorem dataProcessing_epistemicMI_whichPath_invariant (ρ : DensityMatrix hnQubit) :
-    EpistemicMI PathProbe.whichPath (KrausChannel.whichPathChannel.apply hnQubit ρ) =
-      EpistemicMI PathProbe.whichPath ρ :=
-  epistemicMI_whichPath_apply ρ
-
-theorem dataProcessing_diagonal_entropy_invariant (ρ : DensityMatrix hnQubit) :
-    vonNeumannDiagonal (KrausChannel.whichPathChannel.apply hnQubit ρ) = vonNeumannDiagonal ρ :=
-  vonNeumannDiagonal_whichPath_apply ρ
-
-def knowingFibrePhysicsGreenAuthorized : Prop := False
-
-theorem knowingFibrePhysicsGreenAuthorized_false : ¬knowingFibrePhysicsGreenAuthorized := id
 
 end UMST.DoubleSlit.KnowingFibreInstance
