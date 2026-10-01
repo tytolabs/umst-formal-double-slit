@@ -62,3 +62,7 @@ weights/
 
 # Python CI venv
 .venv-ci/
+
+# Coq lia tactic cache
+*.lia.cache
+.lia.cache

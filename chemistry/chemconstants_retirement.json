@@ -1,0 +1,651 @@
+{
+ "schema": "umst_retirement_ledger_v1",
+ "retired": "Lean/ChemConstants (108 modules), Coq/ChemConstants, Agda/ChemConstants, Haskell/UMST/ChemConstants (104 each), Haskell/src/EnvironmentSampleSections.hs",
+ "archive_tag": "archive/chemconstants-scaffold-2026-10-01",
+ "date": "2026-10-01",
+ "reason": "Each declaration was classified by content (scripts/theatre_census.py plus a reading of every remaining law). The modules held status machinery (modality enums, wired/green/proved flags, markers, cited paths), statements restating their own literals, per-module copies of element atomic numbers, hand-typed occupancy strings compared with each other, a scale ladder re-declared six times with projection laws by rfl, and a Landauer cost hard-coded as 1. Their real content is proved elsewhere: the Madelung exceptions are computed from cited NIST data in Chem.GroundStates (which also corrects lawrencium, 7s2 7p, asserted here to agree with Madelung), the exact SI composition is Constants.SI (umst-formal), the scale ladder is ScaleCommute, and the Landauer cost of entropy reduction is LandauerLaw.landauerBound with Constants.SIBridge.landauerBoundSI.",
+ "superseded_by": {
+  "occupancy exceptions": "Lean/Coq/Agda/Haskell Chem.GroundStates (madelung_exceptions)",
+  "element data restated": "Chem.GroundStates (cited Z = 1 to 103)",
+  "exact SI": "Constants.SI and Constants.SIBridge (umst-formal, imported through Lake)",
+  "scale ladder": "ScaleCommute (root module, kept)",
+  "Landauer cost": "LandauerLaw.landauerBound; Constants.SIBridge.landauerBoundSI"
+ },
+ "declarations_by_class": {
+  "status machinery": 9170,
+  "literal theatre": 2207,
+  "occupancy exceptions (computed in Chem.GroundStates)": 500,
+  "element data restated (Chem.GroundStates)": 329,
+  "unclassified": 1728,
+  "exact SI (Constants.SI)": 14
+ },
+ "modules": {
+  "AcExceptionContinuum.lean": {
+   "status machinery": 136,
+   "literal theatre": 29,
+   "occupancy exceptions (computed in Chem.GroundStates)": 19,
+   "element data restated (Chem.GroundStates)": 3,
+   "unclassified": 4
+  },
+  "ActinideOccupancyExceptions.lean": {
+   "status machinery": 16,
+   "occupancy exceptions (computed in Chem.GroundStates)": 43,
+   "literal theatre": 3
+  },
+  "AdjunctionCostLandauer.lean": {
+   "status machinery": 9,
+   "unclassified": 12,
+   "literal theatre": 4
+  },
+  "AgExceptionContinuum.lean": {
+   "status machinery": 123,
+   "literal theatre": 40,
+   "occupancy exceptions (computed in Chem.GroundStates)": 20,
+   "element data restated (Chem.GroundStates)": 5,
+   "unclassified": 4
+  },
+  "AllotropeConservation.lean": {
+   "status machinery": 76,
+   "literal theatre": 11,
+   "element data restated (Chem.GroundStates)": 20,
+   "unclassified": 40
+  },
+  "AqueousVsMineralConservation.lean": {
+   "status machinery": 117,
+   "literal theatre": 22,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "AssayMeasurementLandauerConservation.lean": {
+   "status machinery": 112,
+   "literal theatre": 24,
+   "unclassified": 11,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "AssemblageStabilityWhyConservation.lean": {
+   "status machinery": 114,
+   "literal theatre": 22,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "AuExceptionContinuum.lean": {
+   "status machinery": 120,
+   "literal theatre": 26,
+   "occupancy exceptions (computed in Chem.GroundStates)": 12,
+   "element data restated (Chem.GroundStates)": 5
+  },
+  "BondConservation.lean": {
+   "status machinery": 44,
+   "literal theatre": 6,
+   "element data restated (Chem.GroundStates)": 10,
+   "unclassified": 25
+  },
+  "BondFormingConservation.lean": {
+   "status machinery": 124,
+   "literal theatre": 31,
+   "unclassified": 20
+  },
+  "BondRepellingConservation.lean": {
+   "status machinery": 121,
+   "literal theatre": 31,
+   "unclassified": 26
+  },
+  "CartridgeConstitutiveCompose.lean": {
+   "status machinery": 78,
+   "literal theatre": 18,
+   "unclassified": 29
+  },
+  "CartridgeOreConsultMonoid.lean": {
+   "status machinery": 59,
+   "literal theatre": 14,
+   "unclassified": 12,
+   "element data restated (Chem.GroundStates)": 4
+  },
+  "CatalysisConservation.lean": {
+   "status machinery": 125,
+   "literal theatre": 25,
+   "unclassified": 22,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "CeExceptionContinuum.lean": {
+   "status machinery": 115,
+   "literal theatre": 29,
+   "occupancy exceptions (computed in Chem.GroundStates)": 13,
+   "element data restated (Chem.GroundStates)": 4
+  },
+  "CementHydrationNotL0G.lean": {
+   "status machinery": 54,
+   "literal theatre": 12,
+   "unclassified": 22,
+   "occupancy exceptions (computed in Chem.GroundStates)": 6
+  },
+  "ChemPhysicsChartIsomorphism.lean": {
+   "status machinery": 79,
+   "literal theatre": 15,
+   "element data restated (Chem.GroundStates)": 13,
+   "unclassified": 31,
+   "occupancy exceptions (computed in Chem.GroundStates)": 4
+  },
+  "CmExceptionContinuum.lean": {
+   "status machinery": 130,
+   "literal theatre": 34,
+   "occupancy exceptions (computed in Chem.GroundStates)": 22,
+   "element data restated (Chem.GroundStates)": 5,
+   "unclassified": 3
+  },
+  "CoalgebraConservation.lean": {
+   "status machinery": 29,
+   "literal theatre": 6,
+   "unclassified": 27
+  },
+  "ComposerResearchBleedingEdge.lean": {
+   "status machinery": 87,
+   "literal theatre": 32,
+   "unclassified": 26
+  },
+  "ConstantDeriveSecondLawCensus.lean": {
+   "status machinery": 107,
+   "literal theatre": 36,
+   "unclassified": 26
+  },
+  "ConstantsScaleSheaf.lean": {
+   "status machinery": 18,
+   "unclassified": 33
+  },
+  "ConstitutiveGEngineConservation.lean": {
+   "status machinery": 119,
+   "literal theatre": 26,
+   "unclassified": 14,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "ContaminationReverseRefineConservation.lean": {
+   "status machinery": 113,
+   "literal theatre": 22,
+   "unclassified": 10,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "ContinuumPatternLearn.lean": {
+   "status machinery": 120,
+   "literal theatre": 55,
+   "unclassified": 34
+  },
+  "ContinuumVsDiscreteElementIdConservation.lean": {
+   "status machinery": 115,
+   "literal theatre": 23,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "CrExceptionContinuum.lean": {
+   "status machinery": 110,
+   "literal theatre": 29,
+   "occupancy exceptions (computed in Chem.GroundStates)": 12,
+   "element data restated (Chem.GroundStates)": 4,
+   "unclassified": 3
+  },
+  "CrossDomainBreakthroughProtocol.lean": {
+   "status machinery": 95,
+   "literal theatre": 26,
+   "unclassified": 20,
+   "occupancy exceptions (computed in Chem.GroundStates)": 1
+  },
+  "CuExceptionContinuum.lean": {
+   "status machinery": 117,
+   "literal theatre": 24,
+   "occupancy exceptions (computed in Chem.GroundStates)": 10,
+   "element data restated (Chem.GroundStates)": 4
+  },
+  "CutConservation.lean": {
+   "status machinery": 39,
+   "literal theatre": 6,
+   "element data restated (Chem.GroundStates)": 11,
+   "unclassified": 36
+  },
+  "DBlockOccupancyExceptions.lean": {
+   "status machinery": 14,
+   "occupancy exceptions (computed in Chem.GroundStates)": 34,
+   "literal theatre": 3
+  },
+  "DensityConservation.lean": {
+   "status machinery": 65,
+   "literal theatre": 8,
+   "element data restated (Chem.GroundStates)": 8,
+   "unclassified": 47
+  },
+  "DependentTypesConservation.lean": {
+   "status machinery": 34,
+   "element data restated (Chem.GroundStates)": 4,
+   "unclassified": 22,
+   "literal theatre": 7
+  },
+  "DissipConservation.lean": {
+   "status machinery": 40,
+   "literal theatre": 7,
+   "element data restated (Chem.GroundStates)": 12,
+   "unclassified": 42
+  },
+  "DlvoKtNotPsi.lean": {
+   "status machinery": 60,
+   "literal theatre": 24,
+   "unclassified": 3,
+   "exact SI (Constants.SI)": 1
+  },
+  "Eco02ConsumeNotFork.lean": {
+   "status machinery": 9,
+   "unclassified": 2,
+   "literal theatre": 7
+  },
+  "EffectConservation.lean": {
+   "status machinery": 31,
+   "unclassified": 12,
+   "literal theatre": 5
+  },
+  "EgoffHarnessAdversarial.lean": {
+   "status machinery": 3,
+   "literal theatre": 2
+  },
+  "EngineRefusesNewSi.lean": {
+   "status machinery": 70,
+   "literal theatre": 29,
+   "unclassified": 8
+  },
+  "EnvironmentSampleSections.lean": {
+   "unclassified": 5,
+   "status machinery": 23
+  },
+  "EnvironmentScaleCommute.lean": {
+   "status machinery": 25,
+   "literal theatre": 1,
+   "unclassified": 41
+  },
+  "ExactSiInteger.lean": {
+   "status machinery": 20,
+   "exact SI (Constants.SI)": 12,
+   "unclassified": 5,
+   "literal theatre": 1
+  },
+  "FineStructureAlphaMeasuredRemainder.lean": {
+   "status machinery": 96,
+   "literal theatre": 49,
+   "exact SI (Constants.SI)": 1,
+   "unclassified": 19
+  },
+  "FixpointConservation.lean": {
+   "status machinery": 38,
+   "unclassified": 20,
+   "literal theatre": 5
+  },
+  "FoldConservation.lean": {
+   "status machinery": 27,
+   "unclassified": 24,
+   "literal theatre": 5
+  },
+  "GdExceptionContinuum.lean": {
+   "status machinery": 119,
+   "literal theatre": 31,
+   "occupancy exceptions (computed in Chem.GroundStates)": 13,
+   "element data restated (Chem.GroundStates)": 2
+  },
+  "GoldschmidtConservation.lean": {
+   "status machinery": 82,
+   "literal theatre": 11,
+   "element data restated (Chem.GroundStates)": 20,
+   "unclassified": 34
+  },
+  "HeavyZRelativisticContinuum.lean": {
+   "status machinery": 103,
+   "literal theatre": 33,
+   "unclassified": 30,
+   "element data restated (Chem.GroundStates)": 4
+  },
+  "HomeostasisGminConservation.lean": {
+   "status machinery": 115,
+   "literal theatre": 22,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "HyperConservation.lean": {
+   "status machinery": 41,
+   "literal theatre": 7,
+   "element data restated (Chem.GroundStates)": 9,
+   "unclassified": 41
+  },
+  "ImpureComponentMorphismConservation.lean": {
+   "status machinery": 113,
+   "literal theatre": 23,
+   "unclassified": 10,
+   "element data restated (Chem.GroundStates)": 2
+  },
+  "InteractEngineClosedShell.lean": {
+   "status machinery": 76,
+   "literal theatre": 37,
+   "unclassified": 28,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "IsotopeConservation.lean": {
+   "status machinery": 113,
+   "literal theatre": 26,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "IsotopeNuclearBoundaryConservation.lean": {
+   "status machinery": 113,
+   "literal theatre": 25,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 2
+  },
+  "KleisliInteractConservation.lean": {
+   "status machinery": 25,
+   "literal theatre": 5,
+   "unclassified": 21
+  },
+  "LaExceptionContinuum.lean": {
+   "status machinery": 122,
+   "literal theatre": 31,
+   "occupancy exceptions (computed in Chem.GroundStates)": 13,
+   "element data restated (Chem.GroundStates)": 2
+  },
+  "LinearConservation.lean": {
+   "status machinery": 27,
+   "unclassified": 25,
+   "literal theatre": 7
+  },
+  "LiveDensityRhoConservation.lean": {
+   "status machinery": 57,
+   "literal theatre": 13,
+   "element data restated (Chem.GroundStates)": 6,
+   "unclassified": 56
+  },
+  "LiveEco02ConsumeConservation.lean": {
+   "status machinery": 132,
+   "literal theatre": 32,
+   "unclassified": 22
+  },
+  "LiveGTpxConservation.lean": {
+   "status machinery": 111,
+   "literal theatre": 23,
+   "unclassified": 13,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "LivePatternBundleConservation.lean": {
+   "status machinery": 148,
+   "literal theatre": 29,
+   "unclassified": 7,
+   "element data restated (Chem.GroundStates)": 4
+  },
+  "LiveRemainderRowConservation.lean": {
+   "status machinery": 132,
+   "literal theatre": 27
+  },
+  "LiveScaleCommuteConservation.lean": {
+   "status machinery": 66,
+   "literal theatre": 19,
+   "element data restated (Chem.GroundStates)": 6,
+   "unclassified": 78
+  },
+  "LrExceptionContinuum.lean": {
+   "status machinery": 135,
+   "literal theatre": 35,
+   "occupancy exceptions (computed in Chem.GroundStates)": 16,
+   "element data restated (Chem.GroundStates)": 3,
+   "unclassified": 8
+  },
+  "MadelungExceptionIsTheorem.lean": {
+   "status machinery": 103,
+   "literal theatre": 49,
+   "occupancy exceptions (computed in Chem.GroundStates)": 28,
+   "unclassified": 27
+  },
+  "MetastableVsEquilibriumConservation.lean": {
+   "status machinery": 115,
+   "literal theatre": 24,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "MoExceptionContinuum.lean": {
+   "status machinery": 125,
+   "literal theatre": 29,
+   "occupancy exceptions (computed in Chem.GroundStates)": 13,
+   "element data restated (Chem.GroundStates)": 3,
+   "unclassified": 1
+  },
+  "ModalityConservation.lean": {
+   "status machinery": 52,
+   "literal theatre": 6
+  },
+  "NamedOccupancyExceptions.lean": {
+   "status machinery": 35,
+   "literal theatre": 3,
+   "occupancy exceptions (computed in Chem.GroundStates)": 5
+  },
+  "NaturalOccurrenceZ118.lean": {
+   "status machinery": 73,
+   "literal theatre": 28,
+   "element data restated (Chem.GroundStates)": 2,
+   "unclassified": 34
+  },
+  "NaturalVsPurifiedEnvConservation.lean": {
+   "status machinery": 128,
+   "literal theatre": 26,
+   "unclassified": 22,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "NbExceptionContinuum.lean": {
+   "status machinery": 117,
+   "literal theatre": 28,
+   "occupancy exceptions (computed in Chem.GroundStates)": 18,
+   "element data restated (Chem.GroundStates)": 4,
+   "unclassified": 2
+  },
+  "NpExceptionContinuum.lean": {
+   "status machinery": 120,
+   "literal theatre": 30,
+   "occupancy exceptions (computed in Chem.GroundStates)": 15,
+   "element data restated (Chem.GroundStates)": 2
+  },
+  "OccupancyEngineSort.lean": {
+   "status machinery": 72,
+   "literal theatre": 25,
+   "occupancy exceptions (computed in Chem.GroundStates)": 41,
+   "unclassified": 6
+  },
+  "OccupancyExceptionSetsDisjoint.lean": {
+   "status machinery": 14,
+   "occupancy exceptions (computed in Chem.GroundStates)": 10,
+   "literal theatre": 1
+  },
+  "OccurrenceFamilyPattern.lean": {
+   "status machinery": 75,
+   "literal theatre": 30,
+   "unclassified": 36,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "OgRelativisticConservation.lean": {
+   "status machinery": 117,
+   "literal theatre": 28,
+   "unclassified": 17,
+   "element data restated (Chem.GroundStates)": 5,
+   "occupancy exceptions (computed in Chem.GroundStates)": 2
+  },
+  "OreMonoidalConservation.lean": {
+   "status machinery": 30,
+   "literal theatre": 6,
+   "unclassified": 15
+  },
+  "OtherNamedNuanceConservation.lean": {
+   "status machinery": 121,
+   "literal theatre": 22,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "OutlierIsTheorem.lean": {
+   "status machinery": 90,
+   "literal theatre": 28,
+   "unclassified": 13,
+   "element data restated (Chem.GroundStates)": 2
+  },
+  "PaExceptionContinuum.lean": {
+   "status machinery": 125,
+   "literal theatre": 40,
+   "occupancy exceptions (computed in Chem.GroundStates)": 21,
+   "element data restated (Chem.GroundStates)": 4,
+   "unclassified": 4
+  },
+  "PartialConservation.lean": {
+   "status machinery": 25,
+   "element data restated (Chem.GroundStates)": 2,
+   "unclassified": 26,
+   "literal theatre": 5
+  },
+  "PatternProductConservation.lean": {
+   "status machinery": 91,
+   "literal theatre": 10,
+   "element data restated (Chem.GroundStates)": 8,
+   "unclassified": 4
+  },
+  "PdExceptionContinuum.lean": {
+   "status machinery": 121,
+   "literal theatre": 33,
+   "occupancy exceptions (computed in Chem.GroundStates)": 15,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "PerElementNuanceConservation.lean": {
+   "status machinery": 120,
+   "literal theatre": 43,
+   "element data restated (Chem.GroundStates)": 21,
+   "occupancy exceptions (computed in Chem.GroundStates)": 3,
+   "unclassified": 11
+  },
+  "PhaseEutecticSolidSolutionConservation.lean": {
+   "status machinery": 121,
+   "literal theatre": 23,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "PolymorphismConservation.lean": {
+   "status machinery": 122,
+   "literal theatre": 25,
+   "unclassified": 12,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "ProcessingRefiningConservation.lean": {
+   "status machinery": 112,
+   "literal theatre": 22,
+   "unclassified": 10,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "PtExceptionContinuum.lean": {
+   "status machinery": 121,
+   "literal theatre": 33,
+   "occupancy exceptions (computed in Chem.GroundStates)": 14,
+   "element data restated (Chem.GroundStates)": 4
+  },
+  "PullbackConservation.lean": {
+   "status machinery": 28,
+   "literal theatre": 5,
+   "unclassified": 25
+  },
+  "PurifyRefineLiveConservation.lean": {
+   "status machinery": 127,
+   "literal theatre": 26,
+   "unclassified": 23,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "RedoxLadderConservation.lean": {
+   "status machinery": 117,
+   "literal theatre": 22,
+   "unclassified": 9,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "RewriteConservation.lean": {
+   "status machinery": 39,
+   "unclassified": 22,
+   "literal theatre": 5
+  },
+  "RhExceptionContinuum.lean": {
+   "status machinery": 121,
+   "literal theatre": 31,
+   "occupancy exceptions (computed in Chem.GroundStates)": 14,
+   "element data restated (Chem.GroundStates)": 5
+  },
+  "RuExceptionContinuum.lean": {
+   "status machinery": 114,
+   "literal theatre": 27,
+   "occupancy exceptions (computed in Chem.GroundStates)": 20,
+   "element data restated (Chem.GroundStates)": 4,
+   "unclassified": 3
+  },
+  "ScaleConservation.lean": {
+   "status machinery": 54,
+   "literal theatre": 8,
+   "element data restated (Chem.GroundStates)": 12,
+   "unclassified": 48,
+   "occupancy exceptions (computed in Chem.GroundStates)": 2
+  },
+  "ScaleOccupancyZCommute.lean": {
+   "status machinery": 6,
+   "unclassified": 4,
+   "occupancy exceptions (computed in Chem.GroundStates)": 2,
+   "element data restated (Chem.GroundStates)": 2,
+   "literal theatre": 4
+  },
+  "SharedConservation.lean": {
+   "status machinery": 120,
+   "literal theatre": 30,
+   "unclassified": 13
+  },
+  "StructureBlockingInertnessConservation.lean": {
+   "status machinery": 112,
+   "literal theatre": 21,
+   "unclassified": 11,
+   "element data restated (Chem.GroundStates)": 1
+  },
+  "StructureEnablingConservation.lean": {
+   "status machinery": 83,
+   "literal theatre": 10,
+   "element data restated (Chem.GroundStates)": 20,
+   "unclassified": 35
+  },
+  "SurfaceVsBulkSdfConservation.lean": {
+   "status machinery": 126,
+   "literal theatre": 24,
+   "element data restated (Chem.GroundStates)": 1,
+   "unclassified": 1
+  },
+  "TemperatureScaleCommute.lean": {
+   "status machinery": 14,
+   "unclassified": 24
+  },
+  "ThExceptionContinuum.lean": {
+   "status machinery": 110,
+   "literal theatre": 33,
+   "occupancy exceptions (computed in Chem.GroundStates)": 18,
+   "element data restated (Chem.GroundStates)": 3,
+   "unclassified": 2
+  },
+  "ThermoConservation.lean": {
+   "status machinery": 74,
+   "literal theatre": 7,
+   "element data restated (Chem.GroundStates)": 11,
+   "unclassified": 49
+  },
+  "TpParametricConservation.lean": {
+   "status machinery": 121,
+   "literal theatre": 25,
+   "unclassified": 18,
+   "element data restated (Chem.GroundStates)": 3
+  },
+  "UExceptionContinuum.lean": {
+   "status machinery": 131,
+   "literal theatre": 32,
+   "occupancy exceptions (computed in Chem.GroundStates)": 21,
+   "element data restated (Chem.GroundStates)": 2,
+   "unclassified": 5
+  },
+  "VacuumInertLimitConservation.lean": {
+   "status machinery": 122,
+   "literal theatre": 30,
+   "unclassified": 11,
+   "element data restated (Chem.GroundStates)": 1
+  }
+ },
+ "unclassified_note": "The unclassified entries are the definitions, inductives and structures serving the classes above (string tables, enums, record shapes) and 79 laws; every law was read: 72 are projection or identity laws of the re-declared scale ladder (rfl), 2 restate additive definitions, and the rest are the hard-coded pureward cost, a reflexivity of a boolean equality and a constant false over an enum."
+}
