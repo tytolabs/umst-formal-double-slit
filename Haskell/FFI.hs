@@ -55,6 +55,11 @@ module FFI
   ( -- * High-level wrappers
     withFilter
   , rustGateCheck
+  , rustDissipation
+  , rustHydrationDegree
+  , rustStrengthPowers
+  , rustFromMix
+  , fromCState
     -- * Property tests
   , prop_gateCorrespondence
   , runCorrespondenceTests

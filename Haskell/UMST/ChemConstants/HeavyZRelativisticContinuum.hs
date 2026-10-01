@@ -107,9 +107,9 @@ heavyZRelativisticWitnessTagAll = [Copernicium, Flerovium, Oganesson]
 heavyZRelativisticWitnessZ :: HeavyZRelativisticWitnessTag -> Int
 heavyZRelativisticWitnessZ tag =
   case tag of
-    Copernicium -> 112
-    Flerovium -> 114
-    Oganesson -> 118
+    Copernicium -> coperniciumZ
+    Flerovium -> fleroviumZ
+    Oganesson -> oganessonZ
 
 heavyZRelativisticWitnessSymbol :: HeavyZRelativisticWitnessTag -> String
 heavyZRelativisticWitnessSymbol tag =
@@ -223,30 +223,30 @@ heavyElementX4Witness =
     }
 
 namedFactorPresent :: NamedFactorsProduct -> NamedFactor -> Bool
-namedFactorPresent product factor =
+namedFactorPresent factors factor =
   case factor of
-    RelativisticZ -> holdsRelativisticZ product
-    SpinOrbitSplitting -> holdsSpinOrbitSplitting product
-    ClosedShellRemainder -> holdsClosedShellRemainder product
+    RelativisticZ -> holdsRelativisticZ factors
+    SpinOrbitSplitting -> holdsSpinOrbitSplitting factors
+    ClosedShellRemainder -> holdsClosedShellRemainder factors
 
 -- | Whether named-factors product is concurrent Π_c (≥2 Present — not XOR bucket).
 namedFactorsIsConcurrentProduct :: NamedFactorsProduct -> Bool
-namedFactorsIsConcurrentProduct product =
+namedFactorsIsConcurrentProduct factors =
   length
     ( filter
         id
-        [ holdsRelativisticZ product
-        , holdsSpinOrbitSplitting product
-        , holdsClosedShellRemainder product
+        [ holdsRelativisticZ factors
+        , holdsSpinOrbitSplitting factors
+        , holdsClosedShellRemainder factors
         ]
     )
     >= 2
 
 -- | XOR enum growth refused on concurrent named-factors product.
 refuseXorEnumGrowth :: NamedFactorsProduct -> Bool
-refuseXorEnumGrowth product =
-  namedFactorsIsConcurrentProduct product
-    && namedFactorPresent product RelativisticZ
+refuseXorEnumGrowth factors =
+  namedFactorsIsConcurrentProduct factors
+    && namedFactorPresent factors RelativisticZ
 
 -- | Observed occupancy electron count for Z (qlattice cite — scaffold pins).
 qlatticeObservedElectronCount :: Int -> Maybe Int

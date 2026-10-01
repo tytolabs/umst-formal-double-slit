@@ -49,7 +49,7 @@ jobs:
         run: |
           set -e
           cabal update
-          cabal test
+          cabal test --ghc-options=-Werror
 
       # The cabal package lists 30 modules; the four-language mirrors under Haskell/UMST/ and the root/legacy files
       # are not in it, so without this step 112 tracked .hs files would pass CI unchecked.
@@ -58,4 +58,4 @@ jobs:
           set -e
           files=$(git ls-files '*.hs' | grep -v -E '^(src|app|test)/')
           echo "$(echo "$files" | wc -l) files"
-          cabal exec -- ghc --make -fno-code -i. -isrc -outputdir /tmp/ghc-typecheck $files
+          cabal exec -- ghc --make -fno-code -Wall -Werror -i. -isrc -outputdir /tmp/ghc-typecheck $files
