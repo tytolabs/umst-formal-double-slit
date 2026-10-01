@@ -1,0 +1,43 @@
+{
+ "schema": "retirement_ledger_v1",
+ "date": "2026-10-02",
+ "archive_tag": "archive/agda-mirrors-2026-10-02",
+ "reason": "copies of umst-formal's Agda modules; no double-slit module imports them; each declaration unique to a copy is accounted for below",
+ "removed": [
+  {
+   "path": "Agda/Activation.agda",
+   "canonical": "umst-formal/Agda/Activation.agda",
+   "note": "no declaration unique to this copy"
+  },
+  {
+   "path": "Agda/DIB-Kleisli.agda",
+   "canonical": "umst-formal/Agda/DIB-Kleisli.agda",
+   "note": "umst-formal's version takes DIBState and the phase types as module parameters where this copy fixed DIBState = ⊤; every name is there"
+  },
+  {
+   "path": "Agda/Gate.agda",
+   "canonical": "umst-formal/Agda/Gate.agda",
+   "note": "the monolithic gate; umst-formal splits it into Core/Gate, Concrete/Gate and Compat/Gate (natToℚ, a private helper, builds δ-mass from an exact rational there)"
+  },
+  {
+   "path": "Agda/Helmholtz.agda",
+   "canonical": "umst-formal/Agda/Helmholtz.agda",
+   "note": "HelmholtzOrderedField, HelmholtzGradient and HelmholtzLinearity were hypothesis records standing in for helmholtz-antitone and helmholtz-linear, which umst-formal Concrete/Helmholtz proves"
+  },
+  {
+   "path": "Agda/InfoTheory.agda",
+   "canonical": "umst-formal/Agda/InfoTheory.agda",
+   "note": "ProductMassProps was a hypothesis record of jointMassProduct, marginalFirstProduct and marginalSecondProduct, which umst-formal InfoTheory proves"
+  },
+  {
+   "path": "Agda/LandauerEinsteinTrace.agda",
+   "canonical": "umst-formal/Agda/LandauerEinsteinTrace.agda",
+   "note": "ported to umst-formal (058d505), replacing its empty module"
+  },
+  {
+   "path": "Agda/MaterialClass.agda",
+   "canonical": "umst-formal/Agda/MaterialClass.agda",
+   "note": "no declaration unique to this copy"
+  }
+ ]
+}
