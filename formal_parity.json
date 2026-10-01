@@ -1,0 +1,508 @@
+{
+ "schema": "umst_formal_parity_v1",
+ "rule": "Every statement of the contract is stated in Lean, Coq and Agda and tested in Haskell, each entry naming its declaration, or the entry gives the reason the language cannot state it. scripts/check_formal_parity.py fails on a missing declaration, on a contract-module declaration in no statement, and when absent entries exceed max_absent. The Rust runtime relies only on statements whose Lean, Coq and Agda entries are present.",
+ "contract_modules": [
+  "Lean/Chem/GroundStates.lean"
+ ],
+ "max_absent": 2,
+ "statements": [
+  {
+   "id": "ground_states.capacity",
+   "statement": "the capacity of a subshell: 2(2l + 1) electrons",
+   "lean": {
+    "name": "capacity",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "capacity",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "capacity",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "capacity",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.states",
+   "statement": "the one-electron states of a subshell",
+   "lean": {
+    "name": "states",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "states",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "states",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "states",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.shellCapacity",
+   "statement": "the capacity of shell n: the sum of its subshells",
+   "lean": {
+    "name": "shellCapacity",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "shellCapacity",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "shellCapacity",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "shellCapacity",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelungRank",
+   "statement": "the Madelung rank of a subshell: n + l, then n",
+   "lean": {
+    "name": "madelungRank",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelungRank",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelungRank",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "madelungRank",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelungOrder",
+   "statement": "the subshells in Madelung order",
+   "lean": {
+    "name": "madelungOrder",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelungOrder",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelungOrder",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "madelungOrder",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.fill",
+   "statement": "filling subshells in order with z electrons",
+   "lean": {
+    "name": "fill",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "fill",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "fill",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "fill",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelung",
+   "statement": "the Madelung prediction of a ground state",
+   "lean": {
+    "name": "madelung",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelung",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelung",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "madelung",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.electrons",
+   "statement": "the electron count of a configuration",
+   "lean": {
+    "name": "electrons",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "electrons",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "electrons",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "electrons",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.withinCapacity",
+   "statement": "no subshell holds more than its capacity",
+   "lean": {
+    "name": "withinCapacity",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "withinCapacity",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "withinCapacity",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "withinCapacity",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.observed",
+   "statement": "the cited NIST ground states, Z = 1 … 103",
+   "lean": {
+    "name": "observed",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "observed",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "observed",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "observed",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.mem_states",
+   "statement": "a state (j, s) is in subshell l exactly when j < 2l + 1",
+   "lean": {
+    "name": "mem_states",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "in_states",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "∈-states",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"states are the pairs with j < 2l + 1\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.states_nodup",
+   "statement": "the states of a subshell are distinct",
+   "lean": {
+    "name": "states_nodup",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "states_nodup",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "states-unique",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"states without repetition\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.capacity_eq_length",
+   "statement": "the capacity of a subshell is the number of its states (Pauli exclusion)",
+   "lean": {
+    "name": "capacity_eq_length",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "capacity_eq_length",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "capacity-states",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"capacity is the number of states\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.foldr_add_shift",
+   "statement": "a right fold of sums with seed c is the fold with seed 0 plus c",
+   "lean": {
+    "name": "foldr_add_shift",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "fold_add_shift",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "absent": "Agda proves shell-capacity through sum-++ and the ring identity shell-step; no seed shift arises"
+   },
+   "haskell": {
+    "absent": "a proof step of shellCapacity_eq; the suite tests its conclusion ('shell n holds 2n^2')"
+   }
+  },
+  {
+   "id": "ground_states.shellCapacity_eq",
+   "statement": "shell n holds 2n² electrons",
+   "lean": {
+    "name": "shellCapacity_eq",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "shellCapacity_eq",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "shell-capacity",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"shell n holds 2n^2\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelungOrder_sorted",
+   "statement": "the Madelung order is strictly increasing in rank",
+   "lean": {
+    "name": "madelungOrder_sorted",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelungOrder_sorted",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelungOrder-sorted",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung order sorted\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelungOrder_complete",
+   "statement": "every subshell with n < 8 and l < min(n, 4) is in the order",
+   "lean": {
+    "name": "madelungOrder_complete",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelungOrder_complete",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelungOrder-complete",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung order complete\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelung_electrons_check",
+   "statement": "the prediction for each z ≤ 118 holds z electrons (computed)",
+   "lean": {
+    "name": "madelung_electrons_check",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelung_electrons_check",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelung-electrons",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung electrons\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelung_electrons",
+   "statement": "for every z ≤ 118 the prediction holds z electrons",
+   "lean": {
+    "name": "madelung_electrons",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelung_electrons",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelung-electrons-at",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung electrons\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelung_withinCapacity_check",
+   "statement": "the prediction for each z ≤ 118 respects capacities (computed)",
+   "lean": {
+    "name": "madelung_withinCapacity_check",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelung_withinCapacity_check",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelung-withinCapacity",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung within capacity\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelung_withinCapacity",
+   "statement": "for every z ≤ 118 the prediction respects capacities",
+   "lean": {
+    "name": "madelung_withinCapacity",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelung_withinCapacity",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelung-withinCapacity-at",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung within capacity\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.observed_atomic_numbers",
+   "statement": "the cited ground states are exactly Z = 1 … 103",
+   "lean": {
+    "name": "observed_atomic_numbers",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "observed_atomic_numbers",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "observed-atomic-numbers",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"observed atomic numbers\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.observed_electrons",
+   "statement": "each cited ground state holds Z electrons",
+   "lean": {
+    "name": "observed_electrons",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "observed_electrons",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "observed-electrons",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"observed electrons\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.observed_withinCapacity",
+   "statement": "each cited ground state respects capacities",
+   "lean": {
+    "name": "observed_withinCapacity",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "observed_withinCapacity",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "observed-withinCapacity",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"observed within capacity\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  },
+  {
+   "id": "ground_states.madelung_exceptions",
+   "statement": "the cited ground states differ from the Madelung prediction exactly at Z = 24, 29, 41, 42, 44–47, 57, 58, 64, 78, 79, 89–93, 96, 103",
+   "lean": {
+    "name": "madelung_exceptions",
+    "file": "Lean/Chem/GroundStates.lean"
+   },
+   "coq": {
+    "name": "madelung_exceptions",
+    "file": "Coq/Chem/GroundStates.v"
+   },
+   "agda": {
+    "name": "madelung-exceptions",
+    "file": "Agda/Chem/GroundStates.agda"
+   },
+   "haskell": {
+    "name": "\"madelung exceptions\"",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   }
+  }
+ ]
+}

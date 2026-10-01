@@ -37,6 +37,9 @@ jobs:
       - name: Ground-state modules match chemistry/ground_states.json (cited NIST data)
         run: python3 scripts/gen_ground_states.py --check
 
+      - name: Four-language parity of the contract (formal_parity.json)
+        run: python3 scripts/check_formal_parity.py --summary
+
       - name: No theatre in the Lean tree (literal, reflexive, alias, duplicate or bundle statements)
         # A ratchet that only falls; scripts/theatre_census.py --json lists any declaration it finds.
         run: python3 scripts/theatre_census.py --check 0

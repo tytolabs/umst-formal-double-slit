@@ -8,11 +8,12 @@
 
 module Chem.GroundStates where
 
-open import Data.Bool using (Bool; true; false; _∧_; not)
+open import Data.Bool using (Bool; true; false; _∧_; _∨_; not; T)
 open import Data.Empty using (⊥)
 open import Data.List using (List; []; _∷_; map; filterᵇ; upTo; foldr; _++_; length; [_])
 open import Data.List.Properties using (length-++; length-map; length-upTo; upTo-∷ʳ; map-++)
 open import Data.List.Membership.Propositional using (_∈_)
+open import Data.List.Relation.Unary.Any using (here; there)
 open import Data.List.Membership.Propositional.Properties
   using (∈-++⁺ˡ; ∈-++⁺ʳ; ∈-++⁻; ∈-map⁺; ∈-map⁻; ∈-upTo⁺; ∈-upTo⁻)
 open import Data.List.Relation.Unary.Unique.Propositional using (Unique)
@@ -20,15 +21,26 @@ import Data.List.Relation.Unary.Unique.Propositional.Properties as Unique
 open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _⊓_; _≡ᵇ_; _<ᵇ_; _≤ᵇ_; _<_)
 open import Data.Nat.ListAction using (sum)
 open import Data.Nat.ListAction.Properties using (sum-++)
-open import Data.Nat.Properties using (+-identityʳ)
+open import Data.Nat.Properties using (+-identityʳ; ≡ᵇ⇒≡)
+open import Data.Unit using (tt)
 open import Data.Nat.Tactic.RingSolver using (solve-∀)
 open import Data.Product using (_×_; _,_; proj₁; proj₂)
 open import Data.Sum using (inj₁; inj₂)
-open import Function using (_∘_)
-open import Relation.Binary.PropositionalEquality using (_≡_; refl; sym; trans; cong; cong₂)
+open import Function using (_∘_; _⇔_; mk⇔)
+open import Relation.Binary.PropositionalEquality using (_≡_; refl; sym; trans; cong; cong₂; subst)
 
 allᵇ : {A : Set} → (A → Bool) → List A → Bool
 allᵇ p = foldr (λ x acc → p x ∧ acc) true
+
+-- A Boolean `all` that holds holds at each member.
+allᵇ-∈ : {A : Set} (p : A → Bool) {x : A} (xs : List A) → allᵇ p xs ≡ true → x ∈ xs → p x ≡ true
+allᵇ-∈ p (y ∷ ys) h (here refl) with p y | h
+... | true | _ = refl
+allᵇ-∈ p (y ∷ ys) h (there x∈) with p y | h
+... | true | h′ = allᵇ-∈ p ys h′ x∈
+
+anyᵇ : {A : Set} → (A → Bool) → List A → Bool
+anyᵇ p = foldr (λ x acc → p x ∨ acc) false
 
 Subshell : Set
 Subshell = ℕ × ℕ
@@ -56,6 +68,9 @@ states l = map (λ j → j , false) (upTo (2 * l + 1)) ++ map (λ j → j , true
 ...   | _ , x∈ , refl = ∈-upTo⁻ x∈
 ∈-states⁻ {l} p | inj₂ q with ∈-map⁻ (λ j → j , true) q
 ...   | _ , x∈ , refl = ∈-upTo⁻ x∈
+
+∈-states : ∀ l j s → ((j , s) ∈ states l) ⇔ (j < 2 * l + 1)
+∈-states l j s = mk⇔ (∈-states⁻ {l} {j} {s}) (∈-states⁺ {l} {j} s)
 
 states-unique : ∀ l → Unique (states l)
 states-unique l = Unique.++⁺ (Unique.map⁺ (cong proj₁) (Unique.upTo⁺ _)) (Unique.map⁺ (cong proj₁) (Unique.upTo⁺ _))
@@ -98,6 +113,11 @@ sortedᵇ _ = true
 
 madelungOrder-sorted : sortedᵇ madelungOrder ≡ true
 madelungOrder-sorted = refl
+
+-- Every subshell n < 8, ℓ < min(n, 4) with n ≥ 1 is in the order.
+madelungOrder-complete : allᵇ (λ n → allᵇ (λ l → not ((1 ≤ᵇ n) ∧ (l <ᵇ n)) ∨
+  anyᵇ (λ s → (proj₁ s ≡ᵇ n) ∧ (proj₂ s ≡ᵇ l)) madelungOrder) (upTo 4)) (upTo 8) ≡ true
+madelungOrder-complete = refl
 
 fill : List Subshell → ℕ → List Occupancy
 fill [] _ = []
@@ -231,6 +251,16 @@ madelung-electrons = refl
 
 madelung-withinCapacity : allᵇ (λ z → withinCapacity (madelung z)) (upTo 119) ≡ true
 madelung-withinCapacity = refl
+
+madelung-electrons-at : ∀ z → z < 119 → electrons (madelung z) ≡ z
+madelung-electrons-at z h = ≡ᵇ⇒≡ (electrons (madelung z)) z
+  (subst T (sym (allᵇ-∈ (λ z → electrons (madelung z) ≡ᵇ z) (upTo 119) madelung-electrons (∈-upTo⁺ h))) tt)
+
+madelung-withinCapacity-at : ∀ z → z < 119 → withinCapacity (madelung z) ≡ true
+madelung-withinCapacity-at z h = allᵇ-∈ (λ z → withinCapacity (madelung z)) (upTo 119) madelung-withinCapacity (∈-upTo⁺ h)
+
+observed-atomic-numbers : map proj₁ observed ≡ map suc (upTo 103)
+observed-atomic-numbers = refl
 
 observed-electrons : allᵇ (λ e → electrons (proj₂ e) ≡ᵇ proj₁ e) observed ≡ true
 observed-electrons = refl

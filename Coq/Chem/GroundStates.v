@@ -59,6 +59,12 @@ Fixpoint sortedB (l : list (nat * nat)) : bool :=
 Lemma madelungOrder_sorted : sortedB madelungOrder = true.
 Proof. vm_compute. reflexivity. Qed.
 
+(* Every subshell n < 8, l < min(n, 4) with n >= 1 is in the order. *)
+Lemma madelungOrder_complete :
+  forallb (fun n => forallb (fun l => negb (Nat.leb 1 n && Nat.ltb l n) ||
+    existsb (fun s => Nat.eqb (fst s) n && Nat.eqb (snd s) l) madelungOrder) (seq 0 4)) (seq 0 8) = true.
+Proof. vm_compute. reflexivity. Qed.
+
 Fixpoint fill (order : list (nat * nat)) (z : nat) : list (nat * nat * nat) :=
   match order, z with
   | [], _ => []
@@ -192,6 +198,11 @@ Proof.
 Qed.
 Lemma madelung_withinCapacity_check : forallb (fun z => withinCapacity (madelung z)) (seq 0 119) = true.
 Proof. vm_compute. reflexivity. Qed.
+Lemma madelung_withinCapacity (z : nat) : z <= 118 -> withinCapacity (madelung z) = true.
+Proof.
+  intro Hz. apply (proj1 (forallb_forall _ _) madelung_withinCapacity_check).
+  apply in_seq. lia.
+Qed.
 Lemma observed_atomic_numbers : map fst observed = seq 1 103.
 Proof. vm_compute. reflexivity. Qed.
 Lemma observed_electrons : forallb (fun e => Nat.eqb (electrons (snd e)) (fst e)) observed = true.

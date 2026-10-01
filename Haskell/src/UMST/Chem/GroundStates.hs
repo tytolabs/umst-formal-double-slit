@@ -158,6 +158,7 @@ checks =
   , ("capacity is the number of states", and [capacity (n, l) == length (states l) | n <- [1 .. 8], l <- [0 .. 20]])
   , ("shell n holds 2n^2", all (\n -> shellCapacity n == 2 * n * n) [0 .. 40])
   , ("madelung order sorted", and (zipWith (\a b -> madelungRank a < madelungRank b) madelungOrder (drop 1 madelungOrder)))
+  , ("madelung order complete", and [(n, l) `elem` madelungOrder | n <- [1 .. 7], l <- [0 .. min 3 (n - 1)]])
   , ("madelung electrons", all (\z -> electrons (madelung z) == z) [0 .. 118])
   , ("madelung within capacity", all (withinCapacity . madelung) [0 .. 118])
   , ("observed electrons", all (\(z, c) -> electrons c == z) observed)
