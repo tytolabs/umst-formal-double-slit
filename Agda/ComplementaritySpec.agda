@@ -1,97 +1,40 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 ------------------------------------------------------------------------
--- UMST-Formal: ComplementaritySpec.agda
+-- UMST-Formal-Double-Slit: ComplementaritySpec.agda
 --
--- Englert complementarity relation for qubit density matrices.
---
--- Mirrors:
---   * Lean  @Lean/Complementarity.lean@        — discoverability shim
---   * Lean  @Lean/QuantumClassicalBridge.lean@  — full proof of V² + I² ≤ 1
---   * Lean  @Lean/DoubleSlitCore.lean@          — Complementary record
---
--- The Englert duality inequality states that for any qubit density
--- matrix ρ, the fringe visibility V and which-path distinguishability
--- I satisfy:
---
---   V² + I² ≤ 1
---
--- where:
---   V = 2|ρ₀₁|              (off-diagonal coherence)
---   I = |p₀ - p₁|           (which-path information)
---
--- Key properties are bundled in [ComplementarityProps]; a concrete
--- instance from [DensityMatrixProps] lives in
--- MirrorScope.ComplementarityModel (P0-13b).
+-- Englert's complementarity V² + D² ≤ 1 for every qubit density matrix: with V = 2|ρ₀₁| and D = |ρ₀₀ − ρ₁₁|,
+-- V² + D² = 4|ρ₀₁|² + (ρ₀₀ − ρ₁₁)² ≤ 4ρ₀₀ρ₁₁ + (ρ₀₀ − ρ₁₁)² = (ρ₀₀ + ρ₁₁)² = 1.
+-- Twin of Coq/ComplementaritySpec.v and Lean QuantumClassicalBridge.complementarity_fringe_path.
 ------------------------------------------------------------------------
 
-{-# OPTIONS --without-K #-}
+{-# OPTIONS --safe #-}
 
 module ComplementaritySpec where
 
+open import Data.Rational using (ℚ; 1ℚ; _+_; _*_; _-_; _≤_)
+open import Data.Rational.Properties using (*-monoˡ-≤-nonNeg; +-monoˡ-≤; ≤-trans; ≤-reflexive)
+open import Data.Rational.Solver using (module +-*-Solver)
+open import Relation.Binary.PropositionalEquality using (_≡_; refl; cong; trans)
 open import DensityStateSpec
-open import Data.Rational as ℚ using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _-_; _≤_)
-open import Relation.Binary.PropositionalEquality using (_≡_)
 
-------------------------------------------------------------------------
--- 1. Visibility and distinguishability (definitions over ℚ)
-------------------------------------------------------------------------
+open DensityMatrix2
 
--- | Fringe visibility: V = 2 · |ρ₀₁|.
---   Lean: fringeVisibility ρ = 2 * Complex.abs (ρ.carrier 0 1)
---   We approximate with 2 · c₀₁ where c₀₁ = |ρ₀₁| from DensityMatrix2.
-fringeVisibility : DensityMatrix2 → ℚ
-fringeVisibility ρ = (1ℚ + 1ℚ) * DensityMatrix2.c₀₁ ρ
+four : ℚ
+four = (1ℚ + 1ℚ) * (1ℚ + 1ℚ)
 
--- | Which-path distinguishability: I = |p₀ - p₁|.
---   Lean: whichPathDistinguishability ρ = |pathWeight ρ 0 - pathWeight ρ 1|
---   Since we lack absolute value on ℚ in a convenient form, we store
---   the squared quantity I² = (p₀ - p₁)² directly.
-distinguishability² : DensityMatrix2 → ℚ
-distinguishability² ρ = let d = DensityMatrix2.p₀ ρ - DensityMatrix2.p₁ ρ
-                         in d * d
+-- V² = 4|ρ₀₁|² and D² = (ρ₀₀ − ρ₁₁)².
+visibility² distinguishability² : DensityMatrix2 → ℚ
+visibility² ρ = four * (c₀₁ ρ * c₀₁ ρ)
+distinguishability² ρ = (p₀ ρ - p₁ ρ) * (p₀ ρ - p₁ ρ)
 
--- | Visibility squared: V² = 4 · c₀₁².
-visibility² : DensityMatrix2 → ℚ
-visibility² ρ = let c = DensityMatrix2.c₀₁ ρ
-                    two = 1ℚ + 1ℚ
-                    four = two * two
-                in four * (c * c)
+open +-*-Solver
 
-------------------------------------------------------------------------
--- 2. Complementarity record (mirrors DoubleSlitCore.Complementary)
-------------------------------------------------------------------------
+square-identity : ∀ a b → four * (a * b) + (a - b) * (a - b) ≡ (a + b) * (a + b)
+square-identity = solve 2 (λ a b → ((con 1ℚ :+ con 1ℚ) :* (con 1ℚ :+ con 1ℚ)) :* (a :* b) :+ (a :- b) :* (a :- b)
+                                   := (a :+ b) :* (a :+ b)) refl
 
--- | A pair (I, V) is complementary if V² + I² ≤ 1.
---   Lean: structure Complementary (obs : ObservationState) where
---           hComp : obs.V ^ 2 + obs.I ^ 2 ≤ 1
-record Complementary : Set where
-  constructor mkComplementary
-  field
-    I  : ℚ       -- which-path distinguishability
-    V  : ℚ       -- fringe visibility
-    I∈ : 0ℚ ≤ I  -- I ∈ [0, 1]
-    V∈ : 0ℚ ≤ V  -- V ∈ [0, 1]
-    hComp : V * V + I * I ≤ 1ℚ   -- Englert: V² + I² ≤ 1
-
-------------------------------------------------------------------------
--- 3. Englert complementarity (scoped assumptions; authority: Lean proofs)
-------------------------------------------------------------------------
-
-record ComplementarityProps : Set where
-  field
-    englert-complementarity : ∀ (ρ : DensityMatrix2) →
-      visibility² ρ + distinguishability² ρ ≤ 1ℚ
-    fringeVisibility-nonneg : ∀ (ρ : DensityMatrix2) →
-      0ℚ ≤ fringeVisibility ρ
-    fringeVisibility-le-one : ∀ (ρ : DensityMatrix2) →
-      fringeVisibility ρ ≤ 1ℚ
-    distinguishability²-nonneg : ∀ (ρ : DensityMatrix2) →
-      0ℚ ≤ distinguishability² ρ
-    fringeVisibility-after-measurement-zero : ∀ (ρ : DensityMatrix2) →
-      fringeVisibility (mkDensityMatrix2
-        (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡ 0ℚ
-    distinguishability²-measurement-invariant : ∀ (ρ : DensityMatrix2) →
-      distinguishability² (mkDensityMatrix2
-        (DensityMatrix2.p₀ ρ) (DensityMatrix2.p₁ ρ) 0ℚ) ≡
-      distinguishability² ρ
+englert : ∀ ρ → visibility² ρ + distinguishability² ρ ≤ 1ℚ
+englert ρ = ≤-trans (+-monoˡ-≤ (distinguishability² ρ) (*-monoˡ-≤-nonNeg four (coherence-bounded ρ)))
+  (≤-reflexive (trans (square-identity (p₀ ρ) (p₁ ρ))
+                      (trans (cong (λ s → s * s) (trace-one ρ)) refl)))

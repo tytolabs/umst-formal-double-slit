@@ -29,6 +29,15 @@
   },
   "build artefacts and duplicate tools": {
    "content": "Coq/Makefile.coq, Coq/Makefile.coq.conf, Coq/.Makefile.coq.d and .lia.cache were generated files under version control (now ignored; make coq-check generates the makefile); tools/lean_export/ExportCatalog.lean and its smoke file wrote artifacts/catalog.json in a second shape from a hand-kept module list that had drifted from the lakefile; export_catalog.py is the one writer."
+  },
+  "uninhabited hypothesis records (Agda, Coq)": {
+   "content": "Agda MirrorScope.LandauerSecondLaw and MirrorScope.GatePhysicalModel and Coq MirrorScope.GatePhysicalModel asserted the second law or psi-antitonicity for every process or every state record, types with no inhabitant, so results derived under them were vacuous. Agda DensityMatrixProps and ComplementarityProps asserted density-matrix constraints and Englert's inequality for arbitrary records. They are retired: Agda DensityMatrix2 now carries its constraints and ComplementaritySpec.englert proves V^2 + D^2 <= 1 from them, as Coq does.",
+   "real_content_now": {
+    "Shannon bounds": "Coq VonNeumannEntropySpec proves shannon_binary_le_ln2, negMulLog_zero_interval, vonNeumannDiagonal_le_ln2 and vonNeumannDiagonal_zero_iff_diagonal_pure (previously fields of ShannonRealAnalysis, assumed)"
+   }
+  },
+  "reflexive spec fields and stubs (Agda)": {
+   "content": "VonNeumannEntropySpec (fields lambda = lambda and S rho = S rho), the empty MeasurementCost module, Naturality (a discrete-category naturality copy; MaterialClass keeps the binder type) and the MirrorScope re-export wrappers."
   }
  },
  "files": {
@@ -3187,6 +3196,105 @@
     "catalogDocument",
     "resolveCatalogPath",
     "main"
+   ]
+  },
+  "Agda/Activation.agda": {
+   "status": "pruned",
+   "removed": [
+    "ActivationEngineDynamics"
+   ]
+  },
+  "Agda/ComplementaritySpec.agda": {
+   "status": "pruned",
+   "removed": [
+    "fringeVisibility",
+    "Complementary",
+    "ComplementarityProps"
+   ]
+  },
+  "Agda/DensityStateSpec.agda": {
+   "status": "pruned",
+   "removed": [
+    "DensityMatrixProps",
+    "pureDensity",
+    "ConvexWeight",
+    "ConvexCombinationProps"
+   ]
+  },
+  "Agda/MirrorScope/ActivationDynamics.agda": {
+   "status": "deleted",
+   "removed": [
+    "ActivationScope"
+   ]
+  },
+  "Agda/MirrorScope/ComplementarityModel.agda": {
+   "status": "deleted",
+   "removed": [
+    "ComplementarityScope"
+   ]
+  },
+  "Agda/MirrorScope/GatePhysicalModel.agda": {
+   "status": "deleted",
+   "removed": [
+    "ThermodynamicState",
+    "δ-mass",
+    "Admissible",
+    "PhysicalLaws"
+   ]
+  },
+  "Agda/MirrorScope/LandauerSecondLaw.agda": {
+   "status": "deleted",
+   "removed": [
+    "HeatBath",
+    "ErasureProcess",
+    "PhysicalSecondLaw",
+    "LandauerPhysics"
+   ]
+  },
+  "Agda/MirrorScope/VonNeumannEntropyModel.agda": {
+   "status": "deleted",
+   "removed": [
+    "VonNeumannEntropyScope"
+   ]
+  },
+  "Agda/Naturality.agda": {
+   "status": "deleted",
+   "removed": [
+    "MaterialClass",
+    "stateFor",
+    "GateDecision",
+    "η",
+    "gate-material-agnostic",
+    "gate-state-determined",
+    "MaterialMorphism",
+    "F-map",
+    "G-map",
+    "naturality-square",
+    "example-opc-naturality"
+   ]
+  },
+  "Agda/VonNeumannEntropySpec.agda": {
+   "status": "deleted",
+   "removed": [
+    "EigenvalueSpec",
+    "EigenvalueProps",
+    "RealEntropyCarrier",
+    "VonNeumannEntropyProps",
+    "ShannonBinaryProps",
+    "MeasurementEntropyProps"
+   ]
+  },
+  "Coq/MirrorScope/GatePhysicalModel.v": {
+   "status": "deleted",
+   "removed": [
+    "GatePhysicalLaws"
+   ]
+  },
+  "Coq/MirrorScope/VonNeumannEntropyModel.v": {
+   "status": "deleted",
+   "removed": [
+    "ShannonRealAnalysis",
+    "SpectralVonNeumannEntropy"
    ]
   }
  }

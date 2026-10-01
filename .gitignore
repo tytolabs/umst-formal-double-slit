@@ -73,3 +73,5 @@ Makefile.coq.conf
 Makefile.all
 Makefile.all.conf
 .Makefile.all.d
+*.nra.cache
+.nra.cache

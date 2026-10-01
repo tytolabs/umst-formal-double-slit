@@ -91,7 +91,6 @@ Proof.
   - exfalso; lra.
 Qed.
 
-(* negMulLog_zero_interval / shannon_binary_le_ln2: see MirrorScope.VonNeumannEntropyModel *)
 
 (* ------------------------------------------------------------------ *)
 (*  Binary Shannon entropy                                              *)
@@ -112,7 +111,6 @@ Proof.
   lra.
 Qed.
 
-(* shannon_binary_le_ln2: MirrorScope.VonNeumannEntropyModel.WithShannonRealAnalysis *)
 
 (* ------------------------------------------------------------------ *)
 (*  Diagonal von Neumann entropy                                        *)
@@ -134,7 +132,6 @@ Proof.
   - exact (p0_le_one rho).
 Qed.
 
-(** Diagonal entropy bound: MirrorScope.VonNeumannEntropyModel.vonNeumannDiagonal_le_ln2_scoped *)
 
 (** The diagonal entropy uses p1 = 1 - p0 from the trace constraint. *)
 Lemma vonNeumannDiagonal_alt (rho : DensityMatrix2) :
@@ -147,4 +144,53 @@ Proof.
   lra.
 Qed.
 
-(* Spectral von Neumann entropy: MirrorScope.VonNeumannEntropyModel.SpectralVonNeumannEntropy *)
+
+(** ln y <= y - 1 for y > 0, from 1 + z <= exp z at z = ln y. *)
+Lemma ln_le_minus_one (y : R) (hy : 0 < y) : ln y <= y - 1.
+Proof. pose proof (exp_ineq1_le (ln y)) as h. rewrite exp_ln in h by exact hy. lra. Qed.
+
+(** One term of the binary entropy against ln 2: -x ln x <= x ln 2 - x + 1/2 for x >= 0. *)
+Lemma negMulLog_le_affine (x : R) (hx : 0 <= x) : negMulLog x <= x * ln 2 - x + 1 / 2.
+Proof.
+  unfold negMulLog. destruct (Rle_dec x 0) as [Hle | Hgt].
+  - assert (x = 0) by lra. subst x. lra.
+  - assert (hx' : 0 < x) by lra.
+    assert (h2x : 0 < / (2 * x)) by (apply Rinv_0_lt_compat; lra).
+    pose proof (ln_le_minus_one (/ (2 * x)) h2x) as h.
+    rewrite ln_Rinv in h by lra. rewrite ln_mult in h by lra.
+    assert (hk : x * (/ (2 * x)) = 1 / 2) by (field; lra).
+    assert (x * (- (ln 2 + ln x)) <= x * (/ (2 * x) - 1)) by (apply Rmult_le_compat_l; lra).
+    lra.
+Qed.
+
+(** The binary Shannon entropy is at most ln 2. *)
+Theorem shannon_binary_le_ln2 (p : R) (hp0 : 0 <= p) (hp1 : p <= 1) : shannon_binary p <= ln 2.
+Proof.
+  unfold shannon_binary.
+  pose proof (negMulLog_le_affine p hp0). pose proof (negMulLog_le_affine (1 - p) ltac:(lra)). lra.
+Qed.
+
+(** On [0, 1], -x ln x vanishes only at 0 and 1. *)
+Theorem negMulLog_zero_interval (x : R) (hx0 : 0 <= x) (hx1 : x <= 1) : negMulLog x = 0 -> x = 0 \/ x = 1.
+Proof.
+  unfold negMulLog. destruct (Rle_dec x 0) as [Hle | Hgt]; intro h; [left; lra |].
+  right. assert (hx : 0 < x) by lra.
+  assert (hln : ln x = 0).
+  { apply Rmult_eq_reg_l with (r := - x); [lra | lra]. }
+  rewrite <- ln_1 in hln. apply ln_inv in hln; lra.
+Qed.
+
+(** The diagonal entropy of a qubit is at most ln 2. *)
+Theorem vonNeumannDiagonal_le_ln2 (rho : DensityMatrix2) : vonNeumannDiagonal rho <= ln 2.
+Proof. unfold vonNeumannDiagonal. apply shannon_binary_le_ln2; [exact (p0_nonneg rho) | exact (p0_le_one rho)]. Qed.
+
+(** The diagonal entropy vanishes only when the diagonal is pure. *)
+Theorem vonNeumannDiagonal_zero_iff_diagonal_pure (rho : DensityMatrix2) :
+  vonNeumannDiagonal rho = 0 -> p0 rho = 0 \/ p0 rho = 1.
+Proof.
+  unfold vonNeumannDiagonal, shannon_binary. intro H.
+  pose proof (p0_nonneg rho). pose proof (p0_le_one rho).
+  assert (Ha : 0 <= negMulLog (p0 rho)) by (apply negMulLog_nonneg; lra).
+  assert (Hb : 0 <= negMulLog (1 - p0 rho)) by (apply negMulLog_nonneg; lra).
+  apply negMulLog_zero_interval; lra.
+Qed.

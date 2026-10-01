@@ -155,7 +155,6 @@ gate old new with (density new - density old) ℚ.≤? δ-mass
 ... | _       | _       | _        | _       | no ¬str =
       no (λ adm → ¬str (strength-monotone adm))
 
--- §5–6 forward-hydration theorems: MirrorScope.GatePhysicalModel (module parameter).
 
 ------------------------------------------------------------------------
 -- 7. CSG Decomposition (SDF / FRep Interpretation)

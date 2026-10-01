@@ -39,7 +39,7 @@ Product-state additivity `vonNeumannEntropy_tensorDensity_eq` is proved in `Kron
 
 **umst-chem lift anchor (`CHEM-L0-FORMAL-02`):** quantum / knowing fiber only —
 `umst/umst-chem/src/formal_quantum_lift.rs` cites this module; never place meso / acting
-theorems here (`umst-formal` is `CHEM-L0-FORMAL-01`). Unwired; `physics_green` false.
+theorems here (`umst-formal` is `CHEM-L0-FORMAL-01`).
 -/
 
 open scoped Matrix ComplexOrder BigOperators

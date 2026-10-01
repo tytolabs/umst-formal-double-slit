@@ -1,16 +1,10 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 {-|
-  Traceability stub (Agda): Landauer–Einstein mass-equivalent certificate.
-
-  Machine-checked real analysis and SI numeric brackets live in:
-  * `Lean/LandauerEinsteinBridge.lean` — exact SI `k_B`, `c`, `Real.log 2`, intervals at 300 K
-  * `Coq/LandauerEinsteinBridge.v` — algebraic fragment with parameters `kB_SI`, `c_SI`, `ln2`
-
-  This repository’s Agda layer does not duplicate Mathlib-style bounds on `ln 2`.
-  The empty module keeps the dependency graph explicit under `make check`.
-
-  See: `PROOF-STATUS.md`, `Docs/FORMAL-PHYSICS-ROADMAP.md`.
+  The Landauer–Einstein mass equivalent, algebraically: with the Landauer energy E(T) = k_B · T · ln 2 and the
+  mass equivalence E = m · c², energy scales linearly in temperature (E-linear-scaling) and a mass equivalent at T
+  scales to one at a · T (mass-equivalent-scaling). The constants are parameters of a commutative semiring (ℕ
+  here); the real-valued bounds with the exact SI k_B and c are Lean LandauerEinsteinBridge and Constants.SIBridge.
 -}
 
 {-# OPTIONS --without-K --exact-split --safe #-}

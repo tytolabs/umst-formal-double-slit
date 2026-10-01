@@ -1,90 +1,28 @@
 -- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
 -- SPDX-License-Identifier: MIT
 ------------------------------------------------------------------------
--- UMST-Formal: DensityStateSpec.agda
+-- UMST-Formal-Double-Slit: DensityStateSpec.agda
 --
--- Qubit density matrix spec (diagonal representation over rationals).
---
--- Mirrors:
---   * Lean  @Lean/DensityState.lean@  — full PSD + trace-one structure,
---     `pureDensity`, `mixedDensity`, diagonal non-negativity, re ≤ 1
---
--- This Agda layer keeps the *interface* (record + key properties) using
--- stdlib ℚ for decidable arithmetic; full spectral / PSD proofs live in
--- the Lean codebase.  Properties that rely on ℂ / eigenvalue analysis
--- are postulated here; authority is the Lean proofs.
+-- A qubit density matrix by its diagonal (the Born weights) and the magnitude of its coherence, carrying the
+-- constraints of a density matrix: nonnegative weights summing to one, and |ρ₀₁|² ≤ ρ₀₀ ρ₁₁ (positive
+-- semidefiniteness). Twin of Coq/DensityStateSpec.v; over ℚ, as the standard library has no reals.
 ------------------------------------------------------------------------
 
-{-# OPTIONS --without-K --safe #-}
+{-# OPTIONS --safe #-}
 
 module DensityStateSpec where
 
-open import Data.Rational using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _-_; _≤_)
-open import Data.Rational.Properties
-open import Data.Product using (_×_; _,_)
-open import Relation.Binary.PropositionalEquality using (_≡_; refl)
-
-------------------------------------------------------------------------
--- 1. Qubit density matrix (2 × 2, diagonal representation)
-------------------------------------------------------------------------
-
--- A qubit density matrix in the computational basis is determined by
--- its diagonal entries p₀, p₁ (Born weights) and off-diagonal coherence
--- magnitude c₀₁.  We use ℚ throughout; the Lean codebase uses ℂ with
--- full PSD proofs.
---
--- Physical meaning:
---   p₀   — probability of path 0 (Born rule)
---   p₁   — probability of path 1 (Born rule)
---   c₀₁  — |ρ₀₁|, off-diagonal coherence magnitude
+open import Data.Rational using (ℚ; 0ℚ; 1ℚ; _+_; _*_; _≤_)
+open import Relation.Binary.PropositionalEquality using (_≡_)
 
 record DensityMatrix2 : Set where
   constructor mkDensityMatrix2
   field
-    p₀  : ℚ       -- diagonal entry ρ₀₀ (real, as Born weight)
-    p₁  : ℚ       -- diagonal entry ρ₁₁ (real, as Born weight)
-    c₀₁ : ℚ       -- |ρ₀₁|, off-diagonal coherence magnitude
-
-------------------------------------------------------------------------
--- 2. Structural properties (postulated; authority: Lean proofs)
-------------------------------------------------------------------------
-
--- These mirror DensityMat.diag_re_nonneg_n, DensityMat.trace_re_eq_one_n,
--- and the PSD coherence bound from QuantumClassicalBridge.lean.
-
-record DensityMatrixProps : Set where
-  field
-    p₀-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.p₀ ρ
-    p₁-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.p₁ ρ
-    trace-one : ∀ (ρ : DensityMatrix2) →
-      DensityMatrix2.p₀ ρ + DensityMatrix2.p₁ ρ ≡ 1ℚ
-    coherence-nonneg : ∀ (ρ : DensityMatrix2) → 0ℚ ≤ DensityMatrix2.c₀₁ ρ
-    coherence-bounded : ∀ (ρ : DensityMatrix2) →
-      DensityMatrix2.c₀₁ ρ * DensityMatrix2.c₀₁ ρ ≤
-        DensityMatrix2.p₀ ρ * DensityMatrix2.p₁ ρ
-    p₀-le-one : ∀ (ρ : DensityMatrix2) → DensityMatrix2.p₀ ρ ≤ 1ℚ
-    p₁-le-one : ∀ (ρ : DensityMatrix2) → DensityMatrix2.p₁ ρ ≤ 1ℚ
-
-------------------------------------------------------------------------
--- 3. Pure and mixed state constructors
-------------------------------------------------------------------------
-
--- | A pure state has one eigenvalue = 1 and the other = 0.
---   Lean: pureDensity, vonNeumannEntropy_pure_eq_zero
-pureDensity : ℚ → ℚ → DensityMatrix2
-pureDensity p₀ c₀₁ = mkDensityMatrix2 p₀ (1ℚ - p₀) c₀₁
-
--- | Convex combination weight: t ∈ [0,1].
---   Lean: mixedDensity (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ)
-record ConvexWeight : Set where
-  constructor mkConvexWeight
-  field
-    t    : ℚ
-    t≥0  : 0ℚ ≤ t
-    t≤1  : t ≤ 1ℚ
-
-record ConvexCombinationProps : Set where
-  field
-    mixedDensity-valid : ∀ (ρ₁ ρ₂ : DensityMatrix2) (w : ConvexWeight) →
-      DensityMatrix2.p₀ ρ₁ + DensityMatrix2.p₀ ρ₂ ≡
-        DensityMatrix2.p₀ ρ₁ + DensityMatrix2.p₀ ρ₂
+    p₀                : ℚ
+    p₁                : ℚ
+    c₀₁               : ℚ
+    p₀-nonneg         : 0ℚ ≤ p₀
+    p₁-nonneg         : 0ℚ ≤ p₁
+    trace-one         : p₀ + p₁ ≡ 1ℚ
+    coherence-nonneg  : 0ℚ ≤ c₀₁
+    coherence-bounded : c₀₁ * c₀₁ ≤ p₀ * p₁

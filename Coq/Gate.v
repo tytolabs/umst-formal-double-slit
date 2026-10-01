@@ -203,15 +203,12 @@ Proof.
   intros -> -> -> -> ->. reflexivity.
 Qed.
 
-(* SECTION 7: constitutive laws — MirrorScope.GatePhysicalModel.PhysicalLaws *)
-
 (* ================================================================== *)
 (*  SECTION 8: Helmholtz Antitone Lemma (Concrete Model)                *)
 (* ================================================================== *)
 
 (** This lemma shows that the specific Helmholtz model ψ(α) = −Q·α
-    satisfies the antitone property, providing a concrete witness
-    for the [psi_antitone] axiom.
+    satisfies the antitone property: free energy falls as hydration rises.
 
     Proof obligation: if a₁ ≤ a₂ and Q > 0, then −Q·a₂ ≤ −Q·a₁.
     This is a standard ordered-field property: multiplying both sides
@@ -286,8 +283,6 @@ Proof.
   unfold helmholtz, Q_hyd.
   ring.
 Qed.
-
-(* SECTIONS 9–11 + gate_accepts_forward_hydration: MirrorScope.GatePhysicalModel *)
 
 (* ================================================================== *)
 (*  SECTION 12: Gate Correctness — Soundness + Completeness             *)
