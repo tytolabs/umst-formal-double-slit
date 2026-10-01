@@ -2,6 +2,7 @@
 -arg "-w"
 -arg "-abstract-large-number"
 LandauerEinsteinBridge.v
+Constants/SI.v
 DensityStateSpec.v
 ComplementaritySpec.v
 VonNeumannEntropySpec.v

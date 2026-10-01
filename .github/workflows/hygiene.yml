@@ -30,3 +30,6 @@ jobs:
         # Fails on any Coq Axiom/Parameter, Agda postulate block or Lean native_decide site that the committed
         # FORMAL_GAPS.json does not list; regenerate with `python3 scripts/formal_gaps.py --emit FORMAL_GAPS.json`.
         run: python3 scripts/formal_gaps.py --check FORMAL_GAPS.json
+
+      - name: Constants modules and README table match constants/constants.json
+        run: python3 scripts/gen_constants.py --check

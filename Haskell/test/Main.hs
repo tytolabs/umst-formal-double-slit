@@ -11,6 +11,7 @@ import MeasurementCost
 import EpistemicGalois
 import qualified LandauerExtension as LE
 import MonoidalState
+import qualified UMST.Constants.SI as SI
 import System.Exit (exitFailure)
 
 -- | Generator for random valid 2x2 pure-state Density Matrices
@@ -204,6 +205,9 @@ main = do
   putStrLn "\n--- MonoidalState: density between ---"
   r14 <- quickCheckResult prop_ms_density_between
 
-  if all isSuccess [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14]
+  putStrLn "\n--- Constants: exact SI values, derived constants, CODATA cross-checks ---"
+  rs <- mapM (\(name, ok) -> quickCheckResult (once (counterexample name ok))) SI.derivations
+
+  if all isSuccess ([r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14] ++ rs)
     then putStrLn "All properties passed!"
     else exitFailure

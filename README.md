@@ -627,6 +627,48 @@ OK (skipped=58)
 
 ---
 
+## Constants
+
+Every constant is cited, measured or derived. The seven defining constants of the SI are exact by definition and
+carry their authority; a measured constant carries its standard uncertainty; a derived constant is a theorem in Lean,
+Coq and Agda and a checked property in Haskell. All values are exact rationals, so every language checks them by exact
+arithmetic. The table below lists the constants of the knowing fibre and the shared defining constants;
+`umst-formal` lists the acting fibre's.
+
+The single source is `constants/constants.json`, shared with `umst-formal` (CI there compares the two).
+`python3 scripts/gen_constants.py` writes `Coq/Constants/SI.v`, `Agda/Constants/SI.agda`,
+`Haskell/src/UMST/Constants/SI.hs` and this table; the Lean module `Constants.SI` lives in `umst-formal` and reaches
+this repository through Lake. CI fails when any generated file differs from the table. To add a constant, add its row
+to the table in `umst-formal`, regenerate in both repositories, and build.
+
+<!-- constants:begin -->
+| Symbol | Constant | Kind | Value | Unit | Derivation or authority | Proved by |
+|---|---|---|---|---|---|---|
+| ΔνCs | caesium-133 hyperfine transition frequency | cited | 9.19263177 × 10⁹ (exact) | Hz | SI2019 | a definition (cited) |
+| c | speed of light in vacuum | cited | 2.99792458 × 10⁸ (exact) | m s⁻¹ | SI2019 | a definition (cited) |
+| h | Planck constant | cited | 6.62607015 × 10⁻³⁴ (exact) | J s | SI2019 | a definition (cited) |
+| e | elementary charge | cited | 1.602176634 × 10⁻¹⁹ (exact) | C | SI2019 | a definition (cited) |
+| k_B | Boltzmann constant | cited | 1.380649 × 10⁻²³ (exact) | J K⁻¹ | SI2019 | a definition (cited) |
+| N_A | Avogadro constant | cited | 6.02214076 × 10²³ (exact) | mol⁻¹ | SI2019 | a definition (cited) |
+| K_cd | luminous efficacy of 540 THz radiation | cited | 6.83 × 10² (exact) | lm W⁻¹ | SI2019 | a definition (cited) |
+| K_J | Josephson constant | derived | ≈ 4.83597848417 × 10¹⁴ | Hz V⁻¹ | `2 * elementaryCharge / planck` | `josephson_value`, `josephson_derivation` |
+| R_K | von Klitzing constant | derived | ≈ 2.58128074593 × 10⁴ | Ω | `planck / (elementaryCharge * elementaryCharge)` | `vonKlitzing_value`, `vonKlitzing_derivation` |
+| Φ₀ | magnetic flux quantum | derived | ≈ 2.06783384846 × 10⁻¹⁵ | Wb | `planck / (2 * elementaryCharge)` | `fluxQuantum_value`, `fluxQuantum_derivation` |
+| G₀ | conductance quantum | derived | ≈ 7.74809172986 × 10⁻⁵ | S | `2 * elementaryCharge * elementaryCharge / planck` | `conductanceQuantum_value`, `conductanceQuantum_derivation` |
+| α | fine-structure constant | measured | 7.2973525643 × 10⁻³ ± 1.1 × 10⁻¹² | 1 | CODATA2022 | a definition with its uncertainty (cited) |
+| ε₀ | vacuum electric permittivity | derived | ≈ 8.85418781884 × 10⁻¹² | F m⁻¹ | `elementaryCharge * elementaryCharge / (2 * fineStructure * planck * speedOfLight)` | `vacuumPermittivity_value`, `vacuumPermittivity_derivation`, `vacuumPermittivity_within_CODATA2022` |
+| μ₀ | vacuum magnetic permeability | derived | ≈ 1.25663706126 × 10⁻⁶ | N A⁻² | `2 * fineStructure * planck / (elementaryCharge * elementaryCharge * speedOfLight)` | `vacuumPermeability_value`, `vacuumPermeability_derivation`, `vacuumPermeability_within_CODATA2022` |
+
+- CODATA2022: Mohr, Tiesinga, Newell and Taylor, CODATA recommended values of the fundamental physical constants: 2022, Rev. Mod. Phys. 97 (2025).
+- SI2019: BIPM, The International System of Units (SI), 9th edition (2019), Table 1: the seven defining constants are exact by definition.
+
+Where these constants enter the second law:
+
+- k_B: under the second law in SI form, erasing one bit at temperature T costs at least k_B T ln 2 joules (Constants.SIBridge.landauerBoundSI), and the bound is attained (LandauerLaw.SecondLaw_landauerTight, in units of k_B).
+
+Values marked ≈ are shown to twelve significant digits; the modules hold them as exact rationals.
+<!-- constants:end -->
+
 ## 7. Cross-language verification
 
 Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadratic bound is closed in `Lean/PMICEntropyInterior.lean` (module map: `Lean/VERIFY.md`).
