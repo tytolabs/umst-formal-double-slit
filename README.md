@@ -656,6 +656,10 @@ to the table in `umst-formal`, regenerate in both repositories, and build.
 | Φ₀ | magnetic flux quantum | derived | ≈ 2.06783384846 × 10⁻¹⁵ | Wb | `planck / (2 * elementaryCharge)` | `fluxQuantum_value`, `fluxQuantum_derivation` |
 | G₀ | conductance quantum | derived | ≈ 7.74809172986 × 10⁻⁵ | S | `2 * elementaryCharge * elementaryCharge / planck` | `conductanceQuantum_value`, `conductanceQuantum_derivation` |
 | α | fine-structure constant | measured | 7.2973525643 × 10⁻³ ± 1.1 × 10⁻¹² | 1 | CODATA2022 | a definition with its uncertainty (cited) |
+| m_e | electron mass | measured | 9.1093837139 × 10⁻³¹ ± 2.8 × 10⁻⁴⁰ | kg | CODATA2022 | a definition with its uncertainty (cited) |
+| R∞ | Rydberg constant | derived | ≈ 1.0973731568 × 10⁷ | m^-1 | `fineStructure * fineStructure * electronMass * speedOfLight / (2 * planck)` | `rydberg_value`, `rydberg_derivation`, `rydberg_within_CODATA2022` |
+| E_h | Hartree energy | derived | 4.359744722158896394036998418484286342450 × 10⁻¹⁸ (exact) | J | `fineStructure * fineStructure * electronMass * speedOfLight * speedOfLight` | `hartreeEnergy_value`, `hartreeEnergy_within_CODATA2022` |
+| λ_C | Compton wavelength | derived | ≈ 2.42631023538 × 10⁻¹² | m | `planck / (electronMass * speedOfLight)` | `comptonWavelength_value`, `comptonWavelength_derivation`, `comptonWavelength_within_CODATA2022` |
 | ε₀ | vacuum electric permittivity | derived | ≈ 8.85418781884 × 10⁻¹² | F m⁻¹ | `elementaryCharge * elementaryCharge / (2 * fineStructure * planck * speedOfLight)` | `vacuumPermittivity_value`, `vacuumPermittivity_derivation`, `vacuumPermittivity_within_CODATA2022` |
 | μ₀ | vacuum magnetic permeability | derived | ≈ 1.25663706126 × 10⁻⁶ | N A⁻² | `2 * fineStructure * planck / (elementaryCharge * elementaryCharge * speedOfLight)` | `vacuumPermeability_value`, `vacuumPermeability_derivation`, `vacuumPermeability_within_CODATA2022` |
 
