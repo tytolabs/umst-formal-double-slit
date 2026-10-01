@@ -1,0 +1,32 @@
+{
+ "schema": "retirement_ledger_v1",
+ "date": "2026-10-02",
+ "archive_tag": "archive/coq-mirrors-2026-10-02",
+ "reason": "copies of umst-formal's Coq modules; every declaration they hold exists in umst-formal's Coq tree (checked declaration by declaration), and no double-slit module imports them; one Coq source for the gate, the Landauer bridge, information theory and measurement cost is umst-formal",
+ "removed": [
+  {
+   "path": "Coq/Constitutional.v",
+   "canonical": "umst-formal/Coq/Constitutional.v"
+  },
+  {
+   "path": "Coq/Extraction.v",
+   "canonical": "umst-formal/Coq/Extraction.v"
+  },
+  {
+   "path": "Coq/Gate.v",
+   "canonical": "umst-formal/Coq/Concrete/Gate.v and Coq/Core/Gate.v"
+  },
+  {
+   "path": "Coq/InfoTheory.v",
+   "canonical": "umst-formal/Coq/InfoTheory.v"
+  },
+  {
+   "path": "Coq/LandauerEinsteinBridge.v",
+   "canonical": "umst-formal/Coq/LandauerEinsteinBridge.v"
+  },
+  {
+   "path": "Coq/MeasurementCost.v",
+   "canonical": "umst-formal/Coq/MeasurementCost.v"
+  }
+ ]
+}

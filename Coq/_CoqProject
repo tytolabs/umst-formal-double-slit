@@ -1,14 +1,8 @@
 -Q . UMSTFormal
 -arg "-w"
 -arg "-abstract-large-number"
-LandauerEinsteinBridge.v
 Constants/SI.v
 Chem/GroundStates.v
 DensityStateSpec.v
 ComplementaritySpec.v
 VonNeumannEntropySpec.v
-MeasurementCost.v
-InfoTheory.v
-Gate.v
-Extraction.v
-Constitutional.v

@@ -72,8 +72,6 @@ jobs:
           echo "Using rocq from: $ROCQ_BIN"
           rocq compile --version
           cd Coq
-          # `Extraction.v` writes OCaml under `_extract/` — must exist (see root `Makefile` `coq-check`).
-          mkdir -p _extract
           # Every tracked .v, under the logical mappings of _CoqProject (a hand-picked list let 122 files go unchecked).
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           grep -E '^-' _CoqProject > _CoqProject.all
