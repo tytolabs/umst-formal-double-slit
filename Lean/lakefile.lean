@@ -42,7 +42,7 @@ lean_lib «UMST.DoubleSlit» where
     `VonNeumannEntropy, `QuantumMutualInfo, `KleinInequality, `DataProcessingInequality,
     `DoubleSlit, `ProbeOptimization, `ExamplesQubit, `ExamplesQubitEpistemic, `ErasureChannel, `MeasurementCost,
     `KnowingFibreInstance, `CompressionCost,
-    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `DoubleSlitFormalWitness, `SimLeanBridge,
+    `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `SimLeanBridge,
     -- LandauerExtension / LandauerEinsteinBridge / LandauerLaw: imported from umst-formal (not local roots)
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
     `InformationCostIdentity, `LogSum, `MatrixLog]

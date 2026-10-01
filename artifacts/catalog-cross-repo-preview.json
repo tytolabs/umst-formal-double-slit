@@ -10,12 +10,12 @@
   "secondary_repo": "umst-formal",
   "primary_lean_root": "Lean",
   "secondary_lean_root": "Lean",
-  "primary_module_count": 54,
+  "primary_module_count": 53,
   "secondary_module_count": 174,
-  "merged_module_count": 227,
-  "primary_digest_hex": "56ab72a747b09b3a46dfe448789b2213ab24e2a8c3580f8bd0526d7e0fcbdd15",
+  "merged_module_count": 226,
+  "primary_digest_hex": "19b26d738553b3851fc9bee3a9067c1a03de72b317d03566feb8af5e51db1d83",
   "secondary_digest_hex": "3cfec356774f08eddfa13f18cc7c79bf8a50049351481b879e4daeaefa352a7e",
-  "merged_digest_hex": "b3332e30057f28c1672f511a863f925b3581458989afed152c0f2be034549469",
+  "merged_digest_hex": "89db58b7f67cc5e7190080790625055cd34c10f24dc8dfbd1669a6e9814fbc81",
   "overlap_basename_count": 1,
   "only_in_primary_basename": [
     "CompressionCost",
@@ -23,7 +23,6 @@
     "DensityState",
     "DoubleSlit",
     "DoubleSlitCore",
-    "DoubleSlitFormalWitness",
     "EpistemicDynamics",
     "EpistemicGalois",
     "EpistemicMI",
@@ -8097,21 +8096,6 @@
       "repo": "umst-formal-double-slit"
     },
     {
-      "path": "DoubleSlitFormalWitness.lean",
-      "content_sha256": "1c6e1f28d5021d4a14018b8284e5cde80ccd656499a55566172a3f12691186c8",
-      "declarations": {
-        "theorem": [
-          "umst_double_slit_formal_complete"
-        ]
-      },
-      "import_lines": [
-        "LandauerLaw",
-        "LindbladDynamics"
-      ],
-      "module": "DoubleSlitFormalWitness",
-      "repo": "umst-formal-double-slit"
-    },
-    {
       "path": "EpistemicDynamics.lean",
       "content_sha256": "fd9b3bbba0f40a11309eb5f6d7bc6034d4ea6d4668a08a823340a36b38f14be3",
       "declarations": {
@@ -9398,7 +9382,7 @@
     },
     {
       "path": "lakefile.lean",
-      "content_sha256": "7b2c3ebd606c784603d1d95cfd07710f2fb548968ee7df003a55aa8d345b928d",
+      "content_sha256": "cf5db6624e4fb9fda7730c270dc57f72e0b382c327dfa6137badcc7f81c84ab2",
       "declarations": {},
       "import_lines": [
         "Lake"
@@ -9585,21 +9569,6 @@
       "repo": "umst-formal-double-slit"
     },
     {
-      "path": "DoubleSlitFormalWitness.lean",
-      "content_sha256": "1c6e1f28d5021d4a14018b8284e5cde80ccd656499a55566172a3f12691186c8",
-      "declarations": {
-        "theorem": [
-          "umst_double_slit_formal_complete"
-        ]
-      },
-      "import_lines": [
-        "LandauerLaw",
-        "LindbladDynamics"
-      ],
-      "module": "DoubleSlitFormalWitness",
-      "repo": "umst-formal-double-slit"
-    },
-    {
       "path": "EpistemicDynamics.lean",
       "content_sha256": "fd9b3bbba0f40a11309eb5f6d7bc6034d4ea6d4668a08a823340a36b38f14be3",
       "declarations": {
@@ -10886,7 +10855,7 @@
     },
     {
       "path": "lakefile.lean",
-      "content_sha256": "7b2c3ebd606c784603d1d95cfd07710f2fb548968ee7df003a55aa8d345b928d",
+      "content_sha256": "cf5db6624e4fb9fda7730c270dc57f72e0b382c327dfa6137badcc7f81c84ab2",
       "declarations": {},
       "import_lines": [
         "Lake"

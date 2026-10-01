@@ -5,7 +5,8 @@
 
 Four kinds, each decided from the text of one file:
 
-  literal    every identifier the statement compares unfolds, inside its file, to a literal (a bool, a string, a
+  literal    an equation, disequation or boolean combination (no order, no arithmetic) whose every identifier
+             unfolds, inside its file, to a literal (a bool, a string, a
              numeral, `True`/`False`, a bare constructor), possibly through definitions with ignored parameters
              (`def f (x : A) : Prop := False`), or to a conjunction, disjunction or negation of such: proving it
              checks that the file says what it says;
@@ -13,6 +14,11 @@ Four kinds, each decided from the text of one file:
   alias      the proof applies another declaration of the tree to the statement's own binders in order and nothing
              else, and that declaration states the same proposition over the same binders: a second name for it;
   duplicate  the statement, binders included, repeats an earlier declaration of the same file;
+  definitional the statement is `f a₁ … aₙ = e` (or `↔`), proved by `rfl`, where `f` is defined in the same file with
+             body `e` after its parameters are replaced by `a₁ … aₙ`: the theorem restates the definition;
+  trivial    the statement is `True`;
+  table      the statement is `f c = v` for a constructor `c` and a literal `v`, proved by `rfl` or `decide`, where `f`
+             is defined in the same file by cases whose every result is a literal: it reads back a row of the table;
   bundle     the statement is a conjunction and the proof only pairs declarations of the tree applied to the
              statement's own binders (`⟨a x, (b x).symm, c x⟩`): the conjuncts are already theorems.
 
@@ -117,11 +123,20 @@ def theatre(text: str, index: dict[str, set[tuple[str, str]]] | None = None) -> 
     name of the tree (last component) to its (binders, statement) forms."""
     lit = literal_defs(text)
     index = index if index is not None else {}
+    tables = set()  # definitions by cases whose every result is a literal
+    for m in DEF.finditer(text):
+        rhs = re.findall(r"=>\s*(.+?)(?=\s*\||\s*$)", " ".join(m.group(4).split()))
+        if rhs and all(LITERAL.match(r.strip()) for r in rhs):
+            tables.add(m.group(1).split(".")[-1])
+    defs = {}  # name -> (explicit parameter names, body)
+    for m in DEF.finditer(text):
+        params = [v for grp in re.findall(r"\(\s*([^:()]+?)\s*:", m.group(2) or "") for v in grp.split()]
+        defs[m.group(1).split(".")[-1]] = (params, " ".join(m.group(4).split()))
     out, seen = [], {}
     for m, binders_n, stmt_n, proof_n in declarations(text):
         line = text.count("\n", 0, m.start()) + 1
         kind = None
-        if not binders_n and not re.search(r"[∀∃→↔]|\bfun\b", stmt_n):
+        if not binders_n and not re.search(r"[∀∃→↔<>≤≥^*/+]|\bfun\b| - ", stmt_n):
             idents = [n.split(".")[-1] for n in re.findall(r"[A-Za-z_][\w.']*", stmt_n) if n not in KEYWORDS]
             if idents and all(n in lit for n in idents):
                 kind = "literal"
@@ -145,6 +160,23 @@ def theatre(text: str, index: dict[str, set[tuple[str, str]]] | None = None) -> 
                 return bool(toks) and toks[0].split(".")[-1] in index and all(t in bound for t in toks[1:])
             if comps and all(plain(c) for c in comps):
                 kind = "bundle"
+        if kind is None and re.fullmatch(r"(by\s+)?(rfl|Iff\.rfl|exact\s+rfl)", proof_n):
+            eq = re.fullmatch(r"(.+?)\s+(?:=|↔)\s+(.+)", stmt_n)
+            if eq:
+                head, *args = eq.group(1).strip().strip("()").split()
+                d = defs.get(head.split(".")[-1])
+                if d and len(d[0]) == len(args):
+                    body = d[1]
+                    for v, a in zip(d[0], args):
+                        body = re.sub(r"(?<![\w.'])" + re.escape(v) + r"(?![\w'])", a, body)
+                    if " ".join(body.split()) == " ".join(eq.group(2).split()):
+                        kind = "definitional"
+        if kind is None and stmt_n == "True":
+            kind = "trivial"
+        if kind is None and re.fullmatch(r"(by\s+)?(rfl|decide|exact\s+rfl)", proof_n):
+            row = re.fullmatch(r"\(?([\w.']+)\s+(\.[\w']+|[A-Z][\w']*\.[\w']+)\)?\s*=\s*(.+)", stmt_n)
+            if row and LITERAL.match(row.group(3).strip()) and row.group(1).split(".")[-1] in tables:
+                kind = "table"
         key = (binders_n, stmt_n)
         if kind is None and stmt_n and key in seen:
             kind = "duplicate"

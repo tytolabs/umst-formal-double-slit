@@ -7853,21 +7853,6 @@
       "repo": "umst-formal-double-slit"
     },
     {
-      "path": "DoubleSlitFormalWitness.lean",
-      "content_sha256": "1c6e1f28d5021d4a14018b8284e5cde80ccd656499a55566172a3f12691186c8",
-      "declarations": {
-        "theorem": [
-          "umst_double_slit_formal_complete"
-        ]
-      },
-      "import_lines": [
-        "LandauerLaw",
-        "LindbladDynamics"
-      ],
-      "module": "DoubleSlitFormalWitness",
-      "repo": "umst-formal-double-slit"
-    },
-    {
       "path": "EpistemicDynamics.lean",
       "content_sha256": "fd9b3bbba0f40a11309eb5f6d7bc6034d4ea6d4668a08a823340a36b38f14be3",
       "declarations": {
@@ -9154,7 +9139,7 @@
     },
     {
       "path": "lakefile.lean",
-      "content_sha256": "7b2c3ebd606c784603d1d95cfd07710f2fb548968ee7df003a55aa8d345b928d",
+      "content_sha256": "cf5db6624e4fb9fda7730c270dc57f72e0b382c327dfa6137badcc7f81c84ab2",
       "declarations": {},
       "import_lines": [
         "Lake"
@@ -11630,16 +11615,6 @@
       "to_approx": "Real.State"
     },
     {
-      "from": "DoubleSlitFormalWitness",
-      "import": "LandauerLaw",
-      "to_approx": "LandauerLaw"
-    },
-    {
-      "from": "DoubleSlitFormalWitness",
-      "import": "LindbladDynamics",
-      "to_approx": "LindbladDynamics"
-    },
-    {
       "from": "EpistemicDynamics",
       "import": "EpistemicMI",
       "to_approx": "EpistemicMI"
@@ -12450,5 +12425,5 @@
       "to_approx": "Lake"
     }
   ],
-  "digest": "b3332e30057f28c1672f511a863f925b3581458989afed152c0f2be034549469"
+  "digest": "89db58b7f67cc5e7190080790625055cd34c10f24dc8dfbd1669a6e9814fbc81"
 }
