@@ -43,6 +43,9 @@ jobs:
       - name: Wording matches the formal state (no axiom; physicalSecondLaw is the erase instance)
         run: python3 scripts/check_stale_wording.py
 
+      - name: README census and four-language matrix match the sources
+        run: python3 scripts/gen_readme_blocks.py --check
+
       - name: No theatre in the Lean tree (literal, reflexive, alias, duplicate or bundle statements)
         # A ratchet that only falls; scripts/theatre_census.py --json lists any declaration it finds.
         run: python3 scripts/theatre_census.py --check 0

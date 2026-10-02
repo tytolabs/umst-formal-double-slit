@@ -165,18 +165,7 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 Authoritative MCP = concrete ``AGENT_MCP.md``. Catalog lock = ``umst-manifold/artifacts/catalog.lock.json``.
 ### Honesty ledger (one status pointer)
 
-Counts @ **`42b6844`**. **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md). Strengthen every disclaimer below; soften none.
-
-**Lean 4 (default lake roots)** — paste from `python3 scripts/lean_declaration_stats.py` on `origin/master` @ **`42b6844`** (`42b68445e122765c76772b43a47d19fb9802ee40`):
-
-```text
-Repository: umst-formal-double-slit
-Lake roots: 52 modules
-Roots-only:  477 theorem, 27 lemma, total 504
-All Lean/*:  486 theorem, 28 lemma, total 514
-Axioms (^axiom ):
-  (none — physicalSecondLaw is imported from the umst-formal dependency)
-```
+Counts: the census in §7, generated from the sources. **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md). Strengthen every disclaimer below; soften none.
 
 `Lean/LandauerLaw.lean` was a vendored copy of umst-formal's file and re-declared
 `physicalSecondLaw`, so the workspace held two declarations of one law. The lakefile already
@@ -185,10 +174,10 @@ axioms are two axioms: nothing keeps them identical, and these had already drift
 had already lost a line of upstream's header. The roots count falls by 9
 theorems and 3 lemmas, all of which now live in the dependency where they were always defined.
 
-- **0** tactic `sorry` in default rooted Lean (see [`PROOF-STATUS.md`](PROOF-STATUS.md)).
-- **0** `axiom` declarations. `physicalSecondLaw` is imported from `umst-formal`; this repository declares **no** axiom.
-- This repo does **not** ship a separate `check_print_axioms.sh`; axiom inventory is the script line above + [`PROOF-STATUS.md`](PROOF-STATUS.md).
-- **Script wins** on any mismatch with prose or older docs.
+- The census in §7 counts proof holes, Lean axioms and Coq `Admitted` from the sources; all are zero, and CI fails when
+  the block is stale (`scripts/gen_readme_blocks.py --check`).
+- `physicalSecondLaw` is imported from `umst-formal` as the erase instance of `SecondLaw`; this repository declares no
+  axiom.
 
 **Strengthen — do not soften:** unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
 
@@ -487,7 +476,7 @@ umst-formal-double-slit/
 
 Lean modules (52 roots), Python sim, Haskell QuickCheck, Coq, Agda — topology in §4. Claim taxonomy below summarizes machine-checked vs out-of-scope.
 
-### Lean modules (52 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` / axiom map)
+### Lean modules (`lake build`; counts in the §7 census; `Lean/VERIFY.md` maps the modules)
 *(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **486** / **30**; all-`Lean/*.lean` **495** / **31**; **0** project axioms (the law is the imported predicate `SecondLaw`) — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
 
 <details>
@@ -675,15 +664,38 @@ Values marked ≈ are shown to twelve significant digits; the modules hold them 
 
 ## 7. Cross-language verification
 
-Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadratic bound is closed in `Lean/PMICEntropyInterior.lean` (module map: `Lean/VERIFY.md`).
+Every statement of the contract is stated in Lean, Coq and Agda and tested in Haskell; the parity manifest
+[`formal_parity.json`](formal_parity.json) names each declaration, and `scripts/check_formal_parity.py` (CI) checks
+that every named declaration exists. The second law, the gate, information theory and the Landauer layer have one
+source, in [umst-formal][umst-formal], which this repository imports (Lean through Lake).
 
-| Language | Artifact | Status | Command |
-|:--------:|----------|:------:|---------|
-| **Lean 4** | 52 roots, 486 thm + 30 lem (roots); 495 + 31 all `Lean/*.lean` | **0** tactic sorry, **0** axiom (the law is the imported predicate `SecondLaw`) — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
-| **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
-| **Python** | 88 unit tests (unittest discover @ `42b6844`; 58 skipped in that run) | **Pass** (paste in Quick Start) | `python3 -m unittest discover -s sim/tests -q` |
-| **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
-| **Agda** | **11** entry modules (specs + `Gate` / `Helmholtz` / activation stack) | **Clean** typecheck; specs postulated where noted — `Agda/README.md` | `make agda-check` |
+### Census
+
+<!-- census:begin -->
+| Language | Files | Declarations | Gaps |
+|---|---:|---|---|
+| Lean 4 | 52 (51 Lake roots) | 465 theorems + 27 lemmas in the roots; 480 + 27 over all files | 0 `sorry` or `admit` holes; 0 `axiom` |
+| Coq | 5 | 76 theorems and lemmas | 0 `Admitted` |
+| Agda (`--safe`) | 4 | 111 top-level typed definitions | `--safe` admits no postulate |
+| Haskell | 13 | 14 QuickCheck properties | — |
+
+_Generated by `scripts/gen_readme_blocks.py` from the tracked sources; CI fails when this block is stale._
+<!-- census:end -->
+
+### Four-language matrix
+
+<!-- parity:begin -->
+| Statement family | Statements | Lean | Coq | Agda | Haskell |
+|---|---:|---:|---:|---:|---:|
+| `ground_states` | 25 | 25 | 25 | 24 | 24 |
+| **all** | **25** | **25** | **25** | **24** | **24** |
+
+2 entries are named absences, each with its reason in `formal_parity.json` (bound 2); `scripts/check_formal_parity.py` checks every named declaration exists.
+
+_Generated by `scripts/gen_readme_blocks.py` from `formal_parity.json`; CI fails when this block is stale._
+<!-- parity:end -->
+
+Python simulations: `python3 -m unittest discover -s sim/tests -q`.
 
 ### Downstream manifold integration
 
@@ -851,3 +863,5 @@ Released under the [MIT License](LICENSE). © 2026 .
 
 _Generated by `scripts/gen-lattice-readme.sh` from `umst.toml`. Do not hand-edit inside markers._
 <!-- AUTO-LATTICE:END -->
+
+[umst-formal]: https://github.com/tytolabs/umst-formal
