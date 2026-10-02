@@ -14,7 +14,7 @@ require mathlib from git
 
 -- W-62: public CI checks out one repo; monorepo dev may override via `lakefile.lean.local` (untracked).
 require «umst-formal» from git
-  "https://github.com/tytolabs/umst-formal.git" @ "d18de03bb25333b2675365afe52223c7af8b7bab" / "Lean"
+  "https://github.com/tytolabs/umst-formal.git" @ "7c85e0439bb7f2b67ff79327ad6289e4dd392b8f" / "Lean"
 
 /-!
   The knowing fibre: quantum states, measurement, epistemic information and their thermodynamic cost. Build:
