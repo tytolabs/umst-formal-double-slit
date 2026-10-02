@@ -18,7 +18,9 @@ APPROVE_CROSS_REPO_MERGE_ENV = "APPROVE_CROSS_REPO_MERGE"
 
 
 DECL_RE = re.compile(
-    r"^\s*(theorem|lemma|axiom|def|instance|inductive|structure|class)\s+([^\s:]+)",
+    # Attributes (`@[simp]`) and modifiers (`noncomputable`, `private`) may precede the keyword.
+    r"^\s*(?:@\[[^\]]*\]\s*)*(?:(?:private|protected|noncomputable|partial|unsafe)\s+)*"
+    r"(theorem|lemma|axiom|def|abbrev|instance|inductive|structure|class)\s+([^\s:]+)",
     re.MULTILINE,
 )
 IMPORT_RE = re.compile(r"""^\s*import\s+(?:«[^»]+»|[A-Za-z0-9_.]+)(?:\.(?:«[^»]+»|[A-Za-z0-9_.]+))*""")
