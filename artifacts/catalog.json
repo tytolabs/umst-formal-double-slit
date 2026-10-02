@@ -11,11 +11,10 @@
   "modules": [
     {
       "path": "Adjoint.lean",
-      "content_sha256": "cca5e6159cde1072c1343027ce6ad968a8bc31c07d086e39722d024d9a80b5ef",
+      "content_sha256": "c7325b5607925ea6aa0b9129f6d1080bb46ba41d5c197b4563e30938cdeca1c1",
       "declarations": {
         "theorem": [
-          "adjoint_recovers_gradient",
-          "adjoint_uses_only_terminal"
+          "adjoint_recovers_gradient"
         ]
       },
       "import_lines": [
@@ -45,7 +44,7 @@
     },
     {
       "path": "Chem/Conservation.lean",
-      "content_sha256": "a79973b44ac2c94891dab90ff90177bae89322afc3f19747d74320655e90e9a4",
+      "content_sha256": "373a0550f57e32b99351a1c697f6e66f1ad0bf870c31c0c3bc71f5f6a4cb8f0c",
       "declarations": {
         "inductive": [
           "ConservationAxis"
@@ -73,8 +72,7 @@
           "admissible_from_physical_bridge",
           "conserved_second_law_required",
           "conserved_linear_required",
-          "affine_entropy_from_physical",
-          "chem_conservation_module_witness"
+          "affine_entropy_from_physical"
         ]
       },
       "import_lines": [
@@ -85,7 +83,7 @@
     },
     {
       "path": "Chem/Constants/ConstantsSheaf.lean",
-      "content_sha256": "28893d94962d5a9ce20f8e96ab346814a4e8b8d803543bd4a92fa37260ebd5c2",
+      "content_sha256": "6814de0b45ef4d8fb54b7be9d225163af989f86a452c44c4c5228828d0edbf2d",
       "declarations": {
         "structure": [
           "MesoConstantsSheaf"
@@ -109,9 +107,7 @@
           "gibbsDuhemBalance",
           "gibbsDuhemInterdependenceEq",
           "dotList",
-          "gibbsDuhemInterdependence",
-          "chemConstantsSheafPhysicsGreen",
-          "constantsSheafProductionWired"
+          "gibbsDuhemInterdependence"
         ],
         "theorem": [
           "dotList_zero_map",
@@ -122,14 +118,7 @@
           "gibbsDuhemInterdependenceEq_ungated",
           "constantsSheafOnEdge_admissible",
           "chemSecondLaw_uses_sheaf_temperature",
-          "constantsSheaf_chemSecondLaw_from_physical",
-          "physicalSecondLaw_discharges_constantsSheaf_entropy",
-          "constantsSheaf_refinementLandauer",
-          "constantsSheaf_linear_conservation_zero",
-          "constantsSheaf_admissibleConserved_from_physical",
-          "chemConstantsSheafPhysicsGreenFalse",
-          "constantsSheafProductionWiredFalse",
-          "constantsSheafModuleWitness"
+          "constantsSheaf_linear_conservation_zero"
         ]
       },
       "import_lines": [
@@ -143,27 +132,8 @@
       "repo": "umst-formal"
     },
     {
-      "path": "Chem/Constants/EgoffHarnessAdversarial.lean",
-      "content_sha256": "d2ac6dfc4b94ea66866538362d9e1d1c83e9b50f0635f3606745ba45c1f9b9d4",
-      "declarations": {
-        "def": [
-          "soleAxiomCount",
-          "physicsGreen",
-          "sidecarModelPin",
-          "harnessDriftForbidden"
-        ],
-        "theorem": [
-          "sole_axiom_count_eq_one",
-          "refuse_second_axiom"
-        ]
-      },
-      "import_lines": [],
-      "module": "Chem.Constants.EgoffHarnessAdversarial",
-      "repo": "umst-formal"
-    },
-    {
       "path": "Chem/Constants/TemperatureGraph.lean",
-      "content_sha256": "dab4e8c0ba78df27a903ad4e5c155496327aec2d3f80bdb7d8fe35e4fcdb2c58",
+      "content_sha256": "0c2fb68d49884e222fde53fe5c4929259827945386ee43dab84578368d6b3c43",
       "declarations": {
         "inductive": [
           "InteractGraphVertex"
@@ -177,9 +147,7 @@
           "inverseTemperatureBeta",
           "temperatureSheafSection",
           "temperatureGraphFunction",
-          "temperatureGraphWellTyped",
-          "chemTemperatureGraphPhysicsGreen",
-          "temperatureGraphProductionWired"
+          "temperatureGraphWellTyped"
         ],
         "theorem": [
           "landauerFloorAt_pos",
@@ -191,10 +159,7 @@
           "inverseTemperatureBeta_pos_of_section",
           "refinementWorkFloor_eq_chemLandauer",
           "chemSecondLaw_uses_inverse_temperature",
-          "temperature_linear_conservation_zero",
-          "chemTemperatureGraphPhysicsGreenFalse",
-          "temperatureGraphProductionWiredFalse",
-          "temperatureGraphModuleWitness"
+          "temperature_linear_conservation_zero"
         ]
       },
       "import_lines": [
@@ -207,7 +172,7 @@
     },
     {
       "path": "Chem/ConvexHull.lean",
-      "content_sha256": "f3673c67e5e9992b2f4ffd734e4c95e865d2c292c835e9085b6a32bf0806ebd6",
+      "content_sha256": "88bfd49e431c061d4f2e07a75e42c505525b541bc83a093eef12ecc201e65717",
       "declarations": {
         "structure": [
           "GibbsSurfacePoint",
@@ -223,9 +188,7 @@
           "isSecondLawPresentation",
           "convexHullSecondLawAdmissible",
           "convexHullLinearConservationPreserved",
-          "admissibleConvexHullEquilibrium",
-          "convexHullPhysicsGreen",
-          "convexHullProductionWired"
+          "admissibleConvexHullEquilibrium"
         ],
         "inductive": [
           "GibbsPresentationKind"
@@ -236,9 +199,6 @@
           "thermoAxiomMint_is_not_secondLaw_presentation",
           "convexHull_not_thermo_axiom_mint",
           "commonTangent_not_thermo_axiom_mint",
-          "convexHull_chemSecondLaw_from_physical",
-          "convexHull_entropy_from_physical",
-          "convexHull_refinementLandauer",
           "admissibleConvexHull_from_physical_bridge",
           "convexHullSecondLaw_from_physical",
           "commonTangentSecondLaw_from_physical",
@@ -248,10 +208,7 @@
           "canonicalBinaryBeta_in_unit",
           "canonicalBinaryCommonTangent_onTangent",
           "coherentP0ConvexHull_secondLaw",
-          "coherentP0CommonTangent_secondLaw",
-          "convexHullPhysicsGreenFalse",
-          "convexHullProductionWiredFalse",
-          "convexHullModuleWitness"
+          "coherentP0CommonTangent_secondLaw"
         ]
       },
       "import_lines": [
@@ -263,14 +220,13 @@
     },
     {
       "path": "Chem/Element.lean",
-      "content_sha256": "8114c4cea56d6e309f0be82f6c7cf6176b9d66b5bcecd87c783fda20d1917d7c",
+      "content_sha256": "768a2afe598ced1542c26e75708e5b33517f0293940dbf13009e24b11451edb1",
       "declarations": {
         "inductive": [
           "Element"
         ],
         "def": [
           "elementZ",
-          "elementCardinality",
           "hydrogenElement",
           "heliumElement",
           "carbonElement",
@@ -280,7 +236,6 @@
           "elementSlotAdmissible"
         ],
         "theorem": [
-          "elementCardinality_eq",
           "elementZ_in_range",
           "hydrogen_elementZ",
           "helium_elementZ",
@@ -289,8 +244,7 @@
           "finOfElement_elementOfFin",
           "elementOfFin_finOfElement",
           "elementZ_finOfElement",
-          "elementZ_injective",
-          "element_module_witness"
+          "elementZ_injective"
         ],
         "structure": [
           "ElementAssemblageSlot",
@@ -306,7 +260,7 @@
     },
     {
       "path": "Chem/Environment/EnvGibbsDuhem.lean",
-      "content_sha256": "f58ade9fffb82014e84bd0e17fdc6c94083c238b986f85eb5a2c9c77da13207d",
+      "content_sha256": "96680b9ba377f54863dc8cc7bab91fcd74860cebea9927071526bb7f892af9fb",
       "declarations": {
         "inductive": [
           "EnvGibbsDuhemLeg",
@@ -314,9 +268,7 @@
         ],
         "def": [
           "envGibbsDuhemLegTags",
-          "envGibbsDuhemLegCardinality",
           "envDebyeSquareLegTags",
-          "envDebyeSquareLegCardinality",
           "envMaxwellCommuteBalance",
           "envGibbsDuhemDifferentialHolds",
           "envGibbsDuhemZeroDifferential",
@@ -331,9 +283,7 @@
           "envDebyeSquareInterdependence",
           "envGibbsDuhemFixtureFractions",
           "envDebyeSquareFixtureLegs",
-          "envGibbsDuhemCoupledSections",
-          "chemEnvGibbsDuhemPhysicsGreen",
-          "envGibbsDuhemProductionWired"
+          "envGibbsDuhemCoupledSections"
         ],
         "theorem": [
           "envGibbsDuhemLegTemperaturePressureDistinct",
@@ -349,13 +299,7 @@
           "envGibbsDuhemFixtureThermoSectionsPositive",
           "envGibbsDuhemZeroCoordinateVariation",
           "envDebyeSquareZeroVariation",
-          "envGibbsDuhemMatchesConstantsPattern",
-          "envDebyeMatchesCompositionPattern",
-          "envGibbsDuhemFixtureCoupled",
-          "envGibbsDuhemFixtureSampleTripleDistinct",
-          "chemEnvGibbsDuhemPhysicsGreenFalse",
-          "envGibbsDuhemProductionWiredFalse",
-          "envGibbsDuhemModuleWitness"
+          "envGibbsDuhemFixtureCoupled"
         ],
         "structure": [
           "EnvGibbsDuhemDifferential"
@@ -371,7 +315,7 @@
     },
     {
       "path": "Chem/Environment/EnvSampleSections.lean",
-      "content_sha256": "04f0bd43cf6e03b5d3eb9e85495be5f83680cef526faea5b7a3a8325a528783b",
+      "content_sha256": "517f1e14269b7322287d578a6c551d92b1f2e49dd3c3a522b81ab09f176d24b5",
       "declarations": {
         "inductive": [
           "EnvironmentSectionRegime"
@@ -394,31 +338,21 @@
           "messySampleSectionOnEdge",
           "sampleSectionOnEdge",
           "envSampleSectionsOnEdge",
-          "envSampleSectionsWellTypedOnEdge",
-          "chemEnvSampleSectionsPhysicsGreen",
-          "envSampleSectionsProductionWired"
+          "envSampleSectionsWellTypedOnEdge"
+        ],
+        "structure": [
+          "EnvSampleSectionBundle"
         ],
         "theorem": [
-          "environmentRegimeCardinality_eq",
           "envSampleSectionsTriple_components",
           "envSampleSectionsRegimeVacuumContainedDistinct",
           "envSampleSectionsRegimeVacuumMessyDistinct",
           "envSampleSectionsRegimeContainedMessyDistinct",
-          "envSampleSectionsNamedNotXor",
           "envSampleSectionsRegimeDistinctHolds",
           "sampleSectionAtRegimeMatchesTriple",
-          "envSampleSectionsNamedNotXorOnEdge",
           "envSampleSectionsOnEdge_ungated",
-          "envSampleSectionsOnEdge_admissible",
           "envSampleSectionsFixtureWellTyped",
-          "envSampleSectionsFixtureTripleDistinct",
-          "envSampleSectionsFixtureWitness",
-          "chemEnvSampleSectionsPhysicsGreenFalse",
-          "envSampleSectionsProductionWiredFalse",
-          "envSampleSectionsModuleWitness"
-        ],
-        "structure": [
-          "EnvSampleSectionBundle"
+          "envSampleSectionsFixtureTripleDistinct"
         ]
       },
       "import_lines": [
@@ -429,7 +363,7 @@
     },
     {
       "path": "Chem/Environment/EnvironmentContinuum.lean",
-      "content_sha256": "984a6a0dc371547c0a13dfd6d33d13d2459e0566b71da1c34553064aaa221bae",
+      "content_sha256": "6ff4692129bc03770c8e07441812da375442b0a975ad6f3af76dc9e99998cf1d",
       "declarations": {
         "structure": [
           "MesoEnvironmentSheaf"
@@ -456,19 +390,11 @@
           "environmentSheafOnEdge",
           "environmentContinuumWellTyped",
           "environmentContinuumSecondLawEq",
-          "environmentRegimeCardinality",
           "dotList",
-          "envCompositionInterdependence",
-          "chemEnvironmentContinuumPhysicsGreen",
-          "environmentContinuumProductionWired"
+          "envCompositionInterdependence"
         ],
         "theorem": [
-          "vacuumContainedVerticesDistinct",
-          "vacuumMessyVerticesDistinct",
-          "containedMessyVerticesDistinct",
-          "envSampleSectionsNotXorHolds",
           "vacuumDoesNotCloseMessyHolds",
-          "environmentSectionsNamedNotXor",
           "dotList_zero_map",
           "envCompositionZeroVariation",
           "landauerFloorAtEnvSheaf_pos",
@@ -477,14 +403,7 @@
           "environmentSheafOnEdge_ungated",
           "environmentSheafOnEdge_admissible",
           "environmentContinuumSecondLawEq_ungated",
-          "environmentContinuum_chemSecondLaw_from_physical",
-          "physicalSecondLaw_discharges_environment_entropy",
-          "environmentContinuum_refinementLandauer",
-          "environmentContinuum_linear_conservation_zero",
-          "environmentContinuum_admissibleConserved_from_physical",
-          "chemEnvironmentContinuumPhysicsGreenFalse",
-          "environmentContinuumProductionWiredFalse",
-          "environmentContinuumModuleWitness"
+          "environmentContinuum_linear_conservation_zero"
         ]
       },
       "import_lines": [
@@ -499,32 +418,21 @@
     },
     {
       "path": "Chem/KleisliInteract.lean",
-      "content_sha256": "e4e17d47a8dabcf3d2cd2329bba01b38fcea596da98000d9b3bf943fa26b110f",
+      "content_sha256": "92aeb9b7ec933ea62bd0ca3c036b7bb3861f7a25715132cfbaddf0816e84fa7c",
       "declarations": {
         "def": [
           "admissibleStep",
           "wellTypedAt",
-          "interactIdentity",
-          "chemPhysicsGreen",
-          "kleisliInteractProductionWired"
+          "interactIdentity"
         ],
         "theorem": [
-          "gateArrowWellTyped",
           "kleisliComposeAssocAt",
-          "kleisliComposeAssoc",
           "kleisliLeftUnitAt",
           "kleisliLeftUnit",
           "kleisliRightUnitAt",
           "kleisliRightUnit",
           "kleisliComposeWellTypedAt",
-          "kleisliCoherenceUnits",
-          "kleisliComposeWellTypedN",
-          "kleisliFoldWellTypedN",
-          "interact_chemSecondLaw_from_physical",
-          "interact_admissibleConserved_from_physical",
-          "chemPhysicsGreenFalse",
-          "kleisliInteractProductionWiredFalse",
-          "kleisliInteractModuleWitness"
+          "kleisliCoherenceUnits"
         ]
       },
       "import_lines": [
@@ -537,22 +445,19 @@
     },
     {
       "path": "Chem/OreAssemblage.lean",
-      "content_sha256": "e383469c9f93fb71e21241007f782fac6ed2e9b4e577dc0621e3f01c01fad1de",
+      "content_sha256": "044d3d26948763a5ef35f2d43da74365d7b0af4146fbaacd3d179f6e7fa6ccea",
       "declarations": {
         "inductive": [
           "OreTag",
           "OreTree"
         ],
         "def": [
-          "isMultiBodyScaffold",
           "hematiteLeaf",
           "bauxiteLeaf",
           "hematiteGangueTensor",
           "oreSecondLawAdmissible",
           "oreLinearConservationPreserved",
-          "admissibleOreMorphism",
-          "orePhysicsGreen",
-          "oreAssemblageProductionWired"
+          "admissibleOreMorphism"
         ],
         "structure": [
           "OreMorphism"
@@ -563,11 +468,7 @@
           "admissibleOre_linearConservation",
           "admissibleOre_from_physical_bridge",
           "oreSecondLaw_from_physical",
-          "coherentP0Ore_secondLaw",
-          "hematiteGangue_multiBody",
-          "orePhysicsGreenFalse",
-          "oreAssemblageProductionWiredFalse",
-          "oreAssemblageModuleWitness"
+          "coherentP0Ore_secondLaw"
         ]
       },
       "import_lines": [
@@ -578,7 +479,7 @@
     },
     {
       "path": "Chem/PatternNuance.lean",
-      "content_sha256": "80c94f493c5bd658d264551e7140abaf1722b269cb963af8338ea477e16ffce3",
+      "content_sha256": "bd025547ddcfd128497f7f8d1102f0b87c0d08a2a534794669f7b500df3892fc",
       "declarations": {
         "structure": [
           "Element",
@@ -588,9 +489,7 @@
           "elementZ",
           "carbonElement",
           "heliumElement",
-          "elementCardinality",
           "PatternClass.index",
-          "patternClassCardinality",
           "patternClassOfFin",
           "perElementNuanceClassifier",
           "sharedClassifier",
@@ -618,25 +517,20 @@
           "continuumVsDiscreteElementIdClassifier",
           "otherNamedNuanceClassifier",
           "patternClassifier",
-          "patternBundleUnwired",
+          "patternClassEquiv",
+          "patternBundleUnassessed",
           "PatternBundle.slot",
           "PatternBundle.holds",
           "PatternBundle.withSlot",
           "PatternBundle.withPresent",
           "PatternBundle.presentCount",
           "patternBundleIsConcurrentProduct",
-          "carbonNuanceWitness",
-          "patternNuancePhysicsGreen",
-          "patternNuanceProductionWired"
+          "carbonNuanceWitness"
         ],
         "theorem": [
           "elementZ_in_range",
-          "patternClassCardinality_eq",
           "patternClass_index_roundtrip",
-          "pattern_taxonomy_all_classifiers_present",
-          "ore_module_catalog",
-          "refine_module_catalog",
-          "kleisli_module_catalog",
+          "patternClass_ofFin_index",
           "naturalOre_classifier_links_module",
           "processingRefining_classifier_links_module",
           "assay_classifier_links_module",
@@ -646,7 +540,6 @@
           "carbon_tp_parametric",
           "carbon_continuum_discrete",
           "helium_structure_blocking",
-          "carbon_concurrent_classifiers",
           "contamination_classifier_is_reverse_refine",
           "carbon_nuance_witness_holds_allotrope",
           "carbon_nuance_witness_holds_catalysis",
@@ -655,10 +548,7 @@
           "carbon_nuance_witness_concurrent",
           "pattern_bundle_not_xor",
           "assay_classifier_from_physical",
-          "ore_classifier_from_physical",
-          "patternNuancePhysicsGreenFalse",
-          "patternNuanceProductionWiredFalse",
-          "patternNuanceModuleWitness"
+          "ore_classifier_from_physical"
         ],
         "inductive": [
           "PatternClass",
@@ -676,7 +566,7 @@
     },
     {
       "path": "Chem/RefineCost.lean",
-      "content_sha256": "81877b0555c7e364a57e28655faaa66d41a9b6cdfa41697cecb632e863b1641b",
+      "content_sha256": "b2a2863144a4bf2f7064a8248f7787f2bfc99dbc50370711f003767b05f1e5ae",
       "declarations": {
         "inductive": [
           "RefineGrade"
@@ -692,9 +582,7 @@
           "refineLinearConservationPreserved",
           "admissibleRefineMorphism",
           "reverseRefineMorphism",
-          "contaminationMorphism",
-          "refinePhysicsGreen",
-          "refineCostProductionWired"
+          "contaminationMorphism"
         ],
         "structure": [
           "RefineMorphism"
@@ -713,13 +601,9 @@
           "refineWorkAccounted_from_physical",
           "coherentP0Refine_secondLaw",
           "coherentP0Refine_workAccounted",
-          "coherentP0Contamination_is_reverse",
           "coherentP0Contamination_endpoints",
           "canonicalRefine_fixture",
-          "canonicalContamination_fixture",
-          "refinePhysicsGreenFalse",
-          "refineCostProductionWiredFalse",
-          "refineCostModuleWitness"
+          "canonicalContamination_fixture"
         ]
       },
       "import_lines": [
@@ -731,34 +615,34 @@
     },
     {
       "path": "Chem/SecondLaw.lean",
-      "content_sha256": "086f088b98cc24847c8bc33c44e4589ca9c74cb202cad2975b4bcb14afcf7c74",
+      "content_sha256": "a53528cf7835aab7a3c4d4bcf41f40ed44ce7454a72c4eacf17ea1ce399f0f09",
       "declarations": {
-        "def": [
-          "chemHeatBathOf",
-          "structurallyCoherent",
-          "chemSecondLaw",
-          "admissibleThermochemicalTransition",
-          "refinementWorkAccounted"
-        ],
         "structure": [
-          "ChemAssemblage",
           "ThermochemicalTransition",
           "PhysicalChemBridge"
         ],
+        "def": [
+          "structurallyCoherent",
+          "ThermochemicalTransition.erasure",
+          "chemSecondLaw",
+          "refinementWorkAccounted"
+        ],
         "theorem": [
+          "chemSecondLaw_iff",
+          "chemSecondLaw_comp",
+          "refinementWorkAccounted_iff",
+          "chemSecondLaw_iff_accounted",
           "chem_entropy_bound_from_physical",
           "refinementLandauerBound",
           "chemSecondLaw_from_physical",
-          "chemEntropyAccounting_required",
-          "chemCoherence_required",
           "coherentP0_zero_entropy_drop",
           "coherentP0_structurallyCoherent",
-          "coherentP0_chemSecondLaw",
-          "chem_second_law_module_witness"
+          "coherentP0_chemSecondLaw"
         ]
       },
       "import_lines": [
-        "LandauerLaw"
+        "LandauerLaw",
+        "Process"
       ],
       "module": "Chem.SecondLaw",
       "repo": "umst-formal"
@@ -780,7 +664,7 @@
     },
     {
       "path": "CoarseGraining.lean",
-      "content_sha256": "c30a2d52e082f634e53b650498e73d35c34b39a210c3a5cdfc342b6aacd2404b",
+      "content_sha256": "c28fb9a12dc53fbb0dcdf3bb7038d4b0c781c0d6ab1d61591b9911e7c8390432",
       "declarations": {
         "structure": [
           "CoarseGrainMap",
@@ -797,16 +681,12 @@
         ],
         "theorem": [
           "secondLaw_coarse_from_fine",
-          "espinositoConditions_id",
+          "espositoConditions_id",
           "secondLaw_coarse_from_fine_id",
           "coarse_refusal_sound_erase",
-          "espinositoConditions_lumpPairErase",
+          "espositoConditions_lumpPairErase",
           "lumpPair_secondLaw_coarse_from_fine_joint",
           "lumpPairErase_not_identity",
-          "scaleMapQuantumToStochastic_absent",
-          "scaleMapStochasticToContinuum_absent",
-          "scaleMapQuantumToContinuumDirect_absent",
-          "scaleMapStochasticPairLump_implemented",
           "coarse_graining_p0_12_satisfiable"
         ],
         "inductive": [
@@ -824,7 +704,7 @@
     },
     {
       "path": "Compat/Constitutional.lean",
-      "content_sha256": "793b70ac17a5a7131fea09dd799f3a0af03900e3c64ca1ffeddbd893d5dc27f5",
+      "content_sha256": "2079767b5ece66d9319803a1b6fe0db9301e3622fa7c01991fe6f4b69881d969",
       "declarations": {
         "def": [
           "KleisliArrow",
@@ -841,7 +721,6 @@
           "kleisliComposeWellTypedN",
           "kleisliComposeWellTyped",
           "kleisliFoldWellTypedN",
-          "kleisliFoldWellTyped",
           "sequentialCompositionSafe",
           "identityWellTyped",
           "kleisliComposeAssoc",
@@ -857,7 +736,7 @@
     },
     {
       "path": "Compat/Gate.lean",
-      "content_sha256": "ee3414976276ad0aaefc6a197e45e59cbfbf6572b5c4d9533ae07579ee64a1b4",
+      "content_sha256": "dbf01f88d1955bbd912a402134ccbe1e2a03280fef184bbea0ac26bdaea4979c",
       "declarations": {
         "def": [
           "\u03b4Mass",
@@ -893,7 +772,7 @@
     },
     {
       "path": "Concrete/Activation.lean",
-      "content_sha256": "5057559a99967249a702558761201d695533057c4758d1fc21589ccf4ea57f73",
+      "content_sha256": "77f78e75672a13fef46496c3a47ab98165acd8ab5623feb8b806a252a687458a",
       "declarations": {
         "inductive": [
           "Engine"
@@ -935,7 +814,7 @@
       },
       "import_lines": [
         "Compat.Gate",
-        "Naturality"
+        "MaterialClass"
       ],
       "module": "Concrete.Activation",
       "repo": "umst-formal"
@@ -1051,7 +930,7 @@
     },
     {
       "path": "Concrete/Gate.lean",
-      "content_sha256": "9fc0cb2754ef64ebcd9d4e6d3fc1428ce01ea5877ae829a42b47e4710d8a60e1",
+      "content_sha256": "55ad57aacaebd1e0cb929e93e6978c5d79185d2ef0e0a20e06d487180ce69b63",
       "declarations": {
         "def": [
           "\u03b4Mass",
@@ -1064,6 +943,7 @@
           "StrengthCond"
         ],
         "theorem": [
+          "Q_hyd_pos",
           "helmholtzAntitone",
           "helmholtz_le_iff",
           "helmholtz_one",
@@ -1090,6 +970,7 @@
       },
       "import_lines": [
         "Concrete.State",
+        "Constants.SI",
         "Core.Gate",
         "Core.State",
         "Mathlib.Algebra.Order.Field.Rat",
@@ -1100,7 +981,7 @@
     },
     {
       "path": "Concrete/GraphProperties.lean",
-      "content_sha256": "5fb27619cd4f17a728c61a55b2393d8e1e6a883493dc3024f8caa5e09ea0b014",
+      "content_sha256": "6ff34d2220f1a6074bb9f3904f699e36e980a6311169f430af978f384a8381c6",
       "declarations": {
         "theorem": [
           "mass_not_transitive",
@@ -1124,7 +1005,7 @@
     },
     {
       "path": "Concrete/Helmholtz.lean",
-      "content_sha256": "993e65b0b581bc0687a302c1e6908688d55e052195fa61c65ae7bd12f06291ed",
+      "content_sha256": "6b5fdf8fa3d631ac15aecbc2b4fcb0f6dcfe232bc345d44d3bdd12fe63bccc0a",
       "declarations": {
         "def": [
           "HelmholtzState"
@@ -1147,23 +1028,14 @@
     },
     {
       "path": "Concrete/MicroMechanics.lean",
-      "content_sha256": "3d1cd244add6586f1052467b867c5aee89f9fddaf5335977cd89d15cfa1d4396",
+      "content_sha256": "e8e1cb0734a15d8254067d84b4dc2d739186b8d0646b233d6e4855a220e4431f",
       "declarations": {
         "def": [
           "damageDMax",
           "damageAdmissible",
           "MicroMechanicsState",
-          "l1bRationalGridSchema",
-          "l1bRationalGridRowCount",
           "gridE0RefPa",
-          "gridE0AltPa",
-          "expectedProvedCount",
-          "certProvedFenceHonest",
-          "formalFenceClosed",
-          "literatureAnchorTier",
-          "catalogExportDeferred",
-          "mtHomogenizationWiredToSlice1",
-          "microMechanicsNonClaims"
+          "gridE0AltPa"
         ],
         "lemma": [
           "damageDMax_pos",
@@ -1191,10 +1063,7 @@
           "e_eff_mt_grid_row5",
           "psi_elastic_base_grid_row5",
           "psi_elastic_base_grid_row6_zero_strain",
-          "psi_elastic_base_grid_row7_zero_damage",
-          "l1b_rational_grid_row_count",
-          "expectedProvedCount_zero",
-          "formalFenceClosed_honest"
+          "psi_elastic_base_grid_row7_zero_damage"
         ]
       },
       "import_lines": [
@@ -1206,65 +1075,8 @@
       "repo": "umst-formal"
     },
     {
-      "path": "Concrete/MoriTanaka.lean",
-      "content_sha256": "fb1b89e006cdb8de9827bc09c5fda290abcbc250148c0f7a4432cce80a4febca",
-      "declarations": {
-        "def": [
-          "workstreamTag",
-          "accelSlot",
-          "leanModulePath",
-          "literatureAnchorUri",
-          "modelChoiceTag"
-        ],
-        "theorem": [
-          "rational_grid_seven_rows",
-          "rational_grid_schema_pin",
-          "grid_row1_witness",
-          "grid_row2_witness",
-          "grid_row3_witness",
-          "grid_row4_witness",
-          "grid_row5_witness",
-          "grid_row5_psi_witness",
-          "grid_row6_witness",
-          "grid_row7_witness",
-          "literature_anchor_tier_assumed",
-          "mt_homogenization_unwired",
-          "catalog_export_still_deferred",
-          "mori_tanaka_formal_bound"
-        ]
-      },
-      "import_lines": [
-        "Concrete.MicroMechanics"
-      ],
-      "module": "Concrete.MoriTanaka",
-      "repo": "umst-formal"
-    },
-    {
-      "path": "Concrete/MoriTanakaPosture.lean",
-      "content_sha256": "e58aa8fba28c236f43cc2b6d40869dd1d1a0762d29faee934fb8fb8528cc870c",
-      "declarations": {
-        "def": [
-          "postureTag",
-          "productionWired",
-          "leanL1bFullyClosed",
-          "moriTanakaNonClaims",
-          "ac48FormalCloseHonest"
-        ],
-        "theorem": [
-          "production_wired_false",
-          "lean_l1b_fully_closed_false",
-          "ac48_formal_close_honest"
-        ]
-      },
-      "import_lines": [
-        "Concrete.MoriTanaka"
-      ],
-      "module": "Concrete.MoriTanakaPosture",
-      "repo": "umst-formal"
-    },
-    {
       "path": "Concrete/PoromechanicsB3.lean",
-      "content_sha256": "00eb3aebf46b828b8afdef723dedbd0f7ca49dfca394494ca9ba2999207daad3",
+      "content_sha256": "0564e6f11315a85a13ed925d9b58059d0c94e5f4f85f025f117fc3de7b0ae6d6",
       "declarations": {
         "structure": [
           "PowersCapillaryCoeffs",
@@ -1303,8 +1115,6 @@
           "g0PowersCoeffs_admissible",
           "denom_pos_of_admissible",
           "capillaryPorosity_g0_eq_jennings",
-          "capillaryPorosity_nonneg",
-          "capillaryPorosity_le_one",
           "life365DiffusivityCoeffs_admissible",
           "clamp01_flow_admissible",
           "tortuosityWitness_nonpos",
@@ -1349,7 +1159,7 @@
     },
     {
       "path": "Concrete/Powers.lean",
-      "content_sha256": "b1605b0fa0365d22b00ae3128554a0f01114f3735fa02abd897c9681068052b4",
+      "content_sha256": "62fe4aec15019a5a4b944455150d480587579a2eb39cdf06194875e1cc1dbe4c",
       "declarations": {
         "def": [
           "S_intrinsic",
@@ -1363,6 +1173,7 @@
           "gelSpaceRatio_mono"
         ],
         "theorem": [
+          "gelSpaceRatio_le_one_iff",
           "powers_monotone",
           "powersStateFcMonotone",
           "powersStateAdmissible"
@@ -1370,6 +1181,7 @@
       },
       "import_lines": [
         "Compat.Gate",
+        "Constants.SI",
         "Mathlib.Algebra.Order.Field.Rat",
         "Mathlib.Tactic"
       ],
@@ -1377,8 +1189,62 @@
       "repo": "umst-formal"
     },
     {
+      "path": "Concrete/PowersVolume.lean",
+      "content_sha256": "63e3a12480c149e516705ed6245ac504ad7adfbf7baeab25701081adac5e2ae1",
+      "declarations": {
+        "def": [
+          "waterFraction",
+          "cement",
+          "gelSolids",
+          "gelWaterV",
+          "capillaryWater",
+          "shrinkage",
+          "capillaryPerCement",
+          "spacePerCement"
+        ],
+        "theorem": [
+          "coefficient_balance",
+          "volume_balance",
+          "capillaryPerCement_nonneg_iff",
+          "spacePerCement_nonneg_iff",
+          "capillaryWater_full",
+          "capillaryWater_full_nonneg_iff",
+          "space_full",
+          "capillaryWater_full_eq",
+          "space_full_eq",
+          "space_full_nonneg_iff"
+        ]
+      },
+      "import_lines": [
+        "Constants.SI",
+        "Mathlib.Tactic"
+      ],
+      "module": "Concrete.PowersVolume",
+      "repo": "umst-formal"
+    },
+    {
+      "path": "Concrete/SecondLaw.lean",
+      "content_sha256": "71c4c22220b06354f9727438d301a953854df4c86eee053e57c2882b87710671",
+      "declarations": {
+        "theorem": [
+          "coreAdmissible_iff_secondLaw",
+          "concreteAdmissible_iff_secondLaw",
+          "gateCheck_secondLaw",
+          "helmholtz_secondLaw_iff",
+          "cand_secondLaw"
+        ]
+      },
+      "import_lines": [
+        "Concrete.Helmholtz",
+        "ExcitementProofs",
+        "Process"
+      ],
+      "module": "Concrete.SecondLaw",
+      "repo": "umst-formal"
+    },
+    {
       "path": "Concrete/ShrinkageB4.lean",
-      "content_sha256": "1061b29f1b1ebee7c379e4fe4548529805594e92d1f4a5ecb7fe660e8ee0f6f7",
+      "content_sha256": "b2f5b40aaf0e34c8a63b8b53d324f52a4216f24962df5afcad9170e026a9636d",
       "declarations": {
         "def": [
           "criticalWcChemPin",
@@ -1386,9 +1252,7 @@
           "b4WcMid",
           "b4WcHi",
           "b4WcAdmissible",
-          "shrinkageInputAdmissible",
-          "b2OpenObligationCertId",
-          "b2OpenObligationDescription"
+          "shrinkageInputAdmissible"
         ],
         "lemma": [
           "criticalWcChemPin_pos",
@@ -1416,29 +1280,22 @@
           "b4UltimateEnvelope_at_lo",
           "b4UltimateEnvelope_at_critical",
           "b4UltimateEnvelope_at_mid",
-          "b4UltimateEnvelope_mono_on_lo",
-          "b4UltimateEnvelope_mono_on_critical",
-          "b4UltimateEnvelope_mono_on_mid",
           "b4UltimateEnvelope_mono_on_hi",
           "b4UltimateEnvelope_mid_knot_le_hi_branch",
           "b4UltimateEnvelope_knots_mono_lo_critical",
           "b4UltimateEnvelope_knots_mono_critical_mid",
           "b4UltimateEnvelope_knots_mono_mid_hi",
-          "b4UltimateEnvelope_knots_mono",
           "envelope_global_mono_cross_knot",
-          "b4UltimateEnvelope_mono",
           "shrinkageDevelopmentExp_at_zero",
           "shrinkageDevelopment_parallel_bounds",
           "autogenousShrinkageMicrostrain_nonpos"
         ],
         "structure": [
           "AutogenousShrinkageInput"
-        ],
-        "inductive": [
-          "B2OpenObligation"
         ]
       },
       "import_lines": [
+        "Constants.SI",
         "Mathlib.Algebra.Order.Field.Rat",
         "Mathlib.Data.Complex.Exponential",
         "Mathlib.Data.Real.Basic",
@@ -1463,25 +1320,16 @@
     },
     {
       "path": "Concrete/StiffnessTransition.lean",
-      "content_sha256": "ca35fa3ced344e10bfa33bf9867f4fea22fe8c97050db91f78a79c5bb6531be9",
+      "content_sha256": "050546eb54dddb8017ce730efabc822b2c60ed9399164aae48974a8d994bf918",
       "declarations": {
         "def": [
           "stiffnessAlphaThreshold",
           "stiffnessCoupling",
           "StiffnessTransitionState",
           "l1aRationalGridSchema",
-          "l1aRationalGridRowCount",
           "gridE0RefPa",
           "gridE0AltPa",
-          "gridE0Row7Pa",
-          "leanL1WorkstreamId",
-          "postureTag",
-          "expectedProvedCount",
-          "certProvedFenceHonest",
-          "formalFenceClosed",
-          "catalogExportDeferred",
-          "productionWired",
-          "stiffnessTransitionNonClaims"
+          "gridE0Row7Pa"
         ],
         "lemma": [
           "stiffnessCoupling_nonneg",
@@ -1511,10 +1359,7 @@
           "psi_stiffness_alpha_grid_row4",
           "psi_stiffness_alpha_grid_row5_zero",
           "psi_stiffness_alpha_grid_row6_zero_strain",
-          "psi_stiffness_alpha_grid_row7_zero",
-          "l1a_rational_grid_row_count",
-          "expectedProvedCount_zero",
-          "formalFenceClosed_honest"
+          "psi_stiffness_alpha_grid_row7_zero"
         ]
       },
       "import_lines": [
@@ -1527,7 +1372,7 @@
     },
     {
       "path": "Constants/SI.lean",
-      "content_sha256": "d0cf03ff7b5b2b2de66fc2ec509c4b2eb07de2eb326980e81c877299f0470755",
+      "content_sha256": "bbefa3a73b365b153e0ced82b5590049b1fc11aacf5980bec9ee1711788c7268",
       "declarations": {
         "def": [
           "caesiumHyperfineFrequency",
@@ -1546,8 +1391,36 @@
           "conductanceQuantum",
           "fineStructure",
           "fineStructureUncertainty",
+          "electronMass",
+          "electronMassUncertainty",
+          "rydberg",
+          "hartreeEnergy",
+          "comptonWavelength",
           "vacuumPermittivity",
-          "vacuumPermeability"
+          "vacuumPermeability",
+          "nonEvaporableWater",
+          "chemicalShrinkage",
+          "gelWater",
+          "waterDensity",
+          "cementDensity",
+          "criticalWcSealed",
+          "criticalWcSpace",
+          "densityRatio",
+          "shrinkageVolume",
+          "gelWaterVolume",
+          "capillaryConsumption",
+          "boundWater",
+          "boundWaterVolume",
+          "gelSolidsVolume",
+          "powersGelStrength",
+          "powersGelExponent",
+          "hydrationHeatC3S",
+          "hydrationHeatC3SUncertainty",
+          "hydrationHeatC2S",
+          "hydrationHeatC3AtoAFm",
+          "hydrationHeatC3AtoAFt",
+          "hydrationHeatC4AF",
+          "hydrationHeatDefault"
         ],
         "theorem": [
           "gasConstant_value",
@@ -1561,12 +1434,31 @@
           "fluxQuantum_derivation",
           "conductanceQuantum_value",
           "conductanceQuantum_derivation",
+          "rydberg_value",
+          "rydberg_derivation",
+          "rydberg_within_CODATA2022",
+          "hartreeEnergy_value",
+          "hartreeEnergy_within_CODATA2022",
+          "comptonWavelength_value",
+          "comptonWavelength_derivation",
+          "comptonWavelength_within_CODATA2022",
           "vacuumPermittivity_value",
           "vacuumPermittivity_derivation",
           "vacuumPermittivity_within_CODATA2022",
           "vacuumPermeability_value",
           "vacuumPermeability_derivation",
-          "vacuumPermeability_within_CODATA2022"
+          "vacuumPermeability_within_CODATA2022",
+          "criticalWcSealed_value",
+          "criticalWcSpace_value",
+          "densityRatio_value",
+          "densityRatio_derivation",
+          "shrinkageVolume_value",
+          "gelWaterVolume_value",
+          "capillaryConsumption_value",
+          "boundWater_value",
+          "boundWaterVolume_value",
+          "gelSolidsVolume_value",
+          "hydrationHeatDefault_in_range"
         ]
       },
       "import_lines": [
@@ -1602,7 +1494,7 @@
     },
     {
       "path": "ConvexPhiDissipation.lean",
-      "content_sha256": "9f3a99d9d2401612be79c49170531b568d275115d3258183d273d3748fb933ac",
+      "content_sha256": "256309c298beeb34daf489d88243252c05be73069f8794ecbb838493c97cd4b2",
       "declarations": {
         "structure": [
           "GsmDissipationPotential",
@@ -1612,16 +1504,10 @@
         "theorem": [
           "convex_phi_le_dissipationPower",
           "convex_phi_dissipation_nonneg",
-          "convex_phi_nonneg_dissipation",
           "passive_energy_balance_freeEnergy_descent",
           "gsmCartridge_passive_secondLaw",
           "gsmCartridge_passive_secondLaw_of_balance",
-          "gsmCartridge_dissipation_nonneg",
-          "convexPhiDissipationPhysicsGreen_false"
-        ],
-        "def": [
-          "convexPhiDissipationCellId",
-          "convexPhiDissipationPhysicsGreen"
+          "gsmCartridge_dissipation_nonneg"
         ]
       },
       "import_lines": [
@@ -1668,7 +1554,7 @@
     },
     {
       "path": "CoordinationCost.lean",
-      "content_sha256": "4aed10c1b4dd47a528daf9a2bee49dedb0266d569d9d0e65e6759217e9b10351",
+      "content_sha256": "03e2dc5a4b3e8feb7c3653416b2048bf7a58bc35ae565f7c474e03300b9763c7",
       "declarations": {
         "structure": [
           "CoordinationReport",
@@ -1689,7 +1575,6 @@
           "coordinationMassEquivalent_eq_div",
           "coordinationMassEquivalent_temp_scaling",
           "multiInformationNats_eq_sum_sub",
-          "multiInformationBits_eq_div",
           "multiInformationNats_pair",
           "multiInformationBits_pair",
           "multiInformationNats_zero",
@@ -1699,8 +1584,6 @@
           "multiInformationBits_pair_eq_mutualInformationBits",
           "physicalMultiInfoBits_pair_eq",
           "multiInformationBits_pair_product_zero",
-          "coordinationSavingGlobal_eq_pairwise",
-          "globalCoordinationSaving_eq_global",
           "globalCoordinationSaving_eq_pairwise",
           "coordinationSavingGlobal_linear",
           "coordinationSavingGlobal_zero",
@@ -1738,7 +1621,7 @@
     },
     {
       "path": "CoordinationCostP6.lean",
-      "content_sha256": "bb7d034ec4e3a6a7b7e29be6d131b76047067ee505b15ece84ad976b4c77dc92",
+      "content_sha256": "48de80fe0c4735a14e51184bdbf38d0261c5c9f4697e82c4383779357243a4ef",
       "declarations": {
         "structure": [
           "EpistemicMiDeficitDraft",
@@ -1769,7 +1652,6 @@
           "fromA7OpenObligation"
         ],
         "theorem": [
-          "physicalUnderstandingFloor_eq_coordinationSaving",
           "mkSemanticFloorReport_understandingCost",
           "mkSemanticFloorReport_mi_deficit",
           "mkSemanticFloorReport_is_physical",
@@ -1820,7 +1702,7 @@
     },
     {
       "path": "Core/Constitutional.lean",
-      "content_sha256": "2928ca8554c8c4ce268a2d6be798761bc567ed2642936b25d88d6e5cd2481917",
+      "content_sha256": "c12fc3c5e6ff99b94cc77d06758c03b31378ac3bb5b54905754496e96e65f851",
       "declarations": {
         "def": [
           "KleisliArrow",
@@ -1835,7 +1717,6 @@
           "kleisliComposeWellTypedN",
           "kleisliComposeWellTyped",
           "kleisliFoldWellTypedN",
-          "kleisliFoldWellTyped",
           "subjectReduction",
           "kleisliAdmissibility",
           "identityWellTyped",
@@ -1855,7 +1736,7 @@
     },
     {
       "path": "Core/Gate.lean",
-      "content_sha256": "dd7ace2fe0a5304f990eafe80199a4ef552c75242aba426b92709c1a7d815937",
+      "content_sha256": "966fdbe5ee6515e288ba1034dc50367d584ee3a82e7af3af614d6fde9b795806",
       "declarations": {
         "structure": [
           "CoreAdmissible",
@@ -1920,6 +1801,31 @@
       "repo": "umst-formal"
     },
     {
+      "path": "CostOfInformation.lean",
+      "content_sha256": "9e7ba12078c339463c440155f6ab1c3b73f185108ea3f37c7936fcdf188243de",
+      "declarations": {
+        "theorem": [
+          "shannonEntropy_uniform",
+          "entropyDrop_joules_le",
+          "informationPerJoule_le",
+          "bitErasure_cost",
+          "honest_spend_of_secondLaw",
+          "eta_cog_le_of_honest",
+          "eta_cog_le_of_secondLaw"
+        ],
+        "lemma": [
+          "landauer_joules_per_bit_eq"
+        ]
+      },
+      "import_lines": [
+        "Constants.SIBridge",
+        "EtaCog",
+        "Process"
+      ],
+      "module": "CostOfInformation",
+      "repo": "umst-formal"
+    },
+    {
       "path": "CreditGreedyOptimal.lean",
       "content_sha256": "b82e2720f67d5c789c0502ad70e928852e1a3f5ac06b97cb1c16f276b7d0cd32",
       "declarations": {
@@ -1976,7 +1882,7 @@
     },
     {
       "path": "Crypto/CryptoHypothesis.lean",
-      "content_sha256": "8d7df96a42c9a4409f8832d5927ebba406f8c78d044ce82993b31c5a12053b7e",
+      "content_sha256": "b4283fbed50ca1adb55e2705622a410f834f7c7b579e0e97ef14419fb040e307",
       "declarations": {
         "structure": [
           "Record",
@@ -1989,7 +1895,7 @@
     },
     {
       "path": "Crypto/EUF_CMA.lean",
-      "content_sha256": "027a64dfe59b2f9e35945a9fdc2f685f8fc4cb642624d5f89eb26107e8c1bef5",
+      "content_sha256": "09f37e990865d29bd71e8d1ec02a7342050cea5b4c901e25a5d768f51c9b8cde",
       "declarations": {
         "def": [
           "hypothesisMeta"
@@ -2009,7 +1915,7 @@
     },
     {
       "path": "Crypto/LWE.lean",
-      "content_sha256": "2316ec2f8ab775db938b1bdc035348dc8390dfe1e7db5f90eb498fdec662d3f1",
+      "content_sha256": "238903f09737035bbcf36a348ebf650abfbb3f5ee60e77102b126db322f6f1e4",
       "declarations": {
         "def": [
           "hypothesisMeta"
@@ -2044,7 +1950,7 @@
     },
     {
       "path": "Crypto/SideChannel.lean",
-      "content_sha256": "5c981bedeb19fa45ee78e9d67248d8c6fcc4c2d64186708c9c24e28fe23117b6",
+      "content_sha256": "29b305ef11831b95a946d0e5382742389c6654ba91fa170166ececebd7e8f3f5",
       "declarations": {
         "def": [
           "bridgeMeta"
@@ -2204,7 +2110,7 @@
     },
     {
       "path": "Economic/BurdenRecursionIsAdmissible.lean",
-      "content_sha256": "5d7fc92955b66ab9331b4efa633ff12569a7db663b03598548835099d9d4ca21",
+      "content_sha256": "fc8fae9ca497d554d3a2b18db3c0bb0ed1b3141922401caff3f3dac1746fdab5",
       "declarations": {
         "def": [
           "stateOfBurden",
@@ -2217,7 +2123,6 @@
           "burdenRecursion_admissible",
           "burdenIterate_zero",
           "burdenIterate_succ",
-          "burdenStep_strict_lt",
           "burdenIterate_succ_lt"
         ]
       },
@@ -2229,19 +2134,14 @@
     },
     {
       "path": "Economic/CollectiveCoherenceCost.lean",
-      "content_sha256": "91daf902b8f6756471cb7e23557dfe9fab2937aae3a42b443aca4b6403d5b627",
+      "content_sha256": "5741911feae42d00144c6500f0a7605df03913fb609cbd70d5b4c4bd855faebc",
       "declarations": {
         "def": [
           "collectiveCoherenceWiredOnAgentIdentity",
-          "collectivePenalty",
-          "creditCoreIdNamed",
-          "crossHostSalamiNamed"
+          "collectivePenalty"
         ],
         "structure": [
           "CollectiveCoherenceCost"
-        ],
-        "theorem": [
-          "padma_p2_08_cross_host_salami_is_collective"
         ]
       },
       "import_lines": [],
@@ -2250,7 +2150,7 @@
     },
     {
       "path": "Economic/CreativeExplorationTolerance.lean",
-      "content_sha256": "50e75e547d608f4c4cec448777d577a68468d1fbca1290fae02ba7be8ca8de34",
+      "content_sha256": "5c394d66e643e9102dad6399214e09e89868c05635e2b090d67d8a1d9e9bc115",
       "declarations": {
         "def": [
           "explorationToleranceWiredOnAgentIdentity",
@@ -2258,9 +2158,6 @@
         ],
         "structure": [
           "CreativeExplorationTolerance"
-        ],
-        "theorem": [
-          "padma_p2_11_exploration_formal_not_live"
         ]
       },
       "import_lines": [],
@@ -2385,13 +2282,8 @@
     },
     {
       "path": "Economic/KleisliAdmissibilityComposition.lean",
-      "content_sha256": "dfac1cda85067db8260f022f5fcc2c3d3f44efb0160f70930140e8253d897b5a",
-      "declarations": {
-        "theorem": [
-          "econ_kleisliComposeWellTypedN",
-          "econ_kleisliFoldWellTypedN"
-        ]
-      },
+      "content_sha256": "8ef1e214fdfd2d3d388a2f0401c7acea7c94e05343fa776fd851d8620b2f04ec",
+      "declarations": {},
       "import_lines": [
         "Compat.Constitutional"
       ],
@@ -2433,10 +2325,9 @@
     },
     {
       "path": "Economic/NuanceIsolator.lean",
-      "content_sha256": "8489321a9be1d9d86cf16ca994e7a3828585436b3ad22ad6ea2c909c22e4a89c",
+      "content_sha256": "e2a3c9c6c782b6246b1c8771ac1d20709efcbc5e39cfedde2637f285d323a341",
       "declarations": {
         "theorem": [
-          "cost_split_sum",
           "cost_split_nonneg_of_nonneg"
         ]
       },
@@ -2449,12 +2340,8 @@
     },
     {
       "path": "Economic/PhysicsConstrainedAI.lean",
-      "content_sha256": "fb9639eec1973f69da867786db55cf055dd4f1b01834789ce4a355fe702eadc1",
-      "declarations": {
-        "theorem": [
-          "physicsConstrained_gate_wellTyped"
-        ]
-      },
+      "content_sha256": "c9e1618abda4f099af763984e11cb6e9129547432ec2d2a5ff25d11714a0996c",
+      "declarations": {},
       "import_lines": [
         "Compat.Constitutional"
       ],
@@ -2571,7 +2458,7 @@
     },
     {
       "path": "ExcitementProofs.lean",
-      "content_sha256": "65b2bf2ec78cf8b0ba6783090e5012982132175f639d8f2d63d82cb22c4bb9a5",
+      "content_sha256": "ca75600f5831cd4a9bc42055e8372e50808da03ca54aa3821bd23d629f27b4c7",
       "declarations": {
         "theorem": [
           "select_empty",
@@ -2586,7 +2473,13 @@
           "pickMin_right_comm_of_ne_id",
           "pairwise_id_from_mem",
           "foldl_pickMin_perm",
-          "select_perm_invariant"
+          "select_perm_invariant",
+          "candEnergy_le_of_key_le",
+          "pickMin_spec",
+          "foldl_pickMin_spec",
+          "select_inl_spec",
+          "select_minimal",
+          "select_descent"
         ],
         "def": [
           "candKey",
@@ -2627,12 +2520,8 @@
     },
     {
       "path": "FormalFoundations.lean",
-      "content_sha256": "222ee6436c7da23ae3deb424887efcda6833b1969fa164a4541034fbb0d1fc99",
-      "declarations": {
-        "theorem": [
-          "umst_formal_complete"
-        ]
-      },
+      "content_sha256": "129f7802674c4cf77d69e993d6ce617fee6647e5953d7c012647800060ab7f24",
+      "declarations": {},
       "import_lines": [
         "Compat.Gate",
         "Concrete.Convergence",
@@ -2694,7 +2583,7 @@
     },
     {
       "path": "JenningsGelSpace.lean",
-      "content_sha256": "93e38bea86960ba1c058a345e33f99325bd0c3befec314df2943ce1a38ad74d6",
+      "content_sha256": "dba962b15c1b49e0fda250bbd1ac633f43778565682045ef0a0d56150e1b6379",
       "declarations": {
         "lemma": [
           "denom_pos",
@@ -2719,7 +2608,7 @@
     },
     {
       "path": "LandauerEinsteinBridge.lean",
-      "content_sha256": "9fdffc17b71fe66a875fe7cbc5ade607a40ae4abfdef340727adadf7fc10e35b",
+      "content_sha256": "d38279ef976a53f59613bf89d7460c820f88ca5f5c584e05e2eba1141243e681",
       "declarations": {
         "lemma": [
           "kBoltzmannSI_pos",
@@ -2732,10 +2621,8 @@
           "massEquivalent_linear",
           "massEquivalent_three_hundred_gt_three_point_one_e_neg_thirtyEight",
           "massEquivalent_three_hundred_lt_three_point_two_e_neg_thirtyEight",
-          "massEquivalent_three_hundred_interval",
           "massEquivalent_three_hundred_gt_tight",
-          "massEquivalent_three_hundred_lt_tight",
-          "massEquivalent_three_hundred_interval_tight"
+          "massEquivalent_three_hundred_lt_tight"
         ]
       },
       "import_lines": [
@@ -2747,14 +2634,13 @@
     },
     {
       "path": "LandauerExtension.lean",
-      "content_sha256": "17501fc3eb9940c04a0c7b79698845d7d3782069dfac9e55be99b6601c3b32d7",
+      "content_sha256": "141246315b8ffb9b303bf1741ac036264cfe442c46f9b61e1a770a24d698ac6c",
       "declarations": {
         "theorem": [
           "landauerBound_temp_scaling",
           "landauerEnergy_mono",
           "landauerBound_nBit",
           "landauerBound_additive",
-          "landauerBound_pos'",
           "landauerEnergy_300K_pos"
         ]
       },
@@ -2767,7 +2653,7 @@
     },
     {
       "path": "LandauerLaw.lean",
-      "content_sha256": "8b08abcfe5578ae339eb4ad02bc344433ada2c38d9abebe1cd436478f89d2123",
+      "content_sha256": "8950e2db3e5e34810e0a10034bb1c94cb8a8e1b1740b9b3d9452ffe559e0b7ee",
       "declarations": {
         "structure": [
           "ProbDist",
@@ -2779,8 +2665,6 @@
           "uniformBinaryEntropy",
           "diracEntropy_zero",
           "binaryErasureEntropyDrop",
-          "eraseSecondLaw_eq_step",
-          "physicalSecondLawUniformBinary_eq",
           "SecondLaw_landauerTight",
           "secondLaw_satisfiable",
           "secondLaw_sequential_compose",
@@ -2812,8 +2696,22 @@
       "repo": "umst-formal"
     },
     {
+      "path": "MaterialClass.lean",
+      "content_sha256": "c89deb9c28d595013ef99dbdd7884518ceb6cb2eba7737667604395b98a6691c",
+      "declarations": {
+        "inductive": [
+          "MaterialClass"
+        ]
+      },
+      "import_lines": [
+        "Compat.Gate"
+      ],
+      "module": "MaterialClass",
+      "repo": "umst-formal"
+    },
+    {
       "path": "MeaningState.lean",
-      "content_sha256": "26faa400b0ca1ef92db66d0778180f8d9587e4a67a1b82ca99a8d4fd18e63886",
+      "content_sha256": "8976ad387bf7149d69aead95cfda6ebbd8c6f84d1f80c80a7922382e71afb5f5",
       "declarations": {
         "structure": [
           "MeaningContext",
@@ -2835,16 +2733,13 @@
           "coreAdmissible_semanticSecondLaw",
           "meaningStructuralGateCheck_true_iff",
           "makeMeaningGateArrowWellTyped",
-          "makeMeaningGateArrowWellTyped_structural",
           "meaningKleisliComposeWellTyped",
           "meaningWellTyped_one",
-          "meaning_kleisliComposeWellTyped",
           "consistentP0Meaning_structurallyConsistent",
           "consistentP0Meaning_zero_model_uncertainty_drop",
           "meaningIdentityArrowWellTyped",
           "meaningKleisliCompose_identity_identity",
-          "consistentP0_coreAdmissible_at_zero",
-          "meaning_state_module_witness"
+          "consistentP0_coreAdmissible_at_zero"
         ],
         "inductive": [
           "MeaningAdmissibleSteps"
@@ -2903,7 +2798,7 @@
     },
     {
       "path": "Memory/TierDisjoint.lean",
-      "content_sha256": "146a3bf3fea7a983fe1e77f79a5d878bad9494d8010138d8d334c1cf0b4a5661",
+      "content_sha256": "5c6d84e04637e6ee7e4db2fe63506e5aa9bdf5db34712bbead66ff3b1a26ead4",
       "declarations": {
         "inductive": [
           "MemoryTier"
@@ -2918,7 +2813,6 @@
         ],
         "theorem": [
           "PairwiseDisjoint",
-          "LocalSharedDisjoint",
           "local_shared_disjoint_under_promotion"
         ]
       },
@@ -2952,42 +2846,15 @@
       "repo": "umst-formal"
     },
     {
-      "path": "Naturality.lean",
-      "content_sha256": "35c52e4f1e4ea3cae37075e70e6dfd53cf2ea3ac9f535f30e22a63c2524a17cb",
-      "declarations": {
-        "inductive": [
-          "MaterialClass"
-        ],
-        "def": [
-          "stateFor"
-        ],
-        "theorem": [
-          "gateMaterialAgnostic",
-          "gateStateDetermined",
-          "naturalitySquare",
-          "opcGateWellDefined",
-          "stateForAdmissibleRefl",
-          "initialStateMassConserved"
-        ]
-      },
-      "import_lines": [
-        "Compat.Gate"
-      ],
-      "module": "Naturality",
-      "repo": "umst-formal"
-    },
-    {
       "path": "OneInequalitySecondLaw.lean",
-      "content_sha256": "67b9a822bb28c6f2211587704ae4a3996c2448b7403dd7915ff8197c15757c1f",
+      "content_sha256": "d343e0b695f97c9688bb60095d1b6af64fc057b78e859ec5cb7c452c79db0cdd",
       "declarations": {
         "structure": [
           "Step"
         ],
         "def": [
           "oneInequality",
-          "Step.chain",
-          "formalOneInequalityCellId",
-          "formalOneInequalityPhysicsGreen"
+          "Step.chain"
         ],
         "theorem": [
           "oneInequality_chain",
@@ -3003,8 +2870,7 @@
           "transition_erase_chain_oneInequality",
           "eraseSecondLaw_iff_oneInequality",
           "secondLaw_implies_oneInequality",
-          "szilardMixedChain_oneInequality",
-          "formalOneInequalityPhysicsGreen_false"
+          "szilardMixedChain_oneInequality"
         ],
         "lemma": [
           "oneInequality_erase_joules"
@@ -3018,17 +2884,12 @@
     },
     {
       "path": "OrderStatisticsBand.lean",
-      "content_sha256": "2ae17b4e1a6ee338c3ea679284d92a3ecb8a0f80c6c3fe3df66b9e9cdf72237d",
+      "content_sha256": "062708cb4f22f2bc748e32396fb7f6eedcf694a843b9d31d03bc011b8639d9c2",
       "declarations": {
         "theorem": [
           "order_statistic_concentration",
           "quantile_separation_preserved",
-          "band_classification_soundness",
-          "band_flip_rate_bound",
           "p25_p75_admissibility"
-        ],
-        "lemma": [
-          "empirical_cdf_tail_nonneg"
         ]
       },
       "import_lines": [
@@ -3043,7 +2904,7 @@
     },
     {
       "path": "PrimeSpectralCategory.lean",
-      "content_sha256": "47570405a95444700427b2a2d631e1abe4b364d853ccc3a66eb13089922d5b41",
+      "content_sha256": "d024ad02dabd2eb336bb091d413787f95815f544cb147615fbe66845e0909cc1",
       "declarations": {
         "def": [
           "GuidanceF_map"
@@ -3053,7 +2914,6 @@
           "GuidanceF_map_comp",
           "gate_projection_naturality",
           "gateCheck_guidance_naturality",
-          "gate_naturality",
           "gateCheckSound_guidance",
           "admissible_of_gateCheck_guidance"
         ]
@@ -3066,7 +2926,7 @@
     },
     {
       "path": "PrimeSpectralGuidance.lean",
-      "content_sha256": "c594ababcabf4e0ed38b87591d66d3b7e7a8052d0f000e4d0d24bb53b55d74e5",
+      "content_sha256": "aa79089d775106cf8dd455f575dca034524a3a997afdf3de3a24c7157473b42d",
       "declarations": {
         "structure": [
           "MultiplicativeChannel",
@@ -3094,7 +2954,6 @@
           "mangoldtWeightedSum_zero",
           "prime_coprime",
           "coprime_primes_lcm_eq_mul",
-          "gateProjection_id",
           "applyChannelFilter_admissible",
           "guidance_preserves_admissible",
           "applyChannelFilter_admissibleN",
@@ -3113,7 +2972,7 @@
     },
     {
       "path": "Process.lean",
-      "content_sha256": "b42f96c984d5b786f207136dadbbf9e18085a4030adc2fae3b214725d6c85f4b",
+      "content_sha256": "2db17a540a5301eb7e23538e1b52e3fcf11e34a313cc2e962b825b10627c4c9e",
       "declarations": {
         "structure": [
           "FeedbackProcess"
@@ -3124,22 +2983,23 @@
         ],
         "def": [
           "SecondLaw",
-          "eraseSecondLawSI",
-          "eraseStepSecondLaw"
+          "eraseSecondLawSI"
         ],
         "theorem": [
+          "SecondLaw_transformation_iff_SI",
           "SecondLaw_landauerTight_erase",
           "szilardJoint_marginalX",
           "szilardJoint_marginalY",
           "szilardJoint_entropy",
           "szilardJoint_mutualInformation",
           "SecondLaw_szilardEngine",
+          "SecondLaw_erase_feedback",
           "SecondLaw_transition_refl",
           "secondLaw_process_family_satisfiable",
-          "physicalSecondLaw_erase_instance",
-          "eraseStepSecondLaw_dirac",
-          "SecondLaw_erase_sequential_compose",
-          "SecondLaw_erase_diracStep"
+          "SecondLaw_erasure_iff_transformation",
+          "SecondLaw_transformation_id",
+          "SecondLaw_transformation_comp",
+          "SecondLaw_erasure_additive"
         ]
       },
       "import_lines": [
@@ -3152,63 +3012,11 @@
       "repo": "umst-formal"
     },
     {
-      "path": "RSBridge/ColdPath.lean",
-      "content_sha256": "addcf1b4843d2a5953b0fdc6b4286655ca74d65e8cb1dc78a818990e3cdcceeb",
-      "declarations": {
-        "inductive": [
-          "PendingStatus"
-        ],
-        "structure": [
-          "PendingRow",
-          "ColdPathHonestBundle"
-        ],
-        "def": [
-          "schemaVersion",
-          "postureTag",
-          "l1aLeanSource",
-          "l1bLeanSource",
-          "h50RustSurface",
-          "pendingInventory",
-          "inventoryClosedCount",
-          "inventoryPendingCount",
-          "ac42JobId",
-          "ac42ReceiptPath",
-          "workstreamId",
-          "workerSpawnDeferred",
-          "productionWired",
-          "leanL1FullyClosed",
-          "l1bAnchorModule",
-          "l1bCatalogExportDeferredPin",
-          "l1bExpectedProvedCountPin",
-          "coldPathHonestBundle",
-          "coldPathNonClaims"
-        ],
-        "theorem": [
-          "inventoryRowCount",
-          "inventoryClosedCount_eq_five",
-          "inventoryPendingCount_eq_four",
-          "l1aAnchorReachable",
-          "l1bCatalogExportDeferredPin_honest",
-          "l1bExpectedProvedCountPin_zero",
-          "workerSpawnDeferred_honest",
-          "productionWired_honest",
-          "leanL1FullyClosed_honest",
-          "coldPathHonestBundle_census"
-        ]
-      },
-      "import_lines": [
-        "Concrete.StiffnessTransition"
-      ],
-      "module": "RSBridge.ColdPath",
-      "repo": "umst-formal"
-    },
-    {
       "path": "Real/Gate.lean",
-      "content_sha256": "6403e224fdaec52d86ea778b7c1c97e9952ff40dd8fe7237bae73306b9d3d121",
+      "content_sha256": "f9e08cb53177dab57e2025347e11462c547007fe1626ab7d6f2dda3f949674ce",
       "declarations": {
         "theorem": [
-          "realAdmissibleRefl",
-          "realAdmissible_eq_core"
+          "realAdmissibleRefl"
         ]
       },
       "import_lines": [
@@ -3286,7 +3094,7 @@
     },
     {
       "path": "SemanticEconomicModules.lean",
-      "content_sha256": "9dd5660cc60d6d909c7647a997012856d037e38a5317d44a999a9891079d64fa",
+      "content_sha256": "011f8bc533a6b6b9a3eec32a62e2dac282c43285ad0a747755b8c3668e54a374",
       "declarations": {
         "structure": [
           "MisunderstandingBurden",
@@ -3315,9 +3123,7 @@
           "semanticHallucination_product_off",
           "defaultCreativitySlack_zero",
           "defaultInterpretation_zero_within",
-          "catalogRead_eq_default",
-          "defaultParams_consistency_within_tolerance",
-          "semantic_economic_modules_witness"
+          "defaultParams_consistency_within_tolerance"
         ]
       },
       "import_lines": [
@@ -3334,7 +3140,7 @@
     },
     {
       "path": "SemanticFormal.lean",
-      "content_sha256": "e3056011eea7c8cba4c300a64f0dcfc1c61bab9ee277f317a8936bb731d3ff9a",
+      "content_sha256": "7bb8f6409e2527b4b0c7f6f26ee6e4d44370c54bf32189dc84a2a5112269df7a",
       "declarations": {
         "def": [
           "anchorModule"
@@ -3349,7 +3155,7 @@
     },
     {
       "path": "SemanticSecondLaw.lean",
-      "content_sha256": "d788bf9f55c083859e5fa444209c876cb383207b541a1e9a8f87556766e4f834",
+      "content_sha256": "e0ae249bc746747147a79a7ae7eed586eae861001b5d06bd5f11e510018b5e3d",
       "declarations": {
         "structure": [
           "SemanticBath",
@@ -3362,10 +3168,12 @@
           "structurallyConsistent",
           "miPreserved",
           "semanticSecondLaw",
+          "SemanticBath.heatBath",
           "admissibleSemanticTransition",
           "understandingCostAccounted"
         ],
         "theorem": [
+          "semanticSecondLaw_iff",
           "semantic_entropy_bound_from_physical",
           "understandingCostLandauerBound",
           "semanticConsistency_required",
@@ -3376,14 +3184,14 @@
           "consistentP0_zero_uncertainty_drop",
           "consistentP0_structurallyConsistent",
           "productWitness_mi_zero",
-          "productWitness_miPreserved_at_zero",
-          "semantic_second_law_module_witness"
+          "productWitness_miPreserved_at_zero"
         ]
       },
       "import_lines": [
         "CoordinationCost",
         "InfoTheory",
-        "LandauerLaw"
+        "LandauerLaw",
+        "Process"
       ],
       "module": "SemanticSecondLaw",
       "repo": "umst-formal"
@@ -3445,46 +3253,35 @@
     },
     {
       "path": "Urge/AdmitKleisli.lean",
-      "content_sha256": "b750963f04311bdc029ccebbe552d1e5a09262cca1981a763093f56883a43bbb",
+      "content_sha256": "5f08974d9256cf8e08d975dfb4e7fb9ab4c4962bd6c032acd45dbc12afc54b38",
       "declarations": {
         "structure": [
           "HistorySnapshot",
-          "HistoryTransition",
-          "PhysicalHistoryBridge"
+          "HistoryTransition"
         ],
         "def": [
-          "admitSecondLaw",
           "admissibleHistoryTransition",
-          "admitIdentity",
-          "urgePhysicsGreen",
-          "admitKleisliProductionWired"
+          "admitIdentity"
         ],
         "theorem": [
+          "admissibleHistoryTransition_iff",
           "kleisliComposeAssocAt",
-          "kleisliComposeAssoc",
           "kleisliLeftUnitAt",
-          "kleisliRightUnitAt",
-          "kleisliComposeWellTypedN",
-          "admitHistorySelect_eq_select",
-          "admitSecondLaw_from_physical",
-          "admitMorphism_noNewAxiom",
-          "admissibleHistoryTransition_from_physical",
-          "urgePhysicsGreenFalse",
-          "admitKleisliProductionWiredFalse",
-          "admitKleisliModuleWitness"
+          "kleisliRightUnitAt"
         ]
       },
       "import_lines": [
         "Compat.Constitutional",
         "Excitement",
-        "LandauerLaw"
+        "LandauerLaw",
+        "Process"
       ],
       "module": "Urge.AdmitKleisli",
       "repo": "umst-formal"
     },
     {
       "path": "Urge/AntichainIndependent.lean",
-      "content_sha256": "0a5bedb89f750f1c5a56c2b3996629f771fa67d135f500b2d903e4c6c89bb523",
+      "content_sha256": "ce1b91fd2720fc6609b3a3169d1b978078ae5f3ba0e9cdc602c24804117a7bc8",
       "declarations": {
         "structure": [
           "AntichainWritePath",
@@ -3492,16 +3289,12 @@
           "ConflictEdge",
           "ConflictGraph",
           "AntichainAdmissibilityConjunct",
-          "AntichainIndependentCtx",
-          "AntichainHistoryMove",
-          "AntichainTransition",
-          "PhysicalAntichainBridge"
+          "AntichainHistoryMove"
         ],
         "inductive": [
           "IndependentSetVerdict",
           "AntichainIndependentRefusal",
-          "AntichainIndependentVerdict",
-          "AntichainExcitementComposePin"
+          "AntichainIndependentVerdict"
         ],
         "def": [
           "antichainConjunctAdmits",
@@ -3513,9 +3306,6 @@
           "validateIndependentSet",
           "admitAntichainMember",
           "refuseForkAllocate",
-          "refuseSecondArgminSelector",
-          "refuseGreedyMisTheater",
-          "physicsGreenFromAntichainSize",
           "evaluateAntichainOperation",
           "aiPathZoneA",
           "aiPathZoneAX",
@@ -3528,44 +3318,19 @@
           "aiFixtureEdge12",
           "aiFixtureGraph",
           "aiFixtureConjunct",
-          "admissibleAntichainIndependent",
-          "antichainSecondLaw",
-          "antichainIndependentPhysicsGreen",
-          "antichainIndependentProductionWired"
+          "admissibleAntichainIndependent"
         ],
         "theorem": [
-          "refuseForkAllocate_positive",
-          "refuseSecondArgminSelector_positive",
-          "refuseGreedyMisTheater_positive",
-          "antichainSize_never_invents_green",
           "evaluateAntichainOperation_forkRefused",
           "evaluateAntichainOperation_witnessAdmit",
-          "antichainExcitementSelect_eq_select",
-          "antichainIndependentSelect_eq_select",
-          "antichainIndependentSelect_eq_urgeRecoverySelect",
-          "antichainIndependent_noLocalArgmin",
-          "antichainExcitementSelect_refusesSecondArgmin",
-          "antichainIndependent_empty",
           "aiFixture_acceptOnlyIndependent",
           "aiFixture_acceptRefuseA_conflicts",
           "aiFixture_acceptRefuseB_conflicts",
           "aiFixture_pathsConflict_acceptA",
           "aiFixture_notIndependentPair",
           "aiFixture_conjunctAdmits",
-          "aiFixture_antichainSize_noGreen",
           "admissibleAntichainIndependent_intro",
-          "antichainSecondLaw_from_physical",
-          "admissibleAntichainIndependent_from_physical",
-          "physicalSecondLaw_imported",
-          "antichainIndependentPhysicsGreenFalse",
-          "antichainIndependentProductionWiredFalse",
-          "antichainIndependentModuleWitness",
-          "antichainIndependent_noNewAxiom",
-          "antichainIndependent_positiveRefuseNotSilent",
-          "antichainIndependent_forkAllocateRefusedPositive",
-          "antichainIndependent_secondArgminRefusedPositive",
-          "antichainIndependent_greedyMisRefusedPositive",
-          "antichainIndependent_neverInventsGreenFromSize"
+          "antichainIndependent_positiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -3579,7 +3344,7 @@
     },
     {
       "path": "Urge/AppendOnly.lean",
-      "content_sha256": "6cc85b23a51b1d330ed1bb1cfe0594c5a95d75e013c431c1ac0f4df35d4ac959",
+      "content_sha256": "d709d319d2fd7120fb7d0888fa475469aa8cb745133244c47237669ae8b742c3",
       "declarations": {
         "def": [
           "appendOnlyCommitMove",
@@ -3589,23 +3354,10 @@
           "appendOnlyHistoryChain",
           "recoveryAppendOnly",
           "silentRewriteSnapshots",
-          "selfHealAppendOnly",
-          "urgePhysicsGreen",
-          "appendOnlyProductionWired"
+          "selfHealAppendOnly"
         ],
         "theorem": [
-          "silentRewriteRefused",
-          "appendOnly_not_silentRewrite",
-          "appendOnlyHistoryChain_refusesSilentRewrite",
-          "recoveryAppendOnly_refusesSilentRewrite",
-          "selfHealAppendOnly_eq_appendOnlyInvariant",
-          "selfHeal_not_silentRewrite",
-          "appendOnlyAdmitted_from_physical",
-          "silentRewriteRefused_from_physical",
-          "urgePhysicsGreenFalse",
-          "appendOnlyProductionWiredFalse",
-          "appendOnlyModuleWitness",
-          "appendOnly_silentRewrite_refused"
+          "recoveryAppendOnly_refusesSilentRewrite"
         ]
       },
       "import_lines": [
@@ -3618,7 +3370,7 @@
     },
     {
       "path": "Urge/BackupRecovery.lean",
-      "content_sha256": "678c206e60023ef8d5e0a50d82fedaac25dbaaa58fc6ef09fadc15ed86e6842f",
+      "content_sha256": "a0c236b7d29f9d9147140e05eaa473dd94125d064d1a6d4202b2dd49ff91d457",
       "declarations": {
         "inductive": [
           "BackupReplicaClass",
@@ -3629,41 +3381,13 @@
           "replicaEgressEmpty",
           "backupConjunctAdmits",
           "evaluateBackupRecoveryOperation",
-          "refuseRsyncTheater",
           "witnessFromSnapshot",
           "applyBackupRecoveryMorphism",
           "backupFixtureState",
           "backupFixtureUcrs",
           "backupFixtureMergeSafe",
           "backupFixtureSnapshot",
-          "backupFixtureConjunct",
-          "admissibleBackupTransition",
-          "backupSecondLaw",
-          "backupRecoveryPhysicsGreen",
-          "backupRecoveryProductionWired"
-        ],
-        "theorem": [
-          "offlineLuks_egress_empty",
-          "darwinScratch_egress_empty",
-          "forgePrimary_egress_nonempty",
-          "backupRecovery_rsync_theater_refused",
-          "backupRecovery_morphism_ok_when_not_rsync",
-          "refuseRsyncTheater_positive",
-          "backupRecoverySelect_eq_select",
-          "backupRecoverySelectBare_eq_select",
-          "backupRecoverySelect_eq_urgeRecoverySelect",
-          "backupRecovery_noLocalArgmin",
-          "backupRecovery_empty",
-          "backupFixture_rsync_theater_refused",
-          "backupFixture_apply_morphism_ok",
-          "backupFixture_witness_preserves_ucrs",
-          "backup_recovery_positive_refuse_not_silent",
-          "backupSecondLaw_from_physical",
-          "admissibleBackupTransition_from_physical",
-          "backupRecoveryPhysicsGreenFalse",
-          "backupRecoveryProductionWiredFalse",
-          "backupRecoveryModuleWitness",
-          "backupRecovery_noNewAxiom"
+          "backupFixtureConjunct"
         ],
         "structure": [
           "BackupUcrsStamp",
@@ -3671,10 +3395,13 @@
           "BackupRecoverySnapshot",
           "BackupRecoveryWitness",
           "BackupRecoveryMorphism",
-          "BackupAdmissibilityConjunct",
-          "BackupRecoveryCtx",
-          "BackupTransition",
-          "PhysicalBackupBridge"
+          "BackupAdmissibilityConjunct"
+        ],
+        "theorem": [
+          "backupRecovery_morphism_ok_when_not_rsync",
+          "backupFixture_apply_morphism_ok",
+          "backupFixture_witness_preserves_ucrs",
+          "backup_recovery_positive_refuse_not_silent"
         ]
       },
       "import_lines": [
@@ -3689,7 +3416,7 @@
     },
     {
       "path": "Urge/CarrierProduct.lean",
-      "content_sha256": "c8f44c600b81cbbc095b8988d17fbb084a19bc6a75f5263cbf75a8d99870c4ad",
+      "content_sha256": "f7113ec12c1dee9439992953fc02e8a207057dda73fd2e0d7727342616db7301",
       "declarations": {
         "structure": [
           "with",
@@ -3715,10 +3442,7 @@
           "carrierMk",
           "carrierWellFormed",
           "extendStamp",
-          "carrierAlongTransition",
-          "carrierFromPhysical",
-          "carrierProductPhysicsGreen",
-          "carrierProductProductionWired"
+          "carrierAlongTransition"
         ],
         "theorem": [
           "carrierMk_umstProj",
@@ -3726,17 +3450,7 @@
           "carrierMk_sdfFRepProj",
           "carrierMk_exactAlgProj",
           "carrierMk_witnessProj",
-          "extendStamp_preserves_seq",
-          "carrierAlongTransition_preserves_sdf",
-          "carrierAlongTransition_preserves_exactAlg",
-          "carrierFromPhysical_admitSecondLaw",
-          "carrierFromPhysical_witness_satisfied",
-          "carrierSelect_eq_select",
-          "carrierRecovery_eq_select",
-          "carrierProductPhysicsGreenFalse",
-          "carrierProductProductionWiredFalse",
-          "carrierProductModuleWitness",
-          "carrierProduct_noNewAxiom"
+          "extendStamp_preserves_seq"
         ]
       },
       "import_lines": [
@@ -3750,11 +3464,10 @@
     },
     {
       "path": "Urge/ClosedLoopWitness.lean",
-      "content_sha256": "5d5f2257f0457a5ace701df5b9b53879f2997b52a7d295cb0092511e8a737195",
+      "content_sha256": "3100fb5be7861ec4171092e51d49b85bf71c24536e60b988779116ea635a9350",
       "declarations": {
         "def": [
           "residueConstructorTag",
-          "residueConstructorCount",
           "ClosedLoopResidueCounts.zero",
           "ClosedLoopResidueCounts.total",
           "closedLoopResidueCountOf",
@@ -3766,13 +3479,10 @@
           "addMessyObservedDelta",
           "recordMessyResidue",
           "occupancyFromWitness",
-          "refuseClosedLoopSecondArgmin",
           "refuseClosedLoopF64DeltaF",
           "refuseClosedLoopOpenLoopIsolation",
-          "f64DeltaFTheater",
           "strictImprovement",
           "strictImprovementSuccessors",
-          "closedLoopSelect",
           "closedLoopSelectList",
           "witnessClosedLoopStep",
           "acceptSrc",
@@ -3782,9 +3492,7 @@
           "refuseSrc",
           "refuseTgt",
           "refuseAdmissible",
-          "refuseCandidate",
-          "urgePhysicsGreen",
-          "closedLoopWitnessProductionWired"
+          "refuseCandidate"
         ],
         "theorem": [
           "noCandidates_tag",
@@ -3793,41 +3501,20 @@
           "allExcludedByDEC_tag",
           "untaggedConstant_tag",
           "noStrictImprovement_tag",
-          "residue_constructor_count_is_six",
           "observedDeltaF_eq_compute",
-          "refuseF64DeltaF",
-          "closedLoopSelect_eq_select",
-          "closedLoopSelect_eq_urgeRecoverySelect",
-          "closedLoopNoLocalArgmin",
           "closedLoopEmpty",
           "fixtureStrictImprovementAccept",
           "fixtureStrictImprovementRefuse",
           "fixtureAcceptRecordsDelta",
           "fixtureRefuseNoCandidates",
-          "fixtureRefuseNoStrictImprovement",
-          "occupancySurrogateFixture",
-          "refuseSecondArgminPositive",
           "refuseF64DeltaFPositive",
-          "refuseOpenLoopIsolationPositive",
-          "observedDeltaFComputeFixture",
-          "positiveRefuseNotSilent",
-          "closedLoop_admitSecondLaw_from_physical",
-          "closedLoop_admissible_from_physical",
-          "physicalSecondLaw_imported",
-          "urgePhysicsGreenFalse",
-          "closedLoopWitnessProductionWiredFalse",
-          "closedLoopWitnessModuleWitness",
-          "closedLoopWitness_noNewAxiom",
-          "closedLoopWitness_noLocalArgmin"
+          "refuseOpenLoopIsolationPositive"
         ],
         "structure": [
           "ClosedLoopResidueCounts",
           "ObservedDeltaF",
           "MessyWitness",
-          "ExcitementOccupancyFeedback",
-          "ClosedLoopCtx",
-          "ClosedLoopTransition",
-          "PhysicalClosedLoopBridge"
+          "ExcitementOccupancyFeedback"
         ],
         "inductive": [
           "ClosedLoopRefusal",
@@ -3847,7 +3534,7 @@
     },
     {
       "path": "Urge/CobSocialGraph.lean",
-      "content_sha256": "b4745985647bb4b2a5809dd0910f16bc2ad8303713bb1794aa8cb8f9b2330200",
+      "content_sha256": "be2dcf6ae19c228ec38bf1ccc1520750f8cc19802e1effcd709ed5f85d1e7395",
       "declarations": {
         "instance": [
           "concreteJointThermo"
@@ -3857,18 +3544,14 @@
           "CobLinkVerdict",
           "CobIdentityVerdict",
           "CobSocialRefusal",
-          "CobSocialLinkVerdict",
-          "CobExcitementComposePin"
+          "CobSocialLinkVerdict"
         ],
         "structure": [
           "SocialNode",
           "SocialEdge",
           "TypedSocialGraph",
           "RepositoryIdentity",
-          "CobSocialRecoveryCtx",
-          "CobSocialHistoryMove",
-          "CobSocialTransition",
-          "PhysicalCobSocialBridge"
+          "CobSocialHistoryMove"
         ],
         "def": [
           "emptySocialGraph",
@@ -3886,42 +3569,20 @@
           "cobFixtureIssueId",
           "cobFixtureReviewId",
           "cobFixtureState",
-          "admissibleCobSocialGraph",
-          "cobSocialSecondLaw",
-          "cobSocialGraphPhysicsGreen",
-          "cobSocialGraphProductionWired",
-          "cobSocialGraphNonClaim"
+          "admissibleCobSocialGraph"
         ],
         "theorem": [
           "kindEqb_refl",
           "kindEqb_eq",
           "kindEqb_ne_iff",
           "kindEqb_neq",
-          "refuse_git_hash_only_identity_positive",
           "refuse_git_hash_only_eq_csr",
-          "refuse_second_argmin_positive",
           "linkTypedEdge_untyped_refused",
-          "cob_social_select_eq_excitement_select",
-          "cob_social_select_eq_urge_recovery_select",
-          "cob_social_no_local_argmin",
-          "cob_social_excitement_select_eq_excitement_select",
-          "cob_social_excitement_select_refuses_second_argmin",
-          "cob_social_select_empty",
           "cob_fixture_accept_link",
           "cob_fixture_untyped_link_refused",
           "cob_fixture_missing_node_refused",
-          "cob_fixture_git_hash_only_refused",
-          "cob_fixture_excitement_compose",
           "cob_social_positive_refuse_not_silent",
-          "admissibleCobSocialGraph_intro",
-          "cobSocialSecondLaw_from_physical",
-          "admissibleCobSocialGraph_from_physical",
-          "cobSocialGraphPhysicsGreenFalse",
-          "cobSocialGraphProductionWiredFalse",
-          "cobSocialGraphNonClaim_prefix_len",
-          "cobSocialGraphNonClaim_nonempty",
-          "cobSocialGraphModuleWitness",
-          "cobSocialGraph_noNewAxiom"
+          "admissibleCobSocialGraph_intro"
         ]
       },
       "import_lines": [
@@ -3936,7 +3597,7 @@
     },
     {
       "path": "Urge/CollaborativeObject.lean",
-      "content_sha256": "d53c11799e528630da7e3117037d795a78a872e98422b52cfd59ba2caec62355",
+      "content_sha256": "e9f829c7068c9131405503920df6d909abfc26c1fc111c0fb17fcbc784778bbd",
       "declarations": {
         "instance": [
           "concreteJointThermo"
@@ -3964,32 +3625,16 @@
           "carrierPopulated",
           "cobNew",
           "cobCarrier",
-          "cobHead",
-          "collaborativeObjectPhysicsGreen",
-          "collaborativeObjectProductionWired",
-          "collaborativeObjectNonClaim"
+          "cobHead"
         ],
         "theorem": [
           "kindEqb_refl",
           "kindEqb_eq",
           "kindEqb_ne_iff",
           "kindEqb_neq",
-          "refuse_git_hash_only_is_refused",
           "empty_graph_link_node_not_found",
           "addSocialNode_then_link_ok",
-          "linkTypedEdge_untyped_refused",
-          "cobSelect_eq_select",
-          "cobSelect_eq_carrierSelect",
-          "cob_no_local_argmin",
-          "cobSelect_eq_carrierSelect_head",
-          "cob_admitSecondLaw_from_physical",
-          "cob_physicalSecondLaw_discharge",
-          "collaborativeObjectPhysicsGreenFalse",
-          "collaborativeObjectProductionWiredFalse",
-          "collaborativeObjectNonClaim_prefix_len",
-          "collaborativeObjectNonClaim_nonempty",
-          "collaborativeObjectModuleWitness",
-          "collaborativeObject_noNewAxiom"
+          "linkTypedEdge_untyped_refused"
         ]
       },
       "import_lines": [
@@ -4002,21 +3647,19 @@
     },
     {
       "path": "Urge/CompactionAsArrow.lean",
-      "content_sha256": "0f99f2dbd87834ac6da86ce3cb0633d70789fe49871655e085728a57a0ef0bfc",
+      "content_sha256": "596e4297b9610c7c6c9ef2408c9401a478be4bacf71c7bb343b7da0bcd6888ef",
       "declarations": {
         "structure": [
           "DerivationChainWitness",
           "MiPaymentWitness",
           "CompactionArrow",
-          "CompactionAttempt",
-          "CompactionCtx"
+          "CompactionAttempt"
         ],
         "def": [
           "retainsChain",
           "retainsChainBool",
           "miPaid",
           "miPaidBool",
-          "refuseDeleteOldCommitsTheater",
           "refuseMiUnpaid",
           "refuseSecondArgmin",
           "refuseMissingDerivationWitness",
@@ -4024,46 +3667,24 @@
           "evaluateCompactionAttempt",
           "evaluateCompactionAttemptRefuse",
           "miPaymentFromLandauerBits",
-          "compositeFromLandauer",
           "fixtureMiPaid",
           "fixtureWitness",
           "fixtureAdmissible",
           "fixtureDeleteOldCommits",
-          "fixtureMiUnpaid",
-          "urgePhysicsGreen",
-          "compactionAsArrowProductionWired",
-          "compactionAsArrowMarker"
+          "fixtureMiUnpaid"
         ],
         "theorem": [
           "retainsChainBool_true_iff",
           "miPaidBool_true_iff",
           "evaluateCompactionAttemptRefuse_agrees",
           "landauerBridgeMiPaidWhenNonzero",
-          "compositeFromLandauerRetainsChain",
-          "landauerCompactionPreservesProvenance",
-          "compactionSecondLawFromPhysical",
-          "compactionAsArrowSelect_eq_select",
-          "compactionAsArrowSelectBare_eq_select",
-          "compactionAsArrowSelect_eq_bare",
-          "compactionAsArrowNoLocalArgmin",
-          "compactionAsArrow_empty",
-          "urgeCompactionSelect_eq_select",
-          "urgeCompactionSelect_eq_admitHistorySelect",
           "compactionComposeAssocInherited",
           "fixtureAdmissibleAccept",
           "fixtureDeleteOldCommitsReject",
           "fixtureMiUnpaidReject",
           "fixtureArrowFromChainOk",
           "fixtureArrowFromEmptyChainRefused",
-          "refuseDeleteOldCommitsTheaterPositive",
-          "refuseSecondArgminPositive",
           "positiveRefuseNotSilent",
-          "urgePhysicsGreenFalse",
-          "compactionAsArrowProductionWiredFalse",
-          "compactionAsArrowMarkerPos",
-          "compactionAsArrowModuleWitness",
-          "compactionAsArrowNoNewAxiom",
-          "compactionAsArrowNoSecondArgmin",
           "deleteOldCommitsRefused"
         ],
         "inductive": [
@@ -4083,7 +3704,7 @@
     },
     {
       "path": "Urge/CompactionComposite.lean",
-      "content_sha256": "42be7fd771544d58d69a58b61e30f9fd69c777b81aea8e32e40150c4dba7b6bd",
+      "content_sha256": "ada96464501021634c3cadf1f1c8ac2adf0aca066c41a91a2a3ef7c01d5470ab",
       "declarations": {
         "structure": [
           "DerivationChainWitness",
@@ -4096,42 +3717,21 @@
           "retainsChainBool",
           "miPaid",
           "miPaidBool",
-          "refuseDeleteOldCommitsTheater",
           "refuseMiUnpaid",
           "refuseSecondArgmin",
-          "refuseGitGcTheater",
           "refuseSemanticSquashWithoutComposite",
           "compositeArrowFromChain",
           "classifyCompaction",
           "evaluateCompactionAttempt",
-          "miPaymentFromLandauerBits",
-          "compositeFromPhysical",
-          "urgePhysicsGreen",
-          "compactionCompositeProductionWired",
-          "compactionCompositeMarker"
+          "miPaymentFromLandauerBits"
         ],
         "theorem": [
           "retainsChainBool_true_iff",
           "miPaidBool_true_iff",
           "miPaid_intro",
           "gateCompactionMiRefuseDelete",
-          "gateCompactionMiAdmit",
           "landauerBridgeMiPaidWhenNonzero",
-          "compositeFromPhysicalRetainsChain",
-          "landauerCompactionPreservesProvenance",
-          "compactionSecondLawFromPhysical",
-          "urgeCompactionSelect_eq_select",
-          "urgeCompactionNoLocalArgmin",
-          "compactionComposeAssocInherited",
-          "urgePhysicsGreenFalse",
-          "compactionCompositeProductionWiredFalse",
-          "compactionCompositeMarkerPos",
-          "compactionCompositeModuleWitness",
-          "compactionCompositeNoNewAxiom",
-          "compactionCompositeNoSecondArgmin",
-          "deleteOldCommitsRefused",
-          "gitGcTheaterRefused",
-          "semanticSquashRefused"
+          "compactionComposeAssocInherited"
         ],
         "inductive": [
           "CompactionClass",
@@ -4149,7 +3749,7 @@
     },
     {
       "path": "Urge/ContentAddressed.lean",
-      "content_sha256": "8824a3026d5965b27869eae7b0130f2cc8b345a614e312de6e435be8a0a96ad3",
+      "content_sha256": "19f74e5304d20bfb038afccc590d4c73c0abf83156f2531aaa511dbf61228fe4",
       "declarations": {
         "instance": [
           "concreteJointThermo"
@@ -4163,9 +3763,7 @@
           "ContentAddressedWitness",
           "ContentAddressedMorphism",
           "ContentAdmissibilityConjunct",
-          "ContentAddressedCtx",
           "ContentHistoryTransition",
-          "PhysicalContentBridge",
           "ProvenanceStamp",
           "ContentChunk",
           "NamedContentBlock"
@@ -4192,10 +3790,6 @@
           "contentFixtureSnapshot",
           "contentFixtureConjunct",
           "admissibleContentAddressed",
-          "contentSecondLaw",
-          "contentAddressedPhysicsGreen",
-          "contentAddressedProductionWired",
-          "contentAddressedNonClaim",
           "contentHashDigestLen",
           "contentHashDigestValid",
           "carriesProvenance",
@@ -4204,44 +3798,23 @@
           "contentHashFixtureDigest",
           "contentHashFixtureStamp",
           "contentHashFixtureGitCompat",
-          "contentHashProvenanceMarker",
-          "contentHashProvenanceNonClaim"
+          "contentHashProvenanceMarker"
         ],
         "theorem": [
-          "contentAddressed_gitHashOnly_refused",
           "contentAddressed_admitted_when_not_gitHashOnly",
-          "contentAddressed_hostId_refused",
           "contentAddressed_admitted_when_not_hostId",
-          "refuseSecondArgmin_positive",
-          "contentAddressedSelect_eq_select",
-          "contentAddressedSelect_eq_urgeRecoverySelect",
-          "contentAddressedSelectBare_eq_select",
-          "contentAddressed_noLocalArgmin",
-          "contentAddressed_empty",
-          "contentFixture_gitHashOnly_refused",
-          "contentFixture_hostId_refused",
           "contentFixture_apply_morphism_ok",
           "contentFixture_geometricContentId_present",
           "contentFixture_witness_preserves_geometric",
           "contentFixture_witness_preserves_gitCompat",
           "contentAddressed_gitHashOnly_not_admitted",
           "contentAddressed_hostId_not_admitted",
-          "contentSecondLaw_from_physical",
-          "admissibleContentAddressed_from_physical",
-          "physicalSecondLaw_imported",
-          "contentAddressedPhysicsGreenFalse",
-          "contentAddressedProductionWiredFalse",
-          "contentAddressedModuleWitness",
-          "contentAddressed_noNewAxiom",
-          "refuseProvenanceMissing_positive",
           "carriesProvenance_fixture_ok",
           "carriesProvenance_empty_refused",
           "contentHashFixtureDigest_len",
           "contentHashFixture_name_block_ok",
           "contentHashFixture_provenance_missing_refused",
-          "contentHashFixture_git_hash_only_refused",
-          "contentHashProvenancePhysicsGreenFalse",
-          "contentHashProvenanceModuleWitness"
+          "contentHashFixture_git_hash_only_refused"
         ]
       },
       "import_lines": [
@@ -4255,7 +3828,7 @@
     },
     {
       "path": "Urge/CountedConsume.lean",
-      "content_sha256": "0144d3a8e00cf8b670bb946c7805cb8996e53d94e0c56d9f3155c9565687f027",
+      "content_sha256": "373392ebae3c85c68e39dad91ad989f8065b0b936a74abb659f6ebf3700b8675",
       "declarations": {
         "inductive": [
           "CountedDomainProvenance",
@@ -4269,10 +3842,7 @@
           "CountedScannedClaim",
           "CountedScanWalk",
           "CountedAdmissibilityConjunct",
-          "CountedConsumeCtx",
-          "CountedHistoryMove",
-          "CountedTransition",
-          "PhysicalCountedBridge"
+          "CountedHistoryMove"
         ],
         "def": [
           "countedScanWalkEmpty",
@@ -4286,7 +3856,6 @@
           "scanCounting",
           "evaluateCountedDomainOperation",
           "refuseAuthorDomainNew",
-          "refuseSecondArgminSelector",
           "domainToAdmit",
           "admitScannedClaim",
           "countedConjunctAdmits",
@@ -4297,23 +3866,12 @@
           "countedFixtureClaim",
           "countedFixtureConjunct",
           "countedFixtureHandFilled",
-          "admissibleCountedConsume",
-          "countedSecondLaw",
-          "countedConsumePhysicsGreen",
-          "countedConsumeProductionWired",
-          "excitementComposePin"
+          "admissibleCountedConsume"
         ],
         "theorem": [
           "countedAuthorDomainRefused",
           "countedScanOkWhenNotAuthor",
-          "refuseAuthorDomainNewPositive",
-          "refuseSecondArgminPositive",
           "scanCountingFinalizeEmpty",
-          "countedConsumeSelect_eq_select",
-          "countedConsumeSelect_eq_urgeRecoverySelect",
-          "countedExcitementSelect_eq_select",
-          "countedConsumeNoLocalArgmin",
-          "countedConsumeEmpty",
           "countedFixtureScannerEmittedOk",
           "countedFixtureHandFillRefused",
           "countedFixtureAuthorDomainRefused",
@@ -4322,17 +3880,7 @@
           "countedFixtureScanCountingOk",
           "countedFixtureCardinalityMatchesScope",
           "admissibleCountedConsume_intro",
-          "countedSecondLaw_from_physical",
-          "admissibleCountedConsume_from_physical",
-          "physicalSecondLaw_imported",
-          "countedConsumePhysicsGreenFalse",
-          "countedConsumeProductionWiredFalse",
-          "countedConsumeModuleWitness",
-          "countedConsume_noNewAxiom",
-          "countedConsumePositiveRefuseNotSilent",
-          "countedConsumeAuthorRefusePositive",
-          "excitementComposePinMarker",
-          "refuseSecondArgminIsTag"
+          "countedConsumePositiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -4347,7 +3895,7 @@
     },
     {
       "path": "Urge/CryptoCompose.lean",
-      "content_sha256": "83eb7a6e8400dcf047b3b6a018d73f57bddc1b8ff851cb7ec805f79345bb2c4a",
+      "content_sha256": "0bec1a4d2523f76d578708378bff6d295419b761d01cff5b9357f7a8f2fde232",
       "declarations": {
         "inductive": [
           "CryptoIdentityClass",
@@ -4366,18 +3914,13 @@
           "refuseUnsignedTransition",
           "witnessFromCryptoSnapshot",
           "applyCryptoComposeMorphism",
-          "excitementComposePin",
           "cryptoComposeFixtureState",
           "cryptoComposeFixtureUcrs",
           "cryptoComposeFixtureThreshold",
           "cryptoComposeFixtureSsot",
           "cryptoComposeFixtureSnapshot",
           "cryptoComposeFixtureConjunct",
-          "admissibleCryptoCompose",
-          "cryptoSecondLaw",
-          "cryptoComposePhysicsGreen",
-          "cryptoComposeProductionWired",
-          "cryptoComposeMarker"
+          "admissibleCryptoCompose"
         ],
         "structure": [
           "CryptoUcrsStamp",
@@ -4387,42 +3930,16 @@
           "CryptoComposeWitness",
           "CryptoComposeMorphism",
           "CryptoAdmissibilityConjunct",
-          "CryptoComposeCtx",
-          "CryptoHistoryMove",
-          "CryptoTransition",
-          "PhysicalCryptoBridge"
+          "CryptoHistoryMove"
         ],
         "theorem": [
           "cryptoComposeEgoffCopyPasteRefused",
           "cryptoComposeMorphismOkWhenNotCopyPaste",
-          "refuseEgoffCopyPastePositive",
-          "refuseHostIdAsRidPositive",
-          "refuseUnsignedTransitionPositive",
-          "refuseSecondArgminIsTag",
-          "cryptoComposeSelect_eq_excitementSelect",
-          "cryptoComposeSelect_eq_urgeRecoverySelect",
-          "cryptoComposeNoLocalArgmin",
-          "cryptoComposeExcitementSelect_eq_select",
-          "urgeCryptoComposeSelect_eq_select",
-          "cryptoComposeEmpty",
-          "excitementComposePinMarker",
           "cryptoComposeFixtureEgoffCopyPasteRefused",
           "cryptoComposeFixtureApplyMorphismOk",
-          "cryptoComposeContentAddressedIdentity",
-          "cryptoComposeDecentralizedDidIdentity",
-          "cryptoComposeHostIdNotContentAddressed",
           "cryptoComposeFixtureWitnessPreservesUcrs",
           "cryptoComposePositiveRefuseNotSilent",
-          "admissibleCryptoCompose_intro",
-          "cryptoSecondLaw_from_physical",
-          "admissibleCryptoCompose_from_physical",
-          "cryptoSecondLaw_from_landauer",
-          "physicalSecondLaw_imported",
-          "cryptoComposePhysicsGreenFalse",
-          "cryptoComposeProductionWiredFalse",
-          "cryptoComposeModuleWitness",
-          "cryptoComposeNoNewAxiom",
-          "cryptoComposeMarkerEq"
+          "admissibleCryptoCompose_intro"
         ]
       },
       "import_lines": [
@@ -4437,17 +3954,14 @@
     },
     {
       "path": "Urge/DropProvenance.lean",
-      "content_sha256": "9996a685b0d98789468c78e67b8bb9754e33339133902ad56a0b69a9f8737c5b",
+      "content_sha256": "d6ee95b38bfd8787c094f63ca0ca76ddb400f396006014ea66d5c2996d24b133",
       "declarations": {
         "structure": [
-          "GossipCandidate",
-          "GossipTransition",
-          "PhysicalGossipBridge"
+          "GossipCandidate"
         ],
         "inductive": [
           "DropProvenanceRefusal",
-          "GossipTickVerdict",
-          "ExcitementComposePin"
+          "GossipTickVerdict"
         ],
         "def": [
           "gossipIsAdmissible",
@@ -4460,17 +3974,11 @@
           "h3InadmissibleDropProvenanceId",
           "h3AdmissibleProvenancedId",
           "h3DropProvenanceFixtureCandidate",
-          "h3AdmissibleGossipCandidate",
-          "gossipSecondLaw",
-          "urgePhysicsGreen",
-          "dropProvenanceProductionWired"
+          "h3AdmissibleGossipCandidate"
         ],
         "theorem": [
           "gossipTickVerdict_admissible_iff",
           "gossipTickVerdict_reject_iff",
-          "gossipExcitementSelect_eq_select",
-          "gossipExcitementSelect_refuses_secondArgmin",
-          "gossipSelect_eq_select",
           "gossipIsAdmissible_false_whenDrops",
           "dropProvenanceNeverInAdmissibleFilter",
           "h3DropProvenanceFixture_refused",
@@ -4480,13 +3988,6 @@
           "h3AdmissibleGossipCandidate_evaluateAdmit",
           "h3AdmissibleGossip_isAdmissible",
           "h3DropProvenanceFixture_notAdmissible",
-          "gossipSecondLaw_from_physical",
-          "physicalSecondLaw_imported",
-          "dropProvenance_from_physical",
-          "urgePhysicsGreenFalse",
-          "dropProvenanceProductionWiredFalse",
-          "dropProvenanceModuleWitness",
-          "dropProvenance_noNewAxiom",
           "dropProvenance_positiveRefuse_notSilent"
         ]
       },
@@ -4499,7 +4000,7 @@
     },
     {
       "path": "Urge/EntityRemote.lean",
-      "content_sha256": "b8e0514206073afd330b8159b62e907949803f0c6f0c8c61d42f8c3b3ed72fb5",
+      "content_sha256": "a7390dc87b33b926de20f57ff91ffbc5641eee9b97c27e8843a283447c2ae04e",
       "declarations": {
         "def": [
           "urgeRemoteSectionPrefix",
@@ -4509,17 +4010,13 @@
           "classifyEntityRemoteHost",
           "labsGithubVerdict",
           "evaluateEntityPrePush",
-          "refuseProductionWiredEntityPush",
           "evaluateEntityRemoteOperation",
           "applyEntityRemotePolicy",
           "entityRemoteFixtureLabsPublic",
           "entityRemoteFixtureComposeConfidential",
           "entityRemoteFixtureConjunct",
           "entityRemoteFixtureState",
-          "admissibleEntityRemote",
-          "entityRemoteSecondLaw",
-          "entityRemotePhysicsGreen",
-          "entityRemoteProductionWired"
+          "admissibleEntityRemote"
         ],
         "inductive": [
           "UrgeEntity",
@@ -4535,38 +4032,21 @@
         "structure": [
           "UrgeRemotePolicy",
           "EntityRemoteConjunct",
-          "EntityRemoteCtx",
-          "EntityRemoteHistoryMove",
-          "EntityRemoteTransition",
-          "PhysicalEntityRemoteBridge"
+          "EntityRemoteHistoryMove"
         ],
         "theorem": [
           "entityRemoteUpstreamRefusedPositive",
           "entityRemotePolicyOkWhenNotUpstream",
-          "refuseProductionWiredEntityPushPositive",
-          "entityRemoteSelect_eq_excitementSelect",
-          "entityRemoteSelect_eq_urgeRecoverySelect",
-          "entityRemote_noLocalArgmin",
-          "entityRemote_empty",
           "entityRemoteLabsGithubAdmitted",
           "entityRemoteComposeGithubRefused",
           "entityRemoteComposeOriginRefused",
           "entityRemoteOriginNeverSsotRefused",
           "entityRemoteComposeForgeAdmitted",
-          "entityRemoteSectionPrefixWitness",
           "entityRemoteLabsPublicSectionKey",
           "entityRemoteParseLabs",
           "entityRemoteParseCompose",
-          "entityRemoteClassificationEntityLabs",
-          "entityRemoteClassificationEntityCompose",
           "entityRemoteFixtureApplyPolicyOk",
           "admissibleEntityRemote_intro",
-          "entityRemoteSecondLaw_from_physical",
-          "admissibleEntityRemote_from_physical",
-          "entityRemotePhysicsGreenFalse",
-          "entityRemoteProductionWiredFalse",
-          "entityRemoteModuleWitness",
-          "entityRemote_noNewAxiom",
           "entityRemotePositiveRefuseNotSilent",
           "entityRemoteComposeGithubPositiveRefuse"
         ]
@@ -4583,7 +4063,7 @@
     },
     {
       "path": "Urge/ExactAlgCoeffs.lean",
-      "content_sha256": "717e8d869f63b3b08c2618c1318326f055a4881e6383ec6fde4080e4318aa114",
+      "content_sha256": "b3a02647ba084eb82357837af52430a6388565c343d298e1cff277689b5ec7ab",
       "declarations": {
         "structure": [
           "ExactAlgCoeff",
@@ -4591,10 +4071,7 @@
           "ExactAlgCoeffWitness",
           "ExactAlgCoeffMorphism",
           "ExactAlgCoeffAdmissibilityConjunct",
-          "ExactAlgCoeffCtx",
-          "ExactAlgCoeffsHistoryMove",
-          "ExactAlgCoeffsTransition",
-          "PhysicalExactAlgCoeffsBridge"
+          "ExactAlgCoeffsHistoryMove"
         ],
         "inductive": [
           "FloatCarrierTag",
@@ -4608,12 +4085,9 @@
           "exactAlgCoeffToExactAlg",
           "attachExactAlgCoeff",
           "exactAlgCoeffConjunctAdmits",
-          "evaluateF64IdentityTheater",
           "evaluateZeroDenominator",
-          "refuseF64IdentityTheater",
           "refuseZeroDenominator",
           "refuseExactAlgAbsent",
-          "refuseSecondArgminSelector",
           "witnessFromCarrierCoeffs",
           "admitCarrierExactAlg",
           "applyExactAlgCoeffMorphism",
@@ -4628,39 +4102,16 @@
           "exactAlgFixtureExactAlg",
           "exactAlgFixtureCarrier",
           "exactAlgFixtureConjunct",
-          "admissibleExactAlgCoeffs",
-          "exactAlgCoeffsSecondLaw",
-          "exactAlgCoeffsPhysicsGreen",
-          "exactAlgCoeffsProductionWired"
+          "admissibleExactAlgCoeffs"
         ],
         "theorem": [
-          "exactAlgCoeffF64TheaterRefused",
-          "exactAlgCoeffZeroDenRefused",
-          "exactAlgCoeffExactAlgAbsentRefused",
-          "refuseSecondArgminSelectorPositive",
-          "exactAlgCoeffsExcitementSelect_eq_select",
-          "exactAlgCoeffSelect_eq_select",
-          "exactAlgCoeffSelect_eq_urgeRecoverySelect",
-          "exactAlgCoeffNoLocalArgmin",
-          "exactAlgCoeffsExcitementSelectRefusesSecondArgmin",
-          "exactAlgCoeffEmpty",
           "exactAlgFixtureAdmitOk",
           "exactAlgFixtureZeroDenRefused",
-          "exactAlgFixtureF64TheaterRefused",
           "exactAlgFixtureApplyMorphismOk",
           "exactAlgFixtureWitnessPreservesValue",
           "exactAlgFixtureAttachPreservesExactAlg",
-          "exactAlgCoeffF64TheaterNotAdmitted",
           "exactAlgCoeffZeroDenNotAdmitted",
-          "admissibleExactAlgCoeffs_intro",
-          "exactAlgCoeffsSecondLaw_from_physical",
-          "admissibleExactAlgCoeffs_from_physical",
-          "physicalSecondLaw_imported",
-          "exactAlgCoeffsPhysicsGreenFalse",
-          "exactAlgCoeffsProductionWiredFalse",
-          "exactAlgCoeffsModuleWitness",
-          "exactAlgCoeffs_noNewAxiom",
-          "exactAlgCoeffsPositiveRefuseNotSilent"
+          "admissibleExactAlgCoeffs_intro"
         ]
       },
       "import_lines": [
@@ -4675,29 +4126,19 @@
     },
     {
       "path": "Urge/ExactRatFreeEnergy.lean",
-      "content_sha256": "0357af4103bb7fd500557ea1e9ae874e98aa3aa006478ec757e7b82492037069",
+      "content_sha256": "da79658919059264d86e743abc308a66e1c2d6e90939a9d98e4c7abf1b058096",
       "declarations": {
-        "theorem": [
-          "executableFCarrier_eq_rat",
-          "executableF_eq_jointFreeEnergy",
-          "executableCandEnergy_eq_candEnergy",
-          "executableCandEnergy_eq_globalFreeEnergyCand",
-          "refuseF64AsIdentityTheater",
-          "exactRatFreeEnergyIdentityHolds",
-          "select_strictImprovement_exact_rat",
-          "pickMin_uses_exact_rat_energy",
-          "urgePhysicsGreenFalse",
-          "exactRatFreeEnergyProductionWiredFalse",
-          "exactRatFreeEnergyModuleWitness",
-          "exactRat_noLocalF64F"
-        ],
         "def": [
           "executableF",
           "executableCandEnergy",
-          "f64AsIdentityTheater",
-          "exactRatFreeEnergyIdentity",
-          "urgePhysicsGreen",
-          "exactRatFreeEnergyProductionWired"
+          "exactRatFreeEnergyIdentity"
+        ],
+        "theorem": [
+          "executableCandEnergy_eq_candEnergy",
+          "executableCandEnergy_eq_globalFreeEnergyCand",
+          "exactRatFreeEnergyIdentityHolds",
+          "select_strictImprovement_exact_rat",
+          "pickMin_uses_exact_rat_energy"
         ]
       },
       "import_lines": [
@@ -4709,7 +4150,7 @@
     },
     {
       "path": "Urge/ExcitementImport.lean",
-      "content_sha256": "61a535935c66a40359a98add6cb0e1f0b690bf15b2a8ade299788dd5a1d8029c",
+      "content_sha256": "1c0c0fbd3c7120995f1f5c4e80bc259525db78ef42b8f1bfd43c0f6ba8ad906b",
       "declarations": {
         "structure": [
           "HistoryRecoveryCtx"
@@ -4719,14 +4160,9 @@
           "urgeRecoverySelect_eq_select",
           "urgeRecovery_eq_urgeRecoverySelect",
           "urgeRecovery_empty",
-          "urgeRecovery_admissible",
-          "urgePhysicsGreenFalse",
-          "excitementImportProductionWiredFalse",
-          "excitementImportModuleWitness",
-          "urgeRecovery_noLocalArgmin"
+          "urgeRecovery_admissible"
         ],
         "def": [
-          "urgePhysicsGreen",
           "excitementImportProductionWired"
         ]
       },
@@ -4740,14 +4176,13 @@
     },
     {
       "path": "Urge/FabricNodes.lean",
-      "content_sha256": "4e22a4398f5b0bbc61389869cea66e53b848e787e87b80441da9889f7bef6dde",
+      "content_sha256": "149868e64f981ef8f3db9f6dfd152b7c40dcdc7f3186b3df4eb10f3cf54da8e7",
       "declarations": {
         "inductive": [
           "FabricReplicaClass",
           "FabricAuthority",
           "FabricNodesVerdict",
-          "FabricNodesRefusal",
-          "FabricExcitementComposePin"
+          "FabricNodesRefusal"
         ],
         "def": [
           "fabricReplicaEgressEmpty",
@@ -4762,10 +4197,8 @@
           "evaluateFabricNodesOperation",
           "refuseByzantineMeshClaim",
           "refuseForgejoInstallClaim",
-          "refuseSecondArgminSelector",
           "admitFabricNodePin",
           "applyFabricNodeMorphism",
-          "excitementComposePin",
           "fabricFixtureState",
           "fabricFixtureUcrs",
           "fabricFixtureMergeSafe",
@@ -4773,11 +4206,7 @@
           "fabricFixtureConjunct",
           "fabricFixtureByzantinePin",
           "fabricFixtureForgejoPin",
-          "admissibleFabricHistoryMove",
-          "fabricSecondLaw",
-          "fabricNodesPhysicsGreen",
-          "fabricNodesProductionWired",
-          "fabricNodesMarker"
+          "admissibleFabricHistoryMove"
         ],
         "structure": [
           "FabricUcrsStamp",
@@ -4786,49 +4215,23 @@
           "FabricNodeWitness",
           "FabricNodeMorphism",
           "FabricAdmissibilityConjunct",
-          "FabricNodesCtx",
-          "FabricHistoryMove",
-          "FabricTransition",
-          "PhysicalFabricBridge"
+          "FabricHistoryMove"
         ],
         "theorem": [
           "fabricNodesByzantineMeshRefused",
           "fabricNodesForgejoInstallRefused",
           "fabricNodesPinOkWhenHonest",
-          "refuseByzantineMeshClaimPositive",
-          "refuseForgejoInstallClaimPositive",
-          "refuseSecondArgminSelectorPositive",
           "fabricNodesPositiveRefuseNotSilent",
           "fabricNodesForgejoRefuseNotSilent",
-          "fabricNodesSelect_eq_excitementSelect",
-          "fabricNodesSelect_eq_urgeRecoverySelect",
-          "fabricNodesNoLocalArgmin",
-          "fabricNodesEmpty",
-          "fabricExcitementSelect_eq_excitementSelect",
-          "fabricExcitementSelect_refusesSecondArgmin",
-          "excitementComposePinMarker",
-          "urgeFabricSelect_eq_select",
           "fabricFixtureAdmitNode0Ok",
           "fabricFixtureApplyMorphismOk",
           "fabricNode0MapsToDevClone",
           "fabricNode1MapsToDevClone",
           "fabricUnknownNodeIdRefused",
-          "fabricOfflineLuksEgressEmpty",
-          "fabricDarwinScratchEgressEmpty",
-          "fabricForgejoPrimaryEgressNonempty",
           "fabricFixtureWitnessPreservesUcrs",
           "fabricFixtureByzantineRefused",
           "fabricFixtureForgejoRefused",
-          "fabricNodesSchemaPinEq",
-          "admissibleFabricHistoryMove_intro",
-          "fabricSecondLaw_from_physical",
-          "admissibleFabricHistoryMove_from_physical",
-          "landauerAnchorCited",
-          "fabricNodesPhysicsGreenFalse",
-          "fabricNodesProductionWiredFalse",
-          "fabricNodesModuleWitness",
-          "fabricNodesNoNewAxiom",
-          "fabricNodesMarkerEq"
+          "admissibleFabricHistoryMove_intro"
         ]
       },
       "import_lines": [
@@ -4842,7 +4245,7 @@
     },
     {
       "path": "Urge/FastPathAdmit.lean",
-      "content_sha256": "3308c7095a0d11ffd9b1c44efc87a90afaf905b9c5f82988d87bcd9470ee57cc",
+      "content_sha256": "78414ab9a30e0835af74d718926a4f350c4040e21e5c068321540c760c9fb15c",
       "declarations": {
         "def": [
           "localCommitBudgetMs",
@@ -4853,14 +4256,13 @@
           "refuseWallClockSlaTheater",
           "budgetWitnessFor",
           "checkTypedBudget",
-          "classifySlowPath",
-          "fastPathSecondLaw",
-          "fastPathPhysicsGreen",
-          "fastPathProductionWired"
+          "classifySlowPath"
+        ],
+        "inductive": [
+          "AdmitPath",
+          "FastPathAdmitRefusal"
         ],
         "theorem": [
-          "local_commit_budget_is_100",
-          "merge_recovery_budget_is_1000",
           "admitPath_fastLocal_budget",
           "admitPath_mergeRecovery_budget",
           "classifyAdmitPath_fastLocal",
@@ -4871,26 +4273,11 @@
           "checkTypedBudget_ok",
           "checkTypedBudget_exceeded",
           "slowPathRecovery_eq_urgeRecovery",
-          "slowPathRecovery_eq_excitementSelect",
-          "slowPathRecovery_eq_select",
-          "slowPathRecovery_no_second_argmin",
-          "classifySlowPath_mergeRecovery",
-          "fastPathSecondLaw_from_physical",
-          "fastPathOk_from_physical",
-          "fastPathPhysicsGreenFalse",
-          "fastPathProductionWiredFalse",
-          "fastPathAdmitModuleWitness",
-          "fastPathAdmit_noNewAxiom"
-        ],
-        "inductive": [
-          "AdmitPath",
-          "FastPathAdmitRefusal"
+          "classifySlowPath_mergeRecovery"
         ],
         "structure": [
           "FastPathCandidate",
-          "LatencyBudgetWitness",
-          "FastPathTransition",
-          "PhysicalFastPathBridge"
+          "LatencyBudgetWitness"
         ]
       },
       "import_lines": [
@@ -4903,17 +4290,14 @@
     },
     {
       "path": "Urge/FrugalMi.lean",
-      "content_sha256": "cd85047c4cc69f19825e89e119d12fb950c37ccb8f301600bbb8a2ce31376590",
+      "content_sha256": "5a9049be9df9d2be7bc7ace8338ac9dda9cd776ec6aa4d7391828a6f49f6013a",
       "declarations": {
         "structure": [
           "FrugalLocalState",
           "FrugalMeshState",
           "FrugalLocalMeshState",
           "FrugalMiObservation",
-          "FrugalMiAdmissibilityConjunct",
-          "FrugalMiCtx",
-          "FrugalMiTransition",
-          "PhysicalFrugalMiBridge"
+          "FrugalMiAdmissibilityConjunct"
         ],
         "inductive": [
           "FrugalLocalMeshCoalgebra",
@@ -4935,39 +4319,18 @@
           "frugalFixtureMesh",
           "frugalFixturePaired",
           "frugalFixtureCoalgebra",
-          "frugalFixtureConjunct",
-          "admissibleFrugalMiTransition",
-          "frugalMiSecondLaw",
-          "frugalMiPhysicsGreen",
-          "frugalMiProductionWired",
-          "frugalMiModalityUnwired"
+          "frugalFixtureConjunct"
         ],
         "theorem": [
           "frugalMiLandauerProofRefused",
           "frugalMiObservationOkWhenNotLandauer",
-          "refuseLandauerProofPositive",
-          "refuseLandauerKernelForkPositive",
           "pairwiseMiFixturePaired",
           "pairwiseMiFixtureZero",
-          "frugalMiSelect_eq_select",
-          "frugalMiSelect_eq_urgeRecoverySelect",
-          "frugalMiSelectBare_eq_select",
-          "frugalMiNoLocalArgmin",
-          "frugalMiSelect_empty",
-          "frugalFixtureLandauerProofRefused",
           "frugalFixturePairedObservationOk",
           "frugalFixtureMeshAbsentRefused",
           "frugalFixtureMiZeroRefused",
           "frugalFixtureWitnessDeficitRefused",
           "frugalFixtureCoalgebraRequiresPaired",
-          "frugalFixtureDeconstructPaired",
-          "frugalMiSecondLaw_from_physical",
-          "admissibleFrugalMiTransition_from_physical",
-          "frugalMiPhysicsGreenFalse",
-          "frugalMiProductionWiredFalse",
-          "frugalMiModalityUnwiredTrue",
-          "frugalMiModuleWitness",
-          "frugalMi_noNewAxiom",
           "frugalMiPositiveRefuseNotSilent",
           "frugalMiActingCoalgebraNotLandauerProof"
         ]
@@ -4983,7 +4346,7 @@
     },
     {
       "path": "Urge/GateBeforeSync.lean",
-      "content_sha256": "12c391c9831b9e23cbb6c2bc32494970dafad4f03345c4cbe4d557fe11485b59",
+      "content_sha256": "1a96ac978797234ccebe461f3f340b9415d486ce5f6d93ea2d84f3bdfcc4fcef",
       "declarations": {
         "structure": [
           "HistorySyncTick"
@@ -4993,9 +4356,7 @@
           "gateCheckBeforeSync",
           "mergeSafeTick",
           "excitementPreservesProvenance",
-          "admit",
-          "urgePhysicsGreen",
-          "gateBeforeSyncProductionWired"
+          "admit"
         ],
         "theorem": [
           "gateCheckBeforeSync_sound",
@@ -5003,19 +4364,11 @@
           "gateCheckBeforeSync_iff",
           "mergeSafeTick_intro",
           "mergeSafeTick_from_mergeSafe",
-          "excitementPreservesProvenance_from_physical",
-          "excitement_select_preserves_obligation",
-          "admit_iff",
           "admit_intro",
           "admit_gate",
           "admit_mergeSafe",
           "admit_excitementPreservesProvenance",
-          "admit_from_physical",
-          "admit_decomposed",
-          "urgePhysicsGreenFalse",
-          "gateBeforeSyncProductionWiredFalse",
-          "gateBeforeSyncModuleWitness",
-          "gateBeforeSync_noNewAxiom"
+          "admit_decomposed"
         ]
       },
       "import_lines": [
@@ -5051,7 +4404,7 @@
     },
     {
       "path": "Urge/GossipTick.lean",
-      "content_sha256": "34774bf1aca028308dcde086883f05901ff6c886f07ef4110e8479c9ca90df69",
+      "content_sha256": "42cb10901943031f101828ad5fdae7c84a719aff83e2c2f2ebc59c1f11a33584",
       "declarations": {
         "inductive": [
           "GossipTickMeasure",
@@ -5073,17 +4426,11 @@
           "witnessFromGossipCandidate",
           "applyGossipTickMorphism",
           "gossipFixtureDataset",
-          "gossipFixtureSecondArgminDataset",
           "gossipFixtureUcrs",
           "h3AdmissibleMeasuredGossipTick",
           "h3UnmeasuredFalseGreenFixture",
-          "h3SecondArgminFixture",
           "gossipFixtureConjunct",
-          "admissibleGossipTick",
-          "gossipTickSecondLaw",
-          "gossipTickPhysicsGreen",
-          "gossipTickProductionWired",
-          "gossipTickCatalogWitness"
+          "admissibleGossipTick"
         ],
         "structure": [
           "GossipTickCandidate",
@@ -5091,40 +4438,20 @@
           "GossipTickWitness",
           "GossipTickMorphism",
           "GossipTickAdmissibilityConjunct",
-          "GossipTickCtx",
-          "GossipTickTransition",
-          "PhysicalGossipTickBridge"
+          "GossipTickTransition"
         ],
         "theorem": [
           "refuseUnmeasuredGossipTick_positive",
-          "refuseSecondArgmin_positive",
-          "gossipTick_unmeasuredNotMeasured",
           "gossipTick_observedNoneWhenUnmeasured",
-          "gossipTickSelect_eq_select",
-          "gossipTickSelect_eq_urgeRecoverySelect",
-          "gossipTick_noLocalArgmin",
-          "gossipTickExcitementSelect_eq_select",
-          "gossipTickExcitementSelect_refusesSecondArgmin",
-          "gossipTickSelectBare_eq_select",
-          "gossipTickSelect_empty",
           "h3AdmissibleMeasuredGossipTick_admits",
           "h3AdmissibleMeasuredGossipTick_evaluateAdmit",
           "h3UnmeasuredFalseGreen_refused",
           "h3UnmeasuredFalseGreen_evaluateRefuse",
-          "h3SecondArgmin_refused",
-          "h3SecondArgmin_evaluateRefuse",
           "gossipFixture_measuredGossipTickOk",
           "gossipFixture_emptyDatasetRefused",
           "gossipFixture_applyMorphismOk",
           "gossipFixture_witnessPreservesMeasure",
           "gossipFixture_conjunctAdmitsTrue",
-          "gossipTickSecondLaw_from_physical",
-          "admissibleGossipTick_from_physical",
-          "physicalSecondLaw_imported",
-          "gossipTickPhysicsGreenFalse",
-          "gossipTickProductionWiredFalse",
-          "gossipTickModuleWitness",
-          "gossipTick_noNewAxiom",
           "gossipTick_positiveRefuseNotSilent",
           "gossipTick_unmeasuredNotFalseAsGreen"
         ]
@@ -5140,7 +4467,7 @@
     },
     {
       "path": "Urge/HilbertPersist.lean",
-      "content_sha256": "885187c2965dbbbab1ec3f7ae448a016910451b5b430d4d5392eae63c050573f",
+      "content_sha256": "795063b9a183e87f374d2f7a3b6e014190f62e7391a7e6b3832f0b6efa03f0b0",
       "declarations": {
         "inductive": [
           "HilbertPersistRole",
@@ -5155,10 +4482,7 @@
           "PersistHilbertSnapshot",
           "PersistHilbertWitness",
           "PersistHilbertMorphism",
-          "PersistAdmissibilityConjunct",
-          "PersistHilbertCtx",
-          "PersistHilbertTransition",
-          "PhysicalPersistHilbertBridge"
+          "PersistAdmissibilityConjunct"
         ],
         "def": [
           "persistConjunctAdmits",
@@ -5178,36 +4502,17 @@
           "persistFixtureMergeSafe",
           "persistFixtureIndex",
           "persistFixtureSnapshot",
-          "persistFixtureConjunct",
-          "admissiblePersistHilbertTransition",
-          "persistHilbertSecondLaw",
-          "hilbertPersistPhysicsGreen",
-          "hilbertPersistProductionWired"
+          "persistFixtureConjunct"
         ],
         "theorem": [
           "persistHilbert_fuse_occupancy_refused",
           "persistHilbert_morphism_ok_when_not_fuse",
-          "refuseHilbertFuseOccupancy_positive",
-          "refuseKnowingFiberFuse_positive",
-          "persistHilbertSelect_eq_select",
-          "persistHilbertSelectBare_eq_select",
-          "persistHilbertSelect_eq_urgeRecoverySelect",
-          "persistHilbert_noLocalArgmin",
-          "persistHilbert_empty",
-          "persistFixture_fuse_occupancy_refused",
           "persistFixture_apply_morphism_ok",
           "persistFixture_apply_fuse_refused",
           "persistFixture_witness_preserves_ucrs",
           "persistFixture_witness_preserves_index",
           "persistFixture_index_bits",
-          "persistHilbertSecondLaw_from_physical",
-          "admissiblePersistHilbertTransition_from_physical",
-          "hilbertPersistPhysicsGreenFalse",
-          "hilbertPersistProductionWiredFalse",
-          "hilbertPersistModuleWitness",
-          "hilbertPersist_noNewAxiom",
-          "hilbertPersist_positive_refuse_not_silent",
-          "hilbertPersist_acting_role_witness"
+          "hilbertPersist_positive_refuse_not_silent"
         ]
       },
       "import_lines": [
@@ -5222,7 +4527,7 @@
     },
     {
       "path": "Urge/HistoryFunctor.lean",
-      "content_sha256": "a01edd3e813ac37f3be7d684cb4771a6de5b0c9e35b1220a9a21dfc55ed20271",
+      "content_sha256": "706eccb5e6f696c7b1d71d1dffcdf6d6e69d5a9334241ccdc18d0dabd5277cc5",
       "declarations": {
         "structure": [
           "RawGitCommit",
@@ -5245,25 +4550,15 @@
           "fixtureRawCommit",
           "fixtureTypedHistory",
           "catalogDecode",
-          "catalogHistoryFunctor",
-          "urgePhysicsGreen",
-          "historyFunctorProductionWired"
+          "catalogHistoryFunctor"
         ],
         "theorem": [
-          "preservationProp_of_admissible",
           "evaluateTransition_rejects_invents_green",
-          "evaluateTransition_rejects_physics_green_without_witness",
           "evaluateTransition_rejects_drops_provenance",
           "provenancedOkStep_evaluates_accept",
           "catalogDecode_fixture",
           "catalogDecode_preserveCommitId",
-          "catalog_decode_fixture",
-          "preservationProp_from_physical",
-          "admissible_preserves_second_law",
-          "historyFunctor_noNewAxiom",
-          "urgePhysicsGreenFalse",
-          "historyFunctorProductionWiredFalse",
-          "historyFunctorModuleWitness"
+          "catalog_decode_fixture"
         ]
       },
       "import_lines": [
@@ -5274,7 +4569,7 @@
     },
     {
       "path": "Urge/HomologNotCopy.lean",
-      "content_sha256": "a3467add32a521b51bd84f0a36639b121dd545c1829015f4c2aee7ed350c59b3",
+      "content_sha256": "35d5e5fbf7ea170f3e43e08b3830dbfb94da4f2778a76ace9cbbab3ce64fc147",
       "declarations": {
         "structure": [
           "SiblingCommitRef",
@@ -5283,9 +4578,7 @@
           "HomologRecoveryArrow",
           "HomologRecoveryAttempt",
           "HomologAdmissibilityConjunct",
-          "HomologRecoveryCtx",
-          "HomologHistoryMove",
-          "PhysicalHomologBridge"
+          "HomologHistoryMove"
         ],
         "def": [
           "isNewExcitementArrow",
@@ -5310,30 +4603,16 @@
           "homologFixtureAttempt",
           "homologFixtureGitResetAttempt",
           "homologFixtureCopyClaimWitness",
-          "admissibleHomologRecovery",
-          "homologSecondLaw",
-          "homologNotCopyPhysicsGreen",
-          "homologNotCopyProductionWired"
+          "admissibleHomologRecovery"
         ],
         "inductive": [
           "HomologNotCopyRefusal",
           "HomologRecoveryClass",
-          "HomologRecoveryVerdict",
-          "HomologExcitementComposePin"
+          "HomologRecoveryVerdict"
         ],
         "theorem": [
           "homologRecovery_gitResetHard_refused",
           "homologRecovery_newArrow_ok_when_not_reset",
-          "refuseGitResetHardSibling_positive",
-          "refuseHomologAsCopy_positive",
-          "refuseSecondArgmin_positive",
-          "homologExcitementSelect_eq_select",
-          "homologRecoverySelect_eq_select",
-          "homologRecoverySelect_eq_urgeRecoverySelect",
-          "homologRecovery_noLocalArgmin",
-          "homologExcitementSelect_refuses_secondArgmin",
-          "homologRecovery_empty",
-          "homologFixture_gitResetHard_refused",
           "homologFixture_witness_notCopy",
           "homologFixture_classify_admitsArrow",
           "homologFixture_classify_refusesGitReset",
@@ -5341,15 +4620,7 @@
           "homologFixture_refuses_copyClaim",
           "homologFixture_isNewExcitementArrow",
           "homologFixture_siblingHashesDiffer",
-          "homologSecondLaw_from_physical",
-          "admissibleHomologRecovery_from_physical",
-          "homologNotCopyPhysicsGreenFalse",
-          "homologNotCopyProductionWiredFalse",
-          "homologNotCopyModuleWitness",
-          "homologNotCopy_noNewAxiom",
-          "homologNotCopy_positiveRefuse_notSilent",
-          "homologRecovery_classOfRefusal_gitReset",
-          "homologRecovery_classOfRefusal_homologCopy"
+          "homologNotCopy_positiveRefuse_notSilent"
         ]
       },
       "import_lines": [
@@ -5363,14 +4634,13 @@
     },
     {
       "path": "Urge/InvariantWitness.lean",
-      "content_sha256": "08ce599a9c7bfe51e6de6bd78b69a62f9f0c4cfedb87775bc99dfb920196b55e",
+      "content_sha256": "3a509f40f1dc64eabfd93964b942dcfeaa0a1b6837226c97cc5248da4ddffd34",
       "declarations": {
         "structure": [
           "HistoryObject",
           "InvariantWitnessBundle",
           "InvariantAdmissibilityConjunct",
           "HistoryCandidate",
-          "InvariantWitnessCtx",
           "WitnessedHistoryLedger"
         ],
         "inductive": [
@@ -5392,30 +4662,19 @@
           "applyInvariantWitnessAdmission",
           "excitementSelect",
           "urgeRecoverySelect",
-          "invariantWitnessSelect",
           "invariantFixtureObject",
           "invariantFixtureRejected",
           "invariantFixtureConjunct",
           "witnessedLedgerEmpty",
           "witnessedLedgerAppend",
           "allObjectsHaveWitness",
-          "witnessedLedgerEveryHasWitness",
-          "invariantWitnessPhysicsGreen",
-          "invariantWitnessProductionWired",
-          "invariantWitnessMarker"
+          "witnessedLedgerEveryHasWitness"
         ],
         "theorem": [
           "invariantWitnessAbsentRefused",
           "invariantWitnessAdmitOkWhenWitnessed",
-          "refuseWitnessAbsentPositive",
-          "refuseWitnessStripPositive",
           "satisfiedWitnessPropConsistent",
           "rejectedWitnessPropConsistent",
-          "invariantWitnessSelect_eq_excitementSelect",
-          "invariantWitnessSelect_eq_urgeRecoverySelect",
-          "invariantWitnessNoLocalArgmin",
-          "invariantWitnessEmpty",
-          "typedRecoverySelect_eq_select",
           "invariantFixtureAdmitOk",
           "invariantFixtureRejectedUnsatisfied",
           "invariantFixtureApplyAdmissionOk",
@@ -5424,14 +4683,7 @@
           "invariantFixtureWitnessPreservesMargin",
           "invariantFixtureLedgerAppendOk",
           "invariantFixtureLedgerEveryHasWitness",
-          "invariantSecondLawFromLandauer",
-          "landauerAnchorCited",
-          "invariantWitnessPhysicsGreenFalse",
-          "invariantWitnessProductionWiredFalse",
-          "invariantWitnessModuleWitness",
-          "invariantWitnessNoNewAxiom",
-          "invariantWitnessPositiveRefuseNotSilent",
-          "invariantWitnessMarkerEq"
+          "invariantWitnessPositiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -5445,7 +4697,7 @@
     },
     {
       "path": "Urge/KleisliClone.lean",
-      "content_sha256": "b20c6a7c22454279db337484c56b3f544c07e33eea870b621b4a1fd8f7495f31",
+      "content_sha256": "e8e2238ef31e7d56bbc560d0a4ee6717342584dd23f1354775cdf6b7f61ff8f6",
       "declarations": {
         "inductive": [
           "CloneOperatorVerb",
@@ -5456,17 +4708,13 @@
           "CloneReplicaClass",
           "InitialCoalgebraGateVerdict",
           "CloneGateMismatch",
-          "CloneArrowError",
-          "CloneExcitementComposePin"
+          "CloneArrowError"
         ],
         "structure": [
           "CloneVerbRow",
           "InitialReplicaCoalgebra",
           "CloneRemoteHost",
-          "CloneAdmission",
-          "CloneExcitementCtx",
-          "CloneHistoryTransition",
-          "PhysicalCloneBridge"
+          "CloneAdmission"
         ],
         "def": [
           "cloneVerbRow",
@@ -5486,27 +4734,15 @@
           "refuseExcitementArgminOnClone",
           "refuseReplicaClassOnClone",
           "refuseRemoteClassOnClone",
-          "refuseSecondArgminOnClone",
           "cloneFixtureCoalgebraAdmit",
           "cloneFixtureCoalgebraRefuseEgress",
           "cloneFixtureRemoteForge",
-          "cloneFixtureRemoteGithub",
-          "cloneAdmitSecondLaw",
-          "kleisliClonePhysicsGreen",
-          "kleisliCloneProductionWired"
+          "cloneFixtureRemoteGithub"
         ],
         "theorem": [
-          "kleisliGateMatchesCloneAdmit",
-          "kleisliGateMatchesCloneFrugalFalse",
           "cloneVerbRowMergeSafeNotRequired",
           "cloneVerbRowExcitementNotRequired",
           "cloneVerbRowEntityLabelCheck",
-          "cloneExcitementSelect_eq_select",
-          "cloneRecoverySelect_eq_select",
-          "cloneRecoverySelect_eq_urgeRecoverySelect",
-          "cloneNoLocalArgmin",
-          "cloneExcitementSelectRefusesSecondArgmin",
-          "cloneRecoveryEmpty",
           "cloneFixtureInitialCoalgebraAdmits",
           "cloneFixtureInitialCoalgebraRefusesEgress",
           "cloneFixtureArrowAdmitsLabs",
@@ -5514,19 +4750,7 @@
           "cloneFixtureComposeEntityRefusedOnGithub",
           "cloneFixtureParseLabs",
           "cloneFixtureParseComposeCaseInsensitive",
-          "cloneReplicaClassNode0Tag",
-          "cloneReplicaClassLuksTag",
-          "clonePositiveRefuseFrugalMi",
-          "clonePositiveRefuseSyncGate",
-          "cloneAdmitSecondLaw_from_physical",
-          "clonePhysicalSecondLawDischarge",
-          "kleisliClonePhysicsGreenFalse",
-          "kleisliCloneProductionWiredFalse",
-          "kleisliCloneModuleWitness",
-          "kleisliCloneNoNewAxiom",
-          "kleisliClonePositiveRefuseNotSilent",
-          "kleisliCloneComposeExcitementNotArgmin",
-          "refuseSecondArgminIsTag"
+          "kleisliClonePositiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -5541,7 +4765,7 @@
     },
     {
       "path": "Urge/KleisliFetch.lean",
-      "content_sha256": "800d758b529bb24e658ba9b07c2cd9ee151b8b259a6885f8b68552b025ff6fcc",
+      "content_sha256": "f90e910208ccda1d8abdeb00a4ee878d498e899403fea7fcdec22206d6af99ee",
       "declarations": {
         "inductive": [
           "FetchOperatorVerb",
@@ -5556,7 +4780,6 @@
           "fetchGateAdmits",
           "classifyFetchRemote",
           "evaluateFetchKleisli",
-          "refuseProductionWiredFetch",
           "refuseGateBypassFetch",
           "fetchKleisliArrowFromHost",
           "fetchKleisliAdmissible",
@@ -5565,18 +4788,10 @@
           "fetchFixtureState",
           "fetchFixtureAdmittedArrow",
           "fetchFixtureGateRefusedArrow",
-          "fetchFixtureRemoteRefusedArrow",
-          "admissibleFetchTransition",
-          "fetchSecondLaw",
-          "kleisliFetchPhysicsGreen",
-          "kleisliFetchProductionWired",
-          "excitementComposePin"
+          "fetchFixtureRemoteRefusedArrow"
         ],
         "structure": [
-          "FetchKleisliArrow",
-          "FetchCtx",
-          "FetchTransition",
-          "PhysicalFetchBridge"
+          "FetchKleisliArrow"
         ],
         "theorem": [
           "fetchKleisliAdmissible_spec",
@@ -5586,30 +4801,13 @@
           "fetchGateCheckBeforeSync_sound",
           "fetchGateCheckBeforeSync_eq_tick",
           "fetchInboundGateFromSync_admitted",
-          "fetchSelect_eq_select",
-          "fetchSelect_eq_admitHistorySelect",
-          "fetch_noLocalArgmin",
-          "fetchSelect_empty",
-          "fetchExcitementSelect_eq_select",
-          "fetchExcitementSelect_refuses_secondArgmin",
           "fetchFixture_admitted_ok",
           "fetchFixture_gate_refused",
           "fetchFixture_remote_refused",
           "fetchFixture_classify_forge_entity",
           "fetchFixture_classify_github_refused",
-          "fetchFixture_production_wired_refuse",
-          "fetchFixture_gate_bypass_refuse",
           "fetchFixture_kleisli_admissible",
-          "fetchPositiveRefuse_not_silent",
-          "fetchSecondLaw_from_physical",
-          "admissibleFetchTransition_from_physical",
-          "fetch_physicalSecondLaw_discharge",
-          "kleisliFetchPhysicsGreenFalse",
-          "kleisliFetchProductionWiredFalse",
-          "kleisliFetchModuleWitness",
-          "kleisliFetch_noNewAxiom",
-          "excitementComposePin_marker",
-          "refuseSecondArgmin_isTag"
+          "fetchPositiveRefuse_not_silent"
         ]
       },
       "import_lines": [
@@ -5625,7 +4823,7 @@
     },
     {
       "path": "Urge/KleisliInherit.lean",
-      "content_sha256": "9bd791e0c2402266e2978ef5118daf9d93e9b888f0382365405101f4ad136f19",
+      "content_sha256": "cb06b8d51f5590dea33f8a4199e019848ea9c3cac7d3c0d92fd2fb41ef907fe6",
       "declarations": {
         "theorem": [
           "kleisli_compose_preserves_admissibility",
@@ -5634,17 +4832,10 @@
           "kleisli_compose_preserves_admissibility_at",
           "kleisli_associativity_inherited",
           "kleisli_left_unit_inherited",
-          "kleisli_right_unit_inherited",
-          "kleisliAssociativityProbeHolds",
-          "inheritHistorySelect_eq_select",
-          "kleisliInheritPhysicsGreenFalse",
-          "kleisliInheritProductionWiredFalse",
-          "kleisliInheritModuleWitness"
+          "kleisli_right_unit_inherited"
         ],
         "def": [
-          "kleisli_associativity_probe_holds",
-          "kleisliInheritPhysicsGreen",
-          "kleisliInheritProductionWired"
+          "kleisli_associativity_probe_holds"
         ]
       },
       "import_lines": [
@@ -5658,7 +4849,7 @@
     },
     {
       "path": "Urge/KleisliMerge.lean",
-      "content_sha256": "4f3ed4a7740d42792c140b9fe492e2a03050b8743c0384b0fda8c065b096bb87",
+      "content_sha256": "8497ff9b94958250f4589c65abfb29dad47ffb0429600609cadaa81c04038a8a",
       "declarations": {
         "structure": [
           "HistoryMemoryEntry",
@@ -5668,10 +4859,8 @@
           "MergeProvenance",
           "MergeKleisliArrow",
           "MergeOutcome",
-          "MergeCtx",
           "MergeHistoryMove",
-          "MergeTransitionLaw",
-          "PhysicalMergeBridge"
+          "MergeTransitionLaw"
         ],
         "def": [
           "mergeSafePred",
@@ -5691,7 +4880,6 @@
           "refuseOutboundTickOnMerge",
           "refuseRemoteClassOnMerge",
           "refuseReplicaClassOnMerge",
-          "refuseProductionWiredMerge",
           "mergeFixtureEntry",
           "mergeFixtureObject",
           "mergeFixtureState",
@@ -5703,12 +4891,7 @@
           "mergeFixtureArrowMergeSafeRefused",
           "mergeFixtureRightCrossTier",
           "mergeFixtureArrowTierDisjointRefused",
-          "admissibleMergeHistoryMove",
-          "mergeSecondLaw",
-          "kleisliMergePhysicsGreen",
-          "kleisliMergeProductionWired",
-          "kleisliMergeMarker",
-          "excitementComposePin"
+          "admissibleMergeHistoryMove"
         ],
         "inductive": [
           "MergeSafeVerdict",
@@ -5732,29 +4915,13 @@
           "mergeHistoryEntry_admit",
           "mergeHistoryEntry_refuseOnMismatch",
           "evaluateTierDisjoint_same",
-          "mergeSelect_eq_select",
-          "mergeSelect_eq_admitHistorySelect",
-          "mergeKleisliNoLocalArgmin",
-          "mergeSelect_empty",
           "mergeFixtureSyncGateCheck",
           "mergeFixtureEvaluateOk",
           "mergeFixtureGateRefused",
           "mergeFixtureMergeSafeRefused",
           "mergeFixtureTierDisjointRefused",
-          "mergeFixtureCrdtRefused",
           "mergeFixturePositiveRefuseGates",
-          "admissibleMergeHistoryMove_intro",
-          "mergeSecondLaw_from_physical",
-          "admissibleMergeHistoryMove_from_physical",
-          "merge_physicalSecondLaw_discharge",
-          "kleisliMergePhysicsGreenFalse",
-          "kleisliMergeProductionWiredFalse",
-          "kleisliMergeMarkerPos",
-          "kleisliMergeModuleWitness",
-          "kleisliMerge_noNewAxiom",
-          "kleisliMergeNoSecondArgmin",
-          "excitementComposePin_marker",
-          "refuseSecondArgminIsTag"
+          "admissibleMergeHistoryMove_intro"
         ]
       },
       "import_lines": [
@@ -5770,7 +4937,7 @@
     },
     {
       "path": "Urge/KleisliPush.lean",
-      "content_sha256": "1682ffce4de047934949fa1d04a226505246137685028749803a8cf36a23c9ea",
+      "content_sha256": "fdcc8023985479eed8f4c942519c42d353dc473cfa5c12528daeec9d9c3ada96",
       "declarations": {
         "inductive": [
           "OutboundTickGate",
@@ -5789,7 +4956,6 @@
           "pushConjunctAdmits",
           "pushArrowAdmissible",
           "evaluatePushKleisli",
-          "refuseProductionWiredPush",
           "refuseGateBypassPush",
           "refuseSyncGateOnPush",
           "refuseFrugalMiOnPush",
@@ -5799,44 +4965,22 @@
           "pushFixtureAdmittedArrow",
           "pushFixtureGateRefusedArrow",
           "pushFixtureConjunct",
-          "admissiblePushHistoryMove",
-          "pushSecondLaw",
-          "kleisliPushPhysicsGreen",
-          "kleisliPushProductionWired"
+          "admissiblePushHistoryMove"
         ],
         "structure": [
           "PushKleisliArrow",
           "PushAdmissibilityConjunct",
-          "PushCtx",
-          "PushHistoryMove",
-          "PushTransition",
-          "PhysicalPushBridge"
+          "PushHistoryMove"
         ],
         "theorem": [
-          "pushSelect_eq_select",
-          "pushSelect_eq_urgeRecoverySelect",
-          "pushNoLocalArgmin",
-          "pushSelect_empty",
           "pushFixtureAdmittedOk",
           "pushFixtureGateRefused",
           "pushFixtureEntityRemoteForge",
           "pushFixtureEntityRefusedUpstreamOrigin",
           "pushFixtureEntityRefusedUpstreamGithub",
-          "pushFixtureKleisliGateMatchesPush",
-          "pushFixtureKleisliGateRejectsInboundSync",
-          "pushFixtureRefuseSyncGatePositive",
-          "pushFixtureRefuseFrugalMiPositive",
           "pushFixtureConjunctAdmits",
           "admissiblePushHistoryMove_intro",
-          "pushSecondLaw_from_physical",
-          "admissiblePushHistoryMove_from_physical",
-          "kleisliPushPhysicsGreenFalse",
-          "kleisliPushProductionWiredFalse",
-          "kleisliPushModuleWitness",
-          "kleisliPush_noNewAxiom",
-          "kleisliPushPositiveRefuseNotSilent",
-          "kleisliPushProductionWiredRefusePositive",
-          "kleisliPushGateBypassRefusePositive"
+          "kleisliPushPositiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -5849,7 +4993,7 @@
     },
     {
       "path": "Urge/KleisliRecover.lean",
-      "content_sha256": "ff569f10e0100dbc127b7c85fe7d530677d3fcec65fe5fb17debd12d541a6ce3",
+      "content_sha256": "584b0d5f4e7137e086296fb96302621dd3bbca533f8eadba31522d198b272331",
       "declarations": {
         "inductive": [
           "RecoverOperatorVerb",
@@ -5870,13 +5014,10 @@
           "kleisliGateMatchesRecover",
           "recoverConjunctAdmits",
           "evaluateRecoverOperation",
-          "refuseRsyncTheater",
           "witnessFromSnapshot",
           "recoverArrowAdmissible",
           "evaluateRecoverKleisli",
           "applyRecoverRecoveryMorphism",
-          "refuseProductionWiredRecover",
-          "refuseSecondArgminRecover",
           "refuseSyncGateOnRecover",
           "refuseFrugalMiOnRecover",
           "recoverFixtureState",
@@ -5887,10 +5028,7 @@
           "recoverFixtureAdmittedArrow",
           "recoverFixtureMergeFailArrow",
           "recoverFixtureEgressFailArrow",
-          "admissibleRecoverHistoryMove",
-          "recoverSecondLaw",
-          "kleisliRecoverPhysicsGreen",
-          "kleisliRecoverProductionWired"
+          "admissibleRecoverHistoryMove"
         ],
         "structure": [
           "RecoverMergeSafeWitness",
@@ -5901,46 +5039,21 @@
           "RecoverRecoveryMorphism",
           "RecoverVerbRow",
           "RecoverAdmissibilityConjunct",
-          "RecoverCtx",
-          "RecoverHistoryMove",
-          "RecoverTransition",
-          "PhysicalRecoverBridge"
+          "RecoverHistoryMove"
         ],
         "theorem": [
           "recoverVerbRowMergeSafeRequired",
           "recoverVerbRowExcitementRequired",
           "recoverVerbRowEntityCheckEgress",
-          "kleisliGateMatchesRecoverExcitement",
-          "kleisliGateMatchesRecoverRejectsInboundSync",
-          "recoverSelect_eq_select",
-          "recoverSelect_eq_recoverSelectBare",
-          "recoverNoLocalArgmin",
-          "recoverSelect_empty",
-          "recoverExcitementSelect_eq_select",
-          "recoverExcitementSelect_refusesSecondArgmin",
-          "recoverFixtureRsyncTheaterRefused",
           "recoverFixtureApplyMorphismOk",
           "recoverFixtureAdmittedOk",
           "recoverFixtureMergeSafeRefused",
           "recoverFixtureEgressRefused",
-          "recoverOfflineLuksEgressEmpty",
-          "recoverDarwinScratchEgressEmpty",
-          "recoverForgePrimaryEgressNonempty",
           "recoverClassifyOfflineLuksEgress",
           "recoverFixtureWitnessPreservesUcrs",
-          "recoverFixtureRefuseSyncGatePositive",
-          "recoverFixtureRefuseFrugalMiPositive",
           "recoverArrowAdmissibleFixture",
           "admissibleRecoverHistoryMove_intro",
-          "recoverSecondLaw_from_physical",
-          "admissibleRecoverHistoryMove_from_physical",
-          "kleisliRecoverPhysicsGreenFalse",
-          "kleisliRecoverProductionWiredFalse",
-          "kleisliRecoverModuleWitness",
-          "kleisliRecover_noNewAxiom",
-          "kleisliRecoverPositiveRefuseNotSilent",
-          "kleisliRecoverProductionWiredRefusePositive",
-          "kleisliRecoverSecondArgminRefusePositive"
+          "kleisliRecoverPositiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -5954,7 +5067,7 @@
     },
     {
       "path": "Urge/KleisliStatus.lean",
-      "content_sha256": "bca2ccc43cf5a58d9126d554c7504e2e1772229eda7bfb17ffe63c1b12c3e52b",
+      "content_sha256": "76667cbce2fe07c8af1b6e4410e463e93b09256293fa9735d272e6b47ee42d1f",
       "declarations": {
         "inductive": [
           "StatusReplicaClass",
@@ -5963,8 +5076,7 @@
           "EntityCheckKind",
           "FrugalMiGateVerdict",
           "StatusGateMismatch",
-          "StatusArrowError",
-          "StatusExcitementComposePin"
+          "StatusArrowError"
         ],
         "structure": [
           "OperatorVerbRow",
@@ -5984,39 +5096,18 @@
           "refuseRemoteClassOnStatus",
           "statusFixtureObsAdmit",
           "statusFixtureObsRefuseCap",
-          "statusFixtureObsRefuseZero",
-          "kleisliStatusPhysicsGreen",
-          "kleisliStatusProductionWired"
+          "statusFixtureObsRefuseZero"
         ],
         "theorem": [
           "statusVerbRow_excitementNotRequired",
           "statusVerbRow_mergeSafeNotRequired",
           "statusVerbRow_frugalMiGate",
-          "kleisliGateMatchesStatus_frugal",
-          "kleisliGateMatchesStatus_syncFalse",
-          "statusExcitementSelect_eq_select",
-          "statusExcitementSelect_refusesSecondArgmin",
-          "statusNoLocalArgmin",
-          "statusExcitementSelect_eq_admitHistorySelect",
-          "statusExcitement_empty",
           "statusFixture_frugalMiAdmits",
           "statusFixture_frugalMiRefusesCap",
           "statusFixture_frugalMiRefusesZero",
           "statusFixture_arrowOk",
           "statusFixture_arrowRefusesCap",
-          "statusPositiveRefuse_syncGate",
-          "statusPositiveRefuse_mergeSafe",
-          "statusPositiveRefuse_excitement",
-          "statusPositiveRefuse_outboundTick",
-          "statusPositiveRefuse_notSilent",
-          "statusPositiveRefuse_aggregate",
-          "physicalSecondLaw_imported",
-          "statusSecondLaw_from_physical",
-          "statusAdmissibleTransition_from_physical",
-          "kleisliStatusPhysicsGreenFalse",
-          "kleisliStatusProductionWiredFalse",
-          "kleisliStatusModuleWitness",
-          "kleisliStatus_noNewAxiom"
+          "statusPositiveRefuse_aggregate"
         ]
       },
       "import_lines": [
@@ -6030,7 +5121,7 @@
     },
     {
       "path": "Urge/LatencyBudget.lean",
-      "content_sha256": "75c780669fd90c0a2147ebd4e491f0ab5fee8808deaef95784bd301f1ad7ae82",
+      "content_sha256": "999acfb0429415d2a7a4d04b025aa809d063888be884c3d62a2b47c051545469",
       "declarations": {
         "def": [
           "interactiveBudgetMs",
@@ -6041,9 +5132,7 @@
           "latencyConjunctAdmits",
           "latencyBudgetAdmitPred",
           "evaluateWallClockSlaOperation",
-          "evaluatePhysicsGreenOperation",
           "refuseWallClockSlaTheater",
-          "refuseUnboundedLatencyRatioTheater",
           "evaluateLatencyBudgetAdmit",
           "witnessFromCandidate",
           "applyLatencyBudgetMorphismAdmitted",
@@ -6052,22 +5141,19 @@
           "checkTypedBudget",
           "refuseSecondArgmin",
           "admissibleLatencyBudget",
-          "latencySecondLaw",
           "latencyFixtureInteractiveCandidate",
           "latencyFixtureLocalCommitCandidate",
           "latencyFixtureOverBudgetCandidate",
           "latencyFixtureWallClockCandidate",
           "latencyFixtureGreenCandidate",
-          "latencyFixtureConjunct",
-          "urgePhysicsGreen",
-          "latencyBudgetProductionWired",
-          "latencyBudgetMarker"
+          "latencyFixtureConjunct"
+        ],
+        "inductive": [
+          "LatencyBudgetTier",
+          "LatencyBudgetRefusal",
+          "LatencyBudgetVerdict"
         ],
         "theorem": [
-          "interactive_budget_ms_eq",
-          "local_commit_budget_ms_eq",
-          "merge_recovery_budget_ms_eq",
-          "background_budget_ms_eq",
           "latencyTier_interactive_budget",
           "latencyTier_localCommit_budget",
           "latencyTier_mergeRecovery_budget",
@@ -6078,39 +5164,14 @@
           "checkTypedBudget_exceeded",
           "evaluate_wall_clock_sla_refused",
           "evaluate_wall_clock_sla_ok",
-          "refuse_wall_clock_sla_theater_positive",
-          "refuse_unbounded_ratio_theater_positive",
-          "latencyBudgetRecoverySelect_eq_select",
-          "urgeLatencyBudgetSelect_eq_select",
-          "latencyBudgetSelect_eq_excitementSelect",
-          "latencyBudgetNoSecondArgmin",
-          "urgeLatencyBudgetSelect_eq_excitementSelect",
-          "refuseSecondArgmin_is_tag",
-          "latencyBudgetRecovery_empty",
-          "latencySecondLaw_from_physical",
-          "admissibleLatencyBudget_from_physical",
-          "physicalSecondLaw_imported",
-          "latencyBudget_admitSecondLaw_from_physical",
           "latencyFixture_interactive_admits",
           "latencyFixture_localCommit_admits",
           "latencyFixture_over_budget_refused",
           "latencyFixture_wall_clock_refused",
-          "latencyFixture_physics_green_refused",
           "latencyFixture_apply_morphism_ok",
           "latencyFixture_admit_pred_within_tier",
           "latencyFixture_admit_pred_wall_clock_false",
-          "latency_budget_positive_refuse_not_silent",
-          "latency_budget_sla_theater_refused_not_admit_ok",
-          "urgePhysicsGreenFalse",
-          "latencyBudgetProductionWiredFalse",
-          "latencyBudgetMarkerEq",
-          "latencyBudgetModuleWitness",
-          "latencyBudget_noNewAxiom"
-        ],
-        "inductive": [
-          "LatencyBudgetTier",
-          "LatencyBudgetRefusal",
-          "LatencyBudgetVerdict"
+          "latency_budget_positive_refuse_not_silent"
         ],
         "structure": [
           "LatencyBudgetCandidate",
@@ -6118,10 +5179,7 @@
           "LatencyBudgetMorphismWitness",
           "LatencyBudgetMorphism",
           "LatencyAdmissibilityConjunct",
-          "LatencyBudgetCtx",
-          "LatencyHistoryMove",
-          "LatencyTransition",
-          "PhysicalLatencyBridge"
+          "LatencyHistoryMove"
         ]
       },
       "import_lines": [
@@ -6135,7 +5193,7 @@
     },
     {
       "path": "Urge/MergeSafe.lean",
-      "content_sha256": "4ec20fe668ab505f453f1196eb424d1ddd442380360d46f6d3ac85cce9b109a1",
+      "content_sha256": "7cc0305d1f911f4b849d852eb186998314eea6631c5146d63033d0107d458885",
       "declarations": {
         "structure": [
           "HistoryObject"
@@ -6143,9 +5201,7 @@
         "def": [
           "toMemoryEntry",
           "historyMergeSafePred",
-          "mergeHistoryAttempt",
-          "urgePhysicsGreen",
-          "mergeSafeProductionWired"
+          "mergeHistoryAttempt"
         ],
         "inductive": [
           "MergeRefusal"
@@ -6156,11 +5212,7 @@
           "mergeHistoryAttempt_theorem_err",
           "historyMergeSafePred_iff",
           "historyMergeSafe",
-          "historyMergeSafe_from_attempt",
-          "urgePhysicsGreenFalse",
-          "mergeSafeProductionWiredFalse",
-          "mergeSafeModuleWitness",
-          "historyMergeSafePred_eq_imported"
+          "historyMergeSafe_from_attempt"
         ]
       },
       "import_lines": [
@@ -6173,7 +5225,7 @@
     },
     {
       "path": "Urge/MetaReflexive.lean",
-      "content_sha256": "3b00c33b4797e46ba52d65c735e53df415f586a8af7bb619e7c7f448bb311eac",
+      "content_sha256": "aa697f5056238e338944a08a08ca0f6b4af2554872b7eef4f084d9c060ee2e35",
       "declarations": {
         "inductive": [
           "UrgeMorphismKind",
@@ -6186,10 +5238,7 @@
           "MetaReflexiveWitness",
           "UrgeMorphism",
           "ReflexiveHealthReport",
-          "MetaAdmissibilityConjunct",
-          "MetaReflexiveCtx",
-          "MetaReflexiveTransition",
-          "PhysicalMetaReflexiveBridge"
+          "MetaAdmissibilityConjunct"
         ],
         "def": [
           "metaConjunctAdmits",
@@ -6210,38 +5259,17 @@
           "metaFixtureBypassMorphism",
           "metaFixtureInventedGreen",
           "metaFixtureConjunct",
-          "metaFixtureHealthyReport",
-          "admissibleMetaReflexiveTransition",
-          "metaReflexiveSecondLaw",
-          "metaReflexivePhysicsGreen",
-          "metaReflexiveProductionWired"
+          "metaFixtureHealthyReport"
         ],
         "theorem": [
-          "metaReflexiveBypassRefused",
-          "metaReflexiveSelfExemptRefused",
-          "metaReflexiveInventedGreenRefused",
-          "metaReflexiveFormalOverclaimRefused",
           "evaluateMetaGateBypassPositive",
           "evaluateMetaGateBypassHonest",
-          "metaReflexiveSelect_eq_excitementSelect",
-          "metaReflexiveSelect_eq_urgeRecoverySelect",
-          "metaReflexiveNoLocalArgmin",
-          "metaReflexive_empty",
-          "metaReflexive_emptyBare",
           "metaFixtureHealthyAdmits",
           "metaFixtureBypassRefused",
           "metaFixtureInventedGreenRefused",
           "metaFixtureApplyMorphismOk",
           "metaFixtureWitnessPreservesStamp",
-          "metaReflexiveSecondLaw_from_physical",
-          "admissibleMetaReflexiveTransition_from_physical",
-          "physicalSecondLaw_imported",
-          "metaReflexivePhysicsGreenFalse",
-          "metaReflexiveProductionWiredFalse",
-          "metaReflexiveModuleWitness",
-          "metaReflexive_noNewAxiom",
           "metaReflexivePositiveRefuseNotSilent",
-          "metaReflexiveHonest",
           "metaReflexivePositiveRefuse"
         ]
       },
@@ -6256,7 +5284,7 @@
     },
     {
       "path": "Urge/NoWorkLost.lean",
-      "content_sha256": "3c829e342d716e2b048f3122dba1c2d973df83c8562872634af549407434ab9c",
+      "content_sha256": "123a6b96b059cc55d7e085aef50772f0d657c5c534807b3baf038773c6625f4b",
       "declarations": {
         "structure": [
           "AdmittedChange",
@@ -6278,10 +5306,7 @@
           "fixtureCatalog",
           "fixturePreservingOp",
           "fixtureOrphaningOp",
-          "noWorkLostPhysicsGreen",
-          "noWorkLostProductionWired",
-          "noWorkLostProvenanceMarker",
-          "noWorkLostNonClaim"
+          "noWorkLostProvenanceMarker"
         ],
         "inductive": [
           "UrgeOperationKind"
@@ -6292,17 +5317,10 @@
           "noWorkLost_preservingOp",
           "noWorkLostInvariant_preservingOp",
           "noWorkLost_iff_not_orphan",
-          "appendOnly_preserves_commit_head",
-          "admittedChange_appendOnly_not_silentRewrite",
           "fixture_reachable",
           "fixture_noWorkLost_preserving",
           "fixture_orphaning_clears_catalog",
-          "fixture_orphan_after_bad_op",
-          "noWorkLostPhysicsGreenFalse",
-          "noWorkLostProductionWiredFalse",
-          "noWorkLostProvenanceMarkerWitness",
-          "noWorkLostModuleWitness",
-          "noWorkLost_noNewAxiom"
+          "fixture_orphan_after_bad_op"
         ]
       },
       "import_lines": [
@@ -6315,17 +5333,14 @@
     },
     {
       "path": "Urge/OccupancyNotForge.lean",
-      "content_sha256": "a7abf545dfc877fdbecb3670e090d38f75a8e770a719452ddc3351d494452c30",
+      "content_sha256": "2bf7b53115723a6a979a40023600f46bf33f73f53ad3966deb53b80ba96667ab",
       "declarations": {
         "structure": [
           "OccupancyName",
           "ForgeName",
           "MetaName",
           "PadmaName",
-          "OccupancyNotForgeConjunct",
-          "OccupancyNotForgeCtx",
-          "OccupancyNotForgeTransition",
-          "PhysicalOccupancyNotForgeBridge"
+          "OccupancyNotForgeConjunct"
         ],
         "inductive": [
           "UrgeUnfusedName",
@@ -6336,7 +5351,6 @@
           "urgeNameTag",
           "urgeNameStringTag",
           "fourNamesUnfused",
-          "fourNameCount",
           "classifyUrgeName",
           "evaluateNameFusion",
           "tryMerge",
@@ -6346,7 +5360,6 @@
           "refusePadmaAsOccupancy",
           "onfConjunctAdmits",
           "onfFixtureConjunct",
-          "occupancySecondLaw",
           "onfFixtureOccupancy",
           "onfFixtureForge",
           "onfFixtureMeta",
@@ -6355,8 +5368,6 @@
           "onfFixtureForgeName",
           "onfFixtureMetaName",
           "onfFixturePadmaName",
-          "urgePhysicsGreen",
-          "occupancyNotForgeProductionWired",
           "occupancyNotForgeMarker"
         ],
         "theorem": [
@@ -6372,32 +5383,16 @@
           "meta_tag_ne_padma",
           "padma_tag_ne_occupancy",
           "fourNamesUnfusedHolds",
-          "four_name_count_is_four",
           "evaluate_name_fusion_refused_when_attempt",
           "evaluate_name_fusion_ok_when_hold",
           "try_merge_occupancy_forge_refused",
           "try_merge_padma_occupancy_refused",
-          "refuse_occupancy_as_forge_positive",
-          "refuse_meta_as_padma_positive",
           "onf_fixture_conjunct_admits",
-          "occupancyNotForgeSelect_eq_select",
-          "occupancyNotForgeSelectBare_eq_select",
-          "occupancyNotForgeSelect_eq_admitHistorySelect",
-          "occupancyNotForge_noLocalArgmin",
-          "occupancyNotForge_empty",
-          "occupancySecondLaw_from_physical",
-          "fourNamesUnfused_from_physical",
           "onf_fixture_four_tags_distinct",
           "onf_fixture_occupancy_forge_merge_refused",
           "onf_fixture_padma_occupancy_merge_refused",
-          "onf_fixture_evaluate_fusion_refused",
           "occupancy_not_forge_positive_refuse_not_silent",
-          "urgePhysicsGreenFalse",
-          "occupancyNotForgeProductionWiredFalse",
           "occupancyNotForgeMarkerNonempty",
-          "occupancyNotForgeModuleWitness",
-          "occupancyNotForge_noNewAxiom",
-          "occupancyNotForge_namedUnfused",
           "padma_not_fifth_urge_name"
         ]
       },
@@ -6412,19 +5407,17 @@
     },
     {
       "path": "Urge/OriginRefuse.lean",
-      "content_sha256": "afeb5e303fa2705d86c076c26da947d3c7a27ecf4a093cb949fff41c8b90999c",
+      "content_sha256": "41c433c265c38d49d30d6b039c6a5079e5d98a97aeb4e5be4d5871c69fa0bade",
       "declarations": {
         "inductive": [
           "OriginEntityLabel",
           "OriginHostClass",
           "OriginRefusal",
-          "OriginPolicyVerdict",
-          "OriginExcitementComposePin"
+          "OriginPolicyVerdict"
         ],
         "def": [
           "originHostTag",
           "originHostClassesNotXor",
-          "originHostClassCount",
           "originHostIsCursor",
           "originHostIsGithub",
           "originCursorHostPin",
@@ -6441,39 +5434,18 @@
           "witnessFromRemote",
           "applyOriginRefuseMorphism",
           "admissibleOriginRefuse",
-          "originSecondLaw",
           "originFixtureUcrs",
           "originFixtureConjunct",
           "composeOriginCursorFixture",
           "composeGithubOriginFixture",
-          "composeForgejoCanonicalFixture",
-          "urgePhysicsGreen",
-          "originRefuseProductionWired"
+          "composeForgejoCanonicalFixture"
         ],
         "theorem": [
-          "origin_cursor_tag",
-          "github_tag",
-          "forgejo_canonical_tag",
-          "unclassified_tag",
           "originHostTag_originCursor_ne_github",
           "originHostTag_originCursor_ne_forgejo",
           "originHostTag_github_ne_forgejo",
           "originHostClassesNotXorHolds",
-          "origin_host_class_count_is_four",
-          "refuse_origin_cursor_for_compose_positive",
-          "refuse_github_as_origin_for_compose_positive",
-          "refuse_dual_push_compose_positive",
-          "composeExcitementSelect_eq_select",
-          "originRefuseSelect_eq_select",
-          "originRefuseSelectBare_eq_select",
-          "originRefuseSelect_eq_originRefuseSelectBare",
-          "originRefuse_noLocalArgmin",
-          "composeExcitementSelect_refuses_secondArgmin",
-          "originRefuse_empty",
           "admissibleOriginRefuse_intro",
-          "originSecondLaw_from_physical",
-          "admissibleOriginRefuse_from_physical",
-          "physicalSecondLaw_imported",
           "origin_fixture_cursor_compose_refused",
           "origin_fixture_github_compose_refused",
           "origin_fixture_forgejo_compose_admitted",
@@ -6484,13 +5456,7 @@
           "origin_fixture_classify_github",
           "origin_fixture_classify_forgejo",
           "origin_fixture_conjunct_admits",
-          "urgePhysicsGreenFalse",
-          "originRefuseProductionWiredFalse",
-          "originRefuseModuleWitness",
-          "originRefuse_noNewAxiom",
-          "originRefuse_positiveRefuse_notSilent",
-          "originRefuse_composeExcitement_notArgmin",
-          "originRefuse_namedNotXor"
+          "originRefuse_positiveRefuse_notSilent"
         ],
         "structure": [
           "OriginRemoteDescriptor",
@@ -6498,10 +5464,7 @@
           "OriginPolicyWitness",
           "OriginRefuseMorphism",
           "OriginAdmissibilityConjunct",
-          "OriginRefuseCtx",
-          "OriginHistoryMove",
-          "OriginTransition",
-          "PhysicalOriginBridge"
+          "OriginHistoryMove"
         ]
       },
       "import_lines": [
@@ -6514,7 +5477,7 @@
     },
     {
       "path": "Urge/OverlayAdmit.lean",
-      "content_sha256": "e29c515bcc4c7593ff7d129c09813bb0f01aced7a844a6097af45ae224194f03",
+      "content_sha256": "d504f8a47b0c99a2e82097ca3c008a2d9d136f416c6f60284f2121dabbd31038",
       "declarations": {
         "structure": [
           "OverlayCarrier",
@@ -6532,7 +5495,6 @@
           "packet_arrival_not_sufficient",
           "tunnel_only_inadmissible",
           "magicdns_not_geometric",
-          "overlay_admissible_iff_conjuncts",
           "gate_missing_not_admissible",
           "occupancy_missing_not_admissible",
           "tailscale_wg_peer_refused",
@@ -6550,25 +5512,13 @@
     },
     {
       "path": "Urge/PadmaMembraneBacking.lean",
-      "content_sha256": "4b8d238bbbc37bdd30e74e39e907a44b53fdfd5fed83b909da37063d4a49a7dc",
+      "content_sha256": "2677a2791e8edcc0f7c9420cbaa8a25175ecd619063bac4b4e68abca8ce33c72",
       "declarations": {
         "def": [
           "leanProvenOnPortableFormal",
-          "physicsGreenFormal",
-          "productionWiredFormal",
           "portableCrateWiredFormal",
           "padmaIsFifthFibreFormal",
           "fourArmRunFormal"
-        ],
-        "theorem": [
-          "lean_proven_on_portable_stays_false",
-          "physics_green_stays_false",
-          "production_wired_stays_false",
-          "portable_crate_wired_stays_false",
-          "padma_not_fifth_fibre",
-          "four_arm_run_stays_false",
-          "invent_physics_green_refused",
-          "second_law_cited"
         ]
       },
       "import_lines": [
@@ -6580,7 +5530,7 @@
     },
     {
       "path": "Urge/ProvenancePreserve.lean",
-      "content_sha256": "1116b910ddc0deacf60cba6ecfbe1ee5496d180b7bb68a8a109b0461eea28a3b",
+      "content_sha256": "aa2b4ce021f0b740ff785ebe97e3972cb4a337cef7fa4ed1cd2f06319c6a9252",
       "declarations": {
         "structure": [
           "Provenance"
@@ -6588,23 +5538,12 @@
         "def": [
           "genesisProvenance",
           "preserves",
-          "postProvenanceFromPhysical",
-          "excitementSelectRespectsPreserves",
-          "urgePhysicsGreen",
-          "provenancePreserveProductionWired"
+          "postProvenance"
         ],
         "theorem": [
           "preserves_chain_append",
           "preserves_witness_retained",
-          "preserves_discharges_second_law",
-          "physicalBridge_preserves",
-          "admissibleHistoryTransition_preserves",
-          "provenanceSelect_eq_select",
-          "excitement_select_respects_preserves",
-          "urgePhysicsGreenFalse",
-          "provenancePreserveProductionWiredFalse",
-          "provenancePreserveModuleWitness",
-          "provenancePreserve_noNewAxiom"
+          "postProvenance_preserves"
         ]
       },
       "import_lines": [
@@ -6617,7 +5556,7 @@
     },
     {
       "path": "Urge/Reconcile.lean",
-      "content_sha256": "cbef37132a3db1e9737bb4d5bc2deb868f673e696682b27c7c934f44d3925874",
+      "content_sha256": "eeeed62274936d806685ed3095a6853a7092183d17fc5bd5d551d2fc4a99f519",
       "declarations": {
         "structure": [
           "Head",
@@ -6630,7 +5569,6 @@
           "unionPreserving",
           "contentConflict",
           "reconcileAdmissible",
-          "reconcilePhysicsGreen",
           "fixtureLeft",
           "fixtureRight",
           "fixtureConflictL",
@@ -6639,7 +5577,6 @@
         "theorem": [
           "unionPreserving_trivial",
           "contentConflict_not_admissible",
-          "reconcilePhysicsGreen_false",
           "fixture_union_preserving",
           "fixture_conflict_refused",
           "fixture_conflict_blocks_admit"
@@ -6654,7 +5591,7 @@
     },
     {
       "path": "Urge/ReplicaClass.lean",
-      "content_sha256": "7711e192683f11e029ee1296394d8ff9113ce11ac4fa91ff7511afd6950adb01",
+      "content_sha256": "57f402f96a6fbdf87d74fd41842d566642f10b455a8ed075850903c24f0686fa",
       "declarations": {
         "inductive": [
           "ReplicaClassLabel",
@@ -6662,8 +5599,7 @@
           "ReplicaAuthority",
           "ReplicaClassAdmit",
           "FabricNodeClassVerdict",
-          "ReplicaClassRefusal",
-          "ReplicaExcitementComposePin"
+          "ReplicaClassRefusal"
         ],
         "def": [
           "replicaClassClassField",
@@ -6672,10 +5608,8 @@
           "parseReplicaClassField",
           "replicaEgressEmpty",
           "replicaClassBlueprintRow",
-          "replicaClassTableCardinality",
           "replicaClassLabelToNat",
           "evaluateFabricNodeClass",
-          "refuseInventedPhysicsGreen",
           "refuseMissingClassField",
           "refuseCustomerComposeLabsGossip",
           "refuseSecondExcitementArgmin",
@@ -6684,48 +5618,23 @@
           "replicaClassFixtureState",
           "replicaClassFixtureNode0Pin",
           "replicaClassFixtureInventGreenPin",
-          "replicaClassFixtureComposeGossipPin",
-          "urgePhysicsGreen",
-          "replicaClassProductionWired",
-          "replicaClassMarker"
+          "replicaClassFixtureComposeGossipPin"
         ],
         "structure": [
           "ReplicaClassTableRow",
           "FabricNodeClassPin",
-          "FabricNodeClassRow",
-          "ReplicaClassCtx"
+          "FabricNodeClassRow"
         ],
         "theorem": [
-          "refuseInventedPhysicsGreenPositive",
-          "refuseMissingClassFieldPositive",
-          "refuseCustomerComposeLabsGossipPositive",
-          "refuseSecondExcitementArgminPositive",
-          "composeReplicaExcitementSelect_eq_select",
-          "replicaClassSelect_eq_select",
-          "replicaClassSelect_eq_urgeRecoverySelect",
-          "replicaClassNoLocalArgmin",
-          "composeReplicaExcitementSelect_refusesSecondArgmin",
-          "replicaClassSelect_empty",
           "replicaClassFixtureNode0Admitted",
           "replicaClassFixtureInventGreenRefused",
           "replicaClassFixtureComposeGossipRefused",
           "replicaClassOfflineLuksEgressEmpty",
           "replicaClassDarwinScratchEgressEmpty",
           "replicaClassForgejoEgressNonempty",
-          "replicaClassTableCardinalitySix",
-          "replicaClassNode0ClassField",
           "replicaClassParseLegacyNode0",
           "replicaClassParseUnknownNone",
-          "replicaClassPositiveRefuseNotSilent",
-          "replicaClassComposeExcitementNotArgmin",
-          "physicalSecondLaw_imported",
-          "replicaClassSecondLaw_from_physical",
-          "landauerAnchorCited",
-          "urgePhysicsGreenFalse",
-          "replicaClassProductionWiredFalse",
-          "replicaClassMarkerEq",
-          "replicaClassModuleWitness",
-          "replicaClassNoNewAxiom"
+          "replicaClassPositiveRefuseNotSilent"
         ]
       },
       "import_lines": [
@@ -6740,7 +5649,7 @@
     },
     {
       "path": "Urge/ReplicaCoalgebra.lean",
-      "content_sha256": "17ec3848043ed85a72df0d63cced26bd77a1a3f4ab32ab8174394ad9ac13f019",
+      "content_sha256": "4e70b4d2b2c752a3cccf353739ecf8e273d07c9c1f4e546b3e1912b8dd94a638",
       "declarations": {
         "inductive": [
           "ReplicaClass"
@@ -6748,7 +5657,6 @@
         "def": [
           "replicaClassTag",
           "replicaClassesNotXor",
-          "replicaClassCount",
           "node0SampleSection",
           "node1SampleSection",
           "forgeSampleSection",
@@ -6756,16 +5664,9 @@
           "sampleSectionAt",
           "replicaCoalgebraObserve",
           "networkEgress",
-          "admissibleReplicaCoalgebra",
-          "replicaSecondLaw",
-          "urgePhysicsGreen",
-          "replicaCoalgebraProductionWired"
+          "admissibleReplicaCoalgebra"
         ],
         "theorem": [
-          "node0_tag",
-          "node1_tag",
-          "forge_tag",
-          "luks_tag",
           "replicaClassTag_node0_ne_node1",
           "replicaClassTag_node0_ne_forge",
           "replicaClassTag_node0_ne_luks",
@@ -6773,7 +5674,6 @@
           "replicaClassTag_node1_ne_luks",
           "replicaClassTag_forge_ne_luks",
           "replicaClassesNotXorHolds",
-          "replica_class_count_is_four",
           "replicaCoalgebraObserve_components",
           "sampleSectionAt_node0",
           "sampleSectionAt_node1",
@@ -6782,26 +5682,13 @@
           "node0DoesNotCloseLuks",
           "luks_network_egress_empty",
           "node0_network_egress_tailscale",
-          "offline_luks_is_network_egress_empty",
-          "admissibleReplicaCoalgebra_intro",
-          "typedRecoveryMorphism_eq_select",
-          "typedRecoverySelect_eq_select",
-          "typedRecoveryMorphism_eq_typedRecoverySelect",
-          "replicaSecondLaw_from_physical",
-          "admissibleReplicaCoalgebra_from_physical",
-          "urgePhysicsGreenFalse",
-          "replicaCoalgebraProductionWiredFalse",
-          "replicaCoalgebraModuleWitness",
-          "replicaCoalgebra_noNewAxiom",
-          "replicaCoalgebra_namedNotXor"
+          "admissibleReplicaCoalgebra_intro"
         ],
         "structure": [
           "ReplicaMeshSheaf",
           "ReplicaSectionBundle",
           "ReplicaHistoryMove",
-          "RecoveryCtx",
-          "ReplicaTransition",
-          "PhysicalReplicaBridge"
+          "RecoveryCtx"
         ]
       },
       "import_lines": [
@@ -6813,23 +5700,19 @@
     },
     {
       "path": "Urge/ResidueReturn.lean",
-      "content_sha256": "90e3783f6a331a0cf6c2aac39562b445abe1d11a629ab358294532d4aff0995e",
+      "content_sha256": "45c36cc7c9f9494cb23c25d5daba5af42fe346c63048b46899ba989ec8436f64",
       "declarations": {
         "def": [
           "residueConstructorTag",
           "residueConstructorsDistinct",
-          "residueConstructorCount",
           "pinSixResidueConstructors",
           "ResidueCounts.zero",
           "ResidueCounts.record",
           "ResidueCounts.total",
           "observedDeltaF",
-          "f64DeltaFTheater",
           "exactRatObservedDeltaF",
           "ReturnPayload.empty",
-          "refuseSeventhConstructor",
-          "urgePhysicsGreen",
-          "residueReturnProductionWired"
+          "refuseSeventhConstructor"
         ],
         "theorem": [
           "noCandidates_tag",
@@ -6854,36 +5737,19 @@
           "residueConstructorTag_allExcludedByDEC_ne_noStrictImprovement",
           "residueConstructorTag_untaggedConstant_ne_noStrictImprovement",
           "residueConstructorsDistinctHolds",
-          "residue_constructor_count_is_six",
           "pinSixResidueConstructors_length",
           "pinSixResidueConstructors_tags_nodup",
           "residue_cases_in_pinSix",
           "ResidueCounts.record_noCandidates",
           "ResidueCounts.record_noStrictImprovement",
           "observedDeltaFFromCand_delta",
-          "refuseF64DeltaF",
           "exactRatObservedDeltaFHolds",
-          "residueReturnSelect_eq_select",
-          "recordRecoveryAttempt_inl",
-          "recordRecoveryAttempt_inr",
-          "residueReturn_empty",
-          "recordRecoveryAttempt_empty",
-          "seventhConstructorRefused",
-          "residueReturn_admitSecondLaw_from_physical",
-          "residueReturn_admissible_from_physical",
-          "urgePhysicsGreenFalse",
-          "residueReturnProductionWiredFalse",
-          "residueReturnModuleWitness",
-          "residueReturn_noNewAxiom",
-          "residueReturn_namedSixConstructors",
-          "residueReturn_noLocalArgmin"
+          "seventhConstructorRefused"
         ],
         "structure": [
           "ResidueCounts",
           "ObservedDeltaF",
-          "ReturnPayload",
-          "ResidueReturnTransition",
-          "PhysicalResidueReturnBridge"
+          "ReturnPayload"
         ],
         "inductive": [
           "SeventhConstructorRefusal"
@@ -6900,17 +5766,14 @@
     },
     {
       "path": "Urge/SdfCanonical.lean",
-      "content_sha256": "6355dcfa20af4ef7dc4fea113cacb392579b076eeff13672c666e95bf14d447f",
+      "content_sha256": "10913589147e4fc58d965ed8425619a9ac22e9499fcec28bb34f2339d3acf062",
       "declarations": {
         "structure": [
           "HistoryAction",
           "HistoryIdentity",
           "SdfCanonicalWitness",
           "SdfCanonicalMorphism",
-          "SdfCanonicalAdmissibilityConjunct",
-          "SdfCanonicalCtx",
-          "SdfCanonicalTransition",
-          "PhysicalSdfCanonicalBridge"
+          "SdfCanonicalAdmissibilityConjunct"
         ],
         "inductive": [
           "BehaviorEquivVerdict",
@@ -6929,7 +5792,6 @@
           "evaluateInventedEquivWithoutCanonical",
           "refuseAliasWithoutCanonicalization",
           "refuseInventedEquivWithoutCanonical",
-          "refuseSecondArgminSelector",
           "witnessFromHistoryIdentity",
           "sdfCanonicalTheorem",
           "admitHistoryIdentityStep",
@@ -6943,41 +5805,21 @@
           "sdfCanonicalFixtureActionDistinct",
           "sdfCanonicalFixtureIdentityDistinct",
           "sdfCanonicalFixtureActionAlias",
-          "sdfCanonicalFixtureConjunct",
-          "admissibleSdfCanonicalTransition",
-          "sdfCanonicalSecondLaw",
-          "sdfCanonicalPhysicsGreen",
-          "sdfCanonicalProductionWired"
+          "sdfCanonicalFixtureConjunct"
         ],
         "theorem": [
           "SDFCanonical",
           "sdfCanonicalAliasRefused",
           "sdfCanonicalAdmittedWhenNotAlias",
           "sdfCanonicalInventedEquivRefused",
-          "refuseAliasWithoutCanonicalizationPositive",
-          "refuseSecondArgminSelectorPositive",
-          "sdfCanonicalExcitementSelect_eq_select",
-          "sdfCanonicalSelect_eq_select",
-          "sdfCanonicalSelect_eq_urgeRecoverySelect",
-          "sdfCanonicalNoLocalArgmin",
-          "sdfCanonicalExcitementSelect_refusesSecondArgmin",
-          "sdfCanonicalSelectBare_eq_select",
-          "sdfCanonical_empty",
           "sdfCanonicalFixtureCanonicalSdfId",
           "sdfCanonicalFixtureByteEqualAdmitted",
-          "sdfCanonicalFixtureAliasRefused",
           "sdfCanonicalFixtureApplyMorphismOk",
           "sdfCanonicalFixtureWitnessPreservesBytes",
           "sdfCanonicalTheoremTautology",
           "sdfCanonicalNamedIdentityTautology",
           "sdfCanonicalAliasNotAdmitted",
           "sdfCanonicalPositiveRefuseNotSilent",
-          "sdfCanonicalSecondLaw_from_physical",
-          "admissibleSdfCanonicalTransition_from_physical",
-          "sdfCanonicalPhysicsGreenFalse",
-          "sdfCanonicalProductionWiredFalse",
-          "sdfCanonicalModuleWitness",
-          "sdfCanonical_noNewAxiom",
           "sdfCanonical_namedOnHistoryIdentity"
         ]
       },
@@ -6992,7 +5834,7 @@
     },
     {
       "path": "Urge/SignedPropagate.lean",
-      "content_sha256": "3a268b4f69ab51b798da8eb7e5ba96589feef5b30fb99d4bdd0fb7249d68d01c",
+      "content_sha256": "0b3d1c805f3ed0b8b3927548d2bda3efe0e33228a4a68492d137bd45b1d22c43",
       "declarations": {
         "structure": [
           "SignedPropagateWallStamp",
@@ -7001,10 +5843,7 @@
           "SignedPropagateWitness",
           "SignedPropagateMorphism",
           "SignedAdmissibilityConjunct",
-          "SignedPropagateCtx",
-          "SignedPropagateHistoryMove",
-          "SignedPropagateTransition",
-          "PhysicalSignedPropagateBridge"
+          "SignedPropagateHistoryMove"
         ],
         "inductive": [
           "SignedPropagateRefusal",
@@ -7023,7 +5862,6 @@
           "applySignedPropagateMorphism",
           "refuseUnsignedPropagationTag",
           "refuseSecondArgmin",
-          "excitementComposePin",
           "signedFixtureStamp",
           "signedFixturePostStamp",
           "signedFixtureState",
@@ -7032,23 +5870,11 @@
           "signedFixturePostState",
           "signedFixtureUnsignedState",
           "signedFixtureWitnessDropStep",
-          "admissibleSignedPropagateHistoryMove",
-          "signedPropagateSecondLaw",
-          "signedPropagatePhysicsGreen",
-          "signedPropagateProductionWired",
-          "signedPropagateMarker"
+          "admissibleSignedPropagateHistoryMove"
         ],
         "theorem": [
           "signedPropagateUnsignedRefused",
           "signedPropagateMorphismOkWhenNotUnsigned",
-          "refuseUnsignedPropagationPositive",
-          "signedPropagateSelect_eq_select",
-          "signedPropagateSelect_eq_urgeSignedPropagateSelect",
-          "signedPropagateNoLocalArgmin",
-          "signedPropagateEmpty",
-          "excitementComposePinMarker",
-          "urgeSignedPropagateSelect_eq_select",
-          "signedFixtureUnsignedRefused",
           "signedFixturePropagateOk",
           "signedFixtureApplyMorphismOk",
           "signedFixtureUnsignedPropagationRefused",
@@ -7057,16 +5883,7 @@
           "signedFixtureWallStampOk",
           "signedFixtureWitnessPresent",
           "signedPropagatePositiveRefuseNotSilent",
-          "admissibleSignedPropagateHistoryMove_intro",
-          "signedPropagateSecondLaw_from_physical",
-          "admissibleSignedPropagateHistoryMove_from_physical",
-          "landauerAnchorCited",
-          "signedPropagatePhysicsGreenFalse",
-          "signedPropagateProductionWiredFalse",
-          "signedPropagateMarkerEq",
-          "signedPropagateModuleWitness",
-          "signedPropagateNoNewAxiom",
-          "refuseSecondArgminIsTag"
+          "admissibleSignedPropagateHistoryMove_intro"
         ]
       },
       "import_lines": [
@@ -7079,7 +5896,7 @@
     },
     {
       "path": "Urge/Supervision.lean",
-      "content_sha256": "593702884100ae5c44b430fc532f31ab6b3551757521a65e26a75ebd74504973",
+      "content_sha256": "e07315f795b379aae955b6d901d5d1a536d03906e2c84e83fdde1446b64307ae",
       "declarations": {
         "inductive": [
           "SupervisionPhase",
@@ -7088,14 +5905,12 @@
         "def": [
           "budgetUs",
           "phaseOrder",
-          "localCycleAdmissible",
-          "supervisionPhysicsGreen"
+          "localCycleAdmissible"
         ],
         "theorem": [
           "phaseOrder_len",
           "local_admissible",
-          "offline_inadmissible",
-          "supervisionPhysicsGreen_false"
+          "offline_inadmissible"
         ]
       },
       "import_lines": [
@@ -7107,13 +5922,12 @@
     },
     {
       "path": "Urge/ThreeDagSeparate.lean",
-      "content_sha256": "7262d4f6bf75205df395f1ce69e28f13d9c2c0d955c3e7117fe8661a5b5954af",
+      "content_sha256": "f43324a01ad4eec366bde8a97c47039f8b04cbb056de3e1b3406a5b8a911877f",
       "declarations": {
         "inductive": [
           "ThreeDagSubstrate",
           "ThreeDagFusionRefusal",
-          "ThreeDagWalkerVerdict",
-          "ThreeDagExcitementComposePin"
+          "ThreeDagWalkerVerdict"
         ],
         "structure": [
           "GitCommitNode",
@@ -7124,15 +5938,12 @@
           "ThreeDagWitness",
           "ThreeDagMorphism",
           "ThreeDagAdmissibilityConjunct",
-          "ThreeDagCtx",
-          "ThreeDagTransition",
-          "PhysicalThreeDagBridge"
+          "ThreeDagTransition"
         ],
         "def": [
           "threeDagConjunctAdmits",
           "refusesGitKleisliFusion",
           "refusesUcrsGitFusion",
-          "refuseSecondArgminSelector",
           "evaluateThreeDagWalk",
           "witnessFromCoords",
           "applyThreeDagMorphism",
@@ -7143,34 +5954,17 @@
           "threeDagFixtureKleisli",
           "threeDagFixtureUcrsNode",
           "threeDagFixtureFusedCoords",
-          "threeDagSecondLaw",
-          "admissibleThreeDagWalk",
-          "threeDagSeparatePhysicsGreen",
-          "threeDagSeparateProductionWired"
+          "admissibleThreeDagWalk"
         ],
         "theorem": [
-          "refuseSecondArgminSelector_positive",
           "refuses_git_kleisli_fusion_detects_equal",
           "refuses_git_kleisli_fusion_separate",
-          "threeDagSelect_eq_select",
-          "threeDagSelect_eq_urgeRecoverySelect",
-          "threeDag_noLocalArgmin",
-          "threeDagExcitementSelect_eq_select",
-          "threeDagExcitementSelect_refuses_second_argmin",
-          "threeDagSelect_empty",
           "threeDagFixture_walk_admitted",
           "threeDagFixture_git_kleisli_fusion_refused",
           "threeDagFixture_wall_clock_order_refused",
           "threeDagFixture_apply_morphism_ok",
           "threeDagFixture_witness_preserves_ucrs",
-          "threeDagFixture_physics_green_invent_refused",
-          "threeDag_fusion_refuse_not_silent",
-          "threeDagSecondLaw_from_physical",
-          "admissibleThreeDagWalk_from_physical",
-          "threeDagSeparatePhysicsGreenFalse",
-          "threeDagSeparateProductionWiredFalse",
-          "threeDagSeparateModuleWitness",
-          "threeDagSeparate_noNewAxiom"
+          "threeDag_fusion_refuse_not_silent"
         ]
       },
       "import_lines": [
@@ -7185,7 +5979,7 @@
     },
     {
       "path": "Urge/Transport.lean",
-      "content_sha256": "1886a289713b7fb1c9b2d926749c727e5e2fcb641d254589f550ea77984d0cfa",
+      "content_sha256": "8200e503370a55558d0165abb2af9eca96aadbea4fa82655c00c03f49718effe",
       "declarations": {
         "inductive": [
           "Transport",
@@ -7194,16 +5988,14 @@
         "def": [
           "canCarry",
           "admitCarry",
-          "channelSet",
-          "transportPhysicsGreen"
+          "channelSet"
         ],
         "theorem": [
           "local_can_carry",
           "offline_cannot_carry",
           "admit_local_ok",
           "admit_offline_refuses",
-          "channelSet_len",
-          "transportPhysicsGreen_false"
+          "channelSet_len"
         ]
       },
       "import_lines": [
@@ -7215,16 +6007,13 @@
     },
     {
       "path": "Urge/UmstTomlRemotes.lean",
-      "content_sha256": "1277afb2f9e6993494bbd9a32a1f99734d94de16d7bfb32474e38300b980926b",
+      "content_sha256": "340f3751f2ce2fca9045ad40653a6afa1823e4c62475a2d9505e635b4653f3d6",
       "declarations": {
         "structure": [
           "UrgeRemoteTomlRow",
           "UmstTomlRemotesDocument",
           "UmstTomlRemotesConjunct",
-          "UmstTomlRemotesCtx",
-          "UmstTomlRemotesHistoryMove",
-          "UmstTomlRemotesTransition",
-          "PhysicalUmstTomlRemotesBridge"
+          "UmstTomlRemotesHistoryMove"
         ],
         "inductive": [
           "TomlRemoteParseError",
@@ -7237,8 +6026,6 @@
           "evaluateTomlPrePush",
           "umstTomlRemotesConjunctAdmits",
           "evaluateUmstTomlRemotesOperation",
-          "refuseSecondArgminSelector",
-          "refuseProductionWiredTomlPush",
           "applyUmstTomlRemoteRow",
           "umstTomlFixtureLabsPublic",
           "umstTomlFixtureComposeConfidential",
@@ -7247,23 +6034,13 @@
           "parseRootUmstTomlRemotesEmpty",
           "umstTomlFixtureConjunct",
           "umstTomlFixtureState",
-          "admissibleUmstTomlRemotes",
-          "umstTomlRemotesSecondLaw",
-          "umstTomlRemotesPhysicsGreen",
-          "umstTomlRemotesProductionWired"
+          "admissibleUmstTomlRemotes"
         ],
         "theorem": [
           "umstTomlRemotesParseRefusedPositive",
           "umstTomlRemotesDocumentOkWhenNotParseRefused",
-          "refuseSecondArgminSelectorPositive",
-          "refuseProductionWiredTomlPushPositive",
           "rootUmstTomlFixtureDocumentTwoRows",
-          "parseRootUmstTomlRemotesFixtureOk",
           "parseRootUmstTomlRemotesEmptyRefused",
-          "umstTomlRemotesSelect_eq_excitementSelect",
-          "umstTomlRemotesSelect_eq_urgeRecoverySelect",
-          "umstTomlRemotes_noLocalArgmin",
-          "umstTomlRemotes_empty",
           "umstTomlLabsPublicSectionKey",
           "umstTomlComposeConfidentialSectionKey",
           "umstTomlRowToPolicyLabsPublic",
@@ -7275,12 +6052,6 @@
           "umstTomlFixtureApplyRowOk",
           "umstTomlSectionPrefixWitness",
           "admissibleUmstTomlRemotes_intro",
-          "umstTomlRemotesSecondLaw_from_physical",
-          "admissibleUmstTomlRemotes_from_physical",
-          "umstTomlRemotesPhysicsGreenFalse",
-          "umstTomlRemotesProductionWiredFalse",
-          "umstTomlRemotesModuleWitness",
-          "umstTomlRemotes_noNewAxiom",
           "umstTomlRemotesPositiveRefuseNotSilent",
           "umstTomlComposeGithubPositiveRefuse",
           "umstTomlComposeOriginPositiveRefuse"
@@ -7297,73 +6068,35 @@
     },
     {
       "path": "Urge/UnmeasuredMeasured.lean",
-      "content_sha256": "7b76cd329cb5b90ef6abf06101a47b0c81bb6d1de840d14c1dd7246148e063b1",
+      "content_sha256": "ba937dea2156c4e49b530175f9bbfe0820bd788f6431610951f55143b8dbb735",
       "declarations": {
         "inductive": [
           "ProductionWiredTaxonomy",
           "FalseAsGreenRefusal",
-          "ProductionWiredVerdict",
           "UnmeasuredMeasuredExcitementPin"
         ],
         "def": [
-          "productionWiredIsMeasured",
-          "productionWiredMeasuredValue",
-          "productionWiredDataset",
           "datasetNonempty",
           "ummConjunctAdmits",
           "refuseFalseAsGreen",
-          "productionWiredLegacyBool",
           "boolClaimsMeasurementWhenUnmeasured",
-          "measuredProductionWired",
-          "evaluateProductionWired",
           "gossipMeshProductionWiredTaxonomy",
           "ucrsGossipMeshDocumentedAsUnmeasured",
           "refuseUnmeasuredAsFalseGreen",
           "ummFixtureDataset",
           "ummFixtureMeasuredFalse",
           "ummFixtureConjunct",
-          "admissibleUnmeasuredMeasured",
-          "unmeasuredMeasuredSecondLaw",
-          "unmeasuredMeasuredPhysicsGreen",
-          "unmeasuredMeasuredProductionWired",
-          "excitementComposePin",
-          "unmeasuredMeasuredCatalogWitness"
+          "admissibleUnmeasuredMeasured"
         ],
         "structure": [
           "UnmeasuredMeasuredConjunct",
-          "UnmeasuredMeasuredCtx",
-          "UnmeasuredMeasuredTransition",
-          "PhysicalUnmeasuredMeasuredBridge"
+          "UnmeasuredMeasuredTransition"
         ],
         "theorem": [
           "refuseFalseAsGreen_unmeasured",
-          "productionWiredLegacyNoneWhenUnmeasured",
-          "unmeasuredNotMeasured",
-          "gossipMeshTaxonomyIsUnmeasured",
           "ucrsGossipMeshDocumentedUnmeasuredTrue",
-          "gossipMeshRefuseFalseAsGreen",
-          "unmeasuredMeasuredSelect_eq_select",
-          "unmeasuredMeasuredSelect_eq_urgeRecoverySelect",
-          "unmeasuredMeasuredNoLocalArgmin",
-          "unmeasuredMeasuredExcitementSelect_eq_select",
-          "unmeasuredMeasuredExcitementSelect_refusesSecondArgmin",
-          "unmeasuredMeasuredSelect_empty",
           "ummFixtureMeasuredFalseAdmits",
-          "ummFixtureMeasuredFalseEvaluateOk",
-          "ummFixtureMeasuredProductionWiredOk",
-          "ummFixtureEmptyDatasetRefused",
-          "ummFixtureUnmeasuredLegacyNone",
-          "ummFixtureConjunctAdmitsTrue",
-          "unmeasuredMeasuredSecondLaw_from_physical",
-          "admissibleUnmeasuredMeasured_from_physical",
-          "physicalSecondLaw_imported",
-          "unmeasuredMeasuredPhysicsGreenFalse",
-          "unmeasuredMeasuredProductionWiredFalse",
-          "unmeasuredMeasuredModuleWitness",
-          "unmeasuredMeasured_noNewAxiom",
-          "unmeasuredMeasured_positiveRefuseNotSilent",
-          "unmeasuredMeasured_unknownNotFalseAsGreen",
-          "excitementComposePin_marker"
+          "ummFixtureConjunctAdmitsTrue"
         ]
       },
       "import_lines": [
@@ -7377,14 +6110,13 @@
     },
     {
       "path": "Urge/WorktreeExclusive.lean",
-      "content_sha256": "c954ca35cdf9087b0a012fc0aa2cfe8162f326bb925b36d07f8dec8a4ad8adee",
+      "content_sha256": "5ab7e9a43775baf4e1e8f3c90c6730976aa5b2017f571bf5342ea62d02088f02",
       "declarations": {
         "inductive": [
           "AgentLane",
           "ClaimGateVerdict",
           "WorktreeExclusiveRefusal",
-          "WorktreeExclusiveVerdict",
-          "WorktreeExcitementComposePin"
+          "WorktreeExclusiveVerdict"
         ],
         "structure": [
           "WorktreeId",
@@ -7393,10 +6125,7 @@
           "ExclusiveClaim",
           "ExclusiveAdmission",
           "WorktreeAdmissibilityConjunct",
-          "WorktreeExclusiveCtx",
-          "WorktreeHistoryMove",
-          "WorktreeTransition",
-          "PhysicalWorktreeBridge"
+          "WorktreeHistoryMove"
         ],
         "def": [
           "worktreeConjunctAdmits",
@@ -7409,10 +6138,7 @@
           "evaluateClaimOperation",
           "refuseOverlappingWriteSetAtClaim",
           "refuseAgentSecondWorktree",
-          "refuseMergeConflictTheater",
-          "refuseSecondArgminOnClaim",
           "admissibleWorktreeExclusive",
-          "worktreeSecondLaw",
           "wePathSrc",
           "wePathTest",
           "wePathOriginRefuse",
@@ -7427,27 +6153,11 @@
           "composerSecondWorktreeFixture",
           "kimiAntichainDisjointFixture",
           "worktreeFixtureConjunct",
-          "worktreeFixtureRegistry",
-          "worktreeExclusivePhysicsGreen",
-          "worktreeExclusiveProductionWired"
+          "worktreeFixtureRegistry"
         ],
         "theorem": [
-          "refuseOverlappingWriteSetAtClaim_positive",
-          "refuseAgentSecondWorktree_positive",
-          "refuseMergeConflictTheater_positive",
-          "refuseSecondArgminOnClaim_positive",
-          "evaluateClaimOperation_mergeTheaterRefused",
           "evaluateClaimOperation_exclusiveAdmit",
-          "composeExcitementSelect_eq_select",
-          "worktreeExclusiveSelect_eq_select",
-          "worktreeExclusiveSelect_eq_urgeRecoverySelect",
-          "worktreeExclusive_noLocalArgmin",
-          "composeExcitementSelect_refuses_secondArgmin",
-          "worktreeExclusive_empty",
           "admissibleWorktreeExclusive_intro",
-          "worktreeSecondLaw_from_physical",
-          "admissibleWorktreeExclusive_from_physical",
-          "physicalSecondLaw_imported",
           "composerExclusiveAdmitFixture_ok",
           "grokOverlapRefusedAtClaim",
           "composerSecondWorktreeRefused",
@@ -7455,13 +6165,7 @@
           "writeSetsOverlap_composer_grok",
           "writeSetsDisjoint_composer_originRefuse",
           "worktreeConjunct_fixture_admits",
-          "worktreeExclusive_positiveRefuse_notSilent",
-          "worktreeExclusivePhysicsGreenFalse",
-          "worktreeExclusiveProductionWiredFalse",
-          "worktreeExclusiveModuleWitness",
-          "worktreeExclusive_noNewAxiom",
-          "worktreeExclusive_mergeTheaterRefused_positive",
-          "worktreeExclusive_secondArgminRefused_positive"
+          "worktreeExclusive_positiveRefuse_notSilent"
         ]
       },
       "import_lines": [
@@ -7507,7 +6211,7 @@
     },
     {
       "path": "Web.lean",
-      "content_sha256": "4850c110b356eabe8d487eb3f4dbd6059d439f084af0a2047702ec0b653f24fb",
+      "content_sha256": "7ec5d760d74f8ae615206418657770d582a075f995b3480093678b7da76412c5",
       "declarations": {
         "def": [
           "defaultComplexityWeight",
@@ -7567,7 +6271,7 @@
     },
     {
       "path": "Web/WebMat.lean",
-      "content_sha256": "ee7ea9269fb425fafff2bc8d4dcdece90637fbd53cc6569f828667a34f0b43d0",
+      "content_sha256": "64e25fe151ecc95823b0721296f4e9d1c2de3689d001b13dc87a58bfe0a03778",
       "declarations": {
         "structure": [
           "Hom"
@@ -7599,24 +6303,13 @@
           "gateNT_accepts_neutral_id",
           "proposal_gate_functoriality_neutral_gate",
           "proposal_gate_functoriality_neutral_map",
-          "ProposalPreserves_const",
-          "web_mat_module_witness"
+          "ProposalPreserves_const"
         ]
       },
       "import_lines": [
         "Web"
       ],
       "module": "Web.WebMat",
-      "repo": "umst-formal"
-    },
-    {
-      "path": "_check_ext.lean",
-      "content_sha256": "de67f9d49689f63543a0d4136ea7064a2a2c2c951e52e68316d539fa202f1aba",
-      "declarations": {},
-      "import_lines": [
-        "LandauerLaw"
-      ],
-      "module": "_check_ext",
       "repo": "umst-formal"
     },
     {
@@ -8915,7 +7608,7 @@
     },
     {
       "path": "QuantumClassicalBridge.lean",
-      "content_sha256": "d8ffb5e0a615a1f760960b2d0857a6d43d6eeb7a73cb309fdca983df8a1b9f6f",
+      "content_sha256": "8964fa0c7fd7b03d44baa639e909e9c31ba8992a63eb02e7128c4e77379269cd",
       "declarations": {
         "def": [
           "hnQubit"
@@ -9139,7 +7832,7 @@
     },
     {
       "path": "lakefile.lean",
-      "content_sha256": "cf5db6624e4fb9fda7730c270dc57f72e0b382c327dfa6137badcc7f81c84ab2",
+      "content_sha256": "25db620c24ceab7ecac5e8f1f9ba71e489640e057f6e4c4d2b48c71b8b2d31a3",
       "declarations": {},
       "import_lines": [
         "Lake"
@@ -9335,6 +8028,11 @@
       "to_approx": "LandauerLaw"
     },
     {
+      "from": "Chem.SecondLaw",
+      "import": "Process",
+      "to_approx": "Process"
+    },
+    {
       "from": "ClassicalMeasurementCost",
       "import": "InfoTheory",
       "to_approx": "InfoTheory"
@@ -9381,8 +8079,8 @@
     },
     {
       "from": "Concrete.Activation",
-      "import": "Naturality",
-      "to_approx": "Naturality"
+      "import": "MaterialClass",
+      "to_approx": "MaterialClass"
     },
     {
       "from": "Concrete.Convergence",
@@ -9451,6 +8149,11 @@
     },
     {
       "from": "Concrete.Gate",
+      "import": "Constants.SI",
+      "to_approx": "Constants.SI"
+    },
+    {
+      "from": "Concrete.Gate",
       "import": "Core.Gate",
       "to_approx": "Core.Gate"
     },
@@ -9505,16 +8208,6 @@
       "to_approx": "Mathlib.Tactic"
     },
     {
-      "from": "Concrete.MoriTanaka",
-      "import": "Concrete.MicroMechanics",
-      "to_approx": "Concrete.MicroMechanics"
-    },
-    {
-      "from": "Concrete.MoriTanakaPosture",
-      "import": "Concrete.MoriTanaka",
-      "to_approx": "Concrete.MoriTanaka"
-    },
-    {
       "from": "Concrete.PoromechanicsB3",
       "import": "JenningsGelSpace",
       "to_approx": "JenningsGelSpace"
@@ -9546,6 +8239,11 @@
     },
     {
       "from": "Concrete.Powers",
+      "import": "Constants.SI",
+      "to_approx": "Constants.SI"
+    },
+    {
+      "from": "Concrete.Powers",
       "import": "Mathlib.Algebra.Order.Field.Rat",
       "to_approx": "Mathlib.Algebra.Order.Field.Rat"
     },
@@ -9553,6 +8251,36 @@
       "from": "Concrete.Powers",
       "import": "Mathlib.Tactic",
       "to_approx": "Mathlib.Tactic"
+    },
+    {
+      "from": "Concrete.PowersVolume",
+      "import": "Constants.SI",
+      "to_approx": "Constants.SI"
+    },
+    {
+      "from": "Concrete.PowersVolume",
+      "import": "Mathlib.Tactic",
+      "to_approx": "Mathlib.Tactic"
+    },
+    {
+      "from": "Concrete.SecondLaw",
+      "import": "Concrete.Helmholtz",
+      "to_approx": "Concrete.Helmholtz"
+    },
+    {
+      "from": "Concrete.SecondLaw",
+      "import": "ExcitementProofs",
+      "to_approx": "ExcitementProofs"
+    },
+    {
+      "from": "Concrete.SecondLaw",
+      "import": "Process",
+      "to_approx": "Process"
+    },
+    {
+      "from": "Concrete.ShrinkageB4",
+      "import": "Constants.SI",
+      "to_approx": "Constants.SI"
     },
     {
       "from": "Concrete.ShrinkageB4",
@@ -9698,6 +8426,21 @@
       "from": "Core.State",
       "import": "Core.Scalar",
       "to_approx": "Core.Scalar"
+    },
+    {
+      "from": "CostOfInformation",
+      "import": "Constants.SIBridge",
+      "to_approx": "Constants.SIBridge"
+    },
+    {
+      "from": "CostOfInformation",
+      "import": "EtaCog",
+      "to_approx": "EtaCog"
+    },
+    {
+      "from": "CostOfInformation",
+      "import": "Process",
+      "to_approx": "Process"
     },
     {
       "from": "CreditGreedyOptimal",
@@ -10095,6 +8838,11 @@
       "to_approx": "Mathlib.Data.Complex.ExponentialBounds"
     },
     {
+      "from": "MaterialClass",
+      "import": "Compat.Gate",
+      "to_approx": "Compat.Gate"
+    },
+    {
       "from": "MeaningState",
       "import": "SemanticSecondLaw",
       "to_approx": "SemanticSecondLaw"
@@ -10136,11 +8884,6 @@
     },
     {
       "from": "MonoidalState",
-      "import": "Compat.Gate",
-      "to_approx": "Compat.Gate"
-    },
-    {
-      "from": "Naturality",
       "import": "Compat.Gate",
       "to_approx": "Compat.Gate"
     },
@@ -10223,11 +8966,6 @@
       "from": "Process",
       "import": "Real.State",
       "to_approx": "Real.State"
-    },
-    {
-      "from": "RSBridge.ColdPath",
-      "import": "Concrete.StiffnessTransition",
-      "to_approx": "Concrete.StiffnessTransition"
     },
     {
       "from": "Real.Gate",
@@ -10345,6 +9083,11 @@
       "to_approx": "LandauerLaw"
     },
     {
+      "from": "SemanticSecondLaw",
+      "import": "Process",
+      "to_approx": "Process"
+    },
+    {
       "from": "SeparationBound",
       "import": "Mathlib.Data.Real.Basic",
       "to_approx": "Mathlib.Data.Real.Basic"
@@ -10373,6 +9116,11 @@
       "from": "Urge.AdmitKleisli",
       "import": "LandauerLaw",
       "to_approx": "LandauerLaw"
+    },
+    {
+      "from": "Urge.AdmitKleisli",
+      "import": "Process",
+      "to_approx": "Process"
     },
     {
       "from": "Urge.AntichainIndependent",
@@ -11430,11 +10178,6 @@
       "to_approx": "Web"
     },
     {
-      "from": "_check_ext",
-      "import": "LandauerLaw",
-      "to_approx": "LandauerLaw"
-    },
-    {
       "from": "experiments.CementThermo.cement_thermo_minimiser_unique_strict",
       "import": "Mathlib.Data.Real.Basic",
       "to_approx": "Mathlib.Data.Real.Basic"
@@ -12425,5 +11168,5 @@
       "to_approx": "Lake"
     }
   ],
-  "digest": "89db58b7f67cc5e7190080790625055cd34c10f24dc8dfbd1669a6e9814fbc81"
+  "digest": "4e64db67bdd70291d9c672fd76d7d6285c80120e7c595bddbf24e42f174efe9c"
 }
