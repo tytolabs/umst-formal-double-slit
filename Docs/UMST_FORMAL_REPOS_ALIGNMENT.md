@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 
 Both repositories exist as sibling checkouts under the workspace root. They are **complementary**, not duplicates of the same artifact.
 
-**God-grade fiber policy:** Double-slit owns the **primary** export functor into manifold; `umst-formal` is the **second catalog fiber** (classical/DEC/Economic lemmas without `catalog.json`). Witness ladder: [`../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md). Pipeline: [`../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md).
+**God-grade fiber policy:** Double-slit owns the **primary** export functor into manifold; `umst-formal` is the **second catalog fiber** (classical/DEC/Economic lemmas without `catalog.json`). Witness ladder: [`../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md). Pipeline: [`../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md).
 
 ### Downstream manifold integration (summary)
 
@@ -38,7 +38,7 @@ Upstream pointer is documented in [`README.md`](../README.md) (Related code tabl
 
 ---
 
-## 2. Which repo feeds `export_catalog.py`?
+## 2. The repository that feeds `export_catalog.py`
 
 **Only `umst-formal-double-slit`.**
 
@@ -53,7 +53,7 @@ Upstream pointer is documented in [`README.md`](../README.md) (Related code tabl
 
 ### Downstream consumers of the catalog
 
-| Consumer | How it uses double-slit export |
+| Consumer | Use of the double-slit export |
 |----------|--------------------------------|
 | **`umst-manifold`** | Pins `upstream_catalog_digest_hex` in `artifacts/catalog.lock.json`; `build.rs` → `UMST_CATALOG_LOCK_SHA256_HEX`. Traceability: `docs/claims-vs-proofs.md`, [`CATALOG_COVERAGE_AUDIT.md`](../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md). |
 | **`scripts/verify_umst_stack.sh`** | Resolves `UMST_FORMAL_ROOT` or `../umst-formal-double-slit`, runs `export_catalog.py`, compares digest to manifold lock. |
@@ -72,7 +72,7 @@ Rust anchors to **`lean://umst-formal/...`** (e.g. `umst-concrete-cartridge`) ar
 
 **Learning:** The pin fingerprints **all 69** export rows. Manifold enforces **~18** modules on the gate hot path; the other **51** rows still matter for drift detection and proof-inventory SSOT ([`../../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md`](../../umst-manifold/docs/FORMAL_INTEGRATION_STATUS.md)). `FormalFoundations.umst_double_slit_formal_complete` is **digest pin only** in Rust — not a runtime completeness check.
 
-**Witness ladder:** R0 = this digest; R1–R4 = vendored `Gate` / `Landauer*` / mix / Kleisli families (see [`../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md)); classical-only lemmas stay in **`umst-formal`** until unified export.
+**Witness ladder:** R0 = this digest; R1–R4 = vendored `Gate` / `Landauer*` / mix / Kleisli families (see [`../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md)); classical-only lemmas stay in **`umst-formal`** until unified export.
 
 ---
 
@@ -83,7 +83,7 @@ Rust anchors to **`lean://umst-formal/...`** (e.g. `umst-concrete-cartridge`) ar
 | `*.lean` under `Lean/` (survey) | 62 files | 69 files in catalog export |
 | `lake build` roots | **51** (`Lean/lakefile.lean`) | **59** proof roots + tests/scratch excluded from default build |
 | Catalog export scope | N/A | **69** modules (includes `lakefile`, `Test*`, optional `LogSum`/`MatrixLog`, `test_tensor_eigen`, `FlashMoERuntimeScaffold`) — see [69 vs 59](#69-vs-59-learnings) |
-| Lean `axiom` | `physicalSecondLaw` (`LandauerLaw.lean`) | Same single project axiom |
+| Lean `axiom` | None; the law is the predicate `SecondLaw` | None; `SecondLaw` imported from `umst-formal` |
 | `sorry` | 0 (per `PROOF-STATUS.md`) | 0 (per `PROOF-STATUS.md`) |
 | Declaration stats (roots) | 237 `theorem` + 24 `lemma` | 537 `theorem` + 34 `lemma` |
 
@@ -108,14 +108,14 @@ Proof status indexes:
 
 These **10** modules exist in **both** `Lean/` trees. Double-slit **`lakefile.lean`** lists them as “integrated from upstream framework” (ℚ gate + Landauer stack):
 
-| Module | In `umst-formal` roots? | In double-slit roots? | Notes |
+| Module | In `umst-formal` roots | In double-slit roots | Notes |
 |--------|-------------------------|------------------------|-------|
 | `Gate.lean` | Yes | Yes | Same lineage; double-slit copy adds SPDX header — **not byte-identical** to upstream. |
 | `Naturality.lean` | Yes | Yes | Vendored copy; may drift. |
 | `Activation.lean` | Yes | Yes | Vendored copy. |
 | `FiberedActivation.lean` | Yes | Yes | Vendored copy. |
 | `MonoidalState.lean` | Yes | Yes | Vendored copy. |
-| `LandauerLaw.lean` | Yes | Yes | Shared `physicalSecondLaw` axiom. |
+| `LandauerLaw.lean` | Yes | Yes | Erase instance of `SecondLaw` (`physicalSecondLaw`), imported. |
 | `LandauerExtension.lean` | Yes | Yes | Vendored copy. |
 | `LandauerEinsteinBridge.lean` | Yes | Yes | Vendored copy. |
 | `MeasurementCost.lean` | Yes | Yes | Vendored copy. |
@@ -185,14 +185,14 @@ Quantum / epistemic / sim formal layer (59 roots), including: `UMSTCore`, `Densi
 
 ## 10. Quick reference
 
-| Question | Answer |
+| Topic | Answer |
 |----------|--------|
-| Is `umst-formal` missing? | **No** — present at workspace sibling path. |
-| Who owns `export_catalog.py`? | **`umst-formal-double-slit` only.** |
-| Who consumes the catalog? | **`umst-manifold`** (digest lock); verify script; CI drift workflow. |
-| Where is cement/DEC proof anchor? | **`umst-formal`** (`lean://umst-formal/...` in cartridge docs). |
-| Where is double-slit / CBF anchor? | **`umst-formal-double-slit`** + manifold `catalog_id` map. |
+| `umst-formal` presence | **No** — present at workspace sibling path. |
+| Owner of `export_catalog.py` | **`umst-formal-double-slit` only.** |
+| Catalog consumers | **`umst-manifold`** (digest lock); verify script; CI drift workflow. |
+| Cement/DEC proof anchor | **`umst-formal`** (`lean://umst-formal/...` in cartridge docs). |
+| Double-slit / CBF anchor | **`umst-formal-double-slit`** + manifold `catalog_id` map. |
 
 ---
 
-*See also [`EXPORT_COVERAGE.md`](EXPORT_COVERAGE.md) (downstream manifold narrative, digest pin, witness cross-links); [`../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md) (R0–R6, failure priority, v1/v2); [`../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md); [`../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md).*
+*See also [`EXPORT_COVERAGE.md`](EXPORT_COVERAGE.md) (downstream manifold narrative, digest pin, witness cross-links); [`../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md) (R0–R6, failure priority, v1/v2); [`../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md`](../../umst-manifold/docs/FORMAL_BIDIRECTIONAL_ALIGNMENT.md); [`../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md).*

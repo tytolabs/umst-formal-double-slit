@@ -4,13 +4,13 @@ SPDX-License-Identifier: MIT
 
 **Version:** Wave 6.5.2 — **2026-04-04**
 
-## Single physical axiom (Lean `axiom`)
+## The one physical law (a predicate; no Lean `axiom`)
 
 | Location | Name | Role |
 |----------|------|------|
-| `Lean/LandauerLaw.lean` | `physicalSecondLaw` | Same constitutional second-law input as core `umst-formal` (Landauer layer). |
+| `umst-formal` `Lean/Process.lean` (Lake dependency) | `UMST.ProcessFamily.SecondLaw` | The one predicate over the process family; quantum results take it, or its erase instance `LandauerLaw.physicalSecondLaw`, as a hypothesis. |
 
-No other `axiom` declarations remain under `Lean/`.
+`Lean/` declares no `axiom`; `LandauerLaw` is imported from `umst-formal`.
 
 ## Theorems (formerly risk items; all proved)
 
@@ -42,7 +42,7 @@ Manual map from the **five-paper** programme to this package (and the sibling th
 | **I. Clausius–Duhem / rational gate** | Four inequalities define admissibility | `Gate.Admissible`; `helmholtzAntitone` (ψ model in `Gate.lean`) |
 | **II. 100% admissibility for checked steps** | `gateCheck = true` ⇒ `Admissible` | `Gate.gateCheckSound` |
 | **III. Graded compositional safety** | Composable n-step mass / Kleisli discipline | `Gate.admissibleN_compose`; `Constitutional` |
-| **IV. Landauer / observation** | Second-law axiom → Landauer layer | `LandauerLaw.physicalSecondLaw`; `LandauerBound`, `MeasurementChannel`, `ErasureChannel` |
+| **IV. Landauer / observation** | Second-law hypothesis → Landauer layer | `SecondLaw`, erase instance `LandauerLaw.physicalSecondLaw` (imported); `LandauerBound`, `MeasurementChannel`, `ErasureChannel` |
 | **V. Double-slit, TMI, epistemics** | Visibility cap, dephasing limit, trajectory MI | `GeneralVisibility.fringeVisibility_n_le_one`, `QuantumClassicalBridge.fringeVisibility_le_one`, `LindbladDynamics.dephasingSolution_tendsto_diagonal`, `EpistemicMI`, `EpistemicTrajectoryMI` |
 
 DIB Kleisli semantics and full **Field/Core** functor for `discover`/`invent`/`build` live in **`umst-formal`** (`DIBKleisli.lean`).
@@ -52,7 +52,7 @@ DIB Kleisli semantics and full **Field/Core** functor for `discover`/`invent`/`b
 | Check | Result |
 |--------|--------|
 | `lake build` (all `lakefile` roots) | **Succeeded** (verified in workspace) |
-| `^axiom ` in `Lean/*.lean` (excluding `.lake`) | **1** — `LandauerLaw.physicalSecondLaw` only |
+| `^axiom ` in `Lean/*.lean` (excluding `.lake`) | **0** — the law is the imported predicate `SecondLaw` |
 | Tactic `sorry` / `admit` / `Admitted` in `Lean/*.lean` | **None** (the word “sorry” appears only in **comments** in: `Gate.lean`, `Activation.lean`, `Naturality.lean`) |
 | `theorem` / `lemma` in **`lakefile` roots only** (59 modules) | **540** `theorem`, **34** `lemma` (total **574**) — same line-count convention as `umst-formal` |
 | All `Lean/*.lean` (excludes `.lake`; includes tests / scratch) | **549** `theorem`, **35** `lemma` (total **584**) |
@@ -67,7 +67,7 @@ Procedure: `rm -rf .lake && lake build` under `Lean/`. **Result:** `Build comple
 | Topic | Formal anchor | Note |
 |--------|----------------|------|
 | Thermodynamic gate + graded safety | `Gate` (imported stack), `admissibleN_compose` | Same rational gate predicate as `umst-formal`; composition theorem proved. |
-| Landauer / collapse / observation | `LandauerLaw`, `LandauerBound`, `MeasurementChannel`, `ErasureChannel`, `WhichPathMeasurementUpdate` | **Single** project `axiom`: `physicalSecondLaw`; quantum channels built on top. |
+| Landauer / collapse / observation | `LandauerLaw`, `LandauerBound`, `MeasurementChannel`, `ErasureChannel`, `WhichPathMeasurementUpdate` | The law enters as the hypothesis `SecondLaw` (erase instance `physicalSecondLaw`), no project `axiom`; quantum channels built on top. |
 | Double-slit / complementarity | `DoubleSlit`, `Complementarity`, `GeneralVisibility`, `QuantumClassicalBridge` | Fringe visibility **bound** (`fringeVisibility_n_le_one`, qubit bridge); not a claim of experimental calibration. |
 | Dephasing / decoherence | `LindbladDynamics.dephasingSolution_tendsto_diagonal` | **Theorem** (analytic limit), not axiom. |
 | TMI / epistemic layer | `EpistemicMI`, `EpistemicTrajectoryMI`, telemetry modules | Information-theoretic **definitions + proved lemmas** in-repo; mapping to paper prose is **manual**. |
@@ -76,6 +76,6 @@ Procedure: `rm -rf .lake && lake build` under `Lean/`. **Result:** `Build comple
 
 ## Green-flag status
 
-**GREEN FLAG – Fully Complete** for: default `lake` roots, **zero** tactic `sorry` / `admit` / `Admitted`, **one** project `axiom` (`physicalSecondLaw`), cold `lake build` **without** `warning:`/`error:` in captured output.
+**GREEN FLAG – Fully Complete** for: default `lake` roots, **zero** tactic `sorry` / `admit` / `Admitted`, **zero** project `axiom` declarations (the law is the hypothesis `SecondLaw`), cold `lake build` **without** `warning:`/`error:` in captured output.
 
 Wave **6.5.2**: **`LindbladStreamD`** root (`streamD_limit_to_Lueders_states`); **`DataProcessingInequality`**: `vonNeumannEntropy_nondecreasing_unital_CPTP_n` for **unitary single-Kraus** maps on **`Fin n`** (full arbitrary unital CPTP on general `n` remains future work). **`scripts/lean_declaration_stats.py`** excludes `.lake` from “all Lean” scans. Epistemic “contracts” remain formal scaffolding, not runtime certificates.

@@ -5,7 +5,7 @@ SPDX-License-Identifier: MIT
 
 The knowing fibre's Agda modules, all checked with `--safe`. The second law, the gate, the Helmholtz model,
 information theory, activation and the Landauer–Einstein trace have one Agda source, in
-[umst-formal](https://github.com/tytolabs/umst-formal) (`Agda/`); the copies this repository carried were retired on
+[umst-formal][umst-formal] (`Agda/`); the copies this repository carried were retired on
 2026-10-02 (`retirements/agda-mirrors.json`, recoverable at tag `archive/agda-mirrors-2026-10-02`).
 
 | Module | Content |
@@ -24,3 +24,5 @@ make agda-check
 ```
 
 This type-checks every tracked `.agda` file, as CI does (`.github/workflows/formal.yml`). With Coq: `make formal-check`.
+
+[umst-formal]: https://github.com/tytolabs/umst-formal

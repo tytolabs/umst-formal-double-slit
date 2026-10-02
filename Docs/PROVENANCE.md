@@ -47,7 +47,7 @@ Same contacts as in the repo [`README.md`](../README.md).
 | `QuantumMutualInfo.lean` | QMI | Claude Code | `lake build` ✅ | 0 |
 | `ErasureChannel.lean` | erasure | Claude Code | `lake build` ✅ | 0 |
 
-**Lean `axiom` declarations:** **1** — **`physicalSecondLaw`** (`LandauerLaw.lean`). **`fringeVisibility_n_le_one`** and **`dephasingSolution_tendsto_diagonal`** are **theorems** (`GeneralVisibility.lean`, `LindbladDynamics.lean`). Klein relative-entropy nonnegativity is a **theorem** in `KleinInequality.lean`; tensor entropy additivity is a **theorem** in `KroneckerEigen.lean`. See **`FORMAL_FOUNDATIONS.md`**, **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**.
+**Lean `axiom` declarations:** **0** — the law is the predicate `SecondLaw`, imported from `umst-formal` (erase-instance anchor `LandauerLaw.physicalSecondLaw`). **`fringeVisibility_n_le_one`** and **`dephasingSolution_tendsto_diagonal`** are **theorems** (`GeneralVisibility.lean`, `LindbladDynamics.lean`). Klein relative-entropy nonnegativity is a **theorem** in `KleinInequality.lean`; tensor entropy additivity is a **theorem** in `KroneckerEigen.lean`. See **`FORMAL_FOUNDATIONS.md`**, **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**.
 
 ## Python Simulation Layer
 

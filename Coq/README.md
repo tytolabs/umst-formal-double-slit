@@ -6,7 +6,7 @@ SPDX-License-Identifier: MIT
 The knowing fibre's Coq modules: density-state and complementarity specifications, von Neumann entropy bounds,
 atomic ground states (NIST data with the Madelung prediction) and the shared constants table. The second law, the
 cement gate, the Landauer bridge, information theory and measurement cost have one Coq source, in
-[umst-formal](https://github.com/tytolabs/umst-formal) (`Coq/`); the copies this repository carried were retired on
+[umst-formal][umst-formal] (`Coq/`); the copies this repository carried were retired on
 2026-10-02 (`retirements/coq-mirrors.json`, recoverable at tag `archive/coq-mirrors-2026-10-02`).
 
 | Module | Content |
@@ -27,3 +27,5 @@ make coq-check
 
 This builds every module `Coq/_CoqProject` lists (`-Q . UMSTFormal`); CI compiles every tracked `.v` under the same
 mappings (`.github/workflows/formal.yml`). With Agda: `make formal-check`.
+
+[umst-formal]: https://github.com/tytolabs/umst-formal

@@ -4,7 +4,7 @@ SPDX-License-Identifier: MIT
 
 Last audited: 2026-05-21. Canonical pin for **umst-manifold**: Python `export_catalog.py` → `artifacts/catalog.json` + `artifacts/catalog.lock.json`.
 
-See also [`UMST_FORMAL_REPOS_ALIGNMENT.md`](UMST_FORMAL_REPOS_ALIGNMENT.md) for repo roles, [`../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md) for Rust runtime wiring, and [`../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md) for witness order (CD → Landauer → constitutive → probe) and v1/v2 trace contracts.
+See also [`UMST_FORMAL_REPOS_ALIGNMENT.md`](UMST_FORMAL_REPOS_ALIGNMENT.md) for repo roles, [`../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md`](../../umst-manifold/docs/CATALOG_COVERAGE_AUDIT.md) for Rust runtime wiring, and [`../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md) for witness order (CD → Landauer → constitutive → probe) and v1/v2 trace contracts.
 
 ---
 
@@ -75,11 +75,11 @@ The digest is SHA-256 (hex) of the JSON catalog body **before** the `digest` key
 
 ## Witness ladder cross-links (export repo ↔ manifold)
 
-Normative order and failure priority: [`../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md`](../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md).
+Normative order and failure priority: [`../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md`](../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md).
 
 | Rung | Manifold doc anchor | Lean / export anchor (this repo) |
 |------|---------------------|----------------------------------|
-| **R0** | [`GOD_GRADE_WITNESS_LADDER.md` § R0](../../umst-manifold/docs/GOD_GRADE_WITNESS_LADDER.md#r0--catalog-lock-build-time-functor) | Unified export + `artifacts/catalog.lock.json`, `FormalFoundations` (pin theorem) |
+| **R0** | [`QUALITY_WITNESS_LADDER.md` § R0](../../umst-manifold/docs/QUALITY_WITNESS_LADDER.md#r0--catalog-lock-build-time-functor) | Unified export + `artifacts/catalog.lock.json`, `FormalFoundations` (pin theorem) |
 | **R1** | CD / 2nd law | `Gate`, `UMSTCore`, `GateCompat`, `Naturality`, … (`umst.gate.cd_transition`) |
 | **R2** | Landauer CBF | `LandauerLaw`, `LandauerBound`, `EpistemicMI`, `MeasurementCost`, … |
 | **R3** | Constitutive mix | `Activation`, `FiberedActivation`, `ProbeOptimization` (policy), cartridge-facing lemmas |
@@ -87,7 +87,7 @@ Normative order and failure priority: [`../../umst-manifold/docs/GOD_GRADE_WITNE
 | **R5 v1** | Manifest + digest | `EpistemicRuntimeContract` — optional `formal-witness` in manifold |
 | **R5 v2 / R6** | Trace schema | `EpistemicRuntimeSchemaContract`, `EpistemicPerStepNumerics`, telemetry contracts |
 
-Checklist and CI matrix: [`../../umst-manifold/docs/GOD_GRADE_CHECKLIST.md`](../../umst-manifold/docs/GOD_GRADE_CHECKLIST.md). Row-level ledger: [`../../umst-manifold/docs/claims-vs-proofs.md`](../../umst-manifold/docs/claims-vs-proofs.md).
+Checklist and CI matrix: [`../../umst-manifold/docs/QUALITY_CHECKLIST.md`](../../umst-manifold/docs/QUALITY_CHECKLIST.md). Row-level ledger: [`../../umst-manifold/docs/claims-vs-proofs.md`](../../umst-manifold/docs/claims-vs-proofs.md).
 
 ---
 
@@ -129,7 +129,7 @@ Grouped by proof family (all in default `lake build`; see `PROOF-STATUS.md`):
 
 **Representative classical-only rows now in unified `catalog.json`:**
 
-| Module | Why it matters |
+| Module | Significance |
 |--------|----------------|
 | `DIBKleisli` | DIB pipeline monad laws |
 | `Constitutional` | `ConstitutionalSeq`, Kleisli arrows |
@@ -142,7 +142,7 @@ Grouped by proof family (all in default `lake build`; see `PROOF-STATUS.md`):
 
 ---
 
-## What `export_catalog.py` includes
+## Contents of the `export_catalog.py` export
 
 Per `build_catalog()`:
 
@@ -181,7 +181,7 @@ APPROVE_CROSS_REPO_MERGE=1 python3 tools/lean_export/export_catalog.py \
 make lean-catalog-export   # 69 modules; do not use after unified promotion unless intentional
 ```
 
-After unified export, bump `umst-manifold/artifacts/catalog.lock.json` and green `verify_umst_stack.sh` ([`../../umst-manifold/docs/FORMAL_FIBER_MERGE_RUNBOOK.md`](../../umst-manifold/docs/FORMAL_FIBER_MERGE_RUNBOOK.md)).
+After unified export, bump `umst-manifold/artifacts/catalog.lock.json` and green `verify_umst_stack.sh` (the manifold's `FORMAL_FIBER_MERGE_RUNBOOK.md`, archived in umst-manifold 972a7485).
 
 ---
 

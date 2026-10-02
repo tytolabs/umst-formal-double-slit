@@ -41,7 +41,7 @@ Extracting which-path information from a quantum system destroys interference pr
 | | |
 |:---:|:---:|
 | **52** Lean modules (`lakefile` roots) | **486** `theorem` + **30** `lemma` (roots-only; line-start) |
-| **0** tactic sorry, **0** axiom (`physicalSecondLaw` imported) | Visibility + dephasing: **theorems**; qubit-tier results proved |
+| **0** tactic sorry, **0** axiom (`SecondLaw` imported, a hypothesis) | Visibility + dephasing: **theorems**; qubit-tier results proved |
 | **88** Python unit tests (paste below) | **14** Haskell QuickCheck properties (`Haskell/test/Main.hs`) |
 | **5** languages | Lean 4 · Haskell · Python · Coq · Agda |
 
@@ -145,7 +145,7 @@ Sibling links only — no paper-series arc naming in this README. Already-public
 | `spectralRelativeEntropy_nonneg` | Klein / relative-entropy nonnegativity | [`Lean/KleinInequality.lean:146`](Lean/KleinInequality.lean) |
 | `vonNeumannEntropy` / unitary invariance | Spectral entropy morphisms | [`Lean/VonNeumannEntropy.lean`](Lean/VonNeumannEntropy.lean) |
 | `landauer_galois_connection` | Epistemic Galois: info ⊣ energy | [`Lean/EpistemicGalois.lean:71`](Lean/EpistemicGalois.lean) |
-| `physicalSecondLaw` | Sole `axiom` of the workspace (Second Law) — imported from `umst-formal`; this repository declares **no** axiom | `umst-formal` `Lean/LandauerLaw.lean:155` |
+| `physicalSecondLaw` | Erase instance of the one predicate `SecondLaw` (Second Law), a hypothesis — imported from `umst-formal`; no workspace repository declares an axiom | `umst-formal` `Lean/LandauerLaw.lean` |
 
 Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATIONS.md`](FORMAL_FOUNDATIONS.md).
 
@@ -182,7 +182,7 @@ Axioms (^axiom ):
 `physicalSecondLaw`, so the workspace held two declarations of one law. The lakefile already
 carried `require «umst-formal»`, so the copy is deleted and the axiom is imported. Two identical
 axioms are two axioms: nothing keeps them identical, and these had already drifted — the copy
-had dropped upstream's own line reading *"Sole project `axiom`"*. The roots count falls by 9
+had already lost a line of upstream's header. The roots count falls by 9
 theorems and 3 lemmas, all of which now live in the dependency where they were always defined.
 
 - **0** tactic `sorry` in default rooted Lean (see [`PROOF-STATUS.md`](PROOF-STATUS.md)).
@@ -488,7 +488,7 @@ umst-formal-double-slit/
 Lean modules (52 roots), Python sim, Haskell QuickCheck, Coq, Agda — topology in §4. Claim taxonomy below summarizes machine-checked vs out-of-scope.
 
 ### Lean modules (52 `lakefile` roots, `lake build` — see `Lean/VERIFY.md` for `sorry` / axiom map)
-*(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **486** / **30**; all-`Lean/*.lean` **495** / **31**; **1** project axiom — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
+*(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **486** / **30**; all-`Lean/*.lean` **495** / **31**; **0** project axioms (the law is the imported predicate `SecondLaw`) — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
 
 <details>
 <summary><strong>Quantum core</strong> — density matrices, Kraus channels, complementarity, entropy, Landauer</summary>
@@ -679,7 +679,7 @@ Every claim is checked in at least two languages. Phase 1 PMIC entropy–quadrat
 
 | Language | Artifact | Status | Command |
 |:--------:|----------|:------:|---------|
-| **Lean 4** | 52 roots, 486 thm + 30 lem (roots); 495 + 31 all `Lean/*.lean` | **0** tactic sorry, **1** axiom — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
+| **Lean 4** | 52 roots, 486 thm + 30 lem (roots); 495 + 31 all `Lean/*.lean` | **0** tactic sorry, **0** axiom (the law is the imported predicate `SecondLaw`) — `Lean/VERIFY.md`, `FORMAL_FOUNDATIONS.md` | `cd Lean && lake build` |
 | **Haskell** | 8 modules, 14 QuickCheck + sanity | **All pass** | `cd Haskell && cabal test` |
 | **Python** | 88 unit tests (unittest discover @ `42b6844`; 58 skipped in that run) | **Pass** (paste in Quick Start) | `python3 -m unittest discover -s sim/tests -q` |
 | **Coq** | **9** `.v` files (full `Coq/` tree incl. `Gate`, `Extraction`, `Constitutional`) | **Compiles**; **axioms** (no `Admitted`) in `VonNeumannEntropySpec.v` — `Coq/README.md` | `make coq-check` |
@@ -767,7 +767,7 @@ Two things this repo deliberately does **not** claim (see the Claim Taxonomy): a
 
 ### This repository demonstrates
 - **Observation is continuous payment** — the PMIC / Englert curve is machine-checked: partial which-path extraction destroys interference proportionally, not as a binary switch.
-- **Landauer + complementarity close** — density matrices → Kraus channels → diagonal von Neumann entropy → cost–coherence identity, with one explicit axiom (`physicalSecondLaw`).
+- **Landauer + complementarity close** — density matrices → Kraus channels → diagonal von Neumann entropy → cost–coherence identity, with the second law as one explicit hypothesis (`SecondLaw`).
 - **Multi-language mirrors with distinct roles** — Lean is authoritative; Haskell/Coq/Agda/Python support verification and pedagogy without substituting for `lake build` (see §7).
 
 ### Inferences from the work

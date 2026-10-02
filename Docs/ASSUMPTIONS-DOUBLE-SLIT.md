@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT
 
 Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is **scope control**, not a proof gap inside the stated formal statements.
 
-## What the Lean track **does** assume
+## Assumptions of the Lean track
 
 1. **Standard finite-dimensional QM** as encoded in Mathlib: complex matrices, `PosSemidef`, trace, Kraus form for CPTP maps on the matrix algebra.
 2. **Path qubit only**: Hilbert space **`Fin 2 → ℂ`** for the which-path degree of freedom — no spatial fringe pattern in position/momentum bases inside this layer.
@@ -21,7 +21,7 @@ Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is
 10. **Telemetry approximation bounds**: exact equivalence theorems from numerics to abstract rollout contracts are proved in the explicit **zero-error** limit; a separate quantitative-utility layer provides nonzero-error deviation bounds under explicit approximation assumptions.
 11. **Lindblad stream-D (`LindbladStreamD.lean`)**: discrete readout of the **same** closed-form qubit dephasing trajectory as `LindbladDynamics` (`streamD_sampling` at integer times). **`streamD_limit_to_Lueders_states`** is the entrywise `n → ∞` limit to the computational diagonal (composed with `dephasingSolution_tendsto_diagonal`). Still **qubit `Fin 2`**; not a sampling-bandwidth or finite-`n` error model for experiments.
 
-## What is **not** claimed
+## Claims outside scope
 
 - Derivation from a relativistic / gravitational UMST layer.
 - Identification of `I` with a specific **experimental** which-path meter without calibration axioms.
@@ -29,7 +29,7 @@ Companion to **`PROOF-STATUS.md`** and **`Lean/VERIFY.md`**. Everything below is
 - **Mixed ensembles** as formal convex sums in `DensityState` (future).
 - Certified ODE/PPO solver convergence / stability / generalization claims without an explicit numerical analysis layer.
 
-## When you extend the story, narrow or add axioms explicitly
+## Extensions narrow or add assumptions explicitly
 
 - Coupling **`landauerCostDiagonal`** to **dissipation** `D` or `ΔF` (e.g. inequality `D ≥ …`).
 - A **spatial** Hilbert space (transverse momentum / position) and reduction to the path qubit.

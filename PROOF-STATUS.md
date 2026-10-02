@@ -60,9 +60,8 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 
 ## Axiom inventory (Lean `axiom` keyword)
 
-| Axiom | File | Justification |
-|-------|------|---------------|
-| `physicalSecondLaw` | `LandauerLaw.lean` | Second Law of Thermodynamics (physical constitutive law) |
+The repository declares no `axiom`. The second law is the predicate `UMST.ProcessFamily.SecondLaw`, imported from
+`umst-formal` and taken as a hypothesis; `LandauerLaw.physicalSecondLaw` is the anchor name of its erase instance.
 
 **Proved (not Lean axioms):** `fringeVisibility_n_le_one` — **theorem** in `GeneralVisibility.lean`; `dephasingSolution_tendsto_diagonal` (alias `dephasing_tendsto_diagonal`) — **theorem** in `LindbladDynamics.lean`; **`streamD_limit_to_Lueders_states`** — discrete stream-D sampling limit in **`LindbladStreamD.lean`**.
 
@@ -83,7 +82,7 @@ Optional broader heuristics (`def`, `abbrev`, …): `make lean-stats-md` if you 
 
 | Language | Artifacts | Status |
 |----------|-----------|--------|
-| Lean 4 | **59** `lakefile` roots; **540** `theorem` + **34** `lemma` (roots-only); **549** + **35** all `Lean/*.lean` (script excludes `.lake`) | **0** tactic `sorry`, **1** project `axiom` (`physicalSecondLaw`); `python3 scripts/lean_declaration_stats.py` |
+| Lean 4 | **59** `lakefile` roots; **540** `theorem` + **34** `lemma` (roots-only); **549** + **35** all `Lean/*.lean` (script excludes `.lake`) | **0** tactic `sorry`, **0** project `axiom` (the law is the hypothesis `SecondLaw`); `python3 scripts/lean_declaration_stats.py` |
 | Haskell | 8 exposed modules, 14 QC + sanity suite | **All pass** |
 | Python | 87 unit tests, 4 sim scripts + telemetry export/consumer | **All pass** |
 | Coq | **9** `.v` modules; root **`make coq-check`** | **Compiles**; **`VonNeumannEntropySpec.v`** has **no** `Admitted`; real-analysis facts are **axioms** (`shannon_binary_le_ln2`, `negMulLog_zero_interval`) plus spectral **axioms** (see file) |

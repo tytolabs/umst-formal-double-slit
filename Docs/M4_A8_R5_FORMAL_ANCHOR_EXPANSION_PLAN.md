@@ -6,8 +6,8 @@ SPDX-License-Identifier: MIT
 |-------|-------|
 | **Cell** | **050** · `M4-A8-R5` |
 | **Mode** | Research |
-| **When** | 2026-07-19 08:15 IST |
-| **Authority** | [`README.md`](../README.md) · [`M4_100_CELL_LATTICE_0752.md`](../../old/residuals/residuals/misc-outputs-tmp/M4_100_CELL_LATTICE_0752.md) §A8 depth |
+| **Date** | 2026-07-19 08:15 IST |
+| **Authority** | [`README.md`](../README.md) · `M4_100_CELL_LATTICE_0752.md` (workspace residual, not retained) §A8 depth |
 | **Sibling** | `M4-A8-I10` (W2) wires module cite into `umst-web` — **not claimed here** |
 
 ---

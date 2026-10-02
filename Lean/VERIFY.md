@@ -99,7 +99,7 @@ Expected: **success** (all roots in `lakefile.lean`).
 - **Entropy (general diagonal):** `vonNeumannDiagonal_n_nonneg`, `vonNeumannDiagonal_n_le_log_n`, `vonNeumannDiagonal_n_eq_vonNeumannDiagonal`
 - **Landauer scale (diagonal entropy):** `landauerCostDiagonal_nonneg`, `pathEntropyBits_le_one`, `landauerCostDiagonal_le_landauerBitEnergy`, `landauerCostDiagonal_whichPathInvariant`
 - **Landauer scale (general diagonal / `Fin n`):** `pathEntropyBits_n_nonneg`, `pathEntropyBits_n_le_logb_two`, `landauerCostDiagonal_n_nonneg`, `landauerCostDiagonal_n_le_logb_landauerBitEnergy`, `pathEntropyBits_n_qubit_eq`, `landauerCostDiagonal_n_qubit_eq`
-- **T_LandauerLaw (integrated):** `landauerBound`, `landauerBound_nBit`, `binaryErasureEntropyDrop`, `physicalSecondLaw_uniform_binary`
+- **T_LandauerLaw (integrated):** `landauerBound`, `landauerBound_nBit`, `binaryErasureEntropyDrop`, `physicalSecondLaw_landauerTight`
 - **Landauer–Einstein bridge (integrated):** `massEquivalent_pos`, tight numeric mass bracket theorems at 300 K (see module)
 - **Monoidal state (integrated):** `combine_one`, `combine_zero`, `combine_density_between`, `combine_freeEnergy_le`
 - **Fibered activation (integrated):** `engineFiber_nonempty`, `strength_universal`, `activation_at_least_two`

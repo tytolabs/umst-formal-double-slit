@@ -83,7 +83,7 @@ From repo root, **`python3 scripts/add_spdx_headers.py`** idempotently adds the 
 - **`make agda-check`** — all Agda entry modules in dependency order (Agda 2.6+ + matching stdlib). See **`Agda/README.md`**.
 - **`make formal-check`** or **`scripts/formal_check.sh`** — both tracks in one go.
 
-## Where to document changes
+## Documenting changes
 
 - User-facing summary: **`CHANGELOG.md`**
 - Theorem / build status: **`PROOF-STATUS.md`**, **`Lean/VERIFY.md`**

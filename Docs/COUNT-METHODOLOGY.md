@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 
 - **Lake roots:** Parsed from [`Lean/lakefile.lean`](../Lean/lakefile.lean) by [`scripts/lean_declaration_stats.py`](../scripts/lean_declaration_stats.py).
 - **`theorem` / `lemma`:** Line-start `theorem ` / `lemma ` in each root module; **roots-only** vs **all `Lean/*.lean`** (includes tests and optional files not in `roots`) are reported separately in `FORMAL_FOUNDATIONS.md`.
-- **Project `axiom`:** Should be only `physicalSecondLaw` in `LandauerLaw.lean` (visibility and dephasing limits are **theorems**).
+- **Project `axiom`:** None: the law is the imported predicate `SecondLaw`, taken as a hypothesis (visibility and dephasing limits are **theorems**).
 
 ## Regenerate
 
