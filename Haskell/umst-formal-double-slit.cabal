@@ -147,3 +147,18 @@ test-suite landauer-einstein-sanity
     main-is:          LandauerEinsteinSanity.hs
     hs-source-dirs:   test
     build-depends:    base ^>=4.22.0.0
+
+-- The knowing fibre against umst-formal's executable second law (UMST.Process), the one module this suite takes
+-- from umst-formal (pinned in cabal.project at the Lake pin of Lean/lakefile.lean).
+test-suite knowing-fibre-law
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    main-is:          KnowingFibreLawProps.hs
+    hs-source-dirs:   test
+    build-depends:
+        base ^>=4.22.0.0,
+        QuickCheck >= 2.14,
+        umst-formal-double-slit,
+        umst-formal
+    mixins:           umst-formal (UMST.Process as UMSTFormal.Process)

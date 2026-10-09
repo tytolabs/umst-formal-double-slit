@@ -40,6 +40,9 @@ jobs:
       - name: Four-language parity of the contract (formal_parity.json)
         run: python3 scripts/check_formal_parity.py --summary
 
+      - name: One umst-formal pin for Lean (lakefile, manifest) and the Haskell second-law suite (cabal.project)
+        run: python3 scripts/check_formal_pins.py
+
       - name: Wording matches the formal state (no axiom; physicalSecondLaw is the erase instance)
         run: python3 scripts/check_stale_wording.py
 

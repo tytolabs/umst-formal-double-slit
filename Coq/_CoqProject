@@ -6,3 +6,4 @@ Chem/GroundStates.v
 DensityStateSpec.v
 ComplementaritySpec.v
 VonNeumannEntropySpec.v
+KnowingFibreLaw.v

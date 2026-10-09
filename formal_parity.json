@@ -2,9 +2,12 @@
  "schema": "umst_formal_parity_v1",
  "rule": "Every statement of the contract is stated in Lean, Coq and Agda and tested in Haskell, each entry naming its declaration, or the entry gives the reason the language cannot state it. scripts/check_formal_parity.py fails on a missing declaration, on a contract-module declaration in no statement, and when absent entries exceed max_absent. The Rust runtime relies only on statements whose Lean, Coq and Agda entries are present.",
  "contract_modules": [
-  "Lean/Chem/GroundStates.lean"
+  "Lean/Chem/GroundStates.lean",
+  "Lean/KnowingFibreInstance.lean",
+  "Lean/KnowingFibreLaw.lean"
  ],
  "max_absent": 0,
+ "second_law_classes": "Each statement's second_law entry classes it against the one predicate UMST.ProcessFamily.SecondLaw (umst-formal Lean/Process.lean): composed (its Lean dependency cone reaches SecondLaw; the case is named), vocabulary (a process that composed statements put in SecondLaw), infrastructure (mathematics or a units identity, with the statements that use it), disconnected (physics whose cone does not reach SecondLaw, with the composed statement that states it through the law), or chemistry data (cited data and its combinatorics, with the typed absence that blocks composition). The classes are measured by the composition audit over the Lean declaration graph.",
  "statements": [
   {
    "id": "ground_states.capacity",
@@ -24,6 +27,10 @@
    "haskell": {
     "name": "capacity",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -44,6 +51,10 @@
    "haskell": {
     "name": "states",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -64,6 +75,10 @@
    "haskell": {
     "name": "shellCapacity",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -84,6 +99,10 @@
    "haskell": {
     "name": "madelungRank",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -104,6 +123,10 @@
    "haskell": {
     "name": "madelungOrder",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -124,6 +147,10 @@
    "haskell": {
     "name": "fill",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -144,6 +171,10 @@
    "haskell": {
     "name": "madelung",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -164,6 +195,10 @@
    "haskell": {
     "name": "electrons",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -184,6 +219,10 @@
    "haskell": {
     "name": "withinCapacity",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a definition of the one-electron counting (subshells, states, capacities, the Madelung order by n + l): combinatorics, no energy, entropy, temperature or work; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -204,6 +243,10 @@
    "haskell": {
     "name": "observed",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "the cited NIST Atomic Spectra Database ground-state configurations (chemistry/ground_states.json) and facts read from them: cited data, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -224,6 +267,10 @@
    "haskell": {
     "name": "\"states are the pairs with j < 2l + 1\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -244,6 +291,10 @@
    "haskell": {
     "name": "\"states without repetition\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -264,6 +315,10 @@
    "haskell": {
     "name": "\"capacity is the number of states\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -284,6 +339,10 @@
    "haskell": {
     "name": "prop_foldr_add_shift",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; list arithmetic used by shellCapacity_eq; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -304,6 +363,10 @@
    "haskell": {
     "name": "\"shell n holds 2n^2\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -324,6 +387,10 @@
    "haskell": {
     "name": "\"madelung order sorted\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -344,6 +411,10 @@
    "haskell": {
     "name": "\"madelung order complete\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -364,6 +435,10 @@
    "haskell": {
     "name": "\"madelung electrons\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a computed check of the Madelung prediction for z <= 118: decided by evaluation over the counting, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -384,6 +459,10 @@
    "haskell": {
     "name": "\"madelung electrons\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -404,6 +483,10 @@
    "haskell": {
     "name": "\"madelung within capacity\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a computed check of the Madelung prediction for z <= 118: decided by evaluation over the counting, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -424,6 +507,10 @@
    "haskell": {
     "name": "\"madelung within capacity\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "a theorem of that combinatorics (Pauli counting, shell sums, order and completeness): mathematics, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -444,6 +531,10 @@
    "haskell": {
     "name": "\"observed atomic numbers\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "the cited NIST Atomic Spectra Database ground-state configurations (chemistry/ground_states.json) and facts read from them: cited data, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -464,6 +555,10 @@
    "haskell": {
     "name": "\"observed electrons\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "the cited NIST Atomic Spectra Database ground-state configurations (chemistry/ground_states.json) and facts read from them: cited data, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -484,6 +579,10 @@
    "haskell": {
     "name": "\"observed within capacity\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "the cited NIST Atomic Spectra Database ground-state configurations (chemistry/ground_states.json) and facts read from them: cited data, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
    }
   },
   {
@@ -504,6 +603,802 @@
    "haskell": {
     "name": "\"madelung exceptions\"",
     "file": "Haskell/src/UMST/Chem/GroundStates.hs"
+   },
+   "second_law": {
+    "class": "chemistry data",
+    "reason": "the cited NIST Atomic Spectra Database ground-state configurations (chemistry/ground_states.json) and facts read from them: cited data, no thermodynamic quantity; no SecondLaw case applies: the module carries no energy; the Madelung order ranks subshells by n + l, not by an energy. Composition needs the subshell or ionization energies (Absent, follow-up cell CHEM-GROUND-STATE-ENERGIES): with them a change of configuration is a transition instance with its free-energy change, and the Madelung exceptions become energy facts"
+   }
+  },
+  {
+   "id": "knowing.instance.pathBornDist",
+   "statement": "the Born weights of the path qubit as a two-state distribution: the prior of the erase case",
+   "lean": {
+    "name": "pathBornDist",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "pathBornDist",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathBornDist",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "pathBornDist",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "the prior that the erase-case statements take; a distribution, no thermodynamic quantity"
+   }
+  },
+  {
+   "id": "knowing.instance.shannonEntropy_pathBornDist",
+   "statement": "the Shannon entropy of the path prior (less that of the Dirac state) is the diagonal von Neumann entropy of the path qubit",
+   "lean": {
+    "name": "shannonEntropy_pathBornDist",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "shannonEntropy_pathBornDist",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "shannonEntropy-pathBornDist",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"shannonEntropy_pathBornDist\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "entropy of a fixed distribution (the path prior), used by every erase-case statement of the knowing fibre"
+   }
+  },
+  {
+   "id": "knowing.instance.pathBornEraseProcess",
+   "statement": "the erasure of the path prior at work T·S (units of k_B times kelvin)",
+   "lean": {
+    "name": "pathBornEraseProcess",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "pathBornEraseProcess",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathBornEraseProcess",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "pathBornEraseProcess",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "vocabulary",
+    "reason": "the erase process that pathBornErase_processFamily, the erase hypothesis and the cost bounds put in SecondLaw (.erase _)"
+   }
+  },
+  {
+   "id": "knowing.instance.pathBornErase_secondLaw",
+   "statement": "erasing the path prior at work T·S satisfies the erase case of SecondLaw, with equality",
+   "lean": {
+    "name": "pathBornErase_secondLaw",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "pathBornErase_secondLaw",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathBornErase-secondLaw",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathBornErase_secondLaw\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "the erase instance stated through LandauerLaw.eraseSecondLaw, equal by definition to the erase case of SecondLaw; its SecondLaw form is pathBornErase_processFamily, which uses it"
+   }
+  },
+  {
+   "id": "knowing.instance.pathBornErase_processFamily",
+   "statement": "the path erasure is a member of the process family: SecondLaw (.erase _) (.erasure (pathBornDist ρ)); the same process refused against a feedback prior (Haskell)",
+   "lean": {
+    "name": "pathBornErase_processFamily",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "pathBornErase_processFamily",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathBornErase-processFamily",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathBornErase_processFamily\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.instance.landauerCostDiagonal_eq_kB_eraseWork",
+   "statement": "the diagonal Landauer cost k_B T ln 2 · (S / ln 2) of the path qubit is k_B times the work of its tight erasure, in joules",
+   "lean": {
+    "name": "landauerCostDiagonal_eq_kB_eraseWork",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "landauerCostDiagonal_eq_kB_eraseWork",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "landauerCostDiagonal-eq-kB-eraseWork",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"landauerCostDiagonal_eq_kB_eraseWork\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "a units bridge (joules = k_B times the work in units of k_B kelvin) for the tight erasure; the erase-case cost bound in joules is erase_pathRecord_cost_ge_bits"
+   }
+  },
+  {
+   "id": "knowing.instance.PathEraseHypothesis",
+   "statement": "the erase hypothesis of the path qubit: admissibility of its erasure under SecondLaw (Haskell: held only when secondLaw holds)",
+   "lean": {
+    "name": "PathEraseHypothesis",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "PathEraseHypothesis",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "PathEraseHypothesis",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"PathEraseHypothesis\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.instance.pathEraseHypothesis_default",
+   "statement": "every path qubit at a positive temperature has its erase hypothesis, from the tight erasure",
+   "lean": {
+    "name": "pathEraseHypothesis_default",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "pathEraseHypothesis_default",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathEraseHypothesis-default",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathEraseHypothesis_default\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.instance.epistemicMeasureFeedback",
+   "statement": "the probe's readout as a measurement with feedback: work its measurement cost, no free-energy change, at the bath",
+   "lean": {
+    "name": "epistemicMeasureFeedback",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "epistemicMeasureFeedback",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "epistemicMeasureFeedback",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "epistemicMeasureFeedback",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "vocabulary",
+    "reason": "the measure-feedback process that measureFeedback_admissible_iff and the which-path instance put in SecondLaw (.measureFeedback _)"
+   }
+  },
+  {
+   "id": "knowing.instance.measurementCost_eq_kBT_epistemicMI",
+   "statement": "the probe's measurement cost is k_B T times its epistemic mutual information (nats)",
+   "lean": {
+    "name": "measurementCost_eq_kBT_epistemicMI",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "measurementCost_eq_kBT_epistemicMI",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "measurementCost-eq-kBT-epistemicMI",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"measurementCost_eq_kBT_epistemicMI\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "a units identity (k_B T ln 2 per bit = k_B T per nat), used by measureFeedback_admissible_iff and the which-path instance"
+   }
+  },
+  {
+   "id": "knowing.instance.MeasureFeedbackHypothesis",
+   "statement": "the measure-feedback hypothesis: a record whose mutual information is the probe's, and the measure-feedback case of SecondLaw",
+   "lean": {
+    "name": "MeasureFeedbackHypothesis",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "MeasureFeedbackHypothesis",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "MeasureFeedbackHypothesis",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"MeasureFeedbackHypothesis\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback"
+   }
+  },
+  {
+   "id": "knowing.instance.measureFeedback_admissible_iff",
+   "statement": "against a record aligned with the probe, the readout satisfies the measure-feedback case iff its cost is at most k_B T I",
+   "lean": {
+    "name": "measureFeedback_admissible_iff",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "measureFeedback_admissible_iff",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "measureFeedback-admissible-iff",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"measureFeedback_admissible_iff\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback"
+   }
+  },
+  {
+   "id": "knowing.instance.measureFeedback_null_instance",
+   "statement": "the null probe (no readout, no cost) satisfies the measure-feedback case against an uncorrelated record (zero information)",
+   "lean": {
+    "name": "measureFeedback_null_instance",
+    "file": "Lean/KnowingFibreInstance.lean"
+   },
+   "coq": {
+    "name": "measureFeedback_null_instance",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "measureFeedback-null-instance",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"measureFeedback_null_instance\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback"
+   }
+  },
+  {
+   "id": "knowing.law.pathRecordJoint",
+   "statement": "the record of a Lüders which-path measurement: the joint law of path and record, the record equal to the path",
+   "lean": {
+    "name": "pathRecordJoint",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "pathRecordJoint",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathRecordJoint",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "pathRecordJoint",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "the joint law (path, record) that the which-path measure-feedback instance takes as its prior; a distribution, no thermodynamic quantity"
+   }
+  },
+  {
+   "id": "knowing.law.pathRecordJoint_marginalX",
+   "statement": "the path marginal of the record joint is the Born prior",
+   "lean": {
+    "name": "pathRecordJoint_marginalX",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "pathRecordJoint_marginalX",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathRecordJoint-marginalX",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathRecordJoint_marginalX\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "a marginal of a fixed joint law, used by the measure-feedback instance of the which-path record"
+   }
+  },
+  {
+   "id": "knowing.law.pathRecordJoint_marginalY",
+   "statement": "the record marginal of the record joint is the Born prior",
+   "lean": {
+    "name": "pathRecordJoint_marginalY",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "pathRecordJoint_marginalY",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathRecordJoint-marginalY",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathRecordJoint_marginalY\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "a marginal of a fixed joint law, used by the measure-feedback instance of the which-path record"
+   }
+  },
+  {
+   "id": "knowing.law.pathRecordJoint_jointEntropy",
+   "statement": "the joint entropy of the record joint is the entropy of the path",
+   "lean": {
+    "name": "pathRecordJoint_jointEntropy",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "pathRecordJoint_jointEntropy",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathRecordJoint-jointEntropy",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathRecordJoint_jointEntropy\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "entropy of a fixed joint law, used by the measure-feedback instance of the which-path record"
+   }
+  },
+  {
+   "id": "knowing.law.pathRecordJoint_mutualInformation",
+   "statement": "the which-path record carries exactly the which-path probe's epistemic information: I(path; record) = S(path)",
+   "lean": {
+    "name": "pathRecordJoint_mutualInformation",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "pathRecordJoint_mutualInformation",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "pathRecordJoint-mutualInformation",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"pathRecordJoint_mutualInformation\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "information of a fixed joint law, used by every measure-feedback statement on the record"
+   }
+  },
+  {
+   "id": "knowing.law.whichPath_measureFeedback_secondLaw",
+   "statement": "the which-path readout at its cost k_B T I is an instance of the measure-feedback case of SecondLaw against its record, with equality",
+   "lean": {
+    "name": "whichPath_measureFeedback_secondLaw",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "whichPath_measureFeedback_secondLaw",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "whichPath-measureFeedback-secondLaw",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"whichPath_measureFeedback_secondLaw\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback"
+   }
+  },
+  {
+   "id": "knowing.law.landauerBitEnergy_eq_kB",
+   "statement": "one bit costs k_B T ln 2: the Landauer bit energy of the knowing fibre with the k_B of the second law (Haskell: double-slit's k_B against umst-formal's)",
+   "lean": {
+    "name": "landauerBitEnergy_eq_kB",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "landauerBitEnergy_eq_kB",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "landauerBitEnergy-eq-kB",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"landauerBitEnergy_eq_kB\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "a units identity between the bit energy of LandauerEinsteinBridge and the k_B of the second law, used by the measure-feedback and erase bounds"
+   }
+  },
+  {
+   "id": "knowing.law.measureFeedback_extWork_le_landauerBitEnergy",
+   "statement": "information is worth at most one bit: a feedback that satisfies the measure-feedback case on a record carrying a path probe's information extracts at most -ΔF + k_B T ln 2",
+   "lean": {
+    "name": "measureFeedback_extWork_le_landauerBitEnergy",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "measureFeedback_extWork_le_landauerBitEnergy",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "measureFeedback-extWork-le-landauerBitEnergy",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"measureFeedback_extWork_le_landauerBitEnergy\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback"
+   }
+  },
+  {
+   "id": "knowing.law.readoutCost_le_landauerBitEnergy_of_secondLaw",
+   "statement": "a probe's readout (work its measurement cost, no free-energy change) that satisfies the measure-feedback case against a record carrying the probe's information costs at most k_B T ln 2",
+   "lean": {
+    "name": "readoutCost_le_landauerBitEnergy_of_secondLaw",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "readoutCost_le_landauerBitEnergy_of_secondLaw",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "readoutCost-le-landauerBitEnergy-of-secondLaw",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"readoutCost_le_landauerBitEnergy_of_secondLaw\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback"
+   }
+  },
+  {
+   "id": "knowing.law.erase_pathRecord_work",
+   "statement": "the erase case on the path record: the bath temperature times the path entropy is at most the erasure work",
+   "lean": {
+    "name": "erase_pathRecord_work",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "erase_pathRecord_work",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "erase-pathRecord-work",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"erase_pathRecord_work\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.law.erase_pathRecord_cost_ge_bits",
+   "statement": "each bit costs k_B T ln 2: an erasure of the path record that satisfies the erase case costs, in joules, at least k_B T ln 2 per bit of path entropy",
+   "lean": {
+    "name": "erase_pathRecord_cost_ge_bits",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "erase_pathRecord_cost_ge_bits",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "erase-pathRecord-cost-ge-bits",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"erase_pathRecord_cost_ge_bits\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.law.negMulLog_ge_mul_one_sub",
+   "statement": "the entropy of one outcome against ln x ≤ x − 1: −x ln x ≥ x (1 − x) for x ≥ 0",
+   "lean": {
+    "name": "negMulLog_ge_mul_one_sub",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "negMulLog_ge_mul_one_sub",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "negMulLog-ge-mul-one-sub",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"negMulLog_ge_mul_one_sub\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "an inequality of the logarithm, used by the complementarity bounds on the erasure cost"
+   }
+  },
+  {
+   "id": "knowing.law.one_sub_distinguishability_sq_le_two_mul_entropy",
+   "statement": "the Englert partner bounds the path entropy: 1 − D² ≤ 2 S (nats), with D = |p₀ − p₁| the which-path distinguishability",
+   "lean": {
+    "name": "one_sub_distinguishability_sq_le_two_mul_entropy",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "one_sub_distinguishability_sq_le_two_mul_entropy",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "one-sub-distinguishability-sq-le-two-mul-entropy",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"one_sub_distinguishability_sq_le_two_mul_entropy\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "an entropy inequality of the path distribution, used by the erase-case complementarity bounds"
+   }
+  },
+  {
+   "id": "knowing.law.erase_pathRecord_cost_ge_complementarity",
+   "statement": "an erasure of the path record that satisfies the erase case costs at least k_B T (1 − D²) / 2",
+   "lean": {
+    "name": "erase_pathRecord_cost_ge_complementarity",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "erase_pathRecord_cost_ge_complementarity",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "erase-pathRecord-cost-ge-complementarity",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"erase_pathRecord_cost_ge_complementarity\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.law.erase_pathRecord_cost_ge_visibility_sq",
+   "statement": "fringes cost to forget: through Englert's V² + D² ≤ 1, an erasure of the path record of a state of fringe visibility V that satisfies the erase case costs at least k_B T V² / 2",
+   "lean": {
+    "name": "erase_pathRecord_cost_ge_visibility_sq",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "erase_pathRecord_cost_ge_visibility_sq",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "erase-pathRecord-cost-ge-visibility-sq",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"erase_pathRecord_cost_ge_visibility_sq\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.law.measure_then_erase_no_net_work",
+   "statement": "the Szilard balance on the path qubit: a feedback on the which-path record at no free-energy change and the erasure of the record at the same bath, both satisfying SecondLaw, extract no net work",
+   "lean": {
+    "name": "measure_then_erase_no_net_work",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "measure_then_erase_no_net_work",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "measure-then-erase-no-net-work",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"measure_then_erase_no_net_work\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "measureFeedback and erase (a mixed chain at one bath)"
+   }
+  },
+  {
+   "id": "knowing.law.resetProcess_of_secondLaw",
+   "statement": "the reset process of LandauerBound whose heat is the erasure work in joules takes its bound (Landauer cost ≤ heat) from the erase case of SecondLaw",
+   "lean": {
+    "name": "resetProcess_of_secondLaw",
+    "file": "Lean/KnowingFibreLaw.lean"
+   },
+   "coq": {
+    "name": "resetProcess_of_secondLaw",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "resetProcess-of-secondLaw",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"resetProcess_of_secondLaw\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "case": "erase"
+   }
+  },
+  {
+   "id": "knowing.englert",
+   "statement": "Englert's complementarity for every qubit density matrix: V² + D² ≤ 1, with V = 2|ρ₀₁| and D = |ρ₀₀ − ρ₁₁|",
+   "lean": {
+    "name": "complementarity_fringe_path",
+    "file": "Lean/QuantumClassicalBridge.lean"
+   },
+   "coq": {
+    "name": "englert_complementarity",
+    "file": "Coq/ComplementaritySpec.v"
+   },
+   "agda": {
+    "name": "englert",
+    "file": "Agda/ComplementaritySpec.agda"
+   },
+   "haskell": {
+    "name": "prop_complementarity",
+    "file": "Haskell/test/Main.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "quantum kinematics of the qubit, used by the erase-case bound erase_pathRecord_cost_ge_visibility_sq"
+   }
+  },
+  {
+   "id": "knowing.channel.whichPath_collapse",
+   "statement": "the Lüders which-path channel removes the coherence: the fringe visibility after it is zero",
+   "lean": {
+    "name": "fringeVisibility_whichPath_apply",
+    "file": "Lean/QuantumClassicalBridge.lean"
+   },
+   "coq": {
+    "name": "fringeVisibility_whichPath_apply",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "fringeVisibility-whichPath-apply",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "prop_whichPath_collapse",
+    "file": "Haskell/test/Main.hs"
+   },
+   "second_law": {
+    "class": "infrastructure",
+    "reason": "the measurement channel of the which-path probe: a map of states, no thermodynamic quantity; no SecondLaw statement uses it (orphan)"
+   }
+  },
+  {
+   "id": "knowing.measurementCost_le_landauerBitEnergy",
+   "statement": "the measurement cost of a path probe is at most one Landauer bit energy k_B T ln 2",
+   "lean": {
+    "name": "measurementCost_le_landauerBitEnergy",
+    "file": "Lean/MeasurementCost.lean"
+   },
+   "coq": {
+    "name": "measurementCost_le_landauerBitEnergy",
+    "file": "Coq/KnowingFibreLaw.v"
+   },
+   "agda": {
+    "name": "measurementCost-le-landauerBitEnergy",
+    "file": "Agda/KnowingFibreLaw.agda"
+   },
+   "haskell": {
+    "name": "\"measurementCost_le_landauerBitEnergy\"",
+    "file": "Haskell/test/KnowingFibreLawProps.hs"
+   },
+   "second_law": {
+    "class": "disconnected",
+    "reason": "the cost bound proved from the definition of the cost (k_B T times an information of at most ln 2) without a SecondLaw case; its composed form is knowing.law.readoutCost_le_landauerBitEnergy_of_secondLaw, the same bound for a readout admissible under the measure-feedback case"
    }
   }
  ]

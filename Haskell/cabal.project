@@ -2,3 +2,11 @@
 -- See Docs/PARALLEL_WORK.md (CI row).
 packages: .
 allow-newer: all
+
+-- umst-formal at the Lake pin of Lean/lakefile.lean (scripts/check_formal_pins.py keeps the two equal): the
+-- knowing-fibre-law suite evaluates its executable second law (UMST.Process).
+source-repository-package
+  type: git
+  location: https://github.com/tytolabs/umst-formal.git
+  tag: 7c85e0439bb7f2b67ff79327ad6289e4dd392b8f
+  subdir: Haskell
