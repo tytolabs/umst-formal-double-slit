@@ -25,6 +25,9 @@ We define quantum relative entropy spectrally, then reduce non-negativity to the
 - `gibbs_inequality` — classical KL divergence non-negativity for finite distributions
 - `spectralRelativeEntropy` — quantum relative entropy via spectral overlap
 - `spectralRelativeEntropy_nonneg` — S(ρ‖σ) ≥ 0 in the spectral-overlap form (proved)
+- `vonNeumannEntropy_le_sum_negMulLog_diag_unitary_conj` — measuring in any orthonormal basis (columns of a
+  unitary `W`) does not lower the entropy: `S(ρ) ≤ H(diag(Wᴴ ρ W))` (row-wise Jensen on concave `negMulLog`,
+  column unitarity)
 
 ## References
 
@@ -82,7 +85,7 @@ private lemma unitary_row_diagonal_mul_star (T : Matrix (Fin n) (Fin n) ℂ)
   rw [Matrix.star_eq_conjTranspose] at h
   simpa [Matrix.mul_apply, Matrix.one_apply_eq, Matrix.conjTranspose_apply] using congr_arg (fun M => M i i) h
 
-private lemma unitary_row_normSq_sum (T : Matrix (Fin n) (Fin n) ℂ)
+theorem unitary_row_normSq_sum (T : Matrix (Fin n) (Fin n) ℂ)
     (hT : T ∈ Matrix.unitaryGroup (Fin n) ℂ) (i : Fin n) :
     ∑ j : Fin n, (Complex.normSq (T i j) : ℝ) = 1 := by
   have hdiag := unitary_row_diagonal_mul_star T hT i
@@ -96,7 +99,7 @@ private lemma unitary_col_diagonal_star_mul (T : Matrix (Fin n) (Fin n) ℂ)
   rw [Matrix.star_eq_conjTranspose] at h
   simpa [Matrix.mul_apply, Matrix.one_apply_eq, Matrix.conjTranspose_apply] using congr_arg (fun M => M j j) h
 
-private lemma unitary_col_normSq_sum (T : Matrix (Fin n) (Fin n) ℂ)
+theorem unitary_col_normSq_sum (T : Matrix (Fin n) (Fin n) ℂ)
     (hT : T ∈ Matrix.unitaryGroup (Fin n) ℂ) (j : Fin n) :
     ∑ i : Fin n, (Complex.normSq (T i j) : ℝ) = 1 := by
   have hdiag := unitary_col_diagonal_star_mul T hT j
@@ -178,5 +181,60 @@ theorem spectralRelativeEntropy_nonneg
   have hEnt : A - Csum ≤ A - B := sub_le_sub le_rfl hubound
   unfold spectralRelativeEntropy
   exact le_trans hKl hEnt
+
+/-! ### Entropy does not decrease under a basis measurement
+
+The diagonal of `Wᴴ ρ W` is `dₖ = ∑ᵢ |Tₖᵢ|² λᵢ` with `T = Wᴴ U` unitary (`U` the eigenvectors of `ρ`), a doubly
+stochastic mixture of the spectrum. -/
+
+/-- The `k`-th diagonal entry of `Wᴴ ρ W` is `∑ᵢ |(Wᴴ U)ₖᵢ|² λᵢ`, with `U` the eigenvectors and `λ` the eigenvalues
+of `ρ`. -/
+theorem diag_unitary_conj_re_eq (ρ : DensityMatrix hn) (W : Matrix (Fin n) (Fin n) ℂ) (k : Fin n) :
+    ((Wᴴ * ρ.carrier * W) k k).re =
+      ∑ i, Complex.normSq ((Wᴴ * (ρ.isHermitian.eigenvectorUnitary : Matrix (Fin n) (Fin n) ℂ)) k i) *
+        ρ.isHermitian.eigenvalues i := by
+  set U := (ρ.isHermitian.eigenvectorUnitary : Matrix (Fin n) (Fin n) ℂ)
+  have hspec : ρ.carrier = U * diagonal (RCLike.ofReal ∘ ρ.isHermitian.eigenvalues) * star U :=
+    ρ.isHermitian.spectral_theorem
+  set D : Matrix (Fin n) (Fin n) ℂ := diagonal (RCLike.ofReal ∘ ρ.isHermitian.eigenvalues) with hD
+  have hconj : Wᴴ * ρ.carrier * W = (Wᴴ * U) * D * (Wᴴ * U)ᴴ := by
+    calc Wᴴ * ρ.carrier * W = Wᴴ * (U * D * star U) * W := by rw [← hspec]
+      _ = (Wᴴ * U) * D * (Wᴴ * U)ᴴ := by
+        rw [conjTranspose_mul, conjTranspose_conjTranspose]
+        simp only [Matrix.mul_assoc, star_eq_conjTranspose]
+  rw [hconj, Matrix.mul_apply, Complex.re_sum]
+  refine Finset.sum_congr rfl fun i _ => ?_
+  rw [mul_diagonal, conjTranspose_apply, Function.comp_apply]
+  rw [mul_right_comm, Complex.star_def, Complex.mul_conj]
+  simp [Complex.mul_re]
+
+/-- **Entropy increase under a basis measurement**: for any unitary `W`, `S(ρ) ≤ ∑ₖ η((Wᴴ ρ W)ₖₖ)` with
+`η = negMulLog`. -/
+theorem vonNeumannEntropy_le_sum_negMulLog_diag_unitary_conj (ρ : DensityMatrix hn)
+    (W : Matrix (Fin n) (Fin n) ℂ) (hW : W ∈ Matrix.unitaryGroup (Fin n) ℂ) :
+    vonNeumannEntropy ρ ≤ ∑ k, negMulLog ((Wᴴ * ρ.carrier * W) k k).re := by
+  set U := (ρ.isHermitian.eigenvectorUnitary : Matrix (Fin n) (Fin n) ℂ)
+  set T := Wᴴ * U
+  set lam := ρ.isHermitian.eigenvalues
+  have hT : T ∈ Matrix.unitaryGroup (Fin n) ℂ := by
+    refine Submonoid.mul_mem _ ?_ ρ.isHermitian.eigenvectorUnitary.2
+    rw [← star_eq_conjTranspose]
+    exact unitary.star_mem hW
+  have hjensen (k : Fin n) :
+      ∑ i, Complex.normSq (T k i) * negMulLog (lam i) ≤ negMulLog ((Wᴴ * ρ.carrier * W) k k).re := by
+    rw [diag_unitary_conj_re_eq ρ W k]
+    have h := Real.concaveOn_negMulLog.le_map_sum (t := Finset.univ) (w := fun i => Complex.normSq (T k i))
+      (p := lam) (fun i _ => Complex.normSq_nonneg _) (by simpa using unitary_row_normSq_sum T hT k)
+      (fun i _ => Set.mem_Ici.mpr (density_eigenvalues_nonneg ρ i))
+    simpa [smul_eq_mul] using h
+  calc vonNeumannEntropy ρ
+      = ∑ i, (∑ k, Complex.normSq (T k i)) * negMulLog (lam i) := by
+        unfold vonNeumannEntropy
+        refine Finset.sum_congr rfl fun i _ => ?_
+        rw [unitary_col_normSq_sum T hT i, one_mul]
+    _ = ∑ k, ∑ i, Complex.normSq (T k i) * negMulLog (lam i) := by
+        simp_rw [Finset.sum_mul]
+        exact Finset.sum_comm
+    _ ≤ ∑ k, negMulLog ((Wᴴ * ρ.carrier * W) k k).re := Finset.sum_le_sum fun k _ => hjensen k
 
 end UMST.Quantum

@@ -674,7 +674,7 @@ source, in [umst-formal][umst-formal], which this repository imports (Lean throu
 <!-- census:begin -->
 | Language | Files | Declarations | Gaps |
 |---|---:|---|---|
-| Lean 4 | 52 (51 Lake roots) | 487 theorems + 27 lemmas in the roots; 502 + 27 over all files | 0 `sorry` or `admit` holes; 0 `axiom` |
+| Lean 4 | 52 (51 Lake roots) | 497 theorems + 27 lemmas in the roots; 512 + 27 over all files | 0 `sorry` or `admit` holes; 0 `axiom` |
 | Coq | 5 | 76 theorems and lemmas | 0 `Admitted` |
 | Agda (`--safe`) | 4 | 111 top-level typed definitions | `--safe` admits no postulate |
 | Haskell | 13 | 14 QuickCheck properties | — |

@@ -30,6 +30,9 @@ on the composite system, indexed by `Fin (na * nb)`, is obtained by **`Matrix.re
   on product indices; same for **`trace_partialTraceRightFin`** / **`trace_partialTraceLeftFin`** on **`Fin (na * nb)`**
   after unflattening via **`finProdFinEquiv.symm`**.
 
+* **`sum_diag_kronecker_conj_right`** / **`sum_diag_kronecker_conj_left`** — summing the diagonal of
+  `(U_A ⊗ U_B)ᴴ M (U_A ⊗ U_B)` over one factor gives the diagonal of the other factor's conjugated partial trace.
+
 * **`partialTraceRightProd_toDensityMatrix`** / **`partialTraceLeftProd_toDensityMatrix`** — partial trace
   of **any** bipartite density matrix (including entangled states) yields a valid `DensityMatrix`.
 -/
@@ -326,5 +329,78 @@ theorem partialTraceRightProd_toDensityMatrix_tensor (ρA : DensityMatrix ha) (�
 theorem partialTraceLeftProd_toDensityMatrix_tensor (ρA : DensityMatrix ha) (ρB : DensityMatrix hb) :
     (partialTraceLeftProd_toDensityMatrix ha hb (tensorDensity ha hb ρA ρB)).carrier = ρB.carrier :=
   partialTraceLeftFin_tensorDensity_carrier ha hb ρA ρB
+
+/-- Diagonal entry of a conjugation `Vᴴ M V` as a double sum. -/
+theorem conjTranspose_mul_mul_apply_self {ι : Type*} [Fintype ι] (M V : Matrix ι ι ℂ) (x : ι) :
+    (Vᴴ * M * V) x x = ∑ y, ∑ z, star (V y x) * M y z * V z x := by
+  simp only [Matrix.mul_apply, conjTranspose_apply, Finset.sum_mul]
+  exact Finset.sum_comm
+
+/-- Summing the diagonal of `(U_A ⊗ U_B)ᴴ M (U_A ⊗ U_B)` over the `B` index, with `U_B` unitary, gives the diagonal
+of `U_Aᴴ (Tr_B M) U_A`. -/
+theorem sum_diag_kronecker_conj_right (M : Matrix (Fin na × Fin nb) (Fin na × Fin nb) ℂ)
+    (UA : Matrix (Fin na) (Fin na) ℂ) (UB : Matrix (Fin nb) (Fin nb) ℂ) (hUB : UB * UBᴴ = 1) (a : Fin na) :
+    ∑ b, ((UA ⊗ₖ UB)ᴴ * M * (UA ⊗ₖ UB)) (a, b) (a, b) = (UAᴴ * partialTraceRightProd M * UA) a a := by
+  have hδ (j j' : Fin nb) : ∑ b, UB j' b * star (UB j b) = if j' = j then 1 else 0 := by
+    have h := congrFun (congrFun hUB j') j
+    simpa [Matrix.mul_apply, conjTranspose_apply, one_apply] using h
+  calc ∑ b, ((UA ⊗ₖ UB)ᴴ * M * (UA ⊗ₖ UB)) (a, b) (a, b)
+      = ∑ y : Fin na × Fin nb, ∑ z : Fin na × Fin nb,
+          star (UA y.1 a) * M y z * UA z.1 a * ∑ b, UB z.2 b * star (UB y.2 b) := by
+        simp_rw [conjTranspose_mul_mul_apply_self, kroneckerMap_apply]
+        rw [Finset.sum_comm]
+        refine Finset.sum_congr rfl fun y _ => ?_
+        rw [Finset.sum_comm]
+        refine Finset.sum_congr rfl fun z _ => ?_
+        rw [Finset.mul_sum]
+        refine Finset.sum_congr rfl fun b _ => ?_
+        rw [star_mul']
+        ring
+    _ = ∑ y : Fin na × Fin nb, ∑ i' : Fin na, star (UA y.1 a) * M y (i', y.2) * UA i' a := by
+        refine Finset.sum_congr rfl fun y _ => ?_
+        simp_rw [hδ, mul_ite, mul_one, mul_zero]
+        rw [Fintype.sum_prod_type]
+        refine Finset.sum_congr rfl fun i' _ => ?_
+        rw [Finset.sum_ite_eq']
+        simp
+    _ = (UAᴴ * partialTraceRightProd M * UA) a a := by
+        simp only [Matrix.mul_apply, conjTranspose_apply, partialTraceRightProd, Finset.sum_mul, Finset.mul_sum]
+        rw [Fintype.sum_prod_type]
+        exact (Finset.sum_congr rfl fun x _ => Finset.sum_comm).trans Finset.sum_comm
+
+/-- Summing the diagonal of `(U_A ⊗ U_B)ᴴ M (U_A ⊗ U_B)` over the `A` index, with `U_A` unitary, gives the diagonal
+of `U_Bᴴ (Tr_A M) U_B`. -/
+theorem sum_diag_kronecker_conj_left (M : Matrix (Fin na × Fin nb) (Fin na × Fin nb) ℂ)
+    (UA : Matrix (Fin na) (Fin na) ℂ) (UB : Matrix (Fin nb) (Fin nb) ℂ) (hUA : UA * UAᴴ = 1) (b : Fin nb) :
+    ∑ a, ((UA ⊗ₖ UB)ᴴ * M * (UA ⊗ₖ UB)) (a, b) (a, b) = (UBᴴ * partialTraceLeftProd M * UB) b b := by
+  have hδ (i i' : Fin na) : ∑ a, UA i' a * star (UA i a) = if i' = i then 1 else 0 := by
+    have h := congrFun (congrFun hUA i') i
+    simpa [Matrix.mul_apply, conjTranspose_apply, one_apply] using h
+  calc ∑ a, ((UA ⊗ₖ UB)ᴴ * M * (UA ⊗ₖ UB)) (a, b) (a, b)
+      = ∑ y : Fin na × Fin nb, ∑ z : Fin na × Fin nb,
+          star (UB y.2 b) * M y z * UB z.2 b * ∑ a, UA z.1 a * star (UA y.1 a) := by
+        simp_rw [conjTranspose_mul_mul_apply_self, kroneckerMap_apply]
+        rw [Finset.sum_comm]
+        refine Finset.sum_congr rfl fun y _ => ?_
+        rw [Finset.sum_comm]
+        refine Finset.sum_congr rfl fun z _ => ?_
+        rw [Finset.mul_sum]
+        refine Finset.sum_congr rfl fun a _ => ?_
+        rw [star_mul']
+        ring
+    _ = ∑ y : Fin na × Fin nb, ∑ j' : Fin nb, star (UB y.2 b) * M y (y.1, j') * UB j' b := by
+        refine Finset.sum_congr rfl fun y _ => ?_
+        simp_rw [hδ, mul_ite, mul_one, mul_zero]
+        rw [Fintype.sum_prod_type_right]
+        refine Finset.sum_congr rfl fun j' _ => ?_
+        rw [Finset.sum_ite_eq']
+        simp
+    _ = (UBᴴ * partialTraceLeftProd M * UB) b b := by
+        simp only [Matrix.mul_apply, conjTranspose_apply, partialTraceLeftProd, Finset.sum_mul, Finset.mul_sum]
+        rw [Fintype.sum_prod_type]
+        refine (Finset.sum_comm.trans (Finset.sum_congr rfl fun j _ => Finset.sum_comm)).trans ?_
+        refine Finset.sum_comm.trans (Finset.sum_congr rfl fun j' _ => Finset.sum_congr rfl fun j _ =>
+          Finset.sum_congr rfl fun k _ => ?_)
+        ring
 
 end UMST.Quantum
