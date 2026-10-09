@@ -77,37 +77,10 @@ theorem posSemidef_map_term (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : ρ.PosSemid
     (κ.K i * ρ * (κ.K i)ᴴ).PosSemidef :=
   hρ.mul_mul_conjTranspose_same (κ.K i)
 
-/-- Sum of PSD matrices is PSD (pointwise quadratic form). -/
-theorem PosSemidef.add {A B : Matrix (Fin n) (Fin n) ℂ} (hA : A.PosSemidef) (hB : B.PosSemidef) :
-    (A + B).PosSemidef := by
-  refine ⟨hA.isHermitian.add hB.isHermitian, fun x => ?_⟩
-  have h1 := hA.2 x
-  have h2 := hB.2 x
-  simp only [add_mulVec, dotProduct_add]
-  exact add_nonneg h1 h2
-
-omit [Fintype ι] in
-theorem posSemidef_finset_sum (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n) ℂ)
-    (hf : ∀ i ∈ s, (f i).PosSemidef) : (∑ i ∈ s, f i).PosSemidef := by
-  classical
-  revert hf
-  refine Finset.induction_on s ?_ ?_
-  · intro _hf
-    simp [PosSemidef.zero]
-  · intro a t ha ih hf
-    have hfa : (f a).PosSemidef := hf a (Finset.mem_insert_self a t)
-    have iht : ∀ i ∈ t, (f i).PosSemidef := fun i hi => hf i (Finset.mem_insert_of_mem hi)
-    simp only [Finset.sum_insert ha]
-    exact PosSemidef.add hfa (ih iht)
-
-theorem posSemidef_sum (f : ι → Matrix (Fin n) (Fin n) ℂ) (hf : ∀ i, (f i).PosSemidef) :
-    (∑ i, f i).PosSemidef :=
-  posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
-
 theorem map_posSemidef (ρ : Matrix (Fin n) (Fin n) ℂ) (hρ : ρ.PosSemidef) :
     (κ.map ρ).PosSemidef := by
   dsimp [KrausChannel.map]
-  refine posSemidef_sum _ fun i => posSemidef_map_term κ ρ hρ i
+  refine DensityMat.posSemidef_sum _ fun i => posSemidef_map_term κ ρ hρ i
 
 omit [Fintype ι] in
 theorem trace_mul_sum (ρ : Matrix (Fin n) (Fin n) ℂ) (f : ι → Matrix (Fin n) (Fin n) ℂ)

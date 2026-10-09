@@ -21,6 +21,8 @@ partial trace.
 - `quantumMutualInfo` — definition via partial traces and `vonNeumannEntropy`
 - `quantumConditionalEntropy` — `S(A|B) = S(ρ_AB) - S(ρ_B)`
 - `quantumMutualInfo_eq_entropy_minus_conditional` — `I(A:B) = S(ρ_A) - S(A|B)` (pure algebra)
+- `quantumConditionalEntropy_B_given_A` — `S(B|A) = S(ρ_AB) - S(ρ_A)`, with `I(A:B) = S(ρ_B) - S(B|A)`
+  (`quantumMutualInfo_eq_entropy_minus_conditional_B_given_A`)
 - `quantumMutualInfo_le` — `I(A:B) ≤ log na + log nb` (upper bound)
 - `vonNeumannEntropy_tensorDensity_eq` — `S(ρ_A ⊗ ρ_B) = S(ρ_A) + S(ρ_B)` (**proved** in
   `KroneckerEigen.lean`, imported here)
@@ -53,6 +55,21 @@ theorem quantumMutualInfo_eq_entropy_minus_conditional
     vonNeumannEntropy (partialTraceRightProd_toDensityMatrix ha hb ρAB) -
     quantumConditionalEntropy ha hb ρAB := by
   simp only [quantumMutualInfo, quantumConditionalEntropy]
+  ring
+
+/-- **Quantum conditional entropy** of `B` given `A`: `S(B|A) = S(ρ_AB) - S(ρ_A)`. -/
+noncomputable def quantumConditionalEntropy_B_given_A
+    (ρAB : DensityMatrix (Nat.mul_pos ha hb)) : ℝ :=
+  vonNeumannEntropy ρAB -
+  vonNeumannEntropy (partialTraceRightProd_toDensityMatrix ha hb ρAB)
+
+/-- `I(A:B) = S(ρ_B) - S(B|A)` — the mutual information is symmetric in which side is conditioned on. -/
+theorem quantumMutualInfo_eq_entropy_minus_conditional_B_given_A
+    (ρAB : DensityMatrix (Nat.mul_pos ha hb)) :
+    quantumMutualInfo ha hb ρAB =
+    vonNeumannEntropy (partialTraceLeftProd_toDensityMatrix ha hb ρAB) -
+    quantumConditionalEntropy_B_given_A ha hb ρAB := by
+  simp only [quantumMutualInfo, quantumConditionalEntropy_B_given_A]
   ring
 
 /-- **Upper bound**: `I(A:B) ≤ log na + log nb`.

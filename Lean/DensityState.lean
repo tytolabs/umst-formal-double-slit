@@ -8,6 +8,8 @@ import Mathlib.Data.Matrix.RowCol
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.LinearAlgebra.Matrix.PosDef
 import Mathlib.Data.Fintype.Basic
+import Mathlib.Data.Fintype.BigOperators
+import Mathlib.Data.Complex.BigOperators
 
 /-!
 # DensityState — finite-dimensional density matrices (minimal layer)
@@ -20,9 +22,11 @@ standard quantum density-operator interface.
 - Lemmas in namespace **`DensityMat`** (e.g. **`DensityMat.ext`**, **`DensityMat.trace_eq_one`**) — avoids Lean path clashes between structure and lemma namespaces.
 - `pureDensity ψ h` — rank-one projector `|ψ⟩⟨ψ|` from a normalized vector (`dotProduct ψ (star ψ) = 1`).
 
-**In file:** convex **mixed state** `mixedDensity ρ₁ ρ₂ t` for `t ∈ [0,1]` (`PosSemidef.add` / `smul_psd`).
+**In file:** convex **mixed state** `mixedDensity ρ₁ ρ₂ t` for `t ∈ [0,1]` (`PosSemidef.add` / `smul_psd`), and
+finite mixtures `convexComboDensity w ρ = ∑ᵢ wᵢ ρᵢ` over any `Fintype ι` (`posSemidef_sum`); the two-point mixture is
+the `Bool`-indexed one (`mixedDensity_eq_convexCombo_two`).
 
-**Not yet:** general finite mixtures `∑ tᵢ ρᵢ`, or a dedicated bridge import from `DoubleSlitCore`.
+**Not yet:** a dedicated bridge import from `DoubleSlitCore`.
 **Composite / partial trace:** see **`TensorPartialTrace.lean`** (`tensorDensity`, `partialTraceRightProd`).
 -/
 
@@ -150,6 +154,34 @@ theorem smul_psd {M : Matrix (Fin n) (Fin n) ℂ} (hM : M.PosSemidef) (r : ℝ) 
     rw [step1]
     exact mul_nonneg (Complex.zero_le_real.mpr hr) h1
 
+/-- A finite sum of PSD matrices is PSD (induction on the finset). -/
+theorem posSemidef_finset_sum {ι : Type*} (s : Finset ι) (f : ι → Matrix (Fin n) (Fin n) ℂ)
+    (hf : ∀ i ∈ s, (f i).PosSemidef) : (∑ i ∈ s, f i).PosSemidef := by
+  classical
+  revert hf
+  refine Finset.induction_on s ?_ ?_
+  · intro _hf
+    simp [PosSemidef.zero]
+  · intro a t ha ih hf
+    have hfa : (f a).PosSemidef := hf a (Finset.mem_insert_self a t)
+    have iht : ∀ i ∈ t, (f i).PosSemidef := fun i hi => hf i (Finset.mem_insert_of_mem hi)
+    simp only [Finset.sum_insert ha]
+    exact Matrix.PosSemidef.add hfa (ih iht)
+
+theorem posSemidef_sum {ι : Type*} [Fintype ι] (f : ι → Matrix (Fin n) (Fin n) ℂ)
+    (hf : ∀ i, (f i).PosSemidef) : (∑ i, f i).PosSemidef :=
+  posSemidef_finset_sum Finset.univ f (fun i _ => hf i)
+
+/-- Finite convex combination `∑ᵢ wᵢ ρᵢ` of density matrices, for weights `wᵢ ≥ 0` with `∑ᵢ wᵢ = 1`. -/
+noncomputable def convexComboDensity {ι : Type*} [Fintype ι] (w : ι → ℝ) (hsum : ∑ i, w i = 1)
+    (hnonneg : ∀ i, 0 ≤ w i) (ρ : ι → DensityMatCore hn) : DensityMatCore hn where
+  carrier := ∑ i, (w i : ℂ) • (ρ i).carrier
+  psd := posSemidef_sum _ fun i => smul_psd (ρ i).psd (w i) (hnonneg i)
+  trace_one := by
+    rw [Matrix.trace_sum]
+    simp_rw [Matrix.trace_smul, trace_eq_one, smul_eq_mul, mul_one]
+    exact_mod_cast hsum
+
 /-- Convex combination of two density matrices: `t ρ₁ + (1 - t) ρ₂` for `0 ≤ t ≤ 1`. -/
 noncomputable def mixedDensity (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ) (ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
     DensityMatCore hn where
@@ -163,6 +195,18 @@ noncomputable def mixedDensity (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ) (ht0 
     simp only [Matrix.trace_smul, Matrix.trace_add]
     rw [trace_eq_one ρ₁, trace_eq_one ρ₂]
     simp [mul_one]
+
+/-- The two-point mixture is the `Bool`-indexed convex combination with weights `t` (for `true`) and
+`1 - t` (for `false`). -/
+theorem mixedDensity_eq_convexCombo_two (ρ₁ ρ₂ : DensityMatCore hn) (t : ℝ) (ht0 : 0 ≤ t)
+    (ht1 : t ≤ 1) :
+    mixedDensity ρ₁ ρ₂ t ht0 ht1 =
+      convexComboDensity (fun b : Bool => bif b then t else 1 - t)
+        (by simp [Fintype.sum_bool])
+        (fun b => by cases b <;> simp [ht0, sub_nonneg.mpr ht1])
+        (fun b => bif b then ρ₁ else ρ₂) := by
+  refine ext ?_
+  simp only [mixedDensity, convexComboDensity, Fintype.sum_bool, cond_true, cond_false]
 
 end DensityMat
 

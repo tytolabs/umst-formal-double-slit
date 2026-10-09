@@ -10,6 +10,8 @@ import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.Tactic.FinCases
 import MeasurementChannel
 import LandauerBound
+import VonNeumannEntropy
+import ExamplesQubit
 
 /-!
 # ErasureChannel — concrete "reset to |0⟩" erasure channel
@@ -24,8 +26,14 @@ Together they satisfy the trace-preservation constraint `K₀ᴴ K₀ + K₁ᴴ 
 - `resetChannel_tp` — trace preservation
 - `resetChannel_output_eq_rhoZero` — output is always `|0⟩⟨0|` for any density matrix
 - `resetChannel_entropy_zero` — output has zero diagonal entropy
+- `resetChannel_output_vonNeumannEntropy_zero` — output has zero von Neumann entropy (`resetOutputState = rhoZero`)
+- `resetChannel_diagonal_entropy_drop` — the diagonal entropy erased is `pathEntropyBits ρ · log 2` nats; on `|+⟩` it
+  is `log 2` (`resetChannel_diagonal_entropy_drop_rhoPlus_eq_log_two`), one bit
+  (`resetChannel_pathEntropyBits_drop_rhoPlus_eq_one`)
 - `idealResetErasure` — an `ErasureProcess` at Landauer equality
 - `idealResetErasure_saturates` — dissipated heat = Landauer cost exactly
+- `idealResetErasure_saturationQuality` — dissipated heat less the output's Landauer cost is the input's cost
+- `idealResetErasure_rhoPlus_dissipation_eq_landauerBitEnergy` — erasing `|+⟩` dissipates one `k_B T ln 2`
 -/
 
 open scoped Matrix ComplexOrder BigOperators
@@ -173,6 +181,52 @@ theorem resetChannel_landauerCost_zero (ρ_dm : DensityMatrix hnQubit) (T : ℝ)
     landauerCostDiagonal (resetChannel.apply hnQubit ρ_dm) T = 0 := by
   simp [landauerCostDiagonal, infoEnergyLowerBound, resetChannel_pathEntropyBits_zero, mul_zero]
 
+open UMST.Quantum.Examples in
+/-- The reset output is the pure state `|0⟩⟨0|` of the qubit examples. -/
+theorem resetOutputState_eq_rhoZero : resetOutputState = rhoZero := by
+  apply DensityMat.ext
+  ext a b
+  fin_cases a <;> fin_cases b <;>
+    simp [resetOutputState, rhoZeroCarrier, rhoZero, pureDensity_carrier, pureCarrier, Matrix.mul_apply,
+      Fintype.sum_unique, col_apply, row_apply, psiZero, Matrix.of_apply]
+
+open UMST.Quantum.Examples in
+/-- `|0⟩⟨0|` has determinant `0` (rank one). -/
+theorem rhoZero_carrier_det_eq_zero : rhoZero.carrier.det = 0 := by
+  rw [Matrix.det_fin_two]
+  simp [rhoZero, pureDensity_carrier, pureCarrier, Matrix.mul_apply, Fintype.sum_unique, col_apply, row_apply,
+    psiZero]
+
+open UMST.Quantum.Examples in
+/-- The von Neumann entropy of `|0⟩⟨0|` is `0` (qubit with `det = 0`). -/
+theorem vonNeumannEntropy_rhoZero : vonNeumannEntropy rhoZero = 0 :=
+  vonNeumannEntropy_qubit_det_eq_zero rhoZero rhoZero_carrier_det_eq_zero
+
+/-- The reset output has zero von Neumann entropy: reset prepares a pure state. -/
+theorem resetChannel_output_vonNeumannEntropy_zero (ρ_dm : DensityMatrix hnQubit) :
+    vonNeumannEntropy (resetChannel.apply hnQubit ρ_dm) = 0 := by
+  rw [resetChannel_output_eq_rhoZero, resetOutputState_eq_rhoZero]
+  exact vonNeumannEntropy_rhoZero
+
+/-- The diagonal (Born-path) entropy the reset erases, in nats, is the input's path entropy in bits times
+`log 2`. -/
+theorem resetChannel_diagonal_entropy_drop (ρ_dm : DensityMatrix hnQubit) :
+    vonNeumannDiagonal ρ_dm - vonNeumannDiagonal (resetChannel.apply hnQubit ρ_dm) =
+      pathEntropyBits ρ_dm * log 2 := by
+  rw [resetChannel_entropy_zero, sub_zero, pathEntropyBits, div_mul_cancel₀ _ (ne_of_gt log_two_pos)]
+
+open UMST.Quantum.Examples in
+/-- Resetting `|+⟩` erases exactly `log 2` nats of diagonal entropy. -/
+theorem resetChannel_diagonal_entropy_drop_rhoPlus_eq_log_two :
+    vonNeumannDiagonal rhoPlus - vonNeumannDiagonal (resetChannel.apply hnQubit rhoPlus) = log 2 := by
+  rw [resetChannel_diagonal_entropy_drop, rhoPlus_pathEntropyBits_eq_one, one_mul]
+
+open UMST.Quantum.Examples in
+/-- Resetting `|+⟩` erases exactly one bit of path entropy. -/
+theorem resetChannel_pathEntropyBits_drop_rhoPlus_eq_one :
+    pathEntropyBits rhoPlus - pathEntropyBits (resetChannel.apply hnQubit rhoPlus) = 1 := by
+  rw [resetChannel_pathEntropyBits_zero, sub_zero, rhoPlus_pathEntropyBits_eq_one]
+
 end Entropy
 
 end UMST.Quantum
@@ -193,5 +247,18 @@ dissipated heat equals the Landauer cost exactly. -/
 theorem idealResetErasure_saturates (ρ : DensityMatrix hnQubit) (T : ℝ) :
     (idealResetErasure ρ T).dissipatedHeat = landauerCostDiagonal ρ T :=
   rfl
+
+/-- The heat the ideal reset dissipates, less the Landauer cost still carried by its output, is the input's
+Landauer cost: the output carries none. -/
+theorem idealResetErasure_saturationQuality (ρ : DensityMatrix hnQubit) (T : ℝ) :
+    (idealResetErasure ρ T).dissipatedHeat - landauerCostDiagonal (resetChannel.apply hnQubit ρ) T =
+      landauerCostDiagonal ρ T := by
+  rw [idealResetErasure_saturates, resetChannel_landauerCost_zero, sub_zero]
+
+open UMST.Quantum.Examples in
+/-- Erasing `|+⟩` by the ideal reset dissipates exactly one Landauer bit-energy `k_B T ln 2`. -/
+theorem idealResetErasure_rhoPlus_dissipation_eq_landauerBitEnergy (T : ℝ) :
+    (idealResetErasure rhoPlus T).dissipatedHeat = landauerBitEnergy T := by
+  rw [idealResetErasure_saturates, rhoPlus_landauerCostDiagonal_eq_landauerBitEnergy]
 
 end UMST.DoubleSlit

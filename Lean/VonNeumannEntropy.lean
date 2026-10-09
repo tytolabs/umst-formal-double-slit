@@ -112,6 +112,50 @@ theorem density_eigenvalues_le_one (ρ : DensityMatrix hn) (i : Fin n) :
     exact hsum
   linarith
 
+/-! ### Trace of the square through the spectrum -/
+
+/-- For a Hermitian matrix `A` over ℂ, `Tr(A²) = ∑ᵢ λᵢ²`.
+
+Proof: `A = U D U⋆` with `U⋆ U = 1`, so `A² = U D² U⋆` and cyclicity gives `Tr(A²) = Tr(D²)`. -/
+theorem trace_mul_self_eq_sum_eigenvalues_sq {A : Matrix (Fin n) (Fin n) ℂ}
+    (hA : A.IsHermitian) :
+    Matrix.trace (A * A) = ∑ i : Fin n, ((hA.eigenvalues i : ℂ) ^ 2) := by
+  set U := (hA.eigenvectorUnitary : Matrix (Fin n) (Fin n) ℂ)
+  set D : Matrix (Fin n) (Fin n) ℂ := diagonal (RCLike.ofReal ∘ hA.eigenvalues)
+  have hspec : A = U * D * star U := hA.spectral_theorem
+  have hU_star : star U * U = 1 :=
+    (Matrix.mem_unitaryGroup_iff'.mp (hA.eigenvectorUnitary).2)
+  have hsq : A * A = U * (D * D) * star U := by
+    rw [hspec]
+    calc U * D * star U * (U * D * star U)
+        = U * D * (star U * U) * D * star U := by simp only [Matrix.mul_assoc]
+      _ = U * (D * D) * star U := by rw [hU_star, Matrix.mul_one]; simp only [Matrix.mul_assoc]
+  calc Matrix.trace (A * A)
+      = Matrix.trace (star U * (U * (D * D))) := by rw [hsq, Matrix.trace_mul_comm]
+    _ = Matrix.trace (D * D) := by rw [← Matrix.mul_assoc, hU_star, Matrix.one_mul]
+    _ = ∑ i : Fin n, ((hA.eigenvalues i : ℂ) ^ 2) := by
+          simp [Matrix.trace, D, diagonal_mul_diagonal, Function.comp, sq]
+
+/-- For a density matrix, `Re Tr(ρ²) = ∑ᵢ λᵢ²` (the purity is the sum of the squared eigenvalues). -/
+theorem trace_mul_self_re_eq_sum_sq (ρ : DensityMatrix hn) :
+    (Matrix.trace (ρ.carrier * ρ.carrier)).re = ∑ i : Fin n, (ρ.isHermitian.eigenvalues i) ^ 2 := by
+  rw [trace_mul_self_eq_sum_eigenvalues_sq ρ.isHermitian, Complex.re_sum]
+  refine Finset.sum_congr rfl fun i _ => ?_
+  rw [← Complex.ofReal_pow, Complex.ofReal_re]
+
+/-- Purity one forces every eigenvalue into `{0, 1}`: `∑ λᵢ(1 - λᵢ) = 1 - Tr(ρ²) = 0` with each term `≥ 0`. -/
+theorem density_eigenvalue_mul_one_sub_eq_zero_of_trace_sq_eq_one (ρ : DensityMatrix hn)
+    (hpure : (Matrix.trace (ρ.carrier * ρ.carrier)).re = 1) (i : Fin n) :
+    ρ.isHermitian.eigenvalues i * (1 - ρ.isHermitian.eigenvalues i) = 0 := by
+  set lam := ρ.isHermitian.eigenvalues
+  have hterm : ∀ j, 0 ≤ lam j * (1 - lam j) := fun j =>
+    mul_nonneg (density_eigenvalues_nonneg ρ j) (sub_nonneg.mpr (density_eigenvalues_le_one ρ j))
+  have hsum : ∑ j : Fin n, lam j * (1 - lam j) = 0 := by
+    have hsq : ∑ j : Fin n, lam j ^ 2 = 1 := by rw [← trace_mul_self_re_eq_sum_sq ρ, hpure]
+    have hlin : ∑ j : Fin n, lam j = 1 := density_eigenvalues_sum_eq_one_real ρ
+    simp_rw [mul_one_sub, Finset.sum_sub_distrib, ← sq, hsq, hlin, sub_self]
+  exact (Finset.sum_eq_zero_iff_of_nonneg fun j _ => hterm j).mp hsum i (Finset.mem_univ i)
+
 /-! ### Von Neumann entropy -/
 
 /-- **Von Neumann entropy** `S(ρ) = -Tr(ρ log ρ) = ∑ᵢ negMulLog(λᵢ)`.
@@ -538,9 +582,49 @@ theorem vonNeumannEntropy_eq_sum_negMulLog_of_diagonal_carrier (ρ : DensityMatr
 
 /-! ### Qubit specialization -/
 
-/-- Von Neumann entropy of a pure state (rank-one `pureDensity`) is nonnegative. -/
+/-- A density matrix of purity one (`Re Tr(ρ²) = 1`) has zero von Neumann entropy: every eigenvalue is
+`0` or `1`, and `negMulLog` vanishes at both. -/
+theorem vonNeumannEntropy_eq_zero_of_trace_sq_eq_one (ρ : DensityMatrix hn)
+    (hpure : (Matrix.trace (ρ.carrier * ρ.carrier)).re = 1) :
+    vonNeumannEntropy ρ = 0 := by
+  refine Finset.sum_eq_zero fun i _ => ?_
+  rcases mul_eq_zero.mp (density_eigenvalue_mul_one_sub_eq_zero_of_trace_sq_eq_one ρ hpure i) with h | h
+  · rw [h, negMulLog_zero]
+  · rw [show ρ.isHermitian.eigenvalues i = 1 by linarith, negMulLog_one]
+
+/-- `|ψ⟩⟨ψ|·|ψ⟩⟨ψ| = ⟨ψ|ψ⟩ |ψ⟩⟨ψ|`, so a normalized pure state has `Tr(ρ²) = 1`. -/
+theorem pureCarrier_trace_mul_self (ψ : Fin n → ℂ) (hψ : dotProduct ψ (star ψ) = 1) :
+    Matrix.trace (pureCarrier ψ * pureCarrier ψ) = 1 := by
+  have hmid : row Unit (star ψ) * col Unit ψ = 1 := by
+    ext a b
+    simp [Matrix.mul_apply, ← hψ, dotProduct, mul_comm]
+  calc Matrix.trace (pureCarrier ψ * pureCarrier ψ)
+      = Matrix.trace (col Unit ψ * (row Unit (star ψ) * col Unit ψ) * row Unit (star ψ)) := by
+        simp only [pureCarrier, Matrix.mul_assoc]
+    _ = 1 := by rw [hmid, Matrix.mul_one, ← pureCarrier, pureCarrier_trace, hψ]
+
+/-- The von Neumann entropy of a pure state (rank-one `pureDensity`) is zero. -/
 theorem vonNeumannEntropy_pure_eq_zero (ψ : Fin n → ℂ) (hψ : dotProduct ψ (star ψ) = 1) :
-    0 ≤ vonNeumannEntropy (pureDensity (hn := hn) ψ hψ) :=
-  vonNeumannEntropy_nonneg (pureDensity (hn := hn) ψ hψ)
+    vonNeumannEntropy (pureDensity (hn := hn) ψ hψ) = 0 := by
+  refine vonNeumannEntropy_eq_zero_of_trace_sq_eq_one _ ?_
+  rw [pureDensity_carrier, pureCarrier_trace_mul_self ψ hψ, Complex.one_re]
+
+/-- On a qubit, `det ρ = 0` forces the spectrum `{0, 1}` (`λ₀ λ₁ = 0`, `λ₀ + λ₁ = 1`), so `S(ρ) = 0`. -/
+theorem vonNeumannEntropy_qubit_det_eq_zero {h2 : 0 < 2} (ρ : DensityMatrix h2)
+    (hdet : ρ.carrier.det = 0) :
+    vonNeumannEntropy ρ = 0 := by
+  have hsum : ρ.isHermitian.eigenvalues 0 + ρ.isHermitian.eigenvalues 1 = 1 := by
+    simpa [Fin.sum_univ_two] using density_eigenvalues_sum_eq_one_real ρ
+  have hprod : ρ.isHermitian.eigenvalues 0 * ρ.isHermitian.eigenvalues 1 = 0 := by
+    have e := ρ.isHermitian.det_eq_prod_eigenvalues
+    rw [hdet, Fin.prod_univ_two] at e
+    have h := congrArg Complex.re e
+    simp at h
+    rcases h with h | h <;> simp [h]
+  unfold vonNeumannEntropy
+  rw [Fin.sum_univ_two]
+  rcases mul_eq_zero.mp hprod with h | h
+  · rw [h, show ρ.isHermitian.eigenvalues 1 = 1 by linarith, negMulLog_zero, negMulLog_one, add_zero]
+  · rw [h, show ρ.isHermitian.eigenvalues 0 = 1 by linarith, negMulLog_zero, negMulLog_one, add_zero]
 
 end UMST.Quantum
