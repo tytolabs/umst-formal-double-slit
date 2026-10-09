@@ -205,12 +205,14 @@ main = do
   r13 <- quickCheckResult prop_ms_combine_zero
   putStrLn "\n--- MonoidalState: density between ---"
   r14 <- quickCheckResult prop_ms_density_between
+  putStrLn "\n--- GroundStates: right fold of sums shifts its seed ---"
+  r15 <- quickCheckResult GS.prop_foldr_add_shift
 
   putStrLn "\n--- Constants: exact SI values, derived constants, CODATA cross-checks ---"
   rs <- mapM (\(name, ok) -> quickCheckResult (once (counterexample name ok))) SI.derivations
   putStrLn "\n--- Ground states: Madelung laws and the cited exceptions (NIST ASD) ---"
   gs <- mapM (\(name, ok) -> quickCheckResult (once (counterexample name ok))) GS.checks
 
-  if all isSuccess ([r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14] ++ rs ++ gs)
+  if all isSuccess ([r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15] ++ rs ++ gs)
     then putStrLn "All properties passed!"
     else exitFailure

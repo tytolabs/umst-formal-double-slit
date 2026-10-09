@@ -21,7 +21,7 @@ import Data.List.Relation.Unary.Unique.Propositional.Properties as Unique
 open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _⊓_; _≡ᵇ_; _<ᵇ_; _≤ᵇ_; _<_)
 open import Data.Nat.ListAction using (sum)
 open import Data.Nat.ListAction.Properties using (sum-++)
-open import Data.Nat.Properties using (+-identityʳ; ≡ᵇ⇒≡)
+open import Data.Nat.Properties using (+-identityʳ; +-assoc; ≡ᵇ⇒≡)
 open import Data.Unit using (tt)
 open import Data.Nat.Tactic.RingSolver using (solve-∀)
 open import Data.Product using (_×_; _,_; proj₁; proj₂)
@@ -88,6 +88,11 @@ capacity-states n l = sym (trans (length-++ (map (λ j → j , false) (upTo k)))
 
 shellCapacity : ℕ → ℕ
 shellCapacity n = sum (map (λ l → capacity (n , l)) (upTo n))
+
+-- A right fold of sums with seed c is the fold with seed 0 plus c (Lean foldr_add_shift).
+foldr-add-shift : ∀ (xs : List ℕ) (c : ℕ) → foldr _+_ c xs ≡ foldr _+_ 0 xs + c
+foldr-add-shift [] c = refl
+foldr-add-shift (x ∷ xs) c = trans (cong (x +_) (foldr-add-shift xs c)) (sym (+-assoc x (foldr _+_ 0 xs) c))
 
 shell-step : ∀ n → 2 * (n * n) + (2 * (2 * n + 1) + 0) ≡ 2 * (suc n * suc n)
 shell-step = solve-∀

@@ -21,6 +21,14 @@ states l = [(j, False) | j <- [0 .. 2 * l]] ++ [(j, True) | j <- [0 .. 2 * l]]
 shellCapacity :: Int -> Int
 shellCapacity n = sum [capacity (n, l) | l <- [0 .. n - 1]]
 
+-- | A right fold of sums with seed c is the fold with seed 0 plus c (Lean foldr_add_shift), over the
+-- naturals: the QuickCheck property takes absolute values of its generated integers.
+prop_foldr_add_shift :: [Integer] -> Integer -> Bool
+prop_foldr_add_shift ys d = foldr (+) c xs == foldr (+) 0 xs + c
+  where
+    xs = map abs ys
+    c = abs d
+
 madelungRank :: (Int, Int) -> Int
 madelungRank (n, l) = (n + l) * 8 + n
 

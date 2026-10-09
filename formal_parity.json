@@ -4,7 +4,7 @@
  "contract_modules": [
   "Lean/Chem/GroundStates.lean"
  ],
- "max_absent": 2,
+ "max_absent": 0,
  "statements": [
   {
    "id": "ground_states.capacity",
@@ -278,10 +278,12 @@
     "file": "Coq/Chem/GroundStates.v"
    },
    "agda": {
-    "absent": "Agda proves shell-capacity through sum-++ and the ring identity shell-step; no seed shift arises"
+    "name": "foldr-add-shift",
+    "file": "Agda/Chem/GroundStates.agda"
    },
    "haskell": {
-    "absent": "a proof step of shellCapacity_eq; the suite tests its conclusion ('shell n holds 2n^2')"
+    "name": "prop_foldr_add_shift",
+    "file": "Haskell/src/UMST/Chem/GroundStates.hs"
    }
   },
   {
