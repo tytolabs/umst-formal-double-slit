@@ -651,8 +651,8 @@ to the table in `umst-formal`, regenerate in both repositories, and build.
 | λ_C | Compton wavelength | derived | ≈ 2.42631023538 × 10⁻¹² | m | `planck / (electronMass * speedOfLight)` | `comptonWavelength_value`, `comptonWavelength_derivation`, `comptonWavelength_within_CODATA2022` |
 | ε₀ | vacuum electric permittivity | derived | ≈ 8.85418781884 × 10⁻¹² | F m⁻¹ | `elementaryCharge * elementaryCharge / (2 * fineStructure * planck * speedOfLight)` | `vacuumPermittivity_value`, `vacuumPermittivity_derivation`, `vacuumPermittivity_within_CODATA2022` |
 | μ₀ | vacuum magnetic permeability | derived | ≈ 1.25663706126 × 10⁻⁶ | N A⁻² | `2 * fineStructure * planck / (elementaryCharge * elementaryCharge * speedOfLight)` | `vacuumPermeability_value`, `vacuumPermeability_derivation`, `vacuumPermeability_within_CODATA2022` |
-| ln2_lo | lower end of the rational enclosure of ln 2 | cited | 6.931471803 × 10⁻¹ (exact) | 1 | MathlibLogTwoBounds | a definition (cited) |
-| ln2_hi | upper end of the rational enclosure of ln 2 | cited | 6.931471808 × 10⁻¹ (exact) | 1 | MathlibLogTwoBounds | a definition (cited) |
+| ln2_lo | lower end of the rational enclosure of ln 2 | cited | 6.931471803 × 10⁻¹, uncertainty not stated | 1 | MathlibLogTwoBounds | a definition (cited) |
+| ln2_hi | upper end of the rational enclosure of ln 2 | cited | 6.931471808 × 10⁻¹, uncertainty not stated | 1 | MathlibLogTwoBounds | a definition (cited) |
 
 - CODATA2022: Mohr, Tiesinga, Newell and Taylor, CODATA recommended values of the fundamental physical constants: 2022, Rev. Mod. Phys. 97 (2025).
 - MathlibLogTwoBounds: Mathlib, Mathlib/Data/Complex/ExponentialBounds.lean at the revision umst-formal pins in Lean/lake-manifest.json: Real.log_two_gt_d9 states 0.6931471803 < log 2 and Real.log_two_lt_d9 states log 2 < 0.6931471808; umst-formal re-proves the lower end against its rational value in UnfoldTermination.ln2Lower_lt_log_two.
