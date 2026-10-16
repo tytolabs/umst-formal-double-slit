@@ -7,3 +7,4 @@ DensityStateSpec.v
 ComplementaritySpec.v
 VonNeumannEntropySpec.v
 KnowingFibreLaw.v
+Learning/EvidenceCost.v

@@ -162,3 +162,17 @@ test-suite knowing-fibre-law
         umst-formal-double-slit,
         umst-formal
     mixins:           umst-formal (UMST.Process as UMSTFormal.Process)
+
+-- A verification as an observation (FORMAL-KNOWING-EVIDENCE-COST): the reset of its record against umst-formal's
+-- executable second law (UMST.Process).
+test-suite evidence-cost
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    main-is:          EvidenceCostProps.hs
+    hs-source-dirs:   test
+    build-depends:
+        base ^>=4.22.0.0,
+        QuickCheck >= 2.14,
+        umst-formal
+    mixins:           umst-formal (UMST.Process as UMSTFormal.Process)

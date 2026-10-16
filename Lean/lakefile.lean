@@ -45,7 +45,9 @@ lean_lib «UMST.DoubleSlit» where
     `EpistemicGalois, `SchrodingerDynamics, `LindbladDynamics, `LindbladStreamD, `SimLeanBridge,
     -- LandauerExtension / LandauerEinsteinBridge / LandauerLaw: imported from umst-formal (not local roots)
     `GeneralResidualCoherence, `WhichPathMeasurementUpdate, `GeneralVisibility,
-    `InformationCostIdentity, `LogSum, `MatrixLog]
+    `InformationCostIdentity, `LogSum, `MatrixLog,
+    -- A verification as an observation: the cost of its evidence bits (FORMAL-KNOWING-EVIDENCE-COST).
+    `Learning.EvidenceCost]
   srcDir := "."
 
 /-!

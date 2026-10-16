@@ -1400,6 +1400,78 @@
     "class": "disconnected",
     "reason": "the cost bound proved from the definition of the cost (k_B T times an information of at most ln 2) without a SecondLaw case; its composed form is knowing.law.readoutCost_le_landauerBitEnergy_of_secondLaw, the same bound for a readout admissible under the measure-feedback case"
    }
+  },
+  {
+   "id": "learning.evidenceBits_cost_ge",
+   "statement": "a verification is an observation: resetting its record of b evidence bits under the erase case costs at least b k_B T ln 2 (Lean through umst-formal CostOfInformation.bitErasure_cost; Coq and Agda carry the record's b ln 2 nats as the entropy the erase case removes)",
+   "lean": {
+    "name": "UMST.DoubleSlit.Learning.evidenceBits_cost_ge",
+    "file": "Lean/Learning/EvidenceCost.lean"
+   },
+   "coq": {
+    "name": "evidenceBits_cost_ge",
+    "file": "Coq/Learning/EvidenceCost.v"
+   },
+   "agda": {
+    "name": "evidenceBits-cost-ge",
+    "file": "Agda/Learning/EvidenceCost.agda"
+   },
+   "haskell": {
+    "name": "prop_evidenceBits_cost_ge",
+    "file": "Haskell/test/EvidenceCostProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "reason": "the erase case of SecondLaw on the reset of a verification's record (umst-formal CostOfInformation.bitErasure_cost, KnowingFibreLaw.erase_pathRecord_cost_ge_bits and the Englert bound)"
+   }
+  },
+  {
+   "id": "learning.evidenceBitsPerJoule_le",
+   "statement": "a verification's evidence bits per joule of reset work are at most 1/(k_B T ln 2) (Agda with cleared denominators)",
+   "lean": {
+    "name": "UMST.DoubleSlit.Learning.evidenceBitsPerJoule_le",
+    "file": "Lean/Learning/EvidenceCost.lean"
+   },
+   "coq": {
+    "name": "evidenceBitsPerJoule_le",
+    "file": "Coq/Learning/EvidenceCost.v"
+   },
+   "agda": {
+    "name": "evidenceBitsPerJoule-le",
+    "file": "Agda/Learning/EvidenceCost.agda"
+   },
+   "haskell": {
+    "name": "prop_evidenceBitsPerJoule_le",
+    "file": "Haskell/test/EvidenceCostProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "reason": "the erase case of SecondLaw on the reset of a verification's record (umst-formal CostOfInformation.bitErasure_cost, KnowingFibreLaw.erase_pathRecord_cost_ge_bits and the Englert bound)"
+   }
+  },
+  {
+   "id": "learning.pathEvidence_cost_ge_max",
+   "statement": "on the path qubit, resetting a verification's path record pays for its path-entropy bits at k_B T ln 2 each and at least the Englert bound k_B T V^2 / 2: the larger of the two (Lean and Coq as a maximum, Agda as both bounds; Lean and Coq also state the per-joule rate, pathEvidencePerJoule_le)",
+   "lean": {
+    "name": "UMST.DoubleSlit.Learning.pathEvidence_cost_ge_max",
+    "file": "Lean/Learning/EvidenceCost.lean"
+   },
+   "coq": {
+    "name": "pathEvidence_cost_ge_max",
+    "file": "Coq/Learning/EvidenceCost.v"
+   },
+   "agda": {
+    "name": "pathEvidence-cost-ge-both",
+    "file": "Agda/Learning/EvidenceCost.agda"
+   },
+   "haskell": {
+    "name": "prop_pathEvidence_cost_ge_max",
+    "file": "Haskell/test/EvidenceCostProps.hs"
+   },
+   "second_law": {
+    "class": "composed",
+    "reason": "the erase case of SecondLaw on the reset of a verification's record (umst-formal CostOfInformation.bitErasure_cost, KnowingFibreLaw.erase_pathRecord_cost_ge_bits and the Englert bound)"
+   }
   }
  ]
 }
