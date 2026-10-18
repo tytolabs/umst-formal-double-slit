@@ -461,7 +461,7 @@ umst-formal-double-slit/
 │   ├── schrodinger_2d_*.py                2D split-step + PML
 │   ├── schrodinger_3d_split_step.py       3D FFT split-step
 │   ├── qutip_*.py                         QuTiP parity checks (optional)
-│   ├── tests/                             unittest discover (88 ran @ e2719b9; see Quick Start paste)
+│   ├── tests/                             unittest discover (88 ran @ e2719b9; see Usage paste)
 │   └── requirements-optional.txt          NumPy, SciPy, matplotlib, imageio, QuTiP
 │
 ├── scripts/
