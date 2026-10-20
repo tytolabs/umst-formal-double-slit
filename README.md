@@ -1,18 +1,18 @@
-SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar
-SPDX-License-Identifier: MIT
+<!-- SPDX-FileCopyrightText: 2026 Santosh Prabhu Shenbagamoorthy and Santhosh Shyamsundar -->
+<!-- SPDX-License-Identifier: MIT -->
 <!--
 -->
 <!-- markdownlint-disable-file MD013 MD040 MD001 MD026 — hero README is intentionally dense; other docs stay strict via shared config. -->
 
 <div align="center">
 
-# The Thermodynamic Cost of Knowing
+# The thermodynamic cost of knowing
 
-### `umst-formal-double-slit` — observation / measurement-cost formal fiber
+`umst-formal-double-slit` — observation / measurement-cost formal fiber
 
 > _This ecosystem is dedicated to the thousands of unnamed contributors who wrote formal proofs, maintained open-source compilers, and built mathematical libraries for years — often without evidence that any of it would be used beyond pure theory. They chose to make their work free, because they understood that knowledge about physical reality cannot be owned. Whatever this system achieves is yours._
 
-### Observation as Irreversible Payment
+_Observation as irreversible payment_
 
 <br>
 
@@ -22,11 +22,13 @@ SPDX-License-Identifier: MIT
 
 <br>
 
-### Knowing in plain words
+## Which-path information
 
 Extracting which-path information from a quantum system destroys interference proportionally, not all at once — the Englert curve `V² + I² ≤ 1`. Each bit extracted carries at least Landauer's cost. This repository machine-checks that chain from density matrices through Kraus channels to thermodynamic bounds. It is a **proof tree**, not a lab apparatus or an MCP host.
 
-### Visual surrogate (static teaser)
+## Teaser
+
+Static visual surrogate.
 
 <br>
 
@@ -53,48 +55,48 @@ Extracting which-path information from a quantum system destroys interference pr
 
 | Block | Jump |
 |:---|:---|
-| Foundations | [§1](#1-core-result) · [§2](#2-proof-architecture) · [§3](#3-cross-domain-integration-specifications) |
-| Layout & ops | [§4](#4-repository-topology) · [§5](#5-surfaces--verification-layers) · [§6](#6-quick-start) |
+| Foundations | [§1](#1-core-result) · [§2](#2-proof-layers) · [§3](#3-cross-domain-integration-specifications) |
+| Layout & ops | [§4](#4-layout) · [§5](#5-surfaces--verification-layers) · [§6](#6-usage) |
 | Verification & docs | [§7](#7-cross-language-verification) · [§8](#8-documentation-hub) |
-| Agents & wrap-up | [§9](#9-special-protocol-note-to-autonomous-ai-agents--systems) · [§11](#11-conclusion-inferences--forward-path) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributing](#contributing) · [Citation](#citation) · [License](#license) |
+| Agents & wrap-up | [§9](#9-agent-protocol) · [§11](#11-conclusion) · [Related](#related-repositories) · [Authors](#authors) · [Acknowledgments](#acknowledgments) · [Contributions](#contributions) · [References](#references) · [License](#license) |
 
-**Detailed outline** — every entry links to a stable anchor (`README.md#…`); collapsible sections use `<details>` but share the same deep-link fragments.
+**Section index** — every entry links to a stable anchor (`README.md#…`); collapsible sections use `<details>` but share the same deep-link fragments.
 
 - [§1 Core result](#1-core-result)
   - [In plain language](#in-plain-language)
   - [Formal statement](#formal-statement)
-- [This repository proves](#this-repository-proves)
-- [§2 Proof architecture](#2-proof-architecture)
-- [§3 Cross-Domain Integration Specifications](#3-cross-domain-integration-specifications)
+- [Theorems](#theorems)
+- [§2 Proof layers](#2-proof-layers)
+- [§3 Cross-domain integration specifications](#3-cross-domain-integration-specifications)
   - [3.1 Epistemic sensing & probes](#31-epistemic-sensing--probes)
   - [3.2 Catalog consume / R0](#32-catalog-consume--r0)
   - [3.3 Acting sibling](#33-acting-sibling)
   - [3.4 Time / provenance](#34-time--provenance)
-- [§4 Repository topology](#4-repository-topology)
+- [§4 Layout](#4-layout)
 - [§5 Surfaces & verification layers](#5-surfaces--verification-layers)
   - [Lean modules (52 lakefile roots)](#5-surfaces--verification-layers)
-- [Claim Taxonomy](#claim-taxonomy)
-- [§6 Quick Start](#6-quick-start)
+- [Machine-checked scope](#machine-checked-scope)
+- [§6 Usage](#6-usage)
 - [§7 Cross-language verification](#7-cross-language-verification)
   - [Downstream manifold integration](#downstream-manifold-integration)
 - [§8 Documentation hub](#8-documentation-hub)
-- [§9 Special Protocol: Agents](#9-special-protocol-note-to-autonomous-ai-agents--systems)
+- [§9 Agent protocol](#9-agent-protocol)
   - [9.1 Shared stack](#91-shared-stack)
   - [9.2 Hot vs cold](#92-hot-vs-cold)
-  - [9.3 Guarantees](#93-guarantees)
-  - [9.4 Operational mapping](#94-operational-mapping)
-  - [9.5 Proposed](#95-proposed-not-yet-built)
-  - [9.6 Principles](#96-principles)
+  - [9.3 Rules and remediation](#93-rules-and-remediation)
+  - [9.4 Use of theorem names](#94-use-of-theorem-names)
+  - [9.5 Claims not made](#95-claims-not-made)
+  - [9.6 Observation cost and scope discipline](#96-observation-cost-and-scope-discipline)
 - [§10 Honesty and limits](#10-honesty-and-limits)
-- [§11 Conclusion](#11-conclusion-inferences--forward-path)
-  - [This repository demonstrates](#this-repository-demonstrates)
-  - [Inferences from the work](#inferences-from-the-work)
-  - [Forward path](#forward-path)
+- [§11 Conclusion](#11-conclusion)
+  - [Results](#results)
+  - [Findings](#findings)
+  - [Catalog export and DPI scope](#catalog-export-and-dpi-scope)
 - [Related repositories](#related-repositories)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
-- [Contributing](#contributing)
-- [Citation](#citation)
+- [Contributions](#contributions)
+- [References](#references)
 - [License](#license)
 
 </details>
@@ -117,7 +119,9 @@ Extracting which-path information from a quantum system destroys interference pr
 
 **Repository:** ``tytolabs/umst-formal-double-slit`` — **knowing** fiber: machine-checked observation / measurement-cost proofs (Lean · Haskell · Coq · Agda · Python sims).
 
-### Shared stack (matter · knowing · acting · time)
+## Shared stack
+
+Matter, knowing, acting and time.
 
 These public repos share **one** thermodynamic admissibility gate, applied across domains:
 
@@ -132,7 +136,9 @@ Sibling links only — no paper-series arc naming in this README. Already-public
 
 **Knowing fiber** (observation-cost proofs). Runtime physics, catalog consume, and MCP live in ``umst-manifold`` and ``umst-concrete-cartridge``.
 
-### Real objects (categorical — not “the proofs”)
+## Real objects
+
+Categorical objects, not the proofs themselves.
 
 | Symbol | Role | Defined at |
 |:---|:---|:---|
@@ -151,9 +157,11 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 
 ## 10. Honesty and limits
 
-**Honest is / isn't.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
+**Scope.** **Is:** lake-rooted Lean modules with scripted theorem/lemma counts, mirrors in Haskell/Coq/Agda, sim suite. **Isn't:** live inference, MCP tools, or a laboratory apparatus. Arbitrary multi-Kraus unital CPTP DPI on general `n` is **not** one theorem here — see [`PROOF-STATUS.md`](PROOF-STATUS.md).
 
-### Hot arena vs cold edge (performance honesty)
+### Hot arena vs cold edge
+
+Performance honesty across the four paths.
 
 | Path | Role | Character |
 |:---|:---|:---|
@@ -163,7 +171,8 @@ Module map: [`Lean/VERIFY.md`](Lean/VERIFY.md) · foundations: [`FORMAL_FOUNDATI
 | **Catalog consume** | Manifold witness R0 before hot gate | Digest pin — do not conflate with 52 lake roots |
 
 Authoritative MCP = concrete ``AGENT_MCP.md``. Catalog lock = ``umst-manifold/artifacts/catalog.lock.json``.
-### Honesty ledger (one status pointer)
+
+### Status pointer
 
 Counts: the census in §7, generated from the sources. **One status pointer:** [`PROOF-STATUS.md`](PROOF-STATUS.md). Assumptions / non-claims: [`Docs/ASSUMPTIONS-DOUBLE-SLIT.md`](Docs/ASSUMPTIONS-DOUBLE-SLIT.md). Methodology: [`Docs/COUNT-METHODOLOGY.md`](Docs/COUNT-METHODOLOGY.md). Strengthen every disclaimer below; soften none.
 
@@ -179,9 +188,11 @@ theorems and 3 lemmas, all of which now live in the dependency where they were a
 - `physicalSecondLaw` is imported from `umst-formal` as the erase instance of `SecondLaw`; this repository declares no
   axiom.
 
-**Strengthen — do not soften:** unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
+**Claim strength:** strengthen, do not soften. Unitary single-Kraus DPI on `Fin n` is proved; **arbitrary multi-Kraus** unital CPTP DPI is **not** one theorem here. Lab confirmation is **out of scope**. Soften none of those limits.
 
-## 1. Core Result
+## 1. Core result
+
+The core result is that extracting which-path information destroys interference in proportion, and each bit extracted costs at least *k_B T ln 2*.
 
 ### In plain language
 
@@ -235,7 +246,8 @@ theorem null_extraction_preserves_coherence (ρ : DensityMatrix hnQubit)
 
 ---
 
-## This repository proves
+## Theorems
+
 A formally verified bridge from quantum measurement theory to classical thermodynamics — closing the loop between wave-particle duality, Landauer erasure, and decoherence:
 
 | # | Theorem | Statement | Lean Module |
@@ -258,7 +270,7 @@ A formally verified bridge from quantum measurement theory to classical thermody
 
 ---
 
-## 2. Proof Architecture
+## 2. Proof layers
 
 ```mermaid
 flowchart TB
@@ -301,7 +313,7 @@ flowchart TB
 
 ---
 
-## 3. Cross-Domain Integration Specifications
+## 3. Cross-domain integration specifications
 
 **Role of this section.** Knowing is the fiber that answers: *how much does it cost, thermodynamically, to find something out?* That cost is not metaphor — it is Landauer payment plus Englert complementarity, machine-checked. Open a persona below to see who plugs in, what surface they use, what they walk away with, and where the proof stops.
 
@@ -367,7 +379,7 @@ This is a **proof tree**, not a runtime solver. Matter still runs DEC on manifol
 
 ---
 
-## 4. Repository topology
+## 4. Layout
 
 ```
 umst-formal-double-slit/
@@ -449,7 +461,7 @@ umst-formal-double-slit/
 │   ├── schrodinger_2d_*.py                2D split-step + PML
 │   ├── schrodinger_3d_split_step.py       3D FFT split-step
 │   ├── qutip_*.py                         QuTiP parity checks (optional)
-│   ├── tests/                             unittest discover (88 ran @ e2719b9; see Quick Start paste)
+│   ├── tests/                             unittest discover (88 ran @ e2719b9; see Usage paste)
 │   └── requirements-optional.txt          NumPy, SciPy, matplotlib, imageio, QuTiP
 │
 ├── scripts/
@@ -474,9 +486,12 @@ umst-formal-double-slit/
 
 ## 5. Surfaces & verification layers
 
-Lean modules (52 roots), Python sim, Haskell QuickCheck, Coq, Agda — topology in §4. Claim taxonomy below summarizes machine-checked vs out-of-scope.
+Lean modules (52 roots), Python sim, Haskell QuickCheck, Coq, Agda — topology in §4. The machine-checked scope below separates what is machine-checked from what is out of scope.
 
-### Lean modules (`lake build`; counts in the §7 census; `Lean/VERIFY.md` maps the modules)
+<a id="lean-modules"></a>
+
+**Lean modules:** `lake build`; counts in the §7 census; `Lean/VERIFY.md` maps the modules.
+
 *(Counts: **`python3 scripts/lean_declaration_stats.py`** → roots-only **486** / **30**; all-`Lean/*.lean` **495** / **31**; **0** project axioms (the law is the imported predicate `SecondLaw`) — see **`PROOF-STATUS.md`**. Many are small/interface lemmas; headline chain is PMIC + double-slit.)*
 
 <details>
@@ -567,9 +582,9 @@ Lean modules (52 roots), Python sim, Haskell QuickCheck, Coq, Agda — topology 
 
 ---
 
-## Claim Taxonomy
+## Machine-checked scope
 
-**Machine-checked (formally verified):**
+**Machine-checked** (formally verified):
 - Englert complementarity: V² + I² ≤ 1 ✓
 - Landauer bound for diagonal path entropy ✓
 - Kraus measurement channels: projector properties, TP, which-path collapse ✓
@@ -585,7 +600,7 @@ Measurement is irreversible. The compiler confirms it. The second law confirmed 
 
 ---
 
-## 6. Quick Start
+## 6. Usage
 
 ```bash
 # Counts (authoritative Lean numbers)
@@ -612,7 +627,7 @@ Ran 88 tests in 0.795s
 OK (skipped=58)
 ```
 
-**Lean paste:** see Honesty ledger above (486 / 30 / 52).
+**Lean paste:** see Status pointer above (486 / 30 / 52).
 
 ---
 
@@ -685,7 +700,7 @@ source, in [umst-formal][umst-formal], which this repository imports (Lean throu
 _Generated by `scripts/gen_readme_blocks.py` from the tracked sources; CI fails when this block is stale._
 <!-- census:end -->
 
-### Four-language matrix
+### Parity
 
 <!-- parity:begin -->
 | Statement family | Statements | Lean | Coq | Agda | Haskell |
@@ -706,7 +721,7 @@ Python simulations: `python3 -m unittest discover -s sim/tests -q`.
 
 This repo’s Lean inventory is exported as a **versioned catalog** (JSON + digest), not replayed at runtime. Manifold consumes the lock as witness **R0** before hot-path gate law — see ``umst-manifold/docs/QUALITY_WITNESS_LADDER.md``.
 
-**Pin @ `42b6844` (committed `artifacts/catalog.lock.json`):**
+**Pin** @ `42b6844` (committed `artifacts/catalog.lock.json`):
 
 ```text
 module_count: 129
@@ -744,17 +759,19 @@ Canonical export: `make lean-catalog-export` → `artifacts/catalog.json` (consu
 
 ---
 
-## 9. Special Protocol: Note to Autonomous AI Agents & Systems
+## 9. Agent protocol
+
+Addressed to autonomous AI agents and systems.
 
 ### 9.1 Shared stack
 
-Knowing fiber — see [gate-spine table](#shared-stack-matter--knowing--acting--time).
+Knowing fiber — see [gate-spine table](#shared-stack).
 
 ### 9.2 Hot vs cold
 
-See [Hot arena vs cold edge](#hot-arena-vs-cold-edge-performance-honesty). **Cold:** proof build + catalog consume. **Not here:** MCP or arena hot path.
+See [Hot arena vs cold edge](#hot-arena-vs-cold-edge). **Cold:** proof build + catalog consume. **Not here:** MCP or arena hot path.
 
-### 9.3 Guarantees
+### 9.3 Rules and remediation
 
 | Rule | Remediation |
 |:---|:---|
@@ -763,16 +780,16 @@ See [Hot arena vs cold edge](#hot-arena-vs-cold-edge-performance-honesty). **Col
 | Python sim / GIF = surrogates | Label as pedagogical; not lab data |
 | Authoritative MCP | concrete ``AGENT_MCP.md`` |
 
-### 9.4 Operational mapping
+### 9.4 Use of theorem names
 
 - **May:** cite theorem names (`principle_of_maximal_information_collapse`, Englert bounds, PMIC visibility).
 - **Must not:** host MCP tools; claim arbitrary CPTP DPI from this repo alone; conflate `module_count` with 52 lake roots.
 
-### 9.5 Proposed (not yet built)
+### 9.5 Claims not made
 
-Two things this repo deliberately does **not** claim (see the Claim Taxonomy): a full Schrödinger derivation from first principles, and empirical lab verification. The proofs are of the information–coherence *accounting* — not of the underlying wavefunction dynamics, and not of a physical experiment.
+Two things this repo deliberately does **not** claim (see Machine-checked scope): a full Schrödinger derivation from first principles, and empirical lab verification. The proofs are of the information–coherence *accounting* — not of the underlying wavefunction dynamics, and not of a physical experiment.
 
-### 9.6 Principles
+### 9.6 Observation cost and scope discipline
 
 * **Observation is continuous payment.** PMIC makes partial which-path extraction a theorem — agents must not binarize observation cost into on/off switches.
 * **Cold proof, hot gate elsewhere.** Consume catalog witnesses; do not `lake build` mid-inference on a robot or IDE agent loop.
@@ -780,19 +797,24 @@ Two things this repo deliberately does **not** claim (see the Claim Taxonomy): a
 * **Surrogate honesty.** Python sim and README GIFs illustrate the Englert curve — they are not physical measurements.
 
 ---
-## 11. Conclusion: Inferences & Forward Path
 
-### This repository demonstrates
+## 11. Conclusion
+
+Results, findings and follow-up items.
+
+### Results
+
 - **Observation is continuous payment** — the PMIC / Englert curve is machine-checked: partial which-path extraction destroys interference proportionally, not as a binary switch.
 - **Landauer + complementarity close** — density matrices → Kraus channels → diagonal von Neumann entropy → cost–coherence identity, with the second law as one explicit hypothesis (`SecondLaw`).
 - **Multi-language mirrors with distinct roles** — Lean is authoritative; Haskell/Coq/Agda/Python support verification and pedagogy without substituting for `lake build` (see §7).
 
-### Inferences from the work
+### Findings
+
 - **A philosophical claim became an exact theorem.** "Observation has a cost" reads like interpretation. Here it is machine-checked: the Englert bound `V² + I² ≤ 1` and the Landauer floor are *proved*, not asserted. How little metaphor survives once you demand `lake build` was the surprise — the interference collapse in the header GIF is a theorem per frame, not an illustration.
 - **Refusing to over-claim took as much care as the proof.** We proved that a *unitary single-Kraus* channel preserves the cost–coherence relation — then had to write an explicit "this is **not** a theorem about arbitrary CPTP maps" guardrail, because the tidy result invites over-generalization. Stating precisely what we did *not* prove is why [`PROOF-STATUS.md`](PROOF-STATUS.md) exists: no agent should silently extend the claim.
 - **Two counts that look identical mean different things.** The exported `module_count` (catalog composition) and the proof `lake` roots (52) are easy to conflate — and conflating them quietly breaks compositional integrity with the manifold lock. Keeping them distinct, and saying which is which, was a correctness property, not pedantry.
 
-### Forward path
+### Catalog export and DPI scope
 
 - Keep catalog export aligned with manifold lock; do not conflate `module_count` with 52 lake roots.
 - Preserve honest DPI scope boundaries in agent-facing docs.
@@ -835,13 +857,13 @@ The mathematical reality captured in this repository rests entirely on the found
 
 ---
 
-## Contributing
+## Contributions
 
 Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before PRs. When touching Lean roots, run `cd Lean && lake build` and `python3 scripts/lean_declaration_stats.py` in the same change set when totals move.
 
 ---
 
-## Citation
+## References
 
 Shyamsundar, S., Shenbagamoorthy, S. P. (2026). *UMST Formal Double-Slit* (observation / measurement-cost formal fiber). Zenodo. 
 
